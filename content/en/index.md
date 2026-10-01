@@ -15,6 +15,9 @@ The central object of the project is the polyform in the sense of PMG. The notes
 
 The collection is intended to support a gradual introduction to this approach and the verification of individual results. Notes are published in small thematic collections; their coverage and reading order are refined as the material is prepared.
 
+- Project started: **2026**
+- Library last updated: **1 October 2026**
+
 ## Where to begin
 
 The initial reading route will follow this order:
