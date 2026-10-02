@@ -1,75 +1,83 @@
 ---
 title: "PMG — Research Notes"
-description: An introduction to Polyform Metric Geometry, a reading guide, and research topics.
+description: The foundations of resistance geometry and the development of polyform algebra.
 lang: en
 translation_key: pmg-home
-revision: 1
-translated_revision: 1
+revision: 2
+translated_revision: 2
 ---
 [Русский](../ru/index.md) · [Choose a language](../index.md)
 
-**Polyform Metric Geometry (PMG)** is a research project on algebraic and geometric representations of finite configurations and weighted graphs.
+**Polyform Metric Geometry (PMG)** is a research project devoted to the algebra of polyforms and its connections with geometry, graph theory, and electrical networks.
 
-The central object of the project is the polyform in the sense of PMG. The notes investigate how this language expresses metric characteristics, potentials, structures of spanning forests and cuts, and the relationships between them. Electrical networks and resistance geometry provide a major source of motivation.
+The collection brings together established results, explanations of basic concepts, and research within PMG. Its aim is to help readers build a conceptual foundation and see the connections between objects that are often studied separately: Laplacians, potentials, effective resistances, metric forms, and spanning forests.
 
-The collection is intended to support a gradual introduction to this approach and the verification of individual results. Notes are published in small thematic collections; their coverage and reading order are refined as the material is prepared.
+The approach is based on polyform algebra. One of the questions that led to its development was how changing one or more couplings affects the properties of the entire system. Products of forms and the exponential of the Laplacian in this algebra are used to describe the joint effects of couplings and the resulting metric and combinatorial characteristics.
+
+## Reference Documents
+
+| Document | When to consult it |
+| --- | --- |
+| **PMG Specification** | To check the precise definition of an object, notation, or the rule for an operation |
+| **Glossary and Notation** | To clarify the meaning of a term, its English equivalent, and how its use differs from standard usage |
+
+## Reading Order
+
+Readers are encouraged to begin with two collections, in the following order.
+
+### From Connectivity to Geometry
+
+1. **The Laplacian: a graph, an electrical network, and a quadratic form.** How the structure of connections is expressed in a matrix and how to interpret it in electrical and geometric terms.
+2. **Why effective resistance is a squared distance.** How connections between vertices determine a metric representation of a graph and the space in which its points lie.
+3. **Transfer potential as an inner product.** How a measurement between one pair of points, with current passed through another pair, acquires a geometric meaning.
+
+This collection also includes reference material on the relationships between the Laplacian, Green's matrix, and the resistance matrix.
+
+### Variations in Couplings and Polyform Algebra
+
+1. **Varying a single coupling.** How adding, removing, or changing the weight of a coupling affects effective resistances, potentials, and the spanning-tree coefficient.
+2. **Varying several couplings together.** How to isolate the joint effect of changes and express it in terms of the characteristics of the original system.
+3. **Basic PMG objects and operations.** The transition from quadratic forms associated with couplings to the rules for multiplying them.
+4. **The exponential of the Laplacian.** Constructing the metric polyform and interpreting its coefficients.
+
+In these notes, formulas will be accompanied by small examples that readers can reproduce independently.
+
+**The introductory collections are being prepared for publication.** The reading route shown here is provisional; links will be added once the corresponding notes are published.
+
+A basic knowledge of linear algebra is useful: matrices, determinants, quadratic forms, and eigenvalues. Graph-related topics use basic graph theory. Specialized PMG terms are defined in the notes; additional prerequisites are listed for each collection.
+
+## Research Topics
+
+As the library grows, collections will be prepared on the following topics:
+
+- **Geometric representations:** points and vectors, the Gram matrix of isotropic point representatives, the distinguished null vector, and barycentric (bi-) and metric dual (di-) coordinates.
+- **Polyform algebra:** grades, potentials and norms, symmetric polyforms, and dual constructions.
+- **Forests, cuts, and toponomes:** combinatorial coefficients, generating polynomials, and their reductions.
+- **Graph spectra:** Laplacians of paths and cycles, and spectral properties of graph configurations.
+- **Graph gluing and invariants:** gluing constructions, chains of cores, preserved characteristics, and the limits of their invariance.
+
+Each collection will include a brief reading guide: what it covers, what background is needed, and which order to follow. A note may belong to more than one reading route.
+
+## Status of Results
+
+Established results are presented with references to their sources. Research claims state their conditions of applicability and the strength of their justification:
+
+- **Proved** — a general proof is provided in the note or available through a precise reference.
+- **Computed directly** — the result has been obtained for a particular configuration.
+- **Checked on examples** — checks have been performed in several cases; they do not replace a general proof.
+- **Working conjecture** — a general claim is proposed but has not yet been proved.
+- **Tentative interpretation** — an interpretation requires further justification.
+
+The status applies to an individual claim: proved results and open questions may appear in the same note. Computational checks are accompanied by a description of the method and the scope of the checks.
+
+Terms introduced or redefined within PMG are explained when first used. If a definition differs from the one used in another field, this is stated explicitly.
+
+## About the Project
+
+The approach developed through the study of object ranking, electrical networks, and the geometric properties of graphs. Work with Laplacians, Green's matrices, and effective resistances led to resistance geometry. The study of variations in couplings was the next stage and led to the construction of polyform algebra.
+
+New notes are published in small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
 - Library last updated: **1 October 2026**
-
-## Where to begin
-
-The initial reading route will follow this order:
-
-1. **Motivation.** A concrete problem and the reasons for introducing the PMG language.
-2. **Basic objects and notation.** Definitions, operations, and conventions.
-3. **A worked example.** Calculations for a small configuration or graph that readers can reproduce independently.
-4. **A first substantive result.** A precise statement, proof, and interpretation.
-
-A working knowledge of linear algebra is useful: matrices, determinants, quadratic forms, and eigenvalues. Graph-related topics use basic graph theory. Specialized PMG concepts should be defined in the notes themselves; additional prerequisites are listed for each collection.
-
-**The introductory collection is being prepared for publication.** Links to its notes will appear here once they are published.
-
-## How the collection is organized
-
-| Section | Contents |
-| --- | --- |
-| **Getting started** | Motivation, an introductory reading route, and prerequisites |
-| **Foundations** | Definitions, notation, and basic PMG operations |
-| **Topics** | Related results, proofs, and examples |
-| **Open questions** | Conjectures, computational observations, and unsolved problems |
-
-Thematic collections will include navigation notes with a brief overview, prerequisites, and a recommended reading order.
-
-The main research directions are:
-
-- **Resistance geometry and potentials:** effective resistances, metric representations, and distributions over edges.
-- **Polyform algebra:** operations, grades, metric polyforms, and dual constructions.
-- **Forests, cuts, and toponomes:** combinatorial coefficients, generating polynomials, and their reductions.
-- **Graph spectra:** Laplacians, paths and cycles, and spectral properties of graph configurations.
-- **Graph gluing and invariants:** gluing constructions, chains of cores, preserved characteristics, and the limits of their invariance.
-
-This list describes the scope of the project. It does not imply that all of these materials have already been published.
-
-## How to read mathematical claims
-
-The notes distinguish the origin of a result from the strength of its justification. Known results are accompanied by source references; original claims include a derivation or an explicit statement that a general proof is still missing.
-
-| Status label | Meaning |
-| --- | --- |
-| **Proved** | A general proof is provided, or a precise reference to one is given |
-| **Computed directly** | The result is obtained for a particular configuration |
-| **Checked on examples** | Checks have been performed in several cases; this does not replace a general proof |
-| **Working conjecture** | A general claim has been formulated but has not yet been proved |
-| **Tentative interpretation** | An interpretation is proposed that requires further justification |
-
-A single note may contain claims with different statuses. Computational evidence is assessed together with the method used and the scope of the checks.
-
-Terms introduced or redefined within PMG are explained when they first appear. Sharing a name with a term from another field does not by itself imply that the definitions coincide.
-
-## Language versions
-
-The Russian and English versions belong to one collection. Translated notes will include links to their counterparts.
-
-English materials are published as they become available. Substantive differences between versions should be stated explicitly; a more recent translation date does not by itself indicate a more recent version of a result.
 
