@@ -34,7 +34,7 @@ jobs:
         run: npx quartz plugin install
 
       - name: Build site
-        run: npx quartz build
+        run: npx quartz build -d pmg-library
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
