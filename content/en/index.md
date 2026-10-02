@@ -6,7 +6,6 @@ translation_key: pmg-home
 revision: 1
 translated_revision: 1
 ---
-
 [Русский](../ru/index.md) · [Choose a language](../index.md)
 
 **Polyform Metric Geometry (PMG)** is a research project on algebraic and geometric representations of finite configurations and weighted graphs.
