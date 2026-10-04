@@ -90,20 +90,12 @@ $$
 $$
 The potential difference between vertices $j$ and $i$ is
 $$
-R_{ij}
-=
-\mathbf e_{ij}^{\mathsf T}
-G
-\mathbf e_{ij}
-\tag{4}
+R_{ij} = \mathbf e_{ij}^{\mathsf T} G \mathbf e_{ij} \tag{4}
 $$
 Expanding this expression gives
 $$
-R_{ij}
-=
-G_{ii}+G_{jj}-2G_{ij}
+R_{ij} = G_{ii}+G_{jj}-2G_{ij}
 $$
-
 This already has the standard form of a squared distance computed from a Gram matrix.
 
 ## The Green matrix as a Gram matrix
@@ -111,11 +103,17 @@ This already has the standard form of a squared distance computed from a Gram ma
 The Laplacian of a connected graph with positive conductances is positive semidefinite. Therefore $\quad G = L^+ \quad$ is also positive semidefinite.
 
 Hence there exist Euclidean vectors $\quad x_1,\ldots,x_n \quad$ whose Gram matrix is
-$$\boxed{G_{ij}=\langle x_i,x_j\rangle} \tag{5}$$
+$$
+\boxed{G_{ij}=\langle x_i,x_j\rangle} \tag{5}
+$$
 The condition
-$$G\mathbf 1=0$$
+$$
+G\mathbf 1=0
+$$
 corresponds to the chosen centering
-$$\sum_i x_i=0$$
+$$
+\sum_i x_i=0
+$$
 For the vector between two points, $\quad a_{ij}=x_j-x_i$
 Therefore
 $$
@@ -133,18 +131,8 @@ G_{ii}+G_{jj}-2G_{ij}
 $$
 Comparing this expression with the effective-resistance formula gives
 $$
-\boxed{
-R_{ij}
-=
-\|a_{ij}\|^2
-=
-\mathbf e_{ij}^{\mathsf T}
-G
-\mathbf e_{ij}
-}
-\tag{6}
+\boxed{R_{ij} = \|a_{ij}\|^2 = \mathbf e_{ij}^{\mathsf T} G \mathbf e_{ij}} \tag{6}
 $$
-
 > [!info] Geometric interpretation
 > The vertices of a connected graph can be represented by points in a Euclidean space so that the effective resistance between two vertices equals the squared norm of the vector between the corresponding points.
 
@@ -168,35 +156,21 @@ Two vertices need not be joined by an edge at all, yet the geometric norm of the
 
 ## Example: a three-vertex path
 
-Return to the example from the previous note. Let the graph be
+Return to the example from the previous note. Let the graph be $\quad 1-2-3$ with edge conductances
 $$
-1-2-3
-$$
-with edge conductances
-$$
-c_{12}=1,
-\qquad
-c_{23}=2
+c_{12}=1, \quad c_{23}=2
 $$
 The corresponding edge resistances are
 $$
-r_{12}=1,
-\qquad
-r_{23}=\frac12
+r_{12}=1, \quad r_{23}=\frac12
 $$
 For a tree, the effective resistance between two vertices is the sum of the edge resistances along the unique path between them. Hence
 $$
-R_{12}=1,
-\qquad
-R_{23}=\frac12,
-\qquad
-R_{13}=\frac32
+R_{12}=1, \quad R_{23}=\frac12, \quad R_{13}=\frac32
 $$
-
 The Laplacian is
 $$
-L=
-\begin{pmatrix}
+L = \begin{pmatrix}
 1&-1&0\\
 -1&3&-2\\
 0&-2&2
@@ -204,8 +178,7 @@ L=
 $$
 and its Green matrix is
 $$
-G=L^+
-=
+G=L^+ =
 \begin{pmatrix}
 \frac12&-\frac16&-\frac13\\
 -\frac16&\frac16&0\\
@@ -218,32 +191,18 @@ and $\quad R_{13} = G_{11}+G_{33}-2G_{13} = \frac32$
 
 Now temporarily forget the original path drawing and require only
 $$
-\|a_{12}\|^2=1,
-\qquad
-\|a_{23}\|^2=\frac12,
-\qquad
-\|a_{13}\|^2=\frac32
+\|a_{12}\|^2=1, \qquad \|a_{23}\|^2=\frac12, \qquad \|a_{13}\|^2=\frac32
 $$
 Since
 $$
-\|a_{13}\|^2
-=
-\|a_{12}\|^2+\|a_{23}\|^2
+\|a_{13}\|^2 = \|a_{12}\|^2+\|a_{23}\|^2
 $$
 the three points form a right triangle with the right angle at $a_2$.
 
 For example, after an arbitrary translation of the entire configuration, we may choose
 $$
-a_2=(0,0),
-\qquad
-a_1=(1,0),
-\qquad
-a_3=
-\left(
-0,\frac1{\sqrt2}
-\right)
+a_2=(0,0), \qquad a_1=(1,0), \qquad a_3=\left(0,\frac1{\sqrt2}\right)
 $$
-
 > [!example] The graph and its geometry
 > The original graph $1-2-3$ is usually drawn as a straight path.
 >
@@ -271,26 +230,17 @@ can be viewed as an application of a distance operator.
 
 For a symmetric matrix $B$, define
 $$
-\mathcal D(B)_{ij}
-=
-B_{ii}+B_{jj}-2B_{ij}
+\mathcal D(B)_{ij} = B_{ii}+B_{jj}-2B_{ij}
 $$
 If $B$ is a Gram matrix of points, then $\mathcal D(B)$ is the matrix of squared distances between them.
 
 Therefore
 $$
-\boxed{
-R=\mathcal D(G)=\mathcal D(L^+)
-}
-\tag{7}
+\boxed{R = \mathcal D(G)=\mathcal D(L^+)} \tag{7}
 $$
 For the purposes of this note, the chain
 $$
-L
-\longrightarrow
-G=L^+
-\longrightarrow
-R=\mathcal D(G)
+L \longrightarrow G=L^+ \longrightarrow R=\mathcal D(G)
 $$
 is sufficient.
 
@@ -311,7 +261,9 @@ Thus strengthening the connectivity of the network can be interpreted as a metri
 The Laplacian of a connected weighted graph defines not only an electrical network but also a Euclidean geometric representation of its vertices.
 
 The Green matrix $\quad G=L^+ \quad$ is the Gram matrix of the centered position vectors $x_i$, while effective resistances are given by
-$$\boxed{R_{ij} = \|a_{ij}\|^2 = \mathbf e_{ij}^{\mathsf T} L^+ \mathbf e_{ij}} \tag{8}$$
+$$
+\boxed{R_{ij} = \|a_{ij}\|^2 = \mathbf e_{ij}^{\mathsf T} L^+ \mathbf e_{ij}} \tag{8}
+$$
 Thus the connection structure of the graph determines the mutual arrangement of points in a Euclidean space.
 
 The next step is to pass from the squared norm of one vector $a_{ij}$ to the inner product of two vectors $a_{ij}$ and $a_{kl}$. This will give a geometric interpretation of measuring a potential difference across one pair of vertices while passing current through another.

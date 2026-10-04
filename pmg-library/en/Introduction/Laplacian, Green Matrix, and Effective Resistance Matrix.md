@@ -49,11 +49,7 @@ $$
 $$
 the effective resistance is expressed through the Green matrix as
 $$
-R_{ij}
-=
-\mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij}
-=
-G_{ii}+G_{jj}-2G_{ij}
+R_{ij} = \mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij} = G_{ii}+G_{jj}-2G_{ij}
 $$
 
 Thus $L$, $G$, and $R$ describe the same network from different viewpoints.
@@ -80,20 +76,15 @@ This inversion is exactly what the Green matrix $G=L^+$ represents.
 
 To remove the common constant level explicitly, introduce
 $$
-\boxed{
-J
-=
-I-\frac1n\mathbf 1\mathbf 1^{\mathsf T}
-}
-\tag{2}
+\boxed{J = I-\frac1n\mathbf 1\mathbf 1^{\mathsf T}} \tag{2}
 $$
 Let
 $$
-\bar x=\frac1n\sum_i x_i
+\bar x = \frac1n\sum_i x_i
 $$
 Then
 $$
-Jx=x-\bar x\,\mathbf 1
+J \ x = x-\bar x\,\mathbf 1
 $$
 Thus multiplication by $J$ simply subtracts the mean value from all coordinates.
 
@@ -103,14 +94,14 @@ $$
 $$
 If the original vector already has zero coordinate sum, then
 $$
-Jx=x
+J \ x = x
 $$
 
 For this reason, $J$ is called the **centering matrix**.
 
 At the same time, $J$ is a projector. Here the projection has a direct meaning: from any vector it removes the part corresponding to the common constant level and keeps the part whose coordinates sum to zero. Repeating the centering operation changes nothing:
 $$
-J^2=J
+J^2 = J
 $$
 
 > [!note] $J$ as the Laplacian of a complete graph
@@ -131,17 +122,14 @@ A\mathbf 1=0,
 $$
 Then
 $$
-JA=AJ=A
+JA = AJ = A
 $$
 
 Thus, within the class of such matrices, $J$ plays the same role that the ordinary identity matrix $I$ plays for arbitrary matrices.
 
 Both the Laplacian $L$ and the Green matrix $G$ have zero row and column sums. Their product is
 $$
-\boxed{
-LG=GL=J
-}
-\tag{3}
+\boxed{LG=GL=J} \tag{3}
 $$
 
 This equality gives a simple interpretation of pseudoinversion. For ordinary inverse matrices, the product equals $I$. For $L$ and $G$, the common constant direction has been removed, so the role of the identity is played by $J$.
@@ -150,9 +138,7 @@ This equality gives a simple interpretation of pseudoinversion. For ordinary inv
 
 The Green matrix is the Gram matrix of a centered Euclidean representation of the vertices:
 $$
-G_{ij}=\langle x_i,x_j\rangle,
-\qquad
-\sum_i x_i=0
+G_{ij}=\langle x_i,x_j\rangle, \qquad \sum_i x_i=0
 $$
 Therefore, the squared distance between vertices $i$ and $j$ is
 $$
@@ -169,23 +155,16 @@ $$
 
 In the resistance representation, this squared distance is equal to the effective resistance:
 $$
-\boxed{
-R_{ij}
-=
-G_{ii}+G_{jj}-2G_{ij}
-}
-\tag{4}
+\boxed{R_{ij} = G_{ii}+G_{jj}-2G_{ij}} \tag{4}
 $$
 
 For any symmetric matrix $B$, define the distance operator by
 $$
-\mathcal D(B)_{ij}
-=
-B_{ii}+B_{jj}-2B_{ij}
+\mathcal D(B)_{ij} = B_{ii}+B_{jj}-2B_{ij}
 $$
 Then formula (4) can be written compactly as
 $$
-R=\mathcal D(G)
+R = \mathcal D(G)
 $$
 
 This is not a matrix inversion. The distance operator converts data about inner products into data about squared distances.
@@ -230,10 +209,7 @@ JRJ=-2G
 $$
 and the inverse formula is
 $$
-\boxed{
-G=-\frac12JRJ
-}
-\tag{5}
+\boxed{G = -\frac12JRJ} \tag{5}
 $$
 
 Thus the matrix of all effective resistances completely determines the centered Green matrix.
@@ -248,12 +224,7 @@ $$
 $$
 Then
 $$
-G_{ij}
-=
-\frac12
-\left(
-\bar R_i+\bar R_j-R_{ij}-\bar R
-\right)
+G_{ij} = \frac12 \left(\bar R_i+\bar R_j-R_{ij}-\bar R\right)
 $$
 
 The matrix formula $G=-\frac12JRJ$ and this entrywise formula are equivalent.
@@ -266,31 +237,17 @@ G=L^+
 $$
 the pseudoinverse can be taken once again:
 $$
-\boxed{
-L=G^+
-}
-\tag{6}
+\boxed{L=G^+} \tag{6}
 $$
 
 Hence the Laplacian can also be reconstructed from the effective resistance matrix:
 $$
-\boxed{
-L=
-\left(
--\frac12JRJ
-\right)^+
-}
-\tag{7}
+\boxed{L = \left(-\frac12JRJ \right)^+} \tag{7}
 $$
 
 In the opposite direction,
 $$
-\boxed{
-R_{ij}
-=
-\mathbf e_{ij}^{\mathsf T}L^+\mathbf e_{ij}
-}
-\tag{8}
+\boxed{R_{ij} = \mathbf e_{ij}^{\mathsf T}L^+\mathbf e_{ij}} \tag{8}
 $$
 
 Thus, for a connected undirected graph with positive conductances, all three representations can be reconstructed from one another.
@@ -299,10 +256,7 @@ Thus, for a connected undirected graph with positive conductances, all three rep
 
 The main transitions can be collected in a single scheme:
 $$
-\boxed{
-L
-\overset{+}{\longleftrightarrow}
-G
+\boxed{L \overset{+}{\longleftrightarrow} G
 \overset{\mathcal D}{\longleftrightarrow}
 R
 }

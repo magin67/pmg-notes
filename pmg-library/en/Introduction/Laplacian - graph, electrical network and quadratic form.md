@@ -20,11 +20,15 @@ We will explore these representations through one small example. Familiarity wit
 A **graph** consists of vertices and edges connecting them. Label the vertices $1,\ldots,n$. Assign a connection weight $c_{ij}$ to each pair of distinct vertices.
 
 We consider an undirected graph with nonnegative weights:
-$$c_{ij}=c_{ji}\geq0,\qquad c_{ii}=0.$$
+$$
+c_{ij}=c_{ji}\geq0,\qquad c_{ii}=0.
+$$
 If $c_{ij}>0$, there is an edge between the vertices; if $c_{ij}=0$, there is no direct connection. Loops, which connect a vertex to itself, are excluded here. The weights form the **weighted adjacency matrix** $C=(c_{ij})$.
 
 In an electrical network, $c_{ij}$ is the **conductance** of the edge. It is the reciprocal of its resistance:
-$$r_{ij}=\frac1{c_{ij}}\qquad(c_{ij}>0).$$
+$$
+r_{ij}=\frac1{c_{ij}}\qquad(c_{ij}>0).
+$$
 A higher conductance allows a larger current to flow under the same potential difference. Thus, a weight in this model measures the strength of a connection. Replacing it with a road length or travel time would change its meaning: larger values of those weights usually mean a greater obstacle to movement.
 
 Consider a path with three vertices:
@@ -63,7 +67,9 @@ $$
 \tag{2}
 $$
 This is Kirchhoff's current law for one vertex. Adding these equations over all vertices cancels the internal currents and gives the necessary condition
-$$\sum_i J_i=0.$$
+$$
+\sum_i J_i=0.
+$$
 All current injected into the network must be withdrawn somewhere.
 
 In our example, inject $2$ amperes at vertex 1 and withdraw the same current at vertex 3. Then $J=(2,0,-2)^{\mathsf T}$, and the balance equations are
@@ -80,11 +86,15 @@ The same current of $2$ amperes flows through both edges. The voltages differ: t
 ## How the Laplacian arises
 
 Collect the coefficients of equations (2) into a matrix. Write the total weight of the connections at a vertex as
-$$d_i=\sum_jc_{ij}.$$
+$$
+d_i=\sum_jc_{ij}.
+$$
 The number $d_i$ is called the **weighted degree of the vertex**. If every existing edge has weight 1, it equals the ordinary degree, the number of neighbors.
 
 Expanding the balance equation gives
-$$d_i\varphi_i-\sum_{j\ne i}c_{ij}\varphi_j=J_i.$$
+$$
+d_i\varphi_i-\sum_{j\ne i}c_{ij}\varphi_j=J_i.
+$$
 
 > [!info] Definition. Laplacian
 > The Laplacian of the weighted graph considered here is the matrix
@@ -116,7 +126,9 @@ Two properties of the Laplacian follow immediately from its definition: it is sy
 ## Potentials are determined up to an additive constant
 
 Currents depend only on potential differences. If we add the same number $\alpha$ to every $\varphi_i$, then
-$$(\varphi_i+\alpha)-(\varphi_j+\alpha)=\varphi_i-\varphi_j.$$
+$$
+(\varphi_i+\alpha)-(\varphi_j+\alpha)=\varphi_i-\varphi_j.
+$$
 All voltages and currents remain unchanged. In this model, the physical state of the network is determined by potential differences, rather than absolute potentials. Thus, the vectors $\varphi$ and $\varphi+\alpha\mathbf1$ describe the same state.
 
 In matrix notation,
@@ -127,7 +139,9 @@ $$
 where $\mathbf1$ is the column vector of ones. The nonzero vector $\mathbf1$ is mapped to zero, so $L$ is singular and has no ordinary inverse $L^{-1}$. This reflects the freedom to choose a reference potential; it is not an error in the equations.
 
 To obtain a unique potential vector, we can impose an additional condition that selects one representative from this family of solutions. In our example, set $\varphi_3=0$. Equation (3) then gives
-$$\varphi_2=1,\qquad\varphi_1=3.$$
+$$
+\varphi_2=1,\qquad\varphi_1=3.
+$$
 The middle equation holds automatically: $(1-3)+2(1-0)=0$. It is sufficient to solve the system for the first two vertices:
 $$
 \begin{pmatrix}1&-1\\-1&3\end{pmatrix}
@@ -150,7 +164,9 @@ This is the same physical state: the differences across the edges are still 2 an
 ## The quadratic form of the network
 
 Besides computing currents, the Laplacian assigns a single number to a potential distribution:
-$$\mathcal Q(\varphi)=\varphi^{\mathsf T}L\varphi.$$
+$$
+\mathcal Q(\varphi)=\varphi^{\mathsf T}L\varphi.
+$$
 The superscript $\mathsf T$ denotes transposition: a column becomes a row. The matrix product yields a scalar. This expression is called a **quadratic form** because it consists of squares of variables and their pairwise products.
 
 Expand it in terms of the connections. Each edge $\{i,j\}$ contributes two diagonal terms and two identical mixed terms:
@@ -180,7 +196,9 @@ $$
 Thus, $\mathcal Q(\varphi)$ is the total power dissipated in the network. With potentials in volts and conductances in siemens, it is measured in watts.
 
 For the path with potentials $(3,1,0)^{\mathsf T}$,
-$$\mathcal Q(\varphi)=1\cdot(3-1)^2+2\cdot(1-0)^2=4+2=6.$$
+$$
+\mathcal Q(\varphi)=1\cdot(3-1)^2+2\cdot(1-0)^2=4+2=6.
+$$
 The first edge dissipates 4 watts and the second dissipates 2 watts.
 
 The same result can be obtained from the external currents. Since $L\varphi=J$,
@@ -207,16 +225,13 @@ By the linearity of $L\varphi=J$, scaling the external current scales all potent
 
 For this current pattern, equation (8) gives
 $$
-\mathcal Q(\varphi)=I\varphi_a-I\varphi_b
-=I(\varphi_a-\varphi_b)=I^2R_{ab}.
-\tag{10}
+\mathcal Q(\varphi)=I\varphi_a-I\varphi_b = I(\varphi_a-\varphi_b)=I^2R_{ab}. \tag{10}
 $$
 Thus, the quadratic form relates the contributions of individual edges to the effective resistance of the network between the current entry and exit vertices.
 
 In our path, a current of 2 amperes produces a potential difference of 3 volts between vertices 1 and 3. Therefore,
 $$
-R_{13}=\frac32\text{ ohms},\qquad
-\mathcal Q(\varphi)=2^2\cdot\frac32=6\text{ W}.
+R_{13}=\frac32\text{ ohms},\qquad \mathcal Q(\varphi)=2^2\cdot\frac32=6\text{ W}.
 $$
 The resistance equals the sum of the resistances of the two edges connected in series: $1+1/2=3/2$ ohms. The power agrees with the sum of the edge contributions found earlier.
 
