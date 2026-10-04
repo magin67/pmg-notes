@@ -27,9 +27,9 @@ Readers are encouraged to begin with two collections, in the following order.
 
 ### From Connectivity to Geometry
 
-1. **[[Laplacian - graph, electrical network and quadratic form]]**. How the structure of connections is expressed in a matrix and how to interpret it in electrical and geometric terms.
-2. **[[Effective Resistance and Graph Geometry]]**. How connections between vertices determine a metric representation of a graph and the space in which its points lie.
-3. **Transfer potential as an inner product.** How a measurement between one pair of points, with current passed through another pair, acquires a geometric meaning.
+1. **[[Laplacian - graph, electrical network and quadratic form]].** How the structure of connections is expressed in a matrix and how to interpret it in electrical and geometric terms.
+2. **[[Effective Resistance and Graph Geometry]].** How connections between vertices determine a metric representation of a graph and the space in which its points lie.
+3. **[[Inner Product of Graph Vectors]].** How a measurement between one pair of points, with current passed through another pair, acquires a geometric meaning.
 
 This collection also includes reference material on the relationships between the Laplacian, Green's matrix, and the resistance matrix.
 
