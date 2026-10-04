@@ -256,11 +256,7 @@ Thus, for a connected undirected graph with positive conductances, all three rep
 
 The main transitions can be collected in a single scheme:
 $$
-\boxed{L \overset{+}{\longleftrightarrow} G
-\overset{\mathcal D}{\longleftrightarrow}
-R
-}
-\tag{9}
+\boxed{L \overset{+}{\longleftrightarrow} G \overset{\mathcal D}{\longleftrightarrow} R} \tag{9}
 $$
 
 The two kinds of transition have different meanings:
@@ -288,59 +284,44 @@ $$
 $$
 with conductances
 $$
-c_{12}=1,
-\qquad
-c_{23}=2
+c_{12}=1, \quad c_{23}=2
 $$
-
 Its Laplacian is
 $$
-L=
-\begin{pmatrix}
+L = \begin{pmatrix}
 1&-1&0\\
 -1&3&-2\\
 0&-2&2
 \end{pmatrix}
 $$
-
 The centering matrix for three vertices is
 $$
-J=
-\begin{pmatrix}
+J = \begin{pmatrix}
 \frac23&-\frac13&-\frac13\\
 -\frac13&\frac23&-\frac13\\
 -\frac13&-\frac13&\frac23
 \end{pmatrix}
 $$
-
 The Green matrix is
 $$
-G=L^+
-=
+G = L^+ =
 \begin{pmatrix}
 \frac12&-\frac16&-\frac13\\
 -\frac16&\frac16&0\\
 -\frac13&0&\frac13
 \end{pmatrix}
 $$
-
 Direct multiplication gives
 $$
-LG=GL=J
+LG = GL = J
 $$
-
 The effective resistances are
 $$
-R_{12}=1,
-\qquad
-R_{23}=\frac12,
-\qquad
-R_{13}=\frac32
+R_{12}=1, \qquad R_{23}=\frac12, \qquad R_{13}=\frac32
 $$
 and therefore
 $$
-R=
-\begin{pmatrix}
+R = \begin{pmatrix}
 0&1&\frac32\\
 1&0&\frac12\\
 \frac32&\frac12&0
@@ -349,27 +330,19 @@ $$
 
 Now perform the reverse transition:
 $$
--\frac12JRJ
-=
-\begin{pmatrix}
+-\frac12JRJ = \begin{pmatrix}
 \frac12&-\frac16&-\frac13\\
 -\frac16&\frac16&0\\
 -\frac13&0&\frac13
-\end{pmatrix}
-=
-G
+\end{pmatrix} = G
 $$
 and taking the pseudoinverse once more returns the original Laplacian:
 $$
-G^+
-=
-\begin{pmatrix}
+G^+ = \begin{pmatrix}
 1&-1&0\\
 -1&3&-2\\
 0&-2&2
-\end{pmatrix}
-=
-L
+\end{pmatrix} = L
 $$
 
 In this example, the complete cycle
@@ -382,7 +355,7 @@ recovers the original matrices without loss of information.
 
 The formula
 $$
-G=-\frac12JRJ
+G = -\frac12JRJ
 $$
 has a more general meaning: it reconstructs the Gram matrix of a Euclidean configuration, centered at its centroid, from the matrix of squared Euclidean distances.
 
@@ -390,7 +363,7 @@ However, not every matrix of squared Euclidean distances is the effective resist
 
 Therefore, in this note the reverse scheme
 $$
-R\longrightarrow G\longrightarrow L
+R \longrightarrow G \longrightarrow L
 $$
 is considered for an $R$ that is already known to arise from a connected undirected graph with positive conductances. In that case, the reconstructed $L$ is the original graph Laplacian.
 
@@ -399,13 +372,7 @@ is considered for an $R$ that is already known to arise from a connected undirec
 >
 > For a connected graph with positive conductances, each of them determines the other two:
 > $$
-> G=L^+,
-> \qquad
-> R=\mathcal D(G),
-> \qquad
-> G=-\frac12JRJ,
-> \qquad
-> L=G^+
+> G=L^+, \qquad R=\mathcal D(G), \qquad G=-\frac12JRJ, \qquad L=G^+
 > $$
 
 ## Related notes
@@ -438,12 +405,8 @@ connects these two descriptions. It removes the common constant level, acts as a
 
 As a result, the entire scheme reduces to four main formulas:
 $$
-G=L^+,
-\qquad
-LG=GL=J
+G = L^+, \qquad LG = GL = J
 $$
 $$
-R=\mathcal D(G),
-\qquad
-G=-\frac12JRJ
+R = \mathcal D(G), \qquad G = -\frac12JRJ
 $$
