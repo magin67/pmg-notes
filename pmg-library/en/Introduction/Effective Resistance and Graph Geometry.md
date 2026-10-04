@@ -67,13 +67,12 @@ $$
 and $\quad a_{ij}=x_j-x_i \quad$
 
 Separately, consider the standard coordinate columns
-$$\mathbf e_i=(0,\ldots,0,1,0,\ldots,0)^{\mathsf T}$$
+$$
+\mathbf e_i=(0,\ldots,0,1,0,\ldots,0)^{\mathsf T}
+$$
 in $\mathbb R^n$, and define
 $$
-\boxed{
-\mathbf e_{ij}=\mathbf e_j-\mathbf e_i
-}
-\tag{3}
+\boxed{\mathbf e_{ij}=\mathbf e_j-\mathbf e_i} \tag{3}
 $$
 The column $\mathbf e_{ij}$ is not a new geometric point or vector in the resistance representation. It is the coordinate representative of the vertex difference with respect to the formal vertex basis.
 
@@ -83,11 +82,7 @@ Thus two different levels are used below:
 
 ## Effective resistance through the Green matrix
 
-Suppose a unit current is injected at vertex $j$ and extracted at vertex $i$. Its coordinate column is
-$$
-\mathbf e_{ij}
-$$
-It belongs to $H$ because the sum of its coordinates is zero.
+Suppose a unit current is injected at vertex $j$ and extracted at vertex $i$. Its coordinate column is $\mathbf e_{ij}$. It belongs to $H$ because the sum of its coordinates is zero.
 
 The centered solution of the network equation is
 $$
