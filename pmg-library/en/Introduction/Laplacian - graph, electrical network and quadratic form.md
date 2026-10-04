@@ -233,9 +233,3 @@ With a fixed vertex labeling, these representations contain the same information
 The electrical interpretation gives the variables a physical meaning. Expression (7) itself can also be applied to arbitrary numerical values on the vertices: it measures their differences along connections, giving greater weight to edges with larger weights.
 
 The Laplacian connects the local rule on each edge to the behavior of the entire network. Solving the problem for different pairs of vertices gives their effective resistances. In the next note, we will explore why these quantities can be represented as squared distances between points, and how this gives rise to a geometry of the graph.
-
-## About this note
-
-An introduction to standard properties of the weighted Laplacian and the laws of resistive networks. No special constructions from polyform algebra are used here.
-
-The draft and its English translation were prepared by ChatGPT based on materials by the project author. The outline and editorial decisions were discussed jointly. The mathematical results presented are standard. English revision 1, based on Russian revision 5, October 3, 2026.

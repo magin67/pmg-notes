@@ -1,5 +1,12 @@
 ---
-title: "Inner Product of Graph Vectors"
+title: Inner Product of Graph Vectors
+date: 2026-10-03
+revision: 1
+status: draft
+text_prepared_by: ChatGPT
+translation_key: inner-product-vectors
+lang: en
+description: Why effective resistance is a squared Euclidean distance and how the Green matrix defines a geometric representation of graph vertices.
 ---
 For a connected undirected graph with positive edge conductances, effective resistance can be interpreted as the squared Euclidean distance between the corresponding vertices. This makes it possible to consider not only the lengths of individual vectors between vertices, but also their inner products.
 
@@ -242,4 +249,4 @@ Vector geometry is only the first level of the construction. For several vectors
 ## Related notes
 
 - [[Effective Resistance and Graph Geometry]] - the Euclidean representation of a graph and the formula $R_{ij}=\|a_{ij}\|^2$
-- [[Laplacian, Green Matrix, and Resistance Matrix]] - direct and inverse transformations between $L$, $G=L^+$, and $R$
+- [[Laplacian, Green Matrix, and Effective Resistance Matrix]] - direct and inverse transformations between $L$, $G=L^+$, and $R$
