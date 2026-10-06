@@ -70,11 +70,11 @@ This distinction is useful because permuting the same family may change the sign
 ## Boundary
 
 For simplices we use the standard boundary operator $\partial$. For a simplex $[a_1\ldots a_k]$, its boundary is the alternating sum of simplices obtained by deleting one element:
+
 $$
-\partial[a_1\ldots a_k]
-=
-\sum_{i=1}^k(-1)^{i-1}[a_1\ldots\widehat{a_i}\ldots a_k]
+\partial[a_1\ldots a_k] = \sum_{i=1}^k(-1)^{i-1}[a_1\ldots\widehat{a_i}\ldots a_k]
 $$
+
 We denote boundaries by round brackets. In particular, $(ab)=\partial[ab]=b-a$, while $(abc)=\partial[abc]=[bc]-[ac]+[ab]$.
 
 The grade of a boundary is one less than the grade of the original simplex. Thus the vector $(ab)$ has grade $1$, while the boundary of a triangle $(abc)$ has grade $2$.
