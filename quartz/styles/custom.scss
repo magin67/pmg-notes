@@ -23,3 +23,14 @@ a.internal-link {
 
   --color: var(--callout-color, #448aff) !important;
 }
+
+/* Цвета в формате, совместимом с Mermaid */
+:root {
+  --secondary: #284b63 !important;
+  --tertiary: #84a59d !important;
+}
+
+:root[saved-theme="dark"] {
+  --secondary: #7b97aa !important;
+  --tertiary: #84a59d !important;
+}
