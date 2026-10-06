@@ -34,3 +34,7 @@ a.internal-link {
   --secondary: #7b97aa !important;
   --tertiary: #84a59d !important;
 }
+
+.callout[data-callout="example"] {
+  background-color: rgba(140, 100, 210, 0.12) !important;
+}
