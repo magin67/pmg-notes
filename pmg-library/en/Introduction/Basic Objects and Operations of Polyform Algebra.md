@@ -70,9 +70,11 @@ This distinction is useful because permuting the same family may change the sign
 ## Boundary
 
 For simplices we use the standard boundary operator $\partial$. For a simplex $[a_1\ldots a_k]$, its boundary is the alternating sum of simplices obtained by deleting one element:
+
 $$
 \partial[a_1\ldots a_k] = \sum_{i=1}^k(-1)^{i-1}[a_1\ldots\widehat{a_i}\ldots a_k]
 $$
+
 We denote boundaries by round brackets. In particular, $(ab)=\partial[ab]=b-a$, while $(abc)=\partial[abc]=[bc]-[ac]+[ab]$.
 
 The grade of a boundary is one less than the grade of the original simplex. Thus the vector $(ab)$ has grade $1$, while the boundary of a triangle $(abc)$ has grade $2$.
@@ -80,6 +82,7 @@ The grade of a boundary is one less than the grade of the original simplex. Thus
 The fundamental standard property of the boundary operator is $\partial^2=0$.
 
 The boundary operator is compatible with the exterior product through the graded Leibniz rule. If $X$ has grade $k$, then
+
 $$
 \partial(X\wedge Y)
 =
@@ -110,12 +113,9 @@ If a connected family of graph vectors contains no such dependence, its product 
 For later applications, an important fact is that exterior multiplication of boundaries does not take us outside the class of boundaries.
 
 Let $B_1=\partial X$ and $B_2=\partial Y$. Since $\partial B_2=0$, the Leibniz rule gives
+
 $$
-B_1\wedge B_2
-=
-\partial X\wedge B_2
-=
-\partial(X\wedge B_2)
+B_1\wedge B_2 = \partial X\wedge B_2 = \partial(X\wedge B_2)
 $$
 Therefore, the exterior product of two boundaries is again a boundary.
 
@@ -164,13 +164,17 @@ We also introduce the **unit form** $e$ of grade $0$. It is the neutral element 
 The key operation of polyform algebra is defined through the exterior product of arguments.
 
 Let $[X,Y]$ and $[A,B]$ be bilinear forms. Define
+
 $$
 [X,Y][A,B]=[X\wedge A,Y\wedge B]\tag{1}
 $$
+
 For quadratic forms, this gives the particularly simple rule
+
 $$
 [X]^2[A]^2=[X\wedge A]^2\tag{2}
 $$
+
 If $X$ has grade $k$ and $A$ has grade $m$, then their product has grade $k+m$.
 
 Thus, the product of two first-grade quadratic forms is already a second-grade form. For example, $[(ab)]^2[(bc)]^2=[(abc)]^2$.
@@ -204,21 +208,19 @@ Later, this property will be the reason why forest-like sets of links survive in
 The connection with geometry appears once an inner product is specified.
 
 Let $u_1,\ldots,u_k$ be vectors in a Euclidean space. The standard inner product induces an inner product on the exterior power such that
+
 $$
-\left\|u_1\wedge\cdots\wedge u_k\right\|^2
-=
-\det G(u_1,\ldots,u_k)
-\tag{3}
+\left\|u_1\wedge\cdots\wedge u_k\right\|^2 = \det G(u_1,\ldots,u_k) \tag{3}
 $$
+
 where $G(u_1,\ldots,u_k)$ is the Gram matrix.
 
 On the other hand, in polyform algebra
+
 $$
-[u_1]^2\cdots[u_k]^2
-=
-[u_1\wedge\cdots\wedge u_k]^2
-\tag{4}
+[u_1]^2\cdots[u_k]^2 = [u_1\wedge\cdots\wedge u_k]^2 \tag{4}
 $$
+
 Therefore, **the metric evaluation of a product of first-grade quadratic forms equals the Gram determinant of their arguments**.
 
 For two vectors, this is the squared area of the corresponding parallelogram. For three vectors, it is the squared volume of the parallelepiped. For $k$ vectors, it is the squared corresponding $k$-dimensional volume.
@@ -241,6 +243,7 @@ When we pass to graphs, a narrower class is selected: the arguments of the eleme
 Because the product of boundaries is again a boundary, all products of such forms remain inside the same class. Graph polyforms therefore naturally live in the **subalgebra of forms on boundaries**.
 
 The sequence of specializations can be written schematically as
+
 $$
 \text{exterior algebra of objects}
 \longrightarrow
@@ -270,6 +273,7 @@ graph LR
 When the representation of an object is clear from context, we use its ordinary symbol. Thus the Laplacian polyform is denoted simply by $L$. If the matrix representation is needed in the same discussion, we distinguish the matrix typographically as $\mathbf L$.
 
 For the cycle $C_4$, the matrix Laplacian is
+
 $$
 \mathbf L=
 \begin{array}{c|rrrr}
@@ -281,12 +285,15 @@ c & 0 & -1 & 2 & -1\\
 d & -1 & 0 & -1 & 2
 \end{array}
 $$
+
 The row and column headings make explicit that the matrix is indexed by graph vertices. Diagonal entries belong to the vertices themselves and equal their degrees, while off-diagonal entries describe links between the corresponding pairs of vertices.
 
 The same graph can be written in polyform algebra. Associate with each edge its graph vector: $(ab)$, $(bc)$, $(cd)$, and $(da)$. The quadratic form of each such vector represents one link. Therefore, the polyform representation of the Laplacian is
+
 $$
 L=[(ab)]^2+[(bc)]^2+[(cd)]^2+[(da)]^2\tag{5}
 $$
+
 In later polyform formulas, this is the representation meant by the symbol $L$ unless stated otherwise.
 
 The meaning of multiplication is now visible directly on the graph. Two adjacent links give a second-grade form: $[(ab)]^2[(bc)]^2=[(abc)]^2$. Two nonadjacent links give a two-component boundary: $[(ab)]^2[(cd)]^2=[(ab)(cd)]^2$.
@@ -296,9 +303,11 @@ The product of three consecutive edges of the cycle gives one third-grade bounda
 Thus, already for $C_4$, we can see that a polyform is not another notation for matrix multiplication. It stores links as quadratic forms of graph vectors, while multiplication combines them into joint boundary objects of higher grade.
 
 For an arbitrary weighted graph, the Laplacian polyform is
+
 $$
 L=\sum_{i<j}c_{ij}[(ij)]^2\tag{6}
 $$
+
 Each term has grade $1$, so $L$ is a homogeneous quadratic polyform of first grade.
 
 Its square already contains second-grade forms. If $q_e=[v_e]^2$, then $L^2=\sum_{e,f}c_ec_fq_eq_f$.

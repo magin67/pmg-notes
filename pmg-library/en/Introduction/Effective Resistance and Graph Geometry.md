@@ -36,9 +36,11 @@ $$
 Therefore the ordinary inverse $L^{-1}$ does not exist. Electrically, this reflects the fact that adding the same constant to all potentials does not change potential differences or currents.
 
 Only the centered part of the space is essential:
+
 $$
 H = \mathbf 1^\perp=\left\{u\in\mathbb R^n:\sum_i u_i=0\right\}
 $$
+
 For a connected graph, the restriction of the Laplacian to $H$ is positive definite and invertible.
 
 This inverse map, written in the full space, is represented by the Moore-Penrose pseudoinverse
@@ -61,19 +63,25 @@ Let $\quad a_1,\ldots,a_n \quad$ be the points of a Euclidean space correspondin
 For each pair of vertices, define the vector $\quad a_{ij}=a_j-a_i \quad$
 
 Now choose the centroid of these points as the origin and denote by $x_i$ the position vector of the point $a_i$ relative to this origin. Then
+
 $$
 \sum_i x_i=0
 $$
+
 and $\quad a_{ij}=x_j-x_i \quad$
 
 Separately, consider the standard coordinate columns
+
 $$
 \mathbf e_i=(0,\ldots,0,1,0,\ldots,0)^{\mathsf T}
 $$
+
 in $\mathbb R^n$, and define
+
 $$
 \boxed{\mathbf e_{ij}=\mathbf e_j-\mathbf e_i} \tag{3}
 $$
+
 The column $\mathbf e_{ij}$ is not a new geometric point or vector in the resistance representation. It is the coordinate representative of the vertex difference with respect to the formal vertex basis.
 
 Thus two different levels are used below:
