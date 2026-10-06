@@ -36,11 +36,9 @@ $$
 Therefore the ordinary inverse $L^{-1}$ does not exist. Electrically, this reflects the fact that adding the same constant to all potentials does not change potential differences or currents.
 
 Only the centered part of the space is essential:
-
 $$
-H = \mathbf 1^\perp = \left\{u\in\mathbb R^n: \sum_i u_i=0\right\}
+H = \mathbf 1^\perp=\left\{u\in\mathbb R^n:\sum_i u_i=0\right\}
 $$
-
 For a connected graph, the restriction of the Laplacian to $H$ is positive definite and invertible.
 
 This inverse map, written in the full space, is represented by the Moore-Penrose pseudoinverse
