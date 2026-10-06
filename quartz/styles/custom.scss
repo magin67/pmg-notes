@@ -10,3 +10,16 @@ a.internal,
 a.internal-link {
   background: transparent !important;
 }
+
+/* Фон и рамка блоков примечаний, примеров и определений */
+.callout[data-callout] {
+  background-color: color-mix(
+    in srgb, var(--callout-color, #448aff) 10%, transparent
+  ) !important;
+
+  border: 1px solid color-mix(
+    in srgb, var(--callout-color, #448aff) 30%, transparent
+  ) !important;
+
+  --color: var(--callout-color, #448aff) !important;
+}
