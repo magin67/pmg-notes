@@ -16,13 +16,6 @@ The library brings together established results, explanations of basic concepts,
 
 The approach is based on polyform algebra. One of the questions that led to its development was how changing one or more couplings affects the properties of an entire system. Products of forms and the Laplacian exponential in this algebra describe the joint effects of couplings and the resulting metric and combinatorial characteristics.
 
-## Reference documents
-
-| Document | When to consult it |
-|---|---|
-| **PMG Specification** | To check the precise definition of an object, notation, or rule for an operation |
-| **Glossary and Notation** | To clarify the meaning of a term, its English equivalent, and how its use differs from standard usage |
-
 ## Introductory series
 
 Ten notes introduce the Laplacian, resistance geometry, coupling variations, and polyform algebra.
