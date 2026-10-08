@@ -1,5 +1,5 @@
 ---
-title: "Varying Several Couplings Together"
+title: Varying Several Couplings Together
 date: 2026-10-05
 updated: 2026-10-08
 revision: 2
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: joint-edge-variation
 lang: en
-description: "Exact formulas for simultaneous conductance changes. Gram determinants as variation coefficients of the spanning-tree coefficient, edge probabilities, and criteria for preserving connectivity."
+description: Exact formulas for simultaneous conductance changes. Gram determinants as variation coefficients of the spanning-tree coefficient, edge probabilities, and criteria for preserving connectivity.
+order: "7"
 ---
 
 When several conductances change, their effect on resistances is determined by the same Green matrix. The interaction of the selected couplings is described by the matrix of inner products of the corresponding affine vectors. Its principal minors are coefficients in the change of the spanning-tree coefficient and squared higher-dimensional volumes.

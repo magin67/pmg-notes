@@ -1,5 +1,5 @@
 ---
-title: "Variation of a Single Edge"
+title: Variation of a Single Edge
 date: 2026-10-04
 updated: 2026-10-08
 revision: 2
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: single-edge-variation
 lang: en
-description: "Exact changes in the Green matrix, effective resistances, spanning-tree coefficient, and weights of separating spanning 2-forests when one conductance varies."
+description: Exact changes in the Green matrix, effective resistances, spanning-tree coefficient, and weights of separating spanning 2-forests when one conductance varies.
+order: "6"
 ---
 
 Changing one conductance produces a perturbation of rank at most one in the Laplacian. This yields exact formulas for the Green matrix, effective resistances, and spanning-tree coefficient. Resistance sensitivities are expressed through inner products of affine vectors, while changes in the weights of separating spanning forests are related to Gram determinants.

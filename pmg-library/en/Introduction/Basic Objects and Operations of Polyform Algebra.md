@@ -1,5 +1,5 @@
 ---
-title: "Basic Objects and Operations of Polyform Algebra"
+title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
 updated: 2026-10-08
 revision: 3
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
 lang: en
-description: "Points, affine vectors, exterior products, boundaries, and forms. The four-point identity, polyform multiplication, grades, and the polyform representation of the Laplacian."
+description: Points, affine vectors, exterior products, boundaries, and forms. The four-point identity, polyform multiplication, grades, and the polyform representation of the Laplacian.
+order: "8"
 ---
 
 In [[Varying several couplings together|joint variations of couplings]], mixed coefficients are expressed by Gram determinants of several affine vectors. Polyform algebra associates a single formal object with such a system of vectors and allows operations on it before a numerical metric is specified.

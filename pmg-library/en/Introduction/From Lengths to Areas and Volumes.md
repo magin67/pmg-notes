@@ -1,5 +1,5 @@
 ---
-title: "From Lengths to Areas and Volumes"
+title: From Lengths to Areas and Volumes
 date: 2026-10-04
 updated: 2026-10-08
 revision: 2
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: lengths-areas-volumes
 lang: en
-description: "Gram determinants, areas, and volumes of resistance simplices. Connections with the spanning-tree coefficient and edge-inclusion probabilities in a random spanning tree."
+description: Gram determinants, areas, and volumes of resistance simplices. Connections with the spanning-tree coefficient and edge-inclusion probabilities in a random spanning tree.
+order: "5"
 ---
 
 Inner products determine lengths and angles as well as areas, volumes, and their higher-dimensional analogues. The squares of these quantities are expressed by Gram determinants. In the resistance representation of a graph, Gram matrix entries are computed from effective resistances, and Gram determinants are related to spanning trees.

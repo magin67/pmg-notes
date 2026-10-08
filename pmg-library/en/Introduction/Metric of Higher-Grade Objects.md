@@ -1,5 +1,5 @@
 ---
-title: "Metric of Higher-Grade Objects"
+title: Metric of Higher-Grade Objects
 date: 2026-10-06
 updated: 2026-10-08
 revision: 2
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric
 lang: en
-description: "Extension of the inner product to boundaries at each grade. Mixed Gram determinants, squared norms, areas and volumes, and numerical evaluation of forms."
+description: Extension of the inner product to boundaries at each grade. Mixed Gram determinants, squared norms, areas and volumes, and numerical evaluation of forms.
+order: "9"
 ---
 
 In [[Basic Objects and Operations of Polyform Algebra]], boundaries of grade $k$ were identified with the exterior power $\Lambda^kW$ of the space of affine vectors $W$. An inner product on $W$ determines a metric on each of these exterior powers. Objects are compared within the same grade; no inner product between different grades is introduced here.

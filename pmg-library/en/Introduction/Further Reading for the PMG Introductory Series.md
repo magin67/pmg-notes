@@ -9,6 +9,7 @@ text_prepared_by: ChatGPT
 translation_key: introductory-reading
 lang: en
 description: Annotated reading recommendations on graphs, electric networks, resistance geometry, matrix perturbations, and exterior algebra for the PMG introductory series.
+order: "100"
 ---
 
 This list supplements the ten introductory notes. Sources are grouped into three themes; each entry identifies recommended sections, connections to the notes, and access options. All sources below are in English.

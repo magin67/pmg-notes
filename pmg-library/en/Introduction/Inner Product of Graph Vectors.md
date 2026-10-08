@@ -1,5 +1,5 @@
 ---
-title: "Inner Product of Graph Vectors"
+title: Inner Product of Graph Vectors
 date: 2026-10-03
 updated: 2026-10-08
 revision: 2
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: inner-product-vectors
 lang: en
-description: "Inner products of affine vectors through the Green matrix and four effective resistances. Electrical interpretation, reciprocity of measurements, and the four-point identity."
+description: Inner products of affine vectors through the Green matrix and four effective resistances. Electrical interpretation, reciprocity of measurements, and the four-point identity.
+order: "3"
 ---
 
 In [[Effective Resistance and Graph Geometry]], the vertices of a connected graph were represented by points in Euclidean space whose squared distances equal the effective resistances. The same construction determines inner products of affine vectors between vertices. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.

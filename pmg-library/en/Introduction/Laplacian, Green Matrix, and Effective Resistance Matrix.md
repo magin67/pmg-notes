@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-green-resistance-matrices
 lang: en
-description: "Forward and inverse transformations between the Laplacian, Green matrix, and effective resistance matrix. Centering and reconstruction of a network from effective resistances."
+description: Forward and inverse transformations between the Laplacian, Green matrix, and effective resistance matrix. Centering and reconstruction of a network from effective resistances.
+order: "4"
 ---
 
 The Laplacian $L$, Green matrix $G$, and effective resistance matrix $R$ are mutually reconstructible representations of the same network. The Laplacian specifies the conductances, the Green matrix specifies the inner products of centered position vectors, and the resistance matrix contains the squared pairwise distances.

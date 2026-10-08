@@ -1,5 +1,5 @@
 ---
-title: "PMG Introductory Series"
+title: PMG Introductory Series
 date: 2026-10-08
 updated: 2026-10-08
 revision: 1
@@ -9,6 +9,7 @@ text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
 lang: en
 description: "Reading order for the ten introductory PMG notes: resistance geometry, coupling variations, polyform algebra, and the Laplacian exponential. Prerequisites and recommended reading."
+order: "0"
 ---
 
 The introductory series connects the graph Laplacian, electrical networks, resistance geometry, and polyform algebra. Its ten notes form a sequential course, from current equations and effective resistance to the extraction of metric quantities from the Laplacian exponential in the algebra of forms.

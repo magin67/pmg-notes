@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-graph-network-quadratic-form
 lang: en
-description: "The weighted graph Laplacian, current equations, the choice of reference potential, and the quadratic form of dissipated power."
+description: The weighted graph Laplacian, current equations, the choice of reference potential, and the quadratic form of dissipated power.
+order: "1"
 ---
 
 The Laplacian of a weighted graph relates coupling coefficients to the equations of an electrical network. Its quadratic form expresses dissipated power, while solutions of the network equations determine effective resistances between vertices.

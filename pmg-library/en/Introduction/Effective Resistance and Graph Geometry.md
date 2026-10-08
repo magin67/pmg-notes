@@ -1,5 +1,5 @@
 ---
-title: "Effective Resistance and Graph Geometry"
+title: Effective Resistance and Graph Geometry
 date: 2026-10-03
 updated: 2026-10-08
 revision: 2
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry
 lang: en
-description: "The Green matrix as the Gram matrix of a resistance simplex. A Euclidean representation of graph vertices and the distinction between resistance and geometric distance."
+description: The Green matrix as the Gram matrix of a resistance simplex. A Euclidean representation of graph vertices and the distinction between resistance and geometric distance.
+order: "2"
 ---
 
 Effective resistance, introduced in [[Laplacian - graph, electrical network and quadratic form|Laplacian: graph, electrical network and quadratic form]], admits a Euclidean representation. Graph vertices can be represented by points whose squared pairwise distances equal the effective resistances. This representation is constructed from the Green matrix of the Laplacian.

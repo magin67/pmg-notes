@@ -1,5 +1,5 @@
 ---
-title: "Laplacian Exponential"
+title: Laplacian Exponential
 date: 2026-10-06
 updated: 2026-10-08
 revision: 3
@@ -8,7 +8,8 @@ status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-exponential
 lang: en
-description: "The exponential in the algebra of forms, its forest grade components, and the spanning-tree coefficient. A general proof relating normalized potential to the resistance metric."
+description: The exponential in the algebra of forms, its forest grade components, and the spanning-tree coefficient. A general proof relating normalized potential to the resistance metric.
+order: "10"
 ---
 
 The Laplacian exponential combines products of coupling forms into a single polyform. Its grade components describe spanning forests, and the top-grade component of a connected graph contains the spanning-tree coefficient. Multiplying this exponential by the form of an object and extracting the top-grade coefficient reproduces the metric defined in [[Metric of Higher-Grade Objects]].
