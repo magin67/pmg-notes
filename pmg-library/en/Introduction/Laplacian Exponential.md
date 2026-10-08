@@ -1,415 +1,371 @@
 ---
-title: Laplacian Exponential
+title: "Laplacian Exponential"
 date: 2026-10-06
-revision: 2
+updated: 2026-10-08
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-exponential
 lang: en
-description: The Laplacian exponential in the exterior algebra of forms, its forest expansion, spanning-tree coefficient, and the relation between potentials and the resistance metric of a graph.
+description: "The exponential in the algebra of forms, its forest grade components, and the spanning-tree coefficient. A general proof relating normalized potential to the resistance metric."
 ---
 
-The notes [[Basic Objects and Operations of Polyform Algebra]] and [[Metric of Higher-Grade Objects]] defined the exterior product of forms and the metric values of their arguments. The Laplacian exponential collects products of coupling forms into one polyform. Its grade components describe spanning forests, and the leading coefficient of a connected graph equals its spanning-tree count.
+The Laplacian exponential combines products of coupling forms into a single polyform. Its grade components describe spanning forests, and the top-grade component of a connected graph contains the spanning-tree coefficient. Multiplying this exponential by the form of an object and extracting the top-grade coefficient reproduces the metric defined in [[Metric of Higher-Grade Objects]].
 
-## Laplacian polyform
+## The exponential in the algebra of forms
 
-Let $G$ be a connected undirected graph on vertices $a_1,\ldots,a_n$, $n\ge2$, with positive conductances $c_{ij}$ on its edges. The Laplacian polyform has grade $1$:
-
-$$
-L=\sum_{\{i,j\}\in E}c_{ij}[a_{ij}]^2
-$$
-
-For the affine vector $a_{ij}=a_j-a_i$, orientation does not affect the quadratic coupling form: $[a_{ji}]^2=[a_{ij}]^2$.
-
-Bilinear forms use the exterior product
+Let $G$ be a connected undirected graph on vertices $a_1,\ldots,a_n$, $n\ge2$, with positive conductances on its existing edges. The space of affine vectors $W$ has dimension $n-1$. The Laplacian polyform is
 
 $$
-[X,Y]\wedge[A,B]=[X\wedge A,Y\wedge B]
+L=\sum_{\{i,j\}\in E}c_{ij}[a_{ij}]^2,\qquad a_{ij}=a_j-a_i
 $$
 
-No other product of forms is used in this note, so the sign $\wedge$ between forms is omitted below. In particular,
+All products of forms use the [[Basic Objects and Operations of Polyform Algebra|algebraic definition introduced earlier]]:
 
 $$
-[X]^2[A]^2=[X\wedge A]^2
+[X,Y][A,B]=[X\wedge A,Y\wedge B]
 $$
 
-The product of forms is commutative: exchanging the exterior arguments produces a sign in each argument of the form, and the two signs cancel. For a vector $v$, one has $v\wedge v=0$, hence
+The identity of this algebra is denoted by $e=[1,1]$. For every vector $v$, we have $([v]^2)^2=0$. Also, $L^n=0$, since a product of $n$ forms of grade one on $W$ has zero exterior arguments.
 
-$$
-\bigl([v]^2\bigr)^2=0 \tag{1}
-$$
-
-> [!remark] Unit form
-> The unit form $e$ has grade $0$ and satisfies $ef=fe=f$. Grade zero is identified with scalars, and $e$ with the scalar unit $1$. The notation $e$ makes the algebra of forms explicit.
-
-## Exponential and factorization
-
-Affine vectors form the space of linear combinations of vertices whose coefficients sum to zero. Its dimension is $n-1$, so $L^n=0$.
-
-> [!definition] Metric polyform
-> The **metric polyform of a graph** is the exponential of its Laplacian polyform:
+> [!info] The metric polyform
+> **Definition.** The metric polyform of a graph is the exponential of its Laplacian in the algebra of forms:
 >
 > $$
-> M_G=\exp L=e+L+\frac{L^2}{2!}+\cdots+\frac{L^{n-1}}{(n-1)!} \tag{2}
+> M_G=\exp L=\sum_{k=0}^{n-1}\frac{L^k}{k!}
+> =e+L+\frac{L^2}{2!}+\cdots+\frac{L^{n-1}}{(n-1)!}
+> \tag{1}
 > $$
 >
-> All powers in formula (2) are computed using the exterior product of forms.
+> Here $L^0=e$, and all powers use the product of forms.
 
-> [!remark] Distinction from the matrix exponential
-> $L$ denotes a polyform, while $\mathbf L$ denotes the Laplacian matrix. The matrix exponential $\exp\mathbf L$ uses ordinary matrix multiplication and is a different object. Nilpotency of $L$ in the exterior algebra does not imply nilpotency of the matrix $\mathbf L$.
+The Laplacian matrix is denoted by $\mathbf L$. The matrix exponential $\exp\mathbf L$ uses a different multiplication and does not equal (1). Nilpotence of the polyform $L$ does not imply nilpotence of the matrix $\mathbf L$.
 
-Commutativity of forms allows the exponential of a sum to be factored into a product of exponentials. Formula (1) truncates the exponential of each coupling after its linear term:
-
-$$
-\exp\left(c_{ij}[a_{ij}]^2\right)
-=e+c_{ij}[a_{ij}]^2
-$$
-
-Therefore,
+Commutativity of forms and the identity $([a_{ij}]^2)^2=0$ give the factorization
 
 $$
-M_G=\prod_{\{i,j\}\in E}\left(e+c_{ij}[a_{ij}]^2\right) \tag{3}
+M_G=\prod_{\{i,j\}\in E}\bigl(e+c_{ij}[a_{ij}]^2\bigr)
+\tag{2}
 $$
 
-The factor $e+c_{ij}[a_{ij}]^2$ is called the **factor-form of the coupling**. Formula (3) gives a finite construction of the exponential without computing its powers separately.
+The factor $e+c_{ij}[a_{ij}]^2$ is called the factor-form of the coupling. In the expansion of (2), each coupling is either selected once or omitted.
 
 ## Grade components and spanning forests
 
-The exponential is the sum of its grade components:
+The grade decomposition of the exponential is
 
 $$
-M_G=M_0+M_1+M_2+\cdots+M_{n-1},
-\qquad
-M_0=e,
-\qquad
-M_k=\frac{L^k}{k!}
+M_G=\sum_{k=0}^{n-1}M_k,\qquad M_0=e,\qquad M_k=\frac{L^k}{k!}
+\tag{3}
 $$
 
-Each $M_k$ is a homogeneous polyform of grade $k$, or a grade component of $M_G$.
-
-Expanding formula (3) selects a subset of edges $F\subseteq E$. Its contribution is the product of conductances multiplied by the quadratic form of the exterior product of its edge vectors. If $F$ contains a cycle, its vectors are linearly dependent and the contribution is zero. If $F$ is a forest, the vectors are independent and the contribution is nonzero.
-
-Fix an arbitrary ordering and orientation of the edges, and set
+For an edge subset $F$, fix an arbitrary order and orientations, and set
 
 $$
-B_F=\bigwedge_{\{i,j\}\in F}a_{ij},
-\qquad
+B_F=\bigwedge_{\{i,j\}\in F}a_{ij},\qquad
 w(F)=\prod_{\{i,j\}\in F}c_{ij}
 $$
 
-The sign of $B_F$ depends on these choices, but the form $[B_F]^2$ does not. This gives the forest expansion
+The sign of $B_F$ depends on these choices, but the form $[B_F]^2$ does not. For the empty set, $B_F=1$ and $w(F)=1$.
+
+> [!info] The forest expansion
+> **Theorem.** The grade component of the exponential is
+>
+> $$
+> M_k=\sum_{\substack{F\subseteq E\text{ is a forest}\\|F|=k}}w(F)[B_F]^2
+> \tag{4}
+> $$
+>
+> The forest contains all vertices of the original graph, including isolated vertices, and has $n-k$ components.
+
+In the expansion of (2), each edge set occurs once. A cycle makes the exterior product of its edge vectors zero, while the vectors of a forest are independent. This proves (4). In the power expression (3), each set of $k$ distinct edges occurs in $k!$ orders, explaining the division by $k!$.
+
+For a tree, the product of its edge vectors is the boundary on its vertices, up to sign. For a forest, it is the product of the boundaries of its components. An isolated vertex contributes the factor $\partial a_i=1$.
+
+Denote the sum of weights of forests of a given size by
 
 $$
-M_k=\sum_{\substack{F\subseteq E\text{ is a forest}\\|F|=k}}w(F)[B_F]^2 \tag{4}
+s_k(G)=\sum_{\substack{F\subseteq E\text{ is a forest}\\|F|=k}}w(F)
 $$
 
-All vertices of the graph are retained: vertices untouched by the selected edges are isolated components of the forest. A forest with $k$ edges therefore has $n-k$ components.
-
-The vectors of each tree fuse, up to sign, into the boundary on its vertices. Distinct trees give the exterior product of their component boundaries. For example,
-
-$$
-[(ab)]^2[(bc)]^2=[(abc)]^2,
-\qquad
-[(ab)]^2[(cd)]^2=[(ab)(cd)]^2
-$$
-
-The argument $(abc)$ is the boundary of a triangle, not the simplex $[abc]$.
-
-The total weight of forests of each grade is defined separately:
-
-$$
-s_k(G)=\sum_{\substack{F\subseteq E\text{ is a forest}\\|F|=k}}w(F),
-\qquad
-s_0=1,
-\qquad
-s_1=\sum_{\{i,j\}\in E}c_{ij}
-$$
-
-For unit conductances, $s_k$ counts forests with $k$ edges. The sequence of these numbers is the $f$-vector of the independence complex of the graphic matroid.
-
-> [!remark] Sum of forest coefficients
-> The quantity $s_k$ is the sum of coefficients specifically in the forest expansion of formula (4). Forest forms may satisfy linear relations. The sum of coefficients after an arbitrary rewriting of $M_k$ therefore need not equal $s_k$.
+With unit conductances, this is the number of forests with $k$ edges. The quantity $s_k$ refers to the specific forest expansion (4). Forest forms may satisfy linear relations, so the sum of coefficients after an arbitrary rewriting of $M_k$ need not equal $s_k$.
 
 ## Example: a path on five vertices
 
-Consider the path $P_5$ with unit conductances.
+In the examples, we use the abbreviated notation $(12)=(a_1a_2)$, $(123)=(a_1a_2a_3)$, and similarly for other boundaries.
 
 ```mermaid
 graph LR
-    a((a)) --- b((b))
-    b --- c((c))
-    c --- d((d))
-    d --- e((e))
+    a1((1)) --- a2((2))
+    a2 --- a3((3))
+    a3 --- a4((4))
+    a4 --- a5((5))
 ```
 
-> [!example] Exponential of the path
-> The metric polyform is
+> [!example] Grades of the exponential for the path $P_5$
+> With unit conductances,
 >
 > $$
-> M_{P_5}=(e+[(ab)]^2)(e+[(bc)]^2)(e+[(cd)]^2)(e+[(de)]^2)
+> M_{P_5}=(e+[(12)]^2)(e+[(23)]^2)(e+[(34)]^2)(e+[(45)]^2)
 > $$
 >
-> The same polyform as a sum of grade components:
+> The components in (3) are
 >
 > $$
-> M_{P_5}=M_0+M_1+M_2+M_3+M_4=e+M_1+M_2+M_3+M_4
-> $$
->
-> The components of this expansion are
->
-> $$
-> M_0=e
-> $$
->
-> $$
-> M_1=[(ab)]^2+[(bc)]^2+[(cd)]^2+[(de)]^2
+> M_0=e,\qquad
+> M_1=[(12)]^2+[(23)]^2+[(34)]^2+[(45)]^2
 > $$
 >
 > $$
 > \begin{aligned}
-> M_2={}&[(abc)]^2+[(bcd)]^2+[(cde)]^2+\\
-> &+[(ab)(cd)]^2+[(ab)(de)]^2+[(bc)(de)]^2
+> M_2={}&[(123)]^2+[(234)]^2+[(345)]^2+\\
+> &+[(12)(34)]^2+[(12)(45)]^2+[(23)(45)]^2
 > \end{aligned}
 > $$
 >
 > $$
-> M_3=[(abcd)]^2+[(bcde)]^2+[(abc)(de)]^2+[(ab)(cde)]^2
+> M_3=[(1234)]^2+[(2345)]^2+[(123)(45)]^2+[(12)(345)]^2
 > $$
 >
 > $$
-> M_4=[(abcde)]^2
+> M_4=[(12345)]^2
 > $$
 >
-> Every subset of the path's edges is a forest. The sums of coefficients are therefore binomial coefficients:
->
-> $$
-> (s_0,s_1,s_2,s_3,s_4)=(1,4,6,4,1)
-> $$
->
-> In $M_2$, the boundaries $(abc)$, $(bcd)$, and $(cde)$ describe trees on three vertices; the two remaining vertices of each forest are isolated. The terms $[(ab)(cd)]^2$, $[(ab)(de)]^2$, and $[(bc)(de)]^2$ describe two disconnected edges and one isolated vertex. All six forests have three components.
->
-> In $M_3$, each forest has two components. For example, the argument $(abc)(de)$ contains the boundary of the tree on $a,b,c$ and the boundary of the edge on $d,e$. The only forest with four edges is the path itself.
+> Every edge subset of a path is a forest, so $(s_0,s_1,s_2,s_3,s_4)=(1,4,6,4,1)$. All six forests in $M_2$ have three components. For example, $(123)$ describes a tree on three vertices and two isolated vertices, while $(12)(34)$ describes two edges and the isolated vertex $5$.
 
-## Top-grade form and spanning-tree coefficient
+## The spanning-tree form and top-grade coefficient
 
-A forest with $n-1$ edges on $n$ vertices is a spanning tree. The product of its edge vectors equals, up to sign, the boundary $(a_1\ldots a_n)$. The quadratic forms of all spanning trees therefore coincide.
-
-> [!definition] Spanning-tree form and coefficient
-> Fix the **spanning-tree form**
+> [!info] The spanning-tree form
+> **Definition.** On a fixed vertex set, define
 >
 > $$
 > T_n=[(a_1\ldots a_n)]^2
 > $$
 >
-> The highest-grade component of the metric polyform has the form
->
-> $$
-> M_{n-1}=\tau(G)T_n,
-> \qquad
-> \tau(G)=\sum_{T\text{ is a spanning tree}}\prod_{\{i,j\}\in T}c_{ij} \tag{5}
-> $$
->
-> The coefficient $\tau(G)$ is called the **spanning-tree coefficient**, or **weighted spanning-tree count**. For unit conductances, it counts spanning trees.
+> This is the spanning-tree form of grade $n-1$. In the project's terminology, it is also called the top-grade form.
 
-In the project's terminology, $T_n$ is also called the **top-grade form**, and $\tau(G)T_n$ the **top-grade component**. The component $M_{n-2}$ lies **immediately below the top grade**; it collects spanning forests with two components. For a connected graph, $s_{n-1}=\tau(G)$.
-
-Formula (5) expresses the weighted spanning-tree count in the language of exterior products. By Kirchhoff's theorem, the same coefficient equals any principal minor of order $n-1$ of the Laplacian matrix.
-
-The existence of a spanning tree and positivity of the conductances imply $L^{n-1}\ne0$. The highest nonzero power of $L$ is therefore $n-1$, and its nilpotency index is $n$:
+Forests with $n-1$ edges are spanning trees, and the quadratic form of each is $T_n$. Thus (4) gives
 
 $$
-L^{n-1}\ne0,
-\qquad
-L^n=0,
-\qquad
-\deg M_G=\operatorname{rank}\mathbf L=n-1
+M_{n-1}=\tau(G)T_n,\qquad
+\tau(G)=\sum_{T\text{ is a spanning tree}}\prod_{e\in T}c_e
+\tag{5}
 $$
 
-### Four-cycle
+The number $\tau(G)$ is called the spanning-tree coefficient; with unit conductances, it is the number of spanning trees. The component $M_{n-1}$ is the top-grade component, while $M_{n-2}$ is the component immediately below it and collects spanning 2-forests.
 
-Consider the cycle $C_4$ with unit conductances.
+For a connected graph, $\tau(G)>0$. Hence $L^{n-1}\ne0$, $L^n=0$, and the highest nonzero grade of the exponential is $n-1$. By the matrix-tree theorem, the same $\tau(G)$ equals the determinant of any reduced Laplacian matrix.
 
-```mermaid
-graph LR
-    a((a)) --- b((b))
-    b --- c((c))
-    c --- d((d))
-    d --- a
-```
-
-> [!example] Four spanning trees
-> The exponential has the form
+> [!example] The four-cycle $C_4$
+> For unit-conductance edges $12,23,34,41$,
 >
 > $$
-> M_{C_4}=(e+[(ab)]^2)(e+[(bc)]^2)(e+[(cd)]^2)(e+[(da)]^2)
+> M_{C_4}=(e+[(12)]^2)(e+[(23)]^2)(e+[(34)]^2)(e+[(41)]^2)
 > $$
 >
-> Its grade expansion is
->
-> $$
-> M_{C_4}=M_0+M_1+M_2+M_3=e+M_1+M_2+M_3
-> $$
->
-> Its components are
->
-> $$
-> M_0=e,
-> \qquad
-> M_1=[(ab)]^2+[(bc)]^2+[(cd)]^2+[(da)]^2
-> $$
+> The components of grades zero and one are $M_0=e$ and $M_1=L$. At grade two,
 >
 > $$
 > \begin{aligned}
-> M_2={}&[(abc)]^2+[(bcd)]^2+[(acd)]^2+[(abd)]^2+\\
-> &+[(ab)(cd)]^2+[(bc)(da)]^2
+> M_2={}&[(123)]^2+[(234)]^2+[(134)]^2+[(124)]^2+\\
+> &+[(12)(34)]^2+[(23)(41)]^2
 > \end{aligned}
 > $$
 >
-> Any three of the four edges form a spanning tree. Each of the four contributions equals $[(abcd)]^2$, so
+> Any three edges form a spanning tree, so
 >
 > $$
-> M_3=4[(abcd)]^2,
-> \qquad
-> \tau(C_4)=4
+> M_3=4[(1234)]^2,\qquad \tau(C_4)=4,\qquad M_4=0
 > $$
 >
-> The vectors of the full cycle satisfy $(ab)+(bc)+(cd)+(da)=0$. The product of all four coupling forms is zero, and $M_4=0$.
+> The vanishing fourth grade corresponds to the dependence $(12)+(23)+(34)+(41)=0$.
 
-The path $P_5$ and the cycle $C_4$ each have four edges. Their forest coefficients agree through grade three, but their top-grade components differ:
-
-| Graph | Sums of forest coefficients | Top grade | Spanning-tree count |
+| Graph | Forest weight sums $s_k$ | Top grade | Spanning-tree coefficient |
 |---|---|---:|---:|
-| $P_5$ | $1,4,6,4,1$ | 4 | 1 |
-| $C_4$ | $1,4,6,4$ | 3 | 4 |
+| $P_5$ with unit conductances | $1,4,6,4,1$ | 4 | 1 |
+| $C_4$ with unit conductances | $1,4,6,4$ | 3 | 4 |
 
-### Weighted triangle
-
-> [!example] Conductances and spanning-tree weights
-> Let the conductances of edges $ab$, $bc$, and $ac$ be $\alpha$, $\beta$, and $\gamma$. Then
+> [!example] A weighted triangle
+> For conductances $c_{12}=\alpha$, $c_{23}=\beta$, $c_{13}=\gamma$,
 >
 > $$
 > \begin{aligned}
-> M_G={}&e+\alpha[(ab)]^2+\beta[(bc)]^2+\gamma[(ac)]^2+\\
-> &+(\alpha\beta+\alpha\gamma+\beta\gamma)[(abc)]^2
+> M_G={}&e+\alpha[(12)]^2+\beta[(23)]^2+\gamma[(13)]^2+\\
+> &+(\alpha\beta+\alpha\gamma+\beta\gamma)[(123)]^2
 > \end{aligned}
 > $$
 >
-> The three spanning trees have weights $\alpha\beta$, $\alpha\gamma$, and $\beta\gamma$. Their forms coincide, and their weights add:
->
-> $$
-> \tau(G)=\alpha\beta+\alpha\gamma+\beta\gamma
-> $$
+> The three spanning trees have weights $\alpha\beta$, $\alpha\gamma$, $\beta\gamma$. Their forms coincide, and their weights add to $\tau(G)=\alpha\beta+\alpha\gamma+\beta\gamma$.
 
-## Disconnected graph
+## Disconnected graphs
 
-If the graph has $c$ connected components, including isolated vertices, its edge vectors span a space of dimension $r=n-c$. Maximal forests consist of spanning trees of the individual components. Therefore,
+Definitions (1)-(4) also apply to disconnected graphs. If a graph has $c$ components, including isolated vertices, the rank of its edge-vector system is $r=n-c$. With positive conductances on existing edges,
 
 $$
-\deg M_G=\operatorname{rank}\mathbf L=n-c,
-\qquad
-L^{n-c}\ne0,
-\qquad
-L^{n-c+1}=0
+\deg M_G=\operatorname{rank}\mathbf L=r,\qquad L^r\ne0,\qquad L^{r+1}=0
 $$
 
-For a graph with no edges, $L=0$, $M_G=e$, and the highest nonzero power is understood as $L^0=e$.
+The top-grade component is the quadratic form of the product of the boundaries of all components, multiplied by the product of their spanning-tree coefficients. An isolated vertex contributes boundary $1$ and coefficient $1$.
 
 > [!example] Two disconnected edges
-> For unit edges $ab$ and $cd$,
+> For unit-conductance edges $12$ and $34$,
 >
 > $$
-> M_G=e+[(ab)]^2+[(cd)]^2+[(ab)(cd)]^2
+> M_G=e+[(12)]^2+[(34)]^2+[(12)(34)]^2
 > $$
 >
-> The graph has two components, while its top-grade component contains one quadratic form. Its argument is the product of two component boundaries. The top grade is $4-2=2$.
+> The top grade is $4-2=2$. The top-grade component contains one form whose argument is the product of two component boundaries.
 
-For a general disconnected graph, the argument of the top-grade form is the product of the boundaries of its components, and the coefficient of this form is the product of their spanning-tree coefficients. An isolated vertex contributes the boundary $(a)=1$ and spanning-tree coefficient $1$.
+The number of components is $c=n-\deg M_G$, rather than the number of terms in the top-grade component. With no edges, $L=0$, $M_G=e$, and $L^0=e$ is the only nonzero power. For a disconnected graph, the coefficient of the fixed form $T_n$ is zero; the normalization below is not applied to it.
 
-The number of graph components is determined by $c=n-\deg M_G$. It cannot be identified with the number of terms in the top-grade component; isolated vertices also do not appear as separate factors of positive grade in its argument.
+## The potential of a form
 
-## Potential and normalized potential
-
-Return to a connected graph. In the space of boundary forms on fixed vertices, the top grade $n-1$ is one-dimensional. For any polyform $P$ on this space, define $\tau(P)$ as the coefficient of the fixed form $T_n$:
+Return to a connected graph. The top grade of the algebra of forms on boundaries is one-dimensional. For any polyform $P$ in this algebra, let $\tau(P)$ denote the coefficient of the fixed form $T_n$:
 
 $$
 P_{n-1}=\tau(P)T_n
 $$
 
-In particular, $\tau(M_G)=\tau(G)$.
+In particular, $\tau(M_G)=\tau(G)$. If the component of grade $n-1$ is absent, the coefficient is zero. The choice of $T_n$ does not change when passing to another polyform.
 
-> [!definition] Potential of a form
-> The **polyform potential of a form** $f$ in the metric $M_G$ is
+> [!info] Potential and normalized potential
+> **Definition.** For a form $f$ on boundaries, its polyform potential and normalized potential are
 >
 > $$
-> u_{M_G}(f)=\tau(M_Gf) \tag{6}
-> $$
->
-> Its **normalized potential** is
->
-> $$
-> \frac{u_{M_G}(f)}{u_{M_G}(e)}
-> =\frac{\tau(M_Gf)}{\tau(M_G)}
+> u_{M_G}(f)=\tau(M_Gf),\qquad
+> \frac{u_{M_G}(f)}{u_{M_G}(e)}=\frac{\tau(M_Gf)}{\tau(M_G)}
+> \tag{6}
 > $$
 
-Formula (6) extracts the coefficient of the same $T_n$. If the highest grade of the product is less than $n-1$, this coefficient is zero; no new top-grade form is chosen for the product.
-
-> [!remark] The term “norm”
-> In PMG, the normalized potential is also called the norm of a form. For a quadratic vector form, it equals the square of the ordinary Euclidean norm in the resistance metric. For an arbitrary form, this evaluation is not a norm in the standard sense: it is linear in the form and can have either sign.
-
-For boundaries $X$ and $Y$ of the same grade, normalized potentials reproduce their metric values:
-
-$$
-\frac{\tau(M_G[X,Y])}{\tau(M_G)}=X\cdot Y,
-\qquad
-\frac{\tau(M_G[X]^2)}{\tau(M_G)}=X^2 \tag{7}
-$$
-
-For a vector $v$, this equality follows from the [[Variation of a Single Edge|single-edge variation formula]]. Adding the coupling $t[v]^2$ multiplies the metric polyform by $e+t[v]^2$, so
-
-$$
-M'_G=M_G(e+t[v]^2),
-\qquad
-\tau(M'_G)=\tau(M_G)+t\tau(M_G[v]^2)
-$$
-
-The matrix variation formula gives $\tau(M'_G)/\tau(M_G)=1+tv^2$. Comparing coefficients of $t$ proves the quadratic case of formula (7) for grade one.
-
-For $X=u_1\wedge\cdots\wedge u_k$, comparing mixed coefficients in [[Varying several couplings together|joint variation]] gives
-
-$$
-\frac{\tau(M_G[X]^2)}{\tau(M_G)}
-=\det\bigl(u_i\cdot u_j\bigr)_{i,j=1}^k=X^2
-$$
-
-For $X=u_1\wedge\cdots\wedge u_k$ and $Y=v_1\wedge\cdots\wedge v_k$, the bilinear equality in formula (7) follows from the complementary-minor identity for the reduced Laplacian matrix: normalized complementary minors are expressed by minors of its inverse, which are mixed Gram determinants. Linear extension gives the equality for arbitrary boundary objects of the same grade. This is the metric defined in the preceding note.
-
-If $f$ has grade $k$, only $M_{n-1-k}$ contributes to its potential:
+For a homogeneous form of grade $k$, $0\le k\le n-1$, only the complementary grade of the exponential contributes to (6):
 
 $$
 u_{M_G}(f)=\tau(M_{n-1-k}f)
 $$
 
-In particular, the component $M_{n-2}$ immediately below the top grade determines the metric evaluations of first-grade forms.
+In the project, the normalized potential is also called the PMG norm of the form. For an arbitrary form, this is not a norm in the usual sense: the evaluation is linear and may have either sign. For a quadratic form, it will equal the squared Euclidean norm of its argument.
 
-> [!example] Calculating potentials and norms
-> For the path $P_5$, all four terms of $M_3$ give $T_5$ after multiplication by $[(ae)]^2$. Therefore,
->
-> $$
-> u_{M_{P_5}}([(ae)]^2)=4,
-> \qquad
-> (ae)^2=\frac41=4
-> $$
->
-> The potential and the norm of the form coincide because $\tau(P_5)=1$. The quantity $(ae)^2$ equals the resistance of four unit edges in series.
->
-> For the cycle $C_4$, multiplication of the six terms of $M_2$ by $[(ab)]^2$ makes three vanish and gives $T_4$ for the other three. Hence,
->
-> $$
-> u_{M_{C_4}}([(ab)]^2)=3,
-> \qquad
-> (ab)^2=\frac34
-> $$
->
-> The potential of the form is $3$, and its norm is $3/4$: normalization divides the potential by $\tau(C_4)=4$. An independent electrical check uses the direct edge of resistance $1$ in parallel with a path of resistance $3$, giving effective resistance $1\cdot3/(1+3)=3/4$.
+## A general lemma on the top-grade coefficient
 
-The Laplacian exponential defines the metric polyform together with its forest expansion. Extracting the top-grade coefficient after multiplication by an object's form connects this expansion with the resistance metric and Gram determinants.
+> [!info] The determinant lemma
+> **Lemma.** Let $b_1,\ldots,b_d$ be a basis of a vector space, let $A$ be a symmetric invertible matrix, and set
+>
+> $$
+> L_A=\sum_{p,q=1}^d A_{pq}[b_p,b_q],\qquad
+> T=[b_1\wedge\cdots\wedge b_d]^2
+> $$
+>
+> Let $\tau_b$ denote the coefficient of $T$. For simple objects $X=u_1\wedge\cdots\wedge u_k$, $Y=v_1\wedge\cdots\wedge v_k$, let $U,V$ contain the coordinate columns of their factors in the basis $b$. Then
+>
+> $$
+> \tau_b(\exp L_A)=\det A,\qquad
+> \frac{\tau_b(\exp L_A[X,Y])}{\det A}
+> =\det(U^{\mathsf T}A^{-1}V)
+> \tag{7}
+> $$
+>
+> The formula includes $k=0$ with $X=Y=1$ and the empty determinant equal to one. It extends to general objects of the same grade by bilinearity.
+
+> [!note]- Proof of the lemma
+> **Proof.** For any matrix $C$, set $L_C=\sum C_{pq}[b_p,b_q]$. At the top grade, expanding the product gives
+>
+> $$
+> \frac{L_C^d}{d!}=(\det C)T
+> $$
+>
+> Nonzero terms use each basis element exactly once in each argument. The signs of their permutations give the determinant signs, and the $d!$ orders of the factors cancel the denominator. Thus $\tau_b(\exp L_C)=\det C$, without requiring $C$ to be symmetric.
+>
+> Introduce variables $t_1,\ldots,t_k$ and $D=\operatorname{diag}(t_1,\ldots,t_k)$. Since $[u_i,v_i]^2=[u_i\wedge u_i,v_i\wedge v_i]=0$, commutativity of forms gives
+>
+> $$
+> \exp\left(L_A+\sum_{i=1}^k t_i[u_i,v_i]\right)
+> =\exp L_A\prod_{i=1}^k(e+t_i[u_i,v_i])
+> $$
+>
+> After applying $\tau_b$, the coefficient of $t_1\cdots t_k$ is $\tau_b(\exp L_A[X,Y])$.
+>
+> The coefficient matrix of the polyform in the exponential on the left is $A+UDV^{\mathsf T}$. By the top-grade formula just proved and the matrix determinant lemma,
+>
+> $$
+> \tau_b\left(\exp\left(L_A+\sum_i t_i[u_i,v_i]\right)\right)
+> =\det A\det(I_k+DV^{\mathsf T}A^{-1}U)
+> $$
+>
+> The coefficient of $t_1\cdots t_k$ on the right is $\det A\det(V^{\mathsf T}A^{-1}U)$. Since $A$ is symmetric, the last determinant equals $\det(U^{\mathsf T}A^{-1}V)$. Comparing coefficients proves (7). Simple exterior objects span each grade, so bilinear extension covers all $X,Y$. $\square$
+
+## Agreement with the resistance metric
+
+Choose $d=n-1$ and the basis $b_i=a_i-a_n$ of $W$. In this basis, the coefficient matrix of the polyform $L$ is the reduced Laplacian $A=\mathbf L_0$, obtained by deleting the row and column of vertex $n$.
+
+The boundary and the basis volume are related by
+
+$$
+b_1\wedge\cdots\wedge b_{n-1}=(-1)^{n-1}(a_1\ldots a_n)
+$$
+
+Hence $T=T_n$ and $\tau_b=\tau$: the orientation sign disappears in the quadratic form. The matrix $A$ is positive definite, and the [[From Lengths to Areas and Volumes|Gram matrix relative to the reference vertex]] shows that the matrix of inner products of the $b_i$ is $A^{-1}$. Lemma (7) directly gives the following result.
+
+> [!info] The metric identity
+> **Theorem.** For any boundaries $X,Y\in\Lambda^kW$, $0\le k\le n-1$,
+>
+> $$
+> \frac{\tau(M_G[X,Y])}{\tau(M_G)}=X\cdot Y,\qquad
+> \frac{\tau(M_G[X]^2)}{\tau(M_G)}=X^2
+> \tag{8}
+> $$
+>
+> The right-hand sides use the induced metric of the preceding note; $X^2=X\cdot X$ is a number, while $[X]^2$ is a formal object.
+
+For simple $X,Y$, the right-hand side of (7) is the mixed Gram determinant. For linear combinations, both sides of (8) extend bilinearly. Thus the theorem applies to nonsimple exterior objects as well as to products of edge vectors.
+
+This result does not define the evaluation of forms of points or arbitrary simplices outside the boundary subalgebra.
+
+## Algebraic variation and edge addition
+
+For any affine vector $v$, the identity $([v]^2)^2=0$ gives
+
+$$
+\exp(L+t[v]^2)=M_G(e+t[v]^2)
+$$
+
+By (6) and (8),
+
+$$
+\frac{\tau(\exp(L+t[v]^2))}{\tau(M_G)}=1+t\,v^2
+\tag{9}
+$$
+
+For $v=a_{ij}$, this changes the conductance of the pair $ij$ by $t$, provided the new conductances are admissible. For an arbitrary $v=\sum_i v_i a_i$ with $\sum_i v_i=0$, it is an algebraic variation with matrix perturbation $t\mathbf v\mathbf v^{\mathsf T}$.
+
+For example, if $v=a_1+a_2-2a_3$ and $t>0$, the off-diagonal entry of the perturbation in position $12$ is positive. In the Laplacian representation, this decreases $c_{12}$ by $t$, rather than adding a single conductor. Admissibility of all new conductances must be checked separately; identity (9) does not depend on it.
+
+Similarly, lemma (7) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant formula is algebraic and does not require each direction to correspond to an edge.
+
+## Computing potentials and norms
+
+> [!example] The endpoints of the path $P_5$
+> After multiplication by $[(15)]^2$, each of the four terms of $M_3$ gives $T_5$: the added edge joins the two components of the corresponding forest. Therefore,
+>
+> $$
+> u_{M_{P_5}}([(15)]^2)=4,\qquad
+> (15)^2=\frac41=4
+> $$
+>
+> The normalization uses $\tau(P_5)=1$. Independently, the resistance between the endpoints is the sum of four unit resistances.
+
+> [!example] Adjacent vertices of the cycle $C_4$
+> Of the six terms of $M_2$, three give zero when multiplied by $[(12)]^2$. The nonzero contributions correspond to the edge sets $\{23,34\}$, $\{34,41\}$, $\{23,41\}$. Each becomes a spanning tree after adding $12$. Hence
+>
+> $$
+> u_{M_{C_4}}([(12)]^2)=3,\qquad
+> (12)^2=\frac34
+> $$
+>
+> The potential is $3$, and the normalized potential is $3/4$, since $\tau(C_4)=4$. An electrical check uses parallel paths with resistances $1$ and $3$: $R_{12}=1\cdot3/(1+3)=3/4$.
+
+## Connections with the preceding notes and further reading
+
+The forest expansion describes the coefficients of the exponential, while theorem (8) relates extraction of its top-grade coefficient to the induced metric. At grade one, it recovers effective resistances and inner products; at higher grades, it gives mixed Gram determinants and squared volumes.
+
+In [[Further Reading for the PMG Introductory Series|the reading recommendations]], source [3] covers the matrix-tree theorem, [5] the matrix determinant lemma, and [7] and [8] exterior algebra and the Cauchy-Binet formula. The metric identity in the adopted algebra of forms is proved by lemma (7) and its application to the reduced Laplacian.

@@ -1,412 +1,246 @@
 ---
-title: "Laplacian, Green Matrix, and Effective Resistance Matrix"
-description: "How the Laplacian, Green matrix, and effective resistance matrix can be reconstructed from one another, and why centering connects these three representations."
-lang: en
-translation_key: laplacian-green-resistance-matrices
-status: draft
-revision: 1
+title: "Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations"
 date: 2026-10-04
+updated: 2026-10-08
+revision: 2
+source_revision: 2
+status: draft
+text_prepared_by: ChatGPT
+translation_key: laplacian-green-resistance-matrices
+lang: en
+description: "Forward and inverse transformations between the Laplacian, Green matrix, and effective resistance matrix. Centering and reconstruction of a network from effective resistances."
 ---
-For a connected undirected graph with positive conductances, the same structure can be described by three matrices: the Laplacian $L$, the Green matrix $G$, and the effective resistance matrix $R$.
 
-These representations are related by
-$$
-L \longleftrightarrow G \longleftrightarrow R
-$$
-but the two transitions are different in nature. The relation $L \leftrightarrow G$ is an operator inversion with the common zero direction taken into account, while the relation $G \leftrightarrow R$ converts inner products into squared distances and back.
+The Laplacian $L$, Green matrix $G$, and effective resistance matrix $R$ are mutually reconstructible representations of the same network. The Laplacian specifies the conductances, the Green matrix specifies the inner products of centered position vectors, and the resistance matrix contains the squared pairwise distances.
 
-The purpose of this note is to collect these transitions in one place and explain why they work.
-
-## Three matrices of the same network
-
-Let $L$ be the Laplacian of a connected graph on $n$ vertices.
-
-Its rows and columns have zero sum, so
-$$
-L\mathbf 1=0
-$$
-where $\mathbf 1$ is the column vector of $n$ ones.
-
-The Green matrix, equivalently the Laplacian Green's function in matrix form, is defined as the Moore-Penrose pseudoinverse:
-$$
-\boxed{G=L^+}
-\tag{1}
-$$
-For the purposes of this note, pseudoinversion can be understood as follows: a common shift of all potentials is irrelevant, while on vectors whose coordinates sum to zero, $G$ acts as the ordinary inverse of $L$.
-
-The effective resistance matrix
-$$
-R=(R_{ij})
-$$
-contains the effective resistances between all pairs of vertices. On the diagonal,
-$$
-R_{ii}=0
-$$
-
-For the coordinate column
-$$
-\mathbf e_{ij}=\mathbf e_j-\mathbf e_i
-$$
-the effective resistance is expressed through the Green matrix as
-$$
-R_{ij} = \mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij} = G_{ii}+G_{jj}-2G_{ij}
-$$
-
-Thus $L$, $G$, and $R$ describe the same network from different viewpoints.
-
-## Why the Laplacian has no ordinary inverse
-
-If the same constant is added to every potential, potential differences do not change. Therefore, the electrical state of the network does not depend on the common potential level.
-
-In matrix form, this is expressed by
-$$
-L\mathbf 1=0
-$$
-Hence the ordinary inverse $L^{-1}$ does not exist.
-
-However, if the coordinates of a vector sum to zero,
-$$
-x_1+\cdots+x_n=0
-$$
-then the common constant level has already been removed. For a connected graph, the Laplacian is invertible on such vectors.
-
-This inversion is exactly what the Green matrix $G=L^+$ represents.
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive conductances on its edges. Its geometric representation was constructed in [[Effective Resistance and Graph Geometry]]. This note derives the inverse transformations and collects all the formulas in one table.
 
 ## The centering matrix
 
-To remove the common constant level explicitly, introduce
-$$
-\boxed{J = I-\frac1n\mathbf 1\mathbf 1^{\mathsf T}} \tag{2}
-$$
-Let
-$$
-\bar x = \frac1n\sum_i x_i
-$$
-Then
-$$
-J \ x = x-\bar x\,\mathbf 1
-$$
-Thus multiplication by $J$ simply subtracts the mean value from all coordinates.
+Let $\mathbf1$ denote the column vector of $n$ ones and $I$ the identity matrix. Column vectors whose coordinates sum to zero form the subspace
 
-After this operation, the coordinates sum to zero:
 $$
-\sum_i (Jx)_i=0
-$$
-If the original vector already has zero coordinate sum, then
-$$
-J \ x = x
+H=\mathbf1^\perp=\left\{x\in\mathbb R^n:\sum_i x_i=0\right\}
 $$
 
-For this reason, $J$ is called the **centering matrix**.
-
-At the same time, $J$ is a projector. Here the projection has a direct meaning: from any vector it removes the part corresponding to the common constant level and keeps the part whose coordinates sum to zero. Repeating the centering operation changes nothing:
-$$
-J^2 = J
-$$
-
-> [!note] $J$ as the Laplacian of a complete graph
-> The matrix $J$ itself is the Laplacian of the complete graph $K_n$ if every edge is assigned conductance $1/n$.
+> [!info] The centering matrix
+> **Definition.** The matrix
 >
-> Then every off-diagonal Laplacian entry is $-1/n$, while every diagonal entry is $(n-1)/n$, which gives exactly
 > $$
-> J=I-\frac1n\mathbf 1\mathbf 1^{\mathsf T}
+> J=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
+> $$
+>
+> is called the centering matrix. It subtracts the mean from each coordinate of a column vector:
+>
+> $$
+> Jx=x-\bar x\mathbf1,\qquad \bar x=\frac1n\sum_i x_i
 > $$
 
-## $J$ as the identity for zero-sum matrices
+In the preceding notes, $J$ denoted the column vector of external currents. In this note and in the matrix transformation formulas, $J$ denotes the centering matrix; external current vectors do not occur in these formulas.
 
-Let $A$ be a matrix whose row and column sums are zero:
+For $x\in H$, we have $Jx=x$, while $J\mathbf1=0$. Moreover,
+
 $$
-A\mathbf 1=0,
-\qquad
-\mathbf 1^{\mathsf T}A=0
-$$
-Then
-$$
-JA = AJ = A
+J^{\mathsf T}=J,\qquad J^2=J
 $$
 
-Thus, within the class of such matrices, $J$ plays the same role that the ordinary identity matrix $I$ plays for arbitrary matrices.
+Thus $J$ is the orthogonal projector onto $H$ with respect to the usual inner product on $\mathbb R^n$.
 
-Both the Laplacian $L$ and the Green matrix $G$ have zero row and column sums. Their product is
-$$
-\boxed{LG=GL=J} \tag{3}
-$$
+If a matrix $A$ has zero row and column sums, then
 
-This equality gives a simple interpretation of pseudoinversion. For ordinary inverse matrices, the product equals $I$. For $L$ and $G$, the common constant direction has been removed, so the role of the identity is played by $J$.
-
-## From the Green matrix to the effective resistance matrix
-
-The Green matrix is the Gram matrix of a centered Euclidean representation of the vertices:
 $$
-G_{ij}=\langle x_i,x_j\rangle, \qquad \sum_i x_i=0
-$$
-Therefore, the squared distance between vertices $i$ and $j$ is
-$$
-\begin{aligned}
-\|x_j-x_i\|^2
-&=
-\langle x_i,x_i\rangle
-+\langle x_j,x_j\rangle
--2\langle x_i,x_j\rangle\\
-&=
-G_{ii}+G_{jj}-2G_{ij}
-\end{aligned}
+JA=AJ=A
 $$
 
-In the resistance representation, this squared distance is equal to the effective resistance:
+This follows by substituting the definition of $J$ and using $A\mathbf1=0$ and $\mathbf1^{\mathsf T}A=0$. Hence $J$ acts as the identity for such matrices.
+
+> [!note] Centering and the complete graph
+> The matrix $J$ is the Laplacian of the complete graph $K_n$ with conductance $1/n$ on every edge. Its off-diagonal entries are $-1/n$ and its diagonal entries are $(n-1)/n$.
+
+## The Laplacian and the Green matrix
+
+For a connected graph, the kernel of $L$ consists of constant column vectors, and the restriction of $L$ to $H$ is positive definite. The Green matrix $G=L^+$ inverts $L$ on $H$ and acts as zero on constant column vectors. This definition and its electrical meaning are discussed in [[Effective Resistance and Graph Geometry#The Green matrix|the preceding note on the Green matrix]].
+
+Both matrices are symmetric and have zero row and column sums. Their product acts as the identity on $H$ and sends constant column vectors to zero. Therefore,
+
 $$
-\boxed{R_{ij} = G_{ii}+G_{jj}-2G_{ij}} \tag{4}
+LG=GL=J
+\tag{1}
 $$
 
-For any symmetric matrix $B$, define the distance operator by
+Taking the pseudoinverse again recovers the original matrix:
+
 $$
-\mathcal D(B)_{ij} = B_{ii}+B_{jj}-2B_{ij}
-$$
-Then formula (4) can be written compactly as
-$$
-R = \mathcal D(G)
+L=G^+
 $$
 
-This is not a matrix inversion. The distance operator converts data about inner products into data about squared distances.
+Indeed, on $H$ this operation inverts $(L|_H)^{-1}$, while on constant column vectors it retains the zero action. Formula (1) expresses the fact that $L$ and $G$ are inverses on $H$.
 
-## What is lost when passing to distances
+## From the Green matrix to resistances
 
-Suppose all points $x_i$ are translated by the same vector $t$:
-$$
-x_i\longmapsto x_i+t
-$$
-All pairwise differences remain unchanged:
-$$
-(x_j+t)-(x_i+t)=x_j-x_i
-$$
-Therefore, the distance matrix $R$ contains no information about the position of the coordinate origin.
+Let $x_i$ be the position vectors of the points in the resistance representation, with the centroid as the origin. Then
 
-The Gram matrix, by contrast, depends on the choice of origin. To reconstruct it uniquely from distances, the origin must be fixed.
-
-The natural choice is to place the origin at the centroid of the configuration:
 $$
-\sum_i x_i=0
-$$
-This is exactly the centering performed by the matrix $J$.
-
-## From the effective resistance matrix to the Green matrix
-
-Start with
-$$
-R_{ij}=G_{ii}+G_{jj}-2G_{ij}
-$$
-The terms $G_{ii}$ and $G_{jj}$ form respectively repeated column and row parts. When multiplied by $J$ from the left and right, these parts disappear because
-$$
-J\mathbf 1=0
-$$
-Moreover, for the centered Green matrix,
-$$
-JG=GJ=G
-$$
-Therefore,
-$$
-JRJ=-2G
-$$
-and the inverse formula is
-$$
-\boxed{G = -\frac12JRJ} \tag{5}
+x_i\cdot x_j=G_{ij},\qquad \sum_i x_i=0
 $$
 
-Thus the matrix of all effective resistances completely determines the centered Green matrix.
+The effective resistance equals the squared distance:
 
-The same formula can be written entrywise. Let the mean of row $i$ be
 $$
-\bar R_i=\frac1n\sum_j R_{ij}
+R_{ij}=\|x_j-x_i\|^2=G_{ii}+G_{jj}-2G_{ij}
+\tag{2}
 $$
-and let the mean over the entire matrix be
+
+> [!info] The resistance matrix and the distance operator
+> **Definition.** The symmetric matrix $R=(R_{ij})$ of all pairwise effective resistances is called the resistance matrix. Its diagonal entries are zero.
+>
+> For a symmetric matrix $B$, the distance operator is defined by
+>
+> $$
+> \mathcal D(B)_{ij}=B_{ii}+B_{jj}-2B_{ij}
+> $$
+>
+> In this notation, formula (2) reads $R=\mathcal D(G)$.
+
+The distance operator converts inner products into squared distances. This operation differs from matrix inversion.
+
+## Reconstructing the Green matrix
+
+A common translation of the points preserves their differences and pairwise distances. The Gram matrix of their position vectors depends on the choice of origin. The condition $\sum_i x_i=0$ fixes the origin at the centroid and allows the Gram matrix to be reconstructed uniquely from the distances.
+
+> [!info] Double centering
+> **Lemma.** The Green matrix can be reconstructed from the resistance matrix:
+>
+> $$
+> G=-\frac12JRJ
+> \tag{3}
+> $$
+
+> [!note]- Proof
+> **Proof.** Let $g=(G_{11},\ldots,G_{nn})^{\mathsf T}$ be the column vector of diagonal entries of $G$. Formula (2) can be written as
+>
+> $$
+> R=g\mathbf1^{\mathsf T}+\mathbf1g^{\mathsf T}-2G
+> $$
+>
+> Multiply both sides by $J$ on the left and on the right. The first two terms vanish because $J\mathbf1=0$ and $\mathbf1^{\mathsf T}J=0$. For the last term, $JGJ=G$, so
+>
+> $$
+> JRJ=-2G
+> $$
+>
+> This is equivalent to (3). $\square$
+
+For the entrywise formula, introduce the row means and the mean over the entire matrix:
+
 $$
+\bar R_i=\frac1n\sum_j R_{ij},\qquad
 \bar R=\frac1{n^2}\sum_{i,j}R_{ij}
 $$
-Then
+
+Using the symmetry of $R$, formula (3) becomes
+
 $$
-G_{ij} = \frac12 \left(\bar R_i+\bar R_j-R_{ij}-\bar R\right)
+G_{ij}=\frac12(\bar R_i+\bar R_j-R_{ij}-\bar R)
+\tag{4}
 $$
 
-The matrix formula $G=-\frac12JRJ$ and this entrywise formula are equivalent.
+Multiplication by $J$ on the left subtracts the column means, while multiplication on the right subtracts the row means. The overall mean is added back once.
 
-## Returning to the Laplacian
+## Transformation table and network reconstruction
 
-Since
-$$
-G=L^+
-$$
-the pseudoinverse can be taken once again:
-$$
-\boxed{L=G^+} \tag{6}
-$$
-
-Hence the Laplacian can also be reconstructed from the effective resistance matrix:
-$$
-\boxed{L = \left(-\frac12JRJ \right)^+} \tag{7}
-$$
-
-In the opposite direction,
-$$
-\boxed{R_{ij} = \mathbf e_{ij}^{\mathsf T}L^+\mathbf e_{ij}} \tag{8}
-$$
-
-Thus, for a connected undirected graph with positive conductances, all three representations can be reconstructed from one another.
-
-## Complete transition scheme
-
-The main transitions can be collected in a single scheme:
-$$
-\boxed{L \overset{+}{\longleftrightarrow} G \overset{\mathcal D}{\longleftrightarrow} R} \tag{9}
-$$
-
-The two kinds of transition have different meanings:
-
-| Transition | Formula | Meaning |
+| Transformation | Formula | Meaning |
 |---|---|---|
-| $L\to G$ | $G=L^+$ | inversion of the Laplacian after removing the common constant level |
-| $G\to L$ | $L=G^+$ | inverse transition |
-| $G\to R$ | $R_{ij}=G_{ii}+G_{jj}-2G_{ij}$ | from inner products to squared distances |
-| $R\to G$ | $G=-\frac12JRJ$ | reconstruction of the centered Gram matrix from distances |
+| $L\to G$ | $G=L^+$ | Inversion on $H$, zero action on constant column vectors |
+| $G\to L$ | $L=G^+$ | The inverse transformation on the same subspace |
+| $G\to R$ | $R=\mathcal D(G)$ | From inner products to squared distances |
+| $R\to G$ | $G=-\frac12JRJ$ | Reconstruction of the centered Gram matrix |
 
-The three matrices can also be viewed as three levels of description of the same structure:
+Composing the two inverse transformations gives
 
-| Matrix | What it directly describes |
-|---|---|
-| $L$ | conductances and the local connection structure |
-| $G$ | the inverse metric structure and inner products |
-| $R$ | effective resistances, that is, squared pairwise distances |
+$$
+L=\left(-\frac12JRJ\right)^+
+$$
+
+Once $L$ has been reconstructed, the conductances are determined by its off-diagonal entries:
+
+$$
+c_{ij}=-L_{ij}\qquad(i\ne j)
+$$
+
+Zero conductances correspond to absent edges. Thus the complete set of pairwise resistances determines the original weighted graph for a fixed vertex labeling.
+
+> [!note] Conditions for the inverse transformation
+> Double centering applies to any matrix of squared Euclidean distances: it yields the Gram matrix of the centered configuration. However, the pseudoinverse of that Gram matrix need not be the Laplacian of a graph with positive conductances.
+>
+> In particular, the off-diagonal entries of a Laplacian must be nonpositive. An arbitrary Euclidean configuration does not ensure this condition. In this note, $R$ is known to arise from a connected resistive network, so the inverse transformation recovers its original Laplacian.
 
 ## Example: a three-vertex path
 
-Consider the graph
-$$
-1-2-3
-$$
-with conductances
-$$
-c_{12}=1, \quad c_{23}=2
-$$
-Its Laplacian is
-$$
-L = \begin{pmatrix}
-1&-1&0\\
--1&3&-2\\
-0&-2&2
-\end{pmatrix}
-$$
-The centering matrix for three vertices is
-$$
-J = \begin{pmatrix}
-\frac23&-\frac13&-\frac13\\
--\frac13&\frac23&-\frac13\\
--\frac13&-\frac13&\frac23
-\end{pmatrix}
-$$
-The Green matrix is
-$$
-G = L^+ =
-\begin{pmatrix}
-\frac12&-\frac16&-\frac13\\
--\frac16&\frac16&0\\
--\frac13&0&\frac13
-\end{pmatrix}
-$$
-Direct multiplication gives
-$$
-LG = GL = J
-$$
-The effective resistances are
-$$
-R_{12}=1, \qquad R_{23}=\frac12, \qquad R_{13}=\frac32
-$$
-and therefore
-$$
-R = \begin{pmatrix}
-0&1&\frac32\\
-1&0&\frac12\\
-\frac32&\frac12&0
-\end{pmatrix}
-$$
+Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resistances were computed electrically in the first two notes: $R_{12}=1$, $R_{23}=1/2$, $R_{13}=3/2$.
 
-Now perform the reverse transition:
-$$
--\frac12JRJ = \begin{pmatrix}
-\frac12&-\frac16&-\frac13\\
--\frac16&\frac16&0\\
--\frac13&0&\frac13
-\end{pmatrix} = G
-$$
-and taking the pseudoinverse once more returns the original Laplacian:
-$$
-G^+ = \begin{pmatrix}
-1&-1&0\\
--1&3&-2\\
-0&-2&2
-\end{pmatrix} = L
-$$
-
-In this example, the complete cycle
-$$
-L\longrightarrow G\longrightarrow R\longrightarrow G\longrightarrow L
-$$
-recovers the original matrices without loss of information.
-
-## Conditions for the reverse transition
-
-The formula
-$$
-G = -\frac12JRJ
-$$
-has a more general meaning: it reconstructs the Gram matrix of a Euclidean configuration, centered at its centroid, from the matrix of squared Euclidean distances.
-
-However, not every matrix of squared Euclidean distances is the effective resistance matrix of a graph with positive conductances.
-
-Therefore, in this note the reverse scheme
-$$
-R \longrightarrow G \longrightarrow L
-$$
-is considered for an $R$ that is already known to arise from a connected undirected graph with positive conductances. In that case, the reconstructed $L$ is the original graph Laplacian.
-
-> [!info] Main point
-> The Laplacian, Green matrix, and effective resistance matrix are not three independent sets of data.
+> [!example] The network matrices
 >
-> For a connected graph with positive conductances, each of them determines the other two:
 > $$
-> G=L^+, \qquad R=\mathcal D(G), \qquad G=-\frac12JRJ, \qquad L=G^+
+> L=\begin{pmatrix}
+> 1&-1&0\\
+> -1&3&-2\\
+> 0&-2&2
+> \end{pmatrix},\qquad
+> J=\frac13\begin{pmatrix}
+> 2&-1&-1\\
+> -1&2&-1\\
+> -1&-1&2
+> \end{pmatrix}
 > $$
+>
+> $$
+> G=\begin{pmatrix}
+> \frac12&-\frac16&-\frac13\\
+> -\frac16&\frac16&0\\
+> -\frac13&0&\frac13
+> \end{pmatrix},\qquad
+> R=\begin{pmatrix}
+> 0&1&\frac32\\
+> 1&0&\frac12\\
+> \frac32&\frac12&0
+> \end{pmatrix}
+> $$
+>
+> Direct multiplication verifies $LG=GL=J$ and $G\mathbf1=0$. Thus the displayed matrix $G$ is indeed $L^+$.
 
-## Related notes
+> [!example] Reconstruction from resistances
+> For this matrix $R$, the means are
+>
+> $$
+> \bar R_1=\frac56,\qquad \bar R_2=\frac12,\qquad
+> \bar R_3=\frac23,\qquad \bar R=\frac23
+> $$
+>
+> For example, formula (4) gives
+>
+> $$
+> G_{11}=\frac12\left(\frac56+\frac56-\frac23\right)=\frac12
+> $$
+>
+> $$
+> G_{12}=\frac12\left(\frac56+\frac12-1-\frac23\right)=-\frac16
+> $$
+>
+> The full double-centering calculation gives
+>
+> $$
+> JRJ=\begin{pmatrix}
+> -1&\frac13&\frac23\\
+> \frac13&-\frac13&0\\
+> \frac23&0&-\frac23
+> \end{pmatrix}=-2G
+> $$
+>
+> From $G$, we recover $L=G^+$ and obtain $c_{12}=1$, $c_{23}=2$, $c_{13}=0$. The inverse transformation recovers both the conductances and the absence of an edge between vertices $1$ and $3$.
 
-- [[Laplacian - Graph, Electrical Network and Quadratic Form|Laplacian: Graph, Electrical Network and Quadratic Form]]
-- [[Effective Resistance and Graph Geometry]]
-- [[Inner Product of Graph Vectors]]
+## Further reading
 
-## Summary
+In [[Inner Product of Graph Vectors]], the Green matrix is used to compute inner products of affine vectors. The next note, [[From Lengths to Areas and Volumes]], develops this construction: Gram determinants express squared areas and higher-dimensional volumes.
 
-For a connected undirected graph with positive conductances, the Laplacian $L$, the Green matrix $G$, and the effective resistance matrix $R$ are mutually reconstructible representations of the same structure.
-
-The transition
-$$
-L\longleftrightarrow G
-$$
-is associated with inverting the Laplacian after removing the common constant potential level.
-
-The transition
-$$
-G\longleftrightarrow R
-$$
-has a geometric meaning: it is the transition between inner products of centered position vectors and squared distances between the corresponding points.
-
-The centering matrix
-$$
-J=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
-$$
-connects these two descriptions. It removes the common constant level, acts as a projector onto vectors whose coordinates sum to zero, and plays the role of the identity for matrices with zero row and column sums.
-
-As a result, the entire scheme reduces to four main formulas:
-$$
-G = L^+, \qquad LG = GL = J
-$$
-$$
-R = \mathcal D(G), \qquad G = -\frac12JRJ
-$$
+Sources on Laplacians and resistance geometry are listed in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].

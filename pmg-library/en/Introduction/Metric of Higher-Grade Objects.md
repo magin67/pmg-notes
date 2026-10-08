@@ -1,255 +1,223 @@
 ---
-title: Metric of Higher-Grade Objects
+title: "Metric of Higher-Grade Objects"
 date: 2026-10-06
-revision: 1
+updated: 2026-10-08
+revision: 2
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric
 lang: en
-description: How the scalar product extends to higher-grade boundaries, why the mixed Gram determinant gives their metric value, and how this metric is related to the exterior product of forms.
+description: "Extension of the inner product to boundaries at each grade. Mixed Gram determinants, squared norms, areas and volumes, and numerical evaluation of forms."
 ---
 
-The note [[Basic Objects and Operations of Polyform Algebra]] introduced points, simplices, boundaries, forms, and the exterior product. The next question concerns the measurement and comparison of boundaries of different grades.
+In [[Basic Objects and Operations of Polyform Algebra]], boundaries of grade $k$ were identified with the exterior power $\Lambda^kW$ of the space of affine vectors $W$. An inner product on $W$ determines a metric on each of these exterior powers. Objects are compared within the same grade; no inner product between different grades is introduced here.
 
-A simplex and its boundary have different grades. The oriented segment $[ab]=a\wedge b$ has grade $2$, while its boundary $(ab)=b-a$ has grade $1$. The oriented triangle $[abc]=a\wedge b\wedge c$ has grade $3$, while its boundary $(abc)$ has grade $2$.
+The original metric on $W$ is assumed to be positive definite. For a graph, this is the resistance metric of a finite connected undirected graph with positive conductances on its existing edges. This note does not define a metric on the entire space of formal vertices $V$.
 
-These boundaries arise from exterior products of graph vectors. Their metric values are expressed by Gram determinants.
+## A simplex and its boundary
 
-## Simplex, boundary, and grade
+We retain the conventions $\partial a=1$, $\partial1=0$, and parentheses for boundaries.
 
-For the first few grades one obtains the following table.
+| Object | Simplex and its grade | Boundary | Boundary grade |
+|---|---|---|---:|
+| Point | $a$, grade $1$ | $1$ | 0 |
+| Oriented segment | $[ab]$, grade $2$ | $(ab)=b-a$ | 1 |
+| Oriented triangle | $[abc]$, grade $3$ | $(abc)=[bc]-[ac]+[ab]$ | 2 |
+| Oriented tetrahedron | $[abcd]$, grade $4$ | $(abcd)=[bcd]-[acd]+[abd]-[abc]$ | 3 |
 
-| Geometric object | Simplex | Simplex grade | Boundary | Expanded boundary form | Boundary grade |
-|---|---|---:|---|---|---:|
-| point | $a$ | 1 | $(a)$ | $1$ | 0 |
-| oriented segment | $[ab]=a\wedge b$ | 2 | $(ab)$ | $b-a$ | 1 |
-| oriented triangle | $[abc]=a\wedge b\wedge c$ | 3 | $(abc)$ | $[ab]-[ac]+[bc]$ | 2 |
-| oriented tetrahedron | $[abcd]=a\wedge b\wedge c\wedge d$ | 4 | $(abcd)$ | $[bcd]-[acd]+[abd]-[abc]$ | 3 |
+A nonzero boundary has grade one less than the original simplex. Its grade equals the geometric dimension of a nondegenerate simplex.
 
-The boundary of a point is taken to be the scalar $1$, so scalars have grade $0$.
-
-For every simplex,
+The difference $a_{ij}=a_j-a_i$ is also written as $(a_i a_j)$. The exterior product of consecutive affine vectors gives
 
 $$
-\operatorname{gr}\partial X=\operatorname{gr}X-1 \tag{1}
+(ab)\wedge(bc)=(ab)\wedge(ac)=(abc)
 $$
 
-The geometric dimension of a simplex coincides with the grade of its boundary.
+The right-hand side is the triangle boundary of grade $2$, rather than the simplex $[abc]$ of grade $3$. As in the preceding note, the symbol $\wedge$ between exterior objects may be omitted below.
 
-For graph vectors one has the fusion rule for adjacent boundaries:
+## The inner product within one grade
 
-$$
-(ab)(bc)=(abc) \tag{2}
-$$
-
-The same boundary value is obtained from two vectors with a common initial point:
+An exterior object is called simple if it can be represented as a single product of vectors. Let
 
 $$
-(ab)(ac)=(abc) \tag{3}
+X=u_1\wedge\cdots\wedge u_k,\qquad
+Y=v_1\wedge\cdots\wedge v_k,\qquad u_i,v_i\in W
 $$
 
-The right-hand side of formulas (2) and (3) denotes the boundary of the triangle, not the simplex $[abc]$ itself.
-
-> [!remark] A simplex and its boundary
-> The exterior product of points $a\wedge b\wedge c=[abc]$ gives an oriented triangle of grade $3$.
->
-> The exterior product of two adjacent vectors $(ab)(ac)=(abc)$ gives its boundary of grade $2$.
->
-> These objects are related by the boundary operator, but they are not the same object.
-
-## Scalar product of boundaries of the same grade
-
-Let
-
-$$
-X=u_1\wedge\cdots\wedge u_k,
-\qquad
-Y=v_1\wedge\cdots\wedge v_k
-$$
-
-where the $u_i$ and $v_i$ are vectors of grade $1$. Then $X$ and $Y$ have grade $k$. If the original vectors are boundaries, then their exterior products are boundaries as well.
-
-> [!definition] Mixed Gram determinant
-> The scalar product of simple objects of the same grade is defined by
+> [!info] The induced inner product
+> **Definition.** For simple objects of grade $k$, set
 >
 > $$
-> X\cdot Y=
-> \det\bigl(u_i\cdot v_j\bigr)_{i,j=1}^k \tag{4}
+> X\cdot Y=\det(u_i\cdot v_j)_{i,j=1}^k
+> \tag{1}
+> $$
+>
+> The right-hand side is called the mixed Gram determinant. The rule extends to linear combinations of simple objects by bilinearity:
+>
+> $$
+> \left(\sum_\alpha s_\alpha X_\alpha\right)\cdot
+> \left(\sum_\beta t_\beta Y_\beta\right)
+> =\sum_{\alpha,\beta}s_\alpha t_\beta(X_\alpha\cdot Y_\beta)
 > $$
 
-For $k=1$, formula (4) is the ordinary scalar product of vectors.
+For $k=1$, this is the original metric on $W$. For $k=0$, the inner product of scalars is their ordinary product; in particular, $1\cdot1=1$.
 
-For $X=Y$ one obtains
+> [!info] Well-definedness and positivity
+> **Theorem.** Formula (1) and its bilinear extension define a unique positive definite inner product on $\Lambda^kW$. The result depends on the objects $X,Y$, rather than on the chosen decomposition into exterior products.
+
+> [!note]- Proof
+> **Proof.** Choose an orthonormal basis $w_1,\ldots,w_d$ of $W$. The products
+>
+> $$
+> w_{i_1}\wedge\cdots\wedge w_{i_k},\qquad i_1<\cdots<i_k
+> $$
+>
+> form a basis of $\Lambda^kW$. Declare this basis orthonormal. This defines a positive definite inner product on all linear combinations.
+>
+> If $U$ and $V$ contain the coordinate columns of $u_i$ and $v_i$, then the coordinates of the simple objects $X$ and $Y$ in this exterior basis are the corresponding minors of $U$ and $V$. By the Cauchy-Binet formula, the sum of the products of these minors is $\det(U^{\mathsf T}V)$, the right-hand side of (1).
+>
+> Thus (1) agrees with the defined inner product and is independent of the representation of the object. Simple objects span $\Lambda^kW$, so the bilinear extension is unique. $\square$
+
+## Squared norm and volume
+
+> [!info] The numerical square of an object
+> **Definition.** For a boundary $X$, write
+>
+> $$
+> X^2=X\cdot X=\|X\|^2
+> $$
+>
+> This is a number: the squared norm in the induced Euclidean metric. It differs from the exterior product $X\wedge X$ and from the formal quadratic form $[X]^2$. When needed, the product of an object with itself is written explicitly as $X\wedge X$.
+
+For a simple object $X=u_1\wedge\cdots\wedge u_k$, formula (1) gives
 
 $$
-X^2=
-\det\bigl(u_i\cdot u_j\bigr)_{i,j=1}^k \tag{5}
+X^2=\det(u_i\cdot u_j)_{i,j=1}^k=V_{\parallel}^2
+\tag{2}
 $$
 
-If the vectors $u_1,\ldots,u_k$ are linearly dependent, then $X=0$ and the Gram determinant vanishes. For linearly independent vectors, the quantity $X^2$ equals the square of the $k$-dimensional volume of the parallelepiped spanned by these vectors.
+Here $V_{\parallel}$ is the $k$-dimensional volume of the parallelotope spanned by the vectors $u_i$. It is zero when those vectors are linearly dependent. Positive definiteness gives $X^2=0$ if and only if $X=0$, including for nonsimple exterior objects.
 
-The note [[From Lengths to Areas and Volumes]] introduced the same quantity geometrically. Formulas (4) and (5) identify the exterior object measured by the Gram determinant.
+For a general object, the norm is computed using the bilinear extension. For example, if $X,Y$ have the same grade, then
+
+$$
+(X+Y)^2=X^2+2X\cdot Y+Y^2
+$$
+
+A general linear combination of exterior products need not be representable by a single parallelotope. Its norm is defined independently of such a geometric interpretation.
 
 ## Two triangles with a common side
 
-Consider the oriented triangles $[abc]$ and $[abd]$ with a common side $[ab]$. Their grade-$2$ boundaries are
+Consider points $a,b,c,d$ in an affine space whose vector space is $W$. These points need not be base vertices of the graph. Set
 
 $$
-X=(abc)=(ab)(ac),
-\qquad
-Y=(abd)=(ab)(ad) \tag{6}
+u=(ab),\qquad v=(ac),\qquad w=(ad)
+$$
+
+The triangle boundaries are $X=(abc)=u\wedge v$ and $Y=(abd)=u\wedge w$. By (1),
+
+$$
+(abc)\cdot(abd)
+=\det\begin{pmatrix}u^2&u\cdot w\\v\cdot u&v\cdot w\end{pmatrix}
+=u^2(v\cdot w)-(u\cdot v)(u\cdot w)
+\tag{3}
 $$
 
 ![[Metric of Higher-Grade Objects - two triangles.svg]]
 
-By formula (4),
+The figure shows general Euclidean configurations. Its planar case does not represent four distinct base vertices of a resistance simplex: such vertices are affinely independent.
+
+For $u\ne0$, decompose $v$ and $w$ into components parallel and perpendicular to $u$. Denoting the perpendicular components by $v_\perp,w_\perp$, formula (3) gives
 
 $$
-(abc)\cdot(abd)=
-\det
-\begin{pmatrix}
-(ab)^2 & (ab)\cdot(ad) \\
-(ac)\cdot(ab) & (ac)\cdot(ad)
-\end{pmatrix} \tag{7}
+(abc)\cdot(abd)=u^2(v_\perp\cdot w_\perp)
 $$
 
-The three points $a,b,c$ determine two vectors $(ab)$ and $(ac)$ with common initial point $a$. The parallelogram spanned by these vectors has area square
+For nondegenerate triangles in the same plane, the sign is positive when $c,d$ lie on the same side of the line $ab$, and negative when they lie on opposite sides. In higher-dimensional space, the inner product is zero when the transverse directions $v_\perp,w_\perp$ are orthogonal.
 
-$$
-S_{\parallel,abc}^2=(abc)^2 \tag{8}
-$$
-
-The triangle $[abc]$ occupies one half of this parallelogram, hence
-
-$$
-S_{abc}^2=\frac14(abc)^2 \tag{9}
-$$
-
-or equivalently,
-
-$$
-(abc)^2=4S_{abc}^2 \tag{10}
-$$
-
-Formula (10) refers to the metric value of the boundary $(abc)$. The simplex $[abc]$ itself has grade $3$.
-
-Similarly, the four points $a,b,c,d$ determine the three vectors $(ab)$, $(ac)$, $(ad)$ and the parallelepiped spanned by them. For the boundary of the tetrahedron,
-
-$$
-(abcd)=(ab)(ac)(ad) \tag{11}
-$$
-
-its square equals the square of the volume of this parallelepiped:
-
-$$
-(abcd)^2=V_{\parallel,abcd}^2 \tag{12}
-$$
-
-The volume of the tetrahedron $[abcd]$ is one sixth of the volume of the parallelepiped, so
-
-$$
-V_{abcd}^2=\frac1{36}(abcd)^2 \tag{13}
-$$
-
-> [!remark] Orientation and orthogonality
-> For two nondegenerate triangles in the same plane, the sign of $(abc)\cdot(abd)$ is determined by their relative orientation. If the points $c$ and $d$ lie on the same side of the line $ab$, the sign is positive; if they lie on opposite sides, the sign is negative.
->
-> In higher-dimensional space, nonzero grade-$2$ boundaries can be orthogonal. If the planes of the triangles $[abc]$ and $[abd]$ are mutually orthogonal along the common side $[ab]$, then
+> [!example] Orthogonal boundaries of grade two
+> Let $u,v,w$ be orthonormal affine vectors, and set $b=a+u$, $c=a+v$, $d=a+w$. Then
 >
 > $$
-> (abc)\cdot(abd)=0 \tag{14}
+> (abc)^2=(abd)^2=1,\qquad (abc)\cdot(abd)=0
 > $$
-
-A second-grade scalar product measures the mutual position of oriented two-dimensional boundary objects in the same way that the ordinary scalar product measures the mutual position of vectors.
-
-## Bilinear and quadratic forms
-
-The numerical scalar product and the formal bilinear form should be distinguished.
-
-- $X\cdot Y$ is the numerical scalar product of objects of the same grade;
-- $X^2=X\cdot X$ is the square of the metric value of an object;
-- $[X,Y]$ is a bilinear form;
-- $[X]^2=[X,X]$ is a quadratic form;
-- $[Y,X]$ is the transposed form.
-
-The polar form is defined by
-
-$$
-\{X,Y\}=[X,Y]+[Y,X] \tag{15}
-$$
-
-The corresponding symmetric bilinear form is
-
-$$
-\frac12\{X,Y\} \tag{16}
-$$
-
-The polarization identity has the form
-
-$$
-[X+Y]^2=[X]^2+\{X,Y\}+[Y]^2 \tag{17}
-$$
-
-> [!remark] Numerical value and form
-> The expressions $X^2$ and $[X]^2$ denote different objects.
 >
-> $X^2$ is a numerical metric value.
+> Both boundaries are nonzero and orthogonal. The triangles each have area $1/2$.
+
+Reversing the orientation of one boundary changes the sign of the mixed inner product but preserves its squared norm. Reversing both orientations also preserves the mixed inner product.
+
+## Areas and volumes of simplices
+
+A simplex boundary is expressed through vectors based at one vertex:
+
+$$
+(a_0\ldots a_k)=(a_1-a_0)\wedge\cdots\wedge(a_k-a_0)
+$$
+
+Its squared norm is the squared volume of the corresponding parallelotope. The simplex itself has $1/k!$ times that volume, so
+
+$$
+V_{a_0\ldots a_k}^2=\frac{(a_0\ldots a_k)^2}{(k!)^2}
+\tag{4}
+$$
+
+For a triangle and a tetrahedron,
+
+$$
+S_{abc}^2=\frac14(abc)^2,\qquad
+V_{abcd}^2=\frac1{36}(abcd)^2
+$$
+
+Formula (4) computes the geometric volume of a simplex from the norm of its boundary. It does not define a norm of the formal object $[a_0\ldots a_k]$ in $\Lambda^{k+1}V$.
+
+> [!example] The resistance triangle of $K_3$
+> For $K_3$ with unit conductances, $(ab)^2=(ac)^2=2/3$ and $(ab)\cdot(ac)=1/3$. Hence
 >
-> $[X]^2$ is a quadratic form. A numerical value appears only after a metric has been assigned and the form has been evaluated.
+> $$
+> (abc)^2=\det\begin{pmatrix}\frac23&\frac13\\\frac13&\frac23\end{pmatrix}
+> =\frac13,\qquad S_{abc}^2=\frac1{12}
+> $$
+>
+> This agrees with the calculation in [[From Lengths to Areas and Volumes]].
 
-## Exterior product of forms and its metric meaning
+## Numerical evaluation of forms
 
-For bilinear forms, the exterior product is defined through the exterior product of the arguments:
+Forms, their transposition, and polarization were defined in [[Basic Objects and Operations of Polyform Algebra|the preceding note]]. Once the metric is specified, a form on boundaries $[X,Y]$ is assigned the numerical value $X\cdot Y$. Evaluation extends linearly to forms of a fixed grade.
 
-$$
-[X,Y]\wedge[A,B]=[X\wedge A,Y\wedge B] \tag{18}
-$$
+| Formal object | Numerical evaluation |
+|---|---|
+| $[X,Y]$ | $X\cdot Y$ |
+| $[X]^2=[X,X]$ | $X^2=\|X\|^2$ |
+| $[Y,X]$ | $Y\cdot X=X\cdot Y$ |
+| $\{X,Y\}=[X,Y]+[Y,X]$ | $2X\cdot Y$ |
+| $e=[1,1]$ | $1$ |
 
-No other product of forms will be used, so the sign $\wedge$ between forms may be omitted:
+Symmetry of the numerical evaluation does not imply equality of the forms $[X,Y]$ and $[Y,X]$. In particular, their difference may be a nonzero form with zero evaluation.
 
-$$
-[X,Y][A,B]=[X\wedge A,Y\wedge B] \tag{19}
-$$
-
-For quadratic forms one gets
-
-$$
-[X]^2\wedge[A]^2=[X\wedge A]^2 \tag{20}
-$$
-
-and in shortened notation,
-
-$$
-[X]^2[A]^2=[X\wedge A]^2 \tag{21}
-$$
-
-For example,
+The product of forms retains the rule
 
 $$
-[(ab)]^2[(ac)]^2=[(abc)]^2 \tag{22}
+[X,Y][A,B]=[X\wedge A,Y\wedge B]
 $$
 
-The left-hand side of formula (22) consists of two quadratic forms of grade $1$. The right-hand side is one quadratic form of grade $2$ with argument $(abc)$.
-
-Its metric value is given by the Gram determinant:
+Its numerical evaluation is $(X\wedge A)\cdot(Y\wedge B)$. For vectors of grade one, formula (1) gives
 
 $$
-(abc)^2=
-\det
-\begin{pmatrix}
-(ab)^2 & (ab)\cdot(ac) \\
-(ac)\cdot(ab) & (ac)^2
-\end{pmatrix} \tag{23}
+(X\wedge A)\cdot(Y\wedge B)
+=(X\cdot Y)(A\cdot B)-(X\cdot B)(A\cdot Y)
 $$
 
-Thus, the exterior product of forms combines first-grade objects into a higher-grade form, while the mixed Gram determinant gives the metric value of its argument.
+Thus the evaluation of a product of forms is generally not the product of their evaluations. For example,
 
-Such products arise when quadratic edge forms of a graph are multiplied. [[Laplacian Exponential]] collects them across all grades into one polyform.
+$$
+[(ab)]^2[(ac)]^2=[(abc)]^2
+$$
 
-## Summary
+The evaluation of the right-hand side is $(abc)^2$, determined by (2), rather than the product $(ab)^2(ac)^2$.
 
-The simplex $[a_0\ldots a_k]$ has grade $k+1$, while its boundary $(a_0\ldots a_k)$ has grade $k$. The boundary of a point is the scalar $1$ of grade $0$.
+## Further reading
 
-Exterior products of graph vectors produce higher-grade boundaries. Their scalar product is given by the mixed Gram determinant, and the square of such an object equals the square of the volume of the corresponding parallelepiped.
+The next note, [[Laplacian Exponential]], collects products of coupling forms by grade into a single polyform. It will prove that evaluating a form using the induced metric agrees with normalized extraction of the highest-grade coefficient from its product with the Laplacian exponential.
 
-Bilinear and quadratic forms preserve the same graded structure: their exterior product is defined through the exterior product of their arguments. This connects the algebraic product of forms with metric values of higher-grade boundaries.
+In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover exterior powers, bilinear forms, and Gram determinants; the geometry of the resistance simplex is discussed in [4].

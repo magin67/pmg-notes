@@ -1,283 +1,268 @@
 ---
 title: "Effective Resistance and Graph Geometry"
-description: "Why effective resistance is a squared Euclidean distance and how the Green matrix defines a geometric representation of graph vertices."
-lang: en
-translation_key: effective-resistance-graph-geometry
-text_prepared_by: "ChatGPT"
-status: draft
-revision: 1
 date: 2026-10-03
+updated: 2026-10-08
+revision: 2
+source_revision: 4
+status: draft
+text_prepared_by: ChatGPT
+translation_key: effective-resistance-graph-geometry
+lang: en
+description: "The Green matrix as the Gram matrix of a resistance simplex. A Euclidean representation of graph vertices and the distinction between resistance and geometric distance."
 ---
-In the previous note, [[Laplacian - graph, electrical network, and quadratic form|Laplacian: graph, electrical network, and quadratic form]], the effective resistance $R_{ij}$ was defined through an electrical network: a unit current is injected at one vertex and extracted at another, and the resulting potential difference is the effective resistance between them.
 
-This quantity also has a geometric interpretation. The vertices of a connected undirected graph with positive conductances can be represented by points in a Euclidean space so that
+Effective resistance, introduced in [[Laplacian - graph, electrical network and quadratic form|Laplacian: graph, electrical network and quadratic form]], admits a Euclidean representation. Graph vertices can be represented by points whose squared pairwise distances equal the effective resistances. This representation is constructed from the Green matrix of the Laplacian.
+
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices. Existing edges have positive conductances; for absent edges, $c_{ij}=0$. The Laplacian matrix is denoted by $L$.
+
+## The Green matrix
+
+The current equation is $L\varphi=J$, where $\varphi$ contains the vertex potentials and $J$ the external currents. Since $L\mathbf1=0$, the ordinary inverse $L^{-1}$ does not exist. Adding a common constant to all potentials leaves the currents unchanged.
+
+Balanced external currents belong to the subspace
+
 $$
-\boxed{R_{ij}=\|a_{ij}\|^2}
+H=\mathbf1^\perp=\left\{u\in\mathbb R^n:\sum_i u_i=0\right\}
+$$
+
+Here $\mathbf1$ is the column vector of ones, and orthogonality is taken with respect to the ordinary inner product in $\mathbb R^n$. For a connected graph, the restriction of $L$ to $H$ is positive definite and invertible.
+
+> [!info] Green matrix
+> **Definition.** The Green matrix $G$ inverts $L$ on $H$ and vanishes on constant columns:
+>
+> $$
+> G|_H=(L|_H)^{-1},\qquad G\mathbf1=0
+> $$
+>
+> It is the Moore-Penrose pseudoinverse: $G=L^+$.
+
+The definition gives
+
+$$
+G^{\mathsf T}=G,\qquad LG=GL=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
+$$
+
+where $I$ is the identity matrix. The matrix $G$ is positive semidefinite and has rank $n-1$. For any balanced $J$, the centered solution of the current equation is $\varphi=GJ$; centering means that $\sum_i\varphi_i=0$.
+
+## Resistance through the Green matrix
+
+Denote the standard coordinate columns by $\mathbf e_i$ and set
+
+$$
+\mathbf e_{ij}=\mathbf e_j-\mathbf e_i
+$$
+
+The column $\mathbf e_{ij}$ specifies a unit current injected at vertex $j$ and withdrawn at vertex $i$. The centered potentials are $\varphi=G\mathbf e_{ij}$. Hence
+
+$$
+R_{ij}=\varphi_j-\varphi_i
+=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij}
+=G_{ii}+G_{jj}-2G_{ij}
 \tag{1}
 $$
-where $\quad a_{ij}=a_j-a_i \quad$ is the vector between the points corresponding to vertices $i$ and $j$.
 
-This relation between effective resistance and the squared Euclidean norm is the main subject of this note.
+For $i=j$, set $R_{ii}=0$. Formula (1) remains valid in this case.
 
-## Why the Laplacian has to be inverted
+## A Euclidean representation of the vertices
 
-Let $L$ be the Laplacian of a connected graph on $n$ vertices. For a potential vector $\varphi$ and an external-current vector $J$,
-
-$$
-L\varphi=J
-$$
-
-The rows of the Laplacian sum to zero, so
+A positive semidefinite matrix is the Gram matrix of a family of Euclidean vectors. Thus there exist position vectors $x_1,\ldots,x_n$ in $\mathbb R^{n-1}$ such that
 
 $$
-L\mathbf 1=0
+x_i\cdot x_j=G_{ij}
+\tag{2}
 $$
 
-Therefore the ordinary inverse $L^{-1}$ does not exist. Electrically, this reflects the fact that adding the same constant to all potentials does not change potential differences or currents.
+> [!note]- Construction from eigenvectors
+> **Proof.** Let $q_1,\ldots,q_{n-1}$ be an orthonormal basis of $H$ consisting of eigenvectors of $L$, with corresponding eigenvalues $\lambda_1,\ldots,\lambda_{n-1}>0$. Then
+>
+> $$
+> G=\sum_{\alpha=1}^{n-1}\lambda_\alpha^{-1}q_\alpha q_\alpha^{\mathsf T}
+> $$
+>
+> If $q_{\alpha i}$ denotes the $i$th coordinate of $q_\alpha$, we may choose
+>
+> $$
+> x_i=\left(\frac{q_{1i}}{\sqrt{\lambda_1}},\ldots,\frac{q_{n-1,i}}{\sqrt{\lambda_{n-1}}}\right)
+> $$
+>
+> Their inner products equal the entries of $G$. $\square$
 
-Only the centered part of the space is essential:
-
-$$
-H = \mathbf 1^\perp=\left\{u\in\mathbb R^n:\sum_i u_i=0\right\}
-$$
-
-For a connected graph, the restriction of the Laplacian to $H$ is positive definite and invertible.
-
-This inverse map, written in the full space, is represented by the Moore-Penrose pseudoinverse
-
-$$
-\boxed{G=L^+} \tag{2}
-$$
-
-We will call $G$ the **Green matrix of the Laplacian**.
-
-> [!note] Remark
-> The Green matrix is not an ordinary inverse of the Laplacian. It inverts $L$ on the subspace $H$, which contains balanced current vectors and coordinate representatives of vertex differences.
-
-## Points, vectors, and coordinate columns
-
-It is important to distinguish geometric objects from their coordinate representations.
-
-Let $\quad a_1,\ldots,a_n \quad$ be the points of a Euclidean space corresponding to the graph vertices.
-
-For each pair of vertices, define the vector $\quad a_{ij}=a_j-a_i \quad$
-
-Now choose the centroid of these points as the origin and denote by $x_i$ the position vector of the point $a_i$ relative to this origin. Then
+From (2) and $G\mathbf1=0$, we obtain
 
 $$
-\sum_i x_i=0
+\left\|\sum_i x_i\right\|^2=\mathbf1^{\mathsf T}G\mathbf1=0
 $$
 
-and $\quad a_{ij}=x_j-x_i \quad$
+Consequently, $\sum_i x_i=0$. The points $a_i$ with position vectors $x_i$ have their centroid at the origin.
 
-Separately, consider the standard coordinate columns
+> [!info] Affine vectors
+> **Definition.** The point difference
+>
+> $$
+> a_{ij}=a_j-a_i=x_j-x_i
+> $$
+>
+> is the affine vector from $a_i$ to $a_j$. More generally, an affine vector has the form $u=\sum_i u_i a_i$, where $\sum_i u_i=0$; in the chosen realization, it is represented by $\sum_i u_i x_i$.
 
-$$
-\mathbf e_i=(0,\ldots,0,1,0,\ldots,0)^{\mathsf T}
-$$
+The column $\mathbf e_{ij}$ is the coordinate representative of $a_{ij}$ with respect to the vertices. It records the coefficients of the difference, while $x_j-x_i$ expresses that difference in the chosen Euclidean coordinates. In particular, the ordinary coordinate squared norm $\mathbf e_{ij}^{\mathsf T}\mathbf e_{ij}=2$ for $i\ne j$ does not express resistance: resistance is computed using $G$.
 
-in $\mathbb R^n$, and define
+By (1) and (2),
 
-$$
-\boxed{\mathbf e_{ij}=\mathbf e_j-\mathbf e_i} \tag{3}
-$$
-
-The column $\mathbf e_{ij}$ is not a new geometric point or vector in the resistance representation. It is the coordinate representative of the vertex difference with respect to the formal vertex basis.
-
-Thus two different levels are used below:
-- $a_i$, $x_i$, $a_{ij}$ are geometric objects;
-- $\mathbf e_i$, $\mathbf e_{ij}$ are coordinate columns used in matrix formulas.
-
-## Effective resistance through the Green matrix
-
-Suppose a unit current is injected at vertex $j$ and extracted at vertex $i$. Its coordinate column is $\mathbf e_{ij}$. It belongs to $H$ because the sum of its coordinates is zero.
-
-The centered solution of the network equation is
-$$
-\varphi=G\mathbf e_{ij}
-$$
-The potential difference between vertices $j$ and $i$ is
-$$
-R_{ij} = \mathbf e_{ij}^{\mathsf T} G \mathbf e_{ij} \tag{4}
-$$
-Expanding this expression gives
-$$
-R_{ij} = G_{ii}+G_{jj}-2G_{ij}
-$$
-This already has the standard form of a squared distance computed from a Gram matrix.
-
-## The Green matrix as a Gram matrix
-
-The Laplacian of a connected graph with positive conductances is positive semidefinite. Therefore $\quad G = L^+ \quad$ is also positive semidefinite.
-
-Hence there exist Euclidean vectors $\quad x_1,\ldots,x_n \quad$ whose Gram matrix is
-$$
-\boxed{G_{ij}=\langle x_i,x_j\rangle} \tag{5}
-$$
-The condition
-$$
-G\mathbf 1=0
-$$
-corresponds to the chosen centering
-$$
-\sum_i x_i=0
-$$
-For the vector between two points, $\quad a_{ij}=x_j-x_i$
-Therefore
 $$
 \begin{aligned}
-\|a_{ij}\|^2
-&=
-\|x_j-x_i\|^2\\
-&=
-\langle x_i,x_i\rangle
-+\langle x_j,x_j\rangle
--2\langle x_i,x_j\rangle\\
-&=
-G_{ii}+G_{jj}-2G_{ij}
+\|a_{ij}\|^2&=\|x_j-x_i\|^2\\
+&=x_i\cdot x_i+x_j\cdot x_j-2x_i\cdot x_j\\
+&=G_{ii}+G_{jj}-2G_{ij}=R_{ij}
 \end{aligned}
 $$
-Comparing this expression with the effective-resistance formula gives
-$$
-\boxed{R_{ij} = \|a_{ij}\|^2 = \mathbf e_{ij}^{\mathsf T} G \mathbf e_{ij}} \tag{6}
-$$
-> [!info] Geometric interpretation
-> The vertices of a connected graph can be represented by points in a Euclidean space so that the effective resistance between two vertices equals the squared norm of the vector between the corresponding points.
 
-## Dimension of the geometric representation
+> [!info] Euclidean resistance representation
+> **Theorem.** The vertices of a connected graph admit a Euclidean representation in which
+>
+> $$
+> R_{ij}=\|a_{ij}\|^2,\qquad \|a_{ij}\|=\sqrt{R_{ij}}
+> \tag{3}
+> $$
+>
+> The Green matrix is the Gram matrix of the centered position vectors of these points.
 
-For a connected graph,
-$$
-\operatorname{rank}L=n-1
-$$
-Pseudoinversion preserves rank, so
-$$
-\operatorname{rank}G=n-1
-$$
-Therefore the centered position vectors $x_1,\ldots,x_n$ span a space of dimension $n-1$.
+## Dimension and the resistance simplex
 
-A graph on $n$ vertices thus defines $n$ points forming a Euclidean simplex of affine dimension $n-1$.
+The rank of a Gram matrix equals the dimension of the linear span of its vectors. Hence $x_1,\ldots,x_n$ span a space of dimension $n-1$.
 
-It is important that this is not the usual drawing of a graph. Geometric distances here are determined not by the lengths of drawn edges but by the effective resistances of the entire network.
+The origin is the centroid of the points and belongs to their affine hull. The affine hull therefore also has dimension $n-1$: the points $a_1,\ldots,a_n$ are affinely independent.
 
-Two vertices need not be joined by an edge at all, yet the geometric norm of the corresponding vector $a_{ij}$ is still defined.
+> [!info] Resistance simplex
+> **Definition.** A simplex with vertices $a_1,\ldots,a_n$ satisfying (3) is called the resistance simplex of the graph. For a connected graph, it is nondegenerate and has dimension $n-1$.
+
+Its geometry is uniquely determined up to a Euclidean isometry: a translation and an orthogonal transformation. Two vertices need not be joined by an edge for the distance between their corresponding points to be defined.
 
 ## Example: a three-vertex path
 
-Return to the example from the previous note. Let the graph be $\quad 1-2-3$ with edge conductances
-$$
-c_{12}=1, \quad c_{23}=2
-$$
-The corresponding edge resistances are
-$$
-r_{12}=1, \quad r_{23}=\frac12
-$$
-For a tree, the effective resistance between two vertices is the sum of the edge resistances along the unique path between them. Hence
-$$
-R_{12}=1, \quad R_{23}=\frac12, \quad R_{13}=\frac32
-$$
-The Laplacian is
-$$
-L = \begin{pmatrix}
-1&-1&0\\
--1&3&-2\\
-0&-2&2
-\end{pmatrix}
-$$
-and its Green matrix is
-$$
-G=L^+ =
-\begin{pmatrix}
-\frac12&-\frac16&-\frac13\\
--\frac16&\frac16&0\\
--\frac13&0&\frac13
-\end{pmatrix}
-$$
-For example, $\quad R_{12} = G_{11}+G_{22}-2G_{12} = 1$
+Consider the path from the first note.
 
-and $\quad R_{13} = G_{11}+G_{33}-2G_{13} = \frac32$
+```mermaid
+graph LR
+    a1((1)) ---|"c12 = 1"| a2((2))
+    a2 ---|"c23 = 2"| a3((3))
+```
 
-Now temporarily forget the original path drawing and require only
-$$
-\|a_{12}\|^2=1, \qquad \|a_{23}\|^2=\frac12, \qquad \|a_{13}\|^2=\frac32
-$$
-Since
-$$
-\|a_{13}\|^2 = \|a_{12}\|^2+\|a_{23}\|^2
-$$
-the three points form a right triangle with the right angle at $a_2$.
-
-For example, after an arbitrary translation of the entire configuration, we may choose
-$$
-a_2=(0,0), \qquad a_1=(1,0), \qquad a_3=\left(0,\frac1{\sqrt2}\right)
-$$
-> [!example] The graph and its geometry
-> The original graph $1-2-3$ is usually drawn as a straight path.
+> [!example] Resistances and the Green matrix
+> The edge resistances are $r_{12}=1$ and $r_{23}=1/2$. When current is passed between the endpoints of the path, the two edges are in series, so $R_{13}=3/2$. When current is passed between adjacent vertices, the remaining edge carries no current. Thus,
 >
-> In the resistance Euclidean representation, the same three vertices form a right triangle.
+> $$
+> R_{12}=1,\qquad R_{23}=\frac12,\qquad R_{13}=\frac32
+> $$
 >
-> Therefore a topological drawing of a graph and its metric representation are different objects.
+> The Laplacian and Green matrix are
+>
+> $$
+> L=\begin{pmatrix}
+> 1&-1&0\\
+> -1&3&-2\\
+> 0&-2&2
+> \end{pmatrix},\qquad
+> G=\begin{pmatrix}
+> \frac12&-\frac16&-\frac13\\
+> -\frac16&\frac16&0\\
+> -\frac13&0&\frac13
+> \end{pmatrix}
+> $$
+>
+> Direct multiplication gives $G\mathbf1=0$ and $LG=I-\mathbf1\mathbf1^{\mathsf T}/3$. Formula (1) independently reproduces the electrical calculation:
+>
+> $$
+> R_{12}=\frac12+\frac16+\frac13=1,\qquad
+> R_{23}=\frac16+\frac13=\frac12
+> $$
+>
+> $$
+> R_{13}=\frac12+\frac13+\frac23=\frac32
+> $$
 
-## Why effective resistance is called a distance
+> [!example] Coordinates and a right angle
+> A Euclidean realization may be chosen with coordinates
+>
+> $$
+> a_2=(0,0),\qquad a_1=(1,0),\qquad
+> a_3=\left(0,\frac1{\sqrt2}\right)
+> $$
+>
+> The squared distances are $1$, $1/2$, and $3/2$. The points form a right triangle with the right angle at $a_2$, since
+>
+> $$
+> \|a_{13}\|^2=\|a_{12}\|^2+\|a_{23}\|^2
+> $$
+>
+> These coordinates are not centered. After subtracting the centroid $(1/3,1/(3\sqrt2))$, the position vectors have the Gram matrix $G$ displayed above.
 
-Effective resistance $R_{ij}$ is often called **resistance distance**. This is justified: on the vertex set it satisfies the axioms of a metric.
+The path diagram and its resistance simplex have different geometric meanings. The diagram shows which connections are present; the simplex represents the resistances of the entire network as squared Euclidean distances.
 
-However, the geometric representation is built through the quadratic quantity
-$$
-R_{ij}=\|a_{ij}\|^2
-$$
-For the further development, this is the primary form of the relation. It is consistent with the general logic of PMG, where metric characteristics are expressed mainly through quadratic forms and their polarizations.
+## Two metrics on the vertices
+
+Formula (3) shows that $\sqrt{R_{ij}}$ is a Euclidean distance. The resistance $R_{ij}$ itself also satisfies the metric axioms, but this requires a separate argument: squares of arbitrary Euclidean distances can violate the triangle inequality.
+
+> [!info] Resistance distance
+> **Theorem.** For a connected graph, $R_{ij}=R_{ji}$, $R_{ij}>0$ for $i\ne j$, $R_{ii}=0$, and
+>
+> $$
+> R_{ij}\le R_{ik}+R_{kj}
+> $$
+>
+> Effective resistance therefore defines a metric on the vertex set, called resistance distance.
+
+> [!note]- Proof of the triangle inequality
+> **Proof.** Symmetry and positivity follow from (1) and the positive definiteness of $G$ on $H$. For the triangle inequality, it suffices to consider distinct $i,j,k$.
+>
+> Inject a unit current at $j$ and withdraw it at $k$. Then $\varphi=G(\mathbf e_j-\mathbf e_k)$. At every other vertex $v$, the potential is a weighted average of the potentials at its neighbors:
+>
+> $$
+> \varphi_v=\frac{\sum_w c_{vw}\varphi_w}{\sum_w c_{vw}}
+> $$
+>
+> The minimum potential is attained at $k$. Indeed, $j$ cannot be a minimum because $(L\varphi)_j=1>0$. If the minimum is attained at another vertex, equality with the weighted average forces all its neighbors to have the same potential. By connectedness, propagation of this equality reaches one of the two current terminals, which can only be $k$. Hence $\varphi_i-\varphi_k\ge0$.
+>
+> Substituting (1) gives
+>
+> $$
+> \begin{aligned}
+> R_{ik}+R_{kj}-R_{ij}
+> &=2(G_{kk}-G_{ik}-G_{kj}+G_{ij})\\
+> &=2(\varphi_i-\varphi_k)\ge0
+> \end{aligned}
+> $$
+>
+> If any indices coincide, the inequality follows from $R_{ii}=0$ and the nonnegativity of resistances. $\square$
+
+Thus resistance distance $R_{ij}$ and the distance $\sqrt{R_{ij}}$ in the resistance simplex are two different metrics on the same vertex set.
 
 ## The distance operator
 
-The formula
+> [!info] Distance operator
+> **Definition.** For a symmetric matrix $B$, set
+>
+> $$
+> \mathcal D(B)_{ij}=B_{ii}+B_{jj}-2B_{ij}
+> $$
+>
+> If $B$ is the Gram matrix of the position vectors of points, then $\mathcal D(B)$ is their squared-distance matrix.
+
+The resistance matrix $R=(R_{ij})$ is obtained from the Green matrix by (1):
+
 $$
-R_{ij}=G_{ii}+G_{jj}-2G_{ij}
+R=\mathcal D(G)=\mathcal D(L^+)
 $$
-can be viewed as an application of a distance operator.
 
-For a symmetric matrix $B$, define
-$$
-\mathcal D(B)_{ij} = B_{ii}+B_{jj}-2B_{ij}
-$$
-If $B$ is a Gram matrix of points, then $\mathcal D(B)$ is the matrix of squared distances between them.
+The forward and inverse transformations between these matrices are considered in [[Laplacian, Green Matrix, and Effective Resistance Matrix]].
 
-Therefore
-$$
-\boxed{R = \mathcal D(G)=\mathcal D(L^+)} \tag{7}
-$$
-For the purposes of this note, the chain
-$$
-L \longrightarrow G=L^+ \longrightarrow R=\mathcal D(G)
-$$
-is sufficient.
+## Geometric changes when couplings are strengthened
 
-The exact forward and inverse transitions between the Laplacian, the Green matrix, and the resistance matrix will be collected separately in [[Laplacian, Green matrix, and resistance matrix]].
+Adding an edge with positive conductance or increasing the conductance of an existing edge cannot increase any effective resistance. This property is called Rayleigh monotonicity; its justification through the exact resistance variation formula is given in [[Variation of a Single Edge]].
 
-## What happens when connections are strengthened
+By (3), pairwise distances in the resistance simplex also cannot increase. Some distances may remain unchanged: strengthening one coupling need not affect every measurement. When a coupling is weakened, resistances cannot decrease as long as the graph remains connected.
 
-The geometric interpretation gives another way to view changes in the graph.
+## Further reading
 
-If an edge with positive conductance is added, or the conductance of an existing edge is increased, effective resistances between vertices do not increase. Consequently, $\|a_{ij}\|^2$ does not increase either.
+In [[Inner Product of Graph Vectors]], we pass from squared norms of $a_{ij}$ to inner products of two affine vectors. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
 
-Conversely, weakening connections may increase effective resistances.
-
-Thus strengthening the connectivity of the network can be interpreted as a metric contraction of its vertices. The entire point configuration changes, not only the quantity associated with the endpoints of the modified edge.
-
-## Summary
-
-The Laplacian of a connected weighted graph defines not only an electrical network but also a Euclidean geometric representation of its vertices.
-
-The Green matrix $\quad G=L^+ \quad$ is the Gram matrix of the centered position vectors $x_i$, while effective resistances are given by
-$$
-\boxed{R_{ij} = \|a_{ij}\|^2 = \mathbf e_{ij}^{\mathsf T} L^+ \mathbf e_{ij}} \tag{8}
-$$
-Thus the connection structure of the graph determines the mutual arrangement of points in a Euclidean space.
-
-The next step is to pass from the squared norm of one vector $a_{ij}$ to the inner product of two vectors $a_{ij}$ and $a_{kl}$. This will give a geometric interpretation of measuring a potential difference across one pair of vertices while passing current through another.
-
-## About this note
-
-An introductory presentation of the standard Euclidean interpretation of effective resistance and the Laplacian Green matrix. No special constructions of polyform algebra are used here.
-
-The draft text was prepared by ChatGPT based on materials by the project author. The plan and editorial decisions were discussed jointly. The mathematical results presented here are standard. Revision 1, October 3, 2026.
+Sources on electrical networks and resistance geometry are collected in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].

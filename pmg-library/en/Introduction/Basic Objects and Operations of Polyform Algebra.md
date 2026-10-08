@@ -1,346 +1,413 @@
 ---
 title: "Basic Objects and Operations of Polyform Algebra"
 date: 2026-10-06
-revision: 2
+updated: 2026-10-08
+revision: 3
+source_revision: 6
 status: draft
-text_prepared_by: "ChatGPT"
+text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
 lang: en
-description: "Basic objects and operations of polyform algebra: points, vectors, simplices, boundaries, forms, grades, and the exterior product, together with the relation between products of forms, Gram determinants, and the later Laplacian exponential."
+description: "Points, affine vectors, exterior products, boundaries, and forms. The four-point identity, polyform multiplication, grades, and the polyform representation of the Laplacian."
 ---
 
-In the previous notes, we used graph vectors, quadratic forms, inner products, and Gram determinants without introducing a separate language for describing them together.
+In [[Varying several couplings together|joint variations of couplings]], mixed coefficients are expressed by Gram determinants of several affine vectors. Polyform algebra associates a single formal object with such a system of vectors and allows operations on it before a numerical metric is specified.
 
-The need for such a language became especially clear in [[Joint Variation of Multiple Links]]. The mixed coefficient arising from simultaneous variation of several conductances turned out to be the Gram determinant of the corresponding graph vectors. Geometrically, the same determinant gives the squared area, volume, or higher-dimensional analogue, as shown in [[From Lengths to Areas and Volumes]].
+The construction is based on exterior algebra. Forms and their product are introduced by separate definitions, which require no inner product. The connection with the resistance metric is discussed at the end of this note and developed in the next.
 
-We now introduce a minimal algebraic construction that allows us to work with these objects directly.
+## Points and affine vectors
 
-This construction is not yet a metric theory by itself. We first define the objects and operations of **polyform algebra**. The metric structure will appear later, when this language is applied to the graph Laplacian.
+Let $V$ be a real vector space with a **linearly independent** basis $a_1,\ldots,a_n$. The basis elements represent vertices. For linear combinations, we distinguish points from affine vectors by the sum of their coefficients.
 
-## Three levels of the construction
-
-It is useful to separate three levels from the outset.
-
-1. **Ordinary linear and exterior algebra.** This includes linear combinations, exterior products, simplices, the boundary operator, bilinear and quadratic forms, Gram matrices, and Gram determinants.
-2. **The way these objects are used in polyform algebra.** Arguments of forms may be not only individual vectors but also exterior products of objects of different grades. Products of forms are defined through exterior products of their arguments.
-3. **Project-specific conventions.** These include the term "polyform", the unit form $e$, the adopted notation for boundaries and grade components, and later the special metric constructions.
-
-> [!remark] Terminology
-> The terms **vector**, **simplex**, **boundary**, **exterior product**, **bilinear form**, **quadratic form**, and **Gram determinant** are standard mathematical terms.
+> [!info] Points and vectors
+> **Definition.** A combination $x=\sum_i x_i a_i$ is a point if $\sum_i x_i=1$, and an affine vector if $\sum_i x_i=0$.
 >
-> The term **polyform** is also used in other areas of mathematics, but here it has a specific meaning: a polyform is a linear combination of forms, possibly of different grades. This meaning should therefore be stated explicitly at first use.
-
-## Points and vectors
-
-Let $a,b,c,\ldots$ denote basic points of the space. In the graph interpretation, they are graph vertices. For algebraic operations, we treat these points as formal generators of a linear space. This does not identify a point with a vector in the affine sense: the distinction between them is determined by the coefficients of a linear combination.
-
-The difference of two points defines a vector $(ab)=b-a$.
-
-Round brackets are the adopted notation for the boundary of a pair of points. Orientation matters: $(ba)=-(ab)$.
-
-More generally, a vector is a linear combination of points whose coefficients sum to zero. If $v=\sum_i \lambda_i a_i$, then the condition that $v$ is a vector is $\sum_i\lambda_i=0$.
-
-For example, $v=a+b-2c$ is a vector.
-
-An affine combination whose coefficients sum to $1$ defines a point again. For example, $(a+b)/2$ is the midpoint of $a$ and $b$.
-
-This distinction is sufficient for the introductory algebra. A more specialized description in terms of affine weight and isotropic extension is not needed here.
-
-## Exterior product and simplices
-
-The exterior product is denoted by the standard symbol $\wedge$. For basic objects it is anticommutative: $a\wedge b=-b\wedge a$, and therefore $a\wedge a=0$.
-
-The exterior product of several elements will be written as an oriented simplex $[a_1\ldots a_k]=a_1\wedge\cdots\wedge a_k$.
-
-The **grade** of a simplex is the number of its factors. Thus a point has grade $1$, $[ab]$ has grade $2$, and $[abc]$ has grade $3$.
-
-This convention differs by one from the standard geometric dimension of a simplex: $[abc]$ has grade $3$ but is a two-dimensional simplex.
-
-Interchanging two neighboring elements changes the sign of the simplex. If an element is repeated, the simplex is zero.
-
-For homogeneous exterior objects $X$ and $Y$ of grades $k$ and $m$, we have $X\wedge Y=(-1)^{km}Y\wedge X$, while the grade of the product is $k+m$.
-
-> [!definition] Family
-> In this note, a **family** is a finite ordered family of objects intended to be combined by the exterior product.
+> Denote the space of affine vectors by
 >
-> A family is not a new algebraic object. It only records the factors and their order. The exterior object itself is the result of their product.
+> $$
+> W=\left\{\sum_i u_i a_i:\sum_i u_i=0\right\},\qquad \dim W=n-1
+> $$
 
-This distinction is useful because permuting the same family may change the sign, while a family containing a repeated element has zero exterior product.
-
-## Boundary
-
-For simplices we use the standard boundary operator $\partial$. For a simplex $[a_1\ldots a_k]$, its boundary is the alternating sum of simplices obtained by deleting one element:
+For example, $(a+b)/2$ is a point, while $a+b-2c$ is an affine vector. The difference of two points belongs to $W$. We retain the notation
 
 $$
-\partial[a_1\ldots a_k] = \sum_{i=1}^k(-1)^{i-1}[a_1\ldots\widehat{a_i}\ldots a_k]
+a_{ij}=a_j-a_i
 $$
 
-We denote boundaries by round brackets. In particular, $(ab)=\partial[ab]=b-a$, while $(abc)=\partial[abc]=[bc]-[ac]+[ab]$.
+The formal basis points in $V$ are not identified with the centered position vectors of the preceding notes. There, centering specified Euclidean coordinates; here, linear independence of the base vertices is part of the underlying algebraic construction.
 
-The grade of a boundary is one less than the grade of the original simplex. Thus the vector $(ab)$ has grade $1$, while the boundary of a triangle $(abc)$ has grade $2$.
+## The exterior product and grade
 
-The fundamental standard property of the boundary operator is $\partial^2=0$.
-
-The boundary operator is compatible with the exterior product through the graded Leibniz rule. If $X$ has grade $k$, then
+The exterior product $\wedge$ is bilinear and associative. For elements $x,y\in V$, it satisfies
 
 $$
-\partial(X\wedge Y)
-=
-\partial X\wedge Y+(-1)^kX\wedge\partial Y
+x\wedge y=-y\wedge x,\qquad x\wedge x=0
 $$
 
-## Products of boundaries and connectedness
-
-Boundaries can be multiplied using the exterior product. For the simplest graph boundaries, $(ab)(bc)=(abc)$.
-
-Here and below, the symbol $\wedge$ between boundaries is sometimes omitted when this causes no ambiguity.
-
-If two connected boundaries have exactly one common point, their product merges into a single connected boundary. If they have two or more common points, the product is zero. If they have no common points, the components remain separate.
-
-The simplest examples are $(abc)(bc)=0$, $(ab)(bc)=(abc)$, and $(ab)(cd)=(ab)(cd)$.
-
-> [!definition] Connected family of boundaries
-> A family of boundaries $B_1,\ldots,B_m$ is called **connected** if it cannot be split into two nonempty groups such that boundaries from different groups have no common basic points.
+> [!info] Exterior objects
+> **Definition.** Linear combinations of products $x_1\wedge\cdots\wedge x_k$ form the space $\Lambda^kV$. Its elements are called exterior objects of grade $k$.
 >
-> For a family of graph vectors $(a_ib_i)$, this agrees with the usual graph connectedness of the corresponding edge system after unused vertices are removed.
+> The scalar $1$ has grade $0$ and is the identity for the exterior product. The product of objects of grades $k$ and $m$ has grade $k+m$ if it is nonzero.
 
-Connectedness of a family does not by itself guarantee a nonzero exterior product. For example, the family of three sides of a triangle is connected, but the corresponding vectors are linearly dependent, so $(ab)\wedge(bc)\wedge(ca)=0$.
-
-If a connected family of graph vectors contains no such dependence, its product gives one boundary component. A disconnected family gives a product of several components.
-
-### Boundaries as a closed class
-
-For later applications, an important fact is that exterior multiplication of boundaries does not take us outside the class of boundaries.
-
-Let $B_1=\partial X$ and $B_2=\partial Y$. Since $\partial B_2=0$, the Leibniz rule gives
+For homogeneous objects,
 
 $$
-B_1\wedge B_2 = \partial X\wedge B_2 = \partial(X\wedge B_2)
+X\wedge Y=(-1)^{km}Y\wedge X
 $$
-Therefore, the exterior product of two boundaries is again a boundary.
 
-This allows boundary objects to be treated as an independent graded subalgebra of the exterior construction.
+The exterior product of $k$ elements of grade one vanishes if and only if those elements are linearly dependent.
 
-> [!remark] A more precise algebraic statement
-> If $\mathcal Z=\ker\partial$ is the cycle space and $\mathcal B=\operatorname{im}\partial$ is the boundary space, then $\mathcal B\subseteq\mathcal Z$, and $\mathcal B$ is a graded ideal in $\mathcal Z$.
+An oriented simplex is written as
+
+$$
+[a_1\ldots a_k]=a_1\wedge\cdots\wedge a_k
+$$
+
+Its grade equals the number of vertices. Thus $[abc]$ has grade $3$, although a geometric triangle is two-dimensional. Interchanging two vertices changes the sign; repeating a vertex gives zero. A general exterior object may be a linear combination of simplices and need not be a single exterior product.
+
+## The boundary operator
+
+> [!info] The boundary
+> **Definition.** The linear boundary operator is specified by
 >
-> In general, $\mathcal B$ is not an ideal of the entire exterior algebra. This refinement will not be needed below.
-
-This closure is precisely what makes boundaries natural arguments for the graph-related part of polyform algebra.
-
-## Bilinear and quadratic forms
-
-In standard linear algebra, a bilinear form is linear in each of its two arguments. In polyform algebra, we use the formal notation $[X,Y]$, where $X$ and $Y$ are exterior objects of the same grade.
-
-A quadratic form is defined by $[X]^2=[X,X]$.
-
-For example:
-
-- $[a]^2$ is the form of a point;
-- $[(ab)]^2$ is the quadratic form of a graph vector;
-- $[(abc)]^2$ is the quadratic form of a second-grade boundary.
-
-It is important to distinguish the **formal algebraic object** from its later **numerical metric evaluation**. The expression $[X]^2$ does not by itself denote a specific number. Once a metric is specified, such a form may be evaluated as the squared norm of the corresponding object.
-
-For an undirected graph edge, the quadratic form does not depend on the chosen orientation, because $[(ba)]^2=[-(ab)]^2=[(ab)]^2$.
-
-This is one reason why quadratic forms are particularly convenient for representing undirected links.
-
-## Polyforms and grades
-
-> [!definition] Polyform
-> In this series, a **polyform** is a linear combination of forms. Its terms may have the same grade or different grades.
-
-If all terms have the same grade, the polyform is called **homogeneous**. An arbitrary polyform can be decomposed by grade as $P=P_0+P_1+P_2+\cdots$, where $P_k$ is the homogeneous component of grade $k$.
-
-In this project, such a component may also be called a **grade component** or **grade polyform**.
-
-The grade of a form is defined by the grade of its arguments. For example, $[(ab)]^2$ has grade $1$, while $[(abc)]^2$ has grade $2$.
-
-We also introduce the **unit form** $e$ of grade $0$. It is the neutral element for multiplication of forms: $eF=Fe=F$.
-
-## Product of forms
-
-The key operation of polyform algebra is defined through the exterior product of arguments.
-
-Let $[X,Y]$ and $[A,B]$ be bilinear forms. Define
-
-$$
-[X,Y][A,B]=[X\wedge A,Y\wedge B]\tag{1}
-$$
-
-For quadratic forms, this gives the particularly simple rule
-
-$$
-[X]^2[A]^2=[X\wedge A]^2\tag{2}
-$$
-
-If $X$ has grade $k$ and $A$ has grade $m$, then their product has grade $k+m$.
-
-Thus, the product of two first-grade quadratic forms is already a second-grade form. For example, $[(ab)]^2[(bc)]^2=[(abc)]^2$.
-
-The algebraic meaning of the grade increase is direct: separate vectors are combined by the exterior product into a higher-grade object.
-
-### Why forms commute
-
-Exterior objects do not commute in general. If the grades of $X$ and $A$ are $k$ and $m$, then $X\wedge A=(-1)^{km}A\wedge X$.
-
-But in a bilinear form, interchanging the factors produces the same sign simultaneously in both arguments. The two signs therefore cancel: $[X,Y][A,B]=[A,B][X,Y]$.
-
-Hence the multiplication of forms defined above is commutative, even though it is based on the anticommutative exterior product.
-
-This property concerns multiplication of forms specifically and must not be confused with ordinary matrix multiplication.
-
-## Nilpotency and repeated vectors
-
-Exterior algebra immediately gives another important property. For any vector $v$, we have $v\wedge v=0$. Therefore, for the quadratic form $q_v=[v]^2$, we obtain $q_v^2=[v\wedge v]^2=0$.
-
-More generally, if the same vector occurs repeatedly among the exterior arguments of a product, the corresponding product of forms is zero.
-
-For example, for the graph vectors of a triangle, $(ab)+(bc)+(ca)=0$, so they are linearly dependent and $[(ab)]^2[(bc)]^2[(ca)]^2=0$.
-
-Thus the algebra automatically eliminates families of vectors that do not span a nondegenerate exterior volume.
-
-Later, this property will be the reason why forest-like sets of links survive in the Laplacian exponential while cyclic sets disappear.
-
-## Product of forms and the Gram determinant
-
-The connection with geometry appears once an inner product is specified.
-
-Let $u_1,\ldots,u_k$ be vectors in a Euclidean space. The standard inner product induces an inner product on the exterior power such that
-
-$$
-\left\|u_1\wedge\cdots\wedge u_k\right\|^2 = \det G(u_1,\ldots,u_k) \tag{3}
-$$
-
-where $G(u_1,\ldots,u_k)$ is the Gram matrix.
-
-On the other hand, in polyform algebra
-
-$$
-[u_1]^2\cdots[u_k]^2 = [u_1\wedge\cdots\wedge u_k]^2 \tag{4}
-$$
-
-Therefore, **the metric evaluation of a product of first-grade quadratic forms equals the Gram determinant of their arguments**.
-
-For two vectors, this is the squared area of the corresponding parallelogram. For three vectors, it is the squared volume of the parallelepiped. For $k$ vectors, it is the squared corresponding $k$-dimensional volume.
-
-This is the same object that already appeared in [[From Lengths to Areas and Volumes]]. There the Gram determinant was introduced as a numerical geometric characteristic. We can now see the formal algebraic object behind it: $[u_1]^2\cdots[u_k]^2$.
-
-For graph vectors $v_1,\ldots,v_k$, the metric evaluation of the form $[v_1]^2\cdots[v_k]^2$ equals $\det(\langle v_i,v_j\rangle)$. We do not introduce a new operator for this evaluation here.
-
-> [!remark] Relation to joint variations
-> In [[Joint Variation of Multiple Links]], the Gram determinant of selected graph vectors appeared as the mixed coefficient of their joint variation.
+> $$
+> \partial1=0,\qquad \partial a_i=1
+> $$
 >
-> Formula (4) shows that this coefficient naturally corresponds to the product of the quadratic forms of the selected links. This is precisely why multiplication of forms is an appropriate language for describing variations of several links simultaneously.
+> and, for $k\ge1$, by the rule
+>
+> $$
+> \partial[a_1\ldots a_k]=\sum_{i=1}^k(-1)^{i-1}[a_1\ldots\widehat{a_i}\ldots a_k]
+> \tag{1}
+> $$
+>
+> The hat over $a_i$ indicates omission of that element; the empty exterior product is $1$. A nonzero boundary has grade one less than the original object.
 
-## Boundary subalgebra and graphs
-
-General polyform algebra allows forms on arbitrary exterior objects. They need not be boundaries and need not have a graph interpretation at all.
-
-When we pass to graphs, a narrower class is selected: the arguments of the elementary forms are graph vectors $(ij)=a_j-a_i$, that is, first-grade boundaries.
-
-Because the product of boundaries is again a boundary, all products of such forms remain inside the same class. Graph polyforms therefore naturally live in the **subalgebra of forms on boundaries**.
-
-The sequence of specializations can be written schematically as
+The equality $\partial a_i=1$ is part of the definition: its right-hand side is a scalar of grade $0$, not an additional vertex. By linearity,
 
 $$
-\text{exterior algebra of objects}
-\longrightarrow
-\text{polyform algebra}
-\longrightarrow
-\text{polyforms on boundaries}
-\longrightarrow
-\text{graph polyforms}
+\partial\left(\sum_i x_i a_i\right)=\sum_i x_i
 $$
 
-The last step already uses the special structure of a graph but does not yet require a metric interpretation.
+Thus the boundary of an affine vector is zero, and the boundary of a point is one.
 
-## Polyform representation of the Laplacian
+We denote simplex boundaries by parentheses:
 
-So far, the definitions have been intentionally abstract. We now apply them to a concrete graph.
+$$
+(ab)=\partial[ab]=b-a,\qquad
+(abc)=\partial[abc]=[bc]-[ac]+[ab]
+$$
 
-Consider the simple cycle $C_4$ with four vertices $a,b,c,d$ and unit conductances.
+In particular, $(a_i a_j)=a_{ij}$. The abbreviated index notation $(ij)$ also means $a_{ij}$. The simplex $[abc]$ and its boundary $(abc)$ are distinct objects of grades $3$ and $2$.
+
+> [!info] Properties of the boundary
+> **Lemma.** For homogeneous $X$ of grade $k$,
+>
+> $$
+> \partial^2=0,\qquad
+> \partial(X\wedge Y)=\partial X\wedge Y+(-1)^kX\wedge\partial Y
+> \tag{2}
+> $$
+
+For the first equality, each deletion of two vertices in (1) occurs twice with opposite signs. For the second, the terms separate into deletions from $X$ and from $Y$; a deletion from $Y$ is preceded by the $k$ factors of $X$. Both properties then follow by linearity.
+
+## Boundaries and exterior powers of affine vectors
+
+> [!info] The space of boundaries
+> **Lemma.** At each grade $k$, the space of boundaries equals $\Lambda^kW$. Equivalently, for $B\in\Lambda^kV$, the following conditions are equivalent: $B$ is a boundary, $\partial B=0$, and $B\in\Lambda^kW$.
+
+> [!note]- Proof
+> **Proof.** Fix the base point $a_1$. It complements $W$ in $V$, so every object $B$ of grade $k\ge1$ has a unique representation
+>
+> $$
+> B=D+a_1\wedge C,\qquad
+> D\in\Lambda^kW,\quad C\in\Lambda^{k-1}W
+> $$
+>
+> Every vector in $W$ has zero boundary. By (2), $\partial D=\partial C=0$ and $\partial B=C$. Hence $\partial B=0$ is equivalent to $B\in\Lambda^kW$.
+>
+> For such a $B$, we have $\partial(a_1\wedge B)=B$, so $B$ is a boundary. Conversely, a boundary satisfies $\partial B=0$ because $\partial^2=0$. For $k=0$, every scalar $s$ equals $\partial(sa_1)$, completing the proof. $\square$
+
+Thus boundaries form a subalgebra of the exterior algebra: a product of boundaries is again a boundary. Nonzero boundaries have grades from $0$ to $n-1$. This bound follows from $\dim W=n-1$.
+
+## Products of simplex boundaries
+
+For base vertices $p,a_1,\ldots,a_r$, formula (1) gives
+
+$$
+(pa_1\ldots a_r)=(a_1-p)\wedge\cdots\wedge(a_r-p)
+\tag{3}
+$$
+
+Consider the boundaries of two simplices on base vertices, each containing at least two vertices. If their only common vertex $p$ is placed first in both lists, then (3) gives
+
+$$
+(pa_1\ldots a_r)\wedge(pb_1\ldots b_s)=(pa_1\ldots a_r b_1\ldots b_s)
+$$
+
+Other vertex orders introduce the signs of the corresponding permutations. If there are at least two common vertices, the product is zero: choosing one common vertex as $p$, both products in (3) contain the difference between the second common vertex and $p$. If the vertex sets are disjoint, the product is nonzero and remains a product of two boundaries.
+
+These rules apply specifically to boundaries of simplices on base vertices. For arbitrary linear combinations, the product is computed by bilinearity, rather than from the list of vertices appearing in the expression.
+
+> [!example] Products of boundaries
+>
+> $$
+> (ab)\wedge(bc)=(b-a)\wedge(c-b)=[bc]-[ac]+[ab]=(abc)
+> $$
+>
+> $$
+> (abc)\wedge(bc)=0,\qquad
+> (ab)\wedge(cd)=[bd]-[bc]-[ad]+[ac]
+> $$
+
+From now on, the symbol $\wedge$ between exterior objects may be omitted when the operation is unambiguous: for example, $(ab)(bc)=(abc)$.
+
+> [!info] Products of edge vectors
+> **Theorem.** The exterior product of the vectors of selected edges is nonzero if and only if those edges form a forest. For a tree on vertices $a_{i_1},\ldots,a_{i_s}$, the product equals $\pm(a_{i_1}\ldots a_{i_s})$. For a forest, it is the product of the boundaries of its components, up to an orientation sign.
+
+> [!note]- Proof
+> **Proof.** The edge vectors of a cycle are linearly dependent: after their directions are aligned around the cycle, their sum is zero. Thus a cycle makes the entire product vanish, even in the presence of other components.
+>
+> In a forest, the edge vectors are independent. In any linear dependence, the coefficient of a leaf vertex forces the coefficient of its only incident edge to be zero. Successive removal of leaves makes all coefficients of the dependence zero.
+>
+> For a tree, applying the rule for merging at one common vertex as leaves are successively attached gives the boundary of the whole tree, up to sign. For a forest, this is done in each component. An isolated vertex contributes the factor $\partial a_i=1$. $\square$
+
+## Forms: bilinearity and basic operations
+
+> [!info] Forms of a fixed grade
+> **Definition.** For $X,Y\in\Lambda^kV$, introduce formal symbols $[X,Y]$. They generate the vector space of forms of grade $k$, subject only to the bilinearity relations
+>
+> $$
+> [\alpha X+\beta Z,Y]=\alpha[X,Y]+\beta[Z,Y]
+> $$
+>
+> $$
+> [X,\alpha Y+\beta Z]=\alpha[X,Y]+\beta[X,Z]
+> $$
+>
+> In each formula, all arguments have grade $k$, and $\alpha,\beta\in\mathbb R$. Symmetry $[X,Y]=[Y,X]$ is not assumed.
+
+This definition specifies a formal object, rather than a number or a scalar-valued bilinear function on $V$. If $E_1,\ldots,E_N$ form a basis of $\Lambda^kV$, then the forms $[E_i,E_j]$ form a basis of the space of forms of that grade.
+
+> [!info] Quadratic forms, transposition, and polar forms
+> **Definition.** For arguments of the same grade, set
+>
+> $$
+> [X]^2=[X,X],\qquad [X,Y]^{\mathsf T}=[Y,X]
+> $$
+>
+> $$
+> \{X,Y\}=[X,Y]+[Y,X]
+> $$
+>
+> Transposition extends to linear combinations. The polar form is defined without a factor of $1/2$.
+
+Bilinearity gives
+
+$$
+[X+Y]^2=[X]^2+\{X,Y\}+[Y]^2
+$$
+
+For example, $[a]^2$ is a form of a point, $[(ab)]^2$ is a form of an affine vector, and $[(abc)]^2$ is a form of a boundary of grade two. Reversing the orientation of the argument leaves the quadratic form unchanged: $[-X]^2=[X]^2$.
+
+The notation $[X]^2$ denotes a form. It means neither the exterior product $X\wedge X$ nor a numerical squared norm. Numerical metric quantities will be defined separately.
+
+## The four-point identity
+
+> [!info] The polar-form identity
+> **Lemma.** For any four points $a_i,a_j,a_k,a_l$ and their affine differences $a_{ij}=a_j-a_i$, the following identity of forms holds:
+>
+> $$
+> \{a_{ij},a_{kl}\}+\{a_{jk},a_{il}\}+\{a_{ik},a_{lj}\}=0
+> \tag{4}
+> $$
+>
+> Coincident points are allowed. No choice of metric is required.
+
+> [!note]- Proof
+> **Proof.** Set $u=a_{ij}$, $v=a_{jk}$, $w=a_{kl}$. Then
+>
+> $$
+> a_{il}=u+v+w,\qquad a_{ik}=u+v,\qquad a_{lj}=-v-w
+> $$
+>
+> The left-hand side of (4) is
+>
+> $$
+> \{u,w\}+\{v,u+v+w\}-\{u+v,v+w\}
+> $$
+>
+> By definition, the polar form is bilinear and symmetric, so
+>
+> $$
+> \{v,u+v+w\}=\{u,v\}+\{v,v\}+\{v,w\}
+> $$
+>
+> $$
+> \{u+v,v+w\}=\{u,v\}+\{u,w\}+\{v,v\}+\{v,w\}
+> $$
+>
+> Substitution cancels all terms. $\square$
+
+Identity (4) is structural: it expresses a linear dependence among polar forms of differences of four points. Its scalar version was considered in [[Inner Product of Graph Vectors#The four-point identity|the note on inner products]]. The passage to that version by metric evaluation is described below.
+
+## Polyforms and the product of forms
+
+> [!info] A polyform
+> **Definition.** A polyform is a finite linear combination of forms, possibly of different grades. If all terms have grade $k$, the polyform is homogeneous. A general polyform has the decomposition
+>
+> $$
+> P=P_0+P_1+\cdots+P_n
+> $$
+>
+> where $P_k$ is its grade component.
+
+> [!info] The product of forms
+> **Definition.** For forms of grades $k$ and $m$, set
+>
+> $$
+> [X,Y]\wedge[A,B]=[X\wedge A,Y\wedge B]
+> \tag{5}
+> $$
+>
+> The product extends by bilinearity to polyforms. Its identity is the unit form $e=[1,1]$ of grade $0$.
+
+Inside the arguments in (5), $\wedge$ is the exterior product of objects. Between forms, the same symbol denotes the operation defined through that exterior product. From now on, $\wedge$ between forms is omitted: $[X,Y][A,B]$ means the product (5).
+
+The scalar $1$ and the form $e$ belong to different levels of the construction. By bilinearity, $[s,t]=st\,e$ for scalars $s,t$, and $eF=Fe=F$ for every form.
+
+> [!info] Properties of multiplication
+> **Theorem.** The product of polyforms is associative, distributive, and commutative. Grades add for nonzero products of homogeneous forms.
+
+> [!note]- Proof
+> **Proof.** Bilinearity of the exterior product ensures that (5) is consistent with the relations defining forms. Associativity and distributivity are inherited from the operations on the arguments.
+>
+> Interchanging forms of grades $k$ and $m$ introduces a sign $(-1)^{km}$ in each argument. By bilinearity, the two signs multiply:
+>
+> $$
+> [X\wedge A,Y\wedge B]=(-1)^{2km}[A\wedge X,B\wedge Y]=[A\wedge X,B\wedge Y]
+> $$
+>
+> This proves commutativity. Addition of grades follows from (5). $\square$
+
+For quadratic forms,
+
+$$
+[X]^2[A]^2=[X\wedge A]^2
+\tag{6}
+$$
+
+For example, $[(ab)]^2[(bc)]^2=[(abc)]^2$. The orientation sign of a product of boundaries disappears when passing to the quadratic form.
+
+## Nilpotence and forms on boundaries
+
+For any $v\in V$, set $q_v=[v]^2$. Formula (6) gives
+
+$$
+q_v^2=[v\wedge v]^2=0
+$$
+
+For a nonzero vector, the form $q_v$ itself is nonzero. The identity states that its product with itself is zero.
+
+More generally,
+
+$$
+[v_1]^2\cdots[v_r]^2=[v_1\wedge\cdots\wedge v_r]^2
+\tag{7}
+$$
+
+The product (7) vanishes if and only if the vectors are linearly dependent. In particular, the product of the forms of the edges of a cycle is zero.
+
+Forms $[X,Y]$ with arguments $X,Y\in\Lambda^kW$ form the subalgebra of forms on boundaries. It contains $e$, is closed under multiplication, and has grades from $0$ to $n-1$. Hence every polyform $P$ in this subalgebra with $P_0=0$ satisfies $P^n=0$: each term in a product of $n$ factors would have grade at least $n$.
+
+This does not mean that every form of positive grade has square zero. For example, for independent affine vectors $u,v$,
+
+$$
+\bigl([u]^2+[v]^2\bigr)^2=2[u\wedge v]^2\ne0
+$$
+
+## Metric evaluation
+
+Suppose $W$ is equipped with a positive definite inner product, such as the resistance metric of a connected graph. It induces a metric on each exterior power $\Lambda^kW$. For a simple exterior object,
+
+$$
+\|u_1\wedge\cdots\wedge u_k\|^2=\det(u_i\cdot u_j)_{i,j=1}^k
+$$
+
+Under numerical evaluation, the form $[X,Y]$ is assigned the value $X\cdot Y$. By bilinearity, this defines a linear evaluation of forms on boundaries of a fixed grade. In particular, $[X]^2$ evaluates to $\|X\|^2$, and $\{X,Y\}/2$ evaluates to $X\cdot Y$.
+
+The metric evaluation of each term in (4) is twice the corresponding inner product. Dividing by $2$ gives
+
+$$
+a_{ij}\cdot a_{kl}+a_{jk}\cdot a_{il}+a_{ik}\cdot a_{lj}=0
+$$
+
+The evaluation of the product (7) is the Gram determinant of the original vectors. In general, it is not the product of the evaluations of the individual forms: for two vectors, it is $\|u\|^2\|v\|^2-(u\cdot v)^2$.
+
+A metric on $W$ does not automatically assign a norm to a formal point or an arbitrary simplex in $V$. The next note concerns precisely the metric on boundaries at each grade.
+
+## The polyform representation of the Laplacian
+
+For an undirected graph, set
+
+$$
+L=\sum_{i<j}c_{ij}[a_{ij}]^2=\sum_{i<j}c_{ij}[(ij)]^2
+\tag{8}
+$$
+
+This is a homogeneous polyform of grade one on boundaries. When the matrix representation is needed at the same time, we denote it by $\mathbf L$. The coefficient matrix of the form (8) in the basis forms $[a_i,a_j]$ is the usual Laplacian, since
+
+$$
+[a_j-a_i]^2=[a_i]^2+[a_j]^2-\{a_i,a_j\}
+$$
+
+However, multiplication of forms by (5) differs from matrix multiplication, so $L^2$ and $\mathbf L^2$ denote different objects.
+
+Consider the cycle $C_4$ with unit conductances.
 
 ```mermaid
 graph LR
-    a(("a")) --- b(("b"))
-    b --- c(("c"))
-    c --- d(("d"))
+    a((a)) --- b((b))
+    b --- c((c))
+    c --- d((d))
     d --- a
 ```
 
-When the representation of an object is clear from context, we use its ordinary symbol. Thus the Laplacian polyform is denoted simply by $L$. If the matrix representation is needed in the same discussion, we distinguish the matrix typographically as $\mathbf L$.
-
-For the cycle $C_4$, the matrix Laplacian is
-
-$$
-\mathbf L=
-\begin{array}{c|rrrr}
- & a & b & c & d\\
-\hline
-a & 2 & -1 & 0 & -1\\
-b & -1 & 2 & -1 & 0\\
-c & 0 & -1 & 2 & -1\\
-d & -1 & 0 & -1 & 2
-\end{array}
-$$
-
-The row and column headings make explicit that the matrix is indexed by graph vertices. Diagonal entries belong to the vertices themselves and equal their degrees, while off-diagonal entries describe links between the corresponding pairs of vertices.
-
-The same graph can be written in polyform algebra. Associate with each edge its graph vector: $(ab)$, $(bc)$, $(cd)$, and $(da)$. The quadratic form of each such vector represents one link. Therefore, the polyform representation of the Laplacian is
-
-$$
-L=[(ab)]^2+[(bc)]^2+[(cd)]^2+[(da)]^2\tag{5}
-$$
-
-In later polyform formulas, this is the representation meant by the symbol $L$ unless stated otherwise.
-
-The meaning of multiplication is now visible directly on the graph. Two adjacent links give a second-grade form: $[(ab)]^2[(bc)]^2=[(abc)]^2$. Two nonadjacent links give a two-component boundary: $[(ab)]^2[(cd)]^2=[(ab)(cd)]^2$.
-
-The product of three consecutive edges of the cycle gives one third-grade boundary: $[(ab)]^2[(bc)]^2[(cd)]^2=[(abcd)]^2$. But the product of all four edges is zero because the cycle vectors are linearly dependent: $(ab)+(bc)+(cd)+(da)=0$.
-
-Thus, already for $C_4$, we can see that a polyform is not another notation for matrix multiplication. It stores links as quadratic forms of graph vectors, while multiplication combines them into joint boundary objects of higher grade.
-
-For an arbitrary weighted graph, the Laplacian polyform is
-
-$$
-L=\sum_{i<j}c_{ij}[(ij)]^2\tag{6}
-$$
-
-Each term has grade $1$, so $L$ is a homogeneous quadratic polyform of first grade.
-
-Its square already contains second-grade forms. If $q_e=[v_e]^2$, then $L^2=\sum_{e,f}c_ec_fq_eq_f$.
-
-Terms with $e=f$ disappear because $q_e^2=0$, while linearly dependent sets of links likewise give zero exterior product.
-
-Thus ordinary powers of the Laplacian polyform automatically construct objects of progressively higher grades while simultaneously discarding degenerate sets of links.
-
-> [!warning] Matrix and polyform
-> The Laplacian polyform $L$ and the matrix Laplacian $\mathbf L$ encode the same coupling coefficients but belong to different algebraic representations and are multiplied by different rules.
+> [!example] The matrix and polyform of the cycle
+> In vertex order $a,b,c,d$, the matrix Laplacian and the polyform are
 >
-> Therefore, the polyform power $L^2$ and the matrix power $\mathbf L^2$ are different objects.
+> $$
+> \mathbf L=\begin{pmatrix}
+> 2&-1&0&-1\\
+> -1&2&-1&0\\
+> 0&-1&2&-1\\
+> -1&0&-1&2
+> \end{pmatrix}
+> $$
+>
+> $$
+> L=[(ab)]^2+[(bc)]^2+[(cd)]^2+[(da)]^2
+> $$
+>
+> Two adjacent couplings give $[(ab)]^2[(bc)]^2=[(abc)]^2$, while two nonadjacent couplings give $[(ab)]^2[(cd)]^2=[(ab)(cd)]^2$.
+>
+> Three consecutive couplings give
+>
+> $$
+> [(ab)]^2[(bc)]^2[(cd)]^2=[(abcd)]^2
+> $$
+>
+> The product of all four forms is zero because $(ab)+(bc)+(cd)+(da)=0$.
 
-## Why the exponential comes next
+> [!example] The highest nonzero power for $C_4$
+> In $L^3$, only sets of three distinct edges survive. There are four such sets; each is a spanning tree and gives the form $[(abcd)]^2$. Each set occurs in $3!$ orders, so
+>
+> $$
+> L^3=24[(abcd)]^2,\qquad L^4=0
+> $$
 
-It is now natural to look for a single object that contains all grades generated by the Laplacian polyform: $e$, $L$, $L^2$, $L^3$, $\ldots$
+## Further reading
 
-The standard way to collect all powers of one element into a single graded construction is the exponential $\exp L$.
+The next note, [[Metric of Higher-Grade Objects]], defines inner products of boundaries of the same grade and their numerical norms. After that, [[Laplacian Exponential]] combines the powers of $L$ into a single polyform; the grade bound proved here makes its exponential series finite.
 
-In an ordinary algebra, this would be an infinite power series. Here, exterior nilpotency makes it finite: sufficiently high grades necessarily vanish.
-
-Moreover, if $q_e=[v_e]^2$, then each elementary term $c_eq_e$ satisfies $(c_eq_e)^2=0$. Its exponential therefore has only two terms: $\exp(c_eq_e)=e+c_eq_e$.
-
-This already prepares the factorized representation of the full Laplacian exponential. Its grade structure, relation to spanning forests, and metric meaning will be the subject of the next note [[Laplacian Exponential]].
-
-## What we obtained
-
-Polyform algebra separates formal operations from their metric interpretation.
-
-The initial objects are points and their linear combinations. The exterior product creates simplices and higher-grade objects, the boundary operator selects a special closed class of boundary objects, and bilinear and quadratic forms allow us to build forms on these objects.
-
-The key operation is defined by rule (1): the product of forms is the form of the exterior products of their arguments. From this follow the increase of grade, commutativity of form multiplication, and nilpotency caused by repeated vectors.
-
-Once a metric is specified, the product of quadratic forms receives a numerical evaluation through the Gram determinant. Thus areas, volumes, and mixed coefficients of joint variations become different interpretations of the same algebraic construction.
-
-Applying this algebra to the Laplacian polyform prepares the next step - passing to its exponential and to the metric construction of Polyform Metric Geometry itself.
+In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover exterior algebra, bilinearity, and Gram determinants. The definition of the formal symbols $[X,Y]$ and their product (5) specifies the polyform algebra used in this series.

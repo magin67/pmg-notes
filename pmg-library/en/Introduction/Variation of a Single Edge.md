@@ -1,593 +1,273 @@
 ---
-title: Variation of a Single Edge
+title: "Variation of a Single Edge"
 date: 2026-10-04
-revision: 1
+updated: 2026-10-08
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: single-edge-variation
 lang: en
-description: How changing the conductance of a single edge changes the Laplacian, Green matrix, effective resistances, spanning-tree weight, and spanning 2-forest weights of a graph.
+description: "Exact changes in the Green matrix, effective resistances, spanning-tree coefficient, and weights of separating spanning 2-forests when one conductance varies."
 ---
 
-So far, the graph has been treated as a fixed object. The conductances $c_{ij}$ determined the Laplacian, the Green matrix determined the inverse metric structure, and effective resistances played the role of squared distances between vertices.
+Changing one conductance produces a perturbation of rank at most one in the Laplacian. This yields exact formulas for the Green matrix, effective resistances, and spanning-tree coefficient. Resistance sensitivities are expressed through inner products of affine vectors, while changes in the weights of separating spanning forests are related to Gram determinants.
 
-We now change only one edge and trace how this local change propagates through the entire network.
+## Setup and change in the Laplacian
 
-Physically, the problem is simple. Suppose the conductance between vertices $k$ and $l$ changes: for example, the conductor becomes thicker, or an additional parallel channel is added. Locally only one connection changes, but effective resistances between many other pairs of vertices may change as well.
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices. The conductances $c_{ij}=c_{ji}$ are nonnegative; positive values correspond to existing edges. Choose distinct vertices $k,l$ and change only one conductance:
 
-This perturbation turns out to have a particularly simple structure. The change in the Laplacian has rank one, the change in the inverse metric can be computed exactly, and the sensitivity of any effective resistance is determined by the square of a single inner product of graph vectors.
-
-## Problem setup
-
-Consider a connected undirected graph with nonnegative conductances $c_{ij}=c_{ji}$.
-
-Choose a pair of vertices $k,l$ and change only its conductance:
 $$
-c'_{kl}=c_{kl}+\delta
+c'_{kl}=c_{kl}+\delta,\qquad \delta\ge-c_{kl}
+$$
+
+For $\delta>0$, the coupling is strengthened or added; for $-c_{kl}<\delta<0$, it is weakened; and for $\delta=-c_{kl}$, an existing edge is removed. A prime denotes quantities after the change, and $\Delta$ denotes the new value minus the original value.
+
+We retain $a_{ij}=a_j-a_i$ and $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$. All unprimed resistances and inner products are computed in the **original graph**. The contribution of the coupling $kl$ to the Laplacian is $c_{kl}\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}$, so
+
+$$
+L'=L+\delta\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}
 \tag{1}
 $$
-All other conductances remain unchanged.
 
-We assume
-$$
-c_{kl}+\delta\geq0
-$$
-The sign of $\delta$ determines the type of change:
+For $\delta\ne0$, the perturbation has rank one; for $\delta=0$, it is zero. The change preserves zero row and column sums.
 
-- $\delta>0$ - the edge is strengthened;
-- $-c_{kl}<\delta<0$ - the edge is weakened;
-- $\delta=-c_{kl}$ - an existing edge is removed;
-- if $c_{kl}=0$ and $\delta>0$, a new edge is added between the vertices.
+## The spanning-tree coefficient and connectivity
 
-For formulas involving the Green matrix, we additionally require the graph to remain connected after the change.
+The spanning-tree coefficient is defined by
 
-## Change in the Laplacian
+$$
+\tau=\sum_T\prod_{e\in T}c_e
+$$
 
-As in [[Inner Product of Graph Vectors]], write
-$$
-\mathbf e_{kl}=\mathbf e_l-\mathbf e_k
-$$
-The contribution of a single edge with conductance $c_{kl}$ to the Laplacian is
-$$
-c_{kl}\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}
-$$
-Therefore changing one conductance gives
-$$
-\boxed{
-L'=L+\delta\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}
-}
-\tag{2}
-$$
-The matrix
-$$
-\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}
-$$
-has rank one. Thus a local variation of one edge is a **rank-one perturbation** of the Laplacian.
+where the sum runs over spanning trees. By the [[From Lengths to Areas and Volumes|matrix-tree theorem]], $\tau$ equals the determinant of a reduced Laplacian. For a connected graph, $\tau>0$; for a disconnected graph, $\tau=0$, since there are no spanning trees.
 
-This is the first reason why the problem admits an exact solution.
+> [!info] Change in the spanning-tree coefficient
+> **Lemma.** For every $\delta\ge-c_{kl}$,
+>
+> $$
+> \tau'=\tau(1+\delta R_{kl})
+> \tag{2}
+> $$
+>
+> The modified graph is connected if and only if $1+\delta R_{kl}>0$.
+
+> [!note]- Proof
+> **Proof.** Choose vertex $k$ as the reference vertex and delete its row and column from $L$, obtaining an invertible matrix $L_0$. Let $b$ be the column vector $\mathbf e_{kl}$ with coordinate $k$ deleted. Then $L'_0=L_0+\delta bb^{\mathsf T}$.
+>
+> The determinant formula for a rank-one perturbation gives
+>
+> $$
+> \det L'_0=\det L_0\bigl(1+\delta b^{\mathsf T}L_0^{-1}b\bigr)
+> $$
+>
+> The preceding note established that the Gram matrix of resistance vectors based at one vertex equals the inverse reduced Laplacian. Hence $b^{\mathsf T}L_0^{-1}b=R_{kl}$. The matrix-tree theorem gives (2), including when $L'_0$ is singular.
+>
+> With nonnegative conductances, $\tau'>0$ is equivalent to the existence of a spanning tree, hence to connectivity. Since $\tau>0$, this proves the criterion $1+\delta R_{kl}>0$. $\square$
+
+In particular, while connectivity is preserved,
+
+$$
+\frac{\partial\tau}{\partial c_{kl}}=\tau R_{kl},\qquad
+\frac{\partial\log\tau}{\partial c_{kl}}=R_{kl}
+\tag{3}
+$$
+
+The resistance expresses the relative sensitivity of the spanning-tree coefficient to a conductance change.
 
 ## Change in the Green matrix
 
-The Laplacian of a connected graph is singular in the direction $\mathbf 1$, but invertible on the centered subspace
-$$
-H=\{x:\mathbf 1^{\mathsf T}x=0\}
-$$
-On this subspace, the Green matrix $G=L^+$ acts as the ordinary inverse of $L$.
+For the formulas in this section and the formulas for finite resistance changes, assume that the modified graph remains connected. Denote the Green matrices by $G=L^+$ and $G'=(L')^+$. On the subspace $H=\mathbf1^\perp$, they are the ordinary inverses of the restricted Laplacians.
 
-Since $\mathbf e_{kl}\in H$, the Sherman-Morrison formula can be applied to (2). We obtain
-$$
-\boxed{
-G'
-=
-G-
-\frac{\delta}
-{1+\delta R_{kl}}
-G\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}G
-}
-\tag{3}
-$$
-Here we used
-$$
-\mathbf e_{kl}^{\mathsf T}G\mathbf e_{kl}=R_{kl}
-$$
-Formula (3) is exact: no smallness assumption on $\delta$ is required.
-
-The vector $G\mathbf e_{kl}$ has a direct electrical meaning. It is the centered potential vector produced by a unit external current applied between vertices $k$ and $l$.
-
-Thus the change in the entire Green matrix is built from a single potential profile. Although the global metric structure of the graph changes, the matrix correction still has rank one.
-
-> [!note] When the denominator vanishes
-> In the physically admissible range, the denominator $1+\delta R_{kl}$ remains positive as long as the modified graph stays connected.
+> [!info] The Green matrix update
+> **Lemma.** If $1+\delta R_{kl}>0$, then
 >
-> A special case occurs when a bridge is removed. Then the graph splits into components, the Green matrix of a connected graph no longer describes the whole network as one finite metric system, and the denominator in (3) becomes zero.
+> $$
+> G'=G-\frac{\delta}{1+\delta R_{kl}}
+> G\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}G
+> \tag{4}
+> $$
 
-## Change in an arbitrary effective resistance
+> [!note]- Derivation by the Sherman-Morrison formula
+> **Proof.** For an invertible matrix $A$ and a column vector $b$, provided the denominator is nonzero,
+>
+> $$
+> (A+\delta bb^{\mathsf T})^{-1}
+> =A^{-1}-\frac{\delta A^{-1}bb^{\mathsf T}A^{-1}}{1+\delta b^{\mathsf T}A^{-1}b}
+> $$
+>
+> Apply this identity to the restriction of (1) to $H$, using an orthonormal basis of that subspace. The column vector $\mathbf e_{kl}$ belongs to $H$, and $\mathbf e_{kl}^{\mathsf T}G\mathbf e_{kl}=R_{kl}$. Both sides of (4) act as zero on constant column vectors. Thus the formula holds on the full space. $\square$
 
-For another pair of vertices $i,j$, the effective resistance is
-$$
-R_{ij}=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij}
-$$
-After the variation,
-$$
-R'_{ij}=\mathbf e_{ij}^{\mathsf T}G'\mathbf e_{ij}
-$$
-Substituting (3), we get
-$$
-R'_{ij}
-=
-R_{ij}
--
-\frac{\delta}{1+\delta R_{kl}}
-\left(
-\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}
-\right)^2
-$$
-But
-$$
-\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}
-=
-\langle a_{ij},a_{kl}\rangle
-$$
-where $a_{ij}=a_j-a_i$ and $a_{kl}=a_l-a_k$ are graph vectors in resistance geometry.
+Formula (4) is exact and requires no smallness assumption on $\delta$. The column vector $G\mathbf e_{kl}$ gives the centered potentials for a unit current injected at $l$ and withdrawn at $k$. For $\delta\ne0$, the change in $G$ has rank one because this column vector is nonzero.
 
-Therefore
-$$
-\boxed{
-R'_{ij}
-=
-R_{ij}
--
-\frac{\delta}{1+\delta R_{kl}}
-\langle a_{ij},a_{kl}\rangle^2
-}
-\tag{4}
-$$
-Equivalently, in finite-variation form,
-$$
-\boxed{
-\Delta R_{ij}
-=
--
-\frac{\delta}{1+\delta R_{kl}}
-\langle a_{ij},a_{kl}\rangle^2
-}
-\tag{5}
-$$
-This is the main formula of the note.
+## Finite change in resistance
 
-From [[Inner Product of Graph Vectors]],
+For any vertices $i,j$, we have $R_{ij}=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij}$. Substituting (4) and using $\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}=a_{ij}\cdot a_{kl}$ gives the following result.
+
+> [!info] Change in effective resistance
+> **Corollary.** If connectivity is preserved, then
+>
+> $$
+> \Delta R_{ij}=-\frac{\delta}{1+\delta R_{kl}}(a_{ij}\cdot a_{kl})^2
+> \tag{5}
+> $$
+>
+> In terms of the resistances of the original graph, this is
+>
+> $$
+> \Delta R_{ij}=-\frac{\delta}{4(1+\delta R_{kl})}
+> (R_{il}+R_{jk}-R_{ik}-R_{jl})^2
+> $$
+
+The mixed factor has an electrical interpretation. For a unit current injected at $l$ and withdrawn at $k$,
+
 $$
-\langle a_{ij},a_{kl}\rangle
-=
-\frac12
-\left(
-R_{il}+R_{jk}-R_{ik}-R_{jl}
-\right)
+\varphi_j-\varphi_i=a_{ij}\cdot a_{kl}
 $$
-Hence (5) can be written entirely in terms of effective resistances:
+
+Thus the resistance change is determined by the squared transfer voltage. By reciprocity, the current pair and the measurement pair can be interchanged while retaining their orientations.
+
+> [!note] Monotonicity and unchanged measurements
+> The denominator in (5) is positive. Hence strengthening a coupling cannot increase resistances, and weakening it cannot decrease them. This is Rayleigh's monotonicity principle for variation of a single coupling.
+>
+> If $a_{ij}\cdot a_{kl}=0$, then $R_{ij}$ remains unchanged for every admissible $\delta$ that preserves connectivity. For nonzero $\delta$, this condition is also necessary for $\Delta R_{ij}=0$.
+
+For the endpoints of the varied coupling itself, $a_{kl}\cdot a_{kl}=R_{kl}$. Formula (5) gives
+
 $$
-\boxed{
-\Delta R_{ij}
-=
--
-\frac{\delta}
-{4(1+\delta R_{kl})}
-\left(
-R_{il}+R_{jk}-R_{ik}-R_{jl}
-\right)^2
-}
+R'_{kl}=\frac{R_{kl}}{1+\delta R_{kl}},\qquad
+\frac1{R'_{kl}}=\frac1{R_{kl}}+\delta
 \tag{6}
 $$
 
-> [!remark] Geometric meaning
-> The effect of varying the edge $(kl)$ on the distance between $i$ and $j$ is determined not by the ordinary proximity of these pairs in a drawing of the graph, but by their inner product in resistance geometry.
->
-> If
-> $$
-> \langle a_{ij},a_{kl}\rangle=0
-> $$
-> then changing the edge $(kl)$ does not change $R_{ij}$ at all for any admissible finite $\delta$. In resistance geometry, the corresponding directions are orthogonal.
+For $\delta>0$, the second identity expresses the addition of conductance $\delta$ in parallel between the same vertices.
 
-## Electrical interpretation of the mixed factor
+## Derivatives with respect to conductance
 
-The inner product $\langle a_{ij},a_{kl}\rangle$ already has an electrical interpretation.
+Dividing (5) by $\delta$ and taking the limit as $\delta\to0$ gives
 
-If a unit external current is applied between $k$ and $l$, the resulting potential difference between $i$ and $j$ is
 $$
-\varphi_j-\varphi_i
-=
-\langle a_{ij},a_{kl}\rangle
-$$
-By reciprocity, the measurement pair and the current pair may be interchanged.
-
-Thus formula (5) says that the change in effective resistance is determined by the square of the **transfer voltage** between two pairs of vertices.
-
-If this voltage is zero, changing the conductance $(kl)$ does not affect the measurement between $i$ and $j$.
-
-## Infinitesimal variation
-
-Now let $\delta$ be small and divide (5) by $\delta$.
-
-As $\delta\to0$,
-$$
-\frac1{1+\delta R_{kl}}\longrightarrow1
-$$
-Therefore
-$$
-\boxed{
-\frac{\partial R_{ij}}{\partial c_{kl}}
-=
--\langle a_{ij},a_{kl}\rangle^2
-}
+\frac{\partial R_{ij}}{\partial c_{kl}}=-(a_{ij}\cdot a_{kl})^2,\qquad
+\frac{\partial R_{kl}}{\partial c_{kl}}=-R_{kl}^2
 \tag{7}
 $$
-This is the local sensitivity matrix of the resistance metric with respect to conductance changes.
 
-The right-hand side is always nonpositive:
+For $c_{kl}>0$, the derivatives in (3) and (7) are ordinary two-sided derivatives: sufficiently small changes preserve connectivity. For $c_{kl}=0$, the physically admissible derivative is a right derivative, since the conductance can only increase. The algebraic expressions extend to a neighborhood of zero, but negative conductance lies outside the network model considered here.
+
+## Edge probability and bridge deletion
+
+Let $c_{kl}>0$. Choose a spanning tree with probability proportional to the product of its edge conductances. Differentiating $\tau$ with respect to $c_{kl}$ leaves only the contributions from trees containing this edge. Hence, by (3),
+
 $$
-\frac{\partial R_{ij}}{\partial c_{kl}}\leq0
+\Pr(kl\in T)=\frac{c_{kl}}\tau\frac{\partial\tau}{\partial c_{kl}}
+=c_{kl}R_{kl}
 $$
-Therefore strengthening any edge cannot increase any effective resistance.
 
-This is the local differential form of Rayleigh monotonicity.
+When the edge is deleted completely, $\delta=-c_{kl}$, formula (2) becomes
 
-> [!info] What sensitivity measures
-> Formula (7) is especially transparent in geometric form. The sensitivity of one metric quantity to one edge equals minus the square of the inner product of the corresponding graph vectors.
+$$
+\tau'=\tau(1-c_{kl}R_{kl})
+$$
+
+> [!info] The bridge criterion
+> **Proposition.** For an existing edge of a connected graph, the following conditions are equivalent:
 >
-> The sign is known in advance, while the magnitude of the effect is completely determined by the relative position of the two directions in resistance geometry.
-
-## Special case: the endpoints of the varied edge
-
-Set $(ij)=(kl)$. Then
-$$
-\langle a_{kl},a_{kl}\rangle=R_{kl}
-$$
-From (4),
-$$
-R'_{kl}
-=
-R_{kl}
--
-\frac{\delta R_{kl}^2}{1+\delta R_{kl}}
-$$
-After simplification,
-$$
-\boxed{
-R'_{kl}
-=
-\frac{R_{kl}}{1+\delta R_{kl}}
-}
-\tag{8}
-$$
-For the derivative,
-$$
-\boxed{
-\frac{\partial R_{kl}}{\partial c_{kl}}
-=-R_{kl}^2
-}
-\tag{9}
-$$
-Formula (8) has a simple electrical meaning. The rest of the network between $k$ and $l$ already has some effective conductance. When $\delta>0$, adding conductance between the same two vertices acts as adding another channel in parallel.
-
-## What happens to the spanning-tree weight
-
-Changing one edge affects not only the metric but also the combinatorics of the graph.
-
-Let $\tau$ be the spanning-tree weight: in the weighted case, the sum of the weights of all spanning trees, where the weight of a tree is the product of the conductances of its edges.
-
-By Kirchhoff's matrix-tree theorem, $\tau$ equals the determinant of any reduced Laplacian. After the variation, this reduced Laplacian receives the same rank-one perturbation as $L$. The determinant formula for a rank-one perturbation gives
-$$
-\boxed{
-\tau'
-=
-\tau(1+\delta R_{kl})
-}
-\tag{10}
-$$
-This formula is again exact.
-
-Therefore
-$$
-\Delta\tau
-=
-\delta\tau R_{kl}
-$$
-and
-$$
-\boxed{
-\frac{\partial\tau}{\partial c_{kl}}
-=
-\tau R_{kl}
-}
-\tag{11}
-$$
-For the logarithm of the spanning-tree weight, we obtain the particularly compact identity
-$$
-\boxed{
-\frac{\partial\log\tau}{\partial c_{kl}}
-=
-R_{kl}
-}
-\tag{12}
-$$
-Thus effective resistance measures not only metric distance between vertices but also the relative sensitivity of the spanning-tree weight to strengthening the corresponding edge.
-
-## Probability of an edge in a random spanning tree
-
-Choose a spanning tree at random with probability proportional to the product of the conductances of its edges.
-
-If the edge $(kl)$ already exists and $c_{kl}>0$, then
-$$
-\frac{c_{kl}}{\tau}
-\frac{\partial\tau}{\partial c_{kl}}
-$$
-is the total probability of all spanning trees containing this edge.
-
-Using (11),
-$$
-\boxed{
-\Pr((kl)\in T)=c_{kl}R_{kl}
-}
-\tag{13}
-$$
-This quantity lies between $0$ and $1$.
-
-Formula (10) therefore has a probabilistic interpretation: the sensitivity of the spanning-tree weight to an edge change is determined by how essential that edge is for a random spanning tree.
-
-## Weakening and removing an edge
-
-When the edge is weakened, $\delta<0$. As long as the graph remains connected,
-$$
-1+\delta R_{kl}>0
-$$
-and (5) gives
-$$
-\Delta R_{ij}\geq0
-$$
-Thus weakening an edge increases effective resistances or leaves them unchanged.
-
-Now remove an existing edge completely:
-$$
-\delta=-c_{kl}
-$$
-Then
-$$
-\boxed{
-\tau'
-=
-\tau(1-c_{kl}R_{kl})
-}
-\tag{14}
-$$
-Using (13),
-$$
-1-c_{kl}R_{kl}
-=
-1-\Pr((kl)\in T)
-$$
-If the edge is not a bridge, at least one spanning tree does not contain it, so
-$$
-c_{kl}R_{kl}<1
-$$
-and removing the edge preserves connectivity.
-
-If the edge is a bridge, it belongs to every spanning tree:
-$$
-\Pr((kl)\in T)=1
-$$
-Therefore
-$$
-\boxed{c_{kl}R_{kl}=1}
-\tag{15}
-$$
-and after removal
-$$
-\tau'=0
-$$
-At the same time, the denominator in formulas (3)-(8) becomes zero. This is not an algebraic accident: the graph actually becomes disconnected.
-
-> [!remark] Three interpretations of the same variation
-> For a positively weighted connected graph, the following statements for an edge $(kl)$ are equivalent:
->
-> - $(kl)$ is a bridge;
-> - the edge belongs to every spanning tree;
+> - The edge $kl$ is a bridge, meaning that its deletion disconnects the graph.
+> - The edge belongs to every spanning tree.
 > - $c_{kl}R_{kl}=1$.
+
+If the edge is not a bridge, there is a spanning tree of positive weight that does not contain it. Therefore $c_{kl}R_{kl}<1$, and formulas (4)-(6) remain applicable through complete deletion.
+
+When a bridge is deleted, the denominator vanishes and $\tau'=0$. Resistances between different components cease to be finite: injecting current into one component and withdrawing it from another admits no steady-state solution, even though the total external current is balanced. The pseudoinverse of the disconnected Laplacian exists, but formula (4) does not compute it, and the usual resistance formula using that pseudoinverse does not give an effective resistance between components.
+
+## Weights of separating spanning forests
+
+> [!info] A separating spanning 2-forest
+> **Definition.** For distinct vertices $i,j$, a separating spanning 2-forest contains all vertices of the graph, has no cycles, and has exactly two components, with $i$ and $j$ in different components. Its weight is the product of its edge conductances. Denote the sum of these weights by
 >
-> The same property is expressed topologically, probabilistically, and metrically.
+> $$
+> m_{ij}=\sum_{F}\prod_{e\in F}c_e
+> $$
+>
+> Each forest is counted once, with no ordering of its components. The product over an empty edge set is one.
 
-## Return to the Gram determinant
+> [!info] The forest formula for resistance
+> **Lemma.** For the connected original graph,
+>
+> $$
+> m_{ij}=\tau R_{ij}
+> \tag{8}
+> $$
 
-In the previous note [[From Lengths to Areas and Volumes]], the Gram determinant of two vectors was
-$$
-\det\operatorname{Gram}(a_{ij},a_{kl})
-=
-R_{ij}R_{kl}
--
-\langle a_{ij},a_{kl}\rangle^2
-\tag{16}
-$$
-Let us see how this quantity appears in the variation problem.
+> [!note]- Proof by adding a coupling
+> **Proof.** Increase the conductance of the pair $ij$ by $t\ge0$, adding the edge if it was absent. The weight of each spanning tree depends at most linearly on this conductance. The coefficient of $t$ is obtained by deleting the edge $ij$ from the tree.
+>
+> This deletion produces a separating spanning 2-forest. Conversely, adding the edge $ij$ to any such forest produces a spanning tree. This is a bijection that preserves the product of the conductances of the remaining edges. Thus the new spanning-tree coefficient is $\tau+t m_{ij}$.
+>
+> By (2), the same coefficient is $\tau(1+tR_{ij})$. Comparing coefficients of $t$ proves (8). $\square$
 
-Define $m_{ij}=\tau R_{ij}$ as the weighted sum of spanning 2-forests separating vertices $i$ and $j$.
+## Variation of forest weight and area
 
-Using (4) and (10) together,
-$$
-\begin{aligned}
-m'_{ij}
-&=\tau'R'_{ij}=\\
-&=\tau(1+\delta R_{kl})
-\left(
-R_{ij}
--
-\frac{\delta}{1+\delta R_{kl}}
-\langle a_{ij},a_{kl}\rangle^2
-\right)
-\end{aligned}
-$$
-After simplification,
-$$
-m'_{ij}-m_{ij}
-=
-\delta\tau
-\left(
-R_{ij}R_{kl}
--
-\langle a_{ij},a_{kl}\rangle^2
-\right)
-$$
-Therefore
-$$
-\boxed{
-\Delta m_{ij}
-=
-\delta\tau\,
-\det\operatorname{Gram}(a_{ij},a_{kl})
-}
-\tag{17}
-$$
-But the Gram determinant of two vectors is the squared area of the parallelogram they span:
-$$
-\det\operatorname{Gram}(a_{ij},a_{kl})=S_{\parallel}^2
-$$
-Hence
-$$
-\boxed{
-\Delta m_{ij}
-=
-\delta\tau S_{\parallel}^2
-}
-\tag{18}
-$$
-Here the variation problem directly continues the geometry of the previous note.
+As long as the modified graph is connected, multiplying (2) by $R'_{ij}=R_{ij}+\Delta R_{ij}$ from (5) gives
 
-For effective resistance, the change was determined by the square of the inner product of two directions. For the unnormalized two-forest weight, the full Gram determinant appears, that is, the squared area.
+$$
+\Delta m_{ij}=\delta\tau\bigl(R_{ij}R_{kl}-(a_{ij}\cdot a_{kl})^2\bigr)
+$$
 
-This is the first point where higher-order geometric quantities appear not as an additional construction but directly as coefficients of graph variation.
+The expression in parentheses is the Gram determinant of two affine vectors. Using the notation of the preceding note, we obtain the following result.
 
-## Example: strengthening one edge of a triangle
+> [!info] Change in spanning 2-forest weight
+> **Corollary.** For every $\delta\ge-c_{kl}$, including bridge deletion,
+>
+> $$
+> \Delta m_{ij}=\delta\tau\det G(a_{ij},a_{kl})
+> =\delta\tau S_{\parallel}^2
+> \tag{9}
+> $$
+>
+> The parallelogram area $S_{\parallel}$ is computed in the original resistance representation.
 
-Consider $K_3$ with unit conductances:
-$$
-c_{12}=c_{13}=c_{23}=1
-$$
-For every pair,
-$$
-R_{12}=R_{13}=R_{23}=\frac23
-$$
-and the spanning-tree weight is
-$$
-\tau=3
-$$
-Strengthen edge $(12)$ by one:
-$$
-\delta=1,
-\qquad
-c'_{12}=2
-$$
-For the varied pair itself, (8) gives
-$$
-R'_{12}
-=
-\frac{2/3}{1+2/3}
-=
-\frac25
-$$
-Now consider the resistance between vertices $1$ and $3$. From the inner-product formula,
-$$
-\langle a_{13},a_{12}\rangle
-=
-\frac13
-$$
-Therefore
-$$
-R'_{13}
-=
-\frac23
--
-\frac{1}{1+2/3}\frac19
-=
-\frac35
-$$
-The spanning-tree weight changes according to (10):
-$$
-\tau'
-=
-3\left(1+\frac23\right)
-=5
-$$
-This can be checked directly. After strengthening edge $(12)$, the two spanning trees containing it have weight $2$, while the third has weight $1$:
-$$
-2+2+1=5
-$$
-Before the change, the probability that edge $(12)$ belonged to the random spanning tree was
-$$
-c_{12}R_{12}=\frac23
-$$
-After strengthening,
-$$
-c'_{12}R'_{12}
-=
-2\cdot\frac25
-=
-\frac45
-$$
-The strengthened edge has become much more likely to appear in a random spanning tree.
+> [!note]- Extension to bridge deletion
+> **Proof.** With the other conductances fixed, $m'_{ij}$ is a polynomial of degree at most one in $\delta$: each edge occurs in a forest at most once. The right-hand side of (9) is also linear in $\delta$. The equality has already been proved for $\delta\ge0$, when connectivity is preserved. It is therefore a polynomial identity and also holds at $\delta=-c_{kl}$.
+>
+> After a bridge is deleted, $m'_{ij}$ is defined by the sum of forest weights. Formula (8) is not applied to the disconnected network: the product of a zero spanning-tree coefficient and an infinite resistance is undefined. $\square$
 
-## What is not covered in this note
+For the varied pair itself, $i=k$, $j=l$, the determinant in (9) is zero, so $m'_{kl}=m_{kl}$. This agrees with the definition: a forest separating $k$ and $l$ cannot contain the edge $kl$.
 
-The formulas above concern a change in only one edge.
+## Example: strengthening an edge of a triangle
 
-If several conductances change simultaneously, each of them changes the same Green matrix, so their effects cannot in general be treated as independent. Instead of a rank-one perturbation, one obtains a higher-rank perturbation, and the natural objects become matrices of mutual inner products and their determinants. This is the subject of [[Joint Variation of Several Edges]].
+> [!example] Resistances and the spanning-tree coefficient
+> In $K_3$ with unit conductances, $\tau=3$ and $R_{12}=R_{13}=R_{23}=2/3$. Increase $c_{12}$ from $1$ to $2$, so $\delta=1$.
+>
+> Formulas (6) and (5), with $a_{13}\cdot a_{12}=1/3$, give
+>
+> $$
+> R'_{12}=\frac{2/3}{1+2/3}=\frac25,\qquad
+> R'_{13}=\frac23-\frac{1/9}{1+2/3}=\frac35
+> $$
+>
+> By symmetry, $R'_{23}=3/5$. Formula (2) gives $\tau'=3(1+2/3)=5$.
+>
+> An independent check of the resistances uses parallel paths. Between $1$ and $2$, the branch resistances are $1/2$ and $2$; between $1$ and $3$, they are $1$ and $3/2$:
+>
+> $$
+> R'_{12}=\frac{(1/2)\cdot2}{1/2+2}=\frac25,\qquad
+> R'_{13}=\frac{1\cdot(3/2)}{1+3/2}=\frac35
+> $$
+>
+> The three spanning trees have weights $2,2,1$, whose sum is $5$. The probability of edge $12$ increases from $2/3$ to $c'_{12}R'_{12}=4/5$.
 
-A separate inverse problem starts from variations of effective resistances and asks how conductances change or can be reconstructed from them. It uses the same transition
-$$
-L\longleftrightarrow G\longleftrightarrow R
-$$
-but has a different formulation and will be treated separately.
+> [!example] Forest weight
+> Before the change, $m_{13}=\tau R_{13}=2$. After the change, $m'_{13}=\tau'R'_{13}=3$. Formula (9) gives
+>
+> $$
+> \Delta m_{13}=1\cdot3\left(\frac23\cdot\frac23-\frac19\right)=1
+> $$
+>
+> Direct enumeration: the spanning 2-forests separating vertices $1$ and $3$ consist of the single edge $12$ or $23$. Their total weight changes from $1+1=2$ to $2+1=3$.
 
-## Summary
+## Further reading
 
-Changing one conductance,
-$$
-c_{kl}\longmapsto c_{kl}+\delta
-$$
-produces a rank-one change in the Laplacian,
-$$
-L'=L+\delta\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}
-$$
-From this follow two main exact formulas:
-$$
-\boxed{
-R'_{ij}
-=
-R_{ij}
--
-\frac{\delta}{1+\delta R_{kl}}
-\langle a_{ij},a_{kl}\rangle^2
-}
-$$
-and
-$$
-\boxed{
-\tau'=\tau(1+\delta R_{kl})
-}
-$$
-In infinitesimal form, the first becomes
-$$
-\boxed{
-\frac{\partial R_{ij}}{\partial c_{kl}}
-=
--\langle a_{ij},a_{kl}\rangle^2
-}
-$$
-Thus a local change in one edge is controlled by the geometry of graph vectors. The inner product determines the sensitivity of resistance distance, effective resistance determines the sensitivity of the spanning-tree weight, and the Gram determinant determines the variation of the two-forest weight.
+[[Varying several couplings together]] considers simultaneous changes in several conductances. Their interactions are described by the matrix of inner products of the corresponding affine vectors.
 
-The same variation appears simultaneously in three languages: electrical networks, metric geometry, and spanning-tree combinatorics.
-
-## Classical results used in this note
-
-- the Sherman-Morrison formula for a rank-one update of an inverse matrix;
-- Rayleigh monotonicity for electrical networks;
-- Kirchhoff's matrix-tree theorem;
-- the identity $\Pr(e\in T)=c_eR_e$ for weighted random spanning trees;
-- the spanning-forest interpretation of $\tau R_{ij}$.
+In [[Further Reading for the PMG Introductory Series|the reading recommendations]], the Sherman-Morrison formula is covered in sources [5] and [6], Rayleigh monotonicity in [2], the matrix-tree theorem in [3], and the probabilistic interpretation of edges in [9]. The forest formula (8) and its variation (9) are derived directly in this note.

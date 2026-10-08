@@ -1,622 +1,304 @@
 ---
+title: "From Lengths to Areas and Volumes"
 date: 2026-10-04
-revision: 1
+updated: 2026-10-08
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: lengths-areas-volumes
 lang: en
-description: How lengths and inner products give rise to areas and volumes, why their squares are Gram determinants, and how this geometry is connected with effective resistance and spanning trees.
-title: From Lengths to Areas and Volumes
+description: "Gram determinants, areas, and volumes of resistance simplices. Connections with the spanning-tree coefficient and edge-inclusion probabilities in a random spanning tree."
 ---
 
-Effective resistance allows us to regard a graph as a metric space: the resistance $R_{ij}$ plays the role of the squared distance between vertices, while mixed measurements between graph vectors give their inner products.
+Inner products determine lengths and angles as well as areas, volumes, and their higher-dimensional analogues. The squares of these quantities are expressed by Gram determinants. In the resistance representation of a graph, Gram matrix entries are computed from effective resistances, and Gram determinants are related to spanning trees.
 
-But geometry does not end with lengths and angles. The same inner products determine areas, volumes, and their higher-dimensional analogues. The key object here is the **Gram determinant**.
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for affine vectors and $G=L^+$ for the Green matrix. From the preceding notes,
 
-This construction is especially important for graphs. It connects three aspects of the same problem that at first seem unrelated:
-
-- geometry - through areas and volumes;
-- electrical networks - through effective resistances and transfer quantities;
-- combinatorics - through spanning trees.
-
-## From length to area
-
-Let $u$ and $v$ be two vectors. Their lengths are $\|u\|$ and $\|v\|$, and let the angle between them be $\theta$.
-
-The area of the parallelogram spanned by these vectors is
 $$
-S_{\parallel}=\|u\|\,\|v\|\sin\theta.
+\|a_{ij}\|^2=R_{ij},\qquad
+a_{ij}\cdot a_{kl}=\frac12(R_{il}+R_{jk}-R_{ik}-R_{jl})
 $$
-On the other hand,
+
+## The Gram determinant and area
+
+> [!info] The Gram matrix
+> **Definition.** For Euclidean vectors $u_1,\ldots,u_k$, the matrix
+>
+> $$
+> G(u_1,\ldots,u_k)=(u_i\cdot u_j)_{i,j=1}^k
+> $$
+>
+> is called the Gram matrix, and its determinant is called the Gram determinant. The notation $G$ without arguments continues to denote the Green matrix of the graph.
+
+For nonzero vectors $u,v$ with angle $\theta$ between them, the area of the parallelogram is $\|u\|\|v\|\sin\theta$. Substituting $u\cdot v=\|u\|\|v\|\cos\theta$ gives
+
 $$
-u\cdot v=\|u\|\,\|v\|\cos\theta.
-$$
-Therefore
-$$
-S_{\parallel}^2
-=
-\|u\|^2\|v\|^2-(u\cdot v)^2.
+S_{\parallel}^2=\|u\|^2\|v\|^2-(u\cdot v)^2
+=\det\begin{pmatrix}u\cdot u&u\cdot v\\v\cdot u&v\cdot v\end{pmatrix}
 \tag{1}
 $$
-The right-hand side can be written as a determinant:
+
+Formula (1) remains valid when one of the vectors is zero: both sides vanish. The triangle spanned by the same vectors has half the area of the parallelogram, so
+
 $$
-\boxed{
-S_{\parallel}^2=
-\det
-\begin{pmatrix}
-u\cdot u & u\cdot v\\
-v\cdot u & v\cdot v
-\end{pmatrix}.
-}
+S_\triangle^2=\frac14\det G(u,v)
 \tag{2}
 $$
 
-Thus, area arises directly from inner products. The angle $\theta$ is no longer needed in the final formula.
+## The area of a triangle from its side lengths
 
-> [!definition] Gram matrix and Gram determinant
-> For vectors $u_1,\ldots,u_k$, the **Gram matrix** is the matrix of their pairwise inner products:
+For a triangle with vertices $a_1,a_2,a_3$, set $u=a_{12}$, $v=a_{13}$ and denote the side lengths by $\ell_{12},\ell_{13},\ell_{23}$. Then
+
+$$
+u\cdot v=\frac{\ell_{12}^2+\ell_{13}^2-\ell_{23}^2}{2}
+$$
+
+Formula (2) gives
+
+$$
+4S_\triangle^2=\ell_{12}^2\ell_{13}^2
+-\frac14(\ell_{12}^2+\ell_{13}^2-\ell_{23}^2)^2
+$$
+
+This identity is equivalent to Heron's formula:
+
+$$
+S_\triangle^2=p(p-\ell_{12})(p-\ell_{13})(p-\ell_{23}),\qquad
+p=\frac{\ell_{12}+\ell_{13}+\ell_{23}}2
+$$
+
+For three distinct graph vertices $i,j,k$, we have $\ell_{ij}^2=R_{ij}$. Hence
+
+$$
+\det G(a_{ij},a_{ik})
+=R_{ij}R_{ik}-\frac14(R_{ij}+R_{ik}-R_{jk})^2
+$$
+
+Expanding the square gives a symmetric formula for the area of the resistance triangle:
+
+$$
+16S_{ijk}^2=2R_{ij}R_{ik}+2R_{ik}R_{jk}+2R_{jk}R_{ij}
+-R_{ij}^2-R_{ik}^2-R_{jk}^2
+$$
+
+> [!example] The resistance triangle of $K_3$
+> In the complete graph on three vertices with unit conductances, $R_{12}=R_{13}=R_{23}=2/3$. For $u=a_{12}$ and $v=a_{13}$, we obtain
+>
 > $$
-> G(u_1,\ldots,u_k)=
-> \begin{pmatrix}
-> u_1\cdot u_1 & \cdots & u_1\cdot u_k\\
-> \vdots & \ddots & \vdots\\
-> u_k\cdot u_1 & \cdots & u_k\cdot u_k
-> \end{pmatrix}.
+> G(u,v)=\begin{pmatrix}\frac23&\frac13\\\frac13&\frac23\end{pmatrix},\qquad
+> \det G(u,v)=\frac49-\frac19=\frac13
 > $$
-> Its determinant
+>
+> Formula (2) gives $S_\triangle^2=1/12$. An independent check uses the area of an equilateral triangle with side length $\ell=\sqrt{2/3}$:
+>
 > $$
-> \det G(u_1,\ldots,u_k)
+> S_\triangle^2=\frac3{16}\ell^4=\frac3{16}\cdot\frac49=\frac1{12}
 > $$
-> is called the **Gram determinant**.
 
-For two vectors, formula (2) says that the Gram determinant equals the squared area of the parallelogram.
+## Volumes of parallelotopes and simplices
 
-If we need the area of the triangle spanned by the same two vectors, it is half as large:
-$$
-S_\triangle=\frac12S_{\parallel}.
-$$
-Therefore
-$$
-\boxed{
-S_\triangle^2=
-\frac14\det G(u,v).
-}
-\tag{3}
-$$
+> [!info] A parallelotope
+> **Definition.** The vectors $u_1,\ldots,u_k$ define the parallelotope
+>
+> $$
+> \left\{\sum_{i=1}^k t_i u_i:0\le t_i\le1\right\}
+> $$
+>
+> Its dimension is the rank of the system of vectors. If they are linearly dependent, it is degenerate as a $k$-dimensional figure and its $k$-dimensional volume is zero.
 
-## A triangle from its side lengths
+> [!info] Volume formulas
+> **Theorem.** The squared $k$-dimensional volume of the parallelotope is
+>
+> $$
+> V_{\parallel}^2=\det G(u_1,\ldots,u_k)
+> \tag{3}
+> $$
+>
+> For a simplex with vertices $p_0,\ldots,p_k$ and vectors $u_i=p_i-p_0$,
+>
+> $$
+> V_\triangle^2=\frac{\det G(u_1,\ldots,u_k)}{(k!)^2}
+> \tag{4}
+> $$
+>
+> The notation $V_\triangle$ denotes the volume of a simplex in any dimension. Both formulas include the degenerate case.
 
-Consider a triangle with vertices $a,b,c$ and choose two vectors issuing from $a$:
-$$
-u=b-a,\qquad v=c-a.
-$$
-Let the side lengths be
-$$
-\|u\|=c,\qquad
-\|v\|=b,\qquad
-\|v-u\|=a.
-$$
-From the formula expressing an inner product through three distances,
-$$
-u\cdot v=
-\frac{b^2+c^2-a^2}{2}.
-$$
-Substituting this into the Gram determinant gives
-$$
-4S_\triangle^2
-=
-b^2c^2-
-\frac14(b^2+c^2-a^2)^2.
-$$
-After expanding,
-$$
-\boxed{
-16S_\triangle^2
-=
-2a^2b^2+2b^2c^2+2c^2a^2
--a^4-b^4-c^4.
-}
-\tag{4}
-$$
+> [!note]- Proof of the Gram formula
+> **Proof.** Suppose the vectors are linearly independent. Choose an orthonormal basis of their $k$-dimensional span and form the square matrix $U$ whose columns are their coordinate vectors. Then $G(u_1,\ldots,u_k)=U^{\mathsf T}U$, and the volume of the parallelotope is $|\det U|$. Therefore,
+>
+> $$
+> \det G(u_1,\ldots,u_k)=(\det U)^2=V_{\parallel}^2
+> $$
+>
+> If the vectors are linearly dependent, the Gram matrix is singular and the $k$-dimensional volume is zero. The simplex spanned by the same vectors has $1/k!$ times the volume of the parallelotope: they are the images of the standard simplex and the unit cube, respectively, under the same linear map. This gives (4). $\square$
 
-This is a symmetric form of the classical formula usually known as Heron's formula.
+For $k=3$, formula (3) computes the squared volume of a parallelepiped, while for a tetrahedron the factor in (4) is $1/(3!)^2=1/36$.
 
-If
+The Gram determinant vanishes if and only if the vectors are linearly dependent. For two vectors, the figure may degenerate into a segment or a point; for three, its dimension may drop to two, one, or zero. The determinant also depends on the scales of the vectors and is not, by itself, a dimensionless measure of nondegeneracy.
+
+## The Cayley-Menger determinant
+
+Let $\ell_{ij}=\|p_j-p_i\|$ for vertices $p_0,\ldots,p_k$, and define the matrix
+
 $$
-p=\frac{a+b+c}{2},
-$$
-then the standard form of Heron's formula is
-$$
-\boxed{
-S_\triangle^2=p(p-a)(p-b)(p-c).
-}
-\tag{5}
+M=\begin{pmatrix}
+0&1&1&\cdots&1\\
+1&0&\ell_{01}^2&\cdots&\ell_{0k}^2\\
+1&\ell_{10}^2&0&\cdots&\ell_{1k}^2\\
+\vdots&\vdots&\vdots&\ddots&\vdots\\
+1&\ell_{k0}^2&\ell_{k1}^2&\cdots&0
+\end{pmatrix}
 $$
 
-This reveals an important general principle: **area does not require any new independent metric information**. Its square is completely determined by the side lengths, that is, by first-order metric data.
+> [!info] The Cayley-Menger formula
+> The squared volume of a simplex is expressed through its squared side lengths:
+>
+> $$
+> V_\triangle^2=\frac{(-1)^{k+1}}{2^k(k!)^2}\det M
+> \tag{5}
+> $$
 
-## The resistance triangle
+> [!note]- Relation to the Gram determinant
+> **Proof.** Set $u_i=p_i-p_0$. From each row of $M$ corresponding to $p_i$ with $i\ge1$, subtract the row corresponding to $p_0$, then perform the same operations on the columns. The block indexed by $i,j\ge1$ becomes
+>
+> $$
+> \ell_{ij}^2-\ell_{0i}^2-\ell_{0j}^2=-2u_i\cdot u_j
+> $$
+>
+> In the first row and the first column, the only remaining nonzero entry is a single $1$ in the position corresponding to $p_0$. Expanding the determinant along them gives
+>
+> $$
+> \det M=-\det(-2G(u_1,\ldots,u_k))
+> =(-1)^{k+1}2^k\det G(u_1,\ldots,u_k)
+> $$
+>
+> Substitution into (4) proves (5). $\square$
 
-Now return to a graph.
+For a resistance simplex, the entries substituted into $M$ are the effective resistances $R_{ij}$, which already equal squared distances. They must not be squared again in this substitution.
 
-For three vertices $i,j,k$, consider the graph vectors
+## The spanning-tree coefficient as a Gram determinant
+
+> [!info] The spanning-tree coefficient
+> **Definition.** For a weighted graph,
+>
+> $$
+> \tau=\sum_T\prod_{e\in T}c_e
+> $$
+>
+> where the sum runs over all spanning trees. A spanning tree contains every vertex of the graph, is connected, and has no cycles. When all conductances are one, $\tau$ is the number of spanning trees.
+
+Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
+
+Choose a vertex $0$, relabeling the vertices as $0,1,\ldots,n-1$. Delete its row from $B$ to obtain $B_0$. Deleting the row and column of this vertex from $L$ gives the reduced Laplacian
+
 $$
-u=(ij),\qquad v=(ik).
+L_0=B_0WB_0^{\mathsf T}=AA^{\mathsf T},\qquad A=B_0W^{1/2}
 $$
-In resistance geometry,
+
+Thus $L_0$ is the Gram matrix of the $n-1$ rows of $A$. By the weighted matrix-tree theorem,
+
 $$
-u\cdot u=R_{ij},
-\qquad
-v\cdot v=R_{ik}.
-$$
-Their inner product was obtained earlier:
-$$
-u\cdot v=
-\frac{R_{ij}+R_{ik}-R_{jk}}{2}.
-$$
-Hence
-$$
-\det G(u,v)
-=
-R_{ij}R_{ik}
--
-\frac14
-\left(
-R_{ij}+R_{ik}-R_{jk}
-\right)^2.
+\det L_0=\tau
 \tag{6}
 $$
-Since the area of the triangle is half the area of the corresponding parallelogram,
-$$
-\boxed{
-16S_{ijk}^2=
-2R_{ij}R_{ik}
-+2R_{ik}R_{jk}
-+2R_{jk}R_{ij}
--R_{ij}^2-R_{ik}^2-R_{jk}^2.
-}
-\tag{7}
-$$
 
-This is Heron's formula written directly in terms of effective resistances.
-
-Thus, the three pairwise effective resistances determine not only the shape of the resistance triangle, but also its area.
-
-> [!example] The triangle $K_3$
-> Consider the complete graph on three vertices with unit conductances.
+> [!note]- Derivation by the Cauchy-Binet formula
+> **Proof.** For an edge set $F$ of size $n-1$, let $B_{0,F}$ be the square submatrix consisting of the corresponding columns. The Cauchy-Binet formula gives
 >
-> For every pair of vertices,
 > $$
-> R_{12}=R_{13}=R_{23}=\frac23.
+> \det L_0=\sum_{|F|=n-1}(\det B_{0,F})^2\prod_{e\in F}c_e
 > $$
-> Take
-> $$
-> u=(12),\qquad v=(13).
-> $$
-> Then
-> $$
-> u\cdot v
-> =
-> \frac{R_{12}+R_{13}-R_{23}}2
-> =
-> \frac13.
-> $$
-> Therefore
-> $$
-> \det G(u,v)
-> =
-> \frac23\frac23-\frac19
-> =
-> \frac13.
-> $$
-> The squared area of the resistance triangle is
-> $$
-> S_\triangle^2=\frac1{12}.
-> $$
+>
+> If $F$ contains a cycle, the columns are linearly dependent and the determinant is zero. An acyclic set of $n-1$ edges on $n$ vertices is a spanning tree. For a tree, $\det B_{0,F}=\pm1$: this follows by successively expanding along rows corresponding to leaves other than vertex $0$. Exactly the weights of spanning trees remain in the sum, proving (6). $\square$
 
-## From area to volume
+By (3), the spanning-tree coefficient is the squared volume of the parallelotope spanned by the rows of $A$. These vectors lie in the space of edge coordinates and differ from the affine vectors of the resistance representation.
 
-The same principle extends to three vectors.
+## The volume of the full resistance simplex
 
-Let $u,v,w$ be given. The ordinary three-dimensional parallelepiped spanned by these vectors has volume $V_{\parallel}$ satisfying
+Consider the affine vectors $a_{0i}$ for $i=1,\ldots,n-1$, and denote their Gram matrix by $G_R$. Its entries are
+
 $$
-\boxed{
-V_{\parallel}^2=
-\det
-\begin{pmatrix}
-u\cdot u & u\cdot v & u\cdot w\\
-v\cdot u & v\cdot v & v\cdot w\\
-w\cdot u & w\cdot v & w\cdot w
-\end{pmatrix}.
-}
+(G_R)_{ij}=a_{0i}\cdot a_{0j}=\frac12(R_{0i}+R_{0j}-R_{ij})
+$$
+
+> [!info] The Gram matrix relative to one vertex
+> **Lemma.** The Gram matrix of resistance vectors based at vertex $0$ is
+>
+> $$
+> G_R=L_0^{-1}
+> \tag{7}
+> $$
+
+> [!note]- Proof using potentials
+> **Proof.** Inject a unit current at vertex $j$ and withdraw it at vertex $0$. Choose the reference potential $\varphi_0=0$. The equations for the remaining vertices are
+>
+> $$
+> L_0\widehat\varphi=\widehat{\mathbf e}_j
+> $$
+>
+> Here $\widehat\varphi$ contains the potentials at vertices $1,\ldots,n-1$, and $\widehat{\mathbf e}_j$ is the corresponding standard basis column vector. Hence $\varphi_i=(L_0^{-1})_{ij}$.
+>
+> By the [[Inner Product of Graph Vectors#Electrical interpretation|electrical interpretation of the inner product]],
+>
+> $$
+> \varphi_i-\varphi_0=a_{0i}\cdot a_{0j}=(G_R)_{ij}
+> $$
+>
+> This proves (7) for all $i,j$. $\square$
+
+Formulas (6) and (7) imply $\det G_R=1/\tau$. Thus, for the parallelotope spanned by the vectors $a_{0i}$ and for the full resistance simplex,
+
+$$
+V_{\parallel,R}^2=\frac1\tau,\qquad
+V_R^2=\frac1{((n-1)!)^2\tau}
 \tag{8}
 $$
 
-For the tetrahedron determined by the same three vectors issuing from one vertex,
-$$
-V_{\mathrm{tet}}=\frac1{3!}V_{\parallel}.
-$$
-Therefore
-$$
-V_{\mathrm{tet}}^2=
-\frac1{(3!)^2}\det G(u,v,w).
-$$
-
-No new principle appears here compared with the area case. The Gram matrix simply becomes larger.
-
-## The general case
-
-Let $u_1,\ldots,u_k$ be $k$ vectors.
-
-They span the $k$-dimensional analogue of a parallelepiped. In standard geometric terminology, such a figure is called a **parallelotope**: it is the set of points
-$$
-t_1u_1+\cdots+t_ku_k,
-\qquad
-0\leq t_i\leq1.
-$$
-For $k=2$ this is a parallelogram, and for $k=3$ an ordinary parallelepiped.
-
-The square of its $k$-dimensional volume is
-$$
-\boxed{
-V_k^2=\det G(u_1,\ldots,u_k).
-}
-\tag{9}
-$$
-
-If instead we consider a $k$-dimensional simplex with vertices
-$$
-p_0,p_1,\ldots,p_k
-$$
-and
-$$
-u_i=p_i-p_0,
-$$
-then its volume is smaller by a factor of $k!$:
-$$
-\boxed{
-V_{\mathrm{simplex}}^2=
-\frac{\det G(u_1,\ldots,u_k)}{(k!)^2}.
-}
-\tag{10}
-$$
-
-Thus the same construction gives, step by step:
-
-- for $k=1$ - squared length;
-- for $k=2$ - squared area;
-- for $k=3$ - squared volume;
-- for arbitrary $k$ - squared $k$-dimensional volume.
-
-## Zero determinant and degeneracy
-
-The Gram determinant has another simple geometric meaning.
-
-If the vectors $u_1,\ldots,u_k$ are linearly dependent, the figure they span degenerates and its $k$-dimensional volume is zero. Therefore
-$$
-\det G(u_1,\ldots,u_k)=0.
-$$
-The converse is also true in Euclidean geometry:
-$$
-\boxed{
-\det G(u_1,\ldots,u_k)=0
-\quad\Longleftrightarrow\quad
-u_1,\ldots,u_k
-\text{ are linearly dependent}.
-}
-\tag{11}
-$$
-
-For two vectors this means that the parallelogram collapses to a segment. For three, the parallelepiped lies in a single plane.
-
-Thus the Gram determinant measures both the magnitude of an object and whether it is nondegenerate.
-
-## Why the Gram matrix is simpler than distances
-
-The volume of a simplex can also be computed directly from the pairwise distances between its vertices.
-
-For this one uses the **Cayley-Menger determinant**.
-
-Let
-$$
-d_{ij}^2=\|p_i-p_j\|^2.
-$$
-Then for a $k$-dimensional simplex,
-$$
-V_{\mathrm{simplex}}^2
-=
-\frac{(-1)^{k+1}}{2^k(k!)^2}
-\det
-\begin{pmatrix}
-0 & 1 & 1 & \cdots & 1\\
-1 & 0 & d_{01}^2 & \cdots & d_{0k}^2\\
-1 & d_{10}^2 & 0 & \cdots & d_{1k}^2\\
-\vdots & \vdots & \vdots & \ddots & \vdots\\
-1 & d_{k0}^2 & d_{k1}^2 & \cdots & 0
-\end{pmatrix}.
-\tag{12}
-$$
-
-The formula is symmetric in all vertices, but it looks noticeably more complicated than the Gram formula (10).
-
-The origin of the factor $2^k$ becomes clear if we choose one vertex $p_0$ as the origin and pass from distances to the vectors
-$$
-u_i=p_i-p_0.
-$$
-Then the entries of their Gram matrix are
-$$
-\boxed{
-u_i\cdot u_j
-=
-\frac{
-d_{0i}^2+d_{0j}^2-d_{ij}^2
-}{2}.
-}
-\tag{13}
-$$
-
-Thus the distance matrix must first be converted into a matrix of inner products. This transition introduces a factor $1/2$ in each Gram entry, which leads to the power $2^k$ in the determinant.
-
-From this point of view, the Cayley-Menger determinant and the Gram determinant describe the same volume, but use different input data:
-
-- Cayley-Menger works directly with squared pairwise distances;
-- Gram works with inner products of vectors issuing from a chosen vertex.
-
-For later PMG constructions, the second form is usually more natural.
-
-## The spanning-tree count as a squared volume
-
-An unexpected connection with graph combinatorics now appears.
-
-Let $B$ be an oriented incidence matrix of a connected graph, and let
-$$
-C=\operatorname{diag}(c_e)
-$$
-be the diagonal matrix of edge conductances.
-
-Delete one row from $B$ and denote the resulting matrix by $B_0$. Then the reduced Laplacian is
-$$
-L_0=B_0CB_0^T.
-$$
-It can be written as
-$$
-L_0=
-(B_0C^{1/2})(B_0C^{1/2})^T.
-\tag{14}
-$$
-
-But a matrix of the form $AA^T$ is the Gram matrix of the rows of $A$. Therefore $L_0$ itself is a Gram matrix for a system of $n-1$ vectors.
-
-Hence
-$$
-\det L_0
-$$
-has the geometric meaning of the squared $(n-1)$-dimensional volume of that system.
-
-On the other hand, by Kirchhoff's matrix-tree theorem,
-$$
-\boxed{
-\det L_0=\tau(G),
-}
-\tag{15}
-$$
-where $\tau(G)$ is the spanning-tree count of the graph, or, in the weighted case, the sum of the weights of its spanning trees.
-
-Thus one and the same number appears:
-$$
-\boxed{
-\tau(G)
-=
-\text{the square of a certain }(n-1)\text{-dimensional volume}.
-}
-\tag{16}
-$$
-
-This is one of the important passages between graph combinatorics and geometry. The number of spanning trees appears not only as a counting result - it is also a Gram determinant.
-
-## The inverse side: volume of the resistance simplex
-
-There is also another, in a sense inverse, geometric picture.
-
-Choose a vertex $0$ and consider the $n-1$ graph vectors
-$$
-u_i=(0i),
-\qquad
-i=1,\ldots,n-1.
-$$
-Their inner products are determined by effective resistances:
-$$
-u_i\cdot u_j
-=
-\frac{R_{0i}+R_{0j}-R_{ij}}2.
-$$
-Denote this Gram matrix by $G_R$.
-
-From the relation between the Green matrix and effective resistances,
-$$
-G_R=L_0^{-1}.
-$$
-Therefore
-$$
-\det G_R
-=
-\frac1{\det L_0}
-=
-\frac1{\tau(G)}.
-\tag{17}
-$$
-
-Thus the squared $(n-1)$-dimensional volume spanned by the resistance vectors $(0i)$ is
-$$
-\boxed{
-V_{\parallel,R}^2=\frac1{\tau(G)}.
-}
-\tag{18}
-$$
-For the resistance simplex formed by all $n$ vertices,
-$$
-\boxed{
-V_R^2=
-\frac1{((n-1)!)^2\tau(G)}.
-}
-\tag{19}
-$$
-
-This gives a characteristic duality:
-
-- on the Laplacian side, the spanning-tree count equals a squared volume;
-- on the resistance side, the corresponding squared volume is inversely proportional to the spanning-tree count.
-
-> [!example] $K_3$ again
-> For the unit triangle graph,
-> $$
-> \tau(K_3)=3.
-> $$
-> Earlier we obtained
-> $$
-> \det G((12),(13))=\frac13.
-> $$
-> This is exactly
-> $$
-> \det G=\frac1{\tau(K_3)}.
-> $$
-> The area of the resistance triangle satisfies
-> $$
-> S_\triangle^2
-> =
-> \frac1{(2!)^2\tau(K_3)}
-> =
-> \frac1{12}.
-> $$
-
-## Do areas have an electrical meaning?
-
-Effective resistance has a direct two-terminal interpretation: current is passed through two vertices and the resulting potential difference is measured.
-
-For second- and higher-order Gram determinants, there is no equally simple two-terminal interpretation. Nevertheless, they arise naturally in electrical network theory.
-
-Let $e$ and $f$ be two oriented edges of the original graph. Denote their graph vectors by $t_e$ and $t_f$, and set
-$$
-g(e,f)=t_e\cdot t_f.
-$$
-Then
-$$
-g(e,e)=R_e
-$$
-is the effective resistance between the endpoints of edge $e$, while
-$$
-\det
-\begin{pmatrix}
-R_e & g(e,f)\\
-g(e,f) & R_f
-\end{pmatrix}
-=
-R_eR_f-g(e,f)^2
-\tag{20}
-$$
-is the Gram determinant of the two edge vectors.
-
-Now choose a random spanning tree, with the probability of a tree proportional to the product of the conductances of its edges.
-
-For one edge,
-$$
-\Pr(e\in T)=c_eR_e.
-\tag{21}
-$$
-For two edges, the transfer-current theorem gives
-$$
-\boxed{
-\Pr(e,f\in T)
-=
-c_ec_f
-\left(
-R_eR_f-g(e,f)^2
-\right).
-}
-\tag{22}
-$$
-
-The right-hand side is the same Gram determinant, multiplied by the conductances of the two edges.
-
-Thus a second-order quantity acquires a concrete network and combinatorial meaning: it determines the probability of the **joint** occurrence of two edges in a random spanning tree.
-
-For $k$ chosen edges, one obtains a $k\times k$ determinant of the corresponding transfer-current matrix.
-
-> [!remark] Not a "second-order resistance"
-> Such quantities may be viewed as a natural extension of effective resistance to several directions considered simultaneously. However, calling them "second-order effective resistances" without an explicit definition would be misleading.
+> [!example] The spanning-tree coefficient and area for $K_3$
+> The triangle graph with unit conductances has three spanning trees, so $\tau=3$. Choosing vertex $1$ as the reference vertex gives
 >
-> Effective resistance is a standard two-point characteristic of a network. Higher-order Gram determinants have a different meaning - they describe joint multivector characteristics.
+> $$
+> L_0=\begin{pmatrix}2&-1\\-1&2\end{pmatrix},\qquad
+> L_0^{-1}=\begin{pmatrix}\frac23&\frac13\\\frac13&\frac23\end{pmatrix}
+> $$
+>
+> The inverse matrix equals the previously computed Gram matrix $G(a_{12},a_{13})$. Formula (8) gives $S_\triangle^2=1/((2!)^2\cdot3)=1/12$, in agreement with the direct area calculation.
 
-For the unit triangle graph $K_3$, two specified edges belong simultaneously to exactly one of the three spanning trees. Therefore
-$$
-\Pr(e,f\in T)=\frac13.
-$$
-But above we already found
-$$
-\det G(e,f)=\frac13.
-$$
+## Edge-inclusion probabilities in a spanning tree
 
-The same quantity therefore appears simultaneously as:
+For an edge $e$ oriented from $i$ to $j$, set $t_e=a_{ij}$, $R_e=R_{ij}$, and $g(e,f)=t_e\cdot t_f$. Choose a random spanning tree $T$ according to the distribution
 
-- the squared area of a parallelogram in resistance geometry;
-- the reciprocal of the spanning-tree count;
-- the probability that two edges occur jointly in a random spanning tree.
-
-## Toward higher-grade objects
-
-So far we have used only vectors and matrices of their inner products. That is sufficient to define areas and volumes.
-
-However, the expression
 $$
-\det G(u_1,\ldots,u_k)
-$$
-suggests treating a system of several vectors as a single new geometric object.
-
-In the language of exterior algebra, such an object is written
-$$
-u_1\wedge\cdots\wedge u_k.
-$$
-Its squared norm is
-$$
-\boxed{
-\left\|
-u_1\wedge\cdots\wedge u_k
-\right\|^2
-=
-\det G(u_1,\ldots,u_k).
-}
-\tag{23}
+\Pr(T)=\frac1\tau\prod_{e\in T}c_e
 $$
 
-Exterior products were not needed in this note: all results were obtained from ordinary lengths and inner products.
+> [!info] The transfer-current theorem
+> For pairwise distinct unoriented edges $e_1,\ldots,e_k$, each assigned an arbitrary orientation,
+>
+> $$
+> \Pr(e_1,\ldots,e_k\in T)
+> =\left(\prod_{r=1}^k c_{e_r}\right)\det G(t_{e_1},\ldots,t_{e_k})
+> \tag{9}
+> $$
 
-Later, this notation will allow us to treat areas, volumes, and higher-grade objects in a uniform way. This is why Gram determinants arise naturally in PMG.
+Formula (9) expresses the transfer-current theorem through the Gram matrix of resistance vectors. A proof is given in R. Lyons and Y. Peres, *Probability on Trees and Networks*, Section 4.2, “Electrical Interpretations,” under “The Transfer-Current Theorem,” formula (4.5) ([open full text](https://rdlyons.pages.iu.edu/prbtree/), source [9] in [[Further Reading for the PMG Introductory Series|the reading recommendations]]).
 
-## Summary
+For one edge, $\Pr(e\in T)=c_eR_e$. For two **distinct** edges,
 
-Passing from lengths to areas and volumes does not require introducing a new independent metric.
-
-The basic data remain the inner products of vectors:
 $$
-u_i\cdot u_j.
-$$
-From them we build the Gram matrix, and its determinant gives the square of the corresponding multidimensional volume:
-$$
-\boxed{
-V_k^2=\det G(u_1,\ldots,u_k).
-}
+\Pr(e,f\in T)=c_ec_f\bigl(R_eR_f-g(e,f)^2\bigr)
 $$
 
-For a graph, these same inner products are expressed through effective resistances. Therefore the resistance metric determines not only distances between vertices, but also areas, volumes, and all higher Gram characteristics.
+By (1), the expression in parentheses is the squared area of the parallelogram spanned by $t_e,t_f$. Reversing the orientation of an edge changes the signs of the corresponding row and column of the Gram matrix, leaving its determinant unchanged. If the chosen edges contain a cycle, their vectors are linearly dependent and both sides of (9) vanish.
 
-At the same time, determinants unexpectedly return us to combinatorics: the same mechanism connects geometric volumes with the spanning-tree count and with joint edge probabilities in random spanning trees.
+> [!example] Two edges of a triangle
+> In $K_3$ with unit conductances, two specified distinct edges belong to exactly one of the three equally likely spanning trees. Their joint inclusion probability is therefore $1/3$. This direct count agrees with (9): the conductances are one, and the Gram determinant of the two vectors is $1/3$.
 
-Thus we obtain the first construction in which lengths, electrical networks, volumes, and spanning trees appear as manifestations of the same determinantal mechanism.
+Higher-order determinants describe volumes and joint edge-inclusion probabilities. They are not two-point effective resistances.
 
-## Classical results used in this note
+## Further reading
 
-- the Gram determinant and its interpretation as squared multidimensional volume;
-- Heron's formula;
-- the Cayley-Menger determinant;
-- Kirchhoff's matrix-tree theorem;
-- the transfer-current theorem for random spanning trees.
+[[Variation of a Single Edge]] examines how resistances and the spanning-tree coefficient change when one conductance varies. The connection between Gram determinants and exterior products will be introduced after the algebra is defined, in [[Basic Objects and Operations of Polyform Algebra]] and [[Metric of Higher-Grade Objects]].
+
+In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover Gram determinants and multilinear algebra, [3] covers the matrix-tree theorem, and [9] covers random spanning trees and the transfer-current theorem.

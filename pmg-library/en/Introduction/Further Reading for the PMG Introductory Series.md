@@ -1,7 +1,9 @@
 ---
 title: Further Reading for the PMG Introductory Series
 date: 2026-10-07
-revision: 1
+updated: 2026-10-08
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-reading
@@ -16,7 +18,7 @@ This list supplements the ten introductory notes. Sources are grouped into three
 For a first reading, follow this route:
 
 1. **The Laplacian and electric networks:** Spielman [3], Chapters 1, 11, and 12. Doyle and Snell [2] provide an introduction through currents and voltages.
-2. **The geometry of effective resistance:** Devriendt [4], Section II. This requires inner products, Gram matrices, and the pseudoinverse.
+2. **The geometry of effective resistance:** Devriendt [4], Section 2. This requires inner products, Gram matrices, and the pseudoinverse.
 3. **Coupling variations:** Petersen and Pedersen [5], the sections on determinants and matrix inversion. Derivations of the matrix identities are discussed in [6].
 4. **Exterior products and spanning trees:** Vinberg [8], Chapter 8, and Spielman [3], Section 13.4. Prasolov [7] complements these with proofs and problems.
 
@@ -32,7 +34,7 @@ Fifth edition. Springer, 2017. Graduate Texts in Mathematics, 173.
 
 **Read:** Chapter 1, particularly Sections 1.3 on paths and cycles, 1.4 on connectivity, 1.5 on trees and forests, and 1.9 on linear algebra.
 
-The book establishes the terminology of paths, cycles, trees, forests, and connected components. It supports the first note and the forest expansion of the Laplacian exponential. Resistance geometry requires the more specialised sources [2]-[4]. Prerequisites: elementary discrete mathematics.
+The book establishes the terminology of paths, cycles, trees, forests, and connected components. It supports the first note and the forest expansion of the Laplacian exponential. Resistance geometry requires the more specialized sources [2]-[4]. Prerequisites: elementary discrete mathematics.
 
 ### [2] P. G. Doyle, J. L. Snell. Random Walks and Electric Networks
 
@@ -58,9 +60,9 @@ A unified account connects the Laplacian quadratic form, electric currents, the 
 
 *Linear Algebra and its Applications*, 639 (2022), 24-49.
 
-[Open text on arXiv](https://arxiv.org/abs/2010.04521) · [Journal DOI](https://doi.org/10.1016/j.laa.2022.01.002).
+[Open text on arXiv, version 2](https://arxiv.org/abs/2010.04521v2) · [Journal DOI](https://doi.org/10.1016/j.laa.2022.01.002).
 
-**Read:** Section II on graphs, Laplacians, and simplices, particularly II.2-II.4. Sections III and IV discuss the Schur complement and a geometric proof of the metric properties of resistance.
+**Read:** Section 2, “Graphs, Laplacians and Simplices,” particularly Sections 2.2-2.4. Section 3 discusses maps between Laplacians and simplices, including the Schur complement; Section 4 gives a geometric proof of the metric properties of resistance. Section numbers refer to arXiv v2, dated 8 January 2022.
 
 The paper explains the correspondence between a Laplacian and a geometric simplex, the role of the pseudoinverse as a Gram matrix, and the representation of effective resistances as squared Euclidean distances. It complements the notes on graph geometry and the relations between the Laplacian, Green matrix, and effective resistance matrix. Prerequisites: linear algebra and simplex geometry.
 
@@ -96,7 +98,7 @@ American Mathematical Society, 1994. Translations of Mathematical Monographs, 13
 
 **Read:** Chapter I, Section 2 on minors and cofactors, including the Cauchy-Binet formula and Jacobi's identities for complementary minors; Chapter V, Sections 27 and 28 on multilinear maps, tensor products, and symmetric and skew-symmetric tensors. These section numbers refer to the 1994 English edition.
 
-The book connects determinants, minors, and exterior powers. It supports proofs of metric formulas for higher grades and the extraction of the highest-grade coefficient in the Laplacian exponential. It also complements matrix transformations and joint variations. Prerequisites: basic linear algebra; the presentation emphasises proofs and problems.
+The book connects determinants, minors, and exterior powers. It supports proofs of metric formulas for higher grades and the extraction of the highest-grade coefficient in the Laplacian exponential. It also complements matrix transformations and joint variations. Prerequisites: basic linear algebra; the presentation emphasizes proofs and problems.
 
 ### [8] E. B. Vinberg. A Course in Algebra
 
@@ -110,13 +112,13 @@ A systematic introduction to bilinear forms, tensor products, and exterior algeb
 
 ### [9] R. Lyons, Y. Peres. Probability on Trees and Networks
 
-Cambridge University Press, 2016. Author's electronic versions include corrections and updates.
+Cambridge University Press, 2016; paperback edition, 2021. These recommendations use the authors' electronic version of the paperback edition dated 19 August 2026.
 
-[Book website and open full texts](https://rdlyons.pages.iu.edu/prbtree/).
+[Book website](https://rdlyons.pages.iu.edu/prbtree/) · [Full text of the selected electronic version, PDF](https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf). The PDF at this address is updated periodically; check the version date when consulting it.
 
-**Read:** Chapter 2 on random walks and electric networks and Chapter 4 on uniform spanning trees. The remaining chapters are not required for the introductory series.
+**Read:** Chapter 2, “Random Walks and Electric Networks,” and Chapter 4, “Uniform Spanning Trees,” particularly Section 4.2, “Electrical Interpretations.” The Transfer-Current Theorem is stated on page 108, formula (4.5); its proof begins on page 109. Page references use the printed pagination of the selected electronic version.
 
-A more detailed treatment of electric networks and random spanning trees. Determinantal relations between edge-inclusion events connect tree combinatorics with electrical measurements. This is further reading after the notes on joint variation and the Laplacian exponential. Prerequisites: linear algebra and probability.
+A more detailed treatment of electric networks and random spanning trees. Determinantal relations between edge-inclusion events connect tree combinatorics with electrical measurements. This source supports the probability formulas in the notes on lengths, areas and volumes, variation of a single edge, and joint variation of several couplings. The remaining topics can be left for further reading. Prerequisites: linear algebra and probability.
 
 ## Relation to the introductory notes
 
@@ -126,16 +128,21 @@ A more detailed treatment of electric networks and random spanning trees. Determ
 | [[Effective Resistance and Graph Geometry]] | [2], [3], [4] | Effective resistance and its Euclidean representation |
 | [[Inner Product of Graph Vectors]] | [3], [4], [8] | Inner products and Gram matrix geometry |
 | [[Laplacian, Green Matrix, and Effective Resistance Matrix]] | [3], [4], [7] | Pseudoinverses, distance matrices, minors |
-| [[From Lengths to Areas and Volumes]] | [7], [8] | Gram determinants and exterior powers |
-| [[Variation of a Single Edge]] | [2], [5], [6] | Monotonicity, rank-one perturbations, matrix inversion |
-| [[Varying several couplings together]] | [5], [6], [7], [9] | Matrix perturbations, determinants, relations between edge-inclusion events |
-| [[Basic Objects and Operations of Polyform Algebra]] | [7], [8] | Tensor and exterior algebras, bilinear forms |
-| [[Metric of Higher-Grade Objects]] | [7], [8] | Exterior powers and Gram determinants |
-| [[Laplacian Exponential]] | [1], [3], [7], [9] | Forests, spanning trees, and determinantal coefficients |
+| [[From Lengths to Areas and Volumes]] | [3], [7], [8], [9] | Gram determinants, the matrix-tree theorem, joint edge-inclusion probabilities |
+| [[Variation of a Single Edge]] | [2], [3], [5], [6], [9] | Monotonicity, rank-one perturbations, the spanning-tree coefficient, edge probabilities, separating 2-forests |
+| [[Varying several couplings together]] | [5], [6], [7], [8], [9] | Matrix perturbations, determinants, relations between edge-inclusion events |
+| [[Basic Objects and Operations of Polyform Algebra]] | [7], [8] | Exterior algebra, boundaries, and bilinearity of forms |
+| [[Metric of Higher-Grade Objects]] | [4], [7], [8] | Exterior powers and Gram determinants |
+| [[Laplacian Exponential]] | [1], [3], [5], [7], [8] | Forests, spanning trees, exterior algebra, and determinant identities |
 
-> [!remark] Literature and PMG constructions
-> These sources explain standard results about graphs, electric networks, matrices, and exterior algebra. Their expression in the language of boundaries and forms is given in the introductory notes. The metric polyform $M_G=\exp L$, the adopted definitions of potential and norm, and PMG notation require their own exposition and justification in the project materials.
+In [[Variation of a Single Edge]], the identity $m_{ij}=\tau R_{ij}$ for the weight of separating spanning 2-forests is proved directly by adding a coupling and applying the matrix-tree theorem. Source [3] provides the required background; [9] concerns the probabilistic interpretation of edges.
+
+[[From Lengths to Areas and Volumes]] gives a general proof relating the Cayley-Menger determinant to the Gram determinant. [[Laplacian Exponential]] gives a general proof of the central metric identity.
+
+> [!note] Literature and PMG constructions
+> These sources explain standard results about graphs, electric networks, matrices, and exterior algebra. Their expression in the language of boundaries and forms is given in the introductory notes. The metric polyform $M_G=\exp L$, the definitions of potential and norm, and the relation between the normalized top-grade coefficient and the induced metric are presented and justified in [[Laplacian Exponential]].
 >
 > The exponential $\exp L$ in this construction uses the product of forms. Textbook sections on the matrix exponential concern a different operation.
 
-Links and electronic-version information were checked on 7 October 2026. When citing files that are updated periodically, specify the date of the version used.
+Links and electronic-version information were checked on 7 October 2026. Version and section references for [4] and [9] were rechecked on 8 October 2026. When citing files that are updated periodically, specify the date of the version used.
+

@@ -1,213 +1,214 @@
 ---
-title: Inner Product of Graph Vectors
+title: "Inner Product of Graph Vectors"
 date: 2026-10-03
-revision: 1
+updated: 2026-10-08
+revision: 2
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: inner-product-vectors
 lang: en
-description: Why effective resistance is a squared Euclidean distance and how the Green matrix defines a geometric representation of graph vertices.
+description: "Inner products of affine vectors through the Green matrix and four effective resistances. Electrical interpretation, reciprocity of measurements, and the four-point identity."
 ---
-For a connected undirected graph with positive edge conductances, effective resistance can be interpreted as the squared Euclidean distance between the corresponding vertices. This makes it possible to consider not only the lengths of individual vectors between vertices, but also their inner products.
 
-For two vertices $i$ and $j$, define the oriented geometric vector
+In [[Effective Resistance and Graph Geometry]], the vertices of a connected graph were represented by points in Euclidean space whose squared distances equal the effective resistances. The same construction determines inner products of affine vectors between vertices. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
+
+We consider a finite connected undirected graph without loops, with positive conductances on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $G=L^+$. For the points of the resistance representation, we retain the notation
+
 $$
-a_{ij}=a_j-a_i
+a_{ij}=a_j-a_i,\qquad \mathbf e_{ij}=\mathbf e_j-\mathbf e_i
 $$
-and its coordinate representative
-$$
-\mathbf e_{ij}=\mathbf e_j-\mathbf e_i
-$$
-If $L$ is the graph Laplacian and $G = L^+$ is its Green matrix, then the effective resistance is
-$$
-R_{ij}=\|a_{ij}\|^2=\mathbf e_{ij}^{\mathsf T} \ G \ \mathbf e_{ij}
-$$
-The geometric interpretation of this formula is discussed in more detail in [[Effective Resistance and Graph Geometry]]. Here we focus on the mixed quantity associated with two pairs of vertices.
+
+where $\mathbf e_i$ are the standard coordinate columns. The column $\mathbf e_{ij}$ records the coefficients of the affine vector $a_{ij}$ with respect to the vertices.
 
 ## Inner product through the Green matrix
 
-For two oriented vectors
-$$
-a_{ij}=a_j-a_i,\qquad a_{kl}=a_l-a_k
-$$
-their inner product is determined by the same Gram matrix:
-$$
-\langle a_{ij},a_{kl}\rangle = \mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl} \tag{1}
-$$
-Expanding the coordinate vectors gives
-$$
-\langle a_{ij},a_{kl}\rangle = G_{jl}-G_{jk}-G_{il}+G_{ik}
-$$
-Only differences of Green-matrix entries occur in this expression, so it does not depend on the choice of the zero level of electric potential.
+Let $x_i$ denote the position vector of $a_i$ relative to the centroid. By construction of the resistance representation, $x_i\cdot x_j=G_{ij}$, so
 
-## Formula through effective resistances
+$$
+a_{ij}\cdot a_{kl}=(x_j-x_i)\cdot(x_l-x_k)=G_{jl}-G_{jk}-G_{il}+G_{ik}
+$$
 
-For any two vertices,
+> [!info] Inner product
+> **Lemma.** For any two pairs of vertices,
+>
+> $$
+> a_{ij}\cdot a_{kl}=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}
+> \tag{1}
+> $$
+>
+> This is the numerical inner product of affine vectors in the Euclidean resistance representation.
+
+Some indices may coincide. In particular, when the two pairs coincide, (1) gives
+
+$$
+a_{ij}\cdot a_{ij}=\|a_{ij}\|^2=R_{ij}
+$$
+
+## The four-resistance formula
+
+Effective resistances are expressed through the Green matrix as
+
 $$
 R_{pq}=G_{pp}+G_{qq}-2G_{pq}
 $$
-Consider the combination
-$$
-R_{il}+R_{jk}-R_{ik}-R_{jl}
-$$
-After substitution, all diagonal terms cancel:
-$$
-R_{il}+R_{jk}-R_{ik}-R_{jl} = 2(G_{ik}+G_{jl}-G_{il}-G_{jk})
-$$
-Comparing this expression with (1), we obtain the main formula:
-$$
-\boxed{\langle a_{ij},a_{kl}\rangle = \frac12 \left(R_{il}+R_{jk}-R_{ik}-R_{jl}\right)} \tag{2}
-$$
-Thus, the inner product of any two vectors between graph vertices can be reconstructed solely from pairwise effective resistances.
 
-> [!note] Orientation check
-> Formula (2) is written for the convention $a_{ij}=a_j-a_i$. Reversing one of the vectors changes the sign of the inner product:
+In the combination $R_{il}+R_{jk}-R_{ik}-R_{jl}$, the diagonal entries cancel, giving
+
+$$
+R_{il}+R_{jk}-R_{ik}-R_{jl}=2(G_{ik}+G_{jl}-G_{il}-G_{jk})
+$$
+
+> [!info] Polarization of resistances
+> **Lemma.** The inner product can be recovered from four effective resistances:
+>
 > $$
-> \langle a_{ji},a_{kl}\rangle=-\langle a_{ij},a_{kl}\rangle
+> a_{ij}\cdot a_{kl}=\frac12(R_{il}+R_{jk}-R_{ik}-R_{jl})
+> \tag{2}
 > $$
-> Reversing both vectors preserves the sign.
 
-## Why the norms of individual points do not appear
+This is the standard polarization identity for squared Euclidean distances. In an arbitrary coordinate system, the diagonal terms are the squared norms of the position vectors. Each appears with opposite signs and cancels. The result is therefore independent of the choice of origin, although the norms of the position vectors themselves change under translation.
 
-Formula (2) depends only on distances between points, but this can also be seen directly. In an arbitrary Euclidean coordinate system,
-$$
-R_{pq} = \|a_q-a_p\|^2 = \|a_p\|^2+\|a_q\|^2-2\langle a_p,a_q\rangle
-$$
-Substitute these expressions into the combination from (2):
-$$
-R_{il}+R_{jk}-R_{ik}-R_{jl}
-$$
-Each of the four point norms
-$$
-\|a_i\|^2,\qquad \|a_j\|^2,\qquad \|a_k\|^2,\qquad \|a_l\|^2
-$$
-appears once with a plus sign and once with a minus sign, so all of them cancel.
-
-What remains depends only on the relative positions of the points. In particular, the inner product of the two vectors does not depend on the choice of origin and is determined entirely by the metric configuration of the four vertices.
-
-## Polarization of squared distance
-
-Formula (2) can also be obtained directly from Euclidean geometry. For any four points,
-$$
-2\langle a_j-a_i,a_l-a_k\rangle = \|a_i-a_l\|^2+\|a_j-a_k\|^2 -\|a_i-a_k\|^2-\|a_j-a_l\|^2
-$$
-In the resistance embedding of a graph, squared distances are equal to effective resistances, so this identity immediately becomes (2).
-
-This is the standard polarization of a quadratic metric. No PMG-specific construction is required.
+> [!note] Orientation
+> Reversing one vector changes the sign of the inner product:
+>
+> $$
+> a_{ji}\cdot a_{kl}=-a_{ij}\cdot a_{kl}
+> $$
+>
+> Reversing both vectors preserves its value. The resistance $R_{ij}$ is independent of orientation.
 
 ## Electrical interpretation
 
-Suppose a unit current is injected at vertex $l$ and extracted at vertex $k$. The external current vector is then
-$$
-b=\mathbf e_l-\mathbf e_k=\mathbf e_{kl}
-$$
-With zero mean potential, the solution of Kirchhoff's equation
-$$
-L \ \varphi = b
-$$
-is
-$$
-\varphi = G \ \mathbf e_{kl}
-$$
-The potential difference between vertices $j$ and $i$ is
-$$
-\varphi_j-\varphi_i = \mathbf e_{ij}^{\mathsf T}\varphi = \mathbf e_{ij}^{\mathsf T} \ G \ \mathbf e_{kl}
-$$
-By formula (1),
-$$
-\boxed{\varphi_j-\varphi_i = \langle a_{ij},a_{kl}\rangle} \tag{3}
-$$
-Therefore, the inner product of two graph vectors can be measured electrically: one oriented pair specifies the external current, while the potential difference is measured across the other pair.
+Inject a unit current at vertex $l$ and withdraw it at vertex $k$. The external-current column is then $J=\mathbf e_{kl}$. The centered solution of $L\varphi=J$ is
 
-> [!warning] Current direction and sign
-> In (3), current is injected at $l$ and extracted at $k$, so the external current vector is $\mathbf e_{kl}=\mathbf e_l-\mathbf e_k$.
+$$
+\varphi=G\mathbf e_{kl}
+$$
+
+The potential difference across the measurement pair is
+
+$$
+\varphi_j-\varphi_i=\mathbf e_{ij}^{\mathsf T}\varphi=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}
+$$
+
+> [!info] Measuring an inner product
+> **Lemma.** For a unit current injected at $l$ and withdrawn at $k$,
 >
-> If one instead says that "current flows from $k$ to $l$", the external current vector is $\mathbf e_k-\mathbf e_l=-\mathbf e_{kl}$, and the value of $\varphi_j-\varphi_i$ changes sign.
+> $$
+> \varphi_j-\varphi_i=a_{ij}\cdot a_{kl}
+> \tag{3}
+> $$
+>
+> For a current of magnitude $I$ in the same direction, the right-hand side is multiplied by $I$.
 
-## Three pairings of four points
+Interchanging the injection and withdrawal vertices changes the sign of the current column. The difference $\varphi_j-\varphi_i$ also changes sign. Adding a common constant to all potentials does not affect the measurement.
 
-For four distinct vertices $i,j,k,l$, there are three inner products formed by vectors joining disjoint pairs of points:
-$$
-\langle a_{ij},a_{kl}\rangle,\qquad
-\langle a_{jk},a_{il}\rangle,\qquad
-\langle a_{ik},a_{lj}\rangle
-$$
-They satisfy the identity
-$$
-\boxed{
-\langle a_{ij},a_{kl}\rangle + \langle a_{jk},a_{il}\rangle + \langle a_{ik},a_{lj}\rangle = 0} \tag{4}
-$$
-This can be checked directly from formula (2):
-$$
-2\langle a_{ij},a_{kl}\rangle = R_{il}+R_{jk}-R_{ik}-R_{jl}
-$$
-$$
-2\langle a_{jk},a_{il}\rangle = R_{jl}+R_{ik}-R_{ij}-R_{kl}
-$$
-$$
-2\langle a_{ik},a_{lj}\rangle = R_{ij}+R_{kl}-R_{il}-R_{jk}
-$$
-When the three expressions are added, all resistance terms cancel pairwise.
+## Reciprocity of measurements
 
-Therefore, only two of these three mixed quantities are independent. The third is uniquely determined by their sum.
+Symmetry of the Green matrix in (1) gives
 
-In electrical terms, the same identity gives a linear dependence among three reciprocal four-terminal measurements when the current and measurement orientations are chosen according to (4). This relation is useful, in particular, in four-electrode measurements.
-
-## Special case: effective resistance
-
-If the two vertex pairs coincide, then (2) gives
 $$
-\langle a_{ij},a_{ij}\rangle = \frac12(R_{ij}+R_{ji}-R_{ii}-R_{jj}) = R_{ij}
-$$
-because $R_{ij}=R_{ji}$ and $R_{ii}=0$.
-
-Thus effective resistance is the diagonal case of the more general bilinear quantity:
-$$
-R_{ij} = \langle a_{ij},a_{ij}\rangle = \|a_{ij}\|^2
+a_{ij}\cdot a_{kl}=a_{kl}\cdot a_{ij}
 $$
 
-## Reciprocity
+This is the reciprocity principle for a linear resistive network. The voltage $\varphi_j-\varphi_i$ produced by unit injection at $l$ and withdrawal at $k$ equals the voltage $\psi_l-\psi_k$ produced by unit injection at $j$ and withdrawal at $i$. Interchanging the current and measurement pairs preserves the result when their orientations are retained.
 
-The Green matrix is symmetric, hence $\quad \langle a_{ij},a_{kl}\rangle = \langle a_{kl},a_{ij}\rangle$
-In electrical terms, this means reciprocity of measurement: the voltage across the pair $(i,j)$ produced by the unit external current $\mathbf e_{kl}$ is equal to the voltage across $(k,l)$ produced by the unit external current $\mathbf e_{ij}$.
+## The four-point identity
 
-This is a special case of the reciprocity principle for linear resistive networks.
+> [!info] Four-point identity
+> **Lemma.** For any four points and their affine differences $a_{ij}=a_j-a_i$,
+>
+> $$
+> a_{ij}\cdot a_{kl}+a_{jk}\cdot a_{il}+a_{ik}\cdot a_{lj}=0
+> \tag{4}
+> $$
+>
+> The points need not be distinct. The equality holds for any choice of inner product.
+
+For graph vertices, the identity can be derived through effective resistances.
+
+> [!note]- Proof
+> **Proof.** By (2),
+>
+> $$
+> 2a_{ij}\cdot a_{kl}=R_{il}+R_{jk}-R_{ik}-R_{jl}
+> $$
+>
+> $$
+> 2a_{jk}\cdot a_{il}=R_{jl}+R_{ik}-R_{ij}-R_{kl}
+> $$
+>
+> $$
+> 2a_{ik}\cdot a_{lj}=R_{ij}+R_{kl}-R_{il}-R_{jk}
+> $$
+>
+> All resistance terms cancel upon addition. For arbitrary points, the same argument applies to the squared distances $R_{pq}=\|a_q-a_p\|^2$, since the polarization formula (2) remains valid. $\square$
+
+Equality (4) follows from the bilinearity and symmetry of the inner product and the relations between differences of four points. It does not depend on the graph structure or on particular resistance values. In the note on [[Basic Objects and Operations of Polyform Algebra|polyform algebra]], it will be written as an equality of polar forms that holds before a metric is chosen.
+
+By (3), the same relation holds for three electrical measurements with the corresponding current and measurement pairs. Each of the three values equals minus the sum of the other two.
 
 ## Example: a triangle
 
-Consider the triangle $K_3$ in which all three edges have unit resistance. For every pair of distinct vertices,
-$$
-R_{12}=R_{23}=R_{13}=\frac23
-$$
-Then
-$$
-\langle a_{12},a_{13}\rangle = \frac12(R_{13}+R_{21}-R_{11}-R_{23}) = \frac13
-$$
-while for the consecutively oriented vectors $a_{12}$ and $a_{23}$,
-$$
-\langle a_{12},a_{23}\rangle = \frac12(R_{13}+R_{22}-R_{12}-R_{23}) = -\frac13
-$$
-The sign depends on the relative orientation of the vectors. At the same time,
-$$
-\|a_{12}\|^2=\|a_{23}\|^2=\|a_{13}\|^2=\frac23
-$$
-so the three vertices form an equilateral triangle in the resistance embedding.
+Consider the complete graph $K_3$ with unit conductances on all edges.
 
-## From lengths to geometry
+> [!example] Resistances and inner products
+> Between any pair of vertices, an edge of resistance $1$ is in parallel with a two-edge path of total resistance $2$. Hence
+>
+> $$
+> R_{12}=R_{23}=R_{13}=\frac{1\cdot2}{1+2}=\frac23
+> $$
+>
+> By (2),
+>
+> $$
+> a_{12}\cdot a_{13}=\frac12(R_{13}+R_{21}-R_{11}-R_{23})=\frac13
+> $$
+>
+> For the consecutively oriented vectors,
+>
+> $$
+> a_{12}\cdot a_{23}=\frac12(R_{13}+R_{22}-R_{12}-R_{23})=-\frac13
+> $$
+>
+> The squared norms of all three vectors are $2/3$. The resistance simplex is an equilateral triangle. The angle between $a_{12}$ and $a_{13}$ is $60^\circ$, while the angle between $a_{12}$ and $a_{23}$ is $120^\circ$.
 
-Effective resistance gives the length of a single vector:
-$$
-R_{ij}=\|a_{ij}\|^2
-$$
-The inner product describes the relative position of two vectors:
-$$
-\langle a_{ij},a_{kl}\rangle
-$$
-It can be positive, zero, or negative. Geometrically, this distinguishes acute, right, and obtuse angles between oriented vectors. Electrically, the sign records the direction of the measured potential difference relative to the chosen orientation of the pair.
+> [!example] Independent calculation of potentials
+> For this graph,
+>
+> $$
+> L=\begin{pmatrix}
+> 2&-1&-1\\
+> -1&2&-1\\
+> -1&-1&2
+> \end{pmatrix}
+> $$
+>
+> Inject a unit current at vertex $3$ and withdraw it at vertex $1$. The column $\varphi=(-1/3,0,1/3)^{\mathsf T}$ satisfies $L\varphi=(-1,0,1)^{\mathsf T}$ and $\sum_i\varphi_i=0$. Therefore,
+>
+> $$
+> \varphi_2-\varphi_1=\frac13=a_{12}\cdot a_{13}
+> $$
+>
+> For injection at $3$ and withdrawal at $2$, the centered potentials are $\psi=(0,-1/3,1/3)^{\mathsf T}$, giving
+>
+> $$
+> \psi_2-\psi_1=-\frac13=a_{12}\cdot a_{23}
+> $$
+>
+> Both measurements agree with (3), including the sign.
 
-Vector geometry is only the first level of the construction. For several vectors, one can consider determinants of their Gram matrices. For two vectors, such a determinant gives the squared area of the corresponding parallelogram, while for larger sets it gives squared higher-dimensional volumes. These quantities will be considered separately when passing from vectors to higher-order geometric objects.
+## Angles and further reading
 
-## Related notes
+For nonzero vectors, that is, when $i\ne j$ and $k\ne l$, the angle $\theta$ between them is determined by
 
-- [[Effective Resistance and Graph Geometry]] - the Euclidean representation of a graph and the formula $R_{ij}=\|a_{ij}\|^2$
-- [[Laplacian, Green Matrix, and Effective Resistance Matrix]] - direct and inverse transformations between $L$, $G=L^+$, and $R$
+$$
+\cos\theta=\frac{a_{ij}\cdot a_{kl}}{\sqrt{R_{ij}R_{kl}}}
+$$
+
+A positive inner product means $0\le\theta<90^\circ$, a zero inner product means orthogonality, and a negative inner product means $90^\circ<\theta\le180^\circ$. Electrically, the sign determines the sign of the measured potential difference for the chosen orientations of the pairs.
+
+The next note, [[Laplacian, Green Matrix, and Effective Resistance Matrix]], collects the forward and inverse transformations between $L$, $G$, and $R$. In [[From Lengths to Areas and Volumes]], inner products are used to compute Gram determinants, which express squared areas and volumes.
+
+Sources on resistance geometry and electrical networks are listed in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].
