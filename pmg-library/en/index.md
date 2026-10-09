@@ -23,6 +23,11 @@ Ten notes introduce the Laplacian, resistance geometry, coupling variations, and
 - [[PMG Introductory Series|Reading order and brief descriptions of the notes]].
 - [[Further Reading for the PMG Introductory Series|Recommended reading]].
 
+## PMG Foundations
+
+- [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
+- [[PMG terminology|Terminology]]: English and Russian terms, naming conventions, and distinctions between related concepts.
+
 ## Research topics
 
 As the library grows, collections will be prepared on the following topics:
