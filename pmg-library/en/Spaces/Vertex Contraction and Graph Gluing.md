@@ -2,8 +2,8 @@
 title: Vertex Contraction and Graph Gluing
 date: 2026-10-14
 updated: 2026-10-14
-revision: 2
-translated_revision: 2
+revision: 3
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -79,7 +79,7 @@ Indeed, the form of the coupling $ab$ becomes zero. The couplings $ax,bx$ map to
 >
 > The resulting graph has one coupling of coefficient $2$. Its effective resistance is $1/2$, and its spanning-tree coefficient is $2$.
 
-Thus contraction acts on the arguments of forms themselves. This operation requires neither the new polyform reduction nor the spanning-tree operator.
+Thus contraction acts on the arguments of forms themselves.
 
 ## Which subspace does contraction produce?
 
@@ -356,7 +356,7 @@ The algebra of forms, the boundary merging rules, and the metric identity follow
 
 Vertex identification, multiplication of spanning-tree coefficients under gluing at a single vertex, and the resistance geometry of a graph are established constructions. Their presentation here starts from maps of objects and products of PMG polyforms. The formulas for changes in the metric, circumcenter, and mass are proved in the text; no claim of novelty is made for these geometric laws. The expression of effective resistance as a ratio of spanning-tree coefficients is compared with [1], and the geometry of the resistance simplex and its circumsphere with [2].
 
-The examples were calculated directly. Formulas (3), (4), (7), and (9)-(11) were also checked on small weighted graphs by direct calculation of reduced Laplacians and resistance Gram matrices; circumcenters were obtained by solving the equal-distance equations. These checks verify the calculations and do not replace the proofs. The note contains no working hypotheses.
+The examples were calculated directly. Formulas (3), (4), (7), and (9)-(11) were also checked on small weighted graphs by direct calculation of reduced Laplacians and resistance Gram matrices; circumcenters were obtained by solving the equal-distance equations. The note contains no working hypotheses.
 
 1. Chan, S. H.; Kontorovich, A.; Pak, I. [Effective Resistance in Planar Graphs and Continued Fractions](https://www.math.ucla.edu/~pak/papers/KirchhoffCF10.pdf). Version dated May 15, 2025, formula (1.1): the effective resistance of an edge in a unit graph as the ratio of the spanning-tree count after contraction to the original count. In this note, (4) is derived for an arbitrary pair of vertices in a positively weighted graph.
 2. Devriendt, K. [Effective resistance is more than distance: Laplacians, Simplices and the Schur complement](https://arxiv.org/abs/2010.04521). *Linear Algebra and its Applications*, 639 (2022), 24-49, §2.4: the resistance simplex and the center and radius of its circumsphere. DOI: [10.1016/j.laa.2022.01.002](https://doi.org/10.1016/j.laa.2022.01.002).

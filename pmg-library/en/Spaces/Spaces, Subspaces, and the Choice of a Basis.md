@@ -1,9 +1,9 @@
 ---
 title: Spaces, Subspaces, and the Choice of a Basis
 date: 2026-10-12
-updated: 2026-10-12
-revision: 1
-translated_revision: 1
+updated: 2026-10-14
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -165,7 +165,8 @@ The symbol $\wedge$ denotes the exterior product. Independence of the factors me
 > \tag{2}
 > $$
 
-**Proof.** If $w$ is a linear combination of $u_1,\ldots,u_k$, expanding the product gives terms with repeated factors, so every term vanishes. If $w$ does not belong to $U$, the elements $w,u_1,\ldots,u_k$ are independent, and their exterior product is nonzero. $\square$
+> [!proof]- Proof
+> If $w$ is a linear combination of $u_1,\ldots,u_k$, expanding the product gives terms with repeated factors, so every term vanishes. If $w$ does not belong to $U$, the elements $w,u_1,\ldots,u_k$ are independent, and their exterior product is nonzero. $\square$
 
 > [!example] A line and a plane
 > For the direction of the line through $a,c$, set $\Omega=u+v$. An arbitrary vector $w=\alpha u+\beta v$ satisfies
@@ -230,13 +231,14 @@ For a form with identical arguments, we use the abbreviation $[X]^2=[X,X]$. This
 
 **Proposition.** Polyforms on $U$ form a subalgebra of polyforms on $W$: addition, scalar multiplication, and multiplication of polyforms preserve this class. Its unit is $e=[1,1]$.
 
-**Proof.** Multiplication of forms is defined by
-
-$$
-[X,Y][A,B]=[X\wedge A,Y\wedge B]
-$$
-
-If all arguments are constructed from vectors in $U$, their exterior products are also constructed from these vectors. When the total grade exceeds $k=\dim U$, these products vanish. Addition and scalar multiplication preserve membership by definition. $\square$
+> [!proof]- Proof
+> Multiplication of forms is defined by
+>
+> $$
+> [X,Y][A,B]=[X\wedge A,Y\wedge B]
+> $$
+>
+> If all arguments are constructed from vectors in $U$, their exterior products are also constructed from these vectors. When the total grade exceeds $k=\dim U$, these products vanish. Addition and scalar multiplication preserve membership by definition. $\square$
 
 > [!example] The algebra of forms on one direction
 > Let $U=\operatorname{span}(w)$, where $w\ne0$. Bilinearity gives $[\alpha w,\beta w]=\alpha\beta[w]^2$. Therefore, every polyform on $U$ has the form
@@ -317,7 +319,8 @@ Here $c_{ij}$ is the coupling coefficient. The exponential uses the PMG product 
 >
 > In particular, the evaluation of $[X]^2$ is $X^2$. We use the original metric polyform of the entire graph.
 
-**Proof.** Since $U\subseteq W$, we have $\Lambda^jU\subseteq\Lambda^jW$. The metric identity proved in [[Laplacian Exponential]] therefore applies to these arguments. $\square$
+> [!proof]- Proof
+> Since $U\subseteq W$, we have $\Lambda^jU\subseteq\Lambda^jW$. The metric identity proved in [[Laplacian Exponential]] therefore applies to these arguments. $\square$
 
 ### A direct calculation on the path
 
@@ -367,7 +370,7 @@ A simple example of dependent generators is the pair $w,2w$: these vectors speci
 
 Throughout this note, points belong to $\mathcal A$, while the metric is applied to their differences and to exterior elements constructed from $W$. Thus $\mathcal A$ is a flat Euclidean affine space. No condition that a point itself have zero squared norm has been introduced here.
 
-The next note considers the isotropic representation and the distinguished null vector. There we will need to distinguish an affine point from its representative in an extended space. The forms on $W$ and their metric evaluations obtained here will retain their meaning.
+[[The Null Vector, Isotropic Representation, and the Boundary]] introduces the isotropic representation and the distinguished null vector. It distinguishes an affine point from its representative in an extended space. The forms on $W$ and their metric evaluations obtained here retain their meaning.
 
 ## Foundations and status
 

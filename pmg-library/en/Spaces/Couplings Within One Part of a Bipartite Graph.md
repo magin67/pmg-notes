@@ -2,8 +2,8 @@
 title: Couplings Within One Part of a Bipartite Graph
 date: 2026-10-14
 updated: 2026-10-14
-revision: 1
-translated_revision: 3
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -172,7 +172,7 @@ $$
 
 In a general graph, an individual coupling coefficient is not the reciprocal of the effective resistance between its endpoints. For example, here $1/c^{(P)}_{ab}=6/5$, whereas $R_{ab}=14/15$: the path through $c$ also affects the effective resistance.
 
-The Dirichlet problem on vertices $P$ is preserved as well. For any prescribed values $f_p$, the energy of the resulting graph equals the minimum energy of the original graph over the document values, and the response at the retained vertices remains the same. This is a statement about the same metric transition, not an additional definition of the new couplings.
+The minimum energy and the response at the selected vertices $P$ are also preserved. For any prescribed values $f_p$, the energy of the resulting graph equals the minimum energy of the original graph over the document values, and the response at the retained vertices remains the same. This is a statement about the same metric transition, not an additional definition of the new couplings.
 
 ## Orthogonal residuals and the Laplacian exponential
 
@@ -250,6 +250,16 @@ $$
 $$
 
 The inverse diagonal matrix $\mathbf D_X^{-1}$ contains the numbers $1/d_x$. The rows of the influence matrix from the Dirichlet problem correspond to documents, so in this notation $\mathbf B=\mathbf D_X^{-1}\mathbf H^{\mathsf T}$ and $\mathbf K=\mathbf H\mathbf B$.
+
+In the notation of the notes on the Dirichlet problem and elimination, this means
+
+$$
+I=X,\qquad \mathbf C=\mathbf H^{\mathsf T},\qquad
+\mathbf A=\mathbf D_X,\qquad \boldsymbol\Lambda=\mathbf L_P,\qquad
+\mathbf{Fm}=\mathbf D_X^{-1}
+$$
+
+The diagonal form of $\mathbf{Fm}$ again expresses the orthogonality of the residual vectors of different documents.
 
 The off-diagonal entries $K_{pq}$ are the induced coupling coefficients. The diagonal entries are generally nonzero as well:
 
@@ -357,7 +367,7 @@ Thus the masses of the two induced graphs are not additive in general.
 
 The geometric relation is expressed through the circumcenters. Denote the circumcenter of the original graph by $h$, and those of the two parts by $h_P,h_X$. All three centers are considered in the original metric space: the induced graphs preserve the metrics of their respective parts.
 
-**Lemma.** The centers $h_P,h_X$ are the orthogonal projections of $h$ onto the affine subspaces of the corresponding parts. Therefore
+By the [[Vertex Elimination and Induced Couplings#Mass and projection of the circumcenter|general lemma on the mass of a selected subspace]], the centers $h_P,h_X$ are the orthogonal projections of $h$ onto the affine subspaces of the corresponding parts. Therefore
 
 $$
 \boxed{
@@ -368,16 +378,6 @@ $$
 $$
 
 Here $\|h-h_P\|^2$ is the squared distance between the centers. In particular, each individual mass does not exceed the original mass: $\rho_P\le\rho(G)$ and $\rho_X\le\rho(G)$.
-
-> [!proof]- Projecting the circumcenter
-> Let $h'$ be the orthogonal projection of $h$ onto $\mathcal A_P$. For any vertex $p\in P$, the Pythagorean theorem gives
->
-> $$
-> \|p-h'\|^2=\|p-h\|^2-\|h-h'\|^2
-> =\rho(G)-\|h-h'\|^2
-> $$
->
-> The right-hand side is independent of $p$. Thus $h'$ is equidistant from all vertices of the part and lies in their affine subspace, so it is the center of their unique circumsphere: $h'=h_P$. This proves the first equality in (7); the argument for part $X$ is the same. $\square$
 
 In the example of Figure 2, the squared distances from the original circumcenter to the circumcenters of the parts are $5/8-3/8=1/4$ and $5/8-1/2=1/8$. These two distances explain the change in each mass, but do not give an additive decomposition of mass over the parts.
 
@@ -390,6 +390,42 @@ $$
 $$
 
 Here $\rho_P+\rho_X=1/2<29/48=\rho(G)$, whereas in the example of Figure 2 the sum exceeds the original mass.
+
+> [!example]- Calculating the masses for $K_{2,6}$
+> Denote the parts by $P=\{a,b\}$ and $X=\{x_1,\ldots,x_6\}$. Eliminating $X$ gives a coupling of coefficient $3$ between $a,b$; eliminating $P$ gives coefficient $1/3$ between every pair of distinct $x_i$. The resistances are
+>
+> $$
+> R_{ab}=\frac13,\qquad R_{x_i x_j}=1\ (i\ne j),\qquad
+> R_{a x_i}=R_{b x_i}=\frac7{12}
+> $$
+>
+> The last value follows from the Laplacian equations with response $1$ at $a$, $-1$ at $x_1$, and $0$ at the other vertices: fixing the value at $x_1$ to $0$ gives $7/12$ at $a$, $5/12$ at $b$, and $1/2$ at the other $x_i$. The difference between the values at $a,x_1$ is the resistance.
+>
+> For $m$ equidistant vertices with common resistance $r$, the center is their mean, and the frame form decomposition gives $\rho=(m-1)r/(2m)$. Hence $\rho_P=1/12$ and $\rho_X=5/12$.
+>
+> Find the center of the whole graph using the frame
+>
+> $$
+> h=-\frac34(a+b)+\frac5{12}\sum_{i=1}^{6}x_i
+> $$
+>
+> Its coefficients $h^w$ sum to $1$. For any vertex $v$, set $t_v=\sum_w h^wR_{vw}$. On the two parts, we obtain
+>
+> $$
+> \begin{aligned}
+> t_a=t_b&=-\frac34\cdot\frac13+6\cdot\frac5{12}\cdot\frac7{12}=\frac{29}{24}\\
+> t_{x_i}&=2\left(-\frac34\right)\frac7{12}+5\cdot\frac5{12}=\frac{29}{24}
+> \end{aligned}
+> $$
+>
+> By the [[Projections, Bi-coordinates, and Di-coordinates#Decomposing a form using frame elements and their differences|frame form decomposition]], the vector $v-h$ has squared norm
+>
+> $$
+> \|v-h\|^2=t_v-\frac12\sum_w h^w t_w
+> =\frac{29}{24}-\frac{29}{48}=\frac{29}{48}
+> $$
+>
+> This value is independent of $v$, so $h$ is the circumcenter and $\rho_G=29/48$.
 
 Gluing at a single vertex joins orthogonal spaces with a common point, and mass is additive. Selecting the two parts is a different construction. Their vector spaces are generally not orthogonal, and the sum of their dimensions is one less than the dimension of the entire space: a direction between the parts is also needed. The additivity rule for gluing therefore does not apply here.
 
@@ -411,7 +447,7 @@ Denote the spanning-tree coefficient of the original bipartite graph by $\tau_G$
 > All degrees in this formula belong to the original graph.
 
 > [!proof]- Proof through the metric polyform
-> Consider the highest nonzero grade of the product (5). Select a reference vertex $p_0\in P$. The note on vertex elimination shows that replacing the vectors $x-p_0$ with the residuals $r_x$, while retaining a basis of $W_P$, is a change of basis with determinant $1$. Thus the product of the spanning-tree form on $P$ and the squares of all $r_x$ is the original spanning-tree form. Its coefficient in (5) is $\tau_P\prod_xd_x$. Eliminating part $P$ gives the second expression for the same coefficient $\tau_G$. $\square$
+> Consider the highest nonzero grade component of the product (5). Select a reference vertex $p_0\in P$. The note on vertex elimination shows that replacing the vectors $x-p_0$ with the residuals $r_x$, while retaining a basis of $W_P$, is a change of basis with determinant $1$. Thus the product of the spanning-tree form on $P$ and the squares of all $r_x$ is the original spanning-tree form. Its coefficient in (5) is $\tau_P\prod_xd_x$. Eliminating part $P$ gives the second expression for the same coefficient $\tau_G$. $\square$
 
 The sum of all original coupling coefficients is
 
@@ -520,7 +556,7 @@ Consider the special cases.
 
 If every connected component of the original graph contains at least one retained vertex, the number of resulting components equals the original number. The reason is simple: a path between two vertices of one part consists of two-step transitions through the opposite part, and each such transition creates a positive induced coupling. Vertices in different components have no common neighbors.
 
-The construction uses the metric of affine vectors, projections, and the polyform algebra of the published core. The isotropic representation and the null vector are not required for these results. This transformation does not introduce a separate operation of polyform reduction.
+The construction uses the metric of affine vectors, projections, and the polyform algebra of the published core. The isotropic representation and the null vector are not required for these results.
 
 ## Sources and status of the results
 
@@ -528,7 +564,7 @@ The application and the original table of the main example come from [1]. Here t
 
 The star decomposition (2), the induced Laplacian (3), orthogonality of residuals (4), factorization of the exponential (5), the relation between masses through circumcenters (7), and the spanning-tree relations (8)-(10) are derived in the text using results from the preceding notes and the [[Core specification|core specification]]. The notation $J(G)$ and the name “common spanning-tree parameter” are used here for normalization (9); equality (10) explains its meaning. The applicability conditions and notation follow the [[PMG terminology|terminology]]. The note contains no working conjectures.
 
-The numerical examples were checked using exact rational arithmetic. Effective resistances were calculated separately from the original and induced Laplacians; spanning-tree coefficients were checked by direct enumeration of spanning trees. The coefficients of the polyform decomposition (2), the effect of column normalization, and equality (8) for both parts were also checked. For the two bipartite examples, inner products of residuals were calculated from the original metric, and spanning-tree coefficients of the comparison graphs were checked by tree enumeration. Masses and circumcenters in the example of Figure 2 and in $K_{2,6}$ were calculated from the equations of equal distance to the vertices, and equality (7) was verified. These computational checks verify the examples and do not replace the proofs.
+The numerical examples were checked using exact rational arithmetic. Effective resistances were calculated separately from the original and induced Laplacians; spanning-tree coefficients were checked by direct enumeration of spanning trees. The coefficients of the polyform decomposition (2), the effect of column normalization, and equality (8) for both parts were also checked. For the two bipartite examples, inner products of residuals were calculated from the original metric, and spanning-tree coefficients of the comparison graphs were checked by tree enumeration. Masses and circumcenters in the example of Figure 2 and in $K_{2,6}$ were calculated from the equations of equal distance to the vertices, and equality (7) was verified.
 
 1. Malyugin, D. V. [How to Connect the Unconnected](https://habr.com/ru/articles/533544/) (in Russian). Habr, 24 December 2020. The application, the transformation of a coupling table, and the example with three objects and four intermediaries.
 2. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011. Formula (3.4): single-vertex elimination; Theorem 3.9: preservation of effective resistances. The general vertex-elimination result is applied here to a part with no internal couplings.

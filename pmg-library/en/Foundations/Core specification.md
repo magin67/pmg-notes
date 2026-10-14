@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-09
-revision: 2
+updated: 2026-10-14
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -552,12 +552,14 @@ Algebraic polynomial identities may remain valid for real coupling coefficients 
 
 The following constructions are outside this revision of the core and require separate definitions and applicability conditions:
 
-- the isotropic extension, the distinguished null vector, and barycentric and metric dual coordinates;
+- the isotropic extension, the distinguished null vector, and bi-coordinates and di-coordinates;
 - directed graphs and the KVP/KVPOU structural decompositions;
 - dual polyforms, cut forms, and the function $\operatorname{dex}$;
 - symmetric polyforms, toponomes, and component reductions;
 - metric-value decompositions and interval forms;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
+
+Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]]. The scope of the required core remains unchanged.
 
 In this specification, a boundary is an image of $\partial$, equivalently an element of $\Lambda^kW$. A selected vertex set in a Dirichlet problem is not a boundary in this algebraic sense. When using the standard expression “boundary vertices”, the two notions must be explicitly distinguished.
 
@@ -595,6 +597,7 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
+| 3 | 2026-10-14 | Added links to the published definitions in the spaces series and aligned the names bi-coordinates and di-coordinates across languages. The mathematical content of the core is unchanged. This English version follows Russian revision 3. |
 | 2 | 2026-10-09 | Removed unnecessary equation numbers; retained and consecutively renumbered only equations referenced in the text. This English version follows Russian revision 2. |
 | 1 | 2026-10-09 | First public core specification, aligned with the introductory series. Clarified formal forms, the space of boundaries, the domain of metric evaluation, the spanning-tree coefficient, and conditions for variation formulas. |
 

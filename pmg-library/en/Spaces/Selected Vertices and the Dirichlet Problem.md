@@ -2,8 +2,8 @@
 title: Selected Vertices and the Dirichlet Problem
 date: 2026-10-14
 updated: 2026-10-14
-revision: 1
-translated_revision: 1
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -389,7 +389,7 @@ Positive coefficients on existing couplings are essential to the proofs of the m
 
 ## What comes next
 
-We have found the values at internal vertices and described their projections. The next question is which graph on the selected vertices reproduces the original metric and the response to prescribed values. This is the problem of eliminating internal vertices, to be considered in “Vertex Elimination and Induced Couplings”.
+We have found the values at internal vertices and described their projections. The next question is which graph on the selected vertices reproduces the original metric and the response to prescribed values. This is the problem of eliminating internal vertices, considered in [[Vertex Elimination and Induced Couplings]].
 
 The isotropic extension was not needed here. All inner products were calculated for differences of points and residuals, that is, for affine vectors. The role of $z$ in the extended representation remains as established in the [[The Null Vector, Isotropic Representation, and the Boundary|note on the null vector]].
 
@@ -401,7 +401,7 @@ The equality between influence coefficients and the bi-coordinates of projection
 
 For comparison with [2], in the absence of loops and with our index ordering, $\mathbf B$ is the transpose of the authors' accompanying matrix $L_{ac}$. Their columns sum to $1$, whereas our rows do. The accompanying matrix and the response matrix are different objects; the latter will be considered when eliminating internal vertices.
 
-For the weighted path, the solution, geometric projections, and potentials were calculated independently. Additional checks using exact rational arithmetic covered six cases: the weighted path, a cycle, a complete graph, a weighted graph with cycles, a single selected vertex, and an example with a zero influence coefficient. Solutions of the internal equations were compared with projections calculated from the Gram matrix of the original metric and with potentials extracted by direct exterior multiplication. Singularity of the internal block in the presence of a component without selected vertices was checked separately. These checks verify examples and do not replace proofs. The note contains no working conjectures.
+For the weighted path, the solution, geometric projections, and potentials were calculated independently. Additional checks using exact rational arithmetic covered six cases: the weighted path, a cycle, a complete graph, a weighted graph with cycles, a single selected vertex, and an example with a zero influence coefficient. Solutions of the internal equations were compared with projections calculated from the Gram matrix of the original metric and with potentials extracted by direct exterior multiplication. Singularity of the internal block in the presence of a component without selected vertices was checked separately. The note contains no working conjectures.
 
 1. Doyle, P. G.; Snell, J. L. [Random Walks and Electric Networks](https://math.dartmouth.edu/~doyle/docs/walks/walks.pdf). Version dated 5 July 2006, based on the 1984 monograph. Part 1: the Dirichlet problem, maximum principle, and uniqueness; §1.3, Exercise 1.3.11: the Dirichlet principle.
 2. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011, Lemma 2.1: the accompanying matrix, its nonnegativity, and column sums.

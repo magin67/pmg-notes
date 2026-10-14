@@ -1,9 +1,9 @@
 ---
 title: Projections, Bi-coordinates, and Di-coordinates
 date: 2026-10-13
-updated: 2026-10-13
-revision: 1
-translated_revision: 3
+updated: 2026-10-14
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -16,7 +16,9 @@ Select several vertices of a graph. How can we describe the other vertices relat
 
 This note examines which coordinates describe the object itself, which describe its projection, and how to calculate them using metric polyforms.
 
-This is the third note in the series “Spaces and Subspaces in PMG”. It uses [[Spaces, Subspaces, and the Choice of a Basis]] and [[The Null Vector, Isotropic Representation, and the Boundary]]. Definitions of forms and potentials are collected in the [[Core specification|core specification]]. The graph model remains the same: the graph is connected and undirected, with positive coefficients for all existing couplings. The space of affine vectors $W$ carries a positive definite resistance metric.
+This is the third note in the series “Spaces and Subspaces in PMG”. The main part builds on [[Spaces, Subspaces, and the Choice of a Basis]]. [[The Null Vector, Isotropic Representation, and the Boundary]] is needed for the section “Coordinates in the isotropic extension” and the example of degeneracy along $\mathbb Rz$. Definitions of forms and potentials are collected in the [[Core specification|core specification]]. The graph model remains the same: the graph is connected and undirected, with positive coefficients for all existing couplings. The space of affine vectors $W$ carries a positive definite resistance metric.
+
+We first define bi-coordinates and decompose the forms of frames. We then consider di-coordinates and projections, and finally extend the coordinate description to the isotropic model.
 
 ## A point and its projection
 
@@ -32,9 +34,9 @@ $$
 u^2=v^2=1,\qquad u\cdot v=0,\qquad w^2=2
 $$
 
-Here and below, $y^2=y\cdot y$ denotes a number, the squared norm. The formal quadratic form is denoted by $[y]^2$.
+For $y\in W$, the notation $y^2=y\cdot y$ denotes a number, the squared norm in the positive definite metric. In the isotropic extension, the same notation denotes the metric square, which can be negative. The formal quadratic form is denoted by $[y]^2$.
 
-Select the vertices $a,c$. They determine the line of points $a+tw$, where $t$ ranges over the real numbers. We seek a point $q$ on this line such that the displacement $b-q$ is orthogonal to the direction $w$:
+Select the vertices $a,c$. They determine the line of points $a+tw$, where $t$ ranges over the real numbers. We seek a point $q$ on this line such that the residual $b-q$ is orthogonal to the direction $w$:
 
 $$
 (b-q)\cdot w=0,\qquad q=a+tw
@@ -51,7 +53,7 @@ The point $q$ is the orthogonal projection of $b$ onto the selected line. The co
 
 ![[Projection.svg]]
 
-*The left panel shows the graph; the right panel shows its resistance geometry. The line through $a,c$ is blue, and the displacement $b-q$ is red. The segment $ac$ in the geometric diagram does not imply a coupling $ac$ in the graph.*
+*The left panel shows the graph; the right panel shows its resistance geometry. The line through $a,c$ is blue, and the residual $b-q$ is red. The segment $ac$ in the geometric diagram does not imply a coupling $ac$ in the graph.*
 
 ## Bi-coordinates and frames
 
@@ -104,7 +106,9 @@ Coordinates depend on the basis. The vector $v$ has coordinates $(0,1)$ in the b
 
 ## Decomposing a form using frame elements and their differences
 
-A frame lets us express the quadratic form of an object through the forms of the chosen elements and their differences. This is an identity of PMG forms; it requires neither a metric nor linear independence of the frame elements.
+A frame lets us express the quadratic form of an object through the forms of the chosen elements and their differences. This is an identity of PMG forms; it requires neither a metric nor linear independence of the frame elements. It will be used when [[Vertex Elimination and Induced Couplings#Eliminating a single vertex|eliminating the center of a star]] and constructing [[Couplings Within One Part of a Bipartite Graph|couplings within one part of a bipartite graph]].
+
+In the identities for forms below, all frame elements belong to the same space $\Lambda^kV$ at a fixed grade $k$. Points and affine vectors may occur in one frame: they all have grade $1$.
 
 > [!info] Decomposition of a quadratic form
 > **Lemma.** Let $q=\sum_i q^i a_i$ be a frame, and let $s_q=\sum_i q^i$ be the sum of its coefficients. Then
@@ -169,9 +173,9 @@ $$
 
 For a frame consisting of points, this is the polyform representation of a Laplacian with coupling coefficients $c_{ij}=q^i q^j$. We call $L_q$ the **Laplacian of this frame**. The subscript $q$ is convenient while the frame is fixed: changing the frame may also change $L_q$.
 
-If all $q^i$ are positive, we obtain a complete weighted graph on the frame elements. Zero coefficients give isolated vertices. If the coefficients have different signs, some couplings are negative. This is an algebraic extension of the Laplacian definition beyond the core graph model.
-
 For an arbitrary frame, a graph can be defined on the indices of its elements. Substituting the elements for the formal vertices gives the same form $L_q$; if their affine weights differ, their differences need not be affine vectors.
+
+If all $q^i$ are positive, we obtain a complete weighted graph on the frame elements. Zero coefficients give isolated vertices. If the coefficients have different signs, some couplings are negative. This is an algebraic extension of the Laplacian definition beyond the core graph model.
 
 > [!example] Two frames on a pair of vertices
 > For the midpoint $q=(a+c)/2$, the frame Laplacian is $L_q=\frac14[(ac)]^2$: it specifies one coupling of magnitude $1/4$. This coupling comes from the frame coefficients; the original path $a-b-c$ has no coupling $ac$.
@@ -447,7 +451,7 @@ Formula (7) gives $\pi_U(u)=w/2$, the same result obtained earlier from effectiv
 
 ### Distance to a subspace
 
-Let $h_1,\ldots,h_k$ be independent vectors in $U$, and let $\Omega=h_1\wedge\cdots\wedge h_k$. The nonzero exterior element $\Omega$ specifies the direction subspace, as shown in the [[Spaces, Subspaces, and the Choice of a Basis#Specifying a subspace by an exterior element|note on choosing a subspace]].
+Let $h_1,\ldots,h_k$ form a basis of a nonzero subspace $U\subseteq W$, with $x,p_0\in\mathcal A$. Use the positive definite resistance metric on $W$ and set $\Omega=h_1\wedge\cdots\wedge h_k$. The nonzero exterior element $\Omega$ specifies the direction subspace, as shown in the [[Spaces, Subspaces, and the Choice of a Basis#Specifying a subspace by an exterior element|note on choosing a subspace]].
 
 **Lemma.** If $q$ is the projection of $x$ onto $p_0+U$, then
 
@@ -497,7 +501,7 @@ Area vanishes when the plane is projected onto a line. The evaluation of the fir
 
 ## Coordinates in the isotropic extension
 
-Return to the distinction established in the [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector|note on isotropic representation]]. For a point $x$, its isotropic representative $X(x)$ satisfies $X(x)^2=0$, $X(x)\cdot z=1$. A linear combination of point representatives need not have zero squared norm.
+Return to the distinction established in the [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector|note on isotropic representation]]. For a point $x$, its isotropic representative $X(x)$ satisfies $X(x)^2=0$, $X(x)\cdot z=1$. A linear combination of point representatives can have a nonzero metric square.
 
 Let $p_0,\ldots,p_k$ be affinely independent points, with $P_i=X(p_i)$. Their affine hull consists of points $\sum_i\beta^i p_i$ with $\sum_i\beta^i=1$. In the extension, consider the linear subspace
 
@@ -559,13 +563,13 @@ $$
 
 The equality $\widehat B=\widetilde q$ is specific to this example. For comparison, list the coordinates in the order $(z,A,C)$:
 
-| Object | Bi-coordinates in $(z,A,C)$ | Di-coordinates relative to $(z,A,C)$ | Squared norm |
+| Object | Bi-coordinates in $(z,A,C)$ | Di-coordinates relative to $(z,A,C)$ | Metric square $Y^2$ |
 | --- | --- | --- | --- |
 | Original representative $B$ | No expansion in this sub-basis | $(1,-1/2,-1/2)$ | $0$ |
 | Orthogonal projection $\widehat B$ | $(0,1/2,1/2)$ | $(1,-1/2,-1/2)$ | $-1/2$ |
 | Point representative $X(q)$ | $(1/4,1/2,1/2)$ | $(1,-1/4,-1/4)$ | $0$ |
 
-The word **sub-basis** here means a selected subset of a full basis that generates its own subspace. The table shows that $B$ and $\widehat B$ have the same di-coordinates relative to the sub-basis, but different squared norms. For $X(q)$, the squared norm has been restored to zero, but the di-coordinates relative to $A,C$ have changed.
+The word **sub-basis** here means a selected subset of a full basis that generates its own subspace. The table shows that $B$ and $\widehat B$ have the same di-coordinates relative to the sub-basis, but different metric squares. The correction along $z$ restores the isotropy of $X(q)$, but the di-coordinates relative to $A,C$ have changed.
 
 ## When the construction needs qualification
 
@@ -575,7 +579,7 @@ In an indefinite metric, independence of the basis elements does not guarantee a
 
 For a disconnected graph, the arguments apply separately to each connected component. The published core does not define a finite resistance metric between different components; using a pseudoinverse matrix alone does not remove this limitation.
 
-These definitions do not require nonnegative bi-coordinates. In the Dirichlet problem, nonnegativity will follow from additional properties of the graph. There we will also establish why the influence matrix coefficients coincide with the bi-coordinates of projections onto the subspace generated by the selected vertices. Before that, the next note will consider vertex contraction and graph gluing.
+These definitions do not require nonnegative bi-coordinates. [[Selected Vertices and the Dirichlet Problem]] derives nonnegativity from the graph properties and proves that influence coefficients equal the bi-coordinates of projections. The geometry of residuals connects this problem to [[Vertex Contraction and Graph Gluing|vertex contraction and graph gluing]].
 
 ## Sources and status of the results
 
@@ -585,7 +589,7 @@ The internal notes “The Null Vector and Coordinates” and “Graph Subspaces�
 
 The relation between the two kinds of coordinates, the reciprocal basis, and orthogonal projection are standard constructions of linear algebra. This note gives their derivations and expressions through PMG forms and potentials. The quadratic and polar decompositions (2), (3) are proved by bilinearity. The Laplacian of a frame is the name given here to its difference part; negative couplings explicitly require an algebraic extension of the core graph model. The metric interpretation in terms of the center and moment of inertia is compared with the known identities in [1]. Formulas (8) and (9) are also proved in the text. The examples are calculated directly; the potentials on the path are calculated by multiplying forms, independently of the geometric calculation.
 
-The reciprocal basis, projections, and coordinate table were checked using exact rational arithmetic. Formula (9) was compared with a direct solution of the Gram system, and formula (8) was checked on a nonorthogonal basis of a plane in three-dimensional space. The quadratic and polar decompositions were also checked as equalities of coefficients of every form $[a_i,a_j]$, including frames with negative coefficients and zero coefficient sum. These checks verify the calculations and do not replace the proofs. No working conjectures are included in this note.
+The reciprocal basis, projections, and coordinate table were checked using exact rational arithmetic. Formula (9) was compared with a direct solution of the Gram system, and formula (8) was checked on a nonorthogonal basis of a plane in three-dimensional space. The quadratic and polar decompositions were also checked as equalities of coefficients of every form $[a_i,a_j]$, including frames with negative coefficients and zero coefficient sum. No working conjectures are included in this note.
 
 1. Havel, T. F. [Heron’s Formula in Higher Dimensions](https://doi.org/10.1007/s00006-023-01305-8). *Advances in Applied Clifford Algebras*, 34, 9 (2024), §2. Lagrange and Huygens-Leibniz identities for weighted centers.
 2. Casazza, P. G.; Lynch, R. G. [A brief introduction to Hilbert space frame theory and its applications](https://arxiv.org/abs/1509.07347). The use of the term *frame* for a family of vectors in a Hilbert space.
