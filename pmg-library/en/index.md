@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 3
-translated_revision: 2
-updated: 2026-10-08
+revision: 4
+translated_revision: 3
+updated: 2026-10-14
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -23,6 +23,12 @@ Ten notes introduce the Laplacian, resistance geometry, coupling variations, and
 - [[PMG Introductory Series|Reading order and brief descriptions of the notes]].
 - [[Further Reading for the PMG Introductory Series|Recommended reading]].
 
+## Spaces and subspaces
+
+Seven notes on choosing a subspace, the null vector, coordinates, and graph operations. The series connects the geometric description with the Dirichlet problem and the construction of couplings within one part of a bipartite graph.
+
+- [[Spaces and Subspaces in PMG|Notes, prerequisites, and reading routes]].
+
 ## PMG Foundations
 
 - [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
@@ -32,7 +38,7 @@ Ten notes introduce the Laplacian, resistance geometry, coupling variations, and
 
 As the library grows, collections will be prepared on the following topics:
 
-- **Geometric representations:** points and vectors, the Gram matrix of isotropic point representatives, the distinguished null vector, and barycentric (bi-) and metric dual (di-) coordinates.
+- **Geometric representations:** points and vectors, the Gram matrix of isotropic point representatives, the distinguished null vector, and bi- and di-coordinates.
 - **Polyform algebra:** grades, potentials and norms, symmetric polyforms, and dual constructions.
 - **Forests, cuts, and toponomes:** combinatorial coefficients, generating polynomials, and their reductions.
 - **Graph spectra:** Laplacians of paths and cycles, and spectral properties of graph configurations.
@@ -67,4 +73,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **8 October 2026**
+- Library last updated: **14 October 2026**
