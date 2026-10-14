@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520" role="img" aria-labelledby="title desc">
+<title id="title">Би-координаты и ди-координаты в неортогональном базисе</title><desc id="desc">В ортонормированной плоскости u,v выбраны базисные векторы h1=u и h2=u+v. Вектор v равен минус h1 плюс h2. Его скалярные произведения с h1,h2 равны нулю и единице.</desc>
+<defs>
+ <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L8 4 L0 8 Z" fill="#2563a6"/></marker>
+ <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L8 4 L0 8 Z" fill="#b8463d"/></marker>
+ <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff" rx="12"/>
+<g font-family="Arial, DejaVu Sans, sans-serif" font-size="22" fill="#1e293b" stroke-linecap="round" stroke-linejoin="round">
+<text x="320" y="37" text-anchor="middle" font-size="23">Разложение v = −h₁ + h₂</text>
+<path d="M170 370 L460 370 L460 80 L170 80 Z" fill="#f8fafc"/>
+<path d="M460 370 V80" fill="none" stroke="#cbd5e1" stroke-width="1.7" stroke-dasharray="6 7"/>
+<path d="M170 370 H455" stroke="#2563a6" stroke-width="3" marker-end="url(#arrowBlue)"/>
+<path d="M170 370 L455 85" stroke="#2563a6" stroke-width="3" marker-end="url(#arrowBlue)"/>
+<path d="M170 370 V86" stroke="#b8463d" stroke-width="3" marker-end="url(#arrowRed)"/>
+<path d="M450 80 H180" stroke="#64748b" stroke-width="2.2" stroke-dasharray="7 6" marker-end="url(#arrowGray)"/>
+<path d="M170 350 H190 V370" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="170" cy="370" r="4" fill="#334155"/>
+<text x="146" y="398">0</text>
+<text x="320" y="406" fill="#2563a6" text-anchor="middle">h₁ = u</text>
+<text x="320" y="278" fill="#2563a6">h₂ = u + v</text>
+<text x="105" y="222" fill="#b8463d" text-anchor="middle">y = v</text>
+<text x="315" y="69" text-anchor="middle" fill="#64748b">−h₁</text>
+<text x="480" y="87" font-size="19">u + v</text>
+<text x="152" y="70" fill="#b8463d">v</text>
+<text x="320" y="456" text-anchor="middle" font-size="21">Би-координаты: (−1, 1)</text>
+<text x="320" y="489" text-anchor="middle" font-size="21">Ди-координаты: (0, 1)</text>
+</g></svg>
