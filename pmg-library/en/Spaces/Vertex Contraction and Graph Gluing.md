@@ -2,8 +2,8 @@
 title: Vertex Contraction and Graph Gluing
 date: 2026-10-14
 updated: 2026-10-14
-revision: 1
-translated_revision: 1
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -352,7 +352,7 @@ Next, we return to a selected subspace without identifying vertices: we will con
 
 ## Sources and status of the results
 
-The algebra of forms, the boundary merging rules, and the metric identity follow the [[Core specification|published core specification]]. The research materials “О связывании графов” (On Connecting Graphs), “Стягивание вершин и лесной полином” (Vertex Contraction and the Forest Polynomial), and “Метрическая масса как матроидный инвариант” (Metric Mass as a Matroid Invariant) in the [PMG source repository](https://github.com/magin67/polyform-metric-geometry) were checked during preparation. General forest polynomials and matroid parameters are not prerequisites for this note.
+The algebra of forms, the boundary merging rules, and the metric identity follow the [[Core specification|published core specification]]. General forest polynomials and matroid parameters are not prerequisites for this note.
 
 Vertex identification, multiplication of spanning-tree coefficients under gluing at a single vertex, and the resistance geometry of a graph are established constructions. Their presentation here starts from maps of objects and products of PMG polyforms. The formulas for changes in the metric, circumcenter, and mass are proved in the text; no claim of novelty is made for these geometric laws. The expression of effective resistance as a ratio of spanning-tree coefficients is compared with [1], and the geometry of the resistance simplex and its circumsphere with [2].
 
