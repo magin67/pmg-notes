@@ -1,9 +1,9 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-10-08
-revision: 2
-source_revision: 4
+updated: 2026-10-14
+revision: 3
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry
@@ -126,6 +126,8 @@ $$
 > $$
 >
 > The Green matrix is the Gram matrix of the centered position vectors of these points.
+
+In geometric descriptions of PMG, $R_{ij}$ is also called resistance; in the electrical interpretation, it is effective resistance. In the resistance representation, this quantity equals the squared distance between the points.
 
 ## Dimension and the resistance simplex
 

@@ -1,9 +1,9 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-10-08
-revision: 1
-source_revision: 1
+updated: 2026-10-14
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
@@ -12,15 +12,15 @@ description: "Reading order for the ten introductory PMG notes: resistance geome
 order: "0"
 ---
 
-The introductory series connects the graph Laplacian, electrical networks, resistance geometry, and polyform algebra. Its ten notes form a sequential course, from current equations and effective resistance to the extraction of metric quantities from the Laplacian exponential in the algebra of forms.
+This series introduces the graph Laplacian, electrical networks, and resistance geometry. Polyform algebra naturally extends the matrix approach to these concepts. The series develops the connection from current equations and effective resistance to the extraction of metric quantities from the Laplacian exponential in the algebra of forms.
 
 The first seven notes present results from linear algebra, electrical network theory, and random spanning trees. The final three introduce the formal objects and operations adopted in PMG, the extension of the metric to exterior powers, and the construction of the metric polyform. Standard results and project definitions are distinguished as they are introduced.
 
-## Prerequisites and reading order
+## Reading order
 
 Matrices, systems of linear equations, and inner products are sufficient to begin. Later notes use determinants, eigenvalues, and positive definite matrices. Basic concepts from graph theory and electrical networks are explained in the text. The sections on random spanning trees require elementary probability; the exterior product and boundary operator are introduced within the series.
 
-The main reading order is **1-5, then 6-7, then 8-10**. These three groups correspond to the sections of [[Further Reading for the PMG Introductory Series|the reading recommendations]]. Collapsible proofs give general derivations; examples provide specific calculations and independent checks.
+The main reading order is **1-5, then 6-7, then 8-10**. These three groups correspond to the sections of [[Further Reading for the PMG Introductory Series|the reading recommendations]]. Proofs give general derivations; examples provide specific calculations and independent checks.
 
 ## Graphs, electrical networks, and resistance geometry
 
@@ -76,3 +76,7 @@ Resistances and their variations can be used to analyze connectivity and select 
 The Laplacian exponential in note 10 uses the product of forms. It should be distinguished from the matrix exponential used to describe diffusion on a graph.
 
 Full bibliographic details, recommended sections, and access information are collected in [[Further Reading for the PMG Introductory Series]].
+
+## Next steps
+
+The next stage is developed in [[Spaces and Subspaces in PMG]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].

@@ -1,9 +1,9 @@
 ---
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
-updated: 2026-10-08
-revision: 3
-source_revision: 6
+updated: 2026-10-14
+revision: 4
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
@@ -18,7 +18,13 @@ The construction is based on exterior algebra. Forms and their product are intro
 
 ## Points and affine vectors
 
-Let $V$ be a real vector space with a **linearly independent** basis $a_1,\ldots,a_n$. The basis elements represent vertices. For linear combinations, we distinguish points from affine vectors by the sum of their coefficients.
+Let $V$ be a real vector space with a **linearly independent** basis $a_1,\ldots,a_n$. The basis elements represent vertices. The sum of the coefficients is called the affine weight and is denoted by $\varepsilon$:
+
+$$
+\varepsilon\left(\sum_i x_i a_i\right)=\sum_i x_i
+$$
+
+The affine weight distinguishes points from affine vectors.
 
 > [!info] Points and vectors
 > **Definition.** A combination $x=\sum_i x_i a_i$ is a point if $\sum_i x_i=1$, and an affine vector if $\sum_i x_i=0$.
@@ -26,10 +32,10 @@ Let $V$ be a real vector space with a **linearly independent** basis $a_1,\ldots
 > Denote the space of affine vectors by
 >
 > $$
-> W=\left\{\sum_i u_i a_i:\sum_i u_i=0\right\},\qquad \dim W=n-1
+> W=\ker\varepsilon=\left\{\sum_i u_i a_i:\sum_i u_i=0\right\},\qquad \dim W=n-1
 > $$
 
-For example, $(a+b)/2$ is a point, while $a+b-2c$ is an affine vector. The difference of two points belongs to $W$. We retain the notation
+For example, $(a+b)/2$ is a point, while $a+b-2c$ is an affine vector. The element $a+b$ has weight $2$ and is neither a point nor an affine vector. The difference of two points belongs to $W$. We retain the notation
 
 $$
 a_{ij}=a_j-a_i
@@ -65,6 +71,8 @@ $$
 $$
 
 Its grade equals the number of vertices. Thus $[abc]$ has grade $3$, although a geometric triangle is two-dimensional. Interchanging two vertices changes the sign; repeating a vertex gives zero. A general exterior object may be a linear combination of simplices and need not be a single exterior product.
+
+**Definition.** An exterior element is decomposable (also called simple) if it can be expressed as a single exterior product of elements of grade one.
 
 ## The boundary operator
 
@@ -308,7 +316,7 @@ $$
 q_v^2=[v\wedge v]^2=0
 $$
 
-For a nonzero vector, the form $q_v$ itself is nonzero. The identity states that its product with itself is zero.
+For a nonzero element $v\in V$, the form $q_v$ itself is nonzero. The identity states that its product with itself is zero.
 
 More generally,
 
@@ -317,9 +325,9 @@ $$
 \tag{7}
 $$
 
-The product (7) vanishes if and only if the vectors are linearly dependent. In particular, the product of the forms of the edges of a cycle is zero.
+The product (7) vanishes if and only if the elements $v_1,\ldots,v_r$ are linearly dependent. In particular, the product of the forms of the edges of a cycle is zero.
 
-Forms $[X,Y]$ with arguments $X,Y\in\Lambda^kW$ form the subalgebra of forms on boundaries. It contains $e$, is closed under multiplication, and has grades from $0$ to $n-1$. Hence every polyform $P$ in this subalgebra with $P_0=0$ satisfies $P^n=0$: each term in a product of $n$ factors would have grade at least $n$.
+The linear span of forms $[X,Y]$ with $X,Y\in\Lambda^kW$, over all $k=0,\ldots,n-1$, forms the subalgebra of forms on boundaries. It contains $e$, is closed under multiplication, and has grades from $0$ to $n-1$. Hence every polyform $P$ in this subalgebra with $P_0=0$ satisfies $P^n=0$: each term in a product of $n$ factors would have grade at least $n$.
 
 This does not mean that every form of positive grade has square zero. For example, for independent affine vectors $u,v$,
 
@@ -329,7 +337,7 @@ $$
 
 ## Metric evaluation
 
-Suppose $W$ is equipped with a positive definite inner product, such as the resistance metric of a connected graph. It induces a metric on each exterior power $\Lambda^kW$. For a simple exterior object,
+Suppose $W$ is equipped with a positive definite inner product, such as the resistance metric of a connected graph. It induces a metric on each exterior power $\Lambda^kW$. For a decomposable exterior element,
 
 $$
 \|u_1\wedge\cdots\wedge u_k\|^2=\det(u_i\cdot u_j)_{i,j=1}^k
@@ -361,6 +369,15 @@ This is a homogeneous polyform of grade one on boundaries. When the matrix repre
 $$
 [a_j-a_i]^2=[a_i]^2+[a_j]^2-\{a_i,a_j\}
 $$
+
+To obtain the electrical quadratic form, extend the potential values $\varphi_i$ to a linear functional on $V$ by setting $\varphi(a_i)=\varphi_i$. The substitution $[u,v]\mapsto\varphi(u)\varphi(v)$ in the grade-one form $L$ gives
+
+$$
+L\longmapsto\sum_{i<j}c_{ij}(\varphi_j-\varphi_i)^2
+=\boldsymbol\varphi^{\mathsf T}\mathbf L\boldsymbol\varphi
+$$
+
+Here $\boldsymbol\varphi=(\varphi_1,\ldots,\varphi_n)^{\mathsf T}$ denotes the column of values of the functional at the vertices. This substitution differs from the metric evaluation $[u,v]\mapsto u\cdot v$ and connects the formal Laplacian with the electrical-network quadratic form of the first note.
 
 However, multiplication of forms by (5) differs from matrix multiplication, so $L^2$ and $\mathbf L^2$ denote different objects.
 

@@ -1,9 +1,9 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-10-08
-revision: 3
-source_revision: 3
+updated: 2026-10-14
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-exponential
@@ -239,6 +239,8 @@ In particular, $\tau(M_G)=\tau(G)$. If the component of grade $n-1$ is absent, t
 > \tag{6}
 > $$
 
+The polyform potential $u_{M_G}(f)$ is not the electrical potential $\varphi_i$ at a vertex. The former is determined by the form $f$ and the metric polyform $M_G$; the latter arises when solving the network equations with prescribed currents or potential values.
+
 For a homogeneous form of grade $k$, $0\le k\le n-1$, only the complementary grade of the exponential contributes to (6):
 
 $$
@@ -257,7 +259,7 @@ In the project, the normalized potential is also called the PMG norm of the form
 > T=[b_1\wedge\cdots\wedge b_d]^2
 > $$
 >
-> Let $\tau_b$ denote the coefficient of $T$. For simple objects $X=u_1\wedge\cdots\wedge u_k$, $Y=v_1\wedge\cdots\wedge v_k$, let $U,V$ contain the coordinate columns of their factors in the basis $b$. Then
+> Let $\tau_b$ denote the coefficient of $T$. For decomposable objects $X=u_1\wedge\cdots\wedge u_k$, $Y=v_1\wedge\cdots\wedge v_k$, let $U,V$ contain the coordinate columns of their factors in the basis $b$. Then
 >
 > $$
 > \tau_b(\exp L_A)=\det A,\qquad
@@ -293,7 +295,7 @@ In the project, the normalized potential is also called the PMG norm of the form
 > =\det A\det(I_k+DV^{\mathsf T}A^{-1}U)
 > $$
 >
-> The coefficient of $t_1\cdots t_k$ on the right is $\det A\det(V^{\mathsf T}A^{-1}U)$. Since $A$ is symmetric, the last determinant equals $\det(U^{\mathsf T}A^{-1}V)$. Comparing coefficients proves (7). Simple exterior objects span each grade, so bilinear extension covers all $X,Y$. $\square$
+> The coefficient of $t_1\cdots t_k$ on the right is $\det A\det(V^{\mathsf T}A^{-1}U)$. Since $A$ is symmetric, the last determinant equals $\det(U^{\mathsf T}A^{-1}V)$. Comparing coefficients proves (7). Decomposable exterior objects span each grade, so bilinear extension covers all $X,Y$. $\square$
 
 ## Agreement with the resistance metric
 
@@ -318,7 +320,7 @@ Hence $T=T_n$ and $\tau_b=\tau$: the orientation sign disappears in the quadrati
 >
 > The right-hand sides use the induced metric of the preceding note; $X^2=X\cdot X$ is a number, while $[X]^2$ is a formal object.
 
-For simple $X,Y$, the right-hand side of (7) is the mixed Gram determinant. For linear combinations, both sides of (8) extend bilinearly. Thus the theorem applies to nonsimple exterior objects as well as to products of edge vectors.
+For decomposable $X,Y$, the right-hand side of (7) is the mixed Gram determinant. For linear combinations, both sides of (8) extend bilinearly. Thus the theorem applies to nondecomposable exterior objects as well as to products of edge vectors.
 
 This result does not define the evaluation of forms of points or arbitrary simplices outside the boundary subalgebra.
 

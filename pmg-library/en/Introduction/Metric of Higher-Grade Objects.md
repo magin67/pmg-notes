@@ -1,8 +1,8 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-10-08
-revision: 2
+updated: 2026-10-14
+revision: 3
 source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
@@ -39,7 +39,7 @@ The right-hand side is the triangle boundary of grade $2$, rather than the simpl
 
 ## The inner product within one grade
 
-An exterior object is called simple if it can be represented as a single product of vectors. Let
+An exterior object is called decomposable if it can be represented as a single product of vectors. Let
 
 $$
 X=u_1\wedge\cdots\wedge u_k,\qquad
@@ -47,14 +47,14 @@ Y=v_1\wedge\cdots\wedge v_k,\qquad u_i,v_i\in W
 $$
 
 > [!info] The induced inner product
-> **Definition.** For simple objects of grade $k$, set
+> **Definition.** For decomposable objects of grade $k$, set
 >
 > $$
 > X\cdot Y=\det(u_i\cdot v_j)_{i,j=1}^k
 > \tag{1}
 > $$
 >
-> The right-hand side is called the mixed Gram determinant. The rule extends to linear combinations of simple objects by bilinearity:
+> The right-hand side is called the mixed Gram determinant. The rule extends to linear combinations of decomposable objects by bilinearity:
 >
 > $$
 > \left(\sum_\alpha s_\alpha X_\alpha\right)\cdot
@@ -76,9 +76,9 @@ For $k=1$, this is the original metric on $W$. For $k=0$, the inner product of s
 >
 > form a basis of $\Lambda^kW$. Declare this basis orthonormal. This defines a positive definite inner product on all linear combinations.
 >
-> If $U$ and $V$ contain the coordinate columns of $u_i$ and $v_i$, then the coordinates of the simple objects $X$ and $Y$ in this exterior basis are the corresponding minors of $U$ and $V$. By the Cauchy-Binet formula, the sum of the products of these minors is $\det(U^{\mathsf T}V)$, the right-hand side of (1).
+> If $U$ and $V$ contain the coordinate columns of $u_i$ and $v_i$, then the coordinates of the decomposable objects $X$ and $Y$ in this exterior basis are the corresponding minors of $U$ and $V$. By the Cauchy-Binet formula, the sum of the products of these minors is $\det(U^{\mathsf T}V)$, the right-hand side of (1).
 >
-> Thus (1) agrees with the defined inner product and is independent of the representation of the object. Simple objects span $\Lambda^kW$, so the bilinear extension is unique. $\square$
+> Thus (1) agrees with the defined inner product and is independent of the representation of the object. Decomposable objects span $\Lambda^kW$, so the bilinear extension is unique. $\square$
 
 ## Squared norm and volume
 
@@ -91,14 +91,14 @@ For $k=1$, this is the original metric on $W$. For $k=0$, the inner product of s
 >
 > This is a number: the squared norm in the induced Euclidean metric. It differs from the exterior product $X\wedge X$ and from the formal quadratic form $[X]^2$. When needed, the product of an object with itself is written explicitly as $X\wedge X$.
 
-For a simple object $X=u_1\wedge\cdots\wedge u_k$, formula (1) gives
+For a decomposable object $X=u_1\wedge\cdots\wedge u_k$, formula (1) gives
 
 $$
 X^2=\det(u_i\cdot u_j)_{i,j=1}^k=V_{\parallel}^2
 \tag{2}
 $$
 
-Here $V_{\parallel}$ is the $k$-dimensional volume of the parallelotope spanned by the vectors $u_i$. It is zero when those vectors are linearly dependent. Positive definiteness gives $X^2=0$ if and only if $X=0$, including for nonsimple exterior objects.
+Here $V_{\parallel}$ is the $k$-dimensional volume of the parallelotope spanned by the vectors $u_i$. It is zero when those vectors are linearly dependent. Positive definiteness gives $X^2=0$ if and only if $X=0$, including for nondecomposable exterior objects.
 
 For a general object, the norm is computed using the bilinear extension. For example, if $X,Y$ have the same grade, then
 

@@ -1,9 +1,9 @@
 ---
 title: Inner Product of Graph Vectors
 date: 2026-10-03
-updated: 2026-10-08
-revision: 2
-source_revision: 5
+updated: 2026-10-14
+revision: 3
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: inner-product-vectors
@@ -46,6 +46,19 @@ $$
 a_{ij}\cdot a_{ij}=\|a_{ij}\|^2=R_{ij}
 $$
 
+For arbitrary affine vectors
+
+$$
+u=\sum_i u_i a_i,\qquad v=\sum_i v_i a_i,\qquad
+\sum_i u_i=\sum_i v_i=0
+$$
+
+denote their coefficient columns by $\mathbf u=(u_i)$ and $\mathbf v=(v_i)$. Bilinearity and the identity $x_i\cdot x_j=G_{ij}$ give
+
+$$
+u\cdot v=\sum_{i,j}u_iG_{ij}v_j=\mathbf u^{\mathsf T}G\mathbf v
+$$
+
 ## The four-resistance formula
 
 Effective resistances are expressed through the Green matrix as
@@ -69,6 +82,14 @@ $$
 > $$
 
 This is the standard polarization identity for squared Euclidean distances. In an arbitrary coordinate system, the diagonal terms are the squared norms of the position vectors. Each appears with opposite signs and cancels. The result is therefore independent of the choice of origin, although the norms of the position vectors themselves change under translation.
+
+For general affine vectors whose coefficient sums are zero, the same formula for $R_{ij}$ gives
+
+$$
+u\cdot v=-\frac12\mathbf u^{\mathsf T}R\mathbf v
+$$
+
+Indeed, in the sum $\sum_{i,j}u_iR_{ij}v_j$, the terms involving $G_{ii}$ and $G_{jj}$ vanish because the coefficient sums are zero, leaving $-2\sum_{i,j}u_iG_{ij}v_j$.
 
 > [!note] Orientation
 > Reversing one vector changes the sign of the inner product:
