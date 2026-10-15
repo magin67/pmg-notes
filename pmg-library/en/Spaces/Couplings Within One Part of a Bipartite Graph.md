@@ -2,13 +2,13 @@
 title: Couplings Within One Part of a Bipartite Graph
 date: 2026-10-14
 updated: 2026-10-15
-revision: 4
+revision: 5
 translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: couplings-within-one-part-of-a-bipartite-graph
-order: 7
+order: 8
 description: "From a participation table to couplings between objects: projections, decomposition of the Laplacian and its exponential, preservation of effective resistances, and the meaning of the common spanning-tree parameter."
 ---
 

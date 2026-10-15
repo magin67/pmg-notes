@@ -2,13 +2,13 @@
 title: Vertex Contraction and Graph Gluing
 date: 2026-10-14
 updated: 2026-10-15
-revision: 5
+revision: 6
 translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: vertex-contraction-and-graph-gluing
-order: 4
+order: 5
 description: "Contraction as a passage to a subspace, independent components in the Laplacian exponential, gluing spaces, spanning-tree coefficients, and additivity of resistance radius."
 ---
 
@@ -16,7 +16,7 @@ Suppose two vertices of a graph are to be treated as one. For example, several o
 
 Consider another problem as well. Two graphs are given independently. Select one vertex in each and identify them. The resulting graph allows us to compare vertices from the two original parts. Here, identification joins two spaces.
 
-This is the fourth note in the series “Spaces and Subspaces in PMG”. It uses the [[Spaces, Subspaces, and the Choice of a Basis|distinction between points and affine vectors]], [[Projections, Bi-coordinates, and Di-coordinates|orthogonal projection]], and the [[Laplacian Exponential|metric polyform]]. All existing couplings have positive coefficients. Connectedness is assumed wherever the resistance metric of an entire graph is calculated.
+It uses the [[Spaces, Subspaces, and the Choice of a Basis|distinction between points and affine vectors]], [[Projections, Bi-coordinates, and Di-coordinates|orthogonal projection]], and the [[Laplacian Exponential|metric polyform]]. All existing couplings have positive coefficients. Connectedness is assumed wherever the resistance metric of an entire graph is calculated.
 
 ## Three ways to reduce the number of vertices
 
@@ -283,7 +283,7 @@ The vertices of a connected graph form a nondegenerate resistance simplex. Withi
 
 For a graph consisting of one coupling with effective resistance $r$, the center is the midpoint of a segment of length $\sqrt r$, so $\rho=r/4$. For a single vertex, we take $\rho=0$.
 
-Here centers and their sums are considered in the ordinary affine space of the resistance realization. In the extension with $z$, the affine combination giving a center need not be local; its local point is obtained by the correction $\pi(p)=p-p^2z/2$.
+Here centers and their sums are considered in the ordinary affine space of the resistance realization. In the extension with $z$, the affine combination giving a center need not be local; its local point is obtained by the correction $\pi(p)=p-p^2z/2$, as explained in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on nonlocal elements]].
 
 **Theorem.** When two graphs are glued at a single vertex $o$, the circumcenter and resistance radius of the combined graph satisfy
 

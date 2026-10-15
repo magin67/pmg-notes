@@ -2,8 +2,8 @@
 title: The Null Vector, Isotropic Representation, and the Boundary
 date: 2026-10-12
 updated: 2026-10-15
-revision: 4
-translated_revision: 2
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -190,7 +190,7 @@ $$
 N\cdot x(t)=1-2t(1-t),\qquad z\cdot x(t)=1
 $$
 
-Thus a discussion of a normal must specify the relevant subspace or section. Sections with other normals and the geometry of spheres remain a separate continuation.
+Thus a discussion of a normal must specify the relevant subspace or section. The geometry of spheres is discussed in the [[Nonlocal Elements, Spheres, and Their Centers|next note]]. Sections with other normals remain a separate continuation.
 
 ## Affine subspaces in exterior form
 
@@ -394,7 +394,7 @@ The construction uses the positive definite displacement metric. For a connected
 
 The exterior description of a subspace requires affine independence of the Euclidean coordinates of its generators. For example, local points $a,m,c$ lie on one Euclidean line. Although they are linearly independent as elements of the extension in the span of $a,c,z$, the product $z\wedge a\wedge m\wedge c$ vanishes. It does not specify a plane: $z\wedge a\wedge c$ suffices for this line.
 
-Introducing $z$ is not necessary for calculating effective resistances, finding projections in $W$, or solving the Dirichlet problem. Here it connects local points, affine weight, exterior descriptions of subspaces, and the metric realization of the boundary. The geometry of spheres remains a separate continuation.
+Introducing $z$ is not necessary for calculating effective resistances, finding projections in $W$, or solving the Dirichlet problem. Here it connects local points, affine weight, exterior descriptions of subspaces, and the metric realization of the boundary. The geometry of spheres and preservation of metric evaluations of boundaries under changes in vertex norms are discussed in the [[Nonlocal Elements, Spheres, and Their Centers|next note]].
 
 The [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension|note on coordinates in the isotropic extension]] distinguishes linear orthogonal projection from selection of the local center.
 

@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-10-15
-revision: 5
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -196,8 +196,9 @@ The following definitions are used in the published series “Spaces and Subspac
 | Reciprocal basis | Взаимный базис | A basis of the same subspace whose inner products with the original basis elements are $1$ for matching indices and $0$ otherwise. It exists when the metric on the subspace is nondegenerate. [[Projections, Bi-coordinates, and Di-coordinates#The reciprocal basis]]. |
 | Laplacian of a frame | Лапласиан фрейма | The difference part of the form decomposition for a fixed frame: $L_q=\sum_{i<j}q^iq^j[a_j-a_i]^2$. It may change with the frame and is not determined by the object $q$ alone. [[Projections, Bi-coordinates, and Di-coordinates#The difference part and the Laplacian of a frame]]. |
 | Local element; local point | Локальный элемент; локальная точка | An element of unit affine weight and zero norm: $x\cdot z=1$, $x^2=0$. It represents a point in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
-| Nonlocal element of unit weight | Нелокальный элемент единичного веса | An element $p$ with $p\cdot z=1$ and $p^2\ne0$. A PMG term in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector]]. |
-| Local center | Локальный центр | The point $\pi(p)=p-p^2z/2$ for $p\cdot z=1$. Selecting the center is a nonlinear correction along $z$. [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector]]. |
+| Nonlocal element of unit weight | Нелокальный элемент единичного веса | An element $p$ with $p\cdot z=1$ and $p^2\ne0$. A PMG term in the isotropic model. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
+| Local center | Локальный центр | The point $\pi(p)=p-p^2z/2$ for $p\cdot z=1$. Selecting the center is a nonlinear correction along $z$. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
+| Sphere element | Элемент сферы | A normalized element $S=h+\rho z/2$; for $\rho>0$, the local points on the sphere satisfy $x\cdot S=0$, its local center is $h$, and its norm is $S^2=\rho$. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. |
 | Distinguished null vector | Выделенный нуль-вектор | A nonzero element $z$ with $z^2=0$ that specifies the normalization of local points. It is not the zero element of the space. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Isotropic element | Изотропный элемент | A nonzero linear element $u$ with zero norm $u\cdot u=0$, regardless of affine weight. Local elements are isotropic; the null vector $z$ is isotropic but not local, since its weight is $0$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Metric square | Метрический квадрат | A previous explanatory name for the norm $Y^2=Y\cdot Y$. The current text uses “norm”. It may be negative in an indefinite metric and differs from the form $[Y]^2$. |
@@ -224,6 +225,7 @@ Within a derivation, distinguish the graph $G$ from its Green matrix $\mathbf G$
 
 | Revision | Date | Content |
 |---|---|---|
+| 6 | 2026-10-15 | Added the sphere element and links to the properties of nonlocal elements, completing alignment with Russian glossary revision 5. |
 | 5 | 2026-10-15 | Replaced metric mass with resistance radius and explicitly defined resistance diameter. |
 | 4 | 2026-10-15 | Established the PMG convention for quadratic and linear norms; clarified locality and isotropy. |
 | 3 | 2026-10-15 | Simplified isotropic-model notation: local points, nonlocal elements, and local centers. Updated section links. |

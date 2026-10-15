@@ -2,13 +2,13 @@
 title: Projections, Bi-coordinates, and Di-coordinates
 date: 2026-10-13
 updated: 2026-10-15
-revision: 4
-translated_revision: 4
+revision: 5
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: projections-bi-coordinates-and-di-coordinates
-order: 3
+order: 4
 description: "Frames, bi- and di-coordinates, decompositions of quadratic and polar forms, the Laplacian of a frame, and projection calculations using polyforms."
 ---
 
@@ -16,7 +16,7 @@ Select several vertices of a graph. How can we describe the other vertices relat
 
 This note examines which coordinates describe the object itself, which describe its projection, and how to calculate them using metric polyforms.
 
-This is the third note in the series “Spaces and Subspaces in PMG”. The main part builds on [[Spaces, Subspaces, and the Choice of a Basis]]. [[The Null Vector, Isotropic Representation, and the Boundary]] is needed for the section “Coordinates in the isotropic extension” and the example of degeneracy along $\mathbb Rz$. Definitions of forms and potentials are collected in the [[Core specification|core specification]]. The graph model remains the same: the graph is connected and undirected, with positive coefficients for all existing couplings. The space of affine vectors $W$ carries a positive definite resistance metric.
+The main part builds on [[Spaces, Subspaces, and the Choice of a Basis]]. [[The Null Vector, Isotropic Representation, and the Boundary]] is needed for the section “Coordinates in the isotropic extension” and the example of degeneracy along $\mathbb Rz$. Definitions of forms and potentials are collected in the [[Core specification|core specification]]. The graph model remains the same: the graph is connected and undirected, with positive coefficients for all existing couplings. The space of affine vectors $W$ carries a positive definite resistance metric.
 
 We first define bi-coordinates and decompose the forms of frames. We then consider di-coordinates and projections, and finally extend the coordinate description to the isotropic model.
 
@@ -500,6 +500,8 @@ Area vanishes when the plane is projected onto a line. The evaluation of the fir
 > The mixed forms $[s,r]$ and $[r,s]$ do not vanish. Their metric evaluations are zero. Thus the numerical equality $u^2=s^2+r^2$ does not imply the equality of forms $[u]^2=[s]^2+[r]^2$.
 
 ## Coordinates in the isotropic extension
+
+The properties of selecting the local center and preservation of metric evaluations of differences are discussed in [[Nonlocal Elements, Spheres, and Their Centers]]. Here we compare this operation with linear orthogonal projection.
 
 In this section, use the direct notation from the [[The Null Vector, Isotropic Representation, and the Boundary#Local points|note on the isotropic model]]: local points $x,p_i,q$ are themselves elements of the extension, with $x^2=0$ and $x\cdot z=1$. A linear combination of unit weight can be nonlocal; its center is selected by $\pi(p)=p-p^2z/2$. The preceding sections used ordinary affine notation; here we explicitly distinguish a linear combination from its local center.
 

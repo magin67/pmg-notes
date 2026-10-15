@@ -2,13 +2,13 @@
 title: Vertex Elimination and Induced Couplings
 date: 2026-10-14
 updated: 2026-10-15
-revision: 4
+revision: 5
 translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: vertex-elimination-and-induced-couplings
-order: 6
+order: 7
 description: "A graph on selected vertices: projecting the Laplacian, induced couplings, the response matrix, and preservation of the resistance metric through factorization of the metric polyform."
 ---
 
@@ -16,7 +16,7 @@ Select several vertices of a graph. Can we construct a graph on just these verti
 
 We will call this operation elimination of the internal vertices. Geometrically, it preserves the metric of the selected subspace. In polyform algebra, it is expressed by projecting the Laplacian and factoring its exponential.
 
-This is the sixth note in the series “Spaces and Subspaces in PMG”. It uses [[Selected Vertices and the Dirichlet Problem|projections and the influence matrix]], the [[Projections, Bi-coordinates, and Di-coordinates|decomposition of the quadratic form of a frame]], and the [[Core specification|metric identity]]. We consider a finite, connected, undirected graph without loops. All existing couplings have positive coefficients; absent couplings have coefficient zero.
+It uses [[Selected Vertices and the Dirichlet Problem|projections and the influence matrix]], the [[Projections, Bi-coordinates, and Di-coordinates|decomposition of the quadratic form of a frame]], and the [[Core specification|metric identity]]. We consider a finite, connected, undirected graph without loops. All existing couplings have positive coefficients; absent couplings have coefficient zero.
 
 ## What should remain after elimination
 
