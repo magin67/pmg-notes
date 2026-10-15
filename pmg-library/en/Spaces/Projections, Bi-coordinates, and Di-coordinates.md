@@ -1,9 +1,9 @@
 ---
 title: Projections, Bi-coordinates, and Di-coordinates
 date: 2026-10-13
-updated: 2026-10-15
-revision: 5
-translated_revision: 7
+updated: 2026-10-16
+revision: 6
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -292,25 +292,25 @@ Thus the same object has bi-coordinates $(-1,1)$ and di-coordinates $(0,1)$. The
 
 ### Converting between the two sets of coordinates
 
-Let $\mathbf K$ be the Gram matrix of the basis, whose entries are $K_{ij}=h_i\cdot h_j$. Substituting (1) into (4) gives
+Let $\mathbf G$ be the Gram matrix of the basis, whose entries are $g_{ij}=h_i\cdot h_j$. Substituting (1) into (4) gives
 
 $$
-d_i=\sum_j K_{ij}b^j
+d_i=\sum_j g_{ij}b^j
 $$
 
 If $\mathbf b$ and $\mathbf d$ are written as columns, this becomes
 
 $$
-\mathbf d=\mathbf K\mathbf b,\qquad
-\mathbf b=\mathbf K^{-1}\mathbf d
+\mathbf d=\mathbf G\mathbf b,\qquad
+\mathbf b=\mathbf G^{-1}\mathbf d
 \tag{5}
 $$
 
-The second formula requires $\mathbf K$ to be invertible. Equivalently, the metric on $U$ must be nondegenerate: no nonzero object in $U$ is orthogonal to all of $U$. In our example,
+The second formula requires $\mathbf G$ to be invertible. Equivalently, the metric on $U$ must be nondegenerate: no nonzero object in $U$ is orthogonal to all of $U$. In our example,
 
 $$
-\mathbf K=\begin{pmatrix}1&1\\1&2\end{pmatrix},\qquad
-\mathbf K\begin{pmatrix}-1\\1\end{pmatrix}
+\mathbf G=\begin{pmatrix}1&1\\1&2\end{pmatrix},\qquad
+\mathbf G\begin{pmatrix}-1\\1\end{pmatrix}
 =\begin{pmatrix}0\\1\end{pmatrix}
 $$
 
@@ -324,7 +324,7 @@ $$
 h^i\cdot h_j=\delta^i_j
 $$
 
-The symbol $\delta^i_j$ equals $1$ when $i=j$ and $0$ otherwise. This basis is called the **reciprocal basis**, or the metric dual basis. Its elements are obtained from the columns of the inverse Gram matrix: $h^i=\sum_j(\mathbf K^{-1})_{ji}h_j$.
+The symbol $\delta^i_j$ equals $1$ when $i=j$ and $0$ otherwise. This basis is called the **reciprocal basis**, or the metric dual basis. Its elements are obtained from the columns of the inverse Gram matrix: $h^i=\sum_j(\mathbf G^{-1})_{ji}h_j$.
 
 For $y\in U$, we have
 
@@ -346,7 +346,7 @@ In our example, $h^1=u-v$, $h^2=v$. Check that $(u-v)\cdot u=1$, $(u-v)\cdot(u+v
 If the metric on $U$ is nondegenerate, the projection exists and is unique. Indeed, for $y_U=\sum_j b^j h_j$, the orthogonality conditions are
 
 $$
-\sum_j K_{ij}b^j=y\cdot h_i\qquad(i=1,\ldots,k)
+\sum_j g_{ij}b^j=y\cdot h_i\qquad(i=1,\ldots,k)
 $$
 
 This is system (5), which has a unique solution. We obtain
@@ -398,7 +398,7 @@ In particular, for a basis of a vector subspace, the di-coordinates and Gram mat
 
 $$
 d_i=\frac{u_{M_G}([y,h_i])}{u_{M_G}(e)},\qquad
-K_{ij}=\frac{u_{M_G}([h_i,h_j])}{u_{M_G}(e)}
+g_{ij}=\frac{u_{M_G}([h_i,h_j])}{u_{M_G}(e)}
 $$
 
 This rule applies to the vector arguments of the core. Inner products involving local points and $z$ are defined by the metric in the [[The Null Vector, Isotropic Representation, and the Boundary#The original points and the extended space|note on isotropic representation]].
@@ -596,5 +596,6 @@ The reciprocal basis, projections, and coordinate table were checked using exact
 
 1. Havel, T. F. [Heron’s Formula in Higher Dimensions](https://doi.org/10.1007/s00006-023-01305-8). *Advances in Applied Clifford Algebras*, 34, 9 (2024), §2. Lagrange and Huygens-Leibniz identities for weighted centers.
 2. Casazza, P. G.; Lynch, R. G. [A brief introduction to Hilbert space frame theory and its applications](https://arxiv.org/abs/1509.07347). The use of the term *frame* for a family of vectors in a Hilbert space.
+
 
 

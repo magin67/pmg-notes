@@ -1,9 +1,9 @@
 ---
 title: Inner Product of Graph Vectors
 date: 2026-10-03
-updated: 2026-10-15
-revision: 4
-source_revision: 6
+updated: 2026-10-16
+revision: 5
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: inner-product-vectors
@@ -14,7 +14,7 @@ order: "3"
 
 In [[Effective Resistance and Graph Geometry]], the vertices of a connected graph were represented by points in Euclidean space whose squared distances equal the effective resistances. The same construction determines inner products of affine vectors between vertices. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
 
-We consider a finite connected undirected graph without loops, with positive conductances on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $G=L^+$. For the points of the resistance representation, we retain the notation
+We consider a finite connected undirected graph without loops, with positive conductances on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $\mathrm{Gr}=L^+$. For the points of the resistance representation, we retain the notation
 
 $$
 a_{ij}=a_j-a_i,\qquad \mathbf e_{ij}=\mathbf e_j-\mathbf e_i
@@ -24,17 +24,17 @@ where $\mathbf e_i$ are the standard coordinate columns. The column $\mathbf e_{
 
 ## Inner product through the Green matrix
 
-Let $x_i$ denote the position vector of $a_i$ relative to the centroid. By construction of the resistance representation, $x_i\cdot x_j=G_{ij}$, so
+Let $x_i$ denote the position vector of $a_i$ relative to the centroid. By construction of the resistance representation, $x_i\cdot x_j=\mathrm{Gr}_{ij}$, so
 
 $$
-a_{ij}\cdot a_{kl}=(x_j-x_i)\cdot(x_l-x_k)=G_{jl}-G_{jk}-G_{il}+G_{ik}
+a_{ij}\cdot a_{kl}=(x_j-x_i)\cdot(x_l-x_k)=\mathrm{Gr}_{jl}-\mathrm{Gr}_{jk}-\mathrm{Gr}_{il}+\mathrm{Gr}_{ik}
 $$
 
 > [!info] Inner product
 > **Lemma.** For any two pairs of vertices,
 >
 > $$
-> a_{ij}\cdot a_{kl}=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}
+> a_{ij}\cdot a_{kl}=\mathbf e_{ij}^{\mathsf T}\mathrm{Gr}\mathbf e_{kl}
 > \tag{1}
 > $$
 >
@@ -53,10 +53,10 @@ u=\sum_i u_i a_i,\qquad v=\sum_i v_i a_i,\qquad
 \sum_i u_i=\sum_i v_i=0
 $$
 
-denote their coefficient columns by $\mathbf u=(u_i)$ and $\mathbf v=(v_i)$. Bilinearity and the identity $x_i\cdot x_j=G_{ij}$ give
+denote their coefficient columns by $\mathbf u=(u_i)$ and $\mathbf v=(v_i)$. Bilinearity and the identity $x_i\cdot x_j=\mathrm{Gr}_{ij}$ give
 
 $$
-u\cdot v=\sum_{i,j}u_iG_{ij}v_j=\mathbf u^{\mathsf T}G\mathbf v
+u\cdot v=\sum_{i,j}u_i\mathrm{Gr}_{ij}v_j=\mathbf u^{\mathsf T}\mathrm{Gr}\mathbf v
 $$
 
 ## The four-resistance formula
@@ -64,13 +64,13 @@ $$
 Effective resistances are expressed through the Green matrix as
 
 $$
-R_{pq}=G_{pp}+G_{qq}-2G_{pq}
+R_{pq}=\mathrm{Gr}_{pp}+\mathrm{Gr}_{qq}-2\mathrm{Gr}_{pq}
 $$
 
 In the combination $R_{il}+R_{jk}-R_{ik}-R_{jl}$, the diagonal entries cancel, giving
 
 $$
-R_{il}+R_{jk}-R_{ik}-R_{jl}=2(G_{ik}+G_{jl}-G_{il}-G_{jk})
+R_{il}+R_{jk}-R_{ik}-R_{jl}=2(\mathrm{Gr}_{ik}+\mathrm{Gr}_{jl}-\mathrm{Gr}_{il}-\mathrm{Gr}_{jk})
 $$
 
 > [!info] Polarization of resistances
@@ -89,7 +89,7 @@ $$
 u\cdot v=-\frac12\mathbf u^{\mathsf T}R\mathbf v
 $$
 
-Indeed, in the sum $\sum_{i,j}u_iR_{ij}v_j$, the terms involving $G_{ii}$ and $G_{jj}$ vanish because the coefficient sums are zero, leaving $-2\sum_{i,j}u_iG_{ij}v_j$.
+Indeed, in the sum $\sum_{i,j}u_iR_{ij}v_j$, the terms involving $\mathrm{Gr}_{ii}$ and $\mathrm{Gr}_{jj}$ vanish because the coefficient sums are zero, leaving $-2\sum_{i,j}u_i\mathrm{Gr}_{ij}v_j$.
 
 > [!note] Orientation
 > Reversing one vector changes the sign of the inner product:
@@ -105,13 +105,13 @@ Indeed, in the sum $\sum_{i,j}u_iR_{ij}v_j$, the terms involving $G_{ii}$ and $G
 Inject a unit current at vertex $l$ and withdraw it at vertex $k$. The external-current column is then $J=\mathbf e_{kl}$. The centered solution of $L\varphi=J$ is
 
 $$
-\varphi=G\mathbf e_{kl}
+\varphi=\mathrm{Gr}\mathbf e_{kl}
 $$
 
 The potential difference across the measurement pair is
 
 $$
-\varphi_j-\varphi_i=\mathbf e_{ij}^{\mathsf T}\varphi=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}
+\varphi_j-\varphi_i=\mathbf e_{ij}^{\mathsf T}\varphi=\mathbf e_{ij}^{\mathsf T}\mathrm{Gr}\mathbf e_{kl}
 $$
 
 > [!info] Measuring an inner product
@@ -231,7 +231,8 @@ $$
 
 A positive inner product means $0\le\theta<90^\circ$, a zero inner product means orthogonality, and a negative inner product means $90^\circ<\theta\le180^\circ$. Electrically, the sign determines the sign of the measured potential difference for the chosen orientations of the pairs.
 
-The next note, [[Laplacian, Green Matrix, and Effective Resistance Matrix]], collects the forward and inverse transformations between $L$, $G$, and $R$. In [[From Lengths to Areas and Volumes]], inner products are used to compute Gram determinants, which express squared areas and volumes.
+The next note, [[Laplacian, Green Matrix, and Effective Resistance Matrix]], collects the forward and inverse transformations between $L$, $\mathrm{Gr}$, and $R$. In [[From Lengths to Areas and Volumes]], inner products are used to compute Gram determinants, which express squared areas and volumes.
 
 Sources on resistance geometry and electrical networks are listed in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].
+
 

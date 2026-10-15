@@ -1,9 +1,9 @@
 ---
 title: The Null Vector, Isotropic Representation, and the Boundary
 date: 2026-10-12
-updated: 2026-10-15
-revision: 5
-translated_revision: 5
+updated: 2026-10-16
+revision: 6
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -70,6 +70,17 @@ $$
 Thus the norm of a difference of local points equals their squared Euclidean distance. In the resistance realization, $(a_j-a_i)^2=R_{ij}$.
 
 Choose local vertices $a_1,\ldots,a_n$ whose coordinates in $W_0$ are affinely independent. Then $a_1,\ldots,a_n,z$ are linearly independent. The span $V=\operatorname{span}(a_1,\ldots,a_n)$ retains the algebraic structure of the vertex space in the [[Core specification|PMG core]]. Its elements of unit affine weight can have nonzero norm. Locality is an additional condition in this metric model.
+
+### The vertex Gram matrix and the extended Gram matrix
+
+The Gram matrix of local vertices is denoted by $\mathbf G=(g_{ij})$, where $g_{ij}=a_i\cdot a_j=-R_{ij}/2$. With the elements ordered as $(a_1,\ldots,a_n,z)$, the Gram matrix of the extended set is
+
+$$
+\mathbf G_z=\begin{pmatrix}\mathbf G&\mathbf1\\\mathbf1^{\mathsf T}&0\end{pmatrix},
+\qquad \mathbf G=-\frac12\mathbf R
+$$
+
+The subscript $z$ marks the added row and column of the null vector. The Green matrix $\mathbf{Gr}=\mathbf L^+$ is a different Gram matrix: its entries are inner products of the vectors from the vertices to the centroid. For the full vertex set of a graph, $\mathbf{Gr}=\mathbf J\mathbf G\mathbf J$, where $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$.
 
 ### Example: the same three-vertex path
 
@@ -407,4 +418,5 @@ The previous revision included exact rational checks in the four-dimensional mod
 The internal Russian notes “Isotropic Representation of Points and the Null Vector”, “Sphere Normals and Lorentzian Geometry”, and “The Null Vector: Exterior Products and the Boundary” were checked during preparation. Local points are now denoted directly; their linear combinations and local centers are explicitly distinguished. “Local point” and “nonlocal element” are used here in the stated PMG sense.
 
 The isotropic model of Euclidean points and the exterior description of lines are known constructions in conformal geometric algebra. The correspondence was checked against [H. Li, D. Hestenes, A. Rockwood, *Generalized Homogeneous Coordinates for Computational Geometry*](https://davidhestenes.net/geocalc/pdf/CompGeom-ch2.pdf), §2.3, equations (2.25), (2.26), and (2.32)–(2.34). That source uses $x\cdot e=-1$; our notation corresponds to $z=-e$ and $o=e_0$. The geometric product of Clifford algebra is not identified with the PMG product of forms.
+
 

@@ -1,9 +1,9 @@
 ---
 title: Resistance Radius and Diameter of a Graph
 date: 2026-10-15
-updated: 2026-10-15
-revision: 1
-translated_revision: 1
+updated: 2026-10-16
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -160,7 +160,7 @@ $$
 
 For computation, the full inverse matrix is unnecessary. Solve $\mathbf R\mathbf v=\mathbf1$, calculate $s=\sum_i v_i$, and set $\rho=1/(2s)$, $D_{\mathrm{res}}=2/s$, and $\boldsymbol\alpha=\mathbf v/s$.
 
-Formula (4) uses the resistance matrix. It cannot be replaced by the Green matrix $\mathbf G=\mathbf L^+$: the latter satisfies $\mathbf G\mathbf1=0$ and is singular. A representation using the Gram matrix of local vertices will be considered separately.
+Formula (4) uses the resistance matrix. It cannot be replaced by the Green matrix $\mathbf{Gr}=\mathbf L^+$: the latter satisfies $\mathbf{Gr}\mathbf1=0$ and is singular. A representation using the Gram matrix of local vertices will be considered separately.
 
 ## Reciprocal connectivity parameters
 
@@ -263,7 +263,7 @@ Suppose every edge of the complete graph $K_n$ has the same conductance $c>0$. T
 $$
 \mathbf L=nc\left(I-\frac{\mathbf1\mathbf1^{\mathsf T}}n\right),
 \qquad
-\mathbf G=\frac1{nc}\left(I-\frac{\mathbf1\mathbf1^{\mathsf T}}n\right)
+\mathbf{Gr}=\frac1{nc}\left(I-\frac{\mathbf1\mathbf1^{\mathsf T}}n\right)
 $$
 
 The distance formula gives
@@ -318,3 +318,4 @@ The next note will relate the radius to the Gram matrix of a vertex set, its det
 - [[Vertex Contraction and Graph Gluing]]: additivity of the resistance radius and the tree formula.
 - K. Devriendt, R. Lambiotte. [Discrete curvature on graphs from the effective resistance](https://arxiv.org/abs/2201.06385), 2022, Appendix B.2-B.3 in version v3: matrix and geometric characterizations of the circumsphere center. Their $\sigma^2$ corresponds to our $\rho$, and their $\mathbf p$ to the column $\boldsymbol\alpha$.
 - D. Malyugin. [Express Analysis of Metric Parameters of Graphs](https://habr.com/ru/articles/534182/), 2020 (in Russian): the original discussion of metric characteristics. The parameter $r(G)$, defined there as the squared radius, corresponds to $\rho(G)$; passing to $D_{\mathrm{res}}$ requires a factor of $4$.
+

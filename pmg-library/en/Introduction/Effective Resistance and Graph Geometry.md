@@ -1,9 +1,9 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-10-15
-revision: 4
-source_revision: 5
+updated: 2026-10-16
+revision: 5
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry
@@ -31,21 +31,21 @@ $$
 Here $\mathbf1$ is the column vector of ones, and orthogonality is taken with respect to the ordinary inner product in $\mathbb R^n$. For a connected graph, the restriction of $L$ to $H$ is positive definite and invertible.
 
 > [!info] Green matrix
-> **Definition.** The Green matrix $G$ inverts $L$ on $H$ and vanishes on constant columns:
+> **Definition.** The Green matrix $\mathrm{Gr}$ inverts $L$ on $H$ and vanishes on constant columns:
 >
 > $$
-> G|_H=(L|_H)^{-1},\qquad G\mathbf1=0
+> \mathrm{Gr}|_H=(L|_H)^{-1},\qquad \mathrm{Gr}\mathbf1=0
 > $$
 >
-> It is the Moore-Penrose pseudoinverse: $G=L^+$.
+> It is the Moore-Penrose pseudoinverse: $\mathrm{Gr}=L^+$.
 
 The definition gives
 
 $$
-G^{\mathsf T}=G,\qquad LG=GL=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
+\mathrm{Gr}^{\mathsf T}=\mathrm{Gr},\qquad L\mathrm{Gr}=\mathrm{Gr}L=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
 $$
 
-where $I$ is the identity matrix. The matrix $G$ is positive semidefinite and has rank $n-1$. For any balanced $J$, the centered solution of the current equation is $\varphi=GJ$; centering means that $\sum_i\varphi_i=0$.
+where $I$ is the identity matrix. The matrix $\mathrm{Gr}$ is positive semidefinite and has rank $n-1$. For any balanced $J$, the centered solution of the current equation is $\varphi=\mathrm{Gr}J$; centering means that $\sum_i\varphi_i=0$.
 
 ## Resistance through the Green matrix
 
@@ -55,12 +55,12 @@ $$
 \mathbf e_{ij}=\mathbf e_j-\mathbf e_i
 $$
 
-The column $\mathbf e_{ij}$ specifies a unit current injected at vertex $j$ and withdrawn at vertex $i$. The centered potentials are $\varphi=G\mathbf e_{ij}$. Hence
+The column $\mathbf e_{ij}$ specifies a unit current injected at vertex $j$ and withdrawn at vertex $i$. The centered potentials are $\varphi=\mathrm{Gr}\mathbf e_{ij}$. Hence
 
 $$
 R_{ij}=\varphi_j-\varphi_i
-=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij}
-=G_{ii}+G_{jj}-2G_{ij}
+=\mathbf e_{ij}^{\mathsf T}\mathrm{Gr}\mathbf e_{ij}
+=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
 \tag{1}
 $$
 
@@ -71,7 +71,7 @@ For $i=j$, set $R_{ii}=0$. Formula (1) remains valid in this case.
 A positive semidefinite matrix is the Gram matrix of a family of Euclidean vectors. Thus there exist position vectors $x_1,\ldots,x_n$ in $\mathbb R^{n-1}$ such that
 
 $$
-x_i\cdot x_j=G_{ij}
+x_i\cdot x_j=\mathrm{Gr}_{ij}
 \tag{2}
 $$
 
@@ -79,7 +79,7 @@ $$
 > **Proof.** Let $q_1,\ldots,q_{n-1}$ be an orthonormal basis of $H$ consisting of eigenvectors of $L$, with corresponding eigenvalues $\lambda_1,\ldots,\lambda_{n-1}>0$. Then
 >
 > $$
-> G=\sum_{\alpha=1}^{n-1}\lambda_\alpha^{-1}q_\alpha q_\alpha^{\mathsf T}
+> \mathrm{Gr}=\sum_{\alpha=1}^{n-1}\lambda_\alpha^{-1}q_\alpha q_\alpha^{\mathsf T}
 > $$
 >
 > If $q_{\alpha i}$ denotes the $i$th coordinate of $q_\alpha$, we may choose
@@ -88,12 +88,12 @@ $$
 > x_i=\left(\frac{q_{1i}}{\sqrt{\lambda_1}},\ldots,\frac{q_{n-1,i}}{\sqrt{\lambda_{n-1}}}\right)
 > $$
 >
-> Their inner products equal the entries of $G$. $\square$
+> Their inner products equal the entries of $\mathrm{Gr}$. $\square$
 
-From (2) and $G\mathbf1=0$, we obtain
+From (2) and $\mathrm{Gr}\mathbf1=0$, we obtain
 
 $$
-\left\|\sum_i x_i\right\|^2=\mathbf1^{\mathsf T}G\mathbf1=0
+\left\|\sum_i x_i\right\|^2=\mathbf1^{\mathsf T}\mathrm{Gr}\mathbf1=0
 $$
 
 Consequently, $\sum_i x_i=0$. The points $a_i$ with position vectors $x_i$ have their centroid at the origin.
@@ -107,7 +107,7 @@ Consequently, $\sum_i x_i=0$. The points $a_i$ with position vectors $x_i$ have 
 >
 > is the affine vector from $a_i$ to $a_j$. More generally, an affine vector has the form $u=\sum_i u_i a_i$, where $\sum_i u_i=0$; in the chosen realization, it is represented by $\sum_i u_i x_i$.
 
-The column $\mathbf e_{ij}$ is the coordinate representative of $a_{ij}$ with respect to the vertices. It records the coefficients of the difference, while $x_j-x_i$ expresses that difference in the chosen Euclidean coordinates. In particular, the coordinate quadratic norm $\mathbf e_{ij}^{\mathsf T}\mathbf e_{ij}=2$ for $i\ne j$ does not express resistance: resistance is computed using $G$.
+The column $\mathbf e_{ij}$ is the coordinate representative of $a_{ij}$ with respect to the vertices. It records the coefficients of the difference, while $x_j-x_i$ expresses that difference in the chosen Euclidean coordinates. In particular, the coordinate quadratic norm $\mathbf e_{ij}^{\mathsf T}\mathbf e_{ij}=2$ for $i\ne j$ does not express resistance: resistance is computed using $\mathrm{Gr}$.
 
 By (1) and (2),
 
@@ -115,7 +115,7 @@ $$
 \begin{aligned}
 \|a_{ij}\|^2&=\|x_j-x_i\|^2\\
 &=x_i\cdot x_i+x_j\cdot x_j-2x_i\cdot x_j\\
-&=G_{ii}+G_{jj}-2G_{ij}=R_{ij}
+&=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}=R_{ij}
 \end{aligned}
 $$
 
@@ -167,14 +167,14 @@ graph LR
 > -1&3&-2\\
 > 0&-2&2
 > \end{pmatrix},\qquad
-> G=\begin{pmatrix}
+> \mathrm{Gr}=\begin{pmatrix}
 > \frac12&-\frac16&-\frac13\\
 > -\frac16&\frac16&0\\
 > -\frac13&0&\frac13
 > \end{pmatrix}
 > $$
 >
-> Direct multiplication gives $G\mathbf1=0$ and $LG=I-\mathbf1\mathbf1^{\mathsf T}/3$. Formula (1) independently reproduces the electrical calculation:
+> Direct multiplication gives $\mathrm{Gr}\mathbf1=0$ and $L\mathrm{Gr}=I-\mathbf1\mathbf1^{\mathsf T}/3$. Formula (1) independently reproduces the electrical calculation:
 >
 > $$
 > R_{12}=\frac12+\frac16+\frac13=1,\qquad
@@ -199,7 +199,7 @@ graph LR
 > \|a_{13}\|^2=\|a_{12}\|^2+\|a_{23}\|^2
 > $$
 >
-> These coordinates are not centered. After subtracting the centroid $(1/3,1/(3\sqrt2))$, the position vectors have the Gram matrix $G$ displayed above.
+> These coordinates are not centered. After subtracting the centroid $(1/3,1/(3\sqrt2))$, the position vectors have the Gram matrix $\mathrm{Gr}$ displayed above.
 
 The path diagram and its resistance simplex have different geometric meanings. The diagram shows which connections are present; the simplex represents the resistances of the entire network as squared Euclidean distances.
 
@@ -217,9 +217,9 @@ Formula (3) shows that $\sqrt{R_{ij}}$ is a Euclidean distance. The resistance $
 > Effective resistance therefore defines a metric on the vertex set, called resistance distance.
 
 > [!note]- Proof of the triangle inequality
-> **Proof.** Symmetry and positivity follow from (1) and the positive definiteness of $G$ on $H$. For the triangle inequality, it suffices to consider distinct $i,j,k$.
+> **Proof.** Symmetry and positivity follow from (1) and the positive definiteness of $\mathrm{Gr}$ on $H$. For the triangle inequality, it suffices to consider distinct $i,j,k$.
 >
-> Inject a unit current at $j$ and withdraw it at $k$. Then $\varphi=G(\mathbf e_j-\mathbf e_k)$. At every other vertex $v$, the potential is a weighted average of the potentials at its neighbors:
+> Inject a unit current at $j$ and withdraw it at $k$. Then $\varphi=\mathrm{Gr}(\mathbf e_j-\mathbf e_k)$. At every other vertex $v$, the potential is a weighted average of the potentials at its neighbors:
 >
 > $$
 > \varphi_v=\frac{\sum_w c_{vw}\varphi_w}{\sum_w c_{vw}}
@@ -232,7 +232,7 @@ Formula (3) shows that $\sqrt{R_{ij}}$ is a Euclidean distance. The resistance $
 > $$
 > \begin{aligned}
 > R_{ik}+R_{kj}-R_{ij}
-> &=2(G_{kk}-G_{ik}-G_{kj}+G_{ij})\\
+> &=2(\mathrm{Gr}_{kk}-\mathrm{Gr}_{ik}-\mathrm{Gr}_{kj}+\mathrm{Gr}_{ij})\\
 > &=2(\varphi_i-\varphi_k)\ge0
 > \end{aligned}
 > $$
@@ -244,18 +244,18 @@ Thus resistance distance $R_{ij}$ and the distance $\sqrt{R_{ij}}$ in the resist
 ## The distance operator
 
 > [!info] Distance operator
-> **Definition.** For a symmetric matrix $B$, set
+> **Definition.** For a symmetric matrix $A$, set
 >
 > $$
-> \mathcal D(B)_{ij}=B_{ii}+B_{jj}-2B_{ij}
+> \mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}
 > $$
 >
-> If $B$ is the Gram matrix of the position vectors of points, then $\mathcal D(B)$ is their squared-distance matrix.
+> If $A$ is the Gram matrix of the position vectors of points, then $\mathcal D(A)$ is their squared-distance matrix.
 
 The resistance matrix $R=(R_{ij})$ is obtained from the Green matrix by (1):
 
 $$
-R=\mathcal D(G)=\mathcal D(L^+)
+R=\mathcal D(\mathrm{Gr})=\mathcal D(L^+)
 $$
 
 The forward and inverse transformations between these matrices are considered in [[Laplacian, Green Matrix, and Effective Resistance Matrix]].
@@ -271,4 +271,5 @@ By (3), pairwise distances in the resistance simplex also cannot increase. Some 
 In [[Inner Product of Graph Vectors]], we pass from norms of $a_{ij}$ to inner products of two affine vectors. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
 
 Sources on electrical networks and resistance geometry are collected in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].
+
 

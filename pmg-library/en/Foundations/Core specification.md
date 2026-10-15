@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-15
-revision: 4
+updated: 2026-10-16
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -244,24 +244,32 @@ Sources: [[Laplacian - graph, electrical network and quadratic form]] and [[Basi
 ### The Green matrix and resistances
 
 > [!info] Green matrix
-> **Definition.** For a connected graph, $\mathbf G$ inverts $\mathbf L$ on $H$ and vanishes on constant columns. Equivalently, $\mathbf G=\mathbf L^+$, where $+$ denotes the Moore-Penrose pseudoinverse.
+> **Definition.** For a connected graph, $\mathbf{Gr}$ inverts $\mathbf L$ on $H$ and vanishes on constant columns. Equivalently, $\mathbf{Gr}=\mathbf L^+$, where $+$ denotes the Moore-Penrose pseudoinverse.
 
 For the centering projector $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$,
 
 $$
-\mathbf L\mathbf G=\mathbf G\mathbf L=\mathbf J,\qquad
-\mathbf G\mathbf1=0,\qquad \mathbf G^+=\mathbf L
+\mathbf L\mathbf{Gr}=\mathbf{Gr}\mathbf L=\mathbf J,\qquad
+\mathbf{Gr}\mathbf1=0,\qquad \mathbf{Gr}^+=\mathbf L
 $$
 
 **Definition.** The resistance inner product on $W$ and the effective resistances are given by
 
 $$
-u\cdot v=\mathbf u^{\mathsf T}\mathbf G\mathbf v,\qquad
-R_{ij}=a_{ij}\cdot a_{ij}=\mathbf G_{ii}+\mathbf G_{jj}-2\mathbf G_{ij}
+u\cdot v=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v,\qquad
+R_{ij}=a_{ij}\cdot a_{ij}=\mathbf{Gr}_{ii}+\mathbf{Gr}_{jj}-2\mathbf{Gr}_{ij}
 \tag{3}
 $$
 
 This inner product is positive definite on $W$. In the electrical interpretation, when unit current enters at vertex $i$ and leaves at $j$, one has $R_{ij}=\varphi_i-\varphi_j$, where $\varphi_i$ is the electrical potential at vertex $i$.
+
+For the centroid $b=n^{-1}\sum_i a_i$, the identity $\mathbf{Gr}\mathbf1=0$ gives
+
+$$
+\mathbf{Gr}_{ij}=(b-a_i)\cdot(b-a_j)
+$$
+
+Thus the Green matrix is the Gram matrix of the vectors from the vertices to the centroid. The notation $\mathbf G=(g_{ij})$ is reserved for the Gram matrix of explicitly chosen elements, with $g_{ij}$ denoting their inner products. The expressions $\mathbf{Gr}$ and $\mathbf L^+$ denote the same object: the former names it, while the latter specifies how it is obtained.
 
 For two vertex pairs,
 
@@ -271,17 +279,17 @@ $$
 
 ### The distance operator
 
-**Definition.** For a symmetric matrix $B$, set
+**Definition.** For a symmetric matrix $A$, set
 
 $$
-\mathcal D(B)_{ij}=B_{ii}+B_{jj}-2B_{ij}
+\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}
 $$
 
 Writing $\mathbf R=(R_{ij})$, the transformations between representations are
 
 $$
-\mathbf R=\mathcal D(\mathbf G),\qquad
-\mathbf G=-\frac12\mathbf J\mathbf R\mathbf J,\qquad
+\mathbf R=\mathcal D(\mathbf{Gr}),\qquad
+\mathbf{Gr}=-\frac12\mathbf J\mathbf R\mathbf J,\qquad
 \mathbf L=\left(-\frac12\mathbf J\mathbf R\mathbf J\right)^+
 $$
 
@@ -508,15 +516,15 @@ $$
 \tag{10}
 $$
 
-Let $K_{\alpha\beta}=v_\alpha\cdot v_\beta$ and $D=\operatorname{diag}(t_1,\ldots,t_m)$. For a connected initial graph,
+Let $g_{\alpha\beta}=v_\alpha\cdot v_\beta,\quad \mathbf G=(g_{\alpha\beta})$ and $D=\operatorname{diag}(t_1,\ldots,t_m)$. For a connected initial graph,
 
 $$
 \frac{\tau\left(\exp\left(L+\sum_\alpha t_\alpha[v_\alpha]^2\right)\right)}{\tau(M_G)}
-=\det(I_m+DK)
+=\det(I_m+D\mathbf G)
 \tag{11}
 $$
 
-The coefficient of $\prod_{\alpha\in S}t_\alpha$ is the principal minor $\det K_S$. It is the norm of the exterior product of the selected vectors. For the empty set, both the product and determinant are $1$.
+The coefficient of $\prod_{\alpha\in S}t_\alpha$ is the principal minor $\det\mathbf G_S$. It is the norm of the exterior product of the selected vectors. For the empty set, both the product and determinant are $1$.
 
 For vectors of distinct vertex pairs, (10)-(11) describe joint conductance variations. The determinant formula remains meaningful for a disconnected final graph; inverse-update formulas for its Green matrix on the original subspace require connectedness to be preserved.
 
@@ -580,7 +588,10 @@ In this specification, a boundary is an image of $\partial$, equivalently an ele
 | $c_{ij}$, $d_i$ | Conductances and weighted vertex degrees |
 | $G$ | Graph |
 | $L$, $\mathbf L$ | Laplacian polyform and Laplacian matrix |
-| $\mathbf G$, $\mathbf R$ | Green matrix and resistance matrix |
+| $\mathbf{Gr}=\mathbf L^+$, $\mathbf R$ | Green matrix and resistance matrix |
+| $\mathbf G=(g_{ij})$ | Gram matrix of chosen elements; $g_{ij}$ are their inner products |
+| $\mathbf G_z$ | In the isotropic extension: the Gram matrix of the vertices together with the null vector $z$ |
+| $\mathbf B$ | Bi-coordinate matrix, including the influence matrix in the Dirichlet problem |
 | $H$, $\mathbf J$ | Zero-sum coordinate subspace and centering projector |
 | $\mathcal D$ | Distance operator |
 | $M_G$, $M_k$ | Metric polyform and its grade components |
@@ -597,9 +608,11 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
+| 5 | 2026-10-16 | Aligned notation: Green matrix $\mathbf{Gr}=\mathbf L^+$, Gram matrix $\mathbf G$ with entries $g_{ij}$, extended Gram matrix $\mathbf G_z$, and bi-coordinate matrix $\mathbf B$. Clarified the geometric meaning of the Green matrix. |
 | 3 | 2026-10-14 | Added links to the published definitions in the spaces series and aligned the names bi-coordinates and di-coordinates across languages. The mathematical content of the core is unchanged. This English version follows Russian revision 3. |
 | 2 | 2026-10-09 | Removed unnecessary equation numbers; retained and consecutively renumbered only equations referenced in the text. This English version follows Russian revision 2. |
 | 1 | 2026-10-09 | First public core specification, aligned with the introductory series. Clarified formal forms, the space of boundaries, the domain of metric evaluation, the spanning-tree coefficient, and conditions for variation formulas. |
 
 Internal specification version 0.2 of 2026-09-21 was used as source material. Its core definitions are superseded by this document; its material on thematic extensions does not automatically become part of the core. Earlier revisions are historical records, not parallel current specifications.
+
 

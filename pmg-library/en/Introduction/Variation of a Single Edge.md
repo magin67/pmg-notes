@@ -1,9 +1,9 @@
 ---
 title: Variation of a Single Edge
 date: 2026-10-04
-updated: 2026-10-08
-revision: 2
-source_revision: 2
+updated: 2026-10-16
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: single-edge-variation
@@ -78,14 +78,14 @@ The resistance expresses the relative sensitivity of the spanning-tree coefficie
 
 ## Change in the Green matrix
 
-For the formulas in this section and the formulas for finite resistance changes, assume that the modified graph remains connected. Denote the Green matrices by $G=L^+$ and $G'=(L')^+$. On the subspace $H=\mathbf1^\perp$, they are the ordinary inverses of the restricted Laplacians.
+For the formulas in this section and the formulas for finite resistance changes, assume that the modified graph remains connected. Denote the Green matrices by $\mathrm{Gr}=L^+$ and $\mathrm{Gr}'=(L')^+$. On the subspace $H=\mathbf1^\perp$, they are the ordinary inverses of the restricted Laplacians.
 
 > [!info] The Green matrix update
 > **Lemma.** If $1+\delta R_{kl}>0$, then
 >
 > $$
-> G'=G-\frac{\delta}{1+\delta R_{kl}}
-> G\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}G
+> \mathrm{Gr}'=\mathrm{Gr}-\frac{\delta}{1+\delta R_{kl}}
+> \mathrm{Gr}\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}\mathrm{Gr}
 > \tag{4}
 > $$
 
@@ -97,13 +97,13 @@ For the formulas in this section and the formulas for finite resistance changes,
 > =A^{-1}-\frac{\delta A^{-1}bb^{\mathsf T}A^{-1}}{1+\delta b^{\mathsf T}A^{-1}b}
 > $$
 >
-> Apply this identity to the restriction of (1) to $H$, using an orthonormal basis of that subspace. The column vector $\mathbf e_{kl}$ belongs to $H$, and $\mathbf e_{kl}^{\mathsf T}G\mathbf e_{kl}=R_{kl}$. Both sides of (4) act as zero on constant column vectors. Thus the formula holds on the full space. $\square$
+> Apply this identity to the restriction of (1) to $H$, using an orthonormal basis of that subspace. The column vector $\mathbf e_{kl}$ belongs to $H$, and $\mathbf e_{kl}^{\mathsf T}\mathrm{Gr}\mathbf e_{kl}=R_{kl}$. Both sides of (4) act as zero on constant column vectors. Thus the formula holds on the full space. $\square$
 
-Formula (4) is exact and requires no smallness assumption on $\delta$. The column vector $G\mathbf e_{kl}$ gives the centered potentials for a unit current injected at $l$ and withdrawn at $k$. For $\delta\ne0$, the change in $G$ has rank one because this column vector is nonzero.
+Formula (4) is exact and requires no smallness assumption on $\delta$. The column vector $\mathrm{Gr}\mathbf e_{kl}$ gives the centered potentials for a unit current injected at $l$ and withdrawn at $k$. For $\delta\ne0$, the change in $\mathrm{Gr}$ has rank one because this column vector is nonzero.
 
 ## Finite change in resistance
 
-For any vertices $i,j$, we have $R_{ij}=\mathbf e_{ij}^{\mathsf T}G\mathbf e_{ij}$. Substituting (4) and using $\mathbf e_{ij}^{\mathsf T}G\mathbf e_{kl}=a_{ij}\cdot a_{kl}$ gives the following result.
+For any vertices $i,j$, we have $R_{ij}=\mathbf e_{ij}^{\mathsf T}\mathrm{Gr}\mathbf e_{ij}$. Substituting (4) and using $\mathbf e_{ij}^{\mathsf T}\mathrm{Gr}\mathbf e_{kl}=a_{ij}\cdot a_{kl}$ gives the following result.
 
 > [!info] Change in effective resistance
 > **Corollary.** If connectivity is preserved, then
@@ -272,3 +272,4 @@ For the varied pair itself, $i=k$, $j=l$, the determinant in (9) is zero, so $m'
 [[Varying several couplings together]] considers simultaneous changes in several conductances. Their interactions are described by the matrix of inner products of the corresponding affine vectors.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], the Sherman-Morrison formula is covered in sources [5] and [6], Rayleigh monotonicity in [2], the matrix-tree theorem in [3], and the probabilistic interpretation of edges in [9]. The forest formula (8) and its variation (9) are derived directly in this note.
+

@@ -1,9 +1,9 @@
 ---
 title: "Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations"
 date: 2026-10-04
-updated: 2026-10-08
-revision: 2
-source_revision: 2
+updated: 2026-10-16
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-green-resistance-matrices
@@ -12,7 +12,7 @@ description: Forward and inverse transformations between the Laplacian, Green ma
 order: "4"
 ---
 
-The Laplacian $L$, Green matrix $G$, and effective resistance matrix $R$ are mutually reconstructible representations of the same network. The Laplacian specifies the conductances, the Green matrix specifies the inner products of centered position vectors, and the resistance matrix contains the squared pairwise distances.
+The Laplacian $L$, Green matrix $\mathrm{Gr}$, and effective resistance matrix $R$ are mutually reconstructible representations of the same network. The Laplacian specifies the conductances, the Green matrix specifies the inner products of centered position vectors, and the resistance matrix contains the squared pairwise distances.
 
 We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive conductances on its edges. Its geometric representation was constructed in [[Effective Resistance and Graph Geometry]]. This note derives the inverse transformations and collects all the formulas in one table.
 
@@ -60,48 +60,48 @@ This follows by substituting the definition of $J$ and using $A\mathbf1=0$ and $
 
 ## The Laplacian and the Green matrix
 
-For a connected graph, the kernel of $L$ consists of constant column vectors, and the restriction of $L$ to $H$ is positive definite. The Green matrix $G=L^+$ inverts $L$ on $H$ and acts as zero on constant column vectors. This definition and its electrical meaning are discussed in [[Effective Resistance and Graph Geometry#The Green matrix|the preceding note on the Green matrix]].
+For a connected graph, the kernel of $L$ consists of constant column vectors, and the restriction of $L$ to $H$ is positive definite. The Green matrix $\mathrm{Gr}=L^+$ inverts $L$ on $H$ and acts as zero on constant column vectors. This definition and its electrical meaning are discussed in [[Effective Resistance and Graph Geometry#The Green matrix|the preceding note on the Green matrix]].
 
 Both matrices are symmetric and have zero row and column sums. Their product acts as the identity on $H$ and sends constant column vectors to zero. Therefore,
 
 $$
-LG=GL=J
+L\mathrm{Gr}=\mathrm{Gr}L=J
 \tag{1}
 $$
 
 Taking the pseudoinverse again recovers the original matrix:
 
 $$
-L=G^+
+L=\mathrm{Gr}^+
 $$
 
-Indeed, on $H$ this operation inverts $(L|_H)^{-1}$, while on constant column vectors it retains the zero action. Formula (1) expresses the fact that $L$ and $G$ are inverses on $H$.
+Indeed, on $H$ this operation inverts $(L|_H)^{-1}$, while on constant column vectors it retains the zero action. Formula (1) expresses the fact that $L$ and $\mathrm{Gr}$ are inverses on $H$.
 
 ## From the Green matrix to resistances
 
 Let $x_i$ be the position vectors of the points in the resistance representation, with the centroid as the origin. Then
 
 $$
-x_i\cdot x_j=G_{ij},\qquad \sum_i x_i=0
+x_i\cdot x_j=\mathrm{Gr}_{ij},\qquad \sum_i x_i=0
 $$
 
 The effective resistance equals the squared distance:
 
 $$
-R_{ij}=\|x_j-x_i\|^2=G_{ii}+G_{jj}-2G_{ij}
+R_{ij}=\|x_j-x_i\|^2=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
 \tag{2}
 $$
 
 > [!info] The resistance matrix and the distance operator
 > **Definition.** The symmetric matrix $R=(R_{ij})$ of all pairwise effective resistances is called the resistance matrix. Its diagonal entries are zero.
 >
-> For a symmetric matrix $B$, the distance operator is defined by
+> For a symmetric matrix $A$, the distance operator is defined by
 >
 > $$
-> \mathcal D(B)_{ij}=B_{ii}+B_{jj}-2B_{ij}
+> \mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}
 > $$
 >
-> In this notation, formula (2) reads $R=\mathcal D(G)$.
+> In this notation, formula (2) reads $R=\mathcal D(\mathrm{Gr})$.
 
 The distance operator converts inner products into squared distances. This operation differs from matrix inversion.
 
@@ -113,21 +113,21 @@ A common translation of the points preserves their differences and pairwise dist
 > **Lemma.** The Green matrix can be reconstructed from the resistance matrix:
 >
 > $$
-> G=-\frac12JRJ
+> \mathrm{Gr}=-\frac12JRJ
 > \tag{3}
 > $$
 
 > [!note]- Proof
-> **Proof.** Let $g=(G_{11},\ldots,G_{nn})^{\mathsf T}$ be the column vector of diagonal entries of $G$. Formula (2) can be written as
+> **Proof.** Let $g=(\mathrm{Gr}_{11},\ldots,\mathrm{Gr}_{nn})^{\mathsf T}$ be the column vector of diagonal entries of $\mathrm{Gr}$. Formula (2) can be written as
 >
 > $$
-> R=g\mathbf1^{\mathsf T}+\mathbf1g^{\mathsf T}-2G
+> R=g\mathbf1^{\mathsf T}+\mathbf1g^{\mathsf T}-2\mathrm{Gr}
 > $$
 >
-> Multiply both sides by $J$ on the left and on the right. The first two terms vanish because $J\mathbf1=0$ and $\mathbf1^{\mathsf T}J=0$. For the last term, $JGJ=G$, so
+> Multiply both sides by $J$ on the left and on the right. The first two terms vanish because $J\mathbf1=0$ and $\mathbf1^{\mathsf T}J=0$. For the last term, $J\mathrm{Gr}J=\mathrm{Gr}$, so
 >
 > $$
-> JRJ=-2G
+> JRJ=-2\mathrm{Gr}
 > $$
 >
 > This is equivalent to (3). $\square$
@@ -142,7 +142,7 @@ $$
 Using the symmetry of $R$, formula (3) becomes
 
 $$
-G_{ij}=\frac12(\bar R_i+\bar R_j-R_{ij}-\bar R)
+\mathrm{Gr}_{ij}=\frac12(\bar R_i+\bar R_j-R_{ij}-\bar R)
 \tag{4}
 $$
 
@@ -152,10 +152,10 @@ Multiplication by $J$ on the left subtracts the column means, while multiplicati
 
 | Transformation | Formula | Meaning |
 |---|---|---|
-| $L\to G$ | $G=L^+$ | Inversion on $H$, zero action on constant column vectors |
-| $G\to L$ | $L=G^+$ | The inverse transformation on the same subspace |
-| $G\to R$ | $R=\mathcal D(G)$ | From inner products to squared distances |
-| $R\to G$ | $G=-\frac12JRJ$ | Reconstruction of the centered Gram matrix |
+| $L\to \mathrm{Gr}$ | $\mathrm{Gr}=L^+$ | Inversion on $H$, zero action on constant column vectors |
+| $\mathrm{Gr}\to L$ | $L=\mathrm{Gr}^+$ | The inverse transformation on the same subspace |
+| $\mathrm{Gr}\to R$ | $R=\mathcal D(\mathrm{Gr})$ | From inner products to squared distances |
+| $R\to \mathrm{Gr}$ | $\mathrm{Gr}=-\frac12JRJ$ | Reconstruction of the centered Gram matrix |
 
 Composing the two inverse transformations gives
 
@@ -196,7 +196,7 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > $$
 >
 > $$
-> G=\begin{pmatrix}
+> \mathrm{Gr}=\begin{pmatrix}
 > \frac12&-\frac16&-\frac13\\
 > -\frac16&\frac16&0\\
 > -\frac13&0&\frac13
@@ -208,7 +208,7 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > \end{pmatrix}
 > $$
 >
-> Direct multiplication verifies $LG=GL=J$ and $G\mathbf1=0$. Thus the displayed matrix $G$ is indeed $L^+$.
+> Direct multiplication verifies $L\mathrm{Gr}=\mathrm{Gr}L=J$ and $\mathrm{Gr}\mathbf1=0$. Thus the displayed matrix $\mathrm{Gr}$ is indeed $L^+$.
 
 > [!example] Reconstruction from resistances
 > For this matrix $R$, the means are
@@ -221,11 +221,11 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > For example, formula (4) gives
 >
 > $$
-> G_{11}=\frac12\left(\frac56+\frac56-\frac23\right)=\frac12
+> \mathrm{Gr}_{11}=\frac12\left(\frac56+\frac56-\frac23\right)=\frac12
 > $$
 >
 > $$
-> G_{12}=\frac12\left(\frac56+\frac12-1-\frac23\right)=-\frac16
+> \mathrm{Gr}_{12}=\frac12\left(\frac56+\frac12-1-\frac23\right)=-\frac16
 > $$
 >
 > The full double-centering calculation gives
@@ -235,13 +235,14 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > -1&\frac13&\frac23\\
 > \frac13&-\frac13&0\\
 > \frac23&0&-\frac23
-> \end{pmatrix}=-2G
+> \end{pmatrix}=-2\mathrm{Gr}
 > $$
 >
-> From $G$, we recover $L=G^+$ and obtain $c_{12}=1$, $c_{23}=2$, $c_{13}=0$. The inverse transformation recovers both the conductances and the absence of an edge between vertices $1$ and $3$.
+> From $\mathrm{Gr}$, we recover $L=\mathrm{Gr}^+$ and obtain $c_{12}=1$, $c_{23}=2$, $c_{13}=0$. The inverse transformation recovers both the conductances and the absence of an edge between vertices $1$ and $3$.
 
 ## Further reading
 
 In [[Inner Product of Graph Vectors]], the Green matrix is used to compute inner products of affine vectors. The next note, [[From Lengths to Areas and Volumes]], develops this construction: Gram determinants express squared areas and higher-dimensional volumes.
 
 Sources on Laplacians and resistance geometry are listed in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].
+

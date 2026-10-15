@@ -1,9 +1,9 @@
 ---
 title: Selected Vertices and the Dirichlet Problem
 date: 2026-10-14
-updated: 2026-10-15
-revision: 4
-translated_revision: 4
+updated: 2026-10-16
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -162,10 +162,10 @@ $$
 **Lemma.** For every affine vector $h=\sum_i h_i a_i$ with $\sum_i h_i=0$, one has $s_x\cdot h=h_x$. In particular, $s_x$ is orthogonal to $W_P$.
 
 > [!proof]- Proof of the lemma and theorem
-> For a short verification of the lemma, use the matrix representation from the specification. Let $\mathbf L$ be the Laplacian matrix, $\mathbf G$ the Green matrix, and $\mathbf e_x$ the column with a unit entry in position $x$ and zeros elsewhere. The coordinate column of $s_x$ is $\mathbf L\mathbf e_x$. For a column $\mathbf h$ with zero sum, the PMG core gives $\mathbf L\mathbf G\mathbf h=\mathbf h$. Hence
+> For a short verification of the lemma, use the matrix representation from the specification. Let $\mathbf L$ be the Laplacian matrix, $\mathbf{Gr}$ the Green matrix, and $\mathbf e_x$ the column with a unit entry in position $x$ and zeros elsewhere. The coordinate column of $s_x$ is $\mathbf L\mathbf e_x$. For a column $\mathbf h$ with zero sum, the PMG core gives $\mathbf L\mathbf{Gr}\mathbf h=\mathbf h$. Hence
 >
 > $$
-> s_x\cdot h=\mathbf e_x^{\mathsf T}\mathbf L\mathbf G\mathbf h=h_x
+> s_x\cdot h=\mathbf e_x^{\mathsf T}\mathbf L\mathbf{Gr}\mathbf h=h_x
 > $$
 >
 > If $h\in W_P$, its internal coordinate $h_x$ is zero. This proves the lemma.
@@ -405,4 +405,5 @@ For the weighted path, the solution, geometric projections, and potentials were 
 
 1. Doyle, P. G.; Snell, J. L. [Random Walks and Electric Networks](https://math.dartmouth.edu/~doyle/docs/walks/walks.pdf). Version dated 5 July 2006, based on the 1984 monograph. Part 1: the Dirichlet problem, maximum principle, and uniqueness; §1.3, Exercise 1.3.11: the Dirichlet principle.
 2. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011, Lemma 2.1: the accompanying matrix, its nonnegativity, and column sums.
+
 

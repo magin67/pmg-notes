@@ -1,9 +1,9 @@
 ---
 title: From Lengths to Areas and Volumes
 date: 2026-10-04
-updated: 2026-10-08
-revision: 2
-source_revision: 2
+updated: 2026-10-16
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: lengths-areas-volumes
@@ -14,7 +14,7 @@ order: "5"
 
 Inner products determine lengths and angles as well as areas, volumes, and their higher-dimensional analogues. The squares of these quantities are expressed by Gram determinants. In the resistance representation of a graph, Gram matrix entries are computed from effective resistances, and Gram determinants are related to spanning trees.
 
-We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for affine vectors and $G=L^+$ for the Green matrix. From the preceding notes,
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for affine vectors and $\mathrm{Gr}=L^+$ for the Green matrix. From the preceding notes,
 
 $$
 \|a_{ij}\|^2=R_{ij},\qquad
@@ -30,7 +30,7 @@ $$
 > G(u_1,\ldots,u_k)=(u_i\cdot u_j)_{i,j=1}^k
 > $$
 >
-> is called the Gram matrix, and its determinant is called the Gram determinant. The notation $G$ without arguments continues to denote the Green matrix of the graph.
+> is called the Gram matrix, and its determinant is called the Gram determinant. The Green matrix of the graph is denoted by $\mathrm{Gr}=L^+$; it is the Gram matrix of centered position vectors, a particular case of a Gram matrix.
 
 For nonzero vectors $u,v$ with angle $\theta$ between them, the area of the parallelogram is $\|u\|\|v\|\sin\theta$. Substituting $u\cdot v=\|u\|\|v\|\cos\theta$ gives
 
@@ -189,7 +189,7 @@ For a resistance simplex, the entries substituted into $M$ are the effective res
 >
 > where the sum runs over all spanning trees. A spanning tree contains every vertex of the graph, is connected, and has no cycles. When all conductances are one, $\tau$ is the number of spanning trees.
 
-Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
+Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$ and contains the bi-coordinates of its vector in the vertex basis. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
 
 Choose a vertex $0$, relabeling the vertices as $0,1,\ldots,n-1$. Delete its row from $B$ to obtain $B_0$. Deleting the row and column of this vertex from $L$ gives the reduced Laplacian
 
@@ -303,3 +303,4 @@ Higher-order determinants describe volumes and joint edge-inclusion probabilitie
 [[Variation of a Single Edge]] examines how resistances and the spanning-tree coefficient change when one conductance varies. The connection between Gram determinants and exterior products will be introduced after the algebra is defined, in [[Basic Objects and Operations of Polyform Algebra]] and [[Metric of Higher-Grade Objects]].
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover Gram determinants and multilinear algebra, [3] covers the matrix-tree theorem, and [9] covers random spanning trees and the transfer-current theorem.
+

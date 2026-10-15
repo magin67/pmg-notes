@@ -1,8 +1,8 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-15
-revision: 6
+updated: 2026-10-16
+revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -94,9 +94,9 @@ In the electrical part of the introductory series, “the quadratic form of the 
 | Graph Laplacian matrix | Матрица лапласиана | Standard | The matrix $\mathbf L$ with diagonal entries $d_i$ and off-diagonal entries $-c_{ij}$. |
 | Laplacian polyform | Полиформа лапласиана | PMG | The grade-$1$ form $L=\sum_{i<j}c_{ij}[a_{ij}]^2$. |
 | Reduced Laplacian | Редуцированный лапласиан | Standard | The matrix obtained by deleting the row and column of the same vertex from $\mathbf L$. |
-| Green matrix | Матрица Грина | Qualified | The matrix $\mathbf G=\mathbf L^+$. For a connected graph, it inverts the Laplacian on the zero-sum subspace and vanishes on constant columns. |
+| Green matrix | Матрица Грина | Qualified | The matrix $\mathbf{Gr}=\mathbf L^+$. For a connected graph, it inverts the Laplacian on the zero-sum subspace and vanishes on constant columns. It is the Gram matrix of vectors from the vertices to the centroid: $\mathbf{Gr}_{ij}=(b-a_i)\cdot(b-a_j)$, where $b=n^{-1}\sum_i a_i$. |
 | Resistance matrix | Резистивная матрица | Standard | The matrix $\mathbf R=(R_{ij})$ of pairwise effective resistances. |
-| Distance operator | Дистанционный оператор | Qualified | The linear operator $\mathcal D(B)_{ij}=B_{ii}+B_{jj}-2B_{ij}$. Applied to a Gram matrix, it gives squared distances. |
+| Distance operator | Дистанционный оператор | Qualified | The linear operator $\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}$. Applied to a Gram matrix, it gives squared distances. |
 | Centering matrix; centering projector | Центрирующий проектор | Standard | The matrix $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$. |
 | Centroid | Центроид | Standard | The equal-weight mean of the points: $n^{-1}\sum_i a_i$. |
 | Centering | Центрирование | Standard | Choosing the centroid as the origin in a Euclidean realization, so position vectors sum to zero. This introduces no new linear relation between formal basis vertices. |
@@ -109,9 +109,9 @@ When representations occur together, the polyform retains an ordinary letter and
 |---|---|---|---|
 | Effective resistance | Эффективное сопротивление | Standard | The quantity $R_{ij}$ determined by the entire network and the vertex pair. In the resistance realization it is the squared Euclidean distance. |
 | Resistance distance | Резистивное расстояние | Standard | Effective resistance $R_{ij}$ viewed as a metric on vertices. It does not mean $\sqrt{R_{ij}}$. |
-| Resistance inner product | Резистивная метрика на векторах | Qualified | The inner product $u\cdot v=\mathbf u^{\mathsf T}\mathbf G\mathbf v$ on $W$. Unlike the preceding entry, this refers to a bilinear metric. |
+| Resistance inner product | Резистивная метрика на векторах | Qualified | The inner product $u\cdot v=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v$ on $W$. Unlike the preceding entry, this refers to a bilinear metric. |
 | Resistance simplex | Резистивный симплекс | Qualified | A Euclidean simplex whose squared pairwise distances are $R_{ij}$. Its dimension in the main model is $n-1$. |
-| Gram matrix | Матрица Грама; грамиан | Standard | The matrix of pairwise inner products of selected vectors. Not every Gram matrix is a Green matrix. |
+| Gram matrix | Матрица Грама; грамиан | Standard | The matrix $\mathbf G=(g_{ij})$ of pairwise inner products of selected elements: $g_{ij}=a_i\cdot a_j$. With several sets, specify arguments or meaningful subscripts. For local vertices, $\mathbf G=-\mathbf R/2$. |
 | Mixed Gram determinant | Смешанный определитель Грама | Standard | The determinant of $(u_r\cdot v_s)$ for two ordered collections of equal size. |
 | Induced inner product | Индуцированное скалярное произведение | Standard | The extension of the metric to $\Lambda^kW$ through mixed Gram determinants and bilinearity. |
 | Norm of an exterior element; quadratic norm | Норма внешнего объекта; квадратичная норма | PMG | The number $X^2=X\cdot X$. In the resistance metric it is also called the resistance norm. For a decomposable boundary object, it is the squared volume of a parallelotope. |
@@ -192,6 +192,8 @@ The following definitions are used in the published series “Spaces and Subspac
 | --- | --- | --- |
 | Frame of an object | Фрейм объекта | A representation of an object as a linear combination of selected elements, including the elements and coefficients. The set may be dependent; different frames may represent one object. [[Projections, Bi-coordinates, and Di-coordinates#Bi-coordinates and frames]]. |
 | Bi-coordinates | Би-координаты | Coefficients of the unique expansion of an object in a chosen basis of the corresponding linear space. A point basis is not required; barycentric coordinates of points are a special case. [[Projections, Bi-coordinates, and Di-coordinates#Bi-coordinates and frames]]. |
+| Bi-coordinate matrix | Матрица би-координат | The matrix $\mathbf B$ of expansion coefficients of selected objects in a specified basis. Its definition must state whether the coordinates of each object occupy a row or a column. The influence matrix is a particular case. |
+| Extended isotropic Gram matrix | Расширенный изотропный грамиан | The matrix $\mathbf G_z=G(a_1,\ldots,a_n,z)$ for local vertices and the null vector. With $z$ last, its blocks are $\left(\begin{smallmatrix}\mathbf G&\mathbf1\\\mathbf1^{\mathsf T}&0\end{smallmatrix}\right)$. [[The Null Vector, Isotropic Representation, and the Boundary#The vertex Gram matrix and the extended Gram matrix]]. |
 | Di-coordinates | Ди-координаты | Inner products of an object with the elements of the chosen basis. When the metric on its subspace is nondegenerate, these are also the coefficients of the projection in the reciprocal basis. [[Projections, Bi-coordinates, and Di-coordinates#Di-coordinates: inner products]]. |
 | Reciprocal basis | Взаимный базис | A basis of the same subspace whose inner products with the original basis elements are $1$ for matching indices and $0$ otherwise. It exists when the metric on the subspace is nondegenerate. [[Projections, Bi-coordinates, and Di-coordinates#The reciprocal basis]]. |
 | Laplacian of a frame | Лапласиан фрейма | The difference part of the form decomposition for a fixed frame: $L_q=\sum_{i<j}q^iq^j[a_j-a_i]^2$. It may change with the frame and is not determined by the object $q$ alone. [[Projections, Bi-coordinates, and Di-coordinates#The difference part and the Laplacian of a frame]]. |
@@ -221,10 +223,11 @@ For other extensions, including KVP/KVPOU, dual polyforms, toponomes, metric-val
 
 The first use of a PMG-specific term should include a definition or a precise link to one. Sharing a name with a term from another field does not replace a definition. Where needed, English text uses the qualifiers “polyform in PMG”, “polyform potential”, and “PMG form norm”.
 
-Within a derivation, distinguish the graph $G$ from its Green matrix $\mathbf G$, formal forms from their numerical evaluations, and matrix multiplication from the polyform product. Renaming a mathematical object should include an explicit correspondence with the earlier name.
+Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and the Green matrix $\mathbf{Gr}$, formal forms from their numerical evaluations, and matrix multiplication from the polyform product. Renaming a mathematical object should include an explicit correspondence with the earlier name.
 
 | Revision | Date | Content |
 |---|---|---|
+| 7 | 2026-10-16 | Replaced the Green-matrix notation $\mathbf G$ with $\mathbf{Gr}=\mathbf L^+$; reserved $\mathbf G$ for Gram matrices with entries $g_{ij}$. Discontinued $\mathbf B$ for the local-vertex Gram matrix and distinguished $\mathbf G$, $\mathbf G_z$, and bi-coordinate matrices $\mathbf B$. Aligned with Russian glossary revision 6. |
 | 6 | 2026-10-15 | Added the sphere element and links to the properties of nonlocal elements, completing alignment with Russian glossary revision 5. |
 | 5 | 2026-10-15 | Replaced metric mass with resistance radius and explicitly defined resistance diameter. |
 | 4 | 2026-10-15 | Established the PMG convention for quadratic and linear norms; clarified locality and isotropy. |
@@ -233,5 +236,6 @@ Within a derivation, distinguish the graph $G$ from its Green matrix $\mathbf G$
 | 1 | 2026-10-09 | First public core glossary, aligned with core specification revision 2 and the introductory series. Clarifies the levels of objects and evaluations, the spanning-tree coefficient, edge factors, and earlier names. This English version follows Russian revision 1. |
 
 Internal glossary version 1.1 of 2026-09-21 was used as source material. Its information about extensions remains relevant to their later preparation, but does not automatically form part of the current core terminology. Earlier revisions are records of changes, not parallel terminology standards.
+
 
 
