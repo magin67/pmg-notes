@@ -2,8 +2,8 @@
 title: Nonlocal Elements, Spheres, and Their Centers
 date: 2026-10-15
 updated: 2026-10-15
-revision: 1
-translated_revision: 2
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -240,6 +240,60 @@ The forms $[B,C]$ and $[B_h,C_h]$ need not coincide either. Their numerical eval
 
 This restriction matters. In the full exterior algebra of the extension, $z$ is not orthogonal to every element. For example, for a local point $a$, we have $(z\wedge a)^2=-1$. The result therefore does not extend to arbitrary simplices and forms outside the boundary subalgebra. The core metric identity through normalized potentials likewise does not automatically extend to all forms of the extended space.
 
+## Local basis vertices do not restrict the graph model
+
+**Corollary.** Let $A_1,\ldots,A_n$ have unit affine weight, and let their local centers $h_i=\pi(A_i)$ form the resistance simplex of a connected graph with positive conductances. Replacing $A_i\mapsto h_i$ preserves the resistance metric and gives an isomorphic representation of the algebra of forms on boundaries. The Laplacian and its exponential map to the corresponding forms on local vertices with the same coupling coefficients.
+
+Thus the basis vertices can be chosen local without restricting the graph model under consideration. Their individual norms are additional data of the realization and are not determined by the metric on boundaries.
+
+> [!proof]- A linear change of the fixed basis
+> **Proof.** In the minimal extension of dimension $n+1$, the elements $A_1,\ldots,A_n,z$ form a basis: independence follows from the affine independence of the spatial coordinates of their centers. Define a linear map $F$ on this basis:
+>
+> $$
+> F(A_i)=h_i=A_i-\frac{A_i^2}{2}z,\qquad F(z)=z
+> $$
+>
+> Its matrix is triangular with unit diagonal, so $F$ is invertible. It preserves affine weight. Its extension to the exterior algebra therefore commutes with the boundary operator: $\partial F=F\partial$.
+>
+> For any $u\in z^\perp$, the difference $F(u)-u$ is a multiple of $z$. Hence $F(u)\cdot F(v)=u\cdot v$ for $u,v\in z^\perp$. The determinant formula and bilinearity then show that inner products of boundaries of every grade are preserved.
+>
+> Extend the map to forms by $F([X,Y])=[F(X),F(Y)]$. It preserves the product of forms and the identity form. With the coefficients $c_{ij}$ fixed, we obtain
+>
+> $$
+> L_A=\sum_{i<j}c_{ij}[A_j-A_i]^2,\qquad
+> F(L_A)=L_h=\sum_{i<j}c_{ij}[h_j-h_i]^2
+> $$
+>
+> $$
+> F(\exp L_A)=\exp L_h
+> $$
+>
+> The spanning-tree form $[(A_1\ldots A_n)]^2$ maps to $[(h_1\ldots h_n)]^2$. Consequently, coefficients relative to the respective spanning-tree forms, potentials, and normalized potentials of corresponding forms on boundaries are preserved. $\square$
+
+**Remark on the two maps.** The linear map $F$ agrees with $\pi$ on the chosen basis vertices, but not on all elements of unit weight. If $p=\sum_i\alpha_iA_i$ and $\sum_i\alpha_i=1$, then
+
+$$
+F(p)=p-\frac12\left(\sum_i\alpha_iA_i^2\right)z,\qquad
+\pi(p)=p-\frac{p^2}{2}z
+$$
+
+These elements have the same local center, but $F(p)$ need not be local. The linear change of a fixed basis provides the algebraic correspondence, whereas the nonlinear map $\pi$ selects the center of each individual element.
+
+Isomorphism does not mean literal equality $L_A=L_h$ within the extended algebra. The structure and metric evaluations of forms on boundaries are preserved; the metric of the entire vertex space and the inner products of the vertices themselves generally change.
+
+## The geometric model extends beyond positively weighted graphs
+
+There are two distinct extensions of the graph description here.
+
+First, even with the resistance metric fixed, we can consider all elements $h+\rho z/2$, rather than only local vertices. Their norms matter for describing spheres, orthogonality conditions with points, and inner products of the elements themselves. Passing to centers preserves the metric on boundaries but discards each element's parameter $\rho$. Thus freedom to choose the norms of basis vertices does not mean that the norms of all geometric objects lack content.
+
+Second, a positive definite displacement metric can itself be specified independently of a graph. Not every Euclidean simplex is the resistance simplex of a graph with positive conductances: the recovered Laplacian matrix must have nonpositive off-diagonal entries, as stated in the [[Core specification#The distance operator|core specification]]. Positivity of couplings is an additional condition of the graph model, rather than a condition for defining an arbitrary Euclidean simplex.
+
+The geometric description therefore covers a broader class of metrics and objects. This is not simply a claim about a greater dimension: for a graph on $n$ vertices, the minimal extension with $z$ has dimension $n+1$.
+
+In this note, the displacement metric remains positive definite, although the extended metric has signature $(d+1,1)$ and normalized elements may have norms of any sign. Arbitrary signs of coupling coefficients do not by themselves guarantee positivity or nondegeneracy of the displacement metric. Graphs with couplings of both signs and geometries with an indefinite displacement metric require separate conditions; results for positively weighted graphs do not automatically extend to them.
+
+
 ## Example on a three-vertex path
 
 Take the local vertices of the unit path $a-b-c$. In the coordinate model of the preceding note,
@@ -297,7 +351,7 @@ The additional term is nonzero but orthogonal to every grade-$2$ boundary in $\L
 
 ## Status of the results and continuation
 
-Decomposition (1), the spherical interpretation (2), the change in inner product (3), and invariance (4)-(5) are proved under the stated assumptions. The numerical example was calculated directly from the bilinear metric of the extension. Additional checks using exact rational arithmetic covered the formula for selecting the center of an affine combination, the metric identities for vectors, and 226 mixed Gram determinants of boundaries in a model with a three-dimensional displacement space. These checks control formulas and signs; the general theorems rest on their proofs. The note contains no working conjectures.
+Decomposition (1), the spherical interpretation (2), the change in inner product (3), and invariance (4)-(5) are proved under the stated assumptions. The corollary on choosing local basis vertices additionally establishes the correspondence between Laplacians, their exponentials, and potentials of forms on boundaries. The numerical example was calculated directly from the bilinear metric of the extension. Additional checks using exact rational arithmetic covered the formula for selecting the center of an affine combination, the metric identities for vectors, and 226 mixed Gram determinants of boundaries in a model with a three-dimensional displacement space. These checks control formulas and signs; the general theorems rest on their proofs. The note contains no working conjectures.
 
 Representation of a sphere by a normalized element is established in conformal geometric algebra. The comparison uses [H. Li, D. Hestenes, A. Rockwood, *Generalized Homogeneous Coordinates for Computational Geometry*](https://davidhestenes.net/geocalc/pdf/CompGeom-ch2.pdf), §2.3, equations (2.38)-(2.42). The source uses $x\cdot e=-1$, so our $z$ corresponds to $-e$. Its linear radius is denoted by $\rho$; here $\rho$ denotes the squared linear radius. The Clifford product is not identified with the product of PMG forms.
 
