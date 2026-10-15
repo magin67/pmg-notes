@@ -2,8 +2,8 @@
 title: Couplings Within One Part of a Bipartite Graph
 date: 2026-10-14
 updated: 2026-10-15
-revision: 3
-translated_revision: 4
+revision: 4
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -327,7 +327,7 @@ $$
 
 This gives two alternative graphs, each preserving the metric of its own part. It does not split the original space into independent components. Constructing the document graph is also not the inverse operation to constructing the employee graph.
 
-Their common origin does not require the two graphs to have equal masses, degree sums, or spanning-tree coefficients. Consider a small weighted example.
+Their common origin does not require the two graphs to have equal resistance radii, degree sums, or spanning-tree coefficients. Consider a small weighted example.
 
 | Employee | $x$ | $y$ | $d_p$ |
 |---|---:|---:|---:|
@@ -346,16 +346,16 @@ After eliminating the documents, the coupling coefficient of $ab$ is $1\cdot2/3=
 | Coupling coefficient | $2/3$ | $1/2$ |
 | Sum of degrees | $4/3$ | $1$ |
 | Effective resistance between the vertices | $3/2$ | $2$ |
-| Metric mass $\rho$ | $3/8$ | $1/2$ |
+| Resistance radius $\rho$ | $3/8$ | $1/2$ |
 | Spanning-tree coefficient $\tau$ | $2/3$ | $1/2$ |
 
-Here mass uses the [[Vertex Contraction and Graph Gluing#Metric mass is additive|radius normalization]]: $\rho$ is the squared radius of the circumsphere. For two vertices with effective resistance $r$, it equals $r/4$. The spanning-tree coefficient of a graph consisting of a single coupling is its coupling coefficient.
+By the [[Vertex Contraction and Graph Gluing#Resistance radius is additive|definition of resistance radius]], $\rho$ is the squared radius of the circumsphere. For two vertices with effective resistance $r$, it equals $r/4$. The spanning-tree coefficient of a graph consisting of a single coupling is its coupling coefficient.
 
-## Why the masses of the parts do not add up
+## Why the resistance radii of the parts do not add up
 
-Unequal masses of the two induced graphs do not yet answer another question: does their sum equal the mass of the original graph? Denote the masses of the graphs on $P$ and $X$ by $\rho_P,\rho_X$.
+Unequal resistance radii of the two induced graphs do not yet answer another question: does their sum equal the resistance radius of the original graph? Denote the resistance radii of the graphs on $P$ and $X$ by $\rho_P,\rho_X$.
 
-In the example of Figure 2, the original graph is a tree with coupling coefficients $1,1,2$. By the tree mass formula from the note on [[Vertex Contraction and Graph Gluing|graph gluing]],
+In the example of Figure 2, the original graph is a tree with coupling coefficients $1,1,2$. By the tree resistance radius formula from the note on [[Vertex Contraction and Graph Gluing|graph gluing]],
 
 $$
 \rho(G)=\frac14\left(1+1+\frac12\right)=\frac58,
@@ -363,11 +363,11 @@ $$
 \rho_P+\rho_X=\frac38+\frac12=\frac78
 $$
 
-Thus the masses of the two induced graphs are not additive in general.
+Thus the resistance radii of the two induced graphs are not additive in general.
 
 The geometric relation is expressed through the circumcenters. Denote the circumcenter of the original graph by $h$, and those of the two parts by $h_P,h_X$. All three centers are considered in the original metric space: the induced graphs preserve the metrics of their respective parts.
 
-By the [[Vertex Elimination and Induced Couplings#Mass and projection of the circumcenter|general lemma on the mass of a selected subspace]], the centers $h_P,h_X$ are the orthogonal projections of $h$ onto the affine subspaces of the corresponding parts. Therefore
+By the [[Vertex Elimination and Induced Couplings#Resistance radius and projection of the circumcenter|general lemma on the resistance radius of a selected subspace]], the centers $h_P,h_X$ are the orthogonal projections of $h$ onto the affine subspaces of the corresponding parts. Therefore
 
 $$
 \boxed{
@@ -377,9 +377,9 @@ $$
 \tag{7}
 $$
 
-Here $\|h-h_P\|^2$ is the squared distance between the centers. In particular, each individual mass does not exceed the original mass: $\rho_P\le\rho(G)$ and $\rho_X\le\rho(G)$.
+Here $\|h-h_P\|^2$ is the squared distance between the centers. In particular, each individual resistance radius does not exceed the original resistance radius: $\rho_P\le\rho(G)$ and $\rho_X\le\rho(G)$.
 
-In the example of Figure 2, the squared distances from the original circumcenter to the circumcenters of the parts are $5/8-3/8=1/4$ and $5/8-1/2=1/8$. These two distances explain the change in each mass, but do not give an additive decomposition of mass over the parts.
+In the example of Figure 2, the squared distances from the original circumcenter to the circumcenters of the parts are $5/8-3/8=1/4$ and $5/8-1/2=1/8$. These two distances explain the change in each resistance radius, but do not give an additive decomposition of resistance radius over the parts.
 
 Nor is there a universal direction of inequality for the sum. Consider the complete bipartite graph $K_{2,6}$: one part has two vertices, the other six, and every vertex of the first part is coupled to every vertex of the second with coefficient $1$. Direct calculation gives
 
@@ -389,9 +389,9 @@ $$
 \rho(G)=\frac{29}{48}
 $$
 
-Here $\rho_P+\rho_X=1/2<29/48=\rho(G)$, whereas in the example of Figure 2 the sum exceeds the original mass.
+Here $\rho_P+\rho_X=1/2<29/48=\rho(G)$, whereas in the example of Figure 2 the sum exceeds the original resistance radius.
 
-> [!example]- Calculating the masses for $K_{2,6}$
+> [!example]- Calculating the resistance radii for $K_{2,6}$
 > Denote the parts by $P=\{a,b\}$ and $X=\{x_1,\ldots,x_6\}$. Eliminating $X$ gives a coupling of coefficient $3$ between $a,b$; eliminating $P$ gives coefficient $1/3$ between every pair of distinct $x_i$. The resistances are
 >
 > $$
@@ -427,7 +427,7 @@ Here $\rho_P+\rho_X=1/2<29/48=\rho(G)$, whereas in the example of Figure 2 the s
 >
 > This value is independent of $v$, so $h$ is the circumcenter and $\rho_G=29/48$.
 
-Gluing at a single vertex joins orthogonal spaces with a common point, and mass is additive. Selecting the two parts is a different construction. Their vector spaces are generally not orthogonal, and the sum of their dimensions is one less than the dimension of the entire space: a direction between the parts is also needed. The additivity rule for gluing therefore does not apply here.
+Gluing at a single vertex joins orthogonal spaces with a common point, and resistance radius is additive. Selecting the two parts is a different construction. Their vector spaces are generally not orthogonal, and the sum of their dimensions is one less than the dimension of the entire space: a direction between the parts is also needed. The additivity rule for gluing therefore does not apply here.
 
 ## A common spanning-tree parameter of the original graph
 
@@ -562,9 +562,9 @@ The construction uses the metric of affine vectors, projections, and the polyfor
 
 The application and the original table of the main example come from [1]. Here the transformation is presented through a selected subspace, bi-coordinates of projections, and frame Laplacians. Classical vertex elimination, the Schur complement, and preservation of effective resistances are compared with [2]. Their presentation in the language of PMG makes no claim of novelty for the operation itself.
 
-The star decomposition (2), the induced Laplacian (3), orthogonality of residuals (4), factorization of the exponential (5), the relation between masses through circumcenters (7), and the spanning-tree relations (8)-(10) are derived in the text using results from the preceding notes and the [[Core specification|core specification]]. The notation $J(G)$ and the name “common spanning-tree parameter” are used here for normalization (9); equality (10) explains its meaning. The applicability conditions and notation follow the [[PMG terminology|terminology]]. The note contains no working conjectures.
+The star decomposition (2), the induced Laplacian (3), orthogonality of residuals (4), factorization of the exponential (5), the relation between resistance radii through circumcenters (7), and the spanning-tree relations (8)-(10) are derived in the text using results from the preceding notes and the [[Core specification|core specification]]. The notation $J(G)$ and the name “common spanning-tree parameter” are used here for normalization (9); equality (10) explains its meaning. The applicability conditions and notation follow the [[PMG terminology|terminology]]. The note contains no working conjectures.
 
-The numerical examples were checked using exact rational arithmetic. Effective resistances were calculated separately from the original and induced Laplacians; spanning-tree coefficients were checked by direct enumeration of spanning trees. The coefficients of the polyform decomposition (2), the effect of column normalization, and equality (8) for both parts were also checked. For the two bipartite examples, inner products of residuals were calculated from the original metric, and spanning-tree coefficients of the comparison graphs were checked by tree enumeration. Masses and circumcenters in the example of Figure 2 and in $K_{2,6}$ were calculated from the equations of equal distance to the vertices, and equality (7) was verified.
+The numerical examples were checked using exact rational arithmetic. Effective resistances were calculated separately from the original and induced Laplacians; spanning-tree coefficients were checked by direct enumeration of spanning trees. The coefficients of the polyform decomposition (2), the effect of column normalization, and equality (8) for both parts were also checked. For the two bipartite examples, inner products of residuals were calculated from the original metric, and spanning-tree coefficients of the comparison graphs were checked by tree enumeration. Resistance radii and circumcenters in the example of Figure 2 and in $K_{2,6}$ were calculated from the equations of equal distance to the vertices, and equality (7) was verified.
 
 1. Malyugin, D. V. [How to Connect the Unconnected](https://habr.com/ru/articles/533544/) (in Russian). Habr, 24 December 2020. The application, the transformation of a coupling table, and the example with three objects and four intermediaries.
 2. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011. Formula (3.4): single-vertex elimination; Theorem 3.9: preservation of effective resistances. The general vertex-elimination result is applied here to a part with no internal couplings.

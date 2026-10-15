@@ -2,7 +2,7 @@
 title: Spaces and Subspaces in PMG
 date: 2026-10-14
 updated: 2026-10-15
-revision: 2
+revision: 3
 translated_revision: 1
 status: draft
 text_prepared_by: ChatGPT
@@ -36,13 +36,13 @@ Definitions and notation are collected in the [[Core specification|core specific
 
 3. **[[Projections, Bi-coordinates, and Di-coordinates]].** Bi-coordinates specify an expansion of an object in chosen elements; di-coordinates are inner products with those elements. We consider frames, coordinates of a projection, and uniqueness conditions. We decompose quadratic and polar forms using frame elements and their differences, and express projection through polyforms.
 
-4. **[[Vertex Contraction and Graph Gluing]].** Identifying vertices produces a space that can be realized as an orthogonal subspace of the original one. Gluing at a single vertex joins the spaces of the components. The Laplacian exponential describes independent components and their combination; under single-vertex gluing, spanning-tree coefficients multiply and metric masses add.
+4. **[[Vertex Contraction and Graph Gluing]].** Identifying vertices produces a space that can be realized as an orthogonal subspace of the original one. Gluing at a single vertex joins the spaces of the components. The Laplacian exponential describes independent components and their combination; under single-vertex gluing, spanning-tree coefficients multiply and resistance radii add.
 
 5. **[[Selected Vertices and the Dirichlet Problem]].** We prescribe values at selected vertices and extend them with minimum energy. The extension coefficients are the bi-coordinates of projections and form the influence matrix. The metric of residuals is computed through the polyform of a contracted graph. We state the conditions that ensure uniqueness.
 
-6. **[[Vertex Elimination and Induced Couplings]].** We construct a graph on selected vertices that preserves effective resistances between them, minimum energy, and response. Decomposition of the Laplacian and factorization of its exponential explain preservation of the metric. The Schur complement gives the matrix form of elimination; projection of the circumcenter lets us compare the masses of the original and induced graphs.
+6. **[[Vertex Elimination and Induced Couplings]].** We construct a graph on selected vertices that preserves effective resistances between them, minimum energy, and response. Decomposition of the Laplacian and factorization of its exponential explain preservation of the metric. The Schur complement gives the matrix form of elimination; projection of the circumcenter lets us compare the resistance radii of the original and induced graphs.
 
-7. **[[Couplings Within One Part of a Bipartite Graph]].** We apply vertex elimination to a rectangular table of couplings. The Laplacians of projection frames define induced couplings within the chosen part. We compare the two possible induced graphs, define a common normalized spanning-tree parameter of the original graph, and explain why the masses of the parts generally do not add up.
+7. **[[Couplings Within One Part of a Bipartite Graph]].** We apply vertex elimination to a rectangular table of couplings. The Laplacians of projection frames define induced couplings within the chosen part. We compare the two possible induced graphs, define a common normalized spanning-tree parameter of the original graph, and explain why the resistance radii of the parts generally do not add up.
 
 ## Reading routes
 
@@ -57,4 +57,3 @@ Definitions and notation are collected in the [[Core specification|core specific
 Spectral relations between the parts of a bipartite graph, gluing at several vertices, a fuller treatment of Lorentzian geometry, and possible physical interpretations are reserved for separate notes. General polyform reduction and the spanning-tree operator also belong to a separate continuation. These questions and their dependencies are tracked in the [[Карта библиотеки PMG|library map (in Russian)]].
 
 Sources and the status of results are given in each note. Established constructions are compared with their presentation in PMG after the objects involved have been defined.
-

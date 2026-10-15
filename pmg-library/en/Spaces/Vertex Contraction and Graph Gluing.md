@@ -2,14 +2,14 @@
 title: Vertex Contraction and Graph Gluing
 date: 2026-10-14
 updated: 2026-10-15
-revision: 4
-translated_revision: 3
+revision: 5
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: vertex-contraction-and-graph-gluing
 order: 4
-description: "Contraction as a passage to a subspace, independent components in the Laplacian exponential, gluing spaces, spanning-tree coefficients, and additivity of metric mass."
+description: "Contraction as a passage to a subspace, independent components in the Laplacian exponential, gluing spaces, spanning-tree coefficients, and additivity of resistance radius."
 ---
 
 Suppose two vertices of a graph are to be treated as one. For example, several objects may be combined into a single group. How will the couplings and effective resistances change? What space will correspond to the new graph?
@@ -268,22 +268,24 @@ For example, gluing two unit couplings produces a path with effective resistance
 
 The mixed term remains in the identity of forms $[u_1+u_2]^2=[u_1]^2+\{u_1,u_2\}+[u_2]^2$. Orthogonality makes its metric evaluation zero, not the formal polyform itself.
 
-## Metric mass is additive
+## Resistance radius is additive
 
 The vertices of a connected graph form a nondegenerate resistance simplex. Within its affine space, there is a unique sphere passing through all the vertices. Its center $h$ is called the circumcenter. It need not coincide with the centroid, the arithmetic mean of the vertices.
 
-> [!info] Metric mass
-> **Definition.** The metric mass of a graph, in the radius normalization, is the squared radius of its circumsphere:
+> [!info] Resistance radius
+> **Definition.** The resistance radius of a graph is the squared radius of its circumsphere:
 >
 > $$
 > \rho(G)=\|a-h\|^2=R_{\mathrm{sph}}^2
 > $$
 >
-> Here $a$ is any basis vertex of the graph. The value is independent of this choice. In particular, $\rho$ already denotes the squared radius, not the radius itself.
+> Here $a$ is any basis vertex of the graph. The value is independent of this choice. Here “resistance” specifies a quadratic quantity: $\rho$ is the square of the linear radius $R_{\mathrm{sph}}$.
 
 For a graph consisting of one coupling with effective resistance $r$, the center is the midpoint of a segment of length $\sqrt r$, so $\rho=r/4$. For a single vertex, we take $\rho=0$.
 
-**Theorem.** When two graphs are glued at a single vertex $o$, the circumcenter and mass of the combined graph satisfy
+Here centers and their sums are considered in the ordinary affine space of the resistance realization. In the extension with $z$, the affine combination giving a center need not be local; its local point is obtained by the correction $\pi(p)=p-p^2z/2$.
+
+**Theorem.** When two graphs are glued at a single vertex $o$, the circumcenter and resistance radius of the combined graph satisfy
 
 $$
 \boxed{h=h_1+h_2-o,\qquad \rho(G)=\rho(G_1)+\rho(G_2)}
@@ -302,9 +304,9 @@ $$
 >
 > The same argument applies to the second part. All vertices lie on the sphere with center $h$ and the stated squared radius. Uniqueness of the circumsphere completes the proof. $\square$
 
-![[Gluing and Mass.svg]]
+![[Gluing and Resistance Radius.svg]]
 
-*Figure 3. Gluing two unit couplings. In the resistance realization, their internal directions are orthogonal. The midpoints $h_1,h_2$ of the original segments give the circumcenter $h=h_1+h_2-o$ of the combined triangle; its mass is $1/4+1/4=1/2$.*
+*Figure 3. Gluing two unit couplings. In the resistance realization, their internal directions are orthogonal. The midpoints $h_1,h_2$ of the original segments give the circumcenter $h=h_1+h_2-o$ of the combined triangle; its resistance radius is $1/4+1/4=1/2$.*
 
 Any tree can be assembled by successively gluing individual couplings at a single vertex. Thus (10) gives
 
@@ -312,11 +314,11 @@ $$
 \rho(T)=\frac14\sum_{e\in E(T)}\frac1{c_e}
 $$
 
-Here $c_e$ is the coupling coefficient, and $1/c_e$ is its effective resistance in the tree. For example, the unit path and the unit star with three couplings have the same mass $3/4$, although their maximum pairwise effective resistances differ: $3$ and $2$.
+Here $c_e$ is the coupling coefficient, and $1/c_e$ is its effective resistance in the tree. For example, the unit path and the unit star with three couplings have the same resistance radius $3/4$, although their maximum pairwise effective resistances differ: $3$ and $2$.
 
-The diameter normalization uses the squared diameter of the circumsphere, $D^2=4\rho$. This quantity is also additive. It should be distinguished from both the diameter $D$ itself and the maximum pairwise effective resistance.
+**Definition.** The resistance diameter is $D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2$. It is also additive under single-vertex gluing; for a tree, $D_{\mathrm{res}}(T)=\sum_e1/c_e$. The linear diameter is $2R_{\mathrm{sph}}$. The maximum pairwise effective resistance is a different parameter: for the star above it is $2$, whereas $D_{\mathrm{res}}=3$.
 
-Additivity of mass does not imply additivity of all matroid invariants. For example, the spanning-tree coefficient in (7) is multiplicative. Being a matroid invariant means depending on the linear dependence structure of the edge vectors and, in the weighted case, also on the coupling coefficients. The rule for how a quantity changes under gluing requires a separate justification. Other families of additive parameters are not introduced here.
+Additivity of resistance radius does not imply additivity of all matroid invariants. For example, the spanning-tree coefficient in (7) is multiplicative. Being a matroid invariant means depending on the linear dependence structure of the edge vectors and, in the weighted case, also on the coupling coefficients. The rule for how a quantity changes under gluing requires a separate justification. Other families of additive parameters are not introduced here.
 
 ## When two vertices are shared
 
@@ -338,7 +340,7 @@ At the polyform level, the product $M_1M_2$ still applies after substituting the
 >
 > Check the result independently: a spanning tree of the cycle is obtained by deleting one of its five couplings. There are exactly five such trees.
 
-The second identification reduces the dimension and changes the metric within the parts according to (3). Thus preservation of internal effective resistances and additivity of mass, proved for a single shared vertex, do not automatically extend to two shared vertices.
+The second identification reduces the dimension and changes the metric within the parts according to (3). Thus preservation of internal effective resistances and additivity of resistance radius, proved for a single shared vertex, do not automatically extend to two shared vertices.
 
 ## Scope and continuation
 
@@ -354,7 +356,7 @@ Next, we return to a selected subspace without identifying vertices: we will con
 
 The algebra of forms, the boundary merging rules, and the metric identity follow the [[Core specification|published core specification]]. General forest polynomials and matroid parameters are not prerequisites for this note.
 
-Vertex identification, multiplication of spanning-tree coefficients under gluing at a single vertex, and the resistance geometry of a graph are established constructions. Their presentation here starts from maps of objects and products of PMG polyforms. The formulas for changes in the metric, circumcenter, and mass are proved in the text; no claim of novelty is made for these geometric laws. The expression of effective resistance as a ratio of spanning-tree coefficients is compared with [1], and the geometry of the resistance simplex and its circumsphere with [2].
+Vertex identification, multiplication of spanning-tree coefficients under gluing at a single vertex, and the resistance geometry of a graph are established constructions. Their presentation here starts from maps of objects and products of PMG polyforms. The formulas for changes in the metric, circumcenter, and resistance radius are proved in the text; no claim of novelty is made for these geometric laws. The expression of effective resistance as a ratio of spanning-tree coefficients is compared with [1], and the geometry of the resistance simplex and its circumsphere with [2].
 
 The examples were calculated directly. Formulas (3), (4), (7), and (9)-(11) were also checked on small weighted graphs by direct calculation of reduced Laplacians and resistance Gram matrices; circumcenters were obtained by solving the equal-distance equations. The note contains no working hypotheses.
 

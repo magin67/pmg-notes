@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-10-15
-revision: 4
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -170,6 +170,7 @@ The following table also records earlier Russian usage, so that older research n
 
 | Earlier or ambiguous name | Recommended expression | Reason for clarification |
 |---|---|---|
+| “Metric mass” | Resistance radius for $R_{\mathrm{sph}}^2$; resistance diameter for $4R_{\mathrm{sph}}^2$ | The earlier name is replaced with geometric terminology that explicitly distinguishes the normalizations. |
 | “2-вектор” | Vertex-pair vector, $a_{ij}=a_j-a_i$ | In English, 2-vector normally means an object of exterior grade $2$, whereas $a_{ij}$ has grade $1$. “Two-point vector” is acceptable when explicitly defined. |
 | “Order” without specifying the object | Grade | A simplex and its boundary differ in grade by one. |
 | “Кратность” of a linear element | Affine weight | The coefficient-sum functional need not take integer values. |
@@ -202,7 +203,8 @@ The following definitions are used in the published series “Spaces and Subspac
 | Metric square | Метрический квадрат | A previous explanatory name for the norm $Y^2=Y\cdot Y$. The current text uses “norm”. It may be negative in an indefinite metric and differs from the form $[Y]^2$. |
 | Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension]]. |
 | Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#The linear midpoint and its local center]]. |
-| Metric mass | Метрическая масса | The squared circumradius of the basis: $\rho=R_{\mathrm{sph}}^2$. The radius normalization is used, rather than the diameter normalization. [[Vertex Contraction and Graph Gluing#Metric mass is additive]]. |
+| Resistance radius | Резистивный радиус | The squared linear circumradius of the basis: $\rho=R_{\mathrm{sph}}^2$. A PMG definition. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
+| Resistance diameter | Резистивный диаметр | $D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2$. The squared linear diameter of the circumsphere; generally different from the maximum pairwise effective resistance. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
 | Influence matrix | Матрица влияния | The matrix $\mathbf B$ extending values from selected to internal vertices. Its rows give the bi-coordinates of the projections of internal vertices. [[Selected Vertices and the Dirichlet Problem]]. |
 | Fundamental matrix | Фундаментальная матрица | $\mathbf{Fm}=\mathbf A^{-1}$, where $\mathbf A$ is the internal Laplacian block. For a connected graph, it is also the Gram matrix of residual vectors; for a disconnected graph, the metric statement applies component by component. Invertibility requires every component to contain a selected vertex. [[Selected Vertices and the Dirichlet Problem]]. |
 | Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed values at selected vertices to the response after solving the internal equations. It equals the Laplacian of the induced graph. [[Vertex Elimination and Induced Couplings]]. |
@@ -222,6 +224,7 @@ Within a derivation, distinguish the graph $G$ from its Green matrix $\mathbf G$
 
 | Revision | Date | Content |
 |---|---|---|
+| 5 | 2026-10-15 | Replaced metric mass with resistance radius and explicitly defined resistance diameter. |
 | 4 | 2026-10-15 | Established the PMG convention for quadratic and linear norms; clarified locality and isotropy. |
 | 3 | 2026-10-15 | Simplified isotropic-model notation: local points, nonlocal elements, and local centers. Updated section links. |
 | 2 | 2026-10-14 | Added terms from the published spaces series and links to their definitions. Clarified resistance terminology, bi-coordinates and di-coordinates, metric square, and norm. This English version follows Russian revision 2. |

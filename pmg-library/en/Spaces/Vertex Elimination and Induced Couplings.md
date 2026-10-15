@@ -2,8 +2,8 @@
 title: Vertex Elimination and Induced Couplings
 date: 2026-10-14
 updated: 2026-10-15
-revision: 3
-translated_revision: 3
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -330,11 +330,11 @@ In the new graph, $M_P=e+(6/11)[(ab)]^2$, so $u_{M_P}([(ab)]^2)=1$. In the origi
 
 For the star, $\tau_G=1$, $\det\mathbf A=3$, $\tau_P=1/3$: the triangle has three spanning trees, each of weight $1/9$. We can also check the second grade. In the original metric, the vectors $b-a$, $c-a$ have norms $2$ and inner product $1$, so $(abc)^2=2\cdot2-1^2=3$. In the triangle, the normalized potential of the top-grade form gives the same result: $1/\tau_P=3$. The squared geometric area is $3/4$.
 
-## Mass and projection of the circumcenter
+## Resistance radius and projection of the circumcenter
 
-Preservation of the metric allows us to compare the masses of the original and induced graphs. Recall the [[Vertex Contraction and Graph Gluing#Metric mass is additive|radius normalization]]: the metric mass $\rho$ is the squared circumradius of the basis. Let $h$ be the circumcenter of the original graph, and let $h_P\in\mathcal A_P$ be the circumcenter of the selected vertices. Both centers are considered in the original metric.
+Preservation of the metric allows us to compare the resistance radii of the original and induced graphs. Recall the [[Vertex Contraction and Graph Gluing#Resistance radius is additive|definition]]: the resistance radius $\rho$ is the squared circumradius of the basis. Let $h$ be the circumcenter of the original graph, and let $h_P\in\mathcal A_P$ be the circumcenter of the selected vertices. Both centers are considered in the original metric.
 
-> [!info] Mass of the selected subspace
+> [!info] Resistance radius of the selected subspace
 > **Lemma.** For any nonempty set of selected vertices of a connected graph, the center $h_P$ is the orthogonal projection of $h$ onto $\mathcal A_P$. Therefore
 >
 > $$
@@ -354,9 +354,9 @@ Preservation of the metric allows us to compare the masses of the original and i
 >
 > The right-hand side is independent of $p$. Thus $h'$ is equidistant from the selected vertices and lies in their affine subspace. These vertices are affinely independent, so their circumcenter is unique: $h'=h_P$. Preservation of the metric identifies this sphere with the circumsphere of the induced graph. This proves (11). $\square$
 
-For a star with three unit couplings, the tree mass formula gives $\rho_G=3/4$. Its leaves form an equilateral triangle with squared side length $2$, so $\rho_P=2/3$. Formula (11) gives $\|h-h_P\|^2=1/12$.
+For a star with three unit couplings, the tree resistance radius formula gives $\rho_G=3/4$. Its leaves form an equilateral triangle with squared side length $2$, so $\rho_P=2/3$. Formula (11) gives $\|h-h_P\|^2=1/12$.
 
-The lemma applies to any selected vertex set. In a [[Couplings Within One Part of a Bipartite Graph#Why the masses of the parts do not add up|bipartite graph]], it applies separately to each part.
+The lemma applies to any selected vertex set. In a [[Couplings Within One Part of a Bipartite Graph#Why the resistance radii of the parts do not add up|bipartite graph]], it applies separately to each part.
 
 ## Conditions and limitations
 
