@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="610" viewBox="0 0 1120 610" role="img" aria-labelledby="title desc">
-<title id="title">An affine line and its isotropic representatives</title>
-<desc id="desc">Left: the resistance plane of the path a-b-c, with the line through a and c and its midpoint m. Right: the coordinate plane of expressions (1-t)A+tC+ηz. Linear representatives have η=0; isotropic representatives lie on the parabola η=t(1-t). At t=1/2 the correction is z/4.</desc>
+<title id="title">A local line and linear combinations</title>
+<desc id="desc">Left: the resistance plane of the path a-b-c, with the line through a and c and its midpoint m. Right: the coordinate plane of expressions (1-t)a+tc+ηz. Linear combinations have η=0; local points lie on the parabola η=t(1-t). At t=1/2 the correction is z/4.</desc>
 <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#8a4d1c"/></marker><marker id="axis" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#7b8794"/></marker></defs>
 <rect width="1120" height="610" fill="white"/>
 <g font-family="Arial, DejaVu Sans, sans-serif" fill="#202c3b">
-<text x="270" y="42" text-anchor="middle" font-size="22">Points in the original space</text>
-<text x="824" y="42" text-anchor="middle" font-size="22">Representatives in the (t, η) plane</text>
+<text x="270" y="42" text-anchor="middle" font-size="22">Euclidean geometry of centers</text>
+<text x="824" y="42" text-anchor="middle" font-size="22">Local points in the (t, η) plane</text>
 <path d="M548 68V550" stroke="#dce1e7"/>
 <g stroke="#748497" stroke-width="2.5" fill="none"><path d="M140 410H380V170"/><path d="M363 410V393H380" stroke-width="1.5"/></g>
 <path d="M112 438L140 410M380 170L408 142" stroke="#176ba4" stroke-width="2.5" stroke-dasharray="7 6"/>
@@ -15,7 +15,7 @@
 <circle cx="380" cy="410" r="8" fill="#748497" stroke="white" stroke-width="2"/>
 <circle cx="260" cy="290" r="8" fill="#aa5b19" stroke="white" stroke-width="2"/>
 <g font-size="23" font-style="italic"><text x="114" y="405">a</text><text x="393" y="429">b</text><text x="357" y="155">c</text><text x="278" y="289">m</text></g>
-<text x="270" y="498" text-anchor="middle" font-size="20">m = (a + c)/2</text>
+<text x="270" y="498" text-anchor="middle" font-size="20">m: midpoint of segment ac</text>
 <text x="270" y="536" text-anchor="middle" font-size="18" fill="#526172">The squared distance between a and c is 2</text>
 <g stroke="#7b8794" stroke-width="1.4" fill="none" marker-end="url(#axis)"><path d="M592 405H1060"/><path d="M650 541V128"/></g>
 <text x="1071" y="410" font-size="21" font-style="italic">t</text><text x="643" y="111" font-size="21" font-style="italic">η</text>
@@ -31,8 +31,8 @@
 <g fill="#176ba4" stroke="white" stroke-width="2"><circle cx="650" cy="405" r="8"/><circle cx="990" cy="405" r="8"/></g>
 <circle cx="820" cy="405" r="7" fill="#748497" stroke="white" stroke-width="2"/>
 <circle cx="820" cy="230" r="8" fill="#aa5b19" stroke="white" stroke-width="2"/>
-<g font-size="22" font-style="italic"><text x="660" y="389">A</text><text x="1002" y="389">C</text><text x="837" y="219">X(m)</text></g>
-<text x="820" y="466" text-anchor="middle" font-size="18">p(1/2) = (A + C)/2</text>
+<g font-size="22" font-style="italic"><text x="660" y="389">a</text><text x="1002" y="389">c</text><text x="837" y="219">m</text></g>
+<text x="820" y="466" text-anchor="middle" font-size="18">p(1/2) = (a + c)/2</text>
 <text x="820" y="182" text-anchor="middle" font-size="20" fill="#176ba4">η = t(1 − t)</text>
 <text x="827" y="560" text-anchor="middle" font-size="17" fill="#526172">Height shows the coefficient of z</text>
 <text x="560" y="588" text-anchor="middle" font-size="17" fill="#526172">The right panel shows affine coordinates, not Euclidean lengths and angles in the extension</text>

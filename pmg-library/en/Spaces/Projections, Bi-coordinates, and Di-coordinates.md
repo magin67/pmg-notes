@@ -1,8 +1,8 @@
 ---
 title: Projections, Bi-coordinates, and Di-coordinates
 date: 2026-10-13
-updated: 2026-10-14
-revision: 2
+updated: 2026-10-15
+revision: 3
 translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -401,7 +401,7 @@ d_i=\frac{u_{M_G}([y,h_i])}{u_{M_G}(e)},\qquad
 K_{ij}=\frac{u_{M_G}([h_i,h_j])}{u_{M_G}(e)}
 $$
 
-This rule applies to the vector arguments of the core. Inner products involving point representatives and $z$ are defined by the metric in the [[The Null Vector, Isotropic Representation, and the Boundary#The original points and the extended space|note on isotropic representation]].
+This rule applies to the vector arguments of the core. Inner products involving local points and $z$ are defined by the metric in the [[The Null Vector, Isotropic Representation, and the Boundary#The original points and the extended space|note on isotropic representation]].
 
 Decomposition (2) gives another direct application. For a vector $y=\sum_i y^i a_i$ in the vertex basis, where $\sum_i y^i=0$, apply metric evaluation to the form $[y]^2$:
 
@@ -501,75 +501,76 @@ Area vanishes when the plane is projected onto a line. The evaluation of the fir
 
 ## Coordinates in the isotropic extension
 
-Return to the distinction established in the [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector|note on isotropic representation]]. For a point $x$, its isotropic representative $X(x)$ satisfies $X(x)^2=0$, $X(x)\cdot z=1$. A linear combination of point representatives can have a nonzero metric square.
+In this section, use the direct notation from the [[The Null Vector, Isotropic Representation, and the Boundary#Local points|note on the isotropic model]]: local points $x,p_i,q$ are themselves elements of the extension, with $x^2=0$ and $x\cdot z=1$. A linear combination of unit weight can be nonlocal; its center is selected by $\pi(p)=p-p^2z/2$. The preceding sections used ordinary affine notation; here we explicitly distinguish a linear combination from its local center.
 
-Let $p_0,\ldots,p_k$ be affinely independent points, with $P_i=X(p_i)$. Their affine hull consists of points $\sum_i\beta^i p_i$ with $\sum_i\beta^i=1$. In the extension, consider the linear subspace
-
-$$
-S=\operatorname{span}(z,P_0,\ldots,P_k)
-$$
-
-Here $\operatorname{span}$ means all linear combinations of the listed elements. The restriction of the metric to $S$ is nondegenerate. To see this, take an element of $S$ orthogonal to all of $S$. Its inner product with $z$ is zero, so it can be expressed using $z$ and the differences $P_i-P_0$. Orthogonality to all these differences, together with positive definiteness of the original metric, leaves only a multiple of $z$. Orthogonality to $P_0$ makes this coefficient zero as well.
-
-Consequently, the orthogonal projection $\widehat X=\pi_S(X(x))$ is uniquely defined. It has the form
+Let local points $p_0,\ldots,p_k$ have affinely independent Euclidean coordinates. Consider
 
 $$
-\widehat X=w_xz+\sum_{i=0}^k\beta^iP_i,\qquad
+S=\operatorname{span}(z,p_0,\ldots,p_k)
+$$
+
+The metric restricted to $S$ is nondegenerate. Indeed, an element of $S$ orthogonal to all of $S$ is, by orthogonality to $z$, expressible using $z$ and the differences $p_i-p_0$. Orthogonality to these differences and positive definiteness of the displacement metric leave only a multiple of $z$; orthogonality to $p_0$ makes it zero.
+
+Hence the orthogonal projection $\widehat x=\pi_S(x)$ exists and is unique. It has the expression
+
+$$
+\widehat x=w_xz+\sum_{i=0}^k\beta^i p_i,\qquad
 \sum_{i=0}^k\beta^i=1
 $$
 
-The sum of the coefficients follows from $\widehat X\cdot z=X(x)\cdot z=1$. The coefficient $w_x$ of $z$ is called the **orbital relative to the chosen extended basis**. It is a bi-coordinate. The di-coordinate relative to $z$ is $1$ and is a different quantity.
+The coefficient sum follows from $\widehat x\cdot z=x\cdot z=1$. The coefficient $w_x$ of $z$ is the **orbital relative to the chosen extended basis**. It is a bi-coordinate; the di-coordinate relative to $z$ is $1$.
 
-**Proposition.** The coefficients $\beta^i$ are the bi-coordinates of the affine projection $q$ of the original point $x$:
+**Proposition.** Let $q$ be the nearest local point in the Euclidean affine hull of $p_0,\ldots,p_k$. Then
 
 $$
-q=\sum_i\beta^i p_i,\qquad
-\widehat X=X(q)-\frac{\|x-q\|^2}{2}z,
-\qquad \widehat X^2=-\|x-q\|^2
+q=\pi\left(\sum_i\beta^i p_i\right),\qquad
+\widehat x=q-\frac{(x-q)^2}{2}z,\qquad
+\widehat x^2=-(x-q)^2
 \tag{9}
 $$
 
+The coefficients $\beta^i$ give the affine coordinates of the center $q$; the linear combination in parentheses need not itself be local.
+
 > [!proof]- Proof
-> Let $q$ be the affine projection and $r=x-q$. For every basis point $p_i$, the Pythagorean theorem gives $\|x-p_i\|^2=\|q-p_i\|^2+r^2$. By the [[The Null Vector, Isotropic Representation, and the Boundary#The isotropic representative of a point|distance formula for isotropic representatives]],
+> Write $\delta=(x-q)^2$ for the squared distance from $x$ to $q$. The Pythagorean theorem in Euclidean coordinates gives $(x-p_i)^2=(q-p_i)^2+\delta$. By the distance formula for local points,
 >
 > $$
-> X(x)\cdot P_i=X(q)\cdot P_i-\frac{r^2}{2}
+> x\cdot p_i=q\cdot p_i-\frac{\delta}{2}
 > $$
 >
-> Thus the element $X(q)-r^2z/2$ has the same di-coordinates relative to $P_i,z$ as $X(x)$. It belongs to $S$: the representative $X(q)$ differs from the linear combination $\sum_i\beta^iP_i$ only by a multiple of $z$. Uniqueness of the projection proves the second formula in (9), and expanding its square gives the third. $\square$
+> Thus $q-\delta z/2$ has the same di-coordinates relative to $p_i,z$ as $x$. This element belongs to $S$, since $q$ differs from a normalized linear combination of the $p_i$ only by a multiple of $z$. Uniqueness of orthogonal projection gives $\widehat x=q-\delta z/2$. Comparing the coefficients of $p_i$ gives the first formula in (9), and expanding the square gives the last. $\square$
 
-Thus the orthogonal projection of an isotropic representative is generally not isotropic. Recovering the representative of the point $q$ requires a correction along $z$.
+The operations $\pi_S$ and $\pi$ differ: the former is linear orthogonal projection onto $S$, while the latter selects the local center by correction along $z$. In particular, $\pi(\widehat x)=q$.
 
-### Three expressions for the midpoint
+### The linear midpoint and its local center
 
-For our path, choose the origin at $a$. Then
-
-$$
-A=o,\qquad B=o+u-\frac12z,\qquad
-C=o+u+v-z
-$$
-
-The affine projection of $b$ is $q=(a+c)/2$, and its linear image is $\widetilde q=(A+C)/2$. Applying decomposition (2) to this combination of representatives gives
+For our path, choose orthogonal unit coordinate directions $u_0,v_0$. Then
 
 $$
-\widetilde q^2=\frac12A^2+\frac12C^2-\frac14(C-A)^2=-\frac12
+a=o,\qquad b=o+u_0-\frac12z,\qquad c=o+u_0+v_0-z
 $$
 
-Here $A^2=C^2=0$, while $(C-A)^2=R_{ac}=2$. The isotropic correction is $-\widetilde q^2z/2=z/4$, so $X(q)=(A+C)/2+z/4$. Since $\|b-q\|^2=1/2$, formula (9) gives
+The subscripts distinguish these directions from the vertex differences $u=b-a$, $v=c-b$ in the preceding sections. The linear midpoint $p=(a+c)/2$ has square
 
 $$
-\widehat B=\pi_S(B)=\frac{A+C}{2}=\widetilde q
+p^2=\frac12a^2+\frac12c^2-\frac14(c-a)^2=-\frac12
 $$
 
-The equality $\widehat B=\widetilde q$ is specific to this example. For comparison, list the coordinates in the order $(z,A,C)$:
+Its local center $q=\pi(p)=(a+c)/2+z/4$ is the nearest point on the line $ac$ to $b$. Since $(b-q)^2=1/2$, formula (9) gives
 
-| Object | Bi-coordinates in $(z,A,C)$ | Di-coordinates relative to $(z,A,C)$ | Metric square $Y^2$ |
+$$
+\widehat b=\pi_S(b)=q-\frac14z=\frac{a+c}{2}=p
+$$
+
+The equality of the orthogonal projection and the linear midpoint is specific to this example. Coordinates are listed in the order $(z,a,c)$:
+
+| Object | Bi-coordinates in $(z,a,c)$ | Di-coordinates relative to $(z,a,c)$ | Metric square |
 | --- | --- | --- | --- |
-| Original representative $B$ | No expansion in this sub-basis | $(1,-1/2,-1/2)$ | $0$ |
-| Orthogonal projection $\widehat B$ | $(0,1/2,1/2)$ | $(1,-1/2,-1/2)$ | $-1/2$ |
-| Point representative $X(q)$ | $(1/4,1/2,1/2)$ | $(1,-1/4,-1/4)$ | $0$ |
+| Local point $b$ | No expansion in this sub-basis | $(1,-1/2,-1/2)$ | $0$ |
+| Orthogonal projection $\widehat b=p$ | $(0,1/2,1/2)$ | $(1,-1/2,-1/2)$ | $-1/2$ |
+| Local center $q=\pi(p)$ | $(1/4,1/2,1/2)$ | $(1,-1/4,-1/4)$ | $0$ |
 
-The word **sub-basis** here means a selected subset of a full basis that generates its own subspace. The table shows that $B$ and $\widehat B$ have the same di-coordinates relative to the sub-basis, but different metric squares. The correction along $z$ restores the isotropy of $X(q)$, but the di-coordinates relative to $A,C$ have changed.
+A **sub-basis** is a selected part of a full basis generating its own subspace. The elements $b$ and $\widehat b$ have the same di-coordinates relative to the sub-basis but different squares. Correction along $z$ returns the local center $q$ and changes the di-coordinates relative to $a,c$.
 
 ## When the construction needs qualification
 
@@ -585,7 +586,7 @@ These definitions do not require nonnegative bi-coordinates. [[Selected Vertices
 
 The definitions of points, vectors, forms, and metric potentials follow the [[Core specification|core specification]]. The terms “bi-coordinates” and “di-coordinates” are used in the general sense of §3.4 of Dmitry Malyugin's article *On the Properties of Affine Metric Spaces*, version 1.11, 2018–2021: expansion coefficients and metrically dual coordinates. Barycentric descriptions of points are treated as a special case. The term “frame” and the quadratic form decomposition were checked against Dmitry Malyugin's article *Foundations of Polyform Algebra*, sections “Frames” and “Forms of Frames”. The distinction from the external use of the word *frame* follows [2].
 
-The internal notes “The Null Vector and Coordinates” and “Graph Subspaces” were also consulted. Orthogonal projection in the extension is explicitly distinguished from the isotropic representative of a point.
+The internal notes “The Null Vector and Coordinates” and “Graph Subspaces” were also consulted. Orthogonal projection in the extension is explicitly distinguished from selection of the local center.
 
 The relation between the two kinds of coordinates, the reciprocal basis, and orthogonal projection are standard constructions of linear algebra. This note gives their derivations and expressions through PMG forms and potentials. The quadratic and polar decompositions (2), (3) are proved by bilinearity. The Laplacian of a frame is the name given here to its difference part; negative couplings explicitly require an algebraic extension of the core graph model. The metric interpretation in terms of the center and moment of inertia is compared with the known identities in [1]. Formulas (8) and (9) are also proved in the text. The examples are calculated directly; the potentials on the path are calculated by multiplying forms, independently of the geometric calculation.
 
@@ -593,3 +594,4 @@ The reciprocal basis, projections, and coordinate table were checked using exact
 
 1. Havel, T. F. [Heron’s Formula in Higher Dimensions](https://doi.org/10.1007/s00006-023-01305-8). *Advances in Applied Clifford Algebras*, 34, 9 (2024), §2. Lagrange and Huygens-Leibniz identities for weighted centers.
 2. Casazza, P. G.; Lynch, R. G. [A brief introduction to Hilbert space frame theory and its applications](https://arxiv.org/abs/1509.07347). The use of the term *frame* for a family of vectors in a Hilbert space.
+

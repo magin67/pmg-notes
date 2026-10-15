@@ -1,8 +1,8 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-14
-revision: 2
+updated: 2026-10-15
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -193,11 +193,13 @@ The following definitions are used in the published series “Spaces and Subspac
 | Di-coordinates | Ди-координаты | Inner products of an object with the elements of the chosen basis. When the metric on its subspace is nondegenerate, these are also the coefficients of the projection in the reciprocal basis. [[Projections, Bi-coordinates, and Di-coordinates#Di-coordinates: inner products]]. |
 | Reciprocal basis | Взаимный базис | A basis of the same subspace whose inner products with the original basis elements are $1$ for matching indices and $0$ otherwise. It exists when the metric on the subspace is nondegenerate. [[Projections, Bi-coordinates, and Di-coordinates#The reciprocal basis]]. |
 | Laplacian of a frame | Лапласиан фрейма | The difference part of the form decomposition for a fixed frame: $L_q=\sum_{i<j}q^iq^j[a_j-a_i]^2$. It may change with the frame and is not determined by the object $q$ alone. [[Projections, Bi-coordinates, and Di-coordinates#The difference part and the Laplacian of a frame]]. |
-| Isotropic representation of a point | Изотропное представление точки | A representative $X(x)$ in the extended space satisfying $X(x)^2=0$ and $X(x)\cdot z=1$. [[The Null Vector, Isotropic Representation, and the Boundary#The isotropic representative of a point]]. |
-| Distinguished null vector | Выделенный нуль-вектор | A nonzero element $z$ with $z^2=0$ that specifies the normalization of point representatives. It is not the zero element of the space. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
+| Local point | Локальная точка | A normalized isotropic element $x$ of the extension: $x^2=0$, $x\cdot z=1$. Previously written as an “isotropic representative $X(x)$”; the point is now denoted directly. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
+| Nonlocal element of unit weight | Нелокальный элемент единичного веса | An element $p$ with $p\cdot z=1$ and $p^2\ne0$. A PMG term in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector]]. |
+| Local center | Локальный центр | The point $\pi(p)=p-p^2z/2$ for $p\cdot z=1$. Selecting the center is a nonlinear correction along $z$. [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector]]. |
+| Distinguished null vector | Выделенный нуль-вектор | A nonzero element $z$ with $z^2=0$ that specifies the normalization of local points. It is not the zero element of the space. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Metric square | Метрический квадрат | The number $Y^2=Y\cdot Y$. In a positive definite metric it is the squared norm; in an indefinite metric it can be negative. It differs from the form $[Y]^2$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension]]. |
-| Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#Three expressions for the midpoint]]. |
+| Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#The linear midpoint and its local center]]. |
 | Metric mass | Метрическая масса | The squared circumradius of the basis: $\rho=R_{\mathrm{sph}}^2$. The radius normalization is used, rather than the diameter normalization. [[Vertex Contraction and Graph Gluing#Metric mass is additive]]. |
 | Influence matrix | Матрица влияния | The matrix $\mathbf B$ extending values from selected to internal vertices. Its rows give the bi-coordinates of the projections of internal vertices. [[Selected Vertices and the Dirichlet Problem]]. |
 | Fundamental matrix | Фундаментальная матрица | $\mathbf{Fm}=\mathbf A^{-1}$, where $\mathbf A$ is the internal Laplacian block. For a connected graph, it is also the Gram matrix of residual vectors; for a disconnected graph, the metric statement applies component by component. Invertibility requires every component to contain a selected vertex. [[Selected Vertices and the Dirichlet Problem]]. |
@@ -218,7 +220,9 @@ Within a derivation, distinguish the graph $G$ from its Green matrix $\mathbf G$
 
 | Revision | Date | Content |
 |---|---|---|
+| 3 | 2026-10-15 | Simplified isotropic-model notation: local points, nonlocal elements, and local centers. Updated section links. |
 | 2 | 2026-10-14 | Added terms from the published spaces series and links to their definitions. Clarified resistance terminology, bi-coordinates and di-coordinates, metric square, and norm. This English version follows Russian revision 2. |
 | 1 | 2026-10-09 | First public core glossary, aligned with core specification revision 2 and the introductory series. Clarifies the levels of objects and evaluations, the spanning-tree coefficient, edge factors, and earlier names. This English version follows Russian revision 1. |
 
 Internal glossary version 1.1 of 2026-09-21 was used as source material. Its information about extensions remains relevant to their later preparation, but does not automatically form part of the current core terminology. Earlier revisions are records of changes, not parallel terminology standards.
+

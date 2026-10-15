@@ -1,8 +1,8 @@
 ---
 title: Spaces and Subspaces in PMG
 date: 2026-10-14
-updated: 2026-10-14
-revision: 1
+updated: 2026-10-15
+revision: 2
 translated_revision: 1
 status: draft
 text_prepared_by: ChatGPT
@@ -32,7 +32,7 @@ Definitions and notation are collected in the [[Core specification|core specific
 
 1. **[[Spaces, Subspaces, and the Choice of a Basis]].** We distinguish the linear space of formal vertices, the space of affine vectors, and the affine space of points. Selected vertices generate subspaces; a basis lets us write their exterior elements and forms. Metric evaluations are obtained through potentials of forms.
 
-2. **[[The Null Vector, Isotropic Representation, and the Boundary]].** We construct isotropic representatives of points in an extended space. The distinguished null vector connects affine weight, flat geometry, and the boundary operator. This note develops the geometric part of the series; its constructions are also used in the section on isotropic coordinates.
+2. **[[The Null Vector, Isotropic Representation, and the Boundary]].** We construct an isotropic model with local points and a correction selecting the center of a normalized element. The distinguished null vector connects affine weight, flat geometry, and the boundary operator. This note develops the geometric part of the series; its constructions are also used in the section on isotropic coordinates.
 
 3. **[[Projections, Bi-coordinates, and Di-coordinates]].** Bi-coordinates specify an expansion of an object in chosen elements; di-coordinates are inner products with those elements. We consider frames, coordinates of a projection, and uniqueness conditions. We decompose quadratic and polar forms using frame elements and their differences, and express projection through polyforms.
 
@@ -57,3 +57,4 @@ Definitions and notation are collected in the [[Core specification|core specific
 Spectral relations between the parts of a bipartite graph, gluing at several vertices, a fuller treatment of Lorentzian geometry, and possible physical interpretations are reserved for separate notes. General polyform reduction and the spanning-tree operator also belong to a separate continuation. These questions and their dependencies are tracked in the [[Карта библиотеки PMG|library map (in Russian)]].
 
 Sources and the status of results are given in each note. Established constructions are compared with their presentation in PMG after the objects involved have been defined.
+
