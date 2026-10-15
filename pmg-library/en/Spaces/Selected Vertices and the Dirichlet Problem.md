@@ -1,8 +1,8 @@
 ---
 title: Selected Vertices and the Dirichlet Problem
 date: 2026-10-14
-updated: 2026-10-14
-revision: 2
+updated: 2026-10-15
+revision: 3
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -188,7 +188,7 @@ Each column of $\mathbf B$ describes the influence of one selected vertex: presc
 
 ### A geometric calculation on the path
 
-In our example, set $u=x-a$, $v=y-x$, and $w=b-y$. For a tree, the vectors of distinct couplings are orthogonal in the resistance metric, and their squared norms are the reciprocals of the coupling coefficients. Here,
+In our example, set $u=x-a$, $v=y-x$, and $w=b-y$. For a tree, the vectors of distinct couplings are orthogonal in the resistance metric, and their norms are the reciprocals of the coupling coefficients. Here,
 
 $$
 u^2=\frac12,\qquad v^2=1,\qquad w^2=\frac13,\qquad
@@ -405,3 +405,4 @@ For the weighted path, the solution, geometric projections, and potentials were 
 
 1. Doyle, P. G.; Snell, J. L. [Random Walks and Electric Networks](https://math.dartmouth.edu/~doyle/docs/walks/walks.pdf). Version dated 5 July 2006, based on the 1984 monograph. Part 1: the Dirichlet problem, maximum principle, and uniqueness; §1.3, Exercise 1.3.11: the Dirichlet principle.
 2. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011, Lemma 2.1: the accompanying matrix, its nonnegativity, and column sums.
+

@@ -2,7 +2,7 @@
 title: Projections, Bi-coordinates, and Di-coordinates
 date: 2026-10-13
 updated: 2026-10-15
-revision: 3
+revision: 4
 translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -34,7 +34,7 @@ $$
 u^2=v^2=1,\qquad u\cdot v=0,\qquad w^2=2
 $$
 
-For $y\in W$, the notation $y^2=y\cdot y$ denotes a number, the squared norm in the positive definite metric. In the isotropic extension, the same notation denotes the metric square, which can be negative. The formal quadratic form is denoted by $[y]^2$.
+The notation $y^2=y\cdot y$ denotes the norm in the PMG convention. It is nonnegative on $W$ and may have either sign in the isotropic extension. The linear norm $\|y\|=\sqrt{y^2}$ is used when $y^2\ge0$. The formal quadratic form is denoted by $[y]^2$.
 
 Select the vertices $a,c$. They determine the line of points $a+tw$, where $t$ ranges over the real numbers. We seek a point $q$ on this line such that the residual $b-q$ is orthogonal to the direction $w$:
 
@@ -214,7 +214,7 @@ $$
 =\sum_{i<j}\lambda_i\lambda_j\|x_j-x_i\|^2
 $$
 
-The atomic sum gives the second moment about the chosen origin. The difference sum gives the second central moment, or the moment of inertia about the center for unit total mass. The squared norm of the center itself is the difference between these quantities.
+The atomic sum gives the second moment about the chosen origin. The difference sum gives the second central moment, or the moment of inertia about the center for unit total mass. The norm of the center itself is the difference between these quantities.
 
 > [!example] Two points on a line
 > Take points at $0$ and $2$, each with weight $1/2$. Their center is at $1$. The atomic sum is $\frac12\cdot0^2+\frac12\cdot2^2=2$, and the difference sum is $\frac14(2-0)^2=1$. The square of the center's coordinate is $2-1=1$.
@@ -538,7 +538,7 @@ The coefficients $\beta^i$ give the affine coordinates of the center $q$; the li
 > x\cdot p_i=q\cdot p_i-\frac{\delta}{2}
 > $$
 >
-> Thus $q-\delta z/2$ has the same di-coordinates relative to $p_i,z$ as $x$. This element belongs to $S$, since $q$ differs from a normalized linear combination of the $p_i$ only by a multiple of $z$. Uniqueness of orthogonal projection gives $\widehat x=q-\delta z/2$. Comparing the coefficients of $p_i$ gives the first formula in (9), and expanding the square gives the last. $\square$
+> Thus $q-\delta z/2$ has the same di-coordinates relative to $p_i,z$ as $x$. This element belongs to $S$, since $q$ differs from a normalized linear combination of the $p_i$ only by a multiple of $z$. Uniqueness of orthogonal projection gives $\widehat x=q-\delta z/2$. Comparing the coefficients of $p_i$ gives the first formula in (9), and evaluating the norm gives the last. $\square$
 
 The operations $\pi_S$ and $\pi$ differ: the former is linear orthogonal projection onto $S$, while the latter selects the local center by correction along $z$. In particular, $\pi(\widehat x)=q$.
 
@@ -550,7 +550,7 @@ $$
 a=o,\qquad b=o+u_0-\frac12z,\qquad c=o+u_0+v_0-z
 $$
 
-The subscripts distinguish these directions from the vertex differences $u=b-a$, $v=c-b$ in the preceding sections. The linear midpoint $p=(a+c)/2$ has square
+The subscripts distinguish these directions from the vertex differences $u=b-a$, $v=c-b$ in the preceding sections. The linear midpoint $p=(a+c)/2$ has norm
 
 $$
 p^2=\frac12a^2+\frac12c^2-\frac14(c-a)^2=-\frac12
@@ -564,13 +564,13 @@ $$
 
 The equality of the orthogonal projection and the linear midpoint is specific to this example. Coordinates are listed in the order $(z,a,c)$:
 
-| Object | Bi-coordinates in $(z,a,c)$ | Di-coordinates relative to $(z,a,c)$ | Metric square |
+| Object | Bi-coordinates in $(z,a,c)$ | Di-coordinates relative to $(z,a,c)$ | Norm |
 | --- | --- | --- | --- |
 | Local point $b$ | No expansion in this sub-basis | $(1,-1/2,-1/2)$ | $0$ |
 | Orthogonal projection $\widehat b=p$ | $(0,1/2,1/2)$ | $(1,-1/2,-1/2)$ | $-1/2$ |
 | Local center $q=\pi(p)$ | $(1/4,1/2,1/2)$ | $(1,-1/4,-1/4)$ | $0$ |
 
-A **sub-basis** is a selected part of a full basis generating its own subspace. The elements $b$ and $\widehat b$ have the same di-coordinates relative to the sub-basis but different squares. Correction along $z$ returns the local center $q$ and changes the di-coordinates relative to $a,c$.
+A **sub-basis** is a selected part of a full basis generating its own subspace. The elements $b$ and $\widehat b$ have the same di-coordinates relative to the sub-basis but different norms. Correction along $z$ returns the local center $q$ and changes the di-coordinates relative to $a,c$.
 
 ## When the construction needs qualification
 
@@ -594,4 +594,5 @@ The reciprocal basis, projections, and coordinate table were checked using exact
 
 1. Havel, T. F. [Heron’s Formula in Higher Dimensions](https://doi.org/10.1007/s00006-023-01305-8). *Advances in Applied Clifford Algebras*, 34, 9 (2024), §2. Lagrange and Huygens-Leibniz identities for weighted centers.
 2. Casazza, P. G.; Lynch, R. G. [A brief introduction to Hilbert space frame theory and its applications](https://arxiv.org/abs/1509.07347). The use of the term *frame* for a family of vectors in a Hilbert space.
+
 

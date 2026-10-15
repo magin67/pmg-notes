@@ -1,8 +1,8 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-10-14
-revision: 4
+updated: 2026-10-15
+revision: 5
 source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -247,7 +247,7 @@ $$
 u_{M_G}(f)=\tau(M_{n-1-k}f)
 $$
 
-In the project, the normalized potential is also called the PMG norm of the form. For an arbitrary form, this is not a norm in the usual sense: the evaluation is linear and may have either sign. For a quadratic form, it will equal the squared Euclidean norm of its argument.
+In the project, the normalized potential is also called the PMG norm of the form. For an arbitrary form, this is not a norm in the usual sense: the evaluation is linear and may have either sign. For a quadratic form, it will equal the quadratic norm of its argument.
 
 ## A general lemma on the top-grade coefficient
 
@@ -372,3 +372,4 @@ Similarly, lemma (7) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant 
 The forest expansion describes the coefficients of the exponential, while theorem (8) relates extraction of its top-grade coefficient to the induced metric. At grade one, it recovers effective resistances and inner products; at higher grades, it gives mixed Gram determinants and squared volumes.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], source [3] covers the matrix-tree theorem, [5] the matrix determinant lemma, and [7] and [8] exterior algebra and the Cauchy-Binet formula. The metric identity in the adopted algebra of forms is proved by lemma (7) and its application to the reduced Laplacian.
+

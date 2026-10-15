@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-10-15
-revision: 3
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -114,13 +114,14 @@ When representations occur together, the polyform retains an ordinary letter and
 | Gram matrix | Матрица Грама; грамиан | Standard | The matrix of pairwise inner products of selected vectors. Not every Gram matrix is a Green matrix. |
 | Mixed Gram determinant | Смешанный определитель Грама | Standard | The determinant of $(u_r\cdot v_s)$ for two ordered collections of equal size. |
 | Induced inner product | Индуцированное скалярное произведение | Standard | The extension of the metric to $\Lambda^kW$ through mixed Gram determinants and bilinearity. |
-| Squared norm of an exterior element | Квадрат нормы внешнего объекта | Standard | The number $X^2=X\cdot X=\lVert X\rVert^2$. For a decomposable object it is the squared volume of a parallelotope. |
+| Norm of an exterior element; quadratic norm | Норма внешнего объекта; квадратичная норма | PMG | The number $X^2=X\cdot X$. In the resistance metric it is also called the resistance norm. For a decomposable boundary object, it is the squared volume of a parallelotope. |
+| Linear norm | Линейная норма | PMG | The quantity $\|X\|=\sqrt{X^2}$ for $X^2\ge0$. On a positive definite space, it agrees with the usual Euclidean norm. |
 | Metric evaluation of a form | Численная метрическая оценка формы | PMG | The linear evaluation $[X,Y]\mapsto X\cdot Y$ on forms on boundaries of a fixed grade. |
 
 > [!info] Object, form, and number
-> The notations $X$, $[X]^2$, and $X^2$ are distinct: they denote an exterior object, a formal quadratic form, and a numerical squared norm, respectively. The exterior product of an object with itself is written explicitly as $X\wedge X$.
+> The notations $X$, $[X]^2$, and $X^2$ are distinct: they denote an exterior object, a formal quadratic form, and a numerical norm, respectively. The exterior product of an object with itself is written explicitly as $X\wedge X$.
 
-The norm of a simplex boundary corresponds to the volume of a parallelotope. The squared volume of the $k$-dimensional simplex itself is the squared norm of its boundary divided by $(k!)^2$. The metric on boundaries does not automatically define the norm of a formal point or simplex outside $\Lambda^kW$.
+The norm of a simplex boundary is the squared volume of a parallelotope, while its linear norm is the volume itself. The squared volume of the $k$-dimensional simplex is the norm of its boundary divided by $(k!)^2$. The metric on boundaries does not automatically define the norm of a formal point or simplex outside $\Lambda^kW$.
 
 ## Metric polyforms, forests, and the spanning-tree coefficient
 
@@ -161,7 +162,7 @@ The sum of forest weights refers to a specified forest expansion. Because forms 
 
 For a quadratic form $[X]^2$, the normalized potential is $\|X\|^2$, not $\|X\|$. For a mixed form it can be negative even when the metric is positive definite. This does not mean that the exterior object has a negative norm.
 
-In public notation, $\|X\|$ retains its usual Euclidean meaning. Use of the specialized term “form norm” should include its definition through the normalized potential. The numerical evaluation of a product of forms generally differs from the product of their evaluations.
+In PMG, “norm” without the qualifier “linear” means the quadratic norm $X^2=X\cdot X$. The notation $\|X\|$ is reserved for the linear norm. The norm of a form is defined through the normalized potential; the evaluation of a product of forms generally differs from the product of their evaluations.
 
 ## Earlier names and ambiguous usages
 
@@ -177,7 +178,7 @@ The following table also records earlier Russian usage, so that older research n
 | “Матрица резистенсов” | Resistance matrix; «резистивная матрица» | Consistent naming with the introductory series. |
 | “Двухлес” | Spanning 2-forest | The full name specifies that all vertices are included and there are two components. |
 | “Связь-форма” | Specify $[a_{ij}]^2$, $c_{ij}[a_{ij}]^2$, or $e+c_{ij}[a_{ij}]^2$ | A pair form, a Laplacian contribution, and an exponential factor are different objects. |
-| “Norm” without specifying the level | Euclidean norm of an object, squared norm, metric square, or normalized potential of a form | In an indefinite metric, $X\cdot X$ can be negative and is called the metric square. It differs from a norm and from the formal object $[X]^2$. |
+| “Squared norm” for $X\cdot X$ | Norm or quadratic norm; also resistance norm in the resistance metric | In PMG, the norm is $X\cdot X$ itself; its square root for nonnegative norm is the linear norm. The formal form $[X]^2$ differs from its numerical evaluation. |
 | “Potential of an object” | Potential of the form $f$ | The form being evaluated and the metric must be specified. |
 | “Independent components” in a product of boundaries | Product of component boundaries | Separate factors do not by themselves imply metric orthogonality or statistical independence. |
 | “Form commutator” | Skew-symmetric difference $[X,Y]-[Y,X]$ | The historical PMG name differs from the operator commutator $AB-BA$. The core requires no special name for this difference. |
@@ -193,11 +194,12 @@ The following definitions are used in the published series “Spaces and Subspac
 | Di-coordinates | Ди-координаты | Inner products of an object with the elements of the chosen basis. When the metric on its subspace is nondegenerate, these are also the coefficients of the projection in the reciprocal basis. [[Projections, Bi-coordinates, and Di-coordinates#Di-coordinates: inner products]]. |
 | Reciprocal basis | Взаимный базис | A basis of the same subspace whose inner products with the original basis elements are $1$ for matching indices and $0$ otherwise. It exists when the metric on the subspace is nondegenerate. [[Projections, Bi-coordinates, and Di-coordinates#The reciprocal basis]]. |
 | Laplacian of a frame | Лапласиан фрейма | The difference part of the form decomposition for a fixed frame: $L_q=\sum_{i<j}q^iq^j[a_j-a_i]^2$. It may change with the frame and is not determined by the object $q$ alone. [[Projections, Bi-coordinates, and Di-coordinates#The difference part and the Laplacian of a frame]]. |
-| Local point | Локальная точка | A normalized isotropic element $x$ of the extension: $x^2=0$, $x\cdot z=1$. Previously written as an “isotropic representative $X(x)$”; the point is now denoted directly. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
+| Local element; local point | Локальный элемент; локальная точка | An element of unit affine weight and zero norm: $x\cdot z=1$, $x^2=0$. It represents a point in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
 | Nonlocal element of unit weight | Нелокальный элемент единичного веса | An element $p$ with $p\cdot z=1$ and $p^2\ne0$. A PMG term in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector]]. |
 | Local center | Локальный центр | The point $\pi(p)=p-p^2z/2$ for $p\cdot z=1$. Selecting the center is a nonlinear correction along $z$. [[The Null Vector, Isotropic Representation, and the Boundary#Linear combinations and correction along the null vector]]. |
 | Distinguished null vector | Выделенный нуль-вектор | A nonzero element $z$ with $z^2=0$ that specifies the normalization of local points. It is not the zero element of the space. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
-| Metric square | Метрический квадрат | The number $Y^2=Y\cdot Y$. In a positive definite metric it is the squared norm; in an indefinite metric it can be negative. It differs from the form $[Y]^2$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
+| Isotropic element | Изотропный элемент | A nonzero linear element $u$ with zero norm $u\cdot u=0$, regardless of affine weight. Local elements are isotropic; the null vector $z$ is isotropic but not local, since its weight is $0$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
+| Metric square | Метрический квадрат | A previous explanatory name for the norm $Y^2=Y\cdot Y$. The current text uses “norm”. It may be negative in an indefinite metric and differs from the form $[Y]^2$. |
 | Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension]]. |
 | Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#The linear midpoint and its local center]]. |
 | Metric mass | Метрическая масса | The squared circumradius of the basis: $\rho=R_{\mathrm{sph}}^2$. The radius normalization is used, rather than the diameter normalization. [[Vertex Contraction and Graph Gluing#Metric mass is additive]]. |
@@ -220,9 +222,11 @@ Within a derivation, distinguish the graph $G$ from its Green matrix $\mathbf G$
 
 | Revision | Date | Content |
 |---|---|---|
+| 4 | 2026-10-15 | Established the PMG convention for quadratic and linear norms; clarified locality and isotropy. |
 | 3 | 2026-10-15 | Simplified isotropic-model notation: local points, nonlocal elements, and local centers. Updated section links. |
 | 2 | 2026-10-14 | Added terms from the published spaces series and links to their definitions. Clarified resistance terminology, bi-coordinates and di-coordinates, metric square, and norm. This English version follows Russian revision 2. |
 | 1 | 2026-10-09 | First public core glossary, aligned with core specification revision 2 and the introductory series. Clarifies the levels of objects and evaluations, the spanning-tree coefficient, edge factors, and earlier names. This English version follows Russian revision 1. |
 
 Internal glossary version 1.1 of 2026-09-21 was used as source material. Its information about extensions remains relevant to their later preparation, but does not automatically form part of the current core terminology. Earlier revisions are records of changes, not parallel terminology standards.
+
 

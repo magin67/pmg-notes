@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-14
-revision: 3
+updated: 2026-10-15
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -163,7 +163,7 @@ $$
 [X+Y]^2=[X]^2+\{X,Y\}+[Y]^2
 $$
 
-The notation $[X]^2$ denotes neither $X\wedge X$ nor a numerical squared norm. For nonzero $X$, the form $[X]^2$ is nonzero, and $[-X]^2=[X]^2$.
+The notation $[X]^2$ denotes neither $X\wedge X$ nor a numerical norm. For nonzero $X$, the form $[X]^2$ is nonzero, and $[-X]^2=[X]^2$.
 
 ### Polyforms and their product
 
@@ -312,7 +312,7 @@ Let $W$ carry a positive-definite inner product. The graph model uses (3).
 
 **Proposition.** This extension is well-defined and positive definite on each $\Lambda^kW$. This revision does not introduce an inner product between objects of different grades.
 
-For a boundary $X$, the numerical square and Euclidean norm satisfy
+**Norm convention.** In PMG, the norm is the quadratic quantity $X^2=X\cdot X$. In the resistance metric it is the resistance norm. For $X^2\ge0$, its square root is called the **linear norm**, denoted $\|X\|=\sqrt{X^2}$. Thus, for a boundary $X$,
 
 $$
 X^2=X\cdot X=\|X\|^2
@@ -458,7 +458,7 @@ u_M([a_{ij}]^2)=\tau(G)R_{ij},\qquad
 \frac{u_M(\{X,Y\}/2)}{u_M(e)}=X\cdot Y
 $$
 
-**Terminological convention.** In PMG, the normalized potential is also called the norm of a form. For a general form, it is a linear evaluation that can have either sign and is not a norm in the usual sense. For a quadratic form $[X]^2$, it equals the squared Euclidean norm of its argument. In this specification, $\|X\|$ retains its usual Euclidean meaning; the normalized potential is written as the ratio in (7).
+**Terminological convention.** The normalized potential is called the norm of a form. For a quadratic form $[X]^2$, it equals the norm of its argument $X^2=X\cdot X$. For a general form, it is a linear evaluation that may have either sign. The notation $\|X\|$ denotes the linear norm; the normalized potential is written as the ratio in (7).
 
 The potential of a form, $u_M(f)$, differs from the electrical potential $\varphi_i$ at a vertex. The latter depends on applied currents or prescribed conditions, whereas $u_M(f)$ is determined by the fixed $M$ and $f$.
 
@@ -516,7 +516,7 @@ $$
 \tag{11}
 $$
 
-The coefficient of $\prod_{\alpha\in S}t_\alpha$ is the principal minor $\det K_S$. It is the squared norm of the exterior product of the selected vectors. For the empty set, both the product and determinant are $1$.
+The coefficient of $\prod_{\alpha\in S}t_\alpha$ is the principal minor $\det K_S$. It is the norm of the exterior product of the selected vectors. For the empty set, both the product and determinant are $1$.
 
 For vectors of distinct vertex pairs, (10)-(11) describe joint conductance variations. The determinant formula remains meaningful for a disconnected final graph; inverse-update formulas for its Green matrix on the original subspace require connectedness to be preserved.
 
@@ -576,7 +576,7 @@ In this specification, a boundary is an image of $\partial$, equivalently an ele
 | $\{X,Y\}$ | Polar form without a factor of $1/2$ |
 | $1$, $e=[1,1]$ | Identity for exterior objects and the unit form |
 | $X\wedge Y$ | Exterior product of objects |
-| $X\cdot Y$, $X^2=\lVert X\rVert^2$ | Numerical inner product and squared norm |
+| $X\cdot Y$, $X^2=\lVert X\rVert^2$ | Numerical inner product and quadratic norm; $\|X\|$ is the linear norm |
 | $c_{ij}$, $d_i$ | Conductances and weighted vertex degrees |
 | $G$ | Graph |
 | $L$, $\mathbf L$ | Laplacian polyform and Laplacian matrix |
@@ -602,3 +602,4 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 | 1 | 2026-10-09 | First public core specification, aligned with the introductory series. Clarified formal forms, the space of boundaries, the domain of metric evaluation, the spanning-tree coefficient, and conditions for variation formulas. |
 
 Internal specification version 0.2 of 2026-09-21 was used as source material. Its core definitions are superseded by this document; its material on thematic extensions does not automatically become part of the core. Earlier revisions are historical records, not parallel current specifications.
+

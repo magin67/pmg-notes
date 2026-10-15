@@ -1,8 +1,8 @@
 ---
 title: Vertex Contraction and Graph Gluing
 date: 2026-10-14
-updated: 2026-10-14
-revision: 3
+updated: 2026-10-15
+revision: 4
 translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -149,7 +149,7 @@ On the left of (5), the spanning-tree coefficient is extracted on the new vertex
 > =\frac{d^2v^2-(d\cdot v)^2}{d^2}
 > $$
 >
-> The numerator is the Gram determinant of the two vectors. This gives (3). Polarizing the equality of squared norms gives preservation of inner products. Finally, (2) selects the unique representative of each class in $S^\perp$, proving the isometry. $\square$
+> The numerator is the Gram determinant of the two vectors. This gives (3). Polarizing the equality of norms gives preservation of inner products. Finally, (2) selects the unique representative of each class in $S^\perp$, proving the isometry. $\square$
 
 The product $M_G[d]^2$ in (4) and (5) is used to extract potentials in the original space. The metric polyform of the new graph itself is given by substitution (1).
 
@@ -360,3 +360,4 @@ The examples were calculated directly. Formulas (3), (4), (7), and (9)-(11) were
 
 1. Chan, S. H.; Kontorovich, A.; Pak, I. [Effective Resistance in Planar Graphs and Continued Fractions](https://www.math.ucla.edu/~pak/papers/KirchhoffCF10.pdf). Version dated May 15, 2025, formula (1.1): the effective resistance of an edge in a unit graph as the ratio of the spanning-tree count after contraction to the original count. In this note, (4) is derived for an arbitrary pair of vertices in a positively weighted graph.
 2. Devriendt, K. [Effective resistance is more than distance: Laplacians, Simplices and the Schur complement](https://arxiv.org/abs/2010.04521). *Linear Algebra and its Applications*, 639 (2022), 24-49, §2.4: the resistance simplex and the center and radius of its circumsphere. DOI: [10.1016/j.laa.2022.01.002](https://doi.org/10.1016/j.laa.2022.01.002).
+

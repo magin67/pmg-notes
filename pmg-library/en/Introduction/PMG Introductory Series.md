@@ -1,8 +1,8 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-10-14
-revision: 2
+updated: 2026-10-15
+revision: 3
 source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -54,7 +54,7 @@ This group introduces formal objects that can be manipulated before a metric is 
 
 8. **[[Basic Objects and Operations of Polyform Algebra]].** Points, affine vectors, exterior products, simplices, and their boundaries. Forms are defined through bilinearity, and their product through the exterior product of their arguments. The note proves the structural four-point identity, the rules for products of edge vectors, and nilpotence results for forms on boundaries.
 
-9. **[[Metric of Higher-Grade Objects]].** The inner product of affine vectors extends to boundaries at each grade through mixed Gram determinants. The numerical squared norm is distinguished from the quadratic form of an object; simplex areas and volumes are computed from the norms of their boundaries.
+9. **[[Metric of Higher-Grade Objects]].** The inner product of affine vectors extends to boundaries at each grade through mixed Gram determinants. The numerical norm is distinguished from the quadratic form of an object; simplex areas and volumes are computed from the norms of their boundaries.
 
 10. **[[Laplacian Exponential]].** The exponential in the algebra of forms expands over spanning forests, and its top-grade component contains the spanning-tree coefficient. A general determinant lemma proves that normalized extraction of the top-grade coefficient reproduces the metric of the preceding note. Disconnected graphs and the distinction between algebraic variation and edge addition are also discussed.
 
@@ -80,3 +80,4 @@ Full bibliographic details, recommended sections, and access information are col
 ## Next steps
 
 The next stage is developed in [[Spaces and Subspaces in PMG]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].
+

@@ -1,8 +1,8 @@
 ---
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
-updated: 2026-10-14
-revision: 4
+updated: 2026-10-15
+revision: 5
 source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
@@ -219,7 +219,7 @@ $$
 
 For example, $[a]^2$ is a form of a point, $[(ab)]^2$ is a form of an affine vector, and $[(abc)]^2$ is a form of a boundary of grade two. Reversing the orientation of the argument leaves the quadratic form unchanged: $[-X]^2=[X]^2$.
 
-The notation $[X]^2$ denotes a form. It means neither the exterior product $X\wedge X$ nor a numerical squared norm. Numerical metric quantities will be defined separately.
+The notation $[X]^2$ denotes a form. It means neither the exterior product $X\wedge X$ nor a numerical norm. Numerical metric quantities will be defined separately.
 
 ## The four-point identity
 
@@ -429,3 +429,4 @@ graph LR
 The next note, [[Metric of Higher-Grade Objects]], defines inner products of boundaries of the same grade and their numerical norms. After that, [[Laplacian Exponential]] combines the powers of $L$ into a single polyform; the grade bound proved here makes its exponential series finite.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover exterior algebra, bilinearity, and Gram determinants. The definition of the formal symbols $[X,Y]$ and their product (5) specifies the polyform algebra used in this series.
+

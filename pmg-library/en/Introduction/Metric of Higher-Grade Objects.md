@@ -1,14 +1,14 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-10-14
-revision: 3
+updated: 2026-10-15
+revision: 4
 source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric
 lang: en
-description: Extension of the inner product to boundaries at each grade. Mixed Gram determinants, squared norms, areas and volumes, and numerical evaluation of forms.
+description: Extension of the inner product to boundaries at each grade. Mixed Gram determinants, norms, areas and volumes, and numerical evaluation of forms.
 order: "9"
 ---
 
@@ -80,16 +80,16 @@ For $k=1$, this is the original metric on $W$. For $k=0$, the inner product of s
 >
 > Thus (1) agrees with the defined inner product and is independent of the representation of the object. Decomposable objects span $\Lambda^kW$, so the bilinear extension is unique. $\square$
 
-## Squared norm and volume
+## Norm and volume
 
-> [!info] The numerical square of an object
+> [!info] The norm of an object
 > **Definition.** For a boundary $X$, write
 >
 > $$
 > X^2=X\cdot X=\|X\|^2
 > $$
 >
-> This is a number: the squared norm in the induced Euclidean metric. It differs from the exterior product $X\wedge X$ and from the formal quadratic form $[X]^2$. When needed, the product of an object with itself is written explicitly as $X\wedge X$.
+> In PMG, this number is the **norm**, or quadratic norm; in the resistance metric, it is also called the resistance norm. The quantity $\|X\|=\sqrt{X^2}$ is the **linear norm**, which on $\Lambda^kW$ agrees with the usual Euclidean norm. The number $X^2$ differs from the exterior product $X\wedge X$ and from the formal quadratic form $[X]^2$. When needed, the product of an object with itself is written explicitly as $X\wedge X$.
 
 For a decomposable object $X=u_1\wedge\cdots\wedge u_k$, formula (1) gives
 
@@ -146,7 +146,7 @@ For nondegenerate triangles in the same plane, the sign is positive when $c,d$ l
 >
 > Both boundaries are nonzero and orthogonal. The triangles each have area $1/2$.
 
-Reversing the orientation of one boundary changes the sign of the mixed inner product but preserves its squared norm. Reversing both orientations also preserves the mixed inner product.
+Reversing the orientation of one boundary changes the sign of the mixed inner product but preserves its norm. Reversing both orientations also preserves the mixed inner product.
 
 ## Areas and volumes of simplices
 
@@ -156,7 +156,7 @@ $$
 (a_0\ldots a_k)=(a_1-a_0)\wedge\cdots\wedge(a_k-a_0)
 $$
 
-Its squared norm is the squared volume of the corresponding parallelotope. The simplex itself has $1/k!$ times that volume, so
+Its norm is the squared volume of the corresponding parallelotope. The simplex itself has $1/k!$ times that volume, so
 
 $$
 V_{a_0\ldots a_k}^2=\frac{(a_0\ldots a_k)^2}{(k!)^2}
@@ -222,3 +222,4 @@ The evaluation of the right-hand side is $(abc)^2$, determined by (2), rather th
 The next note, [[Laplacian Exponential]], collects products of coupling forms by grade into a single polyform. It will prove that evaluating a form using the induced metric agrees with normalized extraction of the highest-grade coefficient from its product with the Laplacian exponential.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover exterior powers, bilinear forms, and Gram determinants; the geometry of the resistance simplex is discussed in [4].
+

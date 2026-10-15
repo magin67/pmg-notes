@@ -1,8 +1,8 @@
 ---
 title: Spaces, Subspaces, and the Choice of a Basis
 date: 2026-10-12
-updated: 2026-10-14
-revision: 2
+updated: 2026-10-15
+revision: 3
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -270,7 +270,7 @@ These objects are related but distinct:
 | $U$ | A linear subspace of vectors |
 | $\Omega=u_1\wedge\cdots\wedge u_k$ | The exterior element of the chosen basis |
 | $[\Omega]^2$ | The formal quadratic form on this element |
-| $\Omega^2=\Omega\cdot\Omega$ | Its numerical squared norm in the given metric |
+| $\Omega^2=\Omega\cdot\Omega$ | Its numerical norm in the given metric |
 
 Bilinearity of forms and of the inner product gives
 
@@ -368,7 +368,7 @@ Linear spans, affine weight, exterior elements, and forms are defined without a 
 
 A simple example of dependent generators is the pair $w,2w$: these vectors specify one direction, not a two-dimensional subspace. Their exterior product is zero. Distinct selected basis vertices in the formal space $V$ are independent, but this cannot be assumed for arbitrary points formed from them. For example, $a,(a+c)/2,c$ are affinely dependent.
 
-Throughout this note, points belong to $\mathcal A$, while the metric is applied to their differences and to exterior elements constructed from $W$. Thus $\mathcal A$ is a flat Euclidean affine space. No condition that a point itself have zero squared norm has been introduced here.
+Throughout this note, points belong to $\mathcal A$, while the metric is applied to their differences and to exterior elements constructed from $W$. Thus $\mathcal A$ is a flat Euclidean affine space. No condition that a point itself have zero norm has been introduced here.
 
 [[The Null Vector, Isotropic Representation, and the Boundary]] introduces the isotropic representation and the distinguished null vector. It distinguishes an affine point from its representative in an extended space. The forms on $W$ and their metric evaluations obtained here retain their meaning.
 
@@ -382,3 +382,4 @@ For a review of the underlying constructions:
 - [[Effective Resistance and Graph Geometry]]: the resistance representation of vertices.
 - [[Metric of Higher-Grade Objects]]: metric evaluation of exterior elements.
 - [[Laplacian Exponential]]: the metric polyform, potential, and spanning-tree coefficient.
+

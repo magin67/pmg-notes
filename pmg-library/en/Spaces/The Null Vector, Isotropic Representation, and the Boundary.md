@@ -2,7 +2,7 @@
 title: The Null Vector, Isotropic Representation, and the Boundary
 date: 2026-10-12
 updated: 2026-10-15
-revision: 3
+revision: 4
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -28,26 +28,28 @@ o\cdot w=z\cdot w=0\quad(w\in W_0)
 \tag{1}
 $$
 
-Here $U^2=U\cdot U$ is a numerical metric evaluation. For arbitrary elements,
+Here $U^2=U\cdot U$ is the **norm** in the PMG convention. It is a quadratic quantity that may have either sign in the extension. For $U^2\ge0$, the quantity $\|U\|=\sqrt{U^2}$ is the **linear norm**. For arbitrary elements,
 
 $$
 (\alpha o+w+\beta z)\cdot(\alpha' o+w'+\beta' z)
 =w\cdot w'+\alpha\beta'+\beta\alpha'
 $$
 
-The elements $(o+z)/\sqrt2$ and $(o-z)/\sqrt2$ are orthogonal and have squares $1$ and $-1$. Hence $\widetilde V$ has signature $(d+1,1)$ and dimension $d+2$. All subsequent elements belong to this space; $W_0$ is used for their coordinate expressions.
+The elements $(o+z)/\sqrt2$ and $(o-z)/\sqrt2$ are orthogonal and have norms $1$ and $-1$. Hence $\widetilde V$ has signature $(d+1,1)$ and dimension $d+2$. All subsequent elements belong to this space; $W_0$ is used for their coordinate expressions.
 
 > [!info] The null vector and the zero element
-> A nonzero element with zero square is **isotropic**. The distinguished element $z\ne0$, with $z^2=0$, is called the null vector. It is not the zero element: $z\cdot o=1$.
+> A nonzero linear element with zero norm $U\cdot U=0$ is **isotropic**. The distinguished element $z\ne0$, with $z^2=0$, is called the null vector. It is not the zero element: $z\cdot o=1$.
 
 ## Local points
 
 > [!info] A local point
-> **Definition.** A local point is an element $x\in\widetilde V$ satisfying
+> **Definition.** A local element has unit affine weight and zero norm. Geometrically, it is a local point $x\in\widetilde V$:
 >
 > $$
 > x^2=0,\qquad x\cdot z=1
 > $$
+
+Locality includes the weight condition; isotropy only means that a nonzero linear element has zero norm. Thus local elements are isotropic, but the null vector $z$ is not local: its affine weight $z\cdot z$ is $0$. For points, we use “local” below.
 
 Every local point has the unique expression
 
@@ -65,9 +67,9 @@ x\cdot y=-\frac{(w-v)^2}{2},\qquad
 (y-x)^2=-2x\cdot y=(v-w)^2
 $$
 
-Thus the square of a difference of local points equals their squared Euclidean distance. In the resistance realization, $(a_j-a_i)^2=R_{ij}$.
+Thus the norm of a difference of local points equals their squared Euclidean distance. In the resistance realization, $(a_j-a_i)^2=R_{ij}$.
 
-Choose local vertices $a_1,\ldots,a_n$ whose coordinates in $W_0$ are affinely independent. Then $a_1,\ldots,a_n,z$ are linearly independent. The span $V=\operatorname{span}(a_1,\ldots,a_n)$ retains the algebraic structure of the vertex space in the [[Core specification|PMG core]]. Its elements of unit affine weight can have nonzero square. Locality is an additional condition in this metric model.
+Choose local vertices $a_1,\ldots,a_n$ whose coordinates in $W_0$ are affinely independent. Then $a_1,\ldots,a_n,z$ are linearly independent. The span $V=\operatorname{span}(a_1,\ldots,a_n)$ retains the algebraic structure of the vertex space in the [[Core specification|PMG core]]. Its elements of unit affine weight can have nonzero norm. Locality is an additional condition in this metric model.
 
 ### Example: the same three-vertex path
 
@@ -81,7 +83,7 @@ Thus $a\cdot b=b\cdot c=-1/2$ and $a\cdot c=-1$, giving $R_{ab}=R_{bc}=1$ and $R
 
 ## Linear combinations and correction along the null vector
 
-A linear combination $p=\sum_i p_i a_i$ with $\sum_i p_i=1$ has affine weight $1$, but need not have zero square. If $p^2\ne0$, we call it a **nonlocal element** of unit weight.
+A linear combination $p=\sum_i p_i a_i$ with $\sum_i p_i=1$ has affine weight $1$, but need not have zero norm. If $p^2\ne0$, we call it a **nonlocal element** of unit weight.
 
 > [!info] Isotropic correction
 > **Lemma.** For $p\cdot z=1$, the unique local point on the line $p+\mathbb Rz$ is
@@ -92,7 +94,7 @@ A linear combination $p=\sum_i p_i a_i$ with $\sum_i p_i=1$ has affine weight $1
 > $$
 
 > [!proof]- Proof
-> We have $(p+\lambda z)^2=p^2+2\lambda$ and $(p+\lambda z)\cdot z=1$. The square therefore vanishes exactly when $\lambda=-p^2/2$. $\square$
+> We have $(p+\lambda z)^2=p^2+2\lambda$ and $(p+\lambda z)\cdot z=1$. The norm therefore vanishes exactly when $\lambda=-p^2/2$. $\square$
 
 The point $\pi(p)$ is called the **local center** of $p$. The operation preserves the coordinate $w$ in $p=o+w+\beta z$. It fixes local points, satisfies $\pi(\pi(p))=\pi(p)$, and is constant along $p+\mathbb Rz$. It is a nonlinear projection along $z$ onto the set of local points, not an orthogonal projection onto a linear subspace.
 
@@ -154,7 +156,7 @@ $$
 (U+\alpha z)\cdot(V+\beta z)=U\cdot V
 $$
 
-In particular, correction (3) preserves squares of differences of normalized elements:
+In particular, correction (3) preserves norms of differences of normalized elements:
 
 $$
 (\pi(p)-\pi(q))^2=(p-q)^2
@@ -279,7 +281,7 @@ For example, $\partial(z\wedge a)=-z$, while $\partial(z\wedge a\wedge c)=-z\wed
 
 The inner product extends to exterior elements of the larger space just as in [[Metric of Higher-Grade Objects]]: the inner product of two decomposable elements of the same grade is the determinant of the matrix of pairwise inner products of their factors. The rule extends to sums by bilinearity.
 
-In particular, the square of a decomposable element is the determinant of its Gram matrix, the matrix of inner products of its factors with one another. This numerical evaluation may be negative; the notation $S^2=S\cdot S$ here does not denote the square of a positive norm.
+In particular, the norm of a decomposable element is the determinant of its Gram matrix, the matrix of inner products of its factors with one another. This numerical evaluation may be negative; the notation $S^2=S\cdot S$ denotes the quadratic norm in PMG.
 
 For example,
 
@@ -336,7 +338,7 @@ $$
 =-\bigl((b-a)\wedge(c-a)\bigr)^2=-1
 $$
 
-Here $b-a=u-z/2$ and $c-a=u+v-z$. Their squares are $1,2$, and their inner product is $1$. The square of the boundary is therefore $1\cdot2-1^2=1$. This is the squared area of the parallelogram; the triangle itself has area $1/2$.
+Here $b-a=u-z/2$ and $c-a=u+v-z$. Their norms are $1,2$, and their inner product is $1$. The norm of the boundary is therefore $1\cdot2-1^2=1$. This is the squared area of the parallelogram; the triangle itself has area $1/2$.
 
 ### Passing to PMG forms
 
@@ -405,3 +407,4 @@ The previous revision included exact rational checks in the four-dimensional mod
 The internal Russian notes “Isotropic Representation of Points and the Null Vector”, “Sphere Normals and Lorentzian Geometry”, and “The Null Vector: Exterior Products and the Boundary” were checked during preparation. Local points are now denoted directly; their linear combinations and local centers are explicitly distinguished. “Local point” and “nonlocal element” are used here in the stated PMG sense.
 
 The isotropic model of Euclidean points and the exterior description of lines are known constructions in conformal geometric algebra. The correspondence was checked against [H. Li, D. Hestenes, A. Rockwood, *Generalized Homogeneous Coordinates for Computational Geometry*](https://davidhestenes.net/geocalc/pdf/CompGeom-ch2.pdf), §2.3, equations (2.25), (2.26), and (2.32)–(2.34). That source uses $x\cdot e=-1$; our notation corresponds to $z=-e$ and $o=e_0$. The geometric product of Clifford algebra is not identified with the PMG product of forms.
+

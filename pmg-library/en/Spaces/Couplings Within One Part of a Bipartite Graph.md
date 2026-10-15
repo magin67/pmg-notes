@@ -1,8 +1,8 @@
 ---
 title: Couplings Within One Part of a Bipartite Graph
 date: 2026-10-14
-updated: 2026-10-14
-revision: 2
+updated: 2026-10-15
+revision: 3
 translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -418,7 +418,7 @@ Here $\rho_P+\rho_X=1/2<29/48=\rho(G)$, whereas in the example of Figure 2 the s
 > \end{aligned}
 > $$
 >
-> By the [[Projections, Bi-coordinates, and Di-coordinates#Decomposing a form using frame elements and their differences|frame form decomposition]], the vector $v-h$ has squared norm
+> By the [[Projections, Bi-coordinates, and Di-coordinates#Decomposing a form using frame elements and their differences|frame form decomposition]], the vector $v-h$ has norm
 >
 > $$
 > \|v-h\|^2=t_v-\frac12\sum_w h^w t_w
@@ -568,3 +568,4 @@ The numerical examples were checked using exact rational arithmetic. Effective r
 
 1. Malyugin, D. V. [How to Connect the Unconnected](https://habr.com/ru/articles/533544/) (in Russian). Habr, 24 December 2020. The application, the transformation of a coupling table, and the example with three objects and four intermediaries.
 2. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011. Formula (3.4): single-vertex elimination; Theorem 3.9: preservation of effective resistances. The general vertex-elimination result is applied here to a part with no internal couplings.
+

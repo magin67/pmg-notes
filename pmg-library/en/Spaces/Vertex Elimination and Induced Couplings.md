@@ -1,8 +1,8 @@
 ---
 title: Vertex Elimination and Induced Couplings
 date: 2026-10-14
-updated: 2026-10-14
-revision: 2
+updated: 2026-10-15
+revision: 3
 translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -328,7 +328,7 @@ $$
 
 In the new graph, $M_P=e+(6/11)[(ab)]^2$, so $u_{M_P}([(ab)]^2)=1$. In the original graph, $u_M([(ab)]^2)=11$. After normalization, both give $11/6$.
 
-For the star, $\tau_G=1$, $\det\mathbf A=3$, $\tau_P=1/3$: the triangle has three spanning trees, each of weight $1/9$. We can also check the second grade. In the original metric, the vectors $b-a$, $c-a$ have squared norms $2$ and inner product $1$, so $(abc)^2=2\cdot2-1^2=3$. In the triangle, the normalized potential of the top-grade form gives the same result: $1/\tau_P=3$. The squared geometric area is $3/4$.
+For the star, $\tau_G=1$, $\det\mathbf A=3$, $\tau_P=1/3$: the triangle has three spanning trees, each of weight $1/9$. We can also check the second grade. In the original metric, the vectors $b-a$, $c-a$ have norms $2$ and inner product $1$, so $(abc)^2=2\cdot2-1^2=3$. In the triangle, the normalized potential of the top-grade form gives the same result: $1/\tau_P=3$. The squared geometric area is $3/4$.
 
 ## Mass and projection of the circumcenter
 
@@ -388,3 +388,4 @@ The text uses the current definitions in the [[Core specification|core specifica
 The path and star calculations are given in the text. In addition, eight settings were checked using exact rational arithmetic, including cases with one selected vertex and with all vertices selected. Projections computed from the original Gram matrix were compared with induced couplings and the response matrix. Direct exterior multiplication verified the factorization of the exponential and normalized potentials on bases of every exterior grade of the retained subspace. Elimination order and disconnected cases were checked separately. These checks verify formulas and examples; the general statements rest on the proofs given above. The note contains no hypotheses.
 
 1. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011. Formula (3.4): single-vertex elimination; Lemma 3.3: sequential elimination; Theorem 3.9: preservation of effective resistances.
+

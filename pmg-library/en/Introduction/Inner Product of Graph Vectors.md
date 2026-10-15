@@ -1,8 +1,8 @@
 ---
 title: Inner Product of Graph Vectors
 date: 2026-10-03
-updated: 2026-10-14
-revision: 3
+updated: 2026-10-15
+revision: 4
 source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
@@ -81,7 +81,7 @@ $$
 > \tag{2}
 > $$
 
-This is the standard polarization identity for squared Euclidean distances. In an arbitrary coordinate system, the diagonal terms are the squared norms of the position vectors. Each appears with opposite signs and cancels. The result is therefore independent of the choice of origin, although the norms of the position vectors themselves change under translation.
+This is the standard polarization identity for squared Euclidean distances. In an arbitrary coordinate system, the diagonal terms are the norms of the position vectors. Each appears with opposite signs and cancels. The result is therefore independent of the choice of origin, although the norms of the position vectors themselves change under translation.
 
 For general affine vectors whose coefficient sums are zero, the same formula for $R_{ij}$ gives
 
@@ -194,7 +194,7 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 > a_{12}\cdot a_{23}=\frac12(R_{13}+R_{22}-R_{12}-R_{23})=-\frac13
 > $$
 >
-> The squared norms of all three vectors are $2/3$. The resistance simplex is an equilateral triangle. The angle between $a_{12}$ and $a_{13}$ is $60^\circ$, while the angle between $a_{12}$ and $a_{23}$ is $120^\circ$.
+> The norms of all three vectors are $2/3$. The resistance simplex is an equilateral triangle. The angle between $a_{12}$ and $a_{13}$ is $60^\circ$, while the angle between $a_{12}$ and $a_{23}$ is $120^\circ$.
 
 > [!example] Independent calculation of potentials
 > For this graph,
@@ -234,3 +234,4 @@ A positive inner product means $0\le\theta<90^\circ$, a zero inner product means
 The next note, [[Laplacian, Green Matrix, and Effective Resistance Matrix]], collects the forward and inverse transformations between $L$, $G$, and $R$. In [[From Lengths to Areas and Volumes]], inner products are used to compute Gram determinants, which express squared areas and volumes.
 
 Sources on resistance geometry and electrical networks are listed in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].
+

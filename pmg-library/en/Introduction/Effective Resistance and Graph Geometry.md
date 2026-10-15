@@ -1,8 +1,8 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-10-14
-revision: 3
+updated: 2026-10-15
+revision: 4
 source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
@@ -15,6 +15,8 @@ order: "2"
 Effective resistance, introduced in [[Laplacian - graph, electrical network and quadratic form|Laplacian: graph, electrical network and quadratic form]], admits a Euclidean representation. Graph vertices can be represented by points whose squared pairwise distances equal the effective resistances. This representation is constructed from the Green matrix of the Laplacian.
 
 We consider a finite connected undirected graph without loops on $n\ge2$ vertices. Existing edges have positive conductances; for absent edges, $c_{ij}=0$. The Laplacian matrix is denoted by $L$.
+
+In PMG, the norm of a vector is $u\cdot u$, its squared Euclidean length; the square root is called its linear norm. In the resistance metric, the norm of a vertex-pair vector equals effective resistance.
 
 ## The Green matrix
 
@@ -105,7 +107,7 @@ Consequently, $\sum_i x_i=0$. The points $a_i$ with position vectors $x_i$ have 
 >
 > is the affine vector from $a_i$ to $a_j$. More generally, an affine vector has the form $u=\sum_i u_i a_i$, where $\sum_i u_i=0$; in the chosen realization, it is represented by $\sum_i u_i x_i$.
 
-The column $\mathbf e_{ij}$ is the coordinate representative of $a_{ij}$ with respect to the vertices. It records the coefficients of the difference, while $x_j-x_i$ expresses that difference in the chosen Euclidean coordinates. In particular, the ordinary coordinate squared norm $\mathbf e_{ij}^{\mathsf T}\mathbf e_{ij}=2$ for $i\ne j$ does not express resistance: resistance is computed using $G$.
+The column $\mathbf e_{ij}$ is the coordinate representative of $a_{ij}$ with respect to the vertices. It records the coefficients of the difference, while $x_j-x_i$ expresses that difference in the chosen Euclidean coordinates. In particular, the coordinate quadratic norm $\mathbf e_{ij}^{\mathsf T}\mathbf e_{ij}=2$ for $i\ne j$ does not express resistance: resistance is computed using $G$.
 
 By (1) and (2),
 
@@ -266,6 +268,7 @@ By (3), pairwise distances in the resistance simplex also cannot increase. Some 
 
 ## Further reading
 
-In [[Inner Product of Graph Vectors]], we pass from squared norms of $a_{ij}$ to inner products of two affine vectors. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
+In [[Inner Product of Graph Vectors]], we pass from norms of $a_{ij}$ to inner products of two affine vectors. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
 
 Sources on electrical networks and resistance geometry are collected in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].
+
