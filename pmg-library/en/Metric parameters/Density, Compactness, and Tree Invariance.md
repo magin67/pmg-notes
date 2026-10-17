@@ -2,8 +2,8 @@
 title: Density, Compactness, and Tree Invariance
 date: 2026-10-17
 updated: 2026-10-17
-revision: 1
-translated_revision: 1
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -115,7 +115,20 @@ In the table below, $E$ is computed only for graphs with unit conductances. In a
 
 ### Arboricity as a separate density measure
 
-The arboricity $a(G)$ is the minimum number of forests into which the edge set can be partitioned. By the Nash-Williams theorem [6],
+The arboricity $a(G)$ is the minimum number of forests into which the edge set can be partitioned.
+
+> [!example]- What does partitioning the edges into forests mean?
+> A forest is a graph without cycles, possibly disconnected. In the partition, every edge of the original graph belongs to exactly one forest. All forests can be considered on the same vertex set, retaining isolated vertices; they may share vertices but not edges.
+>
+> Equivalently, color the edges using as few colors as possible so that the edges of each individual color contain no cycle.
+>
+> - **A tree with at least one edge:** one color suffices, so $a(G)=1$.
+> - **A cycle:** one color is impossible. Color one edge blue and the remaining edges red; this gives a single edge and a path. Thus $a(G)=2$.
+> - **The complete graph $K_4$:** its six edges split into two paths with vertex sequences $1,2,3,4$ and $3,1,4,2$. Both paths are acyclic, together contain all the edges, and share no edges. A single forest is impossible because $K_4$ contains cycles; hence $a(K_4)=2$.
+>
+> Arboricity measures how many acyclic layers are needed to accommodate all the edges. It equals $1$ for every nontrivial tree, so it does not distinguish branching patterns.
+
+By the Nash-Williams theorem [6],
 
 $$
 a(G)=\left\lceil\max_{\substack{S\subseteq V\\|S|\ge2}}\frac{|E(S)|}{|S|-1}\right\rceil
