@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 4
-translated_revision: 3
-updated: 2026-10-14
+revision: 5
+translated_revision: 4
+updated: 2026-10-18
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -25,9 +25,15 @@ Ten notes introduce the Laplacian, resistance geometry, coupling variations, and
 
 ## Spaces and subspaces
 
-Seven notes on choosing a subspace, the null vector, coordinates, and graph operations. The series connects the geometric description with the Dirichlet problem and the construction of couplings within one part of a bipartite graph.
+Eight notes on choosing a subspace, the null vector, coordinates, and graph operations. The series connects the geometric description with the Dirichlet problem and the construction of couplings within one part of a bipartite graph.
 
 - [[Spaces and Subspaces in PMG|Notes, prerequisites, and reading routes]].
+
+## Metric parameters of graphs
+
+Five notes on resistance radius and diameter, vertex centralities, dimensionless graph characteristics, and two types of vertex removal. The radius, volumes, and spanning-tree characteristics are expressed through polyforms.
+
+- [[Metric Parameters of Graphs|Notes, reading routes, and a guide to results]].
 
 ## PMG Foundations
 
@@ -73,4 +79,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **14 October 2026**
+- Library last updated: **18 October 2026**
