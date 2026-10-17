@@ -1,9 +1,9 @@
 ---
 title: "Centroid, Spanning-Tree, and Eigenvector Centralities"
 date: 2026-10-16
-updated: 2026-10-17
-revision: 3
-translated_revision: 4
+updated: 2026-10-18
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -211,6 +211,8 @@ C_i^{\mathrm{tree}}=\frac{\delta_i}{2(n-1)}
 $$
 
 It has a direct probabilistic interpretation: select a random spanning tree, then uniformly select one of its $2(n-1)$ edge ends. The probability of obtaining vertex $i$ is $C_i^{\mathrm{tree}}$.
+
+**Comparison with the earlier definition.** In [6], spanning-tree centrality was defined as $\delta_i-1$. For $n>2$, normalizing it to unit sum gives $(\delta_i-1)/(n-2)$, since $\sum_i(\delta_i-1)=n-2$. It gives the same vertex ranking as the present definition, but different values: leaves receive zero. This series normalizes $\delta_i$ itself, giving strictly positive weights and the probabilistic interpretation above. For $n=2$, the earlier normalization is undefined, whereas the present one assigns $1/2$ to each vertex.
 
 Expected spanning-tree degree must be distinguished from expected degree over arbitrary forests. For forests, one must additionally specify the number of components, or a distribution over that number, and the weights. Such averages are not used here.
 
@@ -643,15 +645,16 @@ Formula (6) also explains why spanning-tree centrality and influence on the radi
 
 The minimizing property of the centroid (1), identities (2)-(3), the relation between spanning-tree degrees and center coordinates (4)-(5), the bound in terms of component count, and the geometric removal formula (6) have been proved under explicit assumptions. The polyform expressions follow from the metric identity; the spanning 2-forest formulas for vector norms, the Green diagonal, and the Kirchhoff index are derived through the coefficient of the spanning-tree form. The resistance-geometry identities and the spanning-tree distribution used here agree with the published literature. The centralities and their common normalization are definitions; no ranking is claimed to be universally superior.
 
-Numerical values were checked for $K_5$, $P_5$, $K_{1,4}$, the Krackhardt kite graph, and two triangles sharing one vertex, all with unit conductances. An additional check used a triangle with conductances $2,3,4$: its spanning-tree coefficient is $26$, and degrees were averaged using tree weights rather than equal probabilities.
+> [!example]- Independent computational checks
+> Numerical values were checked for $K_5$, $P_5$, $K_{1,4}$, the Krackhardt kite graph, and two triangles sharing one vertex, all with unit conductances. An additional check used a triangle with conductances $2,3,4$: its spanning-tree coefficient is $26$, and degrees were averaged using tree weights rather than equal probabilities.
+>
+> Resistances were computed in exact rational arithmetic from the inverse of a reduced Laplacian. Radii and center coordinates were independently obtained by solving $\mathbf R\boldsymbol\alpha=2\rho\mathbf1$. Formulas (2)-(6) were checked against these data, including every single-vertex removal. Spanning-tree degrees were additionally obtained by direct tree enumeration; explicit Euclidean realizations were used for the path and the star. Eigenvector scores were computed numerically, with checks of the eigenvector equation and normalization.
+>
+> The polyform expressions for the Green matrix, resistances to the centroid, spanning-tree degrees, and radius were additionally checked by directly extracting top-grade coefficients from forest products on graphs with up to five vertices, including the weighted triangle. The spanning 2-forest sums independently reproduced the Green diagonal and Kirchhoff index; all 8846 spanning 2-forests of the Krackhardt kite graph were enumerated.
+>
+> The decomposition of the centroid form through the star and complete graph was additionally checked by comparing coefficient matrices for $2\le n\le8$. Its metric evaluation was compared with independently computed Green diagonals on $P_3$, $K_{1,4}$, and the triangle with conductances $2,3,4$, using exact rational arithmetic.
 
-Resistances were computed in exact rational arithmetic from the inverse of a reduced Laplacian. Radii and center coordinates were independently obtained by solving $\mathbf R\boldsymbol\alpha=2\rho\mathbf1$. Formulas (2)-(6) were checked against these data, including every single-vertex removal. Spanning-tree degrees were additionally obtained by direct tree enumeration; explicit Euclidean realizations were used for the path and the star. Eigenvector scores were computed numerically, with checks of the eigenvector equation and normalization.
-
-The polyform expressions for the Green matrix, resistances to the centroid, spanning-tree degrees, and radius were additionally checked by directly extracting top-grade coefficients from forest products on graphs with up to five vertices, including the weighted triangle. The spanning 2-forest sums independently reproduced the Green diagonal and Kirchhoff index; all 8846 spanning 2-forests of the Krackhardt kite graph were enumerated.
-
-The decomposition of the centroid form through the star and complete graph was additionally checked by comparing coefficient matrices for $2\le n\le8$. Its metric evaluation was compared with independently computed Green diagonals on $P_3$, $K_{1,4}$, and the triangle with conductances $2,3,4$, using exact rational arithmetic.
-
-The effect of deleting a vertex together with its edges remains a separate research question. It requires a new Laplacian, a new metric, and a separate decision on how to compare the result when several components appear. None of the three centralities considered here is assumed in advance to measure such damage. Dimensionless characteristics of the whole graph and a comparison of their interpretations are discussed in [[Density, Compactness, and Tree Invariance]].
+The two types of vertex removal, the ratios of spanning-tree coefficients and radii, and the case of disconnection are discussed in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]]. None of the three centralities considered here is assumed in advance to measure such damage. A compact expression for the radius after deleting a vertex together with its edges, in terms of a small number of vertex characteristics in the original graph, remains an open question. Dimensionless characteristics of the whole graph and a comparison of their interpretations are discussed in [[Density, Compactness, and Tree Invariance]].
 
 ## Sources
 
@@ -660,3 +663,4 @@ The effect of deleting a vertex together with its edges remains a separate resea
 3. K. Devriendt, R. Lambiotte. *Discrete curvature on graphs from the effective resistance*. Journal of Physics: Complexity, 3, 025008, 2022. [Open version](https://arxiv.org/abs/2201.06385). Vertex resistance curvature $1-\delta_i/2$; its geometric interpretation through the circumcenter is given in Appendix B.3.
 4. NetworkX. [Eigenvector centrality](https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.centrality.eigenvector_centrality.html). The adjacency-matrix definition and conditions for a positive eigenvector. This note normalizes by the sum, not the Euclidean length of the vector.
 5. NetworkX. [Krackhardt kite graph](https://networkx.org/documentation/stable/reference/generated/networkx.generators.small.krackhardt_kite_graph.html), [edge list in the source code](https://networkx.org/documentation/stable/_modules/networkx/generators/small.html#krackhardt_kite_graph). Source of the graph topology and numbering; the figure and the three centrality calculations were prepared for this note.
+6. D. Malyugin. [Express Analysis of Metric Parameters of Graphs](https://habr.com/ru/articles/534182/), 2020 (in Russian), section “Spanning-tree degree and centrality”. The earlier definition uses $\delta_i-1$; this note explicitly distinguishes the chosen normalization.

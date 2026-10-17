@@ -1,9 +1,9 @@
 ---
 title: "Resistance Radius of a Set: Gram Matrix and Volume"
 date: 2026-10-16
-updated: 2026-10-17
-revision: 2
-translated_revision: 4
+updated: 2026-10-18
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -197,7 +197,7 @@ $$
 
 For unit conductances, $\tau(G)$ is the number of spanning trees; for arbitrary conductances, it is a weighted sum and need not be an integer.
 
-Formula (2) is geometric and applies to any set satisfying the stated assumptions. Formula (3) uses the full resistance simplex of a particular graph. For a proper subset, one cannot substitute the spanning-tree coefficient of the original graph or of the graph obtained by deleting the remaining vertices. If a graph interpretation is needed, the subset's metric is realized by [[Vertex Elimination and Induced Couplings|eliminating the remaining vertices through a Schur complement]]; the spanning-tree coefficient of the resulting induced graph is then used.
+Formula (2) is geometric and applies to any set satisfying the stated assumptions. Formula (3) uses the full resistance simplex of a particular graph. For a proper subset, one cannot substitute the spanning-tree coefficient of the original graph or of the graph obtained by deleting the remaining vertices. If a graph interpretation is needed, the subset's metric is realized by [[Vertex Elimination and Induced Couplings|eliminating the remaining vertices through a Schur complement]]; the spanning-tree coefficient of the resulting Kron-reduced graph is then used.
 
 ## Subset volume through grade components of the exponential
 
@@ -431,10 +431,11 @@ An arbitrary Gram matrix, without assumptions on weight, locality, and positivit
 
 The radius and coordinate formulas (1), the determinant identity (2), and subset monotonicity (4) are proved for nondegenerate Euclidean simplices in the local isotropic representation. The graph formula (3) uses the identity $\det\mathbf G_u=1/\tau(G)$; both matrix and polyform derivations are given here. For a subset, its volume is expressed through the normalized potential of its boundary form, with the complementary grade of the exponential specified.
 
-For a segment, a triangle, a regular tetrahedron, and the star's tetrahedron, direct determinant calculations and geometric checks of the radius and volume are given. They check the determinant sign, the factors $4$ and $(l!)^2$, and the power of the radius, but do not replace the general proofs.
+> [!example]- Independent computational checks
+> For a segment, a triangle, a regular tetrahedron, and the star's tetrahedron, direct determinant calculations and geometric checks of the radius and volume are given. They check the determinant sign, the factors $4$ and $(l!)^2$, and the power of the radius, but do not replace the general proofs.
+>
+> The formulas have also been checked using exact rational arithmetic: resistances were recovered from the inverse reduced Laplacian for a single edge and for $P_3$, $K_3$, $K_4$, and $K_{1,3}$ with unit conductances. The checks covered the radii, center coordinates, and equality $g_A=\rho_A/\tau(G)$ for the full sets, as well as identity (2) and nonincrease of the radius for all their subsets containing at least two vertices.
+>
+> The polyform volume formula was checked for every subset containing at least two vertices of a weighted edge; $P_3,P_5,K_3,K_4,K_5,K_{1,3},K_{1,4}$ with unit conductances; and a triangle with conductances $2,3,4$. Potentials were obtained by directly expanding the forest terms of the required grade: the top-grade coefficient of each product was computed as the squared determinant of its exterior factors. These values agreed with independently computed determinants of Gram matrices of differences and satisfied (2).
 
-The formulas have also been checked using exact rational arithmetic: resistances were recovered from the inverse reduced Laplacian for a single edge and for $P_3$, $K_3$, $K_4$, and $K_{1,3}$ with unit conductances. The checks covered the radii, center coordinates, and equality $g_A=\rho_A/\tau(G)$ for the full sets, as well as identity (2) and nonincrease of the radius for all their subsets containing at least two vertices.
-
-The polyform volume formula was checked for every subset containing at least two vertices of a weighted edge; $P_3,P_5,K_3,K_4,K_5,K_{1,3},K_{1,4}$ with unit conductances; and a triangle with conductances $2,3,4$. Potentials were obtained by directly expanding the forest terms of the required grade: the top-grade coefficient of each product was computed as the squared determinant of its exterior factors. These values agreed with independently computed determinants of Gram matrices of differences and satisfied (2).
-
-In [[Centroid, Spanning-Tree, and Eigenvector Centralities]], the next-to-top-grade component is applied to vertex parameters, and an exact formula is derived for the effect of geometrically removing one vertex on the radius. Deleting a vertex together with its couplings remains a separate research question. The next task of this series concerns dimensionless parameters and checks of their interpretations.
+In [[Centroid, Spanning-Tree, and Eigenvector Centralities]], the next-to-top-grade component is applied to vertex parameters, and an exact formula is derived for the effect of geometrically removing one vertex on the radius. Dimensionless parameters and their interpretations are discussed in [[Density, Compactness, and Tree Invariance]]. Deleting a vertex together with its couplings, spanning-tree ratios, and limits of interpreting damage are studied in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]].

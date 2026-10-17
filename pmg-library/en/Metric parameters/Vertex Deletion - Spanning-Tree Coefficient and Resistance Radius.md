@@ -2,8 +2,8 @@
 title: "Vertex Deletion: Spanning-Tree Coefficient and Resistance Radius"
 date: 2026-10-18
 updated: 2026-10-18
-revision: 1
-translated_revision: 1
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -119,7 +119,7 @@ $$
 }
 $$
 
-Geometrically, the circumcenter of the remaining points is the projection of the original circumcenter onto the opposite facet of the simplex. The difference between the radii equals the norm of the center's displacement. Hence $0<\widehat\gamma_i\le1$, with equality to one when $\alpha_i=0$, or equivalently $\delta_i=2$.
+Geometrically, the circumcenter of the remaining points is the projection of the original circumcenter onto the affine hull of the opposite facet of the simplex. The difference between the radii equals the norm of the center's displacement. Hence $0<\widehat\gamma_i\le1$, with equality to one when $\alpha_i=0$, or equivalently $\delta_i=2$.
 
 This formula does not apply to $\gamma_i$ after deletion from the network: the metric itself changes. The computation uses the new Laplacian; the examples below show both an increase and a decrease in radius.
 
@@ -213,7 +213,7 @@ Thus the top-grade coefficient of the new exponential determines the spanning-tr
 
 ### Triangle and path
 
-All conductances in the table are $1$.
+All conductances of the original graphs in the table are $1$.
 
 | Original graph and removed vertex | $s_i$ | $\widehat s_i$ | $\gamma_i$ | $\widehat\gamma_i$ |
 | --- | ---: | ---: | ---: | ---: |
@@ -266,7 +266,8 @@ Here $0=\lambda_1<\lambda_2\le\ldots\le\lambda_m$ are its Laplacian eigenvalues.
 
 The formulas for the two Laplacians and the geometric change in radius rely on the linked notes. The spanning-tree ratios, leaf probability, and polyform expressions are derived here. The criterion $s_i=0$ is exact; the example disproves a universal interpretation of small positive values as proximity to the next disconnection.
 
-The spanning-tree coefficients and radii in the tables were checked in exact rational arithmetic. Spanning-tree coefficients were computed independently by determinants and by enumerating spanning trees. Radii were obtained from the resistance matrix and checked against the Green-matrix formula; for geometric removal, the submatrix of the original resistance matrix was compared with the Schur complement. Polyform coefficients were obtained directly from forest products through determinants of the exterior factors and compared with the matrix values. The checks covered all vertices of the triangle, the path $P_4$, the star $K_{1,3}$, a weighted triangle and path, and the six-vertex counterexample. Spectral values were computed numerically with a check of the eigenvector equation.
+> [!example]- Independent computational checks
+> The spanning-tree coefficients and radii in the tables were checked in exact rational arithmetic. Spanning-tree coefficients were computed independently by determinants and by enumerating spanning trees. Radii were obtained from the resistance matrix and checked against the Green-matrix formula; for geometric removal, the submatrix of the original resistance matrix was compared with the Schur complement. Polyform coefficients were obtained directly from forest products through determinants of the exterior factors and compared with the matrix values. The checks covered all vertices of the triangle, the path $P_4$, the star $K_{1,3}$, a weighted triangle and path, and the six-vertex counterexample. Spectral values were computed numerically with a check of the eigenvector equation.
 
 A compact formula for $\rho(G-i)$ in terms of a small number of vertex characteristics in the original graph remains an open question. Computation through the new metric is specified; no expression solely in terms of $d_i$ and $\delta_i$ is asserted here.
 

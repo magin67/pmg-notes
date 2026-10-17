@@ -2,8 +2,8 @@
 title: Density, Compactness, and Tree Invariance
 date: 2026-10-17
 updated: 2026-10-18
-revision: 3
-translated_revision: 3
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -186,7 +186,7 @@ $$
 \boxed{\eta_\rho=\eta_K\chi}
 $$
 
-Radius compactness combines two properties: compactness based on mean pairwise resistance, and the relative displacement of the circumcenter from the centroid. Equality $\eta_\rho=\eta_K$ is equivalent to $O=b$, or to a constant Green diagonal. It does not require the graph to be complete. In particular, it holds for vertex-transitive graphs: their symmetries make all diagonal entries of the Green matrix equal.
+Radius compactness combines two properties: compactness based on mean pairwise resistance, and the relative displacement of the circumcenter from the centroid. Equality $\eta_\rho=\eta_K$ is equivalent to $O=b$, or to a constant Green diagonal. It does not require the graph to be complete. In particular, it holds when the conductance-preserving automorphism group acts transitively on the vertices: these symmetries make all diagonal entries of the Green matrix equal. Vertex transitivity of the underlying edge structure alone is insufficient for arbitrary conductances.
 
 The two proved chains of inequalities do not establish an ordering between $\eta_\rho$ and $\eta_2$. For example, a star on ten vertices has $\eta_\rho=0.2<0.5=\eta_2$, whereas a path has $\eta_\rho=0.2>\eta_2\approx0.0489$.
 
@@ -369,7 +369,18 @@ The measures $\eta_\rho,\eta_K,\eta_2$ are unchanged under $c_e\mapsto t c_e$. E
 
 ### Adding an edge
 
-For a fixed vertex set, adding a conducting edge does not increase any effective resistance. Consequently, $Kf$ is nonincreasing and $\lambda_2$ is nondecreasing. No analogous general property holds for $\rho$. Moreover, adding an edge changes $\bar d$, and hence changes the reference graph for the normalized measures.
+For a fixed vertex set, adding a conducting edge does not increase any effective resistance. Summing over pairs shows that $Kf$ is nonincreasing.
+
+The nondecrease of $\lambda_2$ follows separately from the variational characterization of the Laplacian. If conductance $t>0$ is added between vertices $u,v$, then
+
+$$
+\mathbf L'=\mathbf L+t\mathbf q\mathbf q^{\mathsf T},
+\qquad \mathbf q=\mathbf e_u-\mathbf e_v
+$$
+
+Here $\mathbf e_u,\mathbf e_v$ are the standard coordinate columns. For every nonzero $\mathbf x\perp\mathbf1$, the Rayleigh quotient $\mathbf x^{\mathsf T}\mathbf L'\mathbf x/(\mathbf x^{\mathsf T}\mathbf x)$ is at least its original value. Its minimum on the same subspace equals $\lambda_2(\mathbf L')$, so $\lambda_2(\mathbf L')\ge\lambda_2(\mathbf L)$.
+
+No analogous general property holds for $\rho$. Moreover, adding an edge changes $\bar d$, and hence changes the reference graph for the normalized measures.
 
 Consider $K_{2,3}$ with unit conductances, and add an edge of conductance $t\ge0$ between the two vertices in the part of size $2$. Direct calculation gives
 
@@ -436,15 +447,16 @@ No universal ranking of graphs by a single “density” is specified here. For 
 
 The bounds on the normalized parameters, the factorization $\eta_\rho=\eta_K\chi$, tree invariance of radius compactness, and its weighted extension are proved. The polyform expressions follow from the metric identity and the previously proved radius decomposition; links to those results appear in the relevant sections. Arboricity and the theorem on partitioning edges into forests are taken from the cited literature.
 
-The ten-vertex table and the edge-change examples were computed directly. For rational conductances, the Green matrix was obtained in exact rational arithmetic from
-
-$$
-\mathbf{Gr}=\left(\mathbf L+\frac1n\mathbf1\mathbf1^{\mathsf T}\right)^{-1}-\frac1n\mathbf1\mathbf1^{\mathsf T}
-$$
-
-It was used to obtain the resistances and $Kf$. The radius was computed independently in two ways: from the system $\mathbf R\boldsymbol\alpha=2\rho\mathbf1$, $\mathbf1^{\mathsf T}\boldsymbol\alpha=1$, and from the formula $\rho=\operatorname{tr}\mathbf{Gr}/n+\mathbf r^{\mathsf T}\mathbf L\mathbf r/4$, where $r_i=\mathbf{Gr}_{ii}$. For $\eta_2$, numerical diagonalization was used with a check of the eigenvector equation; shortest-path lengths were computed by breadth-first search. Arboricity values were checked by enumerating vertex subsets.
-
-Additional checks covered three different trees with unit conductances on six vertices, a path and a star with conductances $1,2,3$, and two cliques with several positive bridge conductances. These checks supplement the general proofs and do not replace them.
+> [!example]- Independent computational checks
+> The ten-vertex table and the edge-change examples were computed directly. For rational conductances, the Green matrix was obtained in exact rational arithmetic from
+>
+> $$
+> \mathbf{Gr}=\left(\mathbf L+\frac1n\mathbf1\mathbf1^{\mathsf T}\right)^{-1}-\frac1n\mathbf1\mathbf1^{\mathsf T}
+> $$
+>
+> It was used to obtain the resistances and $Kf$. The radius was computed independently in two ways: from the system $\mathbf R\boldsymbol\alpha=2\rho\mathbf1$, $\mathbf1^{\mathsf T}\boldsymbol\alpha=1$, and from the formula $\rho=\operatorname{tr}\mathbf{Gr}/n+\mathbf r^{\mathsf T}\mathbf L\mathbf r/4$, where $r_i=\mathbf{Gr}_{ii}$. For $\eta_2$, numerical diagonalization was used with a check of the eigenvector equation; shortest-path lengths were computed by breadth-first search. Arboricity values were checked by enumerating vertex subsets.
+>
+> Additional checks covered three different trees with unit conductances on six vertices, a path and a star with conductances $1,2,3$, and two cliques with several positive bridge conductances. These checks supplement the general proofs and do not replace them.
 
 Choosing a measure of damage caused by deleting a vertex together with its edges requires a way to compare graphs of different orders and a rule for handling any resulting components. The normalizations considered here do not determine that choice automatically. [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]] studies the ratios of the new spanning-tree coefficients and radii to their original values under the two types of removal.
 

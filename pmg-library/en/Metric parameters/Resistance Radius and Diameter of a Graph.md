@@ -1,9 +1,9 @@
 ---
 title: Resistance Radius and Diameter of a Graph
 date: 2026-10-15
-updated: 2026-10-17
-revision: 3
-translated_revision: 3
+updated: 2026-10-18
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -32,13 +32,13 @@ The resistance simplex and the transformations between matrix representations ar
 
 ## Radius and diameter of the circumsphere
 
-In the affine hull of a nondegenerate simplex, there is a unique sphere passing through all its vertices. Denote its center by $h$ and its ordinary linear radius by $R_{\mathrm{sph}}$.
+In the affine hull of a nondegenerate simplex, there is a unique sphere passing through all its vertices. Denote its center by $O$ and its ordinary linear radius by $R_{\mathrm{sph}}$.
 
 > [!info] Radius and diameter in quadratic normalization
 > **Definition.** The resistance radius of a graph is
 >
 > $$
-> \boxed{\rho(G)=(x_i-h)^2=R_{\mathrm{sph}}^2}
+> \boxed{\rho(G)=(x_i-O)^2=R_{\mathrm{sph}}^2}
 > $$
 >
 > This value is independent of the chosen vertex $i$. The resistance diameter is
@@ -57,9 +57,9 @@ In the affine hull of a nondegenerate simplex, there is a unique sphere passing 
 
 The physical dimensions of $\rho$ and $D_{\mathrm{res}}$ do not depend on the number of vertices. This allows values to be compared across graphs of different orders, but does not by itself remove dependence on the order or on the overall conductance scale.
 
-The center $h$ need not coincide with the centroid $b=n^{-1}\sum_i x_i$ and may lie outside the simplex. The center of the circumsphere is not the orthocenter, the intersection of the altitudes.
+The center $O$ need not coincide with the centroid $b=n^{-1}\sum_i x_i$ and may lie outside the simplex. The center of the circumsphere is not the orthocenter, the intersection of the altitudes.
 
-**Remark on the isotropic representation.** In this note, $h$ is the Euclidean center. Its bi-coordinates specify an affine combination of the original local vertices, $h_V=\sum_i\alpha_i a_i$, but $h_V$ need not be a local element of the extension. The distinction between $h_V$, its local center, and the sphere element is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. It does not change the Euclidean distances used here.
+**Remark on the isotropic representation.** In this note, $O$ is the Euclidean center. Its bi-coordinates specify an affine combination of the original local vertices, $h_V=\sum_i\alpha_i a_i$, but $h_V$ need not be a local element of the extension. The distinction between $h_V$, its local center, and the sphere element is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. It does not change the Euclidean distances used here.
 
 The earlier name "metric mass" is no longer used as a current term. When comparing older calculations, check whether their parameter equals $\rho$ or $4\rho$.
 
@@ -78,16 +78,16 @@ $$
 \tag{2}
 $$
 
-Equality holds if and only if two simplex vertices are diametrically opposite on the circumsphere, meaning that their midpoint is $h$.
+Equality holds if and only if two simplex vertices are diametrically opposite on the circumsphere, meaning that their midpoint is $O$.
 
 > [!proof]- Proof and equality condition
-> **Proof.** For $u=x_i-h$ and $v=x_j-h$, one has $u^2=v^2=\rho$. Hence
+> **Proof.** For $u=x_i-O$ and $v=x_j-O$, one has $u^2=v^2=\rho$. Hence
 >
 > $$
 > R_{ij}=(u-v)^2=2\rho-2u\cdot v\le4\rho
 > $$
 >
-> The Cauchy-Schwarz inequality gives $u\cdot v\ge-\rho$. Equality holds precisely when $v=-u$, equivalently $x_i+x_j=2h$. Since the maximum is taken over finitely many pairs, the same condition characterizes equality in (2). $\square$
+> The Cauchy-Schwarz inequality gives $u\cdot v\ge-\rho$. Equality holds precisely when $v=-u$, equivalently $x_i+x_j=2O$. Since the maximum is taken over finitely many pairs, the same condition characterizes equality in (2). $\square$
 
 Thus $D_{\mathrm{res}}$ is the sharp upper bound on squared distances between arbitrary points of the circumsphere. This bound need not be attained by any pair of graph vertices.
 
@@ -98,7 +98,7 @@ The circumsphere also differs from the smallest ball containing all vertices. So
 Write the center in bi-coordinates relative to the vertices:
 
 $$
-h=\sum_i\alpha_i x_i,\qquad
+O=\sum_i\alpha_i x_i,\qquad
 \sum_i\alpha_i=1
 $$
 
@@ -115,7 +115,7 @@ $$
 $$
 
 > [!proof]- Derivation from equal distances to the vertices
-> **Proof.** Set $y_i=x_i-h$. Then $y_i^2=\rho$ and $\sum_i\alpha_i y_i=0$. For each row of the resistance matrix,
+> **Proof.** Set $y_i=x_i-O$. Then $y_i^2=\rho$ and $\sum_i\alpha_i y_i=0$. For each row of the resistance matrix,
 >
 > $$
 > \sum_jR_{ij}\alpha_j
@@ -294,7 +294,7 @@ In a tree, the resistance of a pair is the sum of edge resistances along the uni
 > [!example]- An independent geometric check for the path and the star
 > Take orthonormal vectors $e_1,e_2,e_3$. The path is realized by the points $0,e_1,e_1+e_2,e_1+e_2+e_3$, and the star by $0,e_1,e_2,e_3$. In both cases, squared distances equal the corresponding path lengths in the tree.
 >
-> For each set, the circumsphere center is $h=(e_1+e_2+e_3)/2$, and the norm of the difference between any vertex and $h$ is $3/4$. The first and last vertices of the path are diametrically opposite; the star has no such pair.
+> For each set, the circumsphere center is $O=(e_1+e_2+e_3)/2$, and the norm of the difference between any vertex and $O$ is $3/4$. The first and last vertices of the path are diametrically opposite; the star has no such pair.
 >
 > In the star's basis, the center coordinates are $(-1/2,1/2,1/2,1/2)$, with the first coordinate referring to the central graph vertex. The negative coordinate shows that the sphere center lies outside the simplex.
 
@@ -342,7 +342,7 @@ For $n>2$, inequality (2) is strict even for the complete graph. For $K_5$ with 
 
 **Scale dependence.** Multiplying every conductance by $\lambda>0$ divides every resistance by $\lambda$. The Euclidean simplex is scaled by $1/\sqrt\lambda$, so $\rho$ and $D_{\mathrm{res}}$ are divided by $\lambda$, while the reciprocal connectivity parameters are multiplied by $\lambda$. Dimensionless comparisons require additional normalization.
 
-**No general monotonicity with respect to edges is assumed.** A decrease in pairwise resistances when couplings are strengthened does not automatically imply a decrease in the circumradius: the center also changes. Behavior under conductance variations will be considered separately.
+**No general monotonicity with respect to edges is assumed.** A decrease in pairwise resistances when couplings are strengthened does not automatically imply a decrease in the circumradius: the center also changes. A counterexample in which strengthening a coupling increases the radius is given in the [[Density, Compactness, and Tree Invariance#Adding an edge|section on changing edges]].
 
 **A vertex set and a new network.** When only some vertices are selected, their original resistances can be retained and the circumsphere of that subset constructed. Deleting the remaining vertices together with their edges produces a different network and, in general, a different metric. Preservation of the metric under elimination by a Schur complement is discussed in [[Vertex Elimination and Induced Couplings]].
 
@@ -352,11 +352,12 @@ For $n>2$, inequality (2) is strict even for the complete graph. For $K_5$ with 
 
 The definitions of $\rho$, $D_{\mathrm{res}}$, $c_{\mathrm{rad}}$, and $c_{\mathrm{diam}}$ specify the normalizations used. Inequality (2), system (3), and formulas (4) are proved above. The polyform system for the center and the radius formula are derived from equidistance and the metric identity. The tree formula (5) relies on the proved additivity under gluing; the complete-graph formula (6) is derived from its Laplacian.
 
-For a single edge, the triangle, the path, and the star, geometric or electrical calculations are given that do not use inversion of the resistance matrix. In addition, (3)-(4) were checked with exact rational arithmetic on these graphs and on $K_5$ with unit conductances. These checks supplement the general proofs.
+> [!example]- Independent computational checks
+> For a single edge, the triangle, the path, and the star, geometric or electrical calculations are given that do not use inversion of the resistance matrix. In addition, (3)-(4) were checked with exact rational arithmetic on these graphs and on $K_5$ with unit conductances. These checks supplement the general proofs.
+>
+> The polyform system for the center and the evaluation of its radius were additionally checked on a weighted edge; $P_3,P_5,K_3,K_4,K_5,K_{1,3},K_{1,4}$ with unit conductances; and a triangle with conductances $2,3,4$. Top-grade coefficients were computed directly from the forest expansion, using determinants of the coordinates of exterior products, and compared with independently obtained matrix values.
 
-The polyform system for the center and the evaluation of its radius were additionally checked on a weighted edge; $P_3,P_5,K_3,K_4,K_5,K_{1,3},K_{1,4}$ with unit conductances; and a triangle with conductances $2,3,4$. Top-grade coefficients were computed directly from the forest expansion, using determinants of the coordinates of exterior products, and compared with independently obtained matrix values.
-
-The relation of the radius to the determinant and volume is presented in [[Resistance Radius of a Set - Gram Matrix and Volume]]. Normalized potentials and spanning 2-forest weights are applied to vertex parameters in [[Centroid, Spanning-Tree, and Eigenvector Centralities]]. The continuation of the series concerns dimensionless characteristics and checks of their interpretations. No general electrical interpretation of the reciprocal connectivity parameters for sets of more than two vertices is asserted here.
+The relation of the radius to the determinant and volume is presented in [[Resistance Radius of a Set - Gram Matrix and Volume]]. Normalized potentials and spanning 2-forest weights are applied to vertex parameters in [[Centroid, Spanning-Tree, and Eigenvector Centralities]]. Dimensionless characteristics and their interpretations are discussed in [[Density, Compactness, and Tree Invariance]], and the effects of vertex removal in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]]. No general electrical interpretation of the reciprocal connectivity parameters for sets of more than two vertices is asserted here.
 
 ## Sources and correspondence of notation
 
@@ -365,4 +366,3 @@ The relation of the radius to the determinant and volume is presented in [[Resis
 - [[Laplacian Exponential]]: forest grade components, extraction of the spanning-tree coefficient, and the metric identity for forms on boundaries.
 - K. Devriendt, R. Lambiotte. [Discrete curvature on graphs from the effective resistance](https://arxiv.org/abs/2201.06385), 2022, Appendix B.2-B.3 in version v3: matrix and geometric characterizations of the circumsphere center. Their $\sigma^2$ corresponds to our $\rho$, and their $\mathbf p$ to the column $\boldsymbol\alpha$.
 - D. Malyugin. [Express Analysis of Metric Parameters of Graphs](https://habr.com/ru/articles/534182/), 2020 (in Russian): the original discussion of metric characteristics. The parameter $r(G)$, defined there as the squared radius, corresponds to $\rho(G)$; passing to $D_{\mathrm{res}}$ requires a factor of $4$.
-
