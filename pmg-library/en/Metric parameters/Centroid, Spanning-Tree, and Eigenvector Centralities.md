@@ -2,8 +2,8 @@
 title: "Centroid, Spanning-Tree, and Eigenvector Centralities"
 date: 2026-10-16
 updated: 2026-10-17
-revision: 2
-translated_revision: 3
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -651,7 +651,7 @@ The polyform expressions for the Green matrix, resistances to the centroid, span
 
 The decomposition of the centroid form through the star and complete graph was additionally checked by comparing coefficient matrices for $2\le n\le8$. Its metric evaluation was compared with independently computed Green diagonals on $P_3$, $K_{1,4}$, and the triangle with conductances $2,3,4$, using exact rational arithmetic.
 
-The effect of deleting a vertex together with its edges remains a separate research question. It requires a new Laplacian, a new metric, and a separate decision on how to compare the result when several components appear. None of the three centralities considered here is assumed in advance to measure such damage. The continuation of the current series concerns dimensionless graph characteristics and checks of their interpretations on small examples.
+The effect of deleting a vertex together with its edges remains a separate research question. It requires a new Laplacian, a new metric, and a separate decision on how to compare the result when several components appear. None of the three centralities considered here is assumed in advance to measure such damage. Dimensionless characteristics of the whole graph and a comparison of their interpretations are discussed in [[Density, Compactness, and Tree Invariance]].
 
 ## Sources
 
