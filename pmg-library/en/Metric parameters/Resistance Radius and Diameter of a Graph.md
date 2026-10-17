@@ -1,20 +1,20 @@
 ---
 title: Resistance Radius and Diameter of a Graph
 date: 2026-10-15
-updated: 2026-10-16
-revision: 2
-translated_revision: 2
+updated: 2026-10-17
+revision: 3
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: resistance-radius-and-diameter
 order: 1
-description: "The circumradius of a resistance simplex, the quadratic normalization of its diameter, computation from the resistance matrix, and reciprocal connectivity parameters."
+description: "The circumradius of a resistance simplex, the quadratic normalization of its diameter, computation from the resistance matrix and potentials of the next-to-top-grade component, and reciprocal connectivity parameters."
 ---
 
 Resistances $R_{ij}$ characterize pairs of vertices. To obtain a metric characteristic of the entire graph, consider the sphere passing through every vertex of its resistance simplex. Its radius provides a parameter with the same physical dimension for graphs with different numbers of vertices. However, the size of the circumsphere determines neither all pairwise distances nor the network's robustness to edge deletion.
 
-This note opens the series "Metric Parameters of Graphs". The geometry of a sphere and its center is developed in [[Nonlocal Elements, Spheres, and Their Centers]], and additivity of the radius under gluing is established in [[Vertex Contraction and Graph Gluing]]. Here we align the normalizations, derive a computational formula, and check it on simple graphs.
+This note opens the series "Metric Parameters of Graphs". The geometry of a sphere and its center is developed in [[Nonlocal Elements, Spheres, and Their Centers]], and additivity of the radius under gluing is established in [[Vertex Contraction and Graph Gluing]]. Here we align the normalizations, derive matrix and polyform representations for computing the radius, and check them on simple graphs.
 
 ## The underlying model
 
@@ -160,7 +160,49 @@ $$
 
 For computation, the full inverse matrix is unnecessary. Solve $\mathbf R\mathbf v=\mathbf1$, calculate $s=\sum_i v_i$, and set $\rho=1/(2s)$, $D_{\mathrm{res}}=2/s$, and $\boldsymbol\alpha=\mathbf v/s$.
 
-Formula (4) uses the resistance matrix. It cannot be replaced by the Green matrix $\mathbf{Gr}=\mathbf L^+$: the latter satisfies $\mathbf{Gr}\mathbf1=0$ and is singular. A representation using the Gram matrix of local vertices will be considered separately.
+Formula (4) uses the resistance matrix. It cannot be replaced by the Green matrix $\mathbf{Gr}=\mathbf L^+$: the latter satisfies $\mathbf{Gr}\mathbf1=0$ and is singular. The representation using the Gram matrix of local vertices is given in [[Resistance Radius of a Set - Gram Matrix and Volume]].
+
+## Computing the center and radius using polyforms
+
+In polyform algebra, the vertices $x_i$ correspond to basis elements $a_i$. Set
+
+$$
+L=\sum_{i<j}c_{ij}[a_j-a_i]^2,\qquad
+M=\exp L,\qquad M_k=\frac{L^k}{k!}
+$$
+
+Here $L$ is the Laplacian polyform and $\mathbf L$ its matrix representation. The exponential $M$ uses the product of forms and differs from the matrix exponential.
+
+The spanning-tree form $T_n=[(a_1\ldots a_n)]^2$ has grade $n-1$. Write $\tau(P)$ for the coefficient of $T_n$; in particular, $\tau(M)=\tau(G)$. For any affine vectors $u,v$, the [[Laplacian Exponential#Agreement with the resistance metric|metric identity]] gives
+
+$$
+u\cdot v=\frac{\tau(M_{n-2}[u,v])}{\tau(G)},\qquad
+R_{ij}=\frac{\tau(M_{n-2}[a_j-a_i]^2)}{\tau(G)}
+$$
+
+The form $[u,v]$ has grade $1$, so $M_{n-2}$ supplies its complement to the spanning-tree grade. This next-to-top-grade component contains the forms of spanning 2-forests. Together with normalization by $\tau(G)$, it determines the entire metric on vectors used to construct the circumsphere.
+
+Choose $a_n$ as the reference vertex and set $u_i=a_i-a_n$, $i=1,\ldots,n-1$. The required center corresponds to $h_V=a_n+y$, where $y$ is an affine vector.
+
+**Proposition.** The center and radius can be computed directly from potentials of forms:
+
+$$
+2\tau(M_{n-2}[u_i,y])=\tau(M_{n-2}[u_i]^2),
+\qquad i=1,\ldots,n-1
+$$
+
+$$
+\boxed{\rho=\frac{\tau(M_{n-2}[y]^2)}{\tau(G)}}
+$$
+
+The first system is linear in the coordinates of $y$; after it is solved, the second equality gives the radius.
+
+> [!proof]- Equidistance expressed through potentials
+> **Proof.** Equidistance of the center from $a_i$ and $a_n$ means $(u_i-y)^2=y^2$, or $2u_i\cdot y=u_i^2$. Substituting the metric identity and canceling the common denominator gives the system. The vectors $u_i$ form a basis of directions, and their metric is positive definite, so the system has a unique solution. The radius equals $y^2$, which gives the second formula. $\square$
+
+Thus matrix inversion in (4) and evaluation of potentials describe the same metric. The radius is obtained from it after determining the center. The vector $y$ depends on the graph, so this expression alone does not give the radius as a simple sum of coefficients of $M_{n-2}$.
+
+The vectors $u_i,y$ have zero affine weight. Applying the metric identity here does not require evaluating the form of the nonlocal element $h_V$ itself outside the subalgebra of boundaries.
 
 ## Reciprocal connectivity parameters
 
@@ -202,6 +244,8 @@ c_{\mathrm{diam}}=c
 $$
 
 This direct geometric calculation checks the factor of $4$ in (1).
+
+The polyform check gives the same value. For $v=a_2-a_1$, we have $T_2=[v]^2$, $M=e+c[v]^2$, $M_0=e$, and $\tau(G)=c$. Relative to the reference vertex $a_2$, the center corresponds to $y=-v/2$, so $\tau(M_0[y]^2)=1/4$ and $\rho=1/(4c)$.
 
 ### A triangle with unit conductances
 
@@ -306,16 +350,19 @@ For $n>2$, inequality (2) is strict even for the complete graph. For $K_5$ with 
 
 ## Status of the results and continuation
 
-The definitions of $\rho$, $D_{\mathrm{res}}$, $c_{\mathrm{rad}}$, and $c_{\mathrm{diam}}$ specify the normalizations used. Inequality (2), system (3), and formulas (4) are proved above. The tree formula (5) relies on the proved additivity under gluing; the complete-graph formula (6) is derived from its Laplacian.
+The definitions of $\rho$, $D_{\mathrm{res}}$, $c_{\mathrm{rad}}$, and $c_{\mathrm{diam}}$ specify the normalizations used. Inequality (2), system (3), and formulas (4) are proved above. The polyform system for the center and the radius formula are derived from equidistance and the metric identity. The tree formula (5) relies on the proved additivity under gluing; the complete-graph formula (6) is derived from its Laplacian.
 
 For a single edge, the triangle, the path, and the star, geometric or electrical calculations are given that do not use inversion of the resistance matrix. In addition, (3)-(4) were checked with exact rational arithmetic on these graphs and on $K_5$ with unit conductances. These checks supplement the general proofs.
 
-The next note will relate the radius to the Gram matrix of a vertex set, its determinant, and the simplex volume. Subsequent notes will address center coordinates, vertex and edge parameters, the two types of vertex removal, and dimensionless characteristics. No general electrical interpretation of the reciprocal connectivity parameters for sets of more than two vertices is asserted here.
+The polyform system for the center and the evaluation of its radius were additionally checked on a weighted edge; $P_3,P_5,K_3,K_4,K_5,K_{1,3},K_{1,4}$ with unit conductances; and a triangle with conductances $2,3,4$. Top-grade coefficients were computed directly from the forest expansion, using determinants of the coordinates of exterior products, and compared with independently obtained matrix values.
+
+The relation of the radius to the determinant and volume is presented in [[Resistance Radius of a Set - Gram Matrix and Volume]]. Normalized potentials and spanning 2-forest weights are applied to vertex parameters in [[Centroid, Spanning-Tree, and Eigenvector Centralities]]. The continuation of the series concerns dimensionless characteristics and checks of their interpretations. No general electrical interpretation of the reciprocal connectivity parameters for sets of more than two vertices is asserted here.
 
 ## Sources and correspondence of notation
 
 - [[Nonlocal Elements, Spheres, and Their Centers]]: the geometric definition of a sphere and the distinction between its representatives.
 - [[Vertex Contraction and Graph Gluing]]: additivity of the resistance radius and the tree formula.
+- [[Laplacian Exponential]]: forest grade components, extraction of the spanning-tree coefficient, and the metric identity for forms on boundaries.
 - K. Devriendt, R. Lambiotte. [Discrete curvature on graphs from the effective resistance](https://arxiv.org/abs/2201.06385), 2022, Appendix B.2-B.3 in version v3: matrix and geometric characterizations of the circumsphere center. Their $\sigma^2$ corresponds to our $\rho$, and their $\mathbf p$ to the column $\boldsymbol\alpha$.
 - D. Malyugin. [Express Analysis of Metric Parameters of Graphs](https://habr.com/ru/articles/534182/), 2020 (in Russian): the original discussion of metric characteristics. The parameter $r(G)$, defined there as the squared radius, corresponds to $\rho(G)$; passing to $D_{\mathrm{res}}$ requires a factor of $4$.
 

@@ -1,15 +1,15 @@
 ---
 title: "Resistance Radius of a Set: Gram Matrix and Volume"
 date: 2026-10-16
-updated: 2026-10-16
-revision: 1
-translated_revision: 3
+updated: 2026-10-17
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: resistance-radius-gram-matrix-and-volume
 order: 2
-description: "The radius and center coordinates from the Gram matrix of local points, the determinant's relation to volume and the spanning-tree coefficient, and monotonicity under passage to a subset."
+description: "The radius and center coordinates from the Gram matrix of local points, volume through the normalized potential of a boundary form, the relation to the spanning-tree coefficient, and monotonicity under passage to a subset."
 ---
 
 The resistance radius can be considered for more than the full vertex set of a graph. Any subset, with its pairwise resistances preserved, defines its own simplex and circumsphere. The Gram matrix of the local points suffices to compute the radius; its determinant relates the radius to the volume of the simplex.
@@ -199,6 +199,57 @@ For unit conductances, $\tau(G)$ is the number of spanning trees; for arbitrary 
 
 Formula (2) is geometric and applies to any set satisfying the stated assumptions. Formula (3) uses the full resistance simplex of a particular graph. For a proper subset, one cannot substitute the spanning-tree coefficient of the original graph or of the graph obtained by deleting the remaining vertices. If a graph interpretation is needed, the subset's metric is realized by [[Vertex Elimination and Induced Couplings|eliminating the remaining vertices through a Schur complement]]; the spanning-tree coefficient of the resulting induced graph is then used.
 
+## Subset volume through grade components of the exponential
+
+Let the original connected graph have $N$ vertices, and let $A=\{a_0,\ldots,a_l\}$ be a subset with the metric preserved. The letter $N$ denotes the order of the full graph; the subset has $l+1$ vertices, possibly fewer than $N$. For its boundary, set
+
+$$
+X_A=(a_0\ldots a_l)=u_1\wedge\cdots\wedge u_l,
+\qquad u_i=a_i-a_0
+$$
+
+The polyform exponential of the original Laplacian is $M=\exp L$, with components $M_k=L^k/k!$. The functional $\tau(P)$ extracts the coefficient of the spanning-tree form $T_N$ of the full graph. In particular, $\tau(M)=\tau(G)$.
+
+**Corollary of the metric identity.** The boundary norm and the volume of the set are given by
+
+$$
+\boxed{
+X_A^2=\det\mathbf G_u=(l!\,\mathrm{vol}(A))^2
+=\frac{\tau(M_{N-1-l}[X_A]^2)}{\tau(G)}
+}
+$$
+
+> [!proof]- Complementary grade and volume
+> **Proof.** By the definition of the induced metric, $X_A^2=\det\mathbf G_u$. The form $[X_A]^2$ has grade $l$, so only $M_{N-1-l}$ contributes to its [[Laplacian Exponential#The potential of a form|potential]]. The [[Laplacian Exponential#Agreement with the resistance metric|metric identity]] identifies the normalized potential with $X_A^2$. $\square$
+
+For a vector, the contributing component is $M_{N-2}$, the next-to-top-grade component; for a triangle boundary, it is $M_{N-3}$; for a tetrahedron boundary, $M_{N-4}$. The metric data in the Gram matrix and the coefficients of the corresponding grade of the exponential provide two ways of computing the same volume.
+
+For the full set, $l=N-1$, $[X_A]^2=T_N$, and the complementary grade is zero. Since $M_0=e$ and $\tau(T_N)=1$, we obtain
+
+$$
+X_A^2=\frac1{\tau(G)},\qquad
+g_A=\rho_A X_A^2=\frac{\rho_A}{\tau(G)}
+$$
+
+This is a polyform derivation of specialization (3). For a proper subset, the numerator retains the potential of its boundary form in place of one:
+
+$$
+g_A=\rho_A\frac{\tau(M_{N-1-l}[X_A]^2)}{\tau(G)}
+$$
+
+Here the original spanning-tree coefficient is used together with a numerator computed in the same algebra. This does not assert $g_A=\rho_A/\tau(G)$ for an arbitrary subset.
+
+**Example.** Take the path $a-b-c$ with unit conductances and retain the pair $A=\{a,c\}$. Here $N=3$, $l=1$, $\tau(G)=1$, and
+
+$$
+M_1=L=[(ab)]^2+[(bc)]^2,\qquad
+M_1[(ac)]^2=2[(abc)]^2
+$$
+
+Each of the two terms gives the spanning-tree form after multiplication, since $(ac)=(ab)+(bc)$. Thus $X_A^2=2$, $\rho_A=1/2$, and $g_A=1$. For the full triangle formed by the path's vertices, the boundary has norm $1$, so at the same radius $g_{\{a,b,c\}}=1/2$. This checks the distinction between the full set and a subset without inverting a Gram matrix.
+
+**The boundary and the simplex are distinct.** The potential formula applies to $X_A=(a_0\ldots a_l)$, an exterior product of affine vectors. The exterior object $a_0\wedge\cdots\wedge a_l$ itself is not a boundary. Its negative norm $\det\mathbf G$ in the isotropic extension cannot be obtained by applying the original graph's metric identity directly. The parameter $g_A$ was computed above using the geometric identity $g_A=\rho_A X_A^2$, already proved.
+
 ## Examples and normalization checks
 
 ### Two vertices: a segment
@@ -360,7 +411,7 @@ For a single vertex, set $\rho_C=0$ and $O_C=x_i$; equality (4) remains valid. H
 
 **Deleting a graph vertex and its edges.** This operation changes the Laplacian and generally the resistances between the remaining vertices; the graph may become disconnected. For example, in the path $a-b-c$ with unit conductances, the retained pair $a,c$ has $R_{ac}=2$ and $\rho=1/2$, the same radius as the full resistance triangle of the path. But deleting vertex $b$ together with its edges leaves two disconnected vertices, for which the previous finite effective resistance no longer exists.
 
-**Identifying vertices and changing conductances.** These operations also change the metric and are outside the scope of the subset theorem. Monotonicity of the radius for these operations does not follow from (4). They will be considered in later notes of the series.
+**Identifying vertices and changing conductances.** These operations also change the metric and are outside the scope of the subset theorem. Monotonicity of the radius for these operations does not follow from (4); each such claim requires a separate proof.
 
 ### If the original elements are nonlocal
 
@@ -378,10 +429,12 @@ An arbitrary Gram matrix, without assumptions on weight, locality, and positivit
 
 ## Status of the results and continuation
 
-The radius and coordinate formulas (1), the determinant identity (2), and subset monotonicity (4) are proved for nondegenerate Euclidean simplices in the local isotropic representation. The graph formula (3) additionally uses the identity $\det\mathbf G_u=1/\tau(G)$ proved in the introductory series.
+The radius and coordinate formulas (1), the determinant identity (2), and subset monotonicity (4) are proved for nondegenerate Euclidean simplices in the local isotropic representation. The graph formula (3) uses the identity $\det\mathbf G_u=1/\tau(G)$; both matrix and polyform derivations are given here. For a subset, its volume is expressed through the normalized potential of its boundary form, with the complementary grade of the exponential specified.
 
 For a segment, a triangle, a regular tetrahedron, and the star's tetrahedron, direct determinant calculations and geometric checks of the radius and volume are given. They check the determinant sign, the factors $4$ and $(l!)^2$, and the power of the radius, but do not replace the general proofs.
 
 The formulas have also been checked using exact rational arithmetic: resistances were recovered from the inverse reduced Laplacian for a single edge and for $P_3$, $K_3$, $K_4$, and $K_{1,3}$ with unit conductances. The checks covered the radii, center coordinates, and equality $g_A=\rho_A/\tau(G)$ for the full sets, as well as identity (2) and nonincrease of the radius for all their subsets containing at least two vertices.
 
-The center coordinates and other metric data will next be related to parameters of individual vertices and edges. The subset theorem prepares the analysis of the effect of eliminating one vertex; deleting a vertex together with its couplings will require separate consideration.
+The polyform volume formula was checked for every subset containing at least two vertices of a weighted edge; $P_3,P_5,K_3,K_4,K_5,K_{1,3},K_{1,4}$ with unit conductances; and a triangle with conductances $2,3,4$. Potentials were obtained by directly expanding the forest terms of the required grade: the top-grade coefficient of each product was computed as the squared determinant of its exterior factors. These values agreed with independently computed determinants of Gram matrices of differences and satisfied (2).
+
+In [[Centroid, Spanning-Tree, and Eigenvector Centralities]], the next-to-top-grade component is applied to vertex parameters, and an exact formula is derived for the effect of geometrically removing one vertex on the radius. Deleting a vertex together with its couplings remains a separate research question. The next task of this series concerns dimensionless parameters and checks of their interpretations.

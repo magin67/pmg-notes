@@ -1,20 +1,20 @@
 ---
 title: "Centroid, Spanning-Tree, and Eigenvector Centralities"
 date: 2026-10-16
-updated: 2026-10-16
-revision: 1
-translated_revision: 1
+updated: 2026-10-17
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: centroid-spanning-tree-and-eigenvector-centralities
 order: 3
-description: "The minimizing property of the centroid, the Green-matrix trace and Kirchhoff index, the relation between spanning-tree degrees and the circumcenter, and a comparison of three centralities on the Krackhardt kite graph."
+description: "The centroid, Green-matrix trace, and Kirchhoff index; centralities through potentials of the next-to-top-grade component and spanning 2-forest weights; the relation of spanning-tree degrees to the circumcenter and a comparison on the Krackhardt kite graph."
 ---
 
 Parameters of a graph as a whole do not determine the roles of individual vertices. All trees with unit conductances and the same number of vertices have the same resistance radius, although their branching and vertex positions may differ substantially. To compare vertices, we consider three characteristics: proximity to the centroid, expected degree in a spanning tree, and centrality based on an eigenvector of the adjacency matrix.
 
-The centroid and spanning-tree characteristics connect matrix data with simplex geometry. The diagonal of the Green matrix gives resistances to the centroid, while expected spanning-tree degrees determine the bi-coordinates of the circumcenter. Comparison with eigenvector centrality shows which differences between vertices each approach captures.
+The centroid and spanning-tree characteristics connect matrix data with simplex geometry. The diagonal of the Green matrix gives resistances to the centroid, while expected spanning-tree degrees determine the bi-coordinates of the circumcenter. In polyform terms, both characteristics are obtained by evaluating grade-$1$ forms through the next-to-top-grade component of the Laplacian exponential. Comparison with eigenvector centrality shows which differences between vertices each approach captures.
 
 Definitions of the resistance radius and center coordinates are given in [[Resistance Radius and Diameter of a Graph]] and [[Resistance Radius of a Set - Gram Matrix and Volume]]. The same normalizations are used here.
 
@@ -267,6 +267,175 @@ $$
 
 The quadratic form on the right is nonnegative and vanishes exactly when the column $\mathbf r$ is constant.
 
+## The next-to-top-grade component and vertex parameters
+
+Let $M=\exp L$, $M_k=L^k/k!$ be the polyform exponential of the Laplacian and its grade components. The functional $\tau(P)$ extracts the coefficient of $T_n=[(a_1\ldots a_n)]^2$, so $\tau(M)=\tau(G)$. Below, write $\tau=\tau(G)$ for brevity.
+
+The [[Resistance Radius and Diameter of a Graph#Computing the center and radius using polyforms|polyform computation of the radius]] uses the metric identity
+
+$$
+u\cdot v=\frac{\tau(M_{n-2}[u,v])}{\tau}
+$$
+
+It holds for affine vectors $u,v$. The form $[u,v]$ has grade $1$, so its potential uses precisely the next-to-top-grade component $M_{n-2}$.
+
+### The Green matrix, centroid, and local part of the Laplacian
+
+Set $b_V=n^{-1}\sum_i a_i$ and $v_i=b_V-a_i$. These vectors point from the vertices to the centroid; their Gram matrix is the Green matrix. Hence
+
+$$
+\mathbf{Gr}_{ij}=\frac{\tau(M_{n-2}[v_i,v_j])}{\tau},\qquad
+r_i=\frac{\tau(M_{n-2}[v_i]^2)}{\tau}
+$$
+
+Introduce the auxiliary Laplacians of a star centered at $i$ and the complete graph on the same vertex set, both with unit coefficients:
+
+$$
+L_{\star_i}=\sum_{j\ne i}[a_j-a_i]^2,\qquad
+L_{K_n}=\sum_{j<k}[a_k-a_j]^2
+$$
+
+This star connects $i$ to every other vertex, regardless of whether these couplings occur in the original graph. The auxiliary Laplacians specify forms with coefficients $1$; their metric evaluation is still determined by the original $L$ and $M=\exp L$.
+
+> [!info] Decomposition of the centroid form
+> **Lemma.** For every $i$, the following identity of forms holds:
+>
+> $$
+> \boxed{[v_i]^2=\frac1nL_{\star_i}-\frac1{n^2}L_{K_n}}
+> $$
+
+> [!proof]- Substitution into the frame decomposition
+> **Proof.** Write $v_i=\sum_jq^ja_j$. Its coefficients are
+>
+> $$
+> q^i=-\frac{n-1}{n},\qquad q^j=\frac1n\quad(j\ne i),\qquad \sum_jq^j=0
+> $$
+>
+> In the [[Projections, Bi-coordinates, and Di-coordinates#Decomposing a form using frame elements and their differences|form decomposition in a point frame]], the point part vanishes because the coefficients sum to zero. Separating pairs containing $i$ from pairs of the other vertices gives
+>
+> $$
+> [v_i]^2=\frac{n-1}{n^2}L_{\star_i}-\frac1{n^2}(L_{K_n}-L_{\star_i})
+> $$
+>
+> Combining like terms proves the statement. $\square$
+
+The identity requires no choice of metric. For $n\ge3$, the coefficients of pair forms between the other vertices are $-1/n^2$. This is an algebraic combination of Laplacians with signed coefficients; its metric evaluation is positive because it equals the norm of the nonzero vector $v_i$ in the resistance metric of the original connected graph.
+
+Applying the normalized potential through $M_{n-2}$ gives
+
+$$
+r_i=\mathbf{Gr}_{ii}=\frac1n\sum_jR_{ij}-\frac{Kf(G)}{n^2}
+$$
+
+The complete-graph contribution is the same for every vertex. Thus a smaller resistance to the centroid corresponds exactly to a smaller sum of resistances to all other vertices. This is a polyform derivation of the relation used in the proof of (2).
+
+Every pair belongs to exactly two stars, so $\sum_iL_{\star_i}=2L_{K_n}$. Summing the lemma gives a form for the total resistance to the centroid:
+
+$$
+\Psi=\sum_i[v_i]^2=\frac1nL_{K_n}=\frac1n\sum_{i<j}[a_j-a_i]^2
+$$
+
+Consequently,
+
+$$
+S_{\mathrm{cent}}=\frac{\tau(M_{n-2}\Psi)}{\tau},\qquad
+Kf=\frac{\tau(M_{n-2}L_{K_n})}{\tau}=nS_{\mathrm{cent}}
+$$
+
+Now isolate the part of the Laplacian formed by the couplings incident to vertex $i$:
+
+$$
+L_i=\sum_jc_{ij}[a_j-a_i]^2
+$$
+
+Linearity of the potential and formula (4) give
+
+$$
+\boxed{\delta_i=\frac{\tau(M_{n-2}L_i)}{\tau}}
+$$
+
+Resistance to the centroid and expected spanning-tree degree are evaluations of different forms by the same normalized potential. The centroid characteristic uses the unit-coefficient star $L_{\star_i}$ to all vertices, with factor $1/n$, and subtracts the common contribution $L_{K_n}/n^2$. The spanning-tree characteristic uses $L_i$, consisting of the vertex's existing couplings with their conductances. The distinction between the two characteristics is thus expressed through the choice of form evaluated in the same original metric. To obtain centralities, apply the transformations already defined: normalize the reciprocals of $r_i$ by their sum, and divide $\delta_i$ by $2(n-1)$.
+
+The latter normalization is also visible in polyforms: $\sum_iL_i=2L$ and $M_{n-2}L=(n-1)M_{n-1}$, giving $\sum_i\delta_i=2(n-1)$.
+
+If $h_V=\sum_i\alpha_i a_i$ corresponds to the Euclidean circumcenter $O$, then $h_V-b_V$ is an affine vector with norm $(O-b)^2$. The radius decomposition (3) becomes
+
+$$
+\rho=\frac{\tau\!\left(M_{n-2}\left(\frac1n\Psi+[h_V-b_V]^2\right)\right)}{\tau}
+$$
+
+This relates the radius to the same potential. The form $[h_V-b_V]^2$ depends on the center's position, which is itself determined by the metric; it cannot be held fixed when couplings change. The norms of the nonlocal elements $h_V,b_V$ themselves are not evaluated here: all formulas use their differences of zero affine weight.
+
+### Spanning 2-forest coefficients and component sizes
+
+By the [[Laplacian Exponential#Grade components and spanning forests|forest expansion]],
+
+$$
+M_{n-2}=\sum_{F\in\mathcal F_2}w(F)[X_F]^2,
+\qquad w(F)=\prod_{e\in F}c_e
+$$
+
+Here $\mathcal F_2$ is the set of spanning 2-forests, and $X_F$ is the exterior product of their edge vectors in chosen orders and orientations. It equals the product of the component boundaries up to sign; an isolated vertex contributes a factor of $1$. Write $A_F,B_F$ for the vertex sets of the two components. Each forest is counted once; exchanging $A_F,B_F$ does not create another term.
+
+**Lemma.** For an affine vector $v=\sum_iq_i a_i$, $\sum_iq_i=0$, the contribution of one forest is
+
+$$
+\tau([X_F]^2[v]^2)=\left(\sum_{i\in A_F}q_i\right)^2
+$$
+
+> [!proof]- The sum of coordinates on one component
+> **Proof.** Choose $p\in A_F$, $q\in B_F$. Differences of vertices within each component can be expressed through its tree edges. Modulo the space spanned by all edge vectors of $F$, we have
+>
+> $$
+> v\equiv\left(\sum_{i\in A_F}q_i\right)(a_p-a_q)
+> $$
+>
+> The discarded differences vanish under exterior multiplication by $X_F$. Adding an edge between $p,q$ turns the forest into a spanning tree, so $X_F\wedge(a_p-a_q)$ equals the boundary of the full vertex set up to sign. The sign disappears in the quadratic form, and the coefficient of $T_n$ is the square of the indicated sum. $\square$
+
+Consequently, spanning 2-forest weights determine the norm of any affine vector:
+
+$$
+v^2=\frac1\tau\sum_{F\in\mathcal F_2}w(F)\left(\sum_{i\in A_F}q_i\right)^2
+$$
+
+For vertex $i$, let $m_i(F)$ be the number of vertices in the component of the forest that does not contain $i$.
+
+**Corollary.** The resistances to the centroid, their sum, and the Kirchhoff index are
+
+$$
+\boxed{r_i=\frac1{n^2\tau}\sum_{F\in\mathcal F_2}w(F)m_i(F)^2}
+$$
+
+$$
+S_{\mathrm{cent}}=\frac1{n\tau}\sum_{F\in\mathcal F_2}w(F)|A_F||B_F|,
+\qquad
+Kf=\frac1\tau\sum_{F\in\mathcal F_2}w(F)|A_F||B_F|
+$$
+
+> [!proof]- Substitution of the centroid vectors
+> **Proof.** The vector $v_i=b_V-a_i$ has coordinate $1/n-1$ at vertex $i$ and coordinates $1/n$ elsewhere. The absolute value of its coordinate sum on either component is $m_i(F)/n$. Substitution into the lemma gives the formula for $r_i$. If the component sizes are $p,q$, then
+>
+> $$
+> \sum_i m_i(F)^2=pq^2+qp^2=npq
+> $$
+>
+> Summing over vertices gives the formula for $S_{\mathrm{cent}}$, and equality (2) gives that for $Kf$. $\square$
+
+For a fixed forest weight, vertices in the smaller component receive a larger contribution to their resistance to the centroid because the opposite component is larger. The sum accounts for all spanning 2-forests and their conductance weights. This provides a geometric interpretation of the coefficients of the next-to-top-grade component.
+
+Here “coefficients” means weights in the fixed forest expansion. Forest forms may be linearly dependent, so these weights cannot without qualification be identified with coordinates of the polyform in an arbitrary basis. Computing $Kf$ and $S_{\mathrm{cent}}$ requires the factors $|A_F||B_F|$ and normalization by $\tau$. The sum of spanning 2-forest weights alone does not determine these parameters.
+
+**Example: a path and a star.** Both $P_5$ and $K_{1,4}$ with unit conductances have spanning-tree coefficient $1$. Each spanning 2-forest is obtained by removing one of the four edges and has weight $1$. Their component sizes, however, differ:
+
+| Graph | Component sizes of the four spanning 2-forests | $\sum_F w(F)\lvert A_F\rvert\lvert B_F\rvert$ | $S_{\mathrm{cent}}$ |
+| --- | --- | --- | --- |
+| $P_5$ | $(1,4),(2,3),(3,2),(4,1)$ | $4+6+6+4=20$ | $4$ |
+| $K_{1,4}$ | $(1,4)$ in each case | $4+4+4+4=16$ | $16/5$ |
+
+In the path row, the four entries refer to four distinct forests, not two ways of naming the components of the same forest. For the middle vertex of the path, the opposite component sizes are $1,2,2,1$, so $r_3=(1+4+4+1)/25=2/5$. For an end vertex they are $4,3,2,1$, giving $r_1=(16+9+4+1)/25=6/5$.
+
+In the star, the central vertex has $r_o=4/25$, while each leaf has $r_{\mathrm{leaf}}=(16+1+1+1)/25=19/25$. These values agree with the direct geometric calculations below. Equal numbers and weights of spanning 2-forests do not make the centroid characteristics of the path and star equal.
+
 ## Eigenvector centrality and a common normalization
 
 **Definition.** Eigenvector centrality is defined by a positive eigenvector of the adjacency matrix:
@@ -472,13 +641,17 @@ Formula (6) also explains why spanning-tree centrality and influence on the radi
 
 ## Status of the results and continuation
 
-The minimizing property of the centroid (1), identities (2)-(3), the relation between spanning-tree degrees and center coordinates (4)-(5), the bound in terms of component count, and the geometric removal formula (6) have been proved under explicit assumptions. The resistance-geometry identities and the spanning-tree distribution used here agree with the published literature. The centralities and their common normalization are definitions; no ranking is claimed to be universally superior.
+The minimizing property of the centroid (1), identities (2)-(3), the relation between spanning-tree degrees and center coordinates (4)-(5), the bound in terms of component count, and the geometric removal formula (6) have been proved under explicit assumptions. The polyform expressions follow from the metric identity; the spanning 2-forest formulas for vector norms, the Green diagonal, and the Kirchhoff index are derived through the coefficient of the spanning-tree form. The resistance-geometry identities and the spanning-tree distribution used here agree with the published literature. The centralities and their common normalization are definitions; no ranking is claimed to be universally superior.
 
 Numerical values were checked for $K_5$, $P_5$, $K_{1,4}$, the Krackhardt kite graph, and two triangles sharing one vertex, all with unit conductances. An additional check used a triangle with conductances $2,3,4$: its spanning-tree coefficient is $26$, and degrees were averaged using tree weights rather than equal probabilities.
 
 Resistances were computed in exact rational arithmetic from the inverse of a reduced Laplacian. Radii and center coordinates were independently obtained by solving $\mathbf R\boldsymbol\alpha=2\rho\mathbf1$. Formulas (2)-(6) were checked against these data, including every single-vertex removal. Spanning-tree degrees were additionally obtained by direct tree enumeration; explicit Euclidean realizations were used for the path and the star. Eigenvector scores were computed numerically, with checks of the eigenvector equation and normalization.
 
-The next question is the effect of deleting a vertex together with its edges. This requires a new Laplacian, a new metric, and a separate decision on how to compare the result when several components appear. None of the three centralities considered here is assumed in advance to measure such damage.
+The polyform expressions for the Green matrix, resistances to the centroid, spanning-tree degrees, and radius were additionally checked by directly extracting top-grade coefficients from forest products on graphs with up to five vertices, including the weighted triangle. The spanning 2-forest sums independently reproduced the Green diagonal and Kirchhoff index; all 8846 spanning 2-forests of the Krackhardt kite graph were enumerated.
+
+The decomposition of the centroid form through the star and complete graph was additionally checked by comparing coefficient matrices for $2\le n\le8$. Its metric evaluation was compared with independently computed Green diagonals on $P_3$, $K_{1,4}$, and the triangle with conductances $2,3,4$, using exact rational arithmetic.
+
+The effect of deleting a vertex together with its edges remains a separate research question. It requires a new Laplacian, a new metric, and a separate decision on how to compare the result when several components appear. None of the three centralities considered here is assumed in advance to measure such damage. The continuation of the current series concerns dimensionless graph characteristics and checks of their interpretations on small examples.
 
 ## Sources
 
