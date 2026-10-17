@@ -1,9 +1,9 @@
 ---
 title: Density, Compactness, and Tree Invariance
 date: 2026-10-17
-updated: 2026-10-17
-revision: 2
-translated_revision: 2
+updated: 2026-10-18
+revision: 3
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -446,7 +446,7 @@ It was used to obtain the resistances and $Kf$. The radius was computed independ
 
 Additional checks covered three different trees with unit conductances on six vertices, a path and a star with conductances $1,2,3$, and two cliques with several positive bridge conductances. These checks supplement the general proofs and do not replace them.
 
-The choice of a measure of damage caused by deleting a vertex together with its edges remains open. It requires a way to compare graphs of different orders and a rule for handling any resulting components. The normalizations considered here do not determine that choice automatically.
+Choosing a measure of damage caused by deleting a vertex together with its edges requires a way to compare graphs of different orders and a rule for handling any resulting components. The normalizations considered here do not determine that choice automatically. [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]] studies the ratios of the new spanning-tree coefficients and radii to their original values under the two types of removal.
 
 ## Sources
 
