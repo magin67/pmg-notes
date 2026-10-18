@@ -2,8 +2,8 @@
 title: Supports of Structural Identities
 date: 2026-10-18
 updated: 2026-10-18
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: supports-of-structural-identities
@@ -26,7 +26,7 @@ $$
 U(\pi)=\bigcup_{\substack{B\in\pi\\|B|\geqslant2}}B
 $$
 
-The source material [1] calls this the non-singleton support. Here we use “support” with the meaning specified above. A block and a component of a partition mean the same thing. The size of a block is its number of vertices; the grade of its boundary is one less.
+Throughout this note, we use “support” with the meaning specified above. A block and a component of a partition mean the same thing. The size of a block is its number of vertices; the grade of its boundary is one less.
 
 For example, if $\pi=ab|cd|e$, then $U(\pi)=\{a,b,c,d\}$. A singleton block contributes a unit factor, so adjoining or deleting such a block preserves grade.
 
@@ -166,7 +166,7 @@ $$
 > =1+\frac{y(xF)^2}{1-xF}
 > $$
 >
-> Set $H=xF$. Then $H=x\bigl(1+yH^2/(1-H)\bigr)$. By the Lagrange inversion formula [2, Theorem 2.1.1], for $m\geqslant2$ and admissible $k$,
+> Set $H=xF$. Then $H=x\bigl(1+yH^2/(1-H)\bigr)$. By the Lagrange inversion formula [1, Theorem 2.1.1], for $m\geqslant2$ and admissible $k$,
 >
 > $$
 > \begin{aligned}
@@ -299,7 +299,7 @@ $$
 q_{ab|cd},\qquad q_{ac|bd},\qquad q_{ad|bc}
 $$
 
-These three forms are independent. To see this, use the tetrahedron identity to replace $q_{ac|bd}$ by its expansion in the [[Basis and Dimension of the Space of Partition Forms#Four vertices: a basis and an explicit check|six-dimensional basis]]. In any zero linear combination of the three pair-partition forms, the coefficient of each of the four forms with block sizes $3+1$ then equals the coefficient of $q_{ac|bd}$. It must be zero. Independence of the two remaining basis forms then forces the other coefficients to vanish.
+These three forms are independent. To see this, use the tetrahedron identity to replace $q_{ac|bd}$ by its expansion in the [[Basis and Dimension of the Space of Partition Forms#Four vertices: a basis and an explicit check|six-dimensional basis]]. In any zero linear combination of the three pair-partition forms, the coefficient of each of the four partition forms with block sizes $3+1$ then equals the coefficient of $q_{ac|bd}$. It must be zero. Independence of the two remaining basis forms then forces the other coefficients to vanish.
 
 Thus $N_{\geqslant2}(m,k)$ counts the noncrossing subfamily without singleton blocks, but need not equal the rank of all forms without singleton blocks. Expansions of the latter may contain forms with smaller supports.
 
@@ -355,7 +355,7 @@ This relation of grade $3$ has support on six vertices. It does not belong to th
 
 The relation is therefore new relative to transfer, although it is obtained by multiplying a known identity. This is consistent with the [[Basis and Dimension of the Space of Partition Forms#Completeness of the four-block identity|completeness of the four-block identity]], which allows adjoining additional blocks and other operations.
 
-The source [1] calls the coefficients $p_{m,r}$ “primitive.” That name is appropriate only when the operation is specified: it refers to new directions relative to transfer by adjoining singleton blocks. It does not assert that a relation cannot be obtained by multiplication or by enlarging blocks.
+The coefficients $p_{m,r}$ may be called “primitive” only relative to transfer by adjoining singleton blocks: they count new independent directions under that operation. This does not rule out obtaining a relation by multiplication or by enlarging blocks.
 
 ### First values and an example on seven vertices
 
@@ -409,7 +409,7 @@ Equality of polyforms preserves the spanning-tree pairing by the proved gluing f
 - **Checked directly by computation:** the table entries, the displayed relations, and the ranks in the examples on four, five, and six vertices.
 - **Not asserted:** independence of the chosen space decomposition from the cyclic order, minimality of the number of terms in a relation, or primitivity with respect to all algebraic operations.
 
-The source [1] leaves the formula for successive quotient dimensions as a conjecture. Here it is proved through compatibility of the basis with transfer. This does not give a proof of the noncrossing basis theorem itself that is independent of external theorems.
+Formula (5) is proved through compatibility of the basis with transfer. The proof relies on the noncrossing basis theorem from the third note and hence uses the external results cited there.
 
 Choosing short representatives of relations that are convenient for computation remains a separate task. The dimension result does not determine the best order of transformations or classify relations by all possible operations used to obtain them.
 
@@ -417,7 +417,8 @@ The series completes the passage from the first structural identities to a basis
 
 ## Sources
 
-1. PMG research note [Primitive Structural Identities and Minimal Support](https://github.com/magin67/polyform-metric-geometry/blob/main/Theory/Полиформы/Структурные%20тождества/Примитивные%20структурные%20тождества%20и%20минимальный%20носитель.md) (in Russian). Source of the problem and the coefficients $p_{m,r}$. The present note distinguishes supports of partitions from supports of relations, proves the structural interpretation of the dimension decomposition, and clarifies the meaning of counting forms without singleton blocks.
-2. I. M. Gessel. *Lagrange Inversion*. Journal of Combinatorial Theory, Series A, 144 (2016), 212-249. [arXiv:1609.05988](https://arxiv.org/abs/1609.05988), [DOI: 10.1016/j.jcta.2016.06.018](https://doi.org/10.1016/j.jcta.2016.06.018). Theorem 2.1.1, formula (2.1.1): the version of Lagrange inversion used here; proofs are collected in Section 4.
+1. I. M. Gessel. *Lagrange Inversion*. Journal of Combinatorial Theory, Series A, 144 (2016), 212-249. [arXiv:1609.05988](https://arxiv.org/abs/1609.05988), [DOI: 10.1016/j.jcta.2016.06.018](https://doi.org/10.1016/j.jcta.2016.06.018). Theorem 2.1.1, formula (2.1.1): the version of Lagrange inversion used here; proofs are collected in Section 4.
+
+This note is based on the author's research within PMG.
 
 Foundations of the algebraic result: [[Basis and Dimension of the Space of Partition Forms#Noncrossing partitions and the basis]] and [[Basis and Dimension of the Space of Partition Forms#Completeness of the four-block identity]]. Definitions of forms: [[Core specification#Forms and polyform algebra]].

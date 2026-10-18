@@ -2,8 +2,8 @@
 title: Partition Forms and the Tetrahedron Identity
 date: 2026-10-18
 updated: 2026-10-18
-revision: 2
-source_revision: 2
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-forms-and-tetrahedron-identity
@@ -335,7 +335,7 @@ Metric evaluation behaves differently: it is linear on the space of forms itself
 
 Both sides of (1) are preserved by every permutation of the four vertices. A permutation merely rearranges the terms; any orientation signs disappear in the quadratic forms. The identity therefore also provides an example of equality between symmetric polyforms. Their general properties are treated separately.
 
-For the continuation of the structural series, the relevant mechanism is how the equality is obtained: a zero sum of boundaries yields an equality of quadratic forms. The next task is to extend such identities to larger vertex sets and obtain new relations by multiplying forms.
+For the continuation of the structural series, the relevant mechanism is how the equality is obtained: a zero sum of boundaries yields an equality of quadratic forms. Extending such identities to larger vertex sets and obtaining new relations by multiplying forms are treated in [[Constructing Structural Identities]].
 
 ## Connection with the literature
 

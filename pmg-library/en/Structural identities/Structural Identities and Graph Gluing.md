@@ -2,8 +2,8 @@
 title: Structural Identities and Graph Gluing
 date: 2026-10-18
 updated: 2026-10-18
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: structural-identities-and-graph-gluing
@@ -339,7 +339,7 @@ $$
 
 The coefficient sums of the two expressions are $3$ and $4$. A linear functional taking the value $1$ on every partition form would have to give the same number on equal polyforms, which is impossible.
 
-Consequently, the reduction proved for the spanning-tree pairing cannot automatically be used for ordinary counting of all forests. The original weight sums, their transformed coordinates, and metric evaluations are different data. The research material [3] treats this distinction through a separate forest compatibility matrix; its theory is not needed here.
+Consequently, the reduction proved for the spanning-tree pairing cannot automatically be used for ordinary counting of all forests. The original weight sums, their transformed coordinates, and metric evaluations are different data.
 
 ## Status of the results and continuation
 
@@ -348,12 +348,12 @@ Consequently, the reduction proved for the spanning-tree pairing cannot automati
 - **Computed directly and checked independently:** the weighted cycle on four vertices and gluing two paths into $K_4$, including the coordinate transformation by the tetrahedron identity.
 - **Requires separate study:** choosing a graph decomposition, comparing decompositions along vertices and edges, a possible connection with the dual polyform, and the full forest pairing.
 
-The next question in the structural series concerns relations with minimal support and identifying identities that cannot be obtained by transfer from fewer vertices. This differs from the result proved here: the ability to compute the spanning-tree coefficient in an already chosen basis.
+[[Supports of Structural Identities]] continues the algebraic part of the series: it describes relations by their supports and counts new independent directions relative to transfer by adjoining singleton blocks.
 
 ## Sources
 
 1. R. W. Kenyon, D. B. Wilson. *Boundary Partitions in Trees and Dimers*. Transactions of the American Mathematical Society, 363 (2011), 1325-1364. [arXiv:math/0608422v4](https://arxiv.org/abs/math/0608422v4), [DOI: 10.1090/S0002-9947-2010-04964-5](https://doi.org/10.1090/S0002-9947-2010-04964-5). Source for the notion of a grove and the description of its connectivity by a partition of selected vertices; the paper's planar assumptions are not used in the proof of (2).
-2. PMG research note [Groves and Weighted Boundary Polyforms](https://github.com/magin67/polyform-metric-geometry/blob/main/Theory/Матроиды/Матроидные%20параметры%20и%20граничные%20склейки/Рощи%20и%20взвешенные%20граничные%20полиформы.md) (in Russian). The original combinatorial setup and proof by splitting a tree. Here they are expressed through quadratic partition forms and the functional $\tau_S$, in accordance with the public core.
-3. PMG research note [The Four-Point Boundary Basis](https://github.com/magin67/polyform-metric-geometry/blob/main/Theory/Graphs/Стягивание%20вершин/Сочленение%20и%20полиномы%20графа/Четырехточечный%20граничный%20базис.md) (in Russian), section “Отличие от тождества тетраэдра” (“Difference from the tetrahedron identity”). Source for the distinction between structural relations and compatibility for full unrooted forest counting.
+
+This note is based on the author's research within PMG.
 
 Algebraic definitions and normalizations: [[Core specification#Forms and polyform algebra]] and [[Core specification#The spanning-tree form and coefficient extraction]]. Full proof of the basis used here: [[Basis and Dimension of the Space of Partition Forms]].

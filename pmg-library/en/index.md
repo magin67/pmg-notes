@@ -3,7 +3,7 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 5
+revision: 6
 translated_revision: 4
 updated: 2026-10-18
 ---
@@ -68,7 +68,7 @@ Terms introduced or redefined within PMG are explained when first used. If a def
 
 ## About the project
 
-**Project founder and library editor:** Dmitry Malyugin.
+**Project founder and library editor:** Dmitry Malugin.
 
 The project is developed with the participation of **ChatGPT (OpenAI)** as an AI research assistant. Its role includes discussing problems, developing candidate proofs, searching for counterexamples, and preparing computational code, texts, and translations. The library editor selects the material and approves published versions. Substantial AI contributions to individual materials are acknowledged in the corresponding notes.
 

@@ -2,8 +2,8 @@
 title: Basis and Dimension of the Space of Partition Forms
 date: 2026-10-18
 updated: 2026-10-18
-revision: 1
-source_revision: 2
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-form-basis-and-dimension
@@ -14,7 +14,7 @@ order: 3
 
 Structural identities express some partition forms in terms of others. This raises two questions: which family of forms suffices for all such expressions, and why are there no further dependencies within the chosen family? A basis of noncrossing partition forms answers both questions. The number of basis elements in each grade is a Narayana number; the total over all grades is a Catalan number.
 
-One application that motivates these questions is gluing two initially separate graphs along several vertices. Forests within each piece induce partitions of the shared vertex set. For computations, we need to know how many independent coordinates to retain in the corresponding polyforms. This note establishes the algebraic result about partition forms; the gluing formula will be treated in the next note.
+One application that motivates these questions is gluing two initially separate graphs along several vertices. Forests within each piece induce partitions of the shared vertex set. For computations, we need to know how many independent coordinates to retain in the corresponding polyforms. This note establishes the algebraic result about partition forms; the gluing formula is treated in [[Structural Identities and Graph Gluing]].
 
 We use [[Partition Forms and the Tetrahedron Identity|partition forms]], the [[Constructing Structural Identities#The tetrahedron identity for four blocks|four-block identity]], and [[Core specification#The spanning-tree form and coefficient extraction|top-coefficient extraction]]. All spaces are over $\mathbb R$, before a graph or metric is chosen.
 
@@ -392,7 +392,7 @@ The sum is over partitions of the same grade.
 >
 > Each transformation producing (2) is an application of the seven-term relation. Inserting vertices into its blocks and adjoining additional blocks preserve this pattern. Therefore $R_\pi$ is a linear combination of instances of the four-block identity, as is every element of the kernel. $\square$
 
-Thus a correspondence between crossing partitions and basis relations exists **after a cyclic order has been chosen**. This basis is not distinguished without that choice, nor need it consist of relations with minimal support. Identifying new relations that cannot be transferred from smaller vertex sets requires a separate discussion.
+Thus a correspondence between crossing partitions and basis relations exists **after a cyclic order has been chosen**. The basis depends on that choice. Its compatibility with transfer by adjoining singleton blocks, and the count of new independent relations by support size, are proved in [[Supports of Structural Identities]].
 
 ## Applying the basis to graph gluing
 
@@ -419,7 +419,7 @@ $$
 
 Structural identities concern the forms $q_\pi$. They do not imply that the original coefficients $g_\pi$, such as weight sums of forests of specified types, satisfy the same relations.
 
-The next note will prove how the spanning-tree coefficient of a glued graph is expressed by such a pairing of polyforms on the shared vertices. It will also consider the reverse reading of the construction: computing from a prescribed graph decomposition. The full unrooted spanning-forest polynomial requires a separate compatibility check; the result about $\beta$ does not transfer to it automatically. Here $C_n$ describes a linear space of forms and is not asserted to be the minimum number of arbitrary, possibly nonlinear, parameters of a particular graph.
+[[Structural Identities and Graph Gluing]] proves how the spanning-tree coefficient of a glued graph is expressed by such a pairing of polyforms on the shared vertices. It also considers the reverse reading of the construction: computing from a prescribed graph decomposition. The full unrooted spanning-forest polynomial requires a separate compatibility check; the result about $\beta$ does not transfer to it automatically. Here $C_n$ describes a linear space of forms and is not asserted to be the minimum number of arbitrary, possibly nonlinear, parameters of a particular graph.
 
 ## Status of the results and scope
 
@@ -438,4 +438,4 @@ Choosing a metric preserves the equalities of forms already proved. Numerical va
 2. P. Di Francesco, O. Golinelli, E. Guitter. *Meanders and the Temperley-Lieb Algebra*. Communications in Mathematical Physics, 186 (1997), 1-59. [arXiv:hep-th/9602025](https://arxiv.org/abs/hep-th/9602025), Section 5: the meander determinant (5.6), its derivation in Section 5.4, and nonsingularity of the one-component matrix in (5.14)-(5.18). [DOI: 10.1007/BF02885671](https://doi.org/10.1007/BF02885671).
 3. W. Y. C. Chen, E. Y. P. Deng, R. R. X. Du. *Reduction of m-Regular Noncrossing Partitions*. [arXiv:math/0406180](https://arxiv.org/abs/math/0406180), Section 3: Narayana numbers as the counts of noncrossing partitions with a specified number of blocks.
 
-PMG source material: [“Dimension of the Space of Polyforms and the Number of Structural Identities” (in Russian)](https://github.com/magin67/polyform-metric-geometry/blob/main/Theory/Полиформы/Структурные%20тождества/Размерность%20пространства%20полиформ%20и%20число%20структурных%20тождеств.md). That source leaves open the general passage from combinatorial counting to the rank of forms. The present treatment justifies this passage through (3) and the external theorems cited above; the separate problem of minimal supports of relations remains for a later note.
+This note is based on the author's research within PMG. The passage from combinatorial results to statements about forms is proved above using the cited external theorems.
