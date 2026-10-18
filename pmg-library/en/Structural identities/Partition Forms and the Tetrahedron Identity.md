@@ -2,8 +2,8 @@
 title: Partition Forms and the Tetrahedron Identity
 date: 2026-10-18
 updated: 2026-10-18
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-forms-and-tetrahedron-identity
@@ -17,6 +17,8 @@ A partition of a vertex set can be assigned a product of the forms of its block 
 The identity itself is an equality of forms and requires no choice of metric. Once an inner product is specified, it yields a numerical equality of norms and, in Euclidean geometry, an equality of sums of squared areas.
 
 We use the definitions from [[Basic Objects and Operations of Polyform Algebra]]. The geometric part requires the [[Metric of Higher-Grade Objects|metric on exterior powers]]. The notation follows the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]].
+
+Juxtaposition of exterior elements denotes their exterior product.
 
 ## From a partition to a form
 
@@ -36,7 +38,7 @@ Choose an ordering of the vertices within each block. If $B=\{b_1,\ldots,b_s\}$,
 > **Definition.** To a partition $\pi=B_1|\cdots|B_q$, assign the exterior element and its quadratic form:
 >
 > $$
-> X_\pi=(B_1)\wedge\cdots\wedge(B_q),
+> X_\pi=(B_1)\cdots(B_q),
 > \qquad
 > q_\pi=[X_\pi]^2
 > $$
@@ -62,7 +64,7 @@ A singleton block contributes the factor $1$ to the exterior element and the uni
 | $a\mid b\mid c\mid d$ | $e$ | 0 |
 | $ab\mid c\mid d$ | $[(ab)]^2$ | 1 |
 | $abc\mid d$ | $[(abc)]^2$ | 2 |
-| $ab\mid cd$ | $[(ab)\wedge(cd)]^2$ | 2 |
+| $ab\mid cd$ | $[(ab)(cd)]^2$ | 2 |
 | $abcd$ | $[(abcd)]^2$ | 3 |
 
 Partition forms occur, in particular, in the [[Laplacian Exponential#Grade components and spanning forests|forest expansion of the Laplacian exponential]]: the components of a forest define the blocks, and the product of its edge forms equals the form of that partition. Several different forests may give the same form.
@@ -92,7 +94,7 @@ Consider four distinct basis vertices $a,b,c,d$. They admit three partitions int
 > $$
 > \boxed{
 > \begin{aligned}
-> &[(ab)\wedge(cd)]^2+[(ac)\wedge(bd)]^2+[(ad)\wedge(bc)]^2=\\
+> &[(ab)(cd)]^2+[(ac)(bd)]^2+[(ad)(bc)]^2=\\
 > &\qquad=[(abc)]^2+[(abd)]^2+[(acd)]^2+[(bcd)]^2
 > \end{aligned}
 > }
@@ -153,9 +155,9 @@ $$
 >
 > $$
 > \begin{aligned}
-> X_a+X_b&=-(ab)\wedge(cd)\\
-> X_a+X_c&=(ac)\wedge(bd)\\
-> X_a+X_d&=-(ad)\wedge(bc)
+> X_a+X_b&=-(ab)(cd)\\
+> X_a+X_c&=(ac)(bd)\\
+> X_a+X_d&=-(ad)(bc)
 > \end{aligned}
 > $$
 >
@@ -165,7 +167,7 @@ $$
 > \begin{aligned}
 > (bcd)-(acd)
 > &=[bc]-[bd]-[ac]+[ad]\\
-> &=-(b-a)\wedge(d-c)
+> &=-(b-a)(d-c)
 > \end{aligned}
 > $$
 >
@@ -187,9 +189,9 @@ Applying this evaluation to both sides of (1) gives
 
 $$
 \begin{aligned}
-&\bigl((ab)\wedge(cd)\bigr)^2+
-\bigl((ac)\wedge(bd)\bigr)^2+
-\bigl((ad)\wedge(bc)\bigr)^2=\\
+&\bigl((ab)(cd)\bigr)^2+
+\bigl((ac)(bd)\bigr)^2+
+\bigl((ad)(bc)\bigr)^2=\\
 &\qquad=(abc)^2+(abd)^2+(acd)^2+(bcd)^2
 \end{aligned}
 \tag{3}
@@ -200,7 +202,7 @@ $$
 For two vectors, the product of their forms is evaluated using the Gram determinant:
 
 $$
-\bigl((ab)\wedge(cd)\bigr)^2
+\bigl((ab)(cd)\bigr)^2
 =(ab)^2(cd)^2-\bigl((ab)\cdot(cd)\bigr)^2
 $$
 
@@ -214,7 +216,7 @@ The relation between norms and areas gives
 
 $$
 (abc)^2=4S_{abc}^2,\qquad
-\bigl((ab)\wedge(cd)\bigr)^2=S_{ab,cd}^2
+\bigl((ab)(cd)\bigr)^2=S_{ab,cd}^2
 $$
 
 The factor $4$ arises because a triangle has half the area of the parallelogram spanned by the two vectors from one vertex.
@@ -271,9 +273,9 @@ Let $F_1,F_2,F_3$ be the areas of three pairwise nonparallel faces of the parall
 >
 > $$
 > \begin{aligned}
-> (ab)\wedge(cd)&=(p+q)\wedge(p-q)=-2p\wedge q\\
-> (ac)\wedge(bd)&=(q+r)\wedge(r-q)=2q\wedge r\\
-> (ad)\wedge(bc)&=(p+r)\wedge(r-p)=2p\wedge r
+> (ab)(cd)&=(p+q)(p-q)=-2pq\\
+> (ac)(bd)&=(q+r)(r-q)=2qr\\
+> (ad)(bc)&=(p+r)(r-p)=2pr
 > \end{aligned}
 > $$
 >
@@ -295,19 +297,19 @@ $$
 b=a+u,\qquad c=a+v,\qquad d=a+w
 $$
 
-In a Euclidean realization, this is the tetrahedron with coordinates $(0,0,0)$, $(1,0,0)$, $(0,1,0)$, and $(0,0,1)$. The exterior elements $u\wedge v$, $u\wedge w$, and $v\wedge w$ form an orthonormal basis of the second exterior power.
+In a Euclidean realization, this is the tetrahedron with coordinates $(0,0,0)$, $(1,0,0)$, $(0,1,0)$, and $(0,0,1)$. The exterior elements $uv$, $uw$, and $vw$ form an orthonormal basis of the second exterior power.
 
 Compute all seven norms directly from the following expansions.
 
 | Exterior element $X$ | Expansion | Norm $X^2$ |
 |---|---|---:|
-| $(abc)$ | $u\wedge v$ | 1 |
-| $(abd)$ | $u\wedge w$ | 1 |
-| $(acd)$ | $v\wedge w$ | 1 |
-| $(bcd)$ | $u\wedge v-u\wedge w+v\wedge w$ | 3 |
-| $(ab)\wedge(cd)$ | $u\wedge w-u\wedge v$ | 2 |
-| $(ac)\wedge(bd)$ | $v\wedge w+u\wedge v$ | 2 |
-| $(ad)\wedge(bc)$ | $u\wedge w-v\wedge w$ | 2 |
+| $(abc)$ | $uv$ | 1 |
+| $(abd)$ | $uw$ | 1 |
+| $(acd)$ | $vw$ | 1 |
+| $(bcd)$ | $uv-uw+vw$ | 3 |
+| $(ab)(cd)$ | $uw-uv$ | 2 |
+| $(ac)(bd)$ | $vw+uv$ | 2 |
+| $(ad)(bc)$ | $uw-vw$ | 2 |
 
 The sum of the four norms of triangle boundaries and the sum of the three norms of products of opposite edge vectors both equal $6$.
 
