@@ -3,8 +3,8 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 6
-translated_revision: 4
+revision: 7
+translated_revision: 5
 updated: 2026-10-18
 ---
 
@@ -34,6 +34,12 @@ Eight notes on choosing a subspace, the null vector, coordinates, and graph oper
 Five notes on resistance radius and diameter, vertex centralities, dimensionless graph characteristics, and two types of vertex removal. The radius, volumes, and spanning-tree characteristics are expressed through polyforms.
 
 - [[Metric Parameters of Graphs|Notes, reading routes, and a guide to results]].
+
+## Structural identities
+
+Five notes on dependencies among partition forms. The main results are the noncrossing basis and its dimension, completeness of the four-block identity, the graph gluing formula, and decomposition of relations by supports.
+
+- [[Structural Identities|Main results, reading order, and descriptions of the notes]].
 
 ## PMG Foundations
 
