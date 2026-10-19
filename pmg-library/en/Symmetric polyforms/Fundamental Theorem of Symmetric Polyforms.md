@@ -2,8 +2,8 @@
 title: "Fundamental Theorem of Symmetric Polyforms"
 date: 2026-10-19
 updated: 2026-10-19
-revision: 1
-source_revision: 5
+revision: 2
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: fundamental-theorem-of-symmetric-polyforms
@@ -539,7 +539,7 @@ The name “fundamental theorem of symmetric polyforms” is used here for this 
 
 Formula (1) is proved for all admissible types on any finite set of independent basis vertices over $\mathbb R$. The main proof uses only bilinearity of forms, properties of the boundary operator, and partition counts. The independent derivation through representation theory relies on the precisely cited external results.
 
-The theorem explains linear dependencies among symmetric sums of different types. The next topic in the series is to derive rules for products of principal polyforms and examine their consequences.
+The theorem explains linear dependencies among symmetric sums of different types. The multiplication rules for principal polyforms and their consequences are discussed in [[Products and Powers of Symmetric Polyforms]].
 
 ## References
 
