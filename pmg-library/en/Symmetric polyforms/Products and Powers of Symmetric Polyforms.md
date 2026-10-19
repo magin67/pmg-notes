@@ -1,9 +1,9 @@
 ---
 title: "Products and Powers of Symmetric Polyforms"
 date: 2026-10-19
-updated: 2026-10-19
-revision: 2
-source_revision: 3
+updated: 2026-10-20
+revision: 3
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: products-and-powers-of-symmetric-polyforms
@@ -12,15 +12,15 @@ description: "The product rule for principal symmetric polyforms, powers, nilpot
 order: 3
 ---
 
-The fundamental theorem expresses symmetric sums of different types through principal polyforms of the same grade. To compute products, it therefore suffices to establish a multiplication rule for principal polyforms. The rule is particularly simple: the product is proportional to the principal polyform of the total grade, provided that this grade does not exceed $n-1$.
+The fundamental theorem of symmetric polyforms (SPFs) expresses sums of different types through principal symmetric polyforms (principal SPFs) of the same grade. To compute products of SPFs, it therefore suffices to establish a multiplication rule for principal SPFs. The rule is particularly simple: the product is proportional to the principal polyform of the total grade, provided that this grade does not exceed $n-1$.
 
-We derive the rule by counting block intersections and applying the [[Fundamental Theorem of Symmetric Polyforms|fundamental theorem]]. It then yields formulas for powers and an expression for all symmetric polyforms on boundaries in terms of a single generator $E_n[1]$.
+We derive the rule by counting block intersections and applying the [[Fundamental Theorem of Symmetric Polyforms|fundamental theorem]]. It then yields formulas for powers and an expression for all SPFs on boundaries in terms of a single generator $E_n[1]$.
 
 ## Definitions and the product
 
 Fix a set $A=\{a_1,\ldots,a_n\}$ of independent basis vertices, with $n\geqslant2$. All polyforms below are defined on the same set $A$. The space of affine vectors $W=\ker\varepsilon$ has dimension $n-1$.
 
-We use the normalization from [[Symmetric Polyforms - Types and Normalizations|Symmetric Polyforms: Types and Normalizations]]: in the sum $E_n[\lambda]$, each partition into unordered blocks is counted once with coefficient $1$. A principal polyform of positive grade has the form
+We use the normalization from [[Symmetric Polyforms - Types and Normalizations|Symmetric Polyforms: Types and Normalizations]]: in the sum $E_n[\lambda]$, each partition into unordered blocks is counted once with coefficient $1$. A principal SPF of positive grade has the form
 
 $$
 E_n[k]=\sum_{\substack{B\subseteq A\\|B|=k+1}}[(B)]^2,

@@ -1,9 +1,9 @@
 ---
 title: "Fundamental Theorem of Symmetric Polyforms"
 date: 2026-10-19
-updated: 2026-10-19
-revision: 2
-source_revision: 6
+updated: 2026-10-20
+revision: 3
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: fundamental-theorem-of-symmetric-polyforms
@@ -12,7 +12,7 @@ description: "Expressing a symmetric sum of any admissible type through a princi
 order: 2
 ---
 
-At a fixed positive grade, all symmetric sums of partition forms are proportional to a single principal polyform. The coefficient depends on the number of vertices, the grades of the components, and their multiplicities. We will call this statement the **fundamental theorem of symmetric polyforms**.
+At a fixed positive grade, all symmetric sums of partition forms are proportional to a single principal symmetric polyform (principal SPF). The coefficient depends on the number of vertices, the grades of the components, and their multiplicities. We will call this statement the **fundamental theorem of symmetric polyforms (SPFs)**.
 
 The theorem is stated below in the normalization $E_n[\lambda]$, where each partition into unordered blocks is counted once. The idea of the main proof is due to Dmitry Malugin; the exposition was prepared by ChatGPT. An independent explanation using classical representation theory is given at the end.
 
@@ -42,7 +42,7 @@ $$
 \mu_j=\#\{i:k_i=j\}
 $$
 
-The sum $E_n[k_1,\ldots,k_m,0^\ell]$ contains all partitions of this type, each with coefficient $1$. The principal polyform of the same grade is
+The sum $E_n[k_1,\ldots,k_m,0^\ell]$ contains all partitions of this type, each with coefficient $1$. The principal SPF of the same grade is
 
 $$
 E_n[k]=E_n[k,0^{\,n-k-1}]
@@ -377,7 +377,7 @@ Let $\mathcal P_{n,k}$ be the [[Basis and Dimension of the Space of Partition Fo
 > \qquad \dim(\mathcal P_{n,k})^{S_n}=1
 > $$
 >
-> In grade zero, $(\mathcal P_{n,0})^{S_n}=\mathbb R e$. Therefore every symmetric polyform in $\mathcal P_n$ has a unique representation
+> In grade zero, $(\mathcal P_{n,0})^{S_n}=\mathbb R e$. Therefore every SPF in $\mathcal P_n$ has a unique representation
 >
 > $$
 > \boxed{

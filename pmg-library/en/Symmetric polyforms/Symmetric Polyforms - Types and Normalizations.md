@@ -1,9 +1,9 @@
 ---
 title: "Symmetric Polyforms: Types and Normalizations"
 date: 2026-10-19
-updated: 2026-10-19
-revision: 4
-source_revision: 3
+updated: 2026-10-20
+revision: 5
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-types-and-normalizations
@@ -12,9 +12,9 @@ description: "Symmetry under vertex permutations, sums of partition forms of a g
 order: 1
 ---
 
-The sum of all partition forms of one type is invariant under every permutation of the basis vertices. Such sums provide natural examples of symmetric polyforms. Sums of different types can nevertheless represent the same polyform: the familiar tetrahedron identity reads $E_4[1,1]=E_4[2,0]$.
+The sum of all partition forms of one type is invariant under every permutation of the basis vertices. Such sums provide natural examples of symmetric polyforms (SPFs). Sums of different types can nevertheless represent the same polyform: the familiar tetrahedron identity reads $E_4[1,1]=E_4[2,0]$.
 
-This note defines symmetry, specifies the types and normalization of the sums $E_n[\lambda]$, and introduces principal symmetric polyforms, whose terms have one nontrivial component. The main question for the continuation of the series is how to express a symmetric sum of an arbitrary type in terms of the principal polyform of the same grade.
+This note defines symmetry, specifies the types and normalization of the sums $E_n[\lambda]$, and introduces principal symmetric polyforms (principal SPFs), whose terms have one nontrivial component. The main question for the continuation of the series is how to express a symmetric sum of an arbitrary type in terms of the principal polyform of the same grade.
 
 We use the [[Basic Objects and Operations of Polyform Algebra|algebra of forms]] and [[Partition Forms and the Tetrahedron Identity|partition forms]]. The definition of $E_n[\lambda]$ is retained from the note on [[Constructing Structural Identities#From local identities to symmetric sums|constructing structural identities]]. The algebraic part requires no choice of graph or metric.
 
@@ -31,7 +31,7 @@ $$
 
 A permutation preserves the affine weight and commutes with the boundary operator: $\partial(\sigma X)=\sigma(\partial X)$. The latter equality follows directly from the formula for a simplex boundary. The action therefore preserves the space of boundaries, grades, and the product of forms.
 
-> [!info] Symmetric polyform
+> [!info] Symmetric polyform (SPF)
 > **Definition.** A polyform $P$ on boundaries is **symmetric on $A$** if
 >
 > $$
@@ -40,7 +40,7 @@ A permutation preserves the affine weight and commutes with the boundary operato
 >
 > Here $S_n$ denotes the group of all permutations of the chosen vertex set.
 
-The permutation acts simultaneously on all occurrences of vertices in both arguments of every form. Coefficients remain fixed real numbers. A symmetric polyform may contain several grades; since permutations preserve grade, each of its grade components is also symmetric.
+The permutation acts simultaneously on all occurrences of vertices in both arguments of every form. Coefficients remain fixed real numbers. An SPF may contain several grades; since permutations preserve grade, each of its grade components is also symmetric.
 
 **Example.** On three vertices $a,b,c$, the polyform
 
@@ -241,8 +241,8 @@ The corollary establishes the existence of such a representation. It does not as
 
 ## Principal symmetric polyforms
 
-> [!info] Principal symmetric polyform
-> **Definition.** For $1\leqslant k\leqslant n-1$, the principal symmetric polyform of grade $k$ is
+> [!info] Principal symmetric polyform (principal SPF)
+> **Definition.** For $1\leqslant k\leqslant n-1$, the principal symmetric polyform (principal SPF) of grade $k$ is
 >
 > $$
 > \boxed{

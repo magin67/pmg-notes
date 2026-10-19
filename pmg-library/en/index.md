@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 7
-translated_revision: 5
-updated: 2026-10-18
+revision: 8
+translated_revision: 6
+updated: 2026-10-20
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -40,6 +40,12 @@ Five notes on resistance radius and diameter, vertex centralities, dimensionless
 Five notes on dependencies among partition forms. The main results are the noncrossing basis and its dimension, completeness of the four-block identity, the graph gluing formula, and decomposition of relations by supports.
 
 - [[Structural Identities|Main results, reading order, and descriptions of the notes]].
+
+## Symmetric polyforms
+
+Five notes on symmetry of forms under vertex permutations. The main result is the fundamental theorem of SPFs: a symmetric sum of any admissible type is expressed through the principal polyform of the same grade with an explicit coefficient. Consequences cover products and powers, the exponential of the complete graph, and Abel polynomials.
+
+- [[Symmetric Polyforms|The fundamental theorem, its consequences, and reading order]].
 
 ## PMG Foundations
 
@@ -85,4 +91,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **18 October 2026**
+- Library last updated: **20 October 2026**
