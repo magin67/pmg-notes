@@ -2,8 +2,8 @@
 title: "Products and Powers of Symmetric Polyforms"
 date: 2026-10-19
 updated: 2026-10-19
-revision: 1
-source_revision: 2
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: products-and-powers-of-symmetric-polyforms
@@ -414,6 +414,6 @@ All the equalities obtained are identities of forms before a metric is chosen. L
 
 For example, $q=[(ab)]^2$ satisfies $q^2=0$, although its evaluation $(ab)\cdot(ab)$ in a positive definite metric is positive. Thus the evaluation of a product is generally not the product of the evaluations of its factors. The quadratic norm of an exterior object is still denoted by $X^2=X\cdot X$; it differs from the product of polyforms.
 
-The principal polyform $E_n[1]$ is the [[Laplacian - graph, electrical network and quadratic form|Laplacian polyform]] of the complete graph with unit conductances. Formula (4) therefore directly determines all positive grades of its [[Laplacian Exponential|polyform exponential]]. Applications to the complete graph, spanning-tree numbers, and expansions by forest type will be developed separately.
+The principal polyform $E_n[1]$ is the [[Laplacian - graph, electrical network and quadratic form|Laplacian polyform]] of the complete graph with unit conductances. Formula (4) therefore directly determines all positive grades of its [[Laplacian Exponential|polyform exponential]]. Applications to the complete graph, Cayley's formula, and expansions by forest type are discussed in [[Symmetric Polyforms of the Complete Graph]].
 
 This note is based on the author's research within PMG. The product and power rules are proved for all stated grades and all $n\geqslant2$; the use of the fundamental theorem and the grade restriction are indicated explicitly.
