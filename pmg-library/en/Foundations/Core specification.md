@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-16
-revision: 5
+updated: 2026-10-20
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -364,6 +364,25 @@ M_G=\prod_{\{i,j\}\in E}\bigl(e+c_{ij}[a_{ij}]^2\bigr)
 $$
 
 The multiplier $e+c_{ij}[a_{ij}]^2$ is called an edge factor. The form $[a_{ij}]^2$, its weighted contribution $c_{ij}[a_{ij}]^2$, and the edge factor are distinct objects.
+
+### Addition, deletion, and the inverse exponential
+
+For $p=[a_{ij}]^2$, we have $p^2=0$, so
+
+$$
+(e+cp)^{-1}=e-cp,\qquad
+\exp(L+tp)=M_G(e+tp)
+$$
+
+If the conductance of the pair $ij$ changes by $t$, this adds conductance when $t>0$ and deletes an existing edge when $t=-c_{ij}$. The graph interpretation requires $c_{ij}+t\ge0$. The inverse exponential is
+
+$$
+M_G^{-1}=\exp(-L)
+=\prod_{\{i,j\}\in E}\bigl(e-c_{ij}[a_{ij}]^2\bigr)
+=\sum_{k=0}^{n-1}(-1)^kM_k
+$$
+
+Here $M_k=L^k/k!$. Invertibility refers to the polyform algebra and also holds for disconnected graphs. Sources: [[Laplacian Exponential#Adding and deleting an edge|edge operations]] and [[Laplacian Exponential#The inverse exponential|the inverse exponential]].
 
 ### The forest expansion
 

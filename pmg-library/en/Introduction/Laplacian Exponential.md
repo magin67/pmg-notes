@@ -1,9 +1,9 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-10-15
-revision: 5
-source_revision: 4
+updated: 2026-10-20
+revision: 6
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-exponential
@@ -22,7 +22,7 @@ $$
 L=\sum_{\{i,j\}\in E}c_{ij}[a_{ij}]^2,\qquad a_{ij}=a_j-a_i
 $$
 
-All products of forms use the [[Basic Objects and Operations of Polyform Algebra|algebraic definition introduced earlier]]:
+All products of forms use the [[Basic Objects and Operations of Polyform Algebra#Polyforms and the product of forms|definition of the product of forms]]:
 
 $$
 [X,Y][A,B]=[X\wedge A,Y\wedge B]
@@ -50,7 +50,60 @@ M_G=\prod_{\{i,j\}\in E}\bigl(e+c_{ij}[a_{ij}]^2\bigr)
 \tag{2}
 $$
 
-The factor $e+c_{ij}[a_{ij}]^2$ is called the factor-form of the coupling. In the expansion of (2), each coupling is either selected once or omitted.
+The factor $e+c_{ij}[a_{ij}]^2$ is called the edge factor. In the expansion of (2), each coupling is either selected once or omitted.
+
+### Adding and deleting an edge
+
+Let $p=[a_{ij}]^2$, and change the conductance of the pair $ij$ by $t$. An absent coupling has conductance $0$; the graph interpretation requires $c_{ij}+t\ge0$. Then $L'=L+tp$ and
+
+$$
+\boxed{M_{G'}=M_G(e+tp)}
+$$
+
+For $t=c>0$, this adds conductance $c$, including strengthening an existing coupling. For $t=-c_{ij}$, the existing edge is deleted entirely:
+
+$$
+\boxed{M_{G'}=M_G(e-c_{ij}p)}
+$$
+
+> [!note]- Proof
+> **Proof.** Since $p^2=0$, we have $\exp(tp)=e+tp$ and
+>
+> $$
+> (e+cp)(e-cp)=e
+> $$
+>
+> Commutativity of forms gives $\exp(L+tp)=\exp L\exp(tp)$. When the edge is deleted, the multiplier $e-c_{ij}p$ turns its edge factor into the identity. $\square$
+
+If a set $S$ of existing edges is deleted, then
+
+$$
+M_{G-S}=M_G\prod_{\{i,j\}\in S}\bigl(e-c_{ij}[a_{ij}]^2\bigr)
+$$
+
+The order of deletion does not affect the result. These algebraic equalities remain valid if connectivity is lost: the exponential in that case is described under [[#Disconnected graphs]].
+
+### The inverse exponential
+
+Invertibility of every edge factor makes the whole exponential invertible:
+
+$$
+\boxed{
+M_G^{-1}=\exp(-L)
+=\prod_{\{i,j\}\in E}\bigl(e-c_{ij}[a_{ij}]^2\bigr)
+}
+$$
+
+> [!note]- Proof
+> **Proof.** Multiplication by (2) pairs each edge factor with its inverse; every pair gives $e$. The product of the factors with minus signs equals $\exp(-L)$ because forms commute. $\square$
+
+Writing $M_k=L^k/k!$, inversion changes the signs of precisely the odd grades:
+
+$$
+M_G^{-1}=\sum_{k=0}^{n-1}(-1)^kM_k,\qquad M_0=e
+$$
+
+All sums are finite. Invertibility here refers to the polyform product and requires neither graph connectivity nor invertibility of the Laplacian matrix. The inverse exponential of the complement is used in the [[Symmetric Polyforms of the Complete Graph#Deleting edges from the complete graph|representation by deleting edges from the complete graph]].
 
 ## Grade components and spanning forests
 
@@ -318,7 +371,7 @@ Hence $T=T_n$ and $\tau_b=\tau$: the orientation sign disappears in the quadrati
 > \tag{8}
 > $$
 >
-> The right-hand sides use the induced metric of the preceding note; $X^2=X\cdot X$ is a number, while $[X]^2$ is a formal object.
+> The right-hand sides use the induced metric from [[Metric of Higher-Grade Objects]]; $X^2=X\cdot X$ is a number, while $[X]^2$ is a formal object.
 
 For decomposable $X,Y$, the right-hand side of (7) is the mixed Gram determinant. For linear combinations, both sides of (8) extend bilinearly. Thus the theorem applies to nondecomposable exterior objects as well as to products of edge vectors.
 
@@ -342,6 +395,20 @@ $$
 For $v=a_{ij}$, this changes the conductance of the pair $ij$ by $t$, provided the new conductances are admissible. For an arbitrary $v=\sum_i v_i a_i$ with $\sum_i v_i=0$, it is an algebraic variation with matrix perturbation $t\mathbf v\mathbf v^{\mathsf T}$.
 
 For example, if $v=a_1+a_2-2a_3$ and $t>0$, the off-diagonal entry of the perturbation in position $12$ is positive. In the Laplacian representation, this decreases $c_{12}$ by $t$, rather than adding a single conductor. Admissibility of all new conductances must be checked separately; identity (9) does not depend on it.
+
+For $p=[a_{ij}]^2$ and $M'=M_G(e+tp)$, linearity of top-grade coefficient extraction also gives
+
+$$
+u_{M'}(f)=u_{M_G}(f)+t\,u_{M_G}(pf)
+$$
+
+This holds for any form or polyform $f$ on boundaries. Deleting an existing edge of conductance $c$ gives
+
+$$
+u_{M'}(f)=u_{M_G}(f)-c\,u_{M_G}(pf)
+$$
+
+Indeed, $\tau(M'f)=\tau(M_Gf)+t\tau(M_Gpf)$. Setting $f=e$ recovers the change in the spanning-tree coefficient from [[Variation of a Single Edge]]. The formula for unnormalized potentials remains valid when a bridge is deleted; normalization by $\tau(M')$ requires the modified graph to be connected.
 
 Similarly, lemma (7) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant formula is algebraic and does not require each direction to correspond to an edge.
 

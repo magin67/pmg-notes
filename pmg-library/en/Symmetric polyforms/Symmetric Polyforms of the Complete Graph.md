@@ -1,14 +1,14 @@
 ---
 title: "Symmetric Polyforms of the Complete Graph"
 date: 2026-10-19
-updated: 2026-10-19
-revision: 2
-source_revision: 3
+updated: 2026-10-20
+revision: 3
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-of-the-complete-graph
 lang: en
-description: "The Laplacian exponential of the complete graph, a derivation of Cayley's formula, an expansion by forest type, and a detailed K5 example."
+description: "The Laplacian exponential of the complete graph, a derivation of Cayley's formula, an expansion by forest type, a K5 example, and obtaining C4 by edge deletion."
 order: 4
 ---
 
@@ -331,6 +331,110 @@ $$
 When $n=5$, the type $[1,1,1]$ is absent, leaving the equality $16+9=25$. When $n=4$, only the type $[3]$ remains, with coefficient $16$. No inadmissible sums are introduced.
 
 Identity (5) connects the coefficients of the fundamental theorem with the numbers of trees within components. In [[Forest Coefficients and Abel Polynomials]], its terms are grouped by the number of nontrivial components. This gives an expansion of Abel polynomials in falling factorials and explains the combinatorial meaning of its coefficients.
+
+## Deleting edges from the complete graph
+
+Let $G$ be a simple graph on the same $n$ vertices, and let $\overline G$ be its complement. All edges in both graphs have unit conductance; connectivity is not required. The edges of $G$ and $\overline G$ partition the edge set of $K_n$, so
+
+$$
+L_G+L_{\overline G}=E_n[1]
+$$
+
+Using the [[Laplacian Exponential#The inverse exponential|inverse exponential]], we obtain
+
+$$
+\boxed{
+M_G=M_{K_n}\exp(-L_{\overline G})
+=M_{K_n}(M_{\overline G})^{-1}
+}
+$$
+
+> [!note]- Proof
+> **Proof.** Commutativity of the product of forms gives $\exp(E_n[1])\exp(-L_{\overline G})=\exp(E_n[1]-L_{\overline G})=\exp L_G$. Equivalently, the factor of each deleted edge is multiplied by its inverse and gives $e$. $\square$
+
+Thus the known symmetric expansion (1) is multiplied by the deletion polyform:
+
+$$
+\exp(-L_{\overline G})
+=\prod_{\{i,j\}\in E(\overline G)}\bigl(e-[(a_i a_j)]^2\bigr)
+=\sum_{j=0}^{n-1}(-1)^j(M_{\overline G})_j
+$$
+
+If the complement has few edges or a simple forest expansion, this expression may be shorter than a direct expansion of $M_G$. Symmetry of $G$ itself is not required for the equality.
+
+The inverse exponential may contain several grades, so the grades of the result must be collected after multiplication:
+
+$$
+(M_G)_k=\sum_{j=0}^k(-1)^j(M_{K_n})_{k-j}(M_{\overline G})_j
+$$
+
+Here $(M_{K_n})_0=e$, and $(M_{K_n})_r=n^{r-1}E_n[r]$ for $r\ge1$. Dividing an individual principal SPF by $M_{\overline G}$ does not in general give the corresponding grade component of $G$: lower grades of the complete graph also contribute.
+
+### Example: deleting the diagonals of a four-cycle
+
+Let $C_4$ have edges $ab,bc,cd,da$. The diagonals $ac,bd$ are deleted from $K_4$. Set
+
+$$
+p=[(ac)]^2,\qquad q=[(bd)]^2,\qquad pq=[(ac)(bd)]^2
+$$
+
+We have $p^2=q^2=0$ and
+
+$$
+\begin{aligned}
+M_{K_4}&=e+E_4[1]+4E_4[2]+16E_4[3]\\
+M_{C_4}&=M_{K_4}(e-p-q+pq)
+\end{aligned}
+$$
+
+Collecting grades gives
+
+$$
+\begin{aligned}
+(M_{C_4})_0&=e\\
+(M_{C_4})_1&=E_4[1]-p-q\\
+(M_{C_4})_2&=4E_4[2]-E_4[1](p+q)+pq\\
+(M_{C_4})_3&=16E_4[3]-4E_4[2](p+q)+E_4[1]pq
+\end{aligned}
+$$
+
+The boundary product rules give
+
+$$
+\begin{aligned}
+E_4[1](p+q)&=2E_4[2]+2pq\\
+E_4[2](p+q)&=4E_4[3]\\
+E_4[1]pq&=4E_4[3]
+\end{aligned}
+$$
+
+For the first equality, enumerate edge pairs: the form of each of the four triangle boundaries occurs twice, and the pair of diagonals appears in both products. For the second, each diagonal shares exactly one vertex with two of the four triangles; the other products vanish. For the third, each of the four cycle edges joins the two diagonals into a tree, while repeating a diagonal gives zero.
+
+Hence
+
+$$
+\boxed{
+M_{C_4}=e+L_{C_4}+2E_4[2]-pq+4E_4[3]
+}
+$$
+
+Here $L_{C_4}=E_4[1]-p-q$ and $E_4[3]=[(abcd)]^2$. The top-grade coefficient is $16-16+4=4$, corresponding to the four spanning trees of the cycle.
+
+To return grade two to a forest representation, use the [[Partition Forms and the Tetrahedron Identity|tetrahedron identity]]:
+
+$$
+E_4[2]=[(ab)(cd)]^2+pq+[(ad)(bc)]^2
+$$
+
+Then
+
+$$
+(M_{C_4})_2=E_4[2]+[(ab)(cd)]^2+[(ad)(bc)]^2
+$$
+
+The four terms in $E_4[2]$ correspond to pairs of adjacent edges, and the remaining two forms to pairs of opposite edges. These are all six two-edge forests, as in the [[Laplacian Exponential#The spanning-tree form and top-grade coefficient|direct expansion of the four-cycle exponential]].
+
+**Independent computational check.** Every coefficient of the resulting polyform was compared with the direct product of the four edge factors of $C_4$. Both expressions were expanded in the tensor basis of the exterior arguments over the integers; equality was checked at every grade.
 
 ## Verification and scope of the results
 
