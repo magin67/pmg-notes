@@ -2,8 +2,8 @@
 title: "Symmetric Polyforms: Types and Normalizations"
 date: 2026-10-19
 updated: 2026-10-19
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-types-and-normalizations
@@ -320,8 +320,8 @@ Here $[X]^2$ is a form, whereas $X^2$ is its numerical quadratic norm in the PMG
 
 ## Toward the fundamental identity
 
-This note proves the invariance of the sums $E_n[\lambda]$, the formula for their number of terms, and the representation of a symmetric polyform in the space of partition forms as a combination of these sums. The equalities on four and five vertices are proved in the structural identities series.
+This note proves the invariance of the sums $E_n[\lambda]$, the formula for their number of terms, and the representation of a symmetric polyform in the space of partition forms as a combination of these sums. The equalities on four and five vertices are proved in [[Partition Forms and the Tetrahedron Identity]] and [[Constructing Structural Identities]].
 
-The next question concerns dependencies between symmetric sums: for a fixed grade $k$, can every admissible type be expressed in terms of $E_n[k]$, and how is the coefficient computed? This is the subject of the next note, on the fundamental theorem of symmetric polyforms. Counting terms alone does not prove such an equality; an identity in the algebra of forms is required.
+The next question concerns dependencies between symmetric sums: for a fixed grade $k$, can every admissible type be expressed in terms of $E_n[k]$, and how is the coefficient computed? This is the subject of [[Фундаментальная теорема симметрических полиформ|Fundamental Theorem of Symmetric Polyforms]] (currently available in Russian). Counting terms alone does not prove such an equality; an identity in the algebra of forms is required.
 
 This note is based on the author's research within PMG. The definitions of forms and types, and the starting identities, are aligned with the linked public notes in the library.
