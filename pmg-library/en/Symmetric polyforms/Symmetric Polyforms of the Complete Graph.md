@@ -2,8 +2,8 @@
 title: "Symmetric Polyforms of the Complete Graph"
 date: 2026-10-19
 updated: 2026-10-19
-revision: 1
-source_revision: 2
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-of-the-complete-graph
@@ -330,7 +330,7 @@ $$
 
 When $n=5$, the type $[1,1,1]$ is absent, leaving the equality $16+9=25$. When $n=4$, only the type $[3]$ remains, with coefficient $16$. No inadmissible sums are introduced.
 
-Identity (5) connects the coefficients of the fundamental theorem with the numbers of trees within components. Grouping its terms further by the number of nontrivial components leads to a separate combinatorial question concerning Abel polynomials; the results presented here do not require that grouping.
+Identity (5) connects the coefficients of the fundamental theorem with the numbers of trees within components. In [[Forest Coefficients and Abel Polynomials]], its terms are grouped by the number of nontrivial components. This gives an expansion of Abel polynomials in falling factorials and explains the combinatorial meaning of its coefficients.
 
 ## Verification and scope of the results
 
