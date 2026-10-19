@@ -2,8 +2,8 @@
 title: "Symmetric Polyforms: Types and Normalizations"
 date: 2026-10-19
 updated: 2026-10-19
-revision: 2
-source_revision: 2
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-types-and-normalizations
@@ -144,7 +144,7 @@ In the first sum, $ab|cd$ and $cd|ab$ are not counted as different partitions. S
 
 The definition sums over partitions, rather than all forests of the given type. A single partition may have several tree realizations. For example, there are three trees on three vertices, each giving the form $[(abc)]^2$. The sum of these three forms is $3E_3[2]$, whereas $E_3[2]$ counts the partition $abc$ only once.
 
-## The number of terms and factorial factors
+## Representation size and factorial factors
 
 Let $\lambda=[k_1,\ldots,k_m]$ contain positive parts, with $k=\sum_i k_i$ and $\ell=n-k-m\geqslant0$. For $j\geqslant1$, let $\mu_j$ denote the number of occurrences of $j$ in this list:
 
@@ -152,9 +152,11 @@ $$
 \mu_j=\#\{i:k_i=j\},\qquad \sum_{j\geqslant1}\mu_j=m
 $$
 
-Below, $\#E_n[\lambda,0^\ell]$ denotes the **number of partitions in the sum (1)**. It refers to the specified representation and does not define a numerical functional on the space of polyforms.
+**Definition.** The **size of a polyform representation** is the number of terms in the chosen expression as a sum of forms with coefficients. When the representation is specified, we will simply say **size**. It depends on the expression: equal polyforms may have representations of different sizes.
 
-> [!info] The number of partitions of a given type
+In the basic normalization, $\#E_n[\lambda,0^\ell]$ denotes the size of representation (1), namely the number of partitions of the given type. Each partition occurs once, with coefficient $1$.
+
+> [!info] The size of a symmetric sum
 > **Theorem.** With normalization (1),
 >
 > $$
@@ -174,7 +176,7 @@ Below, $\#E_n[\lambda,0^\ell]$ denotes the **number of partitions in the sum (1)
 >
 > Each partition is counted as many times as the product of these factors. Dividing $n!$ by that product gives (2). $\square$
 
-| Sum | Count from formula (2) | Number of terms |
+| Sum | Count from formula (2) | Size |
 |---|---|---:|
 | $E_4[1,1]$ | $4!/((2!)^2\,2!)$ | 3 |
 | $E_4[2,0]$ | $4!/3!$ | 4 |
@@ -191,7 +193,7 @@ $$
 \left(\prod_{j\geqslant1}\mu_j!\right)E_n[\lambda,0^\ell]
 $$
 
-If all singleton blocks are also numbered, an additional factor of $\ell!$ appears. These are different conventions for enumerating terms.
+If all singleton blocks are also numbered, an additional factor of $\ell!$ appears. These are different conventions for enumerating terms. Before collecting like terms, the size increases by the same factor.
 
 For example, distinguishing the two blocks of size $2$ changes $E_4[1,1]$ into $2E_4[1,1]$. For type $[1,0^3]$, the sole nontrivial block is already distinguished by its size, whereas numbering the three singleton vertices gives a factor of $3!$.
 
@@ -221,7 +223,7 @@ $$
 \tag{3}
 $$
 
-Thus $E_n[\lambda]$ is the sum over the partitions in an orbit, with unit coefficients. Averaging a single form over permutations gives the average over partitions of its type.
+Thus $E_n[\lambda]$ is the sum over the partitions in an orbit, with unit coefficients. Averaging a single form over permutations gives the sum over partitions of its type divided by the size of that sum.
 
 **Corollary.** Every symmetric polyform in the linear span of partition forms on $A$ can be expressed as a linear combination of the sums $E_n[\lambda]$.
 
@@ -252,7 +254,7 @@ The corollary establishes the existence of such a representation. It does not as
 >
 > Each partition in this sum has exactly one nontrivial block; all remaining vertices form singleton blocks.
 
-Choosing the nontrivial block determines the partition completely. Hence
+Choosing the nontrivial block determines the partition completely. Hence the size of the principal polyform in representation (4) is
 
 $$
 \#E_n[k]=\binom{n}{k+1}
@@ -268,7 +270,7 @@ $$
 
 By the definition of the [[Laplacian - graph, electrical network and quadratic form|Laplacian]], this is the Laplacian polyform of the complete graph with unit conductances. This interpretation does not require a graph to be chosen in advance when defining $E_n[1]$.
 
-In the next grade, $E_n[2]$ sums the boundary forms of all three-vertex subsets. In the top grade, there is only one term:
+In the next grade, $E_n[2]$ sums the boundary forms of all three-vertex subsets. In the top grade, the size is $1$:
 
 $$
 E_n[n-1]=[(a_1\ldots a_n)]^2=T_n
@@ -300,7 +302,7 @@ $$
 E_4[1,1]=E_4[2,0]=E_4[2]
 $$
 
-The defining sum on the left has three partitions, and the one on the right has four. This is one polyform of grade $2$ with two representations of different types and different coefficient sums.
+The representations on the left and right have sizes $3$ and $4$, respectively. This is one polyform of grade $2$ with two representations of different types and sizes. Since all coefficients are $1$, the coefficient sums here equal the sizes.
 
 On five vertices, the [[Constructing Structural Identities#From local identities to symmetric sums|structural identities series]] proves
 
@@ -308,7 +310,7 @@ $$
 E_5[2,1]=3E_5[3,0]=3E_5[3]
 $$
 
-The coefficient sums of these two expressions are $10$ and $15$, respectively. The type, the number of partitions, and the coefficient sum of an expression must all be distinguished from the polyform itself.
+After expanding the sums $E$, the representation on the left has size $10$ with coefficients $1$, whereas the one on the right has size $5$ with coefficients $3$. The coefficient sums are $10$ and $15$, respectively. Thus size and coefficient sum are different characteristics of a representation; both may change when passing to an equal expression.
 
 Metric evaluation behaves differently. Once a metric is chosen, the map $[X,Y]\mapsto X\cdot Y$ is linear on the space of forms and therefore takes the same value on equal polyforms. In the resistance metric of a connected graph, the normalized evaluation of a quadratic form is
 
@@ -320,8 +322,8 @@ Here $[X]^2$ is a form, whereas $X^2$ is its numerical quadratic norm in the PMG
 
 ## Toward the fundamental identity
 
-This note proves the invariance of the sums $E_n[\lambda]$, the formula for their number of terms, and the representation of a symmetric polyform in the space of partition forms as a combination of these sums. The equalities on four and five vertices are proved in [[Partition Forms and the Tetrahedron Identity]] and [[Constructing Structural Identities]].
+This note proves the invariance of the sums $E_n[\lambda]$, the formula for the size of their representations, and the representation of a symmetric polyform in the space of partition forms as a combination of these sums. The equalities on four and five vertices are proved in [[Partition Forms and the Tetrahedron Identity]] and [[Constructing Structural Identities]].
 
-The next question concerns dependencies between symmetric sums: for a fixed grade $k$, can every admissible type be expressed in terms of $E_n[k]$, and how is the coefficient computed? This is the subject of [[Фундаментальная теорема симметрических полиформ|Fundamental Theorem of Symmetric Polyforms]] (currently available in Russian). Counting terms alone does not prove such an equality; an identity in the algebra of forms is required.
+The next question concerns dependencies between symmetric sums: for a fixed grade $k$, can every admissible type be expressed in terms of $E_n[k]$, and how is the coefficient computed? This is the subject of [[Фундаментальная теорема симметрических полиформ|Fundamental Theorem of Symmetric Polyforms]] (currently available in Russian). Comparing sizes alone does not prove such an equality; an identity in the algebra of forms is required.
 
 This note is based on the author's research within PMG. The definitions of forms and types, and the starting identities, are aligned with the linked public notes in the library.
