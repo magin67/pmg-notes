@@ -2,7 +2,7 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-10-20
-revision: 6
+revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -60,10 +60,10 @@ Source: [[Basic Objects and Operations of Polyform Algebra#Points and affine vec
 
 **Definition.** The space $\Lambda^kV$ consists of linear combinations of exterior products of $k$ elements of $V$. Its elements are called exterior objects of grade $k$. An object is decomposable if it can be expressed as a single exterior product.
 
-The exterior product is bilinear and associative. For homogeneous objects $X\in\Lambda^kV$ and $Y\in\Lambda^mV$,
+Juxtaposition of exterior objects denotes their exterior product: $XY=X\wedge Y$. The inner product is written explicitly as $X\cdot Y$, and the exterior self-product as $X\wedge X$, since $X^2$ denotes the norm. The exterior product is bilinear and associative. For homogeneous objects $X\in\Lambda^kV$ and $Y\in\Lambda^mV$,
 
 $$
-X\wedge Y=(-1)^{km}Y\wedge X
+XY=(-1)^{km}YX
 $$
 
 In particular, $x\wedge x=0$ for $x\in V$. The scalar $1\in\Lambda^0V$ is the identity for the exterior product. A nonzero product of objects of grades $k$ and $m$ has grade $k+m$.
@@ -71,7 +71,7 @@ In particular, $x\wedge x=0$ for $x\in V$. The scalar $1\in\Lambda^0V$ is the id
 An oriented simplex is written as
 
 $$
-[a_{i_1}\ldots a_{i_k}]=a_{i_1}\wedge\cdots\wedge a_{i_k}
+[a_{i_1}\ldots a_{i_k}]=a_{i_1}\cdots a_{i_k}
 $$
 
 Its grade is the number of vertices, one greater than the usual geometric dimension of a nondegenerate simplex. The term “order” may be used as a synonym for grade when the object is explicitly specified. This specification consistently uses “grade”.
@@ -92,7 +92,7 @@ On $V$, the operator agrees with the affine-weight functional: $\partial x=\vare
 
 $$
 \partial^2=0,\qquad
-\partial(X\wedge Y)=\partial X\wedge Y+(-1)^kX\wedge\partial Y
+\partial(XY)=(\partial X)Y+(-1)^kX(\partial Y)
 $$
 
 Simplex boundaries are denoted by parentheses:
@@ -119,7 +119,7 @@ Thus boundaries form a subalgebra of the exterior algebra. Nonzero boundaries ha
 For points $p,a_1,\ldots,a_r$,
 
 $$
-(pa_1\ldots a_r)=(a_1-p)\wedge\cdots\wedge(a_r-p)
+(pa_1\ldots a_r)=(a_1-p)\cdots(a_r-p)
 $$
 
 The following rules apply to boundaries of simplices on distinct basis vertices, with each simplex containing at least two vertices.
@@ -127,7 +127,7 @@ The following rules apply to boundaries of simplices on distinct basis vertices,
 - If the only shared vertex $p$ is listed first in both simplices, then
 
 $$
-(pa_1\ldots a_r)\wedge(pb_1\ldots b_s)=(pa_1\ldots a_r b_1\ldots b_s)
+(pa_1\ldots a_r)(pb_1\ldots b_s)=(pa_1\ldots a_r b_1\ldots b_s)
 $$
 
 - Other vertex orders require the corresponding orientation signs.
@@ -173,7 +173,7 @@ The notation $[X]^2$ denotes neither $X\wedge X$ nor a numerical norm. For nonze
 > **Definition.** For forms of grades $k$ and $m$, set
 >
 > $$
-> [X,Y][A,B]=[X\wedge A,Y\wedge B]
+> [X,Y][A,B]=[XA,YB]
 > $$
 >
 > The product extends bilinearly to polyforms. Its identity is the grade-$0$ form $e=[1,1]$.
@@ -185,7 +185,7 @@ The scalar $1$ is the identity for exterior objects, whereas $e$ is the identity
 For quadratic forms,
 
 $$
-[X]^2[A]^2=[X\wedge A]^2,\qquad
+[X]^2[A]^2=[XA]^2,\qquad
 ([v]^2)^2=0\quad(v\in V)
 \tag{1}
 $$
@@ -193,7 +193,7 @@ $$
 The last equality does not extend to an arbitrary sum of forms or to every higher-grade form. For independent $u,v\in W$, for example,
 
 $$
-\bigl([u]^2+[v]^2\bigr)^2=2[u\wedge v]^2\ne0
+\bigl([u]^2+[v]^2\bigr)^2=2[uv]^2\ne0
 $$
 
 ### Forms on boundaries
@@ -307,7 +307,7 @@ Let $W$ carry a positive-definite inner product. The graph model uses (3).
 > **Definition.** For decomposable objects of the same grade,
 >
 > $$
-> X=u_1\wedge\cdots\wedge u_k,\qquad Y=v_1\wedge\cdots\wedge v_k
+> X=u_1\cdots u_k,\qquad Y=v_1\cdots v_k
 > $$
 >
 > define their inner product by the mixed Gram determinant:
@@ -582,11 +582,14 @@ The following constructions are outside this revision of the core and require se
 - the isotropic extension, the distinguished null vector, and bi-coordinates and di-coordinates;
 - directed graphs and the KVP/KVPOU structural decompositions;
 - dual polyforms, cut forms, and the function $\operatorname{dex}$;
-- symmetric polyforms, toponomes, and component reductions;
+- structural identities of partition forms, symmetric polyforms, and their combinatorial coefficients;
+- toponomes and component reductions;
 - metric-value decompositions and interval forms;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
-Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]]. The scope of the required core remains unchanged.
+Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]].
+
+Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. The scope of the required core is unchanged.
 
 In this specification, a boundary is an image of $\partial$, equivalently an element of $\Lambda^kW$. A selected vertex set in a Dirichlet problem is not a boundary in this algebraic sense. When using the standard expression “boundary vertices”, the two notions must be explicitly distinguished.
 
@@ -602,7 +605,7 @@ In this specification, a boundary is an image of $\partial$, equivalently an ele
 | $[X,Y]$, $[X]^2$ | Formal bilinear and quadratic forms |
 | $\{X,Y\}$ | Polar form without a factor of $1/2$ |
 | $1$, $e=[1,1]$ | Identity for exterior objects and the unit form |
-| $X\wedge Y$ | Exterior product of objects |
+| $XY$ | Exterior product of objects; the exterior self-product is written as $X\wedge X$ |
 | $X\cdot Y$, $X^2=\lVert X\rVert^2$ | Numerical inner product and quadratic norm; $\|X\|$ is the linear norm |
 | $c_{ij}$, $d_i$ | Conductances and weighted vertex degrees |
 | $G$ | Graph |
@@ -621,17 +624,36 @@ In this specification, a boundary is an image of $\partial$, equivalently an ele
 
 When matrix and polyform representations occur together, bold type denotes a matrix. Notes in which the representation is unambiguous may use ordinary letters $L,G,R$. Equation numbering is local to this specification.
 
+### Collections in combinatorial formulas
+
+A numerical collection $\mathbf x=[x_1,\ldots,x_m]$ is a finite multiset: enumeration order is immaterial, and repetitions are retained. For a finite set or collection $X$, the notation $\#X$ denotes its **size**, or cardinality; every occurrence in a collection is counted. When $\mathbf x$ lists the block sizes of a partition, $m=\#\mathbf x$ is the number of components, while its weight $w(\mathbf x)$ is the size of the set being partitioned.
+
+First specify the collection, then the operation on it:
+
+$$
+w(\mathbf x)=x_1+\cdots+x_m,\qquad
+\mathbf x!=[x_i]!=x_1\cdots x_m
+$$
+
+For nonnegative integers $x_i$, the notation $[x_i!]$ specifies the collection of factorials with the same indices and repetitions, and $[x_i!]!$ is the product of its elements. The ordinary factorial of a number retains its meaning: $[5]!=5$, whereas $5!=120$. The empty product equals $1$. The weight of a numerical collection differs from the affine weight of an element of $V$.
+
+Square brackets for a numerical collection $[x_i]$, a simplex $[a_1\ldots a_k]$, and a form $[X,Y]$ are distinguished by the types of their arguments. Numerical collections use bold letters, such as $\mathbf x$ and $\boldsymbol\mu$; this convention is separate from the use of bold type for matrices. In a type such as $[1^\ell]$, the superscript denotes $\ell$ repetitions of one. When ambiguity is possible, repetitions are written out explicitly.
+
+The parts of a combinatorial type specify block sizes. The parts of an SPF type specify their boundary grades: a block of $b$ vertices contributes the part $b-1$. For a full type on $n$ vertices whose parts sum to $k$, the component count is $m=n-k$, including singleton blocks of grade zero. The representation size $\#E_n[\lambda]$ counts terms in the chosen sum over partitions; it depends on the representation and differs from the number of forests. Definitions and normalizations appear in [[Partitions and the Combinatorial Potential of the Second Kind]] and [[Symmetric Polyforms - Types and Normalizations]].
+
 ## Sources and revision history
 
 The ten notes of the [[PMG Introductory Series|introductory series]] provide the supporting material. External references and their correspondence to individual notes are listed in [[Further Reading for the PMG Introductory Series|further reading]]. This specification records the conventions of the published corpus; subsequent substantive changes require corresponding updates to related definitions and terminology.
 
 | Revision | Date | Content |
 |---|---|---|
+| 7 | 2026-10-20 | Recorded numerical-collection size and weight, collection products, and products of element factorials. Distinguished block-size types, SPF types, and representation size; added links to the structural, symmetric, and combinatorial series. Aligned exterior-product notation. The scope and mathematical statements of the core are unchanged. Aligned with Russian core specification revision 7. |
 | 5 | 2026-10-16 | Aligned notation: Green matrix $\mathbf{Gr}=\mathbf L^+$, Gram matrix $\mathbf G$ with entries $g_{ij}$, extended Gram matrix $\mathbf G_z$, and bi-coordinate matrix $\mathbf B$. Clarified the geometric meaning of the Green matrix. |
 | 3 | 2026-10-14 | Added links to the published definitions in the spaces series and aligned the names bi-coordinates and di-coordinates across languages. The mathematical content of the core is unchanged. This English version follows Russian revision 3. |
 | 2 | 2026-10-09 | Removed unnecessary equation numbers; retained and consecutively renumbered only equations referenced in the text. This English version follows Russian revision 2. |
 | 1 | 2026-10-09 | First public core specification, aligned with the introductory series. Clarified formal forms, the space of boundaries, the domain of metric evaluation, the spanning-tree coefficient, and conditions for variation formulas. |
 
 Internal specification version 0.2 of 2026-09-21 was used as source material. Its core definitions are superseded by this document; its material on thematic extensions does not automatically become part of the core. Earlier revisions are historical records, not parallel current specifications.
+
 
 

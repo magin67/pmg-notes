@@ -1,17 +1,17 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-16
-revision: 7
+updated: 2026-10-20
+revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core, Russian equivalents, and distinctions between formal objects, forms, and metric values."
+description: "Terminology of the PMG core and published series: objects, forms, metrics, collections, partitions, symmetric polyforms, and combinatorial potentials; Russian equivalents."
 order: 2
 ---
 
-This glossary records the terminology of the [[Core specification|core specification]] and the [[PMG Introductory Series|introductory series]]. Each entry gives the English term, its Russian equivalent, and a brief definition. Applicability conditions and fundamental identities are specified in the core specification; proofs and examples appear in the introductory notes.
+This glossary records the terminology of the [[Core specification|core specification]], the [[PMG Introductory Series|introductory series]], and the published thematic series. Each entry gives the English term, its Russian equivalent, and a brief definition. Applicability conditions and fundamental identities of the core are specified in the core specification; definitions of extensions, proofs, and examples appear in the linked notes.
 
 ## Scope and terminology status
 
@@ -27,6 +27,23 @@ Terminology status does not describe the proof status of a claim. English names 
 
 The project name remains **Polyform Metric Geometry (PMG)**.
 
+## Collections and partitions
+
+These conventions are used in the [[Partitions and the Combinatorial Potential of the Second Kind|combinatorial series]]; the compact notation for operations is recorded in the [[Core specification#Collections in combinatorial formulas|specification]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Numerical collection; multiset | Числовой набор | Qualified | A finite multiset $\mathbf x=[x_1,\ldots,x_m]$: order is immaterial, and repetitions are retained. The collection is bold, its elements are not. |
+| Size; cardinality | Размер набора; мощность | Standard | $\#X$ counts the elements of a finite set or the occurrences in a collection. For $\mathbf x=[x_1,\ldots,x_m]$, one has $\#\mathbf x=m$. The term “length of a collection” is not used. |
+| Weight of a numerical collection | Вес числового набора | Qualified | $w(\mathbf x)=x_1+\cdots+x_m$. Distinct from collection size and from the affine weight of an element of $V$. |
+| Product of a collection | Произведение набора | PMG | $\mathbf x!=[x_i]!=x_1\cdots x_m$; the empty product equals $1$. Its argument is a collection, whereas $n!$ is the ordinary factorial of a number. The notation $[x_i!]!$ denotes the product of element factorials, not the factorial of their product. |
+| Multiplicity of a value | Кратность значения | Standard | $\mu_j=\#\{i:x_i=j\}$ for each distinct value $j$ in the collection. The collection $\boldsymbol\mu=[\mu_j]_{j\in J}$ is indexed by the set $J$ of distinct values; equal multiplicities are retained. |
+| Integer partition | Разбиение числа | Standard | A numerical collection of positive integers with prescribed weight $w$. Its elements are called parts. |
+| Set partition; block; partition component | Разбиение множества; блок; компонента разбиения | Standard | A collection of nonempty pairwise disjoint subsets whose union is the original set. Blocks are unordered; their number is denoted by $m$. |
+| Numerical type of a partition; block-size type | Числовой тип разбиения | Qualified | The collection of block sizes $[\#B_1,\ldots,\#B_m]$. Its size is the component count, and its weight is the size of the original set. Distinct from the grade type of a partition form. |
+
+The notation $[x_i!]$ first constructs a new collection using the same indices as $[x_i]$, retaining every occurrence; the outer sign in $[x_i!]!$ then specifies its product. Numbers, collections, simplices, and forms are distinguished by their argument types, rather than by square brackets alone.
+
 ## Points, vectors, and exterior objects
 
 | English term | Russian equivalent | Status | Meaning and convention |
@@ -37,11 +54,11 @@ The project name remains **Polyform Metric Geometry (PMG)**.
 | Affine vector | Аффинный вектор | Qualified | An element $u\in W=\ker\varepsilon$. Within the core, “vector” may be used for brevity. |
 | Vertex-pair vector | Вектор пары вершин | Qualified | The difference $a_{ij}=a_j-a_i=(ij)$. It is defined even without an edge; reversing the order changes its sign. |
 | Space of affine vectors | Пространство аффинных векторов | Qualified | The $(n-1)$-dimensional subspace $W\subset V$ consisting of combinations with zero coefficient sum. |
-| Exterior product; wedge product | Внешнее произведение | Standard | The operation $\wedge$ in the exterior algebra. Exchanging homogeneous objects introduces a sign depending on their grades. |
+| Exterior product; wedge product | Внешнее произведение | Standard | The product $XY$ in the exterior algebra, usually denoted by $X\wedge Y$. Exchanging homogeneous objects introduces a sign depending on their grades. |
 | Exterior-algebra element | Внешний объект | Qualified | An element of $\Lambda^kV$ or $\Lambda^kW$. It may be a linear combination of exterior products. |
 | Decomposable exterior element | Простой внешний объект | Standard | An object expressible as one exterior product. The Russian adjective “простой” means decomposable here. |
 | Grade | Грейд | Qualified | The exterior degree $k$ of an object in $\Lambda^kV$. For a form, it is the common grade of its arguments. |
-| Simplex | Симплекс | Qualified | The formal expression $[a_1\ldots a_k]=a_1\wedge\cdots\wedge a_k$. Its grade is $k$; the geometric dimension of a nondegenerate simplex is $k-1$. |
+| Simplex | Симплекс | Qualified | The formal expression $[a_1\ldots a_k]=a_1\cdots a_k$. Its grade is $k$; the geometric dimension of a nondegenerate simplex is $k-1$. |
 | Orientation | Ориентация | Standard | A choice of sign for an exterior object specified by the order of its generators. Exchanging two generators changes the sign. |
 
 In the algebraic construction, $a_i$ does not denote a centered position vector of a Euclidean realization. Formal vertices are linearly independent; centered position vectors sum to zero.
@@ -75,12 +92,47 @@ The merging and vanishing rules apply to simplex boundaries on basis vertices. F
 | Polyform in PMG | Полиформа | PMG | A finite linear combination of forms, possibly of different grades. After definition, “polyform” may be used. |
 | Homogeneous polyform | Однородная полиформа | Qualified | A polyform of one grade. |
 | Grade component | Грейд-компонента | Qualified | A homogeneous component $P_k$ of a specified polyform. “Грейд-полиформа” is an acceptable Russian synonym. |
-| Polyform product | Произведение форм | PMG | The operation $[X,Y][A,B]=[X\wedge A,Y\wedge B]$. It is commutative and differs from matrix multiplication. |
+| Polyform product | Произведение форм | PMG | The operation $[X,Y][A,B]=[XA,YB]$. It is commutative and differs from matrix multiplication. |
 | Unit form | Единичная форма | PMG | The grade-$0$ form $e=[1,1]$, the identity for the product of forms. |
 | Form on boundaries | Форма на границах | PMG | A form with arguments in $\Lambda^kW$. These forms constitute the subalgebra on which the core's metric evaluation is defined. |
 | Nilpotency | Нильпотентность | Standard | A positive power of an element being zero. For example, $([v]^2)^2=0$ for a vector $v$, although the form of a nonzero vector is itself nonzero. |
 
 In the electrical part of the introductory series, “the quadratic form of the Laplacian” also denotes the numerical function $\varphi\mapsto\varphi^{\mathsf T}\mathbf L\varphi$. When it appears alongside the formal polyform $L$, the representation must be specified.
+
+## Structural identities and symmetric polyforms
+
+Definitions follow [[Partition Forms and the Tetrahedron Identity]] and [[Symmetric Polyforms - Types and Normalizations]]. They belong to the formal algebra and require no choice of metric.
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Partition form | Форма разбиения | PMG | For a partition $\pi$ into blocks $B_1,\ldots,B_m$, this is $q_\pi=[(B_1)\cdots(B_m)]^2$. Its grade is $n-m$, where $n$ is the vertex count. A singleton block contributes the unit factor. |
+| Structural identity | Структурное тождество | PMG | A linear relation between partition forms on a fixed vertex set that holds in the formal algebra. A numerical equality in one chosen metric does not by itself constitute such an identity. |
+| Full type of a partition form | Полный тип формы разбиения | PMG | The collection of block-boundary grades $\lambda=[\#B_1-1,\ldots,\#B_m-1]$. With $r$ positive parts and $\ell$ zero parts, $m=r+\ell=n-k$, where $k$ is the sum of the parts. Zeros may be omitted for fixed $n$. A type refers to a partition and to a chosen representation of a sum. |
+| Symmetric polyform; SPF | Симметрическая полиформа; СПФ | PMG | A polyform invariant under all permutations of a specified set of basis vertices. Vertex symmetry differs from symmetry of a form in its two arguments. |
+| Symmetric sum of a given type | Симметрическая сумма заданного типа | PMG | $E_n[\lambda]$ is the sum of $q_\pi$ over all partitions of a specified set of $n$ vertices with full type $\lambda$. Each partition occurs once with coefficient $1$. |
+| Principal symmetric polyform; principal SPF | Главная симметрическая полиформа; ГСПФ | PMG | $E_n[k]$ for $1\leqslant k\leqslant n-1$: the sum over one block of $k+1$ vertices, with all other blocks singletons. Grade $0$ is defined separately: $E_n[0^n]=e$. |
+| Size of a polyform representation; representation size | Размер представления полиформы | PMG | The number of terms in a chosen expression as a sum of forms with coefficients. In the basic normalization, $\#E_n[\lambda]$ counts the indexing partitions. It is neither a vector-space dimension nor an invariant of the polyform. |
+
+In a forest, the connected components determine the partition blocks. A component with $b$ vertices has $b-1$ edges, so its edge count equals its boundary grade. Several trees on the same block give the same partition form. Symmetric-sum size and forest count are therefore computed separately; see [[Combinatorial Potentials in Symmetric Polyforms]].
+
+## Combinatorial potentials and forest coefficients
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Combinatorial potential of the second kind | Комбинаторный потенциал второго рода | PMG | $s_2(\mathbf x)$ counts partitions of a set of $w(\mathbf x)$ distinguishable elements into unordered blocks with positive sizes $\mathbf x$. This is the PMG name for that combinatorial number. [[Partitions and the Combinatorial Potential of the Second Kind]]. |
+| External combinatorial potential | Внешний комбинаторный потенциал | PMG | $e_n(\mathbf x)=\binom{n}{w(\mathbf x)}s_2(\mathbf x)$ for $w(\mathbf x)\leqslant n$: choosing a subset of the prescribed size and a partition of that subset of the prescribed type. The indexed function $e_n$ differs from the unit form $e$. [[Combinatorial Potentials in Symmetric Polyforms]]. |
+| Forest coefficients | Лесные коэффициенты | PMG | The numbers $\operatorname{St}(k,m)$ count forests on $k$ labelled ordinary vertices and $m$ added unlabelled roots: each component has exactly one root, and no root is isolated. Here $m$ belongs to the auxiliary construction, rather than counting all components of the original graph on $n$ vertices. These numbers differ from $\tau(G)$ and ordinary Stirling numbers $S(k,m)$. [[Forest Coefficients and Abel Polynomials]]. |
+| $r$-Stirling numbers of the second kind | $r$-числа Стирлинга второго рода | Standard | $\left\{\begin{smallmatrix}N\\K\end{smallmatrix}\right\}_r$ counts partitions of $N$ elements into $K$ nonempty blocks with $r$ specified distinct elements in different blocks. Here $N,K$ are full sizes; the shifted notation $c_r(w,m)$ means $N=w+r$, $K=m+r$. [[Falling Factorials, Rooted Forests, and Stirling Numbers]]. |
+
+For $\mathbf x=[x_i]$ with positive integer parts, $w=w(\mathbf x)$, and multiplicity collection $\boldsymbol\mu=[\mu_j]_{j\in J}$, the formula is
+
+$$
+s_2(\mathbf x)=\frac{w!}{[x_i!]!\,[\mu_j!]!}
+$$
+
+A combinatorial potential counts partitions and uses no metric. The polyform potential $u_M(f)=\tau(Mf)$ is defined in a different sense, through the metric polyform. When applying $s_2$, specify whether its argument lists vertex-block sizes or parts of an auxiliary partition. For example, $\#E_5[2,1]=s_2([3,2])=10$, whereas the coefficient in $E_5[2,1]=3E_5[3]$ is $s_2([2,1])=3$. The corresponding forest count in $K_5$ is $30$.
+
+The relation between forest coefficients and $r$-Stirling numbers is used here for specific PMG counts. A general classification of Stirling-number families belongs to a separate project on combinatorics and partition algebra.
 
 ## Graphs, couplings, and matrix representations
 
@@ -180,7 +232,7 @@ The following table also records earlier Russian usage, so that older research n
 | “Двухлес” | Spanning 2-forest | The full name specifies that all vertices are included and there are two components. |
 | “Связь-форма” | Specify $[a_{ij}]^2$, $c_{ij}[a_{ij}]^2$, or $e+c_{ij}[a_{ij}]^2$ | A pair form, a Laplacian contribution, and an exponential factor are different objects. |
 | “Squared norm” for $X\cdot X$ | Norm or quadratic norm; also resistance norm in the resistance metric | In PMG, the norm is $X\cdot X$ itself; its square root for nonnegative norm is the linear norm. The formal form $[X]^2$ differs from its numerical evaluation. |
-| “Potential of an object” | Potential of the form $f$ | The form being evaluated and the metric must be specified. |
+| “Potential of an object” | “Potential of the form $f$” or “combinatorial potential of the collection $\mathbf x$”, as appropriate | For $u_M(f)$, specify the form and metric; for $s_2(\mathbf x)$ or $e_n(\mathbf x)$, specify the collection and counted partitions. |
 | “Independent components” in a product of boundaries | Product of component boundaries | Separate factors do not by themselves imply metric orthogonality or statistical independence. |
 | “Form commutator” | Skew-symmetric difference $[X,Y]-[Y,X]$ | The historical PMG name differs from the operator commutator $AB-BA$. The core requires no special name for this difference. |
 
@@ -227,6 +279,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 8 | 2026-10-20 | Added collections, partitions, structural identities, SPF types, representation sizes, and combinatorial potentials. Distinguished metric potential, symmetric-sum size, and forest count; clarified indices of forest coefficients and $r$-Stirling numbers. Aligned exterior-product notation and project scope. Aligned with Russian glossary revision 7. |
 | 7 | 2026-10-16 | Replaced the Green-matrix notation $\mathbf G$ with $\mathbf{Gr}=\mathbf L^+$; reserved $\mathbf G$ for Gram matrices with entries $g_{ij}$. Discontinued $\mathbf B$ for the local-vertex Gram matrix and distinguished $\mathbf G$, $\mathbf G_z$, and bi-coordinate matrices $\mathbf B$. Aligned with Russian glossary revision 6. |
 | 6 | 2026-10-15 | Added the sphere element and links to the properties of nonlocal elements, completing alignment with Russian glossary revision 5. |
 | 5 | 2026-10-15 | Replaced metric mass with resistance radius and explicitly defined resistance diameter. |
@@ -236,6 +289,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 | 1 | 2026-10-09 | First public core glossary, aligned with core specification revision 2 and the introductory series. Clarifies the levels of objects and evaluations, the spanning-tree coefficient, edge factors, and earlier names. This English version follows Russian revision 1. |
 
 Internal glossary version 1.1 of 2026-09-21 was used as source material. Its information about extensions remains relevant to their later preparation, but does not automatically form part of the current core terminology. Earlier revisions are records of changes, not parallel terminology standards.
+
 
 
 

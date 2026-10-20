@@ -2,8 +2,8 @@
 title: "Falling Factorials, Rooted Forests, and Stirling Numbers"
 date: 2026-10-20
 updated: 2026-10-20
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: falling-factorials-rooted-forests-and-stirling-numbers
@@ -286,7 +286,7 @@ All general identities above have been proved. Bijection (3) follows from revers
 
 An independent check enumerated edge sets for $1\leqslant k\leqslant4$ ordinary vertices and $1\leqslant q\leqslant3$ prescribed roots, tested acyclicity and the presence of exactly one root per component, then compared codes and position partitions. It found the $9$ constructions in Figure 1, the $27$ in Figure 3, and $91$ constructions for $k=4,m=2$. Grouping the last set by block sizes and by the degree of the root not ending the code gave $64+27$ and $75+15+1$, respectively. Separately, sums over types, the formula using ordinary Stirling numbers, and finite differences were compared through degree $8$; this was an algebraic check, not graph enumeration.
 
-For future comparisons of Stirling families, this note fixes the ordinary second-kind numbers $S(w,m)$, their extension $c_r(w,m)$ with distinguished elements, and the exact position of forest coefficients within that extension. First-kind numbers and other block restrictions require separate treatment.
+Within PMG, this note fixes the ordinary Stirling numbers of the second kind $S(w,m)$, their extension $c_r(w,m)$ with distinguished elements, and the exact position of forest coefficients within that extension. A general classification of Stirling-number families, including first-kind numbers and other block restrictions, lies outside PMG and belongs to a separate project on combinatorics and partition algebra.
 
 This note is based on the author's research within PMG. The two figures showing complete sets of forests were adapted from those materials; labels and roots were added to identify the counted objects unambiguously.
 
@@ -295,3 +295,4 @@ This note is based on the author's research within PMG. The two figures showing 
 1. Andrei Z. Broder. *The r-Stirling numbers*. Discrete Mathematics 49 (1984), 241-259. [DOI](https://doi.org/10.1016/0012-365X(84)90161-4), [open Stanford technical report](https://i.stanford.edu/pub/cstr/reports/cs/tr/82/949/CS-TR-82-949.pdf). Definition by separated distinguished elements; indices denote full sizes.
 2. Grzegorz Serafin. *Identities behind some congruences for r-Bell and derangement polynomials*. Research in Number Theory 6, 39 (2020). [Open text, §2.1](https://link.springer.com/article/10.1007/s40993-020-00216-y). Shifted indexing, the expansion of $(x+r)^w$, and the finite-difference formula.
 3. NIST Digital Library of Mathematical Functions. [§3.3(iv), Newton's Interpolation Formula](https://dlmf.nist.gov/3.3.iv). Newton's formula in terms of divided differences; for equally spaced nodes it is expressed using finite differences.
+
