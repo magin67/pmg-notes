@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="624" viewBox="0 0 900 624" role="img" aria-labelledby="title"><title id="title">Типы лесов: размеры блоков вершин и числа связей в компонентах</title>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect width="900" height="624" fill="white"/>
+<rect x="18" y="18" width="423" height="184" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="47" font-size="18" fill="#1d2939" text-anchor="middle" font-weight="600">Одиночная вершина</text>
+<circle cx="229.5" cy="96" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="229.5" y="103" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<text x="40" y="146" font-size="19" fill="#1d2939" text-anchor="start" font-weight="400">По вершинам: [1]</text>
+<text x="40" y="176" font-size="19" fill="#285b7f" text-anchor="start" font-weight="600">По связям: [0]</text>
+<rect x="459" y="18" width="423" height="184" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="47" font-size="18" fill="#1d2939" text-anchor="middle" font-weight="600">Одна связь</text>
+<line x1="631" y1="96" x2="710" y2="96" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="631" cy="96" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="631" y="103" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="710" cy="96" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="710" y="103" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<text x="481" y="146" font-size="19" fill="#1d2939" text-anchor="start" font-weight="400">По вершинам: [2]</text>
+<text x="481" y="176" font-size="19" fill="#285b7f" text-anchor="start" font-weight="600">По связям: [1]</text>
+<rect x="18" y="220" width="423" height="184" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="249" font-size="18" fill="#1d2939" text-anchor="middle" font-weight="600">Две несмежные связи</text>
+<line x1="73" y1="298" x2="148" y2="298" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="311" y1="298" x2="386" y2="298" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="73" cy="298" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="73" y="305" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="148" cy="298" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="148" y="305" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="311" cy="298" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="311" y="305" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="386" cy="298" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="386" y="305" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<text x="40" y="348" font-size="19" fill="#1d2939" text-anchor="start" font-weight="400">По вершинам: [2, 2]</text>
+<text x="40" y="378" font-size="19" fill="#285b7f" text-anchor="start" font-weight="600">По связям: [1, 1]</text>
+<rect x="459" y="220" width="423" height="184" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="249" font-size="18" fill="#1d2939" text-anchor="middle" font-weight="600">Две смежные связи</text>
+<line x1="580.5" y1="298" x2="670.5" y2="298" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="670.5" y1="298" x2="760.5" y2="298" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="580.5" cy="298" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="580.5" y="305" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="670.5" cy="298" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="670.5" y="305" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="760.5" cy="298" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="760.5" y="305" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<text x="481" y="348" font-size="19" fill="#1d2939" text-anchor="start" font-weight="400">По вершинам: [3]</text>
+<text x="481" y="378" font-size="19" fill="#285b7f" text-anchor="start" font-weight="600">По связям: [2]</text>
+<rect x="18" y="422" width="423" height="184" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="451" font-size="18" fill="#1d2939" text-anchor="middle" font-weight="600">Тройка и пара</text>
+<line x1="60" y1="500" x2="122" y2="500" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="122" y1="500" x2="184" y2="500" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="305" y1="500" x2="383" y2="500" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="60" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="60" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="122" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="122" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="184" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="184" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="305" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="305" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="383" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="383" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<text x="40" y="550" font-size="19" fill="#1d2939" text-anchor="start" font-weight="400">По вершинам: [3, 2]</text>
+<text x="40" y="580" font-size="19" fill="#285b7f" text-anchor="start" font-weight="600">По связям: [2, 1]</text>
+<rect x="459" y="422" width="423" height="184" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="451" font-size="18" fill="#1d2939" text-anchor="middle" font-weight="600">Тройка, пара и одиночная вершина</text>
+<line x1="493" y1="500" x2="548" y2="500" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="548" y1="500" x2="603" y2="500" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="694" y1="500" x2="749" y2="500" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="493" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="493" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="548" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="548" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="603" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="603" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="694" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="694" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="749" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="749" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<circle cx="842" cy="500" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="842" y="507" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">f</text>
+<text x="481" y="550" font-size="19" fill="#1d2939" text-anchor="start" font-weight="400">По вершинам: [3, 2, 1]</text>
+<text x="481" y="580" font-size="19" fill="#285b7f" text-anchor="start" font-weight="600">По связям: [2, 1, 0]</text>
+</svg>
