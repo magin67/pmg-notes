@@ -3,8 +3,8 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 8
-translated_revision: 6
+revision: 9
+translated_revision: 8
 updated: 2026-10-20
 ---
 
@@ -46,6 +46,12 @@ Five notes on dependencies among partition forms. The main results are the noncr
 Five notes on symmetry of forms under vertex permutations. The main result is the fundamental theorem of SPFs: a symmetric sum of any admissible type is expressed through the principal polyform of the same grade with an explicit coefficient. Consequences cover products and powers, the exponential of the complete graph, and Abel polynomials.
 
 - [[Symmetric Polyforms|The fundamental theorem, its consequences, and reading order]].
+
+## Combinatorial potentials
+
+Four notes on partitions and counting by component sizes. The series introduces the potential of the second kind, distinguishes SPF representation sizes from forest counts, proves the Cayley-Moon formula for joining prescribed components, and explains falling-factorial expansions through rooted forests and $r$-Stirling numbers.
+
+- [[Combinatorial Potentials|Main results, notation, and reading routes]].
 
 ## PMG Foundations
 

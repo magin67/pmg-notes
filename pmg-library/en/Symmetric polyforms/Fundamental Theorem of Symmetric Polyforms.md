@@ -2,8 +2,8 @@
 title: "Fundamental Theorem of Symmetric Polyforms"
 date: 2026-10-19
 updated: 2026-10-20
-revision: 3
-source_revision: 7
+revision: 4
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: fundamental-theorem-of-symmetric-polyforms
@@ -20,33 +20,41 @@ We use the definitions in [[Symmetric Polyforms - Types and Normalizations|Symme
 
 ## Statement and scope
 
-Let $A=\{a_1,\ldots,a_n\}$, $n\geqslant2$, be a basis of a real vector space $V$, and let $W=\ker\varepsilon$ be the space of affine vectors. For a partition $\pi=B_1|\cdots|B_q$ of $A$, the partition form is
+Let $A=\{a_1,\ldots,a_n\}$, $n\geqslant2$, be a basis of a real vector space $V$, and let $W=\ker\varepsilon$ be the space of affine vectors. For a partition $\pi=B_1|\cdots|B_m$ of $A$, the partition form is
 
 $$
-q_\pi=[(B_1)\cdots(B_q)]^2
+q_\pi=[(B_1)\cdots(B_m)]^2
 $$
 
 The size of a block is its number of vertices; the grade of its boundary is one less. A singleton block contributes the exterior-product unit $1$, so the corresponding factor in the form is $e$.
 
-Fix positive grades
+Fix a collection of positive grades
 
 $$
-k_1,\ldots,k_m\geqslant1,\qquad
-k=\sum_{i=1}^m k_i,\qquad
-\ell=n-k-m\geqslant0
+\boldsymbol k=[k_1,\ldots,k_r],\qquad
+k_i\geqslant1,\qquad r\geqslant1,\qquad
+k=w(\boldsymbol k)
 $$
 
-Here $m\geqslant1$ is the number of nontrivial blocks, and $\ell$ is the number of singleton blocks. For each $j\geqslant1$, set
+The full number of components and the number of singleton blocks are
 
 $$
-\mu_j=\#\{i:k_i=j\}
+m=n-k,\qquad \ell=m-r=n-k-r\geqslant0
 $$
 
-The sum $E_n[k_1,\ldots,k_m,0^\ell]$ contains all partitions of this type, each with coefficient $1$. The principal SPF of the same grade is
+This convention for $m,r,\ell$ is fixed in the [[Symmetric Polyforms - Types and Normalizations#Partitions and types|definition of types]]. Let $J$ be the set of distinct values in $\boldsymbol k$, and let $\mu_j=\#\{i:k_i=j\}$ for $j\in J$. The [[Partitions and the Combinatorial Potential of the Second Kind#The combinatorial potential of the second kind|combinatorial potential of the second kind]] is
+
+$$
+s_2(\boldsymbol k)=\frac{k!}{[k_i!]!\,[\mu_j!]!}
+$$
+
+Here we use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]: $[k_i!]!$ and $[\mu_j!]!$ are products of factorials; their indices range over $1,\ldots,r$ and $J$, respectively.
+
+The sum $E_n[k_1,\ldots,k_r,0^\ell]$ contains all partitions of this type, each with coefficient $1$. The principal SPF of the same grade is
 
 $$
 E_n[k]=E_n[k,0^{\,n-k-1}]
-=\sum_{\substack{B\subseteq A\\|B|=k+1}}[(B)]^2
+=\sum_{\substack{B\subseteq A\\\#B=k+1}}[(B)]^2
 $$
 
 > [!info] Fundamental theorem
@@ -54,38 +62,30 @@ $$
 >
 > $$
 > \boxed{
-> E_n[k_1,\ldots,k_m,0^\ell]
-> =
-> \frac{(n-k-1)!\,k!}
-> {\ell!\displaystyle\prod_{i=1}^m k_i!\displaystyle\prod_{j\geqslant1}\mu_j!}
-> E_n[k]
+> E_n[k_1,\ldots,k_r,0^\ell]
+> =\frac{(m-1)!}{\ell!}\,s_2(\boldsymbol k)E_n[k]
 > }
 > \tag{1}
 > $$
 >
-> The product over $j$ has only finitely many factors different from $1$.
+> In expanded form, the coefficient is
+>
+> $$
+> \frac{(m-1)!}{\ell!}\,s_2(\boldsymbol k)
+> =\frac{(n-k-1)!\,k!}{\ell!\,[k_i!]!\,[\mu_j!]!}
+> $$
 
-The number of singleton blocks on the right is $r=n-k-1=\ell+m-1$. Thus $r\geqslant\ell$, with equality when $m=1$. In that case, the coefficient in (1) is $1$.
+The principal representation has $m-1=\ell+r-1$ singleton blocks. This is at least $\ell$, with equality when $r=1$. In that case both factors of the coefficient in (1) are $1$.
 
-If there are no singleton vertices, that is, if $\ell=0$, the formula becomes
-
-$$
-E_n[k_1,\ldots,k_m]
-=
-\frac{(m-1)!\,k!}
-{\displaystyle\prod_{i=1}^m k_i!\displaystyle\prod_{j\geqslant1}\mu_j!}
-E_n[k]
-$$
-
-This is the case $n=k+m$. Grade zero is treated separately: $E_n[0^n]=e$. Formula (1) applies to positive grades and leaves this convention unchanged.
-
-The factor
+If there are no singleton vertices, so that $\ell=0$ and $m=r$, the formula becomes
 
 $$
-\frac{k!}{\displaystyle\prod_i k_i!\displaystyle\prod_j\mu_j!}
+E_n[k_1,\ldots,k_r]=(r-1)!\,s_2(\boldsymbol k)E_n[k]
 $$
 
-has the usual combinatorial interpretation: it counts partitions of a $k$-element set into unordered blocks of sizes $k_1,\ldots,k_m$. To obtain it, distribute the $k$ elements among the blocks and divide by the permutations within blocks and among blocks of equal size. Here the sizes are the **grades** $k_i$. This auxiliary count differs from partitioning the original $n$ vertices into blocks of sizes $k_i+1$.
+This is the case $n=k+r$. Grade zero is treated separately: $E_n[0^n]=e$. Formula (1) applies to positive grades and leaves this convention unchanged.
+
+The potential $s_2(\boldsymbol k)$ counts partitions of an auxiliary $k$-element set into blocks of sizes $k_i$. These sizes equal the **grades** of the original components. The size of the sum $E_n$ itself is counted on the original $n$ vertices using $[k_i+1,1^\ell]$. The two counts are distinguished in the [[Combinatorial Potentials in Symmetric Polyforms#What the numbers 3, 10, and 30 mean|example with 3, 10, and 30]]. The additional ratio $(m-1)!/\ell!$ arises when merging blocks; its derivation is part of the proof below.
 
 ## Outline of the proof
 
@@ -110,7 +110,7 @@ The following lemma applies to arbitrary exterior objects of the same grade. The
 >
 > $$
 > \boxed{
-> \sum_{\substack{I\subseteq\{1,\ldots,N\}\\|I|=a}}
+> \sum_{\substack{I\subseteq\{1,\ldots,N\}\\\#I=a}}
 > \left[\sum_{i\in I}X_i\right]^2
 > =
 > \binom{N-2}{a-1}\sum_{i=1}^N[X_i]^2
@@ -124,7 +124,7 @@ The following lemma applies to arbitrary exterior objects of the same grade. The
 > Expand each quadratic form by bilinearity. The form $[X_i]^2$ occurs in $\binom{N-1}{a-1}$ subsets, while the polar form $\{X_i,X_j\}=[X_i,X_j]+[X_j,X_i]$, for $i<j$, occurs in $\binom{N-2}{a-2}$ subsets. Hence
 >
 > $$
-> \sum_{|I|=a}\left[\sum_{i\in I}X_i\right]^2
+> \sum_{\#I=a}\left[\sum_{i\in I}X_i\right]^2
 > =
 > \binom{N-1}{a-1}\sum_i[X_i]^2
 > +\binom{N-2}{a-2}\sum_{i<j}\{X_i,X_j\}
@@ -157,7 +157,7 @@ When positive grades $p$ and $q$ are merged, the larger block has $p+q+1$ vertic
 >
 > $$
 > \boxed{
-> \sum_{\substack{B\subseteq C\\|B|=p+1}}
+> \sum_{\substack{B\subseteq C\\\#B=p+1}}
 > [(B)(C\setminus B)]^2
 > =
 > \binom{p+q}{p}
@@ -217,17 +217,17 @@ For $p=q=1$, both sides of (3) contain a factor of $2$. Cancelling it gives the 
 The main counting difficulty is that every merger increases the number of singleton vertices, while some positive grades may coincide. Temporarily number the nontrivial blocks, leaving the singleton blocks unordered. This lets us account for the two kinds of multiplicity separately.
 
 > [!note]- Proof of the theorem
-> **Proof.** Require block $i$ to have size $k_i+1$. Under this numbering, each original partition of type $[k_1,\ldots,k_m,0^\ell]$ occurs $\prod_j\mu_j!$ times: numbers may be permuted only among blocks of equal size. Thus the sum with numbered nontrivial blocks is
+> **Proof.** Require block $i$ to have size $k_i+1$. Under this numbering, each original partition of type $[k_1,\ldots,k_r,0^\ell]$ occurs $[\mu_j!]!$ times: numbers may be permuted only among blocks of equal size. Thus the sum with numbered nontrivial blocks is
 >
 > $$
-> \left(\prod_j\mu_j!\right)E_n[k_1,\ldots,k_m,0^\ell]
+> [\mu_j!]!E_n[k_1,\ldots,k_r,0^\ell]
 > $$
 >
-> For $m=1$, the theorem already holds. Suppose that $m\geqslant2$. Fix the blocks numbered $3,\ldots,m$ and a set $F$ of $\ell$ singleton vertices. The first two blocks occupy the remaining set $C$, which has $k_1+k_2+2$ vertices.
+> For $r=1$, the theorem already holds. Suppose that $r\geqslant2$. Fix the blocks numbered $3,\ldots,r$ and a set $F$ of $\ell$ singleton vertices. The first two blocks occupy the remaining set $C$, which has $k_1+k_2+2$ vertices.
 >
 > Apply (3) with $p=k_1$, $q=k_2$, and multiply both sides by the forms of the remaining blocks. On the right, the first two blocks are replaced by one block of grade $k_1+k_2$ and a singleton vertex $s$. The merged block retains a distinguished number, and the other nontrivial blocks retain their numbers.
 >
-> Sum over all admissible choices of the fixed data: the blocks numbered $3,\ldots,m$ and the sets $F$. Each partition of the new type with numbered nontrivial blocks occurs exactly $\ell+1$ times. Indeed, it has $\ell+1$ singleton vertices, any of which may be chosen as the vertex $s$ separated off by merging. Once $s$ is chosen, the original fixed data are recovered uniquely: $F$ consists of the other singleton vertices, and $C$ is the union of the merged block and $\{s\}$.
+> Sum over all admissible choices of the fixed data: the blocks numbered $3,\ldots,r$ and the sets $F$. Each partition of the new type with numbered nontrivial blocks occurs exactly $\ell+1$ times. Indeed, it has $\ell+1$ singleton vertices, any of which may be chosen as the vertex $s$ separated off by merging. Once $s$ is chosen, the original fixed data are recovered uniquely: $F$ consists of the other singleton vertices, and $C$ is the union of the merged block and $\{s\}$.
 >
 > Consequently, the first merger multiplies the sum of the new type, with block numbers retained, by
 >
@@ -237,32 +237,38 @@ The main counting difficulty is that every merger increases the number of single
 >
 > If the merged block has the same size as another block, their numbers remain distinct. No further multiplication or division by a multiplicity is therefore needed at this step.
 >
-> Next merge the distinguished block successively with the blocks of grades $k_3,\ldots,k_m$. The factor accounting for singleton vertices is $\ell+2$ at the next step, then $\ell+3$, and so on. After $m-1$ mergers, a single nontrivial block of grade $k$ remains. We obtain
+> Next merge the distinguished block successively with the blocks of grades $k_3,\ldots,k_r$. The factor accounting for singleton vertices is $\ell+2$ at the next step, then $\ell+3$, and so on. After $r-1$ mergers, a single nontrivial block of grade $k$ remains. Define the collections of factors
 >
 > $$
-> \left(\prod_j\mu_j!\right)E_n[k_1,\ldots,k_m,0^\ell]
+> \mathbf u=[\ell+t]_{t=1}^{r-1},\qquad
+> \mathbf v=\left[\binom{k_1+\cdots+k_t}{k_t}\right]_{t=2}^{r}
+> $$
+>
+> Their products give
+>
+> $$
+> [\mu_j!]!E_n[k_1,\ldots,k_r,0^\ell]
 > =
-> \left(\prod_{t=1}^{m-1}(\ell+t)\right)
-> \left(\prod_{t=2}^{m}\binom{k_1+\cdots+k_t}{k_t}\right)
+> \mathbf u!\,\mathbf v!
 > E_n[k]
 > $$
 >
 > The first product is
 >
 > $$
-> \prod_{t=1}^{m-1}(\ell+t)
-> =\frac{(\ell+m-1)!}{\ell!}
+> \mathbf u!
+> =\frac{(\ell+r-1)!}{\ell!}
 > =\frac{(n-k-1)!}{\ell!}
 > $$
 >
 > In the second product, the factorials of successive partial sums cancel:
 >
 > $$
-> \prod_{t=2}^{m}\binom{k_1+\cdots+k_t}{k_t}
-> =\frac{k!}{\prod_{i=1}^m k_i!}
+> \mathbf v!
+> =\frac{k!}{[k_i!]!}
 > $$
 >
-> Dividing by $\prod_j\mu_j!$ gives (1). For $m=1$, both empty products equal $1$, so the same final formula remains valid. $\square$
+> Dividing by $[\mu_j!]!$ gives (1). For $r=1$, both empty products equal $1$, so the same final formula remains valid. $\square$
 
 Thus the factor $(n-k-1)!/\ell!$ is obtained by counting specific repetitions during merging. The proof does not infer equality of polyforms from the ratio of their representation sizes.
 
@@ -297,9 +303,9 @@ E_n[1,1]=(n-3)E_n[2],\qquad n\geqslant4
 $$
 
 $$
-E_n[\underbrace{1,\ldots,1}_{m}]
-=\frac{(n-m-1)!}{(n-2m)!}E_n[m],
-\qquad m\geqslant1,\quad n\geqslant2m
+E_n[\underbrace{1,\ldots,1}_{r}]
+=\frac{(n-r-1)!}{(n-2r)!}E_n[r],
+\qquad r\geqslant1,\quad n\geqslant2r
 $$
 
 The number of omitted zeros in these two formulas is determined by $n$, according to the [[Symmetric Polyforms - Types and Normalizations#When zeros may be omitted|convention for omitting zero components]].
@@ -401,13 +407,13 @@ Every linear metric evaluation preserves identity (1). For a form $[X]^2$, such 
 
 There are infinitely many ways to write identities: they can be added and multiplied by scalars. Here we count the dimension of the space of linear relations among formal type symbols that become zero when each symbol is replaced by the corresponding sum $E_n[\lambda]$.
 
-Let $p_m(k)$ denote the number of partitions of the integer $k$ into exactly $m$ positive parts, and let $p(n)$ be the number of all partitions of the integer $n$.
+Let $p_r(k)$ denote the number of partitions of the integer $k$ into exactly $r$ positive parts, and let $p(n)$ be the number of all partitions of the integer $n$.
 
 > [!info] The number of symmetric relations
 > **Corollary.** For $1\leqslant k\leqslant n-1$, the number of independent fully symmetric relations of grade $k$ is
 >
 > $$
-> J_{n,k}=\sum_{m=1}^{\min(k,n-k)}p_m(k)-1
+> J_{n,k}=\sum_{r=1}^{\min(k,n-k)}p_r(k)-1
 > $$
 >
 > Summed over all grades,
@@ -417,7 +423,7 @@ Let $p_m(k)$ denote the number of partitions of the integer $k$ into exactly $m$
 > $$
 
 > [!note]- Proof
-> **Proof.** A positive type of grade $k$ is a partition of the integer $k$ into $m$ positive parts. It is admissible on $n$ vertices when $k+m\leqslant n$, which gives the stated number of types. By the fundamental theorem, their sums span a one-dimensional space, so the number of independent relations is one less than the number of types.
+> **Proof.** A positive type of grade $k$ is a partition of the integer $k$ into $r$ positive parts. It is admissible on $n$ vertices when $k+r\leqslant n$, which gives the stated number of types. By the fundamental theorem, their sums span a one-dimensional space, so the number of independent relations is one less than the number of types.
 >
 > All types on $n$ vertices, including zero components, correspond bijectively to partitions of the integer $n$ into block sizes: add $1$ to each component grade. Thus the total number of types is $p(n)$. Their images span a symmetric space of dimension $n$, with one nonzero polyform in each grade from $0$ to $n-1$. The difference of dimensions gives $J_n=p(n)-n$. $\square$
 
@@ -508,15 +514,15 @@ The one-dimensionality of the symmetric subspace has a classical explanation. Th
 > Distinct blocks lie in orthogonal coordinate subspaces. The quadratic norm of the product of their boundaries equals the product of their quadratic norms; this also follows by direct expansion in the orthonormal exterior basis. Thus
 >
 > $$
-> \operatorname{tr}q_\pi=\prod_{i=1}^m(k_i+1)
+> \operatorname{tr}q_\pi=[k_i+1]!
 > $$
 >
 > Multiplying by the [[Symmetric Polyforms - Types and Normalizations#Representation size and factorial factors|representation size of the symmetric sum]], we obtain
 >
 > $$
-> \operatorname{tr}E_n[k_1,\ldots,k_m,0^\ell]
+> \operatorname{tr}E_n[k_1,\ldots,k_r,0^\ell]
 > =
-> \frac{n!}{\ell!\displaystyle\prod_i k_i!\displaystyle\prod_j\mu_j!}
+> \frac{n!}{\ell![k_i!]!\,[\mu_j!]!}
 > $$
 >
 > For the principal polyform,

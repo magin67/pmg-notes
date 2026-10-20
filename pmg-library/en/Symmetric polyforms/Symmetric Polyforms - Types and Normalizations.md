@@ -2,8 +2,8 @@
 title: "Symmetric Polyforms: Types and Normalizations"
 date: 2026-10-19
 updated: 2026-10-20
-revision: 5
-source_revision: 4
+revision: 6
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-types-and-normalizations
@@ -64,10 +64,10 @@ For example, the form $[(ab)]^2$ equals its transpose, but on the set $\{a,b,c\}
 
 ## Partitions and types
 
-A partition $\pi=B_1|\cdots|B_q$ of $A$ consists of nonempty pairwise disjoint blocks. Here **“block”** and **“component of a partition”** mean the same thing. Recall the associated exterior object and form:
+A partition $\pi=B_1|\cdots|B_m$ of $A$ consists of nonempty pairwise disjoint blocks. Here **“block”** and **“component of a partition”** mean the same thing. Recall the associated exterior object and form:
 
 $$
-X_\pi=(B_1)\cdots(B_q),\qquad
+X_\pi=(B_1)\cdots(B_m),\qquad
 q_\pi=[X_\pi]^2
 $$
 
@@ -76,19 +76,19 @@ Products of boundaries are exterior products by default. The order of vertices w
 **Definition.** The full type of a partition form in the given representation is the list of grades of its block boundaries:
 
 $$
-\lambda(\pi)=[|B_1|-1,\ldots,|B_q|-1]
+\lambda(\pi)=[\#B_1-1,\ldots,\#B_m-1]
 $$
 
 The parts are arranged in nonincreasing order. The size of a block is its number of vertices, and the corresponding part of the type is one less than that size.
 
-Let the positive parts of the type be $k_1,\ldots,k_m$. Write $k$ for their sum and $\ell$ for the number of singleton blocks. Then
+Let the positive parts of the type be $k_1,\ldots,k_r$. Write $k$ for their sum and $\ell$ for the number of singleton blocks. Throughout this series, when describing a type, $m$ is the full number of components, $r$ counts nontrivial components, and $\ell=m-r$. Then
 
 $$
-k=\sum_{i=1}^m k_i=\operatorname{gr}q_\pi,\qquad
-n=k+m+\ell,\qquad q=m+\ell=n-k
+k=\sum_{i=1}^r k_i=\operatorname{gr}q_\pi,\qquad
+n=k+r+\ell,\qquad m=r+\ell=n-k
 $$
 
-The full type is written as $[k_1,\ldots,k_m,0^\ell]$. The notation $0^\ell$ means $\ell$ repetitions of zero in the list. It indicates the multiplicity of a part, not a numerical power.
+The full type is written as $[k_1,\ldots,k_r,0^\ell]$. The notation $0^\ell$ means $\ell$ repetitions of zero in the list. It indicates the multiplicity of a part, not a numerical power.
 
 | Partition | Block sizes | Full type | Grade |
 |---|---|---|---:|
@@ -97,15 +97,15 @@ The full type is written as $[k_1,\ldots,k_m,0^\ell]$. The notation $0^\ell$ mea
 | $abc\mid de\mid f$ | $[3,2,1]$ | $[2,1,0]$ | 3 |
 | $ab\mid c\mid d\mid e$ | $[2,1,1,1]$ | $[1,0^3]$ | 1 |
 
-The positive list $[k_1,\ldots,k_m]$ is a partition of the **integer** $k$. The partition $\pi$ is a partition of the **vertex set**. A single integer type usually corresponds to many set partitions. A positive type is admissible on $n$ vertices if $k+m\leqslant n$; then $\ell=n-k-m$.
+The positive list $[k_1,\ldots,k_r]$ is a partition of the **integer** $k$. The partition $\pi$ is a partition of the **vertex set**. A single integer type usually corresponds to many set partitions. This distinction and the count for a prescribed type are developed in [[Partitions and the Combinatorial Potential of the Second Kind]]. Graphical examples of the passage from block sizes to grades appear in [[Combinatorial Potentials in Symmetric Polyforms#Drawing a type by its edges|the drawings of types by edges]]. A positive type is admissible on $n$ vertices if $k+r\leqslant n$; then $\ell=n-k-r$.
 
 ### When zeros may be omitted
 
 For fixed $n$, the positive parts uniquely determine the number of zeros. We therefore allow the abbreviation
 
 $$
-E_n[k_1,\ldots,k_m]
-=E_n[k_1,\ldots,k_m,0^{\,n-k-m}]
+E_n[k_1,\ldots,k_r]
+=E_n[k_1,\ldots,k_r,0^{\,n-k-r}]
 $$
 
 For example, $E_4[2]=E_4[2,0]$ and $E_6[2,1]=E_6[2,1,0]$. We will display the zeros when the number of singleton blocks or a change in that number needs to be explicit. In $E_4[1,1]=E_4[2,0]$, the zero emphasizes that each three-vertex block on the right is accompanied by one singleton vertex.
@@ -146,11 +146,13 @@ The definition sums over partitions, rather than all forests of the given type. 
 
 ## Representation size and factorial factors
 
-Let $\lambda=[k_1,\ldots,k_m]$ contain positive parts, with $k=\sum_i k_i$ and $\ell=n-k-m\geqslant0$. For $j\geqslant1$, let $\mu_j$ denote the number of occurrences of $j$ in this list:
+Let $\lambda=[k_1,\ldots,k_r]$ contain positive parts, with $k=\sum_i k_i$ and $\ell=n-k-r\geqslant0$. Let $J$ be the set of distinct values in $\lambda$. For $j\in J$, let $\mu_j$ denote the number of occurrences of $j$ in this list:
 
 $$
-\mu_j=\#\{i:k_i=j\},\qquad \sum_{j\geqslant1}\mu_j=m
+\mu_j=\#\{i:k_i=j\},\qquad \sum_{j\in J}\mu_j=r
 $$
+
+The multiplicity collection is $\boldsymbol\mu=[\mu_j]_{j\in J}$. We use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]: $[u_i]!$ is the product of its elements, and $[u_i!]!$ the product of their factorials. Below, $i$ ranges over $1,\ldots,r$ and $j$ over $J$.
 
 **Definition.** The **size of a polyform representation** is the number of terms in the chosen expression as a sum of forms with coefficients. When the representation is specified, we will simply say **size**. It depends on the expression: equal polyforms may have representations of different sizes.
 
@@ -162,19 +164,16 @@ In the basic normalization, $\#E_n[\lambda,0^\ell]$ denotes the size of represen
 > $$
 > \boxed{
 > \#E_n[\lambda,0^\ell]
-> =\frac{n!}{\ell!\displaystyle\prod_{i=1}^m(k_i+1)!\displaystyle\prod_{j\geqslant1}\mu_j!}
+> =s_2([k_1+1,\ldots,k_r+1,1^\ell])
+> =\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
 > }
 > \tag{2}
 > $$
 >
-> All products are finite: absent parts have $\mu_j=0$, and $0!=1$.
+> The potential is applied to block sizes: add $1$ to each positive grade, while zero grades give singleton blocks.
 
 > [!note]- Proof
-> **Proof.** Arrange all $n$ vertices in a row; there are $n!$ ways to do so. Divide the row into $m$ consecutive groups of sizes $k_1+1,\ldots,k_m+1$, followed by $\ell$ singleton groups.
->
-> The internal order of the $i$-th nontrivial group does not affect its block, giving the divisor $(k_i+1)!$. Permutations of the $\mu_j$ groups of the same size $j+1$ also leave the partition unchanged, giving the divisor $\mu_j!$. Finally, the remaining vertices form an unordered collection of singleton blocks, so we divide by $\ell!$.
->
-> Each partition is counted as many times as the product of these factors. Dividing $n!$ by that product gives (2). $\square$
+> **Proof.** Partitions occurring in $E_n[\lambda,0^\ell]$ have block-size collection $[k_1+1,\ldots,k_r+1,1^\ell]$. By definition, their number is the combinatorial potential of this collection. Apply the [[Partitions and the Combinatorial Potential of the Second Kind#From repeated counts to the general formula|potential formula]]. The shift $k_i\mapsto k_i+1$ preserves the multiplicities of positive parts. All nontrivial blocks have size at least $2$, while the $\ell$ singletons form a separate group of equal sizes. Their permutations supply the divisor $\ell!$, permutations of the other equal blocks supply $[\mu_j!]!$, and internal permutations supply $[(k_i+1)!]!$. This gives (2). $\square$
 
 | Sum | Count from formula (2) | Size |
 |---|---|---:|
@@ -190,7 +189,7 @@ In the basic normalization, $\#E_n[\lambda,0^\ell]$ denotes the size of represen
 It is sometimes convenient to temporarily number the nontrivial blocks, prescribing size $k_i+1$ for block $i$. Each collection of $\mu_j$ blocks of the same size can then be assigned to the corresponding numbers in $\mu_j!$ ways. If singleton blocks remain unordered, the resulting sum equals
 
 $$
-\left(\prod_{j\geqslant1}\mu_j!\right)E_n[\lambda,0^\ell]
+[\mu_j!]!E_n[\lambda,0^\ell]
 $$
 
 If all singleton blocks are also numbered, an additional factor of $\ell!$ appears. These are different conventions for enumerating terms. Before collecting like terms, the size increases by the same factor.
@@ -203,12 +202,12 @@ When using the names “compact” and “full” sum, one must specify which bl
 
 Any two partitions of the same type are related by a vertex permutation: match blocks of equal size and choose bijections between their vertices. This set of partitions is called an **orbit** of the action of $S_n$.
 
-For a fixed partition $\pi$ of type $[k_1,\ldots,k_m,0^\ell]$, summing over all permutations gives
+For a fixed partition $\pi$ of type $[k_1,\ldots,k_r,0^\ell]$, summing over all permutations gives
 
 $$
 \sum_{\sigma\in S_n}\sigma q_\pi
-=\ell!\left(\prod_{i=1}^m(k_i+1)!\right)
-\left(\prod_{j\geqslant1}\mu_j!\right)E_n[\lambda,0^\ell]
+=\ell![(k_i+1)!]!
+[\mu_j!]!E_n[\lambda,0^\ell]
 $$
 
 **Proof.** Every partition in the orbit is obtained by the same number of permutations. To find this number, it suffices to consider permutations preserving the original partition: one can permute vertices within blocks, blocks of equal size, and singleton blocks. The number of these permutations is the factor multiplying $E_n$ in the formula. $\square$
@@ -247,7 +246,7 @@ The corollary establishes the existence of such a representation. It does not as
 > $$
 > \boxed{
 > E_n[k]=E_n[k,0^{\,n-k-1}]
-> =\sum_{\substack{B\subseteq A\\|B|=k+1}}[(B)]^2
+> =\sum_{\substack{B\subseteq A\\\#B=k+1}}[(B)]^2
 > }
 > \tag{4}
 > $$
@@ -260,7 +259,7 @@ $$
 \#E_n[k]=\binom{n}{k+1}
 $$
 
-This is also the special case of (2) with $m=1$, $\mu_k=1$, and $\ell=n-k-1$.
+This is also the special case of (2) with $r=1$, $\mu_k=1$, and $\ell=n-k-1$.
 
 In grade $1$, we sum the forms of all pairs:
 
@@ -289,7 +288,7 @@ $$
 Definition (4) of principal polyforms applies only to positive $k$. Formally substituting $k=0$ into its subset sum would give
 
 $$
-\sum_{\substack{B\subseteq A\\|B|=1}}[(B)]^2=ne
+\sum_{\substack{B\subseteq A\\\#B=1}}[(B)]^2=ne
 $$
 
 The difference arises because this sum makes $n$ choices of a distinguished singleton block within the same partition. We therefore denote the unit form by $e$ or $E_n[0^n]$, without extending the formula for choosing a nontrivial block to this case.

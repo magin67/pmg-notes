@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="758" viewBox="0 0 900 758" role="img" aria-labelledby="title"><title id="title">Ten partitions of five vertices into a triple and a pair: one forest per partition</title>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect width="900" height="758" fill="white"/>
+<rect x="18" y="18" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="49" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">abc | de</text>
+<line x1="56" y1="99" x2="123" y2="99" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="123" y1="99" x2="190" y2="99" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="302" y1="99" x2="385" y2="99" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="56" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="56" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="123" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="123" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="190" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="190" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="302" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="302" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="385" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="385" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<rect x="459" y="18" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="49" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">abd | ce</text>
+<line x1="497" y1="99" x2="564" y2="99" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="564" y1="99" x2="631" y2="99" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="743" y1="99" x2="826" y2="99" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="497" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="497" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="564" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="564" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="631" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="631" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="743" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="743" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="826" cy="99" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="826" y="106" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<rect x="18" y="166" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="197" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">abe | cd</text>
+<line x1="56" y1="247" x2="123" y2="247" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="123" y1="247" x2="190" y2="247" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="302" y1="247" x2="385" y2="247" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="56" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="56" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="123" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="123" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="190" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="190" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<circle cx="302" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="302" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="385" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="385" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<rect x="459" y="166" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="197" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">acd | be</text>
+<line x1="497" y1="247" x2="564" y2="247" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="564" y1="247" x2="631" y2="247" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="743" y1="247" x2="826" y2="247" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="497" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="497" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="564" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="564" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="631" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="631" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="743" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="743" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="826" cy="247" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="826" y="254" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<rect x="18" y="314" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="345" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">ace | bd</text>
+<line x1="56" y1="395" x2="123" y2="395" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="123" y1="395" x2="190" y2="395" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="302" y1="395" x2="385" y2="395" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="56" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="56" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="123" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="123" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="190" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="190" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<circle cx="302" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="302" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="385" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="385" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<rect x="459" y="314" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="345" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">ade | bc</text>
+<line x1="497" y1="395" x2="564" y2="395" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="564" y1="395" x2="631" y2="395" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="743" y1="395" x2="826" y2="395" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="497" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="497" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="564" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="564" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="631" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="631" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<circle cx="743" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="743" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="826" cy="395" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="826" y="402" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<rect x="18" y="462" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="493" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">bcd | ae</text>
+<line x1="56" y1="543" x2="123" y2="543" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="123" y1="543" x2="190" y2="543" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="302" y1="543" x2="385" y2="543" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="56" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="56" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="123" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="123" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="190" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="190" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="302" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="302" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="385" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="385" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<rect x="459" y="462" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="493" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">bce | ad</text>
+<line x1="497" y1="543" x2="564" y2="543" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="564" y1="543" x2="631" y2="543" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="743" y1="543" x2="826" y2="543" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="497" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="497" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="564" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="564" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="631" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="631" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<circle cx="743" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="743" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="826" cy="543" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="826" y="550" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<rect x="18" y="610" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="229.5" y="641" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">bde | ac</text>
+<line x1="56" y1="691" x2="123" y2="691" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="123" y1="691" x2="190" y2="691" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="302" y1="691" x2="385" y2="691" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="56" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="56" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+<circle cx="123" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="123" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="190" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="190" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<circle cx="302" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="302" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="385" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="385" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<rect x="459" y="610" width="423" height="130" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="670.5" y="641" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">cde | ab</text>
+<line x1="497" y1="691" x2="564" y2="691" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="564" y1="691" x2="631" y2="691" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="743" y1="691" x2="826" y2="691" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<circle cx="497" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="497" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">c</text>
+<circle cx="564" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="564" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">d</text>
+<circle cx="631" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="631" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">e</text>
+<circle cx="743" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="743" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">a</text>
+<circle cx="826" cy="691" r="18" fill="white" stroke="#344054" stroke-width="1.8"/>
+<text x="826" y="698" font-size="22" fill="#1d2939" text-anchor="middle" font-weight="400">b</text>
+</svg>

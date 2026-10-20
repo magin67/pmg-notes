@@ -2,8 +2,8 @@
 title: "Symmetric Polyforms of the Complete Graph"
 date: 2026-10-19
 updated: 2026-10-20
-revision: 3
-source_revision: 4
+revision: 4
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-of-the-complete-graph
@@ -81,7 +81,7 @@ $$
 
 **Proof.** In the expansion of the exponential, every spanning forest with $n-1$ edges is a tree on all $n$ vertices. The product of its edge vectors equals the boundary $(a_1\ldots a_n)$ up to a sign, which disappears in the quadratic form. Each tree therefore contributes one copy of $T_n$. By (1), the sum of these contributions is $n^{n-2}T_n$. Since the form $T_n$ is nonzero, the number of trees is $n^{n-2}$. $\square$
 
-Equality (2) is the classical **Cayley formula** for trees on a prescribed set of labelled vertices. Stanley gives it in Example 9.11; three combinatorial proofs appear in the appendix to Chapter 9 [1]. Here it follows from the fundamental theorem of SPFs and the product rule. Their proofs do not use Cayley's enumeration of trees, so there is no circular dependence.
+Equality (2) is the classical **Cayley formula** for trees on a prescribed set of labelled vertices. Stanley gives it in Example 9.11; three combinatorial proofs appear in the appendix to Chapter 9 [1]. Here it follows from the fundamental theorem of SPFs and the product rule. Their proofs do not use Cayley's enumeration of trees, so there is no circular dependence. The generalisation counting ways to join prescribed components appears in [[Cayley's Theorem and Joining Prescribed Components]], with an independent combinatorial proof using the Prüfer code.
 
 With a common conductance $c$, every tree has weight $c^{n-1}$. The spanning-tree coefficient is then
 
@@ -105,26 +105,28 @@ In the [[Laplacian Exponential#Grade components and spanning forests|forest expa
 Suppose a forest has $k$ edges. The positive grades of the boundaries of its nontrivial components form an integer partition
 
 $$
-\lambda=[k_1,\ldots,k_m],\qquad
+\lambda=[k_1,\ldots,k_r],\qquad
 k_i\geqslant1,\qquad
-\sum_{i=1}^m k_i=k
+\sum_{i=1}^r k_i=k
 $$
 
 For definiteness, the parts are written in nonincreasing order. A component of grade $k_i$ has $k_i+1$ vertices and $k_i$ edges. The number of isolated vertices and the total number of components are
 
 $$
-\ell=n-k-m\geqslant0,\qquad m+\ell=n-k
+\ell=n-k-r\geqslant0,\qquad m=r+\ell=n-k
 $$
+
+Here $r$ is the number of nontrivial components and $m$ is the full number, including singletons. Types by edge count are illustrated in [[Combinatorial Potentials in Symmetric Polyforms#Drawing a type by its edges|the combinatorial note]].
 
 The partition $\lambda$ specifies the component sizes. A particular allocation of vertices to these components is a partition of the set $A$. In the sum $E_n[\lambda,0^\ell]$, each such set partition is counted once, as specified in the [[Symmetric Polyforms - Types and Normalizations|definition and normalization of symmetric sums]].
 
 Fix one partition of the vertex set of this type. By (2), a block of $k_i+1$ vertices admits $(k_i+1)^{k_i-1}$ trees. Choices of trees in different blocks are independent. The number of forests with this partition into components is therefore
 
 $$
-t(\lambda)=\prod_{i=1}^m(k_i+1)^{k_i-1}
+t(\lambda)=[(k_i+1)^{k_i-1}]!
 $$
 
-A singleton block contributes the unique choice with no edges and the factor $1$. The coefficient $t(\lambda)$ does not include the choice of the blocks themselves. Nor does it include a choice of roots: the trees considered here have no distinguished roots.
+Here $[u_i]!$ denotes the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]], with $i=1,\ldots,r$; the expressions $(k_i+1)^{k_i-1}$ are ordinary numerical powers. A singleton block contributes the unique choice with no edges and the factor $1$. The coefficient $t(\lambda)$ does not include the choice of the blocks themselves. Nor does it include a choice of roots: the trees considered here have no distinguished roots.
 
 > [!info] Expansion by type
 > **Theorem.** For $1\leqslant k\leqslant n-1$, the grade component of the exponential of the complete graph is
@@ -132,18 +134,18 @@ A singleton block contributes the unique choice with no edges and the factor $1$
 > $$
 > \boxed{
 > M_k=
-> \sum_{\substack{\lambda\vdash k\\m\leqslant n-k}}
-> t(\lambda)\,E_n[\lambda,0^{\,n-k-m}]
+> \sum_{\substack{\lambda\vdash k\\r\leqslant n-k}}
+> t(\lambda)\,E_n[\lambda,0^{\,n-k-r}]
 > }
 > \tag{3}
 > $$
 >
-> Here $\lambda\vdash k$ means a partition of the integer $k$ into positive parts, and $m$ is the number of parts of that partition. Grade zero is $M_0=e$.
+> Here $\lambda\vdash k$ means a partition of the integer $k$ into positive parts, and $r$ is the number of parts of that partition. Grade zero is $M_0=e$.
 
 > [!note]- Proof
 > **Proof.** Group the forest expansion of $M_k$ by partitions of the vertex set into components. For a fixed set partition, all forests give the same form of the product of block boundaries: changing the tree within a block changes the exterior argument only by a sign.
 >
-> The number of such choices is $t(\lambda)$. Next, group the set partitions by type. By definition, the sum of the forms of a given type with unit coefficients is $E_n[\lambda,0^{\,n-k-m}]$. The condition $m\leqslant n-k$ ensures that the number of singleton blocks is nonnegative. This gives (3). $\square$
+> The number of such choices is $t(\lambda)$. Next, group the set partitions by type. By definition, the sum of the forms of a given type with unit coefficients is $E_n[\lambda,0^{\,n-k-r}]$. The condition $r\leqslant n-k$ ensures that the number of singleton blocks is nonnegative. This gives (3). $\square$
 
 No additional factors for permutations of equal components are introduced: the blocks are already unordered in the definition of $E_n$. There is also no factorial $k!$ in (3). It is needed when recovering the power $L^k=k!M_k$, where each edge set is selected in all $k!$ orders.
 
@@ -151,12 +153,12 @@ The types in (3) refer to the chosen forest representation. SPFs of different ty
 
 ## Counting forests of a given type
 
-Let $\mu_j=\#\{i:k_i=j\}$ be the multiplicity of the positive part $j$ in $\lambda$. By the [[Symmetric Polyforms - Types and Normalizations#Representation size and factorial factors|formula for representation size]], the number of partitions of the vertex set of this type is
+Let $J$ be the set of distinct parts of $\lambda$, and let $\mu_j=\#\{i:k_i=j\}$ for $j\in J$ be their positive multiplicities. By the [[Symmetric Polyforms - Types and Normalizations#Representation size and factorial factors|formula for representation size]], the number of partitions of the vertex set of this type is
 
 $$
 \#E_n[\lambda,0^\ell]
-=\frac{n!}
-{\ell!\displaystyle\prod_{i=1}^m(k_i+1)!\displaystyle\prod_{j\geqslant1}\mu_j!}
+=s_2([k_1+1,\ldots,k_r+1,1^\ell])
+=\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
 $$
 
 Each set partition corresponds to $t(\lambda)$ forests. Thus the number of forests of the given type is
@@ -165,22 +167,23 @@ $$
 \boxed{
 t(\lambda)\,\#E_n[\lambda,0^\ell]
 =
-\frac{n!\displaystyle\prod_{i=1}^m(k_i+1)^{k_i-1}}
-{\ell!\displaystyle\prod_{i=1}^m(k_i+1)!\displaystyle\prod_{j\geqslant1}\mu_j!}
+t(\lambda)s_2([k_1+1,\ldots,k_r+1,1^\ell])
 }
 \tag{4}
 $$
 
-This separately accounts for three sources of factors: choosing the blocks, removing repetitions of equal block sizes, and choosing a tree within each block. The last choice appears only in the numerator.
+This separately accounts for three sources of factors: choosing the blocks, removing repetitions of equal block sizes, and choosing a tree within each block. The last choice is represented by $t(\lambda)$. The steps are illustrated in detail in the [[Combinatorial Potentials in Symmetric Polyforms#Why there are ten partitions but thirty forests|example of ten partitions and thirty forests]].
 
 Retain the notation $s_k(K_n)$ for the number of spanning forests with $k$ edges, as used in the [[Laplacian Exponential#Grade components and spanning forests|forest expansion of the exponential]]. Summing (4) over admissible types gives
 
 $$
 s_k(K_n)=
-\sum_{\substack{\lambda\vdash k\\m\leqslant n-k}}
-t(\lambda)\,\#E_n[\lambda,0^{\,n-k-m}],
+\sum_{\substack{\lambda\vdash k\\r\leqslant n-k}}
+t(\lambda)\,\#E_n[\lambda,0^{\,n-k-r}],
 \qquad 1\leqslant k\leqslant n-1
 $$
+
+The notation $s_k(K_n)$ refers to a graph and an edge count, while $s_2(\lambda)$ denotes the potential of a collection of sizes. Even for $k=2$, these are different functions with different arguments.
 
 For $k=0$, we have $s_0(K_n)=1$, corresponding to the forest with no edges. With a common conductance $c$, the corresponding sum of forest weights is $c^k s_k(K_n)$, where $s_k(K_n)$ on the right denotes the number of forests of the graph with unit conductances.
 
@@ -273,21 +276,19 @@ Numerical metric evaluation is a linear function of the form and is preserved un
 Comparing (1) and (3) gives a further consequence. Use the exact coefficient from the [[Fundamental Theorem of Symmetric Polyforms#Statement and scope|fundamental theorem]]:
 
 $$
-E_n[\lambda,0^{\,n-k-m}]
+E_n[\lambda,0^{\,n-k-r}]
 =
-\frac{(n-k-1)!\,k!}
-{(n-k-m)!\displaystyle\prod_{i=1}^m k_i!\displaystyle\prod_{j\geqslant1}\mu_j!}
+\frac{(n-k-1)!}{(n-k-r)!}\,s_2(\lambda)
 E_n[k]
 $$
 
-After substitution into (3), all types are expressed through the single nonzero polyform $E_n[k]$. Comparing its coefficient with (1), we obtain, for $1\leqslant k\leqslant n-1$,
+Here $s_2(\lambda)=k!/([k_i!]!\,[\mu_j!]!)$ is applied to positive grades, unlike the block-size potential in (4). After substitution into (3), all types are expressed through the single nonzero polyform $E_n[k]$. Comparing its coefficient with (1), we obtain, for $1\leqslant k\leqslant n-1$,
 
 $$
 \boxed{
-\sum_{\substack{\lambda\vdash k\\m\leqslant n-k}}
-\frac{(n-k-1)!\,k!}
-{(n-k-m)!\displaystyle\prod_{i=1}^m k_i!\displaystyle\prod_{j\geqslant1}\mu_j!}
-\prod_{i=1}^m(k_i+1)^{k_i-1}
+\sum_{\substack{\lambda\vdash k\\r\leqslant n-k}}
+\frac{(n-k-1)!}{(n-k-r)!}\,s_2(\lambda)
+t(\lambda)
 =n^{k-1}
 }
 \tag{5}

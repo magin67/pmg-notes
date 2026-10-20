@@ -2,8 +2,8 @@
 title: Symmetric Polyforms
 date: 2026-10-20
 updated: 2026-10-20
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-series-navigation
@@ -20,21 +20,22 @@ A symmetric polyform (SPF) is invariant under every permutation of the chosen ve
 
 Fix $n\geqslant2$ independent basis vertices over $\mathbb R$. In the sum $E_n[\lambda]$, each partition into unordered blocks of the given type is counted once with coefficient $1$. The parts of the type are the grades of the block boundaries: a part $k_i$ corresponds to a block of $k_i+1$ vertices, and a zero to a singleton block.
 
-Let $m\geqslant1$, $k_i\geqslant1$, $k=\sum_i k_i$, and $\ell=n-k-m\geqslant0$. Write $\mu_j$ for the number of parts equal to $j$. The principal SPF of the same grade is denoted by $E_n[k]=E_n[k,0^{\,n-k-1}]$.
+Let $\boldsymbol k=[k_1,\ldots,k_r]$ be the collection of positive grades, with $k=w(\boldsymbol k)$. The number of nontrivial components is $r\geqslant1$, the full number of components is $m=n-k$, and the number of singletons is $\ell=m-r\geqslant0$. The principal SPF of the same grade is $E_n[k]=E_n[k,0^{\,n-k-1}]$. The [[Partitions and the Combinatorial Potential of the Second Kind|combinatorial potential of the second kind]] of the positive grades is denoted by $s_2(\boldsymbol k)$.
 
 > [!info] Fundamental theorem
 > For every admissible type, the following identity of forms holds:
 >
 > $$
 > \boxed{
-> E_n[k_1,\ldots,k_m,0^\ell]
-> =\frac{(n-k-1)!\,k!}
-> {\ell!\displaystyle\prod_{i=1}^m k_i!\displaystyle\prod_{j\geqslant1}\mu_j!}
+> E_n[k_1,\ldots,k_r,0^\ell]
+> =\frac{(m-1)!}{\ell!}\,s_2(\boldsymbol k)
 > E_n[k]
 > }
 > $$
 >
 > Grade zero is specified separately: $E_n[0^n]=e$. A type refers to the chosen representation; the identity relates representations of different types of the same polyform.
+
+The potential counts partitions of an auxiliary set of $k$ labels. The SPF representation size is determined by the potential of a different collection: the original block sizes $[k_i+1,1^\ell]$. This distinction is developed in [[Combinatorial Potentials in Symmetric Polyforms]].
 
 The full statement and proof are given in [[Fundamental Theorem of Symmetric Polyforms]]. The idea of the main proof is due to Dmitry Malugin; the exposition was prepared by ChatGPT. The proof has three steps:
 
@@ -56,7 +57,7 @@ $$
 M_{K_n}=e+\sum_{k=1}^{n-1}n^{k-1}E_n[k]
 $$
 
-The top-grade coefficient gives $\tau(K_n)=n^{n-2}$. In [[Symmetric Polyforms of the Complete Graph]], this representation is compared with the expansion by forest type. The same note shows how to obtain the exponential of another graph by deleting edges from the complete graph, with a detailed example for $C_4$.
+The top-grade coefficient gives $\tau(K_n)=n^{n-2}$. In [[Symmetric Polyforms of the Complete Graph]], this representation is compared with the expansion by forest type. The same note shows how to obtain the exponential of another graph by deleting edges from the complete graph, with a detailed example for $C_4$. The generalised count of ways to join prescribed components is given in [[Cayley's Theorem and Joining Prescribed Components|the combinatorial section]].
 
 **The combinatorial meaning of forest coefficients.** Comparing the expansions yields the falling-factorial expansion of the Abel polynomial $A_k(x)=x(x+k)^{k-1}$, $k\geqslant1$. Its coefficients $\operatorname{St}(k,m)$ count rooted forests on $k$ labelled vertices together with a partition of their component set into $m$ nonempty groups. The bijection, the connection with Stirling numbers, and the exact correspondence with OEIS A360177 are given in [[Forest Coefficients and Abel Polynomials]].
 
@@ -78,12 +79,14 @@ To study the main result, read [[Symmetric Polyforms - Types and Normalizations|
 
 The main proof requires [[Basic Objects and Operations of Polyform Algebra|boundaries, grades, bilinearity, and the product of forms]], together with the definition of a [[Partition Forms and the Tetrahedron Identity|partition form]]. The original normalization of $E_n[\lambda]$ is introduced in the [[Constructing Structural Identities#From local identities to symmetric sums|section on symmetric sums]] and restated in the note on types. The proof of the noncrossing basis from [[Structural Identities]] is not required for the main proof of the fundamental theorem of SPFs.
 
+For the combinatorial coefficients, [[Partitions and the Combinatorial Potential of the Second Kind]] provides the required background. [[Combinatorial Potentials in Symmetric Polyforms|The application to SPFs]] can be read alongside the first two notes of this series: its figures distinguish vertex partitions, forests, and identity coefficients. The complete combinatorial route is collected in the [[Combinatorial Potentials|separate reading guide]].
+
 Graph applications use the [[Laplacian Exponential|Laplacian exponential and its forest expansion]]. Notation and terminology agree with the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]]. Representation size, coefficient sum, and metric evaluation of a polyform are distinct quantities; the PMG norm is quadratic: $X^2=X\cdot X$.
 
 ## Status and scope of the series
 
-All five notes are available in Russian and English; the overall review of content, translations, links, and formatting is complete. The formulas have general proofs or precise references to accessible sources. Computational checks provide additional verification of examples.
+Notation and links are consistent with the [[Combinatorial Potentials]] series. The formulas have general proofs or precise references to accessible sources. Computational checks provide additional verification of examples.
 
 The main proof of the fundamental theorem works directly with partition forms. The independent explanation and extension to all forms on boundaries use irreducibility of the exterior powers of the standard representation of $S_n$ and Schur's lemma; references and the passage to PMG are given in the [[Fundamental Theorem of Symmetric Polyforms#Correspondence with classical representation theory|section on representation theory]].
 
-The complete-graph formulas apply to unit or equal conductances with explicitly stated scaling. Invariance under automorphisms of an arbitrary graph and the role of SPFs in its exponential remain a separate research topic. Reductions, toponomes, the spanning-tree operator, and the dual polyform retain their own scope. The overview “Partitions and Combinatorial Coefficients” and the note “Polyform Algebra” are planned separately.
+The complete-graph formulas apply to unit or equal conductances with explicitly stated scaling. Invariance under automorphisms of an arbitrary graph and the role of SPFs in its exponential remain a separate research topic. Reductions, toponomes, the spanning-tree operator, and the dual polyform retain their own scope. Partitions, the potential of the second kind, and the joining of prescribed components are covered in [[Combinatorial Potentials]]. The note “Polyform Algebra” remains planned separately.

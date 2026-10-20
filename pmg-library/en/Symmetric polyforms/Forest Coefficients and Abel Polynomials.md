@@ -1,9 +1,9 @@
 ---
 title: "Forest Coefficients and Abel Polynomials"
 date: 2026-10-19
-updated: 2026-10-19
-revision: 1
-source_revision: 1
+updated: 2026-10-20
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-and-abel-polynomials
@@ -21,40 +21,42 @@ The connection between Abel polynomials, labelled trees, and rooted forests is c
 Let $k\geqslant1$ and
 
 $$
-\lambda=[k_1,\ldots,k_m]\vdash k,\qquad
+\lambda=[k_1,\ldots,k_r]\vdash k,\qquad
 k_i\geqslant1,\qquad
-\sum_{i=1}^m k_i=k
+\sum_{i=1}^r k_i=k
 $$
 
-This is a partition of the integer $k$ into $m$ positive parts. In the forest representation of an SPF, the parts specify the grades of the boundaries of its nontrivial components: the corresponding vertex blocks have sizes $k_i+1$. Let $\mu_j$ denote the multiplicity of the part $j$.
+This is a partition of the integer $k$ into $r$ positive parts. In the forest representation of an SPF, the parts specify the grades of the boundaries of its nontrivial components: the corresponding vertex blocks have sizes $k_i+1$. Here $r$ counts nontrivial components; on $n$ vertices the full number of components is $m=n-k$, and the number of singletons is $\ell=m-r$. Let $J$ be the set of distinct parts of $\lambda$, and let $\mu_j$ for $j\in J$ be their positive multiplicities.
 
 Separate two factors:
 
 $$
-s(\lambda)=
-\frac{k!}{\displaystyle\prod_{i=1}^m k_i!\displaystyle\prod_{j\geqslant1}\mu_j!},
+s_2(\lambda)=
+\frac{k!}{[k_i!]!\,[\mu_j!]!},
 \qquad
-t(\lambda)=\prod_{i=1}^m(k_i+1)^{k_i-1}
+t(\lambda)=[(k_i+1)^{k_i-1}]!
 $$
 
-The number $s(\lambda)$ counts partitions of a set of $k$ distinct labels into unordered blocks of sizes $k_1,\ldots,k_m$. Indeed, permutations of labels within blocks give the factors $k_i!$, while permutations of blocks of equal size give the factors $\mu_j!$.
+The number $s_2(\lambda)$ is the [[Partitions and the Combinatorial Potential of the Second Kind#The combinatorial potential of the second kind|combinatorial potential of the second kind]]. It counts partitions of $k$ distinct labels into unordered blocks of sizes $k_1,\ldots,k_r$. The expressions $[k_i!]!$, $[\mu_j!]!$, and $[(k_i+1)^{k_i-1}]!$ use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]; the indices range over $1,\ldots,r$, $J$, and $1,\ldots,r$, respectively.
 
-For now, these $k$ labels form an auxiliary set. The representation size of $E_n[\lambda,0^{\,n-k-m}]$ counts partitions of the original $n$ vertices into blocks of sizes $k_i+1$ and singleton blocks; its formula is given in the [[Symmetric Polyforms - Types and Normalizations#Representation size and factorial factors|note on types and normalizations]]. Thus $s(\lambda)$ is not the representation size of this SPF.
+For now, these $k$ labels form an auxiliary set. The representation size of $E_n[\lambda,0^{\,n-k-r}]$ counts partitions of the original $n$ vertices into blocks of sizes $k_i+1$ and singleton blocks; its formula is given in the [[Symmetric Polyforms - Types and Normalizations#Representation size and factorial factors|note on types and normalizations]]. Thus $s_2(\lambda)$ is not the representation size of this SPF.
 
 The factor $t(\lambda)$ already appeared in the [[Symmetric Polyforms of the Complete Graph#Expansion by forest type|expansion by forest type]]. It counts independent choices of trees on prescribed blocks of sizes $k_i+1$. No roots are chosen in these trees.
 
 The [[Symmetric Polyforms of the Complete Graph#A numerical identity from the two expansions|numerical identity from the two expansions]] establishes that, for $n\geqslant k+1$,
 
 $$
-\sum_{\substack{\lambda\vdash k\\m\leqslant n-k}}
-\frac{(n-k-1)!}{(n-k-m)!}\,
-s(\lambda)t(\lambda)
+\sum_{\substack{\lambda\vdash k\\r\leqslant n-k}}
+\frac{(n-k-1)!}{(n-k-r)!}\,
+s_2(\lambda)t(\lambda)
 =n^{k-1}
 $$
 
-The condition $m\leqslant n-k$ means that enough vertices are available for the type. The factorial ratio comes from the [[Fundamental Theorem of Symmetric Polyforms#Statement and scope|fundamental theorem of SPFs]]; its proof need not be repeated here.
+The condition $r\leqslant n-k$ means that enough vertices are available for the type. The factorial ratio comes from the [[Fundamental Theorem of Symmetric Polyforms#Statement and scope|fundamental theorem of SPFs]]; its proof need not be repeated here.
 
 ## Forest coefficients
+
+From here on, the original vertex count $n$ is not fixed. The index $m$ in $\operatorname{St}(k,m)$ is the number of blocks in an auxiliary partition of $k$ labels. When compared with an SPF type, it equals $r$ in the preceding section; it does not count all forest components on the original $n$ vertices.
 
 **Definition.** For $1\leqslant m\leqslant k$, set
 
@@ -62,7 +64,7 @@ $$
 \boxed{
 \operatorname{St}(k,m)=
 \sum_{\substack{\lambda\vdash k\\\lambda\text{ has }m\text{ parts}}}
-s(\lambda)t(\lambda)
+s_2(\lambda)t(\lambda)
 }
 \tag{1}
 $$
@@ -111,14 +113,14 @@ $$
 **Definition.** The falling factorial is defined as the polynomial
 
 $$
-x_{\underline m}=\prod_{j=0}^{m-1}(x-j),
+x_{\underline m}=[x,x-1,\ldots,x-m+1]!,\qquad m\geqslant1,
 \qquad
 x_{\underline0}=1
 $$
 
 For an integer $x\geqslant m$, it equals $x!/(x-m)!$. The product definition also applies to other values of $x$; in particular, $x_{\underline m}=0$ for an integer $0\leqslant x<m$.
 
-The polynomials $1,x_{\underline1},\ldots,x_{\underline k}$ form a basis of the space of polynomials of degree at most $k$: each has degree equal to its index and leading coefficient $1$.
+The polynomials $1,x_{\underline1},\ldots,x_{\underline k}$ form a basis of the space of polynomials of degree at most $k$: each has degree equal to its index and leading coefficient $1$. Thus every polynomial has a unique expansion in this fixed basis.
 
 In the normalization used by Lando [1], the **Abel polynomials** are
 
@@ -178,11 +180,11 @@ The two sets of coefficients refer to different bases of the polynomial space. T
 
 Consider a set $U$ of $k$ labelled vertices. Partition it into $m$ nonempty unordered blocks $B_1,\ldots,B_m$. Add one new vertex $\rho_i$ to each block and choose a tree on $B_i\cup\{\rho_i\}$.
 
-The vertex $\rho_i$ is distinguished in advance as the root. It is attached to its block; neither roots nor blocks have an independent ordering. If $|B_i|=k_i$, the number of trees is $(k_i+1)^{k_i-1}$ by [[Symmetric Polyforms of the Complete Graph#The top grade and Cayley's formula|Cayley's formula]]. No additional factor for choosing a root occurs.
+The vertex $\rho_i$ is distinguished in advance as the root. It is attached to its block; neither roots nor blocks have an independent ordering. If $\#B_i=k_i$, the number of trees is $(k_i+1)^{k_i-1}$ by [[Symmetric Polyforms of the Complete Graph#The top grade and Cayley's formula|Cayley's formula]]. No additional factor for choosing a root occurs.
 
 **Proposition.** The number of such collections of blocks with trees is $\operatorname{St}(k,m)$.
 
-**Proof.** For a fixed list of sizes $\lambda$, there are $s(\lambda)$ partitions of $U$ and $t(\lambda)$ independent choices of trees. Summing over all $\lambda$ with $m$ parts gives (1). $\square$
+**Proof.** For a fixed list of sizes $\lambda$, there are $s_2(\lambda)$ partitions of $U$ and $t(\lambda)$ independent choices of trees. Summing over all $\lambda$ with $m$ parts gives (1). $\square$
 
 Although the sizes of the augmented trees agree with the sizes of the nontrivial components in the SPF type, this is a separate model on $k$ labelled vertices and $m$ added roots. It does not count all forests of the original $K_n$.
 
@@ -209,6 +211,8 @@ Although the sizes of the augmented trees agree with the sizes of the nontrivial
 
 When $m=1$, all components of any rooted forest are placed in a single group. Hence $\operatorname{St}(k,1)=(k+1)^{k-1}$ counts all rooted forests on $k$ vertices. The bijection identifies them with trees on the same vertices together with one added vertex.
 
+A graph proof of $A_k(q)=q(q+k)^{k-1}$ by deleting ordinary leaves is given in [[Falling Factorials, Rooted Forests, and Stirling Numbers#A code for a rooted forest|the note on rooted-forest codes]]. It also gives a [[Falling Factorials, Rooted Forests, and Stirling Numbers#Why forest coefficients are r-Stirling numbers|bijection with $r$-Stirling numbers]]: $\operatorname{St}(k,m)=\left\{\begin{smallmatrix}2k\\k+m\end{smallmatrix}\right\}_{k+1}$, where the braces use the full sizes of the set and partition.
+
 ## Ordinary coefficients and Stirling numbers
 
 In *Graphs and Topology*, Section 8.3, Theorem 8.3.1 [1], Lando proves that the coefficient of $x^r$ in $A_k(x)$ is the number of rooted labelled forests on $k$ vertices with $r$ components. Expanding $x(x+k)^{k-1}$ gives this count explicitly:
@@ -220,7 +224,7 @@ $$
 
 Here $[x^r]$ denotes extraction of the coefficient of the ordinary power.
 
-**Definition.** The Stirling number of the second kind $S(r,m)$ counts partitions of a set of $r$ elements into $m$ nonempty unordered blocks.
+Recall the [[Partitions and the Combinatorial Potential of the Second Kind#From type potentials to Stirling and Bell numbers|definition of a Stirling number of the second kind]]: $S(r,m)$ counts partitions of $r$ elements into $m$ nonempty unordered blocks. In this section, $r$ counts components of a rooted forest on an auxiliary set, and $m$ counts groups of those components.
 
 Each rooted forest with $r$ components admits $S(r,m)$ ways to group those components. The bijection proved above therefore gives
 
@@ -282,6 +286,8 @@ $$
 In $32$ forests, one root is isolated and the other belongs to a tree containing the three ordinary vertices. In $18$ forests, both roots belong to nontrivial components.
 
 ## Finite differences and the exact correspondence with OEIS
+
+The graph meaning of the alternating sums is the exclusion of forests with isolated prescribed roots. The detailed inclusion-exclusion count appears in [[Falling Factorials, Rooted Forests, and Stirling Numbers#Finite differences exclude unused roots|the note on rooted forests and finite differences]].
 
 For a polynomial $f$, define the finite-difference operator by
 

@@ -2,8 +2,8 @@
 title: "Products and Powers of Symmetric Polyforms"
 date: 2026-10-19
 updated: 2026-10-20
-revision: 3
-source_revision: 4
+revision: 4
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: products-and-powers-of-symmetric-polyforms
@@ -23,7 +23,7 @@ Fix a set $A=\{a_1,\ldots,a_n\}$ of independent basis vertices, with $n\geqslant
 We use the normalization from [[Symmetric Polyforms - Types and Normalizations|Symmetric Polyforms: Types and Normalizations]]: in the sum $E_n[\lambda]$, each partition into unordered blocks is counted once with coefficient $1$. A principal SPF of positive grade has the form
 
 $$
-E_n[k]=\sum_{\substack{B\subseteq A\\|B|=k+1}}[(B)]^2,
+E_n[k]=\sum_{\substack{B\subseteq A\\\#B=k+1}}[(B)]^2,
 \qquad 1\leqslant k\leqslant n-1
 $$
 
@@ -36,7 +36,7 @@ $$
 [X]^2[U]^2=[XU]^2
 $$
 
-The exterior product is implicit in the arguments. Multiplication of forms extends bilinearly to polyforms, is commutative, and has the unit $e=[1,1]$. A power $P^m$ of a polyform means repeated application of this product; in particular, $P^0=e$. The notation $[X]^2$ for a quadratic form retains its separate meaning.
+The exterior product is implicit in the arguments. Multiplication of forms extends bilinearly to polyforms, is commutative, and has the unit $e=[1,1]$. A power $P^h$ of a polyform means repeated application of this product; in particular, $P^0=e$. The notation $[X]^2$ for a quadratic form retains its separate meaning.
 
 The product of symmetric polyforms is symmetric: for any permutation of the vertices $\sigma$, we have $\sigma(PQ)=(\sigma P)(\sigma Q)=PQ$. Thus addition and multiplication preserve the class under consideration.
 
@@ -54,7 +54,7 @@ Its form is determined by the [[Basic Objects and Operations of Polyform Algebra
 |---|---|
 | $B\cap C=\varnothing$ | A form with two nontrivial blocks $[(B)(C)]^2$ |
 | $B\cap C=\{s\}$ | The form of a single boundary $[(B\cup C)]^2$ |
-| $\lvert B\cap C\rvert\geqslant2$ | The zero form |
+| $\#(B\cap C)\geqslant2$ | The zero form |
 
 When there is one common vertex, the boundaries can be written as products of differences relative to that vertex. Their product gives the boundary of the union up to a sign, which disappears in the quadratic form. When two vertices are shared, the same difference of these vertices occurs in both products, so the exterior product vanishes.
 
@@ -134,7 +134,7 @@ These rules apply to individual terms. After summing over blocks, the contributi
 > Finally, if $p+q\geqslant n$, then for any admissible blocks
 >
 > $$
-> |B\cap C|\geqslant |B|+|C|-n=p+q+2-n\geqslant2
+> \#(B\cap C)\geqslant \#B+\#C-n=p+q+2-n\geqslant2
 > $$
 >
 > Every term in the product is therefore zero. This also follows from $\Lambda^{p+q}W=0$ when $p+q\geqslant n$. $\square$
@@ -143,7 +143,14 @@ The factor $n$ in (1) combines two different counts: $k+1$ possible common verti
 
 ## Several factors and powers
 
-Repeated application of (1) gives a formula for any number of principal factors.
+Repeated application of (1) gives a formula for any number of principal factors. For a positive grade collection $\boldsymbol k=[k_1,\ldots,k_r]$ of weight $K$, use the [[Partitions and the Combinatorial Potential of the Second Kind#From repeated counts to the general formula|multinomial coefficient]]
+
+$$
+P(\boldsymbol k)=\frac{K!}{[k_i!]!}
+=s_2(\boldsymbol k)[\mu_j!]!
+$$
+
+Here $[k_i!]!$ is the product of the grade factorials and $[\mu_j!]!$ the product of the factorials of their positive multiplicities. In this section, $r$ is the number of factors; below, the exponent $h$ counts repetitions of one factor.
 
 > [!info] A product of principal polyforms
 > **Corollary.** Let $r\geqslant1$, $1\leqslant k_i\leqslant n-1$, and $K=k_1+\cdots+k_r$. For $K\leqslant n-1$,
@@ -151,7 +158,7 @@ Repeated application of (1) gives a formula for any number of principal factors.
 > $$
 > \boxed{
 > \prod_{i=1}^r E_n[k_i]
-> =n^{r-1}\frac{K!}{\prod_{i=1}^r k_i!}E_n[K]
+> =n^{r-1}P(\boldsymbol k)E_n[K]
 > }
 > \tag{2}
 > $$
@@ -159,16 +166,21 @@ Repeated application of (1) gives a formula for any number of principal factors.
 > For $K\geqslant n$, the product is zero.
 
 > [!note]- Proof
-> **Proof.** For $r=1$, the statement holds directly. By (1), each subsequent factor contributes an additional coefficient $n$ and a binomial coefficient. The product of these binomial coefficients is
+> **Proof.** For $r=1$, the statement holds directly. By (1), each subsequent factor contributes an additional coefficient $n$ and a binomial coefficient. Collect these binomial coefficients in
 >
 > $$
-> \prod_{j=2}^r\binom{k_1+\cdots+k_j}{k_j}
-> =\frac{K!}{\prod_{i=1}^r k_i!}
+> \mathbf b=\left[\binom{k_1+\cdots+k_j}{k_j}\right]_{j=2}^{r}
+> $$
+>
+> Its product is
+>
+> $$
+> \mathbf b!=\frac{K!}{[k_i!]!}=P(\boldsymbol k)
 > $$
 >
 > because the factorials of the intermediate sums cancel. There are $r-1$ multiplications in total, which gives (2). If $K\geqslant n$, the grade of the product exceeds the dimension of $W$, so the product is zero. $\square$
 
-The coefficient $K!/\prod_i k_i!$ counts distributions of $K$ distinct elements into **distinguishable** groups of prescribed sizes. There is therefore no additional division by factorials of the multiplicities of equal $k_i$: the factors specify separate positions for the choices.
+The coefficient $P(\boldsymbol k)$ counts distributions of $K$ distinct elements into **distinguishable** groups of prescribed sizes. There is therefore no additional division by factorials of the multiplicities of equal $k_i$: the factors specify separate positions for the choices.
 
 In particular,
 
@@ -181,14 +193,14 @@ For $1\leqslant k\leqslant n-1$, taking equal factors gives
 
 $$
 \boxed{
-\bigl(E_n[k]\bigr)^m
-=n^{m-1}\frac{(km)!}{(k!)^m}E_n[km]
+\bigl(E_n[k]\bigr)^h
+=n^{h-1}\frac{(kh)!}{(k!)^h}E_n[kh]
 },
-\qquad m\geqslant1,\quad km\leqslant n-1
+\qquad h\geqslant1,\quad kh\leqslant n-1
 \tag{3}
 $$
 
-For $km\geqslant n$, this power is zero. Formula (3) follows from (2) with $r=m$ and $k_1=\cdots=k_m=k$. It includes, for example, the square
+For $kh\geqslant n$, this power is zero. Formula (3) follows from (2) with $r=h$ and $k_1=\cdots=k_h=k$. It includes, for example, the square
 
 $$
 \bigl(E_n[k]\bigr)^2
