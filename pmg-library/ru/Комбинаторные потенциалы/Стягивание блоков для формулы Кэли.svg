@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="310" viewBox="0 0 900 310" role="img" aria-labelledby="title"><title id="title">Блоки ab, cd, e стягиваются в вершины A, B, C со связями величин 4, 2, 2</title>
+<style>text{font-family:Arial,Helvetica,sans-serif}</style>
+<rect width="900" height="310" fill="white"/>
+<rect x="12" y="12" width="390" height="286" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<rect x="498" y="12" width="390" height="286" rx="12" fill="#fafbfc" stroke="#d0d5dd"/>
+<text x="207" y="43" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">Заданные компоненты</text>
+<text x="693" y="43" font-size="21" fill="#1d2939" text-anchor="middle" font-weight="600">После стягивания блоков</text>
+<rect x="29" y="64" width="168" height="99" rx="12" fill="#eef4ff" stroke="#a5bcf4"/>
+<text x="113" y="88" font-size="17" fill="#285b7f" text-anchor="middle" font-weight="600">A: 2 вершины</text>
+<line x1="76" y1="128" x2="150" y2="128" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+<circle cx="76" cy="128" r="18" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="76" y="135" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">a</text>
+<circle cx="150" cy="128" r="18" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="150" y="135" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">b</text>
+<rect x="217" y="64" width="168" height="99" rx="12" fill="#eef4ff" stroke="#a5bcf4"/>
+<text x="301" y="88" font-size="17" fill="#285b7f" text-anchor="middle" font-weight="600">B: 2 вершины</text>
+<line x1="264" y1="128" x2="338" y2="128" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+<circle cx="264" cy="128" r="18" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="264" y="135" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">c</text>
+<circle cx="338" cy="128" r="18" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="338" y="135" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">d</text>
+<rect x="123" y="179" width="168" height="99" rx="12" fill="#eef4ff" stroke="#a5bcf4"/>
+<text x="207" y="204" font-size="17" fill="#285b7f" text-anchor="middle" font-weight="600">C: 1 вершина</text>
+<circle cx="207" cy="244" r="18" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="207" y="251" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">e</text>
+<line x1="425" y1="155" x2="475" y2="155" stroke="#667085" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 466 148 L 477 155 L 466 162" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="571" y1="100" x2="815" y2="100" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="571" y1="100" x2="693" y2="246" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<line x1="815" y1="100" x2="693" y2="246" stroke="#386a90" stroke-width="3" stroke-linecap="round"/>
+<rect x="676" y="83" width="34" height="34" rx="10" fill="#fafbfc"/>
+<text x="693" y="107" font-size="23" fill="#285b7f" text-anchor="middle" font-weight="600">4</text>
+<rect x="615" y="156" width="34" height="34" rx="10" fill="#fafbfc"/>
+<text x="632" y="180" font-size="23" fill="#285b7f" text-anchor="middle" font-weight="600">2</text>
+<rect x="737" y="156" width="34" height="34" rx="10" fill="#fafbfc"/>
+<text x="754" y="180" font-size="23" fill="#285b7f" text-anchor="middle" font-weight="600">2</text>
+<circle cx="571" cy="100" r="22" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="571" y="107" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">A</text>
+<circle cx="815" cy="100" r="22" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="815" y="107" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">B</text>
+<circle cx="693" cy="246" r="22" fill="#eef4ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="693" y="253" font-size="22" fill="#2563eb" text-anchor="middle" font-weight="400">C</text>
+</svg>
