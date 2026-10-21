@@ -1,9 +1,9 @@
 ---
 title: "Fundamental Theorem of Symmetric Polyforms"
 date: 2026-10-19
-updated: 2026-10-20
-revision: 4
-source_revision: 8
+updated: 2026-10-21
+revision: 5
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: fundamental-theorem-of-symmetric-polyforms
@@ -402,6 +402,65 @@ Let $\mathcal P_{n,k}$ be the [[Basis and Dimension of the Space of Partition Fo
 In particular, $\dim\mathcal P_n^{S_n}=n$. Uniqueness concerns the coefficients $c_k$ in the principal representation (4). An expression through sums of different types may be nonunique; the type still refers to the chosen representation of the polyform.
 
 Every linear metric evaluation preserves identity (1). For a form $[X]^2$, such an evaluation gives the quadratic norm $X^2=X\cdot X$. The coefficient sum of an arbitrary expression does not have this property: for example, the identity $E_4[1,1]=E_4[2,0]$ relates expressions with three and four terms of unit coefficient.
+
+## Substituting numbers for components while preserving identities
+
+Assign a real weight $x_j$ to a component of grade $j$, using the same weights for every $n$, and set $x_0=1$. Replace a partition form with positive grades $k_1,\ldots,k_r$ by the number $[x_{k_i}]!$, and replace $e$ by $1$. Extend this rule linearly to chosen sums of forms, keeping their coefficients. For arbitrary weights, this substitution need not preserve identities of forms.
+
+> [!info] Admissible component weights
+> **Corollary.** The substitution preserves every instance of (1), for every $n$ and every admissible type, if and only if
+>
+> $$
+> \boxed{x_j=(j+1)\alpha^j,\qquad j\geqslant1}
+> $$
+>
+> Here $\alpha=x_1/2$ is an arbitrary real number; $x_0=1$ is specified separately.
+
+> [!note]- Proof
+> **Proof.** Use the [[Combinatorial Potentials in Symmetric Polyforms#The size of a symmetric sum|number of terms in a symmetric sum]]:
+>
+> $$
+> \#E_n[k_1,\ldots,k_r,0^\ell]
+> =\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!},
+> \qquad
+> \#E_n[k]=\binom{n}{k+1}
+> $$
+>
+> Substitute these counts and the weights of the forms into both sides of (1). Cancelling nonzero factorial factors gives the necessary and sufficient condition
+>
+> $$
+> \frac{x_k}{k+1}
+> =\left[\frac{x_{k_i}}{k_i+1}\right]!,
+> \qquad k=k_1+\cdots+k_r
+> $$
+>
+> Set $y_j=x_j/(j+1)$. For any positive $p,q$, the type with two positive parts $p,q$ is admissible whenever $n\geqslant p+q+2$, so
+>
+> $$
+> y_{p+q}=y_py_q
+> $$
+>
+> Induction gives $y_j=y_1^j=\alpha^j$. Conversely, these values satisfy the condition for every collection $k_1,\ldots,k_r$, since its entries sum to $k$. This proves both directions, including $\alpha=0$. $\square$
+
+The requirement that the substitution work for every $n$ is essential. For a single fixed $n$, symmetric identities do not constrain $x_{n-1}$: only the principal type occurs in the highest grade.
+
+When $\alpha=1$, each component is replaced by its vertex count. Thus
+
+$$
+q_\pi\longmapsto[k_i+1]!
+$$
+
+This counts the ways to choose one root vertex in each block; singleton blocks contribute a factor of $1$. The same evaluation already appears as the auxiliary trace in the [[#Correspondence with classical representation theory|representation-theoretic proof]]. For general $\alpha$, it is multiplied by $\alpha^k$, which is the same for all types of one grade. The parameter $\alpha$ may also be kept formal: the identities then hold as polynomial identities in $\alpha$.
+
+For example, substituting component sizes into the tetrahedron and five-vertex identities gives
+
+$$
+3\cdot2^2=4\cdot3,
+\qquad
+10\cdot3\cdot2=3\cdot5\cdot4
+$$
+
+The fact that the first two weights are prime does not determine the general rule. If $x_1,x_2$ are required to be prime, the identity $3x_1^2=4x_2$ forces $x_1=2$, $x_2=3$. The identity $E_5[2,1]=3E_5[3,0]$ then requires $10x_2x_1=15x_3$, hence $x_3=4$. Therefore no universal substitution of primes for all positive-grade components preserves the fundamental theorem.
 
 ## The number of independent symmetric identities
 
