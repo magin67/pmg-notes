@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="820" viewBox="0 0 960 820" role="img" aria-labelledby="title desc">
+<title id="title">Семь сопоставлений в произведении (1²)*(1²)</title>
+<desc id="desc">Каждый множитель содержит две части веса один. В левом столбце одно пустое сопоставление, дающее тип (1⁴). В среднем столбце четыре сопоставления одной пары, каждое даёт (2,1²). В правом столбце две биекции между парами частей, каждая даёт (2²). Синие кружки относятся к первому множителю, оранжевые ко второму; линии означают только сопоставления.</desc>
+<rect width="960" height="820" fill="#ffffff"/>
+<style>text{font-family:Arial,'DejaVu Sans',sans-serif;fill:#172b4d} .heading{font-size:21px;font-weight:600} .small{font-size:15px;fill:#46566c} .result{font-size:24px;font-weight:600}</style>
+
+<text x="480" y="36" text-anchor="middle" class="heading">Произведение (1²) * (1²)</text>
+<text x="480" y="63" text-anchor="middle" class="small">Части первого множителя - синие, второго - оранжевые</text>
+<rect x="20" y="84" width="280" height="698" rx="14" fill="#f7f9fc" stroke="#d9e1ed"/>
+<text x="160" y="114" text-anchor="middle" class="heading">Без пар</text>
+<text x="160" y="148" text-anchor="middle" class="result">1 · (1⁴)</text>
+<rect x="340" y="84" width="280" height="698" rx="14" fill="#f7f9fc" stroke="#d9e1ed"/>
+<text x="480" y="114" text-anchor="middle" class="heading">Одна пара</text>
+<text x="480" y="148" text-anchor="middle" class="result">4 · (2,1²)</text>
+<rect x="660" y="84" width="280" height="698" rx="14" fill="#f7f9fc" stroke="#d9e1ed"/>
+<text x="800" y="114" text-anchor="middle" class="heading">Две пары</text>
+<text x="800" y="148" text-anchor="middle" class="result">2 · (2²)</text>
+<rect x="32" y="365" width="256" height="139" rx="10" fill="#ffffff" stroke="#ccd6e4"/>
+<text x="160" y="387" text-anchor="middle" class="small">Пустое сопоставление</text>
+<circle cx="96" cy="419" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="96" y="425" text-anchor="middle" font-size="18">1</text>
+<text x="64" y="424" text-anchor="middle" class="small">a₁</text>
+<circle cx="96" cy="473" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="96" y="479" text-anchor="middle" font-size="18">1</text>
+<text x="64" y="478" text-anchor="middle" class="small">a₂</text>
+<circle cx="224" cy="419" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="224" y="425" text-anchor="middle" font-size="18">1</text>
+<text x="256" y="424" text-anchor="middle" class="small">b₁</text>
+<circle cx="224" cy="473" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="224" y="479" text-anchor="middle" font-size="18">1</text>
+<text x="256" y="478" text-anchor="middle" class="small">b₂</text>
+<rect x="352" y="173" width="256" height="139" rx="10" fill="#ffffff" stroke="#ccd6e4"/>
+<text x="480" y="195" text-anchor="middle" class="small">a₁ ↔ b₁</text>
+<line x1="416" y1="227" x2="544" y2="227" stroke="#68778e" stroke-width="2.8"/>
+<circle cx="416" cy="227" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="233" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="232" text-anchor="middle" class="small">a₁</text>
+<circle cx="416" cy="281" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="287" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="286" text-anchor="middle" class="small">a₂</text>
+<circle cx="544" cy="227" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="233" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="232" text-anchor="middle" class="small">b₁</text>
+<circle cx="544" cy="281" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="287" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="286" text-anchor="middle" class="small">b₂</text>
+<rect x="352" y="322" width="256" height="139" rx="10" fill="#ffffff" stroke="#ccd6e4"/>
+<text x="480" y="344" text-anchor="middle" class="small">a₁ ↔ b₂</text>
+<line x1="416" y1="376" x2="544" y2="430" stroke="#68778e" stroke-width="2.8"/>
+<circle cx="416" cy="376" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="382" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="381" text-anchor="middle" class="small">a₁</text>
+<circle cx="416" cy="430" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="436" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="435" text-anchor="middle" class="small">a₂</text>
+<circle cx="544" cy="376" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="382" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="381" text-anchor="middle" class="small">b₁</text>
+<circle cx="544" cy="430" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="436" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="435" text-anchor="middle" class="small">b₂</text>
+<rect x="352" y="471" width="256" height="139" rx="10" fill="#ffffff" stroke="#ccd6e4"/>
+<text x="480" y="493" text-anchor="middle" class="small">a₂ ↔ b₁</text>
+<line x1="416" y1="579" x2="544" y2="525" stroke="#68778e" stroke-width="2.8"/>
+<circle cx="416" cy="525" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="531" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="530" text-anchor="middle" class="small">a₁</text>
+<circle cx="416" cy="579" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="585" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="584" text-anchor="middle" class="small">a₂</text>
+<circle cx="544" cy="525" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="531" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="530" text-anchor="middle" class="small">b₁</text>
+<circle cx="544" cy="579" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="585" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="584" text-anchor="middle" class="small">b₂</text>
+<rect x="352" y="620" width="256" height="139" rx="10" fill="#ffffff" stroke="#ccd6e4"/>
+<text x="480" y="642" text-anchor="middle" class="small">a₂ ↔ b₂</text>
+<line x1="416" y1="728" x2="544" y2="728" stroke="#68778e" stroke-width="2.8"/>
+<circle cx="416" cy="674" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="680" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="679" text-anchor="middle" class="small">a₁</text>
+<circle cx="416" cy="728" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="416" y="734" text-anchor="middle" font-size="18">1</text>
+<text x="384" y="733" text-anchor="middle" class="small">a₂</text>
+<circle cx="544" cy="674" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="680" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="679" text-anchor="middle" class="small">b₁</text>
+<circle cx="544" cy="728" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="544" y="734" text-anchor="middle" font-size="18">1</text>
+<text x="576" y="733" text-anchor="middle" class="small">b₂</text>
+<rect x="672" y="271" width="256" height="139" rx="10" fill="#ffffff" stroke="#ccd6e4"/>
+<text x="800" y="293" text-anchor="middle" class="small">Две прямые пары</text>
+<line x1="736" y1="325" x2="864" y2="325" stroke="#68778e" stroke-width="2.8"/>
+<line x1="736" y1="379" x2="864" y2="379" stroke="#68778e" stroke-width="2.8"/>
+<circle cx="736" cy="325" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="736" y="331" text-anchor="middle" font-size="18">1</text>
+<text x="704" y="330" text-anchor="middle" class="small">a₁</text>
+<circle cx="736" cy="379" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="736" y="385" text-anchor="middle" font-size="18">1</text>
+<text x="704" y="384" text-anchor="middle" class="small">a₂</text>
+<circle cx="864" cy="325" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="864" y="331" text-anchor="middle" font-size="18">1</text>
+<text x="896" y="330" text-anchor="middle" class="small">b₁</text>
+<circle cx="864" cy="379" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="864" y="385" text-anchor="middle" font-size="18">1</text>
+<text x="896" y="384" text-anchor="middle" class="small">b₂</text>
+<rect x="672" y="509" width="256" height="139" rx="10" fill="#ffffff" stroke="#ccd6e4"/>
+<text x="800" y="531" text-anchor="middle" class="small">Две перекрёстные пары</text>
+<line x1="736" y1="563" x2="864" y2="617" stroke="#68778e" stroke-width="2.8"/>
+<line x1="736" y1="617" x2="864" y2="563" stroke="#68778e" stroke-width="2.8"/>
+<circle cx="736" cy="563" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="736" y="569" text-anchor="middle" font-size="18">1</text>
+<text x="704" y="568" text-anchor="middle" class="small">a₁</text>
+<circle cx="736" cy="617" r="17" fill="#e4f0fd" stroke="#1767aa" stroke-width="2"/>
+<text x="736" y="623" text-anchor="middle" font-size="18">1</text>
+<text x="704" y="622" text-anchor="middle" class="small">a₂</text>
+<circle cx="864" cy="563" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="864" y="569" text-anchor="middle" font-size="18">1</text>
+<text x="896" y="568" text-anchor="middle" class="small">b₁</text>
+<circle cx="864" cy="617" r="17" fill="#fff0de" stroke="#ad5813" stroke-width="2"/>
+<text x="864" y="623" text-anchor="middle" font-size="18">1</text>
+<text x="896" y="622" text-anchor="middle" class="small">b₂</text>
+<text x="480" y="807" text-anchor="middle" class="small">Линии сопоставляют части; временные метки в итоговом типе забываются.</text>
+</svg>
