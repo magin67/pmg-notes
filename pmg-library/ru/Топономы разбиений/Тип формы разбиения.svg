@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="310" viewBox="0 0 880 310" role="img" aria-labelledby="title desc">
+<title id="title">Тип формы разбиения (2, 1)</title>
+<desc id="desc">Блок abc содержит три вершины и даёт границу грейда 2. Блок de содержит две вершины и даёт границу грейда 1. Тип формы равен (2, 1).</desc>
+<rect width="880" height="310" fill="#ffffff"/>
+<text x="440" y="38" font-family="Arial, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" fill="#172b3a">От размеров блоков к грейдам границ</text>
+<rect x="25" y="60" width="400" height="184" rx="12" fill="#f7fafc" stroke="#d5dfe6"/>
+<text x="225" y="94" font-family="Arial, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" fill="#245e91">Блок {a, b, c}</text>
+<text x="225" y="220" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#245e91">3 вершины → грейд 2</text>
+<rect x="455" y="60" width="400" height="184" rx="12" fill="#f7fafc" stroke="#d5dfe6"/>
+<text x="655" y="94" font-family="Arial, sans-serif" font-size="21" font-weight="normal" text-anchor="middle" fill="#087f78">Блок {d, e}</text>
+<text x="655" y="220" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#087f78">2 вершины → грейд 1</text>
+<line x1="125" y1="150" x2="225" y2="150" stroke="#245e91" stroke-width="4"/>
+<line x1="225" y1="150" x2="325" y2="150" stroke="#245e91" stroke-width="4"/>
+<circle cx="125" cy="150" r="19" fill="#ffffff" stroke="#245e91" stroke-width="2.2"/>
+<text x="125" y="157" font-family="Arial, sans-serif" font-size="22" font-weight="normal" text-anchor="middle" fill="#245e91">a</text>
+<circle cx="225" cy="150" r="19" fill="#ffffff" stroke="#245e91" stroke-width="2.2"/>
+<text x="225" y="157" font-family="Arial, sans-serif" font-size="22" font-weight="normal" text-anchor="middle" fill="#245e91">b</text>
+<circle cx="325" cy="150" r="19" fill="#ffffff" stroke="#245e91" stroke-width="2.2"/>
+<text x="325" y="157" font-family="Arial, sans-serif" font-size="22" font-weight="normal" text-anchor="middle" fill="#245e91">c</text>
+<line x1="605" y1="150" x2="705" y2="150" stroke="#087f78" stroke-width="4"/>
+<circle cx="605" cy="150" r="19" fill="#ffffff" stroke="#087f78" stroke-width="2.2"/>
+<text x="605" y="157" font-family="Arial, sans-serif" font-size="22" font-weight="normal" text-anchor="middle" fill="#087f78">d</text>
+<circle cx="705" cy="150" r="19" fill="#ffffff" stroke="#087f78" stroke-width="2.2"/>
+<text x="705" y="157" font-family="Arial, sans-serif" font-size="22" font-weight="normal" text-anchor="middle" fill="#087f78">e</text>
+<text x="440" y="285" font-family="Arial, sans-serif" font-size="25" font-weight="bold" text-anchor="middle" fill="#172b3a">Тип формы: (2, 1)</text>
+</svg>
