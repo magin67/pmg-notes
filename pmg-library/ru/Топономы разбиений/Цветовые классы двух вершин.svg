@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="title desc">
+<title id="title">Цветовые классы двух отдельных вершин</title>
+<desc id="desc">Вверху две вершины весов 1 и 1, внизу весов 2 и 1. В левом столбце разные цвета дают типы (1²) и (2,1), в правом общий цвет даёт (2) и (3). Числа внутри кружков обозначают веса, a и b обозначают вершины. Рёбер нет.</desc>
+<rect width="960" height="480" fill="#fff"/>
+<style>text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#172b4d}.heading{font-size:21px;font-weight:600}.small{font-size:15px;fill:#46566c}.result{font-size:24px;font-weight:600}.node{font-size:20px;font-weight:600}.classes{font-size:19px}</style>
+<text x="480" y="34" text-anchor="middle" class="heading">Две отдельные вершины</text>
+<text x="480" y="62" text-anchor="middle" class="small">Число внутри вершины обозначает её вес; одинаковый цвет задаёт общий класс</text>
+<text x="385" y="99" text-anchor="middle" class="heading">Разные цвета</text>
+<text x="755" y="99" text-anchor="middle" class="heading">Общий цвет</text>
+<text x="108" y="181" text-anchor="middle" class="result">(1) * (1)</text>
+<text x="108" y="209" text-anchor="middle" class="small">веса 1 и 1</text>
+<rect x="220" y="115" width="330" height="150" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<circle cx="318" cy="164" r="20" fill="#e1efff" stroke="#2166a4" stroke-width="2.4"/>
+<text x="318" y="171" text-anchor="middle" class="node">1</text>
+<text x="318" y="204" text-anchor="middle" class="classes">a</text>
+<circle cx="452" cy="164" r="20" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4"/>
+<text x="452" y="171" text-anchor="middle" class="node">1</text>
+<text x="452" y="204" text-anchor="middle" class="classes">b</text>
+<text x="385" y="244" text-anchor="middle" class="result">(1²)</text>
+<rect x="590" y="115" width="330" height="150" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<circle cx="688" cy="164" r="20" fill="#e1efff" stroke="#2166a4" stroke-width="2.4"/>
+<text x="688" y="171" text-anchor="middle" class="node">1</text>
+<text x="688" y="204" text-anchor="middle" class="classes">a</text>
+<circle cx="822" cy="164" r="20" fill="#e1efff" stroke="#2166a4" stroke-width="2.4"/>
+<text x="822" y="171" text-anchor="middle" class="node">1</text>
+<text x="822" y="204" text-anchor="middle" class="classes">b</text>
+<text x="755" y="244" text-anchor="middle" class="result">(2)</text>
+<text x="108" y="366" text-anchor="middle" class="result">(2) * (1)</text>
+<text x="108" y="394" text-anchor="middle" class="small">веса 2 и 1</text>
+<rect x="220" y="300" width="330" height="150" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<circle cx="318" cy="349" r="20" fill="#e1efff" stroke="#2166a4" stroke-width="2.4"/>
+<text x="318" y="356" text-anchor="middle" class="node">2</text>
+<text x="318" y="389" text-anchor="middle" class="classes">a</text>
+<circle cx="452" cy="349" r="20" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4"/>
+<text x="452" y="356" text-anchor="middle" class="node">1</text>
+<text x="452" y="389" text-anchor="middle" class="classes">b</text>
+<text x="385" y="429" text-anchor="middle" class="result">(2,1)</text>
+<rect x="590" y="300" width="330" height="150" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<circle cx="688" cy="349" r="20" fill="#e1efff" stroke="#2166a4" stroke-width="2.4"/>
+<text x="688" y="356" text-anchor="middle" class="node">2</text>
+<text x="688" y="389" text-anchor="middle" class="classes">a</text>
+<circle cx="822" cy="349" r="20" fill="#e1efff" stroke="#2166a4" stroke-width="2.4"/>
+<text x="822" y="356" text-anchor="middle" class="node">1</text>
+<text x="822" y="389" text-anchor="middle" class="classes">b</text>
+<text x="755" y="429" text-anchor="middle" class="result">(3)</text>
+</svg>
