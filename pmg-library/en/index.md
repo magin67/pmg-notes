@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 9
-translated_revision: 8
-updated: 2026-10-20
+revision: 10
+translated_revision: 9
+updated: 2026-10-22
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -53,6 +53,12 @@ Four notes on partitions and counting by component sizes. The series introduces 
 
 - [[Combinatorial Potentials|Main results, notation, and reading routes]].
 
+## Partition toponomes
+
+Six notes on passing from a chosen polyform representation to partition types. The series establishes the limits of the reduction, introduces the second-kind algebra and its graph interpretations, develops coefficient triangles, and shows why they do not distinguish all graphs.
+
+- [[Partition Toponomes|Main results, reading order, and scope]].
+
 ## PMG Foundations
 
 - [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
@@ -97,4 +103,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **20 October 2026**
+- Library last updated: **22 October 2026**

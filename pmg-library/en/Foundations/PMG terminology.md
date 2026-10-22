@@ -1,13 +1,13 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-20
-revision: 8
+updated: 2026-10-22
+revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: objects, forms, metrics, collections, partitions, symmetric polyforms, and combinatorial potentials; Russian equivalents."
+description: "Terminology of the PMG core and published series: objects, forms, metrics, collections, partitions, symmetric polyforms, combinatorial potentials, and partition toponomes; Russian equivalents."
 order: 2
 ---
 
@@ -134,6 +134,27 @@ A combinatorial potential counts partitions and uses no metric. The polyform pot
 
 The relation between forest coefficients and $r$-Stirling numbers is used here for specific PMG counts. A general classification of Stirling-number families belongs to a separate project on combinatorics and partition algebra.
 
+## Partition toponomes and operations on types
+
+Definitions and the scope of the operations are given in the [[Partition Toponomes]] series. The names of PMG-specific constructions refer to the objects below; they do not define a general name for every reduction of a polyform.
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Positive type of a partition form | Положительный тип формы разбиения | PMG | The full type with zero parts omitted: $\lambda=(k_1,\ldots,k_r)$, $k_i\geqslant1$. For $k=w(\lambda)$ and known $n$, recover $m=n-k$ and $\ell=n-k-r$. The empty type is denoted by $1$ and corresponds to the unit form $e$. [[From Polyforms to Partitions]]. |
+| Partition toponome; toponome of a chosen representation | Топоном разбиений; топоном выбранного представления | PMG | For an expression $\mathcal E=\sum_\pi c_\pi q_\pi$, this is $T_{\mathcal E}=\sum_\pi c_\pi\lambda(\pi)$. Vertex labels are forgotten, and contributions of identical positive types are collected. Structural identities need not be preserved; the toponome is not declared invariant under arbitrary changes of expression for the same polyform. [[Toponomes and Structural Identities]]. |
+| Partial matching of components | Частичное сопоставление компонент | Standard | A set of pairs of occurrences of parts from two factors, with each occurrence belonging to at most one pair. Equal parts are temporarily distinguished; a coefficient counts matchings producing the same resulting type. [[The Second-Kind Algebra on Partitions]]. |
+| The second-kind algebra on partitions | Алгебра второго рода на разбиениях | PMG | The real algebra of finite linear combinations of integer partitions with product $*$: matched parts add, unmatched parts remain unchanged, and all partial matchings are summed. The unit is the empty type $1$. “Second-kind” refers to the algebra; $(1)^k=\sum_{\lambda\vdash k}s_2(\lambda)\lambda$. It is isomorphic to the standard algebra of symmetric functions in the augmented monomial basis. |
+| Color class | Цветовой класс | Standard | The set of vertices of one color in a proper coloring; it is an independent block. The weight type of color classes records the sums of vertex weights in each block. The sum of these types differs from the spanning-forest toponome. [[Graph Colorings and Partition Products]]. |
+| Sum of partial gluings at chosen roots | Сумма частичных склеек по выбранным корням | PMG | A boundary realization of $*$: a root is chosen in advance in each nontrivial component, and the roots of each matched pair are identified without adding an edge. The sum ranges over matchings, not root choices. Each component belongs to at most one pair. [[Partition Products and Boundary Forms]]. |
+| Coefficient table of a toponome | Коэффициентная таблица топонома | PMG | $\mathcal A_{\mathcal E}=(a_{k,r})$, where $a_{k,r}$ sums coefficients of types of weight $k$ with $r$ positive parts. Individual types within one cell are lost. Graph comparisons retain the vertex count $n$ separately; the data $(n,\mathcal A_G)$ do not in general determine a graph up to isomorphism. [[Coefficient Tables of Toponomes]]. |
+| Coefficient triangle | Коэффициентный треугольник | PMG | A table layout with weight $k$ indexing columns and the number $r$ of nontrivial components indexing rows. For nonempty types on $n$ vertices, $r\leqslant k\leqslant n-r$; admissible row lengths decrease by two. The unit term is treated separately, and zero cells are left blank. A particular graph may fill only some admissible cells. |
+
+In this series, standalone types use parentheses: $(1^2)=(1,1)$, whereas $(1)^2=(1)*(1)$ denotes a product. Square brackets for collections and SPF notation $E_n[\lambda]$ are retained. Numerical parts of a type differ from vertex labels in boundary notation such as $(ab)$.
+
+The correspondence $\lambda=(k_1,\ldots,k_r)\leftrightarrow x_{k_1}\cdots x_{k_r}$ preserves the type and gives two notations for the same data. Ordinary multiplication of these monomials concatenates lists of parts and differs from $*$. Under disjoint union of graphs, spanning-forest toponomes multiply by the ordinary polynomial product, while sums of color-class types multiply by $*$.
+
+For a graph toponome, the expansion of the factors of the Laplacian exponential is fixed. With unit weights, coefficients count forests; with numerical weights, they sum products of edge weights. Root weighting of components, further specializations, an operator spectrum, and its full spectral representation require their own definitions. Reduction by types is not identified with reduction of one polyform by another.
+
 ## Graphs, couplings, and matrix representations
 
 | English term | Russian equivalent | Status | Meaning and convention |
@@ -185,7 +206,7 @@ The norm of a simplex boundary is the squared volume of a parallelotope, while i
 | Spanning tree | Остовное дерево | Standard | A connected acyclic subgraph containing every vertex of the original graph. |
 | Spanning forest | Остовный лес | Qualified | In this series, any acyclic subgraph containing every vertex, including isolated ones. Maximality of the edge set is not required. |
 | Spanning 2-forest | Остовный 2-лес | Standard | A spanning forest with exactly two components. |
-| Separating spanning 2-forest | Разделяющий остовный 2-лес | Qualified | A spanning 2-forest in which two specified vertices lie in different components. |
+| Separating spanning 2-forest | Разделяющий остовной 2-лес | Qualified | A spanning 2-forest in which two specified vertices lie in different components. |
 | Forest weight; tree weight | Вес леса или дерева | Standard | The product of the conductances of the selected edges. The empty product is $1$. |
 | Forest expansion | Лесное разложение | Qualified | An expression for $M_k$ as a sum of weighted forms of forests with $k$ edges. Each such forest has $n-k$ components. |
 | Spanning-tree form | Остовная форма | PMG | The fixed form $T_n=[(a_1\ldots a_n)]^2$ of grade $n-1$. |
@@ -265,7 +286,7 @@ The following definitions are used in the published series “Spaces and Subspac
 | Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed values at selected vertices to the response after solving the internal equations. It equals the Laplacian of the induced graph. [[Vertex Elimination and Induced Couplings]]. |
 | Common spanning-tree parameter of the two parts | Общий остовной параметр двух долей | The locally introduced normalization $J(G)$ of the spanning-tree coefficient of a bipartite graph. It can be computed through either part while retaining its original degrees. [[Couplings Within One Part of a Bipartite Graph]]. |
 
-For other extensions, including KVP/KVPOU, dual polyforms, toponomes, metric-value decompositions, and interval forms, definitions and translations are added as the corresponding public sections are prepared. The following restrictions remain:
+For other extensions, including KVP/KVPOU, dual polyforms, metric-value decompositions, and interval forms, definitions and translations are added as the corresponding public sections are prepared. The following restrictions remain:
 
 - “Cocenter” is not used as a synonym for centroid or as the name of a separate geometric center without a definition.
 - No translation of “внешнее деление” is fixed until the operation is formally compared with standard operations of exterior algebra.
@@ -273,12 +294,15 @@ For other extensions, including KVP/KVPOU, dual polyforms, toponomes, metric-val
 
 ## Usage rules and revision history
 
+Russian texts use «остовной» in «остовной лес», «остовной 2-лес», and «остовной коэффициент»; the neuter form is «остовное дерево».
+
 The first use of a PMG-specific term should include a definition or a precise link to one. Sharing a name with a term from another field does not replace a definition. Where needed, English text uses the qualifiers “polyform in PMG”, “polyform potential”, and “PMG form norm”.
 
 Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and the Green matrix $\mathbf{Gr}$, formal forms from their numerical evaluations, and matrix multiplication from the polyform product. Renaming a mathematical object should include an explicit correspondence with the earlier name.
 
 | Revision | Date | Content |
 |---|---|---|
+| 9 | 2026-10-22 | Added terminology for partition toponomes: positive type, the toponome of a chosen representation, the second-kind algebra, partial matchings and gluings, color classes, coefficient tables, and triangles. Distinguished polynomial notation, type multiplication, and ordinary polyform multiplication; clarified weight data and representation dependence. Aligned with Russian glossary revision 9, including the Russian adjective «остовной». |
 | 8 | 2026-10-20 | Added collections, partitions, structural identities, SPF types, representation sizes, and combinatorial potentials. Distinguished metric potential, symmetric-sum size, and forest count; clarified indices of forest coefficients and $r$-Stirling numbers. Aligned exterior-product notation and project scope. Aligned with Russian glossary revision 7. |
 | 7 | 2026-10-16 | Replaced the Green-matrix notation $\mathbf G$ with $\mathbf{Gr}=\mathbf L^+$; reserved $\mathbf G$ for Gram matrices with entries $g_{ij}$. Discontinued $\mathbf B$ for the local-vertex Gram matrix and distinguished $\mathbf G$, $\mathbf G_z$, and bi-coordinate matrices $\mathbf B$. Aligned with Russian glossary revision 6. |
 | 6 | 2026-10-15 | Added the sphere element and links to the properties of nonlocal elements, completing alignment with Russian glossary revision 5. |

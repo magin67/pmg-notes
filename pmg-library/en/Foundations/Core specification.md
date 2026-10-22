@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-20
-revision: 7
+updated: 2026-10-22
+revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -583,7 +583,7 @@ The following constructions are outside this revision of the core and require se
 - directed graphs and the KVP/KVPOU structural decompositions;
 - dual polyforms, cut forms, and the function $\operatorname{dex}$;
 - structural identities of partition forms, symmetric polyforms, and their combinatorial coefficients;
-- toponomes and component reductions;
+- partition toponomes, the second-kind algebra, and further component evaluations;
 - metric-value decompositions and interval forms;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
@@ -641,12 +641,30 @@ Square brackets for a numerical collection $[x_i]$, a simplex $[a_1\ldots a_k]$,
 
 The parts of a combinatorial type specify block sizes. The parts of an SPF type specify their boundary grades: a block of $b$ vertices contributes the part $b-1$. For a full type on $n$ vertices whose parts sum to $k$, the component count is $m=n-k$, including singleton blocks of grade zero. The representation size $\#E_n[\lambda]$ counts terms in the chosen sum over partitions; it depends on the representation and differs from the number of forests. Definitions and normalizations appear in [[Partitions and the Combinatorial Potential of the Second Kind]] and [[Symmetric Polyforms - Types and Normalizations]].
 
+### Types and toponomes of chosen representations
+
+In the [[Partition Toponomes]] series, a standalone positive type is written as $\lambda=(k_1,\ldots,k_r)$, where $k_i\geqslant1$ are the boundary grades of the blocks. For a specified vertex count $n$,
+
+$$
+k=w(\lambda),\qquad r=\#\lambda,\qquad
+m=n-k,\qquad \ell=n-k-r\geqslant0
+$$
+
+Here $m$ is the full number of components, $r$ the number of nontrivial components, and $\ell$ the number of singleton vertices. The empty type is denoted by $1$ and corresponds to the form $e$. The multiplicity notation $(1^2)=(1,1)$ differs from the product power $(1)^2$. Square brackets for collections, forms, and SPFs $E_n[\lambda]$ are retained; parentheses for numerical types do not change the notation for boundaries on named vertices.
+
+For a chosen formal sum $\mathcal E=\sum_\pi c_\pi q_\pi$, reduction gives $T_{\mathcal E}=\sum_\pi c_\pi\lambda(\pi)$. It is linear on chosen expressions. Independence from representation requires preservation of all structural relations; free types do not generally satisfy this condition. For the graph toponome $T_G$, the expansion of the factors of $\exp L$ is fixed: coefficients sum products of edge weights of spanning forests by type. See [[From Polyforms to Partitions]] and [[Toponomes and Structural Identities]].
+
+The notation $\lambda\leftrightarrow x_{k_1}\cdots x_{k_r}$ preserves the type. The product $*$ in [[The Second-Kind Algebra on Partitions|the second-kind algebra]] sums partial matchings of parts and differs from ordinary multiplication of these monomials. Its [[Partition Products and Boundary Forms|boundary realization]] requires chosen roots and a sum of partial gluings; types alone do not determine the ordinary product of particular polyforms.
+
+The table $\mathcal A_{\mathcal E}=(a_{k,r})$ groups coefficients of types with the same $(k,r)$; $n$ is retained separately. It loses the distribution among types within a cell and does not in general determine a graph up to isomorphism. These constructions are a thematic extension; definitions and proofs are given in the series, and concise terminology in the [[PMG terminology#Partition toponomes and operations on types|glossary]].
+
 ## Sources and revision history
 
 The ten notes of the [[PMG Introductory Series|introductory series]] provide the supporting material. External references and their correspondence to individual notes are listed in [[Further Reading for the PMG Introductory Series|further reading]]. This specification records the conventions of the published corpus; subsequent substantive changes require corresponding updates to related definitions and terminology.
 
 | Revision | Date | Content |
 |---|---|---|
+| 8 | 2026-10-22 | Recorded notation for positive and empty types, the distinction between multiplicity and product powers, and the dependence of a toponome on its chosen expression. Specified the scope of $*$ and information loss in coefficient tables. Added links to the completed toponome series; the mathematical statements of the required core are unchanged. Aligned with Russian core specification revision 8. |
 | 7 | 2026-10-20 | Recorded numerical-collection size and weight, collection products, and products of element factorials. Distinguished block-size types, SPF types, and representation size; added links to the structural, symmetric, and combinatorial series. Aligned exterior-product notation. The scope and mathematical statements of the core are unchanged. Aligned with Russian core specification revision 7. |
 | 5 | 2026-10-16 | Aligned notation: Green matrix $\mathbf{Gr}=\mathbf L^+$, Gram matrix $\mathbf G$ with entries $g_{ij}$, extended Gram matrix $\mathbf G_z$, and bi-coordinate matrix $\mathbf B$. Clarified the geometric meaning of the Green matrix. |
 | 3 | 2026-10-14 | Added links to the published definitions in the spaces series and aligned the names bi-coordinates and di-coordinates across languages. The mathematical content of the core is unchanged. This English version follows Russian revision 3. |
