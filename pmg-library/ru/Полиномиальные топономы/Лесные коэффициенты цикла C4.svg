@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1035" viewBox="0 0 1080 1035" role="img" aria-labelledby="title desc">
+<title id="title">Лесные коэффициенты цикла C4</title>
+<desc id="desc">Все пятнадцать остовных лесов цикла C4. Вклады групп в векторный полином равны 1,4,4,2,4; в вершинный полином 1,8,12,8,16. Полный цикл исключён.</desc>
+<rect width="1080" height="1035" fill="white"/>
+<g font-family="Arial, sans-serif">
+<text x="26" y="38" font-size="26" fill="#192f3b" font-weight="700">Леса цикла C4: две нормировки</text>
+<text x="26" y="68" font-size="17" fill="#192f3b">Один и тот же набор лесов; вершинная нормировка учитывает выбор корней.</text>
+<text x="26" y="104" font-size="16" fill="#192f3b" font-weight="700">Группа</text>
+<text x="245" y="104" font-size="16" fill="#192f3b" font-weight="700">Все леса группы</text>
+<text x="923" y="104" font-size="15" fill="#192f3b" font-weight="700" text-anchor="middle">Вклад в fₖ</text>
+<text x="1019" y="104" font-size="15" fill="#192f3b" font-weight="700" text-anchor="middle">Вклад в pₖ</text>
+<rect x="16" y="120" width="1048" height="130" rx="10" fill="#f5fafb"/>
+<text x="30" y="151" font-size="19" fill="#192f3b" font-weight="700">k = 0</text>
+<text x="30" y="178" font-size="16" fill="#192f3b">Пустой лес</text>
+<text x="30" y="207" font-size="15" fill="#526b77">h = 1</text>
+<line x1="267" y1="148" x2="330" y2="148" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="330" y1="148" x2="330" y2="211" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="330" y1="211" x2="267" y2="211" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="267" y1="211" x2="267" y2="148" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="267" cy="148" r="5.5" fill="#192f3b"/>
+<text x="251" y="140" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="330" cy="148" r="5.5" fill="#192f3b"/>
+<text x="346" y="140" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="330" cy="211" r="5.5" fill="#192f3b"/>
+<text x="346" y="232" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="267" cy="211" r="5.5" fill="#192f3b"/>
+<text x="251" y="232" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="923" y="192" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">1</text>
+<text x="1019" y="192" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">1</text>
+<rect x="16" y="259" width="1048" height="130" rx="10" fill="#fafcfd"/>
+<text x="30" y="290" font-size="19" fill="#192f3b" font-weight="700">k = 1</text>
+<text x="30" y="317" font-size="16" fill="#192f3b">Одна связь</text>
+<text x="30" y="346" font-size="15" fill="#526b77">h = 2</text>
+<line x1="267" y1="287" x2="330" y2="287" stroke="#227c89" stroke-width="3.5"/>
+<line x1="330" y1="287" x2="330" y2="350" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="330" y1="350" x2="267" y2="350" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="267" y1="350" x2="267" y2="287" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="267" cy="287" r="5.5" fill="#192f3b"/>
+<text x="251" y="279" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="330" cy="287" r="5.5" fill="#192f3b"/>
+<text x="346" y="279" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="330" cy="350" r="5.5" fill="#192f3b"/>
+<text x="346" y="371" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="267" cy="350" r="5.5" fill="#192f3b"/>
+<text x="251" y="371" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="412" y1="287" x2="475" y2="287" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="475" y1="287" x2="475" y2="350" stroke="#227c89" stroke-width="3.5"/>
+<line x1="475" y1="350" x2="412" y2="350" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="412" y1="350" x2="412" y2="287" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="412" cy="287" r="5.5" fill="#192f3b"/>
+<text x="396" y="279" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="475" cy="287" r="5.5" fill="#192f3b"/>
+<text x="491" y="279" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="475" cy="350" r="5.5" fill="#192f3b"/>
+<text x="491" y="371" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="412" cy="350" r="5.5" fill="#192f3b"/>
+<text x="396" y="371" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="557" y1="287" x2="620" y2="287" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="620" y1="287" x2="620" y2="350" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="620" y1="350" x2="557" y2="350" stroke="#227c89" stroke-width="3.5"/>
+<line x1="557" y1="350" x2="557" y2="287" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="557" cy="287" r="5.5" fill="#192f3b"/>
+<text x="541" y="279" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="620" cy="287" r="5.5" fill="#192f3b"/>
+<text x="636" y="279" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="620" cy="350" r="5.5" fill="#192f3b"/>
+<text x="636" y="371" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="557" cy="350" r="5.5" fill="#192f3b"/>
+<text x="541" y="371" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="702" y1="287" x2="765" y2="287" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="765" y1="287" x2="765" y2="350" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="765" y1="350" x2="702" y2="350" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="702" y1="350" x2="702" y2="287" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="702" cy="287" r="5.5" fill="#192f3b"/>
+<text x="686" y="279" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="765" cy="287" r="5.5" fill="#192f3b"/>
+<text x="781" y="279" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="765" cy="350" r="5.5" fill="#192f3b"/>
+<text x="781" y="371" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="702" cy="350" r="5.5" fill="#192f3b"/>
+<text x="686" y="371" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="923" y="331" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">4</text>
+<text x="1019" y="331" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">8</text>
+<rect x="16" y="398" width="1048" height="130" rx="10" fill="#f5fafb"/>
+<text x="30" y="429" font-size="19" fill="#192f3b" font-weight="700">k = 2</text>
+<text x="30" y="456" font-size="16" fill="#192f3b">Смежные связи</text>
+<text x="30" y="485" font-size="15" fill="#526b77">h = 3</text>
+<line x1="267" y1="426" x2="330" y2="426" stroke="#227c89" stroke-width="3.5"/>
+<line x1="330" y1="426" x2="330" y2="489" stroke="#227c89" stroke-width="3.5"/>
+<line x1="330" y1="489" x2="267" y2="489" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="267" y1="489" x2="267" y2="426" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="267" cy="426" r="5.5" fill="#192f3b"/>
+<text x="251" y="418" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="330" cy="426" r="5.5" fill="#192f3b"/>
+<text x="346" y="418" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="330" cy="489" r="5.5" fill="#192f3b"/>
+<text x="346" y="510" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="267" cy="489" r="5.5" fill="#192f3b"/>
+<text x="251" y="510" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="412" y1="426" x2="475" y2="426" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="475" y1="426" x2="475" y2="489" stroke="#227c89" stroke-width="3.5"/>
+<line x1="475" y1="489" x2="412" y2="489" stroke="#227c89" stroke-width="3.5"/>
+<line x1="412" y1="489" x2="412" y2="426" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="412" cy="426" r="5.5" fill="#192f3b"/>
+<text x="396" y="418" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="475" cy="426" r="5.5" fill="#192f3b"/>
+<text x="491" y="418" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="475" cy="489" r="5.5" fill="#192f3b"/>
+<text x="491" y="510" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="412" cy="489" r="5.5" fill="#192f3b"/>
+<text x="396" y="510" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="557" y1="426" x2="620" y2="426" stroke="#227c89" stroke-width="3.5"/>
+<line x1="620" y1="426" x2="620" y2="489" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="620" y1="489" x2="557" y2="489" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="557" y1="489" x2="557" y2="426" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="557" cy="426" r="5.5" fill="#192f3b"/>
+<text x="541" y="418" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="620" cy="426" r="5.5" fill="#192f3b"/>
+<text x="636" y="418" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="620" cy="489" r="5.5" fill="#192f3b"/>
+<text x="636" y="510" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="557" cy="489" r="5.5" fill="#192f3b"/>
+<text x="541" y="510" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="702" y1="426" x2="765" y2="426" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="765" y1="426" x2="765" y2="489" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="765" y1="489" x2="702" y2="489" stroke="#227c89" stroke-width="3.5"/>
+<line x1="702" y1="489" x2="702" y2="426" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="702" cy="426" r="5.5" fill="#192f3b"/>
+<text x="686" y="418" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="765" cy="426" r="5.5" fill="#192f3b"/>
+<text x="781" y="418" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="765" cy="489" r="5.5" fill="#192f3b"/>
+<text x="781" y="510" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="702" cy="489" r="5.5" fill="#192f3b"/>
+<text x="686" y="510" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="923" y="470" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">4</text>
+<text x="1019" y="470" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">12</text>
+<rect x="16" y="537" width="1048" height="130" rx="10" fill="#fafcfd"/>
+<text x="30" y="568" font-size="19" fill="#192f3b" font-weight="700">k = 2</text>
+<text x="30" y="595" font-size="16" fill="#192f3b">Раздельные связи</text>
+<text x="30" y="624" font-size="15" fill="#526b77">h = 4</text>
+<line x1="267" y1="565" x2="330" y2="565" stroke="#227c89" stroke-width="3.5"/>
+<line x1="330" y1="565" x2="330" y2="628" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="330" y1="628" x2="267" y2="628" stroke="#227c89" stroke-width="3.5"/>
+<line x1="267" y1="628" x2="267" y2="565" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="267" cy="565" r="5.5" fill="#192f3b"/>
+<text x="251" y="557" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="330" cy="565" r="5.5" fill="#192f3b"/>
+<text x="346" y="557" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="330" cy="628" r="5.5" fill="#192f3b"/>
+<text x="346" y="649" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="267" cy="628" r="5.5" fill="#192f3b"/>
+<text x="251" y="649" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="412" y1="565" x2="475" y2="565" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="475" y1="565" x2="475" y2="628" stroke="#227c89" stroke-width="3.5"/>
+<line x1="475" y1="628" x2="412" y2="628" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="412" y1="628" x2="412" y2="565" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="412" cy="565" r="5.5" fill="#192f3b"/>
+<text x="396" y="557" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="475" cy="565" r="5.5" fill="#192f3b"/>
+<text x="491" y="557" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="475" cy="628" r="5.5" fill="#192f3b"/>
+<text x="491" y="649" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="412" cy="628" r="5.5" fill="#192f3b"/>
+<text x="396" y="649" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="923" y="609" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">2</text>
+<text x="1019" y="609" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">8</text>
+<rect x="16" y="676" width="1048" height="130" rx="10" fill="#f5fafb"/>
+<text x="30" y="707" font-size="19" fill="#192f3b" font-weight="700">k = 3</text>
+<text x="30" y="734" font-size="16" fill="#192f3b">Остовные деревья</text>
+<text x="30" y="763" font-size="15" fill="#526b77">h = 4</text>
+<line x1="267" y1="704" x2="330" y2="704" stroke="#227c89" stroke-width="3.5"/>
+<line x1="330" y1="704" x2="330" y2="767" stroke="#227c89" stroke-width="3.5"/>
+<line x1="330" y1="767" x2="267" y2="767" stroke="#227c89" stroke-width="3.5"/>
+<line x1="267" y1="767" x2="267" y2="704" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="267" cy="704" r="5.5" fill="#192f3b"/>
+<text x="251" y="696" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="330" cy="704" r="5.5" fill="#192f3b"/>
+<text x="346" y="696" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="330" cy="767" r="5.5" fill="#192f3b"/>
+<text x="346" y="788" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="267" cy="767" r="5.5" fill="#192f3b"/>
+<text x="251" y="788" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="412" y1="704" x2="475" y2="704" stroke="#227c89" stroke-width="3.5"/>
+<line x1="475" y1="704" x2="475" y2="767" stroke="#227c89" stroke-width="3.5"/>
+<line x1="475" y1="767" x2="412" y2="767" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="412" y1="767" x2="412" y2="704" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="412" cy="704" r="5.5" fill="#192f3b"/>
+<text x="396" y="696" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="475" cy="704" r="5.5" fill="#192f3b"/>
+<text x="491" y="696" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="475" cy="767" r="5.5" fill="#192f3b"/>
+<text x="491" y="788" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="412" cy="767" r="5.5" fill="#192f3b"/>
+<text x="396" y="788" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="557" y1="704" x2="620" y2="704" stroke="#227c89" stroke-width="3.5"/>
+<line x1="620" y1="704" x2="620" y2="767" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="620" y1="767" x2="557" y2="767" stroke="#227c89" stroke-width="3.5"/>
+<line x1="557" y1="767" x2="557" y2="704" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="557" cy="704" r="5.5" fill="#192f3b"/>
+<text x="541" y="696" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="620" cy="704" r="5.5" fill="#192f3b"/>
+<text x="636" y="696" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="620" cy="767" r="5.5" fill="#192f3b"/>
+<text x="636" y="788" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="557" cy="767" r="5.5" fill="#192f3b"/>
+<text x="541" y="788" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<line x1="702" y1="704" x2="765" y2="704" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="765" y1="704" x2="765" y2="767" stroke="#227c89" stroke-width="3.5"/>
+<line x1="765" y1="767" x2="702" y2="767" stroke="#227c89" stroke-width="3.5"/>
+<line x1="702" y1="767" x2="702" y2="704" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="702" cy="704" r="5.5" fill="#192f3b"/>
+<text x="686" y="696" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="765" cy="704" r="5.5" fill="#192f3b"/>
+<text x="781" y="696" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="765" cy="767" r="5.5" fill="#192f3b"/>
+<text x="781" y="788" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="702" cy="767" r="5.5" fill="#192f3b"/>
+<text x="686" y="788" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="923" y="748" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">4</text>
+<text x="1019" y="748" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">16</text>
+<rect x="16" y="815" width="1048" height="130" rx="10" fill="#fff7f5"/>
+<text x="30" y="846" font-size="19" fill="#192f3b" font-weight="700">k = 4</text>
+<text x="30" y="873" font-size="16" fill="#192f3b">Цикл исключён</text>
+<text x="30" y="902" font-size="15" fill="#526b77">Не является лесом</text>
+<line x1="267" y1="843" x2="330" y2="843" stroke="#a65045" stroke-width="3.5"/>
+<line x1="330" y1="843" x2="330" y2="906" stroke="#a65045" stroke-width="3.5"/>
+<line x1="330" y1="906" x2="267" y2="906" stroke="#a65045" stroke-width="3.5"/>
+<line x1="267" y1="906" x2="267" y2="843" stroke="#a65045" stroke-width="3.5"/>
+<circle cx="267" cy="843" r="5.5" fill="#192f3b"/>
+<text x="251" y="835" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="330" cy="843" r="5.5" fill="#192f3b"/>
+<text x="346" y="835" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="330" cy="906" r="5.5" fill="#192f3b"/>
+<text x="346" y="927" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="267" cy="906" r="5.5" fill="#192f3b"/>
+<text x="251" y="927" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="923" y="887" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">0</text>
+<text x="1019" y="887" font-size="25" fill="#192f3b" font-weight="700" text-anchor="middle">0</text>
+<text x="26" y="987" font-size="16" fill="#192f3b">Сплошные линии: рёбра леса. Пунктир: остальные рёбра цикла.</text>
+<text x="26" y="1015" font-size="16" fill="#526b77">h: число выборов одного корня в каждой компоненте леса.</text>
+</g></svg>
