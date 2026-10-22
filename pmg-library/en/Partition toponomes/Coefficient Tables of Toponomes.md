@@ -2,12 +2,12 @@
 title: Coefficient Tables of Toponomes
 date: 2026-10-22
 updated: 2026-10-22
-revision: 1
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: coefficient-tables-of-toponomes
 lang: en
-description: "Grouping types by weight and number of nontrivial components: admissible indices, triangular tables, multiplication, and limits on distinguishing graphs."
+description: "Grouping types by weight and number of nontrivial components: coefficient triangles, path and cycle normalization, multiplication, and limits of graph distinction."
 order: 6
 ---
 
@@ -147,6 +147,108 @@ $$
 
 Zero cells are left blank, preserving the column positions of the other coefficients. Entirely zero rows may be omitted.
 
+## Paths and cycles: equal normalized triangles
+
+Consider the path $P_n$ and the cycle $C_n$ on the same number of vertices $n\geqslant3$, with all edge weights equal to $1$. Their coefficient triangles differ by a factor that depends on the column $k$ but not on the row $r$.
+
+> [!info] Cutting a cycle and the coefficients of a path
+> **Theorem.** Dividing each column of the coefficient triangle of a path or a cycle by its top entry gives the same normalized triangle. Before division, the corresponding coefficients satisfy
+>
+> $$
+> \boxed{(n-k)a_{k,r}(C_n)=n\,a_{k,r}(P_n)},
+> \qquad 1\leqslant k\leqslant n-1
+> $$
+
+> [!proof]- Proof by double counting
+> **Proof.** Count pairs $(F,e)$, where $F$ is a spanning forest of the cycle with $k$ edges and $r$ nontrivial components, and the cycle edge $e$ does not belong to $F$. Each forest leaves $n-k$ edges unselected, giving the left-hand side.
+>
+> Alternatively, choose $e$ first, in $n$ ways. The graph $C_n-e$ is a path on the same $n$ vertices. Forests not containing $e$ are exactly its forests; their edge counts and all their components are preserved. Each cut therefore allows $a_{k,r}(P_n)$ choices, giving the right-hand side. $\square$
+
+The top row counts connected segments of $k$ edges:
+
+$$
+a_{k,1}(P_n)=n-k,
+\qquad a_{k,1}(C_n)=n
+$$
+
+Thus the theorem gives identical ratios $a_{k,r}/a_{k,1}$. Division is performed column by column. This is a separate normalization of the table; it does not select roots in the components.
+
+### Explicit formula and row symmetry
+
+**Proposition.** For $1\leqslant r\leqslant\min(k,n-k)$, the path coefficients and the common normalized coefficient are
+
+$$
+a_{k,r}(P_n)=\binom{k-1}{r-1}\binom{n-k}{r}
+$$
+
+$$
+\boxed{
+\frac{a_{k,r}(P_n)}{n-k}
+=\frac{a_{k,r}(C_n)}n
+=\frac1r\binom{k-1}{r-1}\binom{n-k-1}{r-1}
+}
+$$
+
+> [!proof]- Counting runs of selected edges
+> **Proof.** The selected edges of a path form $r$ nonempty runs. Their lengths, read along the path, compose $k$ into $r$ positive parts, in $\binom{k-1}{r-1}$ ways. At least one unselected edge must separate consecutive runs. After reserving these $r-1$ edges, the remaining $n-k-r$ unselected edges can be distributed among $r+1$ gaps, including the two end gaps, in $\binom{n-k}{r}$ ways. Multiplication gives the first formula. The second follows from the theorem and $\binom{n-k}{r}/(n-k)=\binom{n-k-1}{r-1}/r$. $\square$
+
+The substitution $k\mapsto n-k$ exchanges the two binomial factors in the last formula. Hence **the rows of the normalized triangle are symmetric about the middle**. On the cycle this corresponds to exchanging selected and unselected edges: their nonempty runs alternate, so the number of nontrivial components is preserved. The cycle triangle itself is also symmetric in its columns; for the path, symmetry appears after normalization.
+
+### Example on eleven vertices
+
+The columns of the following triangles correspond to $k=1,\ldots,10$, and the rows to $r=1,\ldots,5$. Blank cells retain their positions. The third triangle is obtained by dividing each column of the first by $11-k$, or equivalently by dividing the entire second triangle by $11$:
+
+$$
+\mathcal A_{P_{11}}=\begin{array}{rrrrrrrrrr}
+10&9&8&7&6&5&4&3&2&1\\
+&36&56&63&60&50&36&21&8&\\
+&&56&105&120&100&60&21&&\\
+&&&35&60&50&20&&&\\
+&&&&6&5&&&&
+\end{array}
+$$
+
+$$
+\mathcal A_{C_{11}}=\begin{array}{rrrrrrrrrr}
+11&11&11&11&11&11&11&11&11&11\\
+&44&77&99&110&110&99&77&44&\\
+&&77&165&220&220&165&77&&\\
+&&&55&110&110&55&&&\\
+&&&&11&11&&&&
+\end{array}
+$$
+
+$$
+\mathcal N_{11}=\begin{array}{rrrrrrrrrr}
+1&1&1&1&1&1&1&1&1&1\\
+&4&7&9&10&10&9&7&4&\\
+&&7&15&20&20&15&7&&\\
+&&&5&10&10&5&&&\\
+&&&&1&1&&&&
+\end{array}
+$$
+
+The top row of $\mathcal N_{11}$ consists of ones and may be omitted when displaying the normalized triangle. For example, the cell $k=4,r=2$ gives $63/7=99/11=9$.
+
+### When the normalized coefficients are integers
+
+Equality of the two normalized triangles holds for every $n$, but integrality is not guaranteed. For example,
+
+$$
+a_{2,2}(P_4)=1,
+\qquad a_{2,2}(C_4)=2,
+\qquad \frac12=\frac24
+$$
+
+**Corollary.** If $n$ is prime, every entry of the common normalized triangle is an integer.
+
+**Proof.** Rotations of the cycle preserve $k,r$. For prime $n$, every nonidentity rotation generates all rotations, so an edge set invariant under it must be empty or full. Both cases are excluded by $1\leqslant k\leqslant n-1$. Thus each edge set under consideration has exactly $n$ distinct rotations, and the number of forests in each cell is divisible by $n$. $\square$
+
+This explains the integer entries for $n=11$. For composite $n$, some edge sets have a nontrivial rotational symmetry, and division by $n$ may produce a fraction. In general, normalized coefficients do not count forests up to rotation; for prime $n$, this interpretation is valid. Reflections are not identified.
+
+> [!example]- Independent verification
+> For each $3\leqslant n\leqslant12$, all edge subsets of the path and cycle were enumerated. For the cycle, the full cyclic edge set was excluded. Components of every remaining subset were found directly on the original vertex set; the table was constructed from its edge count and number of nontrivial components. Every cell was checked against the explicit formulas and the double-counting identity. This includes the three displayed triangles for $n=11$ and the fractional example for $n=4$.
+
 ## Multiplication of tables
 
 Grouping by $(k,r)$ is compatible with the product in [[The Second-Kind Algebra on Partitions|the second-kind algebra on partitions]], provided that the tables use the induced product.
@@ -276,3 +378,4 @@ The [[Карта библиотеки PMG|PMG library map (in Russian)]] records
 ## Source
 
 1. Martin Trinks. *The covered components polynomial: A new representation of the edge elimination polynomial*. [arXiv:1103.2218](https://arxiv.org/abs/1103.2218). Definition 3; Remark 33 and Figure 2; Section 10.
+

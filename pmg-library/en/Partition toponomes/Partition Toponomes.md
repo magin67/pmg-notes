@@ -2,7 +2,7 @@
 title: Partition Toponomes
 date: 2026-10-22
 updated: 2026-10-22
-revision: 1
+revision: 2
 source_revision: 1
 status: draft
 text_prepared_by: ChatGPT
@@ -57,7 +57,7 @@ $$
 a_{k,r}=\sum_{\substack{w(\lambda)=k\\\#\lambda=r}}c_\lambda
 $$
 
-For nonempty types on $n$ vertices, the admissible indices satisfy $r\leqslant k\leqslant n-r$. Thus, with $k$ indexing columns and $r$ indexing rows, each successive row loses one position at either end. The unit term is treated separately, and zero cells are left blank. [[Coefficient Tables of Toponomes]] displays the triangle for the path $P_6$, derives the induced product of tables, and gives two nonisomorphic trees on ten vertices with the same table. Their full toponomes differ; the counterexample concerns the data $(n,\mathcal A_G)$, not every possible refinement of the invariant.
+For nonempty types on $n$ vertices, the admissible indices satisfy $r\leqslant k\leqslant n-r$. Thus, with $k$ indexing columns and $r$ indexing rows, each successive row loses one position at either end. The unit term is treated separately, and zero cells are left blank. [[Coefficient Tables of Toponomes]] displays the triangle for the path $P_6$, proves equality of the normalized path and cycle triangles with an example on eleven vertices, derives the induced product of tables, and gives two nonisomorphic trees on ten vertices with the same table. Their full toponomes differ; the counterexample concerns the data $(n,\mathcal A_G)$, not every possible refinement of the invariant.
 
 ## Reading order
 
@@ -66,7 +66,7 @@ For nonempty types on $n$ vertices, the admissible indices satisfy $r\leqslant k
 3. **[[The Second-Kind Algebra on Partitions]].** Partial matchings, one-part multiplication, recursive computation, powers of $(1)$, and symmetric functions.
 4. **[[Graph Colorings and Partition Products]].** The vertex interpretation, seven color-class partitions of two edges, and the chromatic symmetric function.
 5. **[[Partition Products and Boundary Forms]].** The boundary interpretation, seven gluings of two pairs of connections, the role of chosen roots, and the limits of the model.
-6. **[[Coefficient Tables of Toponomes]].** Two indices, triangular layout, multiplication, retained information, and a counterexample to reconstructing every graph.
+6. **[[Coefficient Tables of Toponomes]].** Two indices, triangular layout, normalized path and cycle triangles, multiplication, retained information, and a counterexample to reconstructing every graph.
 
 An introduction to reduction can follow [[From Polyforms to Partitions]] → [[Toponomes and Structural Identities]] → [[Coefficient Tables of Toponomes]]; the section on table multiplication relies on the algebra. The algebraic route through [[The Second-Kind Algebra on Partitions]] and [[Graph Colorings and Partition Products]] does not require a PMG metric.
 
@@ -81,3 +81,4 @@ For a positive type $\lambda=(k_1,\ldots,k_r)$, write $k=w(\lambda)$ and $r=\#\l
 The term “partition toponome” is defined for a specific reduction of a chosen representation. Equal numerical evaluations of distinct types do not imply equal toponomes. Weighted coefficients retain aggregated weight data, so the result cannot be described solely as a collection of topological properties.
 
 The [[Карта библиотеки PMG|PMG library map (in Russian)]] records further directions: component and root weights, the passage to $\det(I+t\mathbf L)$, the distinction between a spectrum and a full spectral representation, toponomes of dual polyforms after duality is introduced, multicomponent gluings, and refinements of graph invariants. Reduction of a polyform by another polyform and the spanning-tree operator remain a separate direction.
+
