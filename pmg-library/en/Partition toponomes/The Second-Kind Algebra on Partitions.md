@@ -1,8 +1,9 @@
 ---
 title: The Second-Kind Algebra on Partitions
 date: 2026-10-22
-updated: 2026-10-22
-revision: 1
+updated: 2026-10-23
+revision: 2
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: second-kind-algebra-on-partitions
@@ -393,6 +394,8 @@ The product $*$ is defined on all formal linear combinations of types, so it can
 A partial matching selects which components of the two factors merge and sums all admissible possibilities according to the given rule. For particular forms, the intersections of their vertex sets are already fixed. The types alone do not specify these intersections. Compatibility between the operation on types and polyform multiplication requires a graph realization of the matchings and conditions for its applicability.
 
 The [[Toponomes and Structural Identities#A criterion for representation-independent reduction|dependence of reduction on the chosen representation]] also remains. Introducing a product on free types adds no relations between them and does not remove the obstruction illustrated by the tetrahedron identity.
+
+**Factorization.** The [[Reducibility of Toponomes#Irreducibility in the second-kind algebra|irreducibility theorem]] proves that the canonical forest toponome of any graph with positive conductances and at least one edge is irreducible relative to $*$, even when the graph is disconnected. The proof uses free one-part generators and the unique type of highest grade. Ordinary multiplication of type polynomials has a different factorization.
 
 **Checks.** In addition to the general proofs, independent enumeration of set partitions and recursive computation of $(1)^k$ were performed for $0\leqslant k\leqslant8$, with comparison against the formula for $s_2$ for every type. The example products were also checked by ordinary multiplication of the corresponding symmetric polynomials in sufficiently many variables.
 

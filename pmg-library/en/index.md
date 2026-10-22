@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 10
-translated_revision: 9
-updated: 2026-10-22
+revision: 11
+translated_revision: 13
+updated: 2026-10-23
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -59,6 +59,12 @@ Six notes on passing from a chosen polyform representation to partition types. T
 
 - [[Partition Toponomes|Main results, reading order, and scope]].
 
+## Polynomial toponomes
+
+Five notes on polynomial reductions of partition toponomes. Vector and vertex normalizations are compared through forest weights; the vertex reduction of the exponential is proved to equal the determinant of $I+t\mathbf L$. Coefficient ratios express the Kirchhoff index and reciprocal spectral sums and relate the polynomial to the centroid and resistance radius. The series also examines reducibility under different products and graph realizability of toponomes.
+
+- [[Polynomial Toponomes|Contents and reading order]].
+
 ## PMG Foundations
 
 - [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
@@ -103,4 +109,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **22 October 2026**
+- Library last updated: **23 October 2026**

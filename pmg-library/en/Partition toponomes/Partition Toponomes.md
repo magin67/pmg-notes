@@ -1,9 +1,9 @@
 ---
 title: Partition Toponomes
 date: 2026-10-22
-updated: 2026-10-22
-revision: 2
-source_revision: 1
+updated: 2026-10-23
+revision: 3
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-toponomes-series-navigation
@@ -78,7 +78,8 @@ For a positive type $\lambda=(k_1,\ldots,k_r)$, write $k=w(\lambda)$ and $r=\#\l
 
 ## Scope and further directions
 
+[[Reducibility of Toponomes]] compares two products: under ordinary multiplication, full and two-variable toponomes factor by components with edges, whereas under $*$ the canonical forest toponome with positive conductances is irreducible for every graph with edges. Passing to one variable can create new factors.
+
 The term “partition toponome” is defined for a specific reduction of a chosen representation. Equal numerical evaluations of distinct types do not imply equal toponomes. Weighted coefficients retain aggregated weight data, so the result cannot be described solely as a collection of topological properties.
 
-The [[Карта библиотеки PMG|PMG library map (in Russian)]] records further directions: component and root weights, the passage to $\det(I+t\mathbf L)$, the distinction between a spectrum and a full spectral representation, toponomes of dual polyforms after duality is introduced, multicomponent gluings, and refinements of graph invariants. Reduction of a polyform by another polyform and the spanning-tree operator remain a separate direction.
-
+Component and root weights and the passage to $\det(I+t\mathbf L)$ are developed in [[Polynomial Toponomes]]. The [[Карта библиотеки PMG|PMG library map (in Russian)]] retains further directions: the distinction between a spectrum and a full spectral representation, toponomes of dual polyforms after duality is introduced, multicomponent gluings, and refinements of graph invariants. Reduction of a polyform by another polyform and the spanning-tree operator remain a separate direction.

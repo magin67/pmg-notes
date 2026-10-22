@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="645" viewBox="0 0 1020 645" role="img" aria-labelledby="title desc">
+<title id="title">Prescribed roots in C4</title>
+<desc id="desc">Roots a and c. Four forests have one root in each component; the other two two-edge forests have one component containing both roots and a singleton with no root.</desc>
+<rect width="1020" height="645" fill="white"/>
+<g font-family="Arial, sans-serif">
+<text x="28" y="38" font-size="26" fill="#192f3b" font-weight="700">Prescribed roots a and c</text>
+<text x="28" y="68" font-size="17" fill="#192f3b">Four admissible forests: det L[{b,d},{b,d}] = 4.</text>
+<text x="28" y="102" font-size="18" fill="#227c89" font-weight="700">Included in the minor</text>
+<text x="690" y="102" font-size="18" fill="#9f4640" font-weight="700">Excluded from the minor</text>
+<rect x="24" y="118" width="310" height="206" rx="10" fill="#f5fafb" stroke="#dbe8ea"/>
+<text x="40" y="146" font-size="18" fill="#192f3b" font-weight="700">ab, ad</text>
+<line x1="136" y1="173" x2="212" y2="173" stroke="#227c89" stroke-width="3.5"/>
+<line x1="212" y1="173" x2="212" y2="249" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="212" y1="249" x2="136" y2="249" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="136" y1="249" x2="136" y2="173" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="136" cy="173" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="136" cy="173" r="5.5" fill="#b95c22"/>
+<text x="120" y="165" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="212" cy="173" r="5.5" fill="#192f3b"/>
+<text x="228" y="165" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="212" cy="249" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="212" cy="249" r="5.5" fill="#b95c22"/>
+<text x="228" y="270" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="136" cy="249" r="5.5" fill="#192f3b"/>
+<text x="120" y="270" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="179" y="299" font-size="14" fill="#192f3b" text-anchor="middle">Components: abd | c</text>
+<rect x="356" y="118" width="310" height="206" rx="10" fill="#f5fafb" stroke="#dbe8ea"/>
+<text x="372" y="146" font-size="18" fill="#192f3b" font-weight="700">ab, cd</text>
+<line x1="468" y1="173" x2="544" y2="173" stroke="#227c89" stroke-width="3.5"/>
+<line x1="544" y1="173" x2="544" y2="249" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="544" y1="249" x2="468" y2="249" stroke="#227c89" stroke-width="3.5"/>
+<line x1="468" y1="249" x2="468" y2="173" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="468" cy="173" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="468" cy="173" r="5.5" fill="#b95c22"/>
+<text x="452" y="165" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="544" cy="173" r="5.5" fill="#192f3b"/>
+<text x="560" y="165" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="544" cy="249" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="544" cy="249" r="5.5" fill="#b95c22"/>
+<text x="560" y="270" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="468" cy="249" r="5.5" fill="#192f3b"/>
+<text x="452" y="270" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="511" y="299" font-size="14" fill="#192f3b" text-anchor="middle">Components: ab | cd</text>
+<rect x="24" y="340" width="310" height="206" rx="10" fill="#f5fafb" stroke="#dbe8ea"/>
+<text x="40" y="368" font-size="18" fill="#192f3b" font-weight="700">bc, ad</text>
+<line x1="136" y1="395" x2="212" y2="395" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="212" y1="395" x2="212" y2="471" stroke="#227c89" stroke-width="3.5"/>
+<line x1="212" y1="471" x2="136" y2="471" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="136" y1="471" x2="136" y2="395" stroke="#227c89" stroke-width="3.5"/>
+<circle cx="136" cy="395" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="136" cy="395" r="5.5" fill="#b95c22"/>
+<text x="120" y="387" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="212" cy="395" r="5.5" fill="#192f3b"/>
+<text x="228" y="387" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="212" cy="471" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="212" cy="471" r="5.5" fill="#b95c22"/>
+<text x="228" y="492" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="136" cy="471" r="5.5" fill="#192f3b"/>
+<text x="120" y="492" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="179" y="521" font-size="14" fill="#192f3b" text-anchor="middle">Components: bc | ad</text>
+<rect x="356" y="340" width="310" height="206" rx="10" fill="#f5fafb" stroke="#dbe8ea"/>
+<text x="372" y="368" font-size="18" fill="#192f3b" font-weight="700">bc, cd</text>
+<line x1="468" y1="395" x2="544" y2="395" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="544" y1="395" x2="544" y2="471" stroke="#227c89" stroke-width="3.5"/>
+<line x1="544" y1="471" x2="468" y2="471" stroke="#227c89" stroke-width="3.5"/>
+<line x1="468" y1="471" x2="468" y2="395" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="468" cy="395" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="468" cy="395" r="5.5" fill="#b95c22"/>
+<text x="452" y="387" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="544" cy="395" r="5.5" fill="#192f3b"/>
+<text x="560" y="387" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="544" cy="471" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="544" cy="471" r="5.5" fill="#b95c22"/>
+<text x="560" y="492" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="468" cy="471" r="5.5" fill="#192f3b"/>
+<text x="452" y="492" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="511" y="521" font-size="14" fill="#192f3b" text-anchor="middle">Components: a | bcd</text>
+<rect x="688" y="118" width="310" height="206" rx="10" fill="#fff7f5" stroke="#ebd7d1"/>
+<text x="704" y="146" font-size="18" fill="#192f3b" font-weight="700">ab, bc</text>
+<line x1="800" y1="173" x2="876" y2="173" stroke="#a65045" stroke-width="3.5"/>
+<line x1="876" y1="173" x2="876" y2="249" stroke="#a65045" stroke-width="3.5"/>
+<line x1="876" y1="249" x2="800" y2="249" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="800" y1="249" x2="800" y2="173" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<circle cx="800" cy="173" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="800" cy="173" r="5.5" fill="#b95c22"/>
+<text x="784" y="165" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="876" cy="173" r="5.5" fill="#192f3b"/>
+<text x="892" y="165" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="876" cy="249" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="876" cy="249" r="5.5" fill="#b95c22"/>
+<text x="892" y="270" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="800" cy="249" r="5.5" fill="#192f3b"/>
+<text x="784" y="270" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="843" y="299" font-size="14" fill="#192f3b" text-anchor="middle">abc: two roots; d: none</text>
+<rect x="688" y="340" width="310" height="206" rx="10" fill="#fff7f5" stroke="#ebd7d1"/>
+<text x="704" y="368" font-size="18" fill="#192f3b" font-weight="700">ad, cd</text>
+<line x1="800" y1="395" x2="876" y2="395" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="876" y1="395" x2="876" y2="471" stroke="#ccd8de" stroke-width="1.5" stroke-dasharray="4 5"/>
+<line x1="876" y1="471" x2="800" y2="471" stroke="#a65045" stroke-width="3.5"/>
+<line x1="800" y1="471" x2="800" y2="395" stroke="#a65045" stroke-width="3.5"/>
+<circle cx="800" cy="395" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="800" cy="395" r="5.5" fill="#b95c22"/>
+<text x="784" y="387" font-size="15" fill="#192f3b" text-anchor="middle">a</text>
+<circle cx="876" cy="395" r="5.5" fill="#192f3b"/>
+<text x="892" y="387" font-size="15" fill="#192f3b" text-anchor="middle">b</text>
+<circle cx="876" cy="471" r="12" fill="#fff1e4" stroke="#b95c22" stroke-width="2.3"/>
+<circle cx="876" cy="471" r="5.5" fill="#b95c22"/>
+<text x="892" y="492" font-size="15" fill="#192f3b" text-anchor="middle">c</text>
+<circle cx="800" cy="471" r="5.5" fill="#192f3b"/>
+<text x="784" y="492" font-size="15" fill="#192f3b" text-anchor="middle">d</text>
+<text x="843" y="521" font-size="14" fill="#192f3b" text-anchor="middle">adc: two roots; b: none</text>
+<text x="28" y="596" font-size="16" fill="#192f3b">Circled vertices are roots. Solid lines: selected forest edges.</text>
+<text x="28" y="621" font-size="16" fill="#526b77">Dashed lines: other edges of the original cycle.</text>
+</g></svg>

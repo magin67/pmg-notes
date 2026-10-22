@@ -1,8 +1,9 @@
 ---
 title: Coefficient Tables of Toponomes
 date: 2026-10-22
-updated: 2026-10-22
-revision: 2
+updated: 2026-10-23
+revision: 3
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: coefficient-tables-of-toponomes
@@ -293,7 +294,13 @@ $$
 
 This product enumerates partial matchings of components. As explained in the [[Partition Products and Boundary Forms|boundary interpretation]], it does not determine the ordinary product of two particular polyforms without data on their shared vertices.
 
-A different rule applies to disjoint union of graphs: a forest is chosen independently in each graph, and components from the two graphs do not merge. Hence
+A different rule applies to disjoint union of graphs: a forest is chosen independently in each graph, and components from the two graphs do not merge. On unit cells, this is coordinatewise addition of pairs; denote it by $\circ$:
+
+$$
+u_{k,r}\circ u_{l,s}=u_{k+l,r+s}
+$$
+
+Under $u_{k,r}\leftrightarrow t^ku^r$, this becomes ordinary monomial multiplication. For arbitrary tables, bilinear extension gives
 
 $$
 a_{k,r}(G\sqcup H)=
@@ -301,7 +308,9 @@ a_{k,r}(G\sqcup H)=
 a_{i,p}(G)\,a_{j,q}(H)
 $$
 
-This is ordinary convolution in two indices. It should be distinguished from the product $*$, which sums over matchings.
+This is ordinary convolution in two indices. It should be distinguished from the product $*$, which sums over matchings. The two rules are compared explicitly in [[Reducibility of Toponomes#Two products of cells|the note on reducibility]]; the expanded square of the toponome of a three-edge path appears in the [[Reducibility of Toponomes#Example: two disjoint three-edge paths|example of two disjoint paths]].
+
+**Reducibility depends on the product.** Under $\circ$, a graph table factors by independent components. Under the induced $*$, the canonical forest table of any graph with positive conductances and at least one edge is irreducible, including when the graph is disconnected. This holds in both normalizations over $\mathbb R$ and $\mathbb C$; a [[Reducibility of Toponomes#Irreducibility of the table under the second-kind product|separate proof]] uses a falling-power representation of the cells.
 
 ## What information is retained
 
@@ -369,7 +378,13 @@ When $n$ is known, this polynomial and the table of a tree contain the same data
 
 This correspondence with the literature helps establish the limits of the invariant. It does not turn the coefficient table into an operator spectrum or a full diagonalization of a polyform. Comparison with characteristic polynomials and other graph invariants requires separate treatment.
 
+## Graph realizability
+
+The inverse question asks whether a given table is the table of at least one graph. Nonnegative integer cells are insufficient: they must consistently count forests of one edge system. [[Graph Realizability of Toponomes]] gives necessary conditions, a nonrealizable triangle with admissible column sums, and an exact criterion through a system of edge variables. It also explains Mason's theorem, which restricts column sums.
+
 ## Further directions
+
+The [[Reducibility of Toponomes#The two-variable toponome and the coefficient triangle|two-variable toponome theorem]] proves that the coefficient-triangle polynomial of a connected graph is irreducible under ordinary multiplication even over $\mathbb C$. For a disconnected graph, the irreducible factors correspond to components with edges. The statement includes the empty forest's unit term and holds in both normalizations; it does not apply to the expression without the unit or to arbitrarily normalized rows.
 
 The table lies between the record of all types and coarser sums of coefficients. It can be stored as an array or encoded as a polynomial; changing the notation does not recover the lost types.
 
@@ -378,4 +393,3 @@ The [[Карта библиотеки PMG|PMG library map (in Russian)]] records
 ## Source
 
 1. Martin Trinks. *The covered components polynomial: A new representation of the edge elimination polynomial*. [arXiv:1103.2218](https://arxiv.org/abs/1103.2218). Definition 3; Remark 33 and Figure 2; Section 10.
-
