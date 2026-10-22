@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="282" viewBox="0 0 960 282" role="img" aria-labelledby="title desc">
+<title id="title">Граничные типы и деревья</title>
+<desc id="desc">Тип (1) изображён одним ребром, (2) деревом из двух рёбер, (1²) двумя отдельными рёбрами, (2,1) двухрёберным деревом и отдельным ребром. Изолированные вершины опущены. Части считают грейды границ, равные числу рёбер дерева.</desc>
+<rect width="960" height="282" fill="#fff"/>
+<style>text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#172b4d}.heading{font-size:21px;font-weight:600}.small{font-size:15px;fill:#46566c}.result{font-size:24px;font-weight:600}.node{font-size:20px;font-weight:600}.classes{font-size:19px}</style>
+<text x="480" y="35" text-anchor="middle" class="heading">Части разбиения как грейды границ</text>
+<text x="480" y="62" text-anchor="middle" class="small">Часть (k): граница на k+1 вершинах; дерево содержит k связей</text>
+<rect x="12" y="85" width="216" height="163" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<text x="120" y="117" text-anchor="middle" class="result">(1)</text>
+<line x1="72" y1="175" x2="172" y2="175" stroke="#2166a4" stroke-width="3.2"/>
+<circle cx="72" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="72" y="197" text-anchor="middle" font-size="16">a</text>
+<circle cx="172" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="172" y="197" text-anchor="middle" font-size="16">b</text>
+<rect x="252" y="85" width="216" height="163" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<text x="360" y="117" text-anchor="middle" class="result">(2)</text>
+<line x1="287" y1="175" x2="362" y2="175" stroke="#2166a4" stroke-width="3.2"/>
+<line x1="362" y1="175" x2="437" y2="175" stroke="#2166a4" stroke-width="3.2"/>
+<circle cx="287" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="287" y="197" text-anchor="middle" font-size="16">a</text>
+<circle cx="362" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="362" y="197" text-anchor="middle" font-size="16">b</text>
+<circle cx="437" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="437" y="197" text-anchor="middle" font-size="16">c</text>
+<rect x="492" y="85" width="216" height="163" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<text x="600" y="117" text-anchor="middle" class="result">(1²)</text>
+<line x1="522" y1="175" x2="577" y2="175" stroke="#2166a4" stroke-width="3.2"/>
+<line x1="627" y1="175" x2="682" y2="175" stroke="#2166a4" stroke-width="3.2"/>
+<circle cx="522" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="522" y="197" text-anchor="middle" font-size="16">a</text>
+<circle cx="577" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="577" y="197" text-anchor="middle" font-size="16">b</text>
+<circle cx="627" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="627" y="197" text-anchor="middle" font-size="16">c</text>
+<circle cx="682" cy="175" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="682" y="197" text-anchor="middle" font-size="16">d</text>
+<rect x="732" y="85" width="216" height="163" rx="10" fill="#f7f9fc" stroke="#ccd6e4"/>
+<text x="840" y="117" text-anchor="middle" class="result">(2,1)</text>
+<line x1="767" y1="151" x2="842" y2="151" stroke="#2166a4" stroke-width="3.2"/>
+<line x1="842" y1="151" x2="917" y2="151" stroke="#2166a4" stroke-width="3.2"/>
+<line x1="804" y1="210" x2="880" y2="210" stroke="#2166a4" stroke-width="3.2"/>
+<circle cx="767" cy="151" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="767" y="173" text-anchor="middle" font-size="16">a</text>
+<circle cx="842" cy="151" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="842" y="173" text-anchor="middle" font-size="16">b</text>
+<circle cx="917" cy="151" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="917" y="173" text-anchor="middle" font-size="16">c</text>
+<circle cx="804" cy="210" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="804" y="232" text-anchor="middle" font-size="16">d</text>
+<circle cx="880" cy="210" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8"/>
+<text x="880" y="232" text-anchor="middle" font-size="16">e</text>
+<text x="480" y="272" text-anchor="middle" class="small">Деревья представляют границы; суммирования по деревьям внутри блока нет.</text>
+</svg>
