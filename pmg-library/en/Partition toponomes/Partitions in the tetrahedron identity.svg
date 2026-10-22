@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+<title id="title">Partitions in the tetrahedron identity</title>
+<desc id="desc">Top row: ab|cd, ac|bd, ad|bc. Bottom row: abc|d, abd|c, acd|b, bcd|a. Every diagram has four vertices. The upper partitions have type (1²), and the lower ones type (2). Triangles represent three-vertex blocks, not edge sets of spanning forests.</desc>
+<rect width="960" height="620" fill="white" />
+<text x="480" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="bold" fill="#172b3a">Seven partitions in the tetrahedron identity</text>
+<text x="480" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="normal" fill="#667785">In every diagram: n = 4, k = 2, m = 2</text>
+<text x="480" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#245e91">Three partitions of type (1²)</text>
+<rect x="24" y="124" width="288" height="172" rx="12" fill="#f7fafc" stroke="#d5dfe6" />
+<line x1="121.0" y1="167" x2="215.0" y2="167" stroke="#245e91" stroke-width="3.5" />
+<line x1="121.0" y1="227" x2="215.0" y2="227" stroke="#087f78" stroke-width="3.5" />
+<circle cx="121.0" cy="167" r="15" fill="white" stroke="#245e91" stroke-width="2" />
+<text x="121.0" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#245e91">a</text>
+<circle cx="215.0" cy="167" r="15" fill="white" stroke="#245e91" stroke-width="2" />
+<text x="215.0" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#245e91">b</text>
+<circle cx="121.0" cy="227" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="121.0" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">c</text>
+<circle cx="215.0" cy="227" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="215.0" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">d</text>
+<text x="168.0" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">ab | cd</text>
+<rect x="336" y="124" width="288" height="172" rx="12" fill="#f7fafc" stroke="#d5dfe6" />
+<line x1="433.0" y1="167" x2="433.0" y2="227" stroke="#245e91" stroke-width="3.5" />
+<line x1="527.0" y1="167" x2="527.0" y2="227" stroke="#087f78" stroke-width="3.5" />
+<circle cx="433.0" cy="167" r="15" fill="white" stroke="#245e91" stroke-width="2" />
+<text x="433.0" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#245e91">a</text>
+<circle cx="527.0" cy="167" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="527.0" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">b</text>
+<circle cx="433.0" cy="227" r="15" fill="white" stroke="#245e91" stroke-width="2" />
+<text x="433.0" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#245e91">c</text>
+<circle cx="527.0" cy="227" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="527.0" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">d</text>
+<text x="480.0" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">ac | bd</text>
+<rect x="648" y="124" width="288" height="172" rx="12" fill="#f7fafc" stroke="#d5dfe6" />
+<line x1="745.0" y1="167" x2="839.0" y2="227" stroke="#245e91" stroke-width="3.5" />
+<line x1="839.0" y1="167" x2="745.0" y2="227" stroke="#f7fafc" stroke-width="8" />
+<line x1="839.0" y1="167" x2="745.0" y2="227" stroke="#087f78" stroke-width="3.5" />
+<circle cx="745.0" cy="167" r="15" fill="white" stroke="#245e91" stroke-width="2" />
+<text x="745.0" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#245e91">a</text>
+<circle cx="839.0" cy="167" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="839.0" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">b</text>
+<circle cx="745.0" cy="227" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="745.0" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">c</text>
+<circle cx="839.0" cy="227" r="15" fill="white" stroke="#245e91" stroke-width="2" />
+<text x="839.0" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#245e91">d</text>
+<text x="792.0" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">ad | bc</text>
+<text x="480" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">The sums of the corresponding forms are equal</text>
+<text x="480" y="369" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#087f78">Four partitions of type (2)</text>
+<rect x="24" y="384" width="210" height="172" rx="12" fill="#f7fafc" stroke="#d5dfe6" />
+<polygon points="82.0,427 176.0,427 82.0,487" fill="#e1f1ee" />
+<line x1="82.0" y1="427" x2="176.0" y2="427" stroke="#087f78" stroke-width="3.5" />
+<line x1="82.0" y1="427" x2="82.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<line x1="176.0" y1="427" x2="82.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<circle cx="82.0" cy="427" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="82.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">a</text>
+<circle cx="176.0" cy="427" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="176.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">b</text>
+<circle cx="82.0" cy="487" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="82.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">c</text>
+<circle cx="176.0" cy="487" r="15" fill="#f1f4f6" stroke="#667785" stroke-width="2" />
+<text x="176.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#667785">d</text>
+<text x="129.0" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">abc | d</text>
+<rect x="258" y="384" width="210" height="172" rx="12" fill="#f7fafc" stroke="#d5dfe6" />
+<polygon points="316.0,427 410.0,427 410.0,487" fill="#e1f1ee" />
+<line x1="316.0" y1="427" x2="410.0" y2="427" stroke="#087f78" stroke-width="3.5" />
+<line x1="316.0" y1="427" x2="410.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<line x1="410.0" y1="427" x2="410.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<circle cx="316.0" cy="427" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="316.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">a</text>
+<circle cx="410.0" cy="427" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="410.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">b</text>
+<circle cx="316.0" cy="487" r="15" fill="#f1f4f6" stroke="#667785" stroke-width="2" />
+<text x="316.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#667785">c</text>
+<circle cx="410.0" cy="487" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="410.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">d</text>
+<text x="363.0" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">abd | c</text>
+<rect x="492" y="384" width="210" height="172" rx="12" fill="#f7fafc" stroke="#d5dfe6" />
+<polygon points="550.0,427 550.0,487 644.0,487" fill="#e1f1ee" />
+<line x1="550.0" y1="427" x2="550.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<line x1="550.0" y1="427" x2="644.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<line x1="550.0" y1="487" x2="644.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<circle cx="550.0" cy="427" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="550.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">a</text>
+<circle cx="644.0" cy="427" r="15" fill="#f1f4f6" stroke="#667785" stroke-width="2" />
+<text x="644.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#667785">b</text>
+<circle cx="550.0" cy="487" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="550.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">c</text>
+<circle cx="644.0" cy="487" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="644.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">d</text>
+<text x="597.0" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">acd | b</text>
+<rect x="726" y="384" width="210" height="172" rx="12" fill="#f7fafc" stroke="#d5dfe6" />
+<polygon points="878.0,427 784.0,487 878.0,487" fill="#e1f1ee" />
+<line x1="878.0" y1="427" x2="784.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<line x1="878.0" y1="427" x2="878.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<line x1="784.0" y1="487" x2="878.0" y2="487" stroke="#087f78" stroke-width="3.5" />
+<circle cx="784.0" cy="427" r="15" fill="#f1f4f6" stroke="#667785" stroke-width="2" />
+<text x="784.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#667785">a</text>
+<circle cx="878.0" cy="427" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="878.0" y="433" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">b</text>
+<circle cx="784.0" cy="487" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="784.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">c</text>
+<circle cx="878.0" cy="487" r="15" fill="white" stroke="#087f78" stroke-width="2" />
+<text x="878.0" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#087f78">d</text>
+<text x="831.0" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="normal" fill="#172b3a">bcd | a</text>
+<text x="480" y="598" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#172b3a">The representations have different toponomes: 3(1²) and 4(2)</text>
+</svg>

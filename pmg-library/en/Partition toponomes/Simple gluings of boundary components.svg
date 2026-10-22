@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="578" viewBox="0 0 960 578" role="img" aria-labelledby="title desc">
+<title id="title">Simple gluings of boundary components</title>
+<desc id="desc">Upper row: (1)*(1) gives (1²) without gluing and (2) when roots a and c are identified. Lower row: (2)*(1) gives (2,1) without gluing and (3) when a and d are identified. Blue edges belong to the first factor, orange edges to the second. Double circles mark roots. Freed labels are omitted.</desc>
+<rect width="960" height="578" fill="#fff" />
+<style>text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#172b4d}.heading{font-size:21px;font-weight:600}.small{font-size:15px;fill:#46566c}.result{font-size:24px;font-weight:600}.node{font-size:20px;font-weight:600}.classes{font-size:19px}</style>
+<text x="480" y="35" text-anchor="middle" class="heading">Keep components separate or glue their chosen roots</text>
+<text x="480" y="63" text-anchor="middle" class="small">Blue edges: first factor; orange: second; double circle: root</text>
+<text x="375" y="100" text-anchor="middle" class="heading">No gluing</text>
+<text x="755" y="100" text-anchor="middle" class="heading">One gluing</text>
+<text x="95" y="215.0" text-anchor="middle" class="result">(1) * (1)</text>
+<rect x="200" y="120" width="350" height="190" rx="10" fill="#f7f9fc" stroke="#ccd6e4" />
+<rect x="580" y="120" width="350" height="190" rx="10" fill="#f7f9fc" stroke="#ccd6e4" />
+<text x="95" y="437.5" text-anchor="middle" class="result">(2) * (1)</text>
+<rect x="200" y="335" width="350" height="205" rx="10" fill="#f7f9fc" stroke="#ccd6e4" />
+<rect x="580" y="335" width="350" height="205" rx="10" fill="#f7f9fc" stroke="#ccd6e4" />
+<line x1="245" y1="190" x2="325" y2="190" stroke="#2166a4" stroke-width="3.2" />
+<line x1="425" y1="190" x2="505" y2="190" stroke="#b05b13" stroke-width="3.2" />
+<circle cx="245" cy="190" r="12" fill="#fff" stroke="#172b4d" stroke-width="1.6" />
+<circle cx="245" cy="190" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="245" y="215" text-anchor="middle" font-size="16">a</text>
+<circle cx="325" cy="190" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="325" y="215" text-anchor="middle" font-size="16">b</text>
+<circle cx="425" cy="190" r="12" fill="#fff" stroke="#172b4d" stroke-width="1.6" />
+<circle cx="425" cy="190" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="425" y="215" text-anchor="middle" font-size="16">c</text>
+<circle cx="505" cy="190" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="505" y="215" text-anchor="middle" font-size="16">d</text>
+<text x="375" y="282" text-anchor="middle" class="result">(1²)</text>
+<line x1="640" y1="190" x2="755" y2="190" stroke="#2166a4" stroke-width="3.2" />
+<line x1="755" y1="190" x2="870" y2="190" stroke="#b05b13" stroke-width="3.2" />
+<circle cx="640" cy="190" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="640" y="215" text-anchor="middle" font-size="16">b</text>
+<circle cx="755" cy="190" r="12" fill="#fff" stroke="#172b4d" stroke-width="1.6" />
+<circle cx="755" cy="190" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="755" y="215" text-anchor="middle" font-size="16">a=c</text>
+<circle cx="870" cy="190" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="870" y="215" text-anchor="middle" font-size="16">d</text>
+<text x="755" y="282" text-anchor="middle" class="result">(2)</text>
+<line x1="295" y1="420" x2="240" y2="377" stroke="#2166a4" stroke-width="3.2" />
+<line x1="295" y1="420" x2="240" y2="463" stroke="#2166a4" stroke-width="3.2" />
+<line x1="430" y1="420" x2="510" y2="420" stroke="#b05b13" stroke-width="3.2" />
+<circle cx="295" cy="420" r="12" fill="#fff" stroke="#172b4d" stroke-width="1.6" />
+<circle cx="295" cy="420" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="295" y="443" text-anchor="middle" font-size="16">a</text>
+<circle cx="240" cy="377" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="240" y="400" text-anchor="middle" font-size="16">b</text>
+<circle cx="240" cy="463" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="240" y="486" text-anchor="middle" font-size="16">c</text>
+<circle cx="430" cy="420" r="12" fill="#fff" stroke="#172b4d" stroke-width="1.6" />
+<circle cx="430" cy="420" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="430" y="443" text-anchor="middle" font-size="16">d</text>
+<circle cx="510" cy="420" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="510" y="443" text-anchor="middle" font-size="16">e</text>
+<text x="375" y="521" text-anchor="middle" class="result">(2,1)</text>
+<line x1="755" y1="420" x2="655" y2="377" stroke="#2166a4" stroke-width="3.2" />
+<line x1="755" y1="420" x2="655" y2="463" stroke="#2166a4" stroke-width="3.2" />
+<line x1="755" y1="420" x2="870" y2="420" stroke="#b05b13" stroke-width="3.2" />
+<circle cx="755" cy="420" r="12" fill="#fff" stroke="#172b4d" stroke-width="1.6" />
+<circle cx="755" cy="420" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="755" y="443" text-anchor="middle" font-size="16">a=d</text>
+<circle cx="655" cy="377" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="655" y="400" text-anchor="middle" font-size="16">b</text>
+<circle cx="655" cy="463" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="655" y="486" text-anchor="middle" font-size="16">c</text>
+<circle cx="870" cy="420" r="7.5" fill="#fff" stroke="#172b4d" stroke-width="1.8" />
+<text x="870" y="443" text-anchor="middle" font-size="16">e</text>
+<text x="755" y="521" text-anchor="middle" class="result">(3)</text>
+<text x="480" y="566" text-anchor="middle" class="small">Gluing identifies roots and retains edges; isolated vertices on the right are omitted.</text>
+</svg>

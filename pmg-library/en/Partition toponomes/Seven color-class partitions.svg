@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="820" viewBox="0 0 960 820" role="img" aria-labelledby="title desc">
+<title id="title">Seven color-class partitions of two edges</title>
+<desc id="desc">All seven panels show the same graph with edges ab and cd and unit vertex weights. Left: four distinct colors, a|b|c|d. Center: four partitions into three classes, ac|b|d, ad|b|c, bc|a|d, bd|a|c. Right: two partitions into two classes, ac|bd and ad|bc. A shared color adds no edge. The result is (1⁴)+4(2,1²)+2(2²).</desc>
+<rect width="960" height="820" fill="#fff" />
+<style>text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#172b4d}.heading{font-size:21px;font-weight:600}.small{font-size:15px;fill:#46566c}.result{font-size:24px;font-weight:600}.node{font-size:20px;font-weight:600}.classes{font-size:19px}</style>
+<text x="480" y="35" text-anchor="middle" class="result">(1²) * (1²) = (1⁴) + 4(2,1²) + 2(2²)</text>
+<text x="480" y="63" text-anchor="middle" class="small">Every panel shows edges ab and cd; all vertex weights are 1</text>
+<rect x="20" y="84" width="280" height="698" rx="14" fill="#f7f9fc" stroke="#d9e1ed" />
+<text x="160" y="114" text-anchor="middle" class="heading">Four classes</text>
+<text x="160" y="148" text-anchor="middle" class="result">1 · (1⁴)</text>
+<g data-partition="a | b | c | d">
+<rect x="32" y="365" width="256" height="139" rx="10" fill="#fff" stroke="#ccd6e4" />
+<line x1="105" y1="396" x2="105" y2="450" stroke="#68778e" stroke-width="3" />
+<line x1="215" y1="396" x2="215" y2="450" stroke="#68778e" stroke-width="3" />
+<circle cx="105" cy="396" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="105" y="403" text-anchor="middle" class="node">a</text>
+<circle cx="105" cy="450" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="105" y="457" text-anchor="middle" class="node">b</text>
+<circle cx="215" cy="396" r="18" fill="#e1f3e7" stroke="#267847" stroke-width="2.4" />
+<text x="215" y="403" text-anchor="middle" class="node">c</text>
+<circle cx="215" cy="450" r="18" fill="#eee5fa" stroke="#7753a1" stroke-width="2.4" />
+<text x="215" y="457" text-anchor="middle" class="node">d</text>
+<text x="160" y="490" text-anchor="middle" class="classes">a | b | c | d</text>
+</g>
+<rect x="340" y="84" width="280" height="698" rx="14" fill="#f7f9fc" stroke="#d9e1ed" />
+<text x="480" y="114" text-anchor="middle" class="heading">Three classes</text>
+<text x="480" y="148" text-anchor="middle" class="result">4 · (2,1²)</text>
+<g data-partition="ac | b | d">
+<rect x="352" y="173" width="256" height="139" rx="10" fill="#fff" stroke="#ccd6e4" />
+<line x1="425" y1="204" x2="425" y2="258" stroke="#68778e" stroke-width="3" />
+<line x1="535" y1="204" x2="535" y2="258" stroke="#68778e" stroke-width="3" />
+<circle cx="425" cy="204" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="425" y="211" text-anchor="middle" class="node">a</text>
+<circle cx="425" cy="258" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="425" y="265" text-anchor="middle" class="node">b</text>
+<circle cx="535" cy="204" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="535" y="211" text-anchor="middle" class="node">c</text>
+<circle cx="535" cy="258" r="18" fill="#e1f3e7" stroke="#267847" stroke-width="2.4" />
+<text x="535" y="265" text-anchor="middle" class="node">d</text>
+<text x="480" y="298" text-anchor="middle" class="classes">ac | b | d</text>
+</g>
+<g data-partition="ad | b | c">
+<rect x="352" y="322" width="256" height="139" rx="10" fill="#fff" stroke="#ccd6e4" />
+<line x1="425" y1="353" x2="425" y2="407" stroke="#68778e" stroke-width="3" />
+<line x1="535" y1="353" x2="535" y2="407" stroke="#68778e" stroke-width="3" />
+<circle cx="425" cy="353" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="425" y="360" text-anchor="middle" class="node">a</text>
+<circle cx="425" cy="407" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="425" y="414" text-anchor="middle" class="node">b</text>
+<circle cx="535" cy="353" r="18" fill="#e1f3e7" stroke="#267847" stroke-width="2.4" />
+<text x="535" y="360" text-anchor="middle" class="node">c</text>
+<circle cx="535" cy="407" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="535" y="414" text-anchor="middle" class="node">d</text>
+<text x="480" y="447" text-anchor="middle" class="classes">ad | b | c</text>
+</g>
+<g data-partition="bc | a | d">
+<rect x="352" y="471" width="256" height="139" rx="10" fill="#fff" stroke="#ccd6e4" />
+<line x1="425" y1="502" x2="425" y2="556" stroke="#68778e" stroke-width="3" />
+<line x1="535" y1="502" x2="535" y2="556" stroke="#68778e" stroke-width="3" />
+<circle cx="425" cy="502" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="425" y="509" text-anchor="middle" class="node">a</text>
+<circle cx="425" cy="556" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="425" y="563" text-anchor="middle" class="node">b</text>
+<circle cx="535" cy="502" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="535" y="509" text-anchor="middle" class="node">c</text>
+<circle cx="535" cy="556" r="18" fill="#e1f3e7" stroke="#267847" stroke-width="2.4" />
+<text x="535" y="563" text-anchor="middle" class="node">d</text>
+<text x="480" y="596" text-anchor="middle" class="classes">bc | a | d</text>
+</g>
+<g data-partition="bd | a | c">
+<rect x="352" y="620" width="256" height="139" rx="10" fill="#fff" stroke="#ccd6e4" />
+<line x1="425" y1="651" x2="425" y2="705" stroke="#68778e" stroke-width="3" />
+<line x1="535" y1="651" x2="535" y2="705" stroke="#68778e" stroke-width="3" />
+<circle cx="425" cy="651" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="425" y="658" text-anchor="middle" class="node">a</text>
+<circle cx="425" cy="705" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="425" y="712" text-anchor="middle" class="node">b</text>
+<circle cx="535" cy="651" r="18" fill="#e1f3e7" stroke="#267847" stroke-width="2.4" />
+<text x="535" y="658" text-anchor="middle" class="node">c</text>
+<circle cx="535" cy="705" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="535" y="712" text-anchor="middle" class="node">d</text>
+<text x="480" y="745" text-anchor="middle" class="classes">bd | a | c</text>
+</g>
+<rect x="660" y="84" width="280" height="698" rx="14" fill="#f7f9fc" stroke="#d9e1ed" />
+<text x="800" y="114" text-anchor="middle" class="heading">Two classes</text>
+<text x="800" y="148" text-anchor="middle" class="result">2 · (2²)</text>
+<g data-partition="ac | bd">
+<rect x="672" y="271" width="256" height="139" rx="10" fill="#fff" stroke="#ccd6e4" />
+<line x1="745" y1="302" x2="745" y2="356" stroke="#68778e" stroke-width="3" />
+<line x1="855" y1="302" x2="855" y2="356" stroke="#68778e" stroke-width="3" />
+<circle cx="745" cy="302" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="745" y="309" text-anchor="middle" class="node">a</text>
+<circle cx="745" cy="356" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="745" y="363" text-anchor="middle" class="node">b</text>
+<circle cx="855" cy="302" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="855" y="309" text-anchor="middle" class="node">c</text>
+<circle cx="855" cy="356" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="855" y="363" text-anchor="middle" class="node">d</text>
+<text x="800" y="396" text-anchor="middle" class="classes">ac | bd</text>
+</g>
+<g data-partition="ad | bc">
+<rect x="672" y="509" width="256" height="139" rx="10" fill="#fff" stroke="#ccd6e4" />
+<line x1="745" y1="540" x2="745" y2="594" stroke="#68778e" stroke-width="3" />
+<line x1="855" y1="540" x2="855" y2="594" stroke="#68778e" stroke-width="3" />
+<circle cx="745" cy="540" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="745" y="547" text-anchor="middle" class="node">a</text>
+<circle cx="745" cy="594" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="745" y="601" text-anchor="middle" class="node">b</text>
+<circle cx="855" cy="540" r="18" fill="#fff0d7" stroke="#a85b12" stroke-width="2.4" />
+<text x="855" y="547" text-anchor="middle" class="node">c</text>
+<circle cx="855" cy="594" r="18" fill="#e1efff" stroke="#2166a4" stroke-width="2.4" />
+<text x="855" y="601" text-anchor="middle" class="node">d</text>
+<text x="800" y="634" text-anchor="middle" class="classes">ad | bc</text>
+</g>
+<text x="480" y="807" text-anchor="middle" class="small">Colors indicate classes; no edges are added between vertices of the same color.</text>
+</svg>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="440" viewBox="0 0 1120 440" role="img" aria-labelledby="title desc">
+<title id="title">Two trees with the same coefficient table</title>
+<desc id="desc">Trees T1 and T2 on ten vertices. T1 has central edge ab, branches a-c-g-i-j and a-d-h at a, and edges be and bf at b. T2 has central edge ab, branches a-c-g-i and a-d at a, and branches b-e-h-j and b-f at b. Their diameters are 6 and 7. All edge weights are one.</desc>
+<rect width="1120" height="440" fill="#fff" />
+<style>text{font-family:Arial,"DejaVu Sans",sans-serif;fill:#172b4d}.heading{font-size:21px;font-weight:600}.small{font-size:15px;fill:#46566c}.result{font-size:24px;font-weight:600}.node{font-size:20px;font-weight:600}.classes{font-size:19px}</style>
+<rect x="15" y="12" width="530" height="412" rx="14" fill="#f7f9fc" stroke="#ccd6e4" />
+<text x="280" y="45" text-anchor="middle" class="heading">T1</text>
+<line x1="250" y1="220" x2="370" y2="220" stroke="#68778e" stroke-width="3" />
+<line x1="250" y1="220" x2="205" y2="180" stroke="#68778e" stroke-width="3" />
+<line x1="250" y1="220" x2="170" y2="290" stroke="#68778e" stroke-width="3" />
+<line x1="370" y1="220" x2="435" y2="170" stroke="#68778e" stroke-width="3" />
+<line x1="370" y1="220" x2="435" y2="280" stroke="#68778e" stroke-width="3" />
+<line x1="205" y1="180" x2="160" y2="140" stroke="#68778e" stroke-width="3" />
+<line x1="170" y1="290" x2="90" y2="350" stroke="#68778e" stroke-width="3" />
+<line x1="160" y1="140" x2="115" y2="100" stroke="#68778e" stroke-width="3" />
+<line x1="115" y1="100" x2="65" y2="100" stroke="#68778e" stroke-width="3" />
+<circle cx="250" cy="220" r="14" fill="#e1efff" stroke="#2166a4" stroke-width="2" />
+<text x="250" y="226" text-anchor="middle" class="classes">a</text>
+<circle cx="370" cy="220" r="14" fill="#e1efff" stroke="#2166a4" stroke-width="2" />
+<text x="370" y="226" text-anchor="middle" class="classes">b</text>
+<circle cx="205" cy="180" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="205" y="186" text-anchor="middle" class="classes">c</text>
+<circle cx="170" cy="290" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="170" y="296" text-anchor="middle" class="classes">d</text>
+<circle cx="435" cy="170" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="435" y="176" text-anchor="middle" class="classes">e</text>
+<circle cx="435" cy="280" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="435" y="286" text-anchor="middle" class="classes">f</text>
+<circle cx="160" cy="140" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="160" y="146" text-anchor="middle" class="classes">g</text>
+<circle cx="90" cy="350" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="90" y="356" text-anchor="middle" class="classes">h</text>
+<circle cx="115" cy="100" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="115" y="106" text-anchor="middle" class="classes">i</text>
+<circle cx="65" cy="100" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="65" y="106" text-anchor="middle" class="classes">j</text>
+<text x="280" y="394" text-anchor="middle" class="heading">Diameter 6</text>
+<rect x="575" y="12" width="530" height="412" rx="14" fill="#f7f9fc" stroke="#ccd6e4" />
+<text x="840" y="45" text-anchor="middle" class="heading">T2</text>
+<line x1="775" y1="220" x2="905" y2="220" stroke="#68778e" stroke-width="3" />
+<line x1="775" y1="220" x2="725" y2="180" stroke="#68778e" stroke-width="3" />
+<line x1="775" y1="220" x2="725" y2="285" stroke="#68778e" stroke-width="3" />
+<line x1="905" y1="220" x2="955" y2="260" stroke="#68778e" stroke-width="3" />
+<line x1="905" y1="220" x2="955" y2="150" stroke="#68778e" stroke-width="3" />
+<line x1="725" y1="180" x2="675" y2="140" stroke="#68778e" stroke-width="3" />
+<line x1="955" y1="260" x2="1005" y2="300" stroke="#68778e" stroke-width="3" />
+<line x1="675" y1="140" x2="625" y2="100" stroke="#68778e" stroke-width="3" />
+<line x1="1005" y1="300" x2="1055" y2="340" stroke="#68778e" stroke-width="3" />
+<circle cx="775" cy="220" r="14" fill="#e1efff" stroke="#2166a4" stroke-width="2" />
+<text x="775" y="226" text-anchor="middle" class="classes">a</text>
+<circle cx="905" cy="220" r="14" fill="#e1efff" stroke="#2166a4" stroke-width="2" />
+<text x="905" y="226" text-anchor="middle" class="classes">b</text>
+<circle cx="725" cy="180" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="725" y="186" text-anchor="middle" class="classes">c</text>
+<circle cx="725" cy="285" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="725" y="291" text-anchor="middle" class="classes">d</text>
+<circle cx="955" cy="260" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="955" y="266" text-anchor="middle" class="classes">e</text>
+<circle cx="955" cy="150" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="955" y="156" text-anchor="middle" class="classes">f</text>
+<circle cx="675" cy="140" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="675" y="146" text-anchor="middle" class="classes">g</text>
+<circle cx="1005" cy="300" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="1005" y="306" text-anchor="middle" class="classes">h</text>
+<circle cx="625" cy="100" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="625" y="106" text-anchor="middle" class="classes">i</text>
+<circle cx="1055" cy="340" r="14" fill="#fff" stroke="#2166a4" stroke-width="2" />
+<text x="1055" y="346" text-anchor="middle" class="classes">j</text>
+<text x="840" y="394" text-anchor="middle" class="heading">Diameter 7</text>
+</svg>
