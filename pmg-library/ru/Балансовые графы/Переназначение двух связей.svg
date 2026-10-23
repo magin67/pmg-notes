@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc">
+<title id="title">Переназначение двух связей</title><desc id="desc">Два единичных 2-орцикла a-c-a и b-d-b превращаются в орцикл a-d-b-c-a после обмена получателями у a и b. Оранжевым выделены изменяемые дуги. Остовной коэффициент при частичном обмене равен t.</desc>
+<defs>
+<marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2666a6"/></marker>
+<marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#b55a17"/></marker>
+<marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#647586"/></marker>
+<marker id="ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#203244"/></marker>
+</defs>
+<rect width="1000" height="420" rx="14" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif" fill="#203244">
+<rect x="16" y="16" width="440" height="330" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<rect x="544" y="16" width="440" height="330" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<text x="236" y="53" text-anchor="middle" font-size="23" fill="#203244" font-weight="bold" font-style="normal">Два 2-орцикла</text>
+<text x="764" y="53" text-anchor="middle" font-size="23" fill="#203244" font-weight="bold" font-style="normal">Один 4-орцикл</text>
+<path d="M80 123 Q48 185 80 247" fill="none" stroke="#b55a17" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M100 247 Q132 185 100 123" fill="none" stroke="#647586" stroke-width="3" marker-end="url(#gray)"/>
+<path d="M370 247 Q338 185 370 123" fill="none" stroke="#b55a17" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M390 123 Q422 185 390 247" fill="none" stroke="#647586" stroke-width="3" marker-end="url(#gray)"/>
+<circle cx="90" cy="110" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="65" y="117" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="90" cy="260" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="65" y="267" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<circle cx="380" cy="110" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="405" y="117" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">d</text>
+<circle cx="380" cy="260" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="405" y="267" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<line x1="635.00" y1="110.00" x2="891.00" y2="110.00" stroke="#b55a17" stroke-width="3" marker-end="url(#orange)"/>
+<line x1="891.00" y1="260.00" x2="635.00" y2="260.00" stroke="#b55a17" stroke-width="3" marker-end="url(#orange)"/>
+<line x1="618.00" y1="243.00" x2="618.00" y2="127.00" stroke="#647586" stroke-width="3" marker-end="url(#gray)"/>
+<line x1="908.00" y1="127.00" x2="908.00" y2="243.00" stroke="#647586" stroke-width="3" marker-end="url(#gray)"/>
+<circle cx="618" cy="110" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="593" y="117" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="618" cy="260" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="593" y="267" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<circle cx="908" cy="110" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="933" y="117" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">d</text>
+<circle cx="908" cy="260" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="933" y="267" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<text x="236" y="320" text-anchor="middle" font-size="22" fill="#203244" font-weight="normal" font-style="normal">t = 0:  τ = 0</text>
+<text x="764" y="320" text-anchor="middle" font-size="22" fill="#203244" font-weight="normal" font-style="normal">t = 1:  τ = 1</text>
+<line x1="471.00" y1="185.00" x2="529.00" y2="185.00" stroke="#203244" stroke-width="3" marker-end="url(#ink)"/>
+<text x="500" y="389" text-anchor="middle" font-size="25" fill="#203244" font-weight="bold" font-style="normal">ΔL = t[(ab),(cd)]</text>
+</g></svg>
