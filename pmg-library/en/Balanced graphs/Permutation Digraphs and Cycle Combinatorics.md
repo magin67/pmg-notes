@@ -1,15 +1,15 @@
 ---
 title: Permutation Digraphs and Cycle Combinatorics
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-10-25
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: permutation-digraphs-and-cycle-combinatorics
 lang: en
 description: Permutation digraphs, cycle-type probabilities and mean cycle counts, marked open paths, and decomposition of regular balanced digraphs into directed 1-factors.
 order: 12
-source_revision: 3
+source_revision: 4
 ---
 
 Degree-one balanced graphs connect directed graph theory with permutations: their components are disjoint directed cycles. Component sizes define the cycle type, and the [[Cyclic Partitions and the Combinatorial Potential of the First Kind|potential of the first kind]] counts graphs of that type on specified vertices. This also answers a probability question: how many cycles of each length occur on average?
@@ -188,7 +188,7 @@ A permutation digraph's cycles have disjoint vertex sets. Its Laplacian is the s
 
 Cycle lengths and forest toponomes describe different objects. A cycle of length $k$ has $k$ arcs, while its vertex-set boundary has grade $k-1$. A permutation's numerical type cannot be substituted for a forest-form type without an additional transformation.
 
-The algebra of marked partitions, potentials of intermediate states, and transitions between them belong to a further combinatorial topic. Here we have specified the states, two arc-addition rules, and the connection between completed graphs and the first-kind potential.
+The potential of an intermediate state, its proof, and its relation to graph and construction-history counts are given in [[The Potential of Path-and-Cycle States]]. Path and cycle multiplicities are treated separately there, and isolated vertices are recovered from the total vertex count. The formulas for an individual type apply here with loops excluded. The general product of marked partitions and its algebraic properties remain a further topic.
 
 The regular-graph theorem suggests another extension: their Laplacian polyform is a sum of permutation-digraph Laplacians. Its exponential factors over these terms under [[The Laplacian Exponential of a Balanced Graph#Conventions and the finite exponential|polyform multiplication]]. The analogous ordinary matrix-exponential factorization needs additional conditions.
 
@@ -201,3 +201,4 @@ The note draws on the author's PMG research, including marked components for ope
 1. NIST DLMF. [§26.13, Permutations: Cycle Notation](https://dlmf.nist.gov/26.13): cycle decompositions, first-kind Stirling numbers, and derangements.
 2. [[Cyclic Partitions and the Combinatorial Potential of the First Kind]]: graph counts of a fixed type and the no-loop restriction.
 3. Chishwashwa N., Faber V., Streib N. [Algebraic Constructions for Digraph Routing Problems, §3](https://arxiv.org/html/2405.12374v3#S3): directed 1-factor decompositions and the bipartite proof.
+

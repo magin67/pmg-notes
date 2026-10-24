@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="430" viewBox="0 0 1140 430" role="img" aria-labelledby="title desc"><title id="title">Arc Labels in Paths and Cycles</title><desc id="desc">Two arc orders on a path, one cyclic order, and two assignments of labels to a loop and an open arc.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#245c86"/></marker></defs>
+<rect width="1140" height="430" fill="white"/><style>text{font-family:Arial,sans-serif;fill:#172d44} .arc{fill:none;stroke:#245c86;stroke-width:2.5;marker-end:url(#arrow)} .node{fill:white;stroke:#172d44;stroke-width:1.8} .label{font-size:23px;fill:#ac4d00;font-weight:700}</style>
+<rect x="10" y="10" width="360" height="365" rx="12" fill="#f6f8fb" stroke="#d6dfeb"/>
+<text x="190" y="46" text-anchor="middle" font-size="21" font-weight="bold" class="">Two-arc path</text>
+<text x="190" y="79" text-anchor="middle" font-size="20" font-weight="normal" class="">u = 2</text>
+<text x="190" y="345" text-anchor="middle" font-size="17" font-weight="normal" class="">Two linear orders</text>
+<rect x="390" y="10" width="360" height="365" rx="12" fill="#f6f8fb" stroke="#d6dfeb"/>
+<text x="570" y="46" text-anchor="middle" font-size="21" font-weight="bold" class="">Two-arc cycle</text>
+<text x="570" y="79" text-anchor="middle" font-size="20" font-weight="normal" class="">u = 1</text>
+<text x="570" y="345" text-anchor="middle" font-size="17" font-weight="normal" class="">One cyclic order</text>
+<rect x="770" y="10" width="360" height="365" rx="12" fill="#f6f8fb" stroke="#d6dfeb"/>
+<text x="950" y="46" text-anchor="middle" font-size="21" font-weight="bold" class="">Loop and open arc</text>
+<text x="950" y="79" text-anchor="middle" font-size="20" font-weight="normal" class="">u = 2</text>
+<text x="950" y="345" text-anchor="middle" font-size="17" font-weight="normal" class="">Two label assignments</text>
+<path d="M 64 160 L 174 160" class="arc"/>
+<text x="120.0" y="146" text-anchor="middle" font-size="18" font-weight="normal" class="label">1</text>
+<path d="M 194 160 L 304 160" class="arc"/>
+<text x="250.0" y="146" text-anchor="middle" font-size="18" font-weight="normal" class="label">2</text>
+<circle cx="55" cy="160" r="8" class="node"/>
+<circle cx="185" cy="160" r="8" class="node"/>
+<circle cx="315" cy="160" r="8" class="node"/>
+<path d="M 64 264 L 174 264" class="arc"/>
+<text x="120.0" y="250" text-anchor="middle" font-size="18" font-weight="normal" class="label">2</text>
+<path d="M 194 264 L 304 264" class="arc"/>
+<text x="250.0" y="250" text-anchor="middle" font-size="18" font-weight="normal" class="label">1</text>
+<circle cx="55" cy="264" r="8" class="node"/>
+<circle cx="185" cy="264" r="8" class="node"/>
+<circle cx="315" cy="264" r="8" class="node"/>
+<path d="M 455 204 Q 570 102 685 204" class="arc"/>
+<path d="M 685 220 Q 570 322 455 220" class="arc"/>
+<circle cx="450" cy="212" r="8" class="node"/>
+<circle cx="690" cy="212" r="8" class="node"/>
+<text x="570" y="150" text-anchor="middle" font-size="18" font-weight="normal" class="label">1</text>
+<text x="570" y="300" text-anchor="middle" font-size="18" font-weight="normal" class="label">2</text>
+<path d="M 809 164 C 757 95 877 95 825 162" class="arc"/>
+<circle cx="817" cy="170" r="8" class="node"/>
+<text x="817" y="109" text-anchor="middle" font-size="18" font-weight="normal" class="label">1</text>
+<path d="M 938 170 L 1086 170" class="arc"/>
+<circle cx="929" cy="170" r="8" class="node"/>
+<circle cx="1097" cy="170" r="8" class="node"/>
+<text x="1013" y="156" text-anchor="middle" font-size="18" font-weight="normal" class="label">2</text>
+<path d="M 809 269 C 757 200 877 200 825 267" class="arc"/>
+<circle cx="817" cy="275" r="8" class="node"/>
+<text x="817" y="214" text-anchor="middle" font-size="18" font-weight="normal" class="label">2</text>
+<path d="M 938 275 L 1086 275" class="arc"/>
+<circle cx="929" cy="275" r="8" class="node"/>
+<circle cx="1097" cy="275" r="8" class="node"/>
+<text x="1013" y="261" text-anchor="middle" font-size="18" font-weight="normal" class="label">1</text>
+<text x="570" y="413" text-anchor="middle" font-size="18" font-weight="normal" class="">Labels 1 and 2 belong to arcs; vertices are unlabelled</text>
+</svg>

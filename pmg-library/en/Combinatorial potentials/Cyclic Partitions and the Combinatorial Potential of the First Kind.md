@@ -1,15 +1,15 @@
 ---
 title: Cyclic Partitions and the Combinatorial Potential of the First Kind
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-10-25
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cyclic-partitions-and-first-kind-combinatorial-potential
 lang: en
 description: Cyclic orders within partition blocks, the first-kind combinatorial potential, Stirling numbers, and the exclusion of fixed points.
 order: 5
-source_revision: 1
+source_revision: 2
 ---
 
 The [[Partitions and the Combinatorial Potential of the Second Kind|potential of the second kind]] counts set partitions with prescribed block sizes. Giving each block a cyclic order produces a **cyclic partition**, or a permutation written as disjoint cycles. We call the count of such objects of a specified type the combinatorial potential of the first kind. It connects partitions with [[Permutation Digraphs and Cycle Combinatorics|permutation digraphs]].
@@ -129,6 +129,8 @@ These differ from ordinary $c(n,m)$: for example, $c_{\geqslant2}(4,2)=3$, where
 
 [[Permutation Digraphs and Cycle Combinatorics]] gives their graph interpretation and uses the type potential for probabilities and mean cycle counts. Its parts $\mathbf k$ are cycle lengths, not boundary grades or forest types from [[Partition Toponomes]].
 
+The extension to mixed states containing cycles and open paths is proved in [[The Potential of Path-and-Cycle States]]. There the factorial refers to the arc count; separate component multiplicities and the passage to graphs on prescribed vertices are explained.
+
 ## Checks and sources
 
 Equations (1)-(2) are proved by counting objects. Enumeration of all permutations for $1\leqslant n\leqslant8$ additionally verified cycle-type distributions, sums by cycle count, and the fixed-point restriction.
@@ -138,3 +140,4 @@ The note draws on the author's PMG research. The potential terminology and notat
 1. NIST DLMF. [§26.4, equations 26.4.7 and 26.4.8](https://dlmf.nist.gov/26.4#E7): permutation and set-partition counts by type.
 2. NIST DLMF. [§26.13, Permutations: Cycle Notation](https://dlmf.nist.gov/26.13): cycle types, unsigned first-kind Stirling numbers, and derangements.
 3. Howard, F. T. [Weighted Associated Stirling Numbers](https://www.fq.math.ca/Scanned/22-2/howard.pdf). *The Fibonacci Quarterly*, 22(2), 1984, 156-165. §1: associated first-kind numbers count permutations with cycles of length at least $2$.
+

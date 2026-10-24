@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 12
-translated_revision: 14
-updated: 2026-10-24
+revision: 13
+translated_revision: 15
+updated: 2026-10-25
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -49,7 +49,7 @@ Five notes on symmetry of forms under vertex permutations. The main result is th
 
 ## Combinatorial potentials
 
-Five notes on ordinary and cyclic partitions and counting by component sizes. The series introduces the potentials of the first and second kinds, distinguishes SPF representation sizes from forest counts, proves the Cayley-Moon formula for joining prescribed components, and explains falling-factorial expansions through rooted forests and $r$-Stirling numbers.
+Six notes on ordinary and cyclic partitions and counting by component sizes. The series introduces the potentials of the first and second kinds, distinguishes SPF representation sizes from forest counts, proves the Cayley-Moon formula for joining prescribed components, and explains falling-factorial expansions through rooted forests and $r$-Stirling numbers. The potential of path-and-cycle states relates arc labels to graph and construction-history counts.
 
 - [[Combinatorial Potentials|Main results, notation, and reading routes]].
 
@@ -115,5 +115,6 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **24 October 2026**
+- Library last updated: **25 October 2026**
+
 
