@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="420" viewBox="0 0 990 420" role="img" aria-labelledby="title desc">
+<title id="title">The circulation form of three points</title>
+<desc id="desc">The forward cycle a to b to c to a, its reverse a to c to b to a, and vectors u=b-a, v=c-a. The form w(abc) is the reverse Laplacian minus the forward Laplacian and equals the skew-symmetric form on u,v.</desc>
+<defs>
+<marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#2666a6"/></marker>
+<marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#b55a17"/></marker>
+<marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#137c75"/></marker>
+</defs>
+<rect width="990" height="420" rx="14" fill="#ffffff"/>
+<g font-family="Arial, DejaVu Sans, sans-serif" fill="#203244">
+<rect x="15" y="15" width="310" height="325" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<text x="170" y="50" text-anchor="middle" font-size="22" fill="#203244" font-weight="bold">Forward cycle</text>
+<line x1="163.63" y1="116.33" x2="88.33" y2="250.18" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<line x1="93.00" y1="265.00" x2="243.00" y2="265.00" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<line x1="253.63" y1="253.67" x2="178.33" y2="119.82" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<circle cx="170" cy="105" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="170" y="82" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="80" cy="265" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="58" y="273" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<circle cx="260" cy="265" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="282" y="273" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<text x="170" y="315" text-anchor="middle" font-size="21" fill="#2666a6" font-weight="normal">L(abc)</text>
+<rect x="340" y="15" width="310" height="325" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<text x="495" y="50" text-anchor="middle" font-size="22" fill="#203244" font-weight="bold">Reverse cycle</text>
+<line x1="501.37" y1="116.33" x2="576.67" y2="250.18" stroke="#b55a17" stroke-width="3" marker-end="url(#orange)"/>
+<line x1="572.00" y1="265.00" x2="422.00" y2="265.00" stroke="#b55a17" stroke-width="3" marker-end="url(#orange)"/>
+<line x1="411.37" y1="253.67" x2="486.67" y2="119.82" stroke="#b55a17" stroke-width="3" marker-end="url(#orange)"/>
+<circle cx="495" cy="105" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="495" y="82" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="405" cy="265" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="383" y="273" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<circle cx="585" cy="265" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="607" y="273" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<text x="495" y="315" text-anchor="middle" font-size="21" fill="#b55a17" font-weight="normal">L(acb)</text>
+<rect x="665" y="15" width="310" height="325" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<text x="820" y="50" text-anchor="middle" font-size="22" fill="#203244" font-weight="bold">Two vectors</text>
+<path d="M820 105 L730 265 L910 265 Z" fill="#e6f2ef" stroke="none"/>
+<line x1="730" y1="265" x2="910" y2="265" stroke="#a3b9b5" stroke-width="2" stroke-dasharray="5 5"/>
+<line x1="813.63" y1="116.33" x2="738.33" y2="250.18" stroke="#137c75" stroke-width="3" marker-end="url(#teal)"/>
+<line x1="826.37" y1="116.33" x2="901.67" y2="250.18" stroke="#137c75" stroke-width="3" marker-end="url(#teal)"/>
+<text x="753" y="182" text-anchor="middle" font-size="23" fill="#137c75" font-weight="normal" font-style="italic">u</text>
+<text x="885" y="182" text-anchor="middle" font-size="23" fill="#137c75" font-weight="normal" font-style="italic">v</text>
+<circle cx="820" cy="105" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="820" y="82" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="730" cy="265" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="708" y="273" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<circle cx="910" cy="265" r="9" fill="#ffffff" stroke="#203244" stroke-width="2"/>
+<text x="932" y="273" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<text x="820" y="315" text-anchor="middle" font-size="21" fill="#137c75" font-weight="normal">u = b − a,   v = c − a</text>
+<text x="495" y="382" text-anchor="middle" font-size="25" fill="#203244" font-weight="bold">w(abc) = L(acb) − L(abc) = [u,v] − [v,u]</text>
+</g></svg>

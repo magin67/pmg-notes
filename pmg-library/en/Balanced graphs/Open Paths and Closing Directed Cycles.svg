@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="750" viewBox="0 0 960 750" role="img" aria-labelledby="title desc">
+<title id="title">Open paths and closing directed cycles</title><desc id="desc">Top: cycle abc and path d to e, type [3, underlined 1]. Middle: adding c to a closes path a to b to c. Bottom: adding b to c joins paths a to b and c to d. New arcs are green and dashed.</desc>
+<defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#285a85"/></marker>
+    <marker id="newarrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#247b56"/></marker>
+    <style>
+      text {font-family:Arial,sans-serif;fill:#24364a}
+      .heading {font-size:21px;font-weight:600;text-anchor:middle}
+      .note {font-size:18px;text-anchor:middle}
+      .edge {fill:none;stroke:#285a85;stroke-width:3;marker-end:url(#arrow)}
+      .new {fill:none;stroke:#247b56;stroke-width:3;stroke-dasharray:8 5;marker-end:url(#newarrow)}
+      .node {fill:#fff;stroke:#285a85;stroke-width:2}
+      .end {fill:#eaf2fb;stroke:#285a85;stroke-width:2}
+      .letter {font-size:21px;font-style:italic;text-anchor:middle;dominant-baseline:central}
+      .rule {font-size:22px;text-anchor:middle}
+    </style></defs>
+<rect width="960" height="750" fill="#fff"/>
+<path d="M25 248H935 M25 495H935" stroke="#dce3eb"/>
+<text class="heading" x="480" y="34">Closed and open components</text>
+<path class="edge" d="M133.00 95.00 L260.00 95.00"/>
+<path class="edge" d="M270.82 113.11 L210.41 190.31"/>
+<path class="edge" d="M181.33 191.50 L124.86 115.10"/>
+<circle class="node" cx="110" cy="95" r="19"/><text class="letter" x="110" y="95">a</text>
+<circle class="node" cx="285" cy="95" r="19"/><text class="letter" x="285" y="95">b</text>
+<circle class="node" cx="195" cy="210" r="19"/><text class="letter" x="195" y="210">c</text>
+<path class="edge" d="M438.00 155.00 L560.00 155.00"/>
+<circle class="end" cx="415" cy="155" r="19"/><text class="letter" x="415" y="155">d</text>
+<circle class="end" cx="585" cy="155" r="19"/><text class="letter" x="585" y="155">e</text>
+<text class="rule" x="770" y="135">[3, 1]</text>
+<path d="M782 142H796" stroke="#24364a" stroke-width="1.5"/>
+<text class="note" x="770" y="175">5 vertices, 4 arcs</text>
+<text class="heading" x="480" y="284">Closing a path</text>
+<path class="edge" d="M133.00 337.00 L260.00 337.00"/>
+<path class="edge" d="M271.05 355.29 L210.16 435.12"/>
+<path class="edge" d="M403 385H490"/>
+<circle class="end" cx="110" cy="337" r="19"/><text class="letter" x="110" y="337">a</text>
+<circle class="node" cx="285" cy="337" r="19"/><text class="letter" x="285" y="337">b</text>
+<circle class="end" cx="195" cy="455" r="19"/><text class="letter" x="195" y="455">c</text>
+<path class="edge" d="M628.00 337.00 L755.00 337.00"/>
+<path class="edge" d="M766.05 355.29 L705.16 435.12"/>
+<path class="new" d="M676.56 436.34 L619.61 357.29"/>
+<circle class="node" cx="605" cy="337" r="19"/><text class="letter" x="605" y="337">a</text>
+<circle class="node" cx="780" cy="337" r="19"/><text class="letter" x="780" y="337">b</text>
+<circle class="node" cx="690" cy="455" r="19"/><text class="letter" x="690" y="455">c</text>
+<text class="note" x="447" y="353">+ arc</text>
+<text class="rule" x="858" y="405">2 → 3</text>
+<path d="M828 413H842" stroke="#24364a" stroke-width="1.5"/>
+<text class="heading" x="480" y="531">Joining two different paths</text>
+<path class="edge" d="M118.00 595.00 L225.00 595.00"/>
+<path class="edge" d="M118.00 665.00 L225.00 665.00"/>
+<circle class="end" cx="95" cy="595" r="19"/><text class="letter" x="95" y="595">a</text>
+<circle class="end" cx="250" cy="595" r="19"/><text class="letter" x="250" y="595">b</text>
+<circle class="end" cx="95" cy="665" r="19"/><text class="letter" x="95" y="665">c</text>
+<circle class="end" cx="250" cy="665" r="19"/><text class="letter" x="250" y="665">d</text>
+<path class="edge" d="M340 630H422"/>
+<text class="note" x="381" y="597">+ arc</text>
+<path class="edge" d="M503.00 630.00 L590.00 630.00"/>
+<path class="new" d="M638.00 630.00 L725.00 630.00"/>
+<path class="edge" d="M773.00 630.00 L860.00 630.00"/>
+<circle class="end" cx="480" cy="630" r="19"/><text class="letter" x="480" y="630">a</text>
+<circle class="node" cx="615" cy="630" r="19"/><text class="letter" x="615" y="630">b</text>
+<circle class="node" cx="750" cy="630" r="19"/><text class="letter" x="750" y="630">c</text>
+<circle class="end" cx="885" cy="630" r="19"/><text class="letter" x="885" y="630">d</text>
+<text class="note" x="680" y="703">1 + 1 + one arc → a path of 3 arcs</text>
+<text class="note" x="480" y="737">The green dashed arc is added; the vertex count is unchanged</text>
+</svg>
+

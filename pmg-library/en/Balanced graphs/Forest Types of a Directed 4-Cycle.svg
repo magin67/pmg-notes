@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="390" viewBox="0 0 1080 390" role="img" aria-labelledby="title desc">
+  <title id="title">Forest types of a directed 4-cycle</title>
+  <desc id="desc">A unit cycle on a, b, c, d. Adjacent arcs a to b and b to c give a triple and a singleton, type (2). Opposite arcs a to b and c to d give two pairs, type (1,1). Roots have a light background.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#285a85"/>
+    </marker>
+    <style>
+      text {font-family:Arial, sans-serif; fill:#24364a}
+      .heading {font-size:20px; font-weight:600; text-anchor:middle}
+      .note {font-size:17px; text-anchor:middle}
+      .edge {fill:none; stroke:#285a85; stroke-width:3; marker-end:url(#arrow)}
+      .node {fill:#fff; stroke:#285a85; stroke-width:2}
+      .root {fill:#fff0bf; stroke:#a17c25; stroke-width:2}
+      .letter {font-size:21px; font-style:italic; text-anchor:middle; dominant-baseline:central}
+    </style>
+  </defs>
+  <rect width="1080" height="390" fill="#fff"/>
+  <path d="M360 22V342 M720 22V342" stroke="#dce3eb" stroke-width="1"/>
+  <g transform="translate(10,0)">
+    <text class="heading" x="170" y="42">Original directed 4-cycle</text>
+    <path class="edge" d="M112 110H228"/>
+    <path class="edge" d="M250 132V248"/>
+    <path class="edge" d="M228 270H112"/>
+    <path class="edge" d="M90 248V132"/>
+    <circle class="node" cx="90" cy="110" r="18"/><text class="letter" x="90" y="110">a</text>
+    <circle class="node" cx="250" cy="110" r="18"/><text class="letter" x="250" y="110">b</text>
+    <circle class="node" cx="250" cy="270" r="18"/><text class="letter" x="250" y="270">c</text>
+    <circle class="node" cx="90" cy="270" r="18"/><text class="letter" x="90" y="270">d</text>
+    <text class="note" x="170" y="322">All weights are 1</text>
+  </g>
+  <g transform="translate(370,0)">
+    <text class="heading" x="170" y="42">Adjacent arcs: type (2)</text>
+    <path class="edge" d="M112 110H228"/>
+    <path class="edge" d="M250 132V248"/>
+    <circle class="node" cx="90" cy="110" r="18"/><text class="letter" x="90" y="110">a</text>
+    <circle class="node" cx="250" cy="110" r="18"/><text class="letter" x="250" y="110">b</text>
+    <circle class="root" cx="250" cy="270" r="18"/><text class="letter" x="250" y="270">c</text>
+    <circle class="root" cx="90" cy="270" r="18"/><text class="letter" x="90" y="270">d</text>
+    <text class="note" x="170" y="322">4 choices</text>
+  </g>
+  <g transform="translate(730,0)">
+    <text class="heading" x="170" y="42" style="font-size:19px">Opposite arcs: type (1,1)</text>
+    <path class="edge" d="M112 110H228"/>
+    <path class="edge" d="M228 270H112"/>
+    <circle class="node" cx="90" cy="110" r="18"/><text class="letter" x="90" y="110">a</text>
+    <circle class="root" cx="250" cy="110" r="18"/><text class="letter" x="250" y="110">b</text>
+    <circle class="node" cx="250" cy="270" r="18"/><text class="letter" x="250" y="270">c</text>
+    <circle class="root" cx="90" cy="270" r="18"/><text class="letter" x="90" y="270">d</text>
+    <text class="note" x="170" y="322">2 choices</text>
+  </g>
+  <text class="note" x="540" y="369">Light vertices are roots of the selected forests</text>
+</svg>
+

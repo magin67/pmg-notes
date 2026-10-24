@@ -1,9 +1,9 @@
 ---
 title: Partitions and the Combinatorial Potential of the Second Kind
 date: 2026-10-20
-updated: 2026-10-20
-revision: 1
-source_revision: 2
+updated: 2026-10-24
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partitions-and-second-kind-combinatorial-potential
@@ -176,7 +176,7 @@ The brackets in $[x_i!]!$ preserve the sequence of operations: first transform t
 
 All block sizes are fixed. Specifying only $w$ and $m$ is insufficient: on four elements, two blocks may have sizes $[3,1]$ or $[2,2]$, and these types have different potentials.
 
-Here, “combinatorial potential” is the PMG term for this counting function. The qualifier “of the second kind” will be explained by its relation to Stirling numbers of the second kind.
+Here, “combinatorial potential” is the PMG term for this counting function. The qualifier “of the second kind” will be explained by its relation to Stirling numbers of the second kind. Giving the blocks cyclic orders leads to the [[Cyclic Partitions and the Combinatorial Potential of the First Kind|combinatorial potential of the first kind]].
 
 ### Two pairs
 
@@ -405,3 +405,4 @@ The potential formula was proved by counting repetitions. Its relations to Stirl
 1. NIST Digital Library of Mathematical Functions. [§26.8(i), Set Partitions: Stirling Numbers](https://dlmf.nist.gov/26.8#i): definition of $S(w,m)$ and Table 26.8.2.
 2. NIST Digital Library of Mathematical Functions. [§26.7(i), Set Partitions: Bell Numbers](https://dlmf.nist.gov/26.7#i): definition of Bell numbers and their relation to Stirling numbers.
 3. NIST Digital Library of Mathematical Functions. [§26.9(i), Integer Partitions](https://dlmf.nist.gov/26.9#i): definitions of integer partitions and $p(w)$.
+

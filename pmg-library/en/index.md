@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 11
-translated_revision: 13
-updated: 2026-10-23
+revision: 12
+translated_revision: 14
+updated: 2026-10-24
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -49,7 +49,7 @@ Five notes on symmetry of forms under vertex permutations. The main result is th
 
 ## Combinatorial potentials
 
-Four notes on partitions and counting by component sizes. The series introduces the potential of the second kind, distinguishes SPF representation sizes from forest counts, proves the Cayley-Moon formula for joining prescribed components, and explains falling-factorial expansions through rooted forests and $r$-Stirling numbers.
+Five notes on ordinary and cyclic partitions and counting by component sizes. The series introduces the potentials of the first and second kinds, distinguishes SPF representation sizes from forest counts, proves the Cayley-Moon formula for joining prescribed components, and explains falling-factorial expansions through rooted forests and $r$-Stirling numbers.
 
 - [[Combinatorial Potentials|Main results, notation, and reading routes]].
 
@@ -64,6 +64,12 @@ Six notes on passing from a chosen polyform representation to partition types. T
 Five notes on polynomial reductions of partition toponomes. Vector and vertex normalizations are compared through forest weights; the vertex reduction of the exponential is proved to equal the determinant of $I+t\mathbf L$. Coefficient ratios express the Kirchhoff index and reciprocal spectral sums and relate the polynomial to the centroid and resistance radius. The series also examines reducibility under different products and graph realizability of toponomes.
 
 - [[Polynomial Toponomes|Contents and reading order]].
+
+## Balanced graphs
+
+Twelve notes extend PMG to balanced directed graphs. They develop the bilinear Laplacian and its exponential, circulation forms, one-way resistance, directional coordinates and the sphere, graph balancing, directed forest toponomes, and permutation digraphs. Definitions and algebraic results precede geometric, electrical, and probabilistic interpretations.
+
+- [[Balanced Graphs|Main results, reading order, and five reading routes]].
 
 ## PMG Foundations
 
@@ -109,4 +115,5 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **23 October 2026**
+- Library last updated: **24 October 2026**
+

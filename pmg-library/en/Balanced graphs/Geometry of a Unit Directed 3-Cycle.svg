@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="530" viewBox="0 0 1080 530" role="img" aria-labelledby="title desc">
+<title id="title">Resistance geometry of a unit directed 3-cycle</title><desc id="desc">The directed cycle a to b to c to a has unit weights. Its resistance geometry is an equilateral triangle of side 1. Mean forward and reverse sequential traversal times are 3 and 6; the circulation norm is minus 1.</desc>
+<defs>
+<marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2666a6"/></marker>
+<marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#b55a17"/></marker>
+<marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#647586"/></marker>
+<marker id="ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#203244"/></marker>
+</defs>
+<rect width="1080" height="530" rx="14" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif" fill="#203244">
+<rect x="16" y="16" width="490" height="440" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<rect x="574" y="16" width="490" height="440" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<text x="261" y="58" text-anchor="middle" font-size="24" fill="#203244" font-weight="bold" font-style="normal">Directed couplings</text>
+<text x="819" y="58" text-anchor="middle" font-size="24" fill="#203244" font-weight="bold" font-style="normal">Resistance geometry</text>
+<line x1="252.50" y1="161.72" x2="139.50" y2="357.28" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<line x1="148.00" y1="372.00" x2="374.00" y2="372.00" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<line x1="382.50" y1="357.28" x2="269.50" y2="161.72" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<circle cx="261" cy="147" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="261" y="123" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="131" cy="372" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="107" y="379" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<circle cx="391" cy="372" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="415" y="379" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<text x="179" y="253" text-anchor="middle" font-size="22" fill="#2666a6" font-weight="normal" font-style="normal">1</text>
+<text x="343" y="253" text-anchor="middle" font-size="22" fill="#2666a6" font-weight="normal" font-style="normal">1</text>
+<text x="261" y="354" text-anchor="middle" font-size="22" fill="#2666a6" font-weight="normal" font-style="normal">1</text>
+<line x1="819" y1="147" x2="689" y2="372" stroke="#203244" stroke-width="3"/>
+<line x1="689" y1="372" x2="949" y2="372" stroke="#203244" stroke-width="3"/>
+<line x1="949" y1="372" x2="819" y2="147" stroke="#203244" stroke-width="3"/>
+<circle cx="819" cy="147" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="819" y="123" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="689" cy="372" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="665" y="379" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<circle cx="949" cy="372" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="973" y="379" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<text x="737" y="253" text-anchor="middle" font-size="22" fill="#203244" font-weight="normal" font-style="normal">1</text>
+<text x="901" y="253" text-anchor="middle" font-size="22" fill="#203244" font-weight="normal" font-style="normal">1</text>
+<text x="819" y="354" text-anchor="middle" font-size="22" fill="#203244" font-weight="normal" font-style="normal">1</text>
+<text x="261" y="426" text-anchor="middle" font-size="19" fill="#203244" font-weight="normal" font-style="normal">Arc labels: transition weights</text>
+<text x="819" y="426" text-anchor="middle" font-size="19" fill="#203244" font-weight="normal" font-style="normal">Side labels: lengths √R</text>
+<line x1="520.00" y1="255.00" x2="560.00" y2="255.00" stroke="#203244" stroke-width="3" marker-end="url(#ink)"/>
+<text x="540" y="495" text-anchor="middle" font-size="21" fill="#203244" font-weight="bold" font-style="normal">Time a → b → c → a: 3;   time a → c → b → a: 6;   χ = −1</text>
+</g></svg>

@@ -1,18 +1,18 @@
 ---
 title: Combinatorial Potentials
 date: 2026-10-20
-updated: 2026-10-20
-revision: 1
-source_revision: 3
+updated: 2026-10-24
+revision: 2
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: combinatorial-potentials-series-navigation
 lang: en
-description: "Set partitions, the potential of the second kind, SPF representation and forest counts, Cayley's formula, rooted forests, and r-Stirling numbers."
+description: "Potentials of the first and second kinds, ordinary and cyclic partitions, SPF and forest counts, Cayley's formula, and Stirling numbers."
 order: 0
 ---
 
-This series explains how component sizes determine the counts of concrete partitions and graph constructions. Its central concept is the **combinatorial potential of the second kind**: the number of partitions of a given set into unordered blocks of prescribed sizes. This count is then applied to symmetric polyforms and compared with the number of forests. A separate note counts ways to join prescribed components into a tree. The series concludes with graph interpretations of falling factorials, finite differences, and the relation between forest coefficients and $r$-Stirling numbers.
+This series explains how component sizes determine the counts of concrete partitions and graph constructions. Its central concept is the **combinatorial potential of the second kind**: the number of partitions of a given set into unordered blocks of prescribed sizes. This count is then applied to symmetric polyforms and compared with the number of forests. A separate note counts ways to join prescribed components into a tree. The relation between forest coefficients and $r$-Stirling numbers is explained through rooted forests. The final note introduces the potential of the first kind: the number of cyclic partitions of a prescribed type, connecting the series to permutation digraphs.
 
 ## Main results
 
@@ -23,6 +23,14 @@ $$
 $$
 
 The formula follows by successively removing repetitions within blocks and between blocks of equal size. Examples with two pairs, a triple and a singleton, and two triples and a pair appear in [[Partitions and the Combinatorial Potential of the Second Kind]].
+
+**The potential of a cycle type.** Giving each block a cyclic order changes the number of objects to
+
+$$
+\boxed{s_1(\mathbf x)=s_2(\mathbf x)\prod_i(x_i-1)!=\frac{w!}{\mathbf x!\,[\mu_j!]!}}
+$$
+
+The definition, a figure showing both orientations of a 3-cycle, and the derivation appear in [[Cyclic Partitions and the Combinatorial Potential of the First Kind]]. Summing over all types of weight $w$ gives $w!$; summing over types with a fixed number of cycles gives the unsigned Stirling numbers of the first kind. Excluding parts of size $1$ gives permutations without fixed points.
 
 **Different SPF counts.** For positive grades $\boldsymbol k=[k_1,\ldots,k_r]$ and $\ell$ singleton blocks, the block sizes are $[k_i+1,1^\ell]$. The potential of this collection counts terms in the standard representation of $E_n$; the potential $s_2(\boldsymbol k)$ enters the fundamental theorem coefficient. Choosing trees within already fixed blocks introduces another factor, $t(\boldsymbol k)$. These distinctions are illustrated with type $[2,1]$ in [[Combinatorial Potentials in Symmetric Polyforms]].
 
@@ -55,6 +63,10 @@ The right side counts partitions of $2k$ elements into $k+m$ blocks with $k+1$ d
 3. **[[Cayley's Theorem and Joining Prescribed Components]].** Joining fixed blocks, the weighted Cayley formula, component contraction, refinement by Prüfer code type, and a brief passage to polyforms.
 4. **[[Falling Factorials, Rooted Forests, and Stirling Numbers]].** Star and general rooted forests, leaf-deletion codes, inclusion-exclusion, $r$-Stirling numbers, and shifted expansions.
 
+5. **[[Cyclic Partitions and the Combinatorial Potential of the First Kind]].** Cyclic orders within blocks, the relation between $s_1$ and $s_2$, sums over types, Stirling numbers of the first kind, and excluding fixed points.
+
+The first-kind note can be read immediately after the definition of the second kind; its graph application appears in [[Permutation Digraphs and Cycle Combinatorics]].
+
 The combinatorial route passes through the notes on partitions, joining components, and [[Falling Factorials, Rooted Forests, and Stirling Numbers|rooted forests and Stirling numbers]]; their main proofs do not require polyforms. For the passage to PMG, read the SPF potential note alongside [[Symmetric Polyforms - Types and Normalizations|types and normalisations]] and the [[Fundamental Theorem of Symmetric Polyforms|fundamental theorem]]. A further application to rooted forests, Abel polynomials, and finite differences appears in [[Forest Coefficients and Abel Polynomials]].
 
 ## Notation and scope
@@ -63,4 +75,5 @@ The size of a collection is $\#\mathbf x$, its weight is $w(\mathbf x)$, and the
 
 Block sizes and boundary grades differ by one. A component's edge count equals its grade in a forest; this equality does not apply in the presence of cycles. Representation size, forest count, and form-identity coefficient have different definitions.
 
-Notation and links are consistent with the [[Symmetric Polyforms]] series. The combinatorial potential of the first kind, related to balance graphs, remains a separate topic. The formulas in this series are proved under their stated conditions; enumeration of small examples provides additional checks.
+Notation and links are consistent with the [[Symmetric Polyforms]] series. The potential of the first kind counts cyclic partitions; the algebra of open paths and marked components remains a further combinatorial topic. The formulas in this series are proved under their stated conditions; enumeration of small examples provides additional checks.
+

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="390" viewBox="0 0 860 390" role="img" aria-labelledby="title desc">
+<title id="title">A balanced graph: a unit cycle and a bidirectional coupling ab</title>
+<desc id="desc">Arc a to b has weight 2; arcs b to a, b to c, and c to a have weight 1. Incoming and outgoing weighted degrees are 2 at a and b, and 1 at c.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#24547a"/></marker></defs>
+<rect width="860" height="390" rx="12" fill="#fbfcfe"/>
+<g font-family="Arial, sans-serif" fill="#20344a">
+<text x="36" y="35" font-size="21" font-weight="bold">3-cycle + bidirectional coupling ab</text>
+<g fill="none" stroke="#24547a" stroke-width="2.8" marker-end="url(#arrow)">
+<path d="M121 101 Q220 45 319 101"/>
+<path d="M317 122 Q220 171 123 122"/>
+<path d="M330 139 L245 277"/>
+<path d="M206 277 L120 139"/>
+</g>
+<g font-size="21" text-anchor="middle" fill="#24547a"><text x="220" y="67">2</text><text x="220" y="166">1</text><text x="307" y="225">1</text><text x="144" y="225">1</text></g>
+<g fill="#edf4fa" stroke="#24547a" stroke-width="2"><circle cx="100" cy="112" r="30"/><circle cx="340" cy="112" r="30"/><circle cx="225" cy="305" r="30"/></g>
+<g text-anchor="middle" font-size="25"><text x="100" y="120">a</text><text x="340" y="120">b</text><text x="225" y="313">c</text></g>
+<path d="M420 64 L420 344" stroke="#dbe3ec"/>
+<text x="462" y="92" font-size="20" font-weight="bold">Balance at each vertex</text>
+<g font-size="17"><text x="470" y="138">Vertex</text><text x="596" y="138">Outgoing</text><text x="716" y="138">Incoming</text></g>
+<path d="M461 151 H810" stroke="#bacbdc"/>
+<g font-size="22" text-anchor="middle"><text x="505" y="190">a</text><text x="632" y="190">2</text><text x="750" y="190">2</text><text x="505" y="233">b</text><text x="632" y="233">2</text><text x="750" y="233">2</text><text x="505" y="276">c</text><text x="632" y="276">1</text><text x="750" y="276">1</text></g>
+<text x="462" y="329" font-size="17">Degrees include arc weights.</text>
+<text x="36" y="367" font-size="15" fill="#53677b">Circulation through c balances the unequal opposite arcs between a and b.</text>
+</g></svg>
+

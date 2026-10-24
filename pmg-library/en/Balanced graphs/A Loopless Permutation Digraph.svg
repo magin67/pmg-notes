@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="320" viewBox="0 0 820 320" role="img" aria-labelledby="title desc">
+<title id="title">A loopless permutation digraph</title><desc id="desc">Disjoint directed cycles a-b-a and c-d-e-c on five vertices. Each vertex has exactly one incoming and one outgoing unit arc. There are no loops.</desc>
+<defs>
+<marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2666a6"/></marker>
+<marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#b55a17"/></marker>
+<marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#647586"/></marker>
+<marker id="ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#203244"/></marker>
+</defs>
+<rect width="820" height="320" rx="14" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif" fill="#203244">
+<rect x="15" y="15" width="345" height="265" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<rect x="380" y="15" width="425" height="265" rx="12" fill="#f6f8fb" stroke="#dde4ec"/>
+<text x="187" y="50" text-anchor="middle" font-size="23" fill="#203244" font-weight="bold" font-style="normal">Directed 2-cycle</text>
+<text x="592" y="50" text-anchor="middle" font-size="23" fill="#203244" font-weight="bold" font-style="normal">Directed 3-cycle</text>
+<path d="M113 150 Q185 90 257 150" fill="none" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M257 170 Q185 230 113 170" fill="none" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<circle cx="100" cy="160" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="76" y="167" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">a</text>
+<circle cx="270" cy="160" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="294" y="167" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">b</text>
+<line x1="580.60" y1="112.61" x2="481.40" y2="222.39" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<line x1="487.00" y1="235.00" x2="697.00" y2="235.00" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<line x1="702.60" y1="222.39" x2="603.40" y2="112.61" stroke="#2666a6" stroke-width="3" marker-end="url(#blue)"/>
+<circle cx="592" cy="100" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="592" y="80" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">c</text>
+<circle cx="470" cy="235" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="447" y="242" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">d</text>
+<circle cx="714" cy="235" r="9" fill="white" stroke="#203244" stroke-width="2"/>
+<text x="737" y="242" text-anchor="middle" font-size="23" fill="#203244" font-weight="normal" font-style="italic">e</text>
+<text x="410" y="306" text-anchor="middle" font-size="19" fill="#203244" font-weight="normal" font-style="normal">All arcs have weight 1</text>
+</g></svg>
