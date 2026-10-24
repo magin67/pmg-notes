@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 0 960 390" role="img" aria-labelledby="title desc">
+<title id="title">Два циклических порядка на тройке</title><desc id="desc">Один блок abc и одиночный элемент d дают два разных цикла на тройке. В обоих случаях d является неподвижной точкой и показан с петлёй.</desc>
+<defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#285a85"/></marker>
+    <marker id="newarrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#247b56"/></marker>
+    <style>
+      text {font-family:Arial,sans-serif;fill:#24364a}
+      .heading {font-size:21px;font-weight:600;text-anchor:middle}
+      .note {font-size:18px;text-anchor:middle}
+      .edge {fill:none;stroke:#285a85;stroke-width:3;marker-end:url(#arrow)}
+      .new {fill:none;stroke:#247b56;stroke-width:3;stroke-dasharray:8 5;marker-end:url(#newarrow)}
+      .node {fill:#fff;stroke:#285a85;stroke-width:2}
+      .end {fill:#eaf2fb;stroke:#285a85;stroke-width:2}
+      .letter {font-size:21px;font-style:italic;text-anchor:middle;dominant-baseline:central}
+      .rule {font-size:22px;text-anchor:middle}
+    </style></defs>
+<rect width="960" height="390" fill="#fff"/>
+<path d="M480 20V350" stroke="#dce3eb"/>
+<text class="heading" x="240" y="38">(a b c)(d)</text>
+<path class="edge" d="M118.00 115.00 L250.00 115.00"/>
+<path class="edge" d="M263.17 134.72 L197.86 243.56"/>
+<path class="edge" d="M173.17 245.28 L107.86 136.44"/>
+<path class="edge" d="M398 218 C450 158 458 272 403 245"/>
+<circle class="node" cx="95" cy="115" r="19"/><text class="letter" x="95" y="115">a</text>
+<circle class="node" cx="275" cy="115" r="19"/><text class="letter" x="275" y="115">b</text>
+<circle class="node" cx="185" cy="265" r="19"/><text class="letter" x="185" y="265">c</text>
+<circle class="node" cx="385" cy="235" r="19"/><text class="letter" x="385" y="235">d</text>
+<text class="note" x="240" y="330">Одно и то же разбиение abc | d</text>
+<text class="heading" x="720" y="38">(a c b)(d)</text>
+<path class="edge" d="M586.83 134.72 L652.14 243.56"/>
+<path class="edge" d="M676.83 245.28 L742.14 136.44"/>
+<path class="edge" d="M732.00 115.00 L600.00 115.00"/>
+<path class="edge" d="M878 218 C930 158 938 272 883 245"/>
+<circle class="node" cx="575" cy="115" r="19"/><text class="letter" x="575" y="115">a</text>
+<circle class="node" cx="755" cy="115" r="19"/><text class="letter" x="755" y="115">b</text>
+<circle class="node" cx="665" cy="265" r="19"/><text class="letter" x="665" y="265">c</text>
+<circle class="node" cx="865" cy="235" r="19"/><text class="letter" x="865" y="235">d</text>
+<text class="note" x="720" y="330">Одно и то же разбиение abc | d</text>
+<text class="note" x="480" y="373">4 варианта одиночного элемента × 2 направления цикла = 8 перестановок</text>
+</svg>
