@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 13
-translated_revision: 15
-updated: 2026-10-25
+revision: 14
+translated_revision: 16
+updated: 2026-10-26
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -71,6 +71,12 @@ Twelve notes extend PMG to balanced directed graphs. They develop the bilinear L
 
 - [[Balanced Graphs|Main results, reading order, and five reading routes]].
 
+## KVP decomposition and oriented extensions
+
+Nine notes on separating pair characteristics into an overall level, vertex heterogeneity, residual pair structure, circulation, and directional imbalance. The series develops the projectors, graph examples, the distance transformation, Green and resistance components, applications, metric parameters, the second-order symmetric potential, and forest toponomes. Proved results are distinguished from computational examples and open questions.
+
+- [[KVP Decomposition and Oriented Extensions|Main results, reading order, and five reading routes]].
+
 ## PMG Foundations
 
 - [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
@@ -115,6 +121,7 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **25 October 2026**
+- Library last updated: **26 October 2026**
+
 
 
