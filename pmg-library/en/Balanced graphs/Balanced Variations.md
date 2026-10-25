@@ -1,20 +1,20 @@
 ---
 title: Balanced Variations
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-10-25
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graph-variations
 lang: en
-description: 'Exact balanced variations: rank-one bilinear updates, exchanging recipients, adding a directed cycle, and inserting a vertex into an arc.'
+description: 'Exact balanced variations: rank-one bilinear updates, exchanging recipients, adding a directed cycle, and inserting a vertex into an arc; rooted potentials after a one-arc addition.'
 order: 5
-source_revision: 2
+source_revision: 3
 ---
 
-A local change to a balanced graph must preserve equality of incoming and outgoing weights at every vertex. Changing one directed arc breaks balance; coordinated changes to several arcs can have a particularly simple polyform expression.
+A balanced variation preserves equality of incoming and outgoing weights at every vertex. Changing one directed arc breaks balance; coordinated changes to several arcs can have a particularly simple polyform expression.
 
-Our basic tool is a variation $t[u,v]$ with affine vectors $u,v$. Its square vanishes, so the entire exponential changes by one multiplication by $e+t[u,v]$. Exchanging two recipients and inserting a vertex into an arc provide graph applications. Adding a directed cycle is another important balance-preserving operation.
+Our basic tool is a variation $t[u,v]$ with affine vectors $u,v$. Its square vanishes, so the entire exponential changes by one multiplication by $e+t[u,v]$. Exchanging two recipients and inserting a vertex into an arc provide graph applications. Adding a directed cycle is another important balance-preserving operation. The concluding section separately considers loss of balance through one arc and its relation to directional projections.
 
 ## Conditions for preserving balance
 
@@ -306,9 +306,109 @@ Preserving balance keeps the calculation within boundary forms. The variation de
 
 Equation (3) gives the bilinear form potential an algebraic meaning as the coefficient of a change in $\tau$. Its relation to the metric, symmetry, and circulation is developed in [[One-Way Resistance and Hitting Times]] and [[Resistance Geometry and Circulation]].
 
+## One-way variation and loss of balance
+
+Now consider a change that leaves the class of balanced graphs. Let the original $G$ be connected, let $a\ne b$, and add an arc $a\to b$ of weight $t\ge0$ or increase its existing weight by $t$. Put
+
+$$
+\mathbf d=\mathbf e_a-\mathbf e_b,\qquad
+\mathbf L(t)=\mathbf L+t\mathbf e_a\mathbf d^{\mathsf T}
+$$
+
+Here $\mathbf e_a,\mathbf e_b$ are unit coordinate columns. Balance is lost for $t>0$, so replace the common spanning-tree coefficient by individual rooted potentials
+
+$$
+\tau_i(t)=\det\mathbf L(t)_{\widehat i,\widehat i},\qquad
+\tau_i(0)=\tau>0
+$$
+
+For the original balanced graph, use the bilinear potential $\beta(u,v)=P_M([u,v])=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u$, where $\mathbf{Gr}=\mathbf L^+$. The first argument has role $\mathrm{out}$ and the second $\mathrm{in}$; see the [[The Gram Matrix and Directional Coordinates of a Balanced Graph#Sources and receivers|direction convention]]. For $v=b-a$, $w_i=a_i-a$, and $R_{ab}=\beta(v,v)>0$, define
+
+$$
+\theta_i^{\mathrm{out}}=\frac{\beta(w_i,v)}{R_{ab}},\qquad
+\theta_i^{\mathrm{in}}=\frac{\beta(v,w_i)}{R_{ab}}
+$$
+
+These are the coefficients of $b$ in two affine projections of vertex $a_i$ onto line $ab$. In the corresponding role, the projection is $(1-\theta_i)a+\theta_i b$, with coefficient $1-\theta_i$ at $a$. The orthogonality conditions differ in argument order:
+
+$$
+\beta(w_i-\theta_i^{\mathrm{out}}v,v)=0,\qquad
+\beta(v,w_i-\theta_i^{\mathrm{in}}v)=0
+$$
+
+> [!info] Rooted potentials after adding one arc
+> **Theorem.** Under these assumptions, for every $t\ge0$,
+>
+> $$
+> \boxed{\tau_i(t)=\tau\bigl(1+tR_{ab}\theta_i^{\mathrm{out}}\bigr)}
+> \tag{10}
+> $$
+>
+> In particular,
+>
+> $$
+> \tau_a(t)=\tau,\qquad \tau_b(t)=\tau(1+tR_{ab}),\qquad
+> \tau_a(t)\le\tau_i(t)\le\tau_b(t)
+> $$
+>
+> The potential at the source $a$ stays unchanged. Other vertices may share the minimum with $a$ or the maximum with $b$.
+
+> [!note]- Proof using rooted minors and the maximum principle
+> **Proof.** A connected balanced graph with nonnegative weights is strongly connected, and adding an arc preserves this property. By the directed matrix-tree theorem, the column of principal minors satisfies $\mathbf L(t)^{\mathsf T}\boldsymbol\tau(t)=0$, and this kernel is one-dimensional. Deleting row and column $a$ removes the entire update, so $\tau_a(t)=\tau$.
+>
+> Put $\mathbf y=\mathbf{Gr}^{\mathsf T}\mathbf d$. Balance and the Green-matrix identities give
+>
+> $$
+> \mathbf L^{\mathsf T}\mathbf y=\mathbf d,\qquad
+> \mathbf L^{\mathsf T}\mathbf1=0
+> $$
+>
+> The column $\mathbf s=\tau[\mathbf1+t(y_a\mathbf1-\mathbf y)]$ has $s_a=\tau$ and satisfies
+>
+> $$
+> \mathbf L(t)^{\mathsf T}\mathbf s
+> =-t\tau\mathbf d+t\mathbf d\,s_a=0
+> $$
+>
+> Hence $\boldsymbol\tau(t)=\mathbf s$. Since $y_a-y_i=\beta(w_i,v)=R_{ab}\theta_i^{\mathrm{out}}$, this proves (10); the equality $y_a-y_b=R_{ab}$ gives $\tau_b(t)$.
+>
+> By balance, $\mathbf L^{\mathsf T}$ is the Laplacian of the graph with all arcs reversed. For $i\notin\{a,b\}$, the equation $\sum_j f_{ji}(y_i-y_j)=0$ says that the value is a weighted average over incoming neighbors. An internal maximum or minimum propagates along positive arcs to $a$ or $b$. The equations $(\mathbf L^{\mathsf T}\mathbf y)_a=1$ and $(\mathbf L^{\mathsf T}\mathbf y)_b=-1$ exclude a minimum at $a$ and a maximum at $b$. Thus $y_b\le y_i\le y_a$, giving $0\le\theta_i^{\mathrm{out}}\le1$ and the asserted bounds on $\tau_i(t)$. $\square$
+
+For $t>0$, formula (10) is equivalent to
+
+$$
+\boxed{\frac{\tau_i(t)-\tau_a(t)}{\tau_b(t)-\tau_a(t)}
+=\theta_i^{\mathrm{out}}}
+$$
+
+Thus normalized differences of rooted potentials reproduce the outgoing projection in the original balanced graph's metric. The perturbed digraph has one potential vector, determined by the left kernel of its Laplacian; the two projections correspond to the two argument roles of the original bilinear form. Their relation to problems for $\mathbf L$ and $\mathbf L^{\mathsf T}$ is explained in the [[Selected Vertices and the Dirichlet Problem#Two Dirichlet problems in a balanced graph|balanced-graph extension]], and their difference is measured by the [[Resistance Geometry and Circulation#Circulation and two projections onto a line|circulation potential]].
+
+### Check on a directed 3-cycle
+
+For the unit cycle $a\to b\to c\to a$, the original values are $\tau=R_{ab}=1$. Increasing the weight of $a\to b$ to $1+t$ gives
+
+$$
+\mathbf L(t)=
+\begin{pmatrix}
+1+t&-1-t&0\\
+0&1&-1\\
+-1&0&1
+\end{pmatrix}
+$$
+
+Its three principal minors of order $2$ directly give $1$, $1+t$, and $1+t$, independently of (10). Projection coefficients are computed from the original bilinear form:
+
+| Vertex | $\tau_i(t)$ | $\theta_i^{\mathrm{out}}$ | $\theta_i^{\mathrm{in}}$ |
+| --- | --- | --- | --- |
+| $a$ | $1$ | $0$ | $0$ |
+| $b$ | $1+t$ | $1$ | $1$ |
+| $c$ | $1+t$ | $1$ | $0$ |
+
+Vertex $c$ shares the maximum rooted potential with $b$, whereas its incoming projection coincides with $a$. In a symmetric graph the two projections coincide, and this directional distinction disappears.
+
 ## Sources and connections
 
-The variation identities follow here from polyform multiplication. The matrix check uses the determinant expansion for a rank-one update. Exterior powers and minors of bilinear forms are treated in double-form theory [1, §2.1], without symmetry assumptions. The proof of (9) uses the directed matrix-tree theorem [2] under our Laplacian convention.
+The balanced variation identities follow here from polyform multiplication. Formula (10) for a single arc is proved using the left kernel of the Laplacian and the maximum principle; the directed 3-cycle example is independently checked through principal minors. In addition, exact rational arithmetic checked 50 variations on 25 balanced graphs with 2-6 vertices: rooted minors were compared with (10), and both projections, their bounds, and their difference through the circulation potential were verified. The matrix check uses the determinant expansion for a rank-one update. Exterior powers and minors of bilinear forms are treated in double-form theory [1, §2.1], without symmetry assumptions. The proof of (9) uses the directed matrix-tree theorem [2] under our Laplacian convention.
 
 1. M. L. Labbi. [On some algebraic identities and the exterior product of double forms](https://arxiv.org/abs/1112.1346). *Archivum Mathematicum* **49** (2013), 241-271. [DOI: 10.5817/AM2013-4-241](https://doi.org/10.5817/AM2013-4-241). §1.1: double-form multiplication; §2.1: exterior powers and minors.
 2. A. Postnikov, notes by A. Lin. [Lecture 29: Proof of Directed Matrix Tree Theorem based on induction](https://ocw.mit.edu/courses/18-212-algebraic-combinatorics-spring-2019/4b3d3325c633bfb7fdea92ab6d6f6d1e_MIT18_212S19_lec29.pdf). *18.212 Algebraic Combinatorics*, 2019. The directed matrix-tree theorem.
@@ -320,3 +420,4 @@ Related library notes:
 - [[The Laplacian Exponential of a Balanced Graph]]: the finite exponential, determinant coefficients, and directed forests.
 - [[Variation of a Single Edge]]: symmetric variations, spanning-tree coefficients, and effective resistance.
 - [[The Circulation Form]]: the skew-symmetric cycle part and its distinction from the full Laplacian.
+

@@ -1,15 +1,15 @@
 ---
 title: Resistance Geometry and Circulation
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-10-25
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: resistance-geometry-and-circulation
 lang: en
 description: Euclidean pair geometry, circulation as nonreciprocal response, and a three-vertex resistance formula combining area and circulation.
 order: 7
-source_revision: 4
+source_revision: 5
 ---
 
 Pair resistance in a balanced graph retains the geometric meaning of squared distance. These distances describe only the symmetric part of its bilinear response. A circulation form's normalized potential supplies an additional oriented quantity. In a Markov model it compares traversal times; electrically it compares responses after exchanging excitation and measurement. On three vertices, both contributions enter a formula extending the expression for area in terms of side lengths.
@@ -158,6 +158,24 @@ Within this family, strengthening the preferred direction increases circulation 
 
 The ratio $\chi_{abc}/R_{ab}=(q-p)/(p+q)$ separates directional bias from scale in this family. A general balanced graph has no such local formula in two arc weights: its circulation potential depends on the entire graph. It also differs from stationary flow, here $(p-q)/3$ along each side.
 
+### Circulation and two projections onto a line
+
+The circulation potential also has a geometric interpretation through [[Balanced Variations#One-way variation and loss of balance|directional projections]]. Put $v=b-a$ and $w_i=a_i-a$. The coefficients of $b$ in the outgoing and incoming projections of vertex $a_i$ onto line $ab$ are
+
+$$
+\theta_i^{\mathrm{out}}=\frac{\beta(w_i,v)}{R_{ab}},\qquad
+\theta_i^{\mathrm{in}}=\frac{\beta(v,w_i)}{R_{ab}}
+$$
+
+By definition, $\chi_{abi}=\beta(v,w_i)-\beta(w_i,v)$, so
+
+$$
+\boxed{\theta_i^{\mathrm{in}}-\theta_i^{\mathrm{out}}
+=\frac{\chi_{abi}}{R_{ab}}}
+$$
+
+Thus the sign of the circulation potential gives the order of the two projections along $a\to b$, while its ratio to $R_{ab}$ gives the difference of their coefficients. Zero circulation for this triple means that these two projections coincide. For example, in the unit cycle $a\to b\to c\to a$, we have $\theta_c^{\mathrm{out}}=1$, $\theta_c^{\mathrm{in}}=0$, and $\chi_{abc}/R_{ab}=-1$.
+
 ## Electrical interpretation: reciprocity of responses
 
 Consider the linear nodal law
@@ -186,6 +204,19 @@ In this experiment, $\mathrm{out}$ denotes current excitation $u$, and $\mathrm{
 Ordinary resistor networks satisfy reciprocity because their Laplacians are symmetric. A nonsymmetric nodal law requires nonreciprocal elements or controlled sources. Electrical models of nonreversible Markov chains with additional elements appear in [2]; their specific circuits must be matched to the chosen nodal law.
 
 Thus $\chi$ has an operational interpretation as **nonreciprocity of transfer response**. Excitation and measurement are exchanged; ordinary resistance of one pair remains unchanged when current is reversed.
+
+To compare with rooted potentials after adding an arc $a\to b$, prescribe the current column $\mathbf d=\mathbf e_a-\mathbf e_b$. The original network and the network with all arcs reversed give, respectively,
+
+$$
+\begin{aligned}
+\boldsymbol\varphi&=\mathbf{Gr}\mathbf d,&
+\frac{\varphi_a-\varphi_i}{R_{ab}}&=\theta_i^{\mathrm{in}}\\
+\mathbf y&=\mathbf{Gr}^{\mathsf T}\mathbf d,&
+\frac{y_a-y_i}{R_{ab}}&=\theta_i^{\mathrm{out}}
+\end{aligned}
+$$
+
+Thus normalized differences of the perturbed digraph's rooted potentials reproduce voltages for the transpose of the original Laplacian. When $\mathbf L=\mathbf L^{\mathsf T}$, both responses coincide. For a general balanced graph, their difference agrees with the two [[Selected Vertices and the Dirichlet Problem#Two Dirichlet problems in a balanced graph|Dirichlet problems]] and the formula involving $\chi$ above.
 
 ## Three-vertex resistance
 
@@ -275,3 +306,4 @@ The geometric and determinant identities are proved above. Three-vertex resistan
 2. M. Balázs, Á. Folly. [An Electric Network for Nonreversible Markov Chains](https://arxiv.org/abs/1405.7660). *The American Mathematical Monthly* **123** (2016), 657-682. [DOI: 10.4169/amer.math.monthly.123.7.657](https://doi.org/10.4169/amer.math.monthly.123.7.657). An electrical model with additional elements for nonreversible chains.
 
 Related notes: [[One-Way Resistance and Hitting Times]], [[The Circulation Form]], [[From Lengths to Areas and Volumes]], [[Balanced Variations]], [[The Gram Matrix and Directional Coordinates of a Balanced Graph]], [[The Isotropic Space and Sphere of a Balanced Graph]].
+
