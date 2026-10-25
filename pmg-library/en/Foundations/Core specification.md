@@ -1,13 +1,13 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-22
-revision: 8
+updated: 2026-10-25
+revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
 lang: en
-description: "Definitions, notation, and fundamental identities of the PMG core: exterior objects, boundaries, forms, the resistance metric, and the Laplacian exponential."
+description: "Definitions, notation, and fundamental identities of the PMG core: exterior objects, boundaries, forms, the resistance metric, the Laplacian exponential, and the balanced extension."
 order: 1
 ---
 
@@ -17,11 +17,11 @@ This specification records the definitions, notation, and fundamental identities
 
 The algebraic construction is over the real numbers. The underlying space has a finite basis of vertices; forms are defined before a graph or metric is chosen.
 
-The main graph model is a finite connected undirected graph without loops, with $n\ge2$ vertices. Existing edges have positive conductances; absent couplings have zero conductance. Parallel conductors between the same pair of vertices are represented by their total conductance.
+The main graph model is a finite connected undirected graph without loops, with $n\ge2$ vertices. Existing edges have positive conductances; absent couplings have zero conductance. Parallel conductors between the same pair of vertices are represented by their total conductance. The balanced model and its differences are explicitly stated in [[Core specification#The balanced extension|the balanced extension section]].
 
 Connectedness is required for the resistance metric on the entire space of affine vectors and for normalization by the spanning-tree coefficient. The algebra of forms, the Laplacian exponential, and the forest expansion also apply to disconnected graphs. That case is specified separately.
 
-**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series; links follow the relevant sections. Working conjectures are not part of the core.
+**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series, and the balanced extension in [[Balanced Graphs]]; links follow the relevant sections. Working conjectures are not part of the core.
 
 ## The underlying space, points, and vectors
 
@@ -216,7 +216,7 @@ $$
 > **Definition.** The matrix and polyform representations of the Laplacian are
 >
 > $$
-> \mathbf L_{ii}=d_i,\qquad \mathbf L_{ij}=-c_{ij}\quad(i\ne j),\qquad
+> L_{ii}=d_i,\qquad L_{ij}=-c_{ij}\quad(i\ne j),\qquad
 > L=\sum_{i<j}c_{ij}[a_{ij}]^2
 > \tag{2}
 > $$
@@ -224,7 +224,7 @@ $$
 The polyform $L$ has grade $1$ and belongs to the subalgebra of forms on boundaries. Its coefficient matrix in the forms $[a_i,a_j]$ is $\mathbf L$:
 
 $$
-L=\sum_{i,j}\mathbf L_{ij}[a_i,a_j]
+L=\sum_{i,j}L_{ij}[a_i,a_j]
 $$
 
 The polyform product differs from matrix multiplication. In particular, $L^2$ and $\mathbf L^2$ are different objects.
@@ -257,7 +257,7 @@ $$
 
 $$
 u\cdot v=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v,\qquad
-R_{ij}=a_{ij}\cdot a_{ij}=\mathbf{Gr}_{ii}+\mathbf{Gr}_{jj}-2\mathbf{Gr}_{ij}
+R_{ij}=a_{ij}\cdot a_{ij}=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
 \tag{3}
 $$
 
@@ -266,10 +266,10 @@ This inner product is positive definite on $W$. In the electrical interpretation
 For the centroid $b=n^{-1}\sum_i a_i$, the identity $\mathbf{Gr}\mathbf1=0$ gives
 
 $$
-\mathbf{Gr}_{ij}=(b-a_i)\cdot(b-a_j)
+\mathrm{Gr}_{ij}=(b-a_i)\cdot(b-a_j)
 $$
 
-Thus the Green matrix is the Gram matrix of the vectors from the vertices to the centroid. The notation $\mathbf G=(g_{ij})$ is reserved for the Gram matrix of explicitly chosen elements, with $g_{ij}$ denoting their inner products. The expressions $\mathbf{Gr}$ and $\mathbf L^+$ denote the same object: the former names it, while the latter specifies how it is obtained.
+In the symmetric model, the Green matrix is the Gram matrix of the vectors from the vertices to the centroid. In a balanced graph, directional argument order gives the transposed matrix, as specified in the balanced extension. The notation $\mathbf G=(g_{ij})$ is reserved for the Gram matrix of explicitly chosen elements, with $g_{ij}$ denoting their inner products. The expressions $\mathbf{Gr}$ and $\mathbf L^+$ denote the same object: the former names it, while the latter specifies how it is obtained.
 
 For two vertex pairs,
 
@@ -293,7 +293,7 @@ $$
 \mathbf L=\left(-\frac12\mathbf J\mathbf R\mathbf J\right)^+
 $$
 
-The distance transformation and double centering are linear operations, distinct from pseudoinversion. An arbitrary squared Euclidean distance matrix need not be the resistance matrix of a graph with nonnegative conductances. The recovered $\mathbf L$ must satisfy the Laplacian conditions in (2).
+These reconstruction formulas use symmetry of the Green matrix. The distance transformation and double centering are linear operations, distinct from pseudoinversion. An arbitrary squared Euclidean distance matrix need not be the resistance matrix of a graph with nonnegative conductances. The recovered $\mathbf L$ must satisfy the Laplacian conditions in (2).
 
 **Proposition.** The vertices of a connected graph form a nondegenerate resistance simplex of dimension $n-1$, in which $R_{ij}$ is the squared Euclidean distance. Both $R_{ij}$ and $\sqrt{R_{ij}}$ define metrics on the vertices; the Euclidean length in this realization is $\sqrt{R_{ij}}$.
 
@@ -549,6 +549,137 @@ For vectors of distinct vertex pairs, (10)-(11) describe joint conductance varia
 
 Sources: [[Variation of a Single Edge]], [[Varying several couplings together]], and [[Laplacian Exponential#Algebraic variation and edge addition|algebraic variation]].
 
+## The balanced extension
+
+This section extends the graph model to finite loopless balanced digraphs with nonnegative arc weights. The algebra of forms and its product are unchanged: symmetry of the arguments was never assumed. Graph and metric statements in the other sections use the symmetric model unless an extension is explicitly stated. Proofs and examples are collected in [[Balanced Graphs]].
+
+### The Laplacian, balance, and rooted potentials
+
+Write $f_{ij}$ for the weight of arc $i\to j$. Use the outgoing Laplacian convention:
+
+$$
+L_{ii}=\sum_jf_{ij},\qquad L_{ij}=-f_{ij}\quad(i\ne j),\qquad
+\mathbf L\mathbf1=0
+$$
+
+**Definition.** A graph is balanced if $\sum_jf_{ij}=\sum_jf_{ji}$ at every vertex. Equivalently, $\mathbf1^{\mathsf T}\mathbf L=0$. PMG uses the Russian abbreviation **балграф**. An undirected graph corresponds to $f_{ij}=f_{ji}$ and is a special case.
+
+With $h=n^{-1}\sum_i a_i$ and $x_i=a_i-h$, the canonical centered representation is
+
+$$
+L=\sum_{i,j}L_{ij}[x_i,x_j]
+$$
+
+Because $\sum_i x_i=0$, arbitrary coefficients in this expression are not unique. The canonical choice fixes the centroid and the unique coefficient matrix with zero row and column sums. Balance places $L$ in the boundary-form subalgebra; the condition $f_{ij}\ge0$ is checked separately.
+
+**Definition.** The spanning-tree potential of vertex $i$ is $\tau_i=\det\mathbf L_{\widehat i,\widehat i}$. It is the sum of weights of spanning arborescences directed toward root $i$. For the outgoing Laplacian, $\mathbf L^{\mathsf T}\boldsymbol\tau=0$.
+
+A connected balanced graph with nonnegative weights is strongly connected, and all $\tau_i$ equal one positive spanning-tree coefficient $\tau$. This is the sum toward one fixed root; summing over all roots gives $n\tau$. Conversely, equality of all $\tau_i$ to one positive number implies balance. Equality of zero minors provides no such criterion.
+
+The exponential and its top component retain the form
+
+$$
+M=\exp L=\sum_{k=0}^{n-1}\frac{L^k}{k!},\qquad
+M_{n-1}=\tau T_n
+$$
+
+Sources: [[Balanced Graphs and Spanning-Tree Potentials]], [[The Bilinear Laplacian of a Balanced Graph]], and [[The Laplacian Exponential of a Balanced Graph]]. Throughout the rest of this section, the graph is connected.
+
+### Directional pairing and resistances
+
+The matrix $\mathbf{Gr}=\mathbf L^+$ inverts $\mathbf L$ on $H$; the identities $\mathbf L\mathbf{Gr}=\mathbf{Gr}\mathbf L=\mathbf J$ and zero row and column sums remain valid. Write $P_M(F)=\tau(MF)/\tau(M)$ for the normalized potential.
+
+**Definition.** For $u,v\in W$, use the source-receiver argument order:
+
+$$
+\boxed{\beta(u,v)=P_M([u,v])
+=u^{\mathrm{out}}\cdot v^{\mathrm{in}}
+=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u}
+$$
+
+Argument order matters. This is a bilinear pairing, generally nonsymmetric; the ordinary Euclidean inner product is its symmetric part
+
+$$
+g(u,v)=\frac{\beta(u,v)+\beta(v,u)}2,\qquad
+\gamma(u,v)=\frac{\beta(u,v)-\beta(v,u)}2
+$$
+
+The form $g$ is positive definite on $W$. The formal circulation $\omega(u,v)=[u,v]-[v,u]$ has PMG grade one. For three points, $w(abc)=\omega(b-a,c-a)$, and its numerical evaluation is $\chi_{abc}=P_M(w(abc))=2\gamma(b-a,c-a)$. Distinguish the form from its potential.
+
+**Definition.** One-way resistance is defined algebraically:
+
+$$
+\boxed{r_{ij}=P_M([a_j-h,a_j-a_i])
+=\mathrm{Gr}_{jj}-\mathrm{Gr}_{ij}},\qquad
+R_{ij}=r_{ij}+r_{ji}
+$$
+
+It is defined whether or not the arc exists and can be asymmetric even in an undirected graph. The notation $r_{ij}$ is not used for the resistance $1/c_{ij}$ of an individual edge. In the continuous-time Markov model with generator $-\mathbf L$, the quantity $nr_{ij}$ is interpreted as the mean hitting time; this interpretation is not part of the resistance definition.
+
+The matrix $\mathbf r=(r_{ij})$ determines the entire Laplacian:
+
+$$
+\mathbf{Gr}=-\mathbf J\mathbf r,\qquad
+\mathbf L=\mathbf{Gr}^{+}
+$$
+
+The symmetric matrix $\mathbf R=(R_{ij})$ determines only the symmetric part of the Green matrix:
+
+$$
+-\frac12\mathbf J\mathbf R\mathbf J
+=\frac{\mathbf{Gr}+\mathbf{Gr}^{\mathsf T}}2
+$$
+
+Thus $\mathbf R$ alone generally cannot reconstruct the original balanced graph. Directional data are needed for the full pairing. Sources: [[One-Way Resistance and Hitting Times]], [[The Circulation Form]], and [[Resistance Geometry and Circulation]].
+
+### Higher grades and geometric interpretation
+
+For decomposable exterior elements, the normalized potential is determined by the full bilinear pairing:
+
+$$
+P_M([u_1\cdots u_k,v_1\cdots v_k])
+=\det\bigl(\beta(u_r,v_s)\bigr)_{r,s=1}^k
+$$
+
+Extend the rule to linear combinations by bilinearity. It cannot be replaced by a determinant using only the symmetric part $g$. For example, if $A_{abc}$ is the triangle's area in the Euclidean metric $g$, then
+
+$$
+P_M([(abc)]^2)=4A_{abc}^2+\frac{\chi_{abc}^2}{4}
+$$
+
+Identifying the potential of a quadratic boundary form with a squared Euclidean volume therefore requires the symmetric case or a separate check. The definition of a form norm as its normalized potential is retained. The determinant rule and the three-vertex identity are proved in the [[Resistance Geometry and Circulation#Three-vertex resistance|three-vertex resistance section]].
+
+### The Gram matrix, coordinates, and isotropic extension
+
+With the chosen role order, $\beta(x_i,x_j)=\mathrm{Gr}_{ji}$, so the Gram matrix of centered vectors is $\mathbf{Gr}^{\mathsf T}$. For canonical local vertices, the conditions $a_i^2=0$ and $a_i\cdot h=h\cdot a_i$ give
+
+$$
+g_{ij}=a_i^{\mathrm{out}}\cdot a_j^{\mathrm{in}}
+=\mathrm{Gr}_{ji}-\frac{q_i+q_j}{2},\qquad
+q_i=\mathrm{Gr}_{ii}
+$$
+
+Consequently, $\mathbf G=-\mathbf R/2$ holds in the symmetric case; a general balanced graph satisfies $(\mathbf G+\mathbf G^{\mathsf T})/2=-\mathbf R/2$. The centroid condition fixes the freedom in extending the pairing from differences to vertices.
+
+Bi-coordinates remain the expansion coefficients of a specified representative in the basis of its own role. Di-coordinates pair it with the basis of the opposite role:
+
+$$
+\mathbf d_{\mathrm{out}}=\mathbf G^{\mathsf T}\mathbf b_{\mathrm{out}},\qquad
+\mathbf d_{\mathrm{in}}=\mathbf G\mathbf b_{\mathrm{in}}
+$$
+
+The two roles do not give two different expansions of a fixed linear representative. Different coordinate sets can represent one functional by pairing from different sides. This is how the two metric representatives of the sphere arise.
+
+The unit border $\mathbf G_z=\left(\begin{smallmatrix}\mathbf G&\mathbf1\\\mathbf1^{\mathsf T}&0\end{smallmatrix}\right)$ is retained. The vertex block of its inverse is $\mathbf L^{\mathsf T}$, and the corner entry defines the single resistance radius
+
+$$
+\rho=(\mathbf G_z^{-1})_{n+1,n+1}>0
+$$
+
+This algebraic definition retains PMG's quadratic normalization. Only in the symmetric case does it automatically equal the squared Euclidean circumradius; for a balanced graph, the radius of the Euclidean realization of $g$ may differ. Sources: [[The Gram Matrix and Directional Coordinates of a Balanced Graph]] and [[The Isotropic Space and Sphere of a Balanced Graph]].
+
+The rooted potential $\tau_i$, form potential $u_M(F)$, and electrical potential $\varphi_i$ are different quantities. Their relation after adding one arc and the distinction between two Dirichlet problems are stated in [[Balanced Variations#One-way variation and loss of balance|one-way variation]] and the [[Selected Vertices and the Dirichlet Problem#Two Dirichlet problems in a balanced graph|balanced-graph extension]]. An electrical model of a nonsymmetric Laplacian requires nonreciprocal elements or controlled sources; it is not a network of ordinary resistors.
+
 ## Limitations and extensions
 
 ### Disconnected graphs
@@ -577,10 +708,10 @@ Algebraic polynomial identities may remain valid for real coupling coefficients 
 
 ### Thematic extensions
 
-The following constructions are outside this revision of the core and require separate definitions and applicability conditions:
+A full treatment of the following thematic extensions requires separate definitions and applicability conditions; this specification records only the explicitly stated conventions:
 
 - the isotropic extension, the distinguished null vector, and bi-coordinates and di-coordinates;
-- directed graphs and the KVP/KVPOU structural decompositions;
+- general unbalanced digraphs and the KVP/KVPOU structural decompositions;
 - dual polyforms, cut forms, and the function $\operatorname{dex}$;
 - structural identities of partition forms, symmetric polyforms, and their combinatorial coefficients;
 - partition toponomes, the second-kind algebra, and further component evaluations;
@@ -589,7 +720,7 @@ The following constructions are outside this revision of the core and require se
 
 Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]].
 
-Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. The scope of the required core is unchanged.
+Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. Thematic definitions do not remove the applicability conditions of the base model or the explicitly stated balanced extension.
 
 In this specification, a boundary is an image of $\partial$, equivalently an element of $\Lambda^kW$. A selected vertex set in a Dirichlet problem is not a boundary in this algebraic sense. When using the standard expression “boundary vertices”, the two notions must be explicitly distinguished.
 
@@ -620,9 +751,16 @@ In this specification, a boundary is an image of $\partial$, equivalently an ele
 | $T_n$ | Fixed spanning-tree form of grade $n-1$ |
 | $\tau(P)$ | Coefficient of $T_n$ in a polyform on boundaries |
 | $\tau(G)=\tau(M_G)$ | Spanning-tree coefficient of the graph |
-| $u_M(f)$ | Potential of a form in the fixed metric |
+| $u_M(f)$, $P_M(f)$ | Form potential and its normalized value $P_M(f)=\tau(Mf)/\tau(M)$ |
+| $f_{ij}$, $\tau_i$ | Directed arc weight and rooted spanning-tree potential |
+| $h$, $x_i=a_i-h$ | Centroid and centered vectors in the balanced extension |
+| $\beta(u,v)$, $g(u,v)$, $\gamma(u,v)$ | Directional pairing and its symmetric and skew-symmetric parts |
+| $\omega(u,v)$, $w(abc)$, $\chi_{abc}$ | Circulation form, triangular notation, and normalized potential |
+| $r_{ij}$, $\mathbf r$ | One-way resistances and their matrix; individual edge resistance is written as $1/c_{ij}$ |
+| $\mathrm{out}$, $\mathrm{in}$ | Source and receiver roles |
+| $\rho$, $D_{\mathrm{res}}=4\rho$ | Quadratic resistance radius and diameter |
 
-When matrix and polyform representations occur together, bold type denotes a matrix. Notes in which the representation is unambiguous may use ordinary letters $L,G,R$. Equation numbering is local to this specification.
+When matrix and polyform representations occur together, bold type denotes a matrix. Notes in which the representation is unambiguous may use ordinary letters $L,G,R$. Scalar matrix entries use ordinary type: $L_{ij}$, $\mathrm{Gr}_{ij}$; submatrices remain bold. Equation numbering is local to this specification.
 
 ### Collections in combinatorial formulas
 
@@ -660,10 +798,13 @@ The table $\mathcal A_{\mathcal E}=(a_{k,r})$ groups coefficients of types with 
 
 ## Sources and revision history
 
+The balanced extension is based on the published [[Balanced Graphs]] series. Links after its subsections lead to definitions and proofs, including applicability conditions.
+
 The ten notes of the [[PMG Introductory Series|introductory series]] provide the supporting material. External references and their correspondence to individual notes are listed in [[Further Reading for the PMG Introductory Series|further reading]]. This specification records the conventions of the published corpus; subsequent substantive changes require corresponding updates to related definitions and terminology.
 
 | Revision | Date | Content |
 |---|---|---|
+| 9 | 2026-10-25 | Added the balanced extension: rooted potentials, directional pairing, one-way resistance and circulation, higher grades, Gram matrix, and radius. Specified the scope of symmetric formulas and reconstruction from the one-way resistance matrix. Aligned scalar matrix entries and terminology with Russian revision 9. |
 | 8 | 2026-10-22 | Recorded notation for positive and empty types, the distinction between multiplicity and product powers, and the dependence of a toponome on its chosen expression. Specified the scope of $*$ and information loss in coefficient tables. Added links to the completed toponome series; the mathematical statements of the required core are unchanged. Aligned with Russian core specification revision 8. |
 | 7 | 2026-10-20 | Recorded numerical-collection size and weight, collection products, and products of element factorials. Distinguished block-size types, SPF types, and representation size; added links to the structural, symmetric, and combinatorial series. Aligned exterior-product notation. The scope and mathematical statements of the core are unchanged. Aligned with Russian core specification revision 7. |
 | 5 | 2026-10-16 | Aligned notation: Green matrix $\mathbf{Gr}=\mathbf L^+$, Gram matrix $\mathbf G$ with entries $g_{ij}$, extended Gram matrix $\mathbf G_z$, and bi-coordinate matrix $\mathbf B$. Clarified the geometric meaning of the Green matrix. |

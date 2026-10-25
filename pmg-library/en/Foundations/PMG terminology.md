@@ -1,13 +1,13 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-22
-revision: 9
+updated: 2026-10-25
+revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: objects, forms, metrics, collections, partitions, symmetric polyforms, combinatorial potentials, and partition toponomes; Russian equivalents."
+description: "Terminology of the PMG core and published series: objects, forms, metrics, collections, partitions, symmetric polyforms, combinatorial potentials, partition toponomes, and balanced metrics; Russian equivalents."
 order: 2
 ---
 
@@ -15,7 +15,7 @@ This glossary records the terminology of the [[Core specification|core specifica
 
 ## Scope and terminology status
 
-The main model is a finite connected undirected graph without loops, with positive conductances on existing edges. The algebraic definitions do not require a graph. The disconnected case is addressed in the specification.
+The main model is a finite connected undirected graph without loops, with positive conductances on existing edges. The algebraic definitions do not require a graph. The disconnected case is addressed in the specification. Terms for the balanced model appear in [[PMG terminology#Balanced graphs and directional metrics|Balanced graphs and directional metrics]]; symmetric formulas do not automatically extend to that model.
 
 The tables use three status labels:
 
@@ -88,7 +88,7 @@ The merging and vanishing rules apply to simplex boundaries on basis vertices. F
 | Quadratic form | Квадратичная форма | Qualified | The formal object $[X]^2=[X,X]$. Its numerical evaluation is defined separately. |
 | Transpose of a form | Транспонирование формы | Qualified | The operation $[X,Y]^{\mathsf T}=[Y,X]$, extended linearly. |
 | Polar form | Полярная форма | Qualified | The unnormalized sum $\{X,Y\}=[X,Y]+[Y,X]$. The definition includes no factor of $1/2$. |
-| Skew-symmetric form | Антисимметричная форма | Qualified | A form $F$ satisfying $F^{\mathsf T}=-F$. Its evaluation under a symmetric metric is zero. |
+| Skew-symmetric form | Антисимметричная форма | Qualified | A form $F$ satisfying $F^{\mathsf T}=-F$. Its evaluation under a symmetric metric is zero. A directional evaluation for a balanced graph can be nonzero. |
 | Polyform in PMG | Полиформа | PMG | A finite linear combination of forms, possibly of different grades. After definition, “polyform” may be used. |
 | Homogeneous polyform | Однородная полиформа | Qualified | A polyform of one grade. |
 | Grade component | Грейд-компонента | Qualified | A homogeneous component $P_k$ of a specified polyform. “Грейд-полиформа” is an acceptable Russian synonym. |
@@ -163,18 +163,18 @@ For a graph toponome, the expansion of the factors of the Laplacian exponential 
 | Edge conductance | Проводимость ребра | Standard | The electrical interpretation of a positive coefficient $c_{ij}$. “Conductivity” is not used here. |
 | Edge weight | Вес ребра | Standard | A general name for a numerical edge parameter. In this model the weight represents conductance, not length. |
 | Weighted degree | Взвешенная степень вершины | Standard | The sum $d_i=\sum_jc_{ij}$. |
-| Edge resistance | Собственное сопротивление ребра | Standard | The quantity $r_{ij}=1/c_{ij}$ for an existing edge. It may differ from the effective resistance of the same pair. |
-| Graph Laplacian matrix | Матрица лапласиана | Standard | The matrix $\mathbf L$ with diagonal entries $d_i$ and off-diagonal entries $-c_{ij}$. |
-| Laplacian polyform | Полиформа лапласиана | PMG | The grade-$1$ form $L=\sum_{i<j}c_{ij}[a_{ij}]^2$. |
+| Edge resistance | Собственное сопротивление ребра | Standard | The quantity $1/c_{ij}$ for an existing edge. It may differ from the resistance of the same pair. The notation $r_{ij}$ is reserved for one-way resistance. |
+| Graph Laplacian matrix | Матрица лапласиана | Standard | In the symmetric model, $\mathbf L$ has diagonal entries $d_i$ and off-diagonal entries $-c_{ij}$. A digraph uses the outgoing convention $L_{ii}=\sum_jf_{ij}$, $L_{ij}=-f_{ij}$ for $i\ne j$. |
+| Laplacian polyform | Полиформа лапласиана | PMG | The grade-one form with the Laplacian matrix as its coefficients. For an undirected graph, $L=\sum_{i<j}c_{ij}[a_{ij}]^2$; a balanced graph admits a nonsymmetric bilinear representation on boundaries. |
 | Reduced Laplacian | Редуцированный лапласиан | Standard | The matrix obtained by deleting the row and column of the same vertex from $\mathbf L$. |
-| Green matrix | Матрица Грина | Qualified | The matrix $\mathbf{Gr}=\mathbf L^+$. For a connected graph, it inverts the Laplacian on the zero-sum subspace and vanishes on constant columns. It is the Gram matrix of vectors from the vertices to the centroid: $\mathbf{Gr}_{ij}=(b-a_i)\cdot(b-a_j)$, where $b=n^{-1}\sum_i a_i$. |
-| Resistance matrix | Резистивная матрица | Standard | The matrix $\mathbf R=(R_{ij})$ of pairwise effective resistances. |
-| Distance operator | Дистанционный оператор | Qualified | The linear operator $\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}$. Applied to a Gram matrix, it gives squared distances. |
+| Green matrix | Матрица Грина | Qualified | $\mathbf{Gr}=\mathbf L^+$. For a connected balanced graph, it inverts the Laplacian on the zero-sum subspace and vanishes on constant columns. With source-receiver pairing, the Gram matrix of centered vectors is $\mathbf{Gr}^{\mathsf T}$; in the symmetric case this equals $\mathbf{Gr}$. |
+| Resistance matrix | Резистивная матрица | Qualified | The symmetric matrix $\mathbf R=(R_{ij})$ of pair resistances. For a balanced graph, $R_{ij}=r_{ij}+r_{ji}$; distinguish it from the one-way resistance matrix $\mathbf r$. |
+| Distance operator | Дистанционный оператор | Qualified | The linear operator $\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}$ on symmetric matrices. Applied to a symmetric Gram matrix, it gives squared distances. A nonsymmetric Gram matrix uses $A_{ij}+A_{ji}$ instead of $2A_{ij}$. |
 | Centering matrix; centering projector | Центрирующий проектор | Standard | The matrix $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$. |
 | Centroid | Центроид | Standard | The equal-weight mean of the points: $n^{-1}\sum_i a_i$. |
 | Centering | Центрирование | Standard | Choosing the centroid as the origin in a Euclidean realization, so position vectors sum to zero. This introduces no new linear relation between formal basis vertices. |
 
-When representations occur together, the polyform retains an ordinary letter and the matrix is bold: $L$ and $\mathbf L$. Where the matrix representation is unambiguous, the introductory notes may use ordinary letters $L,G,R$.
+When representations occur together, the polyform retains an ordinary letter and the matrix is bold: $L$ and $\mathbf L$. Scalar matrix entries are not bold: $L_{ij}$, $\mathrm{Gr}_{ij}$. Where the matrix representation is unambiguous, the introductory notes may use ordinary letters $L,G,R$.
 
 ## Resistance geometry and metric evaluation
 
@@ -182,19 +182,19 @@ When representations occur together, the polyform retains an ordinary letter and
 |---|---|---|---|
 | Effective resistance | Эффективное сопротивление | Standard | The quantity $R_{ij}$ determined by the entire network and the vertex pair. In the resistance realization it is the squared Euclidean distance. |
 | Resistance distance | Резистивное расстояние | Standard | Effective resistance $R_{ij}$ viewed as a metric on vertices. It does not mean $\sqrt{R_{ij}}$. |
-| Resistance inner product | Резистивная метрика на векторах | Qualified | The inner product $u\cdot v=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v$ on $W$. Unlike the preceding entry, this refers to a bilinear metric. |
+| Resistance inner product | Резистивная метрика на векторах | Qualified | In the symmetric model, the inner product $u\cdot v=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v$ on $W$. The balanced extension distinguishes the full pairing $\beta$ from its symmetric part $g$. |
 | Resistance simplex | Резистивный симплекс | Qualified | A Euclidean simplex whose squared pairwise distances are $R_{ij}$. Its dimension in the main model is $n-1$. |
-| Gram matrix | Матрица Грама; грамиан | Standard | The matrix $\mathbf G=(g_{ij})$ of pairwise inner products of selected elements: $g_{ij}=a_i\cdot a_j$. With several sets, specify arguments or meaningful subscripts. For local vertices, $\mathbf G=-\mathbf R/2$. |
+| Gram matrix | Матрица Грама; грамиан | Qualified | The matrix $\mathbf G=(g_{ij})$ of pairings of selected elements: $g_{ij}=a_i\cdot a_j$. The balanced model uses role order $a_i^{\mathrm{out}}\cdot a_j^{\mathrm{in}}$. For local vertices, $\mathbf G=-\mathbf R/2$ in the symmetric case; in general, $(\mathbf G+\mathbf G^{\mathsf T})/2=-\mathbf R/2$. |
 | Mixed Gram determinant | Смешанный определитель Грама | Standard | The determinant of $(u_r\cdot v_s)$ for two ordered collections of equal size. |
 | Induced inner product | Индуцированное скалярное произведение | Standard | The extension of the metric to $\Lambda^kW$ through mixed Gram determinants and bilinearity. |
-| Norm of an exterior element; quadratic norm | Норма внешнего объекта; квадратичная норма | PMG | The number $X^2=X\cdot X$. In the resistance metric it is also called the resistance norm. For a decomposable boundary object, it is the squared volume of a parallelotope. |
+| Norm of an exterior element; quadratic norm | Норма внешнего объекта; квадратичная норма | PMG | The number $X^2=X\cdot X$. In the resistance metric it is also called the resistance norm. For a decomposable boundary object in a symmetric metric, it is the squared volume of a parallelotope; in the balanced model the full potential may contain a circulation contribution. |
 | Linear norm | Линейная норма | PMG | The quantity $\|X\|=\sqrt{X^2}$ for $X^2\ge0$. On a positive definite space, it agrees with the usual Euclidean norm. |
 | Metric evaluation of a form | Численная метрическая оценка формы | PMG | The linear evaluation $[X,Y]\mapsto X\cdot Y$ on forms on boundaries of a fixed grade. |
 
 > [!info] Object, form, and number
 > The notations $X$, $[X]^2$, and $X^2$ are distinct: they denote an exterior object, a formal quadratic form, and a numerical norm, respectively. The exterior product of an object with itself is written explicitly as $X\wedge X$.
 
-The norm of a simplex boundary is the squared volume of a parallelotope, while its linear norm is the volume itself. The squared volume of the $k$-dimensional simplex is the norm of its boundary divided by $(k!)^2$. The metric on boundaries does not automatically define the norm of a formal point or simplex outside $\Lambda^kW$.
+In a symmetric metric, the norm of a simplex boundary is the squared volume of a parallelotope, while its linear norm is the volume itself. The squared volume of the $k$-dimensional simplex is the norm of its boundary divided by $(k!)^2$. The metric on boundaries does not automatically define the norm of a formal point or simplex outside $\Lambda^kW$.
 
 ## Metric polyforms, forests, and the spanning-tree coefficient
 
@@ -226,16 +226,47 @@ The sum of forest weights refers to a specified forest expansion. Because forms 
 |---|---|---|---|
 | Electrical potential | Электрический потенциал вершины | Standard | The value $\varphi_i$ in a solution of the network equations for specified input, subject to the freedom to choose a reference potential. |
 | Polyform potential | Потенциал формы | PMG | The quantity $u_M(f)=\tau(Mf)$ for fixed $M$. It is not the electrical potential at a vertex. |
-| Normalized polyform potential | Нормированный потенциал | PMG | The ratio $u_M(f)/u_M(e)=\tau(Mf)/\tau(M)$ when $\tau(M)\ne0$. |
+| Normalized polyform potential | Нормированный потенциал | PMG | $P_M(f)=u_M(f)/u_M(e)=\tau(Mf)/\tau(M)$ when $\tau(M)\ne0$. The same definition applies in the symmetric and balanced models. |
 | PMG form norm | Норма формы в PMG | PMG | An acceptable name for the normalized potential. For a general form this is a linear evaluation, not a norm in the usual sense. |
-| Metric identity | Метрическое тождество | PMG | The equality between the normalized potential of $[X,Y]$ and the induced inner product $X\cdot Y$. |
+| Metric identity | Метрическое тождество | PMG | In the symmetric model, the normalized potential of $[X,Y]$ equals the induced inner product $X\cdot Y$. The balanced model uses the full pairing $\beta$ and its determinant extension, rather than only the symmetric part $g$. |
 | Conductance variation | Вариация проводимости | Standard | A change $c_{ij}\mapsto c_{ij}+t$. The main graph model requires nonnegative final conductance. |
-| Algebraic Laplacian variation | Алгебраическая вариация лапласиана | PMG | An update $t[v]^2$ for arbitrary $v\in W$. In general it changes several pair coefficients. |
+| Algebraic Laplacian variation | Алгебраическая вариация лапласиана | PMG | In the symmetric model, an elementary update $t[v]^2$ with $v\in W$; in the balanced model, $t[u,v]$ with $u,v\in W$. It generally changes several couplings; weight admissibility is checked separately. |
 | Joint conductance variation | Совместная вариация связей | Qualified | Simultaneous changes in conductances of several vertex pairs; their interaction is determined by the Gram matrix of the corresponding vectors. |
 
-For a quadratic form $[X]^2$, the normalized potential is $\|X\|^2$, not $\|X\|$. For a mixed form it can be negative even when the metric is positive definite. This does not mean that the exterior object has a negative norm.
+In the symmetric resistance model, for a quadratic form $[X]^2$ the normalized potential is $\|X\|^2$, not $\|X\|$. For a mixed form it can be negative even when the metric is positive definite. This does not mean that the exterior object has a negative norm.
 
 In PMG, “norm” without the qualifier “linear” means the quadratic norm $X^2=X\cdot X$. The notation $\|X\|$ is reserved for the linear norm. The norm of a form is defined through the normalized potential; the evaluation of a product of forms generally differs from the product of their evaluations.
+
+## Balanced graphs and directional metrics
+
+This section concerns loopless balanced digraphs with nonnegative arc weights. Connectedness is assumed when potentials are normalized and a metric is used. Conventions are collected in the [[Core specification#The balanced extension|balanced extension of the specification]]; proofs are in [[Balanced Graphs]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+| --- | --- | --- | --- |
+| Balanced digraph; balanced graph | Балансовый граф; балграф | Standard; PMG abbreviation | A weighted digraph whose incoming and outgoing weight sums agree at every vertex. Its outgoing Laplacian satisfies $\mathbf L\mathbf1=0$ and $\mathbf1^{\mathsf T}\mathbf L=0$. |
+| 2-balanced graph | 2-балграф | PMG | An optional name for a symmetric graph as a sum of weighted directed 2-cycles. The existence of this decomposition does not mean that every decomposition uses only 2-cycles. |
+| Arc weight | Вес дуги | Standard | $f_{ij}\ge0$ for arc $i\to j$; $L_{ij}=-f_{ij}$ for $i\ne j$. It is not the directional pairing of the vertices. |
+| Spanning in-arborescence | Остовное ордерево к корню | Standard | A directed spanning tree in which every nonroot vertex has exactly one outgoing arc and its directed path leads to the root. |
+| Rooted spanning-tree potential | Остовной потенциал вершины | Qualified | $\tau_i=\det\mathbf L_{\widehat i,\widehat i}$, the sum of weights of arborescences toward root $i$. Its column satisfies $\mathbf L^{\mathsf T}\boldsymbol\tau=0$. Distinct from electrical potential $\varphi_i$. |
+| Common spanning-tree coefficient | Общий остовной коэффициент балграфа | Qualified | The common value $\tau_i=\tau>0$ in a connected balanced graph. One fixed root is counted; the sum over all roots is $n\tau$. [[Balanced Graphs and Spanning-Tree Potentials]]. |
+| Canonical centered representation | Каноническое центрированное представление | PMG | $L=\sum_{i,j}L_{ij}[a_i-h,a_j-h]$ with centroid $h$. The coefficient matrix is normalized by zero row and column sums. It is not a canonical cycle decomposition. [[The Bilinear Laplacian of a Balanced Graph]]. |
+| Directional pairing; bilinear pairing | Направленное сопряжение; направленное скалярное произведение | Qualified | $\beta(u,v)=P_M([u,v])=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u$. The first argument is a source, $\mathrm{out}$; the second a receiver, $\mathrm{in}$. In general it is not a symmetric inner product. |
+| Symmetric part of the metric | Симметричная часть метрики | Qualified | $g(u,v)=(\beta(u,v)+\beta(v,u))/2$. Positive definite on $W$, it gives Euclidean distances with squares $R_{ij}$. It does not determine the entire bilinear metric. |
+| Circulation form | Форма циркуляции | PMG | $\omega(u,v)=[u,v]-[v,u]$ for affine vectors. A skew-symmetric formal form of PMG grade one. It can be considered without a graph. [[The Circulation Form]]. |
+| Triangular circulation form | Треугольная форма циркуляции | PMG | $w(abc)=\omega(b-a,c-a)$. In the adopted orientation, $w(abc)=L_{acb}-L_{abc}$ for unit directed cycles. It is their difference, not a full cycle Laplacian. |
+| Circulation potential; circulation norm | Циркуляционный потенциал; циркуляционная норма | PMG | $\chi_{ijk}=P_M(w(a_i a_j a_k))$. The difference of one-way resistance sums along the two orientations. It can have either sign; norm means the normalized form potential. |
+| One-way resistance | Односторонний резистенс | PMG | $r_{ij}=P_M([a_j-h,a_j-a_i])=\mathrm{Gr}_{jj}-\mathrm{Gr}_{ij}$. Defined for every pair, it can be asymmetric even in an undirected graph. [[One-Way Resistance and Hitting Times]]. |
+| Two-way resistance | Двусторонний резистенс | Qualified | $R_{ij}=r_{ij}+r_{ji}$. It agrees with undirected resistance in the symmetric case. |
+| One-way resistance matrix | Матрица односторонних резистенсов | PMG | $\mathbf r=(r_{ij})$. It determines $\mathbf{Gr}=-\mathbf J\mathbf r$ and the original $\mathbf L=\mathbf{Gr}^{+}$. The symmetric $\mathbf R=\mathbf r+\mathbf r^{\mathsf T}$ is generally insufficient. |
+| Mean hitting-time matrix | Матрица средних времён достижения | Standard | $\mathbf H=(H_{ij})$ in the chosen Markov model. For the continuous-time walk with generator $-\mathbf L$ on a connected balanced graph, $H_{ij}=nr_{ij}$. This interprets resistances; changing the process normalization changes the formula. |
+| Outgoing and incoming bi-coordinates | Исходящие и входящие би-координаты | PMG | Expansion coefficients of a specified representative in the $\mathrm{out}$ or $\mathrm{in}$ role basis. Each expansion is unique. Two representatives of one functional may have different coordinates. |
+| Outgoing and incoming di-coordinates | Исходящие и входящие ди-координаты | PMG | Pairings with the opposite-role basis: $\mathbf d_{\mathrm{out}}=\mathbf G^{\mathsf T}\mathbf b_{\mathrm{out}}$, $\mathbf d_{\mathrm{in}}=\mathbf G\mathbf b_{\mathrm{in}}$. [[The Gram Matrix and Directional Coordinates of a Balanced Graph]]. |
+| Directional projections | Направленные проекции | PMG | Projections imposing orthogonality in the first or second argument of $\beta$. On line $ab$, their coefficients of $b$ are $\beta(a_i-a,b-a)/R_{ab}$ and $\beta(b-a,a_i-a)/R_{ab}$. [[Balanced Variations#One-way variation and loss of balance]]. |
+| Metric representatives of the sphere | Метрические представители сферы | PMG | $S_{\mathrm{out}}$ and $S_{\mathrm{in}}$ represent one functional by pairing from different sides. Their bi-coordinates may differ, but $S_{\mathrm{out}}\cdot S_{\mathrm{in}}=\rho$. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
+| Balanced variation | Балансовая вариация | Qualified | A Laplacian update with zero row and column sums; nonnegative final weights are checked separately. Its elementary form is $t[u,v]$ with $u,v\in W$. [[Balanced Variations]]. |
+| Single-arc variation | Односторонняя вариация дуги | Qualified | A weight change for one arc $a\to b$, $\Delta\mathbf L=t\mathbf e_a(\mathbf e_a-\mathbf e_b)^{\mathsf T}$. For $a\ne b$ and $t\ne0$, it breaks the original balanced graph's balance. |
+
+Indices $i\to j$ in $r_{ij}$ specify the direction of a pair, whereas $\mathrm{out}/\mathrm{in}$ specify argument roles in the pairing; these are different conventions. The normalized potential $P_M(F)=\tau(MF)/\tau(M)$ is the common algebraic basis of resistance and circulation quantities. Rooted potentials $\tau_i$ and electrical potentials $\varphi_i$ are defined separately.
 
 ## Earlier names and ambiguous usages
 
@@ -255,7 +286,7 @@ The following table also records earlier Russian usage, so that older research n
 | “Squared norm” for $X\cdot X$ | Norm or quadratic norm; also resistance norm in the resistance metric | In PMG, the norm is $X\cdot X$ itself; its square root for nonnegative norm is the linear norm. The formal form $[X]^2$ differs from its numerical evaluation. |
 | “Potential of an object” | “Potential of the form $f$” or “combinatorial potential of the collection $\mathbf x$”, as appropriate | For $u_M(f)$, specify the form and metric; for $s_2(\mathbf x)$ or $e_n(\mathbf x)$, specify the collection and counted partitions. |
 | “Independent components” in a product of boundaries | Product of component boundaries | Separate factors do not by themselves imply metric orthogonality or statistical independence. |
-| “Form commutator” | Skew-symmetric difference $[X,Y]-[Y,X]$ | The historical PMG name differs from the operator commutator $AB-BA$. The core requires no special name for this difference. |
+| “Form commutator” | Skew-symmetric difference $[X,Y]-[Y,X]$; for affine vectors, the circulation form $\omega(u,v)$ | The historical PMG name differs from the operator commutator $AB-BA$. The adopted circulation normalization contains no factor $1/2$. |
 
 ## Terminology of extensions
 
@@ -273,16 +304,16 @@ The following definitions are used in the published series “Spaces and Subspac
 | Local element; local point | Локальный элемент; локальная точка | An element of unit affine weight and zero norm: $x\cdot z=1$, $x^2=0$. It represents a point in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
 | Nonlocal element of unit weight | Нелокальный элемент единичного веса | An element $p$ with $p\cdot z=1$ and $p^2\ne0$. A PMG term in the isotropic model. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
 | Local center | Локальный центр | The point $\pi(p)=p-p^2z/2$ for $p\cdot z=1$. Selecting the center is a nonlinear correction along $z$. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
-| Sphere element | Элемент сферы | A normalized element $S=h+\rho z/2$; for $\rho>0$, the local points on the sphere satisfy $x\cdot S=0$, its local center is $h$, and its norm is $S^2=\rho$. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. |
+| Sphere element | Элемент сферы | In the symmetric isotropic space, $S=h+\rho z/2$, where $h$ here is the local center; $x\cdot S=0$ specifies local points on the sphere and $S^2=\rho$. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. In a balanced graph, one sphere functional has two metric representatives. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
 | Distinguished null vector | Выделенный нуль-вектор | A nonzero element $z$ with $z^2=0$ that specifies the normalization of local points. It is not the zero element of the space. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Isotropic element | Изотропный элемент | A nonzero linear element $u$ with zero norm $u\cdot u=0$, regardless of affine weight. Local elements are isotropic; the null vector $z$ is isotropic but not local, since its weight is $0$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Metric square | Метрический квадрат | A previous explanatory name for the norm $Y^2=Y\cdot Y$. The current text uses “norm”. It may be negative in an indefinite metric and differs from the form $[Y]^2$. |
 | Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension]]. |
 | Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#The linear midpoint and its local center]]. |
-| Resistance radius | Резистивный радиус | The squared linear circumradius of the basis: $\rho=R_{\mathrm{sph}}^2$. A PMG definition. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
-| Resistance diameter | Резистивный диаметр | $D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2$. The squared linear diameter of the circumsphere; generally different from the maximum pairwise effective resistance. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
-| Influence matrix | Матрица влияния | The matrix $\mathbf B$ extending values from selected to internal vertices. Its rows give the bi-coordinates of the projections of internal vertices. [[Selected Vertices and the Dirichlet Problem]]. |
-| Fundamental matrix | Фундаментальная матрица | $\mathbf{Fm}=\mathbf A^{-1}$, where $\mathbf A$ is the internal Laplacian block. For a connected graph, it is also the Gram matrix of residual vectors; for a disconnected graph, the metric statement applies component by component. Invertibility requires every component to contain a selected vertex. [[Selected Vertices and the Dirichlet Problem]]. |
+| Resistance radius | Резистивный радиус | PMG definition through the inverse isotropic Gram matrix: $\rho=(\mathbf G_z^{-1})_{n+1,n+1}$. In the symmetric case, $\rho=R_{\mathrm{sph}}^2$ is the squared Euclidean circumradius. In a balanced graph it can differ from the squared radius of the Euclidean realization of the symmetric metric part. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
+| Resistance diameter | Резистивный диаметр | $D_{\mathrm{res}}=4\rho$. In the symmetric case it is the squared linear diameter of the circumsphere. The balanced model retains the algebraic normalization through $\rho$; generally different from the maximum pairwise resistance. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
+| Influence matrix | Матрица влияния | The matrix $\mathbf B$ of coefficients extending values from selected to internal vertices. Its rows give the bi-coordinates of projections. For a balanced graph, specify whether $\mathbf L$ or $\mathbf L^{\mathsf T}$ is used. [[Selected Vertices and the Dirichlet Problem]]. |
+| Fundamental matrix | Фундаментальная матрица | $\mathbf{Fm}=\mathbf A^{-1}$, where $\mathbf A$ is the internal Laplacian block. For a connected undirected graph, it is also the Gram matrix of residual vectors; for a disconnected graph, the metric statement applies component by component. Invertibility requires every component to contain a selected vertex. [[Selected Vertices and the Dirichlet Problem]]. |
 | Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed values at selected vertices to the response after solving the internal equations. It equals the Laplacian of the induced graph. [[Vertex Elimination and Induced Couplings]]. |
 | Common spanning-tree parameter of the two parts | Общий остовной параметр двух долей | The locally introduced normalization $J(G)$ of the spanning-tree coefficient of a bipartite graph. It can be computed through either part while retaining its original degrees. [[Couplings Within One Part of a Bipartite Graph]]. |
 
@@ -302,6 +333,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 10 | 2026-10-25 | Added balanced graphs, rooted potentials, directional pairing, resistances, circulation, coordinates, and sphere representatives. Reserved $r_{ij}$ for one-way resistance; clarified symmetric formulas, Gram matrices, higher-grade norms, and radius. Aligned with Russian glossary revision 10. |
 | 9 | 2026-10-22 | Added terminology for partition toponomes: positive type, the toponome of a chosen representation, the second-kind algebra, partial matchings and gluings, color classes, coefficient tables, and triangles. Distinguished polynomial notation, type multiplication, and ordinary polyform multiplication; clarified weight data and representation dependence. Aligned with Russian glossary revision 9, including the Russian adjective «остовной». |
 | 8 | 2026-10-20 | Added collections, partitions, structural identities, SPF types, representation sizes, and combinatorial potentials. Distinguished metric potential, symmetric-sum size, and forest count; clarified indices of forest coefficients and $r$-Stirling numbers. Aligned exterior-product notation and project scope. Aligned with Russian glossary revision 7. |
 | 7 | 2026-10-16 | Replaced the Green-matrix notation $\mathbf G$ with $\mathbf{Gr}=\mathbf L^+$; reserved $\mathbf G$ for Gram matrices with entries $g_{ij}$. Discontinued $\mathbf B$ for the local-vertex Gram matrix and distinguished $\mathbf G$, $\mathbf G_z$, and bi-coordinate matrices $\mathbf B$. Aligned with Russian glossary revision 6. |
