@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="555" viewBox="0 0 960 555" role="img" aria-labelledby="title desc">
+<title id="title">Граф из статьи о матрице Кирхгофа и его дуальные веса</title><desc id="desc">Исходный граф на шести вершинах и таблица точных числителей 198 gamma. Десять пар имеют положительные веса, пять отрицательные.</desc>
+<rect width="960" height="555" fill="#ffffff"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#263443">
+<text x="480.00" y="35.00" font-size="21" text-anchor="middle" fill="#263443" font-weight="bold">НЕОДНОРОДНЫЙ ГРАФ НА ШЕСТИ ВЕРШИНАХ</text>
+<text x="220.00" y="90.00" font-size="19" text-anchor="middle" fill="#263443" font-weight="normal">Исходные связи · веса 1</text>
+<text x="710.00" y="90.00" font-size="19" text-anchor="middle" fill="#263443" font-weight="normal">Числители 198 γᵢⱼ</text>
+<line x1="75.00" y1="215.00" x2="180.00" y2="145.00" stroke="#6a7684" stroke-width="2.30"/>
+<line x1="75.00" y1="215.00" x2="180.00" y2="295.00" stroke="#6a7684" stroke-width="2.30"/>
+<line x1="180.00" y1="145.00" x2="310.00" y2="145.00" stroke="#6a7684" stroke-width="2.30"/>
+<line x1="180.00" y1="145.00" x2="180.00" y2="295.00" stroke="#6a7684" stroke-width="2.30"/>
+<line x1="310.00" y1="145.00" x2="310.00" y2="295.00" stroke="#6a7684" stroke-width="2.30"/>
+<line x1="310.00" y1="295.00" x2="180.00" y2="295.00" stroke="#6a7684" stroke-width="2.30"/>
+<line x1="310.00" y1="295.00" x2="310.00" y2="420.00" stroke="#6a7684" stroke-width="2.30"/>
+<circle cx="75.00" cy="215.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
+<text x="75.00" y="220.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">1</text>
+<circle cx="180.00" cy="145.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
+<text x="180.00" y="150.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">2</text>
+<circle cx="310.00" cy="145.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
+<text x="310.00" y="150.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
+<circle cx="310.00" cy="295.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
+<text x="310.00" y="300.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
+<circle cx="180.00" cy="295.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
+<text x="180.00" y="300.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">5</text>
+<circle cx="310.00" cy="420.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
+<text x="310.00" y="425.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">6</text>
+<text x="562.50" y="135.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">1</text>
+<text x="515.00" y="183.50" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">1</text>
+<rect x="535" y="150" width="55" height="55" fill="#f0f2f5" stroke="#fff"/>
+<text x="562.50" y="183.50" font-size="17" text-anchor="middle" fill="#6a7684" font-weight="normal">·</text>
+<rect x="590" y="150" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="617.50" y="183.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-19</text>
+<rect x="645" y="150" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="672.50" y="183.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">26</text>
+<rect x="700" y="150" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="727.50" y="183.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">38</text>
+<rect x="755" y="150" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="782.50" y="183.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-16</text>
+<rect x="810" y="150" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="837.50" y="183.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">71</text>
+<text x="617.50" y="135.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">2</text>
+<text x="515.00" y="238.50" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">2</text>
+<rect x="535" y="205" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="562.50" y="238.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-19</text>
+<rect x="590" y="205" width="55" height="55" fill="#f0f2f5" stroke="#fff"/>
+<text x="617.50" y="238.50" font-size="17" text-anchor="middle" fill="#6a7684" font-weight="normal">·</text>
+<rect x="645" y="205" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="672.50" y="238.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-1</text>
+<rect x="700" y="205" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="727.50" y="238.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">29</text>
+<rect x="755" y="205" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="782.50" y="238.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-7</text>
+<rect x="810" y="205" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="837.50" y="238.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">62</text>
+<text x="672.50" y="135.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
+<text x="515.00" y="293.50" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
+<rect x="535" y="260" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="562.50" y="293.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">26</text>
+<rect x="590" y="260" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="617.50" y="293.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-1</text>
+<rect x="645" y="260" width="55" height="55" fill="#f0f2f5" stroke="#fff"/>
+<text x="672.50" y="293.50" font-size="17" text-anchor="middle" fill="#6a7684" font-weight="normal">·</text>
+<rect x="700" y="260" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="727.50" y="293.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">2</text>
+<rect x="755" y="260" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="782.50" y="293.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">20</text>
+<rect x="810" y="260" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="837.50" y="293.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">35</text>
+<text x="727.50" y="135.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
+<text x="515.00" y="348.50" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
+<rect x="535" y="315" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="562.50" y="348.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">38</text>
+<rect x="590" y="315" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="617.50" y="348.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">29</text>
+<rect x="645" y="315" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="672.50" y="348.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">2</text>
+<rect x="700" y="315" width="55" height="55" fill="#f0f2f5" stroke="#fff"/>
+<text x="727.50" y="348.50" font-size="17" text-anchor="middle" fill="#6a7684" font-weight="normal">·</text>
+<rect x="755" y="315" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="782.50" y="348.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">14</text>
+<rect x="810" y="315" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="837.50" y="348.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-25</text>
+<text x="782.50" y="135.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">5</text>
+<text x="515.00" y="403.50" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">5</text>
+<rect x="535" y="370" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="562.50" y="403.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-16</text>
+<rect x="590" y="370" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="617.50" y="403.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-7</text>
+<rect x="645" y="370" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="672.50" y="403.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">20</text>
+<rect x="700" y="370" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="727.50" y="403.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">14</text>
+<rect x="755" y="370" width="55" height="55" fill="#f0f2f5" stroke="#fff"/>
+<text x="782.50" y="403.50" font-size="17" text-anchor="middle" fill="#6a7684" font-weight="normal">·</text>
+<rect x="810" y="370" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="837.50" y="403.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">47</text>
+<text x="837.50" y="135.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">6</text>
+<text x="515.00" y="458.50" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">6</text>
+<rect x="535" y="425" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="562.50" y="458.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">71</text>
+<rect x="590" y="425" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="617.50" y="458.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">62</text>
+<rect x="645" y="425" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="672.50" y="458.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">35</text>
+<rect x="700" y="425" width="55" height="55" fill="#fbe9e6" stroke="#fff"/>
+<text x="727.50" y="458.50" font-size="17" text-anchor="middle" fill="#b13a32" font-weight="normal">-25</text>
+<rect x="755" y="425" width="55" height="55" fill="#e5f1f8" stroke="#fff"/>
+<text x="782.50" y="458.50" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">47</text>
+<rect x="810" y="425" width="55" height="55" fill="#f0f2f5" stroke="#fff"/>
+<text x="837.50" y="458.50" font-size="17" text-anchor="middle" fill="#6a7684" font-weight="normal">·</text>
+<text x="220.00" y="490.00" font-size="17" text-anchor="middle" fill="#263443" font-weight="normal">7 исходных рёбер · τ = 11</text>
+<text x="700.00" y="510.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">10 положительных и 5 отрицательных пар</text>
+</g></svg>
