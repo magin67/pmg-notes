@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="850" viewBox="0 0 1040 850" role="img" aria-labelledby="title desc">
+<title id="title">Потенциалы и энергия на единичном пути</title>
+<desc id="desc">Для пути a-b-c-d показаны заданные значения минус один, один, ноль, ноль с энергией пять; один, один, ноль, ноль с энергией один; и гармонические значения минус один, один, один, один с энергией четыре. Под каждым ребром указана его энергия. Пунктиром обозначены свободные вершины.</desc>
+<rect width="1040" height="850" fill="#ffffff"/>
+<g font-family="DejaVu Sans, sans-serif" fill="#172b40">
+<text x="36" y="47" font-size="30" fill="#172b40" text-anchor="start" font-weight="bold">Один путь, три задания значений</text>
+<text x="36" y="82" font-size="18" fill="#52667b" text-anchor="start" font-weight="normal">Проводимость каждого ребра равна 1. Числа под рёбрами - их вклады в энергию.</text>
+<rect x="24" y="109" width="992" height="216" rx="14" fill="#f5f8fb" stroke="#dce5ed"/>
+<text x="46" y="144" font-size="23" fill="#172b40" text-anchor="start" font-weight="bold">Разность b − a</text>
+<line x1="157" y1="214" x2="283" y2="214" stroke="#247aab" stroke-width="5"/>
+<text x="220.0" y="250" font-size="23" fill="#247aab" text-anchor="middle" font-weight="bold">4</text>
+<line x1="337" y1="214" x2="463" y2="214" stroke="#247aab" stroke-width="5"/>
+<text x="400.0" y="250" font-size="23" fill="#247aab" text-anchor="middle" font-weight="bold">1</text>
+<line x1="517" y1="214" x2="643" y2="214" stroke="#aebbc6" stroke-width="3"/>
+<text x="580.0" y="250" font-size="23" fill="#aebbc6" text-anchor="middle" font-weight="bold">0</text>
+<circle cx="130" cy="214" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="130" y="175" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">a</text>
+<text x="130" y="222" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">−1</text>
+<circle cx="310" cy="214" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="310" y="175" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">b</text>
+<text x="310" y="222" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="490" cy="214" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="490" y="175" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">c</text>
+<text x="490" y="222" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="670" cy="214" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="670" y="175" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">d</text>
+<text x="670" y="222" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">0</text>
+<rect x="748" y="189" width="244" height="67" rx="10" fill="#e3eff8"/>
+<text x="870" y="229" font-size="21" fill="#185d84" text-anchor="middle" font-weight="bold">E = 4 + 1 = 5</text>
+<text x="46" y="299" font-size="18" fill="#52667b" text-anchor="start" font-weight="normal">Все значения закреплены. На ребре ab перепад равен 2, его вклад равен 4.</text>
+<rect x="24" y="340" width="992" height="216" rx="14" fill="#f5f8fb" stroke="#dce5ed"/>
+<text x="46" y="375" font-size="23" fill="#172b40" text-anchor="start" font-weight="bold">Сумма центрированных вершин</text>
+<line x1="157" y1="445" x2="283" y2="445" stroke="#aebbc6" stroke-width="3"/>
+<text x="220.0" y="481" font-size="23" fill="#aebbc6" text-anchor="middle" font-weight="bold">0</text>
+<line x1="337" y1="445" x2="463" y2="445" stroke="#247aab" stroke-width="5"/>
+<text x="400.0" y="481" font-size="23" fill="#247aab" text-anchor="middle" font-weight="bold">1</text>
+<line x1="517" y1="445" x2="643" y2="445" stroke="#aebbc6" stroke-width="3"/>
+<text x="580.0" y="481" font-size="23" fill="#aebbc6" text-anchor="middle" font-weight="bold">0</text>
+<circle cx="130" cy="445" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="130" y="406" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">a</text>
+<text x="130" y="453" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="310" cy="445" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="310" y="406" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">b</text>
+<text x="310" y="453" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="490" cy="445" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="490" y="406" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">c</text>
+<text x="490" y="453" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="670" cy="445" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="670" y="406" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">d</text>
+<text x="670" y="453" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">0</text>
+<rect x="748" y="420" width="244" height="67" rx="10" fill="#e3eff8"/>
+<text x="870" y="460" font-size="21" fill="#185d84" text-anchor="middle" font-weight="bold">E = 1</text>
+<text x="46" y="530" font-size="18" fill="#52667b" text-anchor="start" font-weight="normal">Общий сдвиг значений не меняет энергию. Работает только разрез ab | cd.</text>
+<rect x="24" y="571" width="992" height="216" rx="14" fill="#f5f8fb" stroke="#dce5ed"/>
+<text x="46" y="606" font-size="23" fill="#172b40" text-anchor="start" font-weight="bold">Только a = −1 и b = 1 закреплены</text>
+<line x1="157" y1="676" x2="283" y2="676" stroke="#247aab" stroke-width="5"/>
+<text x="220.0" y="712" font-size="23" fill="#247aab" text-anchor="middle" font-weight="bold">4</text>
+<line x1="337" y1="676" x2="463" y2="676" stroke="#aebbc6" stroke-width="3"/>
+<text x="400.0" y="712" font-size="23" fill="#aebbc6" text-anchor="middle" font-weight="bold">0</text>
+<line x1="517" y1="676" x2="643" y2="676" stroke="#aebbc6" stroke-width="3"/>
+<text x="580.0" y="712" font-size="23" fill="#aebbc6" text-anchor="middle" font-weight="bold">0</text>
+<circle cx="130" cy="676" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="130" y="637" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">a</text>
+<text x="130" y="684" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">−1</text>
+<circle cx="310" cy="676" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5"/>
+<text x="310" y="637" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">b</text>
+<text x="310" y="684" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="490" cy="676" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="490" y="637" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">c</text>
+<text x="490" y="684" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="670" cy="676" r="26" fill="#ffffff" stroke="#244760" stroke-width="2.5" stroke-dasharray="6 4"/>
+<text x="670" y="637" font-size="22" fill="#172b40" text-anchor="middle" font-weight="bold">d</text>
+<text x="670" y="684" font-size="22" fill="#172b40" text-anchor="middle" font-weight="normal">1</text>
+<rect x="748" y="651" width="244" height="67" rx="10" fill="#e3eff8"/>
+<text x="870" y="691" font-size="21" fill="#185d84" text-anchor="middle" font-weight="bold">min E = 4</text>
+<text x="46" y="761" font-size="18" fill="#52667b" text-anchor="start" font-weight="normal">Свободные c и d получают значение 1. На рёбрах bc и cd перепада нет.</text>
+<text x="36" y="829" font-size="16" fill="#52667b" text-anchor="start" font-weight="normal">Кружок: значение на вершине. Пунктирный кружок: значение найдено минимизацией энергии.</text>
+</g>
+</svg>
