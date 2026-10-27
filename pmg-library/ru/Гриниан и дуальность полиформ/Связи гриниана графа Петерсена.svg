@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1110" height="510" viewBox="0 0 1110 510" role="img" aria-labelledby="title desc">
-<title id="title">Граф Петерсена и два класса дуальных связей</title><desc id="desc">Слева исходный граф, в центре его 15 отрицательных дуальных связей веса минус 3/100, справа 30 положительных связей веса 7/100.</desc>
+<title id="title">Граф Петерсена и два класса связей гриниана</title><desc id="desc">Слева исходный граф, в центре его 15 отрицательных связей гриниана веса минус 3/100, справа 30 положительных связей веса 7/100.</desc>
 <rect width="1110" height="510" fill="#ffffff"/>
 <g font-family="DejaVu Sans, Arial, sans-serif" fill="#263443">
-<text x="555.00" y="35.00" font-size="22" text-anchor="middle" fill="#263443" font-weight="bold">ПЕТЕРСЕН: ДВА КЛАССА ДУАЛЬНЫХ ВЕСОВ</text>
+<text x="555.00" y="35.00" font-size="22" text-anchor="middle" fill="#263443" font-weight="bold">ПЕТЕРСЕН: ДВА КЛАССА ВЕСОВ ГРИНИАНА</text>
 <text x="185.00" y="90.00" font-size="19" text-anchor="middle" fill="#263443" font-weight="bold">Исходный граф</text>
 <line x1="185.00" y1="133.00" x2="310.54" y2="224.21" stroke="#6a7684" stroke-width="2.50"/>
 <line x1="310.54" y1="224.21" x2="262.59" y2="371.79" stroke="#6a7684" stroke-width="2.50"/>
@@ -129,5 +129,5 @@
 <text x="185.00" y="445.00" font-size="18" text-anchor="middle" fill="#263443" font-weight="normal">15 рёбер · вес 1</text>
 <text x="555.00" y="445.00" font-size="18" text-anchor="middle" fill="#b13a32" font-weight="normal">15 пар · вес −3/100</text>
 <text x="925.00" y="445.00" font-size="18" text-anchor="middle" fill="#176c9e" font-weight="normal">30 пар · вес 7/100</text>
-<text x="555.00" y="488.00" font-size="17" text-anchor="middle" fill="#263443" font-weight="normal">Две правые панели вместе задают первую дуальную форму</text>
+<text x="555.00" y="488.00" font-size="17" text-anchor="middle" fill="#263443" font-weight="normal">Две правые панели вместе задают гриниан</text>
 </g></svg>

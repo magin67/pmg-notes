@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-25
-revision: 9
+updated: 2026-10-27
+revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -712,7 +712,7 @@ A full treatment of the following thematic extensions requires separate definiti
 
 - the isotropic extension, the distinguished null vector, and bi-coordinates and di-coordinates;
 - general unbalanced digraphs and the KVP/KVPOU structural decompositions;
-- dual polyforms, cut forms, and the function $\operatorname{dex}$;
+- the Greenian, mutual duality of exterior exponentials, and cut representations;
 - structural identities of partition forms, symmetric polyforms, and their combinatorial coefficients;
 - partition toponomes, the second-kind algebra, and further component evaluations;
 - metric-value decompositions and interval forms;
@@ -723,6 +723,36 @@ Definitions of the isotropic representation and the null vector are given in [[T
 Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. Thematic definitions do not remove the applicability conditions of the base model or the explicitly stated balanced extension.
 
 In this specification, a boundary is an image of $\partial$, equivalently an element of $\Lambda^kW$. A selected vertex set in a Dirichlet problem is not a boundary in this algebraic sense. When using the standard expression “boundary vertices”, the two notions must be explicitly distinguished.
+
+### The Greenian and mutual duality in the symmetric case
+
+For a connected undirected graph, the **Greenian** is the grade-one form associated with the Green matrix:
+
+$$
+\mathrm{Gr}=\sum_{i,j}\mathrm{Gr}_{ij}[a_i-h,a_j-h]
+=-\sum_{i<j}\mathrm{Gr}_{ij}[a_{ij}]^2,\qquad
+h=\frac1n\sum_i a_i
+$$
+
+The Laplacian $L$ and the Greenian $\mathrm{Gr}$ are vector forms; their exterior exponentials are boundary polyforms. The vector representation concerns grade one; higher grades contain forms on exterior products of vectors. The Greenian coefficients $\gamma_{ij}=-\mathrm{Gr}_{ij}$ may have either sign.
+
+The matrices $\mathbf L$ and $\mathbf{Gr}$ are mutual pseudoinverses and ordinary inverses on $\mathbf1^\perp$. Exponential duality distinguishes the direct space $W$ from its dual $W^*$. Let $Q_1$ denote the dual representation of the Greenian and $\mathcal C:a_i\mapsto a_i-h$ the centered identification:
+
+$$
+\mathcal C(Q_1)=\mathrm{Gr},\qquad
+M=\exp L,\qquad D=\exp Q_1,\qquad
+\mathcal C(D)=\exp(\mathrm{Gr})
+$$
+
+For $d=n-1$,
+
+$$
+M_d/Q_k=M_{d-k},\qquad Q_d/M_k=Q_{d-k},\qquad M_0=Q_0=e
+$$
+
+Here $/$ is linear exterior contraction in both arguments of a form. Duality is a mutual relation, not the name of a separate type of polyform. After identification in one space, the ordinary product is $\exp L\,\exp(\mathrm{Gr})=\exp(L+\mathrm{Gr})$; the multiplicative inverse of $\exp L$ is $\exp(-L)$.
+
+Definitions and proofs currently appear in the Russian notes [[Лапласиан и гриниан - взаимная дуальность экспонент]], [[Каноническое векторное представление гриниана]], and [[Внешняя экспонента и представления гриниана]]. These statements about quadratic vector forms do not automatically extend to nonsymmetric balanced-graph Laplacians; their bilinear boundary representation remains valid.
 
 ## Principal notation
 
@@ -741,6 +771,7 @@ In this specification, a boundary is an image of $\partial$, equivalently an ele
 | $c_{ij}$, $d_i$ | Conductances and weighted vertex degrees |
 | $G$ | Graph |
 | $L$, $\mathbf L$ | Laplacian polyform and Laplacian matrix |
+| $\mathrm{Gr}$, $Q_1$, $D$ | Greenian, its dual representation, and the exponential $D=\exp Q_1$ |
 | $\mathbf{Gr}=\mathbf L^+$, $\mathbf R$ | Green matrix and resistance matrix |
 | $\mathbf G=(g_{ij})$ | Gram matrix of chosen elements; $g_{ij}$ are their inner products |
 | $\mathbf G_z$ | In the isotropic extension: the Gram matrix of the vertices together with the null vector $z$ |
@@ -804,6 +835,7 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
+| 10 | 2026-10-27 | Defined the Greenian and mutual exponential duality; distinguished grade-one vector forms from boundary polyforms, dual from centered representations, and exterior multiplication from matrix composition. Removed dex from the current extension list. Aligned with Russian revision 10; the series itself remains in Russian pending review. |
 | 9 | 2026-10-25 | Added the balanced extension: rooted potentials, directional pairing, one-way resistance and circulation, higher grades, Gram matrix, and radius. Specified the scope of symmetric formulas and reconstruction from the one-way resistance matrix. Aligned scalar matrix entries and terminology with Russian revision 9. |
 | 8 | 2026-10-22 | Recorded notation for positive and empty types, the distinction between multiplicity and product powers, and the dependence of a toponome on its chosen expression. Specified the scope of $*$ and information loss in coefficient tables. Added links to the completed toponome series; the mathematical statements of the required core are unchanged. Aligned with Russian core specification revision 8. |
 | 7 | 2026-10-20 | Recorded numerical-collection size and weight, collection products, and products of element factorials. Distinguished block-size types, SPF types, and representation size; added links to the structural, symmetric, and combinatorial series. Aligned exterior-product notation. The scope and mathematical statements of the core are unchanged. Aligned with Russian core specification revision 7. |
@@ -813,6 +845,7 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 | 1 | 2026-10-09 | First public core specification, aligned with the introductory series. Clarified formal forms, the space of boundaries, the domain of metric evaluation, the spanning-tree coefficient, and conditions for variation formulas. |
 
 Internal specification version 0.2 of 2026-09-21 was used as source material. Its core definitions are superseded by this document; its material on thematic extensions does not automatically become part of the core. Earlier revisions are historical records, not parallel current specifications.
+
 
 
 

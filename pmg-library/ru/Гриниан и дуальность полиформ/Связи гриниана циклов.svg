@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1020" height="790" viewBox="0 0 1020 790" role="img" aria-labelledby="title desc">
-<title id="title">Дуальные связи циклов C4, C5 и C6</title><desc id="desc">Сверху исходные циклы, снизу их дуальные системы. Положительные связи синие сплошные, отрицательные красные штриховые, нулевые отсутствуют.</desc>
+<title id="title">Связи гриниана циклов C4, C5 и C6</title><desc id="desc">Сверху исходные циклы, снизу их системы связей гриниана. Положительные связи синие сплошные, отрицательные красные штриховые, нулевые отсутствуют.</desc>
 <rect width="1020" height="790" fill="#ffffff"/>
 <g font-family="DejaVu Sans, Arial, sans-serif" fill="#263443">
 <text x="510.00" y="34.00" font-size="20" text-anchor="middle" fill="#263443" font-weight="bold">ЦИКЛЫ: ПОЛОЖИТЕЛЬНЫЕ, НУЛЕВЫЕ И ОТРИЦАТЕЛЬНЫЕ ВЕСА</text>
@@ -107,7 +107,7 @@
 <text x="759.07" y="582.50" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">5</text>
 <circle cx="759.07" cy="472.50" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
 <text x="759.07" y="477.50" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">6</text>
-<text x="510.00" y="385.00" font-size="20" text-anchor="middle" fill="#263443" font-weight="bold">Дуальные связи</text>
+<text x="510.00" y="385.00" font-size="20" text-anchor="middle" fill="#263443" font-weight="bold">Связи гриниана</text>
 <text x="170.00" y="674.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">Расстояние 1: 1/16</text>
 <text x="170.00" y="697.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">Расстояние 2: 3/16</text>
 <text x="510.00" y="674.00" font-size="16" text-anchor="middle" fill="#263443" font-weight="normal">Расстояние 1: 0</text>

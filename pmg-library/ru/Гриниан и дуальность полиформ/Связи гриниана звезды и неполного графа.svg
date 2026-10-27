@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="850" viewBox="0 0 900 850" role="img" aria-labelledby="title desc">
-<title id="title">Звезда и полный граф без ребра: прямые и дуальные связи</title><desc id="desc">В двух строках сопоставлены исходные графы и все положительные дуальные веса. Вершины обозначены числами.</desc>
+<title id="title">Звезда и полный граф без ребра: исходные связи и связи гриниана</title><desc id="desc">В двух строках сопоставлены исходные графы и все положительные веса гриниана. Вершины обозначены числами.</desc>
 <rect width="900" height="850" fill="#ffffff"/>
 <g font-family="DejaVu Sans, Arial, sans-serif" fill="#263443">
 <text x="450.00" y="35.00" font-size="21" text-anchor="middle" fill="#263443" font-weight="bold">ИЗМЕНЕНИЕ ВЕСОВ И НАБОРА СВЯЗЕЙ</text>
 <text x="220.00" y="80.00" font-size="19" text-anchor="middle" fill="#263443" font-weight="normal">Исходный граф · веса 1</text>
-<text x="670.00" y="80.00" font-size="19" text-anchor="middle" fill="#263443" font-weight="normal">Дуальные связи · точные веса</text>
+<text x="670.00" y="80.00" font-size="19" text-anchor="middle" fill="#263443" font-weight="normal">Гриниан · точные веса</text>
 <text x="450.00" y="120.00" font-size="18" text-anchor="middle" fill="#263443" font-weight="normal">Звезда K₁,₃ · вершина 1 в центре</text>
 <line x1="220.00" y1="245.00" x2="95.00" y2="155.00" stroke="#6a7684" stroke-width="2.30"/>
 <line x1="220.00" y1="245.00" x2="345.00" y2="155.00" stroke="#6a7684" stroke-width="2.30"/>
@@ -84,5 +84,5 @@
 <text x="780.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
 <circle cx="560.00" cy="740.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
 <text x="560.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
-<text x="450.00" y="805.00" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">Отсутствующей исходной связи 12 соответствует дуальный вес 3/16</text>
+<text x="450.00" y="805.00" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">Отсутствующей исходной связи 12 соответствует вес гриниана 3/16</text>
 </g></svg>

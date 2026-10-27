@@ -1,4 +1,4 @@
-"""Exact verification for 'Дуальные экспоненты типовых графов'.
+"""Exact verification for 'Экспоненты гринианов типовых графов'.
 
 Run: python checks/dual/verify_typical.py
 Standard library only. Does not write files. JSON output contains exact fractions.
@@ -217,3 +217,4 @@ if __name__=='__main__':
          +[(i,i+5,1) for i in range(5)]+[(i+5,(i+2)%5+5,1) for i in range(5)])]
     check_families()
     print(json.dumps([verify(*case) for case in cases],ensure_ascii=False,indent=2))
+

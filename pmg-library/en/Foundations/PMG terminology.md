@@ -1,8 +1,8 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-25
-revision: 10
+updated: 2026-10-27
+revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -165,7 +165,7 @@ For a graph toponome, the expansion of the factors of the Laplacian exponential 
 | Weighted degree | Взвешенная степень вершины | Standard | The sum $d_i=\sum_jc_{ij}$. |
 | Edge resistance | Собственное сопротивление ребра | Standard | The quantity $1/c_{ij}$ for an existing edge. It may differ from the resistance of the same pair. The notation $r_{ij}$ is reserved for one-way resistance. |
 | Graph Laplacian matrix | Матрица лапласиана | Standard | In the symmetric model, $\mathbf L$ has diagonal entries $d_i$ and off-diagonal entries $-c_{ij}$. A digraph uses the outgoing convention $L_{ii}=\sum_jf_{ij}$, $L_{ij}=-f_{ij}$ for $i\ne j$. |
-| Laplacian polyform | Полиформа лапласиана | PMG | The grade-one form with the Laplacian matrix as its coefficients. For an undirected graph, $L=\sum_{i<j}c_{ij}[a_{ij}]^2$; a balanced graph admits a nonsymmetric bilinear representation on boundaries. |
+| Laplacian; Laplacian polyform | Лапласиан; полиформа лапласиана | PMG | The grade-one form with the Laplacian matrix as its coefficients. For an undirected graph, $L=\sum_{i<j}c_{ij}[a_{ij}]^2$; a balanced graph admits a nonsymmetric bilinear representation on boundaries. |
 | Reduced Laplacian | Редуцированный лапласиан | Standard | The matrix obtained by deleting the row and column of the same vertex from $\mathbf L$. |
 | Green matrix | Матрица Грина | Qualified | $\mathbf{Gr}=\mathbf L^+$. For a connected balanced graph, it inverts the Laplacian on the zero-sum subspace and vanishes on constant columns. With source-receiver pairing, the Gram matrix of centered vectors is $\mathbf{Gr}^{\mathsf T}$; in the symmetric case this equals $\mathbf{Gr}$. |
 | Resistance matrix | Резистивная матрица | Qualified | The symmetric matrix $\mathbf R=(R_{ij})$ of pair resistances. For a balanced graph, $R_{ij}=r_{ij}+r_{ji}$; distinguish it from the one-way resistance matrix $\mathbf r$. |
@@ -175,6 +175,18 @@ For a graph toponome, the expansion of the factors of the Laplacian exponential 
 | Centering | Центрирование | Standard | Choosing the centroid as the origin in a Euclidean realization, so position vectors sum to zero. This introduces no new linear relation between formal basis vertices. |
 
 When representations occur together, the polyform retains an ordinary letter and the matrix is bold: $L$ and $\mathbf L$. Scalar matrix entries are not bold: $L_{ij}$, $\mathrm{Gr}_{ij}$. Where the matrix representation is unambiguous, the introductory notes may use ordinary letters $L,G,R$.
+
+## The Greenian and mutual duality
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Grade-one vector form | Векторная форма первого грейда | PMG | In the symmetric case, a sum of quadratic forms of vectors in $W$: $\sum c_\ell[u_\ell]^2$. The Laplacian and the Greenian have canonical representations through $[a_{ij}]^2$. Coefficients may have either sign. |
+| Boundary polyform | Граничная полиформа | PMG | A polyform whose form arguments belong to exterior powers of the vector space $W$. Laplacian and Greenian exponentials are of this type; higher grades contain exterior products of several vectors. |
+| Greenian | Гриниан | PMG | The grade-one form $\mathrm{Gr}=\sum_{i,j}\mathrm{Gr}_{ij}[a_i-h,a_j-h]$ with Green matrix $\mathbf{Gr}=\mathbf L^+$. In the symmetric case, $\mathrm{Gr}=-\sum_{i<j}\mathrm{Gr}_{ij}[a_{ij}]^2$. Formerly called the Green polyform; distinct from a Gram matrix $\mathbf G$. |
+| Dual representation of the Greenian | Дуальное представление гриниана | PMG | The form $Q_1$ on $W^*$ satisfying $\mathcal C(Q_1)=\mathrm{Gr}$ for $\mathcal C:a_i\mapsto a_i-h$. Its exponential $D=\exp Q_1$ has grade-zero term $e$. In dual vertex notation, $\sum_i a_i=0$. |
+| Mutually dual exponentials | Взаимно-дуальные экспоненты | PMG | For nondegenerate symmetric first grades: $M_d/Q_k=M_{d-k}$ and $Q_d/M_k=Q_{d-k}$ in paired direct and dual spaces. The slash means exterior contraction. This is a relation, not a separate type of polyform or multiplicative inversion. |
+
+Conventions and proofs currently appear in the Russian notes [[Лапласиан и гриниан - взаимная дуальность экспонент]] and [[Каноническое векторное представление гриниана]]. In that series, the former name “dual polyform” for $D$ is replaced by “the Greenian exponential in its dual representation”. The relational phrase “a polyform dual to a given one” retains its precise meaning. The symmetric quadratic case is distinguished from the general bilinear case of balanced graphs.
 
 ## Resistance geometry and metric evaluation
 
@@ -317,7 +329,7 @@ The following definitions are used in the published series “Spaces and Subspac
 | Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed values at selected vertices to the response after solving the internal equations. It equals the Laplacian of the induced graph. [[Vertex Elimination and Induced Couplings]]. |
 | Common spanning-tree parameter of the two parts | Общий остовной параметр двух долей | The locally introduced normalization $J(G)$ of the spanning-tree coefficient of a bipartite graph. It can be computed through either part while retaining its original degrees. [[Couplings Within One Part of a Bipartite Graph]]. |
 
-For other extensions, including KVP/KVPOU, dual polyforms, metric-value decompositions, and interval forms, definitions and translations are added as the corresponding public sections are prepared. The following restrictions remain:
+For other extensions, including KVP/KVPOU, metric-value decompositions, and interval forms, definitions and translations are added as the corresponding public sections are prepared. The following restrictions remain:
 
 - “Cocenter” is not used as a synonym for centroid or as the name of a separate geometric center without a definition.
 - No translation of “внешнее деление” is fixed until the operation is formally compared with standard operations of exterior algebra.
@@ -333,6 +345,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 11 | 2026-10-27 | Established the Laplacian-Greenian pair, vector first grades and boundary exponentials; distinguished the Green matrix, Greenian, dual representation, and mutual exponential duality. Aligned with Russian glossary revision 11. |
 | 10 | 2026-10-25 | Added balanced graphs, rooted potentials, directional pairing, resistances, circulation, coordinates, and sphere representatives. Reserved $r_{ij}$ for one-way resistance; clarified symmetric formulas, Gram matrices, higher-grade norms, and radius. Aligned with Russian glossary revision 10. |
 | 9 | 2026-10-22 | Added terminology for partition toponomes: positive type, the toponome of a chosen representation, the second-kind algebra, partial matchings and gluings, color classes, coefficient tables, and triangles. Distinguished polynomial notation, type multiplication, and ordinary polyform multiplication; clarified weight data and representation dependence. Aligned with Russian glossary revision 9, including the Russian adjective «остовной». |
 | 8 | 2026-10-20 | Added collections, partitions, structural identities, SPF types, representation sizes, and combinatorial potentials. Distinguished metric potential, symmetric-sum size, and forest count; clarified indices of forest coefficients and $r$-Stirling numbers. Aligned exterior-product notation and project scope. Aligned with Russian glossary revision 7. |
@@ -345,6 +358,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 | 1 | 2026-10-09 | First public core glossary, aligned with core specification revision 2 and the introductory series. Clarifies the levels of objects and evaluations, the spanning-tree coefficient, edge factors, and earlier names. This English version follows Russian revision 1. |
 
 Internal glossary version 1.1 of 2026-09-21 was used as source material. Its information about extensions remains relevant to their later preparation, but does not automatically form part of the current core terminology. Earlier revisions are records of changes, not parallel terminology standards.
+
 
 
 

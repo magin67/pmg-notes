@@ -1,4 +1,4 @@
-"""Exact checks for the canonical vector representation; Python standard library.
+"""Exact checks for the Greenian's vector representation and mutual duality.
 
 Run from any directory: python /path/to/checks/dual/verify_vector.py
 No files are written. All arithmetic uses fractions.Fraction.
@@ -123,6 +123,15 @@ def minor_form(A, k):
     return out
 
 
+def contract_top(top, form, dimension):
+    """Contract both slots into a top-grade form in paired dual bases."""
+    mask = (1 << dimension) - 1
+    coefficient = top[(mask, mask)]
+    return {(mask ^ i, mask ^ j): coefficient * value
+            * wedge_sign(i, mask ^ i) * wedge_sign(j, mask ^ j)
+            for (i, j), value in form.items()}
+
+
 def verify(name, n, source_edges):
     edges = [(i, j, F(c)) for i, j, c in source_edges]
     L = laplacian(n, edges)
@@ -198,6 +207,11 @@ def verify(name, n, source_edges):
     assert not power
     top_mask = (1 << (n-1)) - 1
     assert forest_grades[-1] == {(top_mask, top_mask): F(1) / tau}
+    direct_grades = [minor_form(A, k) for k in range(n)]
+    for k in range(n):
+        # Both directions use the natural pairing, not the exterior product.
+        assert contract_top(direct_grades[-1], forest_grades[k], n-1) == direct_grades[n-1-k]
+        assert contract_top(forest_grades[-1], direct_grades[k], n-1) == forest_grades[n-1-k]
     if name == 'P4':
         assert tree_groups == {0: (4, F(84, 512)), 1: (8, F(-64, 512)), 2: (4, F(12, 512))}
         def boundary_of(group):
@@ -248,3 +262,4 @@ if __name__ == '__main__':
         ('P6', 6, [(i, i+1, 1) for i in range(5)]),
     ]
     print(json.dumps([verify(*case) for case in cases], ensure_ascii=False, indent=2))
+

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="555" viewBox="0 0 960 555" role="img" aria-labelledby="title desc">
-<title id="title">Граф из статьи о матрице Кирхгофа и его дуальные веса</title><desc id="desc">Исходный граф на шести вершинах и таблица точных числителей 198 gamma. Десять пар имеют положительные веса, пять отрицательные.</desc>
+<title id="title">Граф из статьи о матрице Кирхгофа и его веса гриниана</title><desc id="desc">Исходный граф на шести вершинах и таблица точных числителей 198 gamma. Десять пар имеют положительные веса, пять отрицательные.</desc>
 <rect width="960" height="555" fill="#ffffff"/>
 <g font-family="DejaVu Sans, Arial, sans-serif" fill="#263443">
 <text x="480.00" y="35.00" font-size="21" text-anchor="middle" fill="#263443" font-weight="bold">НЕОДНОРОДНЫЙ ГРАФ НА ШЕСТИ ВЕРШИНАХ</text>
