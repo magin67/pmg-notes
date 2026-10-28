@@ -2,12 +2,12 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-10-28
-revision: 12
+revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: objects, forms, metrics, collections, partitions, symmetric polyforms, combinatorial potentials, partition toponomes, and balanced metrics; Russian equivalents."
+description: "Terminology of the PMG core and published series: polyforms and metrics, Laplacian and Greenian, combinatorial potentials, toponomes, KVP/KVPOU, and matroid and forest parameters, with Russian equivalents."
 order: 2
 ---
 
@@ -120,8 +120,10 @@ In a forest, the connected components determine the partition blocks. A componen
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
 | Combinatorial potential of the second kind | Комбинаторный потенциал второго рода | PMG | $s_2(\mathbf x)$ counts partitions of a set of $w(\mathbf x)$ distinguishable elements into unordered blocks with positive sizes $\mathbf x$. This is the PMG name for that combinatorial number. [[Partitions and the Combinatorial Potential of the Second Kind]]. |
+| Combinatorial potential of the first kind | Комбинаторный потенциал первого рода | PMG | $s_1(\mathbf k)=\frac{n!}{\prod_{j\ge1}j^{\mu_j}\mu_j!}$ counts permutations of $n=w(\mathbf k)$ distinguishable elements with cycle-length collection $\mathbf k$; $\mu_j$ is the multiplicity of length $j$. Distinct from the forest parameter $s_1^{\mathrm{for}}$. [[Cyclic Partitions and the Combinatorial Potential of the First Kind]]. |
+| Potential of a mixed path-and-cycle state | Потенциал смешанного состояния из путей и циклов | PMG | $u(\lambda_k)=\frac{k!}{\prod_{j\ge1}j^{c_j}c_j!p_j!}$, where $c_j,p_j$ count cycles and nonempty directed paths with $j$ links, and $k=\sum_j j(c_j+p_j)$. Counts partitions of $k$ distinct link labels into cyclically and linearly ordered blocks, not graphs on a fixed vertex set. Isolated vertices are omitted from the reduced type. [[The Potential of Path-and-Cycle States]]. |
 | External combinatorial potential | Внешний комбинаторный потенциал | PMG | $e_n(\mathbf x)=\binom{n}{w(\mathbf x)}s_2(\mathbf x)$ for $w(\mathbf x)\leqslant n$: choosing a subset of the prescribed size and a partition of that subset of the prescribed type. The indexed function $e_n$ differs from the unit form $e$. [[Combinatorial Potentials in Symmetric Polyforms]]. |
-| Forest coefficients | Лесные коэффициенты | PMG | The numbers $\operatorname{St}(k,m)$ count forests on $k$ labelled ordinary vertices and $m$ added unlabelled roots: each component has exactly one root, and no root is isolated. Here $m$ belongs to the auxiliary construction, rather than counting all components of the original graph on $n$ vertices. These numbers differ from $\tau(G)$ and ordinary Stirling numbers $S(k,m)$. [[Forest Coefficients and Abel Polynomials]]. |
+| Combinatorial forest coefficients $\operatorname{St}(k,m)$ | Комбинаторные лесные коэффициенты $\operatorname{St}(k,m)$ | PMG | The numbers $\operatorname{St}(k,m)$ count forests on $k$ labelled ordinary vertices and $m$ added unlabelled roots: each component has exactly one root, and no root is isolated. Here $m$ belongs to the auxiliary construction, rather than counting all components of the original graph on $n$ vertices. These numbers differ from $\tau(G)$ and ordinary Stirling numbers $S(k,m)$. [[Forest Coefficients and Abel Polynomials]]. |
 | $r$-Stirling numbers of the second kind | $r$-числа Стирлинга второго рода | Standard | $\left\{\begin{smallmatrix}N\\K\end{smallmatrix}\right\}_r$ counts partitions of $N$ elements into $K$ nonempty blocks with $r$ specified distinct elements in different blocks. Here $N,K$ are full sizes; the shifted notation $c_r(w,m)$ means $N=w+r$, $K=m+r$. [[Falling Factorials, Rooted Forests, and Stirling Numbers]]. |
 
 For $\mathbf x=[x_i]$ with positive integer parts, $w=w(\mathbf x)$, and multiplicity collection $\boldsymbol\mu=[\mu_j]_{j\in J}$, the formula is
@@ -148,22 +150,25 @@ Definitions and the scope of the operations are given in the [[en/Partition topo
 | Sum of partial gluings at chosen roots | Сумма частичных склеек по выбранным корням | PMG | A boundary realization of $*$: a root is chosen in advance in each nontrivial component, and the roots of each matched pair are identified without adding an edge. The sum ranges over matchings, not root choices. Each component belongs to at most one pair. [[Partition Products and Boundary Forms]]. |
 | Coefficient table of a toponome | Коэффициентная таблица топонома | PMG | $\mathcal A_{\mathcal E}=(a_{k,r})$, where $a_{k,r}$ sums coefficients of types of weight $k$ with $r$ positive parts. Individual types within one cell are lost. Graph comparisons retain the vertex count $n$ separately; the data $(n,\mathcal A_G)$ do not in general determine a graph up to isomorphism. [[Coefficient Tables of Toponomes]]. |
 | Coefficient triangle | Коэффициентный треугольник | PMG | A table layout with weight $k$ indexing columns and the number $r$ of nontrivial components indexing rows. For nonempty types on $n$ vertices, $r\leqslant k\leqslant n-r$; admissible row lengths decrease by two. The unit term is treated separately, and zero cells are left blank. A particular graph may fill only some admissible cells. |
+| Vector normalization of a forest toponome | Векторная нормировка лесного топонома | PMG | Retains the weight $w(F)$ of each forest in the fixed forest representation. Collecting all types of the same grade gives $F_G(t)=\sum_g f_g t^g$. [[Vector and Vertex Normalizations of Toponomes]]. |
+| Vertex, or rooted, normalization of a forest toponome | Вершинная, или корневая, нормировка лесного топонома | PMG | Multiplies $w(F)$ by $\prod_{C\in\pi(F)}\#C$, the number of choices of one root in each component. For type $\lambda=(k_i)$ this factor is written $h(\lambda)=\prod_i(k_i+1)$; the type function $h(\lambda)$ differs from the centroid $h$. [[Vector and Vertex Normalizations of Toponomes]]. |
+| Laplacian polynomial | Лапласовский полином | Qualified | $P_G(t)=\det(I+t\mathbf L)=\sum_g p_g t^g$ in ascending-grade notation. Distinct from the ordinary forest polynomial $F_G$ and the characteristic polynomial $\chi_{\mathbf L}(x)=x^nP_G(-1/x)$. Its coefficients $p_g$ are rooted coefficients. [[Forest Coefficients and the Laplacian Polynomial]]. |
 
 In this series, standalone types use parentheses: $(1^2)=(1,1)$, whereas $(1)^2=(1)*(1)$ denotes a product. Square brackets for collections and SPF notation $E_n[\lambda]$ are retained. Numerical parts of a type differ from vertex labels in boundary notation such as $(ab)$.
 
 The correspondence $\lambda=(k_1,\ldots,k_r)\leftrightarrow x_{k_1}\cdots x_{k_r}$ preserves the type and gives two notations for the same data. Ordinary multiplication of these monomials concatenates lists of parts and differs from $*$. Under disjoint union of graphs, spanning-forest toponomes multiply by the ordinary polynomial product, while sums of color-class types multiply by $*$.
 
-For a graph toponome, the expansion of the factors of the Laplacian exponential is fixed. With unit weights, coefficients count forests; with numerical weights, they sum products of edge weights. Root weighting of components, further specializations, an operator spectrum, and its full spectral representation require their own definitions. Reduction by types is not identified with reduction of one polyform by another.
+For a graph toponome, the expansion of the factors of the Laplacian exponential is fixed. With unit weights, coefficients count forests; with numerical weights, they sum products of edge weights. The rooted normalization is defined above. For an undirected graph with positive conductances, $P_G(t)=\prod_j(1+t\lambda_j)$, where $\lambda_j$ are the nonzero eigenvalues of $\mathbf L$. In this normalization, $(n,P_G)$ determines the Laplacian spectrum with multiplicities; neither the spectrum nor the polynomial specifies eigenvectors. See [[Forest Coefficients and the Laplacian Polynomial]]. Formal factorization parameters of $F_G$ or $\Phi_G$ do not automatically have this spectral meaning. Reduction by types is not identified with reduction of one polyform by another.
 
 ## Graphs, couplings, and matrix representations
 
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
-| Coupling coefficient | Коэффициент связи | PMG | The pair coefficient $c_{ij}$. In the main model it is symmetric and nonnegative. |
-| Edge conductance | Проводимость ребра | Standard | The electrical interpretation of a positive coefficient $c_{ij}$. “Conductivity” is not used here. |
+| Coupling coefficient | Коэффициент связи | PMG | The pair coefficient $c_{ij}=\sum_{\ell:\,\ell=\{i,j\}}c_\ell$. In the main model it is symmetric and nonnegative. Summing parallel conductors preserves the Laplacian and metric, but changes the matroid ground set. |
+| Edge conductance | Проводимость ребра | Standard | The positive weight $c_\ell$ of an individual conductor; it equals $c_{ij}$ when the pair has a single edge. Conductivity is not used in this sense. |
 | Edge weight | Вес ребра | Standard | A general name for a numerical edge parameter. In this model the weight represents conductance, not length. |
 | Weighted degree | Взвешенная степень вершины | Standard | The sum $d_i=\sum_jc_{ij}$. |
-| Edge resistance | Собственное сопротивление ребра | Standard | The quantity $1/c_{ij}$ for an existing edge. It may differ from the resistance of the same pair. The notation $r_{ij}$ is reserved for one-way resistance. |
+| Conductor resistance; resistance of an individual conductor | Собственное сопротивление ребра | Standard | The value $1/c_\ell$ for an individual conductor. It can differ from the effective resistance between its endpoints, $R_\ell=R_{ij}$. An aggregated coupling has conductor resistance $1/c_{ij}$. The notation $r_{ij}$ is reserved for one-way resistance. |
 | Graph Laplacian matrix | Матрица лапласиана | Standard | In the symmetric model, $\mathbf L$ has diagonal entries $d_i$ and off-diagonal entries $-c_{ij}$. A digraph uses the outgoing convention $L_{ii}=\sum_jf_{ij}$, $L_{ij}=-f_{ij}$ for $i\ne j$. |
 | Laplacian; Laplacian polyform | Лапласиан; полиформа лапласиана | PMG | The grade-one form with the Laplacian matrix as its coefficients. For an undirected graph, $L=\sum_{i<j}c_{ij}[a_{ij}]^2$; a balanced graph admits a nonsymmetric bilinear representation on boundaries. |
 | Reduced Laplacian | Редуцированный лапласиан | Standard | The matrix obtained by deleting the row and column of the same vertex from $\mathbf L$. |
@@ -183,10 +188,14 @@ When representations occur together, the polyform retains an ordinary letter and
 | Grade-one vector form | Векторная форма первого грейда | PMG | In the symmetric case, a sum of quadratic forms of vectors in $W$: $\sum c_\ell[u_\ell]^2$. The Laplacian and the Greenian have canonical representations through $[a_{ij}]^2$. Coefficients may have either sign. |
 | Boundary polyform | Граничная полиформа | PMG | A polyform whose form arguments belong to exterior powers of the vector space $W$. Laplacian and Greenian exponentials are of this type; higher grades contain exterior products of several vectors. |
 | Greenian | Гриниан | PMG | The grade-one form $\mathrm{Gr}=\sum_{i,j}\mathrm{Gr}_{ij}[a_i-h,a_j-h]$ with Green matrix $\mathbf{Gr}=\mathbf L^+$. In the symmetric case, $\mathrm{Gr}=-\sum_{i<j}\mathrm{Gr}_{ij}[a_{ij}]^2$. Formerly called the Green polyform; distinct from a Gram matrix $\mathbf G$. |
-| Dual representation of the Greenian | Дуальное представление гриниана | PMG | The form $Q_1$ on $W^*$ satisfying $\mathcal C(Q_1)=\mathrm{Gr}$ for $\mathcal C:a_i^\vee\mapsto p_i=a_i-h$. Its exponential $D=\exp Q_1$ has grade-zero term $e$. The dual elements satisfy $\sum_i a_i^\vee=0$; they are distinct from the independent direct vertices $a_i$. |
+| Dual representation of the Greenian | Дуальное представление гриниана | PMG | The form $Q_1$ on $W^*$ satisfying $\mathcal C(Q_1)=\mathrm{Gr}$ for $\mathcal C:a_i^\vee\mapsto p_i=a_i-h$. Its exponential $D=\exp Q_1$ has grade-zero term $e$. The dual elements satisfy $\sum_i a_i^\vee=0$; they are distinct from the independent direct vertices $a_i$. In a section confined to one space, the mark $\vee$ may be omitted by explicit convention. |
 | Mutually dual exponentials | Взаимно-дуальные экспоненты | PMG | For nondegenerate symmetric first grades: $M_d/Q_k=M_{d-k}$ and $Q_d/M_k=Q_{d-k}$ in paired direct and dual spaces. The slash means exterior contraction. This is a relation, not a separate type of polyform or multiplicative inversion. |
+| Greenian exponential in the direct space | Экспонента гриниана в прямом пространстве | PMG | $N=\mathcal C(D)=\exp(\mathrm{Gr})$. With the same top-grade form $T_n$, $\tau(N)=1/(n^2\tau(G))$ for a connected undirected graph with positive conductances. It is not the multiplicative inverse of $M=\exp L$. |
+| Exterior contraction in both arguments of a form | Внешнее удаление в обоих аргументах формы | Qualified | The linear operation $/$ between paired direct and dual sides, used in $M_d/Q_k=M_{d-k}$. Distinct from polyform multiplication, matrix pseudoinversion, and division of numbers. [[Laplacian and Greenian - Mutual Duality of Exponentials]]. |
 
 Conventions and proofs appear in [[Laplacian and Greenian - Mutual Duality of Exponentials]] and [[The Canonical Vector Representation of the Greenian]]. In that series, the former name “dual polyform” for $D$ is replaced by “the Greenian exponential in its dual representation”. The relational phrase “a polyform dual to a given one” retains its precise meaning. The symmetric quadratic case is distinguished from the general bilinear case of balanced graphs.
+
+For $u,v\in W$ in the direct space, the normalized potentials are $P_M([u,v])=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v$ and $P_N([u,v])=\mathbf u^{\mathsf T}\mathbf L\mathbf v$, where $P_N(f)=\tau(Nf)/\tau(N)$. The norm of a form depends on the chosen exponential; the metrics extend to higher grades through Gram determinants and bilinearity. [[The Greenian Metric and Potentials]].
 
 ## Resistance geometry and metric evaluation
 
@@ -232,6 +241,47 @@ For a disconnected graph, the highest nonzero grade of $M_G$ is $n-c$, where $c$
 
 The sum of forest weights refers to a specified forest expansion. Because forms satisfy linear relations, an arbitrary expression for the same object may have a different coefficient sum.
 
+## Matroids and forest parameters
+
+**Definition.** A finite matroid is a pair $(E,\mathcal I)$, where $E$ is a finite ground set and $\mathcal I$ is a family of independent subsets satisfying three axioms:
+
+1. $\varnothing\in\mathcal I$.
+2. If $I\in\mathcal I$ and $J\subseteq I$, then $J\in\mathcal I$.
+3. If $I,J\in\mathcal I$ and $\#I<\#J$, there is $e\in J\setminus I$ such that $I\cup\{e\}\in\mathcal I$.
+
+The third condition is the augmentation axiom. For a graph, the elements are individual edges and the independent sets are forests. See [[The Cycle Matroid and Exterior Products of Edges]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Cycle matroid of a graph | Цикловой матроид графа | Standard | $M(G)=(E,\mathcal I)$, whose independent sets are edge sets without cycles. Their exterior products are nonzero. Isolated vertices are not matroid elements. Loops are dependent, and parallel edges form a two-element circuit. |
+| Matroid basis | Базис матроида | Standard | An inclusion-maximal independent set. In a connected graph, a spanning tree; in a disconnected graph, a spanning tree in each component. All bases have size $r(E)$. |
+| Matroid circuit | Цикл матроида | Standard | An inclusion-minimal dependent set. In a cycle matroid, a graph cycle, including a loop or a pair of parallel edges when the model permits them. |
+| Matroid rank and subset rank | Ранг матроида и ранг подмножества | Standard | $r(S)=\max\{\#I:I\subseteq S,\ I\in\mathcal I\}$; the matroid rank is $r=r(E)$. For a graph, $r=n-\kappa(G)$, where $\kappa(G)$ is the number of connected components; isolated vertices are included in both $n$ and $\kappa(G)$. |
+| Forest corank | Когрейд леса | Qualified | $k=r-g$, where $g=\#E(F)$. A forest on all $n$ vertices has $m=n-g$ components, so $k=m-\kappa(G)$. For a connected graph, $r=d=n-1$ and $m=k+1$. |
+| Weight-preserving matroid isomorphism | Изоморфизм матроидов с сохранением весов | Standard | A bijection of ground sets preserving independent subsets in both directions and the weights of corresponding elements. For electrical parameters, the conductances $c_\ell$ are preserved. |
+| Matroid parameter; matroid invariance | Матроидный параметр; матроидная инвариантность | Qualified | A graph characteristic determined by its cycle matroid, with element weights included in the weighted case. A scalar is preserved by the relevant isomorphism; an edge-indexed family is transported by its bijection. This property implies neither additivity nor completeness of an invariant system. |
+
+In the following definitions, $G$ is an undirected loopless graph with positive individual edge conductances, $w(F)=\prod_{\ell\in E(F)}c_\ell$, and $\pi(F)$ partitions all vertices into forest components. The normalized families $\alpha_k$, $s_m^{\mathrm{for}}$, $\xi_k$, as well as random spanning trees and $H_q$, additionally require connectedness, $n\ge2$, and $d=n-1$. Definitions of ordinary and rooted sums: [[Forest Coefficients - Grade, Components, and Corank]], [[Forest Coefficients and the Laplacian Polynomial]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Ordinary forest coefficients of a graph | Обычные лесные коэффициенты графа | Qualified | $f_g(G)=\sum_{F:\,\#E(F)=g}w(F)$ over spanning forests without chosen roots. All vertices, including isolated ones, are retained. $f_0=1$; for a connected graph, $f_d=\tau(G)$. These matroid coefficients differ from $\operatorname{St}(k,m)$. |
+| Rooted forest coefficients of a graph | Корневые лесные коэффициенты графа | Qualified | $p_g(G)=\sum_{F:\,\#E(F)=g}w(F)\prod_{C\in\pi(F)}\#C$. One root is chosen in each component. These are the coefficients of $P_G(t)=\det(I+t\mathbf L)$; for a connected graph, $p_d=n\tau(G)$. Not matroid invariants in general. |
+| Ordinary forest polynomial | Обычный лесной полином | Qualified | $F_G(t)=\sum_{g=0}^{r}f_g(G)t^g$. Collects ordinary spanning forests by grade and differs from the rooted polynomial $P_G$. |
+| Reversed forest polynomial | Обращённый лесной полином | Qualified | $\mathscr F_G(u)=u^rF_G(u^{-1})=\sum_{k=0}^{r}f_{r-k}u^k$, the corank-indexed form. The variables $t,u$ differ from the type variables $x_i$. |
+| Normalized forest coefficients and polynomial | Нормированные лесные коэффициенты и полином | PMG | For a connected graph, $\alpha_k=f_{d-k}/\tau$, $\Phi_G(u)=\mathscr F_G(u)/\tau=\sum_{k=0}^{d}\alpha_k u^k$, and $\alpha_0=1$. In the fixed cut-based forest representation of $Q_k$, the coefficient sum is $\alpha_k$. |
+| Forest power-sum parameters | Лесные степенные параметры | PMG | $s_m^{\mathrm{for}}$ are defined by the formal series $\log\Phi_G(u)=\sum_{m\ge1}(-1)^{m-1}s_m^{\mathrm{for}}u^m/m$. Equality with spectral power sums is not assumed. [[The Normalized Forest Polynomial and Power-Sum Parameters]]. |
+| Forest resistance scale | Лесной резистивный масштаб | PMG | $\xi_k=f_{d-k}/f_{d-k+1}=\alpha_k/\alpha_{k-1}$, $1\le k\le d$. Has resistance dimension, but is not defined as the resistance of a chosen vertex pair. [[Forest Resistance Scales]]. |
+| Edge effective resistance | Эффективный резистенс ребра | Qualified | $R_\ell=R_{ij}$ for an existing edge $\ell=\{i,j\}$, accounting for the entire network. Distinct from $1/c_\ell$. The edge-indexed family is matroidal when conductances are preserved; this does not recover resistances of arbitrary vertex pairs. |
+| Edge inclusion probability | Вероятность включения ребра | Standard | $\eta_\ell=\Pr(\ell\in T)=c_\ell R_\ell=c_\ell\,\partial\log\tau/\partial c_\ell$ under $\Pr(T)=w(T)/\tau$. Individual parallel edges retain their identities. [[Edge Resistances and Random Spanning Trees]]. |
+| Edge resistance parameters | Рёберные резистивные параметры | PMG | $H_q=\sum_{\ell\in E}\eta_\ell^q/c_\ell$, $q=1,2,\ldots$. The expected sum of conductor resistances of edges in the intersection of $q$ independent random spanning trees. In particular, $H_2=\sum_\ell c_\ell R_\ell^2$. [[Edge Resistances and Random Spanning Trees]]. |
+
+If conductance has dimension $C$, then $[f_g]=[p_g]=C^g$, $[\alpha_k]=C^{-k}$, $[s_m^{\mathrm{for}}]=C^{-m}$, $[\xi_k]=[R_\ell]=[H_q]=C^{-1}$, while $\eta_\ell$ is dimensionless.
+
+Matroid invariance of $f_g$ does not imply matroid invariance of the rooted coefficients $p_g$ or the full component-size toponome. The coefficient sum of the fixed cut-based representation of $Q_k$ is also distinct from the canonical forest sum of the Greenian with weights $\gamma_{ij}=-\mathrm{Gr}_{ij}$. Spectral coefficients and ordinary forest coefficients are distinguished.
+
+Under one-vertex gluing of connected graphs with disjoint edge sets, $\tau$, $F_G$, and $\Phi_G$ multiply, $\alpha_k$ convolve, and $s_m^{\mathrm{for}}$, $H_q$, and $\rho$ add. Additivity is not asserted for $\xi_k$ with $k>1$. These laws are proved separately from invariance in [[Gluing and the Limits of Matroid Invariance]]. Aggregating parallel conductors preserves $H_2$, but not the entire family $H_q$. Agreement of several invariants does not prove matroid isomorphism. Statements in this section do not extend automatically to balanced graphs.
+
 ## Potentials, norms, and variations
 
 | English term | Russian equivalent | Status | Meaning and convention |
@@ -240,7 +290,7 @@ The sum of forest weights refers to a specified forest expansion. Because forms 
 | Polyform potential | Потенциал формы | PMG | The quantity $u_M(f)=\tau(Mf)$ for fixed $M$. It is not the electrical potential at a vertex. |
 | Normalized polyform potential | Нормированный потенциал | PMG | $P_M(f)=u_M(f)/u_M(e)=\tau(Mf)/\tau(M)$ when $\tau(M)\ne0$. The same definition applies in the symmetric and balanced models. |
 | PMG form norm | Норма формы в PMG | PMG | An acceptable name for the normalized potential. For a general form this is a linear evaluation, not a norm in the usual sense. |
-| Metric identity | Метрическое тождество | PMG | In the symmetric model, the normalized potential of $[X,Y]$ equals the induced inner product $X\cdot Y$. The balanced model uses the full pairing $\beta$ and its determinant extension, rather than only the symmetric part $g$. |
+| Metric identity | Метрическое тождество | PMG | For $M=M_G=\exp L$ in the symmetric model, the normalized potential of $[X,Y]$ equals the induced inner product $X\cdot Y$. The balanced model uses the full pairing $\beta$ and its determinant extension, rather than only the symmetric part $g$. |
 | Conductance variation | Вариация проводимости | Standard | A change $c_{ij}\mapsto c_{ij}+t$. The main graph model requires nonnegative final conductance. |
 | Algebraic Laplacian variation | Алгебраическая вариация лапласиана | PMG | In the symmetric model, an elementary update $t[v]^2$ with $v\in W$; in the balanced model, $t[u,v]$ with $u,v\in W$. It generally changes several couplings; weight admissibility is checked separately. |
 | Joint conductance variation | Совместная вариация связей | Qualified | Simultaneous changes in conductances of several vertex pairs; their interaction is determined by the Gram matrix of the corresponding vectors. |
@@ -280,6 +330,24 @@ This section concerns loopless balanced digraphs with nonnegative arc weights. C
 
 Indices $i\to j$ in $r_{ij}$ specify the direction of a pair, whereas $\mathrm{out}/\mathrm{in}$ specify argument roles in the pairing; these are different conventions. The normalized potential $P_M(F)=\tau(MF)/\tau(M)$ is the common algebraic basis of resistance and circulation quantities. Rooted potentials $\tau_i$ and electrical potentials $\varphi_i$ are defined separately.
 
+## KVP and KVPOU structural decompositions
+
+The object being decomposed is an explicitly chosen real pair-data table on a fixed set of $n\ge3$ elements. Its diagonal is zero, and all component formulas refer to $i\ne j$. An absent coupling is represented by zero; an unknown value is not replaced by zero. Positivity, connectedness, and a metric are not required for the linear decomposition. Definitions and proofs: [[KVP Decomposition of Pair Characteristics]], [[Oriented Extensions of KVP - Circulation and Imbalance]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| KVP decomposition | KVP-разложение | PMG | The unique decomposition of a symmetric table as $A=A_K+A_V+A_P$. The constant K component gives the overall level, V reproduces deviations of row sums, and P has zero row sums. |
+| K component | K-компонента | PMG | $(A_K)_{ij}=\mu$, where $\mu=\binom{n}{2}^{-1}\sum_{i<j}A_{ij}$. The average includes all distinct pairs, including zero entries. |
+| V component | V-компонента | PMG | $(A_V)_{ij}=(v_i+v_j)/(n-2)$, where $v_i=\sum_{j\ne i}A_{ij}-(n-1)\mu$ and $\sum_i v_i=0$. |
+| P component | P-компонента | PMG | $A_P=A-A_K-A_V$, the symmetric residual satisfying $\sum_{j\ne i}(A_P)_{ij}=0$. |
+| Component sector and projector | Сектор и проектор компоненты | Qualified | A sector is the linear subspace of tables of a specified kind; $\Pi_X$ extracts $A_X$. For KVP, $\Pi_X^2=\Pi_X$, $\Pi_X\Pi_Y=0$ for $X\ne Y$, and the projectors sum to the identity. |
+| KVPOU decomposition | KVPOU-разложение | PMG | For a directed table $C$, its symmetric part $S=(C+C^{\mathsf T})/2$ has a KVP decomposition, and its skew part $H=(C-C^{\mathsf T})/2$ splits into O and U. Thus $C=C_K+C_V+C_P+C_O+C_U$. |
+| U component; vertex imbalance | U-компонента; вершинный дисбаланс | PMG | $(C_U)_{ij}=(u_i-u_j)/n$, where $u=H\mathbf1=(C\mathbf1-C^{\mathsf T}\mathbf1)/2$. This skew vertex part reproduces the imbalance of outgoing and incoming sums. For a balanced table, $U=0$. |
+| O component; circulation component | O-компонента; циркуляционная компонента | PMG | $C_O=H-C_U$, $C_O^{\mathsf T}=-C_O$, $C_O\mathbf1=0$. A circulation table with zero row and column sums. |
+| Coefficient orthogonality | Коэффициентная ортогональность | Qualified | Orthogonality of sectors under $\langle C,D\rangle_0=\tfrac12\sum_{i\ne j}C_{ij}D_{ij}$. On symmetric tables this is $\sum_{i<j}C_{ij}D_{ij}$. Distinct from the metric pairing of PMG elements. |
+
+Components of couplings, the Green matrix, and resistances belong to different input tables. When applying the decomposition to $\mathbf{Gr}$, its off-diagonal part is treated as a pair table separately from the diagonal. The existence of a KVPOU decomposition does not itself define a resistance metric for an arbitrary unbalanced digraph. See [[KVP Decomposition of the Green Matrix and Resistances]].
+
 ## Earlier names and ambiguous usages
 
 The following table also records earlier Russian usage, so that older research notes can be read consistently with the public core.
@@ -316,23 +384,23 @@ The following definitions are used in the published series “Spaces and Subspac
 | Local element; local point | Локальный элемент; локальная точка | An element of unit affine weight and zero norm: $x\cdot z=1$, $x^2=0$. It represents a point in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
 | Nonlocal element of unit weight | Нелокальный элемент единичного веса | An element $p$ with $p\cdot z=1$ and $p^2\ne0$. A PMG term in the isotropic model. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
 | Local center | Локальный центр | The point $\pi(p)=p-p^2z/2$ for $p\cdot z=1$. Selecting the center is a nonlinear correction along $z$. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
-| Sphere element | Элемент сферы | In the symmetric isotropic space, $S=h+\rho z/2$, where $h$ here is the local center; $x\cdot S=0$ specifies local points on the sphere and $S^2=\rho$. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. In a balanced graph, one sphere functional has two metric representatives. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
+| Sphere element | Элемент сферы | In the symmetric isotropic space, $S=O+\rho z/2$, where $O=\pi(S)$ is the local sphere center; $x\cdot S=0$ specifies its local points and $S^2=\rho$. The center $O$ is not identified with the centroid $h$. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. In a balanced graph, one sphere functional has two metric representatives. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
 | Distinguished null vector | Выделенный нуль-вектор | A nonzero element $z$ with $z^2=0$ that specifies the normalization of local points. It is not the zero element of the space. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Isotropic element | Изотропный элемент | A nonzero linear element $u$ with zero norm $u\cdot u=0$, regardless of affine weight. Local elements are isotropic; the null vector $z$ is isotropic but not local, since its weight is $0$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Metric square | Метрический квадрат | A previous explanatory name for the norm $Y^2=Y\cdot Y$. The current text uses “norm”. It may be negative in an indefinite metric and differs from the form $[Y]^2$. |
 | Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension]]. |
 | Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#The linear midpoint and its local center]]. |
-| Resistance radius | Резистивный радиус | PMG definition through the inverse isotropic Gram matrix: $\rho=(\mathbf G_z^{-1})_{n+1,n+1}$. In the symmetric case, $\rho=R_{\mathrm{sph}}^2$ is the squared Euclidean circumradius. In a balanced graph it can differ from the squared radius of the Euclidean realization of the symmetric metric part. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
+| Resistance radius | Резистивный радиус | For a connected undirected graph, $\rho=R_{\mathrm{sph}}^2$ is the squared Euclidean circumradius of the resistance simplex. The forest formula is $\rho=\xi_1/3-H_2/12$. [[Resistance Radius - Forest Formula and Matroid Invariance]]. In the isotropic representation, $\rho=(\mathbf G_z^{-1})_{n+1,n+1}$; this algebraic normalization extends to balanced graphs, where it can differ from the squared radius of the Euclidean realization of the symmetric metric part. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
 | Resistance diameter | Резистивный диаметр | $D_{\mathrm{res}}=4\rho$. In the symmetric case it is the squared linear diameter of the circumsphere. The balanced model retains the algebraic normalization through $\rho$; generally different from the maximum pairwise resistance. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
 | Influence matrix | Матрица влияния | The matrix $\mathbf B$ of coefficients extending values from selected to internal vertices. Its rows give the bi-coordinates of projections. For a balanced graph, specify whether $\mathbf L$ or $\mathbf L^{\mathsf T}$ is used. [[Selected Vertices and the Dirichlet Problem]]. |
 | Fundamental matrix | Фундаментальная матрица | $\mathbf{Fm}=\mathbf A^{-1}$, where $\mathbf A$ is the internal Laplacian block. For a connected undirected graph, it is also the Gram matrix of residual vectors; for a disconnected graph, the metric statement applies component by component. Invertibility requires every component to contain a selected vertex. [[Selected Vertices and the Dirichlet Problem]]. |
 | Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed values at selected vertices to the response after solving the internal equations. It equals the Laplacian of the induced graph. [[Vertex Elimination and Induced Couplings]]. |
 | Common spanning-tree parameter of the two parts | Общий остовной параметр двух долей | The locally introduced normalization $J(G)$ of the spanning-tree coefficient of a bipartite graph. It can be computed through either part while retaining its original degrees. [[Couplings Within One Part of a Bipartite Graph]]. |
 
-For other extensions, including KVP/KVPOU, metric-value decompositions, and interval forms, definitions and translations are added as the corresponding public sections are prepared. The following restrictions remain:
+For extensions not yet developed here, including metric-value decompositions and interval forms, definitions and translations are added as the corresponding public sections are prepared. Published KVP/KVPOU definitions are given above. The following restrictions remain:
 
 - “Cocenter” is not used as a synonym for centroid or as the name of a separate geometric center without a definition.
-- No translation of “внешнее деление” is fixed until the operation is formally compared with standard operations of exterior algebra.
+- For the linear operation $/$ in exponential duality, the terms exterior contraction and «внешнее удаление» are fixed. The historical expression «внешнее деление» without a definition does not automatically denote this operation; a different construction requires a separate comparison.
 - “Duality” and “metric-value decomposition” require a definition of the particular construction; their meaning does not follow from the name alone.
 
 ## Usage rules and revision history
@@ -345,6 +413,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 13 | 2026-10-28 | Added matroid definitions, forest and edge parameter families, both toponome normalizations, first-kind and mixed-state potentials, and KVP/KVPOU. Aligned duality, conductor and edge effective resistance, and radius; removed stale qualifications. Aligned with Russian revision 13. |
 | 12 | 2026-10-28 | Distinguished direct vertices from dual classes in the Greenian entry; aligned with Russian glossary revision 12 and linked the English series. |
 | 11 | 2026-10-27 | Established the Laplacian-Greenian pair, vector first grades and boundary exponentials; distinguished the Green matrix, Greenian, dual representation, and mutual exponential duality. Aligned with Russian glossary revision 11. |
 | 10 | 2026-10-25 | Added balanced graphs, rooted potentials, directional pairing, resistances, circulation, coordinates, and sphere representatives. Reserved $r_{ij}$ for one-way resistance; clarified symmetric formulas, Gram matrices, higher-grade norms, and radius. Aligned with Russian glossary revision 10. |
@@ -359,8 +428,3 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 | 1 | 2026-10-09 | First public core glossary, aligned with core specification revision 2 and the introductory series. Clarifies the levels of objects and evaluations, the spanning-tree coefficient, edge factors, and earlier names. This English version follows Russian revision 1. |
 
 Internal glossary version 1.1 of 2026-09-21 was used as source material. Its information about extensions remains relevant to their later preparation, but does not automatically form part of the current core terminology. Earlier revisions are records of changes, not parallel terminology standards.
-
-
-
-
-

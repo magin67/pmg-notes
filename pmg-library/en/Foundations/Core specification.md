@@ -2,12 +2,12 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-10-28
-revision: 11
+revision: 12
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
 lang: en
-description: "Definitions, notation, and fundamental identities of the PMG core: exterior objects, boundaries, forms, the resistance metric, the Laplacian exponential, and the balanced extension."
+description: "PMG core definitions and conventions: polyform algebra, resistance metric, Laplacian and Greenian, matroid and forest parameters, and conditions for the balanced extension."
 order: 1
 ---
 
@@ -17,11 +17,11 @@ This specification records the definitions, notation, and fundamental identities
 
 The algebraic construction is over the real numbers. The underlying space has a finite basis of vertices; forms are defined before a graph or metric is chosen.
 
-The main graph model is a finite connected undirected graph without loops, with $n\ge2$ vertices. Existing edges have positive conductances; absent couplings have zero conductance. Parallel conductors between the same pair of vertices are represented by their total conductance. The balanced model and its differences are explicitly stated in [[Core specification#The balanced extension|the balanced extension section]].
+The main graph model is a finite connected undirected graph without loops, with $n\ge2$ vertices. Existing edges have positive conductances; absent couplings have zero conductance. For the matrix and metric model, parallel conductors between the same pair of vertices are represented by the total conductance $c_{ij}=\sum_{\ell:\,\ell=\{i,j\}}c_\ell$. For the cycle matroid and edge parameters, the set of individual edges $E$ with conductances $c_\ell$ is fixed: aggregation preserves the Laplacian and resistance metric, but is not a matroid isomorphism and does not preserve all edge parameters. See [[Edge Resistances and Random Spanning Trees]]. The balanced model and its differences are explicitly stated in [[Core specification#The balanced extension|the balanced extension section]].
 
 Connectedness is required for the resistance metric on the entire space of affine vectors and for normalization by the spanning-tree coefficient. The algebra of forms, the Laplacian exponential, and the forest expansion also apply to disconnected graphs. That case is specified separately.
 
-**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series, and the balanced extension in [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]]; links follow the relevant sections. Working conjectures are not part of the core.
+**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series, and the balanced extension in [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]]; links follow the relevant sections. For thematic extensions, links lead to the corresponding published series. Working conjectures are not part of the core.
 
 ## The underlying space, points, and vectors
 
@@ -263,10 +263,10 @@ $$
 
 This inner product is positive definite on $W$. In the electrical interpretation, when unit current enters at vertex $i$ and leaves at $j$, one has $R_{ij}=\varphi_i-\varphi_j$, where $\varphi_i$ is the electrical potential at vertex $i$.
 
-For the centroid $b=n^{-1}\sum_i a_i$, the identity $\mathbf{Gr}\mathbf1=0$ gives
+For the centroid $h=n^{-1}\sum_i a_i$, the identity $\mathbf{Gr}\mathbf1=0$ gives
 
 $$
-\mathrm{Gr}_{ij}=(b-a_i)\cdot(b-a_j)
+\mathrm{Gr}_{ij}=(h-a_i)\cdot(h-a_j)
 $$
 
 In the symmetric model, the Green matrix is the Gram matrix of the vectors from the vertices to the centroid. In a balanced graph, directional argument order gives the transposed matrix, as specified in the balanced extension. The notation $\mathbf G=(g_{ij})$ is reserved for the Gram matrix of explicitly chosen elements, with $g_{ij}$ denoting their inner products. The expressions $\mathbf{Gr}$ and $\mathbf L^+$ denote the same object: the former names it, while the latter specifies how it is obtained.
@@ -276,6 +276,18 @@ For two vertex pairs,
 $$
 a_{ij}\cdot a_{kl}=\frac{R_{il}+R_{jk}-R_{ik}-R_{jl}}2
 $$
+
+### Resistance radius and diameter
+
+For a connected undirected graph with positive conductances, the resistances $R_{ij}$ are squared distances between the vertices of a nondegenerate Euclidean simplex of dimension $n-1$. Let $O$ be its circumcenter and $R_{\mathrm{sph}}$ its linear circumradius. The center $O$ generally differs from the centroid $h$.
+
+**Definition.** The resistance radius and diameter are quadratic quantities:
+
+$$
+\rho=R_{\mathrm{sph}}^2,\qquad D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2
+$$
+
+The resistance diameter does not mean the maximum pairwise resistance. The definition and the forest formula with its verified normalization are given in [[Resistance Radius - Forest Formula and Matroid Invariance]]. The former name “metric mass” is not used without checking the correspondence between normalizations. The algebraic extension to balanced graphs appears in the balanced extension; its Euclidean interpretation requires a separate check.
 
 ### The distance operator
 
@@ -711,16 +723,19 @@ Algebraic polynomial identities may remain valid for real coupling coefficients 
 A full treatment of the following thematic extensions requires separate definitions and applicability conditions; this specification records only the explicitly stated conventions:
 
 - the isotropic extension, the distinguished null vector, and bi-coordinates and di-coordinates;
-- general unbalanced digraphs and the KVP/KVPOU structural decompositions;
+- KVP/KVPOU structural decompositions of specified pair tables; a general metric model for unbalanced digraphs requires separate justification;
 - the Greenian, mutual duality of exterior exponentials, and cut representations;
 - structural identities of partition forms, symmetric polyforms, and their combinatorial coefficients;
-- partition toponomes, the second-kind algebra, and further component evaluations;
+- partition toponomes, the second-kind algebra, and vector and vertex normalizations of polynomial toponomes;
+- the cycle matroid, ordinary and rooted forest coefficients, and normalized forest and edge parameters;
 - metric-value decompositions and interval forms;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
 Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]].
 
 Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[en/Combinatorial potentials/Combinatorial Potentials|Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. Thematic definitions do not remove the applicability conditions of the base model or the explicitly stated balanced extension.
+
+Published definitions of structural decompositions are collected in [[en/KVP decomposition/KVP Decomposition and Oriented Extensions|the KVP series]], and the two forest normalizations and Laplacian polynomial in [[en/Polynomial toponomes/Polynomial Toponomes|the polynomial toponome series]]. Matroid parameters and gluing laws are developed in [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|the matroid series]]. The conventions needed here are recorded below; these extensions are not developed in full.
 
 In this specification, a boundary is an image of $\partial$, equivalently an element of $\Lambda^kW$. A selected vertex set in a Dirichlet problem is not a boundary in this algebraic sense. When using the standard expression “boundary vertices”, the two notions must be explicitly distinguished.
 
@@ -752,7 +767,61 @@ $$
 
 Here $/$ is linear exterior contraction in both arguments of a form. Duality is a mutual relation, not the name of a separate type of polyform. After identification in one space, the ordinary product is $\exp L\,\exp(\mathrm{Gr})=\exp(L+\mathrm{Gr})$; the multiplicative inverse of $\exp L$ is $\exp(-L)$.
 
+After the centered transfer, both exponentials define normalized potentials in the same space $W$. With the same fixed top-grade form $T_n=[(a_1\ldots a_n)]^2$, we have
+
+$$
+N=\exp(\mathrm{Gr})=\mathcal C(D),\qquad
+P_N(f)=\frac{\tau(Nf)}{\tau(N)},\qquad
+\tau(M)=\tau(G),\qquad \tau(N)=\frac{1}{n^2\tau(G)}
+$$
+
+| Exponential | Matrix of the induced metric on $W$ | Normalized potential |
+|---|---|---|
+| $M=\exp L$ | $\mathbf{Gr}=\mathbf L^+$ | $P_M([u,v])=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v$ |
+| $N=\exp(\mathrm{Gr})$ | $\mathbf L$ | $P_N([u,v])=\mathbf u^{\mathsf T}\mathbf L\mathbf v$ |
+
+Here $u,v\in W$, and $\mathbf u,\mathbf v$ are their coefficient columns in the direct vertices. The metrics extend to exterior elements through Gram determinants and bilinearity. The chosen exponential must therefore be specified when discussing norms. The Greenian coefficients $\gamma_{ij}$ may have either sign, while both metrics above are positive definite on $W$. Proof and normalization: [[The Greenian Metric and Potentials]].
+
 Definitions and proofs appear in [[Laplacian and Greenian - Mutual Duality of Exponentials]], [[The Canonical Vector Representation of the Greenian]], and [[The Exterior Exponential and Representations of the Greenian]]. These statements about quadratic vector forms do not automatically extend to nonsymmetric balanced-graph Laplacians; their bilinear boundary representation remains valid.
+
+### The cycle matroid and forest coefficients
+
+The cycle matroid $M(G)$ consists of the edge set $E$ and its independent subsets, namely forests. An edge $\ell=\{i,j\}$ is represented by $a_j-a_i$; the exterior product of these vectors is nonzero exactly for a forest. The formal matroid definition and the definitions of basis, circuit, and matroid parameter appear in [[PMG terminology#Matroids and forest parameters|the terminology]], and the correspondence is proved in [[The Cycle Matroid and Exterior Products of Edges]].
+
+Let $\kappa(G)$ count the components of the original graph, including isolated vertices. The matroid rank $r$, grade $g$, forest component count $m$, and forest corank $k$ satisfy
+
+$$
+r=n-\kappa(G),\qquad g=\#E(F),\qquad m=n-g,\qquad k=r-g=m-\kappa(G)
+$$
+
+For a connected graph, $r=d=n-1$ and $m=k+1$. The vertex count $n$ is retained separately: isolated vertices are not recorded by the cycle matroid.
+
+For a spanning forest $F$, put $w(F)=\prod_{\ell\in E(F)}c_\ell$ and let $\pi(F)$ partition all vertices into components. Ordinary and rooted coefficients are distinguished:
+
+$$
+f_g(G)=\sum_{\substack{F\text{ - forest}\\\#E(F)=g}}w(F),\qquad
+p_g(G)=\sum_{\substack{F\text{ - forest}\\\#E(F)=g}}w(F)\prod_{C\in\pi(F)}\#C
+$$
+
+In $p_g$, one root is chosen in each component, including singleton components. Hence
+
+$$
+F_G(t)=\sum_{g=0}^{r}f_g(G)t^g,\qquad
+P_G(t)=\sum_{g=0}^{r}p_g(G)t^g=\det(I+t\mathbf L)
+$$
+
+The ordinary coefficients $f_g$ are determined by the weighted cycle matroid. The rooted coefficients $p_g$ and the full toponome of component types are not matroid invariants in general. The numbers $\operatorname{St}(k,m)$ from the combinatorial series belong to a different auxiliary construction; they do not rename either $f_g$ or $p_g$. Definitions and proofs: [[Forest Coefficients - Grade, Components, and Corank]], [[Forest Coefficients and the Laplacian Polynomial]].
+
+For a connected graph with $\tau(G)=f_d>0$, normalized corank coefficients are defined by
+
+$$
+\alpha_k=\frac{f_{d-k}}{\tau(G)},\qquad
+\Phi_G(u)=\sum_{k=0}^{d}\alpha_k u^k,\qquad \alpha_0=1
+$$
+
+In the fixed cut-based forest representation of the dual grade $Q_k$, the coefficient sum is $\alpha_k$. This is distinct from the canonical edge-based forest sum of the Greenian with weights $\gamma_{ij}=-\mathrm{Gr}_{ij}$, which may have either sign. Forest sums refer to the specified representations, not to an arbitrary expression for the same form. Formal factors of $\Phi_G$ are not identified with the spectrum of $\mathbf L$ or $\mathbf{Gr}$; it is the rooted polynomial $P_G$ that has a spectral interpretation. See [[The Normalized Forest Polynomial and Power-Sum Parameters]].
+
+Matroid invariance means preservation under a matroid isomorphism that preserves corresponding weights. It does not establish a gluing law. Under one-vertex gluing of connected graphs with disjoint edge sets, $F_G$, $\Phi_G$, and $\tau$ multiply; forest power-sum parameters, $H_q$, and $\rho$ add, while the coefficients $\alpha_k$ convolve. The families are defined in the terminology; separate proofs of the laws appear in [[Gluing and the Limits of Matroid Invariance]]. These laws are not assumed for other gluings. Agreement of several parameters does not prove matroid isomorphism. The results do not extend automatically to balanced graphs.
 
 ## Principal notation
 
@@ -783,8 +852,11 @@ Definitions and proofs appear in [[Laplacian and Greenian - Mutual Duality of Ex
 | $\tau(P)$ | Coefficient of $T_n$ in a polyform on boundaries |
 | $\tau(G)=\tau(M_G)$ | Spanning-tree coefficient of the graph |
 | $u_M(f)$, $P_M(f)$ | Form potential and its normalized value $P_M(f)=\tau(Mf)/\tau(M)$ |
+| $N=\exp(\mathrm{Gr})$, $P_N(f)$ | Greenian exponential in the direct space and its normalized potential |
+| $f_g$, $p_g$, $\alpha_k$ | Ordinary, rooted, and normalized corank forest coefficients |
 | $f_{ij}$, $\tau_i$ | Directed arc weight and rooted spanning-tree potential |
-| $h$, $x_i=a_i-h$ | Centroid and centered vectors in the balanced extension |
+| $c_\ell$, $c_{ij}$ | Individual edge conductance and total conductance of a vertex pair |
+| $h$, $x_i=a_i-h$ | Centroid and centered vectors; the Greenian representation also uses $p_i=a_i-h$ |
 | $\beta(u,v)$, $g(u,v)$, $\gamma(u,v)$ | Directional pairing and its symmetric and skew-symmetric parts |
 | $\omega(u,v)$, $w(abc)$, $\chi_{abc}$ | Circulation form, triangular notation, and normalized potential |
 | $r_{ij}$, $\mathbf r$ | One-way resistances and their matrix; individual edge resistance is written as $1/c_{ij}$ |
@@ -835,6 +907,7 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
+| 12 | 2026-10-28 | Aligned individual edges and aggregated couplings, centroid notation, and quadratic radius. Added the two metric roles of the exponentials, matroid and forest conventions, and links to published extensions. Aligned with Russian revision 12. |
 | 11 | 2026-10-28 | Aligned direct and dual notation with Russian revision 11 and linked the completed English Greenian series. |
 | 10 | 2026-10-27 | Defined the Greenian and mutual exponential duality; distinguished grade-one vector forms from boundary polyforms, dual from centered representations, and exterior multiplication from matrix composition. Removed dex from the current extension list. Aligned with Russian revision 10; the series itself remains in Russian pending review. |
 | 9 | 2026-10-25 | Added the balanced extension: rooted potentials, directional pairing, one-way resistance and circulation, higher grades, Gram matrix, and radius. Specified the scope of symmetric formulas and reconstruction from the one-way resistance matrix. Aligned scalar matrix entries and terminology with Russian revision 9. |
@@ -846,7 +919,3 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 | 1 | 2026-10-09 | First public core specification, aligned with the introductory series. Clarified formal forms, the space of boundaries, the domain of metric evaluation, the spanning-tree coefficient, and conditions for variation formulas. |
 
 Internal specification version 0.2 of 2026-09-21 was used as source material. Its core definitions are superseded by this document; its material on thematic extensions does not automatically become part of the core. Earlier revisions are historical records, not parallel current specifications.
-
-
-
-
