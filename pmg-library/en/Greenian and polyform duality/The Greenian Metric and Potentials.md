@@ -2,8 +2,8 @@
 title: The Greenian Metric and Potentials
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 2
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-metric-and-potentials
@@ -11,6 +11,8 @@ lang: en
 description: "Form potentials in the Greenian exponential: the Laplacian as a metric, cut weights, energy of vertex differences, higher-grade determinants, and exact examples."
 order: 7
 ---
+
+[[ru/Гриниан и дуальность полиформ/Метрика и потенциалы гриниана|Русский]]
 
 The Laplacian exponential defines the resistance metric with the Green matrix. In the Greenian exponential, the matrices exchange roles: its normalized potentials are determined by the original Laplacian. Thus Greenian coefficients may have either sign, while norms of nonzero exterior objects remain positive.
 

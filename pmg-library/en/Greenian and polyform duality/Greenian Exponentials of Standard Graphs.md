@@ -2,8 +2,8 @@
 title: Greenian Exponentials of Standard Graphs
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 5
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-exponentials-of-standard-graphs
@@ -11,6 +11,8 @@ lang: en
 description: "Vector coefficients and boundary exponentials of Greenians for complete graphs, stars, cycles, incomplete and weighted graphs, a six-vertex example, and the Petersen graph."
 order: 6
 ---
+
+[[ru/Гриниан и дуальность полиформ/Экспоненты гринианов типовых графов|Русский]]
 
 The Greenian exponential is constructed by the same vector-form multiplication rules as the Laplacian exponential. The coefficients change: the original conductances are replaced by $\gamma_{ij}=-\mathrm{Gr}_{ij}$. These values may be positive, negative, or zero; nonzero Greenian couplings need not coincide with edges of the original graph.
 

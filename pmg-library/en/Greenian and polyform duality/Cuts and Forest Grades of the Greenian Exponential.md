@@ -2,8 +2,8 @@
 title: Cuts and Forest Grades of the Greenian Exponential
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 9
+revision: 2
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-cuts-forest-grades
@@ -11,6 +11,8 @@ lang: en
 order: 3
 description: "Cut representations of the Greenian and its exponential through original graph forests: partition forms, exterior deletion, positive forest weights, and comparison with signed forests."
 ---
+
+[[ru/Гриниан и дуальность полиформ/Разрезы и лесные грейды экспоненты гриниана|Русский]]
 
 The vector representation of the Greenian expands its exponential over signed forests with coefficients $-\mathrm{Gr}_{ij}$. Here we construct another representation of the same form, using positive weights of forests in the original graph and dual vertex sums of their components.
 

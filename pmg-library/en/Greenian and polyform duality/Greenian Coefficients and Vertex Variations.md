@@ -2,8 +2,8 @@
 title: Greenian Coefficients and Vertex Variations
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 5
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-coefficients-vertex-variations
@@ -11,6 +11,8 @@ lang: en
 order: 5
 description: "Canonical vector coefficients, resistances in the polar expression, original forest weights, and changes in the spanning coefficient under vertex deletion and addition."
 ---
+
+[[ru/Гриниан и дуальность полиформ/Коэффициенты гриниана и вершинные вариации|Русский]]
 
 The canonical vector representation of the Greenian has coefficients $\gamma_{ij}=-\mathrm{Gr}_{ij}$. These are the negative inner products of centroid vectors in the original resistance geometry. For variations, it is convenient to pass from them to resistances and positive forest weights of the original graph. Each such transition changes the expression while preserving the form and its entire exponential.
 

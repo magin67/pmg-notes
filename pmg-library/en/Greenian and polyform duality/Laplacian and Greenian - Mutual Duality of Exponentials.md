@@ -2,8 +2,8 @@
 title: Laplacian and Greenian - Mutual Duality of Exponentials
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 8
+revision: 2
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-definition-metric-recovery
@@ -11,6 +11,8 @@ lang: en
 order: 1
 description: "The Laplacian and Greenian as vector forms: boundary exponentials, mutual duality through exterior deletion, normalization, and a complete path example."
 ---
+
+[[ru/Гриниан и дуальность полиформ/Лапласиан и гриниан - взаимная дуальность экспонент|Русский]]
 
 The Laplacian $L$ and the Greenian $\mathrm{Gr}$ are two grade-one forms related by inversion of their matrices on the space of affine vectors. In the symmetric case, both are **vector forms**: they admit representations as sums of quadratic forms of vertex differences. Their exterior exponentials are **boundary polyforms** with components of different grades.
 

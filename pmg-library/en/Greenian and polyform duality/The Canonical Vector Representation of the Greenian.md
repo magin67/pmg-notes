@@ -2,8 +2,8 @@
 title: The Canonical Vector Representation of the Greenian
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 6
+revision: 2
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-canonical-vector-representation
@@ -11,6 +11,8 @@ lang: en
 order: 2
 description: "The canonical vector form of the Greenian: negative Green-matrix coefficients, centroid geometry, the inverse distance transformation, the boundary exponential, and signed forests."
 ---
+
+[[ru/Гриниан и дуальность полиформ/Каноническое векторное представление гриниана|Русский]]
 
 Like the Laplacian, the Greenian has a canonical vector representation: both grade-one forms are sums of quadratic forms of vertex differences. Their exponentials are boundary polyforms. The coefficient for a pair is the negative inner product of the corresponding centroid vectors in the original resistance geometry. Thus the exponential is calculated using the same boundary merging and annihilation rules as the Laplacian exponential.
 

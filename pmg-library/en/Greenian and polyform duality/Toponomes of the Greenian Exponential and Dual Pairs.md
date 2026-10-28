@@ -2,8 +2,8 @@
 title: Toponomes of the Greenian Exponential and Dual Pairs
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 2
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-exponential-toponomes-and-dual-pairs
@@ -11,6 +11,8 @@ lang: en
 description: "The canonical forest toponome of the Greenian, signed coefficients, two normalizations, structural identities, dual pairs, and exact reversal of spectral polynomial coefficients."
 order: 9
 ---
+
+[[ru/Гриниан и дуальность полиформ/Топономы экспоненты гриниана и дуальные пары|Русский]]
 
 A toponome of the Greenian exponential is constructed in the same way as a toponome of the Laplacian exponential: vector factors are expanded over forests, then labeled partitions are replaced by component types. The coupling coefficients change, and with them the forest weights. For the Greenian, these weights and even their sums for an individual type may be negative.
 

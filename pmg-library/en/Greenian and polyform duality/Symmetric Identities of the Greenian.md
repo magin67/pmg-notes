@@ -2,8 +2,8 @@
 title: Symmetric Identities of the Greenian
 date: 2026-10-28
 updated: 2026-10-28
-revision: 1
-translated_revision: 3
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-symmetric-identities
@@ -11,6 +11,8 @@ lang: en
 description: "Boundary identities and their cut images: centering, the zero sum of dual elements, complementary grades, and evaluations compatible with structural identities."
 order: 8
 ---
+
+[[ru/Гриниан и дуальность полиформ/Симметрические тождества гриниана|Русский]]
 
 The vector representation of the Greenian obeys the same structural identities as the Laplacian. In the cut representation, these relations are written through sums of dual or centered elements. The zero-sum condition concerns the choice of these elements and does not by itself characterize the Greenian coefficients.
 
