@@ -1,8 +1,8 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-27
-revision: 11
+updated: 2026-10-28
+revision: 12
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -136,7 +136,7 @@ The relation between forest coefficients and $r$-Stirling numbers is used here f
 
 ## Partition toponomes and operations on types
 
-Definitions and the scope of the operations are given in the [[Partition Toponomes]] series. The names of PMG-specific constructions refer to the objects below; they do not define a general name for every reduction of a polyform.
+Definitions and the scope of the operations are given in the [[en/Partition toponomes/Partition Toponomes|Partition Toponomes]] series. The names of PMG-specific constructions refer to the objects below; they do not define a general name for every reduction of a polyform.
 
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
@@ -183,10 +183,10 @@ When representations occur together, the polyform retains an ordinary letter and
 | Grade-one vector form | Векторная форма первого грейда | PMG | In the symmetric case, a sum of quadratic forms of vectors in $W$: $\sum c_\ell[u_\ell]^2$. The Laplacian and the Greenian have canonical representations through $[a_{ij}]^2$. Coefficients may have either sign. |
 | Boundary polyform | Граничная полиформа | PMG | A polyform whose form arguments belong to exterior powers of the vector space $W$. Laplacian and Greenian exponentials are of this type; higher grades contain exterior products of several vectors. |
 | Greenian | Гриниан | PMG | The grade-one form $\mathrm{Gr}=\sum_{i,j}\mathrm{Gr}_{ij}[a_i-h,a_j-h]$ with Green matrix $\mathbf{Gr}=\mathbf L^+$. In the symmetric case, $\mathrm{Gr}=-\sum_{i<j}\mathrm{Gr}_{ij}[a_{ij}]^2$. Formerly called the Green polyform; distinct from a Gram matrix $\mathbf G$. |
-| Dual representation of the Greenian | Дуальное представление гриниана | PMG | The form $Q_1$ on $W^*$ satisfying $\mathcal C(Q_1)=\mathrm{Gr}$ for $\mathcal C:a_i\mapsto a_i-h$. Its exponential $D=\exp Q_1$ has grade-zero term $e$. In dual vertex notation, $\sum_i a_i=0$. |
+| Dual representation of the Greenian | Дуальное представление гриниана | PMG | The form $Q_1$ on $W^*$ satisfying $\mathcal C(Q_1)=\mathrm{Gr}$ for $\mathcal C:a_i^\vee\mapsto p_i=a_i-h$. Its exponential $D=\exp Q_1$ has grade-zero term $e$. The dual elements satisfy $\sum_i a_i^\vee=0$; they are distinct from the independent direct vertices $a_i$. |
 | Mutually dual exponentials | Взаимно-дуальные экспоненты | PMG | For nondegenerate symmetric first grades: $M_d/Q_k=M_{d-k}$ and $Q_d/M_k=Q_{d-k}$ in paired direct and dual spaces. The slash means exterior contraction. This is a relation, not a separate type of polyform or multiplicative inversion. |
 
-Conventions and proofs currently appear in the Russian notes [[Лапласиан и гриниан - взаимная дуальность экспонент]] and [[Каноническое векторное представление гриниана]]. In that series, the former name “dual polyform” for $D$ is replaced by “the Greenian exponential in its dual representation”. The relational phrase “a polyform dual to a given one” retains its precise meaning. The symmetric quadratic case is distinguished from the general bilinear case of balanced graphs.
+Conventions and proofs appear in [[Laplacian and Greenian - Mutual Duality of Exponentials]] and [[The Canonical Vector Representation of the Greenian]]. In that series, the former name “dual polyform” for $D$ is replaced by “the Greenian exponential in its dual representation”. The relational phrase “a polyform dual to a given one” retains its precise meaning. The symmetric quadratic case is distinguished from the general bilinear case of balanced graphs.
 
 ## Resistance geometry and metric evaluation
 
@@ -251,7 +251,7 @@ In PMG, “norm” without the qualifier “linear” means the quadratic norm $
 
 ## Balanced graphs and directional metrics
 
-This section concerns loopless balanced digraphs with nonnegative arc weights. Connectedness is assumed when potentials are normalized and a metric is used. Conventions are collected in the [[Core specification#The balanced extension|balanced extension of the specification]]; proofs are in [[Balanced Graphs]].
+This section concerns loopless balanced digraphs with nonnegative arc weights. Connectedness is assumed when potentials are normalized and a metric is used. Conventions are collected in the [[Core specification#The balanced extension|balanced extension of the specification]]; proofs are in [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]].
 
 | English term | Russian equivalent | Status | Meaning and convention |
 | --- | --- | --- | --- |
@@ -345,6 +345,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 12 | 2026-10-28 | Distinguished direct vertices from dual classes in the Greenian entry; aligned with Russian glossary revision 12 and linked the English series. |
 | 11 | 2026-10-27 | Established the Laplacian-Greenian pair, vector first grades and boundary exponentials; distinguished the Green matrix, Greenian, dual representation, and mutual exponential duality. Aligned with Russian glossary revision 11. |
 | 10 | 2026-10-25 | Added balanced graphs, rooted potentials, directional pairing, resistances, circulation, coordinates, and sphere representatives. Reserved $r_{ij}$ for one-way resistance; clarified symmetric formulas, Gram matrices, higher-grade norms, and radius. Aligned with Russian glossary revision 10. |
 | 9 | 2026-10-22 | Added terminology for partition toponomes: positive type, the toponome of a chosen representation, the second-kind algebra, partial matchings and gluings, color classes, coefficient tables, and triangles. Distinguished polynomial notation, type multiplication, and ordinary polyform multiplication; clarified weight data and representation dependence. Aligned with Russian glossary revision 9, including the Russian adjective «остовной». |

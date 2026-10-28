@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 14
-translated_revision: 16
-updated: 2026-10-26
+revision: 15
+translated_revision: 17
+updated: 2026-10-28
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -39,43 +39,49 @@ Five notes on resistance radius and diameter, vertex centralities, dimensionless
 
 Five notes on dependencies among partition forms. The main results are the noncrossing basis and its dimension, completeness of the four-block identity, the graph gluing formula, and decomposition of relations by supports.
 
-- [[Structural Identities|Main results, reading order, and descriptions of the notes]].
+- [[en/Structural identities/Structural Identities|Main results, reading order, and descriptions of the notes]].
 
 ## Symmetric polyforms
 
 Five notes on symmetry of forms under vertex permutations. The main result is the fundamental theorem of SPFs: a symmetric sum of any admissible type is expressed through the principal polyform of the same grade with an explicit coefficient. Consequences cover products and powers, the exponential of the complete graph, and Abel polynomials.
 
-- [[Symmetric Polyforms|The fundamental theorem, its consequences, and reading order]].
+- [[en/Symmetric polyforms/Symmetric Polyforms|The fundamental theorem, its consequences, and reading order]].
 
 ## Combinatorial potentials
 
 Six notes on ordinary and cyclic partitions and counting by component sizes. The series introduces the potentials of the first and second kinds, distinguishes SPF representation sizes from forest counts, proves the Cayley-Moon formula for joining prescribed components, and explains falling-factorial expansions through rooted forests and $r$-Stirling numbers. The potential of path-and-cycle states relates arc labels to graph and construction-history counts.
 
-- [[Combinatorial Potentials|Main results, notation, and reading routes]].
+- [[en/Combinatorial potentials/Combinatorial Potentials|Main results, notation, and reading routes]].
 
 ## Partition toponomes
 
 Six notes on passing from a chosen polyform representation to partition types. The series establishes the limits of the reduction, introduces the second-kind algebra and its graph interpretations, develops coefficient triangles, and shows why they do not distinguish all graphs.
 
-- [[Partition Toponomes|Main results, reading order, and scope]].
+- [[en/Partition toponomes/Partition Toponomes|Main results, reading order, and scope]].
 
 ## Polynomial toponomes
 
 Five notes on polynomial reductions of partition toponomes. Vector and vertex normalizations are compared through forest weights; the vertex reduction of the exponential is proved to equal the determinant of $I+t\mathbf L$. Coefficient ratios express the Kirchhoff index and reciprocal spectral sums and relate the polynomial to the centroid and resistance radius. The series also examines reducibility under different products and graph realizability of toponomes.
 
-- [[Polynomial Toponomes|Contents and reading order]].
+- [[en/Polynomial toponomes/Polynomial Toponomes|Contents and reading order]].
 
 ## Balanced graphs
 
 Twelve notes extend PMG to balanced directed graphs. They develop the bilinear Laplacian and its exponential, circulation forms, one-way resistance, directional coordinates and the sphere, graph balancing, directed forest toponomes, and permutation digraphs. Definitions and algebraic results precede geometric, electrical, and probabilistic interpretations.
 
-- [[Balanced Graphs|Main results, reading order, and five reading routes]].
+- [[en/Balanced graphs/Balanced Graphs|Main results, reading order, and five reading routes]].
 
 ## KVP decomposition and oriented extensions
 
 Nine notes on separating pair characteristics into an overall level, vertex heterogeneity, residual pair structure, circulation, and directional imbalance. The series develops the projectors, graph examples, the distance transformation, Green and resistance components, applications, metric parameters, the second-order symmetric potential, and forest toponomes. Proved results are distinguished from computational examples and open questions.
 
 - [[KVP Decomposition and Oriented Extensions|Main results, reading order, and five reading routes]].
+
+## Greenian and Polyform Duality
+
+Nine notes on the Laplacian and Greenian as vector forms, mutual duality of their exterior exponentials, canonical coefficients and signed forests, cut representations, vertex variations, metric potentials, symmetric identities, and toponomes. Exact examples include complete graphs, stars, cycles, weighted paths, and the Petersen graph.
+
+- [[en/Greenian and polyform duality/Greenian and Polyform Duality|Main results, reading order, normalizations, and reproducible checks]].
 
 ## PMG Foundations
 
@@ -121,7 +127,7 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **26 October 2026**
+- Library last updated: **28 October 2026**
 
 
 

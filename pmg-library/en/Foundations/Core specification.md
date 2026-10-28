@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-27
-revision: 10
+updated: 2026-10-28
+revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -21,7 +21,7 @@ The main graph model is a finite connected undirected graph without loops, with 
 
 Connectedness is required for the resistance metric on the entire space of affine vectors and for normalization by the spanning-tree coefficient. The algebra of forms, the Laplacian exponential, and the forest expansion also apply to disconnected graphs. That case is specified separately.
 
-**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series, and the balanced extension in [[Balanced Graphs]]; links follow the relevant sections. Working conjectures are not part of the core.
+**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series, and the balanced extension in [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]]; links follow the relevant sections. Working conjectures are not part of the core.
 
 ## The underlying space, points, and vectors
 
@@ -551,7 +551,7 @@ Sources: [[Variation of a Single Edge]], [[Varying several couplings together]],
 
 ## The balanced extension
 
-This section extends the graph model to finite loopless balanced digraphs with nonnegative arc weights. The algebra of forms and its product are unchanged: symmetry of the arguments was never assumed. Graph and metric statements in the other sections use the symmetric model unless an extension is explicitly stated. Proofs and examples are collected in [[Balanced Graphs]].
+This section extends the graph model to finite loopless balanced digraphs with nonnegative arc weights. The algebra of forms and its product are unchanged: symmetry of the arguments was never assumed. Graph and metric statements in the other sections use the symmetric model unless an extension is explicitly stated. Proofs and examples are collected in [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]].
 
 ### The Laplacian, balance, and rooted potentials
 
@@ -720,7 +720,7 @@ A full treatment of the following thematic extensions requires separate definiti
 
 Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]].
 
-Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. Thematic definitions do not remove the applicability conditions of the base model or the explicitly stated balanced extension.
+Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[en/Combinatorial potentials/Combinatorial Potentials|Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. Thematic definitions do not remove the applicability conditions of the base model or the explicitly stated balanced extension.
 
 In this specification, a boundary is an image of $\partial$, equivalently an element of $\Lambda^kW$. A selected vertex set in a Dirichlet problem is not a boundary in this algebraic sense. When using the standard expression “boundary vertices”, the two notions must be explicitly distinguished.
 
@@ -736,7 +736,7 @@ $$
 
 The Laplacian $L$ and the Greenian $\mathrm{Gr}$ are vector forms; their exterior exponentials are boundary polyforms. The vector representation concerns grade one; higher grades contain forms on exterior products of vectors. The Greenian coefficients $\gamma_{ij}=-\mathrm{Gr}_{ij}$ may have either sign.
 
-The matrices $\mathbf L$ and $\mathbf{Gr}$ are mutual pseudoinverses and ordinary inverses on $\mathbf1^\perp$. Exponential duality distinguishes the direct space $W$ from its dual $W^*$. Let $Q_1$ denote the dual representation of the Greenian and $\mathcal C:a_i\mapsto a_i-h$ the centered identification:
+The matrices $\mathbf L$ and $\mathbf{Gr}$ are mutual pseudoinverses and ordinary inverses on $\mathbf1^\perp$. Exponential duality distinguishes the direct space $W$ from its dual $W^*$. When both spaces occur together, write an independent direct vertex as $a_i$ and the class of its coordinate functional in $W^*$ as $a_i^\vee$. Let $Q_1$ denote the dual representation of the Greenian and $\mathcal C:a_i^\vee\mapsto p_i=a_i-h$ the centered identification:
 
 $$
 \mathcal C(Q_1)=\mathrm{Gr},\qquad
@@ -752,7 +752,7 @@ $$
 
 Here $/$ is linear exterior contraction in both arguments of a form. Duality is a mutual relation, not the name of a separate type of polyform. After identification in one space, the ordinary product is $\exp L\,\exp(\mathrm{Gr})=\exp(L+\mathrm{Gr})$; the multiplicative inverse of $\exp L$ is $\exp(-L)$.
 
-Definitions and proofs currently appear in the Russian notes [[Лапласиан и гриниан - взаимная дуальность экспонент]], [[Каноническое векторное представление гриниана]], and [[Внешняя экспонента и представления гриниана]]. These statements about quadratic vector forms do not automatically extend to nonsymmetric balanced-graph Laplacians; their bilinear boundary representation remains valid.
+Definitions and proofs appear in [[Laplacian and Greenian - Mutual Duality of Exponentials]], [[The Canonical Vector Representation of the Greenian]], and [[The Exterior Exponential and Representations of the Greenian]]. These statements about quadratic vector forms do not automatically extend to nonsymmetric balanced-graph Laplacians; their bilinear boundary representation remains valid.
 
 ## Principal notation
 
@@ -812,7 +812,7 @@ The parts of a combinatorial type specify block sizes. The parts of an SPF type 
 
 ### Types and toponomes of chosen representations
 
-In the [[Partition Toponomes]] series, a standalone positive type is written as $\lambda=(k_1,\ldots,k_r)$, where $k_i\geqslant1$ are the boundary grades of the blocks. For a specified vertex count $n$,
+In the [[en/Partition toponomes/Partition Toponomes|Partition Toponomes]] series, a standalone positive type is written as $\lambda=(k_1,\ldots,k_r)$, where $k_i\geqslant1$ are the boundary grades of the blocks. For a specified vertex count $n$,
 
 $$
 k=w(\lambda),\qquad r=\#\lambda,\qquad
@@ -829,12 +829,13 @@ The table $\mathcal A_{\mathcal E}=(a_{k,r})$ groups coefficients of types with 
 
 ## Sources and revision history
 
-The balanced extension is based on the published [[Balanced Graphs]] series. Links after its subsections lead to definitions and proofs, including applicability conditions.
+The balanced extension is based on the published [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]] series. Links after its subsections lead to definitions and proofs, including applicability conditions.
 
 The ten notes of the [[PMG Introductory Series|introductory series]] provide the supporting material. External references and their correspondence to individual notes are listed in [[Further Reading for the PMG Introductory Series|further reading]]. This specification records the conventions of the published corpus; subsequent substantive changes require corresponding updates to related definitions and terminology.
 
 | Revision | Date | Content |
 |---|---|---|
+| 11 | 2026-10-28 | Aligned direct and dual notation with Russian revision 11 and linked the completed English Greenian series. |
 | 10 | 2026-10-27 | Defined the Greenian and mutual exponential duality; distinguished grade-one vector forms from boundary polyforms, dual from centered representations, and exterior multiplication from matrix composition. Removed dex from the current extension list. Aligned with Russian revision 10; the series itself remains in Russian pending review. |
 | 9 | 2026-10-25 | Added the balanced extension: rooted potentials, directional pairing, one-way resistance and circulation, higher grades, Gram matrix, and radius. Specified the scope of symmetric formulas and reconstruction from the one-way resistance matrix. Aligned scalar matrix entries and terminology with Russian revision 9. |
 | 8 | 2026-10-22 | Recorded notation for positive and empty types, the distinction between multiplicity and product powers, and the dependence of a toponome on its chosen expression. Specified the scope of $*$ and information loss in coefficient tables. Added links to the completed toponome series; the mathematical statements of the required core are unchanged. Aligned with Russian core specification revision 8. |
