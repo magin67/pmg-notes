@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+<title id="title">Грейд, компоненты и когрейд одного леса</title>
+<desc id="desc">В цикле C4 показано по одному лесу грейдов 0,1,2,3. Числа компонент равны 4,3,2,1, когрейды — 3,2,1,0. Во всех рисунках сохранены четыре вершины.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="440" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Грейд, компоненты и когрейд одного леса</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Четыре леса в C₄. Пунктир: рёбра исходного графа, не вошедшие в выбранный лес.</text>
+<rect x="24" y="100" width="210" height="288" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text9" x="129" y="137" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">g = 0</text>
+<line x1="77" y1="185" x2="181" y2="185" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="181" y1="185" x2="181" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="181" y1="289" x2="77" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="77" y1="185" x2="77" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<circle cx="77" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text15" x="61" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="181" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text17" x="197" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="181" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text19" x="197" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="77" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text21" x="61" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text22" x="129" y="343" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">m = 4,   k = 3</text>
+<rect x="258" y="100" width="210" height="288" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text24" x="363" y="137" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">g = 1</text>
+<line x1="415" y1="185" x2="415" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="415" y1="289" x2="311" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="311" y1="185" x2="311" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="311" y1="185" x2="415" y2="185" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="311" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text30" x="295" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="415" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text32" x="431" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="415" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text34" x="431" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="311" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text36" x="295" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text37" x="363" y="343" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">m = 3,   k = 2</text>
+<rect x="492" y="100" width="210" height="288" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text39" x="597" y="137" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">g = 2</text>
+<line x1="649" y1="289" x2="545" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="545" y1="185" x2="545" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="545" y1="185" x2="649" y2="185" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="649" y1="185" x2="649" y2="289" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="545" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text45" x="529" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="649" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text47" x="665" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="649" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text49" x="665" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="545" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text51" x="529" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text52" x="597" y="343" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">m = 2,   k = 1</text>
+<rect x="726" y="100" width="210" height="288" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text54" x="831" y="137" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">g = 3</text>
+<line x1="779" y1="185" x2="779" y2="289" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="779" y1="185" x2="883" y2="185" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="883" y1="185" x2="883" y2="289" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="883" y1="289" x2="779" y2="289" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="779" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text60" x="763" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="883" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text62" x="899" y="169" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="883" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text64" x="899" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="779" cy="289" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text66" x="763" y="314" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text67" x="831" y="343" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">m = 1,   k = 0</text>
+<text id="text68" x="480" y="414" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">n = 4,   d = 3;     g + m = n,     g + k = d</text>
+</g>
+</svg>

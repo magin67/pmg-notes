@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+<title id="title">Лес и цикл: независимость рёберных векторов</title>
+<desc id="desc">Два ребра треугольника образуют лес; все три ребра дают зависимость и нулевое внешнее произведение.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="430" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Лес и цикл: независимость рёберных векторов</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Ориентация задаёт знаки векторов; независимость набора рёбер от неё не зависит.</text>
+<rect x="24" y="96" width="444" height="307" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text9" x="246" y="130" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Два ребра: лес</text>
+<rect x="492" y="96" width="444" height="307" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text11" x="714" y="130" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Три ребра: цикл</text>
+<line x1="366" y1="295" x2="246" y2="175" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="246" y1="175" x2="135.192" y2="285.808" stroke="#167f77" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="126" y1="295" x2="353" y2="295" stroke="#167f77" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<circle cx="246" cy="175" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text16" x="246" y="157" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="126" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text18" x="109" y="317" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="366" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text20" x="383" y="317" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<text id="text21" x="246" y="351" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">(ab)(bc) = (abc) ≠ 0</text>
+<line x1="834" y1="295" x2="723.192" y2="184.192" stroke="#b54e45" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="714" y1="175" x2="603.192" y2="285.808" stroke="#b54e45" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="594" y1="295" x2="821" y2="295" stroke="#b54e45" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<circle cx="714" cy="175" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text26" x="714" y="157" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="594" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text28" x="577" y="317" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="834" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text30" x="851" y="317" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<text id="text31" x="714" y="351" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">(ab) + (bc) + (ca) = 0</text>
+<text id="text32" x="714" y="384" font-size="22" fill="#b54e45" text-anchor="middle" font-weight="400">(ab)(bc)(ca) = 0</text>
+</g>
+</svg>

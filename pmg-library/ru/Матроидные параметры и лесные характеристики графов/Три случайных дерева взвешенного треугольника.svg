@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="625" viewBox="0 0 960 625" role="img" aria-labelledby="title desc">
+<title id="title">Взвешенный треугольник и его три остовных дерева</title>
+<desc id="desc">Проводимости ab, ac, bc равны 1,2,3. Три дерева имеют веса 2,3,6 и вероятности 2/11,3/11,6/11. Суммирование даёт вероятности включения рёбер 5/11,8/11,9/11.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="625" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Взвешенный треугольник и его три остовных дерева</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Остовной вес τ = 2 + 3 + 6 = 11. Вероятность дерева равна его весу, делённому на τ.</text>
+<line x1="180" y1="132" x2="80" y2="272" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="180" y1="132" x2="280" y2="272" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="80" y1="272" x2="280" y2="272" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="180" cy="132" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text12" x="180" y="114" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="80" cy="272" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text14" x="63" y="294" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="280" cy="272" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text16" x="297" y="294" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<text id="text17" x="111" y="194" font-size="18" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c<tspan baseline-shift="sub" font-size="70%">ab</tspan> = 1</text>
+<text id="text18" x="247" y="194" font-size="18" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c<tspan baseline-shift="sub" font-size="70%">ac</tspan> = 2</text>
+<text id="text19" x="180" y="260" font-size="18" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c<tspan baseline-shift="sub" font-size="70%">bc</tspan> = 3</text>
+<text id="text20" x="390" y="155" font-size="25" fill="#203444" text-anchor="start" font-weight="400">η<tspan baseline-shift="sub" font-size="70%">ab</tspan> = 2/11 + 3/11 = 5/11</text>
+<text id="text21" x="390" y="215" font-size="25" fill="#203444" text-anchor="start" font-weight="400">η<tspan baseline-shift="sub" font-size="70%">ac</tspan> = 2/11 + 6/11 = 8/11</text>
+<text id="text22" x="390" y="275" font-size="25" fill="#203444" text-anchor="start" font-weight="400">η<tspan baseline-shift="sub" font-size="70%">bc</tspan> = 3/11 + 6/11 = 9/11</text>
+<rect x="24" y="335" width="288" height="262" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text24" x="168" y="370" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">T₁</text>
+<line x1="88" y1="518" x2="248" y2="518" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="168" y1="413" x2="88" y2="518" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="168" y1="413" x2="248" y2="518" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="168" cy="413" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text29" x="168" y="395" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="88" cy="518" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text31" x="71" y="540" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="248" cy="518" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text33" x="265" y="540" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<text id="text34" x="168" y="575" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">w = 2;   p = 2/11</text>
+<rect x="336" y="335" width="288" height="262" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text36" x="480" y="370" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">T₂</text>
+<line x1="480" y1="413" x2="560" y2="518" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="480" y1="413" x2="400" y2="518" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="400" y1="518" x2="560" y2="518" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="480" cy="413" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text41" x="480" y="395" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="400" cy="518" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text43" x="383" y="540" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="560" cy="518" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text45" x="577" y="540" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<text id="text46" x="480" y="575" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">w = 3;   p = 3/11</text>
+<rect x="648" y="335" width="288" height="262" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text48" x="792" y="370" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">T₃</text>
+<line x1="792" y1="413" x2="712" y2="518" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="792" y1="413" x2="872" y2="518" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="712" y1="518" x2="872" y2="518" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="792" cy="413" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text53" x="792" y="395" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="712" cy="518" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text55" x="695" y="540" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="872" cy="518" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text57" x="889" y="540" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<text id="text58" x="792" y="575" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">w = 6;   p = 6/11</text>
+</g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="685" viewBox="0 0 960 685" role="img" aria-labelledby="title desc">
+<title id="title">Одноточечное сочленение: лес выбирается по частям</title>
+<desc id="desc">Лес первого треугольника содержит два ребра, лес второго — одно. После отождествления выбранных вершин их объединение остаётся лесом. Грейды и когрейды складываются.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="685" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Одноточечное сочленение: лес выбирается по частям</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Показан один выбор пары лесов. Пунктир сохраняет видимость остальных рёбер частей.</text>
+<text id="text8" x="240" y="111" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">G₁:  g₁ = 2,  k₁ = 0</text>
+<text id="text9" x="720" y="111" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">G₂:  g₂ = 1,  k₂ = 1</text>
+<line x1="360" y1="282" x2="240" y2="167" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="240" y1="167" x2="120" y2="282" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="120" y1="282" x2="360" y2="282" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="240" cy="167" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text14" x="240" y="150" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">p₁</text>
+<circle cx="120" cy="282" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text16" x="120" y="265" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="360" cy="282" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text18" x="360" y="265" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<line x1="600" y1="282" x2="840" y2="282" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="840" y1="282" x2="720" y2="167" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="720" y1="167" x2="600" y2="282" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="720" cy="167" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text23" x="720" y="150" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">p₂</text>
+<circle cx="600" cy="282" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text25" x="600" y="265" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="840" cy="282" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text27" x="840" y="265" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text28" x="480" y="335" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">Отождествляем p₁ и p₂</text>
+<line x1="480" y1="351" x2="480" y2="387" stroke="#566b7b" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="280" y1="575" x2="480" y2="499" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="680" y1="423" x2="680" y2="575" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="680" y1="575" x2="480" y2="499" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="480" y1="499" x2="280" y2="423" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="280" y1="423" x2="280" y2="575" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="480" y1="499" x2="680" y2="423" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="480" cy="499" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text37" x="480" y="527" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">p</text>
+<circle cx="280" cy="423" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text39" x="260" y="428" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="280" cy="575" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text41" x="260" y="580" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="680" cy="423" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text43" x="700" y="428" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="680" cy="575" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text45" x="700" y="580" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text46" x="480" y="630" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">G = G₁ ∨ G₂:   g = 3,   k = 1</text>
+<text id="text47" x="480" y="665" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">F = F₁ ∪ F₂;   g = g₁ + g₂;   k = k₁ + k₂</text>
+</g>
+</svg>
