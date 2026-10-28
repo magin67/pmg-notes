@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="660" viewBox="0 0 960 660" role="img" aria-labelledby="title desc">
+<title id="title">Другой выбор границы меняет матроид результата</title>
+<desc id="desc">Один путь P4 с двумя разметками границы. При добавлении пути из двух рёбер между концами P4 получается C5; при добавлении между вершинами на расстоянии двух рёбер получается C4 с листом. Остовные числа 5 и 4, радиусы 2/5 и 9/16.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="660" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Другой выбор границы меняет матроид результата</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Золотые окружности отмечают выбранные вершины; все проводимости равны 1.</text>
+<rect x="24" y="102" width="444" height="530" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text9" x="246" y="140" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Оба конца пути P₄</text>
+<line x1="70" y1="210" x2="180" y2="210" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="180" y1="210" x2="290" y2="210" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="290" y1="210" x2="400" y2="210" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="70" cy="210" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="70" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text15" x="70" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₀</text>
+<circle cx="180" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text17" x="180" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₁</text>
+<circle cx="290" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text19" x="290" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₂</text>
+<circle cx="400" cy="210" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="400" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text22" x="400" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₃</text>
+<text id="text23" x="246" y="264" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Тот же P₄, другая разметка</text>
+<text id="text24" x="246" y="312" font-size="21" fill="#2767ad" text-anchor="middle" font-weight="400">Присоединяем путь P₃</text>
+<line x1="70" y1="398" x2="180" y2="398" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="180" y1="398" x2="290" y2="398" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="290" y1="398" x2="400" y2="398" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="70" y1="398" x2="235" y2="510" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="235" y1="510" x2="400" y2="398" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="70" cy="398" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="70" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text32" x="70" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₀</text>
+<circle cx="180" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text34" x="180" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₁</text>
+<circle cx="290" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text36" x="290" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₂</text>
+<circle cx="400" cy="398" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="400" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text39" x="400" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₃</text>
+<circle cx="235.0" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text41" x="235.0" y="537" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">x</text>
+<text id="text42" x="246" y="572" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Цикл C₅</text>
+<text id="text43" x="246" y="611" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">τ = 5;   ρ = 2/5</text>
+<rect x="492" y="102" width="444" height="530" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text45" x="714" y="140" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Пара на расстоянии 2</text>
+<line x1="538" y1="210" x2="648" y2="210" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="648" y1="210" x2="758" y2="210" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="758" y1="210" x2="868" y2="210" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="538" cy="210" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="538" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text51" x="538" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₀</text>
+<circle cx="648" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text53" x="648" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₁</text>
+<circle cx="758" cy="210" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="758" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text56" x="758" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₂</text>
+<circle cx="868" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text58" x="868" y="188" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₃</text>
+<text id="text59" x="714" y="264" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Тот же P₄, другая разметка</text>
+<text id="text60" x="714" y="312" font-size="21" fill="#2767ad" text-anchor="middle" font-weight="400">Присоединяем путь P₃</text>
+<line x1="538" y1="398" x2="648" y2="398" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="648" y1="398" x2="758" y2="398" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="758" y1="398" x2="868" y2="398" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="538" y1="398" x2="648" y2="510" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="648" y1="510" x2="758" y2="398" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="538" cy="398" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="538" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text68" x="538" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₀</text>
+<circle cx="648" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text70" x="648" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₁</text>
+<circle cx="758" cy="398" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="758" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text73" x="758" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₂</text>
+<circle cx="868" cy="398" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text75" x="868" y="376" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">v₃</text>
+<circle cx="648.0" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text77" x="648.0" y="537" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">x</text>
+<text id="text78" x="714" y="572" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">C₄ с листом</text>
+<text id="text79" x="714" y="611" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">τ = 4;   ρ = 9/16</text>
+</g>
+</svg>
