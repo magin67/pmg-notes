@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+<title id="title">One matroid, different vertex geometry</title>
+<desc id="desc">Path P4 and star K1,3 with three labeled edges. The label correspondence preserves every independent set, but the sums of pairwise resistances are 10 and 9.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="420" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">One matroid, different vertex geometry</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">All conductances equal 1. Matching colors and labels show the edge correspondence.</text>
+<rect x="24" y="95" width="444" height="296" rx="12" fill="#f3f6f9" stroke="none"/>
+<rect x="492" y="95" width="444" height="296" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text10" x="246" y="132" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Path P₄</text>
+<text id="text11" x="714" y="132" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Star K₁,₃</text>
+<line x1="81" y1="226" x2="191" y2="226" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="714" y1="225" x2="594" y2="181" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<text id="text14" x="136.0" y="259" font-size="20" fill="#2767ad" text-anchor="middle" font-weight="400">ℓ₁</text>
+<text id="text15" x="654.0" y="226.0" font-size="20" fill="#2767ad" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">ℓ₁</text>
+<line x1="191" y1="226" x2="301" y2="226" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="714" y1="225" x2="834" y2="181" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<text id="text18" x="246.0" y="259" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">ℓ₂</text>
+<text id="text19" x="774.0" y="226.0" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">ℓ₂</text>
+<line x1="301" y1="226" x2="411" y2="226" stroke="#b97716" stroke-width="4" stroke-linecap="round"/>
+<line x1="714" y1="225" x2="714" y2="307" stroke="#b97716" stroke-width="4" stroke-linecap="round"/>
+<text id="text22" x="356.0" y="259" font-size="20" fill="#b97716" text-anchor="middle" font-weight="400">ℓ₃</text>
+<text id="text23" x="738.0" y="266.0" font-size="20" fill="#b97716" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">ℓ₃</text>
+<circle cx="81" cy="226" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text25" x="81" y="208" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="191" cy="226" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text27" x="191" y="208" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="301" cy="226" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text29" x="301" y="208" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="411" cy="226" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text31" x="411" y="208" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<circle cx="714" cy="225" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text33" x="714" y="207" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="594" cy="181" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text35" x="594" y="163" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="834" cy="181" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text37" x="834" y="163" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="714" cy="307" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text39" x="714" y="334" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text40" x="246" y="309" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">Every subset of {ℓ₁, ℓ₂, ℓ₃} is independent</text>
+<text id="text41" x="246" y="366" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">Kf = 10</text>
+<text id="text42" x="714" y="366" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">Kf = 9</text>
+</g>
+</svg>

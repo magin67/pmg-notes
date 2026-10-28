@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="570" viewBox="0 0 960 570" role="img" aria-labelledby="title desc">
+<title id="title">One forest: unrooted and rooted contributions</title>
+<desc id="desc">Two forests on four vertices: a three-vertex path and an isolated vertex have 3 root choices; two disjoint edges have 4. All root choices are shown.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="570" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">One forest: unrooted and rooted contributions</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Unit-weight K₄, grade g = 2. A gold ring marks the chosen root of a component.</text>
+<rect x="24" y="98" width="444" height="440" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text9" x="246" y="136" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Components 3 + 1</text>
+<rect x="492" y="98" width="444" height="440" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text11" x="714" y="136" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Components 2 + 2</text>
+<line x1="100" y1="208" x2="240" y2="208" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="240" y1="208" x2="380" y2="208" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="100" cy="208" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text15" x="100" y="191" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="240" cy="208" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text17" x="240" y="191" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="380" cy="208" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text19" x="380" y="191" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="240" cy="285" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text21" x="240" y="268" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<line x1="610" y1="203" x2="810" y2="203" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="610" y1="285" x2="810" y2="285" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="610" cy="203" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text25" x="610" y="186" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="810" cy="203" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text27" x="810" y="186" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="610" cy="285" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text29" x="610" y="268" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="810" cy="285" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text31" x="810" y="268" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text32" x="246" y="339" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">3 root choices</text>
+<text id="text33" x="714" y="339" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">4 root choices</text>
+<line x1="59" y1="391" x2="99" y2="391" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="99" y1="391" x2="139" y2="391" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="59" cy="391" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="59" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="99" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="139" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="99" cy="445" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="99" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<line x1="204" y1="391" x2="244" y2="391" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="244" y1="391" x2="284" y2="391" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="204" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="244" cy="391" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="244" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="284" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="244" cy="445" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="244" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<line x1="349" y1="391" x2="389" y2="391" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="389" y1="391" x2="429" y2="391" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="349" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="389" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="429" cy="391" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="429" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="389" cy="445" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="389" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<line x1="525" y1="391" x2="579" y2="391" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="525" y1="445" x2="579" y2="445" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="525" cy="391" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="525" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="579" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="525" cy="445" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="525" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="579" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<line x1="633" y1="391" x2="687" y2="391" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="633" y1="445" x2="687" y2="445" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="633" cy="391" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="633" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="687" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="633" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="687" cy="445" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="687" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<line x1="741" y1="391" x2="795" y2="391" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="741" y1="445" x2="795" y2="445" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="741" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="795" cy="391" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="795" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="741" cy="445" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="741" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="795" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<line x1="849" y1="391" x2="903" y2="391" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="849" y1="445" x2="903" y2="445" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="849" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="903" cy="391" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="903" cy="391" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="849" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<circle cx="903" cy="445" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="903" cy="445" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text90" x="246" y="510" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Contribution to f₂: 1;   to p₂: 3</text>
+<text id="text91" x="714" y="510" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Contribution to f₂: 1;   to p₂: 4</text>
+</g>
+</svg>

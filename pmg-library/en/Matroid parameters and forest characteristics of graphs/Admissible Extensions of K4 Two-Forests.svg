@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="615" viewBox="0 0 960 615" role="img" aria-labelledby="title desc">
+<title id="title">Which edges can be added to a forest?</title>
+<desc id="desc">In unit-weight K4, a forest of type 3+1 has three admissible edges; type 2+2 has four. There are 12 and 3 such forests, respectively, and the mean of A is 16/5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="615" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Which edges can be added to a forest?</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Blue: forest edges. Gold dashes: admissible additions. Gray dashes: a cycle would form.</text>
+<rect x="24" y="98" width="444" height="401" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text9" x="246" y="136" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Components 3 + 1</text>
+<rect x="492" y="98" width="444" height="401" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text11" x="714" y="136" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Components 2 + 2</text>
+<line x1="120" y1="193" x2="356" y2="429" stroke="#c8d1d9" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="120" y1="193" x2="120" y2="429" stroke="#b97716" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="356" y1="193" x2="120" y2="429" stroke="#b97716" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="356" y1="429" x2="120" y2="429" stroke="#b97716" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="120" y1="193" x2="356" y2="193" stroke="#2767ad" stroke-width="5" stroke-linecap="round"/>
+<line x1="356" y1="193" x2="356" y2="429" stroke="#2767ad" stroke-width="5" stroke-linecap="round"/>
+<circle cx="120" cy="193" r="10" fill="#e9f1fb" stroke="#2767ad" stroke-width="2.5"/>
+<text id="text19" x="104" y="177" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="356" cy="193" r="10" fill="#e9f1fb" stroke="#2767ad" stroke-width="2.5"/>
+<text id="text21" x="372" y="177" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="356" cy="429" r="10" fill="#e9f1fb" stroke="#2767ad" stroke-width="2.5"/>
+<text id="text23" x="372" y="454" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="120" cy="429" r="10" fill="#e4f4ef" stroke="#167f77" stroke-width="2.5"/>
+<text id="text25" x="104" y="454" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text26" x="238" y="480" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">A(F) = 3</text>
+<line x1="588" y1="193" x2="824" y2="429" stroke="#b97716" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="588" y1="193" x2="588" y2="429" stroke="#b97716" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="824" y1="193" x2="824" y2="429" stroke="#b97716" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="824" y1="193" x2="588" y2="429" stroke="#b97716" stroke-width="3.3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="588" y1="193" x2="824" y2="193" stroke="#2767ad" stroke-width="5" stroke-linecap="round"/>
+<line x1="824" y1="429" x2="588" y2="429" stroke="#2767ad" stroke-width="5" stroke-linecap="round"/>
+<circle cx="588" cy="193" r="10" fill="#e9f1fb" stroke="#2767ad" stroke-width="2.5"/>
+<text id="text34" x="572" y="177" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<circle cx="824" cy="193" r="10" fill="#e9f1fb" stroke="#2767ad" stroke-width="2.5"/>
+<text id="text36" x="840" y="177" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="824" cy="429" r="10" fill="#e4f4ef" stroke="#167f77" stroke-width="2.5"/>
+<text id="text38" x="840" y="454" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="588" cy="429" r="10" fill="#e4f4ef" stroke="#167f77" stroke-width="2.5"/>
+<text id="text40" x="572" y="454" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text41" x="706" y="480" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">A(F) = 4</text>
+<text id="text42" x="246" y="529" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">12 forests of this type</text>
+<text id="text43" x="714" y="529" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">3 forests of this type</text>
+<text id="text44" x="480" y="575" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">E₁ A = (12 · 3 + 3 · 4) / 15 = 16/5;     ξ₁ = 15/16</text>
+</g>
+</svg>

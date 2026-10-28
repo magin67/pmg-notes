@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="670" viewBox="0 0 960 670" role="img" aria-labelledby="title desc">
+<title id="title">Why each 2-forest is counted exactly once</title>
+<desc id="desc">A fixed 2-forest with components A={q,a} and B={b,c,d}. In B one can choose 3 vertices or delete 2 edges. After restoring weights, the difference of contributions is (3-2)w(F)=w(F).</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="670" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Why each 2-forest is counted exactly once</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Fix q in A. All choices shown recover the same forest F.</text>
+<rect x="30" y="102" width="330" height="145" rx="12" fill="#f3f6f9" stroke="none"/>
+<rect x="390" y="102" width="540" height="145" rx="12" fill="#f3f6f9" stroke="none"/>
+<text id="text10" x="195" y="135" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Component A</text>
+<text id="text11" x="660" y="135" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Component B</text>
+<line x1="105" y1="201" x2="285" y2="201" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="105" cy="201" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="105" cy="201" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text15" x="105" y="184" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">q</text>
+<circle cx="285" cy="201" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text17" x="285" y="184" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">a</text>
+<line x1="480" y1="201" x2="660" y2="201" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="660" y1="201" x2="840" y2="201" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="480" cy="201" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text21" x="480" y="184" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="660" cy="201" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text23" x="660" y="184" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="840" cy="201" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text25" x="840" y="184" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text26" x="30" y="292" font-size="22" fill="#203444" text-anchor="start" font-weight="700">Vertex sum: three choices</text>
+<text id="text27" x="930" y="292" font-size="24" fill="#2767ad" text-anchor="end" font-weight="700">+3 w(F)</text>
+<line x1="90" y1="360" x2="165" y2="360" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="165" y1="360" x2="240" y2="360" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="90" cy="360" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="90" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text32" x="90" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="165" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text34" x="165" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="240" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text36" x="240" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<line x1="405" y1="360" x2="480" y2="360" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="480" y1="360" x2="555" y2="360" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="405" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text40" x="405" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="480" cy="360" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="480" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text43" x="480" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="555" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text45" x="555" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<line x1="720" y1="360" x2="795" y2="360" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="795" y1="360" x2="870" y2="360" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="720" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text49" x="720" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="795" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text51" x="795" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="870" cy="360" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="870" cy="360" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text54" x="870" y="343" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text55" x="30" y="439" font-size="22" fill="#203444" text-anchor="start" font-weight="700">Edge sum: two deletions</text>
+<text id="text56" x="930" y="439" font-size="24" fill="#b54e45" text-anchor="end" font-weight="700">−2 w(F)</text>
+<line x1="195" y1="510" x2="285" y2="510" stroke="#b54e45" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<line x1="285" y1="510" x2="375" y2="510" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="195" cy="510" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="195" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text61" x="195" y="489" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="285" cy="510" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="285" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text64" x="285" y="489" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="375" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text66" x="375" y="489" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text67" x="285" y="560" font-size="20" fill="#203444" text-anchor="middle" font-weight="400">Delete bc</text>
+<line x1="585" y1="510" x2="675" y2="510" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="675" y1="510" x2="765" y2="510" stroke="#b54e45" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+<circle cx="585" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text71" x="585" y="489" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">b</text>
+<circle cx="675" cy="510" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="675" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text74" x="675" y="489" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">c</text>
+<circle cx="765" cy="510" r="13" fill="white" stroke="#b97716" stroke-width="2.8"/>
+<circle cx="765" cy="510" r="7" fill="white" stroke="#203444" stroke-width="2.5"/>
+<text id="text77" x="765" y="489" font-size="19" fill="#203444" text-anchor="middle" font-weight="400" stroke="white" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">d</text>
+<text id="text78" x="675" y="560" font-size="20" fill="#203444" text-anchor="middle" font-weight="400">Delete cd</text>
+<text id="text79" x="480" y="630" font-size="28" fill="#203444" text-anchor="middle" font-weight="700">(3 − 2) w(F) = w(F)</text>
+</g>
+</svg>

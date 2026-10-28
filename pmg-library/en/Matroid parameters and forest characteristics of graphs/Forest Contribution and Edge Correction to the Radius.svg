@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="610" viewBox="0 0 960 610" role="img" aria-labelledby="title desc">
+<title id="title">Forest contribution, edge correction, and radius</title>
+<desc id="desc">Bars show ξ1/3, from which H2/12 is subtracted. For a unit-weight tree on 4 vertices, C4, K4, and a triangle with conductances 1,2,3, the remaining radii are 3/4,5/16,3/16,15/121.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="context-stroke" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="610" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text id="text6" x="30" y="39" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Forest contribution, edge correction, and radius</text>
+<text id="text7" x="30" y="72" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">Full bar: ξ₁/3. Subtract the hatched part; ρ remains.</text>
+<defs><pattern id="subtract" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#f7dfdb"/><path d="M -2 2 L 2 -2 M 0 8 L 8 0 M 6 10 L 10 6" stroke="#b54e45" stroke-width="1.1"/></pattern></defs>
+<rect x="30" y="94" width="25" height="19" rx="0" fill="#167f77" stroke="none"/>
+<text id="text10" x="67" y="111" font-size="19" fill="#203444" text-anchor="start" font-weight="400">Radius ρ</text>
+<rect x="300" y="94" width="25" height="19" rx="0" fill="url(#subtract)" stroke="none"/>
+<text id="text12" x="337" y="111" font-size="19" fill="#203444" text-anchor="start" font-weight="400">Subtract H₂/12</text>
+<line x1="250" y1="165" x2="250" y2="550" stroke="#e0e6eb" stroke-width="1" stroke-linecap="round"/>
+<text id="text14" x="250.0" y="153" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">0</text>
+<line x1="412.5" y1="165" x2="412.5" y2="550" stroke="#e0e6eb" stroke-width="1" stroke-linecap="round"/>
+<text id="text16" x="412.5" y="153" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1/4</text>
+<line x1="575" y1="165" x2="575" y2="550" stroke="#e0e6eb" stroke-width="1" stroke-linecap="round"/>
+<text id="text18" x="575.0" y="153" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1/2</text>
+<line x1="737.5" y1="165" x2="737.5" y2="550" stroke="#e0e6eb" stroke-width="1" stroke-linecap="round"/>
+<text id="text20" x="737.5" y="153" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">3/4</text>
+<line x1="900" y1="165" x2="900" y2="550" stroke="#e0e6eb" stroke-width="1" stroke-linecap="round"/>
+<text id="text22" x="900.0" y="153" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1</text>
+<text id="text23" x="30" y="203" font-size="23" fill="#203444" text-anchor="start" font-weight="700">P₄ and K₁,₃</text>
+<text id="text24" x="30" y="229" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">c = 1</text>
+<rect x="250" y="180" width="487.5" height="32" rx="0" fill="#167f77" stroke="none"/>
+<rect x="737.5" y="180" width="162.5" height="32" rx="0" fill="url(#subtract)" stroke="none"/>
+<rect x="250" y="180" width="650.0" height="32" rx="0" fill="none" stroke="#203444"/>
+<text id="text28" x="250" y="245" font-size="20" fill="#203444" text-anchor="start" font-weight="400">ξ₁/3 = 1;   H₂/12 = 1/4;   ρ = 3/4</text>
+<text id="text29" x="30" y="313" font-size="23" fill="#203444" text-anchor="start" font-weight="700">C₄</text>
+<text id="text30" x="30" y="339" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">c = 1</text>
+<rect x="250" y="290" width="203.125" height="32" rx="0" fill="#167f77" stroke="none"/>
+<rect x="453.125" y="290" width="121.875" height="32" rx="0" fill="url(#subtract)" stroke="none"/>
+<rect x="250" y="290" width="325.0" height="32" rx="0" fill="none" stroke="#203444"/>
+<text id="text34" x="250" y="355" font-size="20" fill="#203444" text-anchor="start" font-weight="400">ξ₁/3 = 1/2;   H₂/12 = 3/16;   ρ = 5/16</text>
+<text id="text35" x="30" y="423" font-size="23" fill="#203444" text-anchor="start" font-weight="700">K₄</text>
+<text id="text36" x="30" y="449" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">c = 1</text>
+<rect x="250" y="400" width="121.875" height="32" rx="0" fill="#167f77" stroke="none"/>
+<rect x="371.875" y="400" width="81.25" height="32" rx="0" fill="url(#subtract)" stroke="none"/>
+<rect x="250" y="400" width="203.125" height="32" rx="0" fill="none" stroke="#203444"/>
+<text id="text40" x="250" y="465" font-size="20" fill="#203444" text-anchor="start" font-weight="400">ξ₁/3 = 5/16;   H₂/12 = 1/8;   ρ = 3/16</text>
+<text id="text41" x="30" y="533" font-size="23" fill="#203444" text-anchor="start" font-weight="700">Triangle</text>
+<text id="text42" x="30" y="559" font-size="18" fill="#566b7b" text-anchor="start" font-weight="400">c = 1, 2, 3</text>
+<rect x="250" y="510" width="80.57851239669422" height="32" rx="0" fill="#167f77" stroke="none"/>
+<rect x="330.57851239669424" y="510" width="37.603305785123965" height="32" rx="0" fill="url(#subtract)" stroke="none"/>
+<rect x="250" y="510" width="118.18181818181819" height="32" rx="0" fill="none" stroke="#203444"/>
+<text id="text46" x="250" y="575" font-size="20" fill="#203444" text-anchor="start" font-weight="400">ξ₁/3 = 2/11;   H₂/12 = 7/121;   ρ = 15/121</text>
+</g>
+</svg>

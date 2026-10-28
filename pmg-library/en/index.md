@@ -3,8 +3,8 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 15
-translated_revision: 17
+revision: 16
+translated_revision: 18
 updated: 2026-10-28
 ---
 
@@ -83,6 +83,12 @@ Nine notes on the Laplacian and Greenian as vector forms, mutual duality of thei
 
 - [[en/Greenian and polyform duality/Greenian and Polyform Duality|Main results, reading order, normalizations, and reproducible checks]].
 
+## Matroid parameters and forest characteristics of graphs
+
+Seven notes explain which graph characteristics are determined by the cycle matroid and how to compute them. Forest coefficients are developed on both sides of Laplacian-Greenian duality, followed by normalized power sums, resistance scales, edge probabilities, and the forest formula for the resistance radius. One-point gluing and Whitney twists establish the scope and limits of invariance.
+
+- [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Definitions, reading routes, main results, and reproducible checks]].
+
 ## PMG Foundations
 
 - [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
@@ -128,6 +134,3 @@ The library grows through small thematic collections. The Russian text serves as
 
 - Project started: **2026**
 - Library last updated: **28 October 2026**
-
-
-
