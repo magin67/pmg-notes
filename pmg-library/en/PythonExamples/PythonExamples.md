@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 4
-source_revision: 4
+revision: 5
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -29,6 +29,8 @@ This section connects the mathematical PMG notes with executable examples from `
 [[Triangle Coupling Variations in Python]] reproduces the strengthening of one and two couplings of a unit triangle from [[Variation of a Single Edge]] and [[Varying several couplings together]]. Edge factors update the metric polyform; formulas and direct matrix calculations check the results.
 
 Prerequisites: [[PMG Introductory Series]], particularly [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]].
+
+[[Path P5 and Cycle C4 Exponentials in Python]] covers exponential grades, forest weights, spanning-tree coefficients, and resistances of the path and cycle.
 
 ## Code and reproducibility
 
