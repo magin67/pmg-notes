@@ -2,14 +2,14 @@
 title: "Triangle Coupling Variations in Python"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 3
-source_revision: 3
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-triangle-coupling-variations
 lang: en
 description: "Implementing one-edge and two-edge strengthening of a triangle through factors of the metric polyform."
-order: 3
+order: 4
 ---
 
 This note reproduces the triangle-strengthening examples from [[Variation of a Single Edge#Example: strengthening an edge of a triangle|Variation of a Single Edge]] and [[Varying several couplings together#Example: strengthening two couplings of a triangle|Varying Several Couplings Together]]. The main calculation uses the algebra of quadratic forms; matrix formulas provide comparison checks.

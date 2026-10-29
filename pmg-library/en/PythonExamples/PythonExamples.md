@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 3
-source_revision: 3
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -23,6 +23,8 @@ This section connects the mathematical PMG notes with executable examples from `
 ## First examples
 
 [[Weighted Chain in Python]] starts with a graph and its conductances: the Laplacian, exponential, resistances, currents, and power. This is the recommended first calculation.
+
+[[Unit Triangle Geometry in Python]] demonstrates edge inner products, quadratic boundary norm, and area, with Gram-matrix and coordinate checks.
 
 [[Triangle Coupling Variations in Python]] reproduces the strengthening of one and two couplings of a unit triangle from [[Variation of a Single Edge]] and [[Varying several couplings together]]. Edge factors update the metric polyform; formulas and direct matrix calculations check the results.
 
