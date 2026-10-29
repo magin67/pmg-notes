@@ -1,5 +1,6 @@
 """Draw two projection figures from independently verified rational data."""
 import argparse
+from figure_language import prepare_figure, output_directory
 from pathlib import Path
 from fractions import Fraction as F
 from xml.sax.saxutils import escape
@@ -11,9 +12,10 @@ from verify_projection import check, family_edges, spectral, MU, MU_STAR, PAIRS
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--preview-dir", type=Path)
+parser.add_argument("--lang", choices=("ru", "en"), default="ru")
 args = parser.parse_args()
 data = check()
-out = Path(__file__).resolve().parents[2]/"pmg-library/ru/Спектры и диагонализация в алгебре полиформ"
+out = output_directory(args.lang)
 if args.preview_dir:
     args.preview_dir.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 12,
@@ -22,6 +24,7 @@ INK, BLUE, TEAL, ORANGE, GREY = "#19354a", "#216b9f", "#25857e", "#bb4e28", "#a8
 
 
 def save(fig, name, description):
+    name, description = prepare_figure(fig, name, description, args.lang)
     path = out/(name+".svg")
     fig.savefig(path, metadata={"Date": None, "Description": description})
     svg = path.read_text(encoding="utf-8")

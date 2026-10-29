@@ -1,9 +1,10 @@
 """Reproduce the first spectral note's figures after exact verification.
 
-Requires Matplotlib. SVGs are written beside the Russian note. Optional PNG
+Requires Matplotlib. SVGs are written beside the note in the selected language. Optional PNG
 previews are written only when --preview-dir is supplied.
 """
 import argparse
+from figure_language import prepare_figure, output_directory
 from math import cos, sin, pi, sqrt
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -15,10 +16,11 @@ from verify_diagonal import check
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--preview-dir", type=Path)
+parser.add_argument("--lang", choices=("ru", "en"), default="ru")
 args = parser.parse_args()
 data = check()
 root = Path(__file__).resolve().parents[2]
-out = root / "pmg-library/ru/Спектры и диагонализация в алгебре полиформ"
+out = output_directory(args.lang)
 out.mkdir(parents=True, exist_ok=True)
 if args.preview_dir:
     args.preview_dir.mkdir(parents=True, exist_ok=True)
@@ -30,6 +32,7 @@ LIGHT, BORDER = "#edf4f8", "#bdcbd5"
 
 
 def save(fig, name, description):
+    name, description = prepare_figure(fig, name, description, args.lang)
     target = out / (name+".svg")
     fig.savefig(target, metadata={"Date":None, "Description":description})
     svg = target.read_text(encoding="utf-8")

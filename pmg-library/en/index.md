@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 17
-translated_revision: 19
-updated: 2026-10-29
+revision: 18
+translated_revision: 20
+updated: 2026-10-30
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -88,6 +88,12 @@ Nine notes on the Laplacian and Greenian as vector forms, mutual duality of thei
 Seven notes explain which graph characteristics are determined by the cycle matroid and how to compute them. Forest coefficients are developed on both sides of Laplacian-Greenian duality, followed by normalized power sums, resistance scales, edge probabilities, and the forest formula for the resistance radius. One-point gluing and Whitney twists establish the scope and limits of invariance.
 
 - [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Definitions, reading routes, main results, and reproducible checks]].
+
+## Spectra and diagonalization in polyform algebra
+
+Six notes develop eigendirections and projectors, diagonal polyforms, grades as elementary symmetric polynomials in forms, and reversal of complementary grades under duality. Explicit modes of paths and cycles lead to Chebyshev transformations, the spectral cone of a fixed basis, and projections that discard information. A cospectral weighted pair shows why eigenvalues alone do not determine ordinary forest coefficients or individual resistances.
+
+- [[en/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Contents, reading routes, main connections, and reproducible checks]].
 
 ## Python examples
 
