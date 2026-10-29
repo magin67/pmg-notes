@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -15,6 +15,10 @@ order: 0
 This section connects the mathematical PMG notes with executable examples from `polyform_algebra`. Each companion note states the problem, maps notation to code, gives expected results, and describes independent checks.
 
 [[ru/PythonExamples/PythonExamples|Русский]]
+
+## Getting started
+
+[[Installing the Library and Running Examples]]: local installation, library use, running programs and tests, and working in Google Colab.
 
 ## First examples
 

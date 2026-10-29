@@ -2,14 +2,14 @@
 title: "Triangle Coupling Variations in Python"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-triangle-coupling-variations
 lang: en
 description: "Implementing one-edge and two-edge strengthening of a triangle through factors of the metric polyform."
-order: 1
+order: 2
 ---
 
 This note reproduces the triangle-strengthening examples from [[Variation of a Single Edge#Example: strengthening an edge of a triangle|Variation of a Single Edge]] and [[Varying several couplings together#Example: strengthening two couplings of a triangle|Varying Several Couplings Together]]. The main calculation uses the algebra of quadratic forms; matrix formulas provide comparison checks.
@@ -18,20 +18,9 @@ This note reproduces the triangle-strengthening examples from [[Variation of a S
 
 ## Code and execution
 
-Tested Python revision: [`76c433d`](https://github.com/magin67/polyform_algebra/commit/76c433de082b348caca5c0afdcb5c372361aa9f2). Complete programs: [one edge](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note06_single_edge.py), [two edges](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note07_two_edges.py). To prepare a separate checkout and run the examples in PowerShell:
+Tested Python revision: [`76c433d`](https://github.com/magin67/polyform_algebra/commit/76c433de082b348caca5c0afdcb5c372361aa9f2). Complete programs: [one edge](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note06_single_edge.py), [two edges](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note07_two_edges.py).
 
-```powershell
-git clone https://github.com/magin67/polyform_algebra.git polyform-examples
-cd polyform-examples
-git checkout 76c433de082b348caca5c0afdcb5c372361aa9f2
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-.\.venv\Scripts\python.exe -m examples.introductory.note06_single_edge
-.\.venv\Scripts\python.exe -m examples.introductory.note07_two_edges
-.\.venv\Scripts\python.exe -m pytest tests/introductory -q
-```
-
-Activation is optional. On Linux/macOS, replace the interpreter path with `.venv/bin/python`. Run the full test suite with `python -m pytest -q` using the selected environment. The code revision is fixed, but these commands do not pin dependency versions.
+See [[Installing the Library and Running Examples]] for installation, complete programs and tests, and Google Colab instructions. Execute the code fragments below in order within one file or Python session.
 
 ## Initial objects
 

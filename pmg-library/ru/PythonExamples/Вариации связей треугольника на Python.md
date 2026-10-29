@@ -2,13 +2,13 @@
 title: "Вариации связей треугольника на Python"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 1
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-triangle-coupling-variations
 lang: ru
 description: "Реализация усиления одной и двух связей треугольника через рёберные факторы метрической полиформы."
-order: 1
+order: 2
 ---
 
 В заметке воспроизводятся примеры усиления связей единичного треугольника из [[Вариация одной связи#Пример: усиление ребра треугольника|Вариации одной связи]] и [[Совместная вариация нескольких связей#Пример: усиление двух связей треугольника|Совместной вариации нескольких связей]]. Основной расчёт выполняется в алгебре квадратичных форм; матричные формулы используются для проверки.
@@ -17,20 +17,9 @@ order: 1
 
 ## Код и запуск
 
-Проверенная ревизия Python-кода: [`76c433d`](https://github.com/magin67/polyform_algebra/commit/76c433de082b348caca5c0afdcb5c372361aa9f2). Полные программы: [одна связь](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note06_single_edge.py), [две связи](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note07_two_edges.py). Подготовка отдельной копии и запуск в PowerShell:
+Проверенная ревизия Python-кода: [`76c433d`](https://github.com/magin67/polyform_algebra/commit/76c433de082b348caca5c0afdcb5c372361aa9f2). Полные программы: [одна связь](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note06_single_edge.py), [две связи](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note07_two_edges.py).
 
-```powershell
-git clone https://github.com/magin67/polyform_algebra.git polyform-examples
-cd polyform-examples
-git checkout 76c433de082b348caca5c0afdcb5c372361aa9f2
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
-.\.venv\Scripts\python.exe -m examples.introductory.note06_single_edge
-.\.venv\Scripts\python.exe -m examples.introductory.note07_two_edges
-.\.venv\Scripts\python.exe -m pytest tests/introductory -q
-```
-
-Окружение можно не активировать. На Linux/macOS путь к интерпретатору заменяется на `.venv/bin/python`. Полный набор проверок запускается командой `python -m pytest -q` выбранного окружения. Код ревизии фиксирован, но версии зависимостей этими командами не закрепляются.
+Установка, запуск готовых программ и тестов, а также работа в Google Colab описаны в [[Установка библиотеки и запуск примеров]]. Кодовые фрагменты ниже выполняются по порядку в одном файле или сеансе Python.
 
 ## Исходные объекты
 
