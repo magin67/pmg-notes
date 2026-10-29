@@ -2,8 +2,8 @@
 title: "Installing the Library and Running Examples"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 1
-source_revision: 1
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-examples-getting-started
@@ -18,7 +18,7 @@ This note describes the shared environment for [[en/PythonExamples/PythonExample
 
 ## Code version
 
-The examples use revision [`76c433d`](https://github.com/magin67/polyform_algebra/commit/76c433de082b348caca5c0afdcb5c372361aa9f2). Local validation of that revision used Python 3.12. Dependencies are installed through pip without pinning their versions, so fixing the code revision does not fix the entire environment. Newer library versions may differ from the version used by a note.
+The examples use revision [`b5a4ccf`](https://github.com/magin67/polyform_algebra/commit/b5a4ccfd0207ef6250a97417834ff67b4d94482d). Local validation of that revision used Python 3.12. Dependencies are installed through pip without pinning their versions, so fixing the code revision does not fix the entire environment. Newer library versions may differ from the version used by a note.
 
 ## Local installation
 
@@ -27,7 +27,7 @@ Install Python and Git. Run the commands in a terminal from the directory where 
 ```powershell
 git clone https://github.com/magin67/polyform_algebra.git polyform-examples
 cd polyform-examples
-git checkout 76c433de082b348caca5c0afdcb5c372361aa9f2
+git checkout b5a4ccfd0207ef6250a97417834ff67b4d94482d
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 ```
@@ -37,7 +37,7 @@ On Linux/macOS:
 ```bash
 git clone https://github.com/magin67/polyform_algebra.git polyform-examples
 cd polyform-examples
-git checkout 76c433de082b348caca5c0afdcb5c372361aa9f2
+git checkout b5a4ccfd0207ef6250a97417834ff67b4d94482d
 python3 -m venv .venv
 .venv/bin/python -m pip install -e ".[dev]"
 ```
@@ -78,12 +78,13 @@ For further experiments, change conductances, for example `laplacian = 2*f12 + f
 From the cloned repository root, in PowerShell:
 
 ```powershell
+.\.venv\Scripts\python.exe -m examples.introductory.note01_weighted_chain
 .\.venv\Scripts\python.exe -m examples.introductory.note06_single_edge
 .\.venv\Scripts\python.exe -m examples.introductory.note07_two_edges
 .\.venv\Scripts\python.exe -m pytest tests/introductory -q
 ```
 
-On Linux/macOS replace the interpreter path with `.venv/bin/python`. Omit `tests/introductory` to run all tests. Programs print their results; pytest checks expected values. See [[Triangle Coupling Variations in Python]] for the mathematical discussion.
+On Linux/macOS replace the interpreter path with `.venv/bin/python`. Omit `tests/introductory` to run all tests. Programs print their results; pytest checks expected values. See [[Weighted Chain in Python]] and [[Triangle Coupling Variations in Python]] for the mathematical discussion.
 
 ## Google Colab
 
@@ -94,7 +95,7 @@ Open [Google Colab](https://colab.research.google.com/), create a Python noteboo
 Install the library in the first cell:
 
 ```python
-%pip install "polyform_algebra @ git+https://github.com/magin67/polyform_algebra.git@76c433de082b348caca5c0afdcb5c372361aa9f2"
+%pip install "polyform_algebra @ git+https://github.com/magin67/polyform_algebra.git@b5a4ccfd0207ef6250a97417834ff67b4d94482d"
 ```
 
 Paste the code from “First calculation” into the second cell. The `%pip` command installs the package in the current [IPython kernel](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip). It is a notebook command and should not be copied into an ordinary `.py` file.
@@ -107,7 +108,7 @@ For this route, clone the sources instead of using the first installation cell. 
 # Run once in a fresh runtime to obtain the example and test files.
 !git clone https://github.com/magin67/polyform_algebra.git /content/polyform-examples
 %cd /content/polyform-examples
-!git checkout 76c433de082b348caca5c0afdcb5c372361aa9f2
+!git checkout b5a4ccfd0207ef6250a97417834ff67b4d94482d
 %pip install -e ".[dev]"
 ```
 
@@ -119,6 +120,7 @@ import sys
 
 # Use the notebook kernel's interpreter and stop on failure.
 for module in (
+    "examples.introductory.note01_weighted_chain",
     "examples.introductory.note06_single_edge",
     "examples.introductory.note07_two_edges",
 ):
