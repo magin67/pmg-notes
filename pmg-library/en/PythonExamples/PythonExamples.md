@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-10-29
-revision: 5
-source_revision: 5
+revision: 6
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -31,6 +31,8 @@ This section connects the mathematical PMG notes with executable examples from `
 Prerequisites: [[PMG Introductory Series]], particularly [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]].
 
 [[Path P5 and Cycle C4 Exponentials in Python]] covers exponential grades, forest weights, spanning-tree coefficients, and resistances of the path and cycle.
+
+[[Deleting an Edge and a Bridge in Python]] compares cycle-edge and bridge deletion: resistance changes, preservation of isolated vertices, and unavailable global normalization after disconnection.
 
 ## Code and reproducibility
 
