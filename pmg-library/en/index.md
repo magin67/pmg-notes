@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 16
-translated_revision: 18
-updated: 2026-10-28
+revision: 17
+translated_revision: 19
+updated: 2026-10-29
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -89,6 +89,12 @@ Seven notes explain which graph characteristics are determined by the cycle matr
 
 - [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Definitions, reading routes, main results, and reproducible checks]].
 
+## Python examples
+
+Executable examples show how to reproduce calculations from the notes with `polyform_algebra`. The first companion covers strengthening one and two couplings of a triangle.
+
+- [[en/PythonExamples/PythonExamples|Programming examples: code, expected results, and checks]].
+
 ## PMG Foundations
 
 - [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
@@ -133,4 +139,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **28 October 2026**
+- Library last updated: **29 October 2026**

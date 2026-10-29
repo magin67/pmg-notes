@@ -1,0 +1,158 @@
+---
+title: "Вариации связей треугольника на Python"
+date: 2026-10-29
+updated: 2026-10-29
+revision: 1
+status: draft
+text_prepared_by: ChatGPT
+translation_key: python-triangle-coupling-variations
+lang: ru
+description: "Реализация усиления одной и двух связей треугольника через рёберные факторы метрической полиформы."
+order: 1
+---
+
+В заметке воспроизводятся примеры усиления связей единичного треугольника из [[Вариация одной связи#Пример: усиление ребра треугольника|Вариации одной связи]] и [[Совместная вариация нескольких связей#Пример: усиление двух связей треугольника|Совместной вариации нескольких связей]]. Основной расчёт выполняется в алгебре квадратичных форм; матричные формулы используются для проверки.
+
+[[en/PythonExamples/Triangle Coupling Variations in Python|English]] · [[ru/PythonExamples/PythonExamples|Программные примеры]]
+
+## Код и запуск
+
+Проверенная ревизия Python-кода: [`76c433d`](https://github.com/magin67/polyform_algebra/commit/76c433de082b348caca5c0afdcb5c372361aa9f2). Полные программы: [одна связь](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note06_single_edge.py), [две связи](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note07_two_edges.py). Подготовка отдельной копии и запуск в PowerShell:
+
+```powershell
+git clone https://github.com/magin67/polyform_algebra.git polyform-examples
+cd polyform-examples
+git checkout 76c433de082b348caca5c0afdcb5c372361aa9f2
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m examples.introductory.note06_single_edge
+.\.venv\Scripts\python.exe -m examples.introductory.note07_two_edges
+.\.venv\Scripts\python.exe -m pytest tests/introductory -q
+```
+
+Окружение можно не активировать. На Linux/macOS путь к интерпретатору заменяется на `.venv/bin/python`. Полный набор проверок запускается командой `python -m pytest -q` выбранного окружения. Код ревизии фиксирован, но версии зависимостей этими командами не закрепляются.
+
+## Исходные объекты
+
+Пусть $a_1,a_2,a_3$ - вершины, $a_{ij}=a_j-a_i$, $f_{ij}=[a_{ij}]^2$. Все три проводимости исходного графа $K_3$ равны единице. По определению из [[Экспонента лапласиана]] получаем
+
+$$
+L=f_{12}+f_{13}+f_{23},\qquad M=\exp L
+$$
+
+```python
+from polyform_algebra import Point, Polyform, quForm
+
+a, b, c = Point.create_list(["1", "2", "3"])
+f12 = quForm([(a, b)])
+f13 = quForm([(a, c)])
+f23 = quForm([(b, c)])
+laplacian = f12 + f13 + f23
+metric = laplacian.exp()
+
+tau = metric.potential(quForm.one())
+r12 = metric.norm(f12)
+coupling = metric.norm((b-a) @ (c-a))
+```
+
+Здесь `a, b, c` обозначают $a_1,a_2,a_3$. Метод `potential` извлекает коэффициент при фиксированной остовной форме после умножения, а `norm` делит его на $\tau(M)$:
+
+$$
+u_M(f)=\tau(Mf),\qquad P_M(f)=\frac{\tau(Mf)}{\tau(M)}
+$$
+
+В частности, `tau` равен $3$, `r12` равен $2/3$, `coupling` равен $1/3$. Оператор `@` сначала строит скалярную полиформу - половину полярной формы для поддерживаемых аргументов первого грейда. Численное скалярное произведение получается после оценки через `norm`. Потенциал формы не следует смешивать с электрическим потенциалом вершины.
+
+## Усиление одной связи
+
+Увеличим $c_{12}$ с $1$ до $2$, то есть $\delta=1$. Поскольку $f_{12}f_{12}=0$, имеем
+
+$$
+\exp(L+\delta f_{12})=M(e+\delta f_{12})
+$$
+
+```python
+delta = 1
+after_one = metric * (Polyform.one() + delta*f12)
+assert after_one.is_equivalent((laplacian + delta*f12).exp())
+
+tau_one = after_one.potential(quForm.one())
+r12_one = after_one.norm(f12)
+r13_one = after_one.norm(f13)
+probability12 = (1 + delta)*r12_one
+forest13 = after_one.potential(f13)
+```
+
+| Величина | До изменения | После изменения |
+|---|---:|---:|
+| $\tau$ | $3$ | $5$ |
+| $R_{12}$ | $2/3$ | $2/5$ |
+| $R_{13}$ | $2/3$ | $3/5$ |
+| $R_{23}$ | $2/3$ | $3/5$ |
+| $\Pr(12\in T)$ | $2/3$ | $4/5$ |
+| Вес 2-лесов, разделяющих 1 и 3 | $2$ | $3$ |
+
+Вероятность ребра равна $c_{12}R_{12}$, поэтому после изменения используется новая проводимость $2$. Ненормированный потенциал `after_one.potential(f13)` равен весу соответствующих разделяющих остовных 2-лесов.
+
+Программа также сравнивает результаты с формулами теоретической заметки. При $g=a_{12}\cdot a_{13}=1/3$
+
+$$
+\tau'=\tau(1+\delta R_{12}),\qquad
+R'_{13}=R_{13}-\frac{\delta g^2}{1+\delta R_{12}}
+$$
+
+Прирост лесного веса равен $\delta\tau(R_{12}R_{13}-g^2)=1$.
+
+## Усиление двух связей
+
+Теперь обе проводимости $c_{12},c_{13}$ увеличиваются с $1$ до $2$. Используем исходную метрику $M$ и два множителя:
+
+```python
+after_two = metric * (Polyform.one() + f12) * (Polyform.one() + f13)
+assert after_two.is_equivalent((laplacian + f12 + f13).exp())
+assert after_two.is_equivalent(
+    metric * (Polyform.one() + f13) * (Polyform.one() + f12)
+)
+
+tau_two = after_two.potential(quForm.one())
+r23_two = after_two.norm(f23)
+mixed_coefficient = metric.potential(f12*f13)
+```
+
+Ориентируем выбранные векторы от вершины $1$. Для измеряемого вектора $a_{23}$ грамиан и столбец взаимодействий равны
+
+$$
+\mathbf G=
+\begin{pmatrix}2/3&1/3\\1/3&2/3\end{pmatrix},
+\qquad
+q=\begin{pmatrix}-1/3\\1/3\end{pmatrix}
+$$
+
+| Величина | Результат |
+|---|---:|
+| $\tau$ после первого усиления | $5$ |
+| $R_{13}$ после первого усиления | $3/5$ |
+| $\tau$ после обоих усилений | $8$ |
+| $R_{23}$ после обоих усилений | $1/2$ |
+| $\det(I_2+\mathbf G)$ | $8/3$ |
+| Коэффициент при $\delta_1\delta_2$ в $\tau'$ | $1$ |
+| $\Pr(12,13\in T)$ в исходной сети | $1/3$ |
+
+Коэффициент совместного действия вычисляется непосредственно как `metric.potential(f12*f13)` и равен $\tau\det\mathbf G=1$. Численная оценка произведения форм в общем случае не равна произведению их оценок.
+
+Полная программа проверяет формулы
+
+$$
+\tau'=\tau\det(I_2+\mathbf G),\qquad
+R'_{23}=R_{23}-q^{\mathsf T}(I_2+\mathbf G)^{-1}q
+$$
+
+Вычисление обратного действия выполняется через `numpy.linalg.solve`. Последовательный расчёт использует обновлённую метрику после первого шага: $5(1+3/5)=8$.
+
+## Независимые проверки и статус
+
+[Тесты примеров](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/tests/introductory/test_triangle_variations.py) сверяют числа из заметок, знаки ориентаций, порядок факторов и полный пересчёт экспоненты. Дополнительно матрица лапласиана строится прямо из проводимостей: её минор даёт $\tau$, а решение уравнений токов с заземлённой вершиной $3$ даёт $R_{23}$. Эта проверка не использует произведения полиформ.
+
+**Статус: непосредственно вычислено** для двух описанных изменений $K_3$. В проверенной ревизии прошли 223 теста, включая запуск и импорт примеров, как в рабочем каталоге, так и с установленным пакетом вне него. Проверка выполнена на Python 3.12; это не доказательство общих формул и не проверка всех заявленных версий Python.
+
+Примеры не вводят универсальный интерфейс вариаций и не рассматривают произвольное удаление мостов. Публичный программный интерфейс остаётся ограниченным поддерживаемыми квадратичными формами. Общие формальные определения приведены в [[Спецификация ядра PMG]], а соглашения об оценке - в [[Терминология PMG]].

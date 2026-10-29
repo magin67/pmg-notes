@@ -1,9 +1,9 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-10-15
-revision: 3
-source_revision: 3
+updated: 2026-10-29
+revision: 4
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
@@ -81,3 +81,6 @@ Full bibliographic details, recommended sections, and access information are col
 
 The next stage is developed in [[Spaces and Subspaces in PMG]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].
 
+## Programming companions
+
+[[en/PythonExamples/PythonExamples|Programming Examples]] connect the series formulas with tested Python code. The first companion, [[Triangle Coupling Variations in Python]], covers one and two changed couplings.
