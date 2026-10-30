@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+<title id="title">Путь P₅ с трёхточечной границей</title>
+<desc id="desc">Путь a-b-c-d-e с единичными проводимостями. Граница состоит из a,c,e; b,d являются внутренними вершинами.</desc>
+<rect width="960" height="320" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Путь P₅ с трёхточечной границей</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">B = {a, c, e}; все проводимости равны 1.</text>
+<line x1="95.0" y1="171" x2="287.5" y2="171" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="287.5" y1="171" x2="480.0" y2="171" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="480.0" y1="171" x2="672.5" y2="171" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="672.5" y1="171" x2="865.0" y2="171" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="95.0" cy="171" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="95.0" cy="171" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="95.0" y="151" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="287.5" cy="171" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="287.5" y="151" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="480.0" cy="171" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480.0" cy="171" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480.0" y="151" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="672.5" cy="171" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="672.5" y="151" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="865.0" cy="171" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="865.0" cy="171" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="865.0" y="151" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="191.25" y="157" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1</text>
+<text x="383.75" y="157" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1</text>
+<text x="576.25" y="157" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1</text>
+<text x="768.75" y="157" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1</text>
+<text x="480" y="247" font-size="20" fill="#203444" text-anchor="middle" font-weight="400">Золотые окружности: граница. Внутренние вершины: b, d.</text>
+<text x="480" y="286" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">Каждый остовной лес сохраняет все пять вершин.</text>
+</g>
+</svg>

@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="800" viewBox="0 0 960 800" role="img" aria-labelledby="title desc">
+<title id="title">Девять лесов состояния a|c|e</title>
+<desc id="desc">Сетка трёх выборов слева: пустой набор, ab, bc; и трёх справа: пустой набор, cd, de. Получаются один лес с нулём рёбер, четыре с одним и четыре с двумя. Последние четыре являются рощами.</desc>
+<rect width="960" height="800" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Девять лесов состояния a|c|e</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Строки: выбор на a-b-c. Столбцы: выбор на c-d-e. Все веса равны 1.</text>
+<text x="286" y="130" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">ничего</text>
+<text x="546" y="130" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">cd</text>
+<text x="806" y="130" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">de</text>
+<text x="76" y="233" font-size="20" fill="#203444" text-anchor="middle" font-weight="700">ничего</text>
+<rect x="162" y="155" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="190.0" y1="218" x2="238.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="238.0" y1="218" x2="286.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="286.0" y1="218" x2="334.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="334.0" y1="218" x2="382.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="190.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="190.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="190.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="238.0" cy="218" r="11" fill="#f2e8fa" stroke="#9464af" stroke-width="2"/>
+<circle cx="238.0" cy="218" r="5" fill="#9464af" stroke="#203444" stroke-width="2"/>
+<text x="238.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="286.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="286.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="286.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="334.0" cy="218" r="11" fill="#f2e8fa" stroke="#9464af" stroke-width="2"/>
+<circle cx="334.0" cy="218" r="5" fill="#9464af" stroke="#203444" stroke-width="2"/>
+<text x="334.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="382.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="382.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="382.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="286" y="260" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: 1;  k₀ = 2</text>
+<text x="286" y="291" font-size="15" fill="#9464af" text-anchor="middle" font-weight="400">есть внутренняя компонента</text>
+<rect x="422" y="155" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="450.0" y1="218" x2="498.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="498.0" y1="218" x2="546.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="546.0" y1="218" x2="594.0" y2="218" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="594.0" y1="218" x2="642.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="450.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="450.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="450.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="498.0" cy="218" r="11" fill="#f2e8fa" stroke="#9464af" stroke-width="2"/>
+<circle cx="498.0" cy="218" r="5" fill="#9464af" stroke="#203444" stroke-width="2"/>
+<text x="498.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="546.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="546.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="546.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="594.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="594.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="642.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="642.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="642.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="546" y="260" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t;  k₀ = 1</text>
+<text x="546" y="291" font-size="15" fill="#9464af" text-anchor="middle" font-weight="400">есть внутренняя компонента</text>
+<rect x="682" y="155" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="710.0" y1="218" x2="758.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="758.0" y1="218" x2="806.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="806.0" y1="218" x2="854.0" y2="218" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="854.0" y1="218" x2="902.0" y2="218" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="710.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="710.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="710.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="758.0" cy="218" r="11" fill="#f2e8fa" stroke="#9464af" stroke-width="2"/>
+<circle cx="758.0" cy="218" r="5" fill="#9464af" stroke="#203444" stroke-width="2"/>
+<text x="758.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="806.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="806.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="806.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="854.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="854.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="902.0" cy="218" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="902.0" cy="218" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="902.0" y="198" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="806" y="260" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t;  k₀ = 1</text>
+<text x="806" y="291" font-size="15" fill="#9464af" text-anchor="middle" font-weight="400">есть внутренняя компонента</text>
+<text x="76" y="413" font-size="20" fill="#203444" text-anchor="middle" font-weight="700">ab</text>
+<rect x="162" y="335" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="190.0" y1="398" x2="238.0" y2="398" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="238.0" y1="398" x2="286.0" y2="398" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="286.0" y1="398" x2="334.0" y2="398" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="334.0" y1="398" x2="382.0" y2="398" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="190.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="190.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="190.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="238.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="238.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="286.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="286.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="286.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="334.0" cy="398" r="11" fill="#f2e8fa" stroke="#9464af" stroke-width="2"/>
+<circle cx="334.0" cy="398" r="5" fill="#9464af" stroke="#203444" stroke-width="2"/>
+<text x="334.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="382.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="382.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="382.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="286" y="440" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t;  k₀ = 1</text>
+<text x="286" y="471" font-size="15" fill="#9464af" text-anchor="middle" font-weight="400">есть внутренняя компонента</text>
+<rect x="422" y="335" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="450.0" y1="398" x2="498.0" y2="398" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="498.0" y1="398" x2="546.0" y2="398" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="546.0" y1="398" x2="594.0" y2="398" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="594.0" y1="398" x2="642.0" y2="398" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="450.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="450.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="450.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="498.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="498.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="546.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="546.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="546.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="594.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="594.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="642.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="642.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="642.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="546" y="440" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t²;  k₀ = 0</text>
+<text x="546" y="471" font-size="15" fill="#167f77" text-anchor="middle" font-weight="400">роща</text>
+<rect x="682" y="335" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="710.0" y1="398" x2="758.0" y2="398" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="758.0" y1="398" x2="806.0" y2="398" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="806.0" y1="398" x2="854.0" y2="398" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="854.0" y1="398" x2="902.0" y2="398" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="710.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="710.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="710.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="758.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="758.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="806.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="806.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="806.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="854.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="854.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="902.0" cy="398" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="902.0" cy="398" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="902.0" y="378" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="806" y="440" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t²;  k₀ = 0</text>
+<text x="806" y="471" font-size="15" fill="#167f77" text-anchor="middle" font-weight="400">роща</text>
+<text x="76" y="593" font-size="20" fill="#203444" text-anchor="middle" font-weight="700">bc</text>
+<rect x="162" y="515" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="190.0" y1="578" x2="238.0" y2="578" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="238.0" y1="578" x2="286.0" y2="578" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="286.0" y1="578" x2="334.0" y2="578" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="334.0" y1="578" x2="382.0" y2="578" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="190.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="190.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="190.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="238.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="238.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="286.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="286.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="286.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="334.0" cy="578" r="11" fill="#f2e8fa" stroke="#9464af" stroke-width="2"/>
+<circle cx="334.0" cy="578" r="5" fill="#9464af" stroke="#203444" stroke-width="2"/>
+<text x="334.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="382.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="382.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="382.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="286" y="620" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t;  k₀ = 1</text>
+<text x="286" y="651" font-size="15" fill="#9464af" text-anchor="middle" font-weight="400">есть внутренняя компонента</text>
+<rect x="422" y="515" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="450.0" y1="578" x2="498.0" y2="578" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="498.0" y1="578" x2="546.0" y2="578" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="546.0" y1="578" x2="594.0" y2="578" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="594.0" y1="578" x2="642.0" y2="578" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="450.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="450.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="450.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="498.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="498.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="546.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="546.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="546.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="594.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="594.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="642.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="642.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="642.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="546" y="620" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t²;  k₀ = 0</text>
+<text x="546" y="651" font-size="15" fill="#167f77" text-anchor="middle" font-weight="400">роща</text>
+<rect x="682" y="515" width="248" height="157" rx="12" fill="#f3f6f9"/>
+<line x1="710.0" y1="578" x2="758.0" y2="578" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="758.0" y1="578" x2="806.0" y2="578" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="806.0" y1="578" x2="854.0" y2="578" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="854.0" y1="578" x2="902.0" y2="578" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="710.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="710.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="710.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="758.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="758.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="806.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="806.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="806.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="854.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="854.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="902.0" cy="578" r="11" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="902.0" cy="578" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="902.0" y="558" font-size="15" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="806" y="620" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">вклад: t²;  k₀ = 0</text>
+<text x="806" y="651" font-size="15" fill="#167f77" text-anchor="middle" font-weight="400">роща</text>
+<text x="480" y="730" font-size="25" fill="#203444" text-anchor="middle" font-weight="400">(1 + 2t)(1 + 2t) = 1 + 4t + 4t²</text>
+<text x="480" y="772" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">Фиолетовый цвет: внутренняя компонента. Пунктир: невыбранное ребро.</text>
+</g>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="766" viewBox="0 0 960 766" role="img" aria-labelledby="title desc">
+<title id="title">Один партнёр и две разметки пути</title>
+<desc id="desc">Партнёр J содержит единичное ребро xy и изолированную граничную вершину z. При присоединении к пути x-b-y-d-z возникает треугольник с хвостом, а к x-b-z-d-y - цикл C5. Общих рёбер нет; имена x,y,z отождествляются.</desc>
+<rect width="960" height="766" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Один партнёр и две разметки пути</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">B = {x, y, z}; отождествляются одноимённые вершины, каждое ребро учитывается один раз.</text>
+<text x="230" y="143" font-size="21" fill="#2767ad" text-anchor="start" font-weight="400">Партнёр J:</text>
+<line x1="420" y1="150" x2="535" y2="150" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="420" cy="150" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="420" cy="150" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="420" y="130" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="535" cy="150" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="535" cy="150" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="535" y="130" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<circle cx="710" cy="150" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="710" cy="150" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="710" y="130" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">z</text>
+<text x="477" y="180" font-size="17" fill="#2767ad" text-anchor="middle" font-weight="400">1</text>
+<rect x="24" y="208" width="444" height="483" rx="12" fill="#f3f6f9"/>
+<text x="246" y="246" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">Часть X</text>
+<line x1="66.0" y1="316" x2="156.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="156.0" y1="316" x2="246.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="246.0" y1="316" x2="336.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="336.0" y1="316" x2="426.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="66.0" cy="316" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="66.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="66.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="156.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="156.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="246.0" cy="316" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="246.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="246.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<circle cx="336.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="336.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="426.0" cy="316" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="426.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="426.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">z</text>
+<text x="246" y="367" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">F(t) = (1 + t)⁴</text>
+<text x="246" y="415" font-size="19" fill="#2767ad" text-anchor="middle" font-weight="400">После присоединения J</text>
+<path d="M 66 485 Q 156.0 617 246 485" fill="none" stroke="#2767ad" stroke-width="4"/>
+<line x1="66.0" y1="485" x2="156.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="156.0" y1="485" x2="246.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="246.0" y1="485" x2="336.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="336.0" y1="485" x2="426.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="66.0" cy="485" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="66.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="66.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="156.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="156.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="246.0" cy="485" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="246.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="246.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<circle cx="336.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="336.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="426.0" cy="485" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="426.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="426.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">z</text>
+<text x="246" y="597" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Треугольник с хвостом</text>
+<text x="246" y="635" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">1 + 5t + 10t² + 9t³ + 3t⁴</text>
+<text x="246" y="672" font-size="22" fill="#167f77" text-anchor="middle" font-weight="400">τ = 3</text>
+<rect x="492" y="208" width="444" height="483" rx="12" fill="#f3f6f9"/>
+<text x="714" y="246" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">Часть X′</text>
+<line x1="534.0" y1="316" x2="624.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="624.0" y1="316" x2="714.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="714.0" y1="316" x2="804.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="804.0" y1="316" x2="894.0" y2="316" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="534.0" cy="316" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="534.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="534.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="624.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="624.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="714.0" cy="316" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="714.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="714.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">z</text>
+<circle cx="804.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="804.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="894.0" cy="316" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="894.0" cy="316" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="894.0" y="296" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<text x="714" y="367" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">F(t) = (1 + t)⁴</text>
+<text x="714" y="415" font-size="19" fill="#2767ad" text-anchor="middle" font-weight="400">После присоединения J</text>
+<path d="M 534 485 Q 714.0 617 894 485" fill="none" stroke="#2767ad" stroke-width="4"/>
+<line x1="534.0" y1="485" x2="624.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="624.0" y1="485" x2="714.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="714.0" y1="485" x2="804.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="804.0" y1="485" x2="894.0" y2="485" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="534.0" cy="485" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="534.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="534.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="624.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="624.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="714.0" cy="485" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="714.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="714.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">z</text>
+<circle cx="804.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="804.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="894.0" cy="485" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="894.0" cy="485" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="894.0" y="465" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<text x="714" y="597" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Цикл C₅</text>
+<text x="714" y="635" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">1 + 5t + 10t² + 10t³ + 5t⁴</text>
+<text x="714" y="672" font-size="22" fill="#167f77" text-anchor="middle" font-weight="400">τ = 5</text>
+<text x="480" y="737" font-size="20" fill="#566b7b" text-anchor="middle" font-weight="400">Одинаковые лесные полиномы частей дают разные полиномы сочленений.</text>
+</g>
+</svg>
