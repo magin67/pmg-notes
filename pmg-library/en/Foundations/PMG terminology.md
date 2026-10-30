@@ -2,16 +2,18 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-10-30
-revision: 14
+revision: 15
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: polyforms and metrics, Laplacian and Greenian, combinatorial potentials, toponomes, KVP/KVPOU, matroid and forest parameters, and spectral representations and projections, with Russian equivalents."
+description: "Terminology of the PMG core and published series: polyforms and metrics, forest and spectral parameters, boundary states and passports, groves and electrical response; Russian equivalents and usage conditions."
 order: 2
 ---
 
 This glossary records the terminology of the [[Core specification|core specification]], the [[PMG Introductory Series|introductory series]], and the published thematic series. Each entry gives the English term, its Russian equivalent, and a brief definition. Applicability conditions and fundamental identities of the core are specified in the core specification; definitions of extensions, proofs, and examples appear in the linked notes.
+
+Russian version: [[ru/Основания/Терминология PMG|Терминология PMG]].
 
 ## Scope and terminology status
 
@@ -308,6 +310,56 @@ Matroid invariance of $f_g$ does not imply matroid invariance of the rooted coef
 
 Under one-vertex gluing of connected graphs with disjoint edge sets, $\tau$, $F_G$, and $\Phi_G$ multiply, $\alpha_k$ convolve, and $s_m^{\mathrm{for}}$, $H_q$, and $\rho$ add. Additivity is not asserted for $\xi_k$ with $k>1$. These laws are proved separately from invariance in [[Gluing and the Limits of Matroid Invariance]]. Aggregating parallel conductors preserves $H_2$, but not the entire family $H_q$. Agreement of several invariants does not prove matroid isomorphism. Statements in this section do not extend automatically to balanced graphs.
 
+## Boundary states and passports
+
+This section covers terminology from the completed [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] series. The governing formulas and conditions are collected in the [[en/Foundations/Core specification#Boundary passports and graph gluing|specification]]. “Passport” is the PMG name for a collection of data; terminology status does not imply novelty of a mathematical result. The notes and navigator identify the origins of theorems and of the derivations given in the series.
+
+### Forest data and their reduction
+
+Here $B$ is a nonempty set of marked vertices, $k=\#B$, and $n=\#V(G)$. Forests contain all vertices; neither connectivity nor planarity of the graph is assumed. Individual edge weights are positive. Definitions: [[en/Boundary polynomials and graph gluing/Boundary Forest States - What to Retain from a Component]], [[en/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test]], [[en/Boundary polynomials and graph gluing/Gluing Components by Pairing Boundary Data]], [[en/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Marked boundary | Отмеченная граница | Qualified | A set $B\subseteq V(G)$ with fixed names and a fixed gluing correspondence. It is not an algebraic boundary $\partial X$. For a spectral pair, the order $\mathcal B=(a,b)$ matters. |
+| Component to be glued; constituent graph | Компонента сочленения | Qualified | A part of the construction, not necessarily a connected component of a graph. Its internal vertices are distinct from those of other parts. |
+| Boundary forest state | Граничное лесное состояние | Qualified | The connectivity partition $\pi_B(H)$ of the boundary in a spanning forest $H$. It does not select a unique forest: different forests can induce the same state. |
+| Internal forest component | Внутренняя компонента леса | Qualified | A component that does not meet $B$. A forest with $g$ edges in state $\pi$ has $n-g-b(\pi)$ such components. |
+| Boundary-state polynomial | Полином граничного состояния | Qualified | $\mathcal F^{G,B}_\pi(t)=\sum_{\pi_B(H)=\pi}w(H)t^{\#E(H)}$. Includes forests with internal components; the degree of $t$ counts selected edges. |
+| Full boundary forest passport | Полный граничный лесной паспорт | PMG | The vector $\mathbf f_G(t)=(\mathcal F^{G,B}_\pi(t))_\pi$. Boundary names, their correspondence, and the total vertex count are retained separately. The sum of coordinates is $F_G(t)$ and loses the distribution over states. |
+| Free boundary-state space | Свободное пространство граничных состояний | Qualified | $\mathscr S_B=\bigoplus_{\pi\in\Pi(B)}\mathbb R s_\pi$; the symbols $s_\pi$ are independent. Their images $q_\pi$ in the algebra of forms may satisfy structural identities. |
+| Boundary partition rank; join of partitions | Ранг граничного разбиения; соединение разбиений | Standard | $r(\pi)=k-b(\pi)$, where $b(\pi)$ is the number of blocks. $\pi\vee\sigma$ is the least common coarsening. This rank is not the grade of an arbitrary forest in state $\pi$. |
+| Forest compatibility; compatibility matrix | Лесная совместимость; матрица совместимости | Qualified | $C(\pi,\sigma)=1$ when $r(\pi\vee\sigma)=r(\pi)+r(\sigma)$ and $0$ otherwise; $\mathbf C_B=(C(\pi,\sigma))$. The condition means that gluing creates no new cycle. |
+| Boundary contraction test; test response | Граничный тест стягивания; тестовый отклик | Qualified | $U_G(\sigma;t)=F_{G/\sigma}(t)$, $\mathbf u_G=\mathbf C_B\mathbf f_G$. Selects forests that remain acyclic after identifying vertices in the blocks of $\sigma$. It is not an electrical response. |
+| Forest boundary pairing | Лесное граничное спаривание | Qualified | The algebraic bilinear form $\mathbf x^{\mathsf T}\mathbf C_B\mathbf y$ on formal states. It is not the resistance inner product. |
+| Radical of the forest pairing | Радикал лесного спаривания | Standard | $\mathscr R_B=\ker\mathbf C_B$. Vectors whose pairing with every state is zero; not the kernel of the map to partition forms. |
+| Reduced linear forest passport | Сокращённый линейный лесной паспорт | PMG | A class in $\mathscr H_B=\mathscr S_B/\mathscr R_B$, taken coefficientwise in $t$ for polynomials. The dimension $\mathrm{Cat}_k$ is minimal for a universal linear passport with a fixed bilinear law. Coordinates may be signed. |
+| Noncrossing boundary basis | Непересекающийся граничный базис | Qualified | Classes of noncrossing partitions in a chosen cyclic order on $B$. This is a coordinate choice for the forest quotient, not a graph-planarity assumption or an identification with a basis of actual polyforms. |
+
+### Groves and electrical data
+
+Groves are defined without a planarity assumption. The resistance Gram matrix and the electrical correspondences below require a connected graph with positive conductances; $I=V(G)\setminus B$. Definitions, external foundations, and reconstruction limits: [[en/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Grove | Роща | Standard | A spanning forest every component of which contains at least one boundary vertex. A forest with an internal component is not a grove. |
+| Grove weight of a state; grove layer | Вес рощ состояния; слой рощ | Qualified | $g^{G,B}_\pi=[t^{n-b(\pi)}]\mathcal F^{G,B}_\pi(t)$. The extraction degree depends on the state; it does not define a single common grade for the whole vector. |
+| Spanning-tree boundary pairing | Остовное граничное спаривание | Qualified | Restriction of the forest rule to pairs with $\pi\vee\sigma=\{B\}$ and $r(\pi)+r(\sigma)=k-1$. Counts spanning trees of the result using grove weights of the parts. |
+| Fully separated grove scale | Масштаб полностью разделённой рощи | Qualified | $\delta_B(G)=g^{G,B}_{b_0\mid\cdots\mid b_{k-1}}=\det\mathbf L_{II}$. Recovers the scale lost in eliminating the interior; the empty determinant is $1$. |
+| Boundary response matrix; Dirichlet-to-Neumann operator | Граничная матрица отклика; оператор Дирихле–Неймана | Standard | $\boldsymbol\Lambda_B=\mathbf L_{BB}-\mathbf L_{BI}\mathbf L_{II}^{-1}\mathbf L_{IB}$. Maps boundary potentials to currents entering the network; it is the Laplacian of the effective network after eliminating internal vertices. |
+| Boundary resistance Gram matrix | Граничный резистивный грамиан | Qualified | $\mathbf G_B=\mathbf D^{\mathsf T}\mathbf{Gr}_G\mathbf D$, where the columns of $\mathbf D$ are unit differences $b_i-b_0$. Inverse of the reduced response matrix; depends on the chosen basis. |
+| Circular planarity | Круговая планарность | Standard | Embeddability of a network in a disk with boundary vertices on its boundary in the prescribed cyclic order. A condition in results recovering individual normalized grove weights from the electrical response. |
+
+### Spectral boundary data
+
+Here the pencil is $\mathbf M_G(\xi)=\xi I-\mathbf L_G$ and the ordered pair is $\mathcal B=(a,b)$. Connectivity is required for the electrical interpretation at $\xi=0$, but not for the determinant identities. Definitions and formulas: [[en/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Spectral boundary passport of a pair | Спектральный граничный паспорт пары | PMG | Five polynomials $(A,B,C,D,E)$: the pencil determinant, two principal minors each deleting one boundary vertex, an off-diagonal adjugate entry, and the internal principal minor. These are not five ordinary forest states. |
+| Spectral Schur complement | Спектральное дополнение Шура | Qualified | $\mathbf S_G(\xi)=E^{-1}\left(\begin{smallmatrix}C&-D\\-D&B\end{smallmatrix}\right)$ when $E\ne0$. Depends on the spectral parameter; for a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. |
+| Jacobi identity for the passport | Тождество Якоби для паспорта | Standard | $AE=BC-D^2$. A polynomial determinant identity also valid at zeros of $E$; it rules out algebraic independence of the five coordinates. |
+| Input and output boundaries; active boundary | Входная и выходная граница; активная граница | Qualified | Marked sets and their correspondences at successive chain-assembly steps. Moving to a new active boundary requires a separate transfer rule; closure of a five-coordinate automaton does not follow from a passport for a fixed pair. |
+
 ## Potentials, norms, and variations
 
 | English term | Russian equivalent | Status | Meaning and convention |
@@ -393,6 +445,10 @@ The following table also records earlier Russian usage, so that older research n
 | “Potential of an object” | “Potential of the form $f$” or “combinatorial potential of the collection $\mathbf x$”, as appropriate | For $u_M(f)$, specify the form and metric; for $s_2(\mathbf x)$ or $e_n(\mathbf x)$, specify the collection and counted partitions. |
 | “Independent components” in a product of boundaries | Product of component boundaries | Separate factors do not by themselves imply metric orthogonality or statistical independence. |
 | “Form commutator” | Skew-symmetric difference $[X,Y]-[Y,X]$; for affine vectors, the circulation form $\omega(u,v)$ | The historical PMG name differs from the operator commutator $AB-BA$. The adopted circulation normalization contains no factor $1/2$. |
+| “Graph boundary” without qualification | Marked set $B$ or algebraic boundary $\partial X$ | A vertex set differs from an exterior-algebra object. |
+| “Boundary response” without qualification | Forest test response $\mathbf u_G$ or electrical matrix $\boldsymbol\Lambda_B$ | Forest selection and the relation between potentials and currents are different constructions. |
+| “Dual boundary basis” | A basis dual with respect to a specified nondegenerate pairing | Coordinate duality for the forest pairing is not Laplacian-Greenian duality. |
+| “Boundary passport” without qualification | Full forest, reduced linear, spanning-tree electrical data, or spectral passport | Sufficiency depends on the target characteristic and gluing rules; these data are not interchangeable. |
 
 ## Terminology of extensions
 
@@ -420,7 +476,7 @@ The following definitions are used in the published series “Spaces and Subspac
 | Resistance diameter | Резистивный диаметр | $D_{\mathrm{res}}=4\rho$. In the symmetric case it is the squared linear diameter of the circumsphere. The balanced model retains the algebraic normalization through $\rho$; generally different from the maximum pairwise resistance. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
 | Influence matrix | Матрица влияния | The matrix $\mathbf B$ of coefficients extending values from selected to internal vertices. Its rows give the bi-coordinates of projections. For a balanced graph, specify whether $\mathbf L$ or $\mathbf L^{\mathsf T}$ is used. [[Selected Vertices and the Dirichlet Problem]]. |
 | Fundamental matrix | Фундаментальная матрица | $\mathbf{Fm}=\mathbf A^{-1}$, where $\mathbf A$ is the internal Laplacian block. For a connected undirected graph, it is also the Gram matrix of residual vectors; for a disconnected graph, the metric statement applies component by component. Invertibility requires every component to contain a selected vertex. [[Selected Vertices and the Dirichlet Problem]]. |
-| Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed values at selected vertices to the response after solving the internal equations. It equals the Laplacian of the induced graph. [[Vertex Elimination and Induced Couplings]]. |
+| Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed boundary potentials to currents after solving the internal equations. The Laplacian of the effective network obtained by eliminating internal vertices, not merely of the subgraph on the remaining vertices. [[Vertex Elimination and Induced Couplings]]; [[en/Foundations/PMG terminology#Groves and electrical data|precise boundary conventions]]. |
 | Common spanning-tree parameter of the two parts | Общий остовной параметр двух долей | The locally introduced normalization $J(G)$ of the spanning-tree coefficient of a bipartite graph. It can be computed through either part while retaining its original degrees. [[Couplings Within One Part of a Bipartite Graph]]. |
 
 For extensions not yet developed here, including metric-value decompositions and interval forms, definitions and translations are added as the corresponding public sections are prepared. Published KVP/KVPOU definitions are given above. The following restrictions remain:
@@ -439,6 +495,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 15 | 2026-10-30 | Added terminology of the completed C08 series: marked boundaries, full and reduced forest passports, tests, pairing radicals, groves, and electrical and spectral data. Distinguished states from forms, the two responses, minimality, and coordinate independence; clarified the effective network after vertex elimination. Aligned with Russian revision 15. |
 | 14 | 2026-10-30 | Added terminology from the completed spectral series: modes, eigenspaces, projectors, diagonal forms and elementary symmetric grade polynomials, exterior powers, cones, and projections. Distinguished coordinate and resistance evaluations, polynomial symmetry and SPF invariance, and complementary dual directions. Aligned with Russian revision 14. |
 | 13 | 2026-10-28 | Added matroid definitions, forest and edge parameter families, both toponome normalizations, first-kind and mixed-state potentials, and KVP/KVPOU. Aligned duality, conductor and edge effective resistance, and radius; removed stale qualifications. Aligned with Russian revision 13. |
 | 12 | 2026-10-28 | Distinguished direct vertices from dual classes in the Greenian entry; aligned with Russian glossary revision 12 and linked the English series. |

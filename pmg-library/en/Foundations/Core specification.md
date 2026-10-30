@@ -2,16 +2,18 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-10-30
-revision: 13
+revision: 14
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
 lang: en
-description: "PMG core definitions and conventions: polyform algebra, resistance metric, Laplacian and Greenian, matroid and forest parameters, spectral representations and projections, and conditions for the balanced extension."
+description: "Definitions and conventions of the PMG core: polyform algebra, resistance metric, Laplacian and Greenian, forest and spectral parameters, boundary passports and gluing laws; conditions for the balanced extension."
 order: 1
 ---
 
 This specification records the definitions, notation, and fundamental identities of the Polyform Metric Geometry (PMG) core presented in the [[PMG Introductory Series|introductory series]]. It provides a reference for conventions and the conditions under which formulas apply. Proofs, examples, and references appear in the corresponding notes of the series.
+
+Russian version: [[ru/Основания/Спецификация ядра PMG|Спецификация ядра PMG]].
 
 ## Purpose and scope
 
@@ -729,6 +731,7 @@ A full treatment of the following thematic extensions requires separate definiti
 - partition toponomes, the second-kind algebra, and vector and vertex normalizations of polynomial toponomes;
 - the cycle matroid, ordinary and rooted forest coefficients, and normalized forest and edge parameters;
 - spectral representations of a symmetric first grade and its exponential, spectral projectors, graph cones, and projections;
+- full boundary forest passports, their spanning-tree layer, and separate spectral boundary data;
 - metric-value decompositions and interval forms;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
@@ -738,7 +741,7 @@ Partition forms and their structural identities are defined in [[Partition Forms
 
 Published definitions of structural decompositions are collected in [[en/KVP decomposition/KVP Decomposition and Oriented Extensions|the KVP series]], and the two forest normalizations and Laplacian polynomial in [[en/Polynomial toponomes/Polynomial Toponomes|the polynomial toponome series]]. Matroid parameters and gluing laws are developed in [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|the matroid series]]. The conventions needed here are recorded below; these extensions are not developed in full.
 
-In this specification, a boundary is an image of $\partial$, equivalently an element of $\Lambda^kW$. A selected vertex set in a Dirichlet problem is not a boundary in this algebraic sense. When using the standard expression “boundary vertices”, the two notions must be explicitly distinguished.
+An algebraic boundary is an image of $\partial$ and belongs to the corresponding exterior power $\Lambda^kW$. A marked graph boundary is a selected set of vertices for a Dirichlet, contraction, or gluing problem. These two meanings of “boundary” are distinct; conventions for a marked boundary are recorded below.
 
 ### The Greenian and mutual duality in the symmetric case
 
@@ -901,6 +904,169 @@ In the fixed cut-based forest representation of the dual grade $Q_k$, the coeffi
 
 Matroid invariance means preservation under a matroid isomorphism that preserves corresponding weights. It does not establish a gluing law. Under one-vertex gluing of connected graphs with disjoint edge sets, $F_G$, $\Phi_G$, and $\tau$ multiply; forest power-sum parameters, $H_q$, and $\rho$ add, while the coefficients $\alpha_k$ convolve. The families are defined in the terminology; separate proofs of the laws appear in [[Gluing and the Limits of Matroid Invariance]]. These laws are not assumed for other gluings. Agreement of several parameters does not prove matroid isomorphism. The results do not extend automatically to balanced graphs.
 
+### Boundary passports and graph gluing
+
+This section records the conventions of the completed [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] series. The full forest passport, its spanning-tree layer, and the spectral passport describe different data. “Passport” denotes the organization of coordinates adopted in the series; it does not assert novelty of the underlying theorems. The notes and navigator identify the origins of the results.
+
+#### Marked boundaries and formal states
+
+Here $G$ is a finite undirected graph with positive weights on individual edges, $B\subseteq V(G)$ is a nonempty set of marked vertices, $k=|B|$, and $n=|V(G)|$. The forest formulas require neither connectivity nor planarity. A “component” in a gluing problem is a constituent part and need not be a connected component. The boundary $B$ differs from the algebraic boundary $\partial X$.
+
+All forests span all vertices, including isolated ones. A forest $H$ induces the connectivity partition $\pi_B(H)$ of $B$. For $\pi\in\Pi(B)$, set $b(\pi)=|\pi|$ and $r(\pi)=k-b(\pi)$. The state polynomial and full forest passport are
+
+$$
+\mathcal F^{G,B}_\pi(t)=\sum_{\pi_B(H)=\pi}w(H)t^{|E(H)|},\qquad
+\mathbf f_G(t)=(\mathcal F^{G,B}_\pi(t))_{\pi\in\Pi(B)},\qquad
+F_G(t)=\sum_\pi\mathcal F^{G,B}_\pi(t)
+$$
+
+In state $\pi$, a forest with $g$ edges has $n-g-b(\pi)$ components that do not meet the boundary. They are included in the sum. The vertex count and the boundary names and correspondence are retained separately: adding an isolated internal vertex leaves the polynomials unchanged. Definitions and examples: [[en/Boundary polynomials and graph gluing/Boundary Forest States - What to Retain from a Component]].
+
+States are first defined as independent symbols in the free space
+
+$$
+\mathscr S_B=\bigoplus_{\pi\in\Pi(B)}\mathbb R s_\pi
+$$
+
+They must not be identified with partition forms $q_\pi=\prod_{A\in\pi}[(A)]^2$, which satisfy structural identities. Summing the coefficients of a chosen forest expansion does not by itself define a linear evaluation on the space of actual polyforms. Any descent of such a rule to a quotient must be justified separately.
+
+#### Compatibility, contraction, and gluing
+
+Let $\pi\vee\sigma$ be the least common coarsening of the partitions. The forest compatibility matrix is defined by
+
+$$
+(\mathbf C_B)_{\pi\sigma}=C(\pi,\sigma)=
+\begin{cases}
+1,&r(\pi\vee\sigma)=r(\pi)+r(\sigma)\\
+0,&\text{otherwise}
+\end{cases}
+$$
+
+This is a symmetric algebraic pairing of formal states, not the resistance inner product. Contracting the vertices of each block of $\sigma$ gives the test response
+
+$$
+U_G(\sigma;t)=F_{G/\sigma}(t)=\sum_\pi C(\pi,\sigma)\mathcal F^{G,B}_\pi(t),\qquad
+\mathbf u_G(t)=\mathbf C_B\mathbf f_G(t)
+$$
+
+Edge labels are retained: a loop belongs to no forest, and two parallel edges together form a cycle. The polynomial counts the original selected edges, so there is no additional power of $t$. Mapping polyforms to the quotient space under vertex identification differs from multiplying the original expansion by $q_\sigma$, which is a test in the original space. The selection rule and the relation between these constructions are proved in [[en/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test]].
+
+Gluing $G_1\#_B G_2$ requires a fixed correspondence of the vertices of $B$, distinct internal vertices, and disjoint sets of labelled edges. Then
+
+$$
+\begin{aligned}
+F_{G_1\#_B G_2}(t)&=\mathbf f_1(t)^{\mathsf T}\mathbf C_B\mathbf f_2(t)\\
+\mathcal F^{G_1\#_B G_2,B}_\rho(t)&=
+\sum_{\substack{\pi\vee\sigma=\rho\\C(\pi,\sigma)=1}}
+\mathcal F^{G_1,B}_\pi(t)\mathcal F^{G_2,B}_\sigma(t)
+\end{aligned}
+$$
+
+A shared edge that is to occur once in the result is assigned to one part beforehand; retaining two copies means two parallel edges. State coordinates differ from test responses. The pairing matrix may be inverted only on a nondegenerate space. The forest law specializes established rules for combining connectivity tables; its proof, comparison with external sources, and two- and three-point examples appear in [[en/Boundary polynomials and graph gluing/Gluing Components by Pairing Boundary Data]].
+
+#### Reducing a linear passport
+
+All forest gluings can be evaluated on the quotient by the radical of the pairing:
+
+$$
+\mathscr R_B=\ker\mathbf C_B,\qquad
+\mathscr H_B=\mathscr S_B/\mathscr R_B,\qquad
+\dim\mathscr H_B=\operatorname{rank}\mathbf C_B=\mathrm{Cat}_k
+=\frac1{k+1}\binom{2k}{k}
+$$
+
+For polynomial passports, the quotient is taken coefficientwise in $t$. The classes of noncrossing partitions in a chosen cyclic order on $B$ form a basis; this does not require graph planarity. The number $\mathrm{Cat}_k$ is minimal among universal linear passports with a fixed bilinear gluing law. This is not a bound for arbitrary nonlinear encodings. Reduced coordinates may be negative and need not count forests of an individual state.
+
+In [[en/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction]], the exact equality is derived from the upper bound of Mannens–Nederlof, §4.2, Theorem 4.2, and the nonsingularity of the noncrossing spanning-tree pairing in Kenyon–Wilson, §§2.1–2.2. This is a proved combination of external results, not a claim of scientific priority. The computed ranks $2,5,14,42$ for $k=2,3,4,5$ illustrate the general argument.
+
+For $k=4$, the radical is one-dimensional, but its relation mixes partition ranks $2$ and $3$. It is not the tetrahedron structural identity. Equal dimensions do not identify the forest-state quotient with the space of partition forms or transfer their grading to it.
+
+#### The spanning-tree layer and electrical response
+
+A grove is a spanning forest every component of which meets $B$. Its weight in state $\pi$ is extracted from the full passport:
+
+$$
+g^{G,B}_\pi=[t^{n-b(\pi)}]\mathcal F^{G,B}_\pi(t)
+$$
+
+The degree of the extracted coefficient depends on the state. Spanning-tree pairing retains only pairs with $\pi\vee\sigma=\{B\}$ and $r(\pi)+r(\sigma)=k-1$. These conditions and the connection with the published grove pairing are discussed in [[en/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry]].
+
+The following electrical formulas require $G$ to be connected. With $I=V(G)\setminus B$, the Dirichlet-to-Neumann response matrix and the fully separated grove scale are
+
+$$
+\boldsymbol\Lambda_B=\mathbf L_{BB}-\mathbf L_{BI}\mathbf L_{II}^{-1}\mathbf L_{IB},\qquad
+\delta_B(G)=\det\mathbf L_{II}
+$$
+
+Currents are positive into the network. The principal block $\mathbf L_{II}$ retains original vertex degrees; it is not the Laplacian of the induced subgraph. For an empty interior, the eliminated contribution is zero and the empty determinant is $1$.
+
+Choose $B=\{b_0,\ldots,b_{k-1}\}$ and let the columns of $\mathbf D$ be $d_i=b_i-b_0$. If $\mathbf H_B$ is obtained by deleting the row and column of $b_0$ from $\boldsymbol\Lambda_B$, then
+
+$$
+\mathbf G_B=\mathbf D^{\mathsf T}\mathbf{Gr}_G\mathbf D=\mathbf H_B^{-1},\qquad
+\tau(G)=\delta_B(G)\det\mathbf H_B,\qquad
+\delta_B(G)=\tau(G)\det\mathbf G_B
+$$
+
+These are standard electrical and determinant identities expressed in resistance geometry; precise attribution appears in [[en/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry]]. The principal block of the full Green matrix is not identified with $\boldsymbol\Lambda_B^+$: their evaluations on boundary differences agree, but their centerings refer to different vertex sets.
+
+For two connected parts with a common boundary and disjoint edges, in the same boundary-difference basis,
+
+$$
+\boldsymbol\Lambda_{B,\#}=\boldsymbol\Lambda_{B,1}+\boldsymbol\Lambda_{B,2},\qquad
+\tau(G_1\#_B G_2)=\tau(G_1)\tau(G_2)\det(\mathbf G_{B,1}+\mathbf G_{B,2})
+$$
+
+The resulting Gram matrix is $(\mathbf G_{B,1}^{-1}+\mathbf G_{B,2}^{-1})^{-1}$, not the sum of Gram matrices. Laplacians add after embedding in a common space; no analogous addition of Greenians is assumed.
+
+The determinant formulas without correction use unscaled unit differences $b_i-b_0$ or the edges of a tree on $B$. Under the same basis change $\mathbf D'=\mathbf D\mathbf A$, the determinant of the sum of Gram matrices is divided by $(\det\mathbf A)^2$. The same normalization applies to the contraction formula $\tau(G/\sigma)=\tau(G)\det\mathbf G_\sigma$, where $\mathbf G_\sigma$ is the resistance Gram matrix of unit differences from trees within the blocks of $\sigma$. Ordinary reduced determinants are used; the product of nonzero Laplacian eigenvalues is $n\tau(G)$. For $k=1$, empty boundary determinants are $1$.
+
+The electrical response together with its scale suffices for spanning-tree gluing but does not recover the full forest passport. Recovery of individual normalized grove weights from the response in the results of Kenyon–Wilson requires circular planarity: an embedding in a disk with the marked vertices on its boundary in the prescribed order. Choosing a noncrossing coordinate basis does not supply this condition.
+
+#### A separate spectral passport
+
+The spectral variable is $\xi$. The Laplacian pencil and characteristic polynomial use the conventions
+
+$$
+\mathbf M_G(\xi)=\xi I-\mathbf L_G,\qquad
+\chi_G(\xi)=\det\mathbf M_G(\xi)=\xi^nP_G(-1/\xi)
+$$
+
+The last equality is a polynomial identity, including at $\xi=0$. It connects the spectrum with the rooted polynomial $P_G$, not the ordinary polynomial $F_G$.
+
+For an ordered pair $\mathcal B=(a,b)$ and $J=V(G)\setminus\{a,b\}$, the spectral passport consists of five polynomials:
+
+$$
+\begin{aligned}
+A&=\det\mathbf M_G\\
+B&=\det(\mathbf M_G)_{\widehat a},\qquad
+C=\det(\mathbf M_G)_{\widehat b}\\
+D&=(\operatorname{adj}\mathbf M_G)_{ab},\qquad
+E=\det(\mathbf M_G)_{JJ}
+\end{aligned}
+$$
+
+A hat means deletion of a row and column without recalculating the degrees of remaining vertices. Here $B,C,D,E$ are local polynomial names, and $\mathcal B$ denotes the boundary. The classical Jacobi identity and the Schur complement give
+
+$$
+AE=BC-D^2,\qquad
+\mathbf S_G(\xi)=\frac1E\begin{pmatrix}C&-D\\-D&B\end{pmatrix},\qquad
+A=E\det\mathbf S_G
+$$
+
+The rational expression for $\mathbf S_G$ applies when $E\ne0$; polynomial determinant identities also hold at zeros of $E$. The five coordinates are not asserted to be algebraically independent or minimal.
+
+For two parts with the same ordered pair and disjoint edges,
+
+$$
+E_\#=E_1E_2,\qquad
+\mathbf S_\#=\mathbf S_1+\mathbf S_2-\xi I_2
+$$
+
+The correction counts shared vertices once. If both parts contain the same edge $ab$ of weight $w$, which is to occur only once in the result, add $\mathbf L_e=w\left(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\right)$ to the right-hand side. If two parallel copies are retained, there is no such correction. Polynomial formulas for all five coordinates, checks at degenerate values, and attribution of the determinant methods appear in [[en/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data]].
+
+For a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. The static electrical response does not replace the dependence on $\xi$. A passport for a fixed pair does not establish closure of a transfer rule when input and output boundaries change; those rules and chain closures belong to the next stage.
+
 ## Principal notation
 
 | Notation | Meaning |
@@ -936,6 +1102,14 @@ Matroid invariance means preservation under a matroid isomorphism that preserves
 | $\tau(G)=\tau(M_G)$ | Spanning-tree coefficient of the graph |
 | $u_M(f)$, $P_M(f)$ | Form potential and its normalized value $P_M(f)=\tau(Mf)/\tau(M)$ |
 | $N=\exp(\mathrm{Gr})$, $P_N(f)$ | Greenian exponential in the direct space and its normalized potential |
+| $B$, $\mathcal B$ | Marked graph boundary; ordered pair for a spectral passport, distinct from the operator $\partial$ |
+| $\mathcal F^{G,B}_\pi(t)$, $\mathbf f_G(t)$ | State polynomial and full forest passport; the degree of $t$ counts edges |
+| $\mathbf C_B$, $\mathbf u_G(t)$ | Forest compatibility matrix and vector of test responses |
+| $\mathscr S_B$, $\mathscr R_B$, $\mathscr H_B$ | Free states, the radical of the forest pairing, and its quotient |
+| $g^{G,B}_\pi$, $\delta_B(G)$ | Grove weight of a state and fully separated grove scale |
+| $\boldsymbol\Lambda_B$, $\mathbf G_B$, $\mathbf D$ | Electrical response, boundary resistance Gram matrix, and matrix of chosen differences |
+| $\xi$, $\mathbf M_G(\xi)$, $\mathbf S_G(\xi)$ | Spectral variable, the pencil $\xi I-\mathbf L_G$, and its boundary Schur complement |
+| $A,B,C,D,E$ | Local polynomial coordinates of a pair's spectral passport; here $D$ is not an exponential and $E$ is not the projector $\mathbf E_\lambda$ |
 | $f_g$, $p_g$, $\alpha_k$ | Ordinary, rooted, and normalized corank forest coefficients |
 | $f_{ij}$, $\tau_i$ | Directed arc weight and rooted spanning-tree potential |
 | $c_\ell$, $c_{ij}$ | Individual edge conductance and total conductance of a vertex pair |
@@ -990,6 +1164,7 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
+| 14 | 2026-10-30 | Recorded conventions of the completed C08 series: the full forest passport, contraction tests, pairing and the Catalan linear quotient, groves and electrical scale, and a separate spectral passport. Clarified formal states, determinant normalizations, shared vertices and edges, reconstruction conditions, and external foundations. Aligned with Russian revision 14. |
 | 13 | 2026-10-30 | Recorded spectral conventions: coordinate and resistance metrics, projectors, diagonal grades and their evaluations, complementary dual directions, and scaling. Distinguished exterior powers, additive action, graph cones, and projection types; added limitations and links to the completed series. Aligned with Russian revision 13. |
 | 12 | 2026-10-28 | Aligned individual edges and aggregated couplings, centroid notation, and quadratic radius. Added the two metric roles of the exponentials, matroid and forest conventions, and links to published extensions. Aligned with Russian revision 12. |
 | 11 | 2026-10-28 | Aligned direct and dual notation with Russian revision 11 and linked the completed English Greenian series. |
