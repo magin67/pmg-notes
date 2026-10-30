@@ -1,0 +1,4585 @@
+{
+  "hex_pair": [
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          9,
+          8,
+          7,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          13,
+          12,
+          11,
+          10
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "n": 14,
+      "edge_count": 16,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 5
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 5
+        },
+        {
+          "faces": [
+            1,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            4,
+            13
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            11,
+            12
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            12,
+            13
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 65536,
+      "rank_signature_sha256": "446da4a4d45ae500dc79aede3461bba08d12cfbf7ae77c1b3694472b2e4fa9cc",
+      "ordinary_forest_coefficients": [
+        1,
+        16,
+        120,
+        560,
+        1820,
+        4368,
+        8005,
+        11410,
+        12735,
+        11080,
+        7376,
+        3604,
+        1181,
+        204
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        32,
+        458,
+        3872,
+        21509,
+        82624,
+        224918,
+        437304,
+        603954,
+        581144,
+        375104,
+        151536,
+        33425,
+        2856
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -32,
+        458,
+        -3872,
+        21509,
+        -82624,
+        224918,
+        -437304,
+        603954,
+        -581144,
+        375104,
+        -151536,
+        33425,
+        -2856,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        169,
+        169,
+        169,
+        169,
+        169,
+        168,
+        168,
+        168,
+        168,
+        169,
+        169,
+        169,
+        169,
+        169,
+        145,
+        145
+      ],
+      "edge_resistances": [
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "14/17",
+        "14/17",
+        "14/17",
+        "14/17",
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "145/204",
+        "145/204"
+      ],
+      "tau": 204,
+      "rho": "43595/41616",
+      "H2": "36713/3468",
+      "two_forest_count": 1181,
+      "resistances_to_vertex_zero": [
+        "0",
+        "145/204",
+        "253/204",
+        "17/12",
+        "22/17",
+        "14/17",
+        "169/204",
+        "67/51",
+        "99/68",
+        "64/51",
+        "106/51",
+        "163/68",
+        "121/51",
+        "409/204"
+      ],
+      "circumcenter_weights": [
+        "-37/204",
+        "-37/204",
+        "3/17",
+        "-37/204",
+        "-37/204",
+        "3/17",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204"
+      ],
+      "kirchhoff_index": "33425/204",
+      "degree3_vertices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "degree3_induced_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          9,
+          8,
+          7,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          13,
+          12,
+          11,
+          10
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "n": 14,
+      "edge_count": 16,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 5
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 5
+        },
+        {
+          "faces": [
+            1,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            13
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            11,
+            12
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            12,
+            13
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 65536,
+      "rank_signature_sha256": "446da4a4d45ae500dc79aede3461bba08d12cfbf7ae77c1b3694472b2e4fa9cc",
+      "ordinary_forest_coefficients": [
+        1,
+        16,
+        120,
+        560,
+        1820,
+        4368,
+        8005,
+        11410,
+        12735,
+        11080,
+        7376,
+        3604,
+        1181,
+        204
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        32,
+        458,
+        3872,
+        21508,
+        82604,
+        224748,
+        436504,
+        601679,
+        577144,
+        370854,
+        149036,
+        32800,
+        2856
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -32,
+        458,
+        -3872,
+        21508,
+        -82604,
+        224748,
+        -436504,
+        601679,
+        -577144,
+        370854,
+        -149036,
+        32800,
+        -2856,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        169,
+        169,
+        169,
+        169,
+        169,
+        168,
+        168,
+        168,
+        168,
+        169,
+        169,
+        169,
+        169,
+        169,
+        145,
+        145
+      ],
+      "edge_resistances": [
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "14/17",
+        "14/17",
+        "14/17",
+        "14/17",
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "169/204",
+        "145/204",
+        "145/204"
+      ],
+      "tau": 204,
+      "rho": "43595/41616",
+      "H2": "36713/3468",
+      "two_forest_count": 1181,
+      "resistances_to_vertex_zero": [
+        "0",
+        "145/204",
+        "253/204",
+        "24/17",
+        "22/17",
+        "14/17",
+        "169/204",
+        "67/51",
+        "99/68",
+        "64/51",
+        "100/51",
+        "159/68",
+        "121/51",
+        "421/204"
+      ],
+      "circumcenter_weights": [
+        "-37/204",
+        "-37/204",
+        "-37/204",
+        "-37/204",
+        "3/17",
+        "3/17",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204",
+        "35/204"
+      ],
+      "kirchhoff_index": "8200/51",
+      "degree3_vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "degree3_induced_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    }
+  ],
+  "hex_pair_edge_bijection": [
+    {
+      "edge_A": [
+        0,
+        6
+      ],
+      "edge_B": [
+        0,
+        6
+      ],
+      "dual_endpoints": [
+        0,
+        1
+      ]
+    },
+    {
+      "edge_A": [
+        1,
+        9
+      ],
+      "edge_B": [
+        1,
+        9
+      ],
+      "dual_endpoints": [
+        0,
+        1
+      ]
+    },
+    {
+      "edge_A": [
+        6,
+        7
+      ],
+      "edge_B": [
+        6,
+        7
+      ],
+      "dual_endpoints": [
+        0,
+        1
+      ]
+    },
+    {
+      "edge_A": [
+        7,
+        8
+      ],
+      "edge_B": [
+        7,
+        8
+      ],
+      "dual_endpoints": [
+        0,
+        1
+      ]
+    },
+    {
+      "edge_A": [
+        8,
+        9
+      ],
+      "edge_B": [
+        8,
+        9
+      ],
+      "dual_endpoints": [
+        0,
+        1
+      ]
+    },
+    {
+      "edge_A": [
+        0,
+        5
+      ],
+      "edge_B": [
+        0,
+        5
+      ],
+      "dual_endpoints": [
+        0,
+        2
+      ]
+    },
+    {
+      "edge_A": [
+        1,
+        2
+      ],
+      "edge_B": [
+        1,
+        2
+      ],
+      "dual_endpoints": [
+        0,
+        2
+      ]
+    },
+    {
+      "edge_A": [
+        2,
+        3
+      ],
+      "edge_B": [
+        3,
+        4
+      ],
+      "dual_endpoints": [
+        0,
+        2
+      ]
+    },
+    {
+      "edge_A": [
+        4,
+        5
+      ],
+      "edge_B": [
+        4,
+        5
+      ],
+      "dual_endpoints": [
+        0,
+        2
+      ]
+    },
+    {
+      "edge_A": [
+        3,
+        10
+      ],
+      "edge_B": [
+        2,
+        10
+      ],
+      "dual_endpoints": [
+        0,
+        3
+      ]
+    },
+    {
+      "edge_A": [
+        4,
+        13
+      ],
+      "edge_B": [
+        3,
+        13
+      ],
+      "dual_endpoints": [
+        0,
+        3
+      ]
+    },
+    {
+      "edge_A": [
+        10,
+        11
+      ],
+      "edge_B": [
+        10,
+        11
+      ],
+      "dual_endpoints": [
+        0,
+        3
+      ]
+    },
+    {
+      "edge_A": [
+        11,
+        12
+      ],
+      "edge_B": [
+        11,
+        12
+      ],
+      "dual_endpoints": [
+        0,
+        3
+      ]
+    },
+    {
+      "edge_A": [
+        12,
+        13
+      ],
+      "edge_B": [
+        12,
+        13
+      ],
+      "dual_endpoints": [
+        0,
+        3
+      ]
+    },
+    {
+      "edge_A": [
+        0,
+        1
+      ],
+      "edge_B": [
+        0,
+        1
+      ],
+      "dual_endpoints": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_A": [
+        3,
+        4
+      ],
+      "edge_B": [
+        2,
+        3
+      ],
+      "dual_endpoints": [
+        2,
+        3
+      ]
+    }
+  ],
+  "additional_configurations": [
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "seams_ordered_identified_vertices": [],
+      "vertices": [
+        0,
+        1,
+        2
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "n": 3,
+      "edge_count": 3,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 3
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        }
+      ],
+      "subsets_checked": 8,
+      "rank_signature_sha256": "42e41f72ee6d9c3eb14d3d17dfb586ebc0abe8bb6146053d1e64582ac240067c",
+      "ordinary_forest_coefficients": [
+        1,
+        3,
+        3
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        6,
+        9
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -6,
+        9,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        2,
+        2,
+        2
+      ],
+      "edge_resistances": [
+        "2/3",
+        "2/3",
+        "2/3"
+      ],
+      "tau": 3,
+      "rho": "2/9",
+      "H2": "4/3",
+      "two_forest_count": 3,
+      "resistances_to_vertex_zero": [
+        "0",
+        "2/3",
+        "2/3"
+      ],
+      "circumcenter_weights": [
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "kirchhoff_index": "2",
+      "degree3_vertices": [],
+      "degree3_induced_edges": []
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          4,
+          8,
+          9,
+          10
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0
+        ],
+        [
+          4
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "n": 11,
+      "edge_count": 13,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 5
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 4
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            4,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            4,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 8192,
+      "rank_signature_sha256": "7ef1657b57c1f94fa7679809a960c0f4bc1b099fb907d8bfefd79d48ad437d19",
+      "ordinary_forest_coefficients": [
+        1,
+        13,
+        78,
+        286,
+        713,
+        1268,
+        1636,
+        1520,
+        980,
+        400,
+        80
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        26,
+        291,
+        1842,
+        7277,
+        18648,
+        31136,
+        33024,
+        20876,
+        6896,
+        880
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -26,
+        291,
+        -1842,
+        7277,
+        -18648,
+        31136,
+        -33024,
+        20876,
+        -6896,
+        880,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        60,
+        60,
+        60,
+        60,
+        64,
+        64,
+        64,
+        64,
+        64,
+        60,
+        60,
+        60,
+        60
+      ],
+      "edge_resistances": [
+        "3/4",
+        "3/4",
+        "3/4",
+        "3/4",
+        "4/5",
+        "4/5",
+        "4/5",
+        "4/5",
+        "4/5",
+        "3/4",
+        "3/4",
+        "3/4",
+        "3/4"
+      ],
+      "tau": 80,
+      "rho": "41/40",
+      "H2": "77/10",
+      "two_forest_count": 400,
+      "resistances_to_vertex_zero": [
+        "0",
+        "3/4",
+        "1",
+        "3/4",
+        "4/5",
+        "6/5",
+        "6/5",
+        "4/5",
+        "31/20",
+        "9/5",
+        "31/20"
+      ],
+      "circumcenter_weights": [
+        "-11/20",
+        "1/4",
+        "1/4",
+        "1/4",
+        "-11/20",
+        "1/5",
+        "1/5",
+        "1/5",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "kirchhoff_index": "431/5",
+      "degree3_vertices": [],
+      "degree3_induced_edges": []
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          6,
+          8,
+          9,
+          10
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0
+        ],
+        [
+          6
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "n": 11,
+      "edge_count": 13,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 5
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 4
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            6,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 8192,
+      "rank_signature_sha256": "7ef1657b57c1f94fa7679809a960c0f4bc1b099fb907d8bfefd79d48ad437d19",
+      "ordinary_forest_coefficients": [
+        1,
+        13,
+        78,
+        286,
+        713,
+        1268,
+        1636,
+        1520,
+        980,
+        400,
+        80
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        26,
+        291,
+        1842,
+        7281,
+        18696,
+        31364,
+        33560,
+        21500,
+        7184,
+        880
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -26,
+        291,
+        -1842,
+        7281,
+        -18696,
+        31364,
+        -33560,
+        21500,
+        -7184,
+        880,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        60,
+        60,
+        60,
+        60,
+        64,
+        64,
+        64,
+        64,
+        64,
+        60,
+        60,
+        60,
+        60
+      ],
+      "edge_resistances": [
+        "3/4",
+        "3/4",
+        "3/4",
+        "3/4",
+        "4/5",
+        "4/5",
+        "4/5",
+        "4/5",
+        "4/5",
+        "3/4",
+        "3/4",
+        "3/4",
+        "3/4"
+      ],
+      "tau": 80,
+      "rho": "41/40",
+      "H2": "77/10",
+      "two_forest_count": 400,
+      "resistances_to_vertex_zero": [
+        "0",
+        "3/4",
+        "1",
+        "3/4",
+        "4/5",
+        "6/5",
+        "6/5",
+        "4/5",
+        "39/20",
+        "11/5",
+        "39/20"
+      ],
+      "circumcenter_weights": [
+        "-11/20",
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/5",
+        "1/5",
+        "-11/20",
+        "1/5",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "kirchhoff_index": "449/5",
+      "degree3_vertices": [],
+      "degree3_induced_edges": []
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          5,
+          6,
+          9,
+          10,
+          11
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "n": 12,
+      "edge_count": 14,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            1,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            1,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            5,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            6,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 16384,
+      "rank_signature_sha256": "324938ffcc92c8274be8496583a9a3106025ddb505a37812c1153f8c3238f907",
+      "ordinary_forest_coefficients": [
+        1,
+        14,
+        91,
+        364,
+        1001,
+        2000,
+        2984,
+        3352,
+        2807,
+        1692,
+        674,
+        140
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        28,
+        344,
+        2440,
+        11061,
+        33500,
+        68796,
+        95128,
+        85961,
+        47656,
+        14260,
+        1680
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -28,
+        344,
+        -2440,
+        11061,
+        -33500,
+        68796,
+        -95128,
+        85961,
+        -47656,
+        14260,
+        -1680,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        111,
+        111,
+        111,
+        111,
+        115,
+        115,
+        115,
+        115,
+        111,
+        111,
+        111,
+        111,
+        96,
+        96
+      ],
+      "edge_resistances": [
+        "111/140",
+        "111/140",
+        "111/140",
+        "111/140",
+        "23/28",
+        "23/28",
+        "23/28",
+        "23/28",
+        "111/140",
+        "111/140",
+        "111/140",
+        "111/140",
+        "24/35",
+        "24/35"
+      ],
+      "tau": 140,
+      "rho": "3459/3920",
+      "H2": "1699/196",
+      "two_forest_count": 674,
+      "resistances_to_vertex_zero": [
+        "0",
+        "24/35",
+        "159/140",
+        "41/35",
+        "111/140",
+        "171/140",
+        "39/28",
+        "9/7",
+        "23/28",
+        "69/35",
+        "299/140",
+        "66/35"
+      ],
+      "circumcenter_weights": [
+        "-3/20",
+        "-3/20",
+        "29/140",
+        "29/140",
+        "29/140",
+        "-3/20",
+        "-3/20",
+        "5/28",
+        "5/28",
+        "29/140",
+        "29/140",
+        "29/140"
+      ],
+      "kirchhoff_index": "713/7",
+      "degree3_vertices": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "degree3_induced_edges": [
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          0,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "n": 12,
+      "edge_count": 14,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            1,
+            2
+          ],
+          "multiplicity": 1
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            1,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            7,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 16384,
+      "rank_signature_sha256": "324938ffcc92c8274be8496583a9a3106025ddb505a37812c1153f8c3238f907",
+      "ordinary_forest_coefficients": [
+        1,
+        14,
+        91,
+        364,
+        1001,
+        2000,
+        2984,
+        3352,
+        2807,
+        1692,
+        674,
+        140
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        28,
+        344,
+        2440,
+        11061,
+        33500,
+        68796,
+        95128,
+        85961,
+        47656,
+        14260,
+        1680
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -28,
+        344,
+        -2440,
+        11061,
+        -33500,
+        68796,
+        -95128,
+        85961,
+        -47656,
+        14260,
+        -1680,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        111,
+        111,
+        111,
+        111,
+        115,
+        115,
+        115,
+        115,
+        111,
+        111,
+        111,
+        111,
+        96,
+        96
+      ],
+      "edge_resistances": [
+        "111/140",
+        "111/140",
+        "111/140",
+        "111/140",
+        "23/28",
+        "23/28",
+        "23/28",
+        "23/28",
+        "111/140",
+        "111/140",
+        "111/140",
+        "111/140",
+        "24/35",
+        "24/35"
+      ],
+      "tau": 140,
+      "rho": "3459/3920",
+      "H2": "1699/196",
+      "two_forest_count": 674,
+      "resistances_to_vertex_zero": [
+        "0",
+        "24/35",
+        "159/140",
+        "41/35",
+        "111/140",
+        "23/28",
+        "9/7",
+        "39/28",
+        "171/140",
+        "66/35",
+        "299/140",
+        "69/35"
+      ],
+      "circumcenter_weights": [
+        "-3/20",
+        "-3/20",
+        "29/140",
+        "29/140",
+        "29/140",
+        "5/28",
+        "5/28",
+        "-3/20",
+        "-3/20",
+        "29/140",
+        "29/140",
+        "29/140"
+      ],
+      "kirchhoff_index": "713/7",
+      "degree3_vertices": [
+        0,
+        1,
+        7,
+        8
+      ],
+      "degree3_induced_edges": [
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          7,
+          8
+        ]
+      ]
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "n": 12,
+      "edge_count": 14,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 2
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            1,
+            2
+          ],
+          "multiplicity": 2
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 2
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 16384,
+      "rank_signature_sha256": "9a8421404dd2833b22c3c1978d13e68da4a191ccd9a4eeda7ecedd0e15139946",
+      "ordinary_forest_coefficients": [
+        1,
+        14,
+        91,
+        364,
+        1001,
+        2002,
+        3000,
+        3408,
+        2917,
+        1822,
+        764,
+        168
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        28,
+        344,
+        2440,
+        11062,
+        33520,
+        68960,
+        95832,
+        87641,
+        49844,
+        15672,
+        2016
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -28,
+        344,
+        -2440,
+        11062,
+        -33520,
+        68960,
+        -95832,
+        87641,
+        -49844,
+        15672,
+        -2016,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        136,
+        136,
+        136,
+        136,
+        132,
+        132,
+        136,
+        136,
+        136,
+        136,
+        124,
+        124,
+        124,
+        124
+      ],
+      "edge_resistances": [
+        "17/21",
+        "17/21",
+        "17/21",
+        "17/21",
+        "11/14",
+        "11/14",
+        "17/21",
+        "17/21",
+        "17/21",
+        "17/21",
+        "31/42",
+        "31/42",
+        "31/42",
+        "31/42"
+      ],
+      "tau": 168,
+      "rho": "2803/3528",
+      "H2": "2545/294",
+      "two_forest_count": 764,
+      "resistances_to_vertex_zero": [
+        "0",
+        "31/42",
+        "20/21",
+        "9/7",
+        "26/21",
+        "17/21",
+        "7/6",
+        "26/21",
+        "11/14",
+        "61/42",
+        "73/42",
+        "23/14"
+      ],
+      "circumcenter_weights": [
+        "-1/6",
+        "11/42",
+        "-1/6",
+        "4/21",
+        "4/21",
+        "4/21",
+        "-1/6",
+        "11/42",
+        "-1/6",
+        "4/21",
+        "4/21",
+        "4/21"
+      ],
+      "kirchhoff_index": "653/7",
+      "degree3_vertices": [
+        0,
+        2,
+        6,
+        8
+      ],
+      "degree3_induced_edges": [
+        [
+          0,
+          8
+        ],
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          1,
+          0,
+          6,
+          7,
+          8
+        ],
+        [
+          8,
+          7,
+          6,
+          9,
+          10,
+          11
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          8,
+          7,
+          6
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "n": 12,
+      "edge_count": 14,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 2
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            1,
+            2
+          ],
+          "multiplicity": 2
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 2
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            8,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        }
+      ],
+      "subsets_checked": 16384,
+      "rank_signature_sha256": "9a8421404dd2833b22c3c1978d13e68da4a191ccd9a4eeda7ecedd0e15139946",
+      "ordinary_forest_coefficients": [
+        1,
+        14,
+        91,
+        364,
+        1001,
+        2002,
+        3000,
+        3408,
+        2917,
+        1822,
+        764,
+        168
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        28,
+        344,
+        2440,
+        11062,
+        33520,
+        68960,
+        95832,
+        87641,
+        49844,
+        15672,
+        2016
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -28,
+        344,
+        -2440,
+        11062,
+        -33520,
+        68960,
+        -95832,
+        87641,
+        -49844,
+        15672,
+        -2016,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        136,
+        136,
+        136,
+        136,
+        132,
+        132,
+        136,
+        136,
+        136,
+        136,
+        124,
+        124,
+        124,
+        124
+      ],
+      "edge_resistances": [
+        "17/21",
+        "17/21",
+        "17/21",
+        "17/21",
+        "11/14",
+        "11/14",
+        "17/21",
+        "17/21",
+        "17/21",
+        "17/21",
+        "31/42",
+        "31/42",
+        "31/42",
+        "31/42"
+      ],
+      "tau": 168,
+      "rho": "2803/3528",
+      "H2": "2545/294",
+      "two_forest_count": 764,
+      "resistances_to_vertex_zero": [
+        "0",
+        "31/42",
+        "20/21",
+        "9/7",
+        "26/21",
+        "17/21",
+        "11/14",
+        "26/21",
+        "7/6",
+        "61/42",
+        "73/42",
+        "23/14"
+      ],
+      "circumcenter_weights": [
+        "-1/6",
+        "11/42",
+        "-1/6",
+        "4/21",
+        "4/21",
+        "4/21",
+        "-1/6",
+        "11/42",
+        "-1/6",
+        "4/21",
+        "4/21",
+        "4/21"
+      ],
+      "kirchhoff_index": "653/7",
+      "degree3_vertices": [
+        0,
+        2,
+        6,
+        8
+      ],
+      "degree3_induced_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          8
+        ]
+      ]
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "n": 12,
+      "edge_count": 15,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 3
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 2
+        },
+        {
+          "faces": [
+            0,
+            4
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 1
+        },
+        {
+          "faces": [
+            3,
+            4
+          ],
+          "multiplicity": 2
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            6,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            8,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            3,
+            4
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            3,
+            4
+          ]
+        }
+      ],
+      "subsets_checked": 32768,
+      "rank_signature_sha256": "def3ddfa1805aec520094278e8e7f54da7e9dc2a05f99276c2f26861d24a2fa9",
+      "ordinary_forest_coefficients": [
+        1,
+        15,
+        105,
+        454,
+        1352,
+        2925,
+        4719,
+        5720,
+        5152,
+        3320,
+        1395,
+        294
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        30,
+        395,
+        3004,
+        14608,
+        47476,
+        104621,
+        155166,
+        150282,
+        89222,
+        28515,
+        3528
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -30,
+        395,
+        -3004,
+        14608,
+        -47476,
+        104621,
+        -155166,
+        150282,
+        -89222,
+        28515,
+        -3528,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        196,
+        196,
+        196,
+        216,
+        216,
+        216,
+        222,
+        222,
+        237,
+        237,
+        237,
+        237,
+        180,
+        213,
+        213
+      ],
+      "edge_resistances": [
+        "2/3",
+        "2/3",
+        "2/3",
+        "36/49",
+        "36/49",
+        "36/49",
+        "37/49",
+        "37/49",
+        "79/98",
+        "79/98",
+        "79/98",
+        "79/98",
+        "30/49",
+        "71/98",
+        "71/98"
+      ],
+      "tau": 294,
+      "rho": "156487/172872",
+      "H2": "116933/14406",
+      "two_forest_count": 1395,
+      "resistances_to_vertex_zero": [
+        "0",
+        "2/3",
+        "2/3",
+        "36/49",
+        "46/49",
+        "36/49",
+        "71/49",
+        "165/98",
+        "67/49",
+        "193/98",
+        "107/49",
+        "197/98"
+      ],
+      "circumcenter_weights": [
+        "-59/147",
+        "1/3",
+        "1/3",
+        "-5/98",
+        "-5/98",
+        "13/49",
+        "-1/7",
+        "27/98",
+        "-1/7",
+        "19/98",
+        "19/98",
+        "19/98"
+      ],
+      "kirchhoff_index": "9505/98",
+      "degree3_vertices": [
+        3,
+        4,
+        6,
+        8
+      ],
+      "degree3_induced_edges": [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "cores_cyclic_vertex_order": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          8,
+          7,
+          6,
+          9,
+          10,
+          11
+        ]
+      ],
+      "seams_ordered_identified_vertices": [
+        [
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          8,
+          7,
+          6
+        ]
+      ],
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "n": 12,
+      "edge_count": 15,
+      "dual_vertex_zero_is_exterior": true,
+      "dual_bundles": [
+        {
+          "faces": [
+            0,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "faces": [
+            0,
+            2
+          ],
+          "multiplicity": 3
+        },
+        {
+          "faces": [
+            0,
+            3
+          ],
+          "multiplicity": 2
+        },
+        {
+          "faces": [
+            0,
+            4
+          ],
+          "multiplicity": 4
+        },
+        {
+          "faces": [
+            2,
+            3
+          ],
+          "multiplicity": 1
+        },
+        {
+          "faces": [
+            3,
+            4
+          ],
+          "multiplicity": 2
+        }
+      ],
+      "edge_dual_correspondence": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "dual_endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "dual_endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            4,
+            8
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            5,
+            6
+          ],
+          "dual_endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            6,
+            9
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            8,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            9,
+            10
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            10,
+            11
+          ],
+          "dual_endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "dual_endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            6,
+            7
+          ],
+          "dual_endpoints": [
+            3,
+            4
+          ]
+        },
+        {
+          "edge": [
+            7,
+            8
+          ],
+          "dual_endpoints": [
+            3,
+            4
+          ]
+        }
+      ],
+      "subsets_checked": 32768,
+      "rank_signature_sha256": "def3ddfa1805aec520094278e8e7f54da7e9dc2a05f99276c2f26861d24a2fa9",
+      "ordinary_forest_coefficients": [
+        1,
+        15,
+        105,
+        454,
+        1352,
+        2925,
+        4719,
+        5720,
+        5152,
+        3320,
+        1395,
+        294
+      ],
+      "rooted_forest_coefficients": [
+        1,
+        30,
+        395,
+        3004,
+        14608,
+        47476,
+        104621,
+        155166,
+        150282,
+        89222,
+        28515,
+        3528
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        -30,
+        395,
+        -3004,
+        14608,
+        -47476,
+        104621,
+        -155166,
+        150282,
+        -89222,
+        28515,
+        -3528,
+        0
+      ],
+      "spanning_tree_edge_counts": [
+        196,
+        196,
+        196,
+        216,
+        216,
+        216,
+        222,
+        222,
+        237,
+        237,
+        237,
+        237,
+        180,
+        213,
+        213
+      ],
+      "edge_resistances": [
+        "2/3",
+        "2/3",
+        "2/3",
+        "36/49",
+        "36/49",
+        "36/49",
+        "37/49",
+        "37/49",
+        "79/98",
+        "79/98",
+        "79/98",
+        "79/98",
+        "30/49",
+        "71/98",
+        "71/98"
+      ],
+      "tau": 294,
+      "rho": "156487/172872",
+      "H2": "116933/14406",
+      "two_forest_count": 1395,
+      "resistances_to_vertex_zero": [
+        "0",
+        "2/3",
+        "2/3",
+        "36/49",
+        "46/49",
+        "36/49",
+        "67/49",
+        "165/98",
+        "71/49",
+        "193/98",
+        "107/49",
+        "197/98"
+      ],
+      "circumcenter_weights": [
+        "-59/147",
+        "1/3",
+        "1/3",
+        "13/49",
+        "-5/98",
+        "-5/98",
+        "-1/7",
+        "27/98",
+        "-1/7",
+        "19/98",
+        "19/98",
+        "19/98"
+      ],
+      "kirchhoff_index": "9505/98",
+      "degree3_vertices": [
+        4,
+        5,
+        6,
+        8
+      ],
+      "degree3_induced_edges": [
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    }
+  ],
+  "total_configurations": 11,
+  "total_edge_subsets_checked": 278536,
+  "scope": "Finite exact checks support the examples; the general theorem is proved in the note."
+}

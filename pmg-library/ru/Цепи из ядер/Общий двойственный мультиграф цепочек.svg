@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520" role="img" aria-labelledby="title desc">
+<title id="title">Общий двойственный мультиграф трёх шестиугольников</title><desc id="desc">Вершины f1, f2, f3 отвечают граням ядер; f∞ отвечает внешней грани. Между соседними ядрами по одному ребру; к внешней грани ведут пучки из 5, 4 и 5 отдельных рёбер.</desc>
+<rect width="1180" height="520" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="590.00" y="45.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">Двойственный граф обеих конфигураций</text>
+<path d="M 590 125 Q 417.54 305.60 175 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 400.02 275.30 175 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 382.50 245.00 175 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 364.98 214.70 175 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 347.46 184.40 175 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 642.50 245.00 590 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 607.50 245.00 590 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 572.50 245.00 590 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 537.50 245.00 590 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 832.54 184.40 1005 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 815.02 214.70 1005 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 797.50 245.00 1005 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 779.98 275.30 1005 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<path d="M 590 125 Q 762.46 305.60 1005 365" fill="none" stroke="#52657a" stroke-width="2.5"/>
+<line x1="175.00" y1="365.00" x2="590.00" y2="365.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round"/>
+<text x="382.50" y="344.00" font-size="20" fill="#196bb9" text-anchor="middle" font-weight="normal">1 общее ребро</text>
+<line x1="590.00" y1="365.00" x2="1005.00" y2="365.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round"/>
+<text x="797.50" y="344.00" font-size="20" fill="#196bb9" text-anchor="middle" font-weight="normal">1 общее ребро</text>
+<text x="300.00" y="220.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">5 рёбер</text>
+<text x="665.00" y="245.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">4 ребра</text>
+<text x="880.00" y="220.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">5 рёбер</text>
+<circle cx="175.00" cy="365.00" r="30" fill="#fff0d7" stroke="#172b43" stroke-width="2"/>
+<text x="175.00" y="373.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="normal">f1</text>
+<text x="175.00" y="426.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Грань ядра K1</text>
+<circle cx="590.00" cy="365.00" r="30" fill="#ddf4e9" stroke="#172b43" stroke-width="2"/>
+<text x="590.00" y="373.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="normal">f2</text>
+<text x="590.00" y="426.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Грань ядра K2</text>
+<circle cx="1005.00" cy="365.00" r="30" fill="#e2edff" stroke="#172b43" stroke-width="2"/>
+<text x="1005.00" y="373.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="normal">f3</text>
+<text x="1005.00" y="426.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Грань ядра K3</text>
+<circle cx="590.00" cy="125.00" r="30" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="590.00" y="132.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="normal">f∞</text>
+<text x="590.00" y="82.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">Внешняя грань</text>
+<text x="590.00" y="479.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Параллельные линии - отдельные рёбра; всего 4 вершины и 16 рёбер</text>
+</g></svg>
