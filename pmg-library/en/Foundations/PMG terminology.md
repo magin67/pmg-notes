@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-10-30
-revision: 15
+revision: 16
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -495,7 +495,8 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
-| 15 | 2026-10-30 | Added terminology of the completed C08 series: marked boundaries, full and reduced forest passports, tests, pairing radicals, groves, and electrical and spectral data. Distinguished states from forms, the two responses, minimality, and coordinate independence; clarified the effective network after vertex elimination. Aligned with Russian revision 15. |
+| 16 | 2026-10-30 | Replaced the internal series code in the revision history with its descriptive title. Definitions and terminology conventions are unchanged. Aligned with Russian revision 16. |
+| 15 | 2026-10-30 | Added terminology of the completed “Boundary Polynomials and Graph Gluing” series: marked boundaries, full and reduced forest passports, tests, pairing radicals, groves, and electrical and spectral data. Distinguished states from forms, the two responses, minimality, and coordinate independence; clarified the effective network after vertex elimination. Aligned with Russian revision 15. |
 | 14 | 2026-10-30 | Added terminology from the completed spectral series: modes, eigenspaces, projectors, diagonal forms and elementary symmetric grade polynomials, exterior powers, cones, and projections. Distinguished coordinate and resistance evaluations, polynomial symmetry and SPF invariance, and complementary dual directions. Aligned with Russian revision 14. |
 | 13 | 2026-10-28 | Added matroid definitions, forest and edge parameter families, both toponome normalizations, first-kind and mixed-state potentials, and KVP/KVPOU. Aligned duality, conductor and edge effective resistance, and radius; removed stale qualifications. Aligned with Russian revision 13. |
 | 12 | 2026-10-28 | Distinguished direct vertices from dual classes in the Greenian entry; aligned with Russian glossary revision 12 and linked the English series. |

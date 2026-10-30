@@ -2,7 +2,7 @@
 title: "Boundary Polynomials and Graph Gluing"
 date: 2026-10-30
 updated: 2026-10-30
-revision: 1
+revision: 2
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -110,9 +110,9 @@ The path, star, crossing matching, and electrically indistinguishable components
 
 The six Russian notes underwent a [joint review (in Russian)](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/REVIEW_RU.md). Their English versions were checked against that edition, including formulas, references, and figure labels. The series contains 21 distinct figures in each language; [six verification programs and SVG reproduction instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/README_EN.md) are available. Exact arithmetic compares the formulas with direct enumeration of forests, determinants, cofactors, and ranks. These checks supplement the proofs.
 
-In [[ru/Карта библиотеки PMG|the library roadmap (Russian)]], the series forms direction C08 after [[en/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|the general spectral series]] and before C01, “Chains of Cores.” It also continues [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]].
+In [[ru/Карта библиотеки PMG|the library roadmap (Russian)]], the series follows [[en/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|the general spectral series]] and precedes “Chains of Cores.” It also continues [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]].
 
-For chains, the next step is transforming the passport when the active boundary moves from a core's input to its output. Seam rules, shared edges, and closure must be specified before calculation; closure of a particular transfer automaton on the chosen coordinates needs a separate derivation. The automaton itself and classification of isomers are outside this series. C04, “Spectra of Isomers,” and C05, “Spectra of Bipartite Graphs and Mutual Projections,” remain separate directions.
+For chains, the next step is transforming the passport when the active boundary moves from a core's input to its output. Seam rules, shared edges, and closure must be specified before calculation; closure of a particular transfer automaton on the chosen coordinates needs a separate derivation. The automaton itself and classification of isomers are outside this series. “Spectra of Isomers” and “Spectra of Bipartite Graphs and Mutual Projections” remain separate directions.
 
 ## External sources
 

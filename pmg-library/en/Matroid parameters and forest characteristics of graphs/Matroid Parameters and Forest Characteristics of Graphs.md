@@ -2,7 +2,7 @@
 title: "Matroid Parameters and Forest Characteristics of Graphs"
 date: 2026-10-28
 updated: 2026-10-30
-revision: 2
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -15,7 +15,7 @@ When the same graph parts are glued together, some characteristics are preserved
 
 In PMG, the starting connection is algebraic: edges correspond to vectors, forests to nonzero exterior products, and cycles make those products vanish. Forest sums occur in the Laplacian exponential and, after passing to the complementary grade, in the cut representation of the Greenian exponential. Matroid parameters are therefore considered on both sides of the duality.
 
-The seven notes constitute direction **C02** of the [[ru/Карта библиотеки PMG|project map (in Russian)]]. The series prepares the study of boundary data and chains of cores; a prior course in general matroid theory is not required.
+The series consists of seven notes; its place in the library is described in the [[ru/Карта библиотеки PMG|project map (in Russian)]]. It prepares the study of boundary data and chains of cores; a prior course in general matroid theory is not required.
 
 ## Contents and reading order
 
@@ -126,7 +126,7 @@ A verification script is provided for each of the seven notes. The scripts use e
 
 ## Continuation to boundary data and chains of cores
 
-The series develops scalar parameters through gluing laws and the minimal two-point boundary description. The continuation [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] constructs the full forest passport, including internal components, and develops contraction tests, bilinear pairing, grove extraction, and Catalan reduction. Its separate spectral passport prepares direction **C01, “Chains of Cores,”** where seam rules and input and output boundaries must be specified before comparing chain isomers.
+The series develops scalar parameters through gluing laws and the minimal two-point boundary description. The continuation [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] constructs the full forest passport, including internal components, and develops contraction tests, bilinear pairing, grove extraction, and Catalan reduction. Its separate spectral passport prepares the series “Chains of Cores,” where seam rules and input and output boundaries must be specified before comparing chain isomers.
 
 Higher forest scales do not yet have a general geometric realization. Formulas for undirected graphs are not automatically extended to balanced graphs.
 

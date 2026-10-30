@@ -1,8 +1,8 @@
 ---
 title: Polynomial Toponomes
 date: 2026-10-23
-updated: 2026-10-23
-revision: 1
+updated: 2026-10-30
+revision: 2
 source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
@@ -39,6 +39,6 @@ Required concepts are the [[From Polyforms to Partitions|toponome of a chosen re
 
 The series concerns undirected graphs with positive conductances. Requirements of unit conductances and connectivity are stated in the relevant results. Irreducibility always refers to the specified product and coefficient field; an edgeless graph gives the unit.
 
-Balanced graphs are reserved for a separate future series: first balance, potentials, and circulation; then the bilinear exponential and directed forests; and then toponomes, normalizations, and the characteristic polynomial. That continuation must establish the correspondence between forest grouping and reduction of the full bilinear exponential, and determine which results require symmetry. The plan is recorded in the [[Карта библиотеки PMG#Запланированная серия «Балансовые графы»|PMG library map, direction A06 (in Russian)]].
+Balanced graphs are reserved for a separate future series: first balance, potentials, and circulation; then the bilinear exponential and directed forests; and then toponomes, normalizations, and the characteristic polynomial. That continuation must establish the correspondence between forest grouping and reduction of the full bilinear exponential, and determine which results require symmetry. The plan is recorded in the [[ru/Карта библиотеки PMG#Серия «Балансовые графы»|“Balanced Graphs” section of the library map (in Russian)]].
 
 Basic root properties are treated here as polynomial characteristics. Full diagonalization of a polyform, eigenvectors, and spectral subspaces remain a separate continuation. Toponomes of the dual polyform follow introduction of the dual construction itself; the [[Карта библиотеки PMG|PMG library map (in Russian)]] records the status of these topics.

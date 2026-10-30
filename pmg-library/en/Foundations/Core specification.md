@@ -2,7 +2,7 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-10-30
-revision: 14
+revision: 15
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -1164,7 +1164,8 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
-| 14 | 2026-10-30 | Recorded conventions of the completed C08 series: the full forest passport, contraction tests, pairing and the Catalan linear quotient, groves and electrical scale, and a separate spectral passport. Clarified formal states, determinant normalizations, shared vertices and edges, reconstruction conditions, and external foundations. Aligned with Russian revision 14. |
+| 15 | 2026-10-30 | Replaced the internal series code in the revision history with its descriptive title. Mathematical conventions are unchanged. Aligned with Russian revision 15. |
+| 14 | 2026-10-30 | Recorded conventions of the completed “Boundary Polynomials and Graph Gluing” series: the full forest passport, contraction tests, pairing and the Catalan linear quotient, groves and electrical scale, and a separate spectral passport. Clarified formal states, determinant normalizations, shared vertices and edges, reconstruction conditions, and external foundations. Aligned with Russian revision 14. |
 | 13 | 2026-10-30 | Recorded spectral conventions: coordinate and resistance metrics, projectors, diagonal grades and their evaluations, complementary dual directions, and scaling. Distinguished exterior powers, additive action, graph cones, and projection types; added limitations and links to the completed series. Aligned with Russian revision 13. |
 | 12 | 2026-10-28 | Aligned individual edges and aggregated couplings, centroid notation, and quadratic radius. Added the two metric roles of the exponentials, matroid and forest conventions, and links to published extensions. Aligned with Russian revision 12. |
 | 11 | 2026-10-28 | Aligned direct and dual notation with Russian revision 11 and linked the completed English Greenian series. |
