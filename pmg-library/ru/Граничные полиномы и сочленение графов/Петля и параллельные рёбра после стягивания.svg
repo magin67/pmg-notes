@@ -4,7 +4,7 @@
 <rect width="960" height="505" fill="white"/>
 <g font-family="DejaVu Sans, Arial, sans-serif">
 <text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Петля и параллельные рёбра после стягивания</text>
-<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Отождествляем a и b; метки и веса рёбер сначала сохраняются.</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Отождествляем a и b в h; метки и веса рёбер сначала сохраняются.</text>
 <rect x="24" y="111" width="262" height="290" rx="12" fill="#f3f6f9"/>
 <rect x="349" y="111" width="262" height="290" rx="12" fill="#f3f6f9"/>
 <rect x="674" y="111" width="262" height="290" rx="12" fill="#f3f6f9"/>
@@ -21,7 +21,8 @@
 <circle cx="221" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
 <text x="221" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
 <circle cx="155" cy="343" r="7" fill="white" stroke="#203444" stroke-width="2"/>
-<text x="155" y="323" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<text x="155" y="323" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="155" y="372" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
 <text x="155" y="225" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">2</text>
 <text x="100" y="307" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">3</text>
 <text x="210" y="307" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">5</text>

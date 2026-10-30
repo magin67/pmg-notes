@@ -165,7 +165,42 @@ def check_one(graph):
     assert a == rooted
 
 
+def check_resolvent_projectors():
+    """Full vertex-space resolvent: include the entire zero eigenspace."""
+    examples = [
+        ((tuple('aub'), (('a', 'u', 1), ('u', 'b', 1))),
+         [(0, (1, 1, 1)), (1, (1, 0, -1)), (3, (1, -2, 1))]),
+        ((tuple('aubv'), (('a', 'u', 1), ('b', 'v', 1))),
+         [(0, (1, 1, 0, 0)), (0, (0, 0, 1, 1)),
+          (2, (1, -1, 0, 0)), (2, (0, 0, 1, -1))]),
+    ]
+    for graph, modes in examples:
+        vertices, edges = graph
+        n = len(vertices)
+        lap = [[-at(entry, 0) for entry in row] for row in pencil(vertices, edges)]
+        projectors = {}
+        for eigenvalue, vector in modes:
+            assert all(sum(lap[i][j]*vector[j] for j in range(n)) == eigenvalue*vector[i] for i in range(n))
+            norm = sum(v*v for v in vector)
+            projector = projectors.setdefault(eigenvalue, [[Q(0) for _ in range(n)] for _ in range(n)])
+            for i in range(n):
+                for j in range(n):
+                    projector[i][j] += Q(vector[i]*vector[j], norm)
+        assert all(sum(p[i][j] for p in projectors.values()) == int(i == j) for i in range(n) for j in range(n))
+        a, b, c, d, _ = passport(*graph)
+        boundary = [vertices.index(v) for v in 'ab']
+        for x in (Q(-2), Q(4), Q(7, 3)):
+            direct = [[at(b, x)/at(a, x), at(d, x)/at(a, x)],
+                      [at(d, x)/at(a, x), at(c, x)/at(a, x)]]
+            full = [[sum(p[i][j]/(x-lam) for lam, p in projectors.items()) for j in boundary] for i in boundary]
+            positive_only = [[sum(p[i][j]/(x-lam) for lam, p in projectors.items() if lam != 0) for j in boundary] for i in boundary]
+            assert direct == full
+            assert direct != positive_only
+            assert all(full[i][j]-positive_only[i][j] == projectors[0][boundary[i]][boundary[j]]/x for i in range(2) for j in range(2))
+
+
 def main():
+    check_resolvent_projectors()
     path = (tuple('abcd'), (('a', 'b', 1), ('b', 'c', 1), ('c', 'd', 1)))
     star = (tuple('abcd'), (('a', 'b', 1), ('b', 'c', 1), ('b', 'd', 1)))
     assert state_polynomials(*path) == state_polynomials(*star) == {2: poly(1, 2, 1), 1: poly(0, 1, 2, 1)}
@@ -226,6 +261,7 @@ def main():
     print('PASS: 80 component graphs; Jacobi and independently enumerated rooted forests.')
     print('PASS: 528 edge-disjoint gluings and 48 weighted common-edge gluings; all five coordinates compared with direct minors.')
     print('PASS: path/star counterexample, changed boundary, principal-minor warning, singular xi=2, shared/parallel edges, 24 vertex orders and associativity.')
+    print('PASS: full resolvent including zero projectors; connected and disconnected graphs at three rational spectral values.')
 
 
 if __name__ == '__main__':

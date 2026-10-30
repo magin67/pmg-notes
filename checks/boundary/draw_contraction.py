@@ -98,7 +98,7 @@ def loops_and_parallel_edges():
                 'Треугольник с проводимостями ab=2, ac=3, bc=5. После a=b ребро ab становится петлёй веса 2, '
                 'а ac,bc становятся параллельными рёбрами весов 3 и 5. Петля исключается из лесов. '
                 'Параллельные рёбра можно заменить одним весом 8; лесной полином равен 1+8t.',
-                505, 'Отождествляем a и b; метки и веса рёбер сначала сохраняются.')
+                505, 'Отождествляем a и b в h; метки и веса рёбер сначала сохраняются.')
     for x in [24, 349, 674]:
         d.box(x, 111, 262, 290)
     for x, title in [(155, 'Исходный граф'), (480, 'Перенос рёбер'), (805, 'Сумма весов')]:
@@ -107,7 +107,8 @@ def loops_and_parallel_edges():
     for p, q in [(a,b),(a,c),(b,c)]:
         d.line(p, q)
     for label,p in [('a',a),('b',b),('c',c)]:
-        d.node(*p,label,boundary=label in 'ab')
+        d.node(*p, label if label != 'c' else '', boundary=label in 'ab')
+    d.text(155, 372, 'c', 18, anchor='middle')
     d.text(155, 225, '2', 19, MUTED, 'middle')
     d.text(100, 307, '3', 19, MUTED, 'middle')
     d.text(210, 307, '5', 19, MUTED, 'middle')
