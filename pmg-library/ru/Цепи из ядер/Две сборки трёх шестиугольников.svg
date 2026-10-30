@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="620" viewBox="0 0 1240 620" role="img" aria-labelledby="title desc">
+<title id="title">Две сборки трёх шестиугольников</title><desc id="desc">Два графа со швами 01 и 34 либо 01 и 23; одинаковая схема ядер P3, 14 вершин и 16 рёбер.</desc>
+<rect width="1240" height="620" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="590" height="580" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="44.00" y="60.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">А. Противоположные швы</text>
+<polygon points="350.00,340.62 385.00,280.00 455.00,280.00 490.00,340.62 455.00,401.24 385.00,401.24" fill="#fff0d7"/>
+<text x="420.00" y="347.62" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K1</text>
+<polygon points="350.00,340.62 385.00,280.00 350.00,219.38 280.00,219.38 245.00,280.00 280.00,340.62" fill="#ddf4e9"/>
+<text x="315.00" y="287.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K2</text>
+<polygon points="280.00,219.38 245.00,280.00 175.00,280.00 140.00,219.38 175.00,158.76 245.00,158.76" fill="#e2edff"/>
+<text x="210.00" y="226.38" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K3</text>
+<line x1="350.00" y1="340.62" x2="385.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="385.00" y1="280.00" x2="350.00" y2="219.38" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="245.00" y1="158.76" x2="175.00" y2="158.76" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="280.00" y1="219.38" x2="245.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="245.00" y1="280.00" x2="175.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="140.00" y1="219.38" x2="175.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="280.00" y1="219.38" x2="245.00" y2="158.76" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="350.00" y1="340.62" x2="385.00" y2="401.24" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="350.00" y1="219.38" x2="280.00" y2="219.38" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="385.00" y1="401.24" x2="455.00" y2="401.24" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="245.00" y1="280.00" x2="280.00" y2="340.62" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="490.00" y1="340.62" x2="455.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="175.00" y1="158.76" x2="140.00" y2="219.38" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="350.00" y1="340.62" x2="280.00" y2="340.62" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="385.00" y1="280.00" x2="455.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="455.00" y1="401.24" x2="490.00" y2="340.62" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="350.00" y1="340.62" x2="385.00" y2="280.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="360.50" y1="322.44" x2="375.20" y2="296.97" stroke="#bc294b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="375.20,296.97 364.87,304.87 373.53,309.87" fill="#bc294b"/>
+<line x1="280.00" y1="219.38" x2="245.00" y2="280.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<line x1="269.50" y1="237.56" x2="254.80" y2="263.03" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="254.80,263.03 265.13,255.13 256.47,250.13" fill="#196bb9"/>
+<circle cx="350.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="357.50" y="358.61" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="385.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="400.00" y="285.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="350.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="357.50" y="211.39" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="280.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="272.50" y="211.39" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="245.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="230.00" y="285.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="280.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="272.50" y="358.61" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="455.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="455.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<circle cx="490.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="490.00" y="330.62" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<circle cx="455.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="455.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<circle cx="385.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="385.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<circle cx="175.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="175.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">13</text>
+<circle cx="140.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="140.00" y="209.38" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">12</text>
+<circle cx="175.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="175.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<circle cx="245.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="245.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<text x="315.00" y="465.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Вход: (0, 1)     Выход: (3, 4)</text>
+<text x="315.00" y="495.00" font-size="17" fill="#52657a" text-anchor="middle" font-weight="normal">Одинаковые номера отождествлены</text>
+<line x1="210.00" y1="548.00" x2="315.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
+<line x1="315.00" y1="548.00" x2="420.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
+<circle cx="210.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2"/>
+<text x="210.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="315.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2"/>
+<text x="315.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="420.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2"/>
+<text x="420.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="315.00" y="585.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">Схема ядер: P₃;  s₁ = s₂ = 2</text>
+<rect x="630" y="20" width="590" height="580" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="654.00" y="60.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">Б. Швы через одно ребро</text>
+<polygon points="960.00,340.62 995.00,280.00 1065.00,280.00 1100.00,340.62 1065.00,401.24 995.00,401.24" fill="#fff0d7"/>
+<text x="1030.00" y="347.62" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K1</text>
+<polygon points="960.00,340.62 995.00,280.00 960.00,219.38 890.00,219.38 855.00,280.00 890.00,340.62" fill="#ddf4e9"/>
+<text x="925.00" y="287.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K2</text>
+<polygon points="960.00,219.38 890.00,219.38 855.00,158.76 890.00,98.13 960.00,98.13 995.00,158.76" fill="#e2edff"/>
+<text x="925.00" y="165.76" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K3</text>
+<line x1="960.00" y1="340.62" x2="995.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="995.00" y1="280.00" x2="960.00" y2="219.38" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="995.00" y1="158.76" x2="960.00" y2="98.13" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="890.00" y1="219.38" x2="855.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.00" y1="219.38" x2="995.00" y2="158.76" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="890.00" y1="98.13" x2="855.00" y2="158.76" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.00" y1="340.62" x2="995.00" y2="401.24" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.00" y1="219.38" x2="890.00" y2="219.38" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="995.00" y1="401.24" x2="1065.00" y2="401.24" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="855.00" y1="280.00" x2="890.00" y2="340.62" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1100.00" y1="340.62" x2="1065.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="890.00" y1="219.38" x2="855.00" y2="158.76" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.00" y1="98.13" x2="890.00" y2="98.13" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.00" y1="340.62" x2="890.00" y2="340.62" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="995.00" y1="280.00" x2="1065.00" y2="280.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1065.00" y1="401.24" x2="1100.00" y2="340.62" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="960.00" y1="340.62" x2="995.00" y2="280.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="970.50" y1="322.44" x2="985.20" y2="296.97" stroke="#bc294b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="985.20,296.97 974.87,304.87 983.53,309.87" fill="#bc294b"/>
+<line x1="960.00" y1="219.38" x2="890.00" y2="219.38" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<line x1="939.00" y1="219.38" x2="909.60" y2="219.38" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="909.60,219.38 921.60,224.38 921.60,214.38" fill="#196bb9"/>
+<circle cx="960.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="967.50" y="358.61" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="995.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="1010.00" y="285.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="960.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="967.50" y="211.39" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="890.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="882.50" y="211.39" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="855.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="840.00" y="285.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="890.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="882.50" y="358.61" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="1065.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="1065.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<circle cx="1100.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="1100.00" y="330.62" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<circle cx="1065.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="1065.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<circle cx="995.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="995.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<circle cx="855.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="855.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">13</text>
+<circle cx="890.00" cy="98.13" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="890.00" y="88.13" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">12</text>
+<circle cx="960.00" cy="98.13" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="960.00" y="88.13" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<circle cx="995.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="995.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<text x="925.00" y="465.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Вход: (0, 1)     Выход: (2, 3)</text>
+<text x="925.00" y="495.00" font-size="17" fill="#52657a" text-anchor="middle" font-weight="normal">Одинаковые номера отождествлены</text>
+<line x1="820.00" y1="548.00" x2="925.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
+<line x1="925.00" y1="548.00" x2="1030.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
+<circle cx="820.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2"/>
+<text x="820.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="925.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2"/>
+<text x="925.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="1030.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2"/>
+<text x="1030.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="925.00" y="585.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">Схема ядер: P₃;  s₁ = s₂ = 2</text>
+</g></svg>

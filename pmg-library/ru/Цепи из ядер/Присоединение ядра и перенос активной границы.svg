@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="720" viewBox="0 0 1160 720" role="img" aria-labelledby="title desc">
+<title id="title">Присоединение ядра и перенос активной границы</title><desc id="desc">Общее ребро оставлено у старого фрагмента. Входные отметки снимаются после сборки, выход сохраняется. Вставка: изолированная входная вершина при шве на трёх вершинах.</desc>
+<rect width="1160" height="720" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="275" height="330" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="325" y="20" width="275" height="330" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="660" y="20" width="480" height="330" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="40.00" y="60.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">1. Собранная часть H</text>
+<text x="345.00" y="60.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">2. Новый фрагмент K⁻</text>
+<text x="680.00" y="60.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">3. После сочленения</text>
+<polygon points="65.00,140.00 235.00,140.00 235.00,260.00 65.00,260.00" fill="#fff0d7"/>
+<line x1="65.00" y1="140.00" x2="235.00" y2="140.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="235.00" y1="140.00" x2="235.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="235.00" y1="260.00" x2="65.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="65.00" y1="260.00" x2="65.00" y2="140.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="235.00" y1="140.00" x2="235.00" y2="260.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<circle cx="65.00" cy="140.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="235.00" cy="140.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="235.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="65.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="245.00" y="136.00" font-size="18" fill="#bc294b" text-anchor="start" font-weight="normal">a</text>
+<text x="245.00" y="279.00" font-size="18" fill="#bc294b" text-anchor="start" font-weight="normal">b</text>
+<text x="155.00" y="310.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">Активная граница B = {a, b}</text>
+<polygon points="365.00,140.00 555.00,140.00 555.00,260.00 365.00,260.00" fill="#e2edff"/>
+<line x1="365.00" y1="140.00" x2="555.00" y2="140.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="555.00" y1="140.00" x2="555.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="555.00" y1="260.00" x2="365.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="365.00" y1="260.00" x2="365.00" y2="140.00" stroke="#bc294b" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<line x1="555.00" y1="140.00" x2="555.00" y2="260.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<circle cx="365.00" cy="140.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="555.00" cy="140.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="555.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="365.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="353.00" y="127.00" font-size="18" fill="#bc294b" text-anchor="start" font-weight="normal">a</text>
+<text x="353.00" y="284.00" font-size="18" fill="#bc294b" text-anchor="start" font-weight="normal">b</text>
+<text x="543.00" y="127.00" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">c</text>
+<text x="543.00" y="284.00" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">d</text>
+<text x="463.00" y="310.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">Копия ребра ab удалена</text>
+<line x1="605.00" y1="200.00" x2="650.00" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<polygon points="650.00,200.00 638.00,195.00 638.00,205.00" fill="#52657a"/>
+<polygon points="720.00,140.00 890.00,140.00 890.00,260.00 720.00,260.00" fill="#fff0d7"/>
+<polygon points="890.00,140.00 1060.00,140.00 1060.00,260.00 890.00,260.00" fill="#e2edff"/>
+<line x1="720.00" y1="140.00" x2="890.00" y2="140.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="890.00" y1="140.00" x2="1060.00" y2="140.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1060.00" y1="140.00" x2="1060.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1060.00" y1="260.00" x2="890.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="890.00" y1="260.00" x2="720.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="720.00" y1="260.00" x2="720.00" y2="140.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="890.00" y1="140.00" x2="890.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1060.00" y1="140.00" x2="1060.00" y2="260.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<circle cx="720.00" cy="140.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="890.00" cy="140.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="1060.00" cy="140.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="1060.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="890.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="720.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="878.00" y="126.00" font-size="18" fill="#52657a" text-anchor="start" font-weight="normal">a</text>
+<text x="878.00" y="285.00" font-size="18" fill="#52657a" text-anchor="start" font-weight="normal">b</text>
+<text x="1070.00" y="136.00" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">c</text>
+<text x="1070.00" y="279.00" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">d</text>
+<text x="900.00" y="310.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">Новая активная граница C = {c, d}</text>
+<rect x="20" y="380" width="1120" height="315" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="42.00" y="420.00" font-size="23" fill="#172b43" text-anchor="start" font-weight="bold">Вставка: шов на трёх вершинах</text>
+<line x1="110.00" y1="470.00" x2="230.00" y2="470.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="230.00" y1="470.00" x2="290.00" y2="540.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="290.00" y1="540.00" x2="230.00" y2="610.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="230.00" y1="610.00" x2="110.00" y2="610.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="110.00" y1="470.00" x2="110.00" y2="540.00" stroke="#bc294b" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<line x1="110.00" y1="540.00" x2="110.00" y2="610.00" stroke="#bc294b" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<circle cx="110.00" cy="540.00" r="16" fill="#ffe8ee" stroke="none" stroke-width="2"/>
+<circle cx="110.00" cy="470.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="91.00" y="476.00" font-size="18" fill="#172b43" text-anchor="start" font-weight="normal">a</text>
+<circle cx="110.00" cy="540.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="91.00" y="546.00" font-size="18" fill="#172b43" text-anchor="start" font-weight="normal">w</text>
+<circle cx="110.00" cy="610.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="91.00" y="616.00" font-size="18" fill="#172b43" text-anchor="start" font-weight="normal">b</text>
+<circle cx="230.00" cy="470.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="242.00" y="476.00" font-size="18" fill="#172b43" text-anchor="start" font-weight="normal">c</text>
+<circle cx="290.00" cy="540.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="302.00" y="546.00" font-size="18" fill="#172b43" text-anchor="start" font-weight="normal">d</text>
+<circle cx="230.00" cy="610.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="242.00" y="616.00" font-size="18" fill="#172b43" text-anchor="start" font-weight="normal">e</text>
+<text x="360.00" y="482.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">В K⁻ удалены рёбра aw и wb, но сохранены все 6 вершин.</text>
+<text x="360.00" y="526.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">Вершина w изолирована в K⁻ и входит в его паспорт.</text>
+<text x="360.00" y="570.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">В собранном графе она соединена рёбрами шва из H.</text>
+<text x="360.00" y="620.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">Снять отметку границы ≠ удалить вершину.</text>
+<text x="50.00" y="670.00" font-size="17" fill="#52657a" text-anchor="start" font-weight="normal">Пунктир: копии рёбер, исключённые из присоединяемого фрагмента.</text>
+</g></svg>

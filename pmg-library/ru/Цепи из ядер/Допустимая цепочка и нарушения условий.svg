@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="960" viewBox="0 0 1240 960" role="img" aria-labelledby="title desc">
+<title id="title">Допустимая цепочка и нарушения условий</title><desc id="desc">Допустимая цепочка; пересекающиеся швы; дополнительный контакт крайних ядер; несвязный шов из двух отдельных рёбер.</desc>
+<rect width="1240" height="960" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="590" height="450" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="630" y="20" width="590" height="450" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="20" y="490" width="590" height="450" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="630" y="490" width="590" height="450" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="44.00" y="60.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">А. Допустимая цепочка</text>
+<polygon points="347.50,276.29 380.00,220.00 445.00,220.00 477.50,276.29 445.00,332.58 380.00,332.58" fill="#fff0d7"/>
+<text x="412.50" y="283.29" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K1</text>
+<polygon points="347.50,276.29 380.00,220.00 347.50,163.71 282.50,163.71 250.00,220.00 282.50,276.29" fill="#ddf4e9"/>
+<text x="315.00" y="227.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K2</text>
+<polygon points="282.50,163.71 250.00,220.00 185.00,220.00 152.50,163.71 185.00,107.42 250.00,107.42" fill="#e2edff"/>
+<text x="217.50" y="170.71" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K3</text>
+<line x1="347.50" y1="276.29" x2="380.00" y2="220.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="380.00" y1="220.00" x2="347.50" y2="163.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="250.00" y1="107.42" x2="185.00" y2="107.42" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="282.50" y1="163.71" x2="250.00" y2="220.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="250.00" y1="220.00" x2="185.00" y2="220.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="152.50" y1="163.71" x2="185.00" y2="220.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="282.50" y1="163.71" x2="250.00" y2="107.42" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="276.29" x2="380.00" y2="332.58" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="163.71" x2="282.50" y2="163.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="380.00" y1="332.58" x2="445.00" y2="332.58" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="250.00" y1="220.00" x2="282.50" y2="276.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="477.50" y1="276.29" x2="445.00" y2="220.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="185.00" y1="107.42" x2="152.50" y2="163.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="276.29" x2="282.50" y2="276.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="380.00" y1="220.00" x2="445.00" y2="220.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="445.00" y1="332.58" x2="477.50" y2="276.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="276.29" x2="380.00" y2="220.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="282.50" y1="163.71" x2="250.00" y2="220.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<circle cx="347.50" cy="276.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="380.00" cy="220.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="347.50" cy="163.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="282.50" cy="163.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="250.00" cy="220.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="282.50" cy="276.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="445.00" cy="220.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="477.50" cy="276.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="445.00" cy="332.58" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="380.00" cy="332.58" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="185.00" cy="220.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="152.50" cy="163.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="185.00" cy="107.42" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="250.00" cy="107.42" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="315.00" y="392.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Швы не пересекаются по вершинам.</text>
+<text x="315.00" y="425.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Несоседние ядра не имеют контактов.</text>
+<text x="654.00" y="60.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">Б. Два шва имеют общую вершину</text>
+<polygon points="982.50,326.59 1040.00,227.00 982.50,127.41 867.50,127.41 810.00,227.00 867.50,326.59" fill="#ddf4e9"/>
+<line x1="982.50" y1="326.59" x2="1040.00" y2="227.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1040.00" y1="227.00" x2="982.50" y2="127.41" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="867.50" y1="127.41" x2="810.00" y2="227.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="982.50" y1="127.41" x2="867.50" y2="127.41" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="810.00" y1="227.00" x2="867.50" y2="326.59" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="982.50" y1="326.59" x2="867.50" y2="326.59" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="982.50" y1="326.59" x2="1040.00" y2="227.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="1040.00" y1="227.00" x2="982.50" y2="127.41" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<circle cx="1040.00" cy="227.00" r="15" fill="#ffe2e9" stroke="#bc294b" stroke-width="2"/>
+<circle cx="982.50" cy="326.59" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="997.50" y="331.59" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="1040.00" cy="227.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="1066.00" y="232.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="982.50" cy="127.41" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="997.50" y="132.41" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="867.50" cy="127.41" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="852.50" y="132.41" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="810.00" cy="227.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="795.00" y="232.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="867.50" cy="326.59" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="852.50" y="331.59" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="925.00" y="392.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Показано среднее ядро: швы 01 и 12.</text>
+<text x="925.00" y="425.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Вершина 1 принадлежит всем трём ядрам.</text>
+<text x="44.00" y="530.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">В. Дополнительный контакт</text>
+<polygon points="347.50,766.29 380.00,710.00 445.00,710.00 477.50,766.29 445.00,822.58 380.00,822.58" fill="#fff0d7"/>
+<text x="412.50" y="773.29" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K1</text>
+<polygon points="347.50,766.29 380.00,710.00 347.50,653.71 282.50,653.71 250.00,710.00 282.50,766.29" fill="#ddf4e9"/>
+<text x="315.00" y="717.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K2</text>
+<polygon points="282.50,653.71 250.00,710.00 185.00,710.00 152.50,653.71 185.00,597.42 250.00,597.42" fill="#e2edff"/>
+<text x="217.50" y="660.71" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K3</text>
+<line x1="347.50" y1="766.29" x2="380.00" y2="710.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="380.00" y1="710.00" x2="347.50" y2="653.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="250.00" y1="597.42" x2="185.00" y2="597.42" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="282.50" y1="653.71" x2="250.00" y2="710.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="250.00" y1="710.00" x2="185.00" y2="710.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="152.50" y1="653.71" x2="185.00" y2="710.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="282.50" y1="653.71" x2="250.00" y2="597.42" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="766.29" x2="380.00" y2="822.58" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="653.71" x2="282.50" y2="653.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="380.00" y1="822.58" x2="445.00" y2="822.58" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="250.00" y1="710.00" x2="282.50" y2="766.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="477.50" y1="766.29" x2="445.00" y2="710.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="185.00" y1="597.42" x2="152.50" y2="653.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="766.29" x2="282.50" y2="766.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="380.00" y1="710.00" x2="445.00" y2="710.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="445.00" y1="822.58" x2="477.50" y2="766.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="347.50" y1="766.29" x2="380.00" y2="710.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="282.50" y1="653.71" x2="250.00" y2="710.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<circle cx="347.50" cy="766.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="380.00" cy="710.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="347.50" cy="653.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="282.50" cy="653.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="250.00" cy="710.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="282.50" cy="766.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="445.00" cy="710.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="477.50" cy="766.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="445.00" cy="822.58" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="380.00" cy="822.58" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="185.00" cy="710.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="152.50" cy="653.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="185.00" cy="597.42" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="250.00" cy="597.42" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<path d="M 445.00,822.58 C 445.00,598.71 152.50,598.71 152.50,653.71" fill="none" stroke="#8953af" stroke-width="3" stroke-dasharray="7 6"/>
+<circle cx="445.00" cy="822.58" r="9" fill="white" stroke="#8953af" stroke-width="3"/>
+<text x="465.00" y="828.58" font-size="18" fill="#8953af" text-anchor="middle" font-weight="normal">7</text>
+<circle cx="152.50" cy="653.71" r="9" fill="white" stroke="#8953af" stroke-width="3"/>
+<text x="130.50" y="659.71" font-size="18" fill="#8953af" text-anchor="middle" font-weight="normal">12</text>
+<text x="315.00" y="865.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Дополнительно отождествить 7 и 12.</text>
+<text x="315.00" y="902.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Тогда крайние ядра имеют общую вершину.</text>
+<text x="654.00" y="530.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">Г. Несвязный шов</text>
+<polygon points="845.00,782.94 886.93,728.29 877.94,660.00 823.29,618.07 755.00,627.06 713.07,681.71 722.06,750.00 776.71,791.93" fill="#fff0d7"/>
+<line x1="845.00" y1="782.94" x2="886.93" y2="728.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="845.00" y1="782.94" x2="776.71" y2="791.93" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="886.93" y1="728.29" x2="877.94" y2="660.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="823.29" y1="618.07" x2="755.00" y2="627.06" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="877.94" y1="660.00" x2="823.29" y2="618.07" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="722.06" y1="750.00" x2="776.71" y2="791.93" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="755.00" y1="627.06" x2="713.07" y2="681.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="713.07" y1="681.71" x2="722.06" y2="750.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="845.00" y1="782.94" x2="886.93" y2="728.29" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="755.00" y1="627.06" x2="713.07" y2="681.71" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<circle cx="845.00" cy="782.94" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="861.00" y="787.94" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="886.93" cy="728.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="902.93" y="733.29" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="877.94" cy="660.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="823.29" cy="618.07" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="755.00" cy="627.06" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="739.00" y="632.06" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="713.07" cy="681.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="697.07" y="686.71" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="722.06" cy="750.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="776.71" cy="791.93" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<polygon points="1095.00,782.94 1136.93,728.29 1127.94,660.00 1073.29,618.07 1005.00,627.06 963.07,681.71 972.06,750.00 1026.71,791.93" fill="#e2edff"/>
+<line x1="1095.00" y1="782.94" x2="1136.93" y2="728.29" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="972.06" y1="750.00" x2="1026.71" y2="791.93" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1005.00" y1="627.06" x2="1073.29" y2="618.07" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1136.93" y1="728.29" x2="1127.94" y2="660.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1005.00" y1="627.06" x2="963.07" y2="681.71" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1127.94" y1="660.00" x2="1073.29" y2="618.07" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="963.07" y1="681.71" x2="972.06" y2="750.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1095.00" y1="782.94" x2="1026.71" y2="791.93" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1095.00" y1="782.94" x2="1136.93" y2="728.29" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="1005.00" y1="627.06" x2="963.07" y2="681.71" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<circle cx="1095.00" cy="782.94" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="1111.00" y="787.94" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="1136.93" cy="728.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="1152.93" y="733.29" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="1127.94" cy="660.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="1073.29" cy="618.07" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="1005.00" cy="627.06" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="989.00" y="632.06" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="963.07" cy="681.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="947.07" y="686.71" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="972.06" cy="750.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="1026.71" cy="791.93" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="925.00" y="843.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Одинаковые номера отождествляются.</text>
+<text x="925.00" y="878.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Пересечение: два отдельных ребра 01 и 45.</text>
+<text x="925.00" y="913.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Четыре общие вершины не образуют P₄.</text>
+</g></svg>
