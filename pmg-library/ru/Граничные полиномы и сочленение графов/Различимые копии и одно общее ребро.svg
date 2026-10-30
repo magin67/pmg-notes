@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="488" viewBox="0 0 960 488" role="img" aria-labelledby="title desc">
+<title id="title">Различимые копии и одно общее ребро</title>
+<desc id="desc">Слева после отождествления a,b сохранены две единичные копии ребра: зелёная e1 и синяя e2. Их лесной полином 1+2t, обе сразу выбрать нельзя. Справа оставлено одно общее единичное ребро e, его полином 1+t. Суммирование параллельных весов дало бы ребро веса 2, а не 1.</desc>
+<rect width="960" height="488" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Различимые копии и одно общее ребро</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Соответствие вершин одинаково: a ↔ a, b ↔ b. Меняется правило учёта рёбер.</text>
+<rect x="24" y="110" width="444" height="275" rx="12" fill="#f3f6f9"/>
+<rect x="492" y="110" width="444" height="275" rx="12" fill="#f3f6f9"/>
+<text x="246" y="151" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Две разные метки</text>
+<text x="714" y="151" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Одна общая метка</text>
+<path d="M 112 253 Q 246 150 380 253" fill="none" stroke="#167f77" stroke-width="4"/>
+<path d="M 112 253 Q 246 356 380 253" fill="none" stroke="#2767ad" stroke-width="4"/>
+<circle cx="112" cy="253" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="112" cy="253" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="112" y="233" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="380" cy="253" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="380" cy="253" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="380" y="233" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<text x="246" y="186" font-size="19" fill="#167f77" text-anchor="middle" font-weight="400">e₁: 1</text>
+<text x="246" y="327" font-size="19" fill="#2767ad" text-anchor="middle" font-weight="400">e₂: 1</text>
+<text x="246" y="369" font-size="24" fill="#203444" text-anchor="middle" font-weight="400">F(t) = 1 + 2t</text>
+<line x1="580" y1="253" x2="848" y2="253" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="580" cy="253" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="580" cy="253" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="580" y="233" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="848" cy="253" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="848" cy="253" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="848" y="233" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<text x="714" y="232" font-size="19" fill="#167f77" text-anchor="middle" font-weight="400">e: 1</text>
+<text x="714" y="369" font-size="24" fill="#203444" text-anchor="middle" font-weight="400">F(t) = 1 + t</text>
+<text x="480" y="427" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">Сумма проводимостей параллельных копий равна 2.</text>
+<text x="480" y="466" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Для одного общего ребра его метку заранее назначают ровно одной части.</text>
+</g>
+</svg>
