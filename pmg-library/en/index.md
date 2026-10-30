@@ -3,8 +3,8 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 18
-translated_revision: 20
+revision: 19
+translated_revision: 22
 updated: 2026-10-30
 ---
 
@@ -95,6 +95,12 @@ Six notes develop eigendirections and projectors, diagonal polyforms, grades as 
 
 - [[en/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Contents, reading routes, main connections, and reproducible checks]].
 
+## Boundary polynomials and graph gluing
+
+Six notes explain which boundary data suffice for contraction and gluing. The full forest passport retains internal components, while groves and resistance geometry describe its spanning-tree layer. The series proves the Catalan reduction for linear passports and introduces separate spectral data from minors and cofactors. The navigator distinguishes established results, derivations, and PMG interpretations.
+
+- [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|The problem, reading routes, and provenance of the results]].
+
 ## Python examples
 
 Executable examples show how to reproduce calculations from the notes with `polyform_algebra`. The first companion covers strengthening one and two couplings of a triangle.
@@ -145,4 +151,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **29 October 2026**
+- Library last updated: **30 October 2026**

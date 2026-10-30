@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="505" viewBox="0 0 960 505" role="img" aria-labelledby="title desc">
+<title id="title">A loop and parallel edges after contraction</title>
+<desc id="desc">A triangle with conductances ab=2, ac=3, bc=5. Identifying a=b turns ab into a loop of weight 2 and ac,bc into parallel edges of weights 3,5. The loop is excluded from forests. The parallel pair can be replaced by one edge of weight 8; the forest polynomial is 1+8t.</desc>
+<rect width="960" height="505" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">A loop and parallel edges after contraction</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Identify a and b as h; initially retain edge labels and weights.</text>
+<rect x="24" y="111" width="262" height="290" rx="12" fill="#f3f6f9"/>
+<rect x="349" y="111" width="262" height="290" rx="12" fill="#f3f6f9"/>
+<rect x="674" y="111" width="262" height="290" rx="12" fill="#f3f6f9"/>
+<text x="155" y="151" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Original graph</text>
+<text x="480" y="151" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Transferred edges</text>
+<text x="805" y="151" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Sum of weights</text>
+<line x1="89" y1="235" x2="221" y2="235" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="89" y1="235" x2="155" y2="343" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="221" y1="235" x2="155" y2="343" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="89" cy="235" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="89" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="89" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="221" cy="235" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="221" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="221" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="155" cy="343" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="155" y="323" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="155" y="372" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<text x="155" y="225" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">2</text>
+<text x="100" y="307" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">3</text>
+<text x="210" y="307" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">5</text>
+<text x="318" y="287" font-size="35" fill="#566b7b" text-anchor="middle" font-weight="400">→</text>
+<text x="643" y="287" font-size="35" fill="#566b7b" text-anchor="middle" font-weight="400">→</text>
+<path d="M 412 283 Q 480 196 548 283" fill="none" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<path d="M 412 283 Q 480 370 548 283" fill="none" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<path d="M 412 283 C 357 280 363 207 412 226 C 442 239 425 266 412 283" fill="none" stroke="#566b7b" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="412" cy="283" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="412" cy="283" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="412" y="263" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="412" y="315" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">h</text>
+<circle cx="548" cy="283" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="548" y="263" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<text x="480" y="230" font-size="19" fill="#167f77" text-anchor="middle" font-weight="400">3</text>
+<text x="480" y="347" font-size="19" fill="#167f77" text-anchor="middle" font-weight="400">5</text>
+<text x="379" y="207" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">2</text>
+<line x1="376" y1="230" x2="395" y2="250" stroke="#9464af" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="395" y1="230" x2="376" y2="250" stroke="#9464af" stroke-width="2.5" stroke-linecap="round"/>
+<text x="480" y="381" font-size="17" fill="#9464af" text-anchor="middle" font-weight="400">no loop in a forest</text>
+<line x1="733" y1="283" x2="877" y2="283" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="733" cy="283" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="733" cy="283" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="733" y="263" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">h</text>
+<circle cx="877" cy="283" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="877" y="263" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<text x="805" y="264" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">3 + 5 = 8</text>
+<text x="805" y="344" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">F(t) = 1 + 8t</text>
+<text x="480" y="445" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">Select at most one edge from the parallel pair.</text>
+<text x="480" y="481" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">The term 15t² would be a two-edge cycle, so it is excluded.</text>
+</g>
+</svg>

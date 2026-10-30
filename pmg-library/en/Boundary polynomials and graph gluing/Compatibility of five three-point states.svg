@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="622" viewBox="0 0 960 622" role="img" aria-labelledby="title desc">
+<title id="title">Compatibility of five three-point states</title>
+<desc id="desc">Matrix in the order x|y|z, xy|z, xz|y, x|yz, xyz. Rows: 11111, 10110, 11010, 11100, 10000. One means a forest; zero means a cycle. Distinct pair states are compatible; identical pair states create a cycle.</desc>
+<rect width="960" height="622" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Compatibility of five three-point states</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">B = {x, y, z}; rows and columns follow the passport coordinate order.</text>
+<text x="348.0" y="142" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">x|y|z</text>
+<text x="464.0" y="142" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">xy|z</text>
+<text x="580.0" y="142" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">xz|y</text>
+<text x="696.0" y="142" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">x|yz</text>
+<text x="812.0" y="142" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">xyz</text>
+<text x="255" y="205" font-size="22" fill="#203444" text-anchor="end" font-weight="700">x|y|z</text>
+<rect x="290" y="165" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="348.0" y="206" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="406" y="165" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="464.0" y="206" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="522" y="165" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="580.0" y="206" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="638" y="165" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="696.0" y="206" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="754" y="165" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="812.0" y="206" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<text x="255" y="267" font-size="22" fill="#203444" text-anchor="end" font-weight="700">xy|z</text>
+<rect x="290" y="227" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="348.0" y="268" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="406" y="227" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="464.0" y="268" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<rect x="522" y="227" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="580.0" y="268" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="638" y="227" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="696.0" y="268" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="754" y="227" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="812.0" y="268" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<text x="255" y="329" font-size="22" fill="#203444" text-anchor="end" font-weight="700">xz|y</text>
+<rect x="290" y="289" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="348.0" y="330" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="406" y="289" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="464.0" y="330" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="522" y="289" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="580.0" y="330" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<rect x="638" y="289" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="696.0" y="330" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="754" y="289" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="812.0" y="330" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<text x="255" y="391" font-size="22" fill="#203444" text-anchor="end" font-weight="700">x|yz</text>
+<rect x="290" y="351" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="348.0" y="392" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="406" y="351" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="464.0" y="392" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="522" y="351" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="580.0" y="392" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="638" y="351" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="696.0" y="392" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<rect x="754" y="351" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="812.0" y="392" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<text x="255" y="453" font-size="22" fill="#203444" text-anchor="end" font-weight="700">xyz</text>
+<rect x="290" y="413" width="116" height="62" fill="#d9eee8" stroke="white" stroke-width="3"/>
+<text x="348.0" y="454" font-size="27" fill="#167f77" text-anchor="middle" font-weight="700">1</text>
+<rect x="406" y="413" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="464.0" y="454" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<rect x="522" y="413" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="580.0" y="454" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<rect x="638" y="413" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="696.0" y="454" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<rect x="754" y="413" width="116" height="62" fill="#f2e8f5" stroke="white" stroke-width="3"/>
+<text x="812.0" y="454" font-size="27" fill="#9464af" text-anchor="middle" font-weight="700">0</text>
+<text x="480" y="522" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">1: the union remains a forest;  0: the union creates a cycle</text>
+<text x="480" y="567" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Distinct pair connections give a boundary tree; a repeated connection gives a cycle.</text>
+<text x="480" y="603" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">The fully connected state xyz is compatible only with x|y|z.</text>
+</g>
+</svg>

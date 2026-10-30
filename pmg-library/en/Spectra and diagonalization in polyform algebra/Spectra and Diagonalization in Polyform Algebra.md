@@ -2,7 +2,7 @@
 title: "Spectra and Diagonalization in Polyform Algebra"
 date: 2026-10-30
 updated: 2026-10-30
-revision: 1
+revision: 2
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -88,9 +88,9 @@ Reconstructing the operator itself, the conductances, and individual resistances
 
 ## Place of the series and continuations
 
-The series forms a general spectral section following [[en/Greenian and polyform duality/Greenian and Polyform Duality|the Greenian and duality]] and [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]]. It covers the part of direction C03, “Spectra of Paths and Cycles,” developed here from the [[ru/Карта библиотеки PMG|project map (in Russian)]].
+The series forms a general spectral section following [[en/Greenian and polyform duality/Greenian and Polyform Duality|the Greenian and duality]] and [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]]. It forms direction C07 of the [[ru/Карта библиотеки PMG|project map (in Russian)]] and covers the part of C03, “Spectra of Paths and Cycles,” developed here.
 
-The next substantive continuation concerns boundary forest data and gluing components, followed by chains of cores and the spectra of their isomers. Ordinary forest states must be distinguished from characteristic polynomials and their boundary data. The cospectral pair illustrates the limits of reconstruction and does not replace a separate study of chains.
+The continuation is now presented in [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]]: six notes distinguish the full forest passport, its spanning-tree layer, and separate data for the characteristic polynomial. This prepares direction C01, “Chains of Cores.” The cospectral pair illustrates the limits of reconstruction and does not replace a separate study of chains.
 
 Directions C01, “Chains of Cores,” C04, “Spectra of Isomers,” and C05, “Spectra of Bipartite Graphs and Mutual Projections,” remain separate. Their applications are not automatically included in these six notes.
 

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="555" viewBox="0 0 960 555" role="img" aria-labelledby="title desc">
+<title id="title">Input and output of an attached core</title>
+<desc id="desc">Left: an assembled fragment with output a,b. Right: a new core with input a,b and output c,d. The core's input and output pairs are disjoint. Edge ab belongs only to the left fragment, and cd only to the core. After gluing, the active boundary moves from a,b to c,d; this requires a separate transformation of minors.</desc>
+<rect width="960" height="555" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Input and output of an attached core</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Ordered pairs: input (a, b), output (c, d). The diagram specifies incidence.</text>
+<rect x="28" y="103" width="379" height="310" rx="12" fill="#f3f6f9"/>
+<rect x="427" y="103" width="505" height="310" rx="12" fill="#f3f6f9"/>
+<text x="216" y="139" font-size="22" fill="#2767ad" text-anchor="middle" font-weight="700">Assembled fragment</text>
+<text x="681" y="139" font-size="22" fill="#167f77" text-anchor="middle" font-weight="700">New core</text>
+<line x1="170" y1="280" x2="417" y2="210" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="170" y1="280" x2="417" y2="350" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="417" y1="210" x2="417" y2="350" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="417" y1="210" x2="620" y2="180" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="620" y1="180" x2="825" y2="210" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="417" y1="350" x2="620" y2="380" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="620" y1="380" x2="825" y2="350" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="825" y1="210" x2="825" y2="350" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="417" cy="210" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="417" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="417" y="190" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="417" cy="350" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="417" cy="350" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="417" y="330" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="439" y="356" font-size="18" fill="#203444" text-anchor="start" font-weight="400">b</text>
+<circle cx="825" cy="210" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="825" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="825" y="190" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="825" cy="350" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="825" cy="350" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="825" y="330" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="847" y="356" font-size="18" fill="#203444" text-anchor="start" font-weight="400">d</text>
+<circle cx="170" cy="280" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="170" y="260" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">u</text>
+<circle cx="620" cy="180" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="620" y="160" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">v</text>
+<circle cx="620" cy="380" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="620" y="360" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">w</text>
+<text x="417" y="447" font-size="19" fill="#203444" text-anchor="middle" font-weight="400">Old boundary (a, b)</text>
+<text x="797" y="447" font-size="19" fill="#203444" text-anchor="middle" font-weight="400">New boundary (c, d)</text>
+<text x="480" y="491" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">The shared edge ab is counted once: it belongs to the left fragment.</text>
+<text x="480" y="532" font-size="19" fill="#203444" text-anchor="middle" font-weight="400">Gluing at (a, b) and moving the passport to (c, d) are separate operations.</text>
+</g>
+</svg>

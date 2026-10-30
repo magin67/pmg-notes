@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="555" viewBox="0 0 960 555" role="img" aria-labelledby="title desc">
+<title id="title">One shared edge or two copies</title>
+<desc id="desc">Two unit-weight triangles a-u-b-a and a-v-b-a are glued at a,b. Left: the shared instance ab is retained once, giving five edges. Right: two distinct instances of ab remain in parallel, giving six edges. Edges do not cross away from vertices.</desc>
+<rect width="960" height="555" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">One shared edge or two copies</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Original components: triangles a-u-b-a and a-v-b-a; all weights are 1.</text>
+<rect x="24" y="104" width="444" height="351" rx="12" fill="#f3f6f9"/>
+<rect x="492" y="104" width="444" height="351" rx="12" fill="#f3f6f9"/>
+<text x="246" y="140" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Shared ab: one instance</text>
+<line x1="104" y1="285" x2="246" y2="210" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="246" y1="210" x2="388" y2="285" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="388" y1="285" x2="246" y2="370" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="246" y1="370" x2="104" y2="285" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="104" y1="285" x2="388" y2="285" stroke="#9464af" stroke-width="4" stroke-linecap="round"/>
+<circle cx="104" cy="285" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="104" cy="285" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="104" y="265" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="246" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="246" y="190" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">u</text>
+<circle cx="388" cy="285" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="388" cy="285" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="388" y="265" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="246" cy="370" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="246" y="350" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">v</text>
+<text x="246" y="416" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">5 edges;  χ = ξ(ξ − 2)(ξ − 4)²</text>
+<text x="714" y="140" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Distinct ab: two copies</text>
+<line x1="572" y1="285" x2="714" y2="210" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="714" y1="210" x2="856" y2="285" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="856" y1="285" x2="714" y2="370" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="714" y1="370" x2="572" y2="285" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<path d="M 572 285 Q 714 252 856 285" fill="none" stroke="#9464af" stroke-width="4"/>
+<path d="M 572 285 Q 714 318 856 285" fill="none" stroke="#9464af" stroke-width="4"/>
+<circle cx="572" cy="285" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="572" cy="285" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="572" y="265" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="714" cy="210" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="714" y="190" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">u</text>
+<circle cx="856" cy="285" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="856" cy="285" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="856" y="265" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="714" cy="370" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="714" y="350" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">v</text>
+<text x="714" y="416" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">6 edges;  χ = ξ(ξ − 2)(ξ − 4)(ξ − 6)</text>
+<text x="480" y="492" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">For one shared edge: L = L₁ + L₂ − Lₑ</text>
+<text x="480" y="532" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">If ab belongs to only one component, use the law for disjoint edge sets.</text>
+</g>
+</svg>

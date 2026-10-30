@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="644" viewBox="0 0 960 644" role="img" aria-labelledby="title desc">
+<title id="title">Two copies of P₅ and spanning-tree gluing</title>
+<desc id="desc">Two unit-weight paths a-b1-c-d1-e and a-b2-c-d2-e are identified at a,c,e. Green edges belong to the first part, blue to the second. The result is two four-cycles sharing c. Each gives four trees, for 16 in total. The result's Gram matrix is half that of one part, while the spanning-tree coefficient uses the determinant of the sum.</desc>
+<rect width="960" height="644" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Two copies of P₅ and spanning-tree gluing</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Shared boundary B = {a, c, e}; internal vertices are distinct, and no edges are shared.</text>
+<text x="280" y="123" font-size="22" fill="#167f77" text-anchor="middle" font-weight="400">G₁: a–b₁–c–d₁–e</text>
+<text x="680" y="123" font-size="22" fill="#2767ad" text-anchor="middle" font-weight="400">G₂: a–b₂–c–d₂–e</text>
+<line x1="120" y1="270" x2="300" y2="187" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="300" y1="187" x2="480" y2="270" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="480" y1="270" x2="660" y2="187" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="660" y1="187" x2="840" y2="270" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="120" y1="270" x2="300" y2="353" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="300" y1="353" x2="480" y2="270" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="480" y1="270" x2="660" y2="353" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="660" y1="353" x2="840" y2="270" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="120" cy="270" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="120" cy="270" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="120" y="250" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="480" cy="270" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480" cy="270" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480" y="250" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="840" cy="270" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="840" cy="270" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="840" y="250" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<circle cx="300" cy="187" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="300" y="167" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b₁</text>
+<circle cx="660" cy="187" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="660" y="167" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d₁</text>
+<circle cx="300" cy="353" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="300" y="333" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="300" y="383" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b₂</text>
+<circle cx="660" cy="353" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="660" y="333" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="660" y="383" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d₂</text>
+<text x="300" y="280" font-size="23" fill="#566b7b" text-anchor="middle" font-weight="400">C₄</text>
+<text x="660" y="280" font-size="23" fill="#566b7b" text-anchor="middle" font-weight="400">C₄</text>
+<rect x="24" y="414" width="912" height="152" rx="12" fill="#f3f6f9"/>
+<text x="480" y="450" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">From the graph: 4 · 4 = 16 trees</text>
+<text x="480" y="489" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">From groves: 1 · 4 + 4 · 1 + 2 · 2 + 2 · 2 = 16</text>
+<text x="480" y="534" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">From Gram matrices: τ₁τ₂ det(G₁ + G₂) = det(2G₁) = 16</text>
+<text x="480" y="610" font-size="19" fill="#9464af" text-anchor="middle" font-weight="400">Gram matrix of the gluing itself: G = G₁/2. All boundary resistances are halved.</text>
+</g>
+</svg>

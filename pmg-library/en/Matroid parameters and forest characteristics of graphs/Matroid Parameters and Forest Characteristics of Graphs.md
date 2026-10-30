@@ -1,8 +1,8 @@
 ---
 title: "Matroid Parameters and Forest Characteristics of Graphs"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-10-30
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -126,7 +126,7 @@ A verification script is provided for each of the seven notes. The scripts use e
 
 ## Continuation to boundary data and chains of cores
 
-The series develops scalar parameters through gluing laws and the minimal two-point boundary description. A general boundary requires partitions of its vertices, the corresponding forest states, boundary polyforms, and groves. These form a separate continuation, after which direction **C01, “Chains of Cores,”** can use the parameters developed here to compare chain isomers and establish the limits of invariance.
+The series develops scalar parameters through gluing laws and the minimal two-point boundary description. The continuation [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] constructs the full forest passport, including internal components, and develops contraction tests, bilinear pairing, grove extraction, and Catalan reduction. Its separate spectral passport prepares direction **C01, “Chains of Cores,”** where seam rules and input and output boundaries must be specified before comparing chain isomers.
 
 Higher forest scales do not yet have a general geometric realization. Formulas for undirected graphs are not automatically extended to balanced graphs.
 

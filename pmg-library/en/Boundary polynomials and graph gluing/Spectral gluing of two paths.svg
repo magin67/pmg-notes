@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="529" viewBox="0 0 960 529" role="img" aria-labelledby="title desc">
+<title id="title">Two paths glued into the cycle C₄</title>
+<desc id="desc">Paths a-u-b and a-v-b have unit conductances and common boundary a,b. Identifying a with a and b with b gives the cycle a-u-b-v-a. No edges are shared. Each boundary diagonal has one excess xi term subtracted.</desc>
+<rect width="960" height="529" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Two paths glued into the cycle C₄</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Identify a ↔ a and b ↔ b; internal vertices u, v are distinct.</text>
+<rect x="24" y="101" width="258" height="274" rx="12" fill="#f3f6f9"/>
+<rect x="306" y="101" width="258" height="274" rx="12" fill="#f3f6f9"/>
+<rect x="608" y="101" width="328" height="274" rx="12" fill="#f3f6f9"/>
+<text x="153" y="133" font-size="23" fill="#2767ad" text-anchor="middle" font-weight="700">G₁</text>
+<text x="435" y="133" font-size="23" fill="#167f77" text-anchor="middle" font-weight="700">G₂</text>
+<text x="772" y="133" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Result</text>
+<line x1="65" y1="295" x2="153" y2="199" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="153" y1="199" x2="241" y2="295" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="65" cy="295" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="65" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="65" y="275" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="153" cy="199" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="153" y="179" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">u</text>
+<circle cx="241" cy="295" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="241" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="241" y="275" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<line x1="347" y1="295" x2="435" y2="199" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="435" y1="199" x2="523" y2="295" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="347" cy="295" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="347" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="347" y="275" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="435" cy="199" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="435" y="179" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">v</text>
+<circle cx="523" cy="295" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="523" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="523" y="275" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<text x="586" y="252" font-size="31" fill="#203444" text-anchor="middle" font-weight="400">→</text>
+<line x1="657" y1="260" x2="772" y2="185" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="772" y1="185" x2="887" y2="260" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="657" y1="260" x2="772" y2="343" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="772" y1="343" x2="887" y2="260" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="657" cy="260" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="657" cy="260" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="657" y="240" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="772" cy="185" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="772" y="165" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">u</text>
+<circle cx="887" cy="260" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="887" cy="260" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="887" y="240" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="772" cy="343" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="772" y="323" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">v</text>
+<text x="480" y="414" font-size="24" fill="#203444" text-anchor="middle" font-weight="400">S = S₁ + S₂ − ξI₂;     E = E₁E₂</text>
+<text x="480" y="459" font-size="25" fill="#203444" text-anchor="middle" font-weight="700">χC₄(ξ) = ξ(ξ − 2)²(ξ − 4)</text>
+<text x="480" y="504" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">At ξ = 2, the rational Sᵢ are undefined; the polynomial law remains valid.</text>
+</g>
+</svg>

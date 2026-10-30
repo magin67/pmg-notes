@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="632" viewBox="0 0 960 632" role="img" aria-labelledby="title desc">
+<title id="title">Boundary response of P₅ and spanning-tree scale</title>
+<desc id="desc">The original unit-weight path a-b-c-d-e has boundary a,c,e, spanning-tree coefficient 1, and fully separated grove weight 4. Eliminating b,d leaves the path a-c-e with conductances 1/2,1/2 and spanning-tree coefficient 1/4. Boundary resistances 2,2,4 are preserved; scale 4 recovers the original value 1.</desc>
+<rect width="960" height="632" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Boundary response of P₅ and spanning-tree scale</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Boundary B = {a, c, e}; all original conductances are 1.</text>
+<rect x="24" y="109" width="912" height="171" rx="12" fill="#f3f6f9"/>
+<text x="480" y="147" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Original path: n = 5,  τ = 1</text>
+<line x1="100.0" y1="215" x2="290.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="290.0" y1="215" x2="480.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="480.0" y1="215" x2="670.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="670.0" y1="215" x2="860.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="100.0" cy="215" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="100.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="100.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="290.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="290.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="480.0" cy="215" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="670.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="670.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="860.0" cy="215" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="860.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="860.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="480" y="258" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">δ = 4: four groves of state a|c|e</text>
+<text x="480" y="326" font-size="42" fill="#566b7b" text-anchor="middle" font-weight="400">↓</text>
+<text x="525" y="315" font-size="19" fill="#566b7b" text-anchor="start" font-weight="400">eliminate internal b, d</text>
+<rect x="24" y="350" width="912" height="171" rx="12" fill="#f3f6f9"/>
+<text x="480" y="389" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Effective boundary path: n = 3,  τ = 1/4</text>
+<line x1="140" y1="457" x2="480" y2="457" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="480" y1="457" x2="820" y2="457" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="140" cy="457" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="140" cy="457" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="140" y="437" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="480" cy="457" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480" cy="457" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480" y="437" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="820" cy="457" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="820" cy="457" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="820" y="437" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="310" y="444" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1/2</text>
+<text x="650" y="444" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1/2</text>
+<text x="480" y="500" font-size="20" fill="#566b7b" text-anchor="middle">R<tspan baseline-shift="sub" font-size="14">ac</tspan> = 2;  R<tspan baseline-shift="sub" font-size="14">ce</tspan> = 2;  R<tspan baseline-shift="sub" font-size="14">ae</tspan> = 4 in both graphs</text>
+<text x="480" y="565" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">τ(original graph) = δ · τ(effective graph) = 4 · 1/4 = 1</text>
+<text x="480" y="608" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Elimination preserves the boundary metric; the spanning-tree scale is retained separately.</text>
+</g>
+</svg>

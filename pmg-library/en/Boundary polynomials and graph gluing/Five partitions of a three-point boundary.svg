@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="426" viewBox="0 0 960 426" role="img" aria-labelledby="title desc">
+<title id="title">Five partitions of the boundary {a, c, e}</title>
+<desc id="desc">Five formal states: ace, ac|e, ae|c, a|ce, a|c|e. Colored regions represent blocks, not edges. State ae|c is impossible on P5.</desc>
+<rect width="960" height="426" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Five partitions of the boundary {a, c, e}</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">The three vertex positions stay fixed; only the partition into blocks changes.</text>
+<rect x="20" y="106" width="176" height="253" rx="12" fill="#f3f6f9"/>
+<text x="106" y="140" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">ace</text>
+<polygon points="64,269 106,207 148,269" fill="#cbe7e0" stroke="#cbe7e0" stroke-width="25" stroke-linejoin="round"/>
+<circle cx="64" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="64" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="106" cy="207" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="106" y="187" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="148" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="148" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="106" y="333" font-size="16" fill="#566b7b" text-anchor="middle" font-weight="400">blocks: 1</text>
+<rect x="206" y="106" width="176" height="253" rx="12" fill="#f3f6f9"/>
+<text x="292" y="140" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">ac|e</text>
+<line x1="250" y1="269" x2="292" y2="207" stroke="#cbe7e0" stroke-width="35" stroke-linecap="round"/>
+<circle cx="334" cy="269" r="18" fill="#d9e5f8" stroke="#d9e5f8" stroke-width="2"/>
+<circle cx="250" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="250" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="292" cy="207" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="292" y="187" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="334" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="334" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="292" y="333" font-size="16" fill="#566b7b" text-anchor="middle" font-weight="400">blocks: 2</text>
+<rect x="392" y="106" width="176" height="253" rx="12" fill="#f3f6f9"/>
+<text x="478" y="140" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">ae|c</text>
+<line x1="436" y1="269" x2="520" y2="269" stroke="#cbe7e0" stroke-width="35" stroke-linecap="round"/>
+<circle cx="478" cy="207" r="18" fill="#d9e5f8" stroke="#d9e5f8" stroke-width="2"/>
+<circle cx="436" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="436" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="478" cy="207" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="478" y="187" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="520" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="520" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="478" y="333" font-size="16" fill="#9464af" text-anchor="middle" font-weight="400">impossible on P₅</text>
+<rect x="578" y="106" width="176" height="253" rx="12" fill="#f3f6f9"/>
+<text x="664" y="140" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">a|ce</text>
+<circle cx="622" cy="269" r="18" fill="#cbe7e0" stroke="#cbe7e0" stroke-width="2"/>
+<line x1="664" y1="207" x2="706" y2="269" stroke="#d9e5f8" stroke-width="35" stroke-linecap="round"/>
+<circle cx="622" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="622" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="664" cy="207" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="664" y="187" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="706" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="706" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="664" y="333" font-size="16" fill="#566b7b" text-anchor="middle" font-weight="400">blocks: 2</text>
+<rect x="764" y="106" width="176" height="253" rx="12" fill="#f3f6f9"/>
+<text x="850" y="140" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">a|c|e</text>
+<circle cx="808" cy="269" r="18" fill="#cbe7e0" stroke="#cbe7e0" stroke-width="2"/>
+<circle cx="850" cy="207" r="18" fill="#d9e5f8" stroke="#d9e5f8" stroke-width="2"/>
+<circle cx="892" cy="269" r="18" fill="#f3dfb9" stroke="#f3dfb9" stroke-width="2"/>
+<circle cx="808" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="808" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="850" cy="207" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="850" y="187" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="892" cy="269" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="892" y="249" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="850" y="333" font-size="16" fill="#566b7b" text-anchor="middle" font-weight="400">blocks: 3</text>
+<text x="480" y="398" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">Colored regions are partition blocks; they do not depict graph edges.</text>
+</g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="687" viewBox="0 0 960 687" role="img" aria-labelledby="title desc">
+<title id="title">Reducing the crossing state</title>
+<desc id="desc">Graph G has four boundary vertices and unit edges ac,bd; their crossing is not a vertex. Partner J adds only ab. Boundary names match and no edges are shared. The gluing is the path c-a-b-d, with forest polynomial (1+t)^3. Deleting state ac|bd loses t^2+t^3, while linear replacement retains the full answer.</desc>
+<rect width="960" height="687" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Reducing the crossing state</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">B = {a, b, c, d}; all weights are 1. Match names; no edges are shared.</text>
+<rect x="24" y="109" width="430" height="281" rx="12" fill="#f3f6f9"/>
+<text x="239" y="145" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">G: edges ac, bd</text>
+<line x1="126" y1="207" x2="352" y2="309" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="352" y1="207" x2="126" y2="309" stroke="#f3f6f9" stroke-width="11" stroke-linecap="round"/>
+<line x1="352" y1="207" x2="126" y2="309" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="126" cy="207" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="126" cy="207" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="126" y="187" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="126" y="185" font-size="19" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="352" cy="207" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="352" cy="207" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="352" y="187" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="352" y="185" font-size="19" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="352" cy="309" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="352" cy="309" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="352" y="289" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="352" y="341" font-size="19" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="126" cy="309" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="126" cy="309" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="126" y="289" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="126" y="341" font-size="19" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="239" y="372" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">The edges have no shared vertex.</text>
+<rect x="482" y="109" width="454" height="281" rx="12" fill="#f3f6f9"/>
+<text x="709" y="145" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">G # J: path c–a–b–d</text>
+<line x1="529" y1="258" x2="649" y2="258" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="649" y1="258" x2="769" y2="258" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="769" y1="258" x2="889" y2="258" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="529" cy="258" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="529" cy="258" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="529" y="238" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="649" cy="258" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="649" cy="258" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="649" y="238" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="769" cy="258" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="769" cy="258" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="769" y="238" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="889" cy="258" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="889" cy="258" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="889" y="238" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="709" y="308" font-size="18" fill="#2767ad" text-anchor="middle" font-weight="400">J adds the blue edge ab.</text>
+<text x="709" y="362" font-size="25" fill="#203444" text-anchor="middle" font-weight="400">F(t) = (1 + t)³</text>
+<rect x="24" y="414" width="912" height="181" rx="12" fill="#f3f6f9"/>
+<text x="480" y="453" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">The term t² · s(ac|bd) moves to seven coordinates:</text>
+<text x="480" y="492" font-size="23" fill="#167f77" text-anchor="middle" font-weight="400">+t²:  abc|d,  abd|c,  acd|b,  a|bcd</text>
+<text x="480" y="531" font-size="23" fill="#9464af" text-anchor="middle" font-weight="400">−t²:  ab|cd,  ad|bc,  abcd</text>
+<text x="480" y="573" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">These are linear coordinates, not weights of individual states.</text>
+<text x="480" y="644" font-size="21" fill="#203444" text-anchor="middle" font-weight="400">Simply deleting ac|bd gives 1 + 3t + 2t² instead of (1 + t)³.</text>
+</g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="596" viewBox="0 0 960 596" role="img" aria-labelledby="title desc">
+<title id="title">Two paths and two-point pairing</title>
+<desc id="desc">Unit-weight paths a-x-b and a-y-b are joined at matching a,b; internal vertices x,y are distinct. The result is the cycle a-x-b-y-a. Only selecting both entire paths creates a cycle. The polynomial is (1+t)^4-t^4.</desc>
+<rect width="960" height="596" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Two paths and two-point pairing</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Shared boundary B = {a, b}; all edges have distinct labels and unit weights.</text>
+<rect x="24" y="110" width="260" height="294" rx="12" fill="#f3f6f9"/>
+<rect x="350" y="110" width="260" height="294" rx="12" fill="#f3f6f9"/>
+<rect x="676" y="110" width="260" height="294" rx="12" fill="#f3f6f9"/>
+<text x="154" y="150" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Part G₁</text>
+<text x="480" y="150" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Part G₂</text>
+<text x="806" y="150" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Gluing</text>
+<line x1="67" y1="245" x2="154" y2="245" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="154" y1="245" x2="241" y2="245" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="67" cy="245" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="67" cy="245" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="67" y="225" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="154" cy="245" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="154" y="225" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="241" cy="245" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="241" cy="245" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="241" y="225" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<text x="154" y="331" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">D = 1 + 2t</text>
+<text x="154" y="372" font-size="22" fill="#167f77" text-anchor="middle" font-weight="400">S = t²</text>
+<line x1="393" y1="245" x2="480" y2="245" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="480" y1="245" x2="567" y2="245" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="393" cy="245" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="393" cy="245" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="393" y="225" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="480" cy="245" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480" y="225" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<circle cx="567" cy="245" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="567" cy="245" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="567" y="225" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<text x="480" y="331" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">D = 1 + 2t</text>
+<text x="480" y="372" font-size="22" fill="#2767ad" text-anchor="middle" font-weight="400">S = t²</text>
+<text x="317" y="253" font-size="36" fill="#566b7b" text-anchor="middle" font-weight="400">+</text>
+<text x="643" y="253" font-size="36" fill="#566b7b" text-anchor="middle" font-weight="400">→</text>
+<line x1="714" y1="260" x2="806" y2="205" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="806" y1="205" x2="898" y2="260" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="714" y1="260" x2="806" y2="315" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<line x1="806" y1="315" x2="898" y2="260" stroke="#2767ad" stroke-width="4" stroke-linecap="round"/>
+<circle cx="714" cy="260" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="714" cy="260" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="714" y="240" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="806" cy="205" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="806" y="185" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="898" cy="260" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="898" cy="260" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="898" y="240" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="806" cy="315" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="806" y="295" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="806" y="344" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<text x="806" y="380" font-size="18" fill="#9464af" text-anchor="middle" font-weight="400">The full set is a cycle</text>
+<text x="480" y="454" font-size="26" fill="#203444" text-anchor="middle" font-weight="400">D₁D₂ + D₁S₂ + S₁D₂ = F₁F₂ − S₁S₂</text>
+<text x="480" y="506" font-size="25" fill="#203444" text-anchor="middle" font-weight="400">F(t) = (1 + t)⁴ − t⁴ = 1 + 4t + 6t² + 4t³</text>
+<text x="480" y="558" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Of 16 edge subsets, 15 are admissible; only the complete edge set is excluded.</text>
+</g>
+</svg>

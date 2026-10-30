@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="455" viewBox="0 0 960 455" role="img" aria-labelledby="title desc">
+<title id="title">Three forests of state ac|e</title>
+<desc id="desc">Edges ab,bc are required. On the right, select the empty set, cd, or de. The first forest has internal component d and contributes t^2; the other two are groves and each contributes t^3.</desc>
+<rect width="960" height="455" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Three forests of state ac|e</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">In all three forests, a is connected to c and e lies in another component.</text>
+<rect x="24" y="108" width="288" height="257" rx="12" fill="#f3f6f9"/>
+<text x="168" y="146" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Selected: ab, bc</text>
+<line x1="54.0" y1="220" x2="111.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="111.0" y1="220" x2="168.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="168.0" y1="220" x2="225.0" y2="220" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="225.0" y1="220" x2="282.0" y2="220" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="54.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="54.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="54.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="111.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="111.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="168.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="168.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="168.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="225.0" cy="220" r="13" fill="#f2e8fa" stroke="#9464af" stroke-width="2"/>
+<circle cx="225.0" cy="220" r="7" fill="#9464af" stroke="#203444" stroke-width="2"/>
+<text x="225.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="282.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="282.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="282.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="168" y="279" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">term: t²</text>
+<text x="168" y="318" font-size="15" fill="#9464af" text-anchor="middle" font-weight="400">internal component {d}</text>
+<text x="168" y="347" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">k₀ = 1</text>
+<rect x="336" y="108" width="288" height="257" rx="12" fill="#f3f6f9"/>
+<text x="480" y="146" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Added: cd</text>
+<line x1="366.0" y1="220" x2="423.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="423.0" y1="220" x2="480.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="480.0" y1="220" x2="537.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="537.0" y1="220" x2="594.0" y2="220" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="366.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="366.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="366.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="423.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="423.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="480.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="537.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="537.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="594.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="594.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="594.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="480" y="279" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">term: t³</text>
+<text x="480" y="318" font-size="15" fill="#167f77" text-anchor="middle" font-weight="400">grove: no internal components</text>
+<text x="480" y="347" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">k₀ = 0</text>
+<rect x="648" y="108" width="288" height="257" rx="12" fill="#f3f6f9"/>
+<text x="792" y="146" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Added: de</text>
+<line x1="678.0" y1="220" x2="735.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="735.0" y1="220" x2="792.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="792.0" y1="220" x2="849.0" y2="220" stroke="#c8d1d9" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="849.0" y1="220" x2="906.0" y2="220" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="678.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="678.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="678.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="735.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="735.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="792.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="792.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="792.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="849.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="849.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="906.0" cy="220" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="906.0" cy="220" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="906.0" y="200" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="792" y="279" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">term: t³</text>
+<text x="792" y="318" font-size="15" fill="#167f77" text-anchor="middle" font-weight="400">grove: no internal components</text>
+<text x="792" y="347" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">k₀ = 0</text>
+<text x="480" y="406" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">State polynomial: t² + t³ + t³ = t²(1 + 2t).</text>
+<text x="480" y="439" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">Purple: an internal component. Dashed line: an unselected edge.</text>
+</g>
+</svg>

@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="804" viewBox="0 0 960 804" role="img" aria-labelledby="title desc">
+<title id="title">Fifteen states of a four-point boundary</title>
+<desc id="desc">All partitions of a,b,c,d in a fixed cyclic order. Rank counts are 1,6,7,1. The only crossing partition, ac|bd, is marked in pink. Colored regions are blocks, not edges; their crossing is not a vertex.</desc>
+<rect width="960" height="804" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Fifteen states of a four-point boundary</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Cyclic order a, b, c, d. Regions represent blocks, not graph edges.</text>
+<rect x="20" y="106" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="106" y="135" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">a|b|c|d</text>
+<circle cx="63" cy="179" r="13" fill="#b8ded8" stroke="#b8ded8" stroke-width="2"/>
+<circle cx="149" cy="179" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<circle cx="149" cy="247" r="13" fill="#f1d9af" stroke="#f1d9af" stroke-width="2"/>
+<circle cx="63" cy="247" r="13" fill="#e0ccec" stroke="#e0ccec" stroke-width="2"/>
+<circle cx="63" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="63" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="149" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="149" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="149" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="149" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="63" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="63" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="106" y="294" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 0</text>
+<rect x="208" y="106" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="294" y="135" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">ab|c|d</text>
+<line x1="251" y1="179" x2="337" y2="179" stroke="#b8ded8" stroke-width="23" stroke-linecap="round"/>
+<circle cx="337" cy="247" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<circle cx="251" cy="247" r="13" fill="#f1d9af" stroke="#f1d9af" stroke-width="2"/>
+<circle cx="251" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="251" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="337" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="337" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="337" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="337" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="251" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="251" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="294" y="294" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 1</text>
+<rect x="396" y="106" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="482" y="135" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">ac|b|d</text>
+<line x1="439" y1="179" x2="525" y2="247" stroke="#b8ded8" stroke-width="23" stroke-linecap="round"/>
+<circle cx="525" cy="179" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<circle cx="439" cy="247" r="13" fill="#f1d9af" stroke="#f1d9af" stroke-width="2"/>
+<circle cx="439" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="439" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="525" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="525" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="525" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="525" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="439" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="439" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="482" y="294" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 1</text>
+<rect x="584" y="106" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="670" y="135" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">ad|b|c</text>
+<line x1="627" y1="179" x2="627" y2="247" stroke="#b8ded8" stroke-width="23" stroke-linecap="round"/>
+<circle cx="713" cy="179" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<circle cx="713" cy="247" r="13" fill="#f1d9af" stroke="#f1d9af" stroke-width="2"/>
+<circle cx="627" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="627" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="713" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="713" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="713" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="713" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="627" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="627" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="670" y="294" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 1</text>
+<rect x="772" y="106" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="858" y="135" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">a|bc|d</text>
+<circle cx="815" cy="179" r="13" fill="#b8ded8" stroke="#b8ded8" stroke-width="2"/>
+<line x1="901" y1="179" x2="901" y2="247" stroke="#c5d9f3" stroke-width="23" stroke-linecap="round"/>
+<circle cx="815" cy="247" r="13" fill="#f1d9af" stroke="#f1d9af" stroke-width="2"/>
+<circle cx="815" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="815" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="901" cy="179" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="901" y="164" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="901" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="901" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="815" cy="247" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="815" y="272" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="858" y="294" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 1</text>
+<rect x="20" y="320" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="106" y="349" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">a|bd|c</text>
+<circle cx="63" cy="393" r="13" fill="#b8ded8" stroke="#b8ded8" stroke-width="2"/>
+<line x1="149" y1="393" x2="63" y2="461" stroke="#c5d9f3" stroke-width="23" stroke-linecap="round"/>
+<circle cx="149" cy="461" r="13" fill="#f1d9af" stroke="#f1d9af" stroke-width="2"/>
+<circle cx="63" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="63" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="149" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="149" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="149" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="149" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="63" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="63" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="106" y="508" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 1</text>
+<rect x="208" y="320" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="294" y="349" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">a|b|cd</text>
+<circle cx="251" cy="393" r="13" fill="#b8ded8" stroke="#b8ded8" stroke-width="2"/>
+<circle cx="337" cy="393" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<line x1="337" y1="461" x2="251" y2="461" stroke="#f1d9af" stroke-width="23" stroke-linecap="round"/>
+<circle cx="251" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="251" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="337" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="337" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="337" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="337" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="251" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="251" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="294" y="508" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 1</text>
+<rect x="396" y="320" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="482" y="349" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">abc|d</text>
+<polygon points="439,393 525,393 525,461" fill="#b8ded8" stroke="#b8ded8" stroke-width="20" stroke-linejoin="round"/>
+<circle cx="439" cy="461" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<circle cx="439" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="439" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="525" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="525" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="525" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="525" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="439" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="439" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="482" y="508" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 2</text>
+<rect x="584" y="320" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="670" y="349" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">abd|c</text>
+<polygon points="627,393 713,393 627,461" fill="#b8ded8" stroke="#b8ded8" stroke-width="20" stroke-linejoin="round"/>
+<circle cx="713" cy="461" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<circle cx="627" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="627" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="713" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="713" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="713" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="713" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="627" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="627" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="670" y="508" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 2</text>
+<rect x="772" y="320" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="858" y="349" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">acd|b</text>
+<polygon points="815,393 901,461 815,461" fill="#b8ded8" stroke="#b8ded8" stroke-width="20" stroke-linejoin="round"/>
+<circle cx="901" cy="393" r="13" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="2"/>
+<circle cx="815" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="815" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="901" cy="393" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="901" y="378" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="901" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="901" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="815" cy="461" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="815" y="486" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="858" y="508" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 2</text>
+<rect x="20" y="534" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="106" y="563" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">a|bcd</text>
+<circle cx="63" cy="607" r="13" fill="#b8ded8" stroke="#b8ded8" stroke-width="2"/>
+<polygon points="149,607 149,675 63,675" fill="#c5d9f3" stroke="#c5d9f3" stroke-width="20" stroke-linejoin="round"/>
+<circle cx="63" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="63" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="149" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="149" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="149" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="149" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="63" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="63" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="106" y="722" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 2</text>
+<rect x="208" y="534" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="294" y="563" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">ab|cd</text>
+<line x1="251" y1="607" x2="337" y2="607" stroke="#b8ded8" stroke-width="23" stroke-linecap="round"/>
+<line x1="337" y1="675" x2="251" y2="675" stroke="#c5d9f3" stroke-width="23" stroke-linecap="round"/>
+<circle cx="251" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="251" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="337" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="337" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="337" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="337" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="251" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="251" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="294" y="722" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 2</text>
+<rect x="396" y="534" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="482" y="563" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">ad|bc</text>
+<line x1="439" y1="607" x2="439" y2="675" stroke="#b8ded8" stroke-width="23" stroke-linecap="round"/>
+<line x1="525" y1="607" x2="525" y2="675" stroke="#c5d9f3" stroke-width="23" stroke-linecap="round"/>
+<circle cx="439" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="439" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="525" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="525" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="525" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="525" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="439" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="439" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="482" y="722" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 2</text>
+<rect x="584" y="534" width="174" height="200" rx="12" fill="#fff0f3"/>
+<text x="670" y="563" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">ac|bd</text>
+<line x1="627" y1="607" x2="713" y2="675" stroke="#b8ded8" stroke-width="23" stroke-linecap="round"/>
+<line x1="713" y1="607" x2="627" y2="675" stroke="#fff0f3" stroke-width="31" stroke-linecap="round"/>
+<line x1="713" y1="607" x2="627" y2="675" stroke="#c5d9f3" stroke-width="23" stroke-linecap="round"/>
+<circle cx="627" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="627" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="713" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="713" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="713" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="713" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="627" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="627" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="670" y="722" font-size="15" fill="#9464af" text-anchor="middle" font-weight="400">omit, r = 2</text>
+<rect x="772" y="534" width="174" height="200" rx="12" fill="#f3f6f9"/>
+<text x="858" y="563" font-size="18" fill="#203444" text-anchor="middle" font-weight="700">abcd</text>
+<polygon points="815,607 901,607 901,675 815,675" fill="#b8ded8" stroke="#b8ded8" stroke-width="20" stroke-linejoin="round"/>
+<circle cx="815" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="815" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="901" cy="607" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="901" y="592" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="901" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="901" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="815" cy="675" r="5" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="815" y="700" font-size="16" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="858" y="722" font-size="15" fill="#566b7b" text-anchor="middle" font-weight="400">r = 3</text>
+<text x="480" y="776" font-size="24" fill="#203444" text-anchor="middle" font-weight="400">15 original states → 14 coordinates of the passport class</text>
+</g>
+</svg>
