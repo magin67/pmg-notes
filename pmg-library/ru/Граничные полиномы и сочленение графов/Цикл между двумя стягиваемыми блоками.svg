@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="490" viewBox="0 0 960 490" role="img" aria-labelledby="title desc">
+<title id="title">Цикл между двумя стягиваемыми блоками</title>
+<desc id="desc">Исходный лес содержит ac и bd. Золотой пунктир ab и cd задаёт два блока отождествления. После стягивания выбранные рёбра образуют параллельную пару между h1 и h2, то есть цикл.</desc>
+<rect width="960" height="490" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Цикл между двумя стягиваемыми блоками</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">π = ac|bd;  σ = ab|cd.  Отдельные блоки проходят проверку, вся система - нет.</text>
+<rect x="24" y="108" width="408" height="280" rx="12" fill="#f3f6f9"/>
+<rect x="528" y="108" width="408" height="280" rx="12" fill="#f3f6f9"/>
+<text x="228" y="148" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">Лес и пары отождествления</text>
+<line x1="128" y1="218" x2="128" y2="327" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="328" y1="218" x2="328" y2="327" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="128" y1="218" x2="328" y2="218" stroke="#b97716" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 6"/>
+<line x1="128" y1="327" x2="328" y2="327" stroke="#b97716" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 6"/>
+<circle cx="128" cy="218" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="128" y="198" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="328" cy="218" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="328" y="198" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="128" cy="327" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="128" y="307" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="128" y="357" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="328" cy="327" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="328" y="307" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="328" y="357" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="480" y="270" font-size="42" fill="#566b7b" text-anchor="middle" font-weight="400">→</text>
+<text x="732" y="148" font-size="21" fill="#203444" text-anchor="middle" font-weight="700">После отождествления</text>
+<path d="M 630 272 Q 732 178 834 272" fill="none" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<path d="M 630 272 Q 732 366 834 272" fill="none" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="630" cy="272" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="630" cy="272" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="630" y="252" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">h₁</text>
+<circle cx="834" cy="272" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="834" cy="272" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="834" y="252" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">h₂</text>
+<text x="732" y="209" font-size="18" fill="#167f77" text-anchor="middle" font-weight="400">ac</text>
+<text x="732" y="347" font-size="18" fill="#167f77" text-anchor="middle" font-weight="400">bd</text>
+<text x="630" y="307" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">{a, b}</text>
+<text x="834" y="307" font-size="17" fill="#566b7b" text-anchor="middle" font-weight="400">{c, d}</text>
+<text x="480" y="429" font-size="25" fill="#9464af" text-anchor="middle" font-weight="400">r(π) + r(σ) = 2 + 2 &gt; 3 = r(π ∨ σ)</text>
+<text x="480" y="468" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Пунктир задаёт отождествления и не является ребром исходного графа.</text>
+</g>
+</svg>

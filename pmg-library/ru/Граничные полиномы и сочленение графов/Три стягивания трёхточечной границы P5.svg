@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="645" viewBox="0 0 960 645" role="img" aria-labelledby="title desc">
+<title id="title">Три стягивания границы пути P₅</title>
+<desc id="desc">Путь a-b-c-d-e имеет границу a,c,e и единичные веса. После a=c получаются связь h-b веса 2 и путь h-d-e; после a=e получается цикл C4; после a=c=e получаются связи h-b и h-d веса 2. Полиномы соответственно (1+2t)(1+t)^2, (1+t)^4-t^4 и (1+2t)^2.</desc>
+<rect width="960" height="645" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Три стягивания границы пути P₅</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">B = {a, c, e}; исходные проводимости равны 1. Граничные вершины отмечены золотом.</text>
+<line x1="120.0" y1="151" x2="300.0" y2="151" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="300.0" y1="151" x2="480.0" y2="151" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="480.0" y1="151" x2="660.0" y2="151" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="660.0" y1="151" x2="840.0" y2="151" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="120.0" cy="151" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="120.0" cy="151" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="120.0" y="131" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="300.0" cy="151" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="300.0" y="131" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="480.0" cy="151" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480.0" cy="151" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480.0" y="131" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="660.0" cy="151" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="660.0" y="131" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="840.0" cy="151" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="840.0" cy="151" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="840.0" y="131" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<rect x="24" y="210" width="288" height="348" rx="12" fill="#f3f6f9"/>
+<rect x="336" y="210" width="288" height="348" rx="12" fill="#f3f6f9"/>
+<rect x="648" y="210" width="288" height="348" rx="12" fill="#f3f6f9"/>
+<text x="168" y="250" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">a = c</text>
+<text x="480" y="250" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">a = e</text>
+<text x="792" y="250" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">a = c = e</text>
+<line x1="68" y1="374" x2="135" y2="374" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="135" y1="374" x2="202" y2="374" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="202" y1="374" x2="269" y2="374" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="68" cy="374" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="68" y="354" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="135" cy="374" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="135" cy="374" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="135" y="354" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">h</text>
+<circle cx="202" cy="374" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="202" y="354" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="269" cy="374" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="269" cy="374" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="269" y="354" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="101" y="407" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">2</text>
+<text x="168" y="407" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1</text>
+<text x="235" y="407" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">1</text>
+<text x="168" y="292" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">h = {a, c}</text>
+<line x1="410" y1="330" x2="550" y2="330" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="550" y1="330" x2="550" y2="425" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="550" y1="425" x2="410" y2="425" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="410" y1="425" x2="410" y2="330" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="410" cy="330" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="410" cy="330" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="410" y="310" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">h</text>
+<circle cx="550" cy="330" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="550" y="310" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="550" cy="425" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="550" cy="425" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="550" y="405" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="550" y="454" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="410" cy="425" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="410" y="405" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="410" y="454" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="480" y="385" font-size="23" fill="#566b7b" text-anchor="middle" font-weight="400">C₄</text>
+<text x="480" y="292" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">h = {a, e}</text>
+<line x1="702" y1="374" x2="792" y2="374" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="792" y1="374" x2="882" y2="374" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="702" cy="374" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="702" y="354" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="792" cy="374" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="792" cy="374" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="792" y="354" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">h</text>
+<circle cx="882" cy="374" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="882" y="354" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="747" y="407" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">2</text>
+<text x="837" y="407" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">2</text>
+<text x="792" y="292" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">h = {a, c, e}</text>
+<text x="168" y="492" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">(1 + 2t)(1 + t)²</text>
+<text x="168" y="533" font-size="19" fill="#167f77" text-anchor="middle" font-weight="400">степень 3;  τ = 2</text>
+<text x="480" y="492" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">(1 + t)⁴ − t⁴</text>
+<text x="480" y="533" font-size="19" fill="#167f77" text-anchor="middle" font-weight="400">степень 3;  τ = 4</text>
+<text x="792" y="492" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">(1 + 2t)²</text>
+<text x="792" y="533" font-size="19" fill="#167f77" text-anchor="middle" font-weight="400">степень 2;  τ = 4</text>
+<text x="480" y="600" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">Два параллельных единичных ребра заменены связью проводимости 2.</text>
+<text x="480" y="631" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Полиномы учитывают все остовные леса, включая внутренние компоненты.</text>
+</g>
+</svg>
