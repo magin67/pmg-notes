@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="505" viewBox="0 0 960 505" role="img" aria-labelledby="title desc">
+<title id="title">Один лесной паспорт, разные спектры</title>
+<desc id="desc">Путь abcd и звезда с центром b. В обоих графах упорядоченная граница a,b, все проводимости единичные. Лесные полиномы состояний совпадают, характеристические полиномы различаются.</desc>
+<rect width="960" height="505" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Один лесной паспорт, разные спектры</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Граница (a, b) выделена золотым; все проводимости равны 1.</text>
+<rect x="24" y="103" width="446" height="262" rx="12" fill="#f3f6f9"/>
+<rect x="490" y="103" width="446" height="262" rx="12" fill="#f3f6f9"/>
+<text x="245" y="139" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Путь P₄</text>
+<text x="714" y="139" font-size="23" fill="#203444" text-anchor="middle" font-weight="700">Звезда K₁,₃</text>
+<line x1="75" y1="235" x2="185" y2="235" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="185" y1="235" x2="295" y2="235" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="295" y1="235" x2="405" y2="235" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="75" cy="235" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="75" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="75" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="185" cy="235" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="185" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="185" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="295" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="295" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="405" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="405" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<line x1="555" y1="235" x2="685" y2="235" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="685" y1="235" x2="835" y2="190" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="685" y1="235" x2="835" y2="295" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="555" cy="235" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="555" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="555" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="685" cy="235" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="685" cy="235" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="685" y="215" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="835" cy="190" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="835" y="170" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="835" cy="295" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="835" y="275" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<text x="245" y="337" font-size="20" fill="#203444" text-anchor="middle" font-weight="400">χ(ξ) = ξ(ξ − 2)(ξ² − 4ξ + 2)</text>
+<text x="714" y="337" font-size="20" fill="#203444" text-anchor="middle" font-weight="400">χ(ξ) = ξ(ξ − 1)²(ξ − 4)</text>
+<text x="480" y="408" font-size="22" fill="#203444" text-anchor="middle" font-weight="400">В обоих случаях:  ℱa|b(t) = (1 + t)²;   ℱab(t) = t(1 + t)²</text>
+<text x="480" y="451" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">Два ребра в лесе: f₂ = 3, но корневые коэффициенты p₂ равны 10 и 9.</text>
+<text x="480" y="484" font-size="19" fill="#566b7b" text-anchor="middle" font-weight="400">Паспорт по связности границы не сохраняет все размеры компонент.</text>
+</g>
+</svg>
