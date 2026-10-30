@@ -1,13 +1,13 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-28
-revision: 12
+updated: 2026-10-30
+revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
 lang: en
-description: "PMG core definitions and conventions: polyform algebra, resistance metric, Laplacian and Greenian, matroid and forest parameters, and conditions for the balanced extension."
+description: "PMG core definitions and conventions: polyform algebra, resistance metric, Laplacian and Greenian, matroid and forest parameters, spectral representations and projections, and conditions for the balanced extension."
 order: 1
 ---
 
@@ -728,6 +728,7 @@ A full treatment of the following thematic extensions requires separate definiti
 - structural identities of partition forms, symmetric polyforms, and their combinatorial coefficients;
 - partition toponomes, the second-kind algebra, and vector and vertex normalizations of polynomial toponomes;
 - the cycle matroid, ordinary and rooted forest coefficients, and normalized forest and edge parameters;
+- spectral representations of a symmetric first grade and its exponential, spectral projectors, graph cones, and projections;
 - metric-value decompositions and interval forms;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
@@ -783,6 +784,83 @@ $$
 Here $u,v\in W$, and $\mathbf u,\mathbf v$ are their coefficient columns in the direct vertices. The metrics extend to exterior elements through Gram determinants and bilinearity. The chosen exponential must therefore be specified when discussing norms. The Greenian coefficients $\gamma_{ij}$ may have either sign, while both metrics above are positive definite on $W$. Proof and normalization: [[The Greenian Metric and Potentials]].
 
 Definitions and proofs appear in [[Laplacian and Greenian - Mutual Duality of Exponentials]], [[The Canonical Vector Representation of the Greenian]], and [[The Exterior Exponential and Representations of the Greenian]]. These statements about quadratic vector forms do not automatically extend to nonsymmetric balanced-graph Laplacians; their bilinear boundary representation remains valid.
+
+### Spectral representation in the symmetric case
+
+In this section the graph is connected, undirected, and loopless, with positive conductances on existing edges; $d=n-1$. Definitions and proofs are collected in [[en/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]].
+
+**The metric and the associated operator.** On $H=\mathbf1^\perp$, use the auxiliary coordinate inner product $\langle\mathbf v,\mathbf w\rangle_0=\mathbf v^{\mathsf T}\mathbf w$, transferred to $W$ by $v=\sum_i v_i a_i$. With this product, the form $[v,w]$ represents the operator $z\mapsto v\langle w,z\rangle_0$, and $L$ represents the usual Laplacian operator. Contracting the second argument of the same form $L$ using the resistance inner product gives a different operator: $\mathbf L\mathbf{Gr}|_H=I_H$. Distinguish the form, its coefficient matrix, the operator, and its numerical metric evaluation.
+
+Let $\mathbf u_\alpha$ be a coordinate-orthonormal eigenbasis of $H$, with $u_\alpha=\sum_i u_{\alpha i}a_i$. Then
+
+$$
+\mathbf L\mathbf u_\alpha=\lambda_\alpha\mathbf u_\alpha,\qquad
+\mathbf{Gr}\mathbf u_\alpha=\lambda_\alpha^{-1}\mathbf u_\alpha,\qquad
+u_\alpha\cdot u_\beta=\lambda_\alpha^{-1}\delta_{\alpha\beta}
+$$
+
+Here $\lambda_\alpha>0$. The constant mode $\mathbf1/\sqrt n$ has eigenvalue $0$ for both matrices. With multiplicities, individual eigenvectors are not canonical; the eigenspaces $H_\lambda$ and their coordinate-orthogonal projectors are unique:
+
+$$
+\mathbf E_\lambda=\sum_{\alpha:\lambda_\alpha=\lambda}\mathbf u_\alpha\mathbf u_\alpha^{\mathsf T},\qquad
+\mathbf L=\sum_{\lambda>0}\lambda\mathbf E_\lambda,\qquad
+\mathbf{Gr}=\sum_{\lambda>0}\lambda^{-1}\mathbf E_\lambda,\qquad
+\sum_{\lambda>0}\mathbf E_\lambda=\mathbf J
+$$
+
+A full spectral representation retains the eigenvalues and projectors in fixed vertex coordinates. It reconstructs both matrices and the total conductance of each pair, but not the decomposition of that conductance into individual parallel conductors. Eigenvalues with multiplicities alone do not reconstruct the operator; equal spectra do not imply graph isomorphism. A common eigenbasis does not imply equal spectra. For a family of real symmetric operators, simultaneous orthogonal diagonalization is equivalent to pairwise commutation. See [[Eigenspaces, Projectors, and Reconstruction of Polyforms]] and [[The Spectral Cone of a Fixed Basis]].
+
+**Grades and evaluations.** Put $\ell_\alpha=\lambda_\alpha[u_\alpha]^2$. These forms commute and satisfy $\ell_\alpha^2=0$. Hence
+
+$$
+M(t)=\exp(tL)=\prod_{\alpha=1}^{d}(e+t\ell_\alpha),\qquad
+M_g=\frac{L^g}{g!}=e_g(\ell_1,\ldots,\ell_d)
+=\sum_{\#I=g}\lambda_I[u_I]^2
+$$
+
+Here $u_I$ is the exterior product of the selected eigenvectors in increasing index order, $\lambda_I=\prod_{\alpha\in I}\lambda_\alpha$, and $e_g$ is the elementary symmetric polynomial; $e_0=e$ for form arguments and $e_0=1$ for numbers. This symmetry in eigendirections does not imply invariance of the polyform under all vertex permutations, as required in the definition of an SPF.
+
+Under the auxiliary identification on $\Lambda^gH$, the grade $M_g$ corresponds to the exterior power $\Lambda^g(\mathbf L|_H)$ with eigenvalues $\lambda_I$. The additive action obtained by summing the action of $\mathbf L$ on each exterior factor has eigenvalues $\sum_{\alpha\in I}\lambda_\alpha$ and is a different construction. Both operations differ from the matrix exponential. Diagonal factorization applies to the exponential of a symmetric first grade, not to an arbitrary polyform with independently prescribed higher grades.
+
+Extend the coordinate inner product to exterior elements by Gram determinants, and denote the resulting linear evaluation of forms by $\operatorname{ev}_0$. Then
+
+$$
+\operatorname{ev}_0([X,Y])=\langle X,Y\rangle_0,\qquad
+\operatorname{ev}_0(M_g)=e_g(\lambda_1,\ldots,\lambda_d)=p_g,\qquad
+P_M(M_g)=\binom dg
+$$
+
+The evaluation $\operatorname{ev}_0$ is not an algebra homomorphism. The numbers $p_g$ are rooted forest coefficients; they do not replace the ordinary $f_g$ or normalized $\alpha_k$. The spectrum determines $P_G(t)=\prod_\alpha(1+t\lambda_\alpha)$, $\tau=p_d/n$, $\operatorname{tr}\mathbf{Gr}=\sum_\alpha\lambda_\alpha^{-1}$, and the Kirchhoff index $\operatorname{Kf}=n\operatorname{tr}\mathbf{Gr}$, but in general determines neither $F_G(t)$ nor individual $R_{ij}$. Proofs and a cospectral example: [[Diagonal Representation of Polyforms and Duality]], [[Eigenspaces, Projectors, and Reconstruction of Polyforms]].
+
+**Complementary grades and scaling.** For the algebraic dual basis $u^\alpha(u_\beta)=\delta_{\alpha\beta}$, we have $\mathcal C(u^\alpha)=u_\alpha$. The centered identification $\mathcal C$ is not the resistance Riesz identification: $u_\alpha\cdot(\ )=\lambda_\alpha^{-1}u^\alpha$. With $I^c=\{1,\ldots,d\}\setminus I$,
+
+$$
+Q_g=\sum_{\#I=g}\lambda_I^{-1}[u^I]^2
+=\frac1\Delta\sum_{\#I=g}\lambda_{I^c}[u^I]^2,\qquad
+\Delta=\prod_{\alpha=1}^{d}\lambda_\alpha=n\tau(G)
+$$
+
+Thus reversing grade order involves taking complementary sets of directions, passing to $W^*$, and dividing coefficients by $\Delta$. The normalizations $M_d=\tau T_n$ and $N_d=T_n/(n^2\tau)$ remain unchanged: $T_n=n[u_1\cdots u_d]^2$. In $M(t)=\sum_g t^gM_g$ and $D(t)=\sum_g t^gQ_g$, the parameter only marks the grades of the original pair. When conductances are scaled by $s>0$, the mutually dual pair is $M(s)$ and $D(s^{-1})$, not the two exponentials with the same arbitrary parameter. See [[Diagonal Representation of Polyforms and Duality#The grade parameter and rescaling a dual pair|the scaling convention]].
+
+**Graph signs and projections.** Fix a coordinate-orthonormal basis $\mathbf U=(\mathbf1/\sqrt n,\mathbf u_1,\ldots,\mathbf u_d)$. Its Laplacian spectral cone is defined by
+
+$$
+\mathbf L(\boldsymbol\mu)=\mathbf U\operatorname{diag}(0,\mu_1,\ldots,\mu_d)\mathbf U^{\mathsf T},\qquad
+\mathcal K_U=\{\boldsymbol\mu:\ -L_{ij}(\boldsymbol\mu)\ge0\text{ for }i<j\}
+$$
+
+Each coordinate $\mu_k$ belongs to a specified direction. The sign conditions imply positive semidefiniteness; the converse fails even with zero row sums. Within the cone, connectedness is equivalent to $\mu_k>0$ for all $k$. The boundary of the cone may contain connected graphs with missing edges. A polynomial in the Laplacian preserves its eigenspaces, but may merge eigenvalues and violate graph signs; the Chebyshev orbit of a path is not identified with the full cone. Definitions and conditions: [[Chebyshev Transformations of the Laplacian - From Path to Cycle]], [[The Spectral Cone of a Fixed Basis]].
+
+Operator projections use the auxiliary Frobenius inner product $\langle\mathbf A,\mathbf C\rangle_F=\operatorname{tr}(\mathbf A^{\mathsf T}\mathbf C)$, not the resistance metric on $W$. For an arbitrary Laplacian under study, the diagonal evaluations $\mu_k=\mathbf u_k^{\mathsf T}\mathbf L\mathbf u_k$ in a reference basis need not be its eigenvalues. Distinguish
+
+$$
+\Pi_U(\mathbf L)=\sum_k\mu_k\mathbf u_k\mathbf u_k^{\mathsf T},\qquad
+\Pi_{\mathrm{blk}}(\mathbf L)=\sum_\lambda\mathbf F_\lambda\mathbf L\mathbf F_\lambda
+$$
+
+Here $\mathbf F_\lambda$ are the spectral projectors of the reference operator. Block projection retains mixing within a repeated eigenspace and is independent of its basis. Both linear projections require graph-sign checks; the nearest point of the graph cone is obtained by a separate projection that is generally nonlinear. Projecting the Greenian generally differs from taking the pseudoinverse of the projected Laplacian, and diagonal projection of higher grades differs from the corresponding grades of the exponential of the projected first grade. Proofs and examples: [[Projection onto a Fixed Spectral Basis and Loss of Information]].
+
+For disconnected graphs, zero modes remain in $H$. Reciprocal eigenvalues are used only on positive eigenspaces; division by $\Delta=\prod_{\alpha=1}^{d}\lambda_\alpha=0$ is invalid. Connectedness of a diagonal projection does not prove connectedness of the original graph. Nonsymmetric balanced-graph Laplacians require a separate spectral theory; the orthogonal decompositions above do not automatically extend to them.
 
 ### The cycle matroid and forest coefficients
 
@@ -846,6 +924,11 @@ Matroid invariance means preservation under a matroid isomorphism that preserves
 | $\mathbf G_z$ | In the isotropic extension: the Gram matrix of the vertices together with the null vector $z$ |
 | $\mathbf B$ | Bi-coordinate matrix, including the influence matrix in the Dirichlet problem |
 | $H$, $\mathbf J$ | Zero-sum coordinate subspace and centering projector |
+| $\langle\ ,\ \rangle_0$, $\operatorname{ev}_0$ | Auxiliary coordinate inner product and its linear evaluation of forms |
+| $u_\alpha$, $u^\alpha$, $\ell_\alpha$ | Eigenvectors in $W$, algebraic dual elements, and forms $\lambda_\alpha[u_\alpha]^2$ |
+| $\mathbf E_\lambda$, $\mathbf F_\lambda$ | Spectral projectors of the operator under study and of the reference operator |
+| $e_g$, $\Delta=n\tau$ | Elementary symmetric polynomial and product of the positive eigenvalues of a connected graph |
+| $\mathcal K_U$, $\Pi_U$, $\Pi_{\mathrm{blk}}$ | Spectral cone of a basis, diagonal and block operator projections |
 | $\mathcal D$ | Distance operator |
 | $M_G$, $M_k$ | Metric polyform and its grade components |
 | $T_n$ | Fixed spanning-tree form of grade $n-1$ |
@@ -907,6 +990,7 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
+| 13 | 2026-10-30 | Recorded spectral conventions: coordinate and resistance metrics, projectors, diagonal grades and their evaluations, complementary dual directions, and scaling. Distinguished exterior powers, additive action, graph cones, and projection types; added limitations and links to the completed series. Aligned with Russian revision 13. |
 | 12 | 2026-10-28 | Aligned individual edges and aggregated couplings, centroid notation, and quadratic radius. Added the two metric roles of the exponentials, matroid and forest conventions, and links to published extensions. Aligned with Russian revision 12. |
 | 11 | 2026-10-28 | Aligned direct and dual notation with Russian revision 11 and linked the completed English Greenian series. |
 | 10 | 2026-10-27 | Defined the Greenian and mutual exponential duality; distinguished grade-one vector forms from boundary polyforms, dual from centered representations, and exterior multiplication from matrix composition. Removed dex from the current extension list. Aligned with Russian revision 10; the series itself remains in Russian pending review. |

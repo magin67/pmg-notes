@@ -1,13 +1,13 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-28
-revision: 13
+updated: 2026-10-30
+revision: 14
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: polyforms and metrics, Laplacian and Greenian, combinatorial potentials, toponomes, KVP/KVPOU, and matroid and forest parameters, with Russian equivalents."
+description: "Terminology of the PMG core and published series: polyforms and metrics, Laplacian and Greenian, combinatorial potentials, toponomes, KVP/KVPOU, matroid and forest parameters, and spectral representations and projections, with Russian equivalents."
 order: 2
 ---
 
@@ -196,6 +196,32 @@ When representations occur together, the polyform retains an ordinary letter and
 Conventions and proofs appear in [[Laplacian and Greenian - Mutual Duality of Exponentials]] and [[The Canonical Vector Representation of the Greenian]]. In that series, the former name “dual polyform” for $D$ is replaced by “the Greenian exponential in its dual representation”. The relational phrase “a polyform dual to a given one” retains its precise meaning. The symmetric quadratic case is distinguished from the general bilinear case of balanced graphs.
 
 For $u,v\in W$ in the direct space, the normalized potentials are $P_M([u,v])=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v$ and $P_N([u,v])=\mathbf u^{\mathsf T}\mathbf L\mathbf v$, where $P_N(f)=\tau(Nf)/\tau(N)$. The norm of a form depends on the chosen exponential; the metrics extend to higher grades through Gram determinants and bilinearity. [[The Greenian Metric and Potentials]].
+
+## Spectral representations and projections
+
+These definitions concern real symmetric Laplacians of undirected graphs. Eigenvectors are normalized in the auxiliary coordinate inner product $\langle\mathbf v,\mathbf w\rangle_0=\mathbf v^{\mathsf T}\mathbf w$ on $H=\mathbf1^\perp$; it differs from the resistance inner product with matrix $\mathbf{Gr}$. Definitions, proofs, and classical sources appear in [[en/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Eigenmode | Собственная мода | Standard | An eigenvector together with its eigenvalue and an explicitly chosen normalization. For a connected graph the constant mode has eigenvalue $0$, and the remaining modes lie in $H$. With multiplicities, individual modes are not canonical. |
+| Eigenspace | Собственное подпространство | Standard | $H_\lambda=\ker(\mathbf L-\lambda I)$; for a symmetric operator its dimension is the eigenvalue multiplicity. |
+| Spectral projector | Спектральный проектор | Standard | The coordinate-orthogonal projector $\mathbf E_\lambda$ onto $H_\lambda$. Independent of the orthonormal basis chosen within the eigenspace. Distinguish it from the form representing the projector: operator composition and form multiplication are different. |
+| Full spectral representation | Полное спектральное представление | Qualified | Eigenvalues and spectral projectors in fixed vertex coordinates. Reconstructs the matrix, unlike the spectrum as a multiset of numbers. For a graph, it reconstructs total pair conductances. |
+| Simultaneous orthogonal diagonalization | Совместная ортогональная диагонализация | Standard | A common orthonormal eigenbasis of a family of real symmetric operators; exists exactly when they commute pairwise. Their eigenvalues may differ. |
+| Diagonal form of an eigendirection | Диагональная форма собственного направления | Qualified | The weighted form $\ell_\alpha=\lambda_\alpha[u_\alpha]^2$, where $u_\alpha=\sum_i u_{\alpha i}a_i$. Has grade $1$ and satisfies $\ell_\alpha^2=0$. |
+| Diagonal representation of an exterior exponential | Диагональное представление внешней экспоненты | Qualified | The factorization $M(t)=\prod_\alpha(e+t\ell_\alpha)$ and grades $M_g=e_g(\ell_1,\ldots,\ell_d)$. Applies to the exponential of a symmetric first grade; does not assert simultaneous diagonalization of arbitrary higher grades. |
+| Elementary symmetric polynomial | Элементарный симметрический полином | Standard | $e_g$ is the sum of products over all sets of $g$ distinct arguments. It can be evaluated in the commutative algebra of forms, where $e_0=e$; for numbers, $e_0=1$. Distinguish it from the external combinatorial potential $e_n(\mathbf x)$. |
+| Coordinate evaluation of a form | Координатная оценка формы | Qualified | $\operatorname{ev}_0([X,Y])=\langle X,Y\rangle_0$, extending the inner product by Gram determinants. Linear but not an algebra homomorphism; $\operatorname{ev}_0(M_g)=p_g$. Differs from the resistance evaluation $P_M$. |
+| Exterior power of an operator | Внешняя степень оператора | Standard | $\Lambda^g\mathbf A$ acts on an exterior product by applying $\mathbf A$ to every factor; eigenvalues multiply. The correspondence $M_g\leftrightarrow\Lambda^g(\mathbf L\vert_H)$ uses the coordinate metric. |
+| Additive action on an exterior power | Аддитивное действие на внешней степени | Standard | The sum of the operator's actions on one exterior factor, leaving the others unchanged. Eigenvalues add. Differs from the exterior power of an operator and from the matrix exponential. |
+| Laplacian spectral cone of a fixed basis | Лапласовский спектральный конус фиксированного базиса | Qualified | $\mathcal K_U$ consists of coefficients $\boldsymbol\mu$ for which $\mathbf U\operatorname{diag}(0,\boldsymbol\mu)\mathbf U^{\mathsf T}$ has nonpositive off-diagonal entries. The basis is coordinate-orthonormal and its first mode is constant. Coefficients are tied to directions; positive semidefiniteness alone is insufficient. |
+| Diagonal projection in a fixed basis | Диагональная проекция в фиксированном базисе | Standard | The Frobenius projection $\Pi_U$ that removes an operator's off-diagonal entries in the selected basis. The retained evaluations $\mathbf u_k^{\mathsf T}\mathbf L\mathbf u_k$ need not be eigenvalues of the original operator. |
+| Block spectral projection | Блочная спектральная проекция | Standard | $\Pi_{\mathrm{blk}}(\mathbf L)=\sum_\lambda\mathbf F_\lambda\mathbf L\mathbf F_\lambda$, where $\mathbf F_\lambda$ are the reference operator's projectors. Retains entire eigenspace blocks and is independent of the bases chosen within them. |
+| Projection onto the graph spectral cone | Проекция на графовый спектральный конус | Qualified | The nearest admissible matrix of the fixed basis in the Frobenius norm. Corresponds to Euclidean projection of its coefficients onto $\mathcal K_U$; generally nonlinear and distinct from unconstrained diagonal projection. |
+
+Symmetry of the polynomial $e_g$ in eigendirections does not imply invariance of a polyform under all vertex permutations. SPF retains its definition from the structural and symmetric series. With multiplicities, individual forms $\ell_\alpha$ depend on the basis, whereas complete grades and eigenspace forms do not.
+
+Reversal of dual grade order means taking complementary sets of eigendirections, passing to the dual space, and normalizing by $\Delta=\prod_\alpha\lambda_\alpha=n\tau$ for a connected graph. It is not a simple permutation of grades. Disconnectedness, nonsymmetric balanced operators, and graph signs after projection require separate qualifications. Projection in operator space differs from resistance projection of PMG vectors. Conventions are collected in [[Core specification#Spectral representation in the symmetric case|the spectral section of the specification]].
 
 ## Resistance geometry and metric evaluation
 
@@ -413,6 +439,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 14 | 2026-10-30 | Added terminology from the completed spectral series: modes, eigenspaces, projectors, diagonal forms and elementary symmetric grade polynomials, exterior powers, cones, and projections. Distinguished coordinate and resistance evaluations, polynomial symmetry and SPF invariance, and complementary dual directions. Aligned with Russian revision 14. |
 | 13 | 2026-10-28 | Added matroid definitions, forest and edge parameter families, both toponome normalizations, first-kind and mixed-state potentials, and KVP/KVPOU. Aligned duality, conductor and edge effective resistance, and radius; removed stale qualifications. Aligned with Russian revision 13. |
 | 12 | 2026-10-28 | Distinguished direct vertices from dual classes in the Greenian entry; aligned with Russian glossary revision 12 and linked the English series. |
 | 11 | 2026-10-27 | Established the Laplacian-Greenian pair, vector first grades and boundary exponentials; distinguished the Green matrix, Greenian, dual representation, and mutual exponential duality. Aligned with Russian glossary revision 11. |
