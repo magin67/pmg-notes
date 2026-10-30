@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="646" viewBox="0 0 960 646" role="img" aria-labelledby="title desc">
+<title id="title">Одинаковый отклик и разные лесные паспорта</title>
+<desc id="desc">В обоих графах граница a,b, внутренние листья x,y присоединены к a, ребро ab единичное. В первом графе веса ax,ay равны 1,1; во втором 2,1/2. В обоих случаях tau=delta=R_ab=1 и совпадают все веса рощ. Полиномы разделённого состояния равны (1+t)^2 и (1+2t)(1+t/2), поэтому полные паспорта различаются.</desc>
+<rect width="960" height="646" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Одинаковый отклик и разные лесные паспорта</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">B = {a, b}; оба графа имеют четыре вершины и одну и ту же топологию.</text>
+<rect x="24" y="108" width="444" height="377" rx="12" fill="#f3f6f9"/>
+<text x="246" y="149" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">Граф A</text>
+<line x1="235" y1="274" x2="394" y2="274" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="235" y1="274" x2="102" y2="215" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="235" y1="274" x2="102" y2="346" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="235" cy="274" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="235" cy="274" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="235" y="254" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="394" cy="274" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="394" cy="274" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="394" y="254" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="102" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="102" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="102" cy="346" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="102" y="326" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="102" y="374" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<text x="169" y="224" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1</text>
+<text x="169" y="340" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1</text>
+<text x="314" y="258" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1</text>
+<text x="246" y="416" font-size="22" fill="#203444" text-anchor="middle">F<tspan baseline-shift="sub" font-size="16">a|b</tspan>(t) = (1 + t)²</text>
+<text x="246" y="459" font-size="22" fill="#203444" text-anchor="middle">F<tspan baseline-shift="sub" font-size="16">ab</tspan>(t) = t · F<tspan baseline-shift="sub" font-size="16">a|b</tspan>(t)</text>
+<rect x="492" y="108" width="444" height="377" rx="12" fill="#f3f6f9"/>
+<text x="714" y="149" font-size="24" fill="#203444" text-anchor="middle" font-weight="700">Граф B</text>
+<line x1="703" y1="274" x2="862" y2="274" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="703" y1="274" x2="570" y2="215" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="703" y1="274" x2="570" y2="346" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="703" cy="274" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="703" cy="274" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="703" y="254" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="862" cy="274" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="862" cy="274" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="862" y="254" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="570" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="570" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">x</text>
+<circle cx="570" cy="346" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="570" y="326" font-size="18" fill="#203444" text-anchor="middle" font-weight="400"></text>
+<text x="570" y="374" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">y</text>
+<text x="637" y="224" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">2</text>
+<text x="637" y="340" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1/2</text>
+<text x="782" y="258" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1</text>
+<text x="714" y="416" font-size="22" fill="#203444" text-anchor="middle">F<tspan baseline-shift="sub" font-size="16">a|b</tspan>(t) = (1 + 2t)(1 + t/2)</text>
+<text x="714" y="459" font-size="22" fill="#203444" text-anchor="middle">F<tspan baseline-shift="sub" font-size="16">ab</tspan>(t) = t · F<tspan baseline-shift="sub" font-size="16">a|b</tspan>(t)</text>
+<text x="480" y="530" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">В обоих графах резистенс между a и b равен 1;  τ = δ = 1</text>
+<text x="480" y="570" font-size="21" fill="#9464af" text-anchor="middle" font-weight="400">Все веса рощ совпадают; младшие лесные коэффициенты различны.</text>
+<text x="480" y="616" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Лист без выбранного ребра становится внутренней компонентой и не входит в рощу.</text>
+</g>
+</svg>

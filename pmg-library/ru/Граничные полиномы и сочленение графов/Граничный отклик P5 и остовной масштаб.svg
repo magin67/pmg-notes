@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="632" viewBox="0 0 960 632" role="img" aria-labelledby="title desc">
+<title id="title">Граничный отклик P₅ и остовной масштаб</title>
+<desc id="desc">Исходный единичный путь a-b-c-d-e имеет границу a,c,e, остовной коэффициент 1 и вес полностью разделённых рощ 4. После исключения b,d остаётся путь a-c-e с проводимостями 1/2 и 1/2 и остовным коэффициентом 1/4. Граничные резистенсы 2,2,4 сохраняются; масштаб 4 восстанавливает исходное число 1.</desc>
+<rect width="960" height="632" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="28" y="40" font-size="27" fill="#203444" text-anchor="start" font-weight="700">Граничный отклик P₅ и остовной масштаб</text>
+<text x="28" y="73" font-size="17" fill="#566b7b" text-anchor="start" font-weight="400">Граница B = {a, c, e}; все исходные проводимости равны 1.</text>
+<rect x="24" y="109" width="912" height="171" rx="12" fill="#f3f6f9"/>
+<text x="480" y="147" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Исходный путь: n = 5,  τ = 1</text>
+<line x1="100.0" y1="215" x2="290.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="290.0" y1="215" x2="480.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="480.0" y1="215" x2="670.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="670.0" y1="215" x2="860.0" y2="215" stroke="#167f77" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="100.0" cy="215" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="100.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="100.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="290.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="290.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">b</text>
+<circle cx="480.0" cy="215" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="670.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="670.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">d</text>
+<circle cx="860.0" cy="215" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="860.0" cy="215" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="860.0" y="195" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="480" y="258" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">δ = 4: четыре рощи состояния a|c|e</text>
+<text x="480" y="326" font-size="42" fill="#566b7b" text-anchor="middle" font-weight="400">↓</text>
+<text x="525" y="315" font-size="19" fill="#566b7b" text-anchor="start" font-weight="400">исключаем внутренние b, d</text>
+<rect x="24" y="350" width="912" height="171" rx="12" fill="#f3f6f9"/>
+<text x="480" y="389" font-size="22" fill="#203444" text-anchor="middle" font-weight="700">Эффективный путь на границе: n = 3,  τ = 1/4</text>
+<line x1="140" y1="457" x2="480" y2="457" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<line x1="480" y1="457" x2="820" y2="457" stroke="#167f77" stroke-width="4" stroke-linecap="round"/>
+<circle cx="140" cy="457" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="140" cy="457" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="140" y="437" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">a</text>
+<circle cx="480" cy="457" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="480" cy="457" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="480" y="437" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">c</text>
+<circle cx="820" cy="457" r="13" fill="white" stroke="#b97716" stroke-width="2.6"/>
+<circle cx="820" cy="457" r="7" fill="white" stroke="#203444" stroke-width="2"/>
+<text x="820" y="437" font-size="18" fill="#203444" text-anchor="middle" font-weight="400">e</text>
+<text x="310" y="444" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1/2</text>
+<text x="650" y="444" font-size="20" fill="#167f77" text-anchor="middle" font-weight="400">1/2</text>
+<text x="480" y="500" font-size="20" fill="#566b7b" text-anchor="middle">R<tspan baseline-shift="sub" font-size="14">ac</tspan> = 2;  R<tspan baseline-shift="sub" font-size="14">ce</tspan> = 2;  R<tspan baseline-shift="sub" font-size="14">ae</tspan> = 4 в обоих графах</text>
+<text x="480" y="565" font-size="23" fill="#203444" text-anchor="middle" font-weight="400">τ(исходного графа) = δ · τ(эффективного графа) = 4 · 1/4 = 1</text>
+<text x="480" y="608" font-size="18" fill="#566b7b" text-anchor="middle" font-weight="400">Исключение сохраняет граничную метрику, но требует отдельного остовного масштаба.</text>
+</g>
+</svg>
