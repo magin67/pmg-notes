@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350" role="img" aria-labelledby="title desc">
+  <title id="title">Два коэффициента гриниана треугольника</title>
+  <desc id="desc">Слева единичный треугольник с остовным коэффициентом 3. Справа после увеличения коэффициентов гриниана при парах 12 и 13 на одну треть проводимости 12 и 13 равны одной четверти, проводимость 23 равна пяти восьмым, остовной коэффициент равен трём восьмым.</desc>
+  <rect width="900" height="350" rx="18" fill="#f6f8fb"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#243348">
+    <text x="220" y="36" font-size="23">Исходный граф</text>
+    <text x="680" y="36" font-size="23">После двух изменений</text>
+    <g stroke-linecap="round">
+      <path d="M110 245 L330 245 L220 90 Z" stroke="#657184" stroke-width="5" fill="none"/>
+      <path d="M570 245 L790 245" stroke="#2876ae" stroke-width="4"/>
+      <path d="M570 245 L680 90" stroke="#2876ae" stroke-width="4"/>
+      <path d="M680 90 L790 245" stroke="#c36a16" stroke-width="6"/>
+      <path d="M411 175 L485 175 M472 162 L485 175 L472 188" stroke="#8592a3" stroke-width="3" fill="none"/>
+    </g>
+    <g font-size="27" font-weight="bold">
+      <text x="220" y="230">1</text><text x="145" y="162">1</text><text x="297" y="162">1</text>
+      <text x="680" y="230" fill="#20628f">1/4</text><text x="595" y="162" fill="#20628f">1/4</text>
+      <text x="767" y="162" fill="#a55209">5/8</text>
+    </g>
+    <g stroke="#34445a" stroke-width="2.5" fill="white">
+      <circle cx="110" cy="245" r="21"/><circle cx="330" cy="245" r="21"/><circle cx="220" cy="90" r="21"/>
+      <circle cx="570" cy="245" r="21"/><circle cx="790" cy="245" r="21"/><circle cx="680" cy="90" r="21"/>
+    </g>
+    <g font-size="23" dominant-baseline="central">
+      <text x="110" y="245">1</text><text x="330" y="245">2</text><text x="220" y="90">3</text>
+      <text x="570" y="245">1</text><text x="790" y="245">2</text><text x="680" y="90">3</text>
+    </g>
+    <g font-size="23"><text x="220" y="317">τ = 3</text><text x="680" y="317">τ′ = 3/8</text></g>
+  </g>
+</svg>
