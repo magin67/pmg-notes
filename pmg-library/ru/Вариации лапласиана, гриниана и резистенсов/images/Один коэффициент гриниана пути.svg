@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="330" viewBox="0 0 920 330" role="img" aria-labelledby="title desc">
+  <title id="title">Изменение одного коэффициента гриниана пути</title>
+  <desc id="desc">Слева единичный путь 1-2-3-4. Справа после изменения коэффициента гамма 12 на одну пятую проводимости 12 и 23 равны двум пятым и семи десятым, новая связь 13 имеет проводимость одна пятая, связь 34 сохраняет проводимость 1. Остовной коэффициент уменьшается с 1 до одной второй.</desc>
+  <rect width="920" height="330" rx="18" fill="#f6f8fb"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#243348">
+    <text x="225" y="37" font-size="23">Исходный путь</text>
+    <text x="685" y="37" font-size="23">Восстановленные связи</text>
+    <g fill="none" stroke-linecap="round">
+      <path d="M60 205 L170 205 L280 205 L390 205" stroke="#657184" stroke-width="5"/>
+      <path d="M520 205 L630 205 L740 205" stroke="#2876ae" stroke-width="5"/>
+      <path d="M740 205 L850 205" stroke="#657184" stroke-width="5"/>
+      <path d="M520 205 Q630 25 740 205" stroke="#c36a16" stroke-width="4"/>
+      <path d="M425 155 L485 155 M473 143 L485 155 L473 167" stroke="#8592a3" stroke-width="3"/>
+    </g>
+    <text x="455" y="127" font-size="21">t = 1/5</text>
+    <g font-size="24" font-weight="bold">
+      <text x="115" y="179">1</text><text x="225" y="179">1</text><text x="335" y="179">1</text>
+      <text x="575" y="248" fill="#20628f">2/5</text><text x="685" y="248" fill="#20628f">7/10</text>
+      <text x="795" y="179">1</text><text x="630" y="99" fill="#a55209">1/5</text>
+    </g>
+    <g stroke="#34445a" stroke-width="2.5" fill="white">
+      <circle cx="60" cy="205" r="20"/><circle cx="170" cy="205" r="20"/><circle cx="280" cy="205" r="20"/><circle cx="390" cy="205" r="20"/>
+      <circle cx="520" cy="205" r="20"/><circle cx="630" cy="205" r="20"/><circle cx="740" cy="205" r="20"/><circle cx="850" cy="205" r="20"/>
+    </g>
+    <g font-size="22" dominant-baseline="central">
+      <text x="60" y="205">1</text><text x="170" y="205">2</text><text x="280" y="205">3</text><text x="390" y="205">4</text>
+      <text x="520" y="205">1</text><text x="630" y="205">2</text><text x="740" y="205">3</text><text x="850" y="205">4</text>
+    </g>
+    <g font-size="23"><text x="225" y="302">τ = 1</text><text x="685" y="302">τ′ = 1/2</text></g>
+  </g>
+</svg>
