@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="570" viewBox="0 0 1260 570" role="img" aria-labelledby="title desc">
+<title id="title">Два замыкания квадратной полосы</title><desc id="desc">Одна полоса из четырёх квадратов; прямое и обратное соответствия крайних рёбер. Общие рёбра учитываются один раз.</desc>
+<rect width="1260" height="570" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="630.00" y="35.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="bold">Последний шов: совпадение или обмен концов</text>
+<rect x="20" y="65" width="610" height="440" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="325.00" y="102.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="bold">Обычное замыкание</text>
+<polygon points="95.00,180.00 210.00,180.00 210.00,335.00 95.00,335.00" fill="#fff0d7"/>
+<text x="152.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₀</text>
+<polygon points="210.00,180.00 325.00,180.00 325.00,335.00 210.00,335.00" fill="#ddf4e9"/>
+<text x="267.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₁</text>
+<polygon points="325.00,180.00 440.00,180.00 440.00,335.00 325.00,335.00" fill="#e2edff"/>
+<text x="382.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₂</text>
+<polygon points="440.00,180.00 555.00,180.00 555.00,335.00 440.00,335.00" fill="#fff0d7"/>
+<text x="497.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₃</text>
+<line x1="95.00" y1="180.00" x2="95.00" y2="335.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<line x1="210.00" y1="180.00" x2="325.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="440.00" y1="180.00" x2="555.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="325.00" y1="180.00" x2="440.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="325.00" y1="335.00" x2="440.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="210.00" y1="180.00" x2="210.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="440.00" y1="180.00" x2="440.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="325.00" y1="180.00" x2="325.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="555.00" y1="180.00" x2="555.00" y2="335.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<line x1="440.00" y1="335.00" x2="555.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="95.00" y1="180.00" x2="210.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="95.00" y1="335.00" x2="210.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="210.00" y1="335.00" x2="325.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<circle cx="95.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="95.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="210.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="210.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="325.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="325.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="440.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="440.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="555.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="555.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<text x="95.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₀</text>
+<text x="95.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₀</text>
+<text x="210.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₁</text>
+<text x="210.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₁</text>
+<text x="325.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₂</text>
+<text x="325.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₂</text>
+<text x="440.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₃</text>
+<text x="440.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₃</text>
+<text x="555.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₄</text>
+<text x="555.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₄</text>
+<line x1="73.00" y1="310.00" x2="73.00" y2="205.00" stroke="#bc294b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="73.00,205.00 68.00,217.00 78.00,217.00" fill="#bc294b"/>
+<line x1="577.00" y1="310.00" x2="577.00" y2="205.00" stroke="#bc294b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="577.00,205.00 572.00,217.00 582.00,217.00" fill="#bc294b"/>
+<text x="325.00" y="407.00" font-size="24" fill="#bc294b" text-anchor="middle" font-weight="bold">a₄ ↔ a₀,   b₄ ↔ b₀</text>
+<text x="325.00" y="456.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">После замыкания: τ = 384,  ρ = 29/96</text>
+<rect x="650" y="65" width="610" height="440" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="955.00" y="102.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="bold">Скрученное замыкание</text>
+<polygon points="725.00,180.00 840.00,180.00 840.00,335.00 725.00,335.00" fill="#fff0d7"/>
+<text x="782.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₀</text>
+<polygon points="840.00,180.00 955.00,180.00 955.00,335.00 840.00,335.00" fill="#ddf4e9"/>
+<text x="897.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₁</text>
+<polygon points="955.00,180.00 1070.00,180.00 1070.00,335.00 955.00,335.00" fill="#e2edff"/>
+<text x="1012.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₂</text>
+<polygon points="1070.00,180.00 1185.00,180.00 1185.00,335.00 1070.00,335.00" fill="#fff0d7"/>
+<text x="1127.00" y="265.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="bold">K₃</text>
+<line x1="725.00" y1="180.00" x2="725.00" y2="335.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<line x1="840.00" y1="180.00" x2="955.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="1070.00" y1="180.00" x2="1185.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="955.00" y1="180.00" x2="1070.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="955.00" y1="335.00" x2="1070.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="840.00" y1="180.00" x2="840.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="1070.00" y1="180.00" x2="1070.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="955.00" y1="180.00" x2="955.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="1185.00" y1="180.00" x2="1185.00" y2="335.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<line x1="1070.00" y1="335.00" x2="1185.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="725.00" y1="180.00" x2="840.00" y2="180.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="725.00" y1="335.00" x2="840.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="840.00" y1="335.00" x2="955.00" y2="335.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<circle cx="725.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="725.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="840.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="840.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="955.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="955.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="1070.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="1070.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="1185.00" cy="180.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="1185.00" cy="335.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<text x="725.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₀</text>
+<text x="725.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₀</text>
+<text x="840.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₁</text>
+<text x="840.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₁</text>
+<text x="955.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₂</text>
+<text x="955.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₂</text>
+<text x="1070.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₃</text>
+<text x="1070.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₃</text>
+<text x="1185.00" y="158.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">a₄</text>
+<text x="1185.00" y="363.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">b₄</text>
+<line x1="703.00" y1="310.00" x2="703.00" y2="205.00" stroke="#bc294b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="703.00,205.00 698.00,217.00 708.00,217.00" fill="#bc294b"/>
+<line x1="1207.00" y1="205.00" x2="1207.00" y2="310.00" stroke="#bc294b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="1207.00,310.00 1212.00,298.00 1202.00,298.00" fill="#bc294b"/>
+<text x="955.00" y="407.00" font-size="24" fill="#bc294b" text-anchor="middle" font-weight="bold">a₄ ↔ b₀,   b₄ ↔ a₀</text>
+<text x="955.00" y="456.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">После замыкания: τ = 392,  ρ = 67/224</text>
+<text x="630.00" y="545.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">Два крайних красных ребра становятся одним единичным ребром</text>
+</g></svg>

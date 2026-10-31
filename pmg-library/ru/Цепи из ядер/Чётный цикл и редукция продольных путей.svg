@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-labelledby="title desc">
+<title id="title">Чётный цикл и редукция продольных путей</title><desc id="desc">Шестиугольное ядро с противоположными рёберными швами: два пути длины два заменяются проводимостями одна вторая.</desc>
+<rect width="1200" height="530" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="36.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">Шестиугольное ядро: пути длины 2 и их проводимости</text>
+<rect x="20" y="65" width="510" height="390" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="670" y="65" width="510" height="390" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="275.00" y="105.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">Все шесть рёбер единичные</text>
+<text x="925.00" y="105.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">После исключения двух вершин</text>
+<polygon points="115.00,220.00 275.00,160.00 435.00,220.00 435.00,340.00 275.00,400.00 115.00,340.00" fill="#ddf4e9"/>
+<line x1="115.00" y1="220.00" x2="275.00" y2="160.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="275.00" y1="160.00" x2="435.00" y2="220.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="435.00" y1="340.00" x2="275.00" y2="400.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="435.00" y1="220.00" x2="435.00" y2="340.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<line x1="275.00" y1="400.00" x2="115.00" y2="340.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="115.00" y1="220.00" x2="115.00" y2="340.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<circle cx="115.00" cy="220.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="275.00" cy="160.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="435.00" cy="220.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="435.00" cy="340.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="275.00" cy="400.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="115.00" cy="340.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<text x="87.00" y="224.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">aᵢ</text>
+<text x="87.00" y="344.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">bᵢ</text>
+<text x="471.00" y="224.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">aᵢ₊₁</text>
+<text x="471.00" y="344.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">bᵢ₊₁</text>
+<text x="275.00" y="145.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">xᵢ</text>
+<text x="275.00" y="427.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">yᵢ</text>
+<line x1="565.00" y1="280.00" x2="635.00" y2="280.00" stroke="#8953af" stroke-width="4" stroke-linecap="round"/>
+<polygon points="635.00,280.00 623.00,275.00 623.00,285.00" fill="#8953af"/>
+<line x1="775.00" y1="220.00" x2="1075.00" y2="220.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="1075.00" y1="220.00" x2="1075.00" y2="340.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<line x1="1075.00" y1="340.00" x2="775.00" y2="340.00" stroke="#52657a" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="775.00" y1="220.00" x2="775.00" y2="340.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<circle cx="775.00" cy="220.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="1075.00" cy="220.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="1075.00" cy="340.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<circle cx="775.00" cy="340.00" r="4.5" fill="white" stroke="#172b43" stroke-width="1.6"/>
+<text x="925.00" y="197.00" font-size="25" fill="#8953af" text-anchor="middle" font-weight="bold">c = 1/2</text>
+<text x="925.00" y="379.00" font-size="25" fill="#8953af" text-anchor="middle" font-weight="bold">c = 1/2</text>
+<text x="748.00" y="285.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="normal">1</text>
+<text x="1102.00" y="285.00" font-size="22" fill="#196bb9" text-anchor="middle" font-weight="normal">1</text>
+<text x="600.00" y="496.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">Восстановление двух путей даёт множитель 4 для остовного числа</text>
+</g></svg>
