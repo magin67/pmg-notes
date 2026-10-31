@@ -30,15 +30,16 @@ L=\mathscr L(C)=\operatorname{diag}(C\mathbf1)-C,
 J=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
 $$
 
-**Definition.** The Green matrix $\mathrm{Gr}=L^+$ inverts $L$ on $H=\mathbf1^\perp$ and vanishes on constant column vectors. In both models considered here,
-
-$$
-L\mathrm{Gr}=\mathrm{Gr}L=J,
-\qquad
-\mathrm{Gr}\mathbf1=0,
-\qquad
-\mathbf1^{\mathsf T}\mathrm{Gr}=0
-$$
+> [!info] Scope and initial definitions
+> **Definition.** The Green matrix $\mathrm{Gr}=L^+$ inverts $L$ on $H=\mathbf1^\perp$ and vanishes on constant column vectors. In both models considered here,
+>
+> $$
+> L\mathrm{Gr}=\mathrm{Gr}L=J,
+> \qquad
+> \mathrm{Gr}\mathbf1=0,
+> \qquad
+> \mathbf1^{\mathsf T}\mathrm{Gr}=0
+> $$
 
 A useful computational identity is
 
@@ -73,13 +74,14 @@ Thus the Gram matrix of the centered vectors of a balanced graph is $\mathrm{Gr}
 
 The Green matrix has a nonzero diagonal. Projectors for zero-diagonal pair tables therefore cannot be applied to it without specifying the change of representation.
 
-**Definition.** The pair coefficients of the Green matrix are the table
-
-$$
-\gamma_{ij}=-\mathrm{Gr}_{ij}\quad(i\ne j),
-\qquad \gamma_{ii}=0
-\tag{2}
-$$
+> [!info] What decomposition of the Green matrix means
+> **Definition.** The pair coefficients of the Green matrix are the table
+>
+> $$
+> \gamma_{ij}=-\mathrm{Gr}_{ij}\quad(i\ne j),
+> \qquad \gamma_{ii}=0
+> \tag{2}
+> $$
 
 The zero row and column sums of $\mathrm{Gr}$ give
 
@@ -136,7 +138,8 @@ $$
 -\mathrm{Gr}_K-\mathrm{Gr}_V
 $$
 
-**Proof.** The row and column sums of $\gamma$ equal $q_i$, and the sum of all its entries is $t$. This gives $\mu_\gamma$ and $v^{(\gamma)}$. The Laplacian of a constant pair table is $n\mu_\gamma J$. For the V-component, its diagonal is $\eta_i$ and its off-diagonal entries are $-(\eta_i+\eta_j)/(n-2)$, giving the second matrix in (3). The skew-symmetric part of $\gamma$ has zero row sums, so $\gamma_O=-(\mathrm{Gr}-\mathrm{Gr}^{\mathsf T})/2$ and $\mathscr L(\gamma_O)=-\gamma_O$. $\square$
+> [!note]- Proof
+> **Proof.** The row and column sums of $\gamma$ equal $q_i$, and the sum of all its entries is $t$. This gives $\mu_\gamma$ and $v^{(\gamma)}$. The Laplacian of a constant pair table is $n\mu_\gamma J$. For the V-component, its diagonal is $\eta_i$ and its off-diagonal entries are $-(\eta_i+\eta_j)/(n-2)$, giving the second matrix in (3). The skew-symmetric part of $\gamma$ has zero row sums, so $\gamma_O=-(\mathrm{Gr}-\mathrm{Gr}^{\mathsf T})/2$ and $\mathscr L(\gamma_O)=-\gamma_O$. $\square$
 
 The component $\mathrm{Gr}_K$ carries the entire trace $t$. The diagonal of $\mathrm{Gr}_V$ is $\boldsymbol\eta$, while those of $\mathrm{Gr}_P$ and $\mathrm{Gr}_O$ are zero. V therefore describes precisely the nonuniformity of the Green diagonal; in resistance geometry, this is the nonuniformity of quadratic distances to the centroid.
 
@@ -154,18 +157,20 @@ $$
 
 This is the effective resistance of the pair, not the resistance of an individual edge. The linear distance in a Euclidean realization is $\sqrt{R_{ij}}$.
 
-**Theorem.** The components of $R$ are related to the pair coefficients of the Green matrix by
+> [!info] Symmetric resistances: mean, vertex contribution, and residual
+> **Theorem.** The components of $R$ are related to the pair coefficients of the Green matrix by
+>
+> $$
+> \boxed{
+> R_K=2n\gamma_K,\qquad
+> R_V=n\gamma_V,\qquad
+> R_P=2\gamma_P
+> }
+> \tag{4}
+> $$
 
-$$
-\boxed{
-R_K=2n\gamma_K,\qquad
-R_V=n\gamma_V,\qquad
-R_P=2\gamma_P
-}
-\tag{4}
-$$
-
-**Proof.** Substitute $\mathrm{Gr}=\mathscr L(\gamma)$ into $R=\mathcal D(\mathrm{Gr})$. The composition $\mathcal D\circ\mathscr L$ has multipliers $2n,n,2$ on the pair sectors K, V, P, as proved in [[The Distance Operator and KVP Decomposition#Action on KVP and KVPO|the formula for the action on components]]. $\square$
+> [!note]- Proof
+> **Proof.** Substitute $\mathrm{Gr}=\mathscr L(\gamma)$ into $R=\mathcal D(\mathrm{Gr})$. The composition $\mathcal D\circ\mathscr L$ has multipliers $2n,n,2$ on the pair sectors K, V, P, as proved in [[The Distance Operator and KVP Decomposition#Action on KVP and KVPO|the formula for the action on components]]. $\square$
 
 Expanding (4), for $i\ne j$ we obtain
 
@@ -242,34 +247,36 @@ Thus “the Kirchhoff index is determined by the K-component of $R$” does not 
 
 Now $C$ may be nonsymmetric but remains balanced. The Green matrix and $\gamma$ are defined by the same formulas, and the decomposition of $\mathrm{Gr}$ is KVPO.
 
-**Definition.** In the centroid normalization adopted in PMG, one-way resistance is defined by the potential of the form
+> [!info] A balanced graph: three different resistance tables
+> **Definition.** In the centroid normalization adopted in PMG, one-way resistance is defined by the potential of the form
+>
+> $$
+> \Phi_{ij}=[a_j-h,a_j-a_i],
+> \qquad
+> r_{ij}=P_M(\Phi_{ij})=q_j-\mathrm{Gr}_{ij}
+> \tag{8}
+> $$
+>
+> Here $M$ is the graph's metric polyform, and $P_M(F)=\tau(MF)/\tau(M)$ is the normalized potential. The definition, argument order, and subsequent hitting-time interpretation are given in [[One-Way Resistance and Hitting Times]].
 
-$$
-\Phi_{ij}=[a_j-h,a_j-a_i],
-\qquad
-r_{ij}=P_M(\Phi_{ij})=q_j-\mathrm{Gr}_{ij}
-\tag{8}
-$$
-
-Here $M$ is the graph's metric polyform, and $P_M(F)=\tau(MF)/\tau(M)$ is the normalized potential. The definition, argument order, and subsequent hitting-time interpretation are given in [[One-Way Resistance and Hitting Times]].
-
-**Definition.** Denote the symmetric pair resistance and balanced distance table, respectively, by
-
-$$
-\boxed{
-R_{ij}=r_{ij}+r_{ji}
-=q_i+q_j-\mathrm{Gr}_{ij}-\mathrm{Gr}_{ji}
-}
-\tag{9}
-$$
-
-$$
-\boxed{
-\widetilde r_{ij}=\frac12\mathcal D(\mathrm{Gr})_{ij}
-=\frac{q_i+q_j}{2}-\mathrm{Gr}_{ij}
-}
-\tag{10}
-$$
+> [!info] A balanced graph: three different resistance tables
+> **Definition.** Denote the symmetric pair resistance and balanced distance table, respectively, by
+>
+> $$
+> \boxed{
+> R_{ij}=r_{ij}+r_{ji}
+> =q_i+q_j-\mathrm{Gr}_{ij}-\mathrm{Gr}_{ji}
+> }
+> \tag{9}
+> $$
+>
+> $$
+> \boxed{
+> \widetilde r_{ij}=\frac12\mathcal D(\mathrm{Gr})_{ij}
+> =\frac{q_i+q_j}{2}-\mathrm{Gr}_{ij}
+> }
+> \tag{10}
+> $$
 
 The table $R$ is symmetric; $\widetilde r$ is generally nonsymmetric. In particular, $\mathcal D(\mathrm{Gr})=2\widetilde r$, but usually $\mathcal D(\mathrm{Gr})\ne R$ and $\widetilde r\ne r$.
 
@@ -285,49 +292,51 @@ Formulas (4)-(5) for the symmetric components of $R$ remain valid for a balanced
 
 ## The origins of O and U in one-way resistances
 
-**Theorem.** The table $r$ has the KVPOU decomposition
+> [!info] The origins of O and U in one-way resistances
+> **Theorem.** The table $r$ has the KVPOU decomposition
+>
+> $$
+> \boxed{
+> r_K=\frac12R_K,\qquad
+> r_V=\frac12R_V,\qquad
+> r_P=\frac12R_P
+> }
+> $$
+>
+> $$
+> \boxed{
+> r_O=-\frac{\mathrm{Gr}-\mathrm{Gr}^{\mathsf T}}2,
+> \qquad
+> (r_U)_{ij}=\frac{q_j-q_i}{2}
+> }
+> \tag{11}
+> $$
 
-$$
-\boxed{
-r_K=\frac12R_K,\qquad
-r_V=\frac12R_V,\qquad
-r_P=\frac12R_P
-}
-$$
-
-$$
-\boxed{
-r_O=-\frac{\mathrm{Gr}-\mathrm{Gr}^{\mathsf T}}2,
-\qquad
-(r_U)_{ij}=\frac{q_j-q_i}{2}
-}
-\tag{11}
-$$
-
-**Proof.** The symmetric part of $r$ equals $R/2$, giving the first three components. From $r=\mathbf1\mathbf q^{\mathsf T}-\mathrm{Gr}$, its sums are
-
-$$
-d_i^{out}(r)=t,
-\qquad
-d_i^{in}(r)=nq_i
-$$
-
-The definitions of the KVPOU parameters give
-
-$$
-v_i^{(r)}=\frac n2\eta_i,
-\qquad
-u_i^{(r)}=\frac{t-nq_i}{2}=-\frac n2\eta_i=-v_i^{(r)}
-$$
-
-Hence $(r_U)_{ij}=(u_i^{(r)}-u_j^{(r)})/n=(q_j-q_i)/2$. The skew-symmetric part of $r$ is
-
-$$
-\frac{r-r^{\mathsf T}}2
-=r_U-\frac{\mathrm{Gr}-\mathrm{Gr}^{\mathsf T}}2
-$$
-
-The second term has zero row sums, so it is $r_O$. $\square$
+> [!note]- Proof
+> **Proof.** The symmetric part of $r$ equals $R/2$, giving the first three components. From $r=\mathbf1\mathbf q^{\mathsf T}-\mathrm{Gr}$, its sums are
+>
+> $$
+> d_i^{out}(r)=t,
+> \qquad
+> d_i^{in}(r)=nq_i
+> $$
+>
+> The definitions of the KVPOU parameters give
+>
+> $$
+> v_i^{(r)}=\frac n2\eta_i,
+> \qquad
+> u_i^{(r)}=\frac{t-nq_i}{2}=-\frac n2\eta_i=-v_i^{(r)}
+> $$
+>
+> Hence $(r_U)_{ij}=(u_i^{(r)}-u_j^{(r)})/n=(q_j-q_i)/2$. The skew-symmetric part of $r$ is
+>
+> $$
+> \frac{r-r^{\mathsf T}}2
+> =r_U-\frac{\mathrm{Gr}-\mathrm{Gr}^{\mathsf T}}2
+> $$
+>
+> The second term has zero row sums, so it is $r_O$. $\square$
 
 The decomposition separates two sources of asymmetry in $r$.
 
@@ -341,23 +350,24 @@ $$
 =2\bigl((r_O)_{ij}+(r_O)_{jk}+(r_O)_{ki}\bigr)
 $$
 
-**Corollary.** For the one-way resistance table of a connected balanced graph,
-
-$$
-r_U=0\quad\Longleftrightarrow\quad r_V=0
-\quad\Longleftrightarrow\quad q_1=\cdots=q_n
-\tag{12}
-$$
-
-This is a special property of $r$, not a property of arbitrary KVPOU decompositions. It does not mean that balance eliminates V in every table. In particular, $\widetilde r$ is always balanced, while its V may be nonzero.
-
-For an undirected graph, $r_O=0$, but
-
-$$
-r_{ij}=\frac{R_{ij}+q_j-q_i}{2}
-$$
-
-Thus usually $r\ne R/2$. Equality holds exactly when $q_i$ is constant. The term “one-way resistance” also applies in this case.
+> [!info] The origins of O and U in one-way resistances
+> **Corollary.** For the one-way resistance table of a connected balanced graph,
+>
+> $$
+> r_U=0\quad\Longleftrightarrow\quad r_V=0
+> \quad\Longleftrightarrow\quad q_1=\cdots=q_n
+> \tag{12}
+> $$
+>
+> This is a special property of $r$, not a property of arbitrary KVPOU decompositions. It does not mean that balance eliminates V in every table. In particular, $\widetilde r$ is always balanced, while its V may be nonzero.
+>
+> For an undirected graph, $r_O=0$, but
+>
+> $$
+> r_{ij}=\frac{R_{ij}+q_j-q_i}{2}
+> $$
+>
+> Thus usually $r\ne R/2$. Equality holds exactly when $q_i$ is constant. The term “one-way resistance” also applies in this case.
 
 ## Comparing components and recovering data
 

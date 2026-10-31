@@ -93,17 +93,19 @@ $$
 \mathbf E_\lambda=\mathbf U_\lambda\mathbf U_\lambda^{\mathsf T}
 $$
 
-**Theorem.** The matrix $\mathbf E_\lambda$ is independent of the orthonormal basis chosen in $H_\lambda$ and is the orthogonal projector onto that space. For $\lambda,\mu\in\Sigma$,
+> [!info] Projectors recover the operator action
+> **Theorem.** The matrix $\mathbf E_\lambda$ is independent of the orthonormal basis chosen in $H_\lambda$ and is the orthogonal projector onto that space. For $\lambda,\mu\in\Sigma$,
+>
+> $$
+> \mathbf E_\lambda^{\mathsf T}=\mathbf E_\lambda,\qquad
+> \mathbf E_\lambda\mathbf E_\mu=\delta_{\lambda\mu}\mathbf E_\lambda,\qquad
+> \sum_{\lambda\in\Sigma}\mathbf E_\lambda=\mathbf J
+> $$
+>
+> Here $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$, and $\operatorname{tr}\mathbf E_\lambda=\operatorname{rank}\mathbf E_\lambda=m_\lambda$.
 
-$$
-\mathbf E_\lambda^{\mathsf T}=\mathbf E_\lambda,\qquad
-\mathbf E_\lambda\mathbf E_\mu=\delta_{\lambda\mu}\mathbf E_\lambda,\qquad
-\sum_{\lambda\in\Sigma}\mathbf E_\lambda=\mathbf J
-$$
-
-Here $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$, and $\operatorname{tr}\mathbf E_\lambda=\operatorname{rank}\mathbf E_\lambda=m_\lambda$.
-
-**Proof.** Another orthonormal basis has the form $\mathbf U_\lambda\mathbf O$, where $\mathbf O\mathbf O^{\mathsf T}=I$. Hence $(\mathbf U_\lambda\mathbf O)(\mathbf U_\lambda\mathbf O)^{\mathsf T}=\mathbf E_\lambda$. The product identities follow from $\mathbf U_\lambda^{\mathsf T}\mathbf U_\lambda=I$ and orthogonality of distinct eigenspaces. Their direct sum is $H$, so the projectors sum to $\mathbf J$. $\square$
+> [!note]- Proof
+> **Proof.** Another orthonormal basis has the form $\mathbf U_\lambda\mathbf O$, where $\mathbf O\mathbf O^{\mathsf T}=I$. Hence $(\mathbf U_\lambda\mathbf O)(\mathbf U_\lambda\mathbf O)^{\mathsf T}=\mathbf E_\lambda$. The product identities follow from $\mathbf U_\lambda^{\mathsf T}\mathbf U_\lambda=I$ and orthogonality of distinct eigenspaces. Their direct sum is $H$, so the projectors sum to $\mathbf J$. $\square$
 
 For $\mathbf z\in H$, put $\mathbf z_\lambda=\mathbf E_\lambda\mathbf z$. Then
 
@@ -145,19 +147,21 @@ The zero mode is preserved by both matrices; it does not become an infinite eige
 
 Projectors can be obtained from the operator itself without choosing individual eigenvectors. Put $\Sigma_0=\{0\}\cup\Sigma$; each distinct eigenvalue occurs once in this set, regardless of multiplicity.
 
-**Proposition.** For $\lambda\in\Sigma_0$,
+> [!info] Projectors as polynomials in the Laplacian
+> **Proposition.** For $\lambda\in\Sigma_0$,
+>
+> $$
+> \boxed{
+> \mathbf E_\lambda=
+> \prod_{\substack{\mu\in\Sigma_0\\\mu\ne\lambda}}
+> \frac{\mathbf L-\mu I}{\lambda-\mu}
+> }
+> $$
+>
+> Here $\mathbf E_0=\mathbf1\mathbf1^{\mathsf T}/n$, the product is a matrix product, and $I$ acts on all of $\mathbb R^n$.
 
-$$
-\boxed{
-\mathbf E_\lambda=
-\prod_{\substack{\mu\in\Sigma_0\\\mu\ne\lambda}}
-\frac{\mathbf L-\mu I}{\lambda-\mu}
-}
-$$
-
-Here $\mathbf E_0=\mathbf1\mathbf1^{\mathsf T}/n$, the product is a matrix product, and $I$ acts on all of $\mathbb R^n$.
-
-**Proof.** The interpolation polynomial on the right equals $1$ at $\lambda$ and $0$ at every other element of $\Sigma_0$. On each eigenspace it therefore acts as the corresponding projector. The spectral theorem decomposes the whole space into these eigenspaces. $\square$
+> [!note]- Proof
+> **Proof.** The interpolation polynomial on the right equals $1$ at $\lambda$ and $0$ at every other element of $\Sigma_0$. On each eigenspace it therefore acts as the corresponding projector. The spectral theorem decomposes the whole space into these eigenspaces. $\square$
 
 On $H$, only positive eigenvalues are needed if $\mathbf L$ is replaced by $\mathbf L|_H$ and $I$ by $I_H$. Applying this shortened formula to all of $\mathbb R^n$ may give the wrong action on the constant mode.
 
@@ -233,7 +237,8 @@ $$
 \boxed{M_g=\sum_{|\mathbf k|=g}\lambda^{\mathbf k}S_{\mathbf k}}
 $$
 
-**Proof.** In the product of exponentials $\exp(t\lambda S_\lambda)$, choose grade $k_\lambda$ from each factor. Its contribution is $t^{k_\lambda}\lambda^{k_\lambda}S_{\lambda,k_\lambda}$. Collecting the coefficient of $t^g$ gives the stated sum. $\square$
+> [!note]- Proof
+> **Proof.** In the product of exponentials $\exp(t\lambda S_\lambda)$, choose grade $k_\lambda$ from each factor. Its contribution is $t^{k_\lambda}\lambda^{k_\lambda}S_{\lambda,k_\lambda}$. Collecting the coefficient of $t^g$ gives the stated sum. $\square$
 
 The form $S_{\mathbf k}$ describes choosing $k_\lambda$ directions from each eigenspace. Its exterior basis arguments belong to mutually orthogonal subspaces of $\Lambda^gH$ for different tuples $\mathbf k$ of the same grade. Under the auxiliary identification, $S_{\mathbf k}$ is the projector onto the corresponding subspace, of dimension $\prod_\lambda\binom{m_\lambda}{k_\lambda}$.
 

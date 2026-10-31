@@ -40,11 +40,12 @@ The number $3$ does not depend on the names of the elements. It characterises th
 
 ### Numerical collections
 
-**Definition.** A finite numerical collection is an unordered collection of numbers in which repetitions are retained: a multiset. We use a bold letter for the collection and ordinary letters for its elements:
-
-$$
-\mathbf x=[x_1,\ldots,x_m]
-$$
+> [!info] Numerical collections
+> **Definition.** A finite numerical collection is an unordered collection of numbers in which repetitions are retained: a multiset. We use a bold letter for the collection and ordinary letters for its elements:
+>
+> $$
+> \mathbf x=[x_1,\ldots,x_m]
+> $$
 
 Indices identify individual occurrences of elements. The order of listing is not a property of the collection: $[3,3,2]=[2,3,3]$. Repetitions matter: $[3,3,2]$ and $[3,2]$ are different collections.
 
@@ -63,11 +64,13 @@ $$
 w(\mathbf x)=8
 $$
 
-**Definition.** A partition of a positive integer $w$ is a numerical collection of positive integers with weight $w$. For example, $[3,3,2]$ is a partition of $8$.
+> [!info] Numerical collections
+> **Definition.** A partition of a positive integer $w$ is a numerical collection of positive integers with weight $w$. For example, $[3,3,2]$ is a partition of $8$.
 
 ### Set partitions
 
-**Definition.** A partition of a finite set $\mathbf A$ is a collection of nonempty, pairwise disjoint subsets whose union is $\mathbf A$. These subsets are called **blocks**, or components of the partition. The blocks are unnumbered.
+> [!info] Set partitions
+> **Definition.** A partition of a finite set $\mathbf A$ is a collection of nonempty, pairwise disjoint subsets whose union is $\mathbf A$. These subsets are called **blocks**, or components of the partition. The blocks are unnumbered.
 
 Let $m$ be the number of components and $x_1,\ldots,x_m$ their sizes. The collection
 
@@ -123,13 +126,14 @@ In this notation for a type, the superscript denotes multiplicity, not numerical
 
 We first define the collection, then apply the required operation to it.
 
-**Definition.** The product of the elements of a finite numerical collection is denoted by an exclamation mark after the collection:
-
-$$
-\boxed{
-\mathbf x!=[x_1,\ldots,x_m]!=x_1\cdots x_m
-}
-$$
+> [!info] The product of a collection
+> **Definition.** The product of the elements of a finite numerical collection is denoted by an exclamation mark after the collection:
+>
+> $$
+> \boxed{
+> \mathbf x!=[x_1,\ldots,x_m]!=x_1\cdots x_m
+> }
+> $$
 
 In conventional notation, $\mathbf x!=\prod_{i=1}^m x_i$. For example,
 
@@ -224,29 +228,31 @@ There is no further division by $2!$. The blocks are still unordered, but their 
 
 Let $\mathbf x=[x_1,\ldots,x_m]$ be a numerical type, let $w=w(\mathbf x)$, and let $\boldsymbol\mu=[\mu_j]_{j\in J}$ be its collection of positive multiplicities. The indices $i$ range over all occurrences of parts; the indices $j$ range over their distinct values.
 
-**Theorem.** The combinatorial potential of the second kind is
+> [!info] From repeated counts to the general formula
+> **Theorem.** The combinatorial potential of the second kind is
+>
+> $$
+> \boxed{
+> s_2(\mathbf x)=\frac{w!}{[x_i!]!\,[\mu_j!]!}
+> }
+> $$
 
-$$
-\boxed{
-s_2(\mathbf x)=\frac{w!}{[x_i!]!\,[\mu_j!]!}
-}
-$$
-
-**Proof.** Fix one order of listing the sizes $x_1,\ldots,x_m$. Arrange the $w$ distinguishable elements in a row, then cut the row into consecutive block positions of these sizes. There are $w!$ rows.
-
-First forget the order of elements within each position. A block of size $x_i$ has $x_i!$ internal arrangements with the same members. Independent rearrangements in all blocks give the product $[x_i!]!$.
-
-After division, we obtain
-
-$$
-P(\mathbf x)=\frac{w!}{[x_i!]!}
-$$
-
-This is the **multinomial coefficient**: the number of ways to distribute elements among distinguishable positions with prescribed sizes. For sizes $[2,2]$, placing $ab$ first and $cd$ second still differs from the reverse placement.
-
-Now forget the position numbers. The blocks of size $j$ can be assigned to the $\mu_j$ positions of that size in $\mu_j!$ ways. These permutations are independent for different sizes, giving $[\mu_j!]!$ repetitions in total.
-
-Blocks of different sizes introduce no additional factor: the size of each position was already fixed. Thus each unordered partition was counted $[x_i!]!\,[\mu_j!]!$ times. Dividing $w!$ by this number proves the formula. $\square$
+> [!note]- Proof
+> **Proof.** Fix one order of listing the sizes $x_1,\ldots,x_m$. Arrange the $w$ distinguishable elements in a row, then cut the row into consecutive block positions of these sizes. There are $w!$ rows.
+>
+> First forget the order of elements within each position. A block of size $x_i$ has $x_i!$ internal arrangements with the same members. Independent rearrangements in all blocks give the product $[x_i!]!$.
+>
+> After division, we obtain
+>
+> $$
+> P(\mathbf x)=\frac{w!}{[x_i!]!}
+> $$
+>
+> This is the **multinomial coefficient**: the number of ways to distribute elements among distinguishable positions with prescribed sizes. For sizes $[2,2]$, placing $ab$ first and $cd$ second still differs from the reverse placement.
+>
+> Now forget the position numbers. The blocks of size $j$ can be assigned to the $\mu_j$ positions of that size in $\mu_j!$ ways. These permutations are independent for different sizes, giving $[\mu_j!]!$ repetitions in total.
+>
+> Blocks of different sizes introduce no additional factor: the size of each position was already fixed. Thus each unordered partition was counted $[x_i!]!\,[\mu_j!]!$ times. Dividing $w!$ by this number proves the formula. $\square$
 
 The denominator separates two sources of repetition: permutations of **elements within blocks** and permutations of **blocks of equal size**. This is why the product of multiplicity factorials appears instead of a common factor $m!$.
 
@@ -344,7 +350,8 @@ A four-element set has five numerical partition types. Their potentials have alr
 
 Every set partition has exactly one type. To count all partitions with a prescribed number of components, we therefore add the potentials of the corresponding types.
 
-**Definition.** The number of partitions of a $w$-element set into $m$ nonempty blocks is the **Stirling number of the second kind**, denoted by $S(w,m)$ [1].
+> [!info] From type potentials to Stirling and Bell numbers
+> **Definition.** The number of partitions of a $w$-element set into $m$ nonempty blocks is the **Stirling number of the second kind**, denoted by $S(w,m)$ [1].
 
 First specify the set of types: let $\mathcal T_{w,m}$ contain all partitions of the integer $w$ into $m$ positive parts. Then
 
@@ -364,7 +371,8 @@ $$
 S(4,1)=1,\qquad S(4,2)=7,\qquad S(4,3)=6,\qquad S(4,4)=1
 $$
 
-**Definition.** The total number of partitions of a $w$-element set is the **Bell number**, denoted by $B_w$ [2].
+> [!info] From type potentials to Stirling and Bell numbers
+> **Definition.** The total number of partitions of a $w$-element set is the **Bell number**, denoted by $B_w$ [2].
 
 If $\mathcal T_w$ is the set of all numerical partitions of weight $w$, then
 

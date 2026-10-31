@@ -146,20 +146,22 @@ $$
 
 This rewrites known metric formulas to isolate the role of $R_V$. That component determines w, while the Laplacian L specifies how the corresponding displacement is measured.
 
-**Corollary.** For a connected undirected graph,
+> [!info] Radius: overall level and center displacement
+> **Corollary.** For a connected undirected graph,
+>
+> $$
+> \boxed{
+> \rho\ge\rho_0,
+> \qquad
+> \rho=\rho_0
+> \ \Longleftrightarrow\ R_V=0
+> \ \Longleftrightarrow\ p=h
+> }
+> \tag{3}
+> $$
 
-$$
-\boxed{
-\rho\ge\rho_0,
-\qquad
-\rho=\rho_0
-\ \Longleftrightarrow\ R_V=0
-\ \Longleftrightarrow\ p=h
-}
-\tag{3}
-$$
-
-**Proof.** L is positive definite on H. Hence $\mathbf w^{\mathsf T}L\mathbf w=0$ is equivalent to $\mathbf w=0$. This is equivalent to $R_V=0$, and the first formula in (2) then gives $\boldsymbol\alpha=\mathbf1/n$. $\square$
+> [!note]- Proof
+> **Proof.** L is positive definite on H. Hence $\mathbf w^{\mathsf T}L\mathbf w=0$ is equivalent to $\mathbf w=0$. This is equivalent to $R_V=0$, and the first formula in (2) then gives $\boldsymbol\alpha=\mathbf1/n$. $\square$
 
 The P-component of R does not appear explicitly in (2), but it contributes to recovering L. Thus when $R_V$ is nonzero, the same vertex vector w can correspond to different center displacements and radii.
 
@@ -240,12 +242,13 @@ Thus the K- and V-components of resistance do not determine the radius or sphere
 
 Set $L_X=\mathscr L(C_X)$, where $X\in\{K,V,P\}$. Using $L=L_K+L_V+L_P$, decompose the second term of (2).
 
-**Definition.** With w computed for the full original graph, define
-
-$$
-\rho_X=\frac1{4n^2}\mathbf w^{\mathsf T}L_X\mathbf w
-=\frac1{4n^2}\sum_{i<j}(C_X)_{ij}(w_i-w_j)^2
-$$
+> [!info] Decomposing the radius at a fixed graph metric
+> **Definition.** With w computed for the full original graph, define
+>
+> $$
+> \rho_X=\frac1{4n^2}\mathbf w^{\mathsf T}L_X\mathbf w
+> =\frac1{4n^2}\sum_{i<j}(C_X)_{ij}(w_i-w_j)^2
+> $$
 
 Then
 
@@ -267,14 +270,15 @@ $$
 \tag{5}
 $$
 
-**Derivation.** On H, the matrix $L_K$ equals $n\mu I_H$. For $\sum_iw_i=0$, direct summation gives
-
-$$
-\mathbf w^{\mathsf T}L_V\mathbf w
-=\frac{n}{n-2}\sum_i v_iw_i^2
-$$
-
-Finally, $L_P=-C_P$ because $C_P$ has zero row sums. Substituting into the definition of $\rho_X$ gives (5). $\square$
+> [!note]- Derivation
+> **Derivation.** On H, the matrix $L_K$ equals $n\mu I_H$. For $\sum_iw_i=0$, direct summation gives
+>
+> $$
+> \mathbf w^{\mathsf T}L_V\mathbf w
+> =\frac{n}{n-2}\sum_i v_iw_i^2
+> $$
+>
+> Finally, $L_P=-C_P$ because $C_P$ has zero row sums. Substituting into the definition of $\rho_X$ gives (5). $\square$
 
 The K-contribution is nonnegative. The V- and P-contributions may have either sign; their total together with the K-contribution is nonnegative. For unit-weight graphs on five vertices:
 
@@ -355,36 +359,39 @@ $$
 
 The determinant is taken in an orthonormal basis of H. The full polynomial and its mixed coefficients belong to the study of exponentials and toponomes. Here we consider derivatives at the original point.
 
-**Definition.** Set
+> [!info] The spanning-tree coefficient and matching Foster contributions
+> **Definition.** Set
+>
+> $$
+> F_X=\left.\frac{\partial\log\Theta}{\partial x_X}\right|_{(1,1,1)},
+> \qquad (x_K,x_V,x_P)=(\kappa,\nu,\pi)
+> $$
 
-$$
-F_X=\left.\frac{\partial\log\Theta}{\partial x_X}\right|_{(1,1,1)},
-\qquad (x_K,x_V,x_P)=(\kappa,\nu,\pi)
-$$
+> [!info] The spanning-tree coefficient and matching Foster contributions
+> **Theorem.** These sensitivities admit a representation pairing matching components:
+>
+> $$
+> \boxed{
+> F_X=\operatorname{tr}(\mathrm{Gr}L_X)
+> =\langle C_X,R\rangle_0
+> =\langle C_X,R_X\rangle_0,
+> \qquad
+> F_K+F_V+F_P=n-1
+> }
+> \tag{8}
+> $$
+>
+> Here $\langle A,B\rangle_0=\sum_{i<j}A_{ij}B_{ij}$.
 
-**Theorem.** These sensitivities admit a representation pairing matching components:
-
-$$
-\boxed{
-F_X=\operatorname{tr}(\mathrm{Gr}L_X)
-=\langle C_X,R\rangle_0
-=\langle C_X,R_X\rangle_0,
-\qquad
-F_K+F_V+F_P=n-1
-}
-\tag{8}
-$$
-
-Here $\langle A,B\rangle_0=\sum_{i<j}A_{ij}B_{ij}$.
-
-**Proof.** The derivative of the log determinant on H is $\operatorname{tr}(\mathrm{Gr}L_X)$. Since
-
-$$
-L_X=\sum_{i<j}(C_X)_{ij}
-(\mathbf e_i-\mathbf e_j)(\mathbf e_i-\mathbf e_j)^{\mathsf T}
-$$
-
-the trace equals $\sum_{i<j}(C_X)_{ij}R_{ij}$. Orthogonality of the pair sectors retains only $R_X$. The traces sum to $\operatorname{tr}(\mathrm{Gr}L)=\operatorname{tr}J=n-1$. $\square$
+> [!note]- Proof
+> **Proof.** The derivative of the log determinant on H is $\operatorname{tr}(\mathrm{Gr}L_X)$. Since
+>
+> $$
+> L_X=\sum_{i<j}(C_X)_{ij}
+> (\mathbf e_i-\mathbf e_j)(\mathbf e_i-\mathbf e_j)^{\mathsf T}
+> $$
+>
+> the trace equals $\sum_{i<j}(C_X)_{ij}R_{ij}$. Orthogonality of the pair sectors retains only $R_X$. The traces sum to $\operatorname{tr}(\mathrm{Gr}L)=\operatorname{tr}J=n-1$. $\square$
 
 Consequently,
 
@@ -429,16 +436,18 @@ $$
 \tag{10}
 $$
 
-**Corollary.** In the symmetric model, $F_K\ge n-1$ and $F_V+F_P\le0$. Equality holds exactly for the complete graph with equal conductances.
+> [!info] Consequences for compactness
+> **Corollary.** In the symmetric model, $F_K\ge n-1$ and $F_V+F_P\le0$. Equality holds exactly for the complete graph with equal conductances.
 
-**Proof.** For the positive Laplacian eigenvalues $\lambda_2,\ldots,\lambda_n$, Cauchy's inequality gives
-
-$$
-\left(\sum_{k=2}^n\lambda_k\right)
-\left(\sum_{k=2}^n\lambda_k^{-1}\right)\ge(n-1)^2
-$$
-
-The left side is $(n-1)\mu\operatorname{Kf}=(n-1)F_K$. Equality requires all nonzero eigenvalues to be equal, that is, $L=\lambda J$. This is the Laplacian of a complete graph with constant conductance $\lambda/n$. $\square$
+> [!note]- Proof
+> **Proof.** For the positive Laplacian eigenvalues $\lambda_2,\ldots,\lambda_n$, Cauchy's inequality gives
+>
+> $$
+> \left(\sum_{k=2}^n\lambda_k\right)
+> \left(\sum_{k=2}^n\lambda_k^{-1}\right)\ge(n-1)^2
+> $$
+>
+> The left side is $(n-1)\mu\operatorname{Kf}=(n-1)F_K$. Equality requires all nonzero eigenvalues to be equal, that is, $L=\lambda J$. This is the Laplacian of a complete graph with constant conductance $\lambda/n$. $\square$
 
 Thus the total compactness deficit relative to the reference can be expressed through matching V- and P-contractions. These are not two nonnegative shares: it is the combined quantity $-(F_V+F_P)$ that is nonnegative.
 

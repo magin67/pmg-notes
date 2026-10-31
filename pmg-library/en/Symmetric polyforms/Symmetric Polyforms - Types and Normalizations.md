@@ -73,11 +73,12 @@ $$
 
 Products of boundaries are exterior products by default. The order of vertices within the blocks and the order of the blocks themselves may change the sign of $X_\pi$, but not the form $q_\pi$. A singleton block contributes the boundary $(a_i)=1$ and the factor $e=[1,1]$ in the product of forms.
 
-**Definition.** The full type of a partition form in the given representation is the list of grades of its block boundaries:
-
-$$
-\lambda(\pi)=[\#B_1-1,\ldots,\#B_m-1]
-$$
+> [!info] Partitions and types
+> **Definition.** The full type of a partition form in the given representation is the list of grades of its block boundaries:
+>
+> $$
+> \lambda(\pi)=[\#B_1-1,\ldots,\#B_m-1]
+> $$
 
 The parts are arranged in nonincreasing order. The size of a block is its number of vertices, and the corresponding part of the type is one less than that size.
 
@@ -126,9 +127,11 @@ For example, $E_4[2]=E_4[2,0]$ and $E_6[2,1]=E_6[2,1,0]$. We will display the ze
 
 If zeros are omitted from $\lambda$, they are restored using $n$ before applying (1). The subscript $n$ specifies the cardinality of the chosen set; when several vertex sets are compared, the sets themselves must also be specified.
 
-**Proposition.** The polyform $E_n[\lambda]$ is symmetric.
+> [!info] The symmetric sum of a given type
+> **Proposition.** The polyform $E_n[\lambda]$ is symmetric.
 
-**Proof.** For every permutation $\sigma$, one has $\sigma q_\pi=q_{\sigma\pi}$, where $\sigma\pi$ is obtained by relabeling the vertices in each block. The permutation preserves block sizes and bijectively permutes all partitions of the given type. Hence the sum (1) is unchanged. $\square$
+> [!note]- Proof
+> **Proof.** For every permutation $\sigma$, one has $\sigma q_\pi=q_{\sigma\pi}$, where $\sigma\pi$ is obtained by relabeling the vertices in each block. The permutation preserves block sizes and bijectively permutes all partitions of the given type. Hence the sum (1) is unchanged. $\square$
 
 On four vertices $a,b,c,d$, we obtain
 
@@ -154,7 +157,8 @@ $$
 
 The multiplicity collection is $\boldsymbol\mu=[\mu_j]_{j\in J}$. We use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]: $[u_i]!$ is the product of its elements, and $[u_i!]!$ the product of their factorials. Below, $i$ ranges over $1,\ldots,r$ and $j$ over $J$.
 
-**Definition.** The **size of a polyform representation** is the number of terms in the chosen expression as a sum of forms with coefficients. When the representation is specified, we will simply say **size**. It depends on the expression: equal polyforms may have representations of different sizes.
+> [!info] Representation size and factorial factors
+> **Definition.** The **size of a polyform representation** is the number of terms in the chosen expression as a sum of forms with coefficients. When the representation is specified, we will simply say **size**. It depends on the expression: equal polyforms may have representations of different sizes.
 
 In the basic normalization, $\#E_n[\lambda,0^\ell]$ denotes the size of representation (1), namely the number of partitions of the given type. Each partition occurs once, with coefficient $1$.
 
@@ -210,7 +214,8 @@ $$
 [\mu_j!]!E_n[\lambda,0^\ell]
 $$
 
-**Proof.** Every partition in the orbit is obtained by the same number of permutations. To find this number, it suffices to consider permutations preserving the original partition: one can permute vertices within blocks, blocks of equal size, and singleton blocks. The number of these permutations is the factor multiplying $E_n$ in the formula. $\square$
+> [!note]- Proof
+> **Proof.** Every partition in the orbit is obtained by the same number of permutations. To find this number, it suffices to consider permutations preserving the original partition: one can permute vertices within blocks, blocks of equal size, and singleton blocks. The number of these permutations is the factor multiplying $E_n$ in the formula. $\square$
 
 Dividing by $n!$ and using (2) yields the average over permutations:
 
@@ -224,7 +229,8 @@ $$
 
 Thus $E_n[\lambda]$ is the sum over the partitions in an orbit, with unit coefficients. Averaging a single form over permutations gives the sum over partitions of its type divided by the size of that sum.
 
-**Corollary.** Every symmetric polyform in the linear span of partition forms on $A$ can be expressed as a linear combination of the sums $E_n[\lambda]$.
+> [!info] Symmetrization: sum and average
+> **Corollary.** Every symmetric polyform in the linear span of partition forms on $A$ can be expressed as a linear combination of the sums $E_n[\lambda]$.
 
 > [!note]- Proof
 > **Proof.** Choose any representation $P=\sum_\pi c_\pi q_\pi$. By symmetry,

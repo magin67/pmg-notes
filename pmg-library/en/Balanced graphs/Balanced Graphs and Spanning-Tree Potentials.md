@@ -157,11 +157,12 @@ Delete row and column $r$ from $\mathbf L$, denoting the resulting matrix by $\m
 
 This definition applies to a directed graph before balance is assumed. The term denotes this particular minor. It is neither an electrical potential nor a replacement for the polyform potential $u_M(f)$ in [[Laplacian Exponential#The potential of a form|the Laplacian exponential note]].
 
-**Definition.** A directed spanning tree **toward root $r$** includes every vertex and has a unique directed path from each vertex to $r$. Each nonroot vertex has one outgoing tree arc, and the root has none. Its weight is
-
-$$
-\operatorname{wt}(T)=\prod_{(i\to j)\in T}f_{ij}
-$$
+> [!info] The spanning-tree potential of a vertex
+> **Definition.** A directed spanning tree **toward root $r$** includes every vertex and has a unique directed path from each vertex to $r$. Each nonroot vertex has one outgoing tree arc, and the root has none. Its weight is
+>
+> $$
+> \operatorname{wt}(T)=\prod_{(i\to j)\in T}f_{ij}
+> $$
 
 > [!info] Directed matrix-tree theorem
 > **Theorem.** With the chosen Laplacian convention, the spanning-tree potential is the sum of weights of directed spanning trees toward the specified root:
@@ -226,7 +227,8 @@ The proof uses the adjugate $\operatorname{adj}\mathbf L$, the transpose of the 
 >
 > Dividing by $\tau\ne0$ gives zero column sums, hence balance. $\square$
 
-**Definition.** The common value $\tau$ is the **spanning-tree coefficient of a connected balanced graph**. With unit weights, it counts directed spanning trees toward any fixed root. Counting trees with every possible root instead gives $n\tau$.
+> [!info] A balance criterion using spanning-tree potentials
+> **Definition.** The common value $\tau$ is the **spanning-tree coefficient of a connected balanced graph**. With unit weights, it counts directed spanning trees toward any fixed root. Counting trees with every possible root instead gives $n\tau$.
 
 In a symmetric graph, each undirected spanning tree has exactly one orientation toward a chosen root, with the same product of weights. The coefficient therefore agrees with the undirected spanning-tree coefficient already used in PMG.
 

@@ -54,7 +54,7 @@ Connectivity is essential. For a disconnected graph, $p_{n-1}=0$, and vertices i
 
 For unit conductances, the numerator counts separating 2-forests and the denominator counts spanning trees. For arbitrary conductances, their weights are summed. The formula does not require an edge between $i$ and $j$.
 
-> [!proof]- Proof by grounding and a principal minor
+> [!note]- Proof by grounding and a principal minor
 > **Proof.** Inject unit current at $i$, extract it at $j$, and set the potential of $j$ to zero. For $S=V\setminus\{j\}$, the remaining potentials satisfy
 >
 > $$
@@ -75,11 +75,12 @@ A principal minor thus acquires a metric meaning: after division by the spanning
 
 ## The Kirchhoff index from the two highest coefficients
 
-**Definition.** The Kirchhoff index is the sum of resistances over unordered pairs of distinct vertices:
-
-$$
-Kf(G)=\sum_{i<j}R_{ij}
-$$
+> [!info] The Kirchhoff index from the two highest coefficients
+> **Definition.** The Kirchhoff index is the sum of resistances over unordered pairs of distinct vertices:
+>
+> $$
+> Kf(G)=\sum_{i<j}R_{ij}
+> $$
 
 For a fixed vertex count, a smaller index means a smaller average pairwise resistance. The average itself is $2Kf(G)/(n(n-1))$.
 
@@ -94,7 +95,7 @@ For a fixed vertex count, a smaller index means a smaller average pairwise resis
 > \tag{2}
 > $$
 
-> [!proof]- Why the product of component sizes appears
+> [!note]- Why the product of component sizes appears
 > **Proof.** Let a spanning 2-forest $F$ have component vertex sets $A_F,B_F$ and weight $w(F)$. It separates exactly $|A_F|\,|B_F|$ unordered vertex pairs. Hence
 >
 > $$
@@ -155,7 +156,8 @@ Let $t_1,\ldots,t_{n-1}$ be the roots of $P_G(t)$, counted with multiplicity. By
 > }
 > $$
 
-**Proof.** The first identity follows from $\sum_j\lambda_j=\operatorname{tr}\mathbf L$. The second follows from (3), or from Vieta's formula for the root sum together with (2). $\square$
+> [!note]- Proof
+> **Proof.** The first identity follows from $\sum_j\lambda_j=\operatorname{tr}\mathbf L$. The second follows from (3), or from Vieta's formula for the root sum together with (2). $\square$
 
 Thus the low-order coefficient $p_1$ describes total conductance, while the ratio of the two highest coefficients describes total resistance. For example, $P_{K_3}(t)=(1+3t)^2$ has two roots equal to $-1/3$: the negative sum of reciprocal roots is $6$, and the negative root sum is $2/3=Kf(K_3)/3$. Meanwhile, the roots of the characteristic polynomial sum to $6$; these are different polynomial conventions.
 
@@ -257,7 +259,7 @@ Here $r$ records the decrease in grade from the highest one. This divides the al
 
 Here $e_r$ is the elementary symmetric function: the sum of products over all $r$-element sets of distinct arguments; $e_0=1$.
 
-> [!proof]- Proof by complementary subsets
+> [!note]- Proof by complementary subsets
 > **Proof.** The coefficient $p_{n-1-r}$ is the sum of products over all $(n-1-r)$-element sets of eigenvalues. Dividing by $p_{n-1}=\prod_j\lambda_j$ replaces each product by the product of reciprocal values in the complementary $r$-element set. Each such set occurs exactly once. This proves (4), including $r=0$ and $r=n-1$. $\square$
 
 The forest interpretation is retained as well. Let $\mathcal F_{r+1}^{\mathrm{comp}}(G)$ contain spanning forests with $r+1$ components, let $w(F)$ be the product of edge conductances, and let $h(F)$ be the product of component sizes. Then
@@ -271,14 +273,15 @@ The same quantities thus describe rooted forests with a prescribed component cou
 
 ### Reciprocal spectral sums and higher indices
 
-**Definition.** For an integer $m\geqslant1$, set
-
-$$
-S_m=\sum_{j=1}^{n-1}\lambda_j^{-m}
-=\operatorname{tr}(\mathbf{Gr}^{\,m}),
-\qquad
-Kf_m=nS_m
-$$
+> [!info] Reciprocal spectral sums and higher indices
+> **Definition.** For an integer $m\geqslant1$, set
+>
+> $$
+> S_m=\sum_{j=1}^{n-1}\lambda_j^{-m}
+> =\operatorname{tr}(\mathbf{Gr}^{\,m}),
+> \qquad
+> Kf_m=nS_m
+> $$
 
 In this note, call $Kf_m$ the spectral Kirchhoff index of order $m$. The name and the factor $n$ specify the extension used here: $Kf_1=Kf$. When comparing other definitions of higher indices, their normalization must be checked. The power $\mathbf{Gr}^{\,m}$ uses matrix multiplication.
 
@@ -311,7 +314,7 @@ $$
 
 Here $\sigma_r=0$ for $r>n-1$; for $m=1$, the sum is empty. In particular, for $n=2$, $S_2=\sigma_1^2$, with no reference to a coefficient having a negative index.
 
-> [!proof]- Derivation of the recurrence
+> [!note]- Derivation of the recurrence
 > **Proof.** Set $\mu_j=\lambda_j^{-1}$ and introduce the auxiliary polynomial $E(z)=\prod_j(1+z\mu_j)=\sum_r\sigma_rz^r$. Its logarithmic derivative, as a formal power series, is
 >
 > $$

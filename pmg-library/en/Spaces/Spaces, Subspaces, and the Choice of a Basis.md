@@ -165,8 +165,8 @@ The symbol $\wedge$ denotes the exterior product. Independence of the factors me
 > \tag{2}
 > $$
 
-> [!proof]- Proof
-> If $w$ is a linear combination of $u_1,\ldots,u_k$, expanding the product gives terms with repeated factors, so every term vanishes. If $w$ does not belong to $U$, the elements $w,u_1,\ldots,u_k$ are independent, and their exterior product is nonzero. $\square$
+> [!note]- Proof
+> **Proof.** If $w$ is a linear combination of $u_1,\ldots,u_k$, expanding the product gives terms with repeated factors, so every term vanishes. If $w$ does not belong to $U$, the elements $w,u_1,\ldots,u_k$ are independent, and their exterior product is nonzero. $\square$
 
 > [!example] A line and a plane
 > For the direction of the line through $a,c$, set $\Omega=u+v$. An arbitrary vector $w=\alpha u+\beta v$ satisfies
@@ -229,10 +229,11 @@ The word “on” specifies the space from which the arguments are taken. The fo
 
 For a form with identical arguments, we use the abbreviation $[X]^2=[X,X]$. This denotes a quadratic form, not the square of an exterior element.
 
-**Proposition.** Polyforms on $U$ form a subalgebra of polyforms on $W$: addition, scalar multiplication, and multiplication of polyforms preserve this class. Its unit is $e=[1,1]$.
+> [!info] Forms and polyforms on a subspace
+> **Proposition.** Polyforms on $U$ form a subalgebra of polyforms on $W$: addition, scalar multiplication, and multiplication of polyforms preserve this class. Its unit is $e=[1,1]$.
 
-> [!proof]- Proof
-> Multiplication of forms is defined by
+> [!note]- Proof
+> **Proof.** Multiplication of forms is defined by
 >
 > $$
 > [X,Y][A,B]=[X\wedge A,Y\wedge B]
@@ -319,8 +320,8 @@ Here $c_{ij}$ is the coupling coefficient. The exponential uses the PMG product 
 >
 > In particular, the evaluation of $[X]^2$ is $X^2$. We use the original metric polyform of the entire graph.
 
-> [!proof]- Proof
-> Since $U\subseteq W$, we have $\Lambda^jU\subseteq\Lambda^jW$. The metric identity proved in [[Laplacian Exponential]] therefore applies to these arguments. $\square$
+> [!note]- Proof
+> **Proof.** Since $U\subseteq W$, we have $\Lambda^jU\subseteq\Lambda^jW$. The metric identity proved in [[Laplacian Exponential]] therefore applies to these arguments. $\square$
 
 ### A direct calculation on the path
 

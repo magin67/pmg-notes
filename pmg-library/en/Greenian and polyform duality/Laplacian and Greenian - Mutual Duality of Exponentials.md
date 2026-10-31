@@ -218,12 +218,13 @@ This product is commutative: interchanging the forms cancels the signs in the tw
 
 ## Definition of polyform duality
 
-**Definition.** The dual grade polyform $Q_k$ of a metric polyform $M$, relative to its nonzero top component $M_d$, is the form on $\Lambda^kW^*$ such that
-
-$$
-\boxed{M_d/Q_k=M_{d-k}},\qquad 0\le k\le d
-\tag{7}
-$$
+> [!info] Definition of polyform duality
+> **Definition.** The dual grade polyform $Q_k$ of a metric polyform $M$, relative to its nonzero top component $M_d$, is the form on $\Lambda^kW^*$ such that
+>
+> $$
+> \boxed{M_d/Q_k=M_{d-k}},\qquad 0\le k\le d
+> \tag{7}
+> $$
 
 The polyform dual to $M$ in the chosen normalization is defined by the sum
 
@@ -242,31 +243,35 @@ In (7), a “form on $\Lambda^kW^*$” means an element of $\Lambda^kW^*\otimes\
 
 ### Existence and uniqueness
 
-**Lemma (complementary exterior powers).** For nonzero $\Omega\in\Lambda^dW$, the map
+> [!info] Existence and uniqueness
+> **Lemma (complementary exterior powers).** For nonzero $\Omega\in\Lambda^dW$, the map
+>
+> $$
+> C_\Omega:\Lambda^kW^*\longrightarrow\Lambda^{d-k}W,\qquad
+> A\longmapsto\Omega/A
+> $$
+>
+> is a linear isomorphism.
 
-$$
-C_\Omega:\Lambda^kW^*\longrightarrow\Lambda^{d-k}W,\qquad
-A\longmapsto\Omega/A
-$$
+> [!note]- Proof
+> **Proof.** Choose a basis $u_1,\ldots,u_d$ of $W$ and the dual basis $u^1,\ldots,u^d$. Then $\Omega=\lambda u_1\cdots u_d$, with $\lambda\ne0$.
+>
+> Deleting the basis product $u^{i_1}\cdots u^{i_k}$ leaves the product of those $u_j$ whose indices were not deleted, with coefficient $\lambda$ and the appropriate sign. Different sets of $k$ indices correspond to different complementary sets of $d-k$ indices. Thus a basis maps to a basis with nonzero coefficients. $\square$
 
-is a linear isomorphism.
+> [!info] Existence and uniqueness
+> **Theorem.** All forms $Q_k$ in (7) exist and are unique in the dual space subject to relation (4).
 
-**Proof.** Choose a basis $u_1,\ldots,u_d$ of $W$ and the dual basis $u^1,\ldots,u^d$. Then $\Omega=\lambda u_1\cdots u_d$, with $\lambda\ne0$.
-
-Deleting the basis product $u^{i_1}\cdots u^{i_k}$ leaves the product of those $u_j$ whose indices were not deleted, with coefficient $\lambda$ and the appropriate sign. Different sets of $k$ indices correspond to different complementary sets of $d-k$ indices. Thus a basis maps to a basis with nonzero coefficients. $\square$
-
-**Theorem.** All forms $Q_k$ in (7) exist and are unique in the dual space subject to relation (4).
-
-**Proof.** Applying $C_\Omega$ in both arguments and multiplying by the coefficient of $T$ in $M_d$ gives an isomorphism
-
-$$
-C_{M_d}:\Lambda^kW^*\otimes\Lambda^kW^*
-\longrightarrow
-\Lambda^{d-k}W\otimes\Lambda^{d-k}W,\qquad
-F\longmapsto M_d/F
-$$
-
-Since $M_d$ is a nonzero scalar multiple of $T$, this map differs from the action of $T$ only by a nonzero factor. Hence every $M_{d-k}$ has a unique preimage. The map preserves symmetry under interchange of the arguments, so the preimage of a symmetric form is also symmetric. $\square$
+> [!note]- Proof
+> **Proof.** Applying $C_\Omega$ in both arguments and multiplying by the coefficient of $T$ in $M_d$ gives an isomorphism
+>
+> $$
+> C_{M_d}:\Lambda^kW^*\otimes\Lambda^kW^*
+> \longrightarrow
+> \Lambda^{d-k}W\otimes\Lambda^{d-k}W,\qquad
+> F\longmapsto M_d/F
+> $$
+>
+> Since $M_d$ is a nonzero scalar multiple of $T$, this map differs from the action of $T$ only by a nonzero factor. Hence every $M_{d-k}$ has a unique preimage. The map preserves symmetry under interchange of the arguments, so the preimage of a symmetric form is also symmetric. $\square$
 
 The dual form itself is unique, but its expression as a sum of terms need not be. For example, different vertex sums may represent the same class under relation (4).
 
@@ -312,9 +317,11 @@ $$
 
 Thus the top coefficients of the direct and dual exponentials are reciprocals. The coefficient $1/\tau$ refers to the fixed vertex form $T^\vee$.
 
-**Corollary.** The Greenian exponential in its dual representation $D$ retains all information about $M$, including the conductance scale.
+> [!info] Normalization and grade zero
+> **Corollary.** The Greenian exponential in its dual representation $D$ retains all information about $M$, including the conductance scale.
 
-**Proof.** The coefficient of $T^\vee$ in $Q_d$ determines $1/\tau$. Once $\tau$ is recovered, formula (11) recovers all direct grades. $\square$
+> [!note]- Proof
+> **Proof.** The coefficient of $T^\vee$ in $Q_d$ determines $1/\tau$. Once $\tau$ is recovered, formula (11) recovers all direct grades. $\square$
 
 ### The Greenian exponential in its dual representation
 

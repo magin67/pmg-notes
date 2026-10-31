@@ -58,16 +58,17 @@ The condition $r\leqslant n-k$ means that enough vertices are available for the 
 
 From here on, the original vertex count $n$ is not fixed. The index $m$ in $\operatorname{St}(k,m)$ is the number of blocks in an auxiliary partition of $k$ labels. When compared with an SPF type, it equals $r$ in the preceding section; it does not count all forest components on the original $n$ vertices.
 
-**Definition.** For $1\leqslant m\leqslant k$, set
-
-$$
-\boxed{
-\operatorname{St}(k,m)=
-\sum_{\substack{\lambda\vdash k\\\lambda\text{ has }m\text{ parts}}}
-s_2(\lambda)t(\lambda)
-}
-\tag{1}
-$$
+> [!info] Forest coefficients
+> **Definition.** For $1\leqslant m\leqslant k$, set
+>
+> $$
+> \boxed{
+> \operatorname{St}(k,m)=
+> \sum_{\substack{\lambda\vdash k\\\lambda\text{ has }m\text{ parts}}}
+> s_2(\lambda)t(\lambda)
+> }
+> \tag{1}
+> $$
 
 We call these numbers **forest coefficients**. This name is used in this note for the coefficients (1). They differ from the spanning-tree coefficient of a graph, $\tau(G)$, and from the Stirling numbers $S(k,m)$.
 
@@ -110,13 +111,14 @@ $$
 
 ## The expansion of Abel polynomials
 
-**Definition.** The falling factorial is defined as the polynomial
-
-$$
-x_{\underline m}=[x,x-1,\ldots,x-m+1]!,\qquad m\geqslant1,
-\qquad
-x_{\underline0}=1
-$$
+> [!info] The expansion of Abel polynomials
+> **Definition.** The falling factorial is defined as the polynomial
+>
+> $$
+> x_{\underline m}=[x,x-1,\ldots,x-m+1]!,\qquad m\geqslant1,
+> \qquad
+> x_{\underline0}=1
+> $$
 
 For an integer $x\geqslant m$, it equals $x!/(x-m)!$. The product definition also applies to other values of $x$; in particular, $x_{\underline m}=0$ for an integer $0\leqslant x<m$.
 
@@ -182,15 +184,18 @@ Consider a set $U$ of $k$ labelled vertices. Partition it into $m$ nonempty unor
 
 The vertex $\rho_i$ is distinguished in advance as the root. It is attached to its block; neither roots nor blocks have an independent ordering. If $\#B_i=k_i$, the number of trees is $(k_i+1)^{k_i-1}$ by [[Symmetric Polyforms of the Complete Graph#The top grade and Cayley's formula|Cayley's formula]]. No additional factor for choosing a root occurs.
 
-**Proposition.** The number of such collections of blocks with trees is $\operatorname{St}(k,m)$.
+> [!info] What forest coefficients count
+> **Proposition.** The number of such collections of blocks with trees is $\operatorname{St}(k,m)$.
 
-**Proof.** For a fixed list of sizes $\lambda$, there are $s_2(\lambda)$ partitions of $U$ and $t(\lambda)$ independent choices of trees. Summing over all $\lambda$ with $m$ parts gives (1). $\square$
+> [!note]- Proof
+> **Proof.** For a fixed list of sizes $\lambda$, there are $s_2(\lambda)$ partitions of $U$ and $t(\lambda)$ independent choices of trees. Summing over all $\lambda$ with $m$ parts gives (1). $\square$
 
 Although the sizes of the augmented trees agree with the sizes of the nontrivial components in the SPF type, this is a separate model on $k$ labelled vertices and $m$ added roots. It does not count all forests of the original $K_n$.
 
 ### Deleting the added roots
 
-**Definition.** A rooted forest is a forest with one distinguished vertex, called the root, in each component. A singleton component also has a root.
+> [!info] Deleting the added roots
+> **Definition.** A rooted forest is a forest with one distinguished vertex, called the root, in each component. A singleton component also has a root.
 
 > [!info] A forest with grouped components
 > **Theorem.** The number $\operatorname{St}(k,m)$ counts pairs consisting of:
@@ -263,15 +268,17 @@ In the second line, a forest with two components has only one grouping into two 
 
 Expansion (2) also solves another counting problem. Take $k$ ordinary labelled vertices and $q\geqslant1$ additional labelled root vertices. Count spanning forests of the complete graph $K_{k+q}$ in which each component contains exactly one prescribed root. A root may be isolated.
 
-**Corollary.** The number of such forests is
+> [!info] Forests with prescribed roots
+> **Corollary.** The number of such forests is
+>
+> $$
+> A_k(q)=q(q+k)^{k-1}
+> $$
 
-$$
-A_k(q)=q(q+k)^{k-1}
-$$
-
-**Proof.** Suppose exactly $m$ roots belong to nontrivial components. Partitioning the ordinary vertices into the corresponding blocks and choosing trees with added roots gives $\operatorname{St}(k,m)$ possibilities. Distinct roots from the prescribed set can be assigned to these $m$ blocks in $q_{\underline m}$ ways. The remaining roots are isolated.
-
-Thus the number of forests is $\sum_m\operatorname{St}(k,m)q_{\underline m}$, which equals $A_k(q)$ by (2). $\square$
+> [!note]- Proof
+> **Proof.** Suppose exactly $m$ roots belong to nontrivial components. Partitioning the ordinary vertices into the corresponding blocks and choosing trees with added roots gives $\operatorname{St}(k,m)$ possibilities. Distinct roots from the prescribed set can be assigned to these $m$ blocks in $q_{\underline m}$ ways. The remaining roots are isolated.
+>
+> Thus the number of forests is $\sum_m\operatorname{St}(k,m)q_{\underline m}$, which equals $A_k(q)$ by (2). $\square$
 
 In particular, on $k+m$ vertices with $m$ prescribed roots, the number of such forests without isolated roots is $m!\operatorname{St}(k,m)$. The factorial accounts for assigning distinct root labels to the unordered blocks.
 

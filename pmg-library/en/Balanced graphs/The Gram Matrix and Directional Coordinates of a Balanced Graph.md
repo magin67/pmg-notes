@@ -54,13 +54,14 @@ $$
 
 ## The canonical Gram matrix of local vertices
 
-**Definition.** Extend the pairing from differences to the vertex space by requiring
-
-$$
-a_i^2=0,
-\qquad
-a_i\cdot h=h\cdot a_i
-$$
+> [!info] The canonical Gram matrix of local vertices
+> **Definition.** Extend the pairing from differences to the vertex space by requiring
+>
+> $$
+> a_i^2=0,
+> \qquad
+> a_i\cdot h=h\cdot a_i
+> $$
 
 The first condition makes the vertices local in the later isotropic extension. The second requires equal pairings with the centroid in both roles, without requiring the whole Gram matrix to be symmetric.
 
@@ -74,7 +75,7 @@ The first condition makes the vertices local in the later isotropic extension. T
 > \tag{1}
 > $$
 
-> [!proof]- Existence and uniqueness
+> [!note]- Existence and uniqueness
 > **Proof.** Matrix (1) has zero diagonal and satisfies
 >
 > $$
@@ -126,27 +127,29 @@ $$
 
 In [[The Circulation Form|circulation-form notation]], the second term is $P_M(w(h,a_i,a_j))/2$. The centroid is allowed because the form's arguments are point differences.
 
-**Corollary.** For this canonical Gram matrix,
-
-$$
-\mathbf G=\mathbf G^{\mathsf T}
-\quad\Longleftrightarrow\quad
-\mathbf L=\mathbf L^{\mathsf T}
-$$
-
-The skew parts of $\mathbf G$ and $\mathbf{Gr}^{\mathsf T}$ agree, while pseudoinversion preserves symmetry in both directions. An undirected graph therefore has exactly the familiar $\mathbf G=-\mathbf R/2$.
-
-The matrix $\mathbf r$ is not redefined. Even for an undirected graph, $r_{ij}$ may differ from $r_{ji}$ because $q_i,q_j$ differ. The correction in (1) separates unequal centroid positions from pairing asymmetry.
+> [!info] Resistance, circulation, and the symmetric case
+> **Corollary.** For this canonical Gram matrix,
+>
+> $$
+> \mathbf G=\mathbf G^{\mathsf T}
+> \quad\Longleftrightarrow\quad
+> \mathbf L=\mathbf L^{\mathsf T}
+> $$
+>
+> The skew parts of $\mathbf G$ and $\mathbf{Gr}^{\mathsf T}$ agree, while pseudoinversion preserves symmetry in both directions. An undirected graph therefore has exactly the familiar $\mathbf G=-\mathbf R/2$.
+>
+> The matrix $\mathbf r$ is not redefined. Even for an undirected graph, $r_{ij}$ may differ from $r_{ji}$ because $q_i,q_j$ differ. The correction in (1) separates unequal centroid positions from pairing asymmetry.
 
 ## Sources and receivers
 
 Each vertex has two roles: sending and receiving couplings. To record them, use two copies of the vertex space, $V_{\mathrm{out}}$ and $V_{\mathrm{in}}$, with bases $a_i^{\mathrm{out}}$ and $a_i^{\mathrm{in}}$.
 
-**Definition.** Write the directional pairing in source-receiver order:
-
-$$
-a_i^{\mathrm{out}}\cdot a_j^{\mathrm{in}}=g_{ij}
-$$
+> [!info] Sources and receivers
+> **Definition.** Write the directional pairing in source-receiver order:
+>
+> $$
+> a_i^{\mathrm{out}}\cdot a_j^{\mathrm{in}}=g_{ij}
+> $$
 
 The shorthand $a_i\cdot a_j$ means this role order. The value $g_{ij}$ describes a metric pairing in the whole graph, not the weight $f_{ij}$ of one arc.
 
@@ -172,13 +175,14 @@ $$
 
 each expansion is unique. Superscripts on $b^i$ index the coefficients.
 
-**Definition.** Outgoing and incoming di-coordinates are pairings with the opposite-role basis:
-
-$$
-d_j^{\mathrm{out}}(X)=X_{\mathrm{out}}\cdot a_j^{\mathrm{in}},
-\qquad
-d_i^{\mathrm{in}}(Y)=a_i^{\mathrm{out}}\cdot Y_{\mathrm{in}}
-$$
+> [!info] Bi-coordinates and di-coordinates
+> **Definition.** Outgoing and incoming di-coordinates are pairings with the opposite-role basis:
+>
+> $$
+> d_j^{\mathrm{out}}(X)=X_{\mathrm{out}}\cdot a_j^{\mathrm{in}},
+> \qquad
+> d_i^{\mathrm{in}}(Y)=a_i^{\mathrm{out}}\cdot Y_{\mathrm{in}}
+> $$
 
 For coordinate columns, this means
 
@@ -188,18 +192,19 @@ $$
 \mathbf d_{\mathrm{in}}(Y)=\mathbf G\mathbf b_{\mathrm{in}}(Y)
 $$
 
-**Corollary.** The pairing has two equal coordinate contractions:
-
-$$
-\boxed{X_{\mathrm{out}}\cdot Y_{\mathrm{in}}
-=\mathbf b_{\mathrm{out}}(X)^{\mathsf T}\mathbf d_{\mathrm{in}}(Y)
-=\mathbf d_{\mathrm{out}}(X)^{\mathsf T}\mathbf b_{\mathrm{in}}(Y)}
-\tag{3}
-$$
-
-Both equal $\mathbf b_{\mathrm{out}}(X)^{\mathsf T}\mathbf G\mathbf b_{\mathrm{in}}(Y)$. Moving the conversion from bi- to di-coordinates to the other factor does not change the value. Exchanging the objects' roles, giving $Y_{\mathrm{out}}\cdot X_{\mathrm{in}}$, may change it.
-
-Two role spaces do not by themselves give one fixed linear representative two different expansions. Different bi-coordinate sets arise, for example, when one functional is represented through outgoing and incoming pairings. This is how the sphere is constructed in [[The Isotropic Space and Sphere of a Balanced Graph]].
+> [!info] Bi-coordinates and di-coordinates
+> **Corollary.** The pairing has two equal coordinate contractions:
+>
+> $$
+> \boxed{X_{\mathrm{out}}\cdot Y_{\mathrm{in}}
+> =\mathbf b_{\mathrm{out}}(X)^{\mathsf T}\mathbf d_{\mathrm{in}}(Y)
+> =\mathbf d_{\mathrm{out}}(X)^{\mathsf T}\mathbf b_{\mathrm{in}}(Y)}
+> \tag{3}
+> $$
+>
+> Both equal $\mathbf b_{\mathrm{out}}(X)^{\mathsf T}\mathbf G\mathbf b_{\mathrm{in}}(Y)$. Moving the conversion from bi- to di-coordinates to the other factor does not change the value. Exchanging the objects' roles, giving $Y_{\mathrm{out}}\cdot X_{\mathrm{in}}$, may change it.
+>
+> Two role spaces do not by themselves give one fixed linear representative two different expansions. Different bi-coordinate sets arise, for example, when one functional is represented through outgoing and incoming pairings. This is how the sphere is constructed in [[The Isotropic Space and Sphere of a Balanced Graph]].
 
 ## An example with unequal directional pairings
 

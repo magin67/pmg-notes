@@ -81,31 +81,33 @@ $$
 
 The first equality follows by solving the grounded Laplacian system: column $g_{\cdot j}$ gives the potentials for current $\mathbf e_j-\mathbf e_q$ and zero potential at $q$. The second is polarization of the norm of $u_i-u_j$. The connection between the grounded system and $\mathbf{Gr}$ is proved in the [[Edge Resistances and Random Spanning Trees#Differentiating a Laplacian cofactor|Laplacian-cofactor derivation]].
 
-**Lemma.** For any choice of $q$,
+> [!info] The radius as Laplacian energy
+> **Lemma.** For any choice of $q$,
+>
+> $$
+> \boxed{
+> \rho=\frac14\widehat{\mathbf r}^{\mathsf T}\mathbf A\widehat{\mathbf r}
+> =\frac14\mathbf r^{\mathsf T}\mathbf L\mathbf r
+> =\frac14\sum_{\ell=\{i,j\}}c_\ell(r_i-r_j)^2
+> }
+> \tag{3}
+> $$
 
-$$
-\boxed{
-\rho=\frac14\widehat{\mathbf r}^{\mathsf T}\mathbf A\widehat{\mathbf r}
-=\frac14\mathbf r^{\mathsf T}\mathbf L\mathbf r
-=\frac14\sum_{\ell=\{i,j\}}c_\ell(r_i-r_j)^2
-}
-\tag{3}
-$$
-
-**Proof.** Put $y=O-A_q$. Equal distances from the center to $A_i$ and $A_q$ mean
-
-$$
-(u_i-y)^2=y^2,\qquad 2u_i\cdot y=u_i^2=r_i
-$$
-
-Write $y=\sum_{i\ne q}\beta_i u_i$. Then $2\mathbf G_q\boldsymbol\beta=\widehat{\mathbf r}$ and
-
-$$
-\rho=y^2=\boldsymbol\beta^{\mathsf T}\mathbf G_q\boldsymbol\beta
-=\frac14\widehat{\mathbf r}^{\mathsf T}\mathbf G_q^{-1}\widehat{\mathbf r}
-$$
-
-Substituting $\mathbf G_q^{-1}=\mathbf A$ gives the first equality in (3). The second uses $r_q=0$, and the third is the usual expansion of the Laplacian quadratic form. $\square$
+> [!note]- Proof
+> **Proof.** Put $y=O-A_q$. Equal distances from the center to $A_i$ and $A_q$ mean
+>
+> $$
+> (u_i-y)^2=y^2,\qquad 2u_i\cdot y=u_i^2=r_i
+> $$
+>
+> Write $y=\sum_{i\ne q}\beta_i u_i$. Then $2\mathbf G_q\boldsymbol\beta=\widehat{\mathbf r}$ and
+>
+> $$
+> \rho=y^2=\boldsymbol\beta^{\mathsf T}\mathbf G_q\boldsymbol\beta
+> =\frac14\widehat{\mathbf r}^{\mathsf T}\mathbf G_q^{-1}\widehat{\mathbf r}
+> $$
+>
+> Substituting $\mathbf G_q^{-1}=\mathbf A$ gives the first equality in (3). The second uses $r_q=0$, and the third is the usual expansion of the Laplacian quadratic form. $\square$
 
 The column $\mathbf r$ depends on $q$, but its energy always equals $4\rho$. For $n\ge2$ it is nonconstant, hence $\rho>0$.
 
@@ -154,55 +156,59 @@ For a nonempty root set $S$, the determinant of $\mathbf L_{\mathcal V\setminus 
 
 A short derivation clarifies the weights. After deleting root coordinates, expand the determinant of $\sum c_\ell\mathbf b_\ell\mathbf b_\ell^{\mathsf T}$ by Cauchy-Binet. A cycle gives dependent columns; a component without a root gives dependent rows. The remaining edge sets are forests with one root in each component. The coordinate-matrix determinant is $\pm1$, as seen by successively deleting leaves. The contribution is therefore exactly $\prod_{\ell\in F}c_\ell$. For the empty matrix, set $\det=1$.
 
-**Lemma.** For fixed $q$,
+> [!info] Auxiliary forest sums with prescribed roots
+> **Lemma.** For fixed $q$,
+>
+> $$
+> \boxed{
+> \frac{Z_{i\mid q}}{\tau}=r_i,\qquad
+> \frac{Z_{i\mid j\mid q}}{\tau}=r_i r_j-g_{ij}^2
+> }
+> \tag{5}
+> $$
+>
+> To include $i=q$ or $j=q$, extend the scalar notation by $g_{iq}=g_{qi}=0$.
 
-$$
-\boxed{
-\frac{Z_{i\mid q}}{\tau}=r_i,\qquad
-\frac{Z_{i\mid j\mid q}}{\tau}=r_i r_j-g_{ij}^2
-}
-\tag{5}
-$$
-
-To include $i=q$ or $j=q$, extend the scalar notation by $g_{iq}=g_{qi}=0$.
-
-**Proof.** Apply the identity for complementary principal minors of an inverse matrix to $\mathbf A^{-1}=\mathbf G_q$. For $i\ne q$ and for distinct $i,j\ne q$, respectively,
-
-$$
-\frac{\det\mathbf A_{\widehat i,\widehat i}}{\det\mathbf A}=g_{ii}=r_i
-$$
-
-$$
-\frac{\det\mathbf A_{\widehat{\{i,j\}},\widehat{\{i,j\}}}}{\det\mathbf A}
-=\det\begin{pmatrix}g_{ii}&g_{ij}\\g_{ij}&g_{jj}\end{pmatrix}
-=r_i r_j-g_{ij}^2
-$$
-
-Submatrix indices retain the vertex labels. Numerators are the stated forest sums, and denominators are $\tau$. When roots coincide, both sides of the corresponding equality vanish by convention. $\square$
+> [!note]- Proof
+> **Proof.** Apply the identity for complementary principal minors of an inverse matrix to $\mathbf A^{-1}=\mathbf G_q$. For $i\ne q$ and for distinct $i,j\ne q$, respectively,
+>
+> $$
+> \frac{\det\mathbf A_{\widehat i,\widehat i}}{\det\mathbf A}=g_{ii}=r_i
+> $$
+>
+> $$
+> \frac{\det\mathbf A_{\widehat{\{i,j\}},\widehat{\{i,j\}}}}{\det\mathbf A}
+> =\det\begin{pmatrix}g_{ii}&g_{ij}\\g_{ij}&g_{jj}\end{pmatrix}
+> =r_i r_j-g_{ij}^2
+> $$
+>
+> Submatrix indices retain the vertex labels. Numerators are the stated forest sums, and denominators are $\tau$. When roots coincide, both sides of the corresponding equality vanish by convention. $\square$
 
 ## Why each ordinary 2-forest is counted once
 
-**Lemma.** For any reference vertex $q$,
+> [!info] Why each ordinary 2-forest is counted once
+> **Lemma.** For any reference vertex $q$,
+>
+> $$
+> \boxed{
+> f_{n-2}=\sum_i Z_{i\mid q}
+> -\sum_{\ell=\{i,j\}}c_\ell Z_{i\mid j\mid q}
+> }
+> \tag{6}
+> $$
 
-$$
-\boxed{
-f_{n-2}=\sum_i Z_{i\mid q}
--\sum_{\ell=\{i,j\}}c_\ell Z_{i\mid j\mid q}
-}
-\tag{6}
-$$
-
-**Proof.** Fix an ordinary 2-forest $F$ with components $A,B$, where $q\in A$. In the first sum it occurs once for each $i\in B$, contributing $|B|w(F)$ in total.
-
-The second sum counts pairs consisting of a 3-forest with roots $i,j,q$ and an edge $\ell=\{i,j\}$. Adding $\ell$ joins the two components without $q$ and gives a 2-forest $F$. The pair weight is $c_\ell w(F\setminus\{\ell\})=w(F)$.
-
-Conversely, for a fixed $F$, such a representation is obtained by deleting any edge of the tree $F[B]$. There are $|B|-1$ choices. Edges of component $A$ do not give the required representation: after deletion, $q$ remains in the same component as one endpoint. The difference of contributions is therefore
-
-$$
-\bigl(|B|-(|B|-1)\bigr)w(F)=w(F)
-$$
-
-Summing over all 2-forests proves (6). Distinct labels on parallel edges preserve this bijection and the weight equality. $\square$
+> [!note]- Proof
+> **Proof.** Fix an ordinary 2-forest $F$ with components $A,B$, where $q\in A$. In the first sum it occurs once for each $i\in B$, contributing $|B|w(F)$ in total.
+>
+> The second sum counts pairs consisting of a 3-forest with roots $i,j,q$ and an edge $\ell=\{i,j\}$. Adding $\ell$ joins the two components without $q$ and gives a 2-forest $F$. The pair weight is $c_\ell w(F\setminus\{\ell\})=w(F)$.
+>
+> Conversely, for a fixed $F$, such a representation is obtained by deleting any edge of the tree $F[B]$. There are $|B|-1$ choices. Edges of component $A$ do not give the required representation: after deletion, $q$ remains in the same component as one endpoint. The difference of contributions is therefore
+>
+> $$
+> \bigl(|B|-(|B|-1)\bigr)w(F)=w(F)
+> $$
+>
+> Summing over all 2-forests proves (6). Distinct labels on parallel edges preserve this bijection and the weight equality. $\square$
 
 ![[Two-Forest - Counting Vertices and Deleted Edges.svg]]
 
@@ -273,16 +279,18 @@ This proves (1). Every step uses positive conductances directly, without extendi
 
 ## Matroid invariance and its limits
 
-**Theorem.** The resistance radius $\rho$ is an invariant of the weighted cycle matroid.
+> [!info] Matroid invariance and its limits
+> **Theorem.** The resistance radius $\rho$ is an invariant of the weighted cycle matroid.
 
-**Proof.** A matroid isomorphism preserving corresponding conductances preserves the basis-weight sum $\tau$ and the weight sum of independent sets of corank $1$, namely $f_{n-2}$. It also preserves the inclusion probabilities $\eta_\ell$ of matched edges in a weighted random basis. Hence it preserves
-
-$$
-\xi_1=\frac{f_{n-2}}{\tau},\qquad
-H_2=\sum_\ell\frac{\eta_\ell^2}{c_\ell}
-$$
-
-Formula (1) therefore preserves $\rho$. $\square$
+> [!note]- Proof
+> **Proof.** A matroid isomorphism preserving corresponding conductances preserves the basis-weight sum $\tau$ and the weight sum of independent sets of corank $1$, namely $f_{n-2}$. It also preserves the inclusion probabilities $\eta_\ell$ of matched edges in a weighted random basis. Hence it preserves
+>
+> $$
+> \xi_1=\frac{f_{n-2}}{\tau},\qquad
+> H_2=\sum_\ell\frac{\eta_\ell^2}{c_\ell}
+> $$
+>
+> Formula (1) therefore preserves $\rho$. $\square$
 
 Matroid invariance concerns the scalar $\rho$. An edge isomorphism does not match all vertex pairs; it does not imply preservation of the entire matrix $\mathbf R$, the coordinates of $O$, its distance from the centroid, or the shape of the resistance simplex. The path and star in the [[The Cycle Matroid and Exterior Products of Edges#One matroid, different vertex geometry|two-tree comparison]] have the same radius but different vertex characteristics.
 
@@ -306,7 +314,8 @@ $$
 \tag{8}
 $$
 
-**Proof.** The product of normalized forest polynomials gives $\xi_1(G_1\vee G_2)=\xi_1(G_1)+\xi_1(G_2)$. Preservation of edge probabilities in the pieces gives the same law for $H_2$. Substitute both sums into (1). $\square$
+> [!note]- Proof
+> **Proof.** The product of normalized forest polynomials gives $\xi_1(G_1\vee G_2)=\xi_1(G_1)+\xi_1(G_2)$. Preservation of edge probabilities in the pieces gives the same law for $H_2$. Substitute both sums into (1). $\square$
 
 This is a separate derivation using the laws of this particular gluing. It agrees with the geometric proof in the [[Vertex Contraction and Graph Gluing#Resistance radius is additive|section on radius additivity]]. Formula (8) does not automatically extend to gluing at several vertices or along a shared edge subgraph.
 

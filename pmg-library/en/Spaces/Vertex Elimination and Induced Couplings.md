@@ -110,8 +110,8 @@ $$
 
 Here $(pq)=q-p$ denotes the vector of a vertex pair. In (3), $c_{pq}$ is the previous coupling coefficient, and the second term is the induced increment. If both vertices were coupled to $x$, the increment is positive, including when no coupling $pq$ previously existed.
 
-> [!proof]- Proof of the lemma
-> Substitute $x-p=r_x+(q_x-p)$ and expand the quadratic forms. The mixed part is $\{r_x,\sum_pc_{xp}(q_x-p)\}=0$, because the sum in the second argument is zero. Here $\{u,v\}=[u,v]+[v,u]$ is the polar form. This leaves
+> [!note]- Proof of the lemma
+> **Proof.** Substitute $x-p=r_x+(q_x-p)$ and expand the quadratic forms. The mixed part is $\{r_x,\sum_pc_{xp}(q_x-p)\}=0$, because the sum in the second argument is zero. Here $\{u,v\}=[u,v]+[v,u]$ is the polar form. This leaves
 >
 > $$
 > \sum_pc_{xp}[x-p]^2=d_x[r_x]^2+\sum_pc_{xp}[q_x-p]^2
@@ -199,8 +199,8 @@ The internal block $\mathbf A$ is positive definite; its diagonal also accounts 
 > \tag{5}
 > $$
 
-> [!proof]- Proof
-> Substituting $\mathbf f_I=\mathbf A^{-1}\mathbf C\mathbf f_P$ into $\mathbf j_P=\mathbf L_{PP}\mathbf f_P-\mathbf C^{\mathsf T}\mathbf f_I$ gives (4).
+> [!note]- Proof
+> **Proof.** Substituting $\mathbf f_I=\mathbf A^{-1}\mathbf C\mathbf f_P$ into $\mathbf j_P=\mathbf L_{PP}\mathbf f_P-\mathbf C^{\mathsf T}\mathbf f_I$ gives (4).
 >
 > In the polyform (1), replace each vertex by its projection. The coefficient matrix of the result is
 >
@@ -229,10 +229,11 @@ Here we substitute function values into the arguments of the forms; this is dist
 
 On the path, the prescribed values $f_a=0$, $f_b=11$ extend to $f_x=3$, $f_y=9$. In the original graph, the energy is $2\cdot3^2+6^2+3\cdot2^2=66$. In the new graph, it is $(6/11)\cdot11^2=66$, and the response in both models is $j_a=-6$, $j_b=6$.
 
-**Corollary.** The result of eliminating internal vertices does not depend on their order.
+> [!info] Energy and the order of elimination
+> **Corollary.** The result of eliminating internal vertices does not depend on their order.
 
-> [!proof]- Proof of independence of the order
-> Each single-vertex elimination step minimizes the energy over that vertex's value with all other values fixed. The resulting minimum becomes a new function of the remaining values. Eliminating all internal variables sequentially gives the same minimum as eliminating them simultaneously. Thus every order gives the same function $E_P(f_P)$ for all prescribed values. A quadratic function uniquely determines its symmetric coefficient matrix, so all coupling coefficients also agree. $\square$
+> [!note]- Proof of independence of the order
+> **Proof.** Each single-vertex elimination step minimizes the energy over that vertex's value with all other values fixed. The resulting minimum becomes a new function of the remaining values. Eliminating all internal variables sequentially gives the same minimum as eliminating them simultaneously. Thus every order gives the same function $E_P(f_P)$ for all prescribed values. A quadratic function uniquely determines its symmetric coefficient matrix, so all coupling coefficients also agree. $\square$
 
 The resulting graph is connected. Indeed, zero energy in (6) is possible only for constant values on $P$: their minimizing extension must be constant on the original connected graph. A disconnected graph on $P$ would admit nonconstant values with zero energy.
 
@@ -251,8 +252,8 @@ Return to the residual vectors $r_x$. Together they generate the orthogonal comp
 >
 > The arguments of $L_P$ belong to $W_P$, and those of $L_\perp$ belong to $W_P^\perp$. For retained vertices, we use $r_p=0$.
 
-> [!proof]- Proof of the decomposition
-> Substitute $a_j-a_i=(q_j-q_i)+(r_j-r_i)$ into the original Laplacian. In addition to $L_P$ and $L_\perp$, this produces the mixed part
+> [!note]- Proof of the decomposition
+> **Proof.** Substitute $a_j-a_i=(q_j-q_i)+(r_j-r_i)$ into the original Laplacian. In addition to $L_P$ and $L_\perp$, this produces the mixed part
 >
 > $$
 > \sum_{i<j}c_{ij}\{q_j-q_i,r_j-r_i\}
@@ -303,8 +304,8 @@ Let $\tau_G=u_M(e)$ be the spanning-tree coefficient of the original graph and $
 > \tag{10}
 > $$
 
-> [!proof]- Proof using the top grades
-> Choose $p_0\in P$ and order the other retained vertices, followed by the internal vertices $x_1,\ldots,x_m$. Here $m=|I|$. Replace the vector basis $p-p_0$, $x-p_0$ by $p-p_0$, $r_x$. This change has determinant $1$, since
+> [!note]- Proof using the top grades
+> **Proof.** Choose $p_0\in P$ and order the other retained vertices, followed by the internal vertices $x_1,\ldots,x_m$. Here $m=|I|$. Replace the vector basis $p-p_0$, $x-p_0$ by $p-p_0$, $r_x$. This change has determinant $1$, since
 >
 > $$
 > r_x=(x-p_0)-\sum_{p\in P}b_{xp}(p-p_0)
@@ -344,8 +345,8 @@ Preservation of the metric allows us to compare the resistance radii of the orig
 >
 > For a single selected vertex, its center is the vertex itself and $\rho_P=0$.
 
-> [!proof]- Projection of the circumcenter
-> Let $h'$ be the orthogonal projection of $h$ onto $\mathcal A_P$. For any vertex $p\in P$, the Pythagorean theorem gives
+> [!note]- Projection of the circumcenter
+> **Proof.** Let $h'$ be the orthogonal projection of $h$ onto $\mathcal A_P$. For any vertex $p\in P$, the Pythagorean theorem gives
 >
 > $$
 > \|p-h'\|^2=\|p-h\|^2-\|h-h'\|^2

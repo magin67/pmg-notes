@@ -82,7 +82,7 @@ In the isotropic representation, these coordinates specify the element $h_V=\sum
 >
 > In particular, $\mathbf1^{\mathsf T}\mathbf G^{-1}\mathbf1<0$. The center coordinates need not be nonnegative.
 
-> [!proof]- Invertibility and derivation of the formulas
+> [!note]- Invertibility and derivation of the formulas
 > **Proof.** For every vertex, $(a_i-h_V)^2=\rho_A$. Locality of the vertices gives
 >
 > $$
@@ -119,11 +119,12 @@ The computation does not require the entire inverse matrix: it suffices to solve
 
 ## Determinant, radius, and volume
 
-**Definition.** Introduce the positive determinant parameter of the set
-
-$$
-g_A=-\det\mathbf G
-$$
+> [!info] Determinant, radius, and volume
+> **Definition.** Introduce the positive determinant parameter of the set
+>
+> $$
+> g_A=-\det\mathbf G
+> $$
 
 The sign matters. For the exterior object $\mathcal A=a_0\wedge\cdots\wedge a_l$, the induced metric of the isotropic space gives $\mathcal A^2=\det\mathbf G<0$. Thus $g_A=-\mathcal A^2$ is the negative of the exterior object's norm, rather than the norm itself under PMG conventions. Calling $g_A$ the “norm of the set” would require a separate naming convention; here we retain the determinant notation.
 
@@ -138,7 +139,7 @@ The sign matters. For the exterior object $\mathcal A=a_0\wedge\cdots\wedge a_l$
 > \tag{2}
 > $$
 
-> [!proof]- Proof using an orthogonal basis
+> [!note]- Proof using an orthogonal basis
 > **Proof.** The change from $a_0,a_1,\ldots,a_l$ to $a_0,u_1,\ldots,u_l$ has determinant $1$: subtract $a_0$ from every vertex except the first. Next,
 >
 > $$
@@ -210,16 +211,17 @@ $$
 
 The polyform exponential of the original Laplacian is $M=\exp L$, with components $M_k=L^k/k!$. The functional $\tau(P)$ extracts the coefficient of the spanning-tree form $T_N$ of the full graph. In particular, $\tau(M)=\tau(G)$.
 
-**Corollary of the metric identity.** The boundary norm and the volume of the set are given by
+> [!info] Subset volume through grade components of the exponential
+> **Corollary of the metric identity.** The boundary norm and the volume of the set are given by
+>
+> $$
+> \boxed{
+> X_A^2=\det\mathbf G_u=(l!\,\mathrm{vol}(A))^2
+> =\frac{\tau(M_{N-1-l}[X_A]^2)}{\tau(G)}
+> }
+> $$
 
-$$
-\boxed{
-X_A^2=\det\mathbf G_u=(l!\,\mathrm{vol}(A))^2
-=\frac{\tau(M_{N-1-l}[X_A]^2)}{\tau(G)}
-}
-$$
-
-> [!proof]- Complementary grade and volume
+> [!note]- Complementary grade and volume
 > **Proof.** By the definition of the induced metric, $X_A^2=\det\mathbf G_u$. The form $[X_A]^2$ has grade $l$, so only $M_{N-1-l}$ contributes to its [[Laplacian Exponential#The potential of a form|potential]]. The [[Laplacian Exponential#Agreement with the resistance metric|metric identity]] identifies the normalized potential with $X_A^2$. $\square$
 
 For a vector, the contributing component is $M_{N-2}$, the next-to-top-grade component; for a triangle boundary, it is $M_{N-3}$; for a tetrahedron boundary, $M_{N-4}$. The metric data in the Gram matrix and the coefficients of the corresponding grade of the exponential provide two ways of computing the same volume.
@@ -390,7 +392,7 @@ Denote the circumsphere centers in the respective Euclidean affine hulls by $O_A
 >
 > Equality holds if and only if $O_A$ lies in the affine hull of $C$; in that case, $O_C=O_A$.
 
-> [!proof]- Proof using orthogonal projection
+> [!note]- Proof using orthogonal projection
 > **Proof.** Let $P$ be the orthogonal projection of $O_A$ onto the affine hull of $C$. For every vertex $x_i$ in $C$, the Pythagorean theorem gives
 >
 > $$

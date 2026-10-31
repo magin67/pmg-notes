@@ -18,25 +18,27 @@ Consider finite graphs on $n\geqslant2$ distinguishable vertices, without loops,
 
 ## A degree-one balanced graph
 
-**Definition.** A permutation digraph has exactly one outgoing and one incoming arc at each vertex. With unit weights it is a [[Balanced Graphs and Spanning-Tree Potentials#Degree-one balanced graphs and permutations|degree-one balanced graph]].
+> [!info] A degree-one balanced graph
+> **Definition.** A permutation digraph has exactly one outgoing and one incoming arc at each vertex. With unit weights it is a [[Balanced Graphs and Spanning-Tree Potentials#Degree-one balanced graphs and permutations|degree-one balanced graph]].
 
 The unique arc $a_i\to a_{\sigma(i)}$ defines a permutation $\sigma$; excluding loops means $\sigma(i)\ne i$. Unique incoming arcs ensure bijectivity. Independent recipient choices at each vertex do not ensure this condition.
 
-**Proposition.** Such a graph decomposes uniquely into vertex-disjoint directed cycles of length at least $2$.
-
-Following the unique outgoing arc eventually reaches a cycle. An external path cannot enter that cycle, since its entry vertex would then have two incoming arcs. Every vertex therefore already belongs to a cycle. $\square$
-
-For the permutation matrix with $P_{ij}=1$ when $j=\sigma(i)$,
-
-$$
-\mathbf L=\mathbf I-\mathbf P,\qquad
-\mathbf P\mathbf1=\mathbf1,\qquad
-\mathbf P^{\mathsf T}\mathbf1=\mathbf1
-$$
-
-Both Laplacian balance conditions hold automatically. “Permutation digraph” here specifically means the directed graph of arcs $i\to\sigma(i)$.
-
-In Secret Santa, a vertex represents a participant and an arc a gift from donor to recipient. Each participant has one recipient and one donor; self-gifts are excluded.
+> [!info] A degree-one balanced graph
+> **Proposition.** Such a graph decomposes uniquely into vertex-disjoint directed cycles of length at least $2$.
+>
+> Following the unique outgoing arc eventually reaches a cycle. An external path cannot enter that cycle, since its entry vertex would then have two incoming arcs. Every vertex therefore already belongs to a cycle. $\square$
+>
+> For the permutation matrix with $P_{ij}=1$ when $j=\sigma(i)$,
+>
+> $$
+> \mathbf L=\mathbf I-\mathbf P,\qquad
+> \mathbf P\mathbf1=\mathbf1,\qquad
+> \mathbf P^{\mathsf T}\mathbf1=\mathbf1
+> $$
+>
+> Both Laplacian balance conditions hold automatically. “Permutation digraph” here specifically means the directed graph of arcs $i\to\sigma(i)$.
+>
+> In Secret Santa, a vertex represents a participant and an arc a gift from donor to recipient. Each participant has one recipient and one donor; self-gifts are excluded.
 
 ## Graph type and its probability
 
@@ -72,16 +74,17 @@ For unrestricted permutations, including fixed points, grouping by cycle count g
 
 Let $N_k(\sigma)$ count the selected permutation's directed $k$-cycles.
 
-**Proposition.** For a uniform derangement,
-
-$$
-\boxed{
-\mathbb E N_k=
-\binom nk(k-1)!\frac{D_{n-k}}{D_n}
-}
-\qquad 2\leqslant k\leqslant n
-\tag{1}
-$$
+> [!info] Mean number of cycles of a specified length
+> **Proposition.** For a uniform derangement,
+>
+> $$
+> \boxed{
+> \mathbb E N_k=
+> \binom nk(k-1)!\frac{D_{n-k}}{D_n}
+> }
+> \qquad 2\leqslant k\leqslant n
+> \tag{1}
+> $$
 
 > [!note]- Proof
 > **Proof.** Count pairs consisting of a permutation and one marked $k$-cycle in it. There are $\binom nk$ choices of vertices, $(k-1)!$ cyclic orders, and $D_{n-k}$ derangements of the remaining vertices.
@@ -159,9 +162,10 @@ Either of the two paths can be closed, and they can be joined in two directions.
 
 Call a balanced graph **regular of degree $d$** if each vertex has exactly $d$ incoming and $d$ outgoing arcs. Here $d\geqslant1$, all weights are $1$, loops and repeated arcs are excluded, and opposite arcs are allowed. Degree-two regularity differs from “2-balanced”: the latter means a symmetric graph admitting a decomposition into 2-cycles, without restricting vertex degrees.
 
-**Theorem.** Every such graph decomposes into $d$ arc-disjoint permutation digraphs, each spanning all original vertices.
-
-In digraph theory this is a decomposition into directed 1-factors; see source 3.
+> [!info] Regular balanced graphs and permutation decompositions
+> **Theorem.** Every such graph decomposes into $d$ arc-disjoint permutation digraphs, each spanning all original vertices.
+>
+> In digraph theory this is a decomposition into directed 1-factors; see source 3.
 
 > [!note]- Proof
 > **Proof.** Create source and receiver copies of the vertex set. Replace $a_i\to a_j$ by an edge from source $a_i$ to receiver $a_j$. The resulting bipartite graph is $d$-regular.

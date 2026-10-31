@@ -77,11 +77,12 @@ $$
 
 be a partition of $\mathcal V$ into nonempty blocks. The blocks are unordered; indices are used only for notation.
 
-**Definition.** The dual vertex sum of a block $C$ is the element
-
-$$
-a_C=\sum_{a_i\in C}a_i
-$$
+> [!info] The dual form of a partition
+> **Definition.** The dual vertex sum of a block $C$ is the element
+>
+> $$
+> a_C=\sum_{a_i\in C}a_i
+> $$
 
 For a full partition,
 
@@ -89,24 +90,27 @@ $$
 a_{C_1}+\cdots+a_{C_{k+1}}=0
 $$
 
-**Definition.** The dual form of a partition $\pi$ is
-
-$$
-\boxed{\Phi_\pi=[a_{C_1}\cdots a_{C_k}]^2}
-\tag{2}
-$$
+> [!info] The dual form of a partition
+> **Definition.** The dual form of a partition $\pi$ is
+>
+> $$
+> \boxed{\Phi_\pi=[a_{C_1}\cdots a_{C_k}]^2}
+> \tag{2}
+> $$
 
 One block is omitted on the right, here $C_{k+1}$. For $k=0$, the product is empty and $\Phi_\pi=e$.
 
-**Lemma.** The form $\Phi_\pi$ is independent of the omitted block and the order of the remaining blocks.
+> [!info] The dual form of a partition
+> **Lemma.** The form $\Phi_\pi$ is independent of the omitted block and the order of the remaining blocks.
 
-**Proof.** Permuting factors changes only the sign of their exterior product. If $C_r$ is omitted instead of $C_{k+1}$, use
-
-$$
-a_{C_{k+1}}=-\sum_{j=1}^{k}a_{C_j}
-$$
-
-Substitution into the product of all other block sums leaves only the term containing $a_{C_r}$: the others contain a repeated factor and vanish. Thus the new product agrees with the old one up to sign. The sign disappears in the quadratic form. $\square$
+> [!note]- Proof
+> **Proof.** Permuting factors changes only the sign of their exterior product. If $C_r$ is omitted instead of $C_{k+1}$, use
+>
+> $$
+> a_{C_{k+1}}=-\sum_{j=1}^{k}a_{C_j}
+> $$
+>
+> Substitution into the product of all other block sums leaves only the term containing $a_{C_r}$: the others contain a repeated factor and vanish. Thus the new product agrees with the old one up to sign. The sign disappears in the quadratic form. $\square$
 
 On the direct side, let $(C_j)$ denote the boundary of the simplex on the vertices of block $C_j$, taken in any order. A singleton block gives $(a_i)=1$. The corresponding [[Partition Forms and the Tetrahedron Identity|partition form]] is
 
@@ -124,55 +128,57 @@ Thus $\Phi_\pi$ has dual grade $k$, while $q_\pi$ has the complementary direct g
 
 ## The deletion identity for a single partition
 
-**Lemma.** For any partition $\pi$ into $k+1$ nonempty blocks,
+> [!info] The deletion identity for a single partition
+> **Lemma.** For any partition $\pi$ into $k+1$ nonempty blocks,
+>
+> $$
+> \boxed{
+> T/\Phi_\pi=[(C_1)\cdots(C_{k+1})]^2=q_\pi
+> }
+> \tag{3}
+> $$
+>
+> The coefficient is one and is independent of the block sizes.
 
-$$
-\boxed{
-T/\Phi_\pi=[(C_1)\cdots(C_{k+1})]^2=q_\pi
-}
-\tag{3}
-$$
-
-The coefficient is one and is independent of the block sizes.
-
-**Proof.** Choose a vertex $p_j\in C_j$ in each block and place it first in the boundary notation. Write
-
-$$
-U_j=(C_j)=\prod_{a_i\in C_j\setminus\{p_j\}}(a_i-p_j)
-$$
-
-Fix any order of factors. For a singleton block, $U_j=1$.
-
-Take the connecting vectors to be
-
-$$
-v_j=p_j-p_{k+1},\qquad 1\le j\le k
-$$
-
-All internal vectors $a_i-p_j$, together with $v_1,\ldots,v_k$, form the edge system of a tree on $\mathcal V$: each block contains a star, and the selected block vertices are joined to $p_{k+1}$. This is an auxiliary tree on the vertex set; its edges need not belong to $G$.
-
-By the [[Basic Objects and Operations of Polyform Algebra#Products of simplex boundaries|product rule for tree vectors]],
-
-$$
-\Omega=\pm v_1\cdots v_k\,U_1\cdots U_{k+1}
-$$
-
-Now, for $1\le i,j\le k$,
-
-$$
-v_j/a_{C_i}=\delta_{ij}
-$$
-
-Moreover, each block sum $a_{C_i}$ vanishes on every internal vector $a_\ell-p_j$: both vertices lie in one block, so their contributions are either $1-1$ or $0-0$.
-
-Successively deleting $a_{C_1},\ldots,a_{C_k}$ removes precisely the connecting vectors $v_1,\ldots,v_k$. We obtain
-
-$$
-\Omega/(a_{C_1}\cdots a_{C_k})
-=\pm U_1\cdots U_{k+1}
-$$
-
-Passing to quadratic forms removes the sign and gives (3). For $k=0$, there are no deletions, and the equality means $T/e=T$. $\square$
+> [!note]- Proof
+> **Proof.** Choose a vertex $p_j\in C_j$ in each block and place it first in the boundary notation. Write
+>
+> $$
+> U_j=(C_j)=\prod_{a_i\in C_j\setminus\{p_j\}}(a_i-p_j)
+> $$
+>
+> Fix any order of factors. For a singleton block, $U_j=1$.
+>
+> Take the connecting vectors to be
+>
+> $$
+> v_j=p_j-p_{k+1},\qquad 1\le j\le k
+> $$
+>
+> All internal vectors $a_i-p_j$, together with $v_1,\ldots,v_k$, form the edge system of a tree on $\mathcal V$: each block contains a star, and the selected block vertices are joined to $p_{k+1}$. This is an auxiliary tree on the vertex set; its edges need not belong to $G$.
+>
+> By the [[Basic Objects and Operations of Polyform Algebra#Products of simplex boundaries|product rule for tree vectors]],
+>
+> $$
+> \Omega=\pm v_1\cdots v_k\,U_1\cdots U_{k+1}
+> $$
+>
+> Now, for $1\le i,j\le k$,
+>
+> $$
+> v_j/a_{C_i}=\delta_{ij}
+> $$
+>
+> Moreover, each block sum $a_{C_i}$ vanishes on every internal vector $a_\ell-p_j$: both vertices lie in one block, so their contributions are either $1-1$ or $0-0$.
+>
+> Successively deleting $a_{C_1},\ldots,a_{C_k}$ removes precisely the connecting vectors $v_1,\ldots,v_k$. We obtain
+>
+> $$
+> \Omega/(a_{C_1}\cdots a_{C_k})
+> =\pm U_1\cdots U_{k+1}
+> $$
+>
+> Passing to quadratic forms removes the sign and gives (3). For $k=0$, there are no deletions, and the equality means $T/e=T$. $\square$
 
 The proof also establishes that the product in (2) is nonzero. No factors $\#C_j$ or factorials appear here: the deletion element takes the value $1$ on the corresponding connecting vector.
 
@@ -202,22 +208,24 @@ $$
 
 For the empty forest, $w(F)=1$. Denote the partition into forest components by $\pi(F)$.
 
-**Theorem (forest grades).** For $0\le k\le d$,
+> [!info] The forest formula for grades of the Greenian exponential
+> **Theorem (forest grades).** For $0\le k\le d$,
+>
+> $$
+> \boxed{
+> Q_k=\frac1\tau\sum_{F\in\mathcal F_{k+1}(G)}w(F)\Phi_{\pi(F)}
+> }
+> \tag{4}
+> $$
 
-$$
-\boxed{
-Q_k=\frac1\tau\sum_{F\in\mathcal F_{k+1}(G)}w(F)\Phi_{\pi(F)}
-}
-\tag{4}
-$$
-
-**Proof.** A forest with $k+1$ components has $n-k-1=d-k$ edges. The [[Laplacian Exponential#Grade components and spanning forests|forest expansion of the metric polyform]] gives
-
-$$
-M_{d-k}=\sum_{F\in\mathcal F_{k+1}(G)}w(F)q_{\pi(F)}
-$$
-
-Apply $M_d/\cdot=(\tau T)/\cdot$ to the right-hand side of (4), using (3). The factors $\tau$ and $1/\tau$ cancel, giving exactly $M_{d-k}$. By [[Laplacian and Greenian - Mutual Duality of Exponentials#Existence and uniqueness|uniqueness of the dual grade]], the right-hand side of (4) equals $Q_k$. $\square$
+> [!note]- Proof
+> **Proof.** A forest with $k+1$ components has $n-k-1=d-k$ edges. The [[Laplacian Exponential#Grade components and spanning forests|forest expansion of the metric polyform]] gives
+>
+> $$
+> M_{d-k}=\sum_{F\in\mathcal F_{k+1}(G)}w(F)q_{\pi(F)}
+> $$
+>
+> Apply $M_d/\cdot=(\tau T)/\cdot$ to the right-hand side of (4), using (3). The factors $\tau$ and $1/\tau$ cancel, giving exactly $M_{d-k}$. By [[Laplacian and Greenian - Mutual Duality of Exponentials#Existence and uniqueness|uniqueness of the dual grade]], the right-hand side of (4) equals $Q_k$. $\square$
 
 The sum in (4) runs over undirected forests without choosing roots in their components. Each edge set is counted once.
 
@@ -293,11 +301,12 @@ Each unordered partition is counted once. There is no multiplication or division
 
 Let $A$ be a nonempty proper subset of $\mathcal V$, and let $A^c=\mathcal V\setminus A$. The notation $A\mid A^c$ denotes an unordered partition of the vertices into two parts.
 
-**Definition.** The dual cut form of $A\mid A^c$ is
-
-$$
-[a_A]^2,\qquad a_A=\sum_{a_i\in A}a_i
-$$
+> [!info] Representing the Greenian through cuts
+> **Definition.** The dual cut form of $A\mid A^c$ is
+>
+> $$
+> [a_A]^2,\qquad a_A=\sum_{a_i\in A}a_i
+> $$
 
 Since $a_{A^c}=-a_A$, the choice of part does not change the form:
 
@@ -532,13 +541,14 @@ $$
 \tag{13}
 $$
 
-**Proof.** Expanding the left-hand side by bilinearity gives
-
-$$
-3[a]^2+[b]^2+[c]^2+[d]^2+\{a,b+c+d\}
-$$
-
-Since $b+c+d=-a$, the last term equals $-2[a]^2$. The remaining expression is the right-hand side of (13). $\square$
+> [!note]- Proof
+> **Proof.** Expanding the left-hand side by bilinearity gives
+>
+> $$
+> 3[a]^2+[b]^2+[c]^2+[d]^2+\{a,b+c+d\}
+> $$
+>
+> Since $b+c+d=-a$, the last term equals $-2[a]^2$. The remaining expression is the right-hand side of (13). $\square$
 
 Thus form (10) can be reduced to
 

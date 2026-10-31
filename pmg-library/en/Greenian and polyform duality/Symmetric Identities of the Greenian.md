@@ -57,16 +57,18 @@ Thus the zero sum on the dual side follows from the definition of the space, and
 
 ## Preservation of boundary identities
 
-**Proposition.** Centering preserves every boundary and every product of boundaries. Thus all structural identities of boundary forms remain valid in the vector representation of the Greenian.
+> [!info] Preservation of boundary identities
+> **Proposition.** Centering preserves every boundary and every product of boundaries. Thus all structural identities of boundary forms remain valid in the vector representation of the Greenian.
 
-**Proof.** A boundary on $k+1$ vertices is expressed through differences with a common initial vertex:
-
-$$
-(a_{i_0}\ldots a_{i_k})
-=(a_{i_1}-a_{i_0})\cdots(a_{i_k}-a_{i_0})
-$$
-
-Every factor is preserved when $a_i$ is replaced by $p_i$. Hence boundaries, their exterior products, and forms on these arguments are preserved. Moreover, centering is the identity on $W$, so it creates no additional linear relations among these forms. $\square$
+> [!note]- Proof
+> **Proof.** A boundary on $k+1$ vertices is expressed through differences with a common initial vertex:
+>
+> $$
+> (a_{i_0}\ldots a_{i_k})
+> =(a_{i_1}-a_{i_0})\cdots(a_{i_k}-a_{i_0})
+> $$
+>
+> Every factor is preserved when $a_i$ is replaced by $p_i$. Hence boundaries, their exterior products, and forms on these arguments are preserved. Moreover, centering is the identity on $W$, so it creates no additional linear relations among these forms. $\square$
 
 In particular, the tetrahedron identity holds for four vertices:
 
@@ -93,24 +95,26 @@ $$
 
 Thus the quadratic form $[s_A]^2$ depends on the unordered cut $A\mid A^c$.
 
-**Lemma.** For $1\le r\le n-1$,
+> [!info] Symmetric sums of cuts
+> **Lemma.** For $1\le r\le n-1$,
+>
+> $$
+> \boxed{
+> \sum_{\substack{A\subseteq\{1,\ldots,n\}\\\#A=r}}[s_A]^2
+> =\binom{n-2}{r-1}\sum_{i=1}^n[p_i]^2
+> }
+> \tag{3}
+> $$
 
-$$
-\boxed{
-\sum_{\substack{A\subseteq\{1,\ldots,n\}\\\#A=r}}[s_A]^2
-=\binom{n-2}{r-1}\sum_{i=1}^n[p_i]^2
-}
-\tag{3}
-$$
-
-**Proof.** For $r=1$, the formula is immediate. For $r\ge2$, expanding the left-hand side gives
-
-$$
-\binom{n-1}{r-1}\sum_i[p_i]^2
-+\binom{n-2}{r-2}\sum_{i<j}\{p_i,p_j\}
-$$
-
-From $[\sum_i p_i]^2=0$, we obtain $\sum_{i<j}\{p_i,p_j\}=-\sum_i[p_i]^2$. The difference of the two binomial coefficients is $\binom{n-2}{r-1}$. $\square$
+> [!note]- Proof
+> **Proof.** For $r=1$, the formula is immediate. For $r\ge2$, expanding the left-hand side gives
+>
+> $$
+> \binom{n-1}{r-1}\sum_i[p_i]^2
+> +\binom{n-2}{r-2}\sum_{i<j}\{p_i,p_j\}
+> $$
+>
+> From $[\sum_i p_i]^2=0$, we obtain $\sum_{i<j}\{p_i,p_j\}=-\sum_i[p_i]^2$. The difference of the two binomial coefficients is $\binom{n-2}{r-1}$. $\square$
 
 This applies the [[Fundamental Theorem of Symmetric Polyforms#A quadratic identity under a zero-sum condition|zero-sum lemma]]. In the proof of boundary identities, its arguments arise from $\partial^2=0$; here they are the centered elements themselves.
 
@@ -144,16 +148,18 @@ $$
 T/\Phi_\pi=q_\pi
 $$
 
-**Corollary.** For partitions with a fixed number of blocks and arbitrary coefficients $b_\pi$,
+> [!info] Complementary grades and the dual image of an identity
+> **Corollary.** For partitions with a fixed number of blocks and arbitrary coefficients $b_\pi$,
+>
+> $$
+> \sum_\pi b_\pi q_\pi=0
+> \quad\Longleftrightarrow\quad
+> \sum_\pi b_\pi\Phi_\pi=0
+> \tag{5}
+> $$
 
-$$
-\sum_\pi b_\pi q_\pi=0
-\quad\Longleftrightarrow\quad
-\sum_\pi b_\pi\Phi_\pi=0
-\tag{5}
-$$
-
-**Proof.** Deletion from a nonzero top form is a linear isomorphism between forms of complementary grades: in matched exterior bases, it replaces each index set by its complement, with a nonzero common factor and signs. Applying this isomorphism to the sum on the right gives the sum on the left. $\square$
+> [!note]- Proof
+> **Proof.** Deletion from a nonzero top form is a linear isomorphism between forms of complementary grades: in matched exterior bases, it replaces each index set by its complement, with a nonzero common factor and signs. Applying this isomorphism to the sum on the right gives the sum on the left. $\square$
 
 Thus all symmetric boundary identities have dual counterparts with the same coefficients. In this transfer, types index the original partitions; they cannot automatically be regarded as component types of the dual form itself.
 

@@ -76,18 +76,20 @@ $$
 
 Singleton blocks are omitted from short indices: on four vertices, $\Psi_{123}=[(a_1a_2a_3)]^2$ and $\Psi_{12|34}=[a_{12}a_{34}]^2$. Numbers in these indices designate specific vertices, not a numerical type.
 
-**Corollary of the forest expansion.** For $0\le k\le n-1$,
+> [!info] Summing over partitions
+> **Corollary of the forest expansion.** For $0\le k\le n-1$,
+>
+> $$
+> \boxed{
+> Q_k=\sum_{\substack{\pi\text{ a partition of }\{1,\ldots,n\}\\
+> \#\pi=n-k}}
+> \left(\prod_{B\in\pi}t_\gamma(B)\right)\Psi_\pi
+> }
+> \tag{2}
+> $$
 
-$$
-\boxed{
-Q_k=\sum_{\substack{\pi\text{ a partition of }\{1,\ldots,n\}\\
-\#\pi=n-k}}
-\left(\prod_{B\in\pi}t_\gamma(B)\right)\Psi_\pi
-}
-\tag{2}
-$$
-
-**Proof.** By the [[The Canonical Vector Representation of the Greenian#Signed forest grades|forest formula]], $Q_k$ contains forests with $k$ edges. Group them by their components. For a fixed partition, tree choices within blocks are independent, giving the product of $t_\gamma(B)$. All these forests have the same form $\Psi_\pi$. $\square$
+> [!note]- Proof
+> **Proof.** By the [[The Canonical Vector Representation of the Greenian#Signed forest grades|forest formula]], $Q_k$ contains forests with $k$ edges. Group them by their components. For a fixed partition, tree choices within blocks are independent, giving the product of $t_\gamma(B)$. All these forests have the same form $\Psi_\pi$. $\square$
 
 Each $t_\gamma(B)$ is a cofactor of the Laplacian of the **induced system of Greenian couplings on $B$**. Its diagonal contains sums only over vertices in $B$. In general, this is not the principal submatrix $\mathbf{Gr}[B,B]$, which also retains couplings to vertices outside $B$.
 
@@ -138,22 +140,24 @@ $$
 \gamma_{ij}=\frac1{n^2c}\quad(i\ne j)
 $$
 
-**Corollary.** The entire Greenian exponential in its dual representation is
+> [!info] The complete graph
+> **Corollary.** The entire Greenian exponential in its dual representation is
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> D_{K_n}&=\prod_{i<j}\left(e+\frac1{n^2c}[a_{ij}]^2\right)\\
+> &=e+\sum_{k=1}^{n-1}\frac1{n^{k+1}c^k}
+> \sum_{\#B=k+1}[(B)]^2
+> \end{aligned}
+> }
+> \tag{4}
+> $$
+>
+> The inner sum runs over vertex subsets of size $k+1$.
 
-$$
-\boxed{
-\begin{aligned}
-D_{K_n}&=\prod_{i<j}\left(e+\frac1{n^2c}[a_{ij}]^2\right)\\
-&=e+\sum_{k=1}^{n-1}\frac1{n^{k+1}c^k}
-\sum_{\#B=k+1}[(B)]^2
-\end{aligned}
-}
-\tag{4}
-$$
-
-The inner sum runs over vertex subsets of size $k+1$.
-
-**Proof.** As proved in [[Symmetric Polyforms of the Complete Graph]], the exponential of the sum of all vector forms with common coefficient $u$ has positive grade $u^kn^{k-1}\sum_{\#B=k+1}[(B)]^2$. This identity on differences is preserved upon passage to dual elements. Substitute $u=1/(n^2c)$. $\square$
+> [!note]- Proof
+> **Proof.** As proved in [[Symmetric Polyforms of the Complete Graph]], the exponential of the sum of all vector forms with common coefficient $u$ has positive grade $u^kn^{k-1}\sum_{\#B=k+1}[(B)]^2$. This identity on differences is preserved upon passage to dual elements. Substitute $u=1/(n^2c)$. $\square$
 
 If the forest expression (2) is retained, then for a block of size $s\ge2$,
 
@@ -222,7 +226,8 @@ p(p+rq)^{r-1},&1\in B,\quad r=\#B-1\ge1
 \end{cases}
 $$
 
-**Proof.** A block consisting of leaves is a complete graph of weight $q$. For a block containing the center and $r$ leaves, delete the center's row and column from its Laplacian. The resulting matrix is $(p+rq)\mathbf I_r-q\mathbf1\mathbf1^{\mathsf T}$, with eigenvalues $p$ and $p+rq$, the latter of multiplicity $r-1$. Its determinant is the stated product. $\square$
+> [!note]- Proof
+> **Proof.** A block consisting of leaves is a complete graph of weight $q$. For a block containing the center and $r$ leaves, delete the center's row and column from its Laplacian. The resulting matrix is $(p+rq)\mathbf I_r-q\mathbf1\mathbf1^{\mathsf T}$, with eigenvalues $p$ and $p+rq$, the latter of multiplicity $r-1$. Its determinant is the stated product. $\square$
 
 At $r=n-1$, we have $p+rq=1$, so $\tau_\gamma=p=1/n^2$, in agreement with $\tau=1$.
 
@@ -610,24 +615,26 @@ $$
 \mathbf L=3\mathbf I-\mathbf A
 $$
 
-**Proposition.** The Green matrix is
+> [!info] Two Greenian weights
+> **Proposition.** The Green matrix is
+>
+> $$
+> \boxed{
+> \mathbf{Gr}=\frac25\mathbf I+\frac1{10}\mathbf A-\frac7{100}\mathbf U
+> }
+> \tag{7}
+> $$
 
-$$
-\boxed{
-\mathbf{Gr}=\frac25\mathbf I+\frac1{10}\mathbf A-\frac7{100}\mathbf U
-}
-\tag{7}
-$$
-
-**Proof.** Its row sums are $2/5+3/10-7/10=0$. Using the expression for $\mathbf A^2$, direct calculation gives
-
-$$
-(3\mathbf I-\mathbf A)
-\left(\frac25\mathbf I+\frac1{10}\mathbf A-\frac7{100}\mathbf U\right)
-=\mathbf I-\frac1{10}\mathbf U
-$$
-
-The symmetric matrix (7) inverts the Laplacian on $\mathbf1^\perp$ and annihilates constant columns. These are the defining properties of $\mathbf{Gr}$. $\square$
+> [!note]- Proof
+> **Proof.** Its row sums are $2/5+3/10-7/10=0$. Using the expression for $\mathbf A^2$, direct calculation gives
+>
+> $$
+> (3\mathbf I-\mathbf A)
+> \left(\frac25\mathbf I+\frac1{10}\mathbf A-\frac7{100}\mathbf U\right)
+> =\mathbf I-\frac1{10}\mathbf U
+> $$
+>
+> The symmetric matrix (7) inverts the Laplacian on $\mathbf1^\perp$ and annihilates constant columns. These are the defining properties of $\mathbf{Gr}$. $\square$
 
 Its diagonal entries are $33/100$; off-diagonal entries are $3/100$ for adjacent vertices and $-7/100$ for nonadjacent vertices. Therefore
 

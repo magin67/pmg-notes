@@ -75,29 +75,31 @@ Both types of new edges produce a connected tree because $ab$ is already present
 
 ## The general formula for joining components
 
-**Theorem (Cayley-Moon formula).** For a fixed forest with component-size collection $\mathbf x$, where $\#\mathbf x=m$ and $w(\mathbf x)=n\geqslant1$, the number of completions to a tree of the complete graph is
+> [!info] The general formula for joining components
+> **Theorem (Cayley-Moon formula).** For a fixed forest with component-size collection $\mathbf x$, where $\#\mathbf x=m$ and $w(\mathbf x)=n\geqslant1$, the number of completions to a tree of the complete graph is
+>
+> $$
+> \boxed{
+> T(\mathbf x)=\mathbf x!\,n^{m-2}
+> =\mathbf x!\,w(\mathbf x)^{\#\mathbf x-2}
+> }
+> $$
+>
+> Here $\mathbf x!=[x_i]!$ is the product of the component sizes. This is the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|collection product notation]]; the factorial of a scalar retains its usual meaning.
+>
+> For the proof, first consider trees on the components themselves. Temporarily number them from $1$ to $m$, and let $\mathcal T_m$ be the set of all trees on these labels. For $S\in\mathcal T_m$, let $d_i(S)$ be the degree of vertex $i$ in $S$.
 
-$$
-\boxed{
-T(\mathbf x)=\mathbf x!\,n^{m-2}
-=\mathbf x!\,w(\mathbf x)^{\#\mathbf x-2}
-}
-$$
+> [!info] The general formula for joining components
+> **Lemma (weighted Cayley formula).** For $m\geqslant2$,
+>
+> $$
+> \sum_{S\in\mathcal T_m}[x_i^{d_i(S)}]!
+> =\mathbf x!\,w(\mathbf x)^{m-2}
+> $$
+>
+> The exponents in $[x_i^{d_i(S)}]$ are ordinary numerical powers. The index $i$ ranges over all $m$ components.
 
-Here $\mathbf x!=[x_i]!$ is the product of the component sizes. This is the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|collection product notation]]; the factorial of a scalar retains its usual meaning.
-
-For the proof, first consider trees on the components themselves. Temporarily number them from $1$ to $m$, and let $\mathcal T_m$ be the set of all trees on these labels. For $S\in\mathcal T_m$, let $d_i(S)$ be the degree of vertex $i$ in $S$.
-
-**Lemma (weighted Cayley formula).** For $m\geqslant2$,
-
-$$
-\sum_{S\in\mathcal T_m}[x_i^{d_i(S)}]!
-=\mathbf x!\,w(\mathbf x)^{m-2}
-$$
-
-The exponents in $[x_i^{d_i(S)}]$ are ordinary numerical powers. The index $i$ ranges over all $m$ components.
-
-> [!proof]- Proof of the weighted formula by the Prüfer code
+> [!note]- Proof of the weighted formula by the Prüfer code
 > **Proof.** A tree on labels $1,\ldots,m$ corresponds to a Prüfer code of $m-2$ labels. Construct the code by repeatedly deleting the least-labelled leaf and recording its neighbour until two vertices remain.
 >
 > Reconstruction is also unique: join the first label of the remaining code to the least undeleted label absent from that code. Then remove the chosen leaf and the first code entry. Finally join the two remaining vertices. Thus all sequences of $m-2$ labels are in bijection with the trees.
@@ -111,17 +113,18 @@ The exponents in $[x_i^{d_i(S)}]$ are ordinary numerical powers. The index $i$ r
 >
 > Summing over all codes, each position independently contributes $w(\mathbf x)$. The sum is therefore $\mathbf x!\,w(\mathbf x)^{m-2}$. For $m=2$, the code is empty and its weight product is $1$, so the formula still holds. $\square$
 
-**Proof of the theorem.** Contract every original component $B_i$ to a single vertex. Any completion of the forest to a tree determines a tree $S$ on these $m$ vertices.
-
-For an edge $ij$ of $S$, choose one endpoint in $B_i$ and the other in $B_j$, giving $x_i x_j$ choices. Endpoint choices for different edges are independent: several new edges may meet at the same original vertex. Hence the number of realisations of a fixed tree $S$ is
-
-$$
-[x_i^{d_i(S)}]!
-$$
-
-Each completion uniquely determines $S$ and all new-edge endpoints. Conversely, each such choice joins the original trees without cycles. Summing over $S\in\mathcal T_m$ and applying the weighted Cayley formula proves the result.
-
-For $m=1$, the original forest is already a tree, and its only completion is the empty edge set. The formula gives $T([n])=n\cdot n^{-1}=1$. $\square$
+> [!note]- Proof
+> **Proof of the theorem.** Contract every original component $B_i$ to a single vertex. Any completion of the forest to a tree determines a tree $S$ on these $m$ vertices.
+>
+> For an edge $ij$ of $S$, choose one endpoint in $B_i$ and the other in $B_j$, giving $x_i x_j$ choices. Endpoint choices for different edges are independent: several new edges may meet at the same original vertex. Hence the number of realisations of a fixed tree $S$ is
+>
+> $$
+> [x_i^{d_i(S)}]!
+> $$
+>
+> Each completion uniquely determines $S$ and all new-edge endpoints. Conversely, each such choice joins the original trees without cycles. Summing over $S\in\mathcal T_m$ and applying the weighted Cayley formula proves the result.
+>
+> For $m=1$, the original forest is already a tree, and its only completion is the empty edge set. The formula gives $T([n])=n\cdot n^{-1}=1$. $\square$
 
 Equal component sizes do not require division by multiplicity factorials: the blocks are already fixed and distinguished by their vertices. Two prescribed pairs, for example, can be joined by any of four edges, so $T([2,2])=4$.
 

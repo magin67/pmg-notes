@@ -38,11 +38,12 @@ Deleting a vertex removes its couplings. Contracting vertices transfers their co
 
 ## Vertex identification in polyform algebra
 
-**Definition.** Contracting vertices $a,b$ means replacing them with a single vertex $o$. A coupling $ab$ need not exist. Define a linear map $\varphi$ on the basis vertices by
-
-$$
-\varphi(a)=\varphi(b)=o,\qquad \varphi(x)=x\quad(x\ne a,b)
-$$
+> [!info] Vertex identification in polyform algebra
+> **Definition.** Contracting vertices $a,b$ means replacing them with a single vertex $o$. A coupling $ab$ need not exist. Define a linear map $\varphi$ on the basis vertices by
+>
+> $$
+> \varphi(a)=\varphi(b)=o,\qquad \varphi(x)=x\quad(x\ne a,b)
+> $$
 
 Linearity means that the image of a combination is obtained by replacing each element while retaining its coefficient. In particular, for $d=(ab)=b-a$, we have $\varphi(d)=0$.
 
@@ -120,21 +121,22 @@ This is the precise sense in which contraction gives a passage to a subspace. Th
 
 Recall that $\tau(G)$ is the spanning-tree coefficient, and $u_{M_G}(f)$ is the coefficient of the original spanning-tree form in the product $M_Gf$. The metric identity in the [[Core specification#Potential and the metric identity|core specification]] identifies the normalized potential with the numerical metric evaluation of the form.
 
-**Lemma.** For the contraction of a pair $a,b$,
+> [!info] Derivation using potentials
+> **Lemma.** For the contraction of a pair $a,b$,
+>
+> $$
+> \tau(G')=u_{M_G}([d]^2)=\tau(G)d^2
+> \tag{4}
+> $$
+>
+> $$
+> u_{M_{G'}}([\varphi(v)]^2)=u_{M_G}([d]^2[v]^2)
+> \tag{5}
+> $$
+>
+> On the left of (5), the spanning-tree coefficient is extracted on the new vertex set; on the right, it is extracted on the original set.
 
-$$
-\tau(G')=u_{M_G}([d]^2)=\tau(G)d^2
-\tag{4}
-$$
-
-$$
-u_{M_{G'}}([\varphi(v)]^2)=u_{M_G}([d]^2[v]^2)
-\tag{5}
-$$
-
-On the left of (5), the spanning-tree coefficient is extracted on the new vertex set; on the right, it is extracted on the original set.
-
-> [!proof]- Proof of the lemma and theorem
+> [!note]- Proof of the lemma and theorem
 > **Proof.** Write the original vertices as $a,b,x_1,\ldots,x_{n-2}$ and choose the vector basis $d=b-a$, $v_i=x_i-a$. After contraction, the images $\varphi(v_i)=x_i-o$ remain.
 >
 > In grade $n-2$, substitution by $\varphi$ annihilates terms containing $d$ in at least one argument of a form. Multiplication by $[d]^2$ annihilates the same terms. For all remaining terms, the coefficient of the new spanning-tree form equals the coefficient of the original spanning-tree form after multiplication by $[d]^2$: the product $d\wedge v_1\wedge\cdots\wedge v_{n-2}$ is the boundary $(abx_1\ldots x_{n-2})$.
@@ -202,7 +204,8 @@ Each factor $\Omega_\alpha$ describes the space of internal vectors of its compo
 
 ## Gluing at a single vertex
 
-**Definition.** Select vertices $o_1\in G_1$, $o_2\in G_2$ in two initially disjoint connected graphs. Identifying them as a common vertex $o$ is called gluing at a single vertex. For now, there are no other identifications or new couplings.
+> [!info] Gluing at a single vertex
+> **Definition.** Select vertices $o_1\in G_1$, $o_2\in G_2$ in two initially disjoint connected graphs. Identifying them as a common vertex $o$ is called gluing at a single vertex. For now, there are no other identifications or new couplings.
 
 After substituting the vertex names, denote the polyforms of the parts by $M_1,M_2$. Then
 
@@ -244,7 +247,7 @@ In the example of two independent couplings, identify $b,c$ as $o$. The product 
 
 This is called an **orthogonal direct sum** of spaces and is written $W=W_1\oplus W_2$. The word “direct” refers to uniqueness of the decomposition; orthogonality means that inner products between the parts vanish.
 
-> [!proof]- Proof using polyforms
+> [!note]- Proof using polyforms
 > **Proof.** The vectors from $o$ to the other vertices form a basis split into two disjoint sets. Thus $W$ is the direct sum of $W_1,W_2$.
 >
 > In the product $M_1M_2[u_1]^2$, a contribution to the spanning-tree form can arise only from the top grade of the second part. Therefore,
@@ -285,14 +288,15 @@ For a graph consisting of one coupling with effective resistance $r$, the center
 
 Here centers and their sums are considered in the ordinary affine space of the resistance realization. In the extension with $z$, the affine combination giving a center need not be local; its local point is obtained by the correction $\pi(p)=p-p^2z/2$, as explained in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on nonlocal elements]].
 
-**Theorem.** When two graphs are glued at a single vertex $o$, the circumcenter and resistance radius of the combined graph satisfy
+> [!info] Resistance radius is additive
+> **Theorem.** When two graphs are glued at a single vertex $o$, the circumcenter and resistance radius of the combined graph satisfy
+>
+> $$
+> \boxed{h=h_1+h_2-o,\qquad \rho(G)=\rho(G_1)+\rho(G_2)}
+> \tag{10}
+> $$
 
-$$
-\boxed{h=h_1+h_2-o,\qquad \rho(G)=\rho(G_1)+\rho(G_2)}
-\tag{10}
-$$
-
-> [!proof]- Proof
+> [!note]- Proof
 > **Proof.** Put $u_i=h_i-o$. The vectors $u_1,u_2$ belong to the orthogonal spaces of the two parts. Since the common vertex lies on both original spheres, $u_i^2=\rho(G_i)$.
 >
 > The point $h=h_1+h_2-o$ has affine weight $1$. For a vertex $x$ of the first part,
@@ -316,7 +320,8 @@ $$
 
 Here $c_e$ is the coupling coefficient, and $1/c_e$ is its effective resistance in the tree. For example, the unit path and the unit star with three couplings have the same resistance radius $3/4$, although their maximum pairwise effective resistances differ: $3$ and $2$.
 
-**Definition.** The resistance diameter is $D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2$. It is also additive under single-vertex gluing; for a tree, $D_{\mathrm{res}}(T)=\sum_e1/c_e$. The linear diameter is $2R_{\mathrm{sph}}$. The maximum pairwise effective resistance is a different parameter: for the star above it is $2$, whereas $D_{\mathrm{res}}=3$.
+> [!info] Resistance radius is additive
+> **Definition.** The resistance diameter is $D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2$. It is also additive under single-vertex gluing; for a tree, $D_{\mathrm{res}}(T)=\sum_e1/c_e$. The linear diameter is $2R_{\mathrm{sph}}$. The maximum pairwise effective resistance is a different parameter: for the star above it is $2$, whereas $D_{\mathrm{res}}=3$.
 
 Additivity of resistance radius does not imply additivity of all matroid invariants. For example, the spanning-tree coefficient in (7) is multiplicative. Being a matroid invariant means depending on the linear dependence structure of the edge vectors and, in the weighted case, also on the coupling coefficients. The rule for how a quantity changes under gluing requires a separate justification. Other families of additive parameters are not introduced here.
 

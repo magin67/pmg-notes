@@ -32,7 +32,8 @@ $$
 k_0=n-g-b(\pi)
 $$
 
-**Definition.** A grove relative to $B$ is a spanning forest whose every component meets $B$, that is, $k_0=0$. Denote the sum of the weights of groves of state $\pi$ by $g_\pi^{G,B}$, with weight equal to the product of the selected edge conductances.
+> [!info] Extracting groves from the full passport
+> **Definition.** A grove relative to $B$ is a spanning forest whose every component meets $B$, that is, $k_0=0$. Denote the sum of the weights of groves of state $\pi$ by $g_\pi^{G,B}$, with weight equal to the product of the selected edge conductances.
 
 The equality above and [[en/Boundary polynomials and graph gluing/Boundary Forest States - What to Retain from a Component#Internal components and groves|the grove extraction formula]] give
 
@@ -83,7 +84,8 @@ g_\pi^{G_1,B}g_\sigma^{G_2,B}
 \tag{2}
 $$
 
-**Proof.** An internal component of either forest cannot connect to the other part, so it cannot occur in the resulting tree. For two groves, $\pi\vee\sigma=\{B\}$ is equivalent to connectivity of the union. Its edge count is $n_1+n_2-b(\pi)-b(\sigma)$, which equals $n-1$ exactly under the second condition in the sum. A connected graph with $n-1$ edges is a tree. Splitting a tree by edge labels and joining groves are inverse operations preserving the product of weights. $\square$
+> [!note]- Proof
+> **Proof.** An internal component of either forest cannot connect to the other part, so it cannot occur in the resulting tree. For two groves, $\pi\vee\sigma=\{B\}$ is equivalent to connectivity of the union. Its edge count is $n_1+n_2-b(\pi)-b(\sigma)$, which equals $n-1$ exactly under the second condition in the sum. A connected graph with $n-1$ edges is a tree. Splitting a tree by edge labels and joining groves are inverse operations preserving the product of weights. $\square$
 
 Thus the spanning-tree pairing matrix is obtained from the forest compatibility matrix by adding the connectivity condition $\pi\vee\sigma=\{B\}$. These are different matrices.
 
@@ -118,16 +120,17 @@ $$
 
 The internal block is positive definite: with zero boundary values, zero energy in a connected graph is possible only for the zero potential. The diagonal of $\mathbf L_{II}$ includes connections to $B$; this is not the Laplacian of the graph obtained by deleting the boundary.
 
-**Definition.** The electrical response matrix, or Dirichlet-to-Neumann operator on $B$, is
-
-$$
-\boxed{
-\boldsymbol\Lambda_B
-=\mathbf L_{BB}-\mathbf L_{BI}\mathbf L_{II}^{-1}\mathbf L_{IB},\qquad
-\mathbf j_B=\boldsymbol\Lambda_B\mathbf v_B
-}
-\tag{3}
-$$
+> [!info] Electrical response on the boundary
+> **Definition.** The electrical response matrix, or Dirichlet-to-Neumann operator on $B$, is
+>
+> $$
+> \boxed{
+> \boldsymbol\Lambda_B
+> =\mathbf L_{BB}-\mathbf L_{BI}\mathbf L_{II}^{-1}\mathbf L_{IB},\qquad
+> \mathbf j_B=\boldsymbol\Lambda_B\mathbf v_B
+> }
+> \tag{3}
+> $$
 
 Currents $\mathbf j_B$ are taken as entering the network. The matrix is symmetric and positive semidefinite, with kernel consisting of constant columns. Formula (3) is the Schur complement of the internal block. If $I=\varnothing$, set $\boldsymbol\Lambda_B=\mathbf L$ and $\det\mathbf L_{II}=1$.
 
@@ -150,19 +153,21 @@ $$
 \delta_B(G)=g_{b_0|\cdots|b_{k-1}}^{G,B}
 $$
 
-**Theorem (an established identity [1, Lemma A.1]).** Choose $b_0\in B$ and delete its row and column from $\boldsymbol\Lambda_B$. For the resulting matrix $\mathbf H_B$ of size $k-1$,
+> [!info] The scale of the spanning-tree coefficient
+> **Theorem (an established identity [1, Lemma A.1]).** Choose $b_0\in B$ and delete its row and column from $\boldsymbol\Lambda_B$. For the resulting matrix $\mathbf H_B$ of size $k-1$,
+>
+> $$
+> \boxed{
+> \delta_B(G)=\det\mathbf L_{II},\qquad
+> \tau(G)=\delta_B(G)\det\mathbf H_B
+> }
+> \tag{4}
+> $$
 
-$$
-\boxed{
-\delta_B(G)=\det\mathbf L_{II},\qquad
-\tau(G)=\delta_B(G)\det\mathbf H_B
-}
-\tag{4}
-$$
-
-**Proof.** Contract all vertices of $B$ to one vertex $h$. By [[en/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test#A linear test of the full passport|the selection rule]], the passing forests have all boundary vertices separated. Spanning trees of the quotient graph correspond exactly to groves of this state. After deleting $h$, the reduced Laplacian of the quotient graph is $\mathbf L_{II}$. By Kirchhoff's theorem, its determinant is $\delta_B(G)$.
-
-Now delete the row and column of $b_0$ from the original Laplacian. Its determinant is $\tau(G)$. Block elimination of internal variables gives the product of $\det\mathbf L_{II}$ and the determinant of the Schur complement, namely $\det\mathbf H_B$. This proves the second equality. $\square$
+> [!note]- Proof
+> **Proof.** Contract all vertices of $B$ to one vertex $h$. By [[en/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test#A linear test of the full passport|the selection rule]], the passing forests have all boundary vertices separated. Spanning trees of the quotient graph correspond exactly to groves of this state. After deleting $h$, the reduced Laplacian of the quotient graph is $\mathbf L_{II}$. By Kirchhoff's theorem, its determinant is $\delta_B(G)$.
+>
+> Now delete the row and column of $b_0$ from the original Laplacian. Its determinant is $\tau(G)$. Block elimination of internal variables gives the product of $\det\mathbf L_{II}$ and the determinant of the Schur complement, namely $\det\mathbf H_B$. This proves the second equality. $\square$
 
 The effective graph on $B$ has spanning-tree coefficient $\det\mathbf H_B$. The factor $\delta_B(G)$ retains the scale lost when the interior is eliminated. Thus $\boldsymbol\Lambda_B$ alone cannot recover the absolute value of $\tau(G)$. Formula (4) uses ordinary reduced determinants; the product of nonzero Laplacian eigenvalues would introduce an additional factor equal to the vertex count.
 
@@ -189,17 +194,19 @@ $$
 =\frac{R_{b_0b_i}+R_{b_0b_j}-R_{b_ib_j}}2
 $$
 
-**Theorem (resistance formulation of [1, Propositions A.2–A.3]).** In this basis,
+> [!info] The boundary resistance Gram matrix
+> **Theorem (resistance formulation of [1, Propositions A.2–A.3]).** In this basis,
+>
+> $$
+> \boxed{
+> \mathbf G_B=\mathbf H_B^{-1},\qquad
+> \delta_B(G)=\tau(G)\det\mathbf G_B
+> }
+> \tag{5}
+> $$
 
-$$
-\boxed{
-\mathbf G_B=\mathbf H_B^{-1},\qquad
-\delta_B(G)=\tau(G)\det\mathbf G_B
-}
-\tag{5}
-$$
-
-**Proof.** Inject unit current at $b_j$ and withdraw it through $b_0$, setting the potential at $b_0$ to zero. After eliminating internal potentials, the boundary problem is $\mathbf H_B\mathbf v=\mathbf e_j$. Its $i$th response is the potential difference between $b_i$ and $b_0$, namely $d_i\cdot d_j$. Thus $\mathbf G_B=\mathbf H_B^{-1}$. Taking determinants in (4) gives the second equality. $\square$
+> [!note]- Proof
+> **Proof.** Inject unit current at $b_j$ and withdraw it through $b_0$, setting the potential at $b_0$ to zero. After eliminating internal potentials, the boundary problem is $\mathbf H_B\mathbf v=\mathbf e_j$. Its $i$th response is the potential difference between $b_i$ and $b_0$, namely $d_i\cdot d_j$. Thus $\mathbf G_B=\mathbf H_B^{-1}$. Taking determinants in (4) gives the second equality. $\square$
 
 In particular, $\boldsymbol\Lambda_B$ and $\mathbf G_B$ determine each other: $\mathbf H_B=\mathbf G_B^{-1}$, and zero row and column sums recover the deleted row and column. This does not identify the principal block of $\mathbf{Gr}_G$ with $\boldsymbol\Lambda_B^+$: their centerings refer to different vertex sets. What agrees is their metric evaluation on boundary differences.
 
@@ -223,7 +230,8 @@ The effective graph is the path $a-c-e$ with conductances $1/2,1/2$. Its spannin
 
 ## The determinant law for spanning-tree gluing
 
-**Derivation in this note.** Formulas (6)–(8) follow from addition of responses and the established identities (4)–(5). The proof makes this step explicit.
+> [!note] Source of the result
+> **Derivation in this note.** Formulas (6)–(8) follow from addition of responses and the established identities (4)–(5). The proof makes this step explicit.
 
 Return to two parts with common boundary $B$ and disjoint edge labels. Now assume **each part is connected**. Boundary vertices are listed in the same order, and both parts use the differences $d_i=b_i-b_0$.
 
@@ -241,24 +249,26 @@ $$
 \tag{6}
 $$
 
-**Theorem (a consequence of electrical identities).** In the normalized boundary-difference basis,
+> [!info] The determinant law for spanning-tree gluing
+> **Theorem (a consequence of electrical identities).** In the normalized boundary-difference basis,
+>
+> $$
+> \boxed{
+> \tau(G_1\#_B G_2)
+> =\tau(G_1)\tau(G_2)\det(\mathbf G_1+\mathbf G_2)
+> }
+> \tag{7}
+> $$
 
-$$
-\boxed{
-\tau(G_1\#_B G_2)
-=\tau(G_1)\tau(G_2)\det(\mathbf G_1+\mathbf G_2)
-}
-\tag{7}
-$$
-
-**Proof.** By (5), $\delta_B(G_i)=\tau(G_i)\det\mathbf G_i$ and $\mathbf H_i=\mathbf G_i^{-1}$. For invertible matrices,
-
-$$
-\mathbf G_1^{-1}+\mathbf G_2^{-1}
-=\mathbf G_1^{-1}(\mathbf G_1+\mathbf G_2)\mathbf G_2^{-1}
-$$
-
-Substitution into (6) and multiplication of determinants give (7). The matrices need not commute. $\square$
+> [!note]- Proof
+> **Proof.** By (5), $\delta_B(G_i)=\tau(G_i)\det\mathbf G_i$ and $\mathbf H_i=\mathbf G_i^{-1}$. For invertible matrices,
+>
+> $$
+> \mathbf G_1^{-1}+\mathbf G_2^{-1}
+> =\mathbf G_1^{-1}(\mathbf G_1+\mathbf G_2)\mathbf G_2^{-1}
+> $$
+>
+> Substitution into (6) and multiplication of determinants give (7). The matrices need not commute. $\square$
 
 Thus (2) and (7) compute the same spanning-tree coefficient: the former sums grove pairs, and the latter uses their electrical representation. Formula (7) requires no planarity.
 

@@ -89,26 +89,27 @@ $$
 
 The empty index set is denoted by $\varnothing$; its basis symbol in type notation and its corresponding monomial are both $1$. Thus $x_\varnothing=1$. The number $n$ is retained separately: together with the type, it recovers the number of isolated vertices, $n-\sum_\alpha k_\alpha-r$.
 
-**Definition.** The canonical toponome of the Greenian exponential is the polynomial expression for the reduction of forest representation (1):
-
-$$
-\boxed{
-T_{\mathrm{Gr}}(\mathbf x)
-=\sum_{F\in\mathcal F_n}w_\gamma(F)x_{\lambda(F)}
-=\sum_\lambda c_{\mathrm{Gr}}(\lambda)x_\lambda
-}
-\tag{2}
-$$
-
-Its coefficient
-
-$$
-c_{\mathrm{Gr}}(\lambda)
-=\sum_{\substack{F\in\mathcal F_n\\\lambda(F)=\lambda}}
-\prod_{ij\in E(F)}\gamma_{ij}
-$$
-
-is the signed sum of weights of all forests of the specified type. A positive type means that its parts $k_\alpha$ are positive; it imposes no positivity requirement on the toponome coefficient.
+> [!info] The full toponome and the meaning of its coefficients
+> **Definition.** The canonical toponome of the Greenian exponential is the polynomial expression for the reduction of forest representation (1):
+>
+> $$
+> \boxed{
+> T_{\mathrm{Gr}}(\mathbf x)
+> =\sum_{F\in\mathcal F_n}w_\gamma(F)x_{\lambda(F)}
+> =\sum_\lambda c_{\mathrm{Gr}}(\lambda)x_\lambda
+> }
+> \tag{2}
+> $$
+>
+> Its coefficient
+>
+> $$
+> c_{\mathrm{Gr}}(\lambda)
+> =\sum_{\substack{F\in\mathcal F_n\\\lambda(F)=\lambda}}
+> \prod_{ij\in E(F)}\gamma_{ij}
+> $$
+>
+> is the signed sum of weights of all forests of the specified type. A positive type means that its parts $k_\alpha$ are positive; it imposes no positivity requirement on the toponome coefficient.
 
 Denote the analogous expression with $c_{ij}$ in place of $\gamma_{ij}$ by $T_L(\mathbf x)$. This is the original graph's toponome $T_G$ from [[Vector and Vertex Normalizations of Toponomes]]; the index $L$ distinguishes the members of the pair.
 
@@ -192,31 +193,33 @@ The univariate vertex evaluation preserves every structural identity: in the aux
 
 ## The vertex polynomial and the determinant
 
-**Theorem.** The vertex specialization of the canonical Greenian toponome is
+> [!info] The vertex polynomial and the determinant
+> **Theorem.** The vertex specialization of the canonical Greenian toponome is
+>
+> $$
+> \boxed{P_{\mathrm{Gr}}(t)=\det(\mathbf I+t\mathbf{Gr})}
+> \tag{4}
+> $$
+>
+> The equality holds for any symmetric matrix with zero row sums when its vector weights are defined as the negatives of its off-diagonal entries.
 
-$$
-\boxed{P_{\mathrm{Gr}}(t)=\det(\mathbf I+t\mathbf{Gr})}
-\tag{4}
-$$
-
-The equality holds for any symmetric matrix with zero row sums when its vector weights are defined as the negatives of its off-diagonal entries.
-
-**Proof.** Let $\mathbf B$ be the coordinate matrix of all pair vectors: its column for pair $ij$ is $\mathbf e_j-\mathbf e_i$. Let $\mathbf D_\gamma$ be the diagonal matrix of weights $\gamma_{ij}$. Zero row sums give
-
-$$
-\mathbf{Gr}=\mathbf B\mathbf D_\gamma\mathbf B^{\mathsf T}
-$$
-
-Expanding the determinant and applying Cauchy–Binet gives
-
-$$
-\det(\mathbf I+t\mathbf{Gr})
-=\sum_{S}t^{\#S}
-\left(\prod_{ij\in S}\gamma_{ij}\right)
-\det(\mathbf B_S^{\mathsf T}\mathbf B_S)
-$$
-
-The sum runs over sets of pairs. If a set contains a cycle, its columns are dependent and the determinant is zero. For a forest $F$, the Gram determinant of its columns is $\prod_{B\in\pi(F)}\#B=h(\lambda(F))$: a tree on $s$ vertices has $s$ nonzero maximal incidence minors, each equal to $\pm1$, and disjoint components give independent blocks. The empty forest contributes $1$. This is exactly the substitution $x_j=(j+1)t^j$ in (2). No restriction was imposed on the signs of $\gamma_{ij}$. $\square$
+> [!note]- Proof
+> **Proof.** Let $\mathbf B$ be the coordinate matrix of all pair vectors: its column for pair $ij$ is $\mathbf e_j-\mathbf e_i$. Let $\mathbf D_\gamma$ be the diagonal matrix of weights $\gamma_{ij}$. Zero row sums give
+>
+> $$
+> \mathbf{Gr}=\mathbf B\mathbf D_\gamma\mathbf B^{\mathsf T}
+> $$
+>
+> Expanding the determinant and applying Cauchy–Binet gives
+>
+> $$
+> \det(\mathbf I+t\mathbf{Gr})
+> =\sum_{S}t^{\#S}
+> \left(\prod_{ij\in S}\gamma_{ij}\right)
+> \det(\mathbf B_S^{\mathsf T}\mathbf B_S)
+> $$
+>
+> The sum runs over sets of pairs. If a set contains a cycle, its columns are dependent and the determinant is zero. For a forest $F$, the Gram determinant of its columns is $\prod_{B\in\pi(F)}\#B=h(\lambda(F))$: a tree on $s$ vertices has $s$ nonzero maximal incidence minors, each equal to $\pm1$, and disjoint components give independent blocks. The empty forest contributes $1$. This is exactly the substitution $x_j=(j+1)t^j$ in (2). No restriction was imposed on the signs of $\gamma_{ij}$. $\square$
 
 This is the matrix-forest theorem; the standard weighted-graph formulation appears in Chebotarev and Shamis [1, Theorem 5]. Their definition of weights allows negative values. The proof above explains why signs of Greenian coefficients do not prevent use of the formula.
 
@@ -233,29 +236,31 @@ P_L(t)=\det(\mathbf I+t\mathbf L)
 =\sum_{k=0}^d p_{L,k}t^k
 $$
 
-**Theorem.** For a connected graph with positive conductances,
+> [!info] The dual pair and reversal of spectral coefficients
+> **Theorem.** For a connected graph with positive conductances,
+>
+> $$
+> \boxed{
+> P_{\mathrm{Gr}}(t)=\frac{t^d}{n\tau}P_L(1/t),
+> \qquad
+> p_{\mathrm{Gr},k}=\frac{p_{L,d-k}}{n\tau}
+> }
+> \tag{5}
+> $$
+>
+> At $t=0$, the right-hand side is understood as the polynomial obtained after expansion.
 
-$$
-\boxed{
-P_{\mathrm{Gr}}(t)=\frac{t^d}{n\tau}P_L(1/t),
-\qquad
-p_{\mathrm{Gr},k}=\frac{p_{L,d-k}}{n\tau}
-}
-\tag{5}
-$$
-
-At $t=0$, the right-hand side is understood as the polynomial obtained after expansion.
-
-**Proof.** Denote the nonzero eigenvalues of $\mathbf L$ by $\mu_1,\ldots,\mu_d$. On $\mathbf1^\perp$, the matrix $\mathbf{Gr}$ has eigenvalues $\mu_i^{-1}$. By the matrix-tree theorem, $\prod_i\mu_i=n\tau$, so
-
-$$
-P_{\mathrm{Gr}}(t)
-=\prod_{i=1}^d\left(1+\frac{t}{\mu_i}\right)
-=\frac1{n\tau}\prod_{i=1}^d(t+\mu_i)
-=\frac{t^d}{n\tau}P_L(1/t)
-$$
-
-Comparing coefficients gives (5). $\square$
+> [!note]- Proof
+> **Proof.** Denote the nonzero eigenvalues of $\mathbf L$ by $\mu_1,\ldots,\mu_d$. On $\mathbf1^\perp$, the matrix $\mathbf{Gr}$ has eigenvalues $\mu_i^{-1}$. By the matrix-tree theorem, $\prod_i\mu_i=n\tau$, so
+>
+> $$
+> P_{\mathrm{Gr}}(t)
+> =\prod_{i=1}^d\left(1+\frac{t}{\mu_i}\right)
+> =\frac1{n\tau}\prod_{i=1}^d(t+\mu_i)
+> =\frac{t^d}{n\tau}P_L(1/t)
+> $$
+>
+> Comparing coefficients gives (5). $\square$
 
 The roots of the polynomials are $-1/\mu_i$ and $-\mu_i$, respectively. They are pairwise reciprocals, including multiplicities. This concerns the nonzero spectrum; the common zero eigenvalue of both matrices contributes a factor of $1$ to the determinants.
 

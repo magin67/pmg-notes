@@ -105,8 +105,8 @@ The condition $p<q$ means that each unordered pair of vertices is counted once. 
 >
 > The first concerns the direction of the projection residual; the second has its arguments in $W_P$.
 
-> [!proof]- Proof
-> From $\sum_pb_{xp}=1$ and $\sum_pb_{xp}p=q_x$, bilinearity gives
+> [!note]- Proof
+> **Proof.** From $\sum_pb_{xp}=1$ and $\sum_pb_{xp}p=q_x$, bilinearity gives
 >
 > $$
 > \sum_pb_{xp}[x-p]^2
@@ -161,8 +161,8 @@ $$
 R_{ab}=R_{bc}=\frac{14}{15},\qquad R_{ac}=\frac43
 $$
 
-> [!proof]- Effective resistances of the resulting triangle
-> Denote the three coupling coefficients by $u=c^{(P)}_{ab}$, $v=c^{(P)}_{ac}$, and $w=c^{(P)}_{bc}$. The spanning-tree coefficient is
+> [!note]- Effective resistances of the resulting triangle
+> **Proof.** Denote the three coupling coefficients by $u=c^{(P)}_{ab}$, $v=c^{(P)}_{ac}$, and $w=c^{(P)}_{bc}$. The spanning-tree coefficient is
 >
 > $$
 > \tau_P=uv+uw+vw=\frac54
@@ -207,8 +207,8 @@ Here $M_P=\exp(L_P)$, and $e$ is the unit form. The exponential is taken in poly
 
 The first part of the Laplacian describes the selected subspace. Each remaining term belongs to one perpendicular direction. Thus eliminating part $X$ leaves the factor $M_P$ in the metric polyform.
 
-> [!proof]- Orthogonality and factorization
-> The vectors of distinct edges of a tree are orthogonal in the resistance metric, and the squared length of an edge vector is the reciprocal of its coupling coefficient. Apply this to the star described above. The isometry between its vector space and the space of residuals gives (4).
+> [!note]- Orthogonality and factorization
+> **Proof.** The vectors of distinct edges of a tree are orthogonal in the resistance metric, and the squared length of an edge vector is the reciprocal of its coupling coefficient. Apply this to the star described above. The isometry between its vector space and the space of residuals gives (4).
 >
 > In polyform algebra, the exponential of a sum equals the product of exponentials. For the form of a single vector, $([r_x]^2)^2=0$, since $r_x\wedge r_x=0$. Hence $\exp(d_x[r_x]^2)=e+d_x[r_x]^2$, which together with the first equality in (5) proves the second. $\square$
 
@@ -446,8 +446,8 @@ Denote the spanning-tree coefficient of the original bipartite graph by $\tau_G$
 >
 > All degrees in this formula belong to the original graph.
 
-> [!proof]- Proof through the metric polyform
-> Consider the highest nonzero grade component of the product (5). Select a reference vertex $p_0\in P$. The note on vertex elimination shows that replacing the vectors $x-p_0$ with the residuals $r_x$, while retaining a basis of $W_P$, is a change of basis with determinant $1$. Thus the product of the spanning-tree form on $P$ and the squares of all $r_x$ is the original spanning-tree form. Its coefficient in (5) is $\tau_P\prod_xd_x$. Eliminating part $P$ gives the second expression for the same coefficient $\tau_G$. $\square$
+> [!note]- Proof through the metric polyform
+> **Proof.** Consider the highest nonzero grade component of the product (5). Select a reference vertex $p_0\in P$. The note on vertex elimination shows that replacing the vectors $x-p_0$ with the residuals $r_x$, while retaining a basis of $W_P$, is a change of basis with determinant $1$. Thus the product of the spanning-tree form on $P$ and the squares of all $r_x$ is the original spanning-tree form. Its coefficient in (5) is $\tau_P\prod_xd_x$. Eliminating part $P$ gives the second expression for the same coefficient $\tau_G$. $\square$
 
 The sum of all original coupling coefficients is
 
@@ -455,17 +455,18 @@ $$
 S=\sum_{p,x}c_{px}=\sum_pd_p=\sum_xd_x
 $$
 
-**Definition.** Let $J(G)$ denote the following dimensionless normalization of the spanning-tree coefficient of the original bipartite graph. We will call it the **common spanning-tree parameter of the two parts**:
-
-$$
-\boxed{
-\begin{aligned}
-J(G)&=\frac{S\tau_G}{\left(\prod_pd_p\right)\left(\prod_xd_x\right)}\\
-&=\frac{S\tau_P}{\prod_pd_p}=\frac{S\tau_X}{\prod_xd_x}
-\end{aligned}
-}
-\tag{9}
-$$
+> [!info] A common spanning-tree parameter of the original graph
+> **Definition.** Let $J(G)$ denote the following dimensionless normalization of the spanning-tree coefficient of the original bipartite graph. We will call it the **common spanning-tree parameter of the two parts**:
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> J(G)&=\frac{S\tau_G}{\left(\prod_pd_p\right)\left(\prod_xd_x\right)}\\
+> &=\frac{S\tau_P}{\prod_pd_p}=\frac{S\tau_X}{\prod_xd_x}
+> \end{aligned}
+> }
+> \tag{9}
+> $$
 
 The first line of (9) is the definition; the equalities in the second line follow from (8). The notation $J(G)$ is introduced in this note. It is a parameter of the original graph that can be calculated through either part, provided the original degrees are retained.
 
@@ -490,8 +491,8 @@ $$
 
 Thus $J(G)$ compares the weighted spanning-tree sum of the original graph with that of a complete bipartite graph whose degrees are preserved and whose couplings are distributed by the formula above.
 
-> [!proof]- The spanning-tree coefficient of the comparison graph
-> Eliminating part $X$ from $G_0$ by (3) gives the couplings
+> [!note]- The spanning-tree coefficient of the comparison graph
+> **Proof.** Eliminating part $X$ from $G_0$ by (3) gives the couplings
 >
 > $$
 > c^{(P,0)}_{pq}

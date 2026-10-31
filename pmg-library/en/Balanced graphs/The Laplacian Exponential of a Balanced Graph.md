@@ -160,13 +160,14 @@ Equation (5) is the coordinate form of the known identity that the $k$th exterio
 
 The forms $[b_I,b_J]$ form a basis in grade $k$, so these coefficients are unique. Principal minors multiply quadratic forms $[b_I]^2$; other minors multiply forms with different arguments. For a nonsymmetric Laplacian, the coefficients of $[b_I,b_J]$ and $[b_J,b_I]$ need not agree.
 
-**Corollary.** The highest nonzero grade of the exponential equals $\operatorname{rank}\mathbf L$. Formula (5) is nonzero up to the largest order of a nonzero minor of $\mathbf C$, and the boundary representation gives equal ranks for $\mathbf C$ and $\mathbf L$. If there are $c$ weakly connected components, including isolated vertices, nonnegative weights give
-
-$$
-\deg M=\operatorname{rank}\mathbf L=n-c
-$$
-
-Each nontrivial component is strongly connected, as established in [[Balanced Graphs and Spanning-Tree Potentials]]. For an empty graph, $M=e$ and $\deg M=0$.
+> [!info] Grade components and minors
+> **Corollary.** The highest nonzero grade of the exponential equals $\operatorname{rank}\mathbf L$. Formula (5) is nonzero up to the largest order of a nonzero minor of $\mathbf C$, and the boundary representation gives equal ranks for $\mathbf C$ and $\mathbf L$. If there are $c$ weakly connected components, including isolated vertices, nonnegative weights give
+>
+> $$
+> \deg M=\operatorname{rank}\mathbf L=n-c
+> $$
+>
+> Each nontrivial component is strongly connected, as established in [[Balanced Graphs and Spanning-Tree Potentials]]. For an empty graph, $M=e$ and $\deg M=0$.
 
 ## Expansion over directed forests
 
@@ -183,7 +184,8 @@ $$
 M=\prod_{i\to j\in E(G)}(e+E_{ij}(h))
 $$
 
-**Definition.** A directed spanning forest toward roots includes all vertices; each component is a tree directed toward its root. Every nonroot vertex has one outgoing arc, and each root has none. An isolated vertex is its component's root.
+> [!info] Expansion over directed forests
+> **Definition.** A directed spanning forest toward roots includes all vertices; each component is a tree directed toward its root. Every nonroot vertex has one outgoing arc, and each root has none. An isolated vertex is its component's root.
 
 For a forest $F$ with $k$ arcs, choose a common arc order and set
 

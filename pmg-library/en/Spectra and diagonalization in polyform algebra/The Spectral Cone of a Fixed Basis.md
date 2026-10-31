@@ -43,25 +43,28 @@ w_{ij}(\boldsymbol\mu)=-L_{ij}(\boldsymbol\mu)
 =-\sum_{k=1}^d\mu_k u_k(i)u_k(j)
 $$
 
-**Definition.** The Laplacian spectral cone of the basis $\mathbf U$ is
-
-$$
-\boxed{\mathcal K_U=
-\{\boldsymbol\mu\in\mathbb R^d:\ w_{ij}(\boldsymbol\mu)\ge0\ \text{for all }i<j\}}
-$$
+> [!info] Fixed directions and conductance constraints
+> **Definition.** The Laplacian spectral cone of the basis $\mathbf U$ is
+>
+> $$
+> \boxed{\mathcal K_U=
+> \{\boldsymbol\mu\in\mathbb R^d:\ w_{ij}(\boldsymbol\mu)\ge0\ \text{for all }i<j\}}
+> $$
 
 Its corresponding matrix cone is $\{\mathbf L(\boldsymbol\mu):\boldsymbol\mu\in\mathcal K_U\}$. The map between them is linear and one-to-one: $\mu_k=\mathbf u_k^{\mathsf T}\mathbf L\mathbf u_k$. Pairs with $w_{ij}>0$ are graph edges; $w_{ij}=0$ means the edge is absent.
 
-**Lemma.** The sign constraints in the definition already imply $\mu_k\ge0$.
+> [!info] Fixed directions and conductance constraints
+> **Lemma.** The sign constraints in the definition already imply $\mu_k\ge0$.
 
-**Proof.** Zero row sums give $L_{ii}=\sum_{j\ne i}w_{ij}$. Thus, for any $\mathbf z\in\mathbb R^n$,
-
-$$
-\mathbf z^{\mathsf T}\mathbf L\mathbf z
-=\sum_{i<j}w_{ij}(z_i-z_j)^2\ge0
-$$
-
-Substituting $\mathbf z=\mathbf u_k$ gives $\mu_k\ge0$. $\square$
+> [!note]- Proof
+> **Proof.** Zero row sums give $L_{ii}=\sum_{j\ne i}w_{ij}$. Thus, for any $\mathbf z\in\mathbb R^n$,
+>
+> $$
+> \mathbf z^{\mathsf T}\mathbf L\mathbf z
+> =\sum_{i<j}w_{ij}(z_i-z_j)^2\ge0
+> $$
+>
+> Substituting $\mathbf z=\mathbf u_k$ gives $\mu_k\ge0$. $\square$
 
 Separate eigenvalue nonnegativity constraints may therefore be added, but are redundant. The converse fails: for example, the square of a path Laplacian is positive semidefinite with zero row sums, yet its entries between vertices at distance two are positive.
 
@@ -69,18 +72,20 @@ The coordinate inner product and basis remain fixed. For a connected graph, the 
 
 ## Cone geometry and its boundary
 
-**Proposition.** $\mathcal K_U$ is a closed convex polyhedral cone of full dimension $d$ containing no lines.
+> [!info] Cone geometry and its boundary
+> **Proposition.** $\mathcal K_U$ is a closed convex polyhedral cone of full dimension $d$ containing no lines.
 
-**Proof.** Every $w_{ij}$ depends linearly on $\boldsymbol\mu$. The cone is therefore the intersection of finitely many closed homogeneous half-spaces. Nonnegativity of its coordinates shows that it can contain both $\boldsymbol\mu$ and $-\boldsymbol\mu$ only when $\boldsymbol\mu=0$.
-
-For full dimension, consider the complete graph with equal conductance $c>0$:
-
-$$
-\mathbf L_{K_n(c)}=c(n\mathbf I-\mathbf1\mathbf1^{\mathsf T}),\qquad
-\boldsymbol\mu=(nc,\ldots,nc)
-$$
-
-All inequalities $w_{ij}>0$ are strict here and remain strict in a neighborhood. Thus the cone has an interior point in $\mathbb R^d$. $\square$
+> [!note]- Proof
+> **Proof.** Every $w_{ij}$ depends linearly on $\boldsymbol\mu$. The cone is therefore the intersection of finitely many closed homogeneous half-spaces. Nonnegativity of its coordinates shows that it can contain both $\boldsymbol\mu$ and $-\boldsymbol\mu$ only when $\boldsymbol\mu=0$.
+>
+> For full dimension, consider the complete graph with equal conductance $c>0$:
+>
+> $$
+> \mathbf L_{K_n(c)}=c(n\mathbf I-\mathbf1\mathbf1^{\mathsf T}),\qquad
+> \boldsymbol\mu=(nc,\ldots,nc)
+> $$
+>
+> All inequalities $w_{ij}>0$ are strict here and remain strict in a neighborhood. Thus the cone has an interior point in $\mathbb R^d$. $\square$
 
 Adding cone points adds the conductances of their graphs on the same vertex set. Multiplying by a positive number changes the overall conductance scale and preserves the edge set.
 
@@ -279,24 +284,26 @@ $$
 
 The inequality means entrywise nonnegativity, not positive semidefiniteness. The definition and polyhedrality appear in [Johnson–Paparella, Definition 3.1 and Proposition 3.4](https://arxiv.org/pdf/1508.07400#page=4). For our orthogonal $\mathbf U$, its relationship with $\mathcal K_U$ can be stated exactly.
 
-**Proposition.** The Laplacian cone is a linear image of the Perron spectracone:
+> [!info] Connection with the Perron spectracone
+> **Proposition.** The Laplacian cone is a linear image of the Perron spectracone:
+>
+> $$
+> \mathcal K_U=
+> \{(\eta_0-\eta_1,\ldots,\eta_0-\eta_d):
+> \boldsymbol\eta\in\mathcal C(\mathbf U)\}
+> $$
 
-$$
-\mathcal K_U=
-\{(\eta_0-\eta_1,\ldots,\eta_0-\eta_d):
-\boldsymbol\eta\in\mathcal C(\mathbf U)\}
-$$
-
-**Proof.** Let $\mathbf L=\mathbf L(\boldsymbol\mu)$ be an admissible Laplacian. Choose $s\ge\max_iL_{ii}$. Then
-
-$$
-\mathbf A=s\mathbf I-\mathbf L\ge0,\qquad
-\boldsymbol\eta=(s,s-\mu_1,\ldots,s-\mu_d)\in\mathcal C(\mathbf U)
-$$
-
-Indeed, the diagonal entries are nonnegative by the choice of $s$, and the off-diagonal entries are conductances. The differences $\eta_0-\eta_k$ recover $\mu_k$.
-
-Conversely, let $\mathbf A=\mathbf U\operatorname{diag}(\boldsymbol\eta)\mathbf U^{\mathsf T}\ge0$. The constant first mode gives $\mathbf A\mathbf1=\eta_0\mathbf1$. Thus $\mathbf L=\eta_0\mathbf I-\mathbf A$ is symmetric, has zero row sums and nonpositive off-diagonal entries. It is a Laplacian with eigenvalue coefficients $\eta_0-\eta_k$. $\square$
+> [!note]- Proof
+> **Proof.** Let $\mathbf L=\mathbf L(\boldsymbol\mu)$ be an admissible Laplacian. Choose $s\ge\max_iL_{ii}$. Then
+>
+> $$
+> \mathbf A=s\mathbf I-\mathbf L\ge0,\qquad
+> \boldsymbol\eta=(s,s-\mu_1,\ldots,s-\mu_d)\in\mathcal C(\mathbf U)
+> $$
+>
+> Indeed, the diagonal entries are nonnegative by the choice of $s$, and the off-diagonal entries are conductances. The differences $\eta_0-\eta_k$ recover $\mu_k$.
+>
+> Conversely, let $\mathbf A=\mathbf U\operatorname{diag}(\boldsymbol\eta)\mathbf U^{\mathsf T}\ge0$. The constant first mode gives $\mathbf A\mathbf1=\eta_0\mathbf1$. Thus $\mathbf L=\eta_0\mathbf I-\mathbf A$ is symmetric, has zero row sums and nonpositive off-diagonal entries. It is a Laplacian with eigenvalue coefficients $\eta_0-\eta_k$. $\square$
 
 The terminology and general method thus connect to the existing theory of spectral cones. The displayed identity gives the specific transition to the Laplacian sign condition. In this section $\mathcal C(\mathbf U)$ denotes the cone from that work; $\mathcal C$ without a matrix argument above denotes the centered identification of PMG spaces.
 

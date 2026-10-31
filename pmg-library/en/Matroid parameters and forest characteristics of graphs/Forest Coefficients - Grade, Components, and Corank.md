@@ -21,7 +21,8 @@ Ordinary forest sums, rooted sums, and canonical Greenian forest sums remain dis
 
 Let $G=(\mathcal V,E)$ be a finite undirected graph on $n\ge1$ vertices. Existing edges have positive conductances $c_\ell$. The main model is a simple graph; recursions allow separately labeled parallel edges and loops arising from contraction.
 
-**Definition.** A spanning forest is an acyclic subgraph on the entire vertex set $\mathcal V$. Isolated vertices are included. Maximality under inclusion is not required, and no roots are chosen in its components.
+> [!info] Which forests are counted?
+> **Definition.** A spanning forest is an acyclic subgraph on the entire vertex set $\mathcal V$. Isolated vertices are included. Maximality under inclusion is not required, and no roots are chosen in its components.
 
 In a multigraph, a loop is a cycle of length $1$, and two parallel edges form a cycle of length $2$. Thus a forest contains no loops and cannot contain two edges with the same endpoints. This convention agrees with linear dependence of the corresponding edge vectors.
 
@@ -33,14 +34,15 @@ $$
 
 For the empty edge set, $w(F)=1$. Its subgraph contains all $n$ isolated vertices.
 
-**Definition.** The forest coefficient of grade $g$ is
-
-$$
-\boxed{
-f_g(G)=\sum_{\substack{F\text{ a spanning forest of }G\\\#E(F)=g}}w(F)
-}
-\tag{1}
-$$
+> [!info] Which forests are counted?
+> **Definition.** The forest coefficient of grade $g$ is
+>
+> $$
+> \boxed{
+> f_g(G)=\sum_{\substack{F\text{ a spanning forest of }G\\\#E(F)=g}}w(F)
+> }
+> \tag{1}
+> $$
 
 This continues the notation of [[Forest Coefficients and the Laplacian Polynomial]]. With unit conductances, $f_g$ counts forests with $g$ edges.
 
@@ -70,11 +72,12 @@ $$
 g=n-m
 $$
 
-**Definition.** The corank of a forest relative to the original graph is
-
-$$
-k=r-g=m-\kappa(G)
-$$
+> [!info] Grade, component count, and corank
+> **Definition.** The corank of a forest relative to the original graph is
+>
+> $$
+> k=r-g=m-\kappa(G)
+> $$
 
 It is the number of edges missing from a basis of the cycle matroid. For a connected original graph,
 
@@ -105,19 +108,20 @@ For a disconnected graph, a maximal forest has $\kappa(G)$ components and corank
 
 ## Two generating functions
 
-**Definition.** The generating function by grade and its reversal by corank are
-
-$$
-F_G(t)=\sum_{g=0}^{r}f_g(G)t^g
-$$
-
-$$
-\boxed{
-\mathscr F_G(u)=u^rF_G(u^{-1})
-=\sum_{k=0}^{r}f_{r-k}(G)u^k
-}
-\tag{3}
-$$
+> [!info] Two generating functions
+> **Definition.** The generating function by grade and its reversal by corank are
+>
+> $$
+> F_G(t)=\sum_{g=0}^{r}f_g(G)t^g
+> $$
+>
+> $$
+> \boxed{
+> \mathscr F_G(u)=u^rF_G(u^{-1})
+> =\sum_{k=0}^{r}f_{r-k}(G)u^k
+> }
+> \tag{3}
+> $$
 
 The right-hand side of (3) is a polynomial; its value at $u=0$ is taken after expansion. The inverse transformation is $F_G(t)=t^r\mathscr F_G(t^{-1})$.
 
@@ -243,17 +247,19 @@ $$
 \tau(G[B])=0\quad\text{if }G[B]\text{ is disconnected}
 $$
 
-**Theorem.** For $0\le g\le r$,
+> [!info] Computation through vertex partitions
+> **Theorem.** For $0\le g\le r$,
+>
+> $$
+> \boxed{
+> f_g(G)=\sum_{\pi\in\Pi_{n-g}(\mathcal V)}
+> \prod_{B\in\pi}\tau(G[B])
+> }
+> \tag{5}
+> $$
 
-$$
-\boxed{
-f_g(G)=\sum_{\pi\in\Pi_{n-g}(\mathcal V)}
-\prod_{B\in\pi}\tau(G[B])
-}
-\tag{5}
-$$
-
-**Proof.** Fix a partition $\pi$. A forest with these components is obtained by choosing a spanning tree independently inside each block. The total weight of forests with this partition is therefore the product of the block spanning-tree coefficients. Every forest has a unique component partition, so summing over partitions counts it once. $\square$
+> [!note]- Proof
+> **Proof.** Fix a partition $\pi$. A forest with these components is obtained by choosing a spanning tree independently inside each block. The total weight of forests with this partition is therefore the product of the block spanning-tree coefficients. Every forest has a unique component partition, so summing over partitions counts it once. $\square$
 
 There is no factor $(n-g)!$ in (5): blocks are unordered. The same grouping in (4) yields the cut representation of the Greenian through products of $\tau(G[B])$, proved in the [[Cuts and Forest Grades of the Greenian Exponential#Combining forests with identical components|formula for a prescribed partition]].
 
@@ -265,23 +271,25 @@ Formula (5) reduces the problem to determinants and a sum over partitions. There
 
 Deleting $\ell$ retains all vertices and other edges. Contracting an edge with distinct endpoints identifies those endpoints, deletes the edge itself, and retains all other edge labels and conductances. Parallel edges and loops in intermediate graphs follow the conventions in [[#Which forests are counted?]].
 
-**Theorem.** For a nonloop edge $\ell$,
+> [!info] Edge deletion and contraction
+> **Theorem.** For a nonloop edge $\ell$,
+>
+> $$
+> \boxed{
+> F_G(t)=F_{G\setminus\ell}(t)+c_\ell t\,F_{G/\ell}(t)
+> }
+> \tag{6}
+> $$
+>
+> Accordingly,
+>
+> $$
+> f_g(G)=f_g(G\setminus\ell)+c_\ell f_{g-1}(G/\ell)
+> \tag{7}
+> $$
 
-$$
-\boxed{
-F_G(t)=F_{G\setminus\ell}(t)+c_\ell t\,F_{G/\ell}(t)
-}
-\tag{6}
-$$
-
-Accordingly,
-
-$$
-f_g(G)=f_g(G\setminus\ell)+c_\ell f_{g-1}(G/\ell)
-\tag{7}
-$$
-
-**Proof.** Forests not containing $\ell$ are forests of $G\setminus\ell$ with the same weights and edge counts. Contracting $\ell$ gives a bijection between forests of $G$ containing $\ell$ and forests of $G/\ell$. The inverse operation splits the contracted vertex and restores $\ell$; a cycle exists before this operation if and only if it exists afterwards. The edge count decreases by one, and the weight is divided by $c_\ell$. This gives the two terms in (6); coefficient comparison gives (7). $\square$
+> [!note]- Proof
+> **Proof.** Forests not containing $\ell$ are forests of $G\setminus\ell$ with the same weights and edge counts. Contracting $\ell$ gives a bijection between forests of $G$ containing $\ell$ and forests of $G/\ell$. The inverse operation splits the contracted vertex and restores $\ell$; a cycle exists before this operation if and only if it exists afterwards. The edge count decreases by one, and the weight is divided by $c_\ell$. This gives the two terms in (6); coefficient comparison gives (7). $\square$
 
 A loop belongs to no forest, so for a loop $F_G=F_{G\setminus\ell}$. The initial condition for an edgeless graph is $F_G=1$, regardless of the number of isolated vertices.
 
@@ -324,16 +332,18 @@ $$
 
 The notation $T_{\mathsf M(G)}$ is distinct from the full toponome $T_G(\mathbf x)$. The Tutte polynomial and its recursion are classical; Tutte's original paper [1, pp. 85-90] defines it through spanning-tree activities.
 
-**Theorem.** For a unit-weight graph, including a disconnected one,
+> [!info] Connection with the Tutte polynomial
+> **Theorem.** For a unit-weight graph, including a disconnected one,
+>
+> $$
+> \boxed{
+> \mathscr F_G(u)=T_{\mathsf M(G)}(1+u,1)
+> }
+> \tag{9}
+> $$
 
-$$
-\boxed{
-\mathscr F_G(u)=T_{\mathsf M(G)}(1+u,1)
-}
-\tag{9}
-$$
-
-**Proof.** At $y=1$, every term with $\#A-r(A)>0$ vanishes. Exactly the independent sets, or forests, remain. For them, $r(A)=\#A$, and the remaining exponent of $u$ is $r-\#A$, the corank. The sum agrees with (3). The zeroth power $(y-1)^0$ is the constant polynomial $1$, so substitution is unambiguous. $\square$
+> [!note]- Proof
+> **Proof.** At $y=1$, every term with $\#A-r(A)>0$ vanishes. Exactly the independent sets, or forests, remain. For them, $r(A)=\#A$, and the remaining exponent of $u$ is $r-\#A$, the corank. The sum agrees with (3). The zeroth power $(y-1)^0$ is the constant polynomial $1$, so substitution is unambiguous. $\square$
 
 With direct indexing, the same relationship reads
 

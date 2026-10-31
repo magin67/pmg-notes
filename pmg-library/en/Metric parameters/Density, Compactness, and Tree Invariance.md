@@ -62,13 +62,14 @@ It gives the fraction of vertex pairs that are adjacent. For unit conductances, 
 
 ### Normalized radius compactness
 
-**Definition.** The normalized radius compactness is
-
-$$
-\boxed{\eta_\rho=\frac{\rho_*}{\rho}
-=\frac{(n-1)^2}{n^2\bar d\,\rho}
-=\frac{4(n-1)^2}{n^2\bar d\,D_{\mathrm{res}}}}
-$$
+> [!info] Normalized radius compactness
+> **Definition.** The normalized radius compactness is
+>
+> $$
+> \boxed{\eta_\rho=\frac{\rho_*}{\rho}
+> =\frac{(n-1)^2}{n^2\bar d\,\rho}
+> =\frac{4(n-1)^2}{n^2\bar d\,D_{\mathrm{res}}}}
+> $$
 
 This is the ratio of the reference radius to the radius of the graph under study. Its reciprocal $\eta_\rho^{-1}=\rho/\rho_*$ is the relative resistance radius: it gives the factor by which the radius exceeds the reference value at the same vertex count and total conductance.
 
@@ -149,7 +150,7 @@ Forests are explicitly part of this parameter's construction. This is a concrete
 >
 > Equality $\eta_K=1$ holds precisely for a complete graph with equal conductances. In that case, $\eta_\rho=\eta_2=1$ as well.
 
-> [!proof]- Spectral and geometric proof
+> [!note]- Spectral and geometric proof
 > **Proof.** The nonzero eigenvalues satisfy
 >
 > $$
@@ -233,7 +234,8 @@ Here $\mathcal F_2$ is the set of spanning forests with two components, $A_F,B_F
 
 ## Tree invariance
 
-**Definition.** In this note, a parameter is called tree-invariant if it is constant across all trees with unit conductances and a given number of vertices. This specifies a particular property; it does not assert matroid invariance on arbitrary graphs.
+> [!info] Tree invariance
+> **Definition.** In this note, a parameter is called tree-invariant if it is constant across all trees with unit conductances and a given number of vertices. This specifies a particular property; it does not assert matroid invariance on arbitrary graphs.
 
 > [!info] Radius compactness of any tree
 > **Theorem.** If all conductances of a tree on $n\ge2$ vertices equal the same $c>0$, then
@@ -244,7 +246,7 @@ Here $\mathcal F_2$ is the set of spanning forests with two components, $A_F,B_F
 >
 > The values depend neither on tree shape nor on the common conductance scale.
 
-> [!proof]- Gluing individual edges
+> [!note]- Gluing individual edges
 > **Proof.** A tree is obtained by successively gluing $n-1$ edges at single vertices. The [[Resistance Radius and Diameter of a Graph#Trees|additivity of the resistance radius]] gives
 >
 > $$

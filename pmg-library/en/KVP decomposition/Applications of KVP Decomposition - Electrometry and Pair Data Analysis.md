@@ -35,12 +35,13 @@ $$
 \qquad \sum_i\alpha_i=0
 $$
 
-**Definition.** In this notation, KVP decomposition is
-
-$$
-\boxed{A_{ij}=\mu+\alpha_i+\alpha_j+P_{ij}\quad(i\ne j)}
-\tag{1}
-$$
+> [!info] Mathematical basis: the residual of an additive model
+> **Definition.** In this notation, KVP decomposition is
+>
+> $$
+> \boxed{A_{ij}=\mu+\alpha_i+\alpha_j+P_{ij}\quad(i\ne j)}
+> \tag{1}
+> $$
 
 All three component diagonals are zero; $P$ is symmetric and satisfies $\sum_jP_{ij}=0$. Here $A_K$ has constant off-diagonal entries $\mu$, $A_V$ has entries $\alpha_i+\alpha_j$, and $P=A_P$.
 
@@ -53,23 +54,24 @@ $$
 
 This follows from coefficient orthogonality proved in [[KVP Decomposition of Pair Characteristics]]. The inner product is $\langle A,B\rangle_0=\sum_{i<j}A_{ij}B_{ij}$; it is not the PMG metric inner product.
 
-**Corollary.** If the observations change according to
-
-$$
-A'_{ij}=A_{ij}+\varepsilon_i+\varepsilon_j\quad(i\ne j),
-\qquad A'_{ii}=0
-$$
-
-then
-
-$$
-\boxed{\Pi_P A'=\Pi_P A}
-\tag{2}
-$$
-
-Indeed, this addition lies entirely in $K\oplus V$. With $\bar\varepsilon=n^{-1}\sum_i\varepsilon_i$, its K-contribution is $2\bar\varepsilon$, and its V-contribution is $(\varepsilon_i-\bar\varepsilon)+(\varepsilon_j-\bar\varepsilon)$.
-
-The interpretation of $\varepsilon_i$ depends on the problem: an instrument correction, individual activity, or some other additive effect. The decomposition itself does not identify the cause. In particular, it does not prove that V is error and P is useful signal.
+> [!info] Mathematical basis: the residual of an additive model
+> **Corollary.** If the observations change according to
+>
+> $$
+> A'_{ij}=A_{ij}+\varepsilon_i+\varepsilon_j\quad(i\ne j),
+> \qquad A'_{ii}=0
+> $$
+>
+> then
+>
+> $$
+> \boxed{\Pi_P A'=\Pi_P A}
+> \tag{2}
+> $$
+>
+> Indeed, this addition lies entirely in $K\oplus V$. With $\bar\varepsilon=n^{-1}\sum_i\varepsilon_i$, its K-contribution is $2\bar\varepsilon$, and its V-contribution is $(\varepsilon_i-\bar\varepsilon)+(\varepsilon_j-\bar\varepsilon)$.
+>
+> The interpretation of $\varepsilon_i$ depends on the problem: an instrument correction, individual activity, or some other additive effect. The decomposition itself does not identify the cause. In particular, it does not prove that V is error and P is useful signal.
 
 **Remark.** P-projection is not ordinary double centering. For a zero-diagonal correction $B_{ij}=\varepsilon_i+\varepsilon_j$ with $i\ne j$, and $J=I-\mathbf1\mathbf1^{\mathsf T}/n$,
 
@@ -82,13 +84,14 @@ The second expression is generally nonzero, as follows from $B=\boldsymbol\varep
 
 ## What four-point combinations retain
 
-**Definition.** For four pairwise distinct indices, set
-
-$$
-\mathcal T_{ab,mn}(A)
-=\frac12(A_{an}+A_{bm}-A_{am}-A_{bn})
-\tag{3}
-$$
+> [!info] What four-point combinations retain
+> **Definition.** For four pairwise distinct indices, set
+>
+> $$
+> \mathcal T_{ab,mn}(A)
+> =\frac12(A_{an}+A_{bm}-A_{am}-A_{bn})
+> \tag{3}
+> $$
 
 Each vertex parameter occurs with opposite signs, so
 
@@ -96,24 +99,26 @@ $$
 \mathcal T_{ab,mn}(A)=\mathcal T_{ab,mn}(A_P)
 $$
 
-**Theorem.** The complete collection of combinations (3) uniquely determines the P-component. Two symmetric pair tables give the same combinations if and only if their difference has the form $\varepsilon_i+\varepsilon_j$ for $i\ne j$.
+> [!info] What four-point combinations retain
+> **Theorem.** The complete collection of combinations (3) uniquely determines the P-component. Two symmetric pair tables give the same combinations if and only if their difference has the form $\varepsilon_i+\varepsilon_j$ for $i\ne j$.
 
-**Proof.** It suffices to characterize tables A for which all combinations vanish. For such tables, the sums over the three pair partitions of any four elements coincide. Set
-
-$$
-b_1=\frac{A_{12}+A_{13}-A_{23}}2,
-\qquad b_i=A_{1i}-b_1\quad(i\ne1)
-$$
-
-For pairs among $1,2,3$, we obtain $A_{ij}=b_i+b_j$ directly. For $i\ge4$, equality of sums on the four elements $1,2,3,i$ gives
-
-$$
-A_{2i}=A_{1i}+A_{23}-A_{13}=b_2+b_i,
-\qquad
-A_{3i}=A_{1i}+A_{23}-A_{12}=b_3+b_i
-$$
-
-Finally, for distinct $i,j\ge4$, the equality $A_{ij}+A_{12}=A_{1i}+A_{2j}$ gives $A_{ij}=b_i+b_j$. Thus the kernel of the collection (3) is exactly $K\oplus V$. The reverse inclusion follows from cancellation of vertex terms. $\square$
+> [!note]- Proof
+> **Proof.** It suffices to characterize tables A for which all combinations vanish. For such tables, the sums over the three pair partitions of any four elements coincide. Set
+>
+> $$
+> b_1=\frac{A_{12}+A_{13}-A_{23}}2,
+> \qquad b_i=A_{1i}-b_1\quad(i\ne1)
+> $$
+>
+> For pairs among $1,2,3$, we obtain $A_{ij}=b_i+b_j$ directly. For $i\ge4$, equality of sums on the four elements $1,2,3,i$ gives
+>
+> $$
+> A_{2i}=A_{1i}+A_{23}-A_{13}=b_2+b_i,
+> \qquad
+> A_{3i}=A_{1i}+A_{23}-A_{12}=b_3+b_i
+> $$
+>
+> Finally, for distinct $i,j\ge4$, the equality $A_{ij}+A_{12}=A_{1i}+A_{2j}$ gives $A_{ij}=b_i+b_j$. Thus the kernel of the collection (3) is exactly $K\oplus V$. The reverse inclusion follows from cancellation of vertex terms. $\square$
 
 The number of independent linear data of this kind is therefore
 
@@ -177,14 +182,16 @@ The measurements $T_{ab,mn}$ have four indices. They cannot directly be declared
 
 Choose nodes $x_i$ of a network. Attach a separate terminal $a_i$ to each node through a single series resistor of resistance $\varepsilon_i>0$. The terminals $a_i$ are leaves of the extended network. Let $R^0_{ij}$ denote the resistance between $x_i,x_j$ in the original network and $R^{\mathrm{term}}_{ij}$ that between the new terminals.
 
-**Proposition.** For distinct terminals,
+> [!info] An exact model of contact corrections
+> **Proposition.** For distinct terminals,
+>
+> $$
+> \boxed{R^{\mathrm{term}}_{ij}=R^0_{ij}+\varepsilon_i+\varepsilon_j}
+> \tag{7}
+> $$
 
-$$
-\boxed{R^{\mathrm{term}}_{ij}=R^0_{ij}+\varepsilon_i+\varepsilon_j}
-\tag{7}
-$$
-
-**Proof.** Under unit current from $a_i$ to $a_j$, both corresponding contact resistors carry current 1. No current flows through the other leaf resistors. The internal network receives the same current pair $x_i,x_j$, so the total voltage drop is $\varepsilon_i+R^0_{ij}+\varepsilon_j$. $\square$
+> [!note]- Proof
+> **Proof.** Under unit current from $a_i$ to $a_j$, both corresponding contact resistors carry current 1. No current flows through the other leaf resistors. The internal network receives the same current pair $x_i,x_j$, so the total voltage drop is $\varepsilon_i+R^0_{ij}+\varepsilon_j$. $\square$
 
 Formula (2) gives the exact invariance
 

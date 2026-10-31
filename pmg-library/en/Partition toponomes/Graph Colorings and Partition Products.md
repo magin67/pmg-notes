@@ -19,7 +19,8 @@ The main correspondence is as follows: disjoint union of graphs becomes multipli
 
 Let $H=(V,E)$ be a finite simple undirected graph. Its vertices are distinguishable, and their number is $N=\#V$. For now, we impose no bound on the set of available colors.
 
-**Definition.** A proper coloring assigns a color to each vertex so that the endpoints of every edge have different colors. Vertices of the same color form a **color class**. There are no edges within such a class; a vertex set with this property is called **independent**, or stable.
+> [!info] Proper colorings and color classes
+> **Definition.** A proper coloring assigns a color to each vertex so that the endpoints of every edge have different colors. Vertices of the same color form a **color class**. There are no edges within such a class; a vertex set with this property is called **independent**, or stable.
 
 Forget the names of the colors while retaining the membership of each class. This gives a partition
 
@@ -55,11 +56,12 @@ $$
 k=\omega(V)
 $$
 
-**Definition.** The weight type of a color-class partition is the integer partition
-
-$$
-\lambda_\omega(\pi)=\bigl(\omega(B_1),\ldots,\omega(B_r)\bigr)
-$$
+> [!info] Vertex weights and color-class types
+> **Definition.** The weight type of a color-class partition is the integer partition
+>
+> $$
+> \lambda_\omega(\pi)=\bigl(\omega(B_1),\ldots,\omega(B_r)\bigr)
+> $$
 
 Its weight is $k$, and its number of parts is the number $r$ of color classes. With unit vertex weights, the parts equal the class sizes. For arbitrary weights, these quantities can differ: two vertices of weights $2$ and $1$ in the same class give a part $3$.
 
@@ -91,16 +93,17 @@ Here, the complete graph requires the parts of a single factor to have distinct 
 
 Consider two graphs $(G,\omega_G)$ and $(H,\omega_H)$ on disjoint vertex sets. Their **disjoint union** $G\sqcup H$ retains all vertices and edges of both graphs, with no edges between the factors. Its weight function $\omega$ agrees with the original functions on the two vertex sets.
 
-**Theorem.** The formal sums of color-class types satisfy
-
-$$
-\boxed{
-\mathcal C(G\sqcup H,\omega)
-=\mathcal C(G,\omega_G)*\mathcal C(H,\omega_H)
-}
-$$
-
-The symbol $*$ denotes the [[The Second-Kind Algebra on Partitions#The product through partial matchings|product through partial matchings]].
+> [!info] Graph union and partition multiplication
+> **Theorem.** The formal sums of color-class types satisfy
+>
+> $$
+> \boxed{
+> \mathcal C(G\sqcup H,\omega)
+> =\mathcal C(G,\omega_G)*\mathcal C(H,\omega_H)
+> }
+> $$
+>
+> The symbol $*$ denotes the [[The Second-Kind Algebra on Partitions#The product through partial matchings|product through partial matchings]].
 
 > [!note]- Proof
 > **Proof.** Choose a partition of the vertices of $G$ into independent blocks $A_1,\ldots,A_r$ and a partition of the vertices of $H$ into independent blocks $B_1,\ldots,B_s$. Within each graph, different blocks have distinct colors.
@@ -234,14 +237,15 @@ $$
 
 Now retain the color names. Number the colors by positive integers and assign a variable $y_i$ to color $i$.
 
-**Definition.** The chromatic symmetric function of a vertex-weighted graph is
-
-$$
-X_{H,\omega}(\mathbf y)
-=\sum_{\kappa\ \text{proper}}\prod_{v\in V}y_{\kappa(v)}^{\omega(v)}
-$$
-
-Here $\kappa(v)$ is the color number assigned to vertex $v$. This is the standard definition for graphs with positive integer vertex weights [1, §3]. With unit weights, it gives the ordinary chromatic symmetric function. The variables are formal, so analytic convergence is not at issue.
+> [!info] The chromatic symmetric function
+> **Definition.** The chromatic symmetric function of a vertex-weighted graph is
+>
+> $$
+> X_{H,\omega}(\mathbf y)
+> =\sum_{\kappa\ \text{proper}}\prod_{v\in V}y_{\kappa(v)}^{\omega(v)}
+> $$
+>
+> Here $\kappa(v)$ is the color number assigned to vertex $v$. This is the standard definition for graphs with positive integer vertex weights [1, §3]. With unit weights, it gives the ordinary chromatic symmetric function. The variables are formal, so analytic convergence is not at issue.
 
 Fix a color-class partition of weight type $\lambda=(a_1,\ldots,a_r)$. Distinct classes receive pairwise distinct color numbers. Their total contribution is
 

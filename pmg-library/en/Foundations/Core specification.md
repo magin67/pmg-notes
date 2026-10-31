@@ -60,7 +60,8 @@ Source: [[Basic Objects and Operations of Polyform Algebra#Points and affine vec
 
 ### The exterior product and grade
 
-**Definition.** The space $\Lambda^kV$ consists of linear combinations of exterior products of $k$ elements of $V$. Its elements are called exterior objects of grade $k$. An object is decomposable if it can be expressed as a single exterior product.
+> [!info] The exterior product and grade
+> **Definition.** The space $\Lambda^kV$ consists of linear combinations of exterior products of $k$ elements of $V$. Its elements are called exterior objects of grade $k$. An object is decomposable if it can be expressed as a single exterior product.
 
 Juxtaposition of exterior objects denotes their exterior product: $XY=X\wedge Y$. The inner product is written explicitly as $X\cdot Y$, and the exterior self-product as $X\wedge X$, since $X^2$ denotes the norm. The exterior product is bilinear and associative. For homogeneous objects $X\in\Lambda^kV$ and $Y\in\Lambda^mV$,
 
@@ -138,9 +139,10 @@ $$
 
 Products of arbitrary linear combinations are evaluated by bilinearity. The list of vertices appearing in a particular expression for such a combination does not by itself determine a merging or vanishing rule.
 
-**Proposition.** The product of the vectors of selected edges is nonzero if and only if the edges form a forest. For a tree, this product equals the simplex boundary on its vertices up to sign; for a forest, it is the product of its component boundaries. An isolated vertex contributes the factor $\partial a_i=1$.
-
-Sources: [[Basic Objects and Operations of Polyform Algebra#The boundary operator|the boundary operator]], [[Basic Objects and Operations of Polyform Algebra#Boundaries and exterior powers of affine vectors|the space of boundaries]], and [[Basic Objects and Operations of Polyform Algebra#Products of simplex boundaries|products of boundaries]].
+> [!info] Products of simplex boundaries
+> **Proposition.** The product of the vectors of selected edges is nonzero if and only if the edges form a forest. For a tree, this product equals the simplex boundary on its vertices up to sign; for a forest, it is the product of its component boundaries. An isolated vertex contributes the factor $\partial a_i=1$.
+>
+> Sources: [[Basic Objects and Operations of Polyform Algebra#The boundary operator|the boundary operator]], [[Basic Objects and Operations of Polyform Algebra#Boundaries and exterior powers of affine vectors|the space of boundaries]], and [[Basic Objects and Operations of Polyform Algebra#Products of simplex boundaries|products of boundaries]].
 
 ## Forms and polyform algebra
 
@@ -169,7 +171,8 @@ The notation $[X]^2$ denotes neither $X\wedge X$ nor a numerical norm. For nonze
 
 ### Polyforms and their product
 
-**Definition.** A polyform is a finite linear combination of forms, possibly of different grades. It is homogeneous if all its terms have the same grade. In the decomposition $P=\sum_{k=0}^nP_k$, the term $P_k$ is called a grade component.
+> [!info] Polyforms and their product
+> **Definition.** A polyform is a finite linear combination of forms, possibly of different grades. It is homogeneous if all its terms have the same grade. In the decomposition $P=\sum_{k=0}^nP_k$, the term $P_k$ is called a grade component.
 
 > [!info] Product of forms
 > **Definition.** For forms of grades $k$ and $m$, set
@@ -180,27 +183,29 @@ The notation $[X]^2$ denotes neither $X\wedge X$ nor a numerical norm. For nonze
 >
 > The product extends bilinearly to polyforms. Its identity is the grade-$0$ form $e=[1,1]$.
 
-**Proposition.** The product of forms is associative, distributive, and commutative. Grades add in nonzero products of homogeneous forms. On exchanging the factors, the two signs $(-1)^{km}$ from the exterior arguments cancel.
-
-The scalar $1$ is the identity for exterior objects, whereas $e$ is the identity for polyforms. For scalars $s,t$, one has $[s,t]=st\,e$.
-
-For quadratic forms,
-
-$$
-[X]^2[A]^2=[XA]^2,\qquad
-([v]^2)^2=0\quad(v\in V)
-\tag{1}
-$$
-
-The last equality does not extend to an arbitrary sum of forms or to every higher-grade form. For independent $u,v\in W$, for example,
-
-$$
-\bigl([u]^2+[v]^2\bigr)^2=2[uv]^2\ne0
-$$
+> [!info] Polyforms and their product
+> **Proposition.** The product of forms is associative, distributive, and commutative. Grades add in nonzero products of homogeneous forms. On exchanging the factors, the two signs $(-1)^{km}$ from the exterior arguments cancel.
+>
+> The scalar $1$ is the identity for exterior objects, whereas $e$ is the identity for polyforms. For scalars $s,t$, one has $[s,t]=st\,e$.
+>
+> For quadratic forms,
+>
+> $$
+> [X]^2[A]^2=[XA]^2,\qquad
+> ([v]^2)^2=0\quad(v\in V)
+> \tag{1}
+> $$
+>
+> The last equality does not extend to an arbitrary sum of forms or to every higher-grade form. For independent $u,v\in W$, for example,
+>
+> $$
+> \bigl([u]^2+[v]^2\bigr)^2=2[uv]^2\ne0
+> $$
 
 ### Forms on boundaries
 
-**Definition.** Forms with arguments $X,Y\in\Lambda^kW$ and their linear combinations form the subalgebra of forms on boundaries. Its grades range from $0$ to $n-1$, and its identity is also $e$.
+> [!info] Forms on boundaries
+> **Definition.** Forms with arguments $X,Y\in\Lambda^kW$ and their linear combinations form the subalgebra of forms on boundaries. Its grades range from $0$ to $n-1$, and its identity is also $e$.
 
 For a polyform $P$ in this subalgebra with $P_0=0$, one has $P^n=0$. In the full algebra of forms on $V$, a polyform without a grade-$0$ component satisfies $P^{n+1}=0$.
 
@@ -255,13 +260,14 @@ $$
 \mathbf{Gr}\mathbf1=0,\qquad \mathbf{Gr}^+=\mathbf L
 $$
 
-**Definition.** The resistance inner product on $W$ and the effective resistances are given by
-
-$$
-u\cdot v=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v,\qquad
-R_{ij}=a_{ij}\cdot a_{ij}=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
-\tag{3}
-$$
+> [!info] The Green matrix and resistances
+> **Definition.** The resistance inner product on $W$ and the effective resistances are given by
+>
+> $$
+> u\cdot v=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v,\qquad
+> R_{ij}=a_{ij}\cdot a_{ij}=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
+> \tag{3}
+> $$
 
 This inner product is positive definite on $W$. In the electrical interpretation, when unit current enters at vertex $i$ and leaves at $j$, one has $R_{ij}=\varphi_i-\varphi_j$, where $\varphi_i$ is the electrical potential at vertex $i$.
 
@@ -283,21 +289,23 @@ $$
 
 For a connected undirected graph with positive conductances, the resistances $R_{ij}$ are squared distances between the vertices of a nondegenerate Euclidean simplex of dimension $n-1$. Let $O$ be its circumcenter and $R_{\mathrm{sph}}$ its linear circumradius. The center $O$ generally differs from the centroid $h$.
 
-**Definition.** The resistance radius and diameter are quadratic quantities:
-
-$$
-\rho=R_{\mathrm{sph}}^2,\qquad D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2
-$$
+> [!info] Resistance radius and diameter
+> **Definition.** The resistance radius and diameter are quadratic quantities:
+>
+> $$
+> \rho=R_{\mathrm{sph}}^2,\qquad D_{\mathrm{res}}=4\rho=(2R_{\mathrm{sph}})^2
+> $$
 
 The resistance diameter does not mean the maximum pairwise resistance. The definition and the forest formula with its verified normalization are given in [[Resistance Radius - Forest Formula and Matroid Invariance]]. The former name “metric mass” is not used without checking the correspondence between normalizations. The algebraic extension to balanced graphs appears in the balanced extension; its Euclidean interpretation requires a separate check.
 
 ### The distance operator
 
-**Definition.** For a symmetric matrix $A$, set
-
-$$
-\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}
-$$
+> [!info] The distance operator
+> **Definition.** For a symmetric matrix $A$, set
+>
+> $$
+> \mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}
+> $$
 
 Writing $\mathbf R=(R_{ij})$, the transformations between representations are
 
@@ -309,9 +317,10 @@ $$
 
 These reconstruction formulas use symmetry of the Green matrix. The distance transformation and double centering are linear operations, distinct from pseudoinversion. An arbitrary squared Euclidean distance matrix need not be the resistance matrix of a graph with nonnegative conductances. The recovered $\mathbf L$ must satisfy the Laplacian conditions in (2).
 
-**Proposition.** The vertices of a connected graph form a nondegenerate resistance simplex of dimension $n-1$, in which $R_{ij}$ is the squared Euclidean distance. Both $R_{ij}$ and $\sqrt{R_{ij}}$ define metrics on the vertices; the Euclidean length in this realization is $\sqrt{R_{ij}}$.
-
-Sources: [[Effective Resistance and Graph Geometry]], [[Inner Product of Graph Vectors]], and [[Laplacian, Green Matrix, and Effective Resistance Matrix]].
+> [!info] The distance operator
+> **Proposition.** The vertices of a connected graph form a nondegenerate resistance simplex of dimension $n-1$, in which $R_{ij}$ is the squared Euclidean distance. Both $R_{ij}$ and $\sqrt{R_{ij}}$ define metrics on the vertices; the Euclidean length in this realization is $\sqrt{R_{ij}}$.
+>
+> Sources: [[Effective Resistance and Graph Geometry]], [[Inner Product of Graph Vectors]], and [[Laplacian, Green Matrix, and Effective Resistance Matrix]].
 
 ## Metrics of higher-grade objects
 
@@ -332,7 +341,8 @@ Let $W$ carry a positive-definite inner product. The graph model uses (3).
 >
 > Extend this rule to linear combinations by bilinearity. In grade $0$, it is ordinary scalar multiplication.
 
-**Proposition.** This extension is well-defined and positive definite on each $\Lambda^kW$. This revision does not introduce an inner product between objects of different grades.
+> [!info] Metrics of higher-grade objects
+> **Proposition.** This extension is well-defined and positive definite on each $\Lambda^kW$. This revision does not introduce an inner product between objects of different grades.
 
 **Norm convention.** In PMG, the norm is the quadratic quantity $X^2=X\cdot X$. In the resistance metric it is the resistance norm. For $X^2\ge0$, its square root is called the **linear norm**, denoted $\|X\|=\sqrt{X^2}$. Thus, for a boundary $X$,
 
@@ -350,7 +360,8 @@ $$
 
 This formula uses the norm of the boundary and does not define the norm of the formal simplex $[a_0\ldots a_k]\in\Lambda^{k+1}V$.
 
-**Definition.** Numerical metric evaluation of a form on boundaries is specified by $[X,Y]\mapsto X\cdot Y$ and extended linearly within each grade. In particular, $[X]^2$ evaluates to $X^2$, $\{X,Y\}/2$ to $X\cdot Y$, and $e$ to $1$.
+> [!info] Metrics of higher-grade objects
+> **Definition.** Numerical metric evaluation of a form on boundaries is specified by $[X,Y]\mapsto X\cdot Y$ and extended linearly within each grade. In particular, $[X]^2$ evaluates to $X^2$, $\{X,Y\}/2$ to $X\cdot Y$, and $e$ to $1$.
 
 The evaluation of a product of forms generally differs from the product of their evaluations. For $u,v\in W$, for example,
 
@@ -435,29 +446,31 @@ Sources: [[Laplacian Exponential#The exponential in the algebra of forms|the exp
 >
 > It spans the one-dimensional space of forms on boundaries of grade $n-1$. Permuting the vertices does not change $T_n$.
 
-**Definition.** For any polyform $P$ on boundaries, the functional $\tau(P)$ is defined by
-
-$$
-P_{n-1}=\tau(P)T_n
-\tag{5}
-$$
+> [!info] The spanning-tree form and coefficient extraction
+> **Definition.** For any polyform $P$ on boundaries, the functional $\tau(P)$ is defined by
+>
+> $$
+> P_{n-1}=\tau(P)T_n
+> \tag{5}
+> $$
 
 The functional is linear. If the grade-$(n-1)$ component is absent, its value is zero. The form $T_n$ is fixed by the original vertex set and is not replaced when passing from $P$ to another polyform or product.
 
-**Proposition.** For a graph's metric polyform,
-
-$$
-\tau(M_G)=\tau(G)=\sum_{T\text{ is a spanning tree}}\prod_{\{i,j\}\in T}c_{ij},\qquad
-M_{n-1}=\tau(G)T_n
-$$
-
-In the public series, $\tau(G)$ is called the **spanning-tree coefficient**. For unit conductances, it is the spanning-tree count. The earlier Russian term “остовное число” in the weighted setting refers to this same coefficient and does not assert that it is an integer.
-
-For a connected graph, $\tau(G)>0$. By the matrix-tree theorem, it equals the determinant of any reduced Laplacian. Consequently, $L^{n-1}\ne0$, and the highest nonzero grade of $M_G$ is $n-1$.
-
-In this model, $T_n$ is also called the top-grade form; $M_{n-1}$ is the top-grade component, and $M_{n-2}$ the next-to-top-grade component. These names do not change the definition of the functional in (5).
-
-Sources: [[Laplacian Exponential#The spanning-tree form and top-grade coefficient|the spanning-tree form]] and [[From Lengths to Areas and Volumes|the matrix-tree theorem and resistance-simplex volume]].
+> [!info] The spanning-tree form and coefficient extraction
+> **Proposition.** For a graph's metric polyform,
+>
+> $$
+> \tau(M_G)=\tau(G)=\sum_{T\text{ is a spanning tree}}\prod_{\{i,j\}\in T}c_{ij},\qquad
+> M_{n-1}=\tau(G)T_n
+> $$
+>
+> In the public series, $\tau(G)$ is called the **spanning-tree coefficient**. For unit conductances, it is the spanning-tree count. The earlier Russian term “остовное число” in the weighted setting refers to this same coefficient and does not assert that it is an integer.
+>
+> For a connected graph, $\tau(G)>0$. By the matrix-tree theorem, it equals the determinant of any reduced Laplacian. Consequently, $L^{n-1}\ne0$, and the highest nonzero grade of $M_G$ is $n-1$.
+>
+> In this model, $T_n$ is also called the top-grade form; $M_{n-1}$ is the top-grade component, and $M_{n-2}$ the next-to-top-grade component. These names do not change the definition of the functional in (5).
+>
+> Sources: [[Laplacian Exponential#The spanning-tree form and top-grade coefficient|the spanning-tree form]] and [[From Lengths to Areas and Volumes|the matrix-tree theorem and resistance-simplex volume]].
 
 ## Potential and the metric identity
 
@@ -576,7 +589,8 @@ L_{ii}=\sum_jf_{ij},\qquad L_{ij}=-f_{ij}\quad(i\ne j),\qquad
 \mathbf L\mathbf1=0
 $$
 
-**Definition.** A graph is balanced if $\sum_jf_{ij}=\sum_jf_{ji}$ at every vertex. Equivalently, $\mathbf1^{\mathsf T}\mathbf L=0$. PMG uses the Russian abbreviation **балграф**. An undirected graph corresponds to $f_{ij}=f_{ji}$ and is a special case.
+> [!info] The Laplacian, balance, and rooted potentials
+> **Definition.** A graph is balanced if $\sum_jf_{ij}=\sum_jf_{ji}$ at every vertex. Equivalently, $\mathbf1^{\mathsf T}\mathbf L=0$. PMG uses the Russian abbreviation **балграф**. An undirected graph corresponds to $f_{ij}=f_{ji}$ and is a special case.
 
 With $h=n^{-1}\sum_i a_i$ and $x_i=a_i-h$, the canonical centered representation is
 
@@ -586,7 +600,8 @@ $$
 
 Because $\sum_i x_i=0$, arbitrary coefficients in this expression are not unique. The canonical choice fixes the centroid and the unique coefficient matrix with zero row and column sums. Balance places $L$ in the boundary-form subalgebra; the condition $f_{ij}\ge0$ is checked separately.
 
-**Definition.** The spanning-tree potential of vertex $i$ is $\tau_i=\det\mathbf L_{\widehat i,\widehat i}$. It is the sum of weights of spanning arborescences directed toward root $i$. For the outgoing Laplacian, $\mathbf L^{\mathsf T}\boldsymbol\tau=0$.
+> [!info] The Laplacian, balance, and rooted potentials
+> **Definition.** The spanning-tree potential of vertex $i$ is $\tau_i=\det\mathbf L_{\widehat i,\widehat i}$. It is the sum of weights of spanning arborescences directed toward root $i$. For the outgoing Laplacian, $\mathbf L^{\mathsf T}\boldsymbol\tau=0$.
 
 A connected balanced graph with nonnegative weights is strongly connected, and all $\tau_i$ equal one positive spanning-tree coefficient $\tau$. This is the sum toward one fixed root; summing over all roots gives $n\tau$. Conversely, equality of all $\tau_i$ to one positive number implies balance. Equality of zero minors provides no such criterion.
 
@@ -603,13 +618,14 @@ Sources: [[Balanced Graphs and Spanning-Tree Potentials]], [[The Bilinear Laplac
 
 The matrix $\mathbf{Gr}=\mathbf L^+$ inverts $\mathbf L$ on $H$; the identities $\mathbf L\mathbf{Gr}=\mathbf{Gr}\mathbf L=\mathbf J$ and zero row and column sums remain valid. Write $P_M(F)=\tau(MF)/\tau(M)$ for the normalized potential.
 
-**Definition.** For $u,v\in W$, use the source-receiver argument order:
-
-$$
-\boxed{\beta(u,v)=P_M([u,v])
-=u^{\mathrm{out}}\cdot v^{\mathrm{in}}
-=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u}
-$$
+> [!info] Directional pairing and resistances
+> **Definition.** For $u,v\in W$, use the source-receiver argument order:
+>
+> $$
+> \boxed{\beta(u,v)=P_M([u,v])
+> =u^{\mathrm{out}}\cdot v^{\mathrm{in}}
+> =\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u}
+> $$
 
 Argument order matters. This is a bilinear pairing, generally nonsymmetric; the ordinary Euclidean inner product is its symmetric part
 
@@ -620,13 +636,14 @@ $$
 
 The form $g$ is positive definite on $W$. The formal circulation $\omega(u,v)=[u,v]-[v,u]$ has PMG grade one. For three points, $w(abc)=\omega(b-a,c-a)$, and its numerical evaluation is $\chi_{abc}=P_M(w(abc))=2\gamma(b-a,c-a)$. Distinguish the form from its potential.
 
-**Definition.** One-way resistance is defined algebraically:
-
-$$
-\boxed{r_{ij}=P_M([a_j-h,a_j-a_i])
-=\mathrm{Gr}_{jj}-\mathrm{Gr}_{ij}},\qquad
-R_{ij}=r_{ij}+r_{ji}
-$$
+> [!info] Directional pairing and resistances
+> **Definition.** One-way resistance is defined algebraically:
+>
+> $$
+> \boxed{r_{ij}=P_M([a_j-h,a_j-a_i])
+> =\mathrm{Gr}_{jj}-\mathrm{Gr}_{ij}},\qquad
+> R_{ij}=r_{ij}+r_{ji}
+> $$
 
 It is defined whether or not the arc exists and can be asymmetric even in an undirected graph. The notation $r_{ij}$ is not used for the resistance $1/c_{ij}$ of an individual edge. In the continuous-time Markov model with generator $-\mathbf L$, the quantity $nr_{ij}$ is interpreted as the mean hitting time; this interpretation is not part of the resistance definition.
 

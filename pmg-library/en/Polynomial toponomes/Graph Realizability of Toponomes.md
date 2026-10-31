@@ -18,7 +18,8 @@ The canonical forest expansion of the Laplacian exponential produces a partition
 
 ## What graph realizability means
 
-**Definition.** Graph realizability of a toponome or coefficient table in a specified graph class means that some graph in that class has a canonical forest expansion producing the prescribed object under the chosen reduction and normalization.
+> [!info] What graph realizability means
+> **Definition.** Graph realizability of a toponome or coefficient table in a specified graph class means that some graph in that class has a canonical forest expansion producing the prescribed object under the chosen reduction and normalization.
 
 The [[From Polyforms to Partitions#The Laplacian exponential and forest coefficients|forest expansion of the exponential]] is fixed. Arbitrary rewriting of the polyform using structural identities can change its formal toponome and is not allowed here. Realizability means existence of a graph; uniqueness of reconstruction is a separate question. Already, [[Coefficient Tables of Toponomes#Does the table distinguish all graphs?|different trees can have the same table]].
 
@@ -72,7 +73,7 @@ Moreover, $f_k>0$ for every $0\leqslant k\leqslant d$: deleting edges from a max
 > \boxed{N=d+q}
 > $$
 
-> [!proof]- Proof
+> [!note]- Proof
 > **Proof.** Let $G_1,\ldots,G_q$ be the components with edges, of sizes $n_i$. A maximum-size forest contains one spanning tree in each. Therefore
 >
 > $$
@@ -89,19 +90,21 @@ For the full partition toponome, the condition is stronger: the positive type of
 
 Set $M=a_{1,1}$. In the unweighted case, this is the edge count, so in particular $d\leqslant M\leqslant\binom N2$.
 
-**Lemma.** The two cells in the second column sum to the number of all edge pairs. Their distribution distinguishes adjacent and independent pairs:
+> [!info] One and two connections
+> **Lemma.** The two cells in the second column sum to the number of all edge pairs. Their distribution distinguishes adjacent and independent pairs:
+>
+> $$
+> \boxed{a_{2,1}+a_{2,2}=\binom M2}
+> $$
+>
+> $$
+> a_{2,1}=\sum_{v}\binom{\deg v}{2},
+> \qquad
+> a_{2,2}=\binom M2-a_{2,1}
+> $$
 
-$$
-\boxed{a_{2,1}+a_{2,2}=\binom M2}
-$$
-
-$$
-a_{2,1}=\sum_{v}\binom{\deg v}{2},
-\qquad
-a_{2,2}=\binom M2-a_{2,1}
-$$
-
-**Proof.** Any two distinct edges in a simple graph form a forest. If they share a vertex, they give one nontrivial component; otherwise they give two. An adjacent pair has exactly one shared vertex, so the vertex sum counts each such pair once. $\square$
+> [!note]- Proof
+> **Proof.** Any two distinct edges in a simple graph form a forest. If they share a vertex, they give one nontrivial component; otherwise they give two. An adjacent pair has exactly one shared vertex, so the vertex sum counts each such pair once. $\square$
 
 Consequently, realization requires degrees $\delta_1,\ldots,\delta_N$ satisfying
 
@@ -115,13 +118,15 @@ $$
 
 These equalities alone do not guarantee a graph with those degrees and the other prescribed coefficients.
 
-**Corollary.** The number of adjacent pairs has the lower bound
+> [!info] One and two connections
+> **Corollary.** The number of adjacent pairs has the lower bound
+>
+> $$
+> \boxed{a_{2,1}\geqslant M-q}
+> $$
 
-$$
-\boxed{a_{2,1}\geqslant M-q}
-$$
-
-**Proof.** Replace each graph edge by a vertex of an auxiliary graph, joining two such vertices when the original edges are adjacent. This gives $M$ vertices, $q$ connected components, and $a_{2,1}$ edges. Each connected component has at least its vertex count minus one edges. Summing gives the inequality. $\square$
+> [!note]- Proof
+> **Proof.** Replace each graph edge by a vertex of an auxiliary graph, joining two such vertices when the original edges are adjacent. This gives $M$ vertices, $q$ connected components, and $a_{2,1}$ edges. Each connected component has at least its vertex count minus one edges. Summing gives the inequality. $\square$
 
 ### Column sums
 
@@ -179,7 +184,8 @@ The same contradiction can be seen by listing possible trees. After removing iso
 
 *Figure 1. All trees on four vertices up to isomorphism. In both cases, the second column sums to three, but its distribution between adjacent and independent pairs differs.*
 
-**Corollary.** Realizability of a one-variable reduction does not guarantee realizability of the original coefficient table.
+> [!info] A nonrealizable triangle with valid column sums
+> **Corollary.** Realizability of a one-variable reduction does not guarantee realizability of the original coefficient table.
 
 ## What reducibility conditions provide
 
@@ -222,7 +228,8 @@ Mason's strong conjecture, formulated in 1972, has now been proved. Independent 
 > \boxed{g_k^2\geqslant g_{k-1}g_{k+1}},\qquad 1\leqslant k<M
 > $$
 
-**Justification of the application.** The general theorem gives this inequality for the numbers of independent sets of any matroid on $M$ elements [1, Theorem 1.2; 2, Theorem 4.14]. For the graphic matroid, those numbers are $f_k$. The general proof is given in the sources and is not reproduced here. In our simple graph, the boundary case $k=1$ also follows directly from $f_1=M$ and $f_2=\binom M2$. For $M\leqslant1$, there is nothing to check.
+> [!note] Justification of the application
+> **Justification of the application.** The general theorem gives this inequality for the numbers of independent sets of any matroid on $M$ elements [1, Theorem 1.2; 2, Theorem 4.14]. For the graphic matroid, those numbers are $f_k$. The general proof is given in the sources and is not reproduced here. In our simple graph, the boundary case $k=1$ also follows directly from $f_1=M$ and $f_2=\binom M2$. For $M\leqslant1$, there is nothing to check.
 
 The number $g_k$ has a simple meaning: the probability that a uniformly selected $k$-edge subset is a forest. Log-concavity means that, for positive terms, the ratios $g_{k+1}/g_k$ do not increase. This is stronger than mere monotonicity of $g_k$, which follows from the double count above. In unnormalized coefficients,
 
@@ -275,7 +282,8 @@ $$
 >
 > The equalities are required for all cells, including prescribed zero coefficients and $a_{0,0}=1$.
 
-**Proof.** From a solution, construct the graph whose edges are the pairs $ij$ with $x_{ij}=1$. The variable product is one exactly for forests of this graph; all other terms vanish. Thus the system gives its table. Conversely, edge indicators of any realizing graph satisfy every equality. $\square$
+> [!note]- Proof
+> **Proof.** From a solution, construct the graph whose edges are the pairs $ij$ with $x_{ij}=1$. The variable product is one exactly for forests of this graph; all other terms vanish. Thus the system gives its table. Conversely, edge indicators of any realizing graph satisfy every equality. $\square$
 
 The Boolean conditions can be written as equations $x_{ij}^2-x_{ij}=0$ over the reals. One can search by enumerating graphs or solving a system with Boolean variables. The criterion is exact, but promises no fast algorithm and does not reduce to the coefficient inequalities already listed.
 
@@ -302,7 +310,7 @@ Here arbitrary positive real conductances are allowed, and the graph structure i
 > [!info] A spectral realizability criterion
 > **Theorem.** A nonconstant real polynomial is the vertex toponome of some simple undirected graph with positive conductances if and only if its constant term is one and all its roots are real and strictly negative. A degree-$d$ polynomial can be realized by a weighted complete graph on $d+1$ vertices.
 
-> [!proof]- Proof through the inverse eigenvalue problem
+> [!note]- Proof through the inverse eigenvalue problem
 > **Proof.** Necessity follows from the [[Forest Coefficients and the Laplacian Polynomial#Roots and factorization over the reals|spectral representation]]
 >
 > $$

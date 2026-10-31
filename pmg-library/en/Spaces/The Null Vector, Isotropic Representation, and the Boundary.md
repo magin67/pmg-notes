@@ -20,20 +20,21 @@ A linear combination of local points need not be local. For an element of unit a
 
 Let $W_0$ be a positive definite displacement space of dimension $d$. For a connected graph with positive conductances, it is a Euclidean realization of the resistance metric, with $d=n-1$.
 
-**Definition.** Add two independent elements $o,z$ to $W_0$ and denote the resulting linear space by $\widetilde V$. Its metric is specified by
-
-$$
-o^2=z^2=0,\qquad o\cdot z=1,\qquad
-o\cdot w=z\cdot w=0\quad(w\in W_0)
-\tag{1}
-$$
-
-Here $U^2=U\cdot U$ is the **norm** in the PMG convention. It is a quadratic quantity that may have either sign in the extension. For $U^2\ge0$, the quantity $\|U\|=\sqrt{U^2}$ is the **linear norm**. For arbitrary elements,
-
-$$
-(\alpha o+w+\beta z)\cdot(\alpha' o+w'+\beta' z)
-=w\cdot w'+\alpha\beta'+\beta\alpha'
-$$
+> [!info] The original points and the extended space
+> **Definition.** Add two independent elements $o,z$ to $W_0$ and denote the resulting linear space by $\widetilde V$. Its metric is specified by
+>
+> $$
+> o^2=z^2=0,\qquad o\cdot z=1,\qquad
+> o\cdot w=z\cdot w=0\quad(w\in W_0)
+> \tag{1}
+> $$
+>
+> Here $U^2=U\cdot U$ is the **norm** in the PMG convention. It is a quadratic quantity that may have either sign in the extension. For $U^2\ge0$, the quantity $\|U\|=\sqrt{U^2}$ is the **linear norm**. For arbitrary elements,
+>
+> $$
+> (\alpha o+w+\beta z)\cdot(\alpha' o+w'+\beta' z)
+> =w\cdot w'+\alpha\beta'+\beta\alpha'
+> $$
 
 The elements $(o+z)/\sqrt2$ and $(o-z)/\sqrt2$ are orthogonal and have norms $1$ and $-1$. Hence $\widetilde V$ has signature $(d+1,1)$ and dimension $d+2$. All subsequent elements belong to this space; $W_0$ is used for their coordinate expressions.
 
@@ -104,8 +105,8 @@ A linear combination $p=\sum_i p_i a_i$ with $\sum_i p_i=1$ has affine weight $1
 > \tag{3}
 > $$
 
-> [!proof]- Proof
-> We have $(p+\lambda z)^2=p^2+2\lambda$ and $(p+\lambda z)\cdot z=1$. The norm therefore vanishes exactly when $\lambda=-p^2/2$. $\square$
+> [!note]- Proof
+> **Proof.** We have $(p+\lambda z)^2=p^2+2\lambda$ and $(p+\lambda z)\cdot z=1$. The norm therefore vanishes exactly when $\lambda=-p^2/2$. $\square$
 
 The point $\pi(p)$ is called the **local center** of $p$. The operation preserves the coordinate $w$ in $p=o+w+\beta z$. It fixes local points, satisfies $\pi(\pi(p))=\pi(p)$, and is constant along $p+\mathbb Rz$. It is a nonlinear projection along $z$ onto the set of local points, not an orthogonal projection onto a linear subspace.
 
@@ -173,11 +174,12 @@ $$
 (\pi(p)-\pi(q))^2=(p-q)^2
 $$
 
-**Definition.** Regard $U$ and $U+\alpha z$ in $z^\perp$ as the same displacement. The space of these classes, denoted $z^\perp/\mathbb Rz$, is a quotient space. Each class has a unique coordinate $w\in W_0$, and its metric agrees with that of $W_0$:
-
-$$
-z^\perp/\mathbb Rz\simeq W_0
-$$
+> [!info] Affine weight and the space of displacements
+> **Definition.** Regard $U$ and $U+\alpha z$ in $z^\perp$ as the same displacement. The space of these classes, denoted $z^\perp/\mathbb Rz$, is a quotient space. Each class has a unique coordinate $w\in W_0$, and its metric agrees with that of $W_0$:
+>
+> $$
+> z^\perp/\mathbb Rz\simeq W_0
+> $$
 
 For example, $m-a=(u+v)/2-z/4$ and $(c-a)/2=(u+v)/2-z/2$ are different elements but the same displacement. The core affine-vector space $W=\{\sum_i u_i a_i:\sum_i u_i=0\}$ also contains exactly one element of each class and retains the original positive definite metric.
 
@@ -235,8 +237,8 @@ $$
 
 is nonzero and specifies their $k$-dimensional Euclidean affine hull: its local points satisfy $x\wedge F=0$, $x^2=0$, and $x\cdot z=1$.
 
-> [!proof]- Proof
-> Independence of $z,q_0,\ldots,q_k$ follows from independence of the spatial differences. The condition $x\wedge F=0$ gives $x=\sum_i\lambda_iq_i+\eta z$. Normalization requires $\sum_i\lambda_i=1$, and locality uniquely determines $\eta$ by (3). Hence the required points are $x=\pi(\sum_i\lambda_iq_i)$; their coordinates in $W_0$ form the usual affine hull of the coordinates of $q_i$. $\square$
+> [!note]- Proof
+> **Proof.** Independence of $z,q_0,\ldots,q_k$ follows from independence of the spatial differences. The condition $x\wedge F=0$ gives $x=\sum_i\lambda_iq_i+\eta z$. Normalization requires $\sum_i\lambda_i=1$, and locality uniquely determines $\eta$ by (3). Hence the required points are $x=\pi(\sum_i\lambda_iq_i)$; their coordinates in $W_0$ form the usual affine hull of the coordinates of $q_i$. $\square$
 
 For example, $z\wedge a\wedge b\wedge c$ specifies the entire resistance plane of our path. In its minimal four-dimensional extension, $x\wedge F=0$ holds automatically by dimension; the locality and normalization conditions remain. The triangle is selected by the additional inequalities $\lambda_i\ge0$.
 
@@ -244,14 +246,15 @@ For example, $z\wedge a\wedge b\wedge c$ specifies the entire resistance plane o
 
 In the PMG core, the boundary operator is defined by affine weight and requires no metric. In the extension, the same weight has the metric expression (4).
 
-**Definition.** On an exterior product of linear elements $U_1,\ldots,U_k\in\widetilde V$, set
-
-$$
-\partial(U_1\wedge\cdots\wedge U_k)
-=\sum_{i=1}^k(-1)^{i-1}(z\cdot U_i)
-U_1\wedge\cdots\wedge\widehat{U_i}\wedge\cdots\wedge U_k
-\tag{5}
-$$
+> [!info] The boundary operator as contraction with $z$
+> **Definition.** On an exterior product of linear elements $U_1,\ldots,U_k\in\widetilde V$, set
+>
+> $$
+> \partial(U_1\wedge\cdots\wedge U_k)
+> =\sum_{i=1}^k(-1)^{i-1}(z\cdot U_i)
+> U_1\wedge\cdots\wedge\widehat{U_i}\wedge\cdots\wedge U_k
+> \tag{5}
+> $$
 
 The hat over a factor means that it is omitted. The operation extends by linearity; on scalars, set $\partial1=0$. Removing one factor at a time with these weights and signs is called **contraction with the functional** $\varepsilon$, or, here, contraction with $z$.
 
@@ -322,8 +325,8 @@ The negative sign does not mean that the squared distance between $a,c$ is negat
 > \tag{6}
 > $$
 
-> [!proof]- Proof
-> Expanding the determinant along a row gives
+> [!note]- Proof
+> **Proof.** Expanding the determinant along a row gives
 >
 > $$
 > (z\wedge B)\cdot C=B\cdot\partial C

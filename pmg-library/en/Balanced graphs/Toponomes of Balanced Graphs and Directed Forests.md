@@ -25,11 +25,12 @@ $$
 \qquad \mathbf F=(f_{ij})
 $$
 
-**Definition.** A directed spanning forest toward roots contains every vertex, including isolated ones. Each component is a tree with a directed path from every vertex to its root. A nonroot has one outgoing arc, while a root has none. Its weight is
-
-$$
-w(F)=\prod_{i\to j\in F}f_{ij}
-$$
+> [!info] A directed forest in the exponential
+> **Definition.** A directed spanning forest toward roots contains every vertex, including isolated ones. Each component is a tree with a directed path from every vertex to its root. A nonroot has one outgoing arc, while a root has none. Its weight is
+>
+> $$
+> w(F)=\prod_{i\to j\in F}f_{ij}
+> $$
 
 Let $\mathcal F_k^{\to}(G)$ denote these forests with $k$ arcs. Each has $n-k$ components. The empty forest has weight $1$ and all vertices as singleton components.
 
@@ -80,17 +81,18 @@ The empty type is $1$. Notation $(1^2)=(1,1)$ denotes two parts and differs from
 
 No extra root-count factor is introduced: directions already fix each component's root. Coefficients depend on the weight matrix, not on a directed-cycle decomposition.
 
-**Definition.** Obtain vector normalization by dividing each coefficient by the product of its component sizes:
-
-$$
-\boxed{
-c_G^{\mathrm{vec}}(k_1,\ldots,k_r)
-=\frac{c_G^{\mathrm{vert}}(k_1,\ldots,k_r)}{\prod_{s=1}^r(k_s+1)},
-\qquad
-T_G^{\mathrm{vec}}=\sum_\lambda c_G^{\mathrm{vec}}(\lambda)\lambda
-}
-\tag{2}
-$$
+> [!info] Component types and two normalizations
+> **Definition.** Obtain vector normalization by dividing each coefficient by the product of its component sizes:
+>
+> $$
+> \boxed{
+> c_G^{\mathrm{vec}}(k_1,\ldots,k_r)
+> =\frac{c_G^{\mathrm{vert}}(k_1,\ldots,k_r)}{\prod_{s=1}^r(k_s+1)},
+> \qquad
+> T_G^{\mathrm{vec}}=\sum_\lambda c_G^{\mathrm{vec}}(\lambda)\lambda
+> }
+> \tag{2}
+> $$
 
 For the empty type, the denominator is $1$. This extends the [[Vector and Vertex Normalizations of Toponomes#Two normalizations before grouping types|symmetric normalizations]]. The transformation is reversible while types are retained. For a directed graph, vector coefficients can be fractional even with unit weights; they need not count undirected forests.
 

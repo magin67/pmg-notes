@@ -72,7 +72,8 @@ $$
 
 Its grade equals the number of vertices. Thus $[abc]$ has grade $3$, although a geometric triangle is two-dimensional. Interchanging two vertices changes the sign; repeating a vertex gives zero. A general exterior object may be a linear combination of simplices and need not be a single exterior product.
 
-**Definition.** An exterior element is decomposable (also called simple) if it can be expressed as a single exterior product of elements of grade one.
+> [!info] The exterior product and grade
+> **Definition.** An exterior element is decomposable (also called simple) if it can be expressed as a single exterior product of elements of grade one.
 
 ## The boundary operator
 

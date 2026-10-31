@@ -271,11 +271,12 @@ The sum of forest weights refers to a specified forest expansion. Because forms 
 
 ## Matroids and forest parameters
 
-**Definition.** A finite matroid is a pair $(E,\mathcal I)$, where $E$ is a finite ground set and $\mathcal I$ is a family of independent subsets satisfying three axioms:
-
-1. $\varnothing\in\mathcal I$.
-2. If $I\in\mathcal I$ and $J\subseteq I$, then $J\in\mathcal I$.
-3. If $I,J\in\mathcal I$ and $\#I<\#J$, there is $e\in J\setminus I$ such that $I\cup\{e\}\in\mathcal I$.
+> [!info] Matroids and forest parameters
+> **Definition.** A finite matroid is a pair $(E,\mathcal I)$, where $E$ is a finite ground set and $\mathcal I$ is a family of independent subsets satisfying three axioms:
+>
+> 1. $\varnothing\in\mathcal I$.
+> 2. If $I\in\mathcal I$ and $J\subseteq I$, then $J\in\mathcal I$.
+> 3. If $I,J\in\mathcal I$ and $\#I<\#J$, there is $e\in J\setminus I$ such that $I\cup\{e\}\in\mathcal I$.
 
 The third condition is the augmentation axiom. For a graph, the elements are individual edges and the independent sets are forests. See [[The Cycle Matroid and Exterior Products of Edges]].
 

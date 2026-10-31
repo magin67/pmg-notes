@@ -92,7 +92,8 @@ $$
 
 Substitution gives $(C_V)_{ai}=1-2/n$ on spokes and $(C_V)_{ij}=-2/n$ between leaves. Hence $C_P=0$. Equivalently, the star table has the form $c_{ij}=b_i+b_j$, with $b_a=1$ and $b_i=0$ at every leaf.
 
-**Conclusion.** A zero P-component does not mean an absence of pronounced structure. It means that additive endpoint contributions describe the pair values completely. For the star, V captures the entire difference between center and leaves.
+> [!note] Conclusion from the example
+> **Conclusion.** A zero P-component does not mean an absence of pronounced structure. It means that additive endpoint contributions describe the pair values completely. For the star, V captures the entire difference between center and leaves.
 
 ## The cycle: pair structure without V
 
@@ -146,7 +147,8 @@ K coincides with the K-component of the star $K_{1,3}$: both graphs have three e
 
 For example, pairs $ab$ and $ac$ receive identical K- and V-contributions, yet one is an edge and the other is not. The P-values $1/2$ and $-1/2$ recover this distinction.
 
-**Conclusion.** Two trees with identical $n,m$ may have substantially different V- and P-components. Nonzero P in a path also shows that P does not indicate the presence of cycles.
+> [!note] Conclusion from the example
+> **Conclusion.** Two trees with identical $n,m$ may have substantially different V- and P-components. Nonzero P in a path also shows that P does not indicate the presence of cycles.
 
 ## Two separate edges: P does not require connectedness
 

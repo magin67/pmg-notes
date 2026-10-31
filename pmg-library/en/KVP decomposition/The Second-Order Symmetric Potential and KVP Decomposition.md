@@ -39,12 +39,13 @@ Below, KVP decomposition is applied to the symmetric **resistance table R**, inc
 
 ## Definition and the meaning of second order
 
-**Definition.** Let $A=\{a_1,\ldots,a_n\}$ be the vertex set. With the normalization of [[Symmetric Polyforms - Types and Normalizations|principal symmetric polyforms]], for $1\le k\le n-1$ set
-
-$$
-E_n[k]=\sum_{\substack{B\subseteq A\\\#B=k+1}}[(B)]^2,\qquad
-U_k=u_M(E_n[k]),\qquad \nu_k=P_M(E_n[k])=\frac{U_k}\tau
-$$
+> [!info] Definition and the meaning of second order
+> **Definition.** Let $A=\{a_1,\ldots,a_n\}$ be the vertex set. With the normalization of [[Symmetric Polyforms - Types and Normalizations|principal symmetric polyforms]], for $1\le k\le n-1$ set
+>
+> $$
+> E_n[k]=\sum_{\substack{B\subseteq A\\\#B=k+1}}[(B)]^2,\qquad
+> U_k=u_M(E_n[k]),\qquad \nu_k=P_M(E_n[k])=\frac{U_k}\tau
+> $$
 
 Each subset is counted once. Order $k$ is the boundary grade: second order concerns vertex triples and two independent vectors. It must not be confused with [[Partitions and the Combinatorial Potential of the Second Kind|the combinatorial potential of the second kind]].
 
@@ -70,12 +71,13 @@ $$
 h_{ijk}(R)=\frac14\left(2R_{ij}R_{ik}+2R_{ij}R_{jk}+2R_{ik}R_{jk}-R_{ij}^2-R_{ik}^2-R_{jk}^2\right)
 $$
 
-**Definition.** For any symmetric pair table, set
-
-$$
-\boxed{H_n(R)=\sum_{i<j<k}h_{ijk}(R)}
-\tag{2}
-$$
+> [!info] Definition and the meaning of second order
+> **Definition.** For any symmetric pair table, set
+>
+> $$
+> \boxed{H_n(R)=\sum_{i<j<k}h_{ijk}(R)}
+> \tag{2}
+> $$
 
 For the resistance table of the graph under consideration,
 
@@ -133,20 +135,22 @@ $$
 
 Substituting a constant K-component or a sum of two vertex corrections from V gives zero.
 
-**Lemma 1.** For four vertices and the coefficient sum of squares $\|B\|_0^2=\sum_{i<j}B_{ij}^2$,
+> [!info] The tetrahedron identity and four vertices
+> **Lemma 1.** For four vertices and the coefficient sum of squares $\|B\|_0^2=\sum_{i<j}B_{ij}^2$,
+>
+> $$
+> \begin{aligned}
+> R_{ab}R_{cd}+R_{ac}R_{bd}+R_{ad}R_{bc}
+> &=\frac12\left(\|R_K\|_0^2-\|R_V\|_0^2+\|R_P\|_0^2\right)\\
+> \sum_{\alpha=1}^3\pi_\alpha^2&=\frac32\|R_P\|_0^2
+> \end{aligned}
+> \tag{5}
+> $$
 
-$$
-\begin{aligned}
-R_{ab}R_{cd}+R_{ac}R_{bd}+R_{ad}R_{bc}
-&=\frac12\left(\|R_K\|_0^2-\|R_V\|_0^2+\|R_P\|_0^2\right)\\
-\sum_{\alpha=1}^3\pi_\alpha^2&=\frac32\|R_P\|_0^2
-\end{aligned}
-\tag{5}
-$$
-
-**Proof.** Replacing each vertex pair by its opposite preserves K- and P-tables and negates V-tables. For V, this follows from $v_a+v_b=-(v_c+v_d)$. For P, zero row sums imply equal values on opposite pairs. The coefficient inner product of a table with its image under this replacement is twice the sum of the three products in the first line of (5). KVP orthogonality gives the required formula.
-
-Let the P-values on the three pairs of opposite edges be $x,y,z$, respectively. Then $x+y+z=0$, $\|R_P\|_0^2=2(x^2+y^2+z^2)$, and the polar values are $z-y$, $z-x$, and $y-x$. Their squared sum is $3(x^2+y^2+z^2)$, proving the second line. $\square$
+> [!note]- Proof
+> **Proof.** Replacing each vertex pair by its opposite preserves K- and P-tables and negates V-tables. For V, this follows from $v_a+v_b=-(v_c+v_d)$. For P, zero row sums imply equal values on opposite pairs. The coefficient inner product of a table with its image under this replacement is twice the sum of the three products in the first line of (5). KVP orthogonality gives the required formula.
+>
+> Let the P-values on the three pairs of opposite edges be $x,y,z$, respectively. Then $x+y+z=0$, $\|R_P\|_0^2=2(x^2+y^2+z^2)$, and the polar values are $z-y$, $z-x$, and $y-x$. Their squared sum is $3(x^2+y^2+z^2)$, proving the second line. $\square$
 
 The tetrahedron identity and (5) give
 
@@ -190,14 +194,16 @@ $$
 
 All diagonals are zero, $\sum_i v_i=0$, and $R_P\mathbf1=0$. The projectors are denoted by $\Pi_K,\Pi_V,\Pi_P$.
 
-**Lemma 2.** The quadratic form (2) can be written as
+> [!info] The general KVP formula
+> **Lemma 2.** The quadratic form (2) can be written as
+>
+> $$
+> H_n(R)=\frac14\left(\sum_i s_i^2-n\sum_{i<j}R_{ij}^2\right)
+> \tag{8}
+> $$
 
-$$
-H_n(R)=\frac14\left(\sum_i s_i^2-n\sum_{i<j}R_{ij}^2\right)
-\tag{8}
-$$
-
-**Proof.** In the sum over triples, each square $R_{ij}^2$ occurs $n-2$ times with coefficient $-1/4$. Each product of two pairs sharing one vertex occurs once with coefficient $1/2$. In $\sum_i s_i^2$, squares occur twice, and such products also occur twice. Subtracting $n\sum_{i<j}R_{ij}^2$ and dividing by 4 gives (8). $\square$
+> [!note]- Proof
+> **Proof.** In the sum over triples, each square $R_{ij}^2$ occurs $n-2$ times with coefficient $-1/4$. Each product of two pairs sharing one vertex occurs once with coefficient $1/2$. In $\sum_i s_i^2$, squares occur twice, and such products also occur twice. Subtracting $n\sum_{i<j}R_{ij}^2$ and dividing by 4 gives (8). $\square$
 
 Let $\langle A,B\rangle_0=\sum_{i<j}A_{ij}B_{ij}$. The self-adjoint operator of this quadratic form acts on pair-table space:
 
@@ -208,18 +214,19 @@ $$
 
 It acts on a space of dimension $\binom n2$; its representing matrix has size $\binom n2\times\binom n2$, not $n\times n$. It is neither the Green matrix nor the operator of the PMG metric inner product.
 
-**Theorem 1.** For any real symmetric zero-diagonal table on $n\ge3$ vertices,
-
-$$
-\mathsf Q_n=\frac{n-2}{4}\Pi_K-\frac12\Pi_V-\frac n4\Pi_P
-$$
-
-and consequently,
-
-$$
-\boxed{H_n(R)=\frac{n-2}{4}\|R_K\|_0^2-\frac12\|R_V\|_0^2-\frac n4\|R_P\|_0^2}
-\tag{9}
-$$
+> [!info] The general KVP formula
+> **Theorem 1.** For any real symmetric zero-diagonal table on $n\ge3$ vertices,
+>
+> $$
+> \mathsf Q_n=\frac{n-2}{4}\Pi_K-\frac12\Pi_V-\frac n4\Pi_P
+> $$
+>
+> and consequently,
+>
+> $$
+> \boxed{H_n(R)=\frac{n-2}{4}\|R_K\|_0^2-\frac12\|R_V\|_0^2-\frac n4\|R_P\|_0^2}
+> \tag{9}
+> $$
 
 | Sector | Eigenvalue of $\mathsf Q_n$ | Dimension |
 | --- | ---: | ---: |
@@ -227,7 +234,8 @@ $$
 | V | $-1/2$ | $n-1$ |
 | P | $-n/4$ | $n(n-3)/2$ |
 
-**Proof.** For K, the row sums are $(n-1)\mu$, and the operator multiplies the table by $(n-2)/4$. For V, the row sum is $v_i$; since $v_i+v_j=(n-2)(R_V)_{ij}$, the multiplier is $-1/2$. For P, both row sums vanish, and the multiplier is $-n/4$. The three sectors are coefficient-orthogonal, so mixed terms vanish. Dimensions are established in [[KVP Decomposition of Pair Characteristics#The number of independent parameters|the KVP dimension theorem]]. $\square$
+> [!note]- Proof
+> **Proof.** For K, the row sums are $(n-1)\mu$, and the operator multiplies the table by $(n-2)/4$. For V, the row sum is $v_i$; since $v_i+v_j=(n-2)(R_V)_{ij}$, the multiplier is $-1/2$. For P, both row sums vanish, and the multiplier is $-n/4$. The three sectors are coefficient-orthogonal, so mixed terms vanish. Dimensions are established in [[KVP Decomposition of Pair Characteristics#The number of independent parameters|the KVP dimension theorem]]. $\square$
 
 For $n\ge4$, these are three distinct eigenvalues. For $n=3$, the P-sector is zero. If $S=R_{12}+R_{13}+R_{23}$, then
 
@@ -249,26 +257,28 @@ $$
 
 Here polar values are computed from R on the corresponding four-element subset; the subset's own KVP-components are not identified with restrictions of the global components.
 
-**Corollary 1.** For $n\ge4$,
+> [!info] The P-component as a collection of four-point responses
+> **Corollary 1.** For $n\ge4$,
+>
+> $$
+> \boxed{Z_n(R)=\frac{(n-1)(n-2)}4\|R_P\|_0^2}
+> \tag{10}
+> $$
 
-$$
-\boxed{Z_n(R)=\frac{(n-1)(n-2)}4\|R_P\|_0^2}
-\tag{10}
-$$
-
-**Proof.** Let $S=\sum_{i<j}R_{ij}$. The sum of resistance products over all unordered pairs of disjoint edges is
-
-$$
-\frac12\left(S^2+\|R\|_0^2-\sum_i s_i^2\right)
-$$
-
-This follows by expanding $S^2$ and separating pairs sharing a vertex. Subtract $(n-3)H_n(R)$, as required by metric evaluation of (7), and apply (8):
-
-$$
-Z_n(R)=\frac12S^2-\frac{n-1}{4}\sum_i s_i^2+\frac{(n-1)(n-2)}4\|R\|_0^2
-$$
-
-Substitution of KVP and the equalities $S=\binom n2\mu$, $\sum_i s_i^2=n(n-1)^2\mu^2+\sum_i v_i^2$, and $\|R_V\|_0^2=\sum_i v_i^2/(n-2)$ cancels the K- and V-contributions, leaving (10). $\square$
+> [!note]- Proof
+> **Proof.** Let $S=\sum_{i<j}R_{ij}$. The sum of resistance products over all unordered pairs of disjoint edges is
+>
+> $$
+> \frac12\left(S^2+\|R\|_0^2-\sum_i s_i^2\right)
+> $$
+>
+> This follows by expanding $S^2$ and separating pairs sharing a vertex. Subtract $(n-3)H_n(R)$, as required by metric evaluation of (7), and apply (8):
+>
+> $$
+> Z_n(R)=\frac12S^2-\frac{n-1}{4}\sum_i s_i^2+\frac{(n-1)(n-2)}4\|R\|_0^2
+> $$
+>
+> Substitution of KVP and the equalities $S=\binom n2\mu$, $\sum_i s_i^2=n(n-1)^2\mu^2+\sum_i v_i^2$, and $\|R_V\|_0^2=\sum_i v_i^2/(n-2)$ cancels the K- and V-contributions, leaving (10). $\square$
 
 Thus the coefficient magnitude of P is determined by the total intensity of all four-point polar responses. This connects the second-order potential with [[Applications of KVP Decomposition - Electrometry and Pair Data Analysis|four-electrode measurements]]. An individual response sees only one linear combination of P; equality (10) concerns the full collection of four-element subsets.
 
@@ -286,16 +296,18 @@ This is necessary but generally insufficient for Euclidean realizability. The co
 
 In a Euclidean realization, $H_n=0$ exactly when all triples are degenerate, that is, the points are collinear or coincide. For a connected graph of the specified class, resistance geometry is nondegenerate on a space of dimension $n-1$, so $H_n>0$ for $n\ge3$.
 
-**Corollary 2.** For fixed n and Kirchhoff index,
+> [!info] Geometric constraints and a fixed overall level
+> **Corollary 2.** For fixed n and Kirchhoff index,
+>
+> $$
+> \boxed{0<\nu_2\le\frac{n-2}{2n(n-1)}\operatorname{Kf}^2}
+> \tag{12}
+> $$
+>
+> The upper bound is attained exactly by the complete graph with equal positive conductances.
 
-$$
-\boxed{0<\nu_2\le\frac{n-2}{2n(n-1)}\operatorname{Kf}^2}
-\tag{12}
-$$
-
-The upper bound is attained exactly by the complete graph with equal positive conductances.
-
-**Proof.** We have $\|R_K\|_0^2=\operatorname{Kf}^2/\binom n2$, and (9) gives the bound. Equality means $R_V=R_P=0$, that is, $R_{ij}=\mu>0$ for every $i\ne j$. Then $\mathrm{Gr}=\mu J/2$, where $J=I-\mathbf1\mathbf1^{\mathsf T}/n$, and $\mathbf L=2J/\mu$. Every conductance is therefore $2/(n\mu)$. The same formula proves the converse. $\square$
+> [!note]- Proof
+> **Proof.** We have $\|R_K\|_0^2=\operatorname{Kf}^2/\binom n2$, and (9) gives the bound. Equality means $R_V=R_P=0$, that is, $R_{ij}=\mu>0$ for every $i\ne j$. Then $\mathrm{Gr}=\mu J/2$, where $J=I-\mathbf1\mathbf1^{\mathsf T}/n$, and $\mathbf L=2J/\mu$. Every conductance is therefore $2/(n\mu)$. The same formula proves the converse. $\square$
 
 This statement concerns the normalized potential $\nu_2$. For $U_2=\tau\nu_2$, changes in $\tau$ must also be considered. Moreover, changing one coupling of the original graph generally changes all components of R; formula (9) does not provide independent physical controls for K, V, and P.
 
@@ -383,23 +395,25 @@ $$
 
 Indeed, the full pairing $\beta=g+\gamma$ gives the determinant $g(u,u)g(v,v)-g(u,v)^2+\gamma(u,v)^2$ on two vectors, with $\chi=2\gamma$. Euclidean areas describe only the first term $h_{ijk}$.
 
-**Theorem 2.** Let $r_O$ be the O-component of the KVPOU decomposition of the one-way resistance table. Then
+> [!info] What changes for balanced graphs
+> **Theorem 2.** Let $r_O$ be the O-component of the KVPOU decomposition of the one-way resistance table. Then
+>
+> $$
+> \boxed{\nu_2=H_n(R)+n\|r_O\|_0^2}
+> \tag{14}
+> $$
+>
+> For a skew-symmetric table, use $\|A\|_0^2=\frac12\sum_{i\ne j}A_{ij}^2=\sum_{i<j}A_{ij}^2$.
 
-$$
-\boxed{\nu_2=H_n(R)+n\|r_O\|_0^2}
-\tag{14}
-$$
-
-For a skew-symmetric table, use $\|A\|_0^2=\frac12\sum_{i\ne j}A_{ij}^2=\sum_{i<j}A_{ij}^2$.
-
-**Proof.** Symmetric components cancel in the circulation sum. U is a difference of vertex values and also cancels around a closed walk. Thus $\chi_{ijk}=2((r_O)_{ij}+(r_O)_{jk}+(r_O)_{ki})$. For any skew-symmetric A, expanding squares gives
-
-$$
-\sum_{i<j<k}(A_{ij}+A_{jk}+A_{ki})^2
-=n\|A\|_0^2-\sum_i\left(\sum_jA_{ij}\right)^2
-$$
-
-Each entry square occurs in $n-2$ triples; the mixed terms equal $2\|A\|_0^2-\sum_i(\sum_jA_{ij})^2$. The row sums of $r_O$ are zero, so the corrections $\chi^2/4$ sum to $n\|r_O\|_0^2$. Summing the triple potentials proves (14). $\square$
+> [!note]- Proof
+> **Proof.** Symmetric components cancel in the circulation sum. U is a difference of vertex values and also cancels around a closed walk. Thus $\chi_{ijk}=2((r_O)_{ij}+(r_O)_{jk}+(r_O)_{ki})$. For any skew-symmetric A, expanding squares gives
+>
+> $$
+> \sum_{i<j<k}(A_{ij}+A_{jk}+A_{ki})^2
+> =n\|A\|_0^2-\sum_i\left(\sum_jA_{ij}\right)^2
+> $$
+>
+> Each entry square occurs in $n-2$ triples; the mixed terms equal $2\|A\|_0^2-\sum_i(\sum_jA_{ij})^2$. The row sums of $r_O$ are zero, so the corrections $\chi^2/4$ sum to $n\|r_O\|_0^2$. Summing the triple potentials proves (14). $\square$
 
 Writing all components for the single table r, we have $R_X=2r_X$ for $X=K,V,P$, so the formula becomes
 

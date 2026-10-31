@@ -28,11 +28,13 @@ This note defines the initial coordinates of the full forest passport. The main 
 
 Let $G=(V,E)$ be a finite undirected loopless graph, let $n=|V|$, and give each edge $\ell$ a positive conductance $c_\ell$. Parallel edges, when present, are distinct; selecting two parallel edges creates a cycle and does not give a forest. The graph $G$ need not be connected.
 
-**Definition.** The boundary of a component is a nonempty set $B\subseteq V$ chosen in advance. The vertices in $V\setminus B$ are called internal. We write $(G,B)$ for the graph with its marked boundary.
+> [!info] A graph with a marked boundary
+> **Definition.** The boundary of a component is a nonempty set $B\subseteq V$ chosen in advance. The vertices in $V\setminus B$ are called internal. We write $(G,B)$ for the graph with its marked boundary.
+>
+> Here “component” means a part of a future assembly, not necessarily a connected component. The boundary is part of the input data. Gluing also requires a specified correspondence between the boundary vertices of the parts. We assume neither a planar embedding nor a boundary on the outer face.
 
-Here “component” means a part of a future assembly, not necessarily a connected component. The boundary is part of the input data. Gluing also requires a specified correspondence between the boundary vertices of the parts. We assume neither a planar embedding nor a boundary on the outer face.
-
-**Definition.** A spanning forest $H=(V,A)$ of $G$ is an acyclic subgraph on the entire vertex set $V$, where $A\subseteq E$. The set $A$ need not be maximal. In particular, the empty edge set gives a forest of $n$ isolated vertices.
+> [!info] A graph with a marked boundary
+> **Definition.** A spanning forest $H=(V,A)$ of $G$ is an acyclic subgraph on the entire vertex set $V$, where $A\subseteq E$. The set $A$ need not be maximal. In particular, the empty edge set gives a forest of $n$ isolated vertices.
 
 Write the number of edges and the weight of a forest as
 
@@ -60,7 +62,8 @@ All four conductances are $1$; the internal vertices are $b,d$.
 
 ## The boundary partition induced by a forest
 
-**Definition.** A forest $H$ induces a partition $\pi_B(H)$ of $B$: two boundary vertices belong to the same block if and only if they lie in the same connected component of $H$. This partition is called the boundary state of the forest.
+> [!info] The boundary partition induced by a forest
+> **Definition.** A forest $H$ induces a partition $\pi_B(H)$ of $B$: two boundary vertices belong to the same block if and only if they lie in the same connected component of $H$. This partition is called the boundary state of the forest.
 
 Let $\Pi(B)$ be the set of all partitions of $B$, and let $b(\pi)$ be the number of blocks of $\pi$. The notation $ac|e$ means the blocks $\{a,c\}$ and $\{e\}$; their order is immaterial.
 
@@ -86,24 +89,26 @@ $$
 
 **Origin of the construction.** [Definition 4.14 of Mannens–Nederlof](https://arxiv.org/html/2307.01046#S4.SS3) already groups forests by their boundary partition; internal components are allowed. Below, we equip this counting table with weights and an edge-count variable. This is a polynomial version of an established construction.
 
-**Definition.** The polynomial of a state $\pi\in\Pi(B)$ is
-
-$$
-\boxed{
-\mathcal F^{G,B}_\pi(t)
-=\sum_{\substack{H\text{ a spanning forest of }G\\\pi_B(H)=\pi}}
-w(H)t^{g(H)}
-}
-\tag{1}
-$$
+> [!info] State polynomials and the full forest passport
+> **Definition.** The polynomial of a state $\pi\in\Pi(B)$ is
+>
+> $$
+> \boxed{
+> \mathcal F^{G,B}_\pi(t)
+> =\sum_{\substack{H\text{ a spanning forest of }G\\\pi_B(H)=\pi}}
+> w(H)t^{g(H)}
+> }
+> \tag{1}
+> $$
 
 An unrealizable state has polynomial zero. We omit the superscripts when $G,B$ are fixed. The coefficient of $t^g$ is the sum of the weights of all forests with $g$ edges and the given state. Internal components are allowed and included in this count.
 
-**Definition.** The full boundary forest passport in state coordinates is the vector
-
-$$
-\Sigma_B(G;t)=\bigl(\mathcal F^{G,B}_\pi(t)\bigr)_{\pi\in\Pi(B)}
-$$
+> [!info] State polynomials and the full forest passport
+> **Definition.** The full boundary forest passport in state coordinates is the vector
+>
+> $$
+> \Sigma_B(G;t)=\bigl(\mathcal F^{G,B}_\pi(t)\bigr)_{\pi\in\Pi(B)}
+> $$
 
 The boundary vertex names and the number $n$ are retained alongside this vector. The latter matters: adding an isolated internal vertex leaves the polynomials (1) unchanged but changes the number of components of every forest. “Full” means that all states and all spanning forests are included; it asserts neither reconstruction of the graph itself nor minimality of the number of coordinates.
 
@@ -125,18 +130,20 @@ $$
 \varepsilon(s_\pi)=1
 $$
 
-**Proposition.** Forgetting the state gives the ordinary forest polynomial:
+> [!info] Free states and partition forms
+> **Proposition.** Forgetting the state gives the ordinary forest polynomial:
+>
+> $$
+> \boxed{
+> \varepsilon\bigl(\mathbf f_{G,B}(t)\bigr)
+> =\sum_{\pi\in\Pi(B)}\mathcal F^{G,B}_\pi(t)
+> =F_G(t)
+> }
+> \tag{2}
+> $$
 
-$$
-\boxed{
-\varepsilon\bigl(\mathbf f_{G,B}(t)\bigr)
-=\sum_{\pi\in\Pi(B)}\mathcal F^{G,B}_\pi(t)
-=F_G(t)
-}
-\tag{2}
-$$
-
-**Proof.** Every forest induces exactly one boundary partition. Hence the sums in (1) divide all forests into disjoint classes without changing their weights or numbers of edges. $\square$
+> [!note]- Proof
+> **Proof.** Every forest induces exactly one boundary partition. Hence the sums in (1) divide all forests into disjoint classes without changing their weights or numbers of edges. $\square$
 
 A state $s_\pi$ must be distinguished from the partition form
 
@@ -198,14 +205,16 @@ The equality $\mathcal F_{ac|e}=\mathcal F_{a|ce}$ comes from the symmetry of th
 
 **An established definition and a direct consequence.** The term “grove” is used in [Kenyon–Wilson, §1.1](https://arxiv.org/html/math/0608422v4#S1.SS1). Formulas (4)–(5) below follow by counting forest components.
 
-**Lemma.** If a forest $H$ has $g$ edges and state $\pi$, its number of internal components is
+> [!info] Internal components and groves
+> **Lemma.** If a forest $H$ has $g$ edges and state $\pi$, its number of internal components is
+>
+> $$
+> \boxed{k_0(H)=n-g-b(\pi)}
+> \tag{4}
+> $$
 
-$$
-\boxed{k_0(H)=n-g-b(\pi)}
-\tag{4}
-$$
-
-**Proof.** A spanning forest on $n$ vertices with $g$ edges has $n-g$ components. Those meeting the boundary are in bijection with the blocks of $\pi$, so there are exactly $b(\pi)$ of them. The remaining components are internal. $\square$
+> [!note]- Proof
+> **Proof.** A spanning forest on $n$ vertices with $g$ edges has $n-g$ components. Those meeting the boundary are in bijection with the blocks of $\pi$, so there are exactly $b(\pi)$ of them. The remaining components are internal. $\square$
 
 For fixed $n,\pi$, the degree of a monomial therefore already determines the number of internal components. Formula (1) needs no separate variable for that number. The passport does not retain their sizes or vertex sets.
 
@@ -226,16 +235,18 @@ This definition was introduced in [[en/Structural identities/Structural Identiti
 
 As in the note on spanning-tree gluing, let $g_\pi$ denote the sum of the weights of groves of state $\pi$. This is a scalar coefficient, not a polynomial or the edge count $g$.
 
-**Corollary.** Groves are extracted from the full passport by
+> [!info] Internal components and groves
+> **Corollary.** Groves are extracted from the full passport by
+>
+> $$
+> \boxed{g_\pi=[t^{\,n-b(\pi)}]\mathcal F^{G,B}_\pi(t)}
+> \tag{5}
+> $$
+>
+> Here $[t^j]$ denotes extraction of the coefficient of $t^j$.
 
-$$
-\boxed{g_\pi=[t^{\,n-b(\pi)}]\mathcal F^{G,B}_\pi(t)}
-\tag{5}
-$$
-
-Here $[t^j]$ denotes extraction of the coefficient of $t^j$.
-
-**Proof.** A grove is characterized by $k_0(H)=0$. By (4), this is equivalent to $g=n-b(\pi)$. The coefficient of this degree in (1) sums exactly the weights of the required forests. $\square$
+> [!note]- Proof
+> **Proof.** A grove is characterized by $k_0(H)=0$. By (4), this is equivalent to $g=n-b(\pi)$. The coefficient of this degree in (1) sums exactly the weights of the required forests. $\square$
 
 The degree $n-b(\pi)$ is the highest allowed degree for the state, but its coefficient may be zero. Lower degrees count forests with internal components.
 

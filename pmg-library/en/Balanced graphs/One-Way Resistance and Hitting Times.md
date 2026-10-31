@@ -257,7 +257,8 @@ The indices $ji$ follow from pairing order. The expression for $r_{ij}$ also ret
 
 Now interpret $f_{ij}$ as transition rates and consider the continuous-time walk with generator $-\mathbf L$. At $i$, it waits an exponential time of mean $1/d_i$, then selects $k$ with probability $f_{ik}/d_i$. Balance makes the stationary distribution uniform, with probabilities $1/n$.
 
-**Definition.** Let $H_{ij}$ be the mean first hitting time of $j$ starting at $i$. Set $H_{jj}=0$; return time after leaving $j$ is a different quantity. Call $\mathbf H=(H_{ij})$ the **mean first hitting-time matrix**. It refers to the specified random process.
+> [!info] Markov interpretation
+> **Definition.** Let $H_{ij}$ be the mean first hitting time of $j$ starting at $i$. Set $H_{jj}=0$; return time after leaving $j$ is a different quantity. Call $\mathbf H=(H_{ij})$ the **mean first hitting-time matrix**. It refers to the specified random process.
 
 For fixed target $j$, conditioning on the first transition gives [1, Theorem 2.3]
 

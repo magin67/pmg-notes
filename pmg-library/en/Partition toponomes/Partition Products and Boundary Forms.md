@@ -72,13 +72,14 @@ $$
 
 In every case, both factors have type $(1)$, but the results differ. Thus the types of the factors alone, without data on shared vertices, do not determine the product of particular forms.
 
-**Lemma.** Suppose $A$ and $B$ share exactly one vertex $p$, and their boundaries have grades $k$ and $l$. Then
-
-$$
-[(A)]^2[(B)]^2=[(A\cup B)]^2,
-\qquad
-\#(A\cup B)-1=k+l
-$$
+> [!info] The product of two particular components
+> **Lemma.** Suppose $A$ and $B$ share exactly one vertex $p$, and their boundaries have grades $k$ and $l$. Then
+>
+> $$
+> [(A)]^2[(B)]^2=[(A\cup B)]^2,
+> \qquad
+> \#(A\cup B)-1=k+l
+> $$
 
 > [!note]- Proof
 > **Proof.** Put $p$ first in both ordered vertex lists. The boundaries are products of differences relative to $p$:
@@ -106,7 +107,8 @@ $$
 
 Choose one vertex in each block in advance: $p_i\in A_i$, $q_j\in B_j$. Call it the **root**. This is additional data for the construction; a root does not change the original boundary or its form.
 
-**Definition.** For a partial matching $H$ between the indices of the two types, glue the roots $p_i$ and $q_j$ of each pair $(i,j)\in H$. Make no other identifications. Each component participates in at most one pair.
+> [!info] Partial gluings at chosen roots
+> **Definition.** For a partial matching $H$ between the indices of the two types, glue the roots $p_i$ and $q_j$ of each pair $(i,j)\in H$. Make no other identifications. Each component participates in at most one pair.
 
 Gluing identifies vertices without adding an edge between them. Two trees become one tree with a shared root vertex. Unmatched components remain unchanged.
 
@@ -125,17 +127,18 @@ $$
 
 The substitution replaces one basis vertex with another and commutes with the boundary operator. The label $q_j$ no longer occurs in the argument of the result. If the original vertex set is retained, $q_j$ is counted as a singleton block. In this way, the forms $q_H$ for all $H$ belong to the same polyform algebra.
 
-**Theorem.** Let $\mathcal E_{\lambda,\mu}$ be the chosen representation as a sum of forms over all partial matchings, including the empty matching:
-
-$$
-\mathcal E_{\lambda,\mu}=\sum_H q_H
-$$
-
-Its toponome equals the product of types in the second-kind algebra:
-
-$$
-\boxed{T_{\mathcal E_{\lambda,\mu}}=\lambda*\mu}
-$$
+> [!info] Writing all results on one vertex set
+> **Theorem.** Let $\mathcal E_{\lambda,\mu}$ be the chosen representation as a sum of forms over all partial matchings, including the empty matching:
+>
+> $$
+> \mathcal E_{\lambda,\mu}=\sum_H q_H
+> $$
+>
+> Its toponome equals the product of types in the second-kind algebra:
+>
+> $$
+> \boxed{T_{\mathcal E_{\lambda,\mu}}=\lambda*\mu}
+> $$
 
 > [!note]- Proof
 > **Proof.** For the empty matching, all components remain separate. For each pair $(i,j)\in H$, the corresponding blocks share one vertex after substitution. By the lemma, their forms give one component of grade $k_i+l_j$. All other blocks remain disjoint because no index is repeated in a matching and no other identifications are made.

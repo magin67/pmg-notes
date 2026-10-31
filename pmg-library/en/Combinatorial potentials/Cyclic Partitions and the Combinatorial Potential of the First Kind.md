@@ -36,19 +36,21 @@ Parentheses around element names here denote permutation cycles, not PMG exterio
 
 Let $\mathbf k=[k_1,\ldots,k_m]$ be positive cycle lengths, $n=w(\mathbf k)$, and let $\mu_j$ be the multiplicity of length $j$. Use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|collection product]] $\mathbf k!=\prod_i k_i$ and write $\boldsymbol\mu$ for the collection of positive multiplicities.
 
-**Definition.** The combinatorial potential of the first kind $s_1(\mathbf k)$ counts permutations of a fixed set of $n$ distinguishable elements whose cycle-length collection is $\mathbf k$.
+> [!info] The potential of a cycle type
+> **Definition.** The combinatorial potential of the first kind $s_1(\mathbf k)$ counts permutations of a fixed set of $n$ distinguishable elements whose cycle-length collection is $\mathbf k$.
 
-**Proposition.** The two kinds of potential are related by
-
-$$
-\boxed{
-s_1(\mathbf k)
-=s_2(\mathbf k)\prod_{i=1}^{m}(k_i-1)!
-=\frac{n!}{\mathbf k!\,[\mu_j!]!}
-=\frac{n!}{\prod_{j\geqslant1}j^{\mu_j}\mu_j!}
-}
-\tag{1}
-$$
+> [!info] The potential of a cycle type
+> **Proposition.** The two kinds of potential are related by
+>
+> $$
+> \boxed{
+> s_1(\mathbf k)
+> =s_2(\mathbf k)\prod_{i=1}^{m}(k_i-1)!
+> =\frac{n!}{\mathbf k!\,[\mu_j!]!}
+> =\frac{n!}{\prod_{j\geqslant1}j^{\mu_j}\mu_j!}
+> }
+> \tag{1}
+> $$
 
 > [!note]- Proof
 > **Proof.** First partition the original set into blocks of sizes $\mathbf k$, in $s_2(\mathbf k)$ ways. Choose a cyclic order independently in each fixed block, giving factor $\prod_i(k_i-1)!$.
@@ -127,7 +129,7 @@ $$
 
 These differ from ordinary $c(n,m)$: for example, $c_{\geqslant2}(4,2)=3$, whereas $c(4,2)=11$.
 
-[[Permutation Digraphs and Cycle Combinatorics]] gives their graph interpretation and uses the type potential for probabilities and mean cycle counts. Its parts $\mathbf k$ are cycle lengths, not boundary grades or forest types from [[Partition Toponomes]].
+[[Permutation Digraphs and Cycle Combinatorics]] gives their graph interpretation and uses the type potential for probabilities and mean cycle counts. Its parts $\mathbf k$ are cycle lengths, not boundary grades or forest types from [[en/Partition toponomes/Partition Toponomes|Partition Toponomes]].
 
 The extension to mixed states containing cycles and open paths is proved in [[The Potential of Path-and-Cycle States]]. There the factorial refers to the arc count; separate component multiplicities and the passage to graphs on prescribed vertices are explained.
 

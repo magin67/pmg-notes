@@ -25,21 +25,23 @@ Consider finite digraphs in which each vertex has indegree and outdegree at most
 
 This note allows loops, which are cycles of type $1$. For the loopless model, exclude these components.
 
-**Definition.** The reduced type $\lambda_k$ contains only components with a positive number of arcs. Let $c_j$ count cycles of type $j$, and let $p_j$ count paths of type $\underline j$, where $j\geqslant1$. Then
-
-$$
-k=\sum_{j\geqslant1}j(c_j+p_j),\qquad
-p=\sum_{j\geqslant1}p_j,\qquad
-v=k+p
-$$
-
-Here $k$ is the arc count, $p$ the number of nonempty open paths, and $v$ the number of incident vertices. For example, $[3,\underline1]$ has $k=4$, $p=1$, and $v=5$.
+> [!info] The state type and vertex count
+> **Definition.** The reduced type $\lambda_k$ contains only components with a positive number of arcs. Let $c_j$ count cycles of type $j$, and let $p_j$ count paths of type $\underline j$, where $j\geqslant1$. Then
+>
+> $$
+> k=\sum_{j\geqslant1}j(c_j+p_j),\qquad
+> p=\sum_{j\geqslant1}p_j,\qquad
+> v=k+p
+> $$
+>
+> Here $k$ is the arc count, $p$ the number of nonempty open paths, and $v$ the number of incident vertices. For example, $[3,\underline1]$ has $k=4$, $p=1$, and $v=5$.
 
 Isolated vertices $\underline0$ are omitted from the reduced type. On a prescribed set of $n$ vertices, their count is recovered as $n-v$. Their multiplicity therefore does not enter the denominator in the formula for $u$. The empty type has $k=p=v=0$.
 
 ## The potential formula and its proof
 
-**Definition.** The potential $u(\lambda_k)$ counts partitions of the arc-label set $\{1,\ldots,k\}$ into components of the prescribed type, with a cyclic order on each cycle and a linear order on each path. Components are unordered. A cycle has no distinguished initial position, but its direction is retained.
+> [!info] The potential formula and its proof
+> **Definition.** The potential $u(\lambda_k)$ counts partitions of the arc-label set $\{1,\ldots,k\}$ into components of the prescribed type, with a cyclic order on each cycle and a linear order on each path. Components are unordered. A cycle has no distinguished initial position, but its direction is retained.
 
 Equivalently, this counts graphs with no isolated vertices, distinctly labelled arcs, and unlabelled vertices, up to isomorphisms preserving directions and arc labels.
 
@@ -167,7 +169,8 @@ $$
 \tag{3}
 $$
 
-**Proof.** The auxiliary graph on $k$ vertices with $p$ paths has $k-p$ arcs. Choose their sources in $\binom{k}{p}$ ways, then choose an injection from those sources into the full vertex set in $k!/p!$ ways. The degree restrictions hold, and each graph is obtained uniquely. $\square$
+> [!note]- Proof
+> **Proof.** The auxiliary graph on $k$ vertices with $p$ paths has $k-p$ arcs. Choose their sources in $\binom{k}{p}$ ways, then choose an injection from those sources into the full vertex set in $k!/p!$ ways. The degree restrictions hold, and each graph is obtained uniquely. $\square$
 
 This specializes the classical enumeration of Laguerre configurations; formula (1) refines it by the complete component type. The sources provide the model and aggregate formulas, while the proof for our fixed type is given above.
 

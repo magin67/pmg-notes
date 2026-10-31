@@ -72,39 +72,43 @@ For an undirected graph, $d^{out}=d^{in}$, hence $u=0$. Degrees may nevertheless
 
 ## Definitions of U and O
 
-**Definition.** The skew-symmetric vertex sector is
+> [!info] Definitions of U and O
+> **Definition.** The skew-symmetric vertex sector is
+>
+> $$
+> \mathcal U_n=
+> \left\{U:U_{ij}=\frac{u_i-u_j}{n},\quad \sum_i u_i=0\right\}
+> $$
 
-$$
-\mathcal U_n=
-\left\{U:U_{ij}=\frac{u_i-u_j}{n},\quad \sum_i u_i=0\right\}
-$$
-
-**Definition.** The circulation sector is
-
-$$
-\mathcal O_n=
-\{O:O^{\mathsf T}=-O,\quad O\mathbf1=0\}
-$$
+> [!info] Definitions of U and O
+> **Definition.** The circulation sector is
+>
+> $$
+> \mathcal O_n=
+> \{O:O^{\mathsf T}=-O,\quad O\mathbf1=0\}
+> $$
 
 An O-table also has zero column sums. These conditions define linear subspaces and do not require positive coefficients.
 
-**Lemma.** Every skew-symmetric table $H$ has a unique representation
+> [!info] Definitions of U and O
+> **Lemma.** Every skew-symmetric table $H$ has a unique representation
+>
+> $$
+> H=C_U+C_O,\qquad
+> (C_U)_{ij}=\frac{u_i-u_j}{n},\qquad
+> u=H\mathbf1,\qquad
+> C_O=H-C_U
+> $$
 
-$$
-H=C_U+C_O,\qquad
-(C_U)_{ij}=\frac{u_i-u_j}{n},\qquad
-u=H\mathbf1,\qquad
-C_O=H-C_U
-$$
-
-**Proof.** Skew-symmetry gives $\sum_i u_i=0$. Seek a correction $\phi_i-\phi_j$ with $\sum_i\phi_i=0$. Its row sum is
-
-$$
-\sum_{j\ne i}(\phi_i-\phi_j)
-=(n-1)\phi_i+\phi_i=n\phi_i
-$$
-
-To reproduce $u_i$, we must therefore set $\phi_i=u_i/n$. The residual $C_O$ is skew-symmetric with zero row sums. In any such decomposition, $u$ is recovered from the row sums of $H$, proving uniqueness. $\square$
+> [!note]- Proof
+> **Proof.** Skew-symmetry gives $\sum_i u_i=0$. Seek a correction $\phi_i-\phi_j$ with $\sum_i\phi_i=0$. Its row sum is
+>
+> $$
+> \sum_{j\ne i}(\phi_i-\phi_j)
+> =(n-1)\phi_i+\phi_i=n\phi_i
+> $$
+>
+> To reproduce $u_i$, we must therefore set $\phi_i=u_i/n$. The residual $C_O$ is skew-symmetric with zero row sums. In any such decomposition, $u$ is recovered from the row sums of $H$, proving uniqueness. $\square$
 
 The denominators in V and U have different origins: summing two vertex contributions yields the factor $n-2$, while taking their difference yields $n$.
 
@@ -118,27 +122,29 @@ Indeed, $H\mathbf1=u$, $\mathbf1^{\mathsf T}H=-u^{\mathsf T}$, and $\mathbf1^{\m
 
 ## The full KVPOU decomposition
 
-**Theorem.** Every table $C\in\mathcal C_n$ has a unique decomposition
+> [!info] The full KVPOU decomposition
+> **Theorem.** Every table $C\in\mathcal C_n$ has a unique decomposition
+>
+> $$
+> \boxed{C=C_K+C_V+C_P+C_O+C_U}
+> \tag{1}
+> $$
+>
+> Its components are given by
+>
+> $$
+> \begin{aligned}
+> (C_K)_{ij}&=\mu\\
+> (C_V)_{ij}&=\frac{v_i+v_j}{n-2}\\
+> C_P&=S-C_K-C_V\\
+> (C_U)_{ij}&=\frac{u_i-u_j}{n}\\
+> C_O&=H-C_U
+> \end{aligned}
+> \tag{2}
+> $$
 
-$$
-\boxed{C=C_K+C_V+C_P+C_O+C_U}
-\tag{1}
-$$
-
-Its components are given by
-
-$$
-\begin{aligned}
-(C_K)_{ij}&=\mu\\
-(C_V)_{ij}&=\frac{v_i+v_j}{n-2}\\
-C_P&=S-C_K-C_V\\
-(C_U)_{ij}&=\frac{u_i-u_j}{n}\\
-C_O&=H-C_U
-\end{aligned}
-\tag{2}
-$$
-
-**Proof.** The symmetric and skew-symmetric parts of $C$ are uniquely determined. Apply the KVP theorem from [[KVP Decomposition of Pair Characteristics#Existence, uniqueness, and projectors]] to the former and the lemma proved above to the latter. $\square$
+> [!note]- Proof
+> **Proof.** The symmetric and skew-symmetric parts of $C$ are uniquely determined. Apply the KVP theorem from [[KVP Decomposition of Pair Characteristics#Existence, uniqueness, and projectors]] to the former and the lemma proved above to the latter. $\square$
 
 It is useful to record how both systems of row sums are reconstructed:
 
@@ -159,17 +165,19 @@ $$
 
 On symmetric tables, it agrees with the KVP inner product $\sum_{i<j}C_{ij}D_{ij}$. The factor $1/2$ preserves this normalization when both directions are included.
 
-**Theorem.** The five sectors are pairwise orthogonal with respect to $\langle\ ,\ \rangle_0$.
+> [!info] Coefficient orthogonality and projectors
+> **Theorem.** The five sectors are pairwise orthogonal with respect to $\langle\ ,\ \rangle_0$.
 
-**Proof.** Symmetric tables are orthogonal to skew-symmetric tables because the contributions of directions $ij$ and $ji$ cancel. Orthogonality of K, V, and P has already been proved. For the remaining pair,
-
-$$
-\langle U(u),O\rangle_0
-=\frac1{2n}\sum_{i,j}(u_i-u_j)O_{ij}
-=\frac1n\sum_i u_i\sum_jO_{ij}=0
-$$
-
-The last step uses skew-symmetry of O. $\square$
+> [!note]- Proof
+> **Proof.** Symmetric tables are orthogonal to skew-symmetric tables because the contributions of directions $ij$ and $ji$ cancel. Orthogonality of K, V, and P has already been proved. For the remaining pair,
+>
+> $$
+> \langle U(u),O\rangle_0
+> =\frac1{2n}\sum_{i,j}(u_i-u_j)O_{ij}
+> =\frac1n\sum_i u_i\sum_jO_{ij}=0
+> $$
+>
+> The last step uses skew-symmetry of O. $\square$
 
 The linear operators $\Pi_X:C\mapsto C_X$ are self-adjoint projectors:
 
@@ -229,28 +237,32 @@ The vertex values cancel in pairs. Thus O completely determines the sums of the 
 
 The condition $O\mathbf1=0$ means that the signed flow on the complete graph of pairs has no sources or sinks. Its connection with cycles can be made explicit.
 
-**Lemma.** Choose vertex $n$. For $1\le i<j<n$, let $T^{ij}$ be the unit skew-symmetric circulation around the triangle $i\to j\to n\to i$: its entries are $+1$ along the traversal and $-1$ in reverse. Then
+> [!info] Circulations and a triangular basis
+> **Lemma.** Choose vertex $n$. For $1\le i<j<n$, let $T^{ij}$ be the unit skew-symmetric circulation around the triangle $i\to j\to n\to i$: its entries are $+1$ along the traversal and $-1$ in reverse. Then
+>
+> $$
+> \boxed{O=\sum_{1\le i<j<n}O_{ij}T^{ij}}
+> \tag{4}
+> $$
 
-$$
-\boxed{O=\sum_{1\le i<j<n}O_{ij}T^{ij}}
-\tag{4}
-$$
-
-**Proof.** The right-hand side agrees with O on every pair not containing vertex $n$. Zero row sums uniquely determine the remaining values. Each $T^{ij}$ has its own unique pair $(i,j)$ away from vertex $n$, so these tables are linearly independent. $\square$
+> [!note]- Proof
+> **Proof.** The right-hand side agrees with O on every pair not containing vertex $n$. Zero row sums uniquely determine the remaining values. Each $T^{ij}$ has its own unique pair $(i,j)$ away from vertex $n$, so these tables are linearly independent. $\square$
 
 This gives a basis of $\binom{n-1}{2}$ triangular circulations. Choosing a different vertex changes the basis but not the sector or projector. Components may be nonzero on absent arcs of the original graph: the decomposition takes place in the full pair space.
 
 ## Balance and reduced decompositions
 
-**Definition.** A pair table is balanced if $d^{out}=d^{in}$.
+> [!info] Balance and reduced decompositions
+> **Definition.** A pair table is balanced if $d^{out}=d^{in}$.
 
-**Corollary.** Balance is equivalent to $u=0$ and $C_U=0$. In this case, the **KVPO decomposition** remains:
-
-$$
-C=C_K+C_V+C_P+C_O
-$$
-
-If also $C=C^{\mathsf T}$, O vanishes and the result is KVP. Conversely, $C_O=C_U=0$ together imply symmetry of C.
+> [!info] Balance and reduced decompositions
+> **Corollary.** Balance is equivalent to $u=0$ and $C_U=0$. In this case, the **KVPO decomposition** remains:
+>
+> $$
+> C=C_K+C_V+C_P+C_O
+> $$
+>
+> If also $C=C^{\mathsf T}$, O vanishes and the result is KVP. Conversely, $C_O=C_U=0$ together imply symmetry of C.
 
 | Class of tables | Components necessarily zero | Decomposition |
 |---|---|---|

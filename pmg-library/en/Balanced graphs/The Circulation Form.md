@@ -87,11 +87,12 @@ These are two manifestations of skew-symmetry: exchanging the vectors changes th
 
 ### Orientation and the choice of initial vertex
 
-**Proposition.** Triangular circulation is invariant under cyclic shifts of its vertices and changes sign under orientation reversal:
-
-$$
-w(abc)=w(bca)=w(cab),\qquad w(acb)=-w(abc)
-$$
+> [!info] Orientation and the choice of initial vertex
+> **Proposition.** Triangular circulation is invariant under cyclic shifts of its vertices and changes sign under orientation reversal:
+>
+> $$
+> w(abc)=w(bca)=w(cab),\qquad w(acb)=-w(abc)
+> $$
 
 > [!note]- Proof
 > **Proof.** In the expanded expression for $w(abc)$, a cyclic permutation merely permutes the three pairs of terms. Reversing the order changes every pair's sign. $\square$
@@ -123,7 +124,8 @@ w(a_1\ldots a_k)=\sum_{i=1}^k\omega(a_i-h,a_{i+1}-h),\qquad a_{k+1}=a_1
 \tag{4}
 $$
 
-**Proposition.** This sum is independent of $h$.
+> [!info] Circulation around a closed contour
+> **Proposition.** This sum is independent of $h$.
 
 > [!note]- Proof
 > **Proof.** On replacing $h$ by $h+t$, write $x_i=a_i-h$. Bilinearity gives
@@ -181,12 +183,13 @@ For any balanced graph, summing the circulation parts of its cycles gives the sk
 
 ## Polyforms made only of circulations
 
-**Definition.** A pure grade-one circulation polyform is an expression
-
-$$
-C=\sum_\alpha c_\alpha\,\omega(u_\alpha,v_\alpha),\qquad
-u_\alpha,v_\alpha\in W,\quad c_\alpha\in\mathbb R
-$$
+> [!info] Polyforms made only of circulations
+> **Definition.** A pure grade-one circulation polyform is an expression
+>
+> $$
+> C=\sum_\alpha c_\alpha\,\omega(u_\alpha,v_\alpha),\qquad
+> u_\alpha,v_\alpha\in W,\quad c_\alpha\in\mathbb R
+> $$
 
 It satisfies $C^{\mathsf T}=-C$. Its symmetric part is absent, and coefficients have no positivity restriction.
 

@@ -42,7 +42,8 @@ $$
 
 The first formula subtracts the lost contributions to the degrees. In the second, the induced conductances are $\widehat c_{jk}=c_{jk}+c_{ij}c_{ik}/d_i$ for $j\ne k$.
 
-**Definition.** We describe the effect of removal by the ratios of the new values to the original ones:
+> [!info] Two types of removal
+> **Definition.** We describe the effect of removal by the ratios of the new values to the original ones:
 
 | Operation | Spanning-tree ratio | Radius ratio |
 | --- | --- | --- |
@@ -68,7 +69,7 @@ Choose a random spanning tree according to $\Pr(T)=\prod_{e\in T}c_e/\tau(G)$. L
 > }
 > $$
 
-> [!proof]- Counting spanning trees and taking a Schur complement
+> [!note]- Counting spanning trees and taking a Schur complement
 > **Proof.** Each spanning tree of $H_i$ extends to a spanning tree of $G$ in which $i$ is a leaf by choosing one edge incident to $i$. The total weight of these extensions is the weight of the original tree multiplied by $d_i$. Conversely, removing leaf $i$ from such a tree gives a spanning tree of $H_i$. Hence
 >
 > $$
@@ -135,11 +136,12 @@ $$
 
 All products and exponentials in this section are polyform operations. The functional $\tau(P)$ extracts the coefficient of the fixed spanning-tree form $T_n=[(a_1\ldots a_n)]^2$ of the original set.
 
-**Definition.** Mark all edges incident to vertex $i$ with a common factor $t$:
-
-$$
-F_i(t)=\frac{\tau\!\left(\exp(L-L_i+tL_i)\right)}{\tau(G)}
-$$
+> [!info] Vertex properties through polyforms
+> **Definition.** Mark all edges incident to vertex $i$ with a common factor $t$:
+>
+> $$
+> F_i(t)=\frac{\tau\!\left(\exp(L-L_i+tL_i)\right)}{\tau(G)}
+> $$
 
 This is an ordinary scalar polynomial obtained from the polyform. Its coefficients describe the spanning-tree degree distribution:
 
@@ -150,7 +152,7 @@ p_{i,k}=\Pr\{\deg_T(i)=k\}
 }
 $$
 
-> [!proof]- Marked factors in the forest expansion
+> [!note]- Marked factors in the forest expansion
 > **Proof.** In the [[Laplacian Exponential#The exponential in the algebra of forms|factorization of the exponential]], each edge corresponds to a factor $e+c_{jk}[a_k-a_j]^2$. After the substitution $c_{ij}\mapsto tc_{ij}$, each spanning tree acquires a factor $t^{\deg_T(i)}$. Extracting the top-grade coefficient sums the spanning-tree weights, and dividing by $\tau(G)$ turns the weights into probabilities. $\square$
 
 Derivatives of a single polynomial give two different vertex characteristics:

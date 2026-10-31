@@ -68,7 +68,8 @@ The vector sum refers to the fixed [[Laplacian Exponential#Grade components and 
 
 ## Prescribed roots and a principal minor
 
-**Definition.** Let $\varnothing\ne R\subseteq V$ be a prescribed root set. Write $\mathcal F_R(G)$ for the spanning forests in which each component contains exactly one vertex of $R$.
+> [!info] Prescribed roots and a principal minor
+> **Definition.** Let $\varnothing\ne R\subseteq V$ be a prescribed root set. Write $\mathcal F_R(G)$ for the spanning forests in which each component contains exactly one vertex of $R$.
 
 The roots of such a forest are already specified; no additional choices are made in the sum. Its component count is $|R|$, and its edge count is $n-|R|$. In particular, every isolated vertex of such a forest must belong to $R$.
 
@@ -122,7 +123,7 @@ $$
 
 Orientations only specify the columns; reversing an orientation does not change the Laplacian.
 
-> [!proof]- Proof of the theorem
+> [!note]- Proof of the theorem
 > **Proof.** Set $k=|S|$. By the Cauchy–Binet formula,
 >
 > $$
@@ -183,7 +184,7 @@ For the Laplacian, the term $S=V$ vanishes because $\mathbf L\mathbf1=0$. Formul
 > }
 > $$
 
-> [!proof]- How the component-size factor arises
+> [!note]- How the component-size factor arises
 > **Proof.** Fix a forest $F\in\mathcal F_k(G)$ with components $B_1,\ldots,B_{n-k}$. In the sum of order-$k$ minors, it is counted for every set $R=V\setminus S$ containing exactly one vertex of each component. There are $\prod_i|B_i|=h(F)$ such sets.
 >
 > In each corresponding minor, the forest has weight $w(F)$. Its total contribution is therefore $w(F)h(F)$. Summing over forests agrees with the definition of $p_k$ in (1), which together with (3) proves (4). $\square$
@@ -231,7 +232,8 @@ Thus $p_k$ is the elementary symmetric function of degree $k$ in these values. T
 > t_j=-\lambda_j^{-1},\qquad j=1,\ldots,n-c
 > $$
 
-**Proof.** Each factor $1+t\lambda_j$ vanishes at $t=-1/\lambda_j$. For an undirected graph with positive conductances, the nonzero Laplacian eigenvalues are positive. Zero eigenvalues contribute factors of $1$ and produce no roots of the toponome. $\square$
+> [!note]- Proof
+> **Proof.** Each factor $1+t\lambda_j$ vanishes at $t=-1/\lambda_j$. For an undirected graph with positive conductances, the nonzero Laplacian eigenvalues are positive. Zero eigenvalues contribute factors of $1$ and produce no roots of the toponome. $\square$
 
 In particular, **the vertex toponome of a connected graph on $n>2$ vertices is reducible over $\mathbb R$ and splits completely into linear factors**. For an arbitrary graph, the condition is $n-c\geqslant2$. One edge together with isolated vertices gives a polynomial of degree $1$, regardless of the total vertex count.
 
@@ -291,23 +293,24 @@ $$
 
 ### Sum of roots and sum of vertex degrees
 
-**Corollary.** The sum of the roots of the Laplacian characteristic polynomial, with multiplicities, equals the sum of weighted vertex degrees, or twice the total edge conductance:
-
-$$
-\sum_{j=1}^{n-c}\lambda_j
-=\operatorname{tr}\mathbf L
-=\sum_i d_i=2C=p_1
-$$
-
-This follows because the sum of eigenvalues equals the matrix trace. Zero eigenvalues do not change the sum. For unit conductances, it equals $2|E|$.
-
-For the roots $t_j=-1/\lambda_j$ of our toponome, the same statement becomes
-
-$$
--\sum_{j=1}^{n-c}\frac1{t_j}=p_1
-$$
-
-The sum of the roots of $P_G$ themselves is determined by the opposite end of the coefficient list: for a connected graph it is $-p_{n-2}/p_{n-1}$. Its [[Coefficients and Kirchhoff Indices#Root sums and the two ends of the coefficient list|relation to the Kirchhoff index]] is considered separately. Thus “the sum of the roots of the Laplacian polynomial” requires specifying which polynomial convention is intended.
+> [!info] Sum of roots and sum of vertex degrees
+> **Corollary.** The sum of the roots of the Laplacian characteristic polynomial, with multiplicities, equals the sum of weighted vertex degrees, or twice the total edge conductance:
+>
+> $$
+> \sum_{j=1}^{n-c}\lambda_j
+> =\operatorname{tr}\mathbf L
+> =\sum_i d_i=2C=p_1
+> $$
+>
+> This follows because the sum of eigenvalues equals the matrix trace. Zero eigenvalues do not change the sum. For unit conductances, it equals $2|E|$.
+>
+> For the roots $t_j=-1/\lambda_j$ of our toponome, the same statement becomes
+>
+> $$
+> -\sum_{j=1}^{n-c}\frac1{t_j}=p_1
+> $$
+>
+> The sum of the roots of $P_G$ themselves is determined by the opposite end of the coefficient list: for a connected graph it is $-p_{n-2}/p_{n-1}$. Its [[Coefficients and Kirchhoff Indices#Root sums and the two ends of the coefficient list|relation to the Kirchhoff index]] is considered separately. Thus “the sum of the roots of the Laplacian polynomial” requires specifying which polynomial convention is intended.
 
 ### Two connections
 
@@ -427,7 +430,8 @@ These equalities agree with the [[Laplacian Exponential#Disconnected graphs|high
 > c=n-\deg P_G=\operatorname{ord}_{x=0}\chi_{\mathbf L}(x)
 > $$
 
-**Proof.** The combinatorial count of the maximum grade above gives $\deg P_G=n-c$. Thus the lowest nonzero power of $x$ in (5) is $c$. $\square$
+> [!note]- Proof
+> **Proof.** The combinatorial count of the maximum grade above gives $\deg P_G=n-c$. Thus the lowest nonzero power of $x$ in (5) is $c$. $\square$
 
 For $n\geqslant1$, zero has multiplicity $c-1$ in $\chi_{\mathbf L}(x)/x$. If the graph is connected, this polynomial has no zero root. In words, the number of components is one more than the multiplicity of zero after removing one obligatory factor of $x$. The toponome $P_G$ itself has no zero root, since $P_G(0)=1$.
 
@@ -444,9 +448,11 @@ x^nP_G(1/x)=\det(xI+\mathbf L)
 }
 $$
 
-**Proposition.** The coefficient of $x^m$ in this expression is the total weight of rooted spanning forests with $m$ components. For unit conductances, it counts such forests on the given set of labeled vertices. Each component has a chosen root; the components are unordered.
+> [!info] Complete graphs and Abel polynomials
+> **Proposition.** The coefficient of $x^m$ in this expression is the total weight of rooted spanning forests with $m$ components. For unit conductances, it counts such forests on the given set of labeled vertices. Each component has a chosen root; the components are unordered.
 
-**Proof.** The substitution sends $p_kt^k$ to $p_kx^{n-k}$. The forests and their root weights remain unchanged, but the exponent now counts components instead of edges. Equality with the determinant follows from (4) for $x\ne0$ and extends polynomially to $x=0$. $\square$
+> [!note]- Proof
+> **Proof.** The substitution sends $p_kt^k$ to $p_kx^{n-k}$. The forests and their root weights remain unchanged, but the exponent now counts components instead of edges. Equality with the determinant follows from (4) for $x\ne0$ and extends polynomially to $x=0$. $\square$
 
 For the complete graph $K_n$ with unit conductances, $\mathbf L=nI-\mathbf1\mathbf1^{\mathsf T}$. This matrix vanishes on $\mathbf1$ and acts as multiplication by $n$ on $\mathbf1^\perp$. Consequently, for $n\geqslant1$,
 
@@ -466,7 +472,8 @@ This is the [[Forest Coefficients and Abel Polynomials#The expansion of Abel pol
 > =\binom{n-1}{m-1}n^{n-m},\qquad 1\leqslant m\leqslant n
 > $$
 
-**Proof.** Every forest on the given vertices is a subgraph of $K_n$, so the preceding proposition counts all of them. Expanding $x(x+n)^{n-1}$ gives the explicit formula. $\square$
+> [!note]- Proof
+> **Proof.** Every forest on the given vertices is a subgraph of $K_n$, so the preceding proposition counts all of them. Expanding $x(x+n)^{n-1}$ gives the explicit formula. $\square$
 
 For example,
 

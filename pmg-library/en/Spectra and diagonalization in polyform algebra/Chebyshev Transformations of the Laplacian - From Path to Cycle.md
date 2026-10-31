@@ -34,7 +34,8 @@ $$
 f(\mathbf L)\mathbf u_k=f(\lambda_k)\mathbf u_k
 $$
 
-**Proof.** Induction gives $\mathbf L^r\mathbf u_k=\lambda_k^r\mathbf u_k$. A linear combination of these identities proves the assertion. $\square$
+> [!note]- Proof
+> **Proof.** Induction gives $\mathbf L^r\mathbf u_k=\lambda_k^r\mathbf u_k$. A linear combination of these identities proves the assertion. $\square$
 
 Thus the original eigenbasis remains an eigenbasis. If several values $f(\lambda_k)$ coincide, the corresponding eigenspace is the sum of the original eigenspaces, and its projector is the sum of their projectors. This is standard spectral calculus for a symmetric matrix, consistent with simultaneous diagonalization [Brouwer–Haemers, §2.1](https://aeb.win.tue.nl/2WF02/spectra.pdf#page=31).
 
@@ -46,11 +47,12 @@ The coordinate inner product stays fixed throughout the transformation. The resi
 
 The classical formula $T_m(\cos\theta)=\cos(m\theta)$ for Chebyshev polynomials of the first kind appears in [DLMF, formula 18.5.1](https://dlmf.nist.gov/18.5.E1). Apply it to the Laplacian variable $\xi=2-2\cos\theta$.
 
-**Definition.** For an integer $m\ge0$, put
-
-$$
-\Phi_m(\xi)=2-2T_m\left(1-\frac\xi2\right)
-$$
+> [!info] Polynomials that multiply the spectral angle
+> **Definition.** For an integer $m\ge0$, put
+>
+> $$
+> \Phi_m(\xi)=2-2T_m\left(1-\frac\xi2\right)
+> $$
 
 Then
 
@@ -118,21 +120,23 @@ The last equalities follow from periodicity and evenness of cosine on each basis
 
 ## Angle doubling turns a path into a cycle
 
-**Theorem.** For $n\ge3$, the matrix
+> [!info] Angle doubling turns a path into a cycle
+> **Theorem.** For $n\ge3$, the matrix
+>
+> $$
+> \boxed{\mathbf L^{(2)}=4\mathbf L_{P_n}-\mathbf L_{P_n}^{\,2}}
+> $$
+>
+> is the Laplacian of a simple cycle with edges
+>
+> $$
+> \{1,2\},\quad \{n-1,n\},\quad \{i,i+2\}\ (1\le i\le n-2)
+> $$
 
-$$
-\boxed{\mathbf L^{(2)}=4\mathbf L_{P_n}-\mathbf L_{P_n}^{\,2}}
-$$
-
-is the Laplacian of a simple cycle with edges
-
-$$
-\{1,2\},\quad \{n-1,n\},\quad \{i,i+2\}\ (1\le i\le n-2)
-$$
-
-**Proof.** For adjacent path vertices $i,j$, $(\mathbf L^2)_{ij}=-(\deg i+\deg j)$. Thus $4\mathbf L-\mathbf L^2$ retains the two end edges with coefficient $-1$, while all other adjacent-pair coefficients vanish. At distance $2$, the entry of $\mathbf L^2$ is $1$, giving a new edge with coefficient $-1$. All remaining off-diagonal entries vanish.
-
-Row sums are zero, and each vertex of the resulting graph has degree $2$. The graph is connected: starting at $1$, visit even vertices in increasing order and then odd vertices in decreasing order, returning to $1$. It is a cycle, and its Laplacian diagonal entries are $2$. $\square$
+> [!note]- Proof
+> **Proof.** For adjacent path vertices $i,j$, $(\mathbf L^2)_{ij}=-(\deg i+\deg j)$. Thus $4\mathbf L-\mathbf L^2$ retains the two end edges with coefficient $-1$, while all other adjacent-pair coefficients vanish. At distance $2$, the entry of $\mathbf L^2$ is $1$, giving a new edge with coefficient $-1$. All remaining off-diagonal entries vanish.
+>
+> Row sums are zero, and each vertex of the resulting graph has degree $2$. The graph is connected: starting at $1$, visit even vertices in increasing order and then odd vertices in decreasing order, returning to $1$. It is a cycle, and its Laplacian diagonal entries are $2$. $\square$
 
 For $n=6$, the traversal is
 
@@ -174,48 +178,52 @@ $$
 
 This is the quotient matrix of an equitable partition into reflected vertex pairs. Equitability means that the total transition coefficient from a vertex in one class to another class is independent of the selected vertex in the first class. Here reflection, which permutes neighbors, ensures this property. The general quotient construction and lifting of eigenvectors are given by [Brouwer–Haemers, §2.3, Lemma 2.3.1](https://aeb.win.tue.nl/2WF02/spectra.pdf#page=34). All classes have the same size, so the normalized lift $F(j)=f(\pi_n(j))/\sqrt2$ preserves the coordinate inner product and the quotient matrix is symmetric.
 
-**Lemma.** $\mathbf A_m=\mathbf L^{(m)}$.
+> [!info] Folding the doubled cycle
+> **Lemma.** $\mathbf A_m=\mathbf L^{(m)}$.
 
-**Proof.** Extend a path cosine mode to $2n$ indices:
-
-$$
-F_k(j)=\cos\left(\left(j+\frac12\right)\theta_k\right),\qquad
-\theta_k=\frac{\pi k}{n}
-$$
-
-It has period $2n$ and is reflection-invariant. The cosine sum formula gives
-
-$$
-F_k(j+m)+F_k(j-m)=2\cos(m\theta_k)F_k(j)
-$$
-
-Thus $\mathbf A_m$ acts on the complete path basis with multipliers $2-2\cos(m\theta_k)=\mu_k^{(m)}$. They agree with those of $\mathbf L^{(m)}$, proving matrix equality. $\square$
+> [!note]- Proof
+> **Proof.** Extend a path cosine mode to $2n$ indices:
+>
+> $$
+> F_k(j)=\cos\left(\left(j+\frac12\right)\theta_k\right),\qquad
+> \theta_k=\frac{\pi k}{n}
+> $$
+>
+> It has period $2n$ and is reflection-invariant. The cosine sum formula gives
+>
+> $$
+> F_k(j+m)+F_k(j-m)=2\cos(m\theta_k)F_k(j)
+> $$
+>
+> Thus $\mathbf A_m$ acts on the complete path basis with multipliers $2-2\cos(m\theta_k)=\mu_k^{(m)}$. They agree with those of $\mathbf L^{(m)}$, proving matrix equality. $\square$
 
 The adjacency formula also checks the signs: every transition to another orbit gives a negative off-diagonal entry. If $\pi_n(i\pm m)=i$, that term reduces the diagonal; no loop appears in the Laplacian. For $1\le m<n$, the two neighbors cannot coincide: equality modulo the period would require $2m\equiv0\pmod{2n}$, and equality through reflection would require the impossible congruence $2i\equiv-1\pmod{2n}$. Every nonzero conductance is therefore $1$.
 
 ## Which graphs occur in the orbit
 
-**Theorem.** Let $1\le m<n$, and let $\Gamma_m$ be the graph with Laplacian $\mathbf L^{(m)}$.
+> [!info] Which graphs occur in the orbit
+> **Theorem.** Let $1\le m<n$, and let $\Gamma_m$ be the graph with Laplacian $\mathbf L^{(m)}$.
+>
+> If $m$ is odd and $q=\gcd(m,n)$, then
+>
+> $$
+> \Gamma_m\simeq P_{n/q}\;\sqcup\;\frac{q-1}{2}C_{2n/q}
+> $$
+>
+> If $m=2r$ is even and $q=\gcd(r,n)$, then
+>
+> $$
+> \Gamma_m\simeq qC_{n/q}
+> $$
+>
+> A number preceding a graph symbol denotes the number of disjoint copies, and $\sqcup$ denotes disjoint union.
 
-If $m$ is odd and $q=\gcd(m,n)$, then
-
-$$
-\Gamma_m\simeq P_{n/q}\;\sqcup\;\frac{q-1}{2}C_{2n/q}
-$$
-
-If $m=2r$ is even and $q=\gcd(r,n)$, then
-
-$$
-\Gamma_m\simeq qC_{n/q}
-$$
-
-A number preceding a graph symbol denotes the number of disjoint copies, and $\sqcup$ denotes disjoint union.
-
-**Proof.** Step $m$ splits $\mathbb Z/(2n)$ into $s=\gcd(m,2n)$ cycles of length $2n/s$. Their components are indexed by residues modulo $s$, and reflection acts on them as $a\mapsto-a-1$.
-
-For odd $m$, $s=q$ is also odd. The congruence $2a\equiv-1\pmod q$ has exactly one solution. The corresponding cycle is invariant under reflection; reflection fixes none of its vertices, and folding gives a path on $n/q$ vertices. The remaining $q-1$ cycles are paired, each pair giving one cycle of the original length $2n/q$.
-
-For even $m=2r$, $s=2q$. The congruence $2a\equiv-1\pmod{2q}$ has no solution, so all components are paired. The result is $q$ cycles of length $n/q$. For $m<n$, this length is at least $3$. $\square$
+> [!note]- Proof
+> **Proof.** Step $m$ splits $\mathbb Z/(2n)$ into $s=\gcd(m,2n)$ cycles of length $2n/s$. Their components are indexed by residues modulo $s$, and reflection acts on them as $a\mapsto-a-1$.
+>
+> For odd $m$, $s=q$ is also odd. The congruence $2a\equiv-1\pmod q$ has exactly one solution. The corresponding cycle is invariant under reflection; reflection fixes none of its vertices, and folding gives a path on $n/q$ vertices. The remaining $q-1$ cycles are paired, each pair giving one cycle of the original length $2n/q$.
+>
+> For even $m=2r$, $s=2q$. The congruence $2a\equiv-1\pmod{2q}$ has no solution, so all components are paired. The result is $q$ cycles of length $n/q$. For $m<n$, this length is at least $3$. $\square$
 
 Connectedness is therefore equivalent to $\gcd(m,n)=1$ for odd $m$ and $\gcd(m/2,n)=1$ for even $m$. Connected graphs in this range are relabeled copies of $P_n$ or $C_n$.
 

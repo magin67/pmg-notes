@@ -47,35 +47,38 @@ The algebraic statements require neither connectedness nor positivity. For $c_{i
 
 ## The exponential and a fixed forest representation
 
-**Lemma 1.** In polyform algebra,
+> [!info] The exponential and a fixed forest representation
+> **Lemma 1.** In polyform algebra,
+>
+> $$
+> \boxed{M(C)=\exp L(C)=M_KM_VM_P},\qquad M_X=\exp L_X
+> \tag{1}
+> $$
+>
+> For arbitrary real weights, we also have
+>
+> $$
+> M(C)=\prod_{i<j}(e+c_{ij}q_{ij})
+> \tag{2}
+> $$
 
-$$
-\boxed{M(C)=\exp L(C)=M_KM_VM_P},\qquad M_X=\exp L_X
-\tag{1}
-$$
-
-For arbitrary real weights, we also have
-
-$$
-M(C)=\prod_{i<j}(e+c_{ij}q_{ij})
-\tag{2}
-$$
-
-**Proof.** Form multiplication is commutative, so the exponential of a sum factorizes. Since $q_{ij}^2=0$, we have $\exp(c_{ij}q_{ij})=e+c_{ij}q_{ij}$. Every series is finite: a product of grade above $n-1$ on boundaries vanishes. $\square$
+> [!note]- Proof
+> **Proof.** Form multiplication is commutative, so the exponential of a sum factorizes. Since $q_{ij}^2=0$, we have $\exp(c_{ij}q_{ij})=e+c_{ij}q_{ij}$. Every series is finite: a product of grade above $n-1$ on boundaries vanishes. $\square$
 
 Formula (1) concerns the polyform exponential. Matrix multiplication behaves differently; in particular, $\mathbf L_V$ and $\mathbf L_P$ generally do not commute.
 
 In the expansion of (2), an edge set containing a cycle gives zero because its vectors are linearly dependent. Every remaining set is a spanning forest covering all n vertices, including isolated ones. If $\lambda(F)$ is its positive type, given by the grades of its nontrivial components, a tree on $r+1$ vertices contributes a part r.
 
-**Definition.** The forest toponome of C, in polynomial notation, is
-
-$$
-\boxed{\mathcal T_C(\mathbf x)=\sum_{F\text{ a forest}}c(F)x_{\lambda(F)}
-=1+\sum_\lambda A_\lambda(C)x_\lambda}
-\tag{3}
-$$
-
-Here $c(F)=\prod_{ij\in E(F)}c_{ij}$, $x_\lambda=\prod_s x_{\lambda_s}$, and the empty forest contributes 1. Each forest is counted once. In this note, $A_\lambda$ denotes a scalar type coefficient; for example, $A_2=A_{(2)}$ and $A_{11}=A_{(1,1)}$.
+> [!info] The exponential and a fixed forest representation
+> **Definition.** The forest toponome of C, in polynomial notation, is
+>
+> $$
+> \boxed{\mathcal T_C(\mathbf x)=\sum_{F\text{ a forest}}c(F)x_{\lambda(F)}
+> =1+\sum_\lambda A_\lambda(C)x_\lambda}
+> \tag{3}
+> $$
+>
+> Here $c(F)=\prod_{ij\in E(F)}c_{ij}$, $x_\lambda=\prod_s x_{\lambda_s}$, and the empty forest contributes 1. Each forest is counted once. In this note, $A_\lambda$ denotes a scalar type coefficient; for example, $A_2=A_{(2)}$ and $A_{11}=A_{(1,1)}$.
 
 This is the partition toponome in [[Vector and Vertex Normalizations of Toponomes|vector normalization]], extended to signed weights. Types are retained and vertex names are forgotten. The number n is stored separately.
 
@@ -91,7 +94,7 @@ $$
 \tag{4}
 $$
 
-This retains the notation $P_G(t)$ from [[Polynomial Toponomes]]. The subscript C specifies the coupling table; the letter P in the polynomial name does not mean extraction of the P-component. For that component, write $P_{C_P}(t)$.
+This retains the notation $P_G(t)$ from [[en/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. The subscript C specifies the coupling table; the letter P in the polynomial name does not mean extraction of the P-component. For that component, write $P_{C_P}(t)$.
 
 The determinant equality is [[Forest Coefficients and the Laplacian Polynomial#Summing minors and the Laplacian polynomial|the matrix-forest theorem]]. It extends to signed weights by polynomiality: both sides are polynomials in all $c_{ij}$ and agree on the open set of positive weights. The degree is at most $n-1$ and may decrease through degeneracy or cancellation.
 
@@ -111,14 +114,16 @@ $$
 \tag{5}
 $$
 
-**Corollary 1 (separating the K-background).** Let $B=\nu C_V+\pi C_P$ and $a=1+n\mu\kappa t$. Then
+> [!info] The overall level K and vertex heterogeneity V
+> **Corollary 1 (separating the K-background).** Let $B=\nu C_V+\pi C_P$ and $a=1+n\mu\kappa t$. Then
+>
+> $$
+> \boxed{P_{\kappa C_K+B}(t)=a^{n-1}P_B(t/a)}
+> \tag{6}
+> $$
 
-$$
-\boxed{P_{\kappa C_K+B}(t)=a^{n-1}P_B(t/a)}
-\tag{6}
-$$
-
-**Proof.** On $\mathbf1^\perp$, $I+t\mathbf L(\kappa C_K+B)=aI+t\mathbf L(B)$. Factor a out of the determinant of dimension $n-1$. The direction $\mathbf1$ contributes a factor 1. The equality is first obtained for $a\ne0$; after denominators cancel, the right side is a polynomial, and the identity holds for all t. $\square$
+> [!note]- Proof
+> **Proof.** On $\mathbf1^\perp$, $I+t\mathbf L(\kappa C_K+B)=aI+t\mathbf L(B)$. Factor a out of the determinant of dimension $n-1$. The direction $\mathbf1$ contributes a factor 1. The equality is first obtained for $a\ne0$; after denominators cancel, the right side is a polynomial, and the identity holds for all t. $\square$
 
 Thus K supplies a common spectral shift, while V and P determine deviations from it. Formula (6) does not split V and P into independent spectra.
 
@@ -133,15 +138,17 @@ w=\sum_{i<j}c_{ij},\qquad d_i=\sum_{j\ne i}c_{ij},\qquad
 N_2=\sum_{i<j}c_{ij}^2
 $$
 
-**Lemma 2.**
+> [!info] Grade two without mixed coefficients
+> **Lemma 2.**
+>
+> $$
+> \boxed{A_2(C)=\frac12\sum_i d_i^2-N_2,\qquad
+> A_{11}(C)=\frac12w^2-\frac12\sum_i d_i^2+\frac12N_2}
+> \tag{7}
+> $$
 
-$$
-\boxed{A_2(C)=\frac12\sum_i d_i^2-N_2,\qquad
-A_{11}(C)=\frac12w^2-\frac12\sum_i d_i^2+\frac12N_2}
-\tag{7}
-$$
-
-**Proof.** The sum of products over adjacent edge pairs is $\frac12\sum_i(d_i^2-\sum_{j\ne i}c_{ij}^2)$, giving the first formula. The sum over all unordered pairs of distinct edges is $(w^2-N_2)/2$. Subtracting the adjacent pairs gives the second formula. $\square$
+> [!note]- Proof
+> **Proof.** The sum of products over adjacent edge pairs is $\frac12\sum_i(d_i^2-\sum_{j\ne i}c_{ij}^2)$, giving the first formula. The sum over all unordered pairs of distinct edges is $(w^2-N_2)/2$. Subtracting the adjacent pairs gives the second formula. $\square$
 
 Put $V_2=\sum_i v_i^2$ and $P_2=\|C_P\|_0^2=\sum_{i<j}p_{ij}^2$. Formula (7) gives
 
@@ -153,16 +160,18 @@ Put $V_2=\sum_i v_i^2$ and $P_2=\|C_P\|_0^2=\sum_{i<j}p_{ij}^2$. Formula (7) giv
 
 A binomial coefficient is zero if its lower index exceeds n. For K, this counts three trees on each triple and three matchings on each four-element subset. For V, use $w=0$, $d=v$, and $N_2=V_2/(n-2)$. For P, $w=0$ and $d=0$.
 
-**Corollary 2.** For $\kappa C_K+\nu C_V+\pi C_P$, both grade-two coefficients are sums of pure contributions:
+> [!info] Grade two without mixed coefficients
+> **Corollary 2.** For $\kappa C_K+\nu C_V+\pi C_P$, both grade-two coefficients are sums of pure contributions:
+>
+> $$
+> A_\lambda(\kappa C_K+\nu C_V+\pi C_P)
+> =\kappa^2A_\lambda(C_K)+\nu^2A_\lambda(C_V)+\pi^2A_\lambda(C_P),\qquad
+> \lambda\in\{(2),(1,1)\}
+> \tag{8}
+> $$
 
-$$
-A_\lambda(\kappa C_K+\nu C_V+\pi C_P)
-=\kappa^2A_\lambda(C_K)+\nu^2A_\lambda(C_V)+\pi^2A_\lambda(C_P),\qquad
-\lambda\in\{(2),(1,1)\}
-\tag{8}
-$$
-
-**Proof.** Coefficient orthogonality splits $N_2$ into three coefficient sums of squares. The row sums of K are constant, those of V form a zero-sum vector, and those of P vanish. Thus $\sum_i d_i^2$ has no mixed terms. Only K contributes to w. Apply (7). $\square$
+> [!note]- Proof
+> **Proof.** Coefficient orthogonality splits $N_2$ into three coefficient sums of squares. The row sums of K are constant, those of V form a zero-sum vector, and those of P vanish. Thus $\sum_i d_i^2$ has no mixed terms. Only K contributes to w. Apply (7). $\square$
 
 This statement concerns two scalar forest sums. It does not imply $L_KL_V=0$, $L_KL_P=0$, or $L_VL_P=0$. Coefficient orthogonality is not PMG metric orthogonality and does not eliminate arbitrary nonlinear interactions.
 
@@ -196,27 +205,29 @@ The sum of all edge weights is zero, so $A_1(C_P)=0$. Nevertheless, the first gr
 
 All coefficients $A_\lambda$ in the following discussion refer to $C_P$.
 
-**Theorem 1.** For every $k\ge2$,
+> [!info] Balance identities for a pure P-component
+> **Theorem 1.** For every $k\ge2$,
+>
+> $$
+> \boxed{A_{2,1^{k-2}}=-kA_{1^k}}
+> \tag{10}
+> $$
+>
+> The coefficient of a type impossible on n vertices is taken to be zero. Balance here means precisely zero row sums of the signed symmetric P-table.
 
-$$
-\boxed{A_{2,1^{k-2}}=-kA_{1^k}}
-\tag{10}
-$$
-
-The coefficient of a type impossible on n vertices is taken to be zero. Balance here means precisely zero row sums of the signed symmetric P-table.
-
-**Proof.** Enumerate matchings M with $k-1$ edges. Let $p(M)$ be the product of their weights, and let $U(M)$ be the set of free vertices. Zero row sums give
-
-$$
-0=\sum_{M:\,|M|=k-1}p(M)\sum_{i\in U(M)}\sum_{j\ne i}p_{ij}
-$$
-
-Split the added edges $ij$ into two cases.
-
-1. If j is free, the result is a matching of k edges. Each result is counted $2k$ times: any of its k edges may be removed, and either endpoint chosen as i. The contribution is $2kA_{1^k}$.
-2. If j is occupied, the new edge attaches to one edge of M. The result has one three-vertex component and $k-2$ separate edges, hence type $(2,1^{k-2})$. Each result is counted twice: remove either edge of the three-vertex tree; the freed endpoint uniquely determines i. The contribution is $2A_{2,1^{k-2}}$.
-
-There are no other cases. The two contributions sum to zero, proving (10). Positivity of weights was not used. $\square$
+> [!note]- Proof
+> **Proof.** Enumerate matchings M with $k-1$ edges. Let $p(M)$ be the product of their weights, and let $U(M)$ be the set of free vertices. Zero row sums give
+>
+> $$
+> 0=\sum_{M:\,|M|=k-1}p(M)\sum_{i\in U(M)}\sum_{j\ne i}p_{ij}
+> $$
+>
+> Split the added edges $ij$ into two cases.
+>
+> 1. If j is free, the result is a matching of k edges. Each result is counted $2k$ times: any of its k edges may be removed, and either endpoint chosen as i. The contribution is $2kA_{1^k}$.
+> 2. If j is occupied, the new edge attaches to one edge of M. The result has one three-vertex component and $k-2$ separate edges, hence type $(2,1^{k-2})$. Each result is counted twice: remove either edge of the three-vertex tree; the freed endpoint uniquely determines i. The contribution is $2A_{2,1^{k-2}}$.
+>
+> There are no other cases. The two contributions sum to zero, proving (10). Positivity of weights was not used. $\square$
 
 ![[Balance of P-component forest coefficients.svg]]
 
@@ -265,13 +276,14 @@ Both totals count the corresponding two-edge forests of the original path, enume
 
 ## The joint KVP toponome and mixed contributions
 
-**Definition.** The joint KVP toponome of a fixed table C is
-
-$$
-\boxed{\mathcal T_{KVP}(\mathbf x;\kappa,\nu,\pi)
-=\mathcal T_{\kappa C_K+\nu C_V+\pi C_P}(\mathbf x)}
-\tag{13}
-$$
+> [!info] The joint KVP toponome and mixed contributions
+> **Definition.** The joint KVP toponome of a fixed table C is
+>
+> $$
+> \boxed{\mathcal T_{KVP}(\mathbf x;\kappa,\nu,\pi)
+> =\mathcal T_{\kappa C_K+\nu C_V+\pi C_P}(\mathbf x)}
+> \tag{13}
+> $$
 
 The parameters $\kappa,\nu,\pi$ retain the origin of each edge factor. The coefficient of a type of grade k becomes a homogeneous polynomial of degree k in these parameters. For example, a term $\nu\pi^2$ collects contributions with one factor from V and two from P. For a graph interpretation of a particular parameter choice, nonnegativity of the resulting weights must be checked separately.
 
@@ -354,9 +366,10 @@ $$
 
 At $(1,1,1)$, this gives $396\pm2$. Pure slices cannot see the sign of the mixed term $\nu^2\pi$.
 
-**Corollary 3.** In general, the three pure toponomes of K, V, and P determine neither the full toponome nor the spanning-tree coefficient of the original positively weighted graph. The joint toponome retains information about interactions that the pure slices lose.
-
-This example does not establish the distinguishing power of the joint toponome among graphs with identical full ordinary toponomes: here the ordinary toponomes already differ. That remains a separate question.
+> [!info] Why three pure toponomes are insufficient
+> **Corollary 3.** In general, the three pure toponomes of K, V, and P determine neither the full toponome nor the spanning-tree coefficient of the original positively weighted graph. The joint toponome retains information about interactions that the pure slices lose.
+>
+> This example does not establish the distinguishing power of the joint toponome among graphs with identical full ordinary toponomes: here the ordinary toponomes already differ. That remains a separate question.
 
 ## What carries over to balanced graphs
 

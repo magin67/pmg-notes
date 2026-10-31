@@ -62,20 +62,22 @@ $$
 \mathcal A_U=\left\{\sum_{k=1}^d\nu_k\mathbf E_k:\boldsymbol\nu\in\mathbb R^d\right\}
 $$
 
-**Proposition.** The unique matrix in $\mathcal A_U$ nearest to $\mathbf L$ is
+> [!info] Diagonal projection and the exact error
+> **Proposition.** The unique matrix in $\mathcal A_U$ nearest to $\mathbf L$ is
+>
+> $$
+> \boxed{\widehat{\mathbf L}=\Pi_U(\mathbf L)=\sum_{k=1}^d\mu_k\mathbf E_k}
+> $$
+>
+> For every $\boldsymbol\nu\in\mathbb R^d$,
+>
+> $$
+> \left\|\mathbf L-\sum_k\nu_k\mathbf E_k\right\|_F^2
+> =\sum_{i\ne j}S_{ij}^2+\sum_k(\mu_k-\nu_k)^2
+> $$
 
-$$
-\boxed{\widehat{\mathbf L}=\Pi_U(\mathbf L)=\sum_{k=1}^d\mu_k\mathbf E_k}
-$$
-
-For every $\boldsymbol\nu\in\mathbb R^d$,
-
-$$
-\left\|\mathbf L-\sum_k\nu_k\mathbf E_k\right\|_F^2
-=\sum_{i\ne j}S_{ij}^2+\sum_k(\mu_k-\nu_k)^2
-$$
-
-**Proof.** An orthogonal change of basis preserves the Frobenius inner product. In the basis $\mathbf U_H$, the difference consists of the fixed off-diagonal entries $S_{ij}$ and the diagonal entries $\mu_k-\nu_k$. Their sum of squares is minimized only at $\boldsymbol\nu=\boldsymbol\mu$. $\square$
+> [!note]- Proof
+> **Proof.** An orthogonal change of basis preserves the Frobenius inner product. In the basis $\mathbf U_H$, the difference consists of the fixed off-diagonal entries $S_{ij}$ and the diagonal entries $\mu_k-\nu_k$. Their sum of squares is minimized only at $\boldsymbol\nu=\boldsymbol\mu$. $\square$
 
 Thus,
 

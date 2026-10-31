@@ -557,7 +557,8 @@ This correspondence concerns quadratic expressions. Polynomial degree $2$ is dis
 
 The one-dimensionality of the symmetric subspace has a classical explanation. The complexification of $W=\ker\varepsilon$ is the standard $(n-1)$-dimensional representation of $S_n$. For $0\leqslant k\leqslant n-1$, its exterior power $\Lambda^kW_{\mathbb C}$ is the irreducible representation corresponding to the partition $(n-k,1^k)$, a hook diagram. This classical fact is stated in the introduction to Ivan Marin's paper [1]. Together with Schur's lemma in the form of Corollary 1.17 in the book by Etingof and coauthors [2], it yields the following result.
 
-**Proposition.** In the full space of forms $[X,Y]$ on $\Lambda^kW$, the subspace invariant under vertex permutations is one-dimensional. It is spanned by $E_n[k]$ for $k\geqslant1$, and by $e$ for $k=0$.
+> [!info] Correspondence with classical representation theory
+> **Proposition.** In the full space of forms $[X,Y]$ on $\Lambda^kW$, the subspace invariant under vertex permutations is one-dimensional. It is spanned by $E_n[k]$ for $k\geqslant1$, and by $e$ for $k=0$.
 
 > [!note]- Proof and an independent derivation of the coefficient
 > **Proof.** Set $U=\Lambda^kW$. By the definition of forms, their full space is identified with $U\otimes U$: the symbol $[X,Y]$ corresponds to $X\otimes Y$.

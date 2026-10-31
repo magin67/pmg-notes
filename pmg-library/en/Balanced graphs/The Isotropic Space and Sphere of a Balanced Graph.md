@@ -28,14 +28,15 @@ Pairings are written in source-receiver order. The matrix $\mathbf G$ is fixed b
 
 ## The null vector and affine weight
 
-**Definition.** Add an independent element $z$ and prescribe
-
-$$
-z^2=0,
-\qquad
-a_i^{\mathrm{out}}\cdot z_{\mathrm{in}}
-=z_{\mathrm{out}}\cdot a_i^{\mathrm{in}}=1
-$$
+> [!info] The null vector and affine weight
+> **Definition.** Add an independent element $z$ and prescribe
+>
+> $$
+> z^2=0,
+> \qquad
+> a_i^{\mathrm{out}}\cdot z_{\mathrm{in}}
+> =z_{\mathrm{out}}\cdot a_i^{\mathrm{in}}=1
+> $$
 
 In the corresponding bases $(a_1,\ldots,a_n,z)$, the extended Gram matrix is
 
@@ -99,7 +100,7 @@ Let $\mathbf q$ be the column of $q_i$, with mean $\bar q=n^{-1}\operatorname{tr
 > \tag{4}
 > $$
 
-> [!proof]- Verification of the inverse
+> [!note]- Verification of the inverse
 > **Proof.** From $\mathbf{Gr}\mathbf L=\mathbf L\mathbf{Gr}=\mathbf J$ and zero row and column sums,
 >
 > $$
@@ -132,7 +133,8 @@ Let $\mathbf q$ be the column of $q_i$, with mean $\bar q=n^{-1}\operatorname{tr
 
 The original Laplacian is recovered exactly: transpose the upper block according to our convention. In particular, the original arc weight is $f_{ij}=-(\mathbf G_z^{-1})_{ji}$ for $i\ne j$. Exchanging these indices does not reverse the arcs.
 
-**Definition.** The corner entry $\rho$ in (2) is the balanced graph's resistance radius. We retain the PMG quadratic normalization; the corresponding linear quantity is $\sqrt\rho$. This extends the inverse-Gram definition in [[Resistance Radius of a Set - Gram Matrix and Volume]], rather than defining the parameter through an additional geometric model.
+> [!info] Inverting the Gram matrix
+> **Definition.** The corner entry $\rho$ in (2) is the balanced graph's resistance radius. We retain the PMG quadratic normalization; the corresponding linear quantity is $\sqrt\rho$. This extends the inverse-Gram definition in [[Resistance Radius of a Set - Gram Matrix and Volume]], rather than defining the parameter through an additional geometric model.
 
 ## One sphere and two metric representatives
 
@@ -144,15 +146,16 @@ $$
 
 It differs from affine weight: $\ell(a_i)=0$, $\ell(z)=1$. Its dual-basis coordinate column is $\boldsymbol\ell=(0,\ldots,0,1)^{\mathsf T}$.
 
-**Definition.** The basis sphere is specified by $\ell(X)=0$ on local elements. Its incoming and outgoing metric representatives satisfy
-
-$$
-X_{\mathrm{out}}\cdot S_{\mathrm{in}}=\ell(X),
-\qquad
-S_{\mathrm{out}}\cdot X_{\mathrm{in}}=\ell(X)
-\quad\text{for all }X
-\tag{5}
-$$
+> [!info] One sphere and two metric representatives
+> **Definition.** The basis sphere is specified by $\ell(X)=0$ on local elements. Its incoming and outgoing metric representatives satisfy
+>
+> $$
+> X_{\mathrm{out}}\cdot S_{\mathrm{in}}=\ell(X),
+> \qquad
+> S_{\mathrm{out}}\cdot X_{\mathrm{in}}=\ell(X)
+> \quad\text{for all }X
+> \tag{5}
+> $$
 
 This is one functional represented in two ways through a nonsymmetric pairing. Equation (2) gives
 
@@ -180,22 +183,23 @@ $$
 
 This supplies an analogue of an orthocenter understood as an object orthogonal to all basis vertices; in the nonsymmetric case its representative's role must be specified. We call it the basis sphere. Orthogonality in this extended space does not mean intersection of Euclidean simplex altitudes.
 
-**Corollary.** There is one radius:
-
-$$
-\boxed{S_{\mathrm{out}}\cdot S_{\mathrm{in}}=\rho}
-\tag{7}
-$$
-
-Substituting (6) in the first argument kills all vertex terms by orthogonality, while $\rho z_{\mathrm{out}}$ contributes $\rho$. Under the natural role identification, also $S_{\mathrm{out}}^2=S_{\mathrm{in}}^2=\rho$: by (5), each norm is its representative's $z$ coefficient.
-
-The two sets of vertex coordinates coincide exactly when
-
-$$
-(\mathbf L-\mathbf L^{\mathsf T})\mathbf q=0
-$$
-
-This holds for undirected graphs and for constant $q_i$, as in a uniform directed cycle. Agreement of sphere coordinates alone is therefore not a graph-symmetry criterion.
+> [!info] One sphere and two metric representatives
+> **Corollary.** There is one radius:
+>
+> $$
+> \boxed{S_{\mathrm{out}}\cdot S_{\mathrm{in}}=\rho}
+> \tag{7}
+> $$
+>
+> Substituting (6) in the first argument kills all vertex terms by orthogonality, while $\rho z_{\mathrm{out}}$ contributes $\rho$. Under the natural role identification, also $S_{\mathrm{out}}^2=S_{\mathrm{in}}^2=\rho$: by (5), each norm is its representative's $z$ coefficient.
+>
+> The two sets of vertex coordinates coincide exactly when
+>
+> $$
+> (\mathbf L-\mathbf L^{\mathsf T})\mathbf q=0
+> $$
+>
+> This holds for undirected graphs and for constant $q_i$, as in a uniform directed cycle. Agreement of sphere coordinates alone is therefore not a graph-symmetry criterion.
 
 ### Local centers and geometric interpretation
 
@@ -229,7 +233,7 @@ Let $\deg_T(i)$ count all tree arcs incident to $i$, regardless of direction. Th
 > \tag{8}
 > $$
 
-> [!proof]- Derivation using arc-inclusion probabilities
+> [!note]- Derivation using arc-inclusion probabilities
 > **Proof.** Let $\mathcal T_{\mathrm{in}}$ sum incoming-tree weights over all roots. For a row Laplacian, the matrix-tree theorem and determinant formula give
 >
 > $$

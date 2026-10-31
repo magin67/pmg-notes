@@ -33,16 +33,17 @@ F_G(t)=\sum_{g=0}^d f_g t^g,\qquad
 \mathscr F_G(u)=u^d F_G(u^{-1})
 $$
 
-**Definition.** The normalized forest coefficients and normalized forest polynomial are
-
-$$
-\boxed{
-\alpha_k(G)=\frac{f_{d-k}(G)}{\tau(G)},\qquad
-\Phi_G(u)=\frac{\mathscr F_G(u)}{\tau(G)}
-=\sum_{k=0}^d\alpha_k(G)u^k
-}
-\tag{1}
-$$
+> [!info] Normalized coefficients and the additivity problem
+> **Definition.** The normalized forest coefficients and normalized forest polynomial are
+>
+> $$
+> \boxed{
+> \alpha_k(G)=\frac{f_{d-k}(G)}{\tau(G)},\qquad
+> \Phi_G(u)=\frac{\mathscr F_G(u)}{\tau(G)}
+> =\sum_{k=0}^d\alpha_k(G)u^k
+> }
+> \tag{1}
+> $$
 
 Thus $\alpha_0=1$ and $\alpha_d=1/\tau$. All $\alpha_k$ for $0\le k\le d$ are positive: deleting $k$ edges of any spanning tree gives at least one forest of the required corank. In recurrences, set $\alpha_k=0$ for $k>d$.
 
@@ -83,15 +84,16 @@ $$
 
 This is an algebraic definition: only finitely many terms $q\le m$ are needed to compute the coefficient at $u^m$. No numerical value of $u$, convergence domain, or branch of the complex logarithm is required.
 
-**Definition.** The forest power-sum parameters $s_m^{\mathrm{for}}(G)$ are specified by
-
-$$
-\boxed{
-\log\Phi_G(u)=\sum_{m\ge1}(-1)^{m-1}
-\frac{s_m^{\mathrm{for}}(G)}m u^m
-}
-\tag{2}
-$$
+> [!info] Power-sum parameters through the formal logarithm
+> **Definition.** The forest power-sum parameters $s_m^{\mathrm{for}}(G)$ are specified by
+>
+> $$
+> \boxed{
+> \log\Phi_G(u)=\sum_{m\ge1}(-1)^{m-1}
+> \frac{s_m^{\mathrm{for}}(G)}m u^m
+> }
+> \tag{2}
+> $$
 
 The superscript $\mathrm{for}$ refers to ordinary forest coefficients of the original graph and distinguishes this family from spectral power sums. The letter $p$ is retained for the rooted coefficients used in [[Forest Coefficients and the Laplacian Polynomial]].
 
@@ -99,23 +101,25 @@ The parameters are defined for every integer $m\ge1$, including $m>d$. The finit
 
 ## Newton identities and computation without factorization
 
-**Proposition.** For every $m\ge1$, the following recurrence holds:
+> [!info] Newton identities and computation without factorization
+> **Proposition.** For every $m\ge1$, the following recurrence holds:
+>
+> $$
+> \boxed{
+> m\alpha_m=\sum_{j=1}^m(-1)^{j-1}\alpha_{m-j}s_j^{\mathrm{for}}
+> }
+> \tag{3}
+> $$
 
-$$
-\boxed{
-m\alpha_m=\sum_{j=1}^m(-1)^{j-1}\alpha_{m-j}s_j^{\mathrm{for}}
-}
-\tag{3}
-$$
-
-**Proof.** Formal differentiation of (2) gives
-
-$$
-\Phi_G'(u)=\Phi_G(u)
-\sum_{j\ge1}(-1)^{j-1}s_j^{\mathrm{for}}u^{j-1}
-$$
-
-The coefficient at $u^{m-1}$ is $m\alpha_m$ on the left and the convolution in (3) on the right. $\square$
+> [!note]- Proof
+> **Proof.** Formal differentiation of (2) gives
+>
+> $$
+> \Phi_G'(u)=\Phi_G(u)
+> \sum_{j\ge1}(-1)^{j-1}s_j^{\mathrm{for}}u^{j-1}
+> $$
+>
+> The coefficient at $u^{m-1}$ is $m\alpha_m$ on the left and the convolution in (3) on the right. $\square$
 
 These are the classical Newton identities for elementary symmetric functions and power sums, applied to the coefficients (1). They are not specific to graphs. The graph information lies in the $\alpha_k$ themselves.
 
@@ -202,7 +206,8 @@ These properties have different grounds and require separate proofs.
 
 **Matroid-invariance proposition.** An isomorphism of cycle matroids preserving the conductance of each corresponding edge preserves $\Phi_G$, all $\alpha_k$, and all $s_m^{\mathrm{for}}$.
 
-**Proof.** The isomorphism preserves rank $d$, independent sets of each size, and products of their weights. It therefore preserves $f_g$, including $f_d=\tau$. Apply (1) and (2). $\square$
+> [!note]- Proof
+> **Proof.** The isomorphism preserves rank $d$, independent sets of each size, and products of their weights. It therefore preserves $f_g$, including $f_d=\tau$. Apply (1) and (2). $\square$
 
 **Additivity proposition.** Let connected graphs $G_1,G_2$ have disjoint edge sets and be glued at exactly one vertex, preserving conductances and making no further identifications. Then for every $m\ge1$,
 
@@ -214,20 +219,21 @@ s_m^{\mathrm{for}}(G_1\vee G_2)
 \tag{10}
 $$
 
-**Proof.** Every forest of the glued graph splits uniquely into forests of the pieces. A cycle cannot traverse both pieces when they meet only at one vertex. Consider this decomposition for two triangles:
+> [!note]- Proof
+> **Proof.** Every forest of the glued graph splits uniquely into forests of the pieces. A cycle cannot traverse both pieces when they meet only at one vertex. Consider this decomposition for two triangles:
+>
+> Every pair of forests behaves this way: grades and coranks add, and weights multiply. Hence
+>
+> $$
+> \mathscr F_{G_1\vee G_2}=\mathscr F_{G_1}\mathscr F_{G_2},\qquad
+> \tau(G_1\vee G_2)=\tau(G_1)\tau(G_2)
+> $$
+>
+> Division gives $\Phi_{G_1\vee G_2}=\Phi_{G_1}\Phi_{G_2}$. The formal logarithm of a product of series with constant coefficient $1$ is the sum of their logarithms. This can be checked by differentiation: derivatives agree and constant coefficients are zero. Comparing coefficients using (2) completes the proof. $\square$
 
 ![[Forests under One-Point Gluing.svg]]
 
 **Choosing in each piece.** Solid edges form $F_1$ and $F_2$; dashed edges show the remaining original edges. Identifying $p_1,p_2$ creates no cycle. The illustrated choice has $g_1=2$, $g_2=1$, and total $g=3$; with $d_1=d_2=2$, this gives $k_1=0$, $k_2=1$, $k=1$. The isolated vertex $d$ is retained.
-
-Every pair of forests behaves this way: grades and coranks add, and weights multiply. Hence
-
-$$
-\mathscr F_{G_1\vee G_2}=\mathscr F_{G_1}\mathscr F_{G_2},\qquad
-\tau(G_1\vee G_2)=\tau(G_1)\tau(G_2)
-$$
-
-Division gives $\Phi_{G_1\vee G_2}=\Phi_{G_1}\Phi_{G_2}$. The formal logarithm of a product of series with constant coefficient $1$ is the sum of their logarithms. This can be checked by differentiation: derivatives agree and constant coefficients are zero. Comparing coefficients using (2) completes the proof. $\square$
 
 For repeated one-point gluing, apply the formula successively. This explains the purpose of the power-sum family: for given pieces, their contribution to each $s_m^{\mathrm{for}}$ does not depend on the attachment vertices. In matroid language, this is additivity under direct sums.
 
@@ -428,7 +434,8 @@ Unlike the triangle, a negative parameter appears already at $m=3$. The spectral
 
 For known rank $d$, the power-sum family recovers every ordinary forest coefficient through (6). However, the forest polynomial stores only the total weights of independent sets of each size. It does not store the sets themselves and is not a complete matroid invariant.
 
-**Definition.** A matroid element is a loop if its singleton is dependent. Two distinct nonloop elements are parallel if their pair is a minimal dependent set. Maximal groups of pairwise parallel elements are parallel classes; a single nonloop element also forms a class if it has no parallel elements. In a cycle matroid, nonloop edges with the same endpoints form such a class: each pair is a cycle of length $2$.
+> [!info] What can be recovered and what remains undetermined?
+> **Definition.** A matroid element is a loop if its singleton is dependent. Two distinct nonloop elements are parallel if their pair is a minimal dependent set. Maximal groups of pairwise parallel elements are parallel classes; a single nonloop element also forms a class if it has no parallel elements. In a cycle matroid, nonloop edges with the same endpoints form such a class: each pair is a cycle of length $2$.
 
 This distinguishes matroids without spectral computation. Consider two multigraphs $H_1,H_2$ on $a,b,c$, with all edge conductances equal to one:
 

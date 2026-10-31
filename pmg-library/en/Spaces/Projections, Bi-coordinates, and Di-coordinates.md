@@ -123,8 +123,8 @@ We call the first contribution, including the factor $s_q$, the **atomic part**,
 
 If all $a_i$ have affine weight $1$, then $s_q$ is the weight of $q$, and the differences are boundaries $(a_i a_j)=a_j-a_i$. In a mixed basis or a vector basis, the sum of the coefficients alone does not determine affine weight. Thus the names “point part” and “vector part” apply only to a frame consisting of points.
 
-> [!proof]- Proof
-> By bilinearity,
+> [!note]- Proof
+> **Proof.** By bilinearity,
 >
 > $$
 > [q]^2=\sum_i(q^i)^2[a_i]^2
@@ -192,8 +192,8 @@ $$
 L_q=s_q\sum_i q^i[a_i-c]^2
 $$
 
-> [!proof]- Proof
-> Expanding the squares and using $q=s_qc$, we obtain
+> [!note]- Proof
+> **Proof.** Expanding the squares and using $q=s_qc$, we obtain
 >
 > $$
 > s_q\sum_iq^i[a_i-c]^2
@@ -242,8 +242,8 @@ Recall that the polar form $\{p,q\}=[p,q]+[q,p]$ is symmetric, and $\{q,q\}=2[q]
 
 When $p=q$, both sides are doubled, giving (2). If $s_p=s_q=0$, the atomic contribution vanishes. In particular, this occurs for two vectors expressed in a point basis.
 
-> [!proof]- Proof
-> By the definition of the polar form,
+> [!note]- Proof
+> **Proof.** By the definition of the polar form,
 >
 > $$
 > \{p,q\}=[p+q]^2-[p]^2-[q]^2
@@ -453,17 +453,18 @@ Formula (7) gives $\pi_U(u)=w/2$, the same result obtained earlier from effectiv
 
 Let $h_1,\ldots,h_k$ form a basis of a nonzero subspace $U\subseteq W$, with $x,p_0\in\mathcal A$. Use the positive definite resistance metric on $W$ and set $\Omega=h_1\wedge\cdots\wedge h_k$. The nonzero exterior element $\Omega$ specifies the direction subspace, as shown in the [[Spaces, Subspaces, and the Choice of a Basis#Specifying a subspace by an exterior element|note on choosing a subspace]].
 
-**Lemma.** If $q$ is the projection of $x$ onto $p_0+U$, then
+> [!info] Distance to a subspace
+> **Lemma.** If $q$ is the projection of $x$ onto $p_0+U$, then
+>
+> $$
+> \|x-q\|^2
+> =\frac{\|\,(x-p_0)\wedge\Omega\,\|^2}{\|\Omega\|^2}
+> =\frac{u_{M_G}([(x-p_0)\wedge\Omega]^2)}{u_{M_G}([\Omega]^2)}
+> \tag{8}
+> $$
 
-$$
-\|x-q\|^2
-=\frac{\|\,(x-p_0)\wedge\Omega\,\|^2}{\|\Omega\|^2}
-=\frac{u_{M_G}([(x-p_0)\wedge\Omega]^2)}{u_{M_G}([\Omega]^2)}
-\tag{8}
-$$
-
-> [!proof]- Proof
-> Write $x-p_0=s+r$, where $s\in U$ and $r=x-q$ is orthogonal to $U$. Then $s\wedge\Omega=0$. The Gram determinant for a vector $r$ orthogonal to $U$ gives $\|r\wedge\Omega\|^2=r^2\|\Omega\|^2$. Applying the metric identity completes the proof. The denominator is positive because the $h_i$ are independent and the metric is positive definite. $\square$
+> [!note]- Proof
+> **Proof.** Write $x-p_0=s+r$, where $s\in U$ and $r=x-q$ is orthogonal to $U$. Then $s\wedge\Omega=0$. The Gram determinant for a vector $r$ orthogonal to $U$ gives $\|r\wedge\Omega\|^2=r^2\|\Omega\|^2$. Applying the metric identity completes the proof. The denominator is positive because the $h_i$ are independent and the metric is positive definite. $\square$
 
 For the path, take $p_0=a$, $x=b$, $\Omega=w=u+v$. Then $u\wedge w=u\wedge v$, and
 
@@ -522,19 +523,20 @@ $$
 
 The coefficient sum follows from $\widehat x\cdot z=x\cdot z=1$. The coefficient $w_x$ of $z$ is the **orbital relative to the chosen extended basis**. It is a bi-coordinate; the di-coordinate relative to $z$ is $1$.
 
-**Proposition.** Let $q$ be the nearest local point in the Euclidean affine hull of $p_0,\ldots,p_k$. Then
+> [!info] Coordinates in the isotropic extension
+> **Proposition.** Let $q$ be the nearest local point in the Euclidean affine hull of $p_0,\ldots,p_k$. Then
+>
+> $$
+> q=\pi\left(\sum_i\beta^i p_i\right),\qquad
+> \widehat x=q-\frac{(x-q)^2}{2}z,\qquad
+> \widehat x^2=-(x-q)^2
+> \tag{9}
+> $$
+>
+> The coefficients $\beta^i$ give the affine coordinates of the center $q$; the linear combination in parentheses need not itself be local.
 
-$$
-q=\pi\left(\sum_i\beta^i p_i\right),\qquad
-\widehat x=q-\frac{(x-q)^2}{2}z,\qquad
-\widehat x^2=-(x-q)^2
-\tag{9}
-$$
-
-The coefficients $\beta^i$ give the affine coordinates of the center $q$; the linear combination in parentheses need not itself be local.
-
-> [!proof]- Proof
-> Write $\delta=(x-q)^2$ for the squared distance from $x$ to $q$. The Pythagorean theorem in Euclidean coordinates gives $(x-p_i)^2=(q-p_i)^2+\delta$. By the distance formula for local points,
+> [!note]- Proof
+> **Proof.** Write $\delta=(x-q)^2$ for the squared distance from $x$ to $q$. The Pythagorean theorem in Euclidean coordinates gives $(x-p_i)^2=(q-p_i)^2+\delta$. By the distance formula for local points,
 >
 > $$
 > x\cdot p_i=q\cdot p_i-\frac{\delta}{2}

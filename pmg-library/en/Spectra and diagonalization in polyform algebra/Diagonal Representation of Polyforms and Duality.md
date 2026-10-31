@@ -120,28 +120,30 @@ $$
 \ell_\alpha^2=\lambda_\alpha^2[u_\alpha\wedge u_\alpha]^2=0
 $$
 
-**Theorem (diagonal factorization).** For the exterior exponential $M=\exp L$ and a formal scalar parameter $t$,
+> [!info] Diagonal forms and symmetric polynomials of the grades
+> **Theorem (diagonal factorization).** For the exterior exponential $M=\exp L$ and a formal scalar parameter $t$,
+>
+> $$
+> \boxed{
+> M(t)=\exp(tL)=\prod_{\alpha=1}^d(e+t\ell_\alpha)
+> =\sum_{g=0}^d t^g M_g,\qquad
+> M_g=\frac{L^g}{g!}
+> }
+> $$
+>
+> If $e_g$ denotes the elementary symmetric polynomial evaluated in the commutative algebra of forms, then
+>
+> $$
+> \boxed{
+> M_g=e_g(\ell_1,\ldots,\ell_d)
+> =\sum_{\#I=g}\lambda_I[u_I]^2
+> }
+> $$
+>
+> Here $I\subseteq\{1,\ldots,d\}$, $u_I=u_{i_1}\cdots u_{i_g}$ with $i_1<\cdots<i_g$, and $\lambda_I=\prod_{\alpha\in I}\lambda_\alpha$. For the empty set, $u_\varnothing=1$, $\lambda_\varnothing=1$, and $[1]^2=e$. In the algebra of forms, $e_0=e$; for numerical arguments, $e_0=1$.
 
-$$
-\boxed{
-M(t)=\exp(tL)=\prod_{\alpha=1}^d(e+t\ell_\alpha)
-=\sum_{g=0}^d t^g M_g,\qquad
-M_g=\frac{L^g}{g!}
-}
-$$
-
-If $e_g$ denotes the elementary symmetric polynomial evaluated in the commutative algebra of forms, then
-
-$$
-\boxed{
-M_g=e_g(\ell_1,\ldots,\ell_d)
-=\sum_{\#I=g}\lambda_I[u_I]^2
-}
-$$
-
-Here $I\subseteq\{1,\ldots,d\}$, $u_I=u_{i_1}\cdots u_{i_g}$ with $i_1<\cdots<i_g$, and $\lambda_I=\prod_{\alpha\in I}\lambda_\alpha$. For the empty set, $u_\varnothing=1$, $\lambda_\varnothing=1$, and $[1]^2=e$. In the algebra of forms, $e_0=e$; for numerical arguments, $e_0=1$.
-
-**Proof.** Commutativity allows the exponential of a sum to be written as a product of exponentials. Since $\ell_\alpha^2=0$, we have $\exp(t\ell_\alpha)=e+t\ell_\alpha$. Selecting $g$ nonzero terms produces a product of forms associated with $g$ distinct directions. Each such set occurs $g!$ times in $L^g$, giving the stated grade component. $\square$
+> [!note]- Proof
+> **Proof.** Commutativity allows the exponential of a sum to be written as a product of exponentials. Since $\ell_\alpha^2=0$, we have $\exp(t\ell_\alpha)=e+t\ell_\alpha$. Selecting $g$ nonzero terms produces a product of forms associated with $g$ distinct directions. Each such set occurs $g!$ times in $L^g$, giving the stated grade component. $\square$
 
 For example, for three eigendirections all grades are
 

@@ -20,12 +20,13 @@ Components and projectors are defined in [[KVP Decomposition of Pair Characteris
 
 ## Definition and geometric meaning
 
-For a symmetric matrix $A$, the distance operator is
-
-$$
-\boxed{\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}}
-\tag{1}
-$$
+> [!info] The distance operator
+> For a symmetric matrix $A$, the distance operator is
+>
+> $$
+> \boxed{\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}}
+> \tag{1}
+> $$
 
 If $G=(g_{ij})$ is the Gram matrix of vectors $x_i$, then
 
@@ -44,7 +45,8 @@ Here $\mathrm{Gr}$ denotes the Green matrix and $G$ a Gram matrix. Formula (1) i
 
 For an arbitrary symmetric $A$, it remains an algebraic definition. A Euclidean interpretation requires the centered Gram matrix to be positive semidefinite; signed coefficients alone do not ensure this.
 
-**Definition.** Extend the operator to nonsymmetric matrices using the same formula (1). The result has zero diagonal but may be nonsymmetric. It is an oriented pair table, not an ordinary table of squared distances.
+> [!info] Definition and geometric meaning
+> **Definition.** Extend the operator to nonsymmetric matrices using the same formula (1). The result has zero diagonal but may be nonsymmetric. It is an oriented pair table, not an ordinary table of squared distances.
 
 If $A=S+H$, with $S^{\mathsf T}=S$ and $H^{\mathsf T}=-H$, then
 
@@ -78,13 +80,15 @@ A\mathbf1=0,\qquad
 A^{\mathsf T}\mathbf1=d^{out}-d^{in}
 $$
 
-**Lemma.** The map $\mathscr L$ is an isomorphism between balanced pair tables and doubly centered matrices
+> [!info] Three objects and two successive transformations
+> **Lemma.** The map $\mathscr L$ is an isomorphism between balanced pair tables and doubly centered matrices
+>
+> $$
+> \mathcal Z_n=\{A:A\mathbf1=A^{\mathsf T}\mathbf1=0\}
+> $$
 
-$$
-\mathcal Z_n=\{A:A\mathbf1=A^{\mathsf T}\mathbf1=0\}
-$$
-
-**Proof.** Balance means $d^{out}=d^{in}$, so both sums of $A$ vanish. Conversely, for a centered $A$, set $C_{ij}=-A_{ij}$ for $i\ne j$ and $C_{ii}=0$. Zero row and column sums of $A$ give $d_i^{out}=d_i^{in}=A_{ii}$ and $\mathscr L(C)=A$. $\square$
+> [!note]- Proof
+> **Proof.** Balance means $d^{out}=d^{in}$, so both sums of $A$ vanish. Conversely, for a centered $A$, set $C_{ij}=-A_{ij}$ for $i\ne j$ and $C_{ii}=0$. Zero row and column sums of $A$ give $d_i^{out}=d_i^{in}=A_{ii}$ and $\mathscr L(C)=A$. $\square$
 
 In the symmetric case, this gives an isomorphism between symmetric pair tables and symmetric centered matrices. All these statements refer to a fixed vertex set.
 
@@ -118,40 +122,43 @@ $$
 
 The condition $\mathcal D(A)=0$ is equivalent to $A_{ij}=(A_{ii}+A_{jj})/2$, proving this expression with $w_i=A_{ii}$. For a symmetric Gram matrix, the ambiguity reflects the choice of origin; centering selects the representative relative to the centroid.
 
-**Theorem.** The distance operator is a linear isomorphism between $\mathcal Z_n$ and balanced pair tables with zero diagonal. Its inverse is
+> [!info] Centering and the inverse distance transformation
+> **Theorem.** The distance operator is a linear isomorphism between $\mathcal Z_n$ and balanced pair tables with zero diagonal. Its inverse is
+>
+> $$
+> \boxed{A=-\frac12JQJ}
+> \tag{3}
+> $$
 
-$$
-\boxed{A=-\frac12JQJ}
-\tag{3}
-$$
-
-**Proof.** Let $A$ be doubly centered and $Q=\mathcal D(A)$. Then
-
-$$
-Q\mathbf1=Q^{\mathsf T}\mathbf1=nq+(\operatorname{tr}A)\mathbf1
-$$
-
-Thus $Q$ is balanced. Formula (2) recovers $A$ because $JAJ=A$.
-
-Conversely, let $Q$ be balanced with $Q_{ii}=0$. Denote its coinciding row and corresponding column means, and its overall mean, by
-
-$$
-\bar Q_i=\frac1n\sum_jQ_{ij}=\frac1n\sum_jQ_{ji},\qquad
-\bar Q=\frac1{n^2}\sum_{i,j}Q_{ij}
-$$
-
-Double centering gives
-
-$$
-A_{ij}=\frac{\bar Q_i+\bar Q_j-Q_{ij}-\bar Q}{2},\qquad
-A_{ii}=\bar Q_i-\frac{\bar Q}{2}
-$$
-
-The matrix $A$ is centered by construction. Substituting into (1) recovers $Q_{ij}$, proving invertibility. $\square$
+> [!note]- Proof
+> **Proof.** Let $A$ be doubly centered and $Q=\mathcal D(A)$. Then
+>
+> $$
+> Q\mathbf1=Q^{\mathsf T}\mathbf1=nq+(\operatorname{tr}A)\mathbf1
+> $$
+>
+> Thus $Q$ is balanced. Formula (2) recovers $A$ because $JAJ=A$.
+>
+> Conversely, let $Q$ be balanced with $Q_{ii}=0$. Denote its coinciding row and corresponding column means, and its overall mean, by
+>
+> $$
+> \bar Q_i=\frac1n\sum_jQ_{ij}=\frac1n\sum_jQ_{ji},\qquad
+> \bar Q=\frac1{n^2}\sum_{i,j}Q_{ij}
+> $$
+>
+> Double centering gives
+>
+> $$
+> A_{ij}=\frac{\bar Q_i+\bar Q_j-Q_{ij}-\bar Q}{2},\qquad
+> A_{ii}=\bar Q_i-\frac{\bar Q}{2}
+> $$
+>
+> The matrix $A$ is centered by construction. Substituting into (1) recovers $Q_{ij}$, proving invertibility. $\square$
 
 Both spaces have dimension $(n-1)^2$. Restricting to symmetric matrices gives the isomorphism between spaces of dimension $\binom n2$ familiar from the introductory series.
 
-**Corollary.** A symmetric zero-diagonal $Q$ is a table of squared Euclidean distances if and only if $-JQJ/2$ is positive semidefinite. In one direction, this is the centered Gram matrix of the original points; in the other, represent the positive semidefinite matrix as a Gram matrix and apply the inverse transformation just proved. Linear invertibility in (3) itself requires no positivity.
+> [!info] Centering and the inverse distance transformation
+> **Corollary.** A symmetric zero-diagonal $Q$ is a table of squared Euclidean distances if and only if $-JQJ/2$ is positive semidefinite. In one direction, this is the centered Gram matrix of the original points; in the other, represent the positive semidefinite matrix as a Gram matrix and apply the inverse transformation just proved. Linear invertibility in (3) itself requires no positivity.
 
 ## Action on KVP and KVPO
 
@@ -164,33 +171,35 @@ $$
 
 For symmetric $C$, this is an operator on KVP space; for balanced oriented $C$, it acts on KVPO space.
 
-**Theorem.** On balanced pair tables,
+> [!info] Action on KVP and KVPO
+> **Theorem.** On balanced pair tables,
+>
+> $$
+> \boxed{\mathcal F=2n\Pi_K+n\Pi_V+2\Pi_P+2\Pi_O}
+> \tag{5}
+> $$
+>
+> For symmetric tables, O is absent.
 
-$$
-\boxed{\mathcal F=2n\Pi_K+n\Pi_V+2\Pi_P+2\Pi_O}
-\tag{5}
-$$
-
-For symmetric tables, O is absent.
-
-**Proof.** Under balance, write
-
-$$
-C_{ij}=\mu+\frac{v_i+v_j}{n-2}+p_{ij}+o_{ij},\qquad
-d_i^{out}=(n-1)\mu+v_i
-$$
-
-Here $\sum_i v_i=0$, and P and O have zero row sums. For distinct i and j, directly applying the two operators gives
-
-$$
-\begin{aligned}
-Q_{ij}
-&=d_i^{out}+d_j^{out}+2C_{ij}\\
-&=2n\mu+\frac{n}{n-2}(v_i+v_j)+2p_{ij}+2o_{ij}
-\end{aligned}
-$$
-
-The four terms belong to their respective sectors. Uniqueness of KVPO decomposition proves (5). $\square$
+> [!note]- Proof
+> **Proof.** Under balance, write
+>
+> $$
+> C_{ij}=\mu+\frac{v_i+v_j}{n-2}+p_{ij}+o_{ij},\qquad
+> d_i^{out}=(n-1)\mu+v_i
+> $$
+>
+> Here $\sum_i v_i=0$, and P and O have zero row sums. For distinct i and j, directly applying the two operators gives
+>
+> $$
+> \begin{aligned}
+> Q_{ij}
+> &=d_i^{out}+d_j^{out}+2C_{ij}\\
+> &=2n\mu+\frac{n}{n-2}(v_i+v_j)+2p_{ij}+2o_{ij}
+> \end{aligned}
+> $$
+>
+> The four terms belong to their respective sectors. Uniqueness of KVPO decomposition proves (5). $\square$
 
 Thus
 
@@ -269,21 +278,23 @@ $$
 
 The notation $V(u)$ means the symmetric V-table constructed from the imbalance vector u. It differs from the original component $C_V=V(v)$.
 
-**Theorem.** For $Q=\mathcal F(C)$ on the entire KVPOU space,
+> [!info] What changes without balance
+> **Theorem.** For $Q=\mathcal F(C)$ on the entire KVPOU space,
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> Q_K&=2nC_K\\
+> Q_V&=nC_V+(n-2)V(u)\\
+> Q_P&=2C_P\\
+> Q_O&=2C_O\\
+> Q_U&=2C_U
+> \end{aligned}}
+> \tag{7}
+> $$
 
-$$
-\boxed{
-\begin{aligned}
-Q_K&=2nC_K\\
-Q_V&=nC_V+(n-2)V(u)\\
-Q_P&=2C_P\\
-Q_O&=2C_O\\
-Q_U&=2C_U
-\end{aligned}}
-\tag{7}
-$$
-
-**Proof.** Now $d^{out}=(n-1)\mu\mathbf1+v+u$. Substitute this expression and the KVPOU decomposition of $C$ into $Q_{ij}=d_i^{out}+d_j^{out}+2C_{ij}$. In addition to the terms in (5), we obtain $2(C_U)_{ij}$ and the symmetric contribution $u_i+u_j=(n-2)V(u)_{ij}$. Uniqueness of the decomposition gives (7). $\square$
+> [!note]- Proof
+> **Proof.** Now $d^{out}=(n-1)\mu\mathbf1+v+u$. Substitute this expression and the KVPOU decomposition of $C$ into $Q_{ij}=d_i^{out}+d_j^{out}+2C_{ij}$. In addition to the terms in (5), we obtain $2(C_U)_{ij}$ and the symmetric contribution $u_i+u_j=(n-2)V(u)_{ij}$. Uniqueness of the decomposition gives (7). $\square$
 
 A pure U-component therefore produces two parts:
 
@@ -297,14 +308,16 @@ The composition $\mathcal F$ remains invertible. First recover $C_U=Q_U/2$ and u
 
 ### Exactly what double centering loses
 
-**Lemma.** For every zero-diagonal $Q$,
+> [!info] Exactly what double centering loses
+> **Lemma.** For every zero-diagonal $Q$,
+>
+> $$
+> \boxed{\mathcal D\left(-\frac12JQJ\right)=Q-Q_U}
+> \tag{8}
+> $$
 
-$$
-\boxed{\mathcal D\left(-\frac12JQJ\right)=Q-Q_U}
-\tag{8}
-$$
-
-**Proof.** The inverse transformation theorem recovers the balanced part $Q-Q_U$. For the gradient table $Q_U=(u^{(Q)}\mathbf1^{\mathsf T}-\mathbf1(u^{(Q)})^{\mathsf T})/n$, we have $JQ_UJ=0$. Double centering therefore retains only the balanced part. $\square$
+> [!note]- Proof
+> **Proof.** The inverse transformation theorem recovers the balanced part $Q-Q_U$. For the gradient table $Q_U=(u^{(Q)}\mathbf1^{\mathsf T}-\mathbf1(u^{(Q)})^{\mathsf T})/n$, we have $JQ_UJ=0$. Double centering therefore retains only the balanced part. $\square$
 
 The balance assumption in (3) is essential. If $Q$ comes from an unbalanced $C$, then $-JQJ/2$ equals $J\mathscr L(C)J$, not the original Laplacian.
 

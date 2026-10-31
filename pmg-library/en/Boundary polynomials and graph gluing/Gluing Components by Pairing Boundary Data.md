@@ -52,11 +52,12 @@ All vertices belong to the forest, including isolated vertices. Components with 
 
 Let $b(\pi)$ be the number of blocks and $r(\pi)=k-b(\pi)$. The join $\pi\vee\sigma$ is the least common coarsening: it connects vertices through sequences of steps within blocks of $\pi$ or $\sigma$.
 
-**Definition.** Partitions $\pi,\sigma$ are compatible if
-
-$$
-r(\pi\vee\sigma)=r(\pi)+r(\sigma)
-$$
+> [!info] Compatibility of two forest states
+> **Definition.** Partitions $\pi,\sigma$ are compatible if
+>
+> $$
+> r(\pi\vee\sigma)=r(\pi)+r(\sigma)
+> $$
 
 The forest compatibility matrix has entries
 
@@ -72,26 +73,28 @@ $$
 
 It is symmetric and depends only on the boundary and the ordering of partitions. This is the *forest compatibility* matrix of [1, Definitions 4.3–4.5].
 
-**Lemma.** For forests $H_i\subseteq G_i$ with states $\pi,\sigma$, the union $H_1\cup H_2$ is a forest if and only if $C(\pi,\sigma)=1$.
+> [!info] Compatibility of two forest states
+> **Lemma.** For forests $H_i\subseteq G_i$ with states $\pi,\sigma$, the union $H_1\cup H_2$ is a forest if and only if $C(\pi,\sigma)=1$.
 
-**Proof.** Let $g_i$ be the number of edges of $H_i$ and $k_{0,i}$ the number of its components containing no boundary vertex. Then
-
-$$
-g_1=n_1-k_{0,1}-b(\pi),\qquad
-g_2=n_2-k_{0,2}-b(\sigma)
-$$
-
-Internal components remain unchanged in the union, while components meeting $B$ join according to $\pi\vee\sigma$. The number of independent cycles in the union is
-
-$$
-\begin{aligned}
-(g_1+g_2)-n+k_{0,1}+k_{0,2}+b(\pi\vee\sigma)
-&=k-b(\pi)-b(\sigma)+b(\pi\vee\sigma)\\
-&=r(\pi)+r(\sigma)-r(\pi\vee\sigma)
-\end{aligned}
-$$
-
-It is zero exactly under condition (1). The count also applies to distinguishable parallel edges. $\square$
+> [!note]- Proof
+> **Proof.** Let $g_i$ be the number of edges of $H_i$ and $k_{0,i}$ the number of its components containing no boundary vertex. Then
+>
+> $$
+> g_1=n_1-k_{0,1}-b(\pi),\qquad
+> g_2=n_2-k_{0,2}-b(\sigma)
+> $$
+>
+> Internal components remain unchanged in the union, while components meeting $B$ join according to $\pi\vee\sigma$. The number of independent cycles in the union is
+>
+> $$
+> \begin{aligned}
+> (g_1+g_2)-n+k_{0,1}+k_{0,2}+b(\pi\vee\sigma)
+> &=k-b(\pi)-b(\sigma)+b(\pi\vee\sigma)\\
+> &=r(\pi)+r(\sigma)-r(\pi\vee\sigma)
+> \end{aligned}
+> $$
+>
+> It is zero exactly under condition (1). The count also applies to distinguishable parallel edges. $\square$
 
 This is the same as [[en/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test#When the image of a forest remains a forest|the contraction criterion]]. Here, however, both sides are forests of graph parts. The internal-component counts cancel in the cycle test while their contributions remain in the state polynomials.
 
@@ -99,29 +102,31 @@ This is the same as [[en/Boundary polynomials and graph gluing/Vertex Contractio
 
 **An established law in polynomial form.** The combination of tables over compatible partitions appears in [the proof of Lemma 4.21 of Mannens–Nederlof](https://arxiv.org/html/2307.01046#S4.SS3). Formulas (2)–(3) below use the same rule with weights and powers of $t$.
 
-**Theorem.** Under the gluing rules fixed above,
+> [!info] The bilinear law for the full forest polynomial
+> **Theorem.** Under the gluing rules fixed above,
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> F_{G_1\#_B G_2}(t)
+> &=\sum_{\pi,\sigma\in\Pi(B)}
+> \mathcal F^{G_1,B}_\pi(t)C(\pi,\sigma)\mathcal F^{G_2,B}_\sigma(t)
+> \\
+> &=\mathbf f_1(t)^{\mathsf T}\mathbf C_B\mathbf f_2(t)
+> \end{aligned}
+> }
+> \tag{2}
+> $$
 
-$$
-\boxed{
-\begin{aligned}
-F_{G_1\#_B G_2}(t)
-&=\sum_{\pi,\sigma\in\Pi(B)}
-\mathcal F^{G_1,B}_\pi(t)C(\pi,\sigma)\mathcal F^{G_2,B}_\sigma(t)
-\\
-&=\mathbf f_1(t)^{\mathsf T}\mathbf C_B\mathbf f_2(t)
-\end{aligned}
-}
-\tag{2}
-$$
-
-**Proof.** Edge labels uniquely split every forest of the resulting graph into forests of the two parts. Conversely, a pair of forests has an admissible union exactly under the condition of the lemma. Weights multiply and edge counts add:
-
-$$
-w(H_1\cup H_2)=w(H_1)w(H_2),\qquad
-t^{|E(H_1\cup H_2)|}=t^{g_1}t^{g_2}
-$$
-
-Summing first over forest pairs with fixed states and then over states gives (2). $\square$
+> [!note]- Proof
+> **Proof.** Edge labels uniquely split every forest of the resulting graph into forests of the two parts. Conversely, a pair of forests has an admissible union exactly under the condition of the lemma. Weights multiply and edge counts add:
+>
+> $$
+> w(H_1\cup H_2)=w(H_1)w(H_2),\qquad
+> t^{|E(H_1\cup H_2)|}=t^{g_1}t^{g_2}
+> $$
+>
+> Summing first over forest pairs with fixed states and then over states gives (2). $\square$
 
 There is no additional power of $t$. Identifying boundary vertices decreases the vertex count but not the number of selected edges. In particular, the constant term of (2) is $1$: the empty forests of the two parts are compatible.
 

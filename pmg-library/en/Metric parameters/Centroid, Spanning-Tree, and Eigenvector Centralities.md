@@ -79,7 +79,7 @@ For a point $x$ in the entire affine space of the simplex, set $R(x,x_i)=(x-x_i)
 >
 > Consequently, the centroid $b$ is the unique minimizer of the sum of resistances to all vertices.
 
-> [!proof]- Decomposition relative to the centroid
+> [!note]- Decomposition relative to the centroid
 > **Proof.** Write $x-x_i=(x-b)+(b-x_i)$ and expand the norm. On summation, the cross term vanishes because $\sum_i(b-x_i)=0$. This gives (1). The metric on the space of directions is positive definite, so $(x-b)^2\ge0$, with equality only at $x=b$. $\square$
 
 The statement holds for every nondegenerate Euclidean simplex. It uses the sum of squared distances. Minimizing the sum of linear distances $\sum_i\sqrt{R(x,x_i)}$ is a different problem and generally gives a different point.
@@ -88,19 +88,21 @@ All vertices in (1) receive equal weight. Edge conductances affect the metric. I
 
 ## Total resistance to the centroid, the Kirchhoff index, and the radius
 
-**Definition.** The total resistance to the centroid is
-
-$$
-S_{\mathrm{cent}}(G)=\sum_i r_i=\operatorname{tr}\mathbf{Gr}
-$$
+> [!info] Total resistance to the centroid, the Kirchhoff index, and the radius
+> **Definition.** The total resistance to the centroid is
+>
+> $$
+> S_{\mathrm{cent}}(G)=\sum_i r_i=\operatorname{tr}\mathbf{Gr}
+> $$
 
 By (1), this is the minimum sum of resistances from a single point to all vertices. The mean resistance is $S_{\mathrm{cent}}/n$. Both quantities have the physical dimension of resistance.
 
-**Definition.** The Kirchhoff index is the sum over unordered pairs of distinct vertices:
-
-$$
-Kf(G)=\sum_{i<j}R_{ij}
-$$
+> [!info] Total resistance to the centroid, the Kirchhoff index, and the radius
+> **Definition.** The Kirchhoff index is the sum over unordered pairs of distinct vertices:
+>
+> $$
+> Kf(G)=\sum_{i<j}R_{ij}
+> $$
 
 > [!info] Three expressions for one parameter
 > **Theorem.** For a connected graph,
@@ -113,7 +115,7 @@ $$
 > \tag{2}
 > $$
 
-> [!proof]- Summing the distance formula
+> [!note]- Summing the distance formula
 > **Proof.** The identities $R_{ij}=r_i+r_j-2\mathbf{Gr}_{ij}$ and $\mathbf{Gr}\mathbf1=0$ imply
 >
 > $$
@@ -145,20 +147,21 @@ The relation to the radius also involves the distance between the two centers.
 >
 > In particular, $Kf(G)\le n^2\rho$, with equality if and only if $O=b$.
 
-> [!proof]- Substituting the circumcenter
+> [!note]- Substituting the circumcenter
 > **Proof.** At $x=O$, the left-hand side of (1) equals $n\rho$, since $O$ is equidistant from all vertices. Dividing by $n$ and using (2) gives (3). $\square$
 
 The centers coincide if and only if all $r_i$ are equal. Indeed, in this case $b$ is equidistant from the vertices and is the circumcenter. Thus the radius captures the mean resistance to the centroid together with the displacement of the circumcenter; in general, $S_{\mathrm{cent}}$ alone is insufficient to recover $\rho$.
 
 ## Centroid centrality
 
-**Definition.** The centroid centrality of a vertex is the normalized reciprocal of its resistance to the centroid:
-
-$$
-C_i^{\mathrm{cent}}
-=\frac{1/r_i}{\sum_j1/r_j}
-=\frac{1/\mathbf{Gr}_{ii}}{\sum_j1/\mathbf{Gr}_{jj}}
-$$
+> [!info] Centroid centrality
+> **Definition.** The centroid centrality of a vertex is the normalized reciprocal of its resistance to the centroid:
+>
+> $$
+> C_i^{\mathrm{cent}}
+> =\frac{1/r_i}{\sum_j1/r_j}
+> =\frac{1/\mathbf{Gr}_{ii}}{\sum_j1/\mathbf{Gr}_{jj}}
+> $$
 
 A larger value corresponds to a smaller distance to the centroid. The name and normalization are fixed here for this series; they do not imply a new definition of the Green matrix itself.
 
@@ -183,13 +186,14 @@ $$
 
 For unit conductances, all spanning trees are equally likely.
 
-**Definition.** The expected spanning-tree degree of a vertex is
-
-$$
-\delta_i=\mathbb E[\deg_T(i)]
-$$
-
-Here $\deg_T(i)$ counts the tree edges incident to the vertex; it is not the sum of their conductances. Conductances are already included in the probability of selecting a tree.
+> [!info] Expected spanning-tree degree and circumcenter coordinates
+> **Definition.** The expected spanning-tree degree of a vertex is
+>
+> $$
+> \delta_i=\mathbb E[\deg_T(i)]
+> $$
+>
+> Here $\deg_T(i)$ counts the tree edges incident to the vertex; it is not the sum of their conductances. Conductances are already included in the probability of selecting a tree.
 
 The [[From Lengths to Areas and Volumes#Edge-inclusion probabilities in a spanning tree|edge-inclusion formula]] $\Pr(\{i,j\}\in T)=c_{ij}R_{ij}$ gives
 
@@ -204,11 +208,12 @@ $$
 
 The first equality follows by summing the inclusion indicators of incident edges. The second follows because the degree sum of every spanning tree is $2(n-1)$. In particular, $1\le\delta_i\le k_i$.
 
-**Definition.** Spanning-tree centrality in this note is defined by
-
-$$
-C_i^{\mathrm{tree}}=\frac{\delta_i}{2(n-1)}
-$$
+> [!info] Expected spanning-tree degree and circumcenter coordinates
+> **Definition.** Spanning-tree centrality in this note is defined by
+>
+> $$
+> C_i^{\mathrm{tree}}=\frac{\delta_i}{2(n-1)}
+> $$
 
 It has a direct probabilistic interpretation: select a random spanning tree, then uniformly select one of its $2(n-1)$ edge ends. The probability of obtaining vertex $i$ is $C_i^{\mathrm{tree}}$.
 
@@ -228,7 +233,7 @@ Expected spanning-tree degree must be distinguished from expected degree over ar
 > \tag{5}
 > $$
 
-> [!proof]- Derivation using the Laplacian and the resistance matrix
+> [!note]- Derivation using the Laplacian and the resistance matrix
 > **Proof.** The distance formula can be written as
 >
 > $$
@@ -306,7 +311,7 @@ This star connects $i$ to every other vertex, regardless of whether these coupli
 > \boxed{[v_i]^2=\frac1nL_{\star_i}-\frac1{n^2}L_{K_n}}
 > $$
 
-> [!proof]- Substitution into the frame decomposition
+> [!note]- Substitution into the frame decomposition
 > **Proof.** Write $v_i=\sum_jq^ja_j$. Its coefficients are
 >
 > $$
@@ -379,13 +384,14 @@ $$
 
 Here $\mathcal F_2$ is the set of spanning 2-forests, and $X_F$ is the exterior product of their edge vectors in chosen orders and orientations. It equals the product of the component boundaries up to sign; an isolated vertex contributes a factor of $1$. Write $A_F,B_F$ for the vertex sets of the two components. Each forest is counted once; exchanging $A_F,B_F$ does not create another term.
 
-**Lemma.** For an affine vector $v=\sum_iq_i a_i$, $\sum_iq_i=0$, the contribution of one forest is
+> [!info] Spanning 2-forest coefficients and component sizes
+> **Lemma.** For an affine vector $v=\sum_iq_i a_i$, $\sum_iq_i=0$, the contribution of one forest is
+>
+> $$
+> \tau([X_F]^2[v]^2)=\left(\sum_{i\in A_F}q_i\right)^2
+> $$
 
-$$
-\tau([X_F]^2[v]^2)=\left(\sum_{i\in A_F}q_i\right)^2
-$$
-
-> [!proof]- The sum of coordinates on one component
+> [!note]- The sum of coordinates on one component
 > **Proof.** Choose $p\in A_F$, $q\in B_F$. Differences of vertices within each component can be expressed through its tree edges. Modulo the space spanned by all edge vectors of $F$, we have
 >
 > $$
@@ -402,19 +408,20 @@ $$
 
 For vertex $i$, let $m_i(F)$ be the number of vertices in the component of the forest that does not contain $i$.
 
-**Corollary.** The resistances to the centroid, their sum, and the Kirchhoff index are
+> [!info] Spanning 2-forest coefficients and component sizes
+> **Corollary.** The resistances to the centroid, their sum, and the Kirchhoff index are
+>
+> $$
+> \boxed{r_i=\frac1{n^2\tau}\sum_{F\in\mathcal F_2}w(F)m_i(F)^2}
+> $$
+>
+> $$
+> S_{\mathrm{cent}}=\frac1{n\tau}\sum_{F\in\mathcal F_2}w(F)|A_F||B_F|,
+> \qquad
+> Kf=\frac1\tau\sum_{F\in\mathcal F_2}w(F)|A_F||B_F|
+> $$
 
-$$
-\boxed{r_i=\frac1{n^2\tau}\sum_{F\in\mathcal F_2}w(F)m_i(F)^2}
-$$
-
-$$
-S_{\mathrm{cent}}=\frac1{n\tau}\sum_{F\in\mathcal F_2}w(F)|A_F||B_F|,
-\qquad
-Kf=\frac1\tau\sum_{F\in\mathcal F_2}w(F)|A_F||B_F|
-$$
-
-> [!proof]- Substitution of the centroid vectors
+> [!note]- Substitution of the centroid vectors
 > **Proof.** The vector $v_i=b_V-a_i$ has coordinate $1/n-1$ at vertex $i$ and coordinates $1/n$ elsewhere. The absolute value of its coordinate sum on either component is $m_i(F)/n$. Substitution into the lemma gives the formula for $r_i$. If the component sizes are $p,q$, then
 >
 > $$
@@ -440,13 +447,14 @@ In the star, the central vertex has $r_o=4/25$, while each leaf has $r_{\mathrm{
 
 ## Eigenvector centrality and a common normalization
 
-**Definition.** Eigenvector centrality is defined by a positive eigenvector of the adjacency matrix:
-
-$$
-\mathbf A v=\lambda_{\max}(\mathbf A)v,\qquad v_i>0,
-\qquad
-C_i^{\mathrm{eig}}=\frac{v_i}{\sum_jv_j}
-$$
+> [!info] Eigenvector centrality and a common normalization
+> **Definition.** Eigenvector centrality is defined by a positive eigenvector of the adjacency matrix:
+>
+> $$
+> \mathbf A v=\lambda_{\max}(\mathbf A)v,\qquad v_i>0,
+> \qquad
+> C_i^{\mathrm{eig}}=\frac{v_i}{\sum_jv_j}
+> $$
 
 For a connected graph, this vector exists and is unique up to scaling by the Perron-Frobenius theorem [4]. In component form, $\lambda_{\max}v_i=\sum_jc_{ij}v_j$: the score of a vertex is determined by the weighted scores of its neighbors.
 
@@ -460,13 +468,14 @@ All three centralities use a common normalization:
 | Spanning-tree | $\delta_i$ | $C_i^{\mathrm{tree}}=\delta_i/[2(n-1)]$ |
 | Centroid | $1/r_i$ | $C_i^{\mathrm{cent}}=(1/r_i)/\sum_j(1/r_j)$ |
 
-**Corollary.** Every column satisfies $C_i>0$, $\sum_iC_i=1$. The uniform score is $1/n$; comparison with it can use $nC_i$, whose mean is $1$.
-
-Multiplying all conductances by $t>0$ multiplies $\mathbf A,\mathbf L$ by $t$ and divides $\mathbf{Gr},\mathbf R$ by $t$. The eigenvector $v$ and the products $c_{ij}R_{ij}$ remain unchanged; all $1/r_i$ are multiplied by the same factor. Therefore the three normalized centralities are unchanged.
-
-A common sum allows the distributions of scores across vertices to be compared, but does not turn different definitions into one measure of importance. A value of $0.15$ in one column has no universal substantive equivalent in another. Comparisons between graphs of different sizes must also account for the baseline $1/n$.
-
-Normalization on the complete graph is a check of consistency with symmetry. It does not imply statistical unbiasedness: that claim would require a statistical model and an estimand.
+> [!info] Eigenvector centrality and a common normalization
+> **Corollary.** Every column satisfies $C_i>0$, $\sum_iC_i=1$. The uniform score is $1/n$; comparison with it can use $nC_i$, whose mean is $1$.
+>
+> Multiplying all conductances by $t>0$ multiplies $\mathbf A,\mathbf L$ by $t$ and divides $\mathbf{Gr},\mathbf R$ by $t$. The eigenvector $v$ and the products $c_{ij}R_{ij}$ remain unchanged; all $1/r_i$ are multiplied by the same factor. Therefore the three normalized centralities are unchanged.
+>
+> A common sum allows the distributions of scores across vertices to be compared, but does not turn different definitions into one measure of importance. A value of $0.15$ in one column has no universal substantive equivalent in another. Comparisons between graphs of different sizes must also account for the baseline $1/n$.
+>
+> Normalization on the complete graph is a check of consistency with symmetry. It does not imply statistical unbiasedness: that claim would require a statistical model and an estimand.
 
 ## The complete graph, a path, and a star
 
@@ -591,13 +600,14 @@ $$
 
 The high score of vertex $8$ has a specific cause: its two mandatory edges. The number of components after deletion is related to expected spanning-tree degree but does not determine it completely.
 
-**Lemma.** Suppose deleting vertex $i$ together with its incident edges leaves $q_i$ components. Then
+> [!info] Spanning-tree degree and disconnection after vertex deletion
+> **Lemma.** Suppose deleting vertex $i$ together with its incident edges leaves $q_i$ components. Then
+>
+> $$
+> \delta_i\ge q_i
+> $$
 
-$$
-\delta_i\ge q_i
-$$
-
-> [!proof]- Component count and degree in a spanning tree
+> [!note]- Component count and degree in a spanning tree
 > **Proof.** For every spanning tree $T$, deleting $i$ produces exactly $\deg_T(i)$ components. The graph $T-i$ is a spanning subgraph of $G-i$, so it cannot have fewer components than $G-i$. Therefore $\deg_T(i)\ge q_i$ for every $T$. Taking expectations proves the claim. $\square$
 
 At vertex $8$ of the Krackhardt kite graph, $q_8=\delta_8=2$. However, the common vertex of two triangles with unit conductances glued at one point also has $q_i=2$, but $\delta_i=8/3$: each triangle contributes an average of $4/3$ incident edges. The same number of components after deletion is compatible with different expected spanning-tree degrees.
@@ -622,7 +632,7 @@ Geometric removal of one vertex admits an exact formula. Let $\rho_{\widehat i}$
 >
 > Here $d_i$ is the weighted degree of the vertex in the original graph.
 
-> [!proof]- Distance to the opposite face
+> [!note]- Distance to the opposite face
 > **Proof.** Let $y_j=x_j-b$ and $w_i=\sum_j\mathbf L_{ij}y_j$. Since the Gram matrix of the $y_j$ is $\mathbf{Gr}$,
 >
 > $$

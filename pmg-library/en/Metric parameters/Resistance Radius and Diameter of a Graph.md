@@ -71,16 +71,17 @@ $$
 R_{\max}(G)=\max_{i,j}R_{ij}
 $$
 
-**Proposition.** For every graph in the class under consideration,
+> [!info] Difference from the maximum pairwise resistance
+> **Proposition.** For every graph in the class under consideration,
+>
+> $$
+> \boxed{R_{\max}(G)\le D_{\mathrm{res}}(G)}
+> \tag{2}
+> $$
+>
+> Equality holds if and only if two simplex vertices are diametrically opposite on the circumsphere, meaning that their midpoint is $O$.
 
-$$
-\boxed{R_{\max}(G)\le D_{\mathrm{res}}(G)}
-\tag{2}
-$$
-
-Equality holds if and only if two simplex vertices are diametrically opposite on the circumsphere, meaning that their midpoint is $O$.
-
-> [!proof]- Proof and equality condition
+> [!note]- Proof and equality condition
 > **Proof.** For $u=x_i-O$ and $v=x_j-O$, one has $u^2=v^2=\rho$. Hence
 >
 > $$
@@ -104,17 +105,18 @@ $$
 
 For an affine point basis, these are the ordinary barycentric coordinates. They are unique but need not be nonnegative. Write $\mathbf1$ for the column of ones and $\boldsymbol\alpha$ for the coordinate column.
 
-**Lemma.** The center coordinates and the resistance radius satisfy
+> [!info] Computation from the resistance matrix
+> **Lemma.** The center coordinates and the resistance radius satisfy
+>
+> $$
+> \boxed{
+> \mathbf R\boldsymbol\alpha=2\rho\,\mathbf1,\qquad
+> \mathbf1^{\mathsf T}\boldsymbol\alpha=1
+> }
+> \tag{3}
+> $$
 
-$$
-\boxed{
-\mathbf R\boldsymbol\alpha=2\rho\,\mathbf1,\qquad
-\mathbf1^{\mathsf T}\boldsymbol\alpha=1
-}
-\tag{3}
-$$
-
-> [!proof]- Derivation from equal distances to the vertices
+> [!note]- Derivation from equal distances to the vertices
 > **Proof.** Set $y_i=x_i-O$. Then $y_i^2=\rho$ and $\sum_i\alpha_i y_i=0$. For each row of the resistance matrix,
 >
 > $$
@@ -125,26 +127,27 @@ $$
 >
 > This is the first equality in (3); the second is the affine-weight condition for the center. $\square$
 
-**Theorem.** For $n\ge2$, the resistance matrix of a connected graph is invertible, and
+> [!info] Computation from the resistance matrix
+> **Theorem.** For $n\ge2$, the resistance matrix of a connected graph is invertible, and
+>
+> $$
+> \boxed{
+> \rho=\frac{1}{2\,\mathbf1^{\mathsf T}\mathbf R^{-1}\mathbf1},
+> \qquad
+> D_{\mathrm{res}}=\frac{2}{\mathbf1^{\mathsf T}\mathbf R^{-1}\mathbf1}
+> }
+> \tag{4}
+> $$
+>
+> The center coordinates are expressed through the same matrix:
+>
+> $$
+> \boldsymbol\alpha=
+> \frac{\mathbf R^{-1}\mathbf1}
+> {\mathbf1^{\mathsf T}\mathbf R^{-1}\mathbf1}
+> $$
 
-$$
-\boxed{
-\rho=\frac{1}{2\,\mathbf1^{\mathsf T}\mathbf R^{-1}\mathbf1},
-\qquad
-D_{\mathrm{res}}=\frac{2}{\mathbf1^{\mathsf T}\mathbf R^{-1}\mathbf1}
-}
-\tag{4}
-$$
-
-The center coordinates are expressed through the same matrix:
-
-$$
-\boldsymbol\alpha=
-\frac{\mathbf R^{-1}\mathbf1}
-{\mathbf1^{\mathsf T}\mathbf R^{-1}\mathbf1}
-$$
-
-> [!proof]- Invertibility and normalization
+> [!note]- Invertibility and normalization
 > **Proof.** For any column $\mathbf v$ with $\mathbf1^{\mathsf T}\mathbf v=0$, the distance formula gives
 >
 > $$
@@ -184,20 +187,21 @@ The form $[u,v]$ has grade $1$, so $M_{n-2}$ supplies its complement to the span
 
 Choose $a_n$ as the reference vertex and set $u_i=a_i-a_n$, $i=1,\ldots,n-1$. The required center corresponds to $h_V=a_n+y$, where $y$ is an affine vector.
 
-**Proposition.** The center and radius can be computed directly from potentials of forms:
+> [!info] Computing the center and radius using polyforms
+> **Proposition.** The center and radius can be computed directly from potentials of forms:
+>
+> $$
+> 2\tau(M_{n-2}[u_i,y])=\tau(M_{n-2}[u_i]^2),
+> \qquad i=1,\ldots,n-1
+> $$
+>
+> $$
+> \boxed{\rho=\frac{\tau(M_{n-2}[y]^2)}{\tau(G)}}
+> $$
+>
+> The first system is linear in the coordinates of $y$; after it is solved, the second equality gives the radius.
 
-$$
-2\tau(M_{n-2}[u_i,y])=\tau(M_{n-2}[u_i]^2),
-\qquad i=1,\ldots,n-1
-$$
-
-$$
-\boxed{\rho=\frac{\tau(M_{n-2}[y]^2)}{\tau(G)}}
-$$
-
-The first system is linear in the coordinates of $y$; after it is solved, the second equality gives the radius.
-
-> [!proof]- Equidistance expressed through potentials
+> [!note]- Equidistance expressed through potentials
 > **Proof.** Equidistance of the center from $a_i$ and $a_n$ means $(u_i-y)^2=y^2$, or $2u_i\cdot y=u_i^2$. Substituting the metric identity and canceling the common denominator gives the system. The vectors $u_i$ form a basis of directions, and their metric is positive definite, so the system has a unique solution. The radius equals $y^2$, which gives the second formula. $\square$
 
 Thus matrix inversion in (4) and evaluation of potentials describe the same metric. The radius is obtained from it after determining the center. The vector $y$ depends on the graph, so this expression alone does not give the radius as a simple sum of coefficients of $M_{n-2}$.

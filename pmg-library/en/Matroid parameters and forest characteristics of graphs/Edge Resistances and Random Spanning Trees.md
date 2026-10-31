@@ -55,12 +55,13 @@ $$
 
 Positive conductances give $\tau>0$. Throughout this note, $T$ is an ordinary spanning tree without a chosen root.
 
-**Definition.** A weighted random spanning tree is sampled from
-
-$$
-\Pr(T)=\frac{w(T)}\tau
-\tag{2}
-$$
+> [!info] The spanning-tree distribution
+> **Definition.** A weighted random spanning tree is sampled from
+>
+> $$
+> \Pr(T)=\frac{w(T)}\tau
+> \tag{2}
+> $$
 
 If every conductance is the same, all trees have equal weight and the distribution is uniform. Unequal conductances generally give a nonuniform distribution.
 
@@ -68,19 +69,20 @@ The polynomial $\tau$ has degree $d$ and is linear in each individual variable $
 
 ## Kirchhoff's formula in three representations
 
-**Theorem.** For every existing edge,
-
-$$
-\boxed{
-\Pr(\ell\in T)
-=c_\ell\frac{\partial\log\tau}{\partial c_\ell}
-=c_\ell R_\ell
-=\eta_\ell
-}
-\tag{3}
-$$
-
-The probabilistic equality involving effective resistance is Kirchhoff's classical formula; see [1, Section 4.2]. Below it is derived from the weighted matrix-tree theorem in the notation of the current PMG series.
+> [!info] Kirchhoff's formula in three representations
+> **Theorem.** For every existing edge,
+>
+> $$
+> \boxed{
+> \Pr(\ell\in T)
+> =c_\ell\frac{\partial\log\tau}{\partial c_\ell}
+> =c_\ell R_\ell
+> =\eta_\ell
+> }
+> \tag{3}
+> $$
+>
+> The probabilistic equality involving effective resistance is Kirchhoff's classical formula; see [1, Section 4.2]. Below it is derived from the weighted matrix-tree theorem in the notation of the current PMG series.
 
 ### Differentiating the spanning-tree polynomial
 
@@ -178,22 +180,23 @@ $$
 
 ## The edge-parameter family
 
-**Definition.** For integers $q\ge1$, put
-
-$$
-\boxed{
-H_q(G)=\sum_{\ell\in E}\frac{\eta_\ell^q}{c_\ell}
-=\sum_{\ell\in E}c_\ell^{q-1}R_\ell^q
-}
-\tag{5}
-$$
-
-Here $q$ is not a forest grade. It specifies a power of one edge's inclusion probability. In particular,
-
-$$
-H_1=\sum_{\ell\in E}R_\ell,\qquad
-H_2=\sum_{\ell\in E}c_\ell R_\ell^2
-$$
+> [!info] The edge-parameter family
+> **Definition.** For integers $q\ge1$, put
+>
+> $$
+> \boxed{
+> H_q(G)=\sum_{\ell\in E}\frac{\eta_\ell^q}{c_\ell}
+> =\sum_{\ell\in E}c_\ell^{q-1}R_\ell^q
+> }
+> \tag{5}
+> $$
+>
+> Here $q$ is not a forest grade. It specifies a power of one edge's inclusion probability. In particular,
+>
+> $$
+> H_1=\sum_{\ell\in E}R_\ell,\qquad
+> H_2=\sum_{\ell\in E}c_\ell R_\ell^2
+> $$
 
 The sum in $H_1$ runs over original edges with multiplicities. It differs from the Kirchhoff index $Kf=\sum_{i<j}R_{ij}$, which counts each vertex pair once.
 
@@ -270,21 +273,23 @@ Thus for fixed $n,c$, the first parameter does not distinguish graphs. The secon
 
 Let $G=G_1\vee G_2$ identify exactly one vertex of two connected graphs with disjoint edge sets. Conductances are retained, and no additional identifications are made.
 
-**Proposition.** Each edge of either piece retains its inclusion probability and effective resistance after gluing. For every integer $q\ge1$,
+> [!info] One-point gluing
+> **Proposition.** Each edge of either piece retains its inclusion probability and effective resistance after gluing. For every integer $q\ge1$,
+>
+> $$
+> \boxed{H_q(G_1\vee G_2)=H_q(G_1)+H_q(G_2)}
+> \tag{9}
+> $$
 
-$$
-\boxed{H_q(G_1\vee G_2)=H_q(G_1)+H_q(G_2)}
-\tag{9}
-$$
-
-**Proof.** Every spanning tree of the result is uniquely the union of spanning trees $T_1,T_2$ of the pieces. Weights multiply and $\tau(G)=\tau(G_1)\tau(G_2)$. Therefore
-
-$$
-\Pr_G(T_1\cup T_2)
-=\frac{w(T_1)}{\tau(G_1)}\frac{w(T_2)}{\tau(G_2)}
-$$
-
-The restrictions of a random tree to the pieces are independent and have the original distributions. Hence $\eta_\ell$ is preserved for $\ell\in E(G_j)$, as is $R_\ell=\eta_\ell/c_\ell$. The sum (5) splits over disjoint edge sets, proving (9). $\square$
+> [!note]- Proof
+> **Proof.** Every spanning tree of the result is uniquely the union of spanning trees $T_1,T_2$ of the pieces. Weights multiply and $\tau(G)=\tau(G_1)\tau(G_2)$. Therefore
+>
+> $$
+> \Pr_G(T_1\cup T_2)
+> =\frac{w(T_1)}{\tau(G_1)}\frac{w(T_2)}{\tau(G_2)}
+> $$
+>
+> The restrictions of a random tree to the pieces are independent and have the original distributions. Hence $\eta_\ell$ is preserved for $\ell\in E(G_j)$, as is $R_\ell=\eta_\ell/c_\ell$. The sum (5) splits over disjoint edge sets, proving (9). $\square$
 
 Matroid invariance and additivity have different justifications. The former follows from the distribution on weighted bases. The latter uses the special tree decomposition of this gluing. For the forest parameters $s_m^{\mathrm{for}}$, additivity came from the logarithm of a product of forest polynomials; here it comes from preservation of edge probabilities.
 

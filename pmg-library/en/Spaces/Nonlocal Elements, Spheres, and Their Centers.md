@@ -26,26 +26,28 @@ $$
 \mathcal H=\{S\in\widetilde V:S\cdot z=1\},\qquad z^2=0
 $$
 
-**Definition.** An element $S\in\mathcal H$ is local if $S^2=0$ and nonlocal if $S^2\ne0$. Local elements are denoted directly as points $x,h,a_i$. No separate notation for their representatives is introduced.
+> [!info] Assumptions and notation
+> **Definition.** An element $S\in\mathcal H$ is local if $S^2=0$ and nonlocal if $S^2\ne0$. Local elements are denoted directly as points $x,h,a_i$. No separate notation for their representatives is introduced.
 
 Elements of zero weight, including $z$, are not called local points. Differences of elements of $\mathcal H$ belong to $z^\perp$; in the extended space, this extends the notion of an affine vector from the PMG core. The metric on $z^\perp$ is degenerate: $z$ is orthogonal to this entire subspace.
 
 ## Decomposing an element into its center and norm
 
-**Lemma.** Every $S\in\mathcal H$ has a unique representation
+> [!info] Decomposing an element into its center and norm
+> **Lemma.** Every $S\in\mathcal H$ has a unique representation
+>
+> $$
+> \boxed{S=h+\frac{\rho}{2}z,\qquad h^2=0,\qquad h\cdot z=1,\qquad \rho=S^2}
+> \tag{1}
+> $$
+>
+> The local point $h$ is called the center of $S$ and is given by
+>
+> $$
+> h=\pi(S)=S-\frac{S^2}{2}z
+> $$
 
-$$
-\boxed{S=h+\frac{\rho}{2}z,\qquad h^2=0,\qquad h\cdot z=1,\qquad \rho=S^2}
-\tag{1}
-$$
-
-The local point $h$ is called the center of $S$ and is given by
-
-$$
-h=\pi(S)=S-\frac{S^2}{2}z
-$$
-
-> [!proof]- Proof
+> [!note]- Proof
 > **Proof.** For $h=S-S^2z/2$, we have $h\cdot z=1$ and $h^2=S^2-S^2(S\cdot z)=0$. Conversely, $S=h+\rho z/2$ under the stated conditions gives $S^2=\rho$. Hence both the coefficient and the center are uniquely determined. $\square$
 
 All elements with the same center form the line $h+\mathbb Rz$. Moving an element along this line gives
@@ -58,20 +60,21 @@ Thus the center and norm are independent data of a normalized element. With the 
 
 ## A sphere as an orthogonality condition
 
-**Theorem.** Let $S=h+\rho z/2$, and let $x$ be a local point. Then
+> [!info] A sphere as an orthogonality condition
+> **Theorem.** Let $S=h+\rho z/2$, and let $x$ be a local point. Then
+>
+> $$
+> \boxed{x\cdot S=\frac{\rho-(x-h)^2}{2}}
+> \tag{2}
+> $$
+>
+> Consequently, the local points orthogonal to $S$ satisfy
+>
+> $$
+> x\cdot S=0\quad\Longleftrightarrow\quad(x-h)^2=\rho
+> $$
 
-$$
-\boxed{x\cdot S=\frac{\rho-(x-h)^2}{2}}
-\tag{2}
-$$
-
-Consequently, the local points orthogonal to $S$ satisfy
-
-$$
-x\cdot S=0\quad\Longleftrightarrow\quad(x-h)^2=\rho
-$$
-
-> [!proof]- Proof
+> [!note]- Proof
 > **Proof.** Since $x^2=h^2=0$, we have $x\cdot h=-(x-h)^2/2$. Substituting (1) and using $x\cdot z=1$ gives (2). $\square$
 
 For $\rho>0$, this is a sphere with center $h$ and linear radius $\sqrt\rho$. In a displacement space of dimension $d$, the sphere has dimension $d-1$. For $\rho=0$, the set consists of the single local point $h$. For $\rho<0$, it has no real local points, since $(x-h)^2\ge0$.
@@ -116,7 +119,7 @@ h=\pi(h_V)=h_V+\frac{\rho(G)}2z,\qquad
 S_G=h_V+\rho(G)z
 $$
 
-> [!proof]- The norm of the affine combination giving the center
+> [!note]- The norm of the affine combination giving the center
 > **Proof.** For every vertex, $(a_i-h_V)^2=\rho(G)$. Since $a_i^2=0$, we obtain $a_i\cdot h_V=(h_V^2-\rho(G))/2$. Multiply by $\alpha_i$ and sum: $h_V^2=(h_V^2-\rho(G))/2$. Hence $h_V^2=-\rho(G)$, and the remaining identities follow from (1). $\square$
 
 Here $h_V$ denotes the original affine combination, $h$ its local center, and $S_G$ the circumsphere element. These symbols identify particular elements of one model, rather than additional types of geometric center.
@@ -139,7 +142,7 @@ $$
 
 This is the squared distance between the centers; in resistance geometry, it has the units of resistance. Distinct elements with the same center have a difference of zero norm. Therefore (4) specifies distance between centers but does not distinguish all elements of $\mathcal H$.
 
-> [!proof]- Preservation of the norm of a difference
+> [!note]- Preservation of the norm of a difference
 > **Proof.** We have $S-T=h-k+(S^2-T^2)z/2$. Since $(h-k)\cdot z=0$ and $z^2=0$, the term along $z$ does not affect the norm. $\square$
 
 ### Why the projection is nonlinear
@@ -162,16 +165,17 @@ Preservation of (4) therefore does not make $\pi$ a linear or affine projection.
 
 ## Inner products of vectors
 
-**Theorem.** For any $S_0,S_1,T_0,T_1\in\mathcal H$,
+> [!info] Inner products of vectors
+> **Theorem.** For any $S_0,S_1,T_0,T_1\in\mathcal H$,
+>
+> $$
+> (S_1-S_0)\cdot(T_1-T_0)
+> =(\pi(S_1)-\pi(S_0))\cdot(\pi(T_1)-\pi(T_0))
+> $$
+>
+> Consequently, the norms of the endpoints do not affect the norms and inner products of vectors when the centers of the endpoints remain fixed.
 
-$$
-(S_1-S_0)\cdot(T_1-T_0)
-=(\pi(S_1)-\pi(S_0))\cdot(\pi(T_1)-\pi(T_0))
-$$
-
-Consequently, the norms of the endpoints do not affect the norms and inner products of vectors when the centers of the endpoints remain fixed.
-
-> [!proof]- Proof
+> [!note]- Proof
 > **Proof.** Selecting the centers changes each difference only by a multiple of $z$. For any $u,v\in z^\perp$ and $\alpha,\beta\in\mathbb R$,
 >
 > $$
@@ -206,16 +210,17 @@ $$
 
 Write $h_i=\pi(S_i)$ and $B_h=(h_0\ldots h_k)$. Boundaries use the same operator $\partial$ as in the [[The Null Vector, Isotropic Representation, and the Boundary#The boundary operator as contraction with $z$|note on the null vector]].
 
-**Theorem.** Replacing vertices by their local centers preserves the norms of boundaries of every grade and the inner products of any two boundaries of the same grade:
+> [!info] Higher-grade boundaries
+> **Theorem.** Replacing vertices by their local centers preserves the norms of boundaries of every grade and the inner products of any two boundaries of the same grade:
+>
+> $$
+> \boxed{B^2=B_h^2,\qquad B\cdot C=B_h\cdot C_h}
+> \tag{5}
+> $$
+>
+> In the second identity, the boundary $C$ may be formed from a different set of elements of unit weight.
 
-$$
-\boxed{B^2=B_h^2,\qquad B\cdot C=B_h\cdot C_h}
-\tag{5}
-$$
-
-In the second identity, the boundary $C$ may be formed from a different set of elements of unit weight.
-
-> [!proof]- Proof for decomposable boundaries and their sums
+> [!note]- Proof for decomposable boundaries and their sums
 > **Proof.** For decomposable boundaries, the inner product is the mixed Gram determinant:
 >
 > $$
@@ -242,11 +247,12 @@ This restriction matters. In the full exterior algebra of the extension, $z$ is 
 
 ## Local basis vertices do not restrict the graph model
 
-**Corollary.** Let $A_1,\ldots,A_n$ have unit affine weight, and let their local centers $h_i=\pi(A_i)$ form the resistance simplex of a connected graph with positive conductances. Replacing $A_i\mapsto h_i$ preserves the resistance metric and gives an isomorphic representation of the algebra of forms on boundaries. The Laplacian and its exponential map to the corresponding forms on local vertices with the same coupling coefficients.
+> [!info] Local basis vertices do not restrict the graph model
+> **Corollary.** Let $A_1,\ldots,A_n$ have unit affine weight, and let their local centers $h_i=\pi(A_i)$ form the resistance simplex of a connected graph with positive conductances. Replacing $A_i\mapsto h_i$ preserves the resistance metric and gives an isomorphic representation of the algebra of forms on boundaries. The Laplacian and its exponential map to the corresponding forms on local vertices with the same coupling coefficients.
+>
+> Thus the basis vertices can be chosen local without restricting the graph model under consideration. Their individual norms are additional data of the realization and are not determined by the metric on boundaries.
 
-Thus the basis vertices can be chosen local without restricting the graph model under consideration. Their individual norms are additional data of the realization and are not determined by the metric on boundaries.
-
-> [!proof]- A linear change of the fixed basis
+> [!note]- A linear change of the fixed basis
 > **Proof.** In the minimal extension of dimension $n+1$, the elements $A_1,\ldots,A_n,z$ form a basis: independence follows from the affine independence of the spatial coordinates of their centers. Define a linear map $F$ on this basis:
 >
 > $$

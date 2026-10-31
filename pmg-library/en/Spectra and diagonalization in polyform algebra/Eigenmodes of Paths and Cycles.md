@@ -61,30 +61,32 @@ $$
 
 This selects the angles $\theta_k=\pi k/n$.
 
-**Theorem (path modes).** An orthonormal eigenbasis of the Laplacian of $P_n$ is given by
+> [!info] Why a path gives a cosine basis
+> **Theorem (path modes).** An orthonormal eigenbasis of the Laplacian of $P_n$ is given by
+>
+> $$
+> u_0(r)=\frac1{\sqrt n},\qquad
+> u_k(r)=\sqrt{\frac2n}\cos\left(\frac{\pi k}{n}\left(r-\frac12\right)\right),
+> \quad 1\le k\le n-1
+> $$
+>
+> The eigenvalues are
+>
+> $$
+> \boxed{\lambda_k=2-2\cos\frac{\pi k}{n},\qquad 0\le k\le n-1}
+> $$
+>
+> They are all distinct; $\lambda_0=0$ and $\lambda_k>0$ for $k>0$. Write $\mathbf u_k$ for the column with components $u_k(r)$.
 
-$$
-u_0(r)=\frac1{\sqrt n},\qquad
-u_k(r)=\sqrt{\frac2n}\cos\left(\frac{\pi k}{n}\left(r-\frac12\right)\right),
-\quad 1\le k\le n-1
-$$
-
-The eigenvalues are
-
-$$
-\boxed{\lambda_k=2-2\cos\frac{\pi k}{n},\qquad 0\le k\le n-1}
-$$
-
-They are all distinct; $\lambda_0=0$ and $\lambda_k>0$ for $k>0$. Write $\mathbf u_k$ for the column with components $u_k(r)$.
-
-**Proof.** Substitution and the endpoint conditions already give the eigenvalue equation. Orthogonality and normalization follow from the sum formula
-
-$$
-\sum_{r=1}^n\cos\left(\left(r-\frac12\right)\theta\right)
-=\frac{\sin(n\theta)}{2\sin(\theta/2)}
-$$
-
-for $\sin(\theta/2)\ne0$ and the product identity for two cosines. For $k>0$, the components sum to zero, their unnormalized squares sum to $n/2$, and pairwise inner products vanish. For $k=0$ this gives the constant column normalized by $1/\sqrt n$. Cosine is strictly decreasing on the angles $0\le\pi k/n<\pi$, so the values $\lambda_k$ are distinct. The resulting $n$ orthonormal vectors form a complete basis. $\square$
+> [!note]- Proof
+> **Proof.** Substitution and the endpoint conditions already give the eigenvalue equation. Orthogonality and normalization follow from the sum formula
+>
+> $$
+> \sum_{r=1}^n\cos\left(\left(r-\frac12\right)\theta\right)
+> =\frac{\sin(n\theta)}{2\sin(\theta/2)}
+> $$
+>
+> for $\sin(\theta/2)\ne0$ and the product identity for two cosines. For $k>0$, the components sum to zero, their unnormalized squares sum to $n/2$, and pairwise inner products vanish. For $k=0$ this gives the constant column normalized by $1/\sqrt n$. Cosine is strictly decreasing on the angles $0\le\pi k/n<\pi$, so the values $\lambda_k$ are distinct. The resulting $n$ orthonormal vectors form a complete basis. $\square$
 
 This cosine basis corresponds to the type-II discrete cosine transform, DCT-II. The shift $r-1/2$ is essential for matching the mode to the path endpoints.
 
@@ -113,18 +115,20 @@ v_k^c(r)=\sqrt{\frac2n}\cos\frac{2\pi k(r-1)}n,\qquad
 v_k^s(r)=\sqrt{\frac2n}\sin\frac{2\pi k(r-1)}n
 $$
 
-**Theorem (cycle modes).** A real orthonormal eigenbasis of $C_n$ consists of the constant mode $1/\sqrt n$, the pairs $\mathbf v_k^c,\mathbf v_k^s$, $1\le k\le m$, and, for even $n$, one additional mode
+> [!info] Periodic modes of a cycle
+> **Theorem (cycle modes).** A real orthonormal eigenbasis of $C_n$ consists of the constant mode $1/\sqrt n$, the pairs $\mathbf v_k^c,\mathbf v_k^s$, $1\le k\le m$, and, for even $n$, one additional mode
+>
+> $$
+> w(r)=\frac{(-1)^{r-1}}{\sqrt n},\qquad
+> \mathbf L\mathbf w=4\mathbf w
+> $$
+>
+> Each pair has eigenvalue $\mu_k$ of multiplicity $2$. The constant mode has eigenvalue $0$ of multiplicity $1$, and the additional mode of an even cycle has eigenvalue $4$ of multiplicity $1$.
 
-$$
-w(r)=\frac{(-1)^{r-1}}{\sqrt n},\qquad
-\mathbf L\mathbf w=4\mathbf w
-$$
-
-Each pair has eigenvalue $\mu_k$ of multiplicity $2$. The constant mode has eigenvalue $0$ of multiplicity $1$, and the additional mode of an even cycle has eigenvalue $4$ of multiplicity $1$.
-
-**Proof.** Substituting sine and cosine into the difference formula gives the multiplier $2-2\cos\vartheta_k$. Periodicity follows from $n\vartheta_k=2\pi k$. Orthogonality follows from the root-of-unity sum $\sum_{r=0}^{n-1}\exp(2\pi i\ell r/n)=0$ for $\ell\not\equiv0\pmod n$; its real and imaginary parts give the required trigonometric sums. In these pairs, squared sine and cosine values each sum to $n/2$.
-
-For even $n$, the angle $\pi$ gives an alternating cosine whose squares sum to $n$; the sine is identically zero. For odd $n$, the sequence $(-1)^{r-1}$ is incompatible with period $n$, so this mode is absent. The values $\mu_k$ are distinct at the selected angles $0<2\pi k/n<\pi$. The number of basis vectors is $1+2m$ for odd $n$ and $2+2m$ for even $n$, equal to $n$ in both cases. $\square$
+> [!note]- Proof
+> **Proof.** Substituting sine and cosine into the difference formula gives the multiplier $2-2\cos\vartheta_k$. Periodicity follows from $n\vartheta_k=2\pi k$. Orthogonality follows from the root-of-unity sum $\sum_{r=0}^{n-1}\exp(2\pi i\ell r/n)=0$ for $\ell\not\equiv0\pmod n$; its real and imaginary parts give the required trigonometric sums. In these pairs, squared sine and cosine values each sum to $n/2$.
+>
+> For even $n$, the angle $\pi$ gives an alternating cosine whose squares sum to $n$; the sine is identically zero. For odd $n$, the sequence $(-1)^{r-1}$ is incompatible with period $n$, so this mode is absent. The values $\mu_k$ are distinct at the selected angles $0<2\pi k/n<\pi$. The number of basis vectors is $1+2m$ for odd $n$ and $2+2m$ for even $n$, equal to $n$ in both cases. $\square$
 
 Changing the starting vertex rotates the sine-cosine basis within each pair while preserving the eigenspace. In an arbitrary orthonormal basis of that space, individual modes may look different.
 

@@ -77,10 +77,11 @@ $$
 
 Extend $f$ linearly to the formal vertex space: $f(\sum_i t_i a_i)=\sum_i t_if_i$. Substituting $[u,v]\mapsto f(u)f(v)$ into the grade-1 form $L$ gives exactly (2), since $f((a_i a_j))=f_j-f_i$. This evaluates the form using function values and differs from the metric evaluation $[u,v]\mapsto u\cdot v$. The potential of a form, $u_M([u,v])$, is also distinct from a function value at a vertex.
 
-**Theorem.** For a connected graph and nonempty $P$, the Dirichlet problem has a unique solution. It is the unique minimizer of the energy (2) subject to the prescribed values on $P$.
+> [!info] Minimum energy and uniqueness
+> **Theorem.** For a connected graph and nonempty $P$, the Dirichlet problem has a unique solution. It is the unique minimizer of the energy (2) subject to the prescribed values on $P$.
 
-> [!proof]- Proof
-> Let $h$ vanish on $P$ and represent a change in the internal values. Expanding the squares and collecting the terms for each $h_x$ gives
+> [!note]- Proof
+> **Proof.** Let $h$ vanish on $P$ and represent a change in the internal values. Expanding the squares and collecting the terms for each $h_x$ gives
 >
 > $$
 > E(f+h)=E(f)+2\sum_{x\in I}h_x\sum_jc_{xj}(f_x-f_j)+E(h)
@@ -159,10 +160,11 @@ $$
 s_x=\sum_jc_{xj}(x-a_j)
 $$
 
-**Lemma.** For every affine vector $h=\sum_i h_i a_i$ with $\sum_i h_i=0$, one has $s_x\cdot h=h_x$. In particular, $s_x$ is orthogonal to $W_P$.
+> [!info] Why the same coefficients extend values
+> **Lemma.** For every affine vector $h=\sum_i h_i a_i$ with $\sum_i h_i=0$, one has $s_x\cdot h=h_x$. In particular, $s_x$ is orthogonal to $W_P$.
 
-> [!proof]- Proof of the lemma and theorem
-> For a short verification of the lemma, use the matrix representation from the specification. Let $\mathbf L$ be the Laplacian matrix, $\mathbf{Gr}$ the Green matrix, and $\mathbf e_x$ the column with a unit entry in position $x$ and zeros elsewhere. The coordinate column of $s_x$ is $\mathbf L\mathbf e_x$. For a column $\mathbf h$ with zero sum, the PMG core gives $\mathbf L\mathbf{Gr}\mathbf h=\mathbf h$. Hence
+> [!note]- Proof of the lemma and theorem
+> **Proof.** For a short verification of the lemma, use the matrix representation from the specification. Let $\mathbf L$ be the Laplacian matrix, $\mathbf{Gr}$ the Green matrix, and $\mathbf e_x$ the column with a unit entry in position $x$ and zeros elsewhere. The coordinate column of $s_x$ is $\mathbf L\mathbf e_x$. For a column $\mathbf h$ with zero sum, the PMG core gives $\mathbf L\mathbf{Gr}\mathbf h=\mathbf h$. Hence
 >
 > $$
 > s_x\cdot h=\mathbf e_x^{\mathsf T}\mathbf L\mathbf{Gr}\mathbf h=h_x
@@ -285,18 +287,19 @@ In particular, $r_x^2=4/11$ and $r_y^2=3/11$. The geometric calculation gives th
 
 Contraction preserves the sums $d_x^P$, but no longer distinguishes couplings to individual vertices in $P$. To recover the influence of each selected vertex, use the original coefficients $c_{yp}$.
 
-**Theorem.** The bi-coordinates of projections and the influence coefficients are given by
+> [!info] From the internal metric to influence
+> **Theorem.** The bi-coordinates of projections and the influence coefficients are given by
+>
+> $$
+> \boxed{\begin{aligned}
+> b_{xp}&=\sum_{y\in I}\mathrm{Fm}_{xy}c_{yp}\\
+> &=\sum_{y\in I}c_{yp}\frac{u_{\widehat M}([v_x,v_y])}{u_{\widehat M}(e)}
+> \end{aligned}}
+> \tag{6}
+> $$
 
-$$
-\boxed{\begin{aligned}
-b_{xp}&=\sum_{y\in I}\mathrm{Fm}_{xy}c_{yp}\\
-&=\sum_{y\in I}c_{yp}\frac{u_{\widehat M}([v_x,v_y])}{u_{\widehat M}(e)}
-\end{aligned}}
-\tag{6}
-$$
-
-> [!proof]- Proof using reciprocal bases
-> By the lemma, $s_y\cdot r_x$ equals the internal coordinate of $r_x$ in position $y$: it is $1$ when $x=y$ and $0$ otherwise. The vectors $s_y$ lie in the orthogonal complement of $W_P$ and form the reciprocal basis to the $r_x$.
+> [!note]- Proof using reciprocal bases
+> **Proof.** By the lemma, $s_y\cdot r_x$ equals the internal coordinate of $r_x$ in position $y$: it is $1$ when $x=y$ and $0$ otherwise. The vectors $s_y$ lie in the orthogonal complement of $W_P$ and form the reciprocal basis to the $r_x$.
 >
 > The expansion of $r_x$ in this reciprocal basis is therefore
 >
@@ -328,16 +331,17 @@ $$
 
 This is the internal principal block of the full Laplacian matrix. Its diagonal includes couplings to all vertices, including $P$. Thus $\mathbf A$ is not the Laplacian of the graph obtained by deleting the selected vertices and their couplings.
 
-**Lemma.** The fundamental matrix inverts the internal block:
+> [!info] Matrix notation for computation
+> **Lemma.** The fundamental matrix inverts the internal block:
+>
+> $$
+> \boxed{\mathbf{Fm}=\mathbf A^{-1},\qquad
+> \mathbf B=\mathbf A^{-1}\mathbf C}
+> \tag{7}
+> $$
 
-$$
-\boxed{\mathbf{Fm}=\mathbf A^{-1},\qquad
-\mathbf B=\mathbf A^{-1}\mathbf C}
-\tag{7}
-$$
-
-> [!proof]- Proof
-> In the expansion $s_x=\sum_jc_{xj}(x-a_j)$, replace each vertex by the sum of its projection and residual. For $p\in P$, the residual is zero, and the sum of the projected terms vanishes by the theorem proved above. We obtain
+> [!note]- Proof
+> **Proof.** In the expansion $s_x=\sum_jc_{xj}(x-a_j)$, replace each vertex by the sum of its projection and residual. For $p\in P$, the residual is zero, and the sum of the projected terms vanishes by the theorem proved above. We obtain
 >
 > $$
 > s_x=\sum_{y\in I}A_{xy}r_y
@@ -358,16 +362,17 @@ For a single set of prescribed values, it is enough to solve a linear system; th
 
 ## Nonnegativity and limitations
 
-**Proposition.** In the graph model considered here,
+> [!info] Nonnegativity and limitations
+> **Proposition.** In the graph model considered here,
+>
+> $$
+> b_{xp}\ge0,\qquad \sum_{p\in P}b_{xp}=1,\qquad
+> \min_{p\in P}f_p\le f_x\le\max_{p\in P}f_p
+> \tag{8}
+> $$
 
-$$
-b_{xp}\ge0,\qquad \sum_{p\in P}b_{xp}=1,\qquad
-\min_{p\in P}f_p\le f_x\le\max_{p\in P}f_p
-\tag{8}
-$$
-
-> [!proof]- The maximum principle and properties of the coefficients
-> If the function attains its maximum at an internal vertex, equality with the weighted average forces all its neighbors to have the same value. Along a path to a selected vertex, this maximum propagates to $P$. The same argument applies to the minimum. This proves the last part of (8).
+> [!note]- The maximum principle and properties of the coefficients
+> **Proof.** If the function attains its maximum at an internal vertex, equality with the weighted average forces all its neighbors to have the same value. Along a path to a selected vertex, this maximum propagates to $P$. The same argument applies to the minimum. This proves the last part of (8).
 >
 > For data equal to $1$ at one selected vertex and $0$ at the others, the solution lies between $0$ and $1$. Its internal values form the corresponding column of $\mathbf B$, so $b_{xp}\ge0$. Constant prescribed values of $1$ extend to the constant function $1$, so every row of $\mathbf B$ sums to $1$. $\square$
 

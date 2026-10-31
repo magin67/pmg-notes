@@ -79,7 +79,8 @@ $$
 \tag{2}
 $$
 
-**Proof.** In the expansion of the exponential, every spanning forest with $n-1$ edges is a tree on all $n$ vertices. The product of its edge vectors equals the boundary $(a_1\ldots a_n)$ up to a sign, which disappears in the quadratic form. Each tree therefore contributes one copy of $T_n$. By (1), the sum of these contributions is $n^{n-2}T_n$. Since the form $T_n$ is nonzero, the number of trees is $n^{n-2}$. $\square$
+> [!note]- Proof
+> **Proof.** In the expansion of the exponential, every spanning forest with $n-1$ edges is a tree on all $n$ vertices. The product of its edge vectors equals the boundary $(a_1\ldots a_n)$ up to a sign, which disappears in the quadratic form. Each tree therefore contributes one copy of $T_n$. By (1), the sum of these contributions is $n^{n-2}T_n$. Since the form $T_n$ is nonzero, the number of trees is $n^{n-2}$. $\square$
 
 Equality (2) is the classical **Cayley formula** for trees on a prescribed set of labelled vertices. Stanley gives it in Example 9.11; three combinatorial proofs appear in the appendix to Chapter 9 [1]. Here it follows from the fundamental theorem of SPFs and the product rule. Their proofs do not use Cayley's enumeration of trees, so there is no circular dependence. The generalisation counting ways to join prescribed components appears in [[Cayley's Theorem and Joining Prescribed Components]], with an independent combinatorial proof using the Prüfer code.
 

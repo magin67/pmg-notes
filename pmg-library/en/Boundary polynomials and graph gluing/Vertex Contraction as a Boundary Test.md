@@ -26,11 +26,12 @@ The input consists of the state polynomials from [[en/Boundary polynomials and g
 
 Let $G=(V,E)$ be a finite undirected graph on $n$ vertices with positive conductances, and let $B\subseteq V$ be a nonempty marked boundary. Edges are distinguishable; parallel edges are allowed. Existing loops may be removed beforehand because they belong to no forest. Connectivity is needed only in the section on the resistance determinant.
 
-**Definition.** Let
-
-$$
-\sigma=B_1|\cdots|B_s\in\Pi(B)
-$$
+> [!info] What contracting a partition means
+> **Definition.** Let
+>
+> $$
+> \sigma=B_1|\cdots|B_s\in\Pi(B)
+> $$
 
 Contraction by $\sigma$ identifies all vertices of each block $B_i$ with a single vertex $h_i$. Distinct blocks remain distinct; internal vertices $V\setminus B$ are retained. Denote the resulting graph by $G/\sigma$.
 
@@ -56,34 +57,37 @@ Contraction does not require an edge between the identified vertices. It is an o
 
 For a spanning forest $H$, write $\pi=\pi_B(H)$ for its induced boundary partition. Its blocks describe connectivity between boundary vertices; internal forest components do not enter $\pi$.
 
-**Definition.** The join $\pi\vee\sigma$ is the partition in which two vertices are equivalent if they can be connected by a sequence of steps within blocks of $\pi$ or $\sigma$. It is the least common coarsening of the two partitions.
+> [!info] When the image of a forest remains a forest
+> **Definition.** The join $\pi\vee\sigma$ is the partition in which two vertices are equivalent if they can be connected by a sequence of steps within blocks of $\pi$ or $\sigma$. It is the least common coarsening of the two partitions.
 
-**Theorem (selection criterion).** The image of a forest $H$ after contraction by $\sigma$ is acyclic if and only if
+> [!info] When the image of a forest remains a forest
+> **Theorem (selection criterion).** The image of a forest $H$ after contraction by $\sigma$ is acyclic if and only if
+>
+> $$
+> \boxed{r(\pi\vee\sigma)=r(\pi)+r(\sigma)}
+> \tag{1}
+> $$
+>
+> The image retains every selected edge label, including any loops or parallel edges produced; a cycle is precisely what excludes the selection.
 
-$$
-\boxed{r(\pi\vee\sigma)=r(\pi)+r(\sigma)}
-\tag{1}
-$$
-
-The image retains every selected edge label, including any loops or parallel edges produced; a cycle is precisely what excludes the selection.
-
-**Proof.** Suppose $H$ has $g$ edges and $c=n-g$ components, of which $k_0=c-b(\pi)$ are internal. Contraction leaves internal components unchanged. Components meeting the boundary merge according to $\pi\vee\sigma$. The image therefore has
-
-$$
-c'=k_0+b(\pi\vee\sigma)=c-b(\pi)+b(\pi\vee\sigma)
-$$
-
-components, $n'=n-r(\sigma)$ vertices, and $g$ distinguishable edges. For any undirected multigraph, $g-n'+c'$ is the number of independent cycles; it is zero exactly for a forest. This includes loops as one-edge cycles and parallel pairs as two-edge cycles. Substitution gives
-
-$$
-\begin{aligned}
-g-n'+c'
-&=r(\sigma)-b(\pi)+b(\pi\vee\sigma)\\
-&=r(\pi)+r(\sigma)-r(\pi\vee\sigma)
-\end{aligned}
-$$
-
-Thus acyclicity is equivalent to (1). $\square$
+> [!note]- Proof
+> **Proof.** Suppose $H$ has $g$ edges and $c=n-g$ components, of which $k_0=c-b(\pi)$ are internal. Contraction leaves internal components unchanged. Components meeting the boundary merge according to $\pi\vee\sigma$. The image therefore has
+>
+> $$
+> c'=k_0+b(\pi\vee\sigma)=c-b(\pi)+b(\pi\vee\sigma)
+> $$
+>
+> components, $n'=n-r(\sigma)$ vertices, and $g$ distinguishable edges. For any undirected multigraph, $g-n'+c'$ is the number of independent cycles; it is zero exactly for a forest. This includes loops as one-edge cycles and parallel pairs as two-edge cycles. Substitution gives
+>
+> $$
+> \begin{aligned}
+> g-n'+c'
+> &=r(\sigma)-b(\pi)+b(\pi\vee\sigma)\\
+> &=r(\pi)+r(\sigma)-r(\pi\vee\sigma)
+> \end{aligned}
+> $$
+>
+> Thus acyclicity is equivalent to (1). $\square$
 
 Selection depends only on the boundary state, not on the shapes of the internal trees or the number of internal components. Their contributions remain in the state polynomials.
 
@@ -125,22 +129,25 @@ $$
 \mathcal T_\sigma(s_\pi)=C(\pi,\sigma)
 $$
 
-**Definition.** The response of a component to the contraction test $\sigma$ is the polynomial
+> [!info] A linear test of the full passport
+> **Definition.** The response of a component to the contraction test $\sigma$ is the polynomial
+>
+> $$
+> U_{G,B}(\sigma;t)
+> =\mathcal T_\sigma\bigl(\mathbf f_{G,B}(t)\bigr)
+> =\sum_{\pi\in\Pi(B)}C(\pi,\sigma)\mathcal F^{G,B}_\pi(t)
+> $$
 
-$$
-U_{G,B}(\sigma;t)
-=\mathcal T_\sigma\bigl(\mathbf f_{G,B}(t)\bigr)
-=\sum_{\pi\in\Pi(B)}C(\pi,\sigma)\mathcal F^{G,B}_\pi(t)
-$$
+> [!info] A linear test of the full passport
+> **Theorem (polynomial consequence of the selection criterion).** With the edge-transfer rules specified above,
+>
+> $$
+> \boxed{F_{G/\sigma}(t)=U_{G,B}(\sigma;t)}
+> \tag{2}
+> $$
 
-**Theorem (polynomial consequence of the selection criterion).** With the edge-transfer rules specified above,
-
-$$
-\boxed{F_{G/\sigma}(t)=U_{G,B}(\sigma;t)}
-\tag{2}
-$$
-
-**Proof.** Every forest of the quotient graph specifies a unique subset of original edge labels. Splitting identified vertices cannot create cycles, so this subset is a forest of $G$ satisfying (1). Conversely, every forest passing test (1) gives a forest of the quotient graph. The correspondence is bijective and preserves labels, edge count, and the product of conductances. Summing weights gives (2). $\square$
+> [!note]- Proof
+> **Proof.** Every forest of the quotient graph specifies a unique subset of original edge labels. Splitting identified vertices cannot create cycles, so this subset is a forest of $G$ satisfying (1). Conversely, every forest passing test (1) gives a forest of the quotient graph. The correspondence is bijective and preserves labels, edge count, and the product of conductances. Summing weights gives (2). $\square$
 
 The degree of $t$ remains the number of selected original edges. The number of vertices has decreased, but every forest passing the test retains its edge count. Thus (2) has **no additional factor $t^{-r(\sigma)}$**.
 
@@ -270,25 +277,27 @@ $$
 
 This equality uses ordinary endpoint differences with coefficients $+1,-1$. For a tree on one block, the product of differences equals the boundary of that block up to sign; the sign disappears in the quadratic form. Changing the trees, order, or orientations leaves $q_\sigma$ unchanged.
 
-**Lemma (forest-form test).** Let $X_H$ be the exterior product of the edge vectors of a forest $H$. Then
+> [!info] Auxiliary differences
+> **Lemma (forest-form test).** Let $X_H$ be the exterior product of the edge vectors of a forest $H$. Then
+>
+> $$
+> [X_H]^2q_\sigma\ne0
+> \quad\Longleftrightarrow\quad
+> H\text{ passes test }\sigma
+> \tag{4}
+> $$
 
-$$
-[X_H]^2q_\sigma\ne0
-\quad\Longleftrightarrow\quad
-H\text{ passes test }\sigma
-\tag{4}
-$$
-
-**Proof.** The left-hand side is nonzero exactly when the edges of $H$, together with the auxiliary edges of $K_\sigma$, form a forest: a cycle is equivalent to linear dependence of the edge vectors. Auxiliary edge labels are distinct from original labels even when endpoints coincide.
-
-After adding $K_\sigma$, the number of components is $k_0+b(\pi\vee\sigma)$, the number of edges is $g+r$, and the number of vertices is still $n$. The number of independent cycles is
-
-$$
-(g+r)-n+k_0+b(\pi\vee\sigma)
-=r(\pi)+r(\sigma)-r(\pi\vee\sigma)
-$$
-
-It vanishes under the same condition (1). $\square$
+> [!note]- Proof
+> **Proof.** The left-hand side is nonzero exactly when the edges of $H$, together with the auxiliary edges of $K_\sigma$, form a forest: a cycle is equivalent to linear dependence of the edge vectors. Auxiliary edge labels are distinct from original labels even when endpoints coincide.
+>
+> After adding $K_\sigma$, the number of components is $k_0+b(\pi\vee\sigma)$, the number of edges is $g+r$, and the number of vertices is still $n$. The number of independent cycles is
+>
+> $$
+> (g+r)-n+k_0+b(\pi\vee\sigma)
+> =r(\pi)+r(\sigma)-r(\pi\vee\sigma)
+> $$
+>
+> It vanishes under the same condition (1). $\square$
 
 Thus $\varphi_\sigma([X_H]^2)$ and $[X_H]^2q_\sigma$ vanish for exactly the same original forests. However, these forms lie in different spaces and have different grades: a surviving image has grade $g$, while the nonzero product in the original space has grade $g+r$.
 
@@ -314,18 +323,20 @@ $$
 
 First extract the leading coefficient of (2). Set $r=r(\sigma)$ and $n'=n-r$. For $V=\{v_1,\ldots,v_n\}$, the original spanning form is $T_V=[(v_1\cdots v_n)]^2$. The functional $\tau_V$ extracts the coefficient of $T_V$ in the space of the original $n$ vertices. Write a forest weight as $w(H)=\prod_{e\in E(H)}c_e$.
 
-**Theorem.** With the stated normalization of $q_\sigma$,
+> [!info] The spanning-tree coefficient and the resistance determinant
+> **Theorem.** With the stated normalization of $q_\sigma$,
+>
+> $$
+> \boxed{
+> \tau(G/\sigma)
+> =[t^{n'-1}]U_{G,B}(\sigma;t)
+> =\tau_V(M_Gq_\sigma),\qquad M_G=\exp L_G
+> }
+> \tag{5}
+> $$
 
-$$
-\boxed{
-\tau(G/\sigma)
-=[t^{n'-1}]U_{G,B}(\sigma;t)
-=\tau_V(M_Gq_\sigma),\qquad M_G=\exp L_G
-}
-\tag{5}
-$$
-
-**Proof.** The top grade of the product involves forests $H$ with $n-1-r=n'-1$ edges. For each forest passing the test, $H\cup K_\sigma$ is acyclic and has $n-1$ edges on $n$ vertices, hence is a tree. Its form is $T_V$ with coefficient $1$, and the original edges have weight $w(H)$. The coefficient of $T_V$ therefore sums exactly the weights of the spanning trees of the quotient graph. $\square$
+> [!note]- Proof
+> **Proof.** The top grade of the product involves forests $H$ with $n-1-r=n'-1$ edges. For each forest passing the test, $H\cup K_\sigma$ is acyclic and has $n-1$ edges on $n$ vertices, hence is a tree. Its form is $T_V$ with coefficient $1$, and the original edges have weight $w(H)$. The coefficient of $T_V$ therefore sums exactly the weights of the spanning trees of the quotient graph. $\square$
 
 Unlike summing arbitrary forest coefficients, extracting the coefficient of $T_V$ is a well-defined linear functional on polyforms themselves. The spanning-tree result (5) may therefore be evaluated after structural transformations.
 

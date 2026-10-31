@@ -65,7 +65,8 @@ $$
 
 Temporarily distinguish occurrences of parts by indices, even when their values coincide.
 
-**Definition.** A partial matching of components is a set of index pairs $H\subseteq\{1,\ldots,r\}\times\{1,\ldots,s\}$ in which each index of either factor occurs at most once. Equivalently, we select some components from each factor and choose a bijection between the selected components.
+> [!info] The product through partial matchings
+> **Definition.** A partial matching of components is a set of index pairs $H\subseteq\{1,\ldots,r\}\times\{1,\ldots,s\}$ in which each index of either factor occurs at most once. Equivalently, we select some components from each factor and choose a bijection between the selected components.
 
 For each such $H$, construct a partition $\nu_H$:
 
@@ -73,13 +74,14 @@ For each such $H$, construct a partition $\nu_H$:
 - leave every unmatched part unchanged;
 - forget the temporary indices and sort the parts.
 
-**Definition.** The product of basis partitions is
-
-$$
-\boxed{
-\lambda*\mu=\sum_H\nu_H
-}
-$$
+> [!info] The product through partial matchings
+> **Definition.** The product of basis partitions is
+>
+> $$
+> \boxed{
+> \lambda*\mu=\sum_H\nu_H
+> }
+> $$
 
 The sum includes the empty matching. Extend the product to linear combinations by bilinearity. Identical resulting types are collected: their coefficients count the distinct matchings that produce the same type.
 
@@ -115,7 +117,8 @@ This number depends on the numbers of parts in the factors. Its distribution amo
 
 ## Why this defines an algebra
 
-**Theorem.** The product is well-defined on unordered types, commutative, and associative. The empty partition $1$ is its unit. The weights of the factors add.
+> [!info] Why this defines an algebra
+> **Theorem.** The product is well-defined on unordered types, commutative, and associative. The empty partition $1$ is its unit. The weights of the factors add.
 
 > [!note]- Proof
 > **Proof.** Reindexing occurrences of parts changes the matching indices while preserving all resulting types and their multiplicities. Thus the result is independent of the temporary indices. Exchanging the factors reverses every matched pair, proving commutativity. The empty factor has no parts to match, leaving a single possibility that preserves the other factor.
@@ -262,26 +265,28 @@ There is one matching with no pairs, four with one pair, and two with two pairs.
 
 ## Powers of the part of weight one and combinatorial potentials
 
-**Lemma.** For every $k\geqslant0$,
+> [!info] Powers of the part of weight one and combinatorial potentials
+> **Lemma.** For every $k\geqslant0$,
+>
+> $$
+> \boxed{
+> (1)^k=\sum_{\lambda\vdash k}s_2(\lambda)\,\lambda
+> }
+> $$
+>
+> Here $\lambda\vdash k$ means that $\lambda$ ranges over all integer partitions of weight $k$. For $\lambda=(a_1,\ldots,a_r)$ with part multiplicities $\mu_j$, we use the abbreviation
+>
+> $$
+> s_2(\lambda)=s_2([a_1,\ldots,a_r])
+> =\frac{k!}{[a_i!]!\,[\mu_j!]!}
+> $$
+>
+> This is the [[Partitions and the Combinatorial Potential of the Second Kind#The combinatorial potential of the second kind|combinatorial potential of the second kind]] introduced for a numerical collection. At $k=0$, only the empty partition occurs; its potential and the zeroth power both equal $1$.
 
-$$
-\boxed{
-(1)^k=\sum_{\lambda\vdash k}s_2(\lambda)\,\lambda
-}
-$$
-
-Here $\lambda\vdash k$ means that $\lambda$ ranges over all integer partitions of weight $k$. For $\lambda=(a_1,\ldots,a_r)$ with part multiplicities $\mu_j$, we use the abbreviation
-
-$$
-s_2(\lambda)=s_2([a_1,\ldots,a_r])
-=\frac{k!}{[a_i!]!\,[\mu_j!]!}
-$$
-
-This is the [[Partitions and the Combinatorial Potential of the Second Kind#The combinatorial potential of the second kind|combinatorial potential of the second kind]] introduced for a numerical collection. At $k=0$, only the empty partition occurs; its potential and the zeroth power both equal $1$.
-
-**Proof.** Temporarily give the $k$ factors $(1)$ distinct labels. When the next factor is multiplied in, its label either forms a new block or joins an existing block. The rule for multiplication by $(1)$ enumerates these possibilities.
-
-Every set partition of the labels arises exactly once. Removing the last label uniquely recovers the preceding partition and the step taken; if its block was a singleton, the entire block is removed. Forgetting the labels leaves the block sizes, namely the integer type $\lambda$. Its coefficient is the number of set partitions of that type, which is $s_2(\lambda)$. $\square$
+> [!note]- Proof
+> **Proof.** Temporarily give the $k$ factors $(1)$ distinct labels. When the next factor is multiplied in, its label either forms a new block or joins an existing block. The rule for multiplication by $(1)$ enumerates these possibilities.
+>
+> Every set partition of the labels arises exactly once. Removing the last label uniquely recovers the preceding partition and the step taken; if its block was a singleton, the entire block is removed. Forgetting the labels leaves the block sizes, namely the integer type $\lambda$. Its coefficient is the number of set partitions of that type, which is $s_2(\lambda)$. $\square$
 
 The first powers are
 
@@ -373,17 +378,19 @@ $$
 =2\sum_{i<j}y_i y_j
 $$
 
-**Proposition.** The map $\Psi$ is an isomorphism from $\mathcal A$ onto the real algebra of symmetric functions.
+> [!info] Realization by ordinary multiplication of symmetric functions
+> **Proposition.** The map $\Psi$ is an isomorphism from $\mathcal A$ onto the real algebra of symmetric functions.
 
-**Proof.** In the product $\widetilde m_\lambda\widetilde m_\mu$, the indices within each factor are distinct. Index coincidences between the factors therefore form a partial matching: an index in the first factor can coincide with at most one index in the second. Coincident indices add their exponents. Grouping all possible coincidences gives
-
-$$
-\widetilde m_\lambda\widetilde m_\mu
-=\sum_H\widetilde m_{\nu_H}
-=\Psi(\lambda*\mu)
-$$
-
-The functions $\widetilde m_\lambda$ form a basis because they are obtained from the monomial basis by multiplication by the nonzero numbers $[\mu_j!]!$. Hence $\Psi$ is a linear bijection that preserves products. $\square$
+> [!note]- Proof
+> **Proof.** In the product $\widetilde m_\lambda\widetilde m_\mu$, the indices within each factor are distinct. Index coincidences between the factors therefore form a partial matching: an index in the first factor can coincide with at most one index in the second. Coincident indices add their exponents. Grouping all possible coincidences gives
+>
+> $$
+> \widetilde m_\lambda\widetilde m_\mu
+> =\sum_H\widetilde m_{\nu_H}
+> =\Psi(\lambda*\mu)
+> $$
+>
+> The functions $\widetilde m_\lambda$ form a basis because they are obtained from the monomial basis by multiplication by the nonzero numbers $[\mu_j!]!$. Hence $\Psi$ is a linear bijection that preserves products. $\square$
 
 In particular, $(b)$ corresponds to the power sum $p_b=\sum_i y_i^b$. The lemma on powers of $(1)$ becomes the expansion of $p_1^k$ in the basis $\widetilde m_\lambda$. The proposed name thus highlights a basis useful in PMG and the combinatorial meaning of the coefficients of a known algebra.
 

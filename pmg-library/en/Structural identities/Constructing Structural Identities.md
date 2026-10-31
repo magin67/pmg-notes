@@ -153,13 +153,14 @@ The same additional blocks on vertices outside $S$ may be appended to every part
 
 Another way to obtain identities extends the [[Partition Forms and the Tetrahedron Identity#A lemma on a zero sum|lemma on a zero sum]].
 
-**Lemma.** Let the exterior elements $X_1,\ldots,X_m$ have the same grade, with $m\geqslant4$, and satisfy $\sum_{j=1}^mX_j=0$. For any chosen index $i$,
-
-$$
-\sum_{j\ne i}[X_i+X_j]^2
-=(m-3)[X_i]^2+\sum_{j\ne i}[X_j]^2
-\tag{2}
-$$
+> [!info] Five vertices and a distinguished argument
+> **Lemma.** Let the exterior elements $X_1,\ldots,X_m$ have the same grade, with $m\geqslant4$, and satisfy $\sum_{j=1}^mX_j=0$. For any chosen index $i$,
+>
+> $$
+> \sum_{j\ne i}[X_i+X_j]^2
+> =(m-3)[X_i]^2+\sum_{j\ne i}[X_j]^2
+> \tag{2}
+> $$
 
 > [!note]- Proof
 > **Proof.** Expand each quadratic form using the polar form $\{X,Y\}=[X,Y]+[Y,X]$, with no factor of $1/2$:
@@ -187,17 +188,18 @@ $$
 
 They have grade $3$ and sum to zero because $\partial^2[abcde]=0$.
 
-**Corollary.** For the distinguished vertex $a$,
-
-$$
-\boxed{
-\begin{aligned}
-&q_{ab|cde}+q_{ac|bde}+q_{ad|bce}+q_{ae|bcd}=\\
-&\qquad=2q_{a|bcde}+q_{b|acde}+q_{c|abde}+q_{d|abce}+q_{e|abcd}
-\end{aligned}
-}
-\tag{3}
-$$
+> [!info] Five vertices and a distinguished argument
+> **Corollary.** For the distinguished vertex $a$,
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> &q_{ab|cde}+q_{ac|bde}+q_{ad|bce}+q_{ae|bcd}=\\
+> &\qquad=2q_{a|bcde}+q_{b|acde}+q_{c|abde}+q_{d|abce}+q_{e|abcd}
+> \end{aligned}
+> }
+> \tag{3}
+> $$
 
 > [!note]- Proof
 > **Proof.** Expanding the boundaries gives
@@ -269,12 +271,13 @@ $$
 E_4[1,1]=E_4[2,0]
 $$
 
-**Corollary.** On five vertices,
-
-$$
-\boxed{E_5[2,1]=3E_5[3,0]}
-\tag{6}
-$$
+> [!info] From local identities to symmetric sums
+> **Corollary.** On five vertices,
+>
+> $$
+> \boxed{E_5[2,1]=3E_5[3,0]}
+> \tag{6}
+> $$
 
 > [!note]- Counting the coefficients
 > **Proof.** Add the five equalities (3), choosing each vertex in turn as the distinguished one.

@@ -105,20 +105,21 @@ The quantities being added here are forms. Both sides represent the same polyfor
 
 ### A lemma on a zero sum
 
-**Lemma.** Suppose that the exterior elements $X_1,X_2,X_3,X_4$ have the same grade and satisfy
-
-$$
-X_1+X_2+X_3+X_4=0
-$$
-
-Then
-
-$$
-[X_1+X_2]^2+[X_1+X_3]^2+[X_1+X_4]^2
-=
-\sum_{i=1}^4[X_i]^2
-\tag{2}
-$$
+> [!info] A lemma on a zero sum
+> **Lemma.** Suppose that the exterior elements $X_1,X_2,X_3,X_4$ have the same grade and satisfy
+>
+> $$
+> X_1+X_2+X_3+X_4=0
+> $$
+>
+> Then
+>
+> $$
+> [X_1+X_2]^2+[X_1+X_3]^2+[X_1+X_4]^2
+> =
+> \sum_{i=1}^4[X_i]^2
+> \tag{2}
+> $$
 
 > [!note]- Proof of the lemma
 > **Proof.** Use the polar form $\{X,Y\}=[X,Y]+[Y,X]$ without a factor of $1/2$. Expanding the three terms gives
@@ -221,16 +222,17 @@ $$
 
 The factor $4$ arises because a triangle has half the area of the parallelogram spanned by the two vectors from one vertex.
 
-**Corollary.** In the chosen Euclidean metric,
-
-$$
-4\left(S_{abc}^2+S_{abd}^2+S_{acd}^2+S_{bcd}^2\right)
-=
-S_{ab,cd}^2+S_{ac,bd}^2+S_{ad,bc}^2
-\tag{4}
-$$
-
-This numerical equality of areas is a metric consequence of the tetrahedron identity.
+> [!info] Areas of triangles and parallelograms
+> **Corollary.** In the chosen Euclidean metric,
+>
+> $$
+> 4\left(S_{abc}^2+S_{abd}^2+S_{acd}^2+S_{bcd}^2\right)
+> =
+> S_{ab,cd}^2+S_{ac,bd}^2+S_{ad,bc}^2
+> \tag{4}
+> $$
+>
+> This numerical equality of areas is a metric consequence of the tetrahedron identity.
 
 ### The circumscribed parallelepiped
 
@@ -329,13 +331,14 @@ This calculation uses the coordinates directly. It illustrates the metric conseq
 
 The left-hand side of (1) contains three forms with unit coefficients, whereas the right-hand side contains four. Thus one polyform has two representations with different coefficient sums: $3$ and $4$.
 
-**Corollary.** The coefficient sum in an expansion into partition forms depends on the chosen representation. It is not determined by the polyform alone.
-
-Metric evaluation behaves differently: it is linear on the space of forms itself and therefore assigns the same value to equal polyforms. In the numerical example, both expressions evaluate to $6$, despite having different coefficient sums.
-
-Both sides of (1) are preserved by every permutation of the four vertices. A permutation merely rearranges the terms; any orientation signs disappear in the quadratic forms. The identity therefore also provides an example of equality between symmetric polyforms. Their general properties are treated separately.
-
-For the continuation of the structural series, the relevant mechanism is how the equality is obtained: a zero sum of boundaries yields an equality of quadratic forms. Extending such identities to larger vertex sets and obtaining new relations by multiplying forms are treated in [[Constructing Structural Identities]].
+> [!info] Coefficients and symmetry
+> **Corollary.** The coefficient sum in an expansion into partition forms depends on the chosen representation. It is not determined by the polyform alone.
+>
+> Metric evaluation behaves differently: it is linear on the space of forms itself and therefore assigns the same value to equal polyforms. In the numerical example, both expressions evaluate to $6$, despite having different coefficient sums.
+>
+> Both sides of (1) are preserved by every permutation of the four vertices. A permutation merely rearranges the terms; any orientation signs disappear in the quadratic forms. The identity therefore also provides an example of equality between symmetric polyforms. Their general properties are treated separately.
+>
+> For the continuation of the structural series, the relevant mechanism is how the equality is obtained: a zero sum of boundaries yields an equality of quadratic forms. Extending such identities to larger vertex sets and obtaining new relations by multiplying forms are treated in [[Constructing Structural Identities]].
 
 ## Connection with the literature
 

@@ -113,18 +113,19 @@ $$
 
 The boundary $(abc)$ has grade $2$, the boundary $(de)$ has grade $1$, and their product has grade $3$. Square brackets with exponent $2$ here denote a formal quadratic form, not a numerical collection or its metric evaluation.
 
-**Definition.** Let $\mathcal P_n(\boldsymbol\lambda)$ be the set of all partitions of a fixed $n$-vertex set with the given boundary type. For a partition $\pi=\{B_1,\ldots,B_m\}$, put
-
-$$
-q_\pi=[(B_1)\cdots(B_m)]^2
-$$
-
-Here $(B_i)$ denotes the boundary of a block, and the boundary of a singleton is the unit. Passing to the quadratic form removes signs arising from permutations of vertices and blocks. The symmetric sum of this type is
-
-$$
-E_n[\boldsymbol\lambda]
-=\sum_{\pi\in\mathcal P_n(\boldsymbol\lambda)}q_\pi
-$$
+> [!info] From a partition to a form
+> **Definition.** Let $\mathcal P_n(\boldsymbol\lambda)$ be the set of all partitions of a fixed $n$-vertex set with the given boundary type. For a partition $\pi=\{B_1,\ldots,B_m\}$, put
+>
+> $$
+> q_\pi=[(B_1)\cdots(B_m)]^2
+> $$
+>
+> Here $(B_i)$ denotes the boundary of a block, and the boundary of a singleton is the unit. Passing to the quadratic form removes signs arising from permutations of vertices and blocks. The symmetric sum of this type is
+>
+> $$
+> E_n[\boldsymbol\lambda]
+> =\sum_{\pi\in\mathcal P_n(\boldsymbol\lambda)}q_\pi
+> $$
 
 Each partition is counted once with coefficient $1$. This is the normalisation in the [[Symmetric Polyforms - Types and Normalizations|definition of symmetric sums]]. Therefore,
 
@@ -140,17 +141,19 @@ Let $J$ be the set of distinct positive grades in $\boldsymbol k$. For $j\in J$,
 
 We use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|collection product notation]]: $[u_i]!$ is the product of the elements and $[u_i!]!$ is the product of their factorials.
 
-**Proposition.** For $r\geqslant1$, $k_i\geqslant1$, and $\ell=n-k-r\geqslant0$, the size of the symmetric sum is
+> [!info] The size of a symmetric sum
+> **Proposition.** For $r\geqslant1$, $k_i\geqslant1$, and $\ell=n-k-r\geqslant0$, the size of the symmetric sum is
+>
+> $$
+> \boxed{
+> \#E_n[k_1,\ldots,k_r,0^\ell]
+> =s_2([k_1+1,\ldots,k_r+1,1^\ell])
+> =\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
+> }
+> $$
 
-$$
-\boxed{
-\#E_n[k_1,\ldots,k_r,0^\ell]
-=s_2([k_1+1,\ldots,k_r+1,1^\ell])
-=\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
-}
-$$
-
-**Proof.** Partition the original vertices into blocks of sizes $k_i+1$ and $\ell$ singletons. Apply the potential formula to this collection of sizes. The shift $k_i\mapsto k_i+1$ preserves the multiplicities of the positive parts. All these blocks have size at least $2$, so the singletons form a separate group of multiplicity $\ell$. Their permutations supply the factor $\ell!$, giving the stated formula. $\square$
+> [!note]- Proof
+> **Proof.** Partition the original vertices into blocks of sizes $k_i+1$ and $\ell$ singletons. Apply the potential formula to this collection of sizes. The shift $k_i\mapsto k_i+1$ preserves the multiplicities of the positive parts. All these blocks have size at least $2$, so the singletons form a separate group of multiplicity $\ell$. Their permutations supply the factor $\ell!$, giving the stated formula. $\square$
 
 For type $[2,1,0]$ on six vertices,
 
@@ -173,11 +176,12 @@ $$
 
 Let a numerical type $\mathbf x$ have positive parts and weight $v\leqslant n$. First choose $v$ elements from an $n$-element set, then partition the chosen subset according to $\mathbf x$.
 
-**Definition.** The number of such partial partitions is the **external combinatorial potential**:
-
-$$
-e_n(\mathbf x)=\binom nv s_2(\mathbf x),\qquad v=w(\mathbf x)
-$$
+> [!info] Choosing a subset and the external potential
+> **Definition.** The number of such partial partitions is the **external combinatorial potential**:
+>
+> $$
+> e_n(\mathbf x)=\binom nv s_2(\mathbf x),\qquad v=w(\mathbf x)
+> $$
 
 Unchosen elements remain outside the partitioned subset. This condition is part of the object being counted.
 
@@ -235,11 +239,12 @@ This is the number of forests of type $[2,1]$ in the complete graph $K_5$. The s
 
 By [[Symmetric Polyforms of the Complete Graph|Cayley's formula]], a fixed set of $k_i+1\geqslant2$ labelled vertices supports $(k_i+1)^{k_i-1}$ trees. Choices in different blocks are independent.
 
-**Definition.** Denote the number of tree realisations of one fixed block partition by
-
-$$
-t(\boldsymbol k)=[(k_i+1)^{k_i-1}]!
-$$
+> [!info] Counting forests of a prescribed type
+> **Definition.** Denote the number of tree realisations of one fixed block partition by
+>
+> $$
+> t(\boldsymbol k)=[(k_i+1)^{k_i-1}]!
+> $$
 
 Each singleton has one realisation without edges. Therefore, the number of forests of this type in $K_n$ is
 
@@ -250,7 +255,8 @@ F_n(\boldsymbol\lambda)
 }
 $$
 
-**Proof.** First choose a vertex partition, in $\#E_n[\boldsymbol\lambda]$ ways. Then choose a tree on each block, in $t(\boldsymbol k)$ independent combinations. Each forest uniquely determines its component partition and the trees on those components, so there is no repetition. $\square$
+> [!note]- Proof
+> **Proof.** First choose a vertex partition, in $\#E_n[\boldsymbol\lambda]$ ways. Then choose a tree on each block, in $t(\boldsymbol k)$ independent combinations. Each forest uniquely determines its component partition and the trees on those components, so there is no repetition. $\square$
 
 For $\boldsymbol k=[2,1]$, $t(\boldsymbol k)=[3,1]!=3$. For $[1,1]$, both blocks are pairs, so $t([1,1])=1$: the three pair partitions of four vertices give exactly three forests.
 

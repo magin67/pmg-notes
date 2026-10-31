@@ -71,39 +71,41 @@ These constructions use only [[Basic Objects and Operations of Polyform Algebra|
 
 ## Independence, forests, and cycles
 
-**Theorem.** For an edge set $S\subseteq E$, the following conditions are equivalent:
+> [!info] Independence, forests, and cycles
+> **Theorem.** For an edge set $S\subseteq E$, the following conditions are equivalent:
+>
+> $$
+> \boxed{
+> \begin{gathered}
+> S\text{ is a forest}
+> \\
+> \Longleftrightarrow\quad\{v_\ell:\ell\in S\}\text{ are linearly independent}
+> \\
+> \Longleftrightarrow\quad B_S\ne0
+> \end{gathered}
+> }
+> $$
+>
+> A forest here is a subgraph on the entire set $\mathcal V$, including isolated vertices. Maximality under inclusion is not required.
 
-$$
-\boxed{
-\begin{gathered}
-S\text{ is a forest}
-\\
-\Longleftrightarrow\quad\{v_\ell:\ell\in S\}\text{ are linearly independent}
-\\
-\Longleftrightarrow\quad B_S\ne0
-\end{gathered}
-}
-$$
-
-A forest here is a subgraph on the entire set $\mathcal V$, including isolated vertices. Maximality under inclusion is not required.
-
-**Proof.** If $S$ contains a cycle, orient it consistently. For its vertices $a_{i_1},\ldots,a_{i_m}$,
-
-$$
-(a_{i_2}-a_{i_1})+(a_{i_3}-a_{i_2})+\cdots+(a_{i_1}-a_{i_m})=0
-$$
-
-Other choices of orientation change only the coefficient signs. This is a nontrivial linear dependence, so the exterior product of all vectors in the set vanishes.
-
-Now suppose $S$ is a nonempty forest and
-
-$$
-\sum_{\ell\in S}\beta_\ell v_\ell=0
-$$
-
-Choose a leaf in a nontrivial component. Its basis vertex appears in exactly one edge vector, so the coefficient of that edge is zero. Delete the edge and repeat. Every coefficient is zero. The empty set is independent by definition.
-
-The equivalence between linear independence and a nonzero exterior product is a standard property of exterior algebra. $\square$
+> [!note]- Proof
+> **Proof.** If $S$ contains a cycle, orient it consistently. For its vertices $a_{i_1},\ldots,a_{i_m}$,
+>
+> $$
+> (a_{i_2}-a_{i_1})+(a_{i_3}-a_{i_2})+\cdots+(a_{i_1}-a_{i_m})=0
+> $$
+>
+> Other choices of orientation change only the coefficient signs. This is a nontrivial linear dependence, so the exterior product of all vectors in the set vanishes.
+>
+> Now suppose $S$ is a nonempty forest and
+>
+> $$
+> \sum_{\ell\in S}\beta_\ell v_\ell=0
+> $$
+>
+> Choose a leaf in a nontrivial component. Its basis vertex appears in exactly one edge vector, so the coefficient of that edge is zero. Delete the edge and repeat. Every coefficient is zero. The empty set is independent by definition.
+>
+> The equivalence between linear independence and a nonzero exterior product is a standard property of exterior algebra. $\square$
 
 For example,
 
@@ -120,11 +122,12 @@ For a tree, the product of its edge vectors equals the simplex boundary on its v
 
 ## What is a matroid?
 
-**Definition.** A finite **matroid** $\mathsf M=(E,\mathcal I)$ consists of a finite ground set $E$ and a family $\mathcal I$ of its subsets, called independent sets. This family satisfies three conditions:
-
-1. **The empty set is independent:** $\varnothing\in\mathcal I$.
-2. **Heredity:** if $I\in\mathcal I$ and $J\subseteq I$, then $J\in\mathcal I$.
-3. **Augmentation:** if $I,J\in\mathcal I$ and $\#I<\#J$, there is an element $\ell\in J\setminus I$ such that $I\cup\{\ell\}\in\mathcal I$.
+> [!info] What is a matroid?
+> **Definition.** A finite **matroid** $\mathsf M=(E,\mathcal I)$ consists of a finite ground set $E$ and a family $\mathcal I$ of its subsets, called independent sets. This family satisfies three conditions:
+>
+> 1. **The empty set is independent:** $\varnothing\in\mathcal I$.
+> 2. **Heredity:** if $I\in\mathcal I$ and $J\subseteq I$, then $J\in\mathcal I$.
+> 3. **Augmentation:** if $I,J\in\mathcal I$ and $\#I<\#J$, there is an element $\ell\in J\setminus I$ such that $I\cup\{\ell\}\in\mathcal I$.
 
 Subsets outside $\mathcal I$ are dependent. Thus a matroid specifies a consistent independence rule; neither graph vertices nor vector coordinates enter its general definition. This is the standard definition from matroid theory [1].
 
@@ -134,7 +137,8 @@ Linear and cycle matroids are examples of the general construction. The definiti
 
 ## The cycle matroid
 
-**Definition.** The cycle matroid $\mathsf M(G)$ has ground set $E$. Its independent sets are the edge sets that form forests. By the theorem above, these are exactly the independent sets of the linear matroid of $\{v_\ell\}_{\ell\in E}$, and therefore satisfy all three defining conditions.
+> [!info] The cycle matroid
+> **Definition.** The cycle matroid $\mathsf M(G)$ has ground set $E$. Its independent sets are the edge sets that form forests. By the theorem above, these are exactly the independent sets of the linear matroid of $\{v_\ell\}_{\ell\in E}$, and therefore satisfy all three defining conditions.
 
 The notation $\mathsf M(G)$ is distinct from the polyform $M=\exp L$.
 
@@ -171,26 +175,28 @@ $$
 
 Thus the component count and corank differ by one only when the original graph is connected. The matroid does not record added isolated vertices: they change neither $E$ nor its independent subsets.
 
-**Definition.** An isomorphism of cycle matroids is a bijection $\psi:E(G)\to E(H)$ such that $S$ is a forest if and only if $\psi(S)$ is a forest. In the weighted setting, additionally require
-
-$$
-c_{\psi(\ell)}=c_\ell
-$$
+> [!info] The cycle matroid
+> **Definition.** An isomorphism of cycle matroids is a bijection $\psi:E(G)\to E(H)$ such that $S$ is a forest if and only if $\psi(S)$ is a forest. In the weighted setting, additionally require
+>
+> $$
+> c_{\psi(\ell)}=c_\ell
+> $$
 
 Such a bijection preserves bases, cycles, and the ranks of all sets. It need not arise from a bijection between graph vertices.
 
 ## What is a matroid parameter?
 
-**Definition.** A numerical or polynomial graph characteristic $P$ is a **matroid parameter** on a specified class of graphs if it is determined by the cycle matroid. Equivalently, isomorphic cycle matroids have equal values of $P$. For weighted graphs, conductances of corresponding edges must be preserved:
-
-$$
-\mathsf M(G)\simeq\mathsf M(H),\qquad
-c'_{\psi(\ell)}=c_\ell
-\quad\Longrightarrow\quad
-P(G,c)=P(H,c')
-$$
-
-Here $\psi$ is the isomorphism, and $c,c'$ are the conductances of the two graphs. In the unweighted case they all equal $1$. For example, rank and the number of independent sets of each size are matroid parameters directly from the definition; the corresponding claims for weighted forest sums and metric characteristics require justification.
+> [!info] What is a matroid parameter?
+> **Definition.** A numerical or polynomial graph characteristic $P$ is a **matroid parameter** on a specified class of graphs if it is determined by the cycle matroid. Equivalently, isomorphic cycle matroids have equal values of $P$. For weighted graphs, conductances of corresponding edges must be preserved:
+>
+> $$
+> \mathsf M(G)\simeq\mathsf M(H),\qquad
+> c'_{\psi(\ell)}=c_\ell
+> \quad\Longrightarrow\quad
+> P(G,c)=P(H,c')
+> $$
+>
+> Here $\psi$ is the isomorphism, and $c,c'$ are the conductances of the two graphs. In the unweighted case they all equal $1$. For example, rank and the number of independent sets of each size are matroid parameters directly from the definition; the corresponding claims for weighted forest sums and metric characteristics require justification.
 
 For a family indexed by individual edges, values are preserved under the same correspondence: $P_{\psi(\ell)}(H,c')=P_\ell(G,c)$. This is the meaning of matroid invariance for edge resistances proved below. It supplies no correspondence between all vertex pairs.
 
@@ -242,9 +248,11 @@ $$
 
 Here $f_0=1$ and $f_d=\tau$. These are weight sums of ordinary spanning forests without chosen roots.
 
-**Corollary.** Every $f_g$, the polynomial $F_G$, and the spanning-tree coefficient $\tau$ are determined by the weighted cycle matroid.
+> [!info] Forest coefficients in the Laplacian exponential
+> **Corollary.** Every $f_g$, the polynomial $F_G$, and the spanning-tree coefficient $\tau$ are determined by the weighted cycle matroid.
 
-**Proof.** A matroid isomorphism matches independent sets of the same size, and weight preservation preserves each product $w(F)$. $\square$
+> [!note]- Proof
+> **Proof.** A matroid isomorphism matches independent sets of the same size, and weight preservation preserves each product $w(F)$. $\square$
 
 The sum $f_g$ refers specifically to the edge-factor expansion. Forms of different forests may be linearly dependent, so summing coefficients in an arbitrary other expression for $M_g$ need not give $f_g$. This distinction is explained in [[Partition Forms and the Tetrahedron Identity]] and [[From Polyforms to Partitions]].
 
@@ -395,22 +403,24 @@ Quantities computed directly from the Green matrix can also be matroid parameter
 
 Let $\ell=\{i,j\}$ be an **existing edge**. Write $R_\ell=R_{ij}$ for the effective resistance between its endpoints. It may differ from the conductor resistance $1/c_\ell$.
 
-**Proposition.** For a connected graph with positive conductances,
+> [!info] Edge resistance as a link between the two sides
+> **Proposition.** For a connected graph with positive conductances,
+>
+> $$
+> \boxed{
+> R_\ell=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
+> =\frac{\partial\log\tau}{\partial c_\ell}
+> }
+> $$
 
-$$
-\boxed{
-R_\ell=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
-=\frac{\partial\log\tau}{\partial c_\ell}
-}
-$$
-
-**Proof.** By the [[Variation of a Single Edge|conductance variation formula]],
-
-$$
-\tau(G;c_\ell+\delta)=\tau(G;c_\ell)(1+\delta R_\ell)
-$$
-
-Differentiation with respect to $\delta$ at zero proves the claim. $\square$
+> [!note]- Proof
+> **Proof.** By the [[Variation of a Single Edge|conductance variation formula]],
+>
+> $$
+> \tau(G;c_\ell+\delta)=\tau(G;c_\ell)(1+\delta R_\ell)
+> $$
+>
+> Differentiation with respect to $\delta$ at zero proves the claim. $\square$
 
 The spanning-tree polynomial is determined by matroid bases. Its derivative with respect to the variable of a matched edge, and hence $R_\ell$, is therefore preserved by a conductance-preserving isomorphism. If a spanning tree is sampled with probability proportional to its weight, then
 

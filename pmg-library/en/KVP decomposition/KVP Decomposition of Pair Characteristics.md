@@ -32,23 +32,24 @@ The decomposition itself requires neither positivity, connectedness, nor a previ
 
 ## Definition of KVP
 
-**Definition.** The KVP decomposition of a table $A$ is a representation
-
-$$
-\boxed{A=A_K+A_V+A_P}
-\tag{1}
-$$
-
-whose components have the following form:
-
-$$
-\begin{aligned}
-(A_K)_{ij}&=\mu\\
-(A_V)_{ij}&=\frac{v_i+v_j}{n-2},\qquad \sum_i v_i=0\\
-(A_P)_{ij}&=p_{ij},\qquad p_{ij}=p_{ji},\qquad \sum_{j\ne i}p_{ij}=0
-\end{aligned}
-\tag{2}
-$$
+> [!info] Definition of KVP
+> **Definition.** The KVP decomposition of a table $A$ is a representation
+>
+> $$
+> \boxed{A=A_K+A_V+A_P}
+> \tag{1}
+> $$
+>
+> whose components have the following form:
+>
+> $$
+> \begin{aligned}
+> (A_K)_{ij}&=\mu\\
+> (A_V)_{ij}&=\frac{v_i+v_j}{n-2},\qquad \sum_i v_i=0\\
+> (A_P)_{ij}&=p_{ij},\qquad p_{ij}=p_{ji},\qquad \sum_{j\ne i}p_{ij}=0
+> \end{aligned}
+> \tag{2}
+> $$
 
 These conditions define three linear subspaces, or **sectors**: $\mathcal K_n$, $\mathcal V_n$, and $\mathcal P_n$. A sector consists of all tables of the corresponding form; a component $A_X$ is part of a particular table $A$.
 
@@ -127,9 +128,11 @@ The P-component therefore changes the distribution of values among pairs while p
 
 ## Existence, uniqueness, and projectors
 
-**Theorem.** For $n\ge3$, every table $A\in\mathcal A_n$ has a unique KVP decomposition. Its components are given by formulas (3)-(6).
+> [!info] Existence, uniqueness, and projectors
+> **Theorem.** For $n\ge3$, every table $A\in\mathcal A_n$ has a unique KVP decomposition. Its components are given by formulas (3)-(6).
 
-**Proof.** The constructed components satisfy all conditions in (2), proving existence. In any decomposition, the sum of pair values determines $\mu$ by (3). The row sums then determine $v_i$ by (4). The residual $A_P$ is consequently unique as well. $\square$
+> [!note]- Proof
+> **Proof.** The constructed components satisfy all conditions in (2), proving existence. In any decomposition, the sum of pair values determines $\mu$ by (3). The row sums then determine $v_i$ by (4). The residual $A_P$ is consequently unique as well. $\square$
 
 Denote the linear operators extracting the components by $\Pi_K$, $\Pi_V$, and $\Pi_P$:
 
@@ -163,21 +166,23 @@ $$
 
 Here $\langle A,B\rangle_0$ is the ordinary Euclidean inner product of table coordinates. It is not the metric inner product of PMG vertices or vectors. We call $\|A\|_0^2$ the **coefficient sum of squares**.
 
-**Theorem.** The K-, V-, and P-sectors are pairwise orthogonal with respect to $\langle\ ,\ \rangle_0$. Consequently,
+> [!info] Coefficient orthogonality
+> **Theorem.** The K-, V-, and P-sectors are pairwise orthogonal with respect to $\langle\ ,\ \rangle_0$. Consequently,
+>
+> $$
+> \boxed{\mathcal A_n=\mathcal K_n\mathbin\oplus\mathcal V_n\mathbin\oplus\mathcal P_n}
+> $$
 
-$$
-\boxed{\mathcal A_n=\mathcal K_n\mathbin\oplus\mathcal V_n\mathbin\oplus\mathcal P_n}
-$$
-
-**Proof.** Every V- or P-table has zero sum of coefficients and is therefore orthogonal to a constant K-table. For $V(v)\in\mathcal V_n$ and $P\in\mathcal P_n$,
-
-$$
-\langle V(v),P\rangle_0
-=\frac1{n-2}\sum_{i<j}(v_i+v_j)P_{ij}
-=\frac1{n-2}\sum_i v_i\sum_{j\ne i}P_{ij}=0
-$$
-
-Orthogonality makes the sum direct, and the construction of the components has already proved that it exhausts the space. $\square$
+> [!note]- Proof
+> **Proof.** Every V- or P-table has zero sum of coefficients and is therefore orthogonal to a constant K-table. For $V(v)\in\mathcal V_n$ and $P\in\mathcal P_n$,
+>
+> $$
+> \langle V(v),P\rangle_0
+> =\frac1{n-2}\sum_{i<j}(v_i+v_j)P_{ij}
+> =\frac1{n-2}\sum_i v_i\sum_{j\ne i}P_{ij}=0
+> $$
+>
+> Orthogonality makes the sum direct, and the construction of the components has already proved that it exhausts the space. $\square$
 
 The projectors are self-adjoint with respect to this inner product. The coefficient sum of squares splits into three terms:
 
@@ -194,16 +199,17 @@ There is also a precise approximation interpretation: $A_K+A_V$ is the unique ta
 
 ## The number of independent parameters
 
-**Corollary.** For $n\ge3$,
-
-$$
-\dim\mathcal K_n=1,\qquad
-\dim\mathcal V_n=n-1,\qquad
-\dim\mathcal P_n=\frac{n(n-3)}2
-\tag{9}
-$$
-
-K is specified by one number. V is specified by $n$ numbers subject to one zero-sum constraint; the vector itself is recovered from the row sums. Subtracting these dimensions from $\dim\mathcal A_n=\binom n2$ gives the dimension of P.
+> [!info] The number of independent parameters
+> **Corollary.** For $n\ge3$,
+>
+> $$
+> \dim\mathcal K_n=1,\qquad
+> \dim\mathcal V_n=n-1,\qquad
+> \dim\mathcal P_n=\frac{n(n-3)}2
+> \tag{9}
+> $$
+>
+> K is specified by one number. V is specified by $n$ numbers subject to one zero-sum constraint; the vector itself is recovered from the row sums. Subtracting these dimensions from $\dim\mathcal A_n=\binom n2$ gives the dimension of P.
 
 | Number of elements $n$ | All pairs | K | V | P |
 |---:|---:|---:|---:|---:|

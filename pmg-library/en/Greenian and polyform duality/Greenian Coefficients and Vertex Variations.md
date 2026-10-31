@@ -102,41 +102,44 @@ $$
 
 These are dual deletion elements; the direct vertices remain independent.
 
-**Definition.** The polar form of a pair of distinct dual elements is
-
-$$
-\{a_i,a_j\}=[a_i,a_j]+[a_j,a_i]
-$$
+> [!info] The polar basis as an alternative representation
+> **Definition.** The polar form of a pair of distinct dual elements is
+>
+> $$
+> \{a_i,a_j\}=[a_i,a_j]+[a_j,a_i]
+> $$
 
 We consider symmetric grade-one forms, that is, elements of $\operatorname{Sym}^2(W^*)$.
 
-**Theorem.** The forms $\{a_i,a_j\}$, $i<j$, form a basis of $\operatorname{Sym}^2(W^*)$. Thus every symmetric grade-one form has a unique representation
+> [!info] The polar basis as an alternative representation
+> **Theorem.** The forms $\{a_i,a_j\}$, $i<j$, form a basis of $\operatorname{Sym}^2(W^*)$. Thus every symmetric grade-one form has a unique representation
+>
+> $$
+> \boxed{S=\sum_{i<j}q_{ij}\{a_i,a_j\}}
+> \tag{2}
+> $$
 
-$$
-\boxed{S=\sum_{i<j}q_{ij}\{a_i,a_j\}}
-\tag{2}
-$$
-
-**Proof.** Polarizing the dual relation gives
-
-$$
-0=\left\{a_i,\sum_j a_j\right\}
-=2[a_i]^2+\sum_{j\ne i}\{a_i,a_j\}
-$$
-
-Consequently,
-
-$$
-[a_i]^2=-\frac12\sum_{j\ne i}\{a_i,a_j\}
-$$
-
-Every quadratic term is expressible through polar terms. Since the dual vertices generate $W^*$, the polar forms span the entire space of symmetric forms. Their number equals its dimension:
-
-$$
-\binom n2=\frac{d(d+1)}2
-$$
-
-Thus they form a basis. $\square$
+> [!note]- Proof
+> **Proof.** Polarizing the dual relation gives
+>
+> $$
+> 0=\left\{a_i,\sum_j a_j\right\}
+> =2[a_i]^2+\sum_{j\ne i}\{a_i,a_j\}
+> $$
+>
+> Consequently,
+>
+> $$
+> [a_i]^2=-\frac12\sum_{j\ne i}\{a_i,a_j\}
+> $$
+>
+> Every quadratic term is expressible through polar terms. Since the dual vertices generate $W^*$, the polar forms span the entire space of symmetric forms. Their number equals its dimension:
+>
+> $$
+> \binom n2=\frac{d(d+1)}2
+> $$
+>
+> Thus they form a basis. $\square$
 
 The polar expression is also unique for fixed vertices. Unlike the main vector basis, it is used here to extract resistances directly. No reference vertex needs to be selected.
 
@@ -167,19 +170,21 @@ $$
 
 Here $\tau$ in the numerator extracts the coefficient of $T$. This agrees with the definition $P_M(F)=\tau(MF)/\tau(M)$: only $M_{d-1}F$ contributes to the top grade.
 
-**Lemma.** For any direct grade-one form $F$,
+> [!info] Resistances in the polar representation
+> **Lemma.** For any direct grade-one form $F$,
+>
+> $$
+> F/Q_1=P_M(F)e
+> $$
 
-$$
-F/Q_1=P_M(F)e
-$$
-
-**Proof.** It suffices to check the equality on basis forms $[u_i,u_j]$ in a direct basis $u_1,\ldots,u_d$ and its dual basis. By (1), $M_{d-1}=M_d/Q_1$. Multiplying this form by $[u_i,u_j]$ leaves only the term in which precisely $u_i$ and $u_j$ were deleted from the two arguments of the top form. The signs of deletion and the subsequent exterior multiplication cancel across the two arguments. We obtain
-
-$$
-M_{d-1}F=(F/Q_1)M_d
-$$
-
-Comparing coefficients of $T$ and dividing by $\tau(G)$ completes the proof. $\square$
+> [!note]- Proof
+> **Proof.** It suffices to check the equality on basis forms $[u_i,u_j]$ in a direct basis $u_1,\ldots,u_d$ and its dual basis. By (1), $M_{d-1}=M_d/Q_1$. Multiplying this form by $[u_i,u_j]$ leaves only the term in which precisely $u_i$ and $u_j$ were deleted from the two arguments of the top form. The signs of deletion and the subsequent exterior multiplication cancel across the two arguments. We obtain
+>
+> $$
+> M_{d-1}F=(F/Q_1)M_d
+> $$
+>
+> Comparing coefficients of $T$ and dividing by $\tau(G)$ completes the proof. $\square$
 
 The resistance of a pair is defined by the norm of the direct vector:
 
@@ -189,18 +194,19 @@ $$
 
 The lemma and (3) yield the polar representation.
 
-**Theorem.** The polar expression for the first dual form is
-
-$$
-\boxed{
-Q_1=-\frac12\sum_{i<j}R_{ij}\{a_i,a_j\}
-}
-\tag{4}
-$$
-
-Its coefficients are unique and determine every pairwise resistance. In particular, negative polar coefficients are compatible with positivity of the resistance metric: polar basis forms are not themselves positive quadratic forms.
-
-The transition between vector and polar expressions gives two ways to read the data of a single dual form:
+> [!info] Resistances in the polar representation
+> **Theorem.** The polar expression for the first dual form is
+>
+> $$
+> \boxed{
+> Q_1=-\frac12\sum_{i<j}R_{ij}\{a_i,a_j\}
+> }
+> \tag{4}
+> $$
+>
+> Its coefficients are unique and determine every pairwise resistance. In particular, negative polar coefficients are compatible with positivity of the resistance metric: polar basis forms are not themselves positive quadratic forms.
+>
+> The transition between vector and polar expressions gives two ways to read the data of a single dual form:
 
 | Representation of $Q_1$ | Grade-one forms | Coefficients |
 |---|---|---|
@@ -391,21 +397,23 @@ $$
 
 If all $t_i=0$, the graph $G+p$ is disconnected and its spanning coefficient is zero.
 
-**Theorem.** For any $t_i\ge0$,
+> [!info] Adding a vertex and the contribution of every grade
+> **Theorem.** For any $t_i\ge0$,
+>
+> $$
+> \boxed{
+> \tau(G+p)=
+> \sum_{\pi}\mu_\pi\prod_{C\in\pi}t(C)
+> }
+> \tag{10}
+> $$
+>
+> The sum runs over all partitions of the original vertices into nonempty blocks; $\mu_\pi$ is defined in (8).
 
-$$
-\boxed{
-\tau(G+p)=
-\sum_{\pi}\mu_\pi\prod_{C\in\pi}t(C)
-}
-\tag{10}
-$$
-
-The sum runs over all partitions of the original vertices into nonempty blocks; $\mu_\pi$ is defined in (8).
-
-**Proof.** Removing $p$ from a spanning tree of the new graph leaves a spanning forest of the original graph. Each forest component was joined to $p$ by exactly one edge: no edge would violate connectedness, and two edges would create a cycle.
-
-Conversely, choose a spanning forest and attach each component to $p$ by one edge. This gives a spanning tree. The sum of conductances of the ways to attach component $C$ is $t(C)$; choices for different components are independent. Grouping forests by partition gives (10). $\square$
+> [!note]- Proof
+> **Proof.** Removing $p$ from a spanning tree of the new graph leaves a spanning forest of the original graph. Each forest component was joined to $p$ by exactly one edge: no edge would violate connectedness, and two edges would create a cycle.
+>
+> Conversely, choose a spanning forest and attach each component to $p$ by one edge. This gives a spanning tree. The sum of conductances of the ways to attach component $C$ is $t(C)$; choices for different components are independent. Grouping forests by partition gives (10). $\square$
 
 Denote the homogeneous part of degree $k+1$ in the new conductances by
 
@@ -470,23 +478,25 @@ $$
 
 This is the Laplacian of additional undirected couplings of conductance $t_it_j/\sigma$ between the old vertices. Eliminating $p$ by a Schur complement leaves the Laplacian $\mathbf L+\mathbf K_{\mathbf t}$.
 
-**Corollary.** We have
+> [!info] Calculating directly from the canonical form
+> **Corollary.** We have
+>
+> $$
+> \boxed{
+> \frac{\tau(G+p)}{\tau(G)}
+> =\sigma\det\bigl(\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}\bigr)
+> }
+> \tag{13}
+> $$
 
-$$
-\boxed{
-\frac{\tau(G+p)}{\tau(G)}
-=\sigma\det\bigl(\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}\bigr)
-}
-\tag{13}
-$$
-
-**Proof.** Take the cofactor of the Laplacian of $G+p$ corresponding to an old vertex. The Schur complement with respect to the new vertex's diagonal entry $\sigma$ gives
-
-$$
-\tau(G+p)=\sigma\,\tau(\mathbf L+\mathbf K_{\mathbf t})
-$$
-
-Here $\tau$ applied to a Laplacian denotes its common cofactor. On the space of zero-sum columns, the ratio of the determinants of $\mathbf L+\mathbf K_{\mathbf t}$ and $\mathbf L$ equals the determinant of $\mathbf I+\mathbf{Gr}\mathbf K_{\mathbf t}$. Both Laplacians have the same constant null vector, and their determinants on this space equal $n$ times their spanning coefficients. Thus the factors $n$ cancel. On constant columns, $\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}$ acts as the identity, giving (13). $\square$
+> [!note]- Proof
+> **Proof.** Take the cofactor of the Laplacian of $G+p$ corresponding to an old vertex. The Schur complement with respect to the new vertex's diagonal entry $\sigma$ gives
+>
+> $$
+> \tau(G+p)=\sigma\,\tau(\mathbf L+\mathbf K_{\mathbf t})
+> $$
+>
+> Here $\tau$ applied to a Laplacian denotes its common cofactor. On the space of zero-sum columns, the ratio of the determinants of $\mathbf L+\mathbf K_{\mathbf t}$ and $\mathbf L$ equals the determinant of $\mathbf I+\mathbf{Gr}\mathbf K_{\mathbf t}$. Both Laplacians have the same constant null vector, and their determinants on this space equal $n$ times their spanning coefficients. Thus the factors $n$ cancel. On constant columns, $\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}$ acts as the identity, giving (13). $\square$
 
 The matrix $\mathbf{Gr}$ is assembled directly from the canonical vector coefficients $\gamma_{ij}$; it can also be recovered from the resistances of the polar expression (4). Thus (13) calculates the variation without choosing a forest expansion. Formulas (10) and (13) express the same result in two ways: the first exposes forest components, while the second uses canonical metric data.
 

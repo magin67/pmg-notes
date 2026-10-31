@@ -89,7 +89,7 @@ $$
 
 The last entry must be a root: no other ordinary vertex can still be adjacent to the last ordinary leaf.
 
-> [!proof]- Why the coding is reversible
+> [!note]- Why the coding is reversible
 > **Proof.** Take any sequence of the stated form. Among the remaining ordinary labels, choose the least one absent from the entire remaining code. Join it to the first code entry, then remove the chosen label and that entry. Repeat until all ordinary vertices have been removed.
 >
 > If $t$ ordinary vertices remain, the code has $t$ entries, the last of which is a root. At most $t-1$ ordinary labels can therefore occur in it, so a suitable label exists. A previously deleted vertex cannot occur in the remaining code: it was absent from that code when deleted.
@@ -210,10 +210,11 @@ $$
 
 The first term chooses the singleton and a tree on the other three vertices with their root. The second chooses one of three pair partitions and one of three trees on each pair with its root.
 
-> [!example]- All 27 possibilities for two pairs
-> ![Three partitions of four ordinary vertices into two pairs, with nine independent tree choices for each partition](Twenty%20Seven%20Rooted%20Forests.svg)
->
-> *Figure 3. All $27$ possibilities from the author's research drawing are retained, regrouped by $ab\mid cd$, $ac\mid bd$, and $ad\mid bc$. Within each panel, rows vary the tree on the first pair and columns vary the tree on the second. Roots are coloured and have no individual labels.*
+**All 27 possibilities for two pairs**
+
+![Three partitions of four ordinary vertices into two pairs, with nine independent tree choices for each partition](Twenty%20Seven%20Rooted%20Forests.svg)
+
+*Figure 3. All $27$ possibilities from the author's research drawing are retained, regrouped by $ab\mid cd$, $ac\mid bd$, and $ad\mid bc$. Within each panel, rows vary the tree on the first pair and columns vary the tree on the second. Roots are coloured and have no individual labels.*
 
 Now count the same forests through their codes. Call the final root $\rho_0$ and the other root $\rho_1$. The first three positions must contain $\rho_1$ at least once. All other values are chosen from $a,b,c,d,\rho_0$. Grouping by the number of occurrences of $\rho_1$ gives
 
@@ -256,17 +257,18 @@ For graphs, this passage is explained by the rooted-forest code. For polynomials
 
 ## The discrete Taylor formula
 
-**Theorem.** For a polynomial $P$ of degree at most $d$ and any $a$,
+> [!info] The discrete Taylor formula
+> **Theorem.** For a polynomial $P$ of degree at most $d$ and any $a$,
+>
+> $$
+> \boxed{
+> P(x)=\sum_{m=0}^{d}\frac{\Delta^mP(a)}{m!}(x-a)_{\underline m}
+> }
+> $$
+>
+> This is Newton's formula for equally spaced nodes, the polynomial analogue of a Taylor series [3]. The notation $\Delta^mP(a)$ means the value of the $m$th finite difference at $a$.
 
-$$
-\boxed{
-P(x)=\sum_{m=0}^{d}\frac{\Delta^mP(a)}{m!}(x-a)_{\underline m}
-}
-$$
-
-This is Newton's formula for equally spaced nodes, the polynomial analogue of a Taylor series [3]. The notation $\Delta^mP(a)$ means the value of the $m$th finite difference at $a$.
-
-> [!proof]- Extracting a coefficient by a finite difference
+> [!note]- Extracting a coefficient by a finite difference
 > **Proof.** We have $\Delta(x-a)_{\underline j}=j(x-a)_{\underline{j-1}}$. After $m$ applications of $\Delta$ and substitution of $x=a$, the result is $m!$ when $j=m$ and zero when $j\ne m$. Applying this to the unique expansion of $P$ in the stated basis gives the coefficient $\Delta^mP(a)/m!$. $\square$
 
 In particular,

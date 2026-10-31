@@ -167,32 +167,34 @@ E_G=E_1E_2,\qquad
 \tag{10}
 $$
 
-**Derivation for the specified gluing.** Write
+> [!info] Gluing along two shared vertices
+> **Derivation for the specified gluing.** Write
+>
+> $$
+> \begin{aligned}
+> U&=B_1E_2+E_1B_2\\
+> V&=C_1E_2+E_1C_2\\
+> W&=D_1E_2+E_1D_2,\qquad Z=E_1E_2\\
+> Q&=A_1E_2+E_1A_2+B_1C_2+C_1B_2-2D_1D_2
+> \end{aligned}
+> \tag{11}
+> $$
+>
+> Then the entire passport of the result on the same boundary is
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> A_G&=Q-\xi(U+V)+\xi^2 Z\\
+> B_G&=U-\xi Z,\qquad C_G=V-\xi Z\\
+> D_G&=W,\qquad E_G=Z
+> \end{aligned}
+> }
+> \tag{12}
+> $$
 
-$$
-\begin{aligned}
-U&=B_1E_2+E_1B_2\\
-V&=C_1E_2+E_1C_2\\
-W&=D_1E_2+E_1D_2,\qquad Z=E_1E_2\\
-Q&=A_1E_2+E_1A_2+B_1C_2+C_1B_2-2D_1D_2
-\end{aligned}
-\tag{11}
-$$
-
-Then the entire passport of the result on the same boundary is
-
-$$
-\boxed{
-\begin{aligned}
-A_G&=Q-\xi(U+V)+\xi^2 Z\\
-B_G&=U-\xi Z,\qquad C_G=V-\xi Z\\
-D_G&=W,\qquad E_G=Z
-\end{aligned}
-}
-\tag{12}
-$$
-
-**Proof.** The equalities for $B_G,C_G,D_G$ follow by substituting (6) into (10). For the first equality, expand the determinant of $\mathbf S_1+\mathbf S_2-\xi I_2$ and multiply by $E_1E_2$. Terms involving only one component reduce by (7) to $A_1E_2$ and $E_1A_2$; mixed terms give $B_1C_2+C_1B_2-2D_1D_2$. The diagonal correction gives the remaining terms. The resulting expressions are polynomial and therefore hold also when $E_1E_2=0$. $\square$
+> [!note]- Proof
+> **Proof.** The equalities for $B_G,C_G,D_G$ follow by substituting (6) into (10). For the first equality, expand the determinant of $\mathbf S_1+\mathbf S_2-\xi I_2$ and multiply by $E_1E_2$. Terms involving only one component reduce by (7) to $A_1E_2$ and $E_1A_2$; mixed terms give $B_1C_2+C_1B_2-2D_1D_2$. The diagonal correction gives the remaining terms. The resulting expressions are polynomial and therefore hold also when $E_1E_2=0$. $\square$
 
 Formula (12) is derived here from the classical Schur complement and (7), rather than borrowed as an ordinary forest-state formula. It is bilinear in the two five-component vectors over the polynomial ring in $\xi$. For a fixed partner, it is a linear transformation of the passport. Sufficiency concerns the marked pair and the stated gluing rules; planarity is not required.
 

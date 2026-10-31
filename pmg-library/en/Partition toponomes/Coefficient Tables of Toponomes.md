@@ -160,7 +160,7 @@ Consider the path $P_n$ and the cycle $C_n$ on the same number of vertices $n\ge
 > \qquad 1\leqslant k\leqslant n-1
 > $$
 
-> [!proof]- Proof by double counting
+> [!note]- Proof by double counting
 > **Proof.** Count pairs $(F,e)$, where $F$ is a spanning forest of the cycle with $k$ edges and $r$ nontrivial components, and the cycle edge $e$ does not belong to $F$. Each forest leaves $n-k$ edges unselected, giving the left-hand side.
 >
 > Alternatively, choose $e$ first, in $n$ ways. The graph $C_n-e$ is a path on the same $n$ vertices. Forests not containing $e$ are exactly its forests; their edge counts and all their components are preserved. Each cut therefore allows $a_{k,r}(P_n)$ choices, giving the right-hand side. $\square$
@@ -176,21 +176,22 @@ Thus the theorem gives identical ratios $a_{k,r}/a_{k,1}$. Division is performed
 
 ### Explicit formula and row symmetry
 
-**Proposition.** For $1\leqslant r\leqslant\min(k,n-k)$, the path coefficients and the common normalized coefficient are
+> [!info] Explicit formula and row symmetry
+> **Proposition.** For $1\leqslant r\leqslant\min(k,n-k)$, the path coefficients and the common normalized coefficient are
+>
+> $$
+> a_{k,r}(P_n)=\binom{k-1}{r-1}\binom{n-k}{r}
+> $$
+>
+> $$
+> \boxed{
+> \frac{a_{k,r}(P_n)}{n-k}
+> =\frac{a_{k,r}(C_n)}n
+> =\frac1r\binom{k-1}{r-1}\binom{n-k-1}{r-1}
+> }
+> $$
 
-$$
-a_{k,r}(P_n)=\binom{k-1}{r-1}\binom{n-k}{r}
-$$
-
-$$
-\boxed{
-\frac{a_{k,r}(P_n)}{n-k}
-=\frac{a_{k,r}(C_n)}n
-=\frac1r\binom{k-1}{r-1}\binom{n-k-1}{r-1}
-}
-$$
-
-> [!proof]- Counting runs of selected edges
+> [!note]- Counting runs of selected edges
 > **Proof.** The selected edges of a path form $r$ nonempty runs. Their lengths, read along the path, compose $k$ into $r$ positive parts, in $\binom{k-1}{r-1}$ ways. At least one unselected edge must separate consecutive runs. After reserving these $r-1$ edges, the remaining $n-k-r$ unselected edges can be distributed among $r+1$ gaps, including the two end gaps, in $\binom{n-k}{r}$ ways. Multiplication gives the first formula. The second follows from the theorem and $\binom{n-k}{r}/(n-k)=\binom{n-k-1}{r-1}/r$. $\square$
 
 The substitution $k\mapsto n-k$ exchanges the two binomial factors in the last formula. Hence **the rows of the normalized triangle are symmetric about the middle**. On the cycle this corresponds to exchanging selected and unselected edges: their nonempty runs alternate, so the number of nontrivial components is preserved. The cycle triangle itself is also symmetric in its columns; for the path, symmetry appears after normalization.
@@ -241,9 +242,11 @@ a_{2,2}(P_4)=1,
 \qquad \frac12=\frac24
 $$
 
-**Corollary.** If $n$ is prime, every entry of the common normalized triangle is an integer.
+> [!info] When the normalized coefficients are integers
+> **Corollary.** If $n$ is prime, every entry of the common normalized triangle is an integer.
 
-**Proof.** Rotations of the cycle preserve $k,r$. For prime $n$, every nonidentity rotation generates all rotations, so an edge set invariant under it must be empty or full. Both cases are excluded by $1\leqslant k\leqslant n-1$. Thus each edge set under consideration has exactly $n$ distinct rotations, and the number of forests in each cell is divisible by $n$. $\square$
+> [!note]- Proof
+> **Proof.** Rotations of the cycle preserve $k,r$. For prime $n$, every nonidentity rotation generates all rotations, so an edge set invariant under it must be empty or full. Both cases are excluded by $1\leqslant k\leqslant n-1$. Thus each edge set under consideration has exactly $n$ distinct rotations, and the number of forests in each cell is divisible by $n$. $\square$
 
 This explains the integer entries for $n=11$. For composite $n$, some edge sets have a nontrivial rotational symmetry, and division by $n$ may produce a fraction. In general, normalized coefficients do not count forests up to rotation; for prime $n$, this interpretation is valid. Reflections are not identified.
 
@@ -260,22 +263,23 @@ $$
 \rho(\lambda)=u_{w(\lambda),\#\lambda}
 $$
 
-**Proposition.** The rule
-
-$$
-u_{k,r}*u_{l,s}=
-\sum_{h=0}^{\min(r,s)}
-\binom rh\binom sh h!\,
-u_{k+l,r+s-h}
-$$
-
-defines a product for which
-
-$$
-\rho(\lambda*\mu)=\rho(\lambda)*\rho(\mu)
-$$
-
-The unit is $u_{0,0}$. Here, tables are considered without fixing a common $n$: multiplication may increase the number of vertices required.
+> [!info] Multiplication of tables
+> **Proposition.** The rule
+>
+> $$
+> u_{k,r}*u_{l,s}=
+> \sum_{h=0}^{\min(r,s)}
+> \binom rh\binom sh h!\,
+> u_{k+l,r+s-h}
+> $$
+>
+> defines a product for which
+>
+> $$
+> \rho(\lambda*\mu)=\rho(\lambda)*\rho(\mu)
+> $$
+>
+> The unit is $u_{0,0}$. Here, tables are considered without fixing a common $n$: multiplication may increase the number of vertices required.
 
 > [!note]- Proof
 > **Proof.** Suppose $\lambda$ has $r$ parts and $\mu$ has $s$. A partial matching of size $h$ can be chosen in $\binom rh\binom sh h!$ ways: choose $h$ parts in each factor and a bijection between them. After the matched parts merge, the weight is $k+l$ and the number of parts is $r+s-h$. These parameters do not depend on the individual part sizes, so all matchings of size $h$ give the same table cell. Bilinear extension proves compatibility of the reduction with multiplication. Associativity and commutativity are inherited from the partition algebra. $\square$

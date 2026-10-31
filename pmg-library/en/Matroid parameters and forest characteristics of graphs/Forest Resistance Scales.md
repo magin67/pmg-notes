@@ -28,15 +28,16 @@ $$
 
 A forest of corank $k$ has $d-k$ edges and $k+1$ components. Its normalized coefficients are $\alpha_k=f_{d-k}/\tau$; in particular, $\alpha_0=1$.
 
-**Definition.** The forest resistance scales are the ratios
-
-$$
-\boxed{
-\xi_k(G)=\frac{f_{d-k}(G)}{f_{d-k+1}(G)}
-=\frac{\alpha_k(G)}{\alpha_{k-1}(G)},\qquad 1\le k\le d
-}
-\tag{1}
-$$
+> [!info] Definition and assumptions
+> **Definition.** The forest resistance scales are the ratios
+>
+> $$
+> \boxed{
+> \xi_k(G)=\frac{f_{d-k}(G)}{f_{d-k+1}(G)}
+> =\frac{\alpha_k(G)}{\alpha_{k-1}(G)},\qquad 1\le k\le d
+> }
+> \tag{1}
+> $$
 
 All coefficients in (1) are positive: deleting edges of a spanning tree gives forests of every grade from $0$ to $d$. Normalization by the global $\tau$ assumes connectedness; adding isolated vertices lies outside this note's assumptions.
 
@@ -91,29 +92,31 @@ This is the total conductance of original edges that can be added to $F$ without
 
 **Admissible additions.** In unit $K_4$, a 2-forest of type $3+1$ admits three edges to its isolated vertex; the unused edge within the three-vertex component would close a cycle. For type $2+2$, all four edges between components are admissible. There are $12$ and $3$ such forests, respectively, and all $15$ have weight $1$. Hence $\mathbb E_1 A=(12\cdot3+3\cdot4)/15=16/5$. The formula below gives $\xi_1=3/(16/5)=15/16$. Line crossings without a circle are not vertices.
 
-**Proposition.** For distribution (3),
+> [!info] A random forest and admissible edge addition
+> **Proposition.** For distribution (3),
+>
+> $$
+> \boxed{
+> \mathbb E_k A(F)=(n-k)\frac{f_{d-k+1}}{f_{d-k}},\qquad
+> \xi_k=\frac{n-k}{\mathbb E_k A(F)}
+> }
+> \tag{4}
+> $$
 
-$$
-\boxed{
-\mathbb E_k A(F)=(n-k)\frac{f_{d-k+1}}{f_{d-k}},\qquad
-\xi_k=\frac{n-k}{\mathbb E_k A(F)}
-}
-\tag{4}
-$$
-
-**Proof.** Consider pairs $(F,\ell)$ where $F\in\mathcal F_k(G)$ and $\ell$ joins two components of $F$. The pair weight is $w(F)c_\ell$. Summing first over forests gives
-
-$$
-\sum_{F\in\mathcal F_k(G)}w(F)A(F)
-$$
-
-On the other hand, $F'=F\cup\{\ell\}$ is a forest with $d-k+1=n-k$ edges, and the pair weight equals $w(F')$. Every such $F'$ arises in exactly $n-k$ ways, by deleting any one of its edges. Therefore
-
-$$
-\sum_{F\in\mathcal F_k(G)}w(F)A(F)=(n-k)f_{d-k+1}
-$$
-
-Division by $f_{d-k}$ proves both equalities in (4). $\square$
+> [!note]- Proof
+> **Proof.** Consider pairs $(F,\ell)$ where $F\in\mathcal F_k(G)$ and $\ell$ joins two components of $F$. The pair weight is $w(F)c_\ell$. Summing first over forests gives
+>
+> $$
+> \sum_{F\in\mathcal F_k(G)}w(F)A(F)
+> $$
+>
+> On the other hand, $F'=F\cup\{\ell\}$ is a forest with $d-k+1=n-k$ edges, and the pair weight equals $w(F')$. Every such $F'$ arises in exactly $n-k$ ways, by deleting any one of its edges. Therefore
+>
+> $$
+> \sum_{F\in\mathcal F_k(G)}w(F)A(F)=(n-k)f_{d-k+1}
+> $$
+>
+> Division by $f_{d-k}$ proves both equalities in (4). $\square$
 
 The formula relates one step of joining forest components to the mean total weight of admissible couplings. The number $n-k$ counts edges of the resulting forest, not admissible edges of each initial forest; the latter count may vary.
 
@@ -175,7 +178,8 @@ $$
 
 This applies the external theory of log-concavity of matroid independent sets. We do not prove the general theorem here, but use the result of Anari, Liu, Oveis Gharan, and Vinzant [1].
 
-**Definition.** A nonnegative sequence $b_0,\ldots,b_N$ without internal zeros is **ultra-log-concave** if $b_g/\binom Ng$ is log-concave: the square of each interior term is at least the product of its neighbors. “Without internal zeros” means that no zero lies between positive terms. Forest coefficients are positive from $f_0$ through $f_d$ and zero above the rank.
+> [!info] Ordering of scales and log-concavity
+> **Definition.** A nonnegative sequence $b_0,\ldots,b_N$ without internal zeros is **ultra-log-concave** if $b_g/\binom Ng$ is log-concave: the square of each interior term is at least the product of its neighbors. “Without internal zeros” means that no zero lies between positive terms. Forest coefficients are positive from $f_0$ through $f_d$ and zero above the rank.
 
 A precise reference to the external result requires one more term. A nonnegative polynomial is **completely log-concave** if every sequence of directional derivatives in directions with nonnegative coordinates yields either the zero polynomial or a polynomial whose logarithm is concave on the positive orthant. The sequence may be empty. Here a directional derivative means $D_v=\sum_i v_i\partial/\partial z_i$, with $v_i\ge0$; this is Definition 1.3 of [1].
 
@@ -197,21 +201,23 @@ $$
 
 Here $N_E$ is the edge count, not the vertex count or rank $d$. Zero coefficients above the rank do not enter the stated range. Inequality (7) is a weaker consequence of (8).
 
-**Corollary.** The scales are ordered:
+> [!info] Ordering of scales and log-concavity
+> **Corollary.** The scales are ordered:
+>
+> $$
+> \boxed{\xi_1\ge\xi_2\ge\cdots\ge\xi_d>0}
+> \tag{9}
+> $$
 
-$$
-\boxed{\xi_1\ge\xi_2\ge\cdots\ge\xi_d>0}
-\tag{9}
-$$
-
-**Proof.** For $g=d-k$,
-
-$$
-\frac{\xi_{k+1}}{\xi_k}
-=\frac{f_{g-1}f_{g+1}}{f_g^2}\le1
-$$
-
-This proves (9). The stronger (8), together with positivity, even yields $\xi_{k+1}<\xi_k$ for $1\le k<d$. When $d=1$, there are no adjacent values to compare. $\square$
+> [!note]- Proof
+> **Proof.** For $g=d-k$,
+>
+> $$
+> \frac{\xi_{k+1}}{\xi_k}
+> =\frac{f_{g-1}f_{g+1}}{f_g^2}\le1
+> $$
+>
+> This proves (9). The stronger (8), together with positivity, even yields $\xi_{k+1}<\xi_k$ for $1\le k<d$. When $d=1$, there are no adjacent values to compare. $\square$
 
 This ordering concerns different coranks of one fixed graph. It does not compare different graphs after edges are added. Nor does (7) follow from real-rootedness of $\Phi_G$: the unit triangle has nonreal roots, as shown in the [[The Normalized Forest Polynomial and Power-Sum Parameters#Unit triangle|triangle example]].
 
@@ -395,39 +401,41 @@ A_{\mathrm{root}}(F)=
 c_\ell\left(\frac1{\#B_\ell}+\frac1{\#C_\ell}\right)
 $$
 
-**Proposition.** For the rooted distribution,
+> [!info] A rooted probabilistic formula
+> **Proposition.** For the rooted distribution,
+>
+> $$
+> \boxed{
+> \xi_k^{\mathrm{root}}=
+> \frac{n-k}{\mathbb E_k^{\mathrm{root}}A_{\mathrm{root}}(F)}
+> }
+> \tag{15}
+> $$
 
-$$
-\boxed{
-\xi_k^{\mathrm{root}}=
-\frac{n-k}{\mathbb E_k^{\mathrm{root}}A_{\mathrm{root}}(F)}
-}
-\tag{15}
-$$
-
-**Proof.** Let the component sizes be $b,c$. Before addition, these components admit $bc$ root choices; after merging, they admit $b+c$. Hence
-
-$$
-\frac{\omega(F\cup\{\ell\})}{\omega(F)}
-=\frac{b+c}{bc}=\frac1b+\frac1c
-$$
-
-The pair weight therefore satisfies
-
-$$
-w(F)\omega(F)c_\ell
-\left(\frac1b+\frac1c\right)
-=w(F\cup\{\ell\})\omega(F\cup\{\ell\})
-$$
-
-As in the proof of (4), each resulting forest $F'$ has $n-k$ edges and is counted that many times. Thus
-
-$$
-\sum_{F\in\mathcal F_k(G)}w(F)\omega(F)A_{\mathrm{root}}(F)
-=(n-k)p_{L,d-k+1}
-$$
-
-Division by $p_{L,d-k}$ gives (15). $\square$
+> [!note]- Proof
+> **Proof.** Let the component sizes be $b,c$. Before addition, these components admit $bc$ root choices; after merging, they admit $b+c$. Hence
+>
+> $$
+> \frac{\omega(F\cup\{\ell\})}{\omega(F)}
+> =\frac{b+c}{bc}=\frac1b+\frac1c
+> $$
+>
+> The pair weight therefore satisfies
+>
+> $$
+> w(F)\omega(F)c_\ell
+> \left(\frac1b+\frac1c\right)
+> =w(F\cup\{\ell\})\omega(F\cup\{\ell\})
+> $$
+>
+> As in the proof of (4), each resulting forest $F'$ has $n-k$ edges and is counted that many times. Thus
+>
+> $$
+> \sum_{F\in\mathcal F_k(G)}w(F)\omega(F)A_{\mathrm{root}}(F)
+> =(n-k)p_{L,d-k+1}
+> $$
+>
+> Division by $p_{L,d-k}$ gives (15). $\square$
 
 Both the forest distribution and the added-edge weight have changed. Changing only one would not yield ratio (14).
 

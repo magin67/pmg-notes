@@ -66,9 +66,11 @@ Conditions (2) are essential. Gluing along a shared edge subgraph while identify
 
 Let $U=\{a\}$ and $G=G_1\vee G_2$.
 
-**Proposition.** An edge set $I\subseteq E(G)$ is a forest if and only if both $I\cap E(G_i)$ are forests. Consequently, the cycle matroid of $G$ is the direct sum of the cycle matroids of the parts.
+> [!info] One-point gluing and the direct sum of matroids
+> **Proposition.** An edge set $I\subseteq E(G)$ is a forest if and only if both $I\cap E(G_i)$ are forests. Consequently, the cycle matroid of $G$ is the direct sum of the cycle matroids of the parts.
 
-**Proof.** A cycle within a part remains a cycle in the whole graph. Conversely, a simple cycle cannot pass through both parts: to return, it would have to visit the sole shared vertex twice. Thus every cycle is contained in one part. This proves the independence criterion that defines the direct sum of matroids. $\square$
+> [!note]- Proof
+> **Proof.** A cycle within a part remains a cycle in the whole graph. Conversely, a simple cycle cannot pass through both parts: to return, it would have to visit the sole shared vertex twice. Thus every cycle is contained in one part. This proves the independence criterion that defines the direct sum of matroids. $\square$
 
 An ordinary forest of the resulting graph splits uniquely into two forests, its weight is the product of their weights, and their edge counts add. Therefore
 
@@ -112,9 +114,10 @@ $$
 
 Matroid invariance of all these scalars was established independently of these laws. It does not turn a convolution into a sum or prove additivity by itself.
 
-**Corollary.** If fixed parts are attached successively at exactly one vertex, every matroid parameter of the result is independent of the choice of attachment vertices. The pattern of these successive attachments can also be changed, provided each attachment remains a one-point attachment and creates no additional contacts. The resulting matroid is always the direct sum of the same matroids of the parts.
-
-This statement does not require the parts to be identical or cyclic. At the same time, distances between vertices in different parts, centroidal characteristics, and spectra can depend on the assembly.
+> [!info] Summary of the laws
+> **Corollary.** If fixed parts are attached successively at exactly one vertex, every matroid parameter of the result is independent of the choice of attachment vertices. The pattern of these successive attachments can also be changed, provided each attachment remains a one-point attachment and creates no additional contacts. The resulting matroid is always the direct sum of the same matroids of the parts.
+>
+> This statement does not require the parts to be identical or cyclic. At the same time, distances between vertices in different parts, centroidal characteristics, and spectra can depend on the assembly.
 
 ## Two-point gluing and the Whitney twist
 
@@ -130,11 +133,13 @@ $$
 
 The boundary pairs, the parts themselves, edge labels, and conductances remain fixed. The second assembly is called a *Whitney twist*, a classical operation associated with graph 2-isomorphism [1]. The following direct proof suffices here; the general classification theorem is not needed.
 
-**Theorem.** The identity correspondence of edge labels in (5) preserves every cycle as an edge set. Thus $G_{\parallel}$ and $G_{\times}$ have the same weighted cycle matroid.
+> [!info] Two-point gluing and the Whitney twist
+> **Theorem.** The identity correspondence of edge labels in (5) preserves every cycle as an edge set. Thus $G_{\parallel}$ and $G_{\times}$ have the same weighted cycle matroid.
 
-**Proof.** A simple cycle either lies wholly in one part or uses both parts. In the first case its edge set is unchanged. In the second, it splits into a path from $a_1$ to $b_1$ in the first part and a path from $a_2$ to $b_2$ in the second. The interiors of these paths are vertex-disjoint. After the endpoints are interchanged, the second path is traversed in reverse, and the same edges again form a simple cycle.
-
-The twist is reversible, so the cycle correspondence works in both directions. Minimal dependent sets, and hence all independent sets, coincide. Weights are preserved along with edge labels. $\square$
+> [!note]- Proof
+> **Proof.** A simple cycle either lies wholly in one part or uses both parts. In the first case its edge set is unchanged. In the second, it splits into a path from $a_1$ to $b_1$ in the first part and a path from $a_2$ to $b_2$ in the second. The interiors of these paths are vertex-disjoint. After the endpoints are interchanged, the second path is traversed in reverse, and the same edges again form a simple cycle.
+>
+> The twist is reversible, so the cycle correspondence works in both directions. Minimal dependent sets, and hence all independent sets, coincide. Weights are preserved along with edge labels. $\square$
 
 The quantities $f_g$, $\tau$, $\Phi_G$, $s_m^{\mathrm{for}}$, $\xi_k$, all corresponding $\eta_\ell,R_\ell$, the family $H_q$, and the radius $\rho$ are preserved. These are equalities between two ways of gluing. They do not assert that the parameters of the glued graph are sums of the parameters of its parts.
 
@@ -213,17 +218,19 @@ For two parts satisfying (2) with exactly two shared vertices, compatibility is 
 | Separated | Forest; boundary remains separated | Forest; boundary is connected |
 | Connected | Forest; boundary is connected | Cycle; contribution excluded |
 
-**Proposition.** In the grade variable $t$,
+> [!info] Two boundary states of an ordinary forest
+> **Proposition.** In the grade variable $t$,
+>
+> $$
+> \boxed{\begin{aligned}
+> F_G&=F_1^{\mathrm{sep}}F_2^{\mathrm{sep}}+F_1^{\mathrm{con}}F_2^{\mathrm{sep}}+F_1^{\mathrm{sep}}F_2^{\mathrm{con}}\\
+> &=F_1F_2-F_1^{\mathrm{con}}F_2^{\mathrm{con}}
+> \end{aligned}}
+> \tag{6}
+> $$
 
-$$
-\boxed{\begin{aligned}
-F_G&=F_1^{\mathrm{sep}}F_2^{\mathrm{sep}}+F_1^{\mathrm{con}}F_2^{\mathrm{sep}}+F_1^{\mathrm{sep}}F_2^{\mathrm{con}}\\
-&=F_1F_2-F_1^{\mathrm{con}}F_2^{\mathrm{con}}
-\end{aligned}}
-\tag{6}
-$$
-
-**Proof.** Restrictions of a forest of the result to the parts are forests. Conversely, the union of two forests creates a cycle exactly when both contain a path between the boundary vertices. The two paths then form a cycle; every cycle using both parts has precisely this form. In all other cases the union is acyclic. Edge counts add, weights multiply, and restriction to the parts is the inverse map. This proves (6) monomial by monomial. $\square$
+> [!note]- Proof
+> **Proof.** Restrictions of a forest of the result to the parts are forests. Conversely, the union of two forests creates a cycle exactly when both contain a path between the boundary vertices. The two paths then form a cycle; every cycle using both parts has precisely this form. In all other cases the union is acyclic. Edge counts add, weights multiply, and restriction to the parts is the inverse map. This proves (6) monomial by monomial. $\square$
 
 There is no correction for the number of identified vertices in (6), because the exponent of $t$ counts edges. When passing to corank, one must account for $d=d_1+d_2-1$. Substituting the one-point law (4) here would be an error.
 

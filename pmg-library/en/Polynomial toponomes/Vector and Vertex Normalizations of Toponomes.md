@@ -18,7 +18,7 @@ In **vector normalization**, the original coefficients of the forest representat
 
 The construction starts with the Laplacian exponential in the polyform algebra and passes through partition types. The key result, proved in the [[Forest Coefficients and the Laplacian Polynomial#Summing minors and the Laplacian polynomial|theorem identifying the two constructions]], is that the resulting one-variable vertex toponome equals $\det(I+t\mathbf L)$, constructed directly from the Laplacian matrix. The normalization thus also determines the relation between reduction and the matrix characteristic polynomial.
 
-Prerequisites are the [[From Polyforms to Partitions|toponome of a chosen representation]], the [[Toponomes and Structural Identities|criterion for representation-independent reduction]], and [[Coefficient Tables of Toponomes|coefficient triangles]]. The overall reading route appears in [[Polynomial Toponomes]].
+Prerequisites are the [[From Polyforms to Partitions|toponome of a chosen representation]], the [[Toponomes and Structural Identities|criterion for representation-independent reduction]], and [[Coefficient Tables of Toponomes|coefficient triangles]]. The overall reading route appears in [[en/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]].
 
 ## Initial data and two kinds of weight
 
@@ -67,9 +67,11 @@ These formulas distinguish the type weight $w(\lambda)=k$ from the forest weight
 >
 > For the empty type, $h(1)=1$. Under the PMG convention, $[k_i+1]!$ denotes the product of the entries of a collection, not the factorial of a number.
 
-**Proposition.** If a forest $F$ has type $\lambda$, the number of ways to choose one root in each component is $h(\lambda)$.
+> [!info] Vertex weight and root choices
+> **Proposition.** If a forest $F$ has type $\lambda$, the number of ways to choose one root in each component is $h(\lambda)$.
 
-**Proof.** Any of the $k_i+1$ vertices of a component of grade $k_i$ can be its root. Choices in different components are independent, so their numbers multiply. A singleton component has exactly one choice and contributes a factor of $1$. $\square$
+> [!note]- Proof
+> **Proof.** Any of the $k_i+1$ vertices of a component of grade $k_i$ can be its root. Choices in different components are independent, so their numbers multiply. A singleton component has exactly one choice and contributes a factor of $1$. $\square$
 
 For the partition $abc\mid de\mid f$, we have $n=6$, $\lambda=(2,1)$, $k=3$, $r=2$, $m=3$, and $\ell=1$. Hence
 
@@ -219,7 +221,8 @@ Let $G\sqcup H$ be the union of graphs on disjoint vertex sets, with no connecti
 > \end{aligned}
 > $$
 
-**Proof.** Every spanning forest of the union is uniquely specified by a pair of forests in $G$ and $H$. Their weights multiply and their lists of nontrivial components concatenate. Thus the type monomial of the union is the product of the two forest type monomials. Root weights also multiply. Summing over all pairs proves the claim; setting $u=1$ gives the one-variable identities. $\square$
+> [!note]- Proof
+> **Proof.** Every spanning forest of the union is uniquely specified by a pair of forests in $G$ and $H$. Their weights multiply and their lists of nontrivial components concatenate. Thus the type monomial of the union is the product of the two forest type monomials. Root weights also multiply. Summing over all pairs proves the claim; setting $u=1$ gives the one-variable identities. $\square$
 
 For the full toponome in vertex normalization, the identity follows from the same componentwise substitution $x_j\mapsto(j+1)x_j$. This uses ordinary polynomial multiplication, which concatenates component lists. It differs from the product $*$ in the [[The Second-Kind Algebra on Partitions|second-kind algebra]], which sums partial component matchings. At the table level, ordinary multiplication gives [[Coefficient Tables of Toponomes#Multiplication of tables|convolution in two indices]].
 

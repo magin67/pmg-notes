@@ -47,12 +47,13 @@ The first block contains three vertices and gives a boundary of grade $2$; the s
 
 *Figure 1. The block sizes are $3$ and $2$, while their boundary grades are $2$ and $1$. Edges depict tree representatives of the blocks; the type records grades rather than vertex names or the chosen tree shapes.*
 
-**Definition.** The full type of a partition form is the unordered collection of the boundary grades of all its blocks:
-
-$$
-\lambda_{\mathrm{full}}(\pi)
-=(\#B_1-1,\ldots,\#B_m-1)
-$$
+> [!info] From a partition form to its type
+> **Definition.** The full type of a partition form is the unordered collection of the boundary grades of all its blocks:
+>
+> $$
+> \lambda_{\mathrm{full}}(\pi)
+> =(\#B_1-1,\ldots,\#B_m-1)
+> $$
 
 In this series, integer partitions are written in parentheses. The order of parts is immaterial; for definiteness, they may be arranged in decreasing order. The multiplicity of an equal part is indicated by an exponent inside the parentheses:
 

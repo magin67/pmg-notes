@@ -116,7 +116,8 @@ $$
 
 This is the normalized potential of the grade-one form $w(a_i a_j a_k)$. Its sign compares one-way resistance sums in the two orientations; its magnitude measures their difference. In the Markov interpretation, $n\chi_{ijk}$ is the difference between mean sequential target-traversal times. A single difference $r_{ij}-r_{ji}$ also includes different centroid positions and is not a pure circulation measure.
 
-**Proposition.** The following conditions are equivalent: every $\chi_{ijk}$ vanishes; $\beta$ is symmetric; $\mathbf L$ is symmetric. In the Markov interpretation, these are also equivalent to reversibility of the walk with generator $-\mathbf L$.
+> [!info] What circulation measures
+> **Proposition.** The following conditions are equivalent: every $\chi_{ijk}$ vanishes; $\beta$ is symmetric; $\mathbf L$ is symmetric. In the Markov interpretation, these are also equivalent to reversibility of the walk with generator $-\mathbf L$.
 
 > [!note]- Why all triples are needed
 > **Proof.** Fix $a_n$. The forms $w(a_n a_i a_j)$ encode skew pairs of the basis vectors $a_i-a_n$. Vanishing of their potentials is equivalent to $\gamma=0$ on all of $W$. Then $\mathbf{Gr}$ is symmetric on zero-sum columns and, since it annihilates constants, on the full coordinate space. Its pseudoinverse $\mathbf L$ is also symmetric. The reverse implications follow from the same identities. For stationary probabilities $\pi_i=1/n$, detailed balance $\pi_if_{ij}=\pi_jf_{ji}$ is equivalent to $f_{ij}=f_{ji}$. $\square$
@@ -281,22 +282,23 @@ $$
 
 This independently agrees with $M=e+L+[(abc)]^2$ and $\tau(M)=1$: the top coefficient of $M[(abc)]^2$ is $1$. An undirected triangle with the same pair resistances has $\chi_{abc}=0$, giving $R_{abc}=3/4$.
 
-**Corollary.** With circulation present, the potential of $[(abc)]^2$ is not just the Euclidean boundary norm induced by $g$. It evaluates the full bilinear response. It can be measured as the determinant of the two-experiment response matrix in (4): two independent current excitations and two measurements give a matrix with determinant $R_{abc}$. Reversing every arc changes the sign of $\chi$, while preserving $\chi^2/4$.
-
-Decomposable objects of arbitrary grade obey the analogous determinant rule:
-
-$$
-P_M([u_1\cdots u_k,v_1\cdots v_k])
-=\det\bigl(\beta(u_i,v_j)\bigr)_{i,j=1}^k
-$$
-
-It follows by comparing coefficients of $k$ bilinear variations, as in the proof of (5). The one-way resistance matrix therefore determines these potentials too: for zero-sum coordinate columns,
-
-$$
-\beta(u,v)=-\mathbf v^{\mathsf T}\mathbf r\mathbf u
-$$
-
-Detailed higher-grade geometry remains a separate subject. Already the three-vertex case shows why it cannot automatically be identified with the exterior extension of the symmetric metric $g$ alone.
+> [!info] Three-vertex resistance
+> **Corollary.** With circulation present, the potential of $[(abc)]^2$ is not just the Euclidean boundary norm induced by $g$. It evaluates the full bilinear response. It can be measured as the determinant of the two-experiment response matrix in (4): two independent current excitations and two measurements give a matrix with determinant $R_{abc}$. Reversing every arc changes the sign of $\chi$, while preserving $\chi^2/4$.
+>
+> Decomposable objects of arbitrary grade obey the analogous determinant rule:
+>
+> $$
+> P_M([u_1\cdots u_k,v_1\cdots v_k])
+> =\det\bigl(\beta(u_i,v_j)\bigr)_{i,j=1}^k
+> $$
+>
+> It follows by comparing coefficients of $k$ bilinear variations, as in the proof of (5). The one-way resistance matrix therefore determines these potentials too: for zero-sum coordinate columns,
+>
+> $$
+> \beta(u,v)=-\mathbf v^{\mathsf T}\mathbf r\mathbf u
+> $$
+>
+> Detailed higher-grade geometry remains a separate subject. Already the three-vertex case shows why it cannot automatically be identified with the exterior extension of the symmetric metric $g$ alone.
 
 ## Sources and connections
 

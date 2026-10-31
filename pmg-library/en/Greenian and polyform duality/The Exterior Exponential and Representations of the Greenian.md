@@ -31,18 +31,19 @@ Products in the arguments are exterior products. The product of forms itself is 
 
 Let $S$ be an arbitrary grade-one form. Then $S^{d+1}=0$, since $E$ has no exterior objects of grade $d+1$.
 
-**Definition.** The exterior exponential of the form $S$ is the polyform
-
-$$
-\boxed{
-\mathcal E(S)=\exp S=\sum_{k=0}^{d}\mathcal E_k(S),
-\qquad
-\mathcal E_k(S)=\frac{S^k}{k!},
-\qquad
-\mathcal E_0(S)=e
-}
-\tag{1}
-$$
+> [!info] The exponential of a grade-one form
+> **Definition.** The exterior exponential of the form $S$ is the polyform
+>
+> $$
+> \boxed{
+> \mathcal E(S)=\exp S=\sum_{k=0}^{d}\mathcal E_k(S),
+> \qquad
+> \mathcal E_k(S)=\frac{S^k}{k!},
+> \qquad
+> \mathcal E_0(S)=e
+> }
+> \tag{1}
+> $$
 
 The series is finite, so no convergence issue arises. Its components are generated successively by
 
@@ -114,42 +115,44 @@ Thus the factor $1/k!$ removes repeated counting of the order of the selected fo
 
 ## Factorization and an arbitrary number of terms
 
-**Theorem.** For a representation of a symmetric form
+> [!info] Factorization and an arbitrary number of terms
+> **Theorem.** For a representation of a symmetric form
+>
+> $$
+> S=\sum_{\ell=1}^{m}\lambda_\ell[u_\ell]^2
+> $$
+>
+> the following hold:
+>
+> $$
+> \boxed{
+> \exp S=\prod_{\ell=1}^{m}\bigl(e+\lambda_\ell[u_\ell]^2\bigr)
+> }
+> \tag{3}
+> $$
+>
+> and
+>
+> $$
+> \boxed{
+> \mathcal E_k(S)=
+> \sum_{\ell_1<\cdots<\ell_k}
+> \lambda_{\ell_1}\cdots\lambda_{\ell_k}
+> [u_{\ell_1}\cdots u_{\ell_k}]^2
+> }
+> \tag{4}
+> $$
+>
+> The coefficients $\lambda_\ell$ may be arbitrary real numbers.
 
-$$
-S=\sum_{\ell=1}^{m}\lambda_\ell[u_\ell]^2
-$$
-
-the following hold:
-
-$$
-\boxed{
-\exp S=\prod_{\ell=1}^{m}\bigl(e+\lambda_\ell[u_\ell]^2\bigr)
-}
-\tag{3}
-$$
-
-and
-
-$$
-\boxed{
-\mathcal E_k(S)=
-\sum_{\ell_1<\cdots<\ell_k}
-\lambda_{\ell_1}\cdots\lambda_{\ell_k}
-[u_{\ell_1}\cdots u_{\ell_k}]^2
-}
-\tag{4}
-$$
-
-The coefficients $\lambda_\ell$ may be arbitrary real numbers.
-
-**Proof.** For commuting forms $P,Q$ with no grade-zero term, the finite binomial formula gives
-
-$$
-\exp(P+Q)=\exp P\,\exp Q
-$$
-
-Since $(\lambda_\ell[u_\ell]^2)^2=0$, the exponential of an individual term is $e+\lambda_\ell[u_\ell]^2$. This proves (3). Expanding the product, grade $k$ selects $k$ distinct factors, giving (4). $\square$
+> [!note]- Proof
+> **Proof.** For commuting forms $P,Q$ with no grade-zero term, the finite binomial formula gives
+>
+> $$
+> \exp(P+Q)=\exp P\,\exp Q
+> $$
+>
+> Since $(\lambda_\ell[u_\ell]^2)^2=0$, the exponential of an individual term is $e+\lambda_\ell[u_\ell]^2$. This proves (3). Expanding the product, grade $k$ selects $k$ distinct factors, giving (4). $\square$
 
 The unit grade $\mathcal E_0=e$ comes from choosing $e$ in every factor. It is already part of the exponential.
 
@@ -168,21 +171,23 @@ $$
 
 For an increasing index set $I=(i_1<\cdots<i_k)$, put $u_I=u_{i_1}\cdots u_{i_k}$. Write $\mathbf S_{I,J}$ for the submatrix with the selected rows and columns.
 
-**Theorem.** For every $0\le k\le d$,
+> [!info] Higher-grade coefficients are minors
+> **Theorem.** For every $0\le k\le d$,
+>
+> $$
+> \boxed{
+> \frac{S^k}{k!}
+> =\sum_{\#I=\#J=k}\det(\mathbf S_{I,J})[u_I,u_J]
+> }
+> \tag{5}
+> $$
+>
+> At $k=0$, the empty determinant is used and equals $1$. Formula (5) does not require $\mathbf S$ to be symmetric.
 
-$$
-\boxed{
-\frac{S^k}{k!}
-=\sum_{\#I=\#J=k}\det(\mathbf S_{I,J})[u_I,u_J]
-}
-\tag{5}
-$$
-
-At $k=0$, the empty determinant is used and equals $1$. Formula (5) does not require $\mathbf S$ to be symmetric.
-
-**Proof.** Expand $S^k$. Repeated indices in either exterior argument make a term vanish. For fixed index sets $I,J$, all permutations of their indices remain. Reordering the arguments increasingly introduces the signs of these permutations.
-
-After the order of the first set is fixed, summing over permutations of the second gives the determinant $\det(\mathbf S_{I,J})$. The first set can be ordered in $k!$ ways; after signs are included, each gives the same determinant. Thus the coefficient in $S^k$ is $k!\det(\mathbf S_{I,J})$. Division by $k!$ gives (5). $\square$
+> [!note]- Proof
+> **Proof.** Expand $S^k$. Repeated indices in either exterior argument make a term vanish. For fixed index sets $I,J$, all permutations of their indices remain. Reordering the arguments increasingly introduces the signs of these permutations.
+>
+> After the order of the first set is fixed, summing over permutations of the second gives the determinant $\det(\mathbf S_{I,J})$. The first set can be ordered in $k!$ ways; after signs are included, each gives the same determinant. Thus the coefficient in $S^k$ is $k!\det(\mathbf S_{I,J})$. Division by $k!$ gives (5). $\square$
 
 For example, the grade-two coefficient of $[u_i u_j,u_p u_q]$, where $i<j$ and $p<q$, is
 
@@ -196,17 +201,19 @@ This is the standard machinery of exterior powers and compound matrices [1]. In 
 
 ## Rank and top grade
 
-**Corollary.** If $\operatorname{rank}\mathbf S=r$, the highest nonzero grade of $\exp S$ is $r$:
+> [!info] Rank and top grade
+> **Corollary.** If $\operatorname{rank}\mathbf S=r$, the highest nonzero grade of $\exp S$ is $r$:
+>
+> $$
+> \mathcal E_r(S)\ne0,\qquad
+> \mathcal E_k(S)=0\quad(k>r)
+> \tag{6}
+> $$
+>
+> For $S=0$, we have $r=0$ and $\exp S=e$.
 
-$$
-\mathcal E_r(S)\ne0,\qquad
-\mathcal E_k(S)=0\quad(k>r)
-\tag{6}
-$$
-
-For $S=0$, we have $r=0$ and $\exp S=e$.
-
-**Proof.** Matrix rank is the largest order of a nonzero minor. Formula (5) translates this condition into a statement about grades. $\square$
+> [!note]- Proof
+> **Proof.** Matrix rank is the largest order of a nonzero minor. Formula (5) translates this condition into a statement about grades. $\square$
 
 Denote the fixed top form of the space by
 
@@ -263,11 +270,12 @@ $$
 
 The partition $A\mid A^c$ corresponds to the cut form $[a_A]^2$. Since $a_{A^c}=-a_A$, both parts give the same form.
 
-**Definition.** A grade-one cut polyform is a specified sum
-
-$$
-S=\sum_{A\mid A^c}\mu_A[a_A]^2
-$$
+> [!info] Cut forms without an underlying graph
+> **Definition.** A grade-one cut polyform is a specified sum
+>
+> $$
+> S=\sum_{A\mid A^c}\mu_A[a_A]^2
+> $$
 
 Each unordered partition is counted once. Here the coefficients $\mu_A$ are arbitrary real numbers.
 
@@ -391,55 +399,57 @@ $$
 
 Deletion from direct objects means the interior product with dual arguments.
 
-**Theorem (exponential duality).** For $0\le k\le d$,
+> [!info] The dual exponential of a nondegenerate symmetric form
+> **Theorem (exponential duality).** For $0\le k\le d$,
+>
+> $$
+> \boxed{
+> (\Delta T)/\left(\frac{S^k}{k!}\right)
+> =\frac{P^{d-k}}{(d-k)!}
+> }
+> \tag{10}
+> $$
+>
+> Consequently, the polyform dual to $\exp P$ relative to its top component $\Delta T$ is
+>
+> $$
+> \boxed{D=\exp S,\qquad (\Delta T)/D=\exp P}
+> \tag{11}
+> $$
 
-$$
-\boxed{
-(\Delta T)/\left(\frac{S^k}{k!}\right)
-=\frac{P^{d-k}}{(d-k)!}
-}
-\tag{10}
-$$
-
-Consequently, the polyform dual to $\exp P$ relative to its top component $\Delta T$ is
-
-$$
-\boxed{D=\exp S,\qquad (\Delta T)/D=\exp P}
-\tag{11}
-$$
-
-**Proof.** The real symmetric matrix $\mathbf A$ can be diagonalized by an orthogonal coordinate change. In matched direct and dual bases $v_i,v^i$, we obtain
-
-$$
-P=\sum_{i=1}^{d}\lambda_i[v_i]^2,\qquad
-S=\sum_{i=1}^{d}\lambda_i^{-1}[v^i]^2,\qquad
-\Delta=\prod_{i=1}^{d}\lambda_i
-$$
-
-All $\lambda_i$ are nonzero, but may have either sign. The orthogonal change has determinant $\pm1$, so $T=[v_1\cdots v_d]^2$.
-
-By (4), the term of $S^k/k!$ indexed by a $k$-element set $I$ is
-
-$$
-\left(\prod_{i\in I}\lambda_i^{-1}\right)[v^I]^2
-$$
-
-Upon deletion from $\Delta T$, this term's coefficient is multiplied by $\Delta$ and becomes
-
-$$
-\Delta\prod_{i\in I}\lambda_i^{-1}
-=\prod_{j\notin I}\lambda_j
-$$
-
-Deleting $v^I$ from the top exterior product leaves the complementary set $v_{I^c}$ up to sign. The sign disappears in the quadratic form. Thus the action on the left-hand side of (10) gives the sum
-
-$$
-\sum_{\#I=k}
-\left(\prod_{j\notin I}\lambda_j\right)[v_{I^c}]^2
-=\frac{P^{d-k}}{(d-k)!}
-$$
-
-This proves (10), and summing over $k$ gives (11). $\square$
+> [!note]- Proof
+> **Proof.** The real symmetric matrix $\mathbf A$ can be diagonalized by an orthogonal coordinate change. In matched direct and dual bases $v_i,v^i$, we obtain
+>
+> $$
+> P=\sum_{i=1}^{d}\lambda_i[v_i]^2,\qquad
+> S=\sum_{i=1}^{d}\lambda_i^{-1}[v^i]^2,\qquad
+> \Delta=\prod_{i=1}^{d}\lambda_i
+> $$
+>
+> All $\lambda_i$ are nonzero, but may have either sign. The orthogonal change has determinant $\pm1$, so $T=[v_1\cdots v_d]^2$.
+>
+> By (4), the term of $S^k/k!$ indexed by a $k$-element set $I$ is
+>
+> $$
+> \left(\prod_{i\in I}\lambda_i^{-1}\right)[v^I]^2
+> $$
+>
+> Upon deletion from $\Delta T$, this term's coefficient is multiplied by $\Delta$ and becomes
+>
+> $$
+> \Delta\prod_{i\in I}\lambda_i^{-1}
+> =\prod_{j\notin I}\lambda_j
+> $$
+>
+> Deleting $v^I$ from the top exterior product leaves the complementary set $v_{I^c}$ up to sign. The sign disappears in the quadratic form. Thus the action on the left-hand side of (10) gives the sum
+>
+> $$
+> \sum_{\#I=k}
+> \left(\prod_{j\notin I}\lambda_j\right)[v_{I^c}]^2
+> =\frac{P^{d-k}}{(d-k)!}
+> $$
+>
+> This proves (10), and summing over $k$ gives (11). $\square$
 
 Orthogonality in this proof refers to auxiliary coordinates in the chosen basis. No PMG metric inner product is introduced here.
 
@@ -492,44 +502,45 @@ $$
 
 the equality $(\tau T)/S=M_{d-1}$. By the definition and uniqueness of the dual grade, $S=Q_1$.
 
-**Corollary (the exponential law for dual grades).**
-
-$$
-\boxed{
-Q_k=\frac{Q_1^k}{k!},
-\qquad
-D=\exp Q_1,\qquad Q_0=e
-}
-\tag{12}
-$$
-
-For the auxiliary forest normalization $\widetilde Q_k=\tau Q_k$, $\widetilde D=\tau D$,
-
-$$
-\widetilde Q_0=\tau e,\qquad
-\widetilde Q_k=\frac{\widetilde Q_1^k}{k!\tau^{k-1}}\quad(1\le k\le d)
-\tag{13}
-$$
-
-Thus the entire series is determined by the first dual form. Its unit and all its coefficients arise from one ordinary exponential.
-
-In the [[Cuts and Forest Grades of the Greenian Exponential#Representing the Greenian through cuts|forest representation of the cut form]],
-
-$$
-Q_1=\sum_{A\mid A^c}\widehat\mu_A[a_A]^2,\qquad
-\widehat\mu_A=\frac{\tau(G[A])\tau(G[A^c])}{\tau(G)}
-$$
-
-Thus factorization (8) becomes a factorization of the Greenian exponential in dual notation. Comparing (12) with the [[Cuts and Forest Grades of the Greenian Exponential#The forest formula for grades of the Greenian exponential|forest formula for higher grades]] gives
-
-$$
-\frac{Q_1^k}{k!}
-=\frac1\tau
-\sum_{F\in\mathcal F_{k+1}(G)}w(F)\Phi_{\pi(F)}
-\tag{14}
-$$
-
-These are equalities of full sums of forms. An individual product of $k$ cut forms need not correspond to one spanning $(k+1)$-forest.
+> [!info] Application to the metric polyform of a graph
+> **Corollary (the exponential law for dual grades).**
+>
+> $$
+> \boxed{
+> Q_k=\frac{Q_1^k}{k!},
+> \qquad
+> D=\exp Q_1,\qquad Q_0=e
+> }
+> \tag{12}
+> $$
+>
+> For the auxiliary forest normalization $\widetilde Q_k=\tau Q_k$, $\widetilde D=\tau D$,
+>
+> $$
+> \widetilde Q_0=\tau e,\qquad
+> \widetilde Q_k=\frac{\widetilde Q_1^k}{k!\tau^{k-1}}\quad(1\le k\le d)
+> \tag{13}
+> $$
+>
+> Thus the entire series is determined by the first dual form. Its unit and all its coefficients arise from one ordinary exponential.
+>
+> In the [[Cuts and Forest Grades of the Greenian Exponential#Representing the Greenian through cuts|forest representation of the cut form]],
+>
+> $$
+> Q_1=\sum_{A\mid A^c}\widehat\mu_A[a_A]^2,\qquad
+> \widehat\mu_A=\frac{\tau(G[A])\tau(G[A^c])}{\tau(G)}
+> $$
+>
+> Thus factorization (8) becomes a factorization of the Greenian exponential in dual notation. Comparing (12) with the [[Cuts and Forest Grades of the Greenian Exponential#The forest formula for grades of the Greenian exponential|forest formula for higher grades]] gives
+>
+> $$
+> \frac{Q_1^k}{k!}
+> =\frac1\tau
+> \sum_{F\in\mathcal F_{k+1}(G)}w(F)\Phi_{\pi(F)}
+> \tag{14}
+> $$
+>
+> These are equalities of full sums of forms. An individual product of $k$ cut forms need not correspond to one spanning $(k+1)$-forest.
 
 ## The centered image and the Greenian
 
@@ -543,13 +554,14 @@ $$
 
 be the centroid of the direct vertices; set $p_i=a_i-h$. In this section, classes of coordinate functionals are written explicitly as $a_i^\vee$ to distinguish them from direct vertices $a_i$.
 
-**Definition.** The centered identification is the linear map
-
-$$
-\mathcal C:W^*\longrightarrow W,\qquad
-a_i^\vee\longmapsto p_i=a_i-h
-\tag{15}
-$$
+> [!info] The centered image and the Greenian
+> **Definition.** The centered identification is the linear map
+>
+> $$
+> \mathcal C:W^*\longrightarrow W,\qquad
+> a_i^\vee\longmapsto p_i=a_i-h
+> \tag{15}
+> $$
 
 The relation $\sum_i a_i^\vee=0$ maps to $\sum_i p_i=0$. The vectors $p_1,\ldots,p_{n-1}$ are independent, so $\mathcal C$ is an isomorphism. In the shorter dual notation above, the same classes were denoted by $a_i$.
 
@@ -563,39 +575,42 @@ This identification is determined by the original vertex basis and subtraction o
 
 Centering preserves any form on differences, including one specified independently of a Laplacian. The zero-sum relation concerns centered or dual elements, not independent direct vertices. Preservation of boundary identities and their cut images are examined in [[Symmetric Identities of the Greenian]].
 
-**Theorem.** The coefficient matrix of $\mathcal C(Q_1)$ in the direct vertices is the Green matrix $\mathbf{Gr}=\mathbf L^+$.
+> [!info] The centered image and the Greenian
+> **Theorem.** The coefficient matrix of $\mathcal C(Q_1)$ in the direct vertices is the Green matrix $\mathbf{Gr}=\mathbf L^+$.
 
-**Proof.** Let $\mathbf U$ contain the coordinate columns of $a_i-a_n$, $i<n$, and let $\mathbf C$ contain the columns of $a_i-h$, $i<n$, in the original vertex basis. Directly from these columns,
+> [!note]- Proof
+> **Proof.** Let $\mathbf U$ contain the coordinate columns of $a_i-a_n$, $i<n$, and let $\mathbf C$ contain the columns of $a_i-h$, $i<n$, in the original vertex basis. Directly from these columns,
+>
+> $$
+> \mathbf U^{\mathsf T}\mathbf C=\mathbf I_d,\qquad
+> \mathbf U\mathbf C^{\mathsf T}=\mathbf J,\qquad
+> \mathbf J=\mathbf I_n-\frac1n\mathbf1\mathbf1^{\mathsf T}
+> $$
+>
+> Also, $\mathbf L=\mathbf U\mathbf A\mathbf U^{\mathsf T}$. The coefficient matrix of the centered image is
+>
+> $$
+> \mathbf K=\mathbf C\mathbf A^{-1}\mathbf C^{\mathsf T}
+> $$
+>
+> It is symmetric, satisfies $\mathbf K\mathbf1=0$, and
+>
+> $$
+> \mathbf L\mathbf K
+> =\mathbf U\mathbf A(\mathbf U^{\mathsf T}\mathbf C)
+> \mathbf A^{-1}\mathbf C^{\mathsf T}
+> =\mathbf U\mathbf C^{\mathsf T}
+> =\mathbf J
+> $$
+>
+> By symmetry, also $\mathbf K\mathbf L=\mathbf J$. Thus $\mathbf K$ inverts $\mathbf L$ on the space of columns with zero sum and vanishes on constant columns. These are the defining properties of the Green matrix, so $\mathbf K=\mathbf{Gr}$. $\square$
 
-$$
-\mathbf U^{\mathsf T}\mathbf C=\mathbf I_d,\qquad
-\mathbf U\mathbf C^{\mathsf T}=\mathbf J,\qquad
-\mathbf J=\mathbf I_n-\frac1n\mathbf1\mathbf1^{\mathsf T}
-$$
-
-Also, $\mathbf L=\mathbf U\mathbf A\mathbf U^{\mathsf T}$. The coefficient matrix of the centered image is
-
-$$
-\mathbf K=\mathbf C\mathbf A^{-1}\mathbf C^{\mathsf T}
-$$
-
-It is symmetric, satisfies $\mathbf K\mathbf1=0$, and
-
-$$
-\mathbf L\mathbf K
-=\mathbf U\mathbf A(\mathbf U^{\mathsf T}\mathbf C)
-\mathbf A^{-1}\mathbf C^{\mathsf T}
-=\mathbf U\mathbf C^{\mathsf T}
-=\mathbf J
-$$
-
-By symmetry, also $\mathbf K\mathbf L=\mathbf J$. Thus $\mathbf K$ inverts $\mathbf L$ on the space of columns with zero sum and vanishes on constant columns. These are the defining properties of the Green matrix, so $\mathbf K=\mathbf{Gr}$. $\square$
-
-**Definition.** The Greenian is the grade-one form
-
-$$
-\mathrm{Gr}=\sum_{i,j=1}^{n}\mathrm{Gr}_{ij}[a_i-h,a_j-h]
-$$
+> [!info] The centered image and the Greenian
+> **Definition.** The Greenian is the grade-one form
+>
+> $$
+> \mathrm{Gr}=\sum_{i,j=1}^{n}\mathrm{Gr}_{ij}[a_i-h,a_j-h]
+> $$
 
 Because the row and column sums vanish, the same form can be written as $\mathrm{Gr}=\sum_{i,j}\mathrm{Gr}_{ij}[a_i,a_j]$.
 

@@ -60,13 +60,14 @@ N_{n-1}=\sigma T,\qquad
 \sigma=\tau(N)=\frac{1}{n^2\tau(G)}>0
 $$
 
-**Definition.** The potential of a form $f$ in the Greenian exponential and its normalized value are
-
-$$
-u_N(f)=\tau(Nf),\qquad
-P_N(f)=\frac{u_N(f)}{u_N(e)}=\frac{\tau(Nf)}{\sigma}
-\tag{1}
-$$
+> [!info] The Greenian exponential and the potential of a form
+> **Definition.** The potential of a form $f$ in the Greenian exponential and its normalized value are
+>
+> $$
+> u_N(f)=\tau(Nf),\qquad
+> P_N(f)=\frac{u_N(f)}{u_N(e)}=\frac{\tau(Nf)}{\sigma}
+> \tag{1}
+> $$
 
 If $f$ has grade $k$, only $N_{n-1-k}f$ contributes to the numerator. In particular, $P_N(e)=1$. In PMG terminology, the normalized potential is called the norm of the form; for $f=[X]^2$, it is the quadratic norm of the argument $X$.
 
@@ -76,33 +77,35 @@ The coefficient $\gamma_{ij}$ in the Greenian expression must be distinguished f
 
 For $u=\sum_i u_i a_i\in W$, denote its coefficient column by $\mathbf u$; its coordinates sum to zero.
 
-**Theorem.** For $u,v\in W$, the normalized potential of the bilinear form is
+> [!info] The Laplacian as the metric of the Greenian exponential
+> **Theorem.** For $u,v\in W$, the normalized potential of the bilinear form is
+>
+> $$
+> \boxed{P_N([u,v])=\mathbf u^{\mathsf T}\mathbf L\mathbf v}
+> \tag{2}
+> $$
+>
+> This is a positive definite inner product on $W$. Denote it by $u\cdot_N v$. For simple exterior objects $X=u_1\cdots u_k$ and $Y=v_1\cdots v_k$, we have
+>
+> $$
+> \boxed{
+> P_N([X,Y])
+> =\det\bigl(u_\alpha\cdot_N v_\beta\bigr)_{\alpha,\beta=1}^k
+> =\det(U^{\mathsf T}\mathbf L V)
+> }
+> \tag{3}
+> $$
+>
+> Here $U,V$ contain the full $n$-coordinate columns of the factors. For $k=0$, the determinant equals $1$. The formula extends bilinearly to arbitrary objects of the same grade.
 
-$$
-\boxed{P_N([u,v])=\mathbf u^{\mathsf T}\mathbf L\mathbf v}
-\tag{2}
-$$
-
-This is a positive definite inner product on $W$. Denote it by $u\cdot_N v$. For simple exterior objects $X=u_1\cdots u_k$ and $Y=v_1\cdots v_k$, we have
-
-$$
-\boxed{
-P_N([X,Y])
-=\det\bigl(u_\alpha\cdot_N v_\beta\bigr)_{\alpha,\beta=1}^k
-=\det(U^{\mathsf T}\mathbf L V)
-}
-\tag{3}
-$$
-
-Here $U,V$ contain the full $n$-coordinate columns of the factors. For $k=0$, the determinant equals $1$. The formula extends bilinearly to arbitrary objects of the same grade.
-
-**Proof.** Choose an auxiliary orthonormal basis of the hyperplane $\mathbf1^\perp$ in the ordinary coordinate space $\mathbb R^n$, and collect its columns in the matrix $E$. This is auxiliary coordinate orthonormality, not the PMG metric being defined.
-
-The Greenian coefficient matrix in this basis is $A=E^{\mathsf T}\mathbf{Gr}E$. It is positive definite, and $A^{-1}=E^{\mathsf T}\mathbf L E$, since $\mathbf{Gr}$ and $\mathbf L$ are mutual inverses on $\mathbf1^\perp$.
-
-Apply the [[Laplacian Exponential#A general lemma on the top-grade coefficient|determinant lemma for the exterior exponential]] to the matrix $A$. The normalized potential equals the determinant of inner products with matrix $A^{-1}$. Passing to full coordinates gives (2) and (3). Changing the reference top form multiplies the numerator and denominator of (1) by the same coefficient and leaves their ratio unchanged.
-
-Positive definiteness of $\mathbf L$ on $\mathbf1^\perp$ implies positive definiteness of all its exterior powers: in an eigenbasis, their diagonal entries are products of positive eigenvalues. Thus $P_N([X]^2)>0$ for every nonzero exterior object $X$, including nonsimple objects. $\square$
+> [!note]- Proof
+> **Proof.** Choose an auxiliary orthonormal basis of the hyperplane $\mathbf1^\perp$ in the ordinary coordinate space $\mathbb R^n$, and collect its columns in the matrix $E$. This is auxiliary coordinate orthonormality, not the PMG metric being defined.
+>
+> The Greenian coefficient matrix in this basis is $A=E^{\mathsf T}\mathbf{Gr}E$. It is positive definite, and $A^{-1}=E^{\mathsf T}\mathbf L E$, since $\mathbf{Gr}$ and $\mathbf L$ are mutual inverses on $\mathbf1^\perp$.
+>
+> Apply the [[Laplacian Exponential#A general lemma on the top-grade coefficient|determinant lemma for the exterior exponential]] to the matrix $A$. The normalized potential equals the determinant of inner products with matrix $A^{-1}$. Passing to full coordinates gives (2) and (3). Changing the reference top form multiplies the numerator and denominator of (1) by the same coefficient and leaves their ratio unchanged.
+>
+> Positive definiteness of $\mathbf L$ on $\mathbf1^\perp$ implies positive definiteness of all its exterior powers: in an eigenbasis, their diagonal entries are products of positive eigenvalues. Thus $P_N([X]^2)>0$ for every nonzero exterior object $X$, including nonsimple objects. $\square$
 
 In particular,
 
@@ -154,20 +157,22 @@ $$
 c(A,B)=\sum_{i\in A,\ j\in B}c_{ij}
 $$
 
-**Corollary.** The norm of the centered-sum form equals the weight of the corresponding cut:
+> [!info] The potential of a cut form
+> **Corollary.** The norm of the centered-sum form equals the weight of the corresponding cut:
+>
+> $$
+> \boxed{P_N([s_A]^2)=c(A,A^c)}
+> \tag{6}
+> $$
+>
+> For disjoint $A,B$, also
+>
+> $$
+> P_N([s_A,s_B])=-c(A,B)
+> $$
 
-$$
-\boxed{P_N([s_A]^2)=c(A,A^c)}
-\tag{6}
-$$
-
-For disjoint $A,B$, also
-
-$$
-P_N([s_A,s_B])=-c(A,B)
-$$
-
-**Proof.** The vector $s_A$ is represented by the indicator of $A$ with its mean subtracted. Centering preserves coordinate differences. In (4), the indicator difference has absolute value $1$ exactly on cut edges; all other terms vanish. The mixed formula follows from $\mathbf1_A^{\mathsf T}\mathbf L\mathbf1_B$; for disjoint sets, only off-diagonal entries $-c_{ij}$ contribute. $\square$
+> [!note]- Proof
+> **Proof.** The vector $s_A$ is represented by the indicator of $A$ with its mean subtracted. Centering preserves coordinate differences. In (4), the indicator difference has absolute value $1$ exactly on cut edges; all other terms vanish. The mixed formula follows from $\mathbf1_A^{\mathsf T}\mathbf L\mathbf1_B$; for disjoint sets, only off-diagonal entries $-c_{ij}$ contribute. $\square$
 
 For $A=\varnothing$ or $A=V(G)$, the vector and potential are zero. For a nonempty proper $A$, the value is positive by connectedness.
 
@@ -223,36 +228,38 @@ $$
 
 The resistance $R_{ij}$ equals dissipation under a unit current between the endpoints. The value $P_N([a_{ij}]^2)$ equals dissipation with specified values $-1,+1$ at the endpoints and $0$ at every other vertex. In this problem, the other vertices are fixed, not free.
 
-**Theorem.** If only $\varphi_i=-1$ and $\varphi_j=1$ are prescribed and the other values are free, then
+> [!info] Resistance and free interior vertices
+> **Theorem.** If only $\varphi_i=-1$ and $\varphi_j=1$ are prescribed and the other values are free, then
+>
+> $$
+> \min_{\varphi_i=-1,\ \varphi_j=1}\mathcal E(\varphi)=\frac4{R_{ij}},\qquad
+> P_N([a_{ij}]^2)R_{ij}\ge4
+> \tag{9}
+> $$
+>
+> Equality in the second relation holds if and only if $\mathbf w$ is an eigenvector of $\mathbf L$.
 
-$$
-\min_{\varphi_i=-1,\ \varphi_j=1}\mathcal E(\varphi)=\frac4{R_{ij}},\qquad
-P_N([a_{ij}]^2)R_{ij}\ge4
-\tag{9}
-$$
-
-Equality in the second relation holds if and only if $\mathbf w$ is an eigenvector of $\mathbf L$.
-
-**Proof.** Set
-
-$$
-\psi=\frac2{R_{ij}}\mathbf{Gr}\mathbf w+t\mathbf1
-$$
-
-The difference $\psi_j-\psi_i$ is $2$, so a common constant $t$ can enforce both boundary values. Moreover,
-
-$$
-\mathbf L\psi=\frac2{R_{ij}}\mathbf w,\qquad
-\mathcal E(\psi)=\frac4{R_{ij}}
-$$
-
-At every interior vertex, $\mathbf L\psi$ is zero: this is the harmonic extension of the boundary values. Any other admissible assignment is $\psi+\eta$, where $\eta_i=\eta_j=0$. The mixed term $\eta^{\mathsf T}\mathbf L\psi$ vanishes, so
-
-$$
-\mathcal E(\psi+\eta)=\mathcal E(\psi)+\mathcal E(\eta)\ge\mathcal E(\psi)
-$$
-
-Substitution of the admissible assignment $\varphi=\mathbf w$ gives the inequality. For the equality condition, apply Cauchy–Schwarz on $\mathbf1^\perp$ to $\mathbf L^{1/2}\mathbf w$ and $\mathbf L^{-1/2}\mathbf w$. Their inner product is $\mathbf w^{\mathsf T}\mathbf w=2$. Equality holds precisely when these columns are linearly dependent, that is, when $\mathbf L\mathbf w$ is proportional to $\mathbf w$. $\square$
+> [!note]- Proof
+> **Proof.** Set
+>
+> $$
+> \psi=\frac2{R_{ij}}\mathbf{Gr}\mathbf w+t\mathbf1
+> $$
+>
+> The difference $\psi_j-\psi_i$ is $2$, so a common constant $t$ can enforce both boundary values. Moreover,
+>
+> $$
+> \mathbf L\psi=\frac2{R_{ij}}\mathbf w,\qquad
+> \mathcal E(\psi)=\frac4{R_{ij}}
+> $$
+>
+> At every interior vertex, $\mathbf L\psi$ is zero: this is the harmonic extension of the boundary values. Any other admissible assignment is $\psi+\eta$, where $\eta_i=\eta_j=0$. The mixed term $\eta^{\mathsf T}\mathbf L\psi$ vanishes, so
+>
+> $$
+> \mathcal E(\psi+\eta)=\mathcal E(\psi)+\mathcal E(\eta)\ge\mathcal E(\psi)
+> $$
+>
+> Substitution of the admissible assignment $\varphi=\mathbf w$ gives the inequality. For the equality condition, apply Cauchy–Schwarz on $\mathbf1^\perp$ to $\mathbf L^{1/2}\mathbf w$ and $\mathbf L^{-1/2}\mathbf w$. Their inner product is $\mathbf w^{\mathsf T}\mathbf w=2$. Equality holds precisely when these columns are linearly dependent, that is, when $\mathbf L\mathbf w$ is proportional to $\mathbf w$. $\square$
 
 The minimization is the classical Dirichlet principle for an electrical network [2]. In (9), the factor $4$ comes from the prescribed difference $2$. For difference $1$, the minimum is the effective conductance $1/R_{ij}$. Thus $P_N([a_{ij}]^2)/4$ generally differs from effective conductance: fixing additional vertices may increase dissipation.
 
@@ -287,20 +294,22 @@ The degrees $d_a,d_b,d_c$ include couplings to vertices outside the triple. Thus
 
 ### Expansion through original edges
 
-**Theorem.** Choose an arbitrary orientation of the edges of the original undirected graph. Let $B$ be the matrix of coordinates of their vectors: the column for edge $e=(i,j)$ is $\mathbf e_j-\mathbf e_i$. For $X=u_1\cdots u_k$ and the column matrix $U$,
+> [!info] Expansion through original edges
+> **Theorem.** Choose an arbitrary orientation of the edges of the original undirected graph. Let $B$ be the matrix of coordinates of their vectors: the column for edge $e=(i,j)$ is $\mathbf e_j-\mathbf e_i$. For $X=u_1\cdots u_k$ and the column matrix $U$,
+>
+> $$
+> \boxed{
+> P_N([X]^2)
+> =\sum_{\substack{S\subseteq E(G)\\\#S=k}}
+> \left(\prod_{e\in S}c_e\right)\det(U^{\mathsf T}B_S)^2
+> }
+> \tag{11}
+> $$
+>
+> Here $B_S$ contains the selected columns, and $c_e$ is the conductance of an original edge.
 
-$$
-\boxed{
-P_N([X]^2)
-=\sum_{\substack{S\subseteq E(G)\\\#S=k}}
-\left(\prod_{e\in S}c_e\right)\det(U^{\mathsf T}B_S)^2
-}
-\tag{11}
-$$
-
-Here $B_S$ contains the selected columns, and $c_e$ is the conductance of an original edge.
-
-**Proof.** With $C=\operatorname{diag}(c_e)$, we have $\mathbf L=BCB^{\mathsf T}$. Substitute this decomposition into $\det(U^{\mathsf T}\mathbf L U)$ and apply Cauchy–Binet. Selecting $k$ columns gives the product of their conductances and two identical determinants $\det(U^{\mathsf T}B_S)$. This yields (11). $\square$
+> [!note]- Proof
+> **Proof.** With $C=\operatorname{diag}(c_e)$, we have $\mathbf L=BCB^{\mathsf T}$. Substitute this decomposition into $\det(U^{\mathsf T}\mathbf L U)$ and apply Cauchy–Binet. Selecting $k$ columns gives the product of their conductances and two identical determinants $\det(U^{\mathsf T}B_S)$. This yields (11). $\square$
 
 Every term in (11) is nonnegative. Reversing an edge's chosen orientation changes the sign of one column, which disappears when the determinant is squared. If $S$ contains a cycle, the columns of $B_S$ are dependent and its contribution vanishes. Thus the sum may run over spanning forests with $k$ edges, including isolated vertices; some of these forests may also contribute zero.
 
