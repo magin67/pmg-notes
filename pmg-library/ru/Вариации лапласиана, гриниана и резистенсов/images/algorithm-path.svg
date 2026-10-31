@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="250" viewBox="0 0 880 250" role="img" aria-labelledby="title desc">
+  <title id="title">Путь с одной изменяемой связью</title>
+  <desc id="desc">Вершины 1 и 3 образуют множество P. Проводимость ребра 12 равна 1, проводимость ребра 23 равна x. Ребро 13 отсутствует и запрещено.</desc>
+  <rect width="880" height="250" rx="18" fill="#f5f7fb"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <path d="M150 112 H440" stroke="#526078" stroke-width="5"/>
+    <path d="M440 112 H730" stroke="#a85f10" stroke-width="6"/>
+    <text x="295" y="72" font-size="24" fill="#26354b">c<tspan dy="6" font-size="16">12</tspan><tspan dy="-6" font-size="24"> = 1</tspan></text>
+    <text x="585" y="72" font-size="24" fill="#8b4c08">c<tspan dy="6" font-size="16">23</tspan><tspan dy="-6" font-size="24"> = x</tspan></text>
+    <g fill="#dbebff" stroke="#245b93" stroke-width="3">
+      <circle cx="150" cy="112" r="27"/><circle cx="730" cy="112" r="27"/>
+    </g>
+    <circle cx="440" cy="112" r="27" fill="white" stroke="#526078" stroke-width="3"/>
+    <g font-size="23" fill="#26354b"><text x="150" y="120">1</text><text x="440" y="120">2</text><text x="730" y="120">3</text></g>
+    <text x="150" y="170" font-size="19" fill="#245b93">P</text><text x="730" y="170" font-size="19" fill="#245b93">P</text>
+    <text x="440" y="217" font-size="20" fill="#526078">R<tspan dy="5" font-size="14">13</tspan><tspan dy="-5" font-size="20"> = 1 + 1/x  ·  x &gt; 0  ·  c</tspan><tspan dy="5" font-size="14">13</tspan><tspan dy="-5" font-size="20"> = 0</tspan></text>
+  </g>
+</svg>
