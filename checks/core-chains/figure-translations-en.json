@@ -1,0 +1,202 @@
+{
+  "Два замыкания квадратной полосы.svg": {
+    "file": "Two Closures of a Square Strip.svg",
+    "text": {
+      "Два замыкания квадратной полосы": "Two closures of a square strip",
+      "Одна полоса из четырёх квадратов; прямое и обратное соответствия крайних рёбер. Общие рёбра учитываются один раз.": "One strip of four squares; direct and reversed correspondences of the end edges. Shared edges are counted once.",
+      "Последний шов: совпадение или обмен концов": "The final seam: match or exchange the endpoints",
+      "Обычное замыкание": "Ordinary closure",
+      "После замыкания: τ = 384,  ρ = 29/96": "After closure: τ = 384,  ρ = 29/96",
+      "Скрученное замыкание": "Twisted closure",
+      "После замыкания: τ = 392,  ρ = 67/224": "After closure: τ = 392,  ρ = 67/224",
+      "Два крайних красных ребра становятся одним единичным ребром": "The two red end edges become one unit edge"
+    }
+  },
+  "Два несвязных шва в цикле.svg": {
+    "file": "Two Disconnected Seams in a Cycle.svg",
+    "text": {
+      "Два расположения несвязных швов": "Two placements of disconnected seams",
+      "Среднее ядро C12. Вход 01 и 45 одинаков. Выход в А равен 23 и 67, в Б равен 67 и 10-11. Вход и выход не пересекаются по вершинам.": "Middle core C12. Input 01 and 45 is fixed. The output is 23 and 67 in A, and 67 and 10-11 in B. Input and output are vertex-disjoint.",
+      "Одинаковые несвязные швы, разное взаимное расположение": "Equal disconnected seams, different relative positions",
+      "Конфигурация А": "Configuration A",
+      "Выход: (2, 3, 6, 7)": "Output: (2, 3, 6, 7)",
+      "Конфигурация Б": "Configuration B",
+      "Выход: (6, 7, 10, 11)": "Output: (6, 7, 10, 11)",
+      "Вход в обеих конфигурациях: (0, 1, 4, 5)": "Input in both configurations: (0, 1, 4, 5)"
+    }
+  },
+  "Две сборки трёх шестиугольников.svg": {
+    "file": "Two Assemblies of Three Hexagons.svg",
+    "text": {
+      "Две сборки трёх шестиугольников": "Two assemblies of three hexagons",
+      "Два графа со швами 01 и 34 либо 01 и 23; одинаковая схема ядер P3, 14 вершин и 16 рёбер.": "Two graphs with seams 01 and 34 or 01 and 23; the same core scheme P3, 14 vertices, and 16 edges.",
+      "А. Противоположные швы": "A. Opposite seams",
+      "Вход: (0, 1)     Выход: (3, 4)": "Input: (0, 1)     Output: (3, 4)",
+      "Одинаковые номера отождествлены": "Equal labels are identified",
+      "Схема ядер: P₃;  s₁ = s₂ = 2": "Core scheme: P₃;  s₁ = s₂ = 2",
+      "Б. Швы через одно ребро": "B. One edge between seams",
+      "Вход: (0, 1)     Выход: (2, 3)": "Input: (0, 1)     Output: (2, 3)"
+    }
+  },
+  "Допустимая цепочка и нарушения условий.svg": {
+    "file": "An Admissible Chain and Violations.svg",
+    "text": {
+      "Допустимая цепочка и нарушения условий": "An admissible chain and violations of its conditions",
+      "Допустимая цепочка; пересекающиеся швы; дополнительный контакт крайних ядер; несвязный шов из двух отдельных рёбер.": "An admissible chain; intersecting seams; an extra contact between end cores; a disconnected seam of two separate edges.",
+      "А. Допустимая цепочка": "A. Admissible chain",
+      "Швы не пересекаются по вершинам.": "Seams are vertex-disjoint.",
+      "Несоседние ядра не имеют контактов.": "Nonadjacent cores do not meet.",
+      "Б. Два шва имеют общую вершину": "B. Two seams share a vertex",
+      "Показано среднее ядро: швы 01 и 12.": "Middle core shown: seams 01 and 12.",
+      "Вершина 1 принадлежит всем трём ядрам.": "Vertex 1 belongs to all three cores.",
+      "В. Дополнительный контакт": "C. Additional contact",
+      "Дополнительно отождествить 7 и 12.": "Also identify vertices 7 and 12.",
+      "Тогда крайние ядра имеют общую вершину.": "Then the end cores share a vertex.",
+      "Г. Несвязный шов": "D. Disconnected seam",
+      "Одинаковые номера отождествляются.": "Equal labels are identified.",
+      "Пересечение: два отдельных ребра 01 и 45.": "Intersection: two separate edges 01 and 45.",
+      "Четыре общие вершины не образуют P₄.": "Four shared vertices do not form P₄."
+    }
+  },
+  "Неизоморфность двух шестиугольных цепочек.svg": {
+    "file": "Nonisomorphism of Two Hexagonal Chains.svg",
+    "text": {
+      "Неизоморфность двух цепочек по вершинам степени три": "Nonisomorphism of two chains from their degree-three vertices",
+      "У каждой цепочки четыре вершины степени 3. В конфигурации А они индуцируют два раздельных ребра 01 и 34; в конфигурации Б - путь 0-1-2-3 из трёх рёбер. Это препятствует изоморфизму графов.": "Each chain has four vertices of degree 3. In A they induce two disjoint edges 01 and 34; in B they induce the three-edge path 0-1-2-3. This rules out graph isomorphism.",
+      "А. Противоположные швы": "A. Opposite seams",
+      "Выделены четыре вершины степени 3": "Four degree-3 vertices highlighted",
+      "Индуцированный подграф": "Induced subgraph",
+      "2 раздельных ребра": "2 disjoint edges",
+      "Б. Швы через одно ребро": "B. One edge between seams",
+      "Путь из 3 рёбер": "A 3-edge path",
+      "Изоморфизм сохраняет степени вершин и рёбра индуцированного подграфа": "Isomorphisms preserve vertex degrees and edges of induced subgraphs"
+    }
+  },
+  "Общий двойственный мультиграф цепочек.svg": {
+    "file": "The Common Dual Multigraph of the Chains.svg",
+    "text": {
+      "Общий двойственный мультиграф трёх шестиугольников": "The common dual multigraph of three hexagons",
+      "Вершины f1, f2, f3 отвечают граням ядер; f∞ отвечает внешней грани. Между соседними ядрами по одному ребру; к внешней грани ведут пучки из 5, 4 и 5 отдельных рёбер.": "Vertices f1, f2, f3 represent core faces; f∞ represents the outer face. Adjacent cores have one dual edge between them; bundles of 5, 4, and 5 distinct edges lead to the outer face.",
+      "Двойственный граф обеих конфигураций": "The dual graph of both configurations",
+      "1 общее ребро": "1 shared edge",
+      "5 рёбер": "5 edges",
+      "4 ребра": "4 edges",
+      "Грань ядра K1": "Face of core K1",
+      "Грань ядра K2": "Face of core K2",
+      "Грань ядра K3": "Face of core K3",
+      "Внешняя грань": "Outer face",
+      "Параллельные линии - отдельные рёбра; всего 4 вершины и 16 рёбер": "Parallel lines are distinct edges; 4 vertices and 16 edges in total"
+    }
+  },
+  "Одинаковое остовное число и разные радиусы.svg": {
+    "file": "Equal Spanning-Tree Counts and Different Radii.svg",
+    "text": {
+      "Одинаковое остовное число и разные резистивные радиусы": "Equal spanning-tree counts and different resistance radii",
+      "Граф А: C4 и C3 с общей вершиной 0. Граф Б: K2,3 с висячим ребром 05. Оба имеют шесть вершин, семь рёбер и 12 деревьев. Радиусы 77/144 и 7/12 различны.": "Graph A: C4 and C3 sharing vertex 0. Graph B: K2,3 with pendant edge 05. Both have six vertices, seven edges, and 12 trees. Their radii, 77/144 and 7/12, differ.",
+      "Одного остовного числа недостаточно для определения радиуса": "The spanning-tree count alone does not determine the radius",
+      "А. Два цикла в общей вершине": "A. Two cycles sharing a vertex",
+      "Б. K₂,₃ и висячее ребро": "B. K₂,₃ with a pendant edge",
+      "В обоих графах: n = 6, |E| = 7; висячая вершина есть только в Б": "Both graphs: n = 6, |E| = 7; only B has a pendant vertex"
+    }
+  },
+  "Паросочетания и остовной полином.svg": {
+    "file": "Matchings and the Spanning-Tree Polynomial.svg",
+    "text": {
+      "Паросочетания и остовной полином четырёх ядер": "Matchings and the spanning-tree polynomial of four cores",
+      "Пять паросочетаний вспомогательного пути на четырёх ядрах: пустое, три одиночных ребра и пара первого с третьим. Каждое выбранное ребро даёт минус квадрат числа общих рёбер, непокрытая вершина даёт размер ядра.": "The five matchings of the auxiliary path on four cores: empty, three single edges, and the first and third edges together. Each selected edge contributes minus the square of the shared-edge count; an uncovered vertex contributes the core size.",
+      "Пять паросочетаний пути на четырёх ядрах": "The five matchings of the path on four cores",
+      "Синим выделены рёбра паросочетания; круги обозначают ядра": "Blue edges form the matching; circles represent cores",
+      "ℓᵢ = sᵢ − 1: число общих рёбер, а не число вершин шва": "ℓᵢ = sᵢ − 1 counts shared edges, not seam vertices"
+    }
+  },
+  "Пары рёберных швов куба.svg": {
+    "file": "Pairs of Edge Seams of a Cube.svg",
+    "text": {
+      "Три пары непересекающихся рёбер куба": "Three pairs of disjoint cube edges",
+      "Первый шов 01. Второй равен 23, 67 или 26. Индуцированные подграфы на концах швов имеют вид C4, 2K2 и P4, поэтому пары неэквивалентны.": "The first seam is 01; the second is 23, 67, or 26. The endpoint-induced subgraphs are C4, 2K2, and P4, so the pairs are inequivalent.",
+      "Куб: отдельные рёбра эквивалентны, пары швов различаются": "Cube: individual edges are equivalent, seam pairs differ",
+      "Швы 01 и 23": "Seams 01 and 23",
+      "Подграф на концах швов": "Seam-endpoint subgraph",
+      "Швы 01 и 67": "Seams 01 and 67",
+      "Швы 01 и 26": "Seams 01 and 26",
+      "Каждая сборка содержит три куба: 20 вершин и 34 ребра": "Each assembly has three cubes: 20 vertices and 34 edges"
+    }
+  },
+  "Порядок швов и остовное число.svg": {
+    "file": "Seam Order and the Spanning-Tree Count.svg",
+    "text": {
+      "Порядок швов меняет остовное число": "Seam order changes the spanning-tree count",
+      "Вспомогательные пути четырёх восьмиугольных ядер. Порядки швов 1,2,3 и 1,3,2 дают 3776 деревьев; порядок 2,1,3 даёт 3780. Размеры швов считаются в вершинах; пунктир означает точечный контакт.": "Auxiliary paths of four octagonal cores. Seam orders 1,2,3 and 1,3,2 give 3776 trees; order 2,1,3 gives 3780. Seam sizes count vertices; a dashed line denotes one-vertex contact.",
+      "Одинаковые ядра C₈, разные порядки швов": "Identical cores C₈, different seam orders",
+      "Вспомогательный путь: каждый круг обозначает целый цикл": "Auxiliary path: each circle represents an entire cycle",
+      "Пунктир: шов из одной вершины; общее ребро отсутствует": "Dashed line: a one-vertex seam, with no shared edge"
+    }
+  },
+  "Присоединение ядра и перенос активной границы.svg": {
+    "file": "Attaching a Core and Transferring the Active Boundary.svg",
+    "text": {
+      "Присоединение ядра и перенос активной границы": "Attaching a core and transferring the active boundary",
+      "Общее ребро оставлено у старого фрагмента. Входные отметки снимаются после сборки, выход сохраняется. Вставка: изолированная входная вершина при шве на трёх вершинах.": "The shared edge stays in the old fragment. Input marks are removed after assembly, while the output is retained. Inset: an isolated input vertex for a three-vertex seam.",
+      "1. Собранная часть H": "1. Assembled part H",
+      "2. Новый фрагмент K⁻": "2. New fragment K⁻",
+      "3. После сочленения": "3. After gluing",
+      "Активная граница B = {a, b}": "Active boundary B = {a, b}",
+      "Копия ребра ab удалена": "Copy of edge ab removed",
+      "Новая активная граница C = {c, d}": "New active boundary C = {c, d}",
+      "Вставка: шов на трёх вершинах": "Inset: a three-vertex seam",
+      "В K⁻ удалены рёбра aw и wb, но сохранены все 6 вершин.": "Edges aw and wb are removed from K⁻; all 6 vertices remain.",
+      "Вершина w изолирована в K⁻ и входит в его паспорт.": "Vertex w is isolated in K⁻ and included in its passport.",
+      "В собранном графе она соединена рёбрами шва из H.": "In the assembled graph, seam edges from H connect it.",
+      "Снять отметку границы ≠ удалить вершину.": "Removing a boundary mark ≠ deleting a vertex.",
+      "Пунктир: копии рёбер, исключённые из присоединяемого фрагмента.": "Dashed lines: edge copies excluded from the new fragment."
+    }
+  },
+  "Путь и звезда из четырёх циклов.svg": {
+    "file": "A Path and a Star of Four Cycles.svg",
+    "text": {
+      "Путь и звезда из четырёх шестиугольников": "A path and a star of four hexagons",
+      "Одни и те же четыре циклических ядра и три однорёберных шва. Схема пути даёт 1189 деревьев, схема звезды 1188; точные радиусы также различны.": "The same four cycle cores and three single-edge seams. The path scheme gives 1189 trees and the star scheme 1188; the exact radii also differ.",
+      "Четыре C₆: положение швов или изменение схемы?": "Four C₆ cores: seam placement or a change of scheme?",
+      "Путь P₄": "Path P₄",
+      "Звезда K₁,₃": "Star K₁,₃",
+      "В обоих графах: 18 вершин, 21 ребро; синим выделены общие рёбра": "Both graphs: 18 vertices, 21 edges; shared edges are blue"
+    }
+  },
+  "Сдвиг последнего основания призм.svg": {
+    "file": "Shifting the Final Prism Base.svg",
+    "text": {
+      "Сдвиг последнего основания призм": "Shifting the final prism base",
+      "Соответствия двух квадратных границ при сдвигах ноль и один. Стрелки показывают отождествление, а не новые рёбра.": "Correspondences between two square boundaries with shifts zero and one. Arrows show identifications, not new edges.",
+      "Последнее основание: j переходит в j + r по модулю 4": "The final base: j maps to j + r modulo 4",
+      "Нулевой сдвиг r = 0": "Zero shift r = 0",
+      "Конец цепи": "Chain end",
+      "Начало цепи": "Chain start",
+      "Сдвиг r = 1": "Shift r = 1",
+      "Стрелки — соответствия; две копии каждого ребра основания сливаются в одну": "Arrows are correspondences; two copies of each base edge become one"
+    }
+  },
+  "Чётный цикл и редукция продольных путей.svg": {
+    "file": "An Even Cycle and Reduction of Longitudinal Paths.svg",
+    "text": {
+      "Чётный цикл и редукция продольных путей": "An even cycle and reduction of longitudinal paths",
+      "Шестиугольное ядро с противоположными рёберными швами: два пути длины два заменяются проводимостями одна вторая.": "A hexagonal core with opposite edge seams: two paths of length two are replaced by conductances one half.",
+      "Шестиугольное ядро: пути длины 2 и их проводимости": "Hexagonal core: length-2 paths and their conductances",
+      "Все шесть рёбер единичные": "All six edges have unit conductance",
+      "После исключения двух вершин": "After eliminating two vertices",
+      "Восстановление двух путей даёт множитель 4 для остовного числа": "Restoring both paths multiplies the spanning-tree coefficient by 4"
+    }
+  },
+  "Шестиугольное кольцо и замкнутая полоса.svg": {
+    "file": "A Hexagonal Ring and a Closed Strip.svg",
+    "text": {
+      "Шестиугольное кольцо и замкнутая полоса": "A hexagonal ring and a closed strip",
+      "Два обычных замыкания шести циклов C6. Пути между швами имеют длины 1 и 3 либо 2 и 2. Последний шов красный.": "Two ordinary closures of six cycles C6. Paths between seams have lengths 1 and 3, or 2 and 2. The final seam is red.",
+      "Одинаковые ядра, разное положение швов": "Identical cores, different seam positions",
+      "Кольцо вокруг пустой ячейки": "Ring around an empty cell",
+      "Цилиндрическая полоса": "Cylindrical strip",
+      "Длины путей: 1 и 3": "Path lengths: 1 and 3",
+      "Длины путей: 2 и 2": "Path lengths: 2 and 2",
+      "В обоих графах: 24 вершины, 30 рёбер; красным отмечен последний шов": "Both graphs: 24 vertices, 30 edges; the final seam is red"
+    }
+  }
+}

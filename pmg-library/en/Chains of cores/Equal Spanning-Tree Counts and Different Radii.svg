@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="565" viewBox="0 0 1240 565" role="img" aria-labelledby="title desc">
+<title id="title">Equal spanning-tree counts and different resistance radii</title><desc id="desc">Graph A: C4 and C3 sharing vertex 0. Graph B: K2,3 with pendant edge 05. Both have six vertices, seven edges, and 12 trees. Their radii, 77/144 and 7/12, differ.</desc>
+<rect width="1240" height="565" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="620.00" y="43.00" font-size="26" fill="#172b43" text-anchor="middle" font-weight="bold">The spanning-tree count alone does not determine the radius</text>
+<rect x="20" y="75" width="580" height="425" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="310.00" y="112.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">A. Two cycles sharing a vertex</text>
+<line x1="290.00" y1="290.00" x2="120.00" y2="290.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="290.00" y1="290.00" x2="290.00" y2="160.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="290.00" y1="290.00" x2="450.00" y2="225.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="290.00" y1="290.00" x2="450.00" y2="365.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="120.00" y1="290.00" x2="120.00" y2="160.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="120.00" y1="160.00" x2="290.00" y2="160.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="450.00" y1="225.00" x2="450.00" y2="365.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<circle cx="290.00" cy="290.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="300.00" y="280.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">0</text>
+<circle cx="120.00" cy="290.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="130.00" y="280.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">1</text>
+<circle cx="120.00" cy="160.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="130.00" y="150.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">2</text>
+<circle cx="290.00" cy="160.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="300.00" y="150.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">3</text>
+<circle cx="450.00" cy="225.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="460.00" y="215.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">4</text>
+<circle cx="450.00" cy="365.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="460.00" y="355.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">5</text>
+<text x="310.00" y="417.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">τ = 12</text>
+<text x="310.00" y="466.00" font-size="27" fill="#8953af" text-anchor="middle" font-weight="bold">ρ = 77/144</text>
+<rect x="640" y="75" width="580" height="425" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="930.00" y="112.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">B. K₂,₃ with a pendant edge</text>
+<line x1="770.00" y1="260.00" x2="920.00" y2="160.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="770.00" y1="260.00" x2="920.00" y2="260.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="770.00" y1="260.00" x2="920.00" y2="365.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="770.00" y1="260.00" x2="680.00" y2="260.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1070.00" y1="260.00" x2="920.00" y2="160.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1070.00" y1="260.00" x2="920.00" y2="260.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1070.00" y1="260.00" x2="920.00" y2="365.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<circle cx="770.00" cy="260.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="780.00" y="250.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">0</text>
+<circle cx="1070.00" cy="260.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="1080.00" y="250.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">1</text>
+<circle cx="920.00" cy="160.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="930.00" y="150.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">2</text>
+<circle cx="920.00" cy="260.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="930.00" y="250.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">3</text>
+<circle cx="920.00" cy="365.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="930.00" y="355.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">4</text>
+<circle cx="680.00" cy="260.00" r="6" fill="white" stroke="#172b43" stroke-width="1.8" />
+<text x="690.00" y="250.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">5</text>
+<text x="930.00" y="417.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">τ = 12</text>
+<text x="930.00" y="466.00" font-size="27" fill="#8953af" text-anchor="middle" font-weight="bold">ρ = 7/12</text>
+<text x="620.00" y="540.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">Both graphs: n = 6, |E| = 7; only B has a pendant vertex</text>
+</g></svg>

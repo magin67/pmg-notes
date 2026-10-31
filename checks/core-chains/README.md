@@ -1,8 +1,22 @@
 # Проверки серии «Цепи из ядер»
 
-Комплект сопровождает пять русских заметок серии, от «Ядра, швы и допустимые цепочки» до «Замыкание цепи: кольцо и эффект Мёбиуса». Требуется Python 3.10 или новее; используются только стандартная библиотека и проверочные функции серии «Граничные полиномы и сочленение графов» из `checks/boundary`. Запускать из корня репозитория без `-O`, отключающего утверждения `assert`.
+Комплект сопровождает пять заметок серии на русском и английском языках, от «Ядра, швы и допустимые цепочки» до «Замыкание цепи: кольцо и эффект Мёбиуса». Требуется Python 3.10 или новее; используются только стандартная библиотека и проверочные функции серии «Граничные полиномы и сочленение графов» из `checks/boundary`. Запускать из корня репозитория без `-O`, отключающего утверждения `assert`.
 
 Итоги общей проверки, внесённые исправления и границы вычислительного покрытия зафиксированы в [REVIEW_RU.md](REVIEW_RU.md). Маршрут чтения и происхождение результатов собраны в [навигаторе серии](../../pmg-library/ru/Цепи%20из%20ядер/Цепи%20из%20ядер.md).
+
+## English versions and figures
+
+The five notes and the [English navigator](../../pmg-library/en/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for translation, notation, link, and rendering checks.
+
+The five verification programs listed below use Python 3.10 or newer and the standard library, together with the repository's `checks/boundary` helpers. Run them from the repository root without `-O`. Their adjacent JSON outputs retain the cores, seam correspondences, final edge sets, and exact rational results.
+
+Generate the Russian SVGs with the five drawing commands in the final section, then translate all 15 figures:
+
+```bash
+python checks/core-chains/translate_figures.py
+```
+
+The explicit dictionary in `figure-translations-en.json` translates visible labels, titles, and descriptions without changing the graph geometry. The translator rejects missing or unused dictionary entries and remaining Cyrillic text. Output goes to `pmg-library/en/Chains of cores`.
 
 ## Точные проверки
 

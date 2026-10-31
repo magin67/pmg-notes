@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="530" viewBox="0 0 1180 530" role="img" aria-labelledby="title desc">
+<title id="title">Two placements of disconnected seams</title><desc id="desc">Middle core C12. Input 01 and 45 is fixed. The output is 23 and 67 in A, and 67 and 10-11 in B. Input and output are vertex-disjoint.</desc>
+<rect width="1180" height="530" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="590.00" y="42.00" font-size="26" fill="#172b43" text-anchor="middle" font-weight="bold">Equal disconnected seams, different relative positions</text>
+<rect x="20" y="70" width="550" height="405" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="295.00" y="106.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Configuration A</text>
+<line x1="357.50" y1="384.25" x2="403.25" y2="338.50" stroke="#bc294b" stroke-width="6" stroke-linecap="round" />
+<line x1="403.25" y1="338.50" x2="420.00" y2="276.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="420.00" y1="276.00" x2="403.25" y2="213.50" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<line x1="403.25" y1="213.50" x2="357.50" y2="167.75" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="357.50" y1="167.75" x2="295.00" y2="151.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round" />
+<line x1="295.00" y1="151.00" x2="232.50" y2="167.75" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="232.50" y1="167.75" x2="186.75" y2="213.50" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<line x1="186.75" y1="213.50" x2="170.00" y2="276.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="170.00" y1="276.00" x2="186.75" y2="338.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="186.75" y1="338.50" x2="232.50" y2="384.25" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="232.50" y1="384.25" x2="295.00" y2="401.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="357.50" y1="384.25" x2="295.00" y2="401.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<circle cx="357.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="370.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="403.25" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="424.90" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="420.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="445.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="403.25" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="424.90" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="357.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="370.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="295.00" cy="151.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="295.00" y="133.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="232.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="220.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<circle cx="186.75" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="165.10" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<circle cx="170.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="145.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<circle cx="186.75" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="165.10" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<circle cx="232.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="220.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<circle cx="295.00" cy="401.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="295.00" y="433.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<text x="295.00" y="457.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Output: (2, 3, 6, 7)</text>
+<rect x="610" y="70" width="550" height="405" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="885.00" y="106.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Configuration B</text>
+<line x1="947.50" y1="384.25" x2="993.25" y2="338.50" stroke="#bc294b" stroke-width="6" stroke-linecap="round" />
+<line x1="993.25" y1="338.50" x2="1010.00" y2="276.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1010.00" y1="276.00" x2="993.25" y2="213.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="993.25" y1="213.50" x2="947.50" y2="167.75" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="947.50" y1="167.75" x2="885.00" y2="151.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round" />
+<line x1="885.00" y1="151.00" x2="822.50" y2="167.75" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="822.50" y1="167.75" x2="776.75" y2="213.50" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<line x1="776.75" y1="213.50" x2="760.00" y2="276.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="760.00" y1="276.00" x2="776.75" y2="338.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="776.75" y1="338.50" x2="822.50" y2="384.25" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="822.50" y1="384.25" x2="885.00" y2="401.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<line x1="947.50" y1="384.25" x2="885.00" y2="401.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<circle cx="947.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="960.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="993.25" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="1014.90" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="1010.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="1035.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="993.25" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="1014.90" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="947.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="960.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="885.00" cy="151.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="885.00" y="133.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="822.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="810.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<circle cx="776.75" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="755.10" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<circle cx="760.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="735.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<circle cx="776.75" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="755.10" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<circle cx="822.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="810.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<circle cx="885.00" cy="401.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="885.00" y="433.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<text x="885.00" y="457.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Output: (6, 7, 10, 11)</text>
+<text x="590.00" y="510.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="normal">Input in both configurations: (0, 1, 4, 5)</text>
+</g></svg>

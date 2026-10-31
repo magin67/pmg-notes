@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 19
-translated_revision: 22
-updated: 2026-10-30
+revision: 20
+translated_revision: 29
+updated: 2026-10-31
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -101,6 +101,19 @@ Six notes explain which boundary data suffice for contraction and gluing. The fu
 
 - [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|The problem, reading routes, and provenance of the results]].
 
+## Chains of cores
+
+Five notes connect the precise construction of a chain with matroid invariance, spanning-tree recurrences, their applicability conditions, and ordinary or twisted closure.
+
+- [[en/Chains of cores/Chains of Cores|Navigator: reading routes, conditions, and origins of results]].
+- [[ru/Цепи из ядер/Цепи из ядер|Русская версия серии]].
+
+- [[en/Chains of cores/Cores, Seams, and Admissible Chains|Definitions, sequential assembly, and the first example]].
+- [[en/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|The dual graph, matroid invariance, and two hexagonal isomers]].
+- [[en/Chains of cores/Spanning-Tree Polynomials of Chains - Determinant and Recurrence|Spanning-tree determinants, continuants, Chebyshev polynomials, and seam order]].
+- [[en/Chains of cores/Limits of Invariance - Branching, Disconnected Seams, and Other Cores|A fixed tree of cycles and counterexamples for other gluings]].
+- [[en/Chains of cores/Closing a Chain - Rings and the Möbius Effect|Ordinary and twisted closures, spanning-tree counts, and radii]].
+
 ## Python examples
 
 Executable examples show how to reproduce calculations from the notes with `polyform_algebra`. The first companion covers strengthening one and two couplings of a triangle.
@@ -151,4 +164,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **30 October 2026**
+- Library last updated: **31 October 2026**

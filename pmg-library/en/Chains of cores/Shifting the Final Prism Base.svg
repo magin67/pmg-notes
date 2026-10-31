@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="590" viewBox="0 0 1260 590" role="img" aria-labelledby="title desc">
+<title id="title">Shifting the final prism base</title><desc id="desc">Correspondences between two square boundaries with shifts zero and one. Arrows show identifications, not new edges.</desc>
+<rect width="1260" height="590" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="630.00" y="35.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">The final base: j maps to j + r modulo 4</text>
+<rect x="20" y="65" width="610" height="450" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="325.00" y="102.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Zero shift r = 0</text>
+<text x="150.00" y="143.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Chain end</text>
+<text x="500.00" y="143.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Chain start</text>
+<line x1="150.00" y1="185.00" x2="150.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="150.00" y1="260.00" x2="150.00" y2="335.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="150.00" y1="335.00" x2="150.00" y2="410.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<path d="M150,185 C85,160 85,435 150,410" fill="none" stroke="#52657a" stroke-width="3" />
+<line x1="500.00" y1="185.00" x2="500.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="500.00" y1="260.00" x2="500.00" y2="335.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="500.00" y1="335.00" x2="500.00" y2="410.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<path d="M500,185 C565,160 565,435 500,410" fill="none" stroke="#52657a" stroke-width="3" />
+<line x1="165.00" y1="185.00" x2="485.00" y2="185.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="485.00,185.00 473.00,180.00 473.00,190.00" fill="#8953af" />
+<line x1="165.00" y1="260.00" x2="485.00" y2="260.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="485.00,260.00 473.00,255.00 473.00,265.00" fill="#8953af" />
+<line x1="165.00" y1="335.00" x2="485.00" y2="335.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="485.00,335.00 473.00,330.00 473.00,340.00" fill="#8953af" />
+<line x1="165.00" y1="410.00" x2="485.00" y2="410.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="485.00,410.00 473.00,405.00 473.00,415.00" fill="#8953af" />
+<circle cx="150.00" cy="185.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="150.00" y="192.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="150.00" cy="260.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="150.00" y="267.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="150.00" cy="335.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="150.00" y="342.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="150.00" cy="410.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="150.00" y="417.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="500.00" cy="185.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="500.00" y="192.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="500.00" cy="260.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="500.00" y="267.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="500.00" cy="335.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="500.00" y="342.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="500.00" cy="410.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="500.00" y="417.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="325.00" y="478.00" font-size="23" fill="#8953af" text-anchor="middle" font-weight="bold">0→0, 1→1, 2→2, 3→3</text>
+<rect x="650" y="65" width="610" height="450" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="955.00" y="102.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Shift r = 1</text>
+<text x="780.00" y="143.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Chain end</text>
+<text x="1130.00" y="143.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Chain start</text>
+<line x1="780.00" y1="185.00" x2="780.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="780.00" y1="260.00" x2="780.00" y2="335.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="780.00" y1="335.00" x2="780.00" y2="410.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<path d="M780,185 C715,160 715,435 780,410" fill="none" stroke="#52657a" stroke-width="3" />
+<line x1="1130.00" y1="185.00" x2="1130.00" y2="260.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="1130.00" y1="260.00" x2="1130.00" y2="335.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="1130.00" y1="335.00" x2="1130.00" y2="410.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<path d="M1130,185 C1195,160 1195,435 1130,410" fill="none" stroke="#52657a" stroke-width="3" />
+<line x1="795.00" y1="185.00" x2="1115.00" y2="260.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="1115.00,260.00 1104.46,252.39 1102.18,262.13" fill="#8953af" />
+<line x1="795.00" y1="260.00" x2="1115.00" y2="335.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="1115.00,335.00 1104.46,327.39 1102.18,337.13" fill="#8953af" />
+<line x1="795.00" y1="335.00" x2="1115.00" y2="410.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="1115.00,410.00 1104.46,402.39 1102.18,412.13" fill="#8953af" />
+<line x1="795.00" y1="410.00" x2="1115.00" y2="185.00" stroke="#8953af" stroke-width="2.5" stroke-linecap="round" />
+<polygon points="1115.00,185.00 1102.31,187.81 1108.06,195.99" fill="#8953af" />
+<circle cx="780.00" cy="185.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="780.00" y="192.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="780.00" cy="260.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="780.00" y="267.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="780.00" cy="335.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="780.00" y="342.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="780.00" cy="410.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="780.00" y="417.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="1130.00" cy="185.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="1130.00" y="192.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="1130.00" cy="260.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="1130.00" y="267.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="1130.00" cy="335.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="1130.00" y="342.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="1130.00" cy="410.00" r="15" fill="white" stroke="#172b43" stroke-width="1.7" />
+<text x="1130.00" y="417.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="955.00" y="478.00" font-size="23" fill="#8953af" text-anchor="middle" font-weight="bold">0→1, 1→2, 2→3, 3→0</text>
+<text x="630.00" y="555.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Arrows are correspondences; two copies of each base edge become one</text>
+</g></svg>
