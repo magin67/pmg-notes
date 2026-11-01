@@ -8,7 +8,7 @@
 
 The five notes and the [English navigator](../../pmg-library/en/Graph%20Transformations%20and%20Gluing/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for translation, notation, link, and rendering checks.
 
-The five verification programs listed below use Python 3.10 or newer and the standard library, together with the repository's `checks/boundary` helpers. Run them from the repository root without `-O`. Their adjacent JSON outputs retain the cores, seam correspondences, final edge sets, and exact rational results.
+The five original verification programs listed below use Python 3.10 or newer and the standard library, together with the repository's `checks/boundary` helpers. Run them from the repository root without `-O`. Their adjacent JSON outputs retain the cores, seam correspondences, final edge sets, and exact rational results.
 
 Generate the Russian SVGs with the five drawing commands in the final section, then translate all 15 figures:
 
@@ -17,6 +17,27 @@ python checks/core-chains/translate_figures.py
 ```
 
 The explicit dictionary in `figure-translations-en.json` translates visible labels, titles, and descriptions without changing the graph geometry. The translator rejects missing or unused dictionary entries and remaining Cyrillic text. Output goes to `pmg-library/en/Graph Transformations and Gluing/Chains of cores`.
+
+## Плетение графов: русское дополнение
+
+Заметка «Плетение графов: вилка, розетка и рекурсия» добавлена к исходному двуязычному комплекту. Её четыре рисунка и новый проверочный скрипт пока относятся только к русскому дополнению; прежние словари переводов не изменялись.
+
+```bash
+python -B checks/core-chains/verify_weaving.py
+python -B checks/core-chains/draw_weaving.py
+```
+
+`verify_weaving.py` использует стандартную библиотеку и уже имеющиеся точные матричные и лесные помощники из `checks/boundary`. Проверяются обе координаты: остовной коэффициент и вес двухкомпонентных лесов, разделяющих текущую розетку. Обе координаты непосредственно вычисляются минорами лапласиана собранного графа; на малых графах они независимо получаются перебором рёбер.
+
+- Семь бегунков и шаги 0–5: 42 прямые проверки. Пути, веер с пересечением границ, квадрат с сохранённым входным ребром, K4 без входного ребра; целые и рациональные проводимости.
+- Независимый перебор всех 5254 наборов рёбер на 21 малом графе.
+- Все 38 связных простых графов на четырёх именованных вершинах, 36 сочетаний входной и выходной пар, оба соответствия контактов: 2736 присоединений к взвешенному треугольнику. Включены совпадающие пары, нулевой смешанный резистивный элемент и параллельные рёбра.
+- Все 27 последовательностей трёх выходов пути P6; совпадение двух остовных координат с (204,169).
+- Чередование P4 и P6: прямые миноры до четырёх периодов и рекурсия матрицы периода.
+
+`weaving-results.json` хранит бегунки, входные и выходные пары, точные резистивные параметры, матрицы, состояния и полные списки рёбер семи примеров. Рёбра представлены отдельными записями, так что параллельные экземпляры не теряются. Пустой определитель равен 1, леса не имеют выбранных корней. Все результаты точные; координаты рисунков не участвуют в проверках.
+
+Новые SVG строятся отдельно скриптом `draw_weaving.py`: вилка и розетка; два остовных состояния; три бегунка; начало и замыкание. Рисунок замыканий поясняет уже опубликованное правило, а не новый расчёт замкнутых спектров.
 
 ## Точные проверки
 

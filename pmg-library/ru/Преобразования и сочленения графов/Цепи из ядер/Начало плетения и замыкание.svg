@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="755" viewBox="0 0 1120 755" role="img" aria-labelledby="title desc">
+<title id="title">Начало плетения и замыкание</title><desc id="desc">При замыкании нужно хранить начальные контакты. Прямое и перекрёстное соответствия крайних пар квадратной полосы дают разные замыкания.</desc>
+<rect width="1120" height="755" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="1080" height="310" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="42.00" y="62.00" font-size="25" fill="#172b43" text-anchor="start" font-weight="bold">Открытая полоса: начало сохраняется до последнего шага</text>
+<line x1="210.00" y1="125.00" x2="210.00" y2="245.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="435.00" y1="125.00" x2="435.00" y2="245.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="660.00" y1="125.00" x2="660.00" y2="245.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="885.00" y1="125.00" x2="885.00" y2="245.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="210.00" y1="125.00" x2="435.00" y2="125.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="210.00" y1="245.00" x2="435.00" y2="245.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="435.00" y1="125.00" x2="660.00" y2="125.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="435.00" y1="245.00" x2="660.00" y2="245.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="660.00" y1="125.00" x2="885.00" y2="125.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<line x1="660.00" y1="245.00" x2="885.00" y2="245.00" stroke="#52657a" stroke-width="4" stroke-linecap="round"/>
+<circle cx="210.00" cy="125.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="210.00" cy="125.00" r="10" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="210.00" cy="125.00" r="4" fill="#bc294b" stroke="none" stroke-width="2"/>
+<circle cx="210.00" cy="245.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="210.00" cy="245.00" r="10" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="210.00" cy="245.00" r="4" fill="#bc294b" stroke="none" stroke-width="2"/>
+<circle cx="435.00" cy="125.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="435.00" cy="245.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="660.00" cy="125.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="660.00" cy="245.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="885.00" cy="125.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="885.00" cy="125.00" r="10" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="885.00" cy="125.00" r="4" fill="#196bb9" stroke="none" stroke-width="2"/>
+<circle cx="885.00" cy="245.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<circle cx="885.00" cy="245.00" r="10" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="885.00" cy="245.00" r="4" fill="#196bb9" stroke="none" stroke-width="2"/>
+<text x="185.00" y="132.00" font-size="22" fill="#172b43" text-anchor="end" font-weight="normal">a₀</text>
+<text x="185.00" y="252.00" font-size="22" fill="#172b43" text-anchor="end" font-weight="normal">b₀</text>
+<text x="910.00" y="132.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a₃</text>
+<text x="910.00" y="252.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b₃</text>
+<text x="210.00" y="296.00" font-size="20" fill="#bc294b" text-anchor="start" font-weight="normal">B₀: начальная пара</text>
+<text x="680.00" y="296.00" font-size="20" fill="#196bb9" text-anchor="start" font-weight="normal">B₃: текущая розетка</text>
+<rect x="20" y="355" width="530" height="280" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="42.00" y="397.00" font-size="23" fill="#172b43" text-anchor="start" font-weight="bold">Прямое соответствие</text>
+<line x1="115.00" y1="460.00" x2="435.00" y2="460.00" stroke="#8953af" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
+<circle cx="115.00" cy="460.00" r="8" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="435.00" cy="460.00" r="8" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="92.00" y="467.00" font-size="21" fill="#172b43" text-anchor="end" font-weight="normal">a₀</text>
+<text x="458.00" y="467.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">a₃</text>
+<line x1="115.00" y1="555.00" x2="435.00" y2="555.00" stroke="#8953af" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
+<circle cx="115.00" cy="555.00" r="8" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="435.00" cy="555.00" r="8" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="92.00" y="562.00" font-size="21" fill="#172b43" text-anchor="end" font-weight="normal">b₀</text>
+<text x="458.00" y="562.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">b₃</text>
+<text x="42.00" y="610.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">Цилиндрическое замыкание</text>
+<rect x="570" y="355" width="530" height="280" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="592.00" y="397.00" font-size="23" fill="#172b43" text-anchor="start" font-weight="bold">Скрещённое соответствие</text>
+<line x1="665.00" y1="460.00" x2="985.00" y2="555.00" stroke="#8953af" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
+<circle cx="665.00" cy="460.00" r="8" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="985.00" cy="460.00" r="8" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="642.00" y="467.00" font-size="21" fill="#172b43" text-anchor="end" font-weight="normal">a₀</text>
+<text x="1008.00" y="467.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">a₃</text>
+<line x1="665.00" y1="555.00" x2="985.00" y2="460.00" stroke="#8953af" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
+<circle cx="665.00" cy="555.00" r="8" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="985.00" cy="555.00" r="8" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="642.00" y="562.00" font-size="21" fill="#172b43" text-anchor="end" font-weight="normal">b₀</text>
+<text x="1008.00" y="562.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">b₃</text>
+<text x="592.00" y="610.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">Мёбиусово замыкание</text>
+<text x="42.00" y="680.00" font-size="21" fill="#52657a" text-anchor="start" font-weight="normal">Пунктир обозначает отождествления, а не новые рёбра.</text>
+<text x="42.00" y="719.00" font-size="21" fill="#52657a" text-anchor="start" font-weight="normal">Для единичного общего ребра одну из двух крайних копий удаляют.</text>
+</g></svg>
