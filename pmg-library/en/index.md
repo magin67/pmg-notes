@@ -3,7 +3,7 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 25
+revision: 26
 translated_revision: 29
 updated: 2026-11-01
 ---
@@ -22,7 +22,7 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Thematic sections
 
-The library contains 16 completed bilingual series and the newly started “Spectra of Isomers”: 115 substantive notes in Russian and 112 in English. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
+The library contains 16 completed bilingual series and the newly started “Spectra of Isomers”: 116 substantive notes in Russian and 112 in English. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
 - **[[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
@@ -38,7 +38,7 @@ The library contains 16 completed bilingual series and the newly started “Spec
 
 ## Development plan
 
-The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. “Spectra of Isomers” has begun with [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]], covering exact polynomials, rooted forests, and the spectral difference of two chains. [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]] proves closure of five coordinates under two-vertex attachment and gives explicit hexagon transitions. [[ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек|SLR Codes of Hexagonal Chains, in Russian]] defines reflection and reversal and proves graph classification by these symmetries for abstract open hexagonal chains. The three Russian notes await translation; subsequent scope remains open.
+The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. “Spectra of Isomers” has begun with [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]], covering exact polynomials, rooted forests, and the spectral difference of two chains. [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]] proves closure of five coordinates under two-vertex attachment and gives explicit hexagon transitions. [[ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек|SLR Codes of Hexagonal Chains, in Russian]] defines reflection and reversal and proves graph classification by these symmetries for abstract open hexagonal chains. The four Russian notes await translation; subsequent scope remains open. The note [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральные разности SLR-цепочек|Spectral Differences of SLR Chains, in Russian]] derives local and mixed differences and relates bend counts to the fourth rooted coefficient.
 
 ## Status of results
 

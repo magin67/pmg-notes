@@ -87,3 +87,35 @@ The 121 words through six cores are checked against complete exact Laplacian cha
 `slr-code-results.json` contains the finite-check counts, example values and full edge sets, terminal states, and explicit isomorphisms for the four words in the `SLS` orbit. Four SVG files illustrate local turns and seam order, a symmetry orbit, the four classes with four cores, and different passports at opposite ends. The drawing script uses only the standard-library helper and does not require NetworkX or SymPy.
 
 The note proves the graph classification only for abstract open chains of hexagons with disjoint edge seams and no other identifications. It does not establish injectivity of the spectral state, the characteristic polynomial, or its value at `xi=-1`.
+
+## Спектральные разности SLR-цепочек
+
+Из корня репозитория:
+
+```console
+python checks/isomer-spectra/verify_spectral_differences.py
+python checks/isomer-spectra/draw_spectral_differences.py
+```
+
+Проверено на Python 3.12.1, SymPy 1.14.0 и NetworkX 3.6.1. Расчёт использует
+только точные целые числа и полиномы; программа рисунков использует стандартную
+библиотеку Python и сохранённые результаты.
+
+- Независимые полные характеристические полиномы: все 121 слово при 2 ≤ N ≤ 6.
+- Все 426 однобуквенных замен и 64 смешанные разности по двум выбранным позициям
+  на этом наборе; фиксированные промежутки сохраняются в произведении матриц.
+- Прямые спектральные моменты и число рёбер между вершинами степени 3:
+  все 364 слова при 2 ≤ N ≤ 7. Для 121 полинома проверены тождества Ньютона
+  и общий младший коэффициент −nτ.
+- Две разные рекурсии: обычные S/L-замены и замены с дополнительной
+  перестановкой границы. Прямые знакопеременные суммы проверены до r=4,
+  полиномиальные последовательности до r=8; общие матричные тождества проверены
+  символьно. Конечные проверки не подменяют доказательств в заметке.
+- Факторизации примеров, отсутствие универсальной делимости на χ(C5)²,
+  одна телескопическая разность с заменой всех букв.
+
+`spectral-differences-results.json` сохраняет матрицы разности, факторизации,
+коэффициенты, значения при ξ=−1, списки рёбер примеров и счётчики проверок.
+Числа на рисунках берутся из этого файла. Полные спектральные паспорта,
+характеристические полиномы и одно числовое значение не смешиваются как
+критерии восстановления.

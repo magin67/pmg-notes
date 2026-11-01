@@ -2,7 +2,7 @@
 title: Thematic Index
 date: 2026-11-01
 updated: 2026-11-01
-revision: 4
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -31,7 +31,7 @@ This index groups series by their main question. Each series has one primary hom
 
 ## Primary home of each series
 
-16 completed bilingual series and the newly started “Spectra of Isomers”: 115 substantive notes in Russian and 112 in English. Thematic pages, navigators, references, and programming examples are excluded from this count.
+16 completed bilingual series and the newly started “Spectra of Isomers”: 116 substantive notes in Russian and 112 in English. Thematic pages, navigators, references, and programming examples are excluded from this count.
 
 | Series | Primary home | Notes |
 | --- | --- | ---: |
@@ -52,7 +52,7 @@ This index groups series by their main question. Each series has one primary hom
 | [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 5 |
 | [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | [[en/Directed Graphs and Extensions/Directed Graphs and Extensions\|Directed Graphs and Extensions]] | 12 |
 
-The newly started **“Spectra of Isomers”** contains [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]], [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]], and [[ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек|SLR Codes of Hexagonal Chains, in Russian]] (three Russian notes; English translations pending). Its primary home is [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]], with a secondary entry through [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]].
+The newly started **“Spectra of Isomers”** contains [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]], [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]], [[ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек|SLR Codes of Hexagonal Chains, in Russian]], and [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральные разности SLR-цепочек|Spectral Differences of SLR Chains, in Russian]] (four Russian notes; English translations pending). Its primary home is [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]], with a secondary entry through [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]].
 
 ## Finding connections and future directions
 
