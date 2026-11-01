@@ -3,7 +3,7 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 27
+revision: 28
 translated_revision: 29
 updated: 2026-11-02
 ---
@@ -38,7 +38,7 @@ The library contains 16 completed bilingual series and the completed Russian col
 
 ## Development plan
 
-The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers: Results and Open Questions, in Russian]] completes the current Russian series of nine substantive notes on spectral differences, boundary transfer, decoding, response, and periodic chains. The navigator separates proofs, finite computations, and conjectures. English translations are pending.
+The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers: Results and Open Questions, in Russian]] completes the current Russian series of nine substantive notes on spectral differences, boundary transfer, decoding, response, and periodic chains. The navigator separates proofs, finite computations, and conjectures. English translations are pending.
 
 ## Status of results
 

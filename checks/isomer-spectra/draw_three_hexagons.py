@@ -3,7 +3,7 @@ from html import escape
 from math import cos, sin, pi
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[2] / 'pmg-library/ru/Инварианты, разложения и спектры/Спектры изомеров'
+OUT = Path(__file__).resolve().parents[2] / 'pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров'
 INK, MUTED, EDGE = '#172b43', '#52657a', '#52657a'
 RED, BLUE, GREEN = '#bc294b', '#196bb9', '#15815b'
 FILLS = ['#fff0d7', '#ddf4e9', '#e2edff']

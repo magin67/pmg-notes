@@ -1,6 +1,8 @@
 # Exact checks for “Spectra of Isomers”
 
-The Russian note is `pmg-library/ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников.md`.
+[Series-wide review, 2026-11-02 (Russian)](REVIEW_RU.md): proof boundaries, corrections, repeated exact checks, navigation, and preserved addresses.
+
+The Russian note is `pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров/Два изомера трёх шестиугольников.md`.
 The input consists solely of the explicitly listed cycles, with shared edges counted once.
 
 ## Reproduction
@@ -43,7 +45,7 @@ The determinant identity in the note is proved algebraically. Exhaustive forest 
 
 ## Transfer to a new boundary
 
-The second Russian note is `pmg-library/ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы.md`.
+The second Russian note is `pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров/Спектральный перенос при смене границы.md`.
 
 ```text
 python checks/isomer-spectra/verify_boundary_transfer.py
@@ -70,7 +72,7 @@ Closure for every two-vertex attachment satisfying the note's conditions is prov
 
 ## SLR codes, reflection, and reversal
 
-The third Russian note is `pmg-library/ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек.md`.
+The third Russian note is `pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров/SLR-код гексагональных цепочек.md`.
 
 ```text
 python -m pip install sympy==1.14.0 networkx==3.6.1

@@ -2,7 +2,7 @@
 title: Graph Transformations and Gluing
 date: 2026-11-01
 updated: 2026-11-02
-revision: 6
+revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -21,7 +21,8 @@ How do characteristics change when couplings vary, vertices are eliminated, or a
 
 - **[[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]]** (8 notes). Direct and inverse changes to couplings, the Greenian, and resistances; compatibility and conductance constraints.
 - **[[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]]** (6 notes). Data sufficient for contraction and gluing: the forest passport, its spanning-tree layer, and spectral data.
-- **[[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]** (5 notes). Admissible assemblies of cores, preserved parameters, spanning-tree recurrences, and chain closures.
+- **[[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]** (5 English notes; the Russian collection also includes 2 supplements on weaving). Admissible assemblies of cores, preserved parameters, spanning-tree recurrences, and chain closures.
+- **[[ru/Преобразования и сочленения графов/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers, in Russian]]** (9 substantive notes and a navigator; the Russian collection has passed a series-wide review). Spectral transfer, SLR codes, differences, exact decoding, boundary response, and constant and periodic chains. A continuation of Chains of Cores; English translations are pending.
 
 ## Reading route
 
@@ -41,10 +42,8 @@ These are secondary thematic entry points; each series navigator identifies its 
 - [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]: the Dirichlet problem, vertex elimination, and contraction.
 - [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]]: one-point gluing and Whitney twists.
 
-- **[[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers: Results and Open Questions, in Russian]]**: a secondary entry through seams, active-boundary transfer, fixed runners, and periodic blocks. The nine-note Russian collection and its navigator are complete; English translations are pending. Its primary home is [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].
-
 ## Future directions
 
-Composite cores and further assembly methods. “Spectra of Isomers” has a secondary entry here through transfer methods, with its primary home in invariants and spectra. Infinite lattices and limits of finite graphs are provisionally placed here, with a connection to spectra; their final placement depends on scope.
+Composite cores and further assembly methods. Chains of Cores and Spectra of Isomers form a shared route from assembly to invariants and reconstruction. The isomer-series navigator records the remaining spectral questions. Infinite lattices and limits of finite graphs are provisionally placed here, with a connection to spectra; their final placement depends on scope.
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]].

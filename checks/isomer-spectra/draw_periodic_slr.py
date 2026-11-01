@@ -47,7 +47,7 @@ def phases():
         value=DATA['phases'][u]['P1_sequence'][1]
         s.text(x+180,459,'P(1) =',20,MUTED,'middle')
         s.text(x+180,494,f'{value:,}'.replace(',',' '),24,RED if u=='LSL' else BLUE,'middle','bold')
-    s.text(600,575,'LLS и SLL: обращение цепи сохраняет спектр',23,BLUE,'middle')
+    s.text(600,575,'LLS и SLL: отражение и обращение сохраняют спектр',23,BLUE,'middle')
     s.text(600,611,'LLS и LSL: Δp6 = −1 при любом числе повторений m ≥ 1',23,RED,'middle')
     s.save('Три фазы периода LLS.svg')
 
