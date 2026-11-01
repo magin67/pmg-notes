@@ -67,3 +67,23 @@ The script verifies the compact recurrences, reflection identities, initial stat
 The output `boundary-transfer-results.json` records all three polynomial transfer matrices, the initial state, their normalized specialization at `xi=-1`, both two-hexagon states, and the test counts. The input convention is `(0,1)=(a,b)`, the output is `(j,j+1)`, and a shared unit edge is counted once. Reversing only the input changes `T_j` to `T_j J`, not to `J T_j J`.
 
 Closure for every two-vertex attachment satisfying the note's conditions is proved algebraically in the note. These finite checks validate formulas and implementation; they do not prove minimality or injectivity of the state, characteristic polynomial, or one numerical value.
+
+## SLR codes, reflection, and reversal
+
+The third Russian note is `pmg-library/ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек.md`.
+
+```text
+python -m pip install sympy==1.14.0 networkx==3.6.1
+python checks/isomer-spectra/verify_slr_code.py
+python checks/isomer-spectra/draw_slr_code.py
+```
+
+The code is `w=S u`, where the first `S` is a marker and `len(u)=N-2`. The builder identifies the new local `(0,1)` with the old `(b,a)`, assigns four new vertex IDs, and uses exits 2, 3, or 4 for `L`, `S`, or `R`. A final attachment completes the graph; its opposite free edge is selected only to define the final passport. No geometric coordinate is used to identify graph vertices.
+
+The test constructs all 364 words for two to seven cores. A bounded DFS on the adjacency lists recovers all six-edge cycles independently of the supplied core list. Exact graph isomorphism partitions the graphs without consulting their code or spectra; a Weisfeiler-Lehman hash is used only to reduce candidate comparisons, and every accepted match is checked by graph isomorphism. The resulting partition is compared with the complete four-element code orbits. Reflection and reversal are also checked by 728 explicit bijections with equality of all mapped edge sets.
+
+The 121 words through six cores are checked against complete exact Laplacian characteristic polynomials. All five direct polynomial minors/cofactors are checked for the 13 words through four cores. The test verifies the symbolic transfer reflection identity, code symmetry, the input-order error at `SLL`, and the two different terminal passports of `SLS` and `SSR`, including both boundaries in one labelled graph. It also checks the exact center displacement in the regular development of `SLLLL`: this development has an extra contact that is excluded from the abstract model. Code orbits are additionally enumerated through ten cores and compared with the Burnside formula.
+
+`slr-code-results.json` contains the finite-check counts, example values and full edge sets, terminal states, and explicit isomorphisms for the four words in the `SLS` orbit. Four SVG files illustrate local turns and seam order, a symmetry orbit, the four classes with four cores, and different passports at opposite ends. The drawing script uses only the standard-library helper and does not require NetworkX or SymPy.
+
+The note proves the graph classification only for abstract open chains of hexagons with disjoint edge seams and no other identifications. It does not establish injectivity of the spectral state, the characteristic polynomial, or its value at `xi=-1`.
