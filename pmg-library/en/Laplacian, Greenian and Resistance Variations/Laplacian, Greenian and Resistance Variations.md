@@ -2,14 +2,18 @@
 title: Laplacian, Greenian and Resistance Variations
 date: 2026-11-01
 updated: 2026-11-01
-revision: 1
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: laplacian-greenian-resistance-variations-series-navigation
 order: 0
 description: 'Reading order for eight notes: direct and inverse variations, exterior exponential factors, quadric connectivity, prescribed resistances, and conductance constraints. Main formulas, applicability, and provenance.'
-translated_revision: 2
+translated_revision: 3
+tags:
+  - variations
+  - resistances
+  - forests-and-spanning-trees
 ---
 
 [[ru/Вариации лапласиана, гриниана и резистенсов/Вариации лапласиана, гриниана и резистенсов|Русский]]
@@ -17,6 +21,16 @@ translated_revision: 2
 This series describes direct and inverse variations on graphs: changes in couplings and the resulting changes in the spanning-tree coefficient, Greenian, and resistances; recovery of conductances from prescribed Greenian or resistance variations; and preservation of zero couplings and nonnegativity when only a restricted set of changes is permitted.
 
 Eight notes lead from simple examples to joint variations and constrained algorithms. Their common algebraic basis is the addition of vector factors to the exterior exponentials of the Laplacian and Greenian. Finite formulas account for the new normalization; matrix inversion supplies an independent check.
+
+## Place in the library
+
+Primary section: [[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]]: changes in the resistance metric and quadric connectivity.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Contents and reading order
 

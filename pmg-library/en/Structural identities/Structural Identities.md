@@ -1,8 +1,8 @@
 ---
 title: Structural Identities
 date: 2026-10-18
-updated: 2026-10-18
-revision: 1
+updated: 2026-11-01
+revision: 2
 source_revision: 1
 status: draft
 text_prepared_by: ChatGPT
@@ -10,11 +10,25 @@ translation_key: structural-identities-series-navigation
 lang: en
 description: "Five notes on dependencies among partition forms: the noncrossing basis, Narayana and Catalan numbers, completeness of the four-block identity, graph gluing, and supports of relations."
 order: 0
+tags:
+  - partitions
+  - boundary-data
+  - gluing
 ---
 
 This series determines which partition forms are independent, how to express the remaining forms in terms of them, and how many independent identities relate the original forms. The motivating application is gluing graphs along several vertices: forests in each piece induce partitions of the shared vertices, and structural identities reduce the number of coordinates needed to compute the spanning-tree coefficient.
 
 The starting example is the **tetrahedron identity**. It is an equality of forms before a metric is chosen. Relations between areas follow from metric evaluation and are equalities of numbers. In PMG, the norm is quadratic: $X^2=X\cdot X$; the form $[X]^2$ must be distinguished from its numerical evaluation.
+
+## Place in the library
+
+Primary section: [[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]]: pairing forms and reducing boundary data.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Main results
 

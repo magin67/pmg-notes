@@ -1,18 +1,31 @@
 ---
 title: Combinatorial Potentials
 date: 2026-10-20
-updated: 2026-10-25
-revision: 3
-source_revision: 5
+updated: 2026-11-01
+revision: 4
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: combinatorial-potentials-series-navigation
 lang: en
 description: "Potentials of the first and second kinds, path-and-cycle states, SPF and forest counts, Cayley's formula, and Stirling numbers."
 order: 0
+tags:
+  - partitions
+  - forests-and-spanning-trees
 ---
 
 This series explains how component sizes determine the counts of concrete partitions and graph constructions. Its central concept is the **combinatorial potential of the second kind**: the number of partitions of a given set into unordered blocks of prescribed sizes. This count is then applied to symmetric polyforms and compared with the number of forests. A separate note counts ways to join prescribed components into a tree. The relation between forest coefficients and $r$-Stirling numbers is explained through rooted forests. The potential of the first kind counts cyclic partitions of a prescribed type, connecting the series to permutation digraphs. The final note extends this count to states made of open paths and closed cycles.
+
+## Place in the library
+
+Primary section: [[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Directed Graphs and Extensions|Directed Graphs and Extensions]]: cyclic partitions and permutation digraphs.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Main results
 
@@ -86,6 +99,4 @@ The size of a collection is $\#\mathbf x$, its weight is $w(\mathbf x)$, and the
 
 Block sizes and boundary grades differ by one. A component's edge count equals its grade in a forest; this equality does not apply in the presence of cycles. Representation size, forest count, and form-identity coefficient have different definitions.
 
-Notation and links are consistent with the [[Symmetric Polyforms]] series. The potential of the first kind counts cyclic partitions; the mixed-state potential also admits linearly ordered blocks. For the latter, labels belong to arcs and isolated vertices are accounted for separately. The general algebra of marked components remains a further topic. The formulas in this series are proved under their stated conditions; enumeration of small examples provides additional checks.
-
-
+Notation and links are consistent with the [[en/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] series. The potential of the first kind counts cyclic partitions; the mixed-state potential also admits linearly ordered blocks. For the latter, labels belong to arcs and isolated vertices are accounted for separately. The general algebra of marked components remains a further topic. The formulas in this series are proved under their stated conditions; enumeration of small examples provides additional checks.

@@ -1,15 +1,19 @@
 ---
 title: "Chains of Cores"
 date: 2026-10-31
-updated: 2026-10-31
-revision: 1
-translated_revision: 2
+updated: 2026-11-01
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: core-chains-series-navigation
 order: 0
 description: "Reading routes, applicability conditions, proofs, examples, and sources for chains of cores."
+tags:
+  - matroids
+  - forests-and-spanning-trees
+  - gluing
 ---
 
 Russian version: [[ru/Цепи из ядер/Цепи из ядер|Цепи из ядер]].
@@ -17,6 +21,16 @@ Russian version: [[ru/Цепи из ядер/Цепи из ядер|Цепи и�
 This series explains how cores, seams, and the gluing scheme determine the characteristics of an assembled graph. Its main positive result concerns admissible open chains of cycles: with fixed ordered core and seam sizes, changing the configuration preserves the cycle matroid, ordinary forest coefficients, spanning-tree count, and resistance radius. Reordering seams, changing the scheme, or changing the last correspondence at closure requires separate analysis.
 
 The five notes form a complete introductory reading route. This navigator collects their connections, applicability conditions, and the origins of the results. Full spectral classification of chains remains a continuation.
+
+## Place in the library
+
+Primary section: [[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: matroid invariance and the future problem of distinguishing isomers.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Reading route
 

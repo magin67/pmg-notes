@@ -1,15 +1,19 @@
 ---
 title: Spaces and Subspaces in PMG
 date: 2026-10-14
-updated: 2026-10-15
-revision: 4
-translated_revision: 4
+updated: 2026-11-01
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: spaces-subspaces-series-navigation
 lang: en
 description: "Reading order for eight notes on PMG spaces: choosing a basis, the null vector, nonlocal elements and spheres, coordinates, contraction, the Dirichlet problem, and induced couplings. Prerequisites and reading routes."
 order: 0
+tags:
+  - resistances
+  - boundary-data
+  - gluing
 ---
 
 Choose several vertices of a graph. They generate a subspace relative to which we can describe the remaining vertices and their positions. Which coordinates do we need? How are projection onto the chosen subspace, extension of prescribed values, and construction of a graph on the selected vertices related?
@@ -18,9 +22,19 @@ The eight notes in this series connect these questions. We begin with spaces of 
 
 Forms and polyforms participate at every stage: they provide metric evaluations and describe projections and changes of space under graph operations. Matrices are used for proofs, computation, and comparison with established constructions.
 
+## Place in the library
+
+Primary section: [[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]]: the Dirichlet problem, vertex elimination, and contraction.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
+
 ## Prerequisites
 
-The foundation is the [[PMG Introductory Series]]. The following topics are particularly useful here:
+The foundation is the [[en/Introduction/PMG Introductory Series|PMG Introductory Series]]. The following topics are particularly useful here:
 
 - points, affine vectors, exterior products, boundaries, and forms - [[Basic Objects and Operations of Polyform Algebra]];
 - resistance geometry, inner products, and norms of exterior elements - [[Effective Resistance and Graph Geometry]], [[Inner Product of Graph Vectors]], and [[Metric of Higher-Grade Objects]];

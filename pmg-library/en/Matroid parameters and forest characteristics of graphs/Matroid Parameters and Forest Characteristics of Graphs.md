@@ -1,14 +1,19 @@
 ---
 title: "Matroid Parameters and Forest Characteristics of Graphs"
 date: 2026-10-28
-updated: 2026-10-30
-revision: 3
+updated: 2026-11-01
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: matroid-parameters-and-forest-characteristics-series-navigation
 order: 0
 description: "Seven notes on the cycle matroid, forest coefficients, the Laplacian and Greenian, resistance scales, edge characteristics, the radius, and the limits of invariance under gluing."
+tags:
+  - matroids
+  - forests-and-spanning-trees
+  - resistances
+  - gluing
 ---
 
 When the same graph parts are glued together, some characteristics are preserved even though vertex distances and positions change. This series explains which of these invariances follow from the **cycle matroid**: the edge independence structure in which precisely the forests are independent. It then provides ways to compute the corresponding parameters and derives their gluing laws separately.
@@ -16,6 +21,16 @@ When the same graph parts are glued together, some characteristics are preserved
 In PMG, the starting connection is algebraic: edges correspond to vectors, forests to nonzero exterior products, and cycles make those products vanish. Forest sums occur in the Laplacian exponential and, after passing to the complementary grade, in the cut representation of the Greenian exponential. Matroid parameters are therefore considered on both sides of the duality.
 
 The series consists of seven notes; its place in the library is described in the [[ru/Карта библиотеки PMG|project map (in Russian)]]. It prepares the study of boundary data and chains of cores; a prior course in general matroid theory is not required.
+
+## Place in the library
+
+Primary section: [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]]: one-point gluing and Whitney twists.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Contents and reading order
 

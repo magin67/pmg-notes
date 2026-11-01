@@ -1,8 +1,8 @@
 ---
 title: "Spectra and Diagonalization in Polyform Algebra"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 3
+updated: 2026-11-01
+revision: 4
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -10,6 +10,9 @@ lang: en
 translation_key: spectra-and-diagonalization-series-navigation
 order: 0
 description: "Six notes on eigendirections, diagonal polyforms and duality, spectra of paths and cycles, Chebyshev transformations, the spectral cone, and information lost under projection."
+tags:
+  - spectra
+  - reconstruction
 ---
 
 [[ru/Спектры и диагонализация в алгебре полиформ/Спектры и диагонализация в алгебре полиформ|Русский]]
@@ -17,6 +20,16 @@ description: "Six notes on eigendirections, diagonal polyforms and duality, spec
 Scalar invariants and forest polynomials allow graphs to be compared, but do not retain all information about their eigendirections. This series introduces the **full spectral representation**: eigenvalues together with projectors in vertex coordinates. It reconstructs the Laplacian and Greenian, their exterior exponentials, and pairwise resistances.
 
 In the language of PMG, the diagonal expression makes grades elementary symmetric polynomials in the forms of eigendirections. Duality relates complementary sets of these directions and reverses the order of grades. Paths, cycles, and small weighted graphs show which information is retained in numerical coefficients and which is lost on passing to a spectrum or a projection.
+
+## Place in the library
+
+Primary section: [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]]: the distinction between coordinate and resistance metrics.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Contents and reading order
 

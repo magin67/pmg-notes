@@ -1,20 +1,34 @@
 ---
 title: Balanced Graphs
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
-source_revision: 1
+updated: 2026-11-01
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: balanced-graphs-series-navigation
 order: 0
 description: "Balance, the bilinear Laplacian and its exponential, circulation, directional metrics and spheres, balancing, forest toponomes, and permutation digraphs."
+tags:
+  - directed-graphs
+  - resistances
+  - forests-and-spanning-trees
 ---
 
 This series extends PMG to **balanced graphs**: the total incoming weight equals the outgoing weight at every vertex. Undirected graphs form the symmetric special case. Balance retains boundary forms, a finite Laplacian exponential, and one common spanning-tree coefficient. Asymmetry adds a directional bilinear pairing and circulation.
 
 Twelve notes form a complete introductory route. Algebraic definitions precede interpretations: one-way resistances are defined by form potentials and subsequently interpreted as hitting times. Electrical and geometric explanations state their applicability conditions.
+
+## Place in the library
+
+Primary section: [[en/Topics/Directed Graphs and Extensions|Directed Graphs and Extensions]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]]: directional coordinates, resistances, and the sphere.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Contents and reading order
 
@@ -64,7 +78,7 @@ The first index of $r_{ij}$ is the initial vertex, the second the target. For a 
 - **Algebra:** notes 1-5, after [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]]. The main questions are what survives without symmetry and how to compute products.
 - **Metrics and geometry:** notes 1-3 followed by 6-9. [[The Null Vector, Isotropic Representation, and the Boundary]] and [[Projections, Bi-coordinates, and Di-coordinates]] provide the symmetric starting point.
 - **Balancing data and flows:** notes 1 and 10; add 6-9 for the resulting metric. Scaling preserves directions and outgoing proportions while changing weights.
-- **Forests and toponomes:** notes 1-3 and 11 alongside [[Partition Toponomes]] and [[Polynomial Toponomes]]. Numerical types alone do not determine products on a common vertex set.
+- **Forests and toponomes:** notes 1-3 and 11 alongside [[en/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. Numerical types alone do not determine products on a common vertex set.
 - **Permutation combinatorics:** notes 1 and 12, then [[Cyclic Partitions and the Combinatorial Potential of the First Kind]]. This route does not require the directional metric.
 
 ## Conventions and scope

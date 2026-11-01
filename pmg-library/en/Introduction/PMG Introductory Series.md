@@ -1,20 +1,30 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-10-29
-revision: 4
-source_revision: 5
+updated: 2026-11-01
+revision: 5
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
 lang: en
 description: "Reading order for the ten introductory PMG notes: resistance geometry, coupling variations, polyform algebra, and the Laplacian exponential. Prerequisites and recommended reading."
 order: "0"
+tags:
+  - resistances
+  - variations
+  - forests-and-spanning-trees
 ---
 
 This series introduces the graph Laplacian, electrical networks, and resistance geometry. Polyform algebra naturally extends the matrix approach to these concepts. The series develops the connection from current equations and effective resistance to the extraction of metric quantities from the Laplacian exponential in the algebra of forms.
 
 The first seven notes present results from linear algebra, electrical network theory, and random spanning trees. The final three introduce the formal objects and operations adopted in PMG, the extension of the metric to exterior powers, and the construction of the metric polyform. Standard results and project definitions are distinguished as they are introduced.
+
+## Place in the library
+
+Primary section: [[en/Topics/Getting Started and Foundations|Getting Started and Foundations]].
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Reading order
 
@@ -79,7 +89,7 @@ Full bibliographic details, recommended sections, and access information are col
 
 ## Next steps
 
-The next stage is developed in [[Spaces and Subspaces in PMG]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].
+The next stage is developed in [[en/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].
 
 ## Programming companions
 

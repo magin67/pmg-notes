@@ -1,8 +1,8 @@
 ---
 title: Symmetric Polyforms
 date: 2026-10-20
-updated: 2026-10-20
-revision: 2
+updated: 2026-11-01
+revision: 3
 source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -10,11 +10,20 @@ translation_key: symmetric-polyforms-series-navigation
 lang: en
 description: "The fundamental theorem of SPFs as the main result of the series: exact normalization, proof, product rules, the complete-graph exponential, and Abel polynomials."
 order: 0
+tags:
+  - partitions
+  - forests-and-spanning-trees
 ---
 
 The main result of this series is the **fundamental theorem of symmetric polyforms**. It expresses a symmetric sum of partition forms of any admissible type through the principal polyform of the same grade and gives the exact coefficient of this conversion. Consequences include product and power rules, a compact representation of the exponential of the complete graph, and combinatorial identities related to Abel polynomials.
 
 A symmetric polyform (SPF) is invariant under every permutation of the chosen vertex set. A principal symmetric polyform (principal SPF) of positive grade is a sum of partition forms with one nontrivial component. Symmetry under vertex permutations differs from symmetry of the arguments of a form and from commutativity of the product of forms.
+
+## Place in the library
+
+Primary section: [[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]].
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Main result: the fundamental theorem of SPFs
 
@@ -77,16 +86,16 @@ To study the main result, read [[Symmetric Polyforms - Types and Normalizations|
 
 ## Prerequisites
 
-The main proof requires [[Basic Objects and Operations of Polyform Algebra|boundaries, grades, bilinearity, and the product of forms]], together with the definition of a [[Partition Forms and the Tetrahedron Identity|partition form]]. The original normalization of $E_n[\lambda]$ is introduced in the [[Constructing Structural Identities#From local identities to symmetric sums|section on symmetric sums]] and restated in the note on types. The proof of the noncrossing basis from [[Structural Identities]] is not required for the main proof of the fundamental theorem of SPFs.
+The main proof requires [[Basic Objects and Operations of Polyform Algebra|boundaries, grades, bilinearity, and the product of forms]], together with the definition of a [[Partition Forms and the Tetrahedron Identity|partition form]]. The original normalization of $E_n[\lambda]$ is introduced in the [[Constructing Structural Identities#From local identities to symmetric sums|section on symmetric sums]] and restated in the note on types. The proof of the noncrossing basis from [[en/Structural identities/Structural Identities|Structural Identities]] is not required for the main proof of the fundamental theorem of SPFs.
 
-For the combinatorial coefficients, [[Partitions and the Combinatorial Potential of the Second Kind]] provides the required background. [[Combinatorial Potentials in Symmetric Polyforms|The application to SPFs]] can be read alongside the first two notes of this series: its figures distinguish vertex partitions, forests, and identity coefficients. The complete combinatorial route is collected in the [[Combinatorial Potentials|separate reading guide]].
+For the combinatorial coefficients, [[Partitions and the Combinatorial Potential of the Second Kind]] provides the required background. [[Combinatorial Potentials in Symmetric Polyforms|The application to SPFs]] can be read alongside the first two notes of this series: its figures distinguish vertex partitions, forests, and identity coefficients. The complete combinatorial route is collected in the [[en/Combinatorial potentials/Combinatorial Potentials|separate reading guide]].
 
 Graph applications use the [[Laplacian Exponential|Laplacian exponential and its forest expansion]]. Notation and terminology agree with the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]]. Representation size, coefficient sum, and metric evaluation of a polyform are distinct quantities; the PMG norm is quadratic: $X^2=X\cdot X$.
 
 ## Status and scope of the series
 
-Notation and links are consistent with the [[Combinatorial Potentials]] series. The formulas have general proofs or precise references to accessible sources. Computational checks provide additional verification of examples.
+Notation and links are consistent with the [[en/Combinatorial potentials/Combinatorial Potentials|Combinatorial Potentials]] series. The formulas have general proofs or precise references to accessible sources. Computational checks provide additional verification of examples.
 
 The main proof of the fundamental theorem works directly with partition forms. The independent explanation and extension to all forms on boundaries use irreducibility of the exterior powers of the standard representation of $S_n$ and Schur's lemma; references and the passage to PMG are given in the [[Fundamental Theorem of Symmetric Polyforms#Correspondence with classical representation theory|section on representation theory]].
 
-The complete-graph formulas apply to unit or equal conductances with explicitly stated scaling. Invariance under automorphisms of an arbitrary graph and the role of SPFs in its exponential remain a separate research topic. Reductions, toponomes, the spanning-tree operator, and the dual polyform retain their own scope. Partitions, the potential of the second kind, and the joining of prescribed components are covered in [[Combinatorial Potentials]]. The note “Polyform Algebra” remains planned separately.
+The complete-graph formulas apply to unit or equal conductances with explicitly stated scaling. Invariance under automorphisms of an arbitrary graph and the role of SPFs in its exponential remain a separate research topic. Reductions, toponomes, the spanning-tree operator, and the dual polyform retain their own scope. Partitions, the potential of the second kind, and the joining of prescribed components are covered in [[en/Combinatorial potentials/Combinatorial Potentials|Combinatorial Potentials]]. The note “Polyform Algebra” remains planned separately.

@@ -1,8 +1,8 @@
 ---
 title: "Boundary Polynomials and Graph Gluing"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 2
+updated: 2026-11-01
+revision: 3
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -10,6 +10,11 @@ lang: en
 translation_key: boundary-polynomials-series-navigation
 order: 0
 description: "Reading routes through six notes: the full forest passport, contraction tests, gluing, groves, Catalan reduction, and separate spectral boundary data. Includes a map of sources and result status."
+tags:
+  - boundary-data
+  - gluing
+  - forests-and-spanning-trees
+  - spectra
 ---
 
 What information about a component must be retained to compute properties of the whole graph after another component is attached? This series answers the question for the **full forest polynomial**, extracts the spanning-tree problem, and then turns to the **Laplacian characteristic polynomial**.
@@ -17,6 +22,17 @@ What information about a component must be retained to compute properties of the
 A forest polynomial alone does not show which boundary vertices a chosen forest connects. A spectrum alone does not show the position of the boundary relative to the eigenspaces. A component is therefore replaced by boundary data whose contents depend on the quantity to be computed. Sufficiency of a passport means obtaining the answer for every admissible partner, with the boundary correspondence and edge-counting rule specified in advance.
 
 The main subject is the full forest passport, including forests with components that **do not meet the boundary**. It extends the published [[en/Structural identities/Structural Identities and Graph Gluing|spanning-tree gluing through groves]] and prepares calculations on chains of cores. Ordinary forest and spectral passports have different coordinates and different gluing laws.
+
+## Place in the library
+
+Primary section: [[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]: boundary partitions and coordinate reduction.
+- [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: spectral boundary data.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Contents and reading order
 

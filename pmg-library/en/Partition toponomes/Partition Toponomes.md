@@ -1,8 +1,8 @@
 ---
 title: Partition Toponomes
 date: 2026-10-22
-updated: 2026-10-23
-revision: 3
+updated: 2026-11-01
+revision: 4
 source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
@@ -10,11 +10,25 @@ translation_key: partition-toponomes-series-navigation
 lang: en
 description: "Reducing a chosen polyform representation to partition types, dependence on structural identities, the second-kind algebra, graph interpretations, and coefficient triangles."
 order: 0
+tags:
+  - partitions
+  - forests-and-spanning-trees
+  - reconstruction
 ---
 
 This series introduces a **partition toponome**: a linear combination of types obtained from a chosen representation of a polyform as a sum of partition forms. Vertex labels are forgotten, and coefficients of identical types are collected. The series then defines multiplication of types, examines its graph interpretations, and develops a further reduction to coefficient tables.
 
 The central question is what data each passage retains and on which objects it is defined. Types can be written as partitions or as monomials of a polynomial in several variables: these notations are equivalent. Grouping distinct types and applying structural identities require separate consideration.
+
+## Place in the library
+
+Primary section: [[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: distinguishing graphs by coefficient tables.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Main results
 
@@ -82,4 +96,4 @@ For a positive type $\lambda=(k_1,\ldots,k_r)$, write $k=w(\lambda)$ and $r=\#\l
 
 The term “partition toponome” is defined for a specific reduction of a chosen representation. Equal numerical evaluations of distinct types do not imply equal toponomes. Weighted coefficients retain aggregated weight data, so the result cannot be described solely as a collection of topological properties.
 
-Component and root weights and the passage to $\det(I+t\mathbf L)$ are developed in [[Polynomial Toponomes]]. The [[Карта библиотеки PMG|PMG library map (in Russian)]] retains further directions: the distinction between a spectrum and a full spectral representation, toponomes of dual polyforms after duality is introduced, multicomponent gluings, and refinements of graph invariants. Reduction of a polyform by another polyform and the spanning-tree operator remain a separate direction.
+Component and root weights and the passage to $\det(I+t\mathbf L)$ are developed in [[en/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. The [[Карта библиотеки PMG|PMG library map (in Russian)]] retains further directions: the distinction between a spectrum and a full spectral representation, toponomes of dual polyforms after duality is introduced, multicomponent gluings, and refinements of graph invariants. Reduction of a polyform by another polyform and the spanning-tree operator remain a separate direction.

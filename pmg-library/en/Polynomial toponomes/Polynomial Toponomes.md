@@ -1,8 +1,8 @@
 ---
 title: Polynomial Toponomes
 date: 2026-10-23
-updated: 2026-10-30
-revision: 2
+updated: 2026-11-01
+revision: 3
 source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
@@ -10,9 +10,23 @@ translation_key: polynomial-toponomes-series-navigation
 lang: en
 description: "Polynomial reductions of forest toponomes: normalizations, Laplacian coefficients, Kirchhoff indices, reducibility, and graph realizability."
 order: 0
+tags:
+  - forests-and-spanning-trees
+  - spectra
+  - resistances
 ---
 
-This series continues [[Partition Toponomes]] and studies polynomial reductions through their coefficients. The main question is which graph parameters these coefficients express and how their meaning depends on normalization.
+This series continues [[en/Partition toponomes/Partition Toponomes|Partition Toponomes]] and studies polynomial reductions through their coefficients. The main question is which graph parameters these coefficients express and how their meaning depends on normalization.
+
+## Place in the library
+
+Primary section: [[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: the rooted polynomial and spectral coefficients.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Reading order and series status
 

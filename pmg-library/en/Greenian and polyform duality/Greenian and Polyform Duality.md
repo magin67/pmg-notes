@@ -1,15 +1,19 @@
 ---
 title: Greenian and Polyform Duality
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
-translated_revision: 2
+updated: 2026-11-01
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: greenian-and-polyform-duality-series-navigation
 order: 0
 description: "The Laplacian and Greenian, mutual duality of exterior exponentials, vector and cut representations, signed forests, potentials, symmetric identities, and toponomes."
+tags:
+  - resistances
+  - forests-and-spanning-trees
+  - spectra
 ---
 
 This series connects the **Laplacian** $L$ and the **Greenian** $\mathrm{Gr}$: two grade-one vector forms whose matrices are mutual pseudoinverses. Their exterior exponentials are boundary polyforms. Duality describes the mutual relationship between these exponentials through deletion from the top form and passage to a complementary grade.
@@ -17,6 +21,17 @@ This series connects the **Laplacian** $L$ and the **Greenian** $\mathrm{Gr}$: t
 The main working expression for the Greenian uses forms of vectors $a_{ij}=a_j-a_i$. Thus multiplication and forest expansion follow the same rules as for the Laplacian, while coefficients acquire a different meaning and may have either sign. Polar and cut expressions provide additional methods of calculation and interpretation.
 
 Nine notes provide a route from definitions to toponomes. The graph model throughout the series is a connected undirected graph on $n\ge2$ vertices with positive conductances on existing edges. The general algebraic part of the exterior exponential requires no graph; the assumptions of each broader statement are specified separately.
+
+## Place in the library
+
+Primary section: [[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]: symmetric identities and toponomes of dual representations.
+- [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: spectral dual pairs.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Contents and reading order
 
@@ -112,7 +127,7 @@ In the full vector toponome of the Greenian, the coefficient of $x_d$ is $1/(n^2
 
 - **Definition and algebra.** [[Laplacian and Greenian - Mutual Duality of Exponentials]], followed by [[The Canonical Vector Representation of the Greenian]] and [[The Exterior Exponential and Representations of the Greenian]]. Prerequisites: [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]]. General matroid theory is not required.
 - **Coefficients, cuts, and graph changes.** After the canonical expression, proceed to [[Cuts and Forest Grades of the Greenian Exponential]] and [[Greenian Coefficients and Vertex Variations]]. Retain the specific vertex blocks and distinguish original forests from edges crossing a cut.
-- **Examples and metric meaning.** [[Greenian Exponentials of Standard Graphs]], followed by [[The Greenian Metric and Potentials]]. For matrix transformations, see [[Laplacian, Green Matrix, and Effective Resistance Matrix]]; for the centroid interpretation, see [[KVP Decomposition and Oriented Extensions]].
+- **Examples and metric meaning.** [[Greenian Exponentials of Standard Graphs]], followed by [[The Greenian Metric and Potentials]]. For matrix transformations, see [[Laplacian, Green Matrix, and Effective Resistance Matrix]]; for the centroid interpretation, see [[en/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]].
 - **Symmetric identities and toponomes.** [[Symmetric Identities of the Greenian]], followed by [[Toponomes of the Greenian Exponential and Dual Pairs]]. Prerequisites are collected in [[en/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. For the general role of identities, see the [[en/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] series.
 
 ## Distinctions to retain while reading

@@ -3,7 +3,7 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 21
+revision: 22
 translated_revision: 29
 updated: 2026-11-01
 ---
@@ -16,132 +16,29 @@ The library brings together established results, explanations of basic concepts,
 
 The approach is based on polyform algebra. One of the questions that led to its development was how changing one or more couplings affects the properties of an entire system. Products of forms and the Laplacian exponential in this algebra describe the joint effects of couplings and the resulting metric and combinatorial characteristics.
 
-## Introductory series
+## Getting started and foundations
 
-Ten notes introduce the Laplacian, resistance geometry, coupling variations, and polyform algebra.
+[[en/Topics/Getting Started and Foundations|Getting Started and Foundations]] brings together the introductory series, specification, terminology, and general reading routes.
 
-- [[PMG Introductory Series|Reading order and brief descriptions of the notes]].
-- [[Further Reading for the PMG Introductory Series|Recommended reading]].
+## Thematic sections
 
-## Spaces and subspaces
+The library contains 16 series and 112 substantive notes in each language. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
-Eight notes on choosing a subspace, the null vector, coordinates, and graph operations. The series connects the geometric description with the Dirichlet problem and the construction of couplings within one part of a bipartite graph.
+- **[[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
+- **[[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
+- **[[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]**. Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?
+- **[[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]]**. How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?
+- **[[en/Topics/Directed Graphs and Extensions|Directed Graphs and Extensions]]**. What changes when couplings become directed and constructions become nonsymmetric?
 
-- [[Spaces and Subspaces in PMG|Notes, prerequisites, and reading routes]].
+[[en/Topics/Topics|All series and their primary homes]] · [[en/Topics/Cross-cutting Tags|Cross-cutting Tags]].
 
-## Metric parameters of graphs
+## Programming examples
 
-Five notes on resistance radius and diameter, vertex centralities, dimensionless graph characteristics, and two types of vertex removal. The radius, volumes, and spanning-tree characteristics are expressed through polyforms.
+[[en/PythonExamples/PythonExamples|Programming Examples]] connect the mathematical notes to executable `polyform_algebra` code, expected results, and checks.
 
-- [[Metric Parameters of Graphs|Notes, reading routes, and a guide to results]].
+## Development plan
 
-## Structural identities
-
-Five notes on dependencies among partition forms. The main results are the noncrossing basis and its dimension, completeness of the four-block identity, the graph gluing formula, and decomposition of relations by supports.
-
-- [[en/Structural identities/Structural Identities|Main results, reading order, and descriptions of the notes]].
-
-## Symmetric polyforms
-
-Five notes on symmetry of forms under vertex permutations. The main result is the fundamental theorem of SPFs: a symmetric sum of any admissible type is expressed through the principal polyform of the same grade with an explicit coefficient. Consequences cover products and powers, the exponential of the complete graph, and Abel polynomials.
-
-- [[en/Symmetric polyforms/Symmetric Polyforms|The fundamental theorem, its consequences, and reading order]].
-
-## Combinatorial potentials
-
-Six notes on ordinary and cyclic partitions and counting by component sizes. The series introduces the potentials of the first and second kinds, distinguishes SPF representation sizes from forest counts, proves the Cayley-Moon formula for joining prescribed components, and explains falling-factorial expansions through rooted forests and $r$-Stirling numbers. The potential of path-and-cycle states relates arc labels to graph and construction-history counts.
-
-- [[en/Combinatorial potentials/Combinatorial Potentials|Main results, notation, and reading routes]].
-
-## Partition toponomes
-
-Six notes on passing from a chosen polyform representation to partition types. The series establishes the limits of the reduction, introduces the second-kind algebra and its graph interpretations, develops coefficient triangles, and shows why they do not distinguish all graphs.
-
-- [[en/Partition toponomes/Partition Toponomes|Main results, reading order, and scope]].
-
-## Polynomial toponomes
-
-Five notes on polynomial reductions of partition toponomes. Vector and vertex normalizations are compared through forest weights; the vertex reduction of the exponential is proved to equal the determinant of $I+t\mathbf L$. Coefficient ratios express the Kirchhoff index and reciprocal spectral sums and relate the polynomial to the centroid and resistance radius. The series also examines reducibility under different products and graph realizability of toponomes.
-
-- [[en/Polynomial toponomes/Polynomial Toponomes|Contents and reading order]].
-
-## Balanced graphs
-
-Twelve notes extend PMG to balanced directed graphs. They develop the bilinear Laplacian and its exponential, circulation forms, one-way resistance, directional coordinates and the sphere, graph balancing, directed forest toponomes, and permutation digraphs. Definitions and algebraic results precede geometric, electrical, and probabilistic interpretations.
-
-- [[en/Balanced graphs/Balanced Graphs|Main results, reading order, and five reading routes]].
-
-## KVP decomposition and oriented extensions
-
-Nine notes on separating pair characteristics into an overall level, vertex heterogeneity, residual pair structure, circulation, and directional imbalance. The series develops the projectors, graph examples, the distance transformation, Green and resistance components, applications, metric parameters, the second-order symmetric potential, and forest toponomes. Proved results are distinguished from computational examples and open questions.
-
-- [[KVP Decomposition and Oriented Extensions|Main results, reading order, and five reading routes]].
-
-## Greenian and Polyform Duality
-
-Nine notes on the Laplacian and Greenian as vector forms, mutual duality of their exterior exponentials, canonical coefficients and signed forests, cut representations, vertex variations, metric potentials, symmetric identities, and toponomes. Exact examples include complete graphs, stars, cycles, weighted paths, and the Petersen graph.
-
-- [[en/Greenian and polyform duality/Greenian and Polyform Duality|Main results, reading order, normalizations, and reproducible checks]].
-
-## Matroid parameters and forest characteristics of graphs
-
-Seven notes explain which graph characteristics are determined by the cycle matroid and how to compute them. Forest coefficients are developed on both sides of Laplacian-Greenian duality, followed by normalized power sums, resistance scales, edge probabilities, and the forest formula for the resistance radius. One-point gluing and Whitney twists establish the scope and limits of invariance.
-
-- [[en/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Definitions, reading routes, main results, and reproducible checks]].
-
-## Spectra and diagonalization in polyform algebra
-
-Six notes develop eigendirections and projectors, diagonal polyforms, grades as elementary symmetric polynomials in forms, and reversal of complementary grades under duality. Explicit modes of paths and cycles lead to Chebyshev transformations, the spectral cone of a fixed basis, and projections that discard information. A cospectral weighted pair shows why eigenvalues alone do not determine ordinary forest coefficients or individual resistances.
-
-- [[en/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Contents, reading routes, main connections, and reproducible checks]].
-
-## Boundary polynomials and graph gluing
-
-Six notes explain which boundary data suffice for contraction and gluing. The full forest passport retains internal components, while groves and resistance geometry describe its spanning-tree layer. The series proves the Catalan reduction for linear passports and introduces separate spectral data from minors and cofactors. The navigator distinguishes established results, derivations, and PMG interpretations.
-
-- [[en/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|The problem, reading routes, and provenance of the results]].
-
-## Chains of cores
-
-Five notes connect the precise construction of a chain with matroid invariance, spanning-tree recurrences, their applicability conditions, and ordinary or twisted closure.
-
-- [[en/Chains of cores/Chains of Cores|Navigator: reading routes, conditions, and origins of results]].
-- [[ru/Цепи из ядер/Цепи из ядер|Русская версия серии]].
-
-- [[en/Chains of cores/Cores, Seams, and Admissible Chains|Definitions, sequential assembly, and the first example]].
-- [[en/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|The dual graph, matroid invariance, and two hexagonal isomers]].
-- [[en/Chains of cores/Spanning-Tree Polynomials of Chains - Determinant and Recurrence|Spanning-tree determinants, continuants, Chebyshev polynomials, and seam order]].
-- [[en/Chains of cores/Limits of Invariance - Branching, Disconnected Seams, and Other Cores|A fixed tree of cycles and counterexamples for other gluings]].
-- [[en/Chains of cores/Closing a Chain - Rings and the Möbius Effect|Ordinary and twisted closures, spanning-tree counts, and radii]].
-
-## Laplacian, Greenian and Resistance Variations
-
-Eight notes move from changing one edge to joint Greenian and resistance variations, quadric connectivity, and algorithms with conductance constraints. Vector factors of exterior exponentials give finite formulas; triangle, path, cycle, and prism examples clarify their scope.
-
-- [[en/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Reading order, all eight notes, main formulas, and applicability conditions]].
-
-## Python examples
-
-Executable examples show how to reproduce calculations from the notes with `polyform_algebra`. The first companion covers strengthening one and two couplings of a triangle.
-
-- [[en/PythonExamples/PythonExamples|Programming examples: code, expected results, and checks]].
-
-## PMG Foundations
-
-- [[Core specification|Core specification]]: definitions, notation, fundamental identities, and applicability conditions.
-- [[PMG terminology|Terminology]]: English and Russian terms, naming conventions, and distinctions between related concepts.
-
-## Research topics
-
-As the library grows, collections will be prepared on the following topics:
-
-- **Geometric representations:** points and vectors, the Gram matrix of isotropic point representatives, the distinguished null vector, and bi- and di-coordinates.
-- **Polyform algebra:** grades, potentials and norms, symmetric polyforms, and dual constructions.
-- **Forests, cuts, and toponomes:** combinatorial coefficients, generating polynomials, and their reductions.
-- **Graph spectra:** Laplacians of paths and cycles, and spectral properties of graph configurations.
-- **Graph gluing and invariants:** gluing constructions, chains of cores, preserved characteristics, and the limits of their invariance.
-
-Each collection will include a brief reading guide: what it covers, what background is needed, and which order to follow. A note may belong to more than one reading route.
+The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. “Spectra of Isomers” is the selected next continuation in invariants and spectra; the series is not yet published.
 
 ## Status of results
 

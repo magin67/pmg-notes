@@ -1,15 +1,19 @@
 ---
 title: Metric Parameters of Graphs
 date: 2026-10-18
-updated: 2026-10-18
-revision: 1
-translated_revision: 1
+updated: 2026-11-01
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: metric-parameters-series-navigation
 lang: en
 description: "Reading order for five notes on resistance radius, Gram matrices and volumes, centralities, dimensionless parameters, and vertex deletion. A guide to results and their polyform representations."
 order: 0
+tags:
+  - resistances
+  - forests-and-spanning-trees
+  - variations
 ---
 
 How can the size of a graph's resistance simplex be described by a single number? How do central vertices differ from critical ones? Which parameters distinguish a path from a star, and which are the same for all trees of the same order? The five notes in this series connect these questions with circumsphere geometry, the Green matrix, spanning trees, and the Laplacian exponential.
@@ -18,11 +22,21 @@ The series considers finite connected undirected loopless graphs with positive c
 
 In PMG, the norm is quadratic: $X^2=X\cdot X$. The resistance radius $\rho=R_{\mathrm{sph}}^2$ and resistance diameter $D_{\mathrm{res}}=4\rho$ have the physical dimension of resistance. The latter is the square of the ordinary diameter of the circumsphere; in general, it does not equal the maximum pairwise resistance.
 
+## Place in the library
+
+Primary section: [[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: tree invariance and the distinguishing power of parameters.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
+
 ## Prerequisites
 
 The graph part requires [[Effective Resistance and Graph Geometry|effective resistance and the resistance simplex]], and [[Laplacian, Green Matrix, and Effective Resistance Matrix|conversions between the Laplacian, Green matrix, and resistance matrix]]. The polyform expressions build on [[Laplacian Exponential|the Laplacian exponential and normalized potentials]].
 
-The geometric background is developed in [[Spaces and Subspaces in PMG]]. Particularly relevant are [[Nonlocal Elements, Spheres, and Their Centers|the distinction between a sphere element and its center]], [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]], and, for comparing the two types of vertex removal, [[Vertex Elimination and Induced Couplings|elimination that preserves the metric]].
+The geometric background is developed in [[en/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]. Particularly relevant are [[Nonlocal Elements, Spheres, and Their Centers|the distinction between a sphere element and its center]], [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]], and, for comparing the two types of vertex removal, [[Vertex Elimination and Induced Couplings|elimination that preserves the metric]].
 
 General definitions and notation are given in the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]].
 

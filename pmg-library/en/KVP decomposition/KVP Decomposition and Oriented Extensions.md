@@ -1,20 +1,34 @@
 ---
 title: KVP Decomposition and Oriented Extensions
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 3
+updated: 2026-11-01
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: kvp-decomposition-series-navigation
 order: 0
 description: "Nine notes on KVP, KVPO, and KVPOU: definitions, examples, the distance transformation, Green and resistance components, applications, metric parameters, the second-order potential, and forest toponomes."
+tags:
+  - resistances
+  - directed-graphs
 ---
 
 This series explains the canonical decomposition of pair characteristics and its use in PMG. Linear subspaces and projectors are defined first, followed by graph, metric, and applied consequences. The decomposition always concerns a chosen table: couplings C, pair coefficients of the Green matrix, or resistances R and r.
 
 The nine reviewed Russian notes form the current series; their English translations are collected here. KVP is the PMG name for a decomposition with known counterparts in Hoeffding-ANOVA theory, representations of the symmetric group, and the Johnson scheme. The established decomposition itself should be distinguished from the study of particular consequences for PMG.
+
+## Place in the library
+
+Primary section: [[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].
+
+Secondary thematic entries:
+
+- [[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]]: components of the Green matrix, resistances, and metric parameters.
+- [[en/Topics/Directed Graphs and Extensions|Directed Graphs and Extensions]]: circulation and directional imbalance.
+
+[[en/Topics/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Topics/Topics|Thematic Index]].
 
 ## Components and classes of tables
 
@@ -86,10 +100,10 @@ Here $\|A\|_0^2=\sum_{i<j}A_{ij}^2$ is the coefficient sum of squares. For a sym
 ## Reading routes and prerequisites
 
 - **First introduction:** [[KVP Decomposition of Pair Characteristics]], then [[KVP on Simple and Weighted Graphs]]. Linear algebra and the notion of a coupling table suffice; the decomposition itself needs no metric.
-- **Oriented data:** after the KVP definition, read [[Oriented Extensions of KVP - Circulation and Imbalance]]. Moving to directional geometry requires [[Balanced Graphs]] and [[KVP Decomposition of the Green Matrix and Resistances]].
-- **Metric and potentials:** [[The Distance Operator and KVP Decomposition]], [[KVP Decomposition of the Green Matrix and Resistances]], then [[KVP Components and Metric Graph Parameters]] and [[The Second-Order Symmetric Potential and KVP Decomposition]]. Useful background includes [[Laplacian, Green Matrix, and Effective Resistance Matrix]], [[Metric Parameters of Graphs]], and [[Partition Forms and the Tetrahedron Identity]].
+- **Oriented data:** after the KVP definition, read [[Oriented Extensions of KVP - Circulation and Imbalance]]. Moving to directional geometry requires [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]] and [[KVP Decomposition of the Green Matrix and Resistances]].
+- **Metric and potentials:** [[The Distance Operator and KVP Decomposition]], [[KVP Decomposition of the Green Matrix and Resistances]], then [[KVP Components and Metric Graph Parameters]] and [[The Second-Order Symmetric Potential and KVP Decomposition]]. Useful background includes [[Laplacian, Green Matrix, and Effective Resistance Matrix]], [[en/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]], and [[Partition Forms and the Tetrahedron Identity]].
 - **Applications:** the KVP definitions, then [[Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]. The electrical part requires [[KVP Decomposition of the Green Matrix and Resistances]] first; the interaction example uses a pair table directly.
-- **Forests and toponomes:** [[Forest Toponomes of KVP Components]] after the KVP definition and the basic constructions of [[Partition Toponomes]] and [[Polynomial Toponomes]]. The metric notes are not prerequisites for defining pure toponomes.
+- **Forests and toponomes:** [[Forest Toponomes of KVP Components]] after the KVP definition and the basic constructions of [[en/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. The metric notes are not prerequisites for defining pure toponomes.
 
 ## Checks, boundaries, and further work
 
