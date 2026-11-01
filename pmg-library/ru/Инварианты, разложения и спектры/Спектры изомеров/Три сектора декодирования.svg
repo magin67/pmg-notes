@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="710" viewBox="0 0 1200 710" role="img" aria-labelledby="title desc">
+<title id="title">Три сектора декодирования</title><desc id="desc">Проекция инвариантной области на b/a,c/a. Пороги 4/9 разделяют L: минус плюс, S: плюс плюс, R: плюс минус. Нижний левый сектор невозможен для потомков. Начальное состояние лежит на верхнем правом углу и проверяется отдельно.</desc>
+<rect width="1200" height="710" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="38.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="bold">Последний переход определяется двумя знаками</text>
+<rect x="105" y="105" width="346.66666666666623" height="133.33333333333377" fill="#fce4e9" stroke="none"/>
+<rect x="451.66666666666623" y="105" width="133.33333333333377" height="133.33333333333377" fill="#def3e8" stroke="none"/>
+<rect x="451.66666666666623" y="238.33333333333377" width="133.33333333333377" height="346.66666666666623" fill="#e2edff" stroke="none"/>
+<rect x="105" y="238.33333333333377" width="346.66666666666623" height="346.66666666666623" fill="#f0f2f5" stroke="none"/>
+<rect x="105" y="105" width="480" height="480" fill="none" stroke="#52657a"/>
+<line x1="451.67" y1="105.00" x2="451.67" y2="585.00" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
+<line x1="105.00" y1="238.33" x2="585.00" y2="238.33" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
+<text x="205.00" y="175.00" font-size="26" fill="#bc294b" text-anchor="middle" font-weight="bold">L  (−,+)</text>
+<text x="517.67" y="145.00" font-size="23" fill="#15815b" text-anchor="middle" font-weight="bold">S  (+,+)</text>
+<text x="517.67" y="428.33" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">R  (+,−)</text>
+<text x="275.00" y="393.33" font-size="27" fill="#52657a" text-anchor="middle" font-weight="normal">(−,−)</text>
+<text x="275.00" y="428.33" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">нет непустых потомков</text>
+<text x="105.00" y="618.00" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">43/100</text>
+<text x="90.00" y="592.00" font-size="21" fill="#52657a" text-anchor="end" font-weight="normal">43/100</text>
+<text x="451.67" y="618.00" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">4/9</text>
+<text x="90.00" y="245.33" font-size="21" fill="#52657a" text-anchor="end" font-weight="normal">4/9</text>
+<text x="585.00" y="618.00" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">9/20</text>
+<text x="90.00" y="112.00" font-size="21" fill="#52657a" text-anchor="end" font-weight="normal">9/20</text>
+<text x="623.00" y="590.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="normal">b/a</text>
+<text x="105.00" y="81.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="normal">c/a</text>
+<circle cx="499.12" cy="190.88" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="192.74" cy="190.88" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="499.12" cy="497.26" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="497.36" cy="192.64" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="185.40" cy="192.64" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="497.36" cy="504.60" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="492.73" cy="193.79" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="158.08" cy="197.27" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="496.21" cy="504.09" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="496.21" cy="197.27" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="185.91" cy="193.79" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="492.73" cy="531.92" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="497.32" cy="192.68" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="185.25" cy="192.68" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="497.32" cy="504.75" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="492.61" cy="193.85" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="157.42" cy="197.39" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="496.15" cy="504.23" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="496.15" cy="197.39" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="185.77" cy="193.85" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="492.61" cy="532.58" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="497.24" cy="192.72" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="184.85" cy="192.76" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="497.28" cy="504.84" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="492.17" cy="194.03" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="154.98" cy="197.83" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="495.97" cy="504.60" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="496.13" cy="197.39" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="185.67" cy="193.87" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="492.61" cy="532.53" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="497.28" cy="192.76" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="185.16" cy="192.72" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="497.24" cy="505.15" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="492.61" cy="193.87" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="157.47" cy="197.39" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="496.13" cy="504.33" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="495.97" cy="197.83" r="4" fill="#15815b" stroke="white" stroke-width="0.8"/>
+<circle cx="185.40" cy="194.03" r="4" fill="#bc294b" stroke="white" stroke-width="0.8"/>
+<circle cx="492.17" cy="535.02" r="4" fill="#196bb9" stroke="white" stroke-width="0.8"/>
+<circle cx="585.00" cy="105.00" r="7" fill="white" stroke="#172b43" stroke-width="3"/>
+<line x1="594.00" y1="105.00" x2="685.00" y2="105.00" stroke="#172b43" stroke-width="2" stroke-linecap="round"/>
+<text x="707.00" y="111.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">z₀: сначала проверка остановки</text>
+<rect x="685" y="160" width="480" height="340" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="925.00" y="205.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="normal">U = 9b − 4a</text>
+<text x="925.00" y="254.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="normal">V = 9c − 4a</text>
+<text x="925.00" y="303.00" font-size="25" fill="#bc294b" text-anchor="middle" font-weight="normal">L: снять Nₗ</text>
+<text x="925.00" y="352.00" font-size="25" fill="#15815b" text-anchor="middle" font-weight="normal">S: снять Nₛ</text>
+<text x="925.00" y="401.00" font-size="25" fill="#196bb9" text-anchor="middle" font-weight="normal">R: снять Nᵣ</text>
+<text x="925.00" y="450.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">После выбора применить обратную матрицу</text>
+<text x="925.00" y="554.00" font-size="22" fill="#52657a" text-anchor="middle" font-weight="normal">Точки: слова операций длины 1–3</text>
+<text x="925.00" y="588.00" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">Цветные области показывают знаки,</text>
+<text x="925.00" y="617.00" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">а не все достижимые состояния</text>
+<text x="600.00" y="678.00" font-size="22" fill="#52657a" text-anchor="middle" font-weight="normal">Пороги точные; размещение точек на рисунке приближённое</text>
+</g></svg>

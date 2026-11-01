@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+<title id="title">Пять корневых координат</title><desc id="desc">По одному корневому лесу на C6 для каждого из пяти условий. Зелёные вершины являются корнями; красное кольцо отмечает x, синее y. Пунктир показывает невыбранные рёбра цикла. Классы лесов пересекаются.</desc>
+<rect width="1200" height="790" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="38.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="bold">Корни леса и отметки границы</text>
+<rect x="20" y="65" width="360" height="315" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="200.00" y="97.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">a · Все корневые леса</text>
+<line x1="141.11" y1="180.00" x2="200.00" y2="146.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<line x1="200.00" y1="146.00" x2="258.89" y2="180.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 258.8897274573418 180.0 L 258.88972745734185 248.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<line x1="258.89" y1="248.00" x2="200.00" y2="282.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 200.00000000000003 282.0 L 141.11027254265815 248.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="M 141.11027254265815 248.0 L 141.11027254265815 180.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<circle cx="141.11" cy="180.00" r="12" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="141.11" cy="180.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="200.00" cy="146.00" r="12" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="200.00" cy="146.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="258.89" cy="180.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="258.89" cy="248.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="200.00" cy="282.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="141.11" cy="248.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<text x="122.11" y="166.00" font-size="23" fill="#bc294b" text-anchor="middle" font-weight="bold">x</text>
+<text x="219.00" y="132.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">y</text>
+<text x="200.00" y="328.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">Один корень</text>
+<text x="200.00" y="355.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">в каждой компоненте</text>
+<rect x="420" y="65" width="360" height="315" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="600.00" y="97.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">b · x является корнем</text>
+<line x1="541.11" y1="180.00" x2="600.00" y2="146.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<line x1="600.00" y1="146.00" x2="658.89" y2="180.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 658.8897274573418 180.0 L 658.8897274573418 248.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<line x1="658.89" y1="248.00" x2="600.00" y2="282.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 600.0 282.0 L 541.1102725426582 248.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="M 541.1102725426582 248.0 L 541.1102725426582 180.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<circle cx="541.11" cy="180.00" r="12" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="541.11" cy="180.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="600.00" cy="146.00" r="12" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="600.00" cy="146.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="658.89" cy="180.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="658.89" cy="248.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="600.00" cy="282.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="541.11" cy="248.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<text x="522.11" y="166.00" font-size="23" fill="#bc294b" text-anchor="middle" font-weight="bold">x</text>
+<text x="619.00" y="132.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">y</text>
+<text x="600.00" y="328.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">Корень компоненты x</text>
+<text x="600.00" y="355.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">обязательно равен x</text>
+<rect x="820" y="65" width="360" height="315" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="1000.00" y="97.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">c · y является корнем</text>
+<line x1="941.11" y1="180.00" x2="1000.00" y2="146.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<line x1="1000.00" y1="146.00" x2="1058.89" y2="180.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 1058.889727457342 180.0 L 1058.889727457342 248.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<line x1="1058.89" y1="248.00" x2="1000.00" y2="282.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 1000.0 282.0 L 941.1102725426582 248.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="M 941.1102725426582 248.0 L 941.1102725426582 180.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<circle cx="941.11" cy="180.00" r="12" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="941.11" cy="180.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="1000.00" cy="146.00" r="12" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="1000.00" cy="146.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="1058.89" cy="180.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="1058.89" cy="248.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="1000.00" cy="282.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="941.11" cy="248.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<text x="922.11" y="166.00" font-size="23" fill="#bc294b" text-anchor="middle" font-weight="bold">x</text>
+<text x="1019.00" y="132.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">y</text>
+<text x="1000.00" y="328.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">Корень компоненты y</text>
+<text x="1000.00" y="355.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">обязательно равен y</text>
+<rect x="220" y="405" width="360" height="315" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="400.00" y="437.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">d · x и y в одном дереве</text>
+<line x1="341.11" y1="520.00" x2="400.00" y2="486.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<line x1="400.00" y1="486.00" x2="458.89" y2="520.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 458.8897274573418 520.0 L 458.88972745734185 588.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<line x1="458.89" y1="588.00" x2="400.00" y2="622.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 400.00000000000006 622.0 L 341.11027254265815 588.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="M 341.11027254265815 588.0 L 341.11027254265815 520.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<circle cx="341.11" cy="520.00" r="12" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="341.11" cy="520.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="400.00" cy="486.00" r="12" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="400.00" cy="486.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="458.89" cy="520.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="458.89" cy="588.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="400.00" cy="622.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="341.11" cy="588.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<text x="322.11" y="506.00" font-size="23" fill="#bc294b" text-anchor="middle" font-weight="bold">x</text>
+<text x="419.00" y="472.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">y</text>
+<text x="400.00" y="668.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">Общая компонента</text>
+<text x="400.00" y="695.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">укоренена в y</text>
+<rect x="620" y="405" width="360" height="315" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="800.00" y="437.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">e · Два предписанных корня</text>
+<path d="M 741.1102725426582 520.0 L 800.0 486.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<line x1="800.00" y1="486.00" x2="858.89" y2="520.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<line x1="858.89" y1="520.00" x2="858.89" y2="588.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 858.8897274573418 588.0 L 800.0 622.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<line x1="800.00" y1="622.00" x2="741.11" y2="588.00" stroke="#172b43" stroke-width="4" stroke-linecap="round"/>
+<path d="M 741.1102725426582 588.0 L 741.1102725426582 520.0" stroke="#c8d2dd" stroke-width="2" stroke-dasharray="5 6"/>
+<circle cx="741.11" cy="520.00" r="12" fill="white" stroke="#bc294b" stroke-width="3"/>
+<circle cx="741.11" cy="520.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="800.00" cy="486.00" r="12" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="800.00" cy="486.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="858.89" cy="520.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="858.89" cy="588.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="800.00" cy="622.00" r="6" fill="#15815b" stroke="#172b43" stroke-width="1.5"/>
+<circle cx="741.11" cy="588.00" r="6" fill="white" stroke="#172b43" stroke-width="1.5"/>
+<text x="722.11" y="506.00" font-size="23" fill="#bc294b" text-anchor="middle" font-weight="bold">x</text>
+<text x="819.00" y="472.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">y</text>
+<text x="800.00" y="668.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">x и y являются корнями</text>
+<text x="800.00" y="695.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">разных компонент</text>
+<circle cx="264.00" cy="764.00" r="7" fill="#15815b" stroke="none" stroke-width="2"/>
+<text x="282.00" y="771.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">корень</text>
+<circle cx="444.00" cy="764.00" r="11" fill="white" stroke="#bc294b" stroke-width="3"/>
+<text x="464.00" y="771.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">отметка x</text>
+<circle cx="670.00" cy="764.00" r="11" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="690.00" y="771.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">отметка y</text>
+<text x="1020.00" y="771.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">классы пересекаются</text>
+</g></svg>
