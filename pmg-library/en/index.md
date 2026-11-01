@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 20
+revision: 21
 translated_revision: 29
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -114,6 +114,12 @@ Five notes connect the precise construction of a chain with matroid invariance, 
 - [[en/Chains of cores/Limits of Invariance - Branching, Disconnected Seams, and Other Cores|A fixed tree of cycles and counterexamples for other gluings]].
 - [[en/Chains of cores/Closing a Chain - Rings and the Möbius Effect|Ordinary and twisted closures, spanning-tree counts, and radii]].
 
+## Laplacian, Greenian and Resistance Variations
+
+Eight notes move from changing one edge to joint Greenian and resistance variations, quadric connectivity, and algorithms with conductance constraints. Vector factors of exterior exponentials give finite formulas; triangle, path, cycle, and prism examples clarify their scope.
+
+- [[en/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Reading order, all eight notes, main formulas, and applicability conditions]].
+
 ## Python examples
 
 Executable examples show how to reproduce calculations from the notes with `polyform_algebra`. The first companion covers strengthening one and two couplings of a triangle.
@@ -164,4 +170,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **31 October 2026**
+- Library last updated: **1 November 2026**
