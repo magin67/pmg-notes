@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img" aria-labelledby="title desc">
+<title id="title">Корневые веса четырёхрёберных лесов</title><desc id="desc">Пять типов размеров компонент: 5; 4,2; 3,3; 3,2,2; 2,2,2,2. Их корневые веса равны 5,8,9,12,16. Зелёным отмечен один пример выбора корней.</desc>
+<rect width="1200" height="550" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="38.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Четыре ребра · пять типов размеров компонент</text>
+<rect x="20" y="65" width="220" height="412" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="130.00" y="103.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">5</text>
+<line x1="58.00" y1="154.00" x2="94.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="94.00" y1="154.00" x2="130.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="130.00" y1="154.00" x2="166.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="166.00" y1="154.00" x2="202.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="58.00" cy="154.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="94.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="130.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="166.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="202.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="130.00" y="345.00" font-size="20" fill="#15815b" text-anchor="middle" font-weight="bold">5 выборов</text>
+<text x="130.00" y="391.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">А: 56 лесов</text>
+<text x="130.00" y="432.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Б: 60 лесов</text>
+<rect x="256" y="65" width="220" height="412" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="366.00" y="103.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">4 + 2</text>
+<line x1="312.00" y1="154.00" x2="348.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="348.00" y1="154.00" x2="384.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="384.00" y1="154.00" x2="420.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="312.00" cy="154.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="348.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="384.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="420.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<line x1="348.00" y1="199.00" x2="384.00" y2="199.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="348.00" cy="199.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="384.00" cy="199.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="366.00" y="345.00" font-size="20" fill="#15815b" text-anchor="middle" font-weight="bold">4 × 2 = 8</text>
+<text x="366.00" y="391.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">А: 314 лесов</text>
+<text x="366.00" y="432.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Б: 317 лесов</text>
+<rect x="492" y="65" width="220" height="412" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="602.00" y="103.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">3 + 3</text>
+<line x1="566.00" y1="154.00" x2="602.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="602.00" y1="154.00" x2="638.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="566.00" cy="154.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="602.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="638.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<line x1="566.00" y1="199.00" x2="602.00" y2="199.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="602.00" y1="199.00" x2="638.00" y2="199.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="566.00" cy="199.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="602.00" cy="199.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="638.00" cy="199.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="602.00" y="345.00" font-size="20" fill="#15815b" text-anchor="middle" font-weight="bold">3 × 3 = 9</text>
+<text x="602.00" y="391.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">А: 133 лесов</text>
+<text x="602.00" y="432.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Б: 128 лесов</text>
+<rect x="728" y="65" width="220" height="412" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="838.00" y="103.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">3 + 2 + 2</text>
+<line x1="802.00" y1="154.00" x2="838.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="838.00" y1="154.00" x2="874.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="802.00" cy="154.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="838.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<circle cx="874.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<line x1="820.00" y1="199.00" x2="856.00" y2="199.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="820.00" cy="199.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="856.00" cy="199.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<line x1="820.00" y1="244.00" x2="856.00" y2="244.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="820.00" cy="244.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="856.00" cy="244.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="838.00" y="345.00" font-size="20" fill="#15815b" text-anchor="middle" font-weight="bold">3 × 2 × 2 = 12</text>
+<text x="838.00" y="391.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">А: 888 лесов</text>
+<text x="838.00" y="432.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Б: 880 лесов</text>
+<rect x="964" y="65" width="220" height="412" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="1074.00" y="103.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">2 + 2 + 2 + 2</text>
+<line x1="1056.00" y1="154.00" x2="1092.00" y2="154.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="1056.00" cy="154.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="1092.00" cy="154.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<line x1="1056.00" y1="199.00" x2="1092.00" y2="199.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="1056.00" cy="199.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="1092.00" cy="199.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<line x1="1056.00" y1="244.00" x2="1092.00" y2="244.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="1056.00" cy="244.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="1092.00" cy="244.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<line x1="1056.00" y1="289.00" x2="1092.00" y2="289.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="1056.00" cy="289.00" r="7" fill="#15815b" stroke="#15815b" stroke-width="2"/>
+<circle cx="1092.00" cy="289.00" r="5" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="1074.00" y="345.00" font-size="20" fill="#15815b" text-anchor="middle" font-weight="bold">2 × 2 × 2 × 2 = 16</text>
+<text x="1074.00" y="391.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">А: 429 лесов</text>
+<text x="1074.00" y="432.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Б: 435 лесов</text>
+<circle cx="65.00" cy="514.00" r="7" fill="#15815b" stroke="none" stroke-width="2"/>
+<text x="85.00" y="521.00" font-size="21" fill="#52657a" text-anchor="start" font-weight="normal">Один выбор корней; изолированные вершины не показаны</text>
+</g></svg>

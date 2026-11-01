@@ -2,7 +2,7 @@
 title: Graph Transformations and Gluing
 date: 2026-11-01
 updated: 2026-11-01
-revision: 1
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -40,6 +40,8 @@ These are secondary thematic entry points; each series navigator identifies its 
 - [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities|Structural Identities]]: pairing forms and reducing boundary data.
 - [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]: the Dirichlet problem, vertex elimination, and contraction.
 - [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]]: one-point gluing and Whitney twists.
+
+- **Spectra of Isomers**: [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]] uses a Schur complement to compare two seam positions; its primary home is [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]. English translation pending.
 
 ## Future directions
 
