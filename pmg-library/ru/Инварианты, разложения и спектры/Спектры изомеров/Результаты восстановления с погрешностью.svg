@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="title desc">
+<title id="title">Результаты восстановления с погрешностью</title><desc id="desc">При известном ограничении N&lt;=7 полный каталог содержит 365 отмеченных состояний. Округление отклика SLR до 14 знаков даёт единственного кандидата. Среднее откликов SSSSSS и SLSSSS допускает оба кода. Неопределённый сектор интервального алгоритма не доказывает неоднозначность.</desc>
+<rect width="1200" height="670" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="43.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="bold">Что означает результат проверки неточных данных</text>
+<rect x="20" y="80" width="370" height="515" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="205.00" y="125.00" font-size="27" fill="#15815b" text-anchor="middle" font-weight="bold">Один кандидат</text>
+<text x="205.00" y="174.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">Полный поиск при N ≤ 7</text>
+<text x="205.00" y="255.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Отклик SLR округлён</text>
+<text x="205.00" y="298.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">до 14 знаков после запятой</text>
+<text x="205.00" y="341.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">ε = 5 · 10⁻¹⁵</text>
+<line x1="205.00" y1="389.00" x2="205.00" y2="436.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="205.00,436.00 210.00,424.00 200.00,424.00" fill="#172b43"/>
+<text x="205.00" y="479.00" font-size="30" fill="#15815b" text-anchor="middle" font-weight="bold">SLR</text>
+<text x="205.00" y="526.00" font-size="19" fill="#15815b" text-anchor="middle" font-weight="normal">Единственность в каталоге</text>
+<rect x="415" y="80" width="370" height="515" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="600.00" y="125.00" font-size="27" fill="#bc294b" text-anchor="middle" font-weight="bold">Два кандидата</text>
+<text x="600.00" y="174.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">Полный поиск при N ≤ 7</text>
+<text x="600.00" y="255.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Середина двух откликов</text>
+<text x="600.00" y="298.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Радиус: половина расстояния</text>
+<text x="600.00" y="341.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">ε ≈ 1,23 · 10⁻¹¹</text>
+<line x1="600.00" y1="389.00" x2="600.00" y2="436.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="600.00,436.00 605.00,424.00 595.00,424.00" fill="#172b43"/>
+<text x="600.00" y="479.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="bold">SSSSSS  или  SLSSSS</text>
+<text x="600.00" y="526.00" font-size="19" fill="#bc294b" text-anchor="middle" font-weight="normal">Доказана неоднозначность</text>
+<rect x="810" y="80" width="370" height="515" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="995.00" y="125.00" font-size="27" fill="#196bb9" text-anchor="middle" font-weight="bold">Нет заключения</text>
+<text x="995.00" y="174.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">Интервальное снятие шагов</text>
+<text x="995.00" y="255.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Интервал пересёк порог</text>
+<text x="995.00" y="298.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">или знак делителя не установлен</text>
+<text x="995.00" y="341.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Проверка остановилась</text>
+<line x1="995.00" y1="389.00" x2="995.00" y2="436.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="995.00,436.00 1000.00,424.00 990.00,424.00" fill="#172b43"/>
+<text x="995.00" y="479.00" font-size="18" fill="#196bb9" text-anchor="middle" font-weight="bold">Нужна более точная проверка</text>
+<text x="995.00" y="526.00" font-size="18" fill="#196bb9" text-anchor="middle" font-weight="normal">Неоднозначность не доказана</text>
+<text x="600.00" y="639.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">Каждый найденный кандидат проверяется по исходным измерительным интервалам</text>
+</g></svg>
