@@ -1,0 +1,101 @@
+{
+  "source_commit": "4fa10ffe176625c864d56f0af6a223ac88317631",
+  "symbolic_runner_transfers": 3,
+  "marked_graph_comparisons": 121,
+  "nonreversing_alternating_graph_comparisons": 14,
+  "spectral": {
+    "S": {
+      "transfer_charpoly": "(q - 1)*(q**4 - q**3*xi**4 + 10*q**3*xi**3 - 32*q**3*xi**2 + 36*q**3*xi - 12*q**3 + 2*q**2*xi**4 - 20*q**2*xi**3 + 68*q**2*xi**2 - 88*q**2*xi + 38*q**2 - q*xi**4 + 10*q*xi**3 - 32*q*xi**2 + 36*q*xi - 12*q + 1)",
+      "a": "(xi**2 - 6*xi + 6)*(xi**2 - 4*xi + 2)",
+      "b": "2*(xi - 1)*(xi**3 - 9*xi**2 + 25*xi - 19)",
+      "quartic_residual": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "homogeneous_minimal_order": 4,
+      "hankel_at_minus_one": "2800526400",
+      "P1_N0_to_N8": [
+        3,
+        320,
+        28435,
+        2518737,
+        223092224,
+        19759932457,
+        1750195109835,
+        155019908457920,
+        13730567456707723
+      ],
+      "tau_N0_to_N8": [
+        1,
+        6,
+        35,
+        204,
+        1189,
+        6930,
+        40391,
+        235416,
+        1372105
+      ],
+      "initial_polynomials_N0_to_N3": [
+        "xi*(xi - 2)",
+        "xi**6 - 12*xi**5 + 54*xi**4 - 112*xi**3 + 105*xi**2 - 36*xi",
+        "xi**10 - 22*xi**9 + 206*xi**8 - 1072*xi**7 + 3395*xi**6 - 6734*xi**5 + 8290*xi**4 - 6040*xi**3 + 2325*xi**2 - 350*xi",
+        "xi**14 - 32*xi**13 + 458*xi**12 - 3872*xi**11 + 21509*xi**10 - 82624*xi**9 + 224918*xi**8 - 437304*xi**7 + 603954*xi**6 - 581144*xi**5 + 375104*xi**4 - 151536*xi**3 + 33425*xi**2 - 2856*xi"
+      ]
+    },
+    "L": {
+      "transfer_charpoly": "(q - 1)*(q**4 - q**3*xi**4 + 10*q**3*xi**3 - 33*q**3*xi**2 + 40*q**3*xi - 12*q**3 + q**2*xi**6 - 14*q**2*xi**5 + 75*q**2*xi**4 - 192*q**2*xi**3 + 242*q**2*xi**2 - 144*q**2*xi + 38*q**2 - q*xi**4 + 10*q*xi**3 - 33*q*xi**2 + 40*q*xi - 12*q + 1)",
+      "a": "(xi - 3)*(xi - 2)*(xi**2 - 5*xi + 2)",
+      "b": "xi**6 - 14*xi**5 + 75*xi**4 - 192*xi**3 + 242*xi**2 - 144*xi + 38",
+      "quartic_residual": [
+        "-2*xi**2*(xi - 3)**2",
+        "2*xi*(xi - 3)",
+        "-2*xi*(xi - 3)**2*(xi - 1)",
+        "xi*(xi - 3)*(xi**3 - 7*xi**2 + 12*xi - 2)",
+        "0"
+      ],
+      "homogeneous_minimal_order": 5,
+      "hankel_at_minus_one": "-1927817515468800",
+      "P1_N0_to_N8": [
+        3,
+        320,
+        28435,
+        2504096,
+        220348791,
+        19388321568,
+        1705952988831,
+        150104482880576,
+        13207488604942315
+      ],
+      "tau_N0_to_N8": [
+        1,
+        6,
+        35,
+        204,
+        1189,
+        6930,
+        40391,
+        235416,
+        1372105
+      ],
+      "initial_polynomials_N0_to_N3": [
+        "xi*(xi - 2)",
+        "xi**6 - 12*xi**5 + 54*xi**4 - 112*xi**3 + 105*xi**2 - 36*xi",
+        "xi**10 - 22*xi**9 + 206*xi**8 - 1072*xi**7 + 3395*xi**6 - 6734*xi**5 + 8290*xi**4 - 6040*xi**3 + 2325*xi**2 - 350*xi",
+        "xi**14 - 32*xi**13 + 458*xi**12 - 3872*xi**11 + 21508*xi**10 - 82604*xi**9 + 224748*xi**8 - 436504*xi**7 + 601679*xi**6 - 577144*xi**5 + 370854*xi**4 - 149036*xi**3 + 32800*xi**2 - 2856*xi"
+      ]
+    }
+  },
+  "direct_characteristic_polynomial_checks": 18,
+  "direct_full_polynomial_passports": 8,
+  "direct_integer_rooted_and_tree_determinants": 36,
+  "reflection_graph_checks": 8,
+  "periodic_block_direct_checks": 5,
+  "contact_order_counterexample_N4": {
+    "SLL_P1": 220348791,
+    "SLR_P1": 220480560
+  }
+}
