@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Динамический отклик исходной цепочки</title><desc id="desc">Одинаковые единичные теплоёмкости в вершинах и теплопроводности рёбер. Нет новых рёбер и внешнего теплообмена. На примере C6 показаны точные функции собственного и перекрёстного откликов; взвешенные интегралы равны 9/20 и 7/40.</desc>
+<rect width="1200" height="820" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="42.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">Исходный граф · распространение тепла без новых рёбер</text>
+<rect x="20" y="75" width="350" height="470" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="195.00" y="115.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Один C₆: пример</text>
+<polygon points="262.27,207.50 262.27,302.50 180.00,350.00 97.73,302.50 97.73,207.50 180.00,160.00" fill="#ddf4e9"/>
+<line x1="262.27" y1="207.50" x2="262.27" y2="302.50" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="262.27" y1="302.50" x2="180.00" y2="350.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="180.00" y1="350.00" x2="97.73" y2="302.50" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="97.73" y1="302.50" x2="97.73" y2="207.50" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="97.73" y1="207.50" x2="180.00" y2="160.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="180.00" y1="160.00" x2="262.27" y2="207.50" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="262.27" cy="207.50" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
+<circle cx="262.27" cy="302.50" r="7" fill="white" stroke="#15815b" stroke-width="3"/>
+<circle cx="180.00" cy="350.00" r="5" fill="#172b43" stroke="#172b43" stroke-width="3"/>
+<circle cx="97.73" cy="302.50" r="5" fill="#172b43" stroke="#172b43" stroke-width="3"/>
+<circle cx="97.73" cy="207.50" r="5" fill="#172b43" stroke="#172b43" stroke-width="3"/>
+<circle cx="180.00" cy="160.00" r="5" fill="#172b43" stroke="#172b43" stroke-width="3"/>
+<text x="280.27" y="214.50" font-size="25" fill="#196bb9" text-anchor="start" font-weight="normal">x</text>
+<text x="280.27" y="309.50" font-size="25" fill="#15815b" text-anchor="start" font-weight="normal">y</text>
+<text x="195.00" y="391.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">У x и y по два соседа</text>
+<text x="195.00" y="437.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Импульс в x: Fₓₓ, Fᵧₓ</text>
+<text x="195.00" y="477.00" font-size="21" fill="#15815b" text-anchor="middle" font-weight="normal">Импульс в y: Fₓᵧ, Fᵧᵧ</text>
+<text x="195.00" y="516.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">Записываем обе температуры</text>
+<ns0:svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="790" height="470" viewBox="0 0 568.8 338.4" version="1.1" x="390" y="75">
+ <ns0:metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.8.2, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </ns0:metadata>
+ <ns0:defs>
+  <ns0:style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</ns0:style>
+ </ns0:defs>
+ <ns0:g id="figure_1">
+  <ns0:g id="patch_1">
+   <ns0:path d="M 0 338.4  L 568.8 338.4  L 568.8 0  L 0 0  z " style="fill: #ffffff" />
+  </ns0:g>
+  <ns0:g id="axes_1">
+   <ns0:g id="patch_2">
+    <ns0:path d="M 47.255865 299.236635  L 561.664135 299.236635  L 561.664135 3.00024  L 47.255865 3.00024  z " style="fill: #ffffff" />
+   </ns0:g>
+   <ns0:g id="matplotlib.axis_1">
+    <ns0:g id="xtick_1">
+     <ns0:g id="line2d_1">
+      <ns0:path d="M 47.255865 299.236635  L 47.255865 3.00024  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_2">
+      <ns0:defs>
+       <ns0:path id="mc3f5711975" d="M 0 0  L 0 3.5  " style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:defs>
+      <ns0:g>
+       <ns0:use ns4:href="#mc3f5711975" x="47.255865" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_1">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="47.255865" y="316.114604" transform="rotate(-0 47.255865 316.114604)">0</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="xtick_2">
+     <ns0:g id="line2d_3">
+      <ns0:path d="M 132.990577 299.236635  L 132.990577 3.00024  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_4">
+      <ns0:g>
+       <ns0:use ns4:href="#mc3f5711975" x="132.990577" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_2">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="132.990577" y="316.114604" transform="rotate(-0 132.990577 316.114604)">1</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="xtick_3">
+     <ns0:g id="line2d_5">
+      <ns0:path d="M 218.725288 299.236635  L 218.725288 3.00024  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_6">
+      <ns0:g>
+       <ns0:use ns4:href="#mc3f5711975" x="218.725288" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_3">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="218.725288" y="316.114604" transform="rotate(-0 218.725288 316.114604)">2</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="xtick_4">
+     <ns0:g id="line2d_7">
+      <ns0:path d="M 304.46 299.236635  L 304.46 3.00024  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_8">
+      <ns0:g>
+       <ns0:use ns4:href="#mc3f5711975" x="304.46" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_4">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="304.46" y="316.114604" transform="rotate(-0 304.46 316.114604)">3</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="xtick_5">
+     <ns0:g id="line2d_9">
+      <ns0:path d="M 390.194712 299.236635  L 390.194712 3.00024  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_10">
+      <ns0:g>
+       <ns0:use ns4:href="#mc3f5711975" x="390.194712" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_5">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="390.194712" y="316.114604" transform="rotate(-0 390.194712 316.114604)">4</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="xtick_6">
+     <ns0:g id="line2d_11">
+      <ns0:path d="M 475.929423 299.236635  L 475.929423 3.00024  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_12">
+      <ns0:g>
+       <ns0:use ns4:href="#mc3f5711975" x="475.929423" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_6">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="475.929423" y="316.114604" transform="rotate(-0 475.929423 316.114604)">5</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="xtick_7">
+     <ns0:g id="line2d_13">
+      <ns0:path d="M 561.664135 299.236635  L 561.664135 3.00024  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_14">
+      <ns0:g>
+       <ns0:use ns4:href="#mc3f5711975" x="561.664135" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_7">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="561.664135" y="316.114604" transform="rotate(-0 561.664135 316.114604)">6</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="text_8">
+     <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="304.46" y="332.696166" transform="rotate(-0 304.46 332.696166)">Время t</ns0:text>
+    </ns0:g>
+   </ns0:g>
+   <ns0:g id="matplotlib.axis_2">
+    <ns0:g id="ytick_1">
+     <ns0:g id="line2d_15">
+      <ns0:path d="M 47.255865 299.236635  L 561.664135 299.236635  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_16">
+      <ns0:defs>
+       <ns0:path id="m52547510a0" d="M 0 0  L -3.5 0  " style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:defs>
+      <ns0:g>
+       <ns0:use ns4:href="#m52547510a0" x="47.255865" y="299.236635" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_9">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: end" x="40.255865" y="304.175619" transform="rotate(-0 40.255865 304.175619)">0.0</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="ytick_2">
+     <ns0:g id="line2d_17">
+      <ns0:path d="M 47.255865 241.151067  L 561.664135 241.151067  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_18">
+      <ns0:g>
+       <ns0:use ns4:href="#m52547510a0" x="47.255865" y="241.151067" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_10">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: end" x="40.255865" y="246.090052" transform="rotate(-0 40.255865 246.090052)">0.2</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="ytick_3">
+     <ns0:g id="line2d_19">
+      <ns0:path d="M 47.255865 183.0655  L 561.664135 183.0655  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_20">
+      <ns0:g>
+       <ns0:use ns4:href="#m52547510a0" x="47.255865" y="183.0655" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_11">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: end" x="40.255865" y="188.004484" transform="rotate(-0 40.255865 188.004484)">0.4</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="ytick_4">
+     <ns0:g id="line2d_21">
+      <ns0:path d="M 47.255865 124.979932  L 561.664135 124.979932  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_22">
+      <ns0:g>
+       <ns0:use ns4:href="#m52547510a0" x="47.255865" y="124.979932" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_12">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: end" x="40.255865" y="129.918916" transform="rotate(-0 40.255865 129.918916)">0.6</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="ytick_5">
+     <ns0:g id="line2d_23">
+      <ns0:path d="M 47.255865 66.894364  L 561.664135 66.894364  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_24">
+      <ns0:g>
+       <ns0:use ns4:href="#m52547510a0" x="47.255865" y="66.894364" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_13">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: end" x="40.255865" y="71.833349" transform="rotate(-0 40.255865 71.833349)">0.8</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="ytick_6">
+     <ns0:g id="line2d_25">
+      <ns0:path d="M 47.255865 8.808797  L 561.664135 8.808797  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square" />
+     </ns0:g>
+     <ns0:g id="line2d_26">
+      <ns0:g>
+       <ns0:use ns4:href="#m52547510a0" x="47.255865" y="8.808797" style="stroke: #000000; stroke-width: 0.8" />
+      </ns0:g>
+     </ns0:g>
+     <ns0:g id="text_14">
+      <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: end" x="40.255865" y="13.747781" transform="rotate(-0 40.255865 13.747781)">1.0</ns0:text>
+     </ns0:g>
+    </ns0:g>
+    <ns0:g id="text_15">
+     <ns0:text style="font: 13px 'DejaVu Sans'; text-anchor: middle" x="12.878209" y="151.118438" transform="rotate(-90 12.878209 151.118438)">Температура</ns0:text>
+    </ns0:g>
+   </ns0:g>
+   <ns0:g id="line2d_27">
+    <ns0:path d="M 47.255865 8.808797  L 49.399233 22.800438  L 51.542601 35.789274  L 53.685968 47.854998  L 55.829336 59.070658  L 59.044388 74.445251  L 62.25944 88.259685  L 65.474491 100.692412  L 68.689543 111.900315  L 71.904595 122.021397  L 75.119646 131.17712  L 78.334698 139.474455  L 81.54975 147.007672  L 84.764801 153.859897  L 87.979853 160.104485  L 91.194905 165.806207  L 94.409956 171.0223  L 97.625008 175.80338  L 100.84006 180.194243  L 104.055111 184.234567  L 107.270163 187.959522  L 110.485215 191.400315  L 113.700267 194.584659  L 117.987002 198.473707  L 122.273738 202.001349  L 126.560473 205.211333  L 130.847209 208.141233  L 135.133944 210.823389  L 139.42068 213.285696  L 144.7791 216.090836  L 150.137519 218.630053  L 155.495938 220.937038  L 161.926042 223.438523  L 168.356145 225.68713  L 174.786249 227.716533  L 182.288036 229.84409  L 189.789823 231.747601  L 198.363294 233.686745  L 206.936765 235.408435  L 216.581921 237.122011  L 227.29876 238.788421  L 239.087282 240.376063  L 251.947489 241.860703  L 265.87938 243.225081  L 280.882954 244.458359  L 296.958213 245.555452  L 315.176839 246.570101  L 335.538833 247.473599  L 358.044195 248.250259  L 384.836292 248.94379  L 415.915125 249.518189  L 453.424062 249.98383  L 501.649837 250.348751  L 561.664135 250.592028  L 561.664135 250.592028  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #196bb9; stroke-width: 2.5; stroke-linecap: square" />
+   </ns0:g>
+   <ns0:g id="line2d_28">
+    <ns0:path d="M 47.255865 299.236635  L 49.399233 292.327889  L 51.542601 286.080704  L 53.685968 280.435835  L 55.829336 275.339305  L 57.972704 270.741939  L 60.116072 266.598926  L 62.25944 262.869438  L 64.402807 259.516264  L 66.546175 256.505496  L 68.689543 253.806229  L 70.832911 251.390292  L 72.976279 249.232011  L 75.119646 247.307982  L 77.263014 245.59687  L 80.478066 243.387351  L 83.693117 241.55499  L 86.908169 240.048823  L 90.123221 238.824488  L 93.338273 237.843372  L 96.553324 237.071864  L 100.84006 236.319245  L 105.126795 235.828635  L 109.413531 235.55098  L 114.77195 235.442019  L 121.202054 235.577174  L 128.703841 235.994718  L 138.348996 236.792153  L 152.280887 238.200238  L 186.574771 241.742904  L 203.721714 243.263839  L 220.868656 244.568887  L 239.087282 245.731133  L 258.377592 246.739386  L 279.81127 247.634438  L 304.46 248.428341  L 332.323781 249.093093  L 365.545982 249.65085  L 406.26997 250.097182  L 458.782481 250.433665  L 531.656986 250.661733  L 561.664135 250.712013  L 561.664135 250.712013  " clip-path="url(#p606ce4c390)" style="fill: none; stroke: #15815b; stroke-width: 2.5; stroke-linecap: square" />
+   </ns0:g>
+   <ns0:g id="patch_3">
+    <ns0:path d="M 47.255865 299.236635  L 47.255865 3.00024  " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </ns0:g>
+   <ns0:g id="patch_4">
+    <ns0:path d="M 47.255865 299.236635  L 561.664135 299.236635  " style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square" />
+   </ns0:g>
+   <ns0:g id="legend_1">
+    <ns0:g id="patch_5">
+     <ns0:path d="M 367.60351 47.82774  L 553.264135 47.82774  Q 555.664135 47.82774 555.664135 45.42774  L 555.664135 11.40024  Q 555.664135 9.00024 553.264135 9.00024  L 367.60351 9.00024  Q 365.20351 9.00024 365.20351 11.40024  L 365.20351 45.42774  Q 365.20351 47.82774 367.60351 47.82774  z " style="fill: #ffffff; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter" />
+    </ns0:g>
+    <ns0:g id="line2d_29">
+     <ns0:path d="M 370.00351 18.718365  L 382.00351 18.718365  L 394.00351 18.718365  " style="fill: none; stroke: #196bb9; stroke-width: 2.5; stroke-linecap: square" />
+    </ns0:g>
+    <ns0:g id="text_16">
+     <ns0:text style="font: 12px 'DejaVu Sans'; text-anchor: start" x="403.60351" y="22.918365" transform="rotate(-0 403.60351 22.918365)">Собственный Fₓₓ = Fᵧᵧ</ns0:text>
+    </ns0:g>
+    <ns0:g id="line2d_30">
+     <ns0:path d="M 370.00351 36.332115  L 382.00351 36.332115  L 394.00351 36.332115  " style="fill: none; stroke: #15815b; stroke-width: 2.5; stroke-linecap: square" />
+    </ns0:g>
+    <ns0:g id="text_17">
+     <ns0:text style="font: 12px 'DejaVu Sans'; text-anchor: start" x="403.60351" y="40.532115" transform="rotate(-0 403.60351 40.532115)">Перекрёстный Fₓᵧ = Fᵧₓ</ns0:text>
+    </ns0:g>
+   </ns0:g>
+  </ns0:g>
+ </ns0:g>
+ <ns0:defs>
+  <ns0:clipPath id="p606ce4c390">
+   <ns0:rect x="47.255865" y="3.00024" width="514.40827" height="296.236395" />
+  </ns0:clipPath>
+ </ns0:defs>
+</ns0:svg>
+<rect x="20" y="572" width="1160" height="218" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="600.00" y="610.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Обработка записи: умножить на e⁻ᵗ и проинтегрировать</text>
+<text x="330.00" y="660.00" font-size="27" fill="#196bb9" text-anchor="middle" font-weight="normal">Для C₆: r = s = 9/20</text>
+<text x="875.00" y="660.00" font-size="27" fill="#15815b" text-anchor="middle" font-weight="normal">h = 7/40</text>
+<text x="600.00" y="706.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="normal">В общем случае четыре интеграла: r, h, h, s</text>
+<text x="600.00" y="753.00" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">Вес e⁻ᵗ применяется к данным; физической утечки во внешнюю среду нет</text>
+</g></svg>

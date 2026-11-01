@@ -2,7 +2,7 @@
 <title id="title">Два опыта с заземлённой цепочкой</title><desc id="desc">В каждой вершине, включая x и y, есть единичная проводимость к общей земле. Первый опыт с токами (1,0) даёт напряжения (r,h); второй с токами (0,1) даёт (h,s).</desc>
 <rect width="1200" height="650" fill="white"/>
 <g font-family="DejaVu Sans, Arial, sans-serif">
-<text x="600.00" y="42.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="bold">Одинаковое заземление во всех вершинах</text>
+<text x="600.00" y="42.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">Вспомогательная сеть G*: по резистору к общей точке</text>
 <rect x="20" y="75" width="520" height="495" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
 <text x="280.00" y="112.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">Один C₆ для иллюстрации</text>
 <polygon points="350.26,260.00 350.26,370.00 255.00,425.00 159.74,370.00 159.74,260.00 255.00,205.00" fill="#ddf4e9"/>
@@ -13,7 +13,11 @@
 <line x1="159.74" y1="260.00" x2="255.00" y2="205.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
 <line x1="255.00" y1="205.00" x2="350.26" y2="260.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
 <line x1="350.26" y1="260.00" x2="418.85" y2="220.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
-<line x1="382.06" y1="235.87" x2="387.06" y2="244.53" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="372.53,241.37 391.58,230.37 396.58,239.03 377.53,250.03" fill="white"/>
+<line x1="372.53" y1="241.37" x2="391.58" y2="230.37" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="391.58" y1="230.37" x2="396.58" y2="239.03" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="396.58" y1="239.03" x2="377.53" y2="250.03" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="377.53" y1="250.03" x2="372.53" y2="241.37" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
 <text x="396.56" y="234.20" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">1</text>
 <line x1="418.85" y1="220.40" x2="418.85" y2="232.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <line x1="407.85" y1="232.40" x2="429.85" y2="232.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
@@ -21,7 +25,11 @@
 <line x1="415.35" y1="242.40" x2="422.35" y2="242.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <circle cx="350.26" cy="260.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
 <line x1="350.26" y1="370.00" x2="418.85" y2="409.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
-<line x1="387.06" y1="385.47" x2="382.06" y2="394.13" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="377.53,379.97 396.58,390.97 391.58,399.63 372.53,388.63" fill="white"/>
+<line x1="377.53" y1="379.97" x2="396.58" y2="390.97" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="396.58" y1="390.97" x2="391.58" y2="399.63" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="391.58" y1="399.63" x2="372.53" y2="388.63" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="372.53" y1="388.63" x2="377.53" y2="379.97" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
 <text x="396.56" y="383.80" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">1</text>
 <line x1="418.85" y1="409.60" x2="418.85" y2="421.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <line x1="407.85" y1="421.60" x2="429.85" y2="421.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
@@ -29,7 +37,11 @@
 <line x1="415.35" y1="431.60" x2="422.35" y2="431.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <circle cx="350.26" cy="370.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
 <line x1="255.00" y1="425.00" x2="255.00" y2="504.20" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
-<line x1="260.00" y1="464.60" x2="250.00" y2="464.60" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="260.00,453.60 260.00,475.60 250.00,475.60 250.00,453.60" fill="white"/>
+<line x1="260.00" y1="453.60" x2="260.00" y2="475.60" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="260.00" y1="475.60" x2="250.00" y2="475.60" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="250.00" y1="475.60" x2="250.00" y2="453.60" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="250.00" y1="453.60" x2="260.00" y2="453.60" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
 <text x="267.00" y="458.60" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">1</text>
 <line x1="255.00" y1="504.20" x2="255.00" y2="516.20" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <line x1="244.00" y1="516.20" x2="266.00" y2="516.20" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
@@ -37,7 +49,11 @@
 <line x1="251.50" y1="526.20" x2="258.50" y2="526.20" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <circle cx="255.00" cy="425.00" r="5" fill="#172b43" stroke="#172b43" stroke-width="3"/>
 <line x1="159.74" y1="370.00" x2="91.15" y2="409.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
-<line x1="127.94" y1="394.13" x2="122.94" y2="385.47" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="137.47,388.63 118.42,399.63 113.42,390.97 132.47,379.97" fill="white"/>
+<line x1="137.47" y1="388.63" x2="118.42" y2="399.63" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="118.42" y1="399.63" x2="113.42" y2="390.97" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="113.42" y1="390.97" x2="132.47" y2="379.97" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="132.47" y1="379.97" x2="137.47" y2="388.63" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
 <text x="137.44" y="383.80" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">1</text>
 <line x1="91.15" y1="409.60" x2="91.15" y2="421.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <line x1="80.15" y1="421.60" x2="102.15" y2="421.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
@@ -45,7 +61,11 @@
 <line x1="87.65" y1="431.60" x2="94.65" y2="431.60" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <circle cx="159.74" cy="370.00" r="5" fill="#172b43" stroke="#172b43" stroke-width="3"/>
 <line x1="159.74" y1="260.00" x2="91.15" y2="220.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
-<line x1="122.94" y1="244.53" x2="127.94" y2="235.87" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="132.47,250.03 113.42,239.03 118.42,230.37 137.47,241.37" fill="white"/>
+<line x1="132.47" y1="250.03" x2="113.42" y2="239.03" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="113.42" y1="239.03" x2="118.42" y2="230.37" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="118.42" y1="230.37" x2="137.47" y2="241.37" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="137.47" y1="241.37" x2="132.47" y2="250.03" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
 <text x="137.44" y="234.20" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">1</text>
 <line x1="91.15" y1="220.40" x2="91.15" y2="232.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <line x1="80.15" y1="232.40" x2="102.15" y2="232.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
@@ -53,7 +73,11 @@
 <line x1="87.65" y1="242.40" x2="94.65" y2="242.40" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <circle cx="159.74" cy="260.00" r="5" fill="#172b43" stroke="#172b43" stroke-width="3"/>
 <line x1="255.00" y1="205.00" x2="255.00" y2="125.80" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
-<line x1="250.00" y1="165.40" x2="260.00" y2="165.40" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="250.00,176.40 250.00,154.40 260.00,154.40 260.00,176.40" fill="white"/>
+<line x1="250.00" y1="176.40" x2="250.00" y2="154.40" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="250.00" y1="154.40" x2="260.00" y2="154.40" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="260.00" y1="154.40" x2="260.00" y2="176.40" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
+<line x1="260.00" y1="176.40" x2="250.00" y2="176.40" stroke="#196bb9" stroke-width="2" stroke-linecap="round"/>
 <text x="267.00" y="159.40" font-size="18" fill="#196bb9" text-anchor="start" font-weight="normal">1</text>
 <line x1="255.00" y1="125.80" x2="255.00" y2="137.80" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
 <line x1="244.00" y1="137.80" x2="266.00" y2="137.80" stroke="#52657a" stroke-width="2" stroke-linecap="round"/>
@@ -79,5 +103,5 @@
 <text x="962.00" y="389.00" font-size="24" fill="#15815b" text-anchor="start" font-weight="normal">vₓ = h</text>
 <text x="962.00" y="429.00" font-size="24" fill="#15815b" text-anchor="start" font-weight="normal">vᵧ = s</text>
 <text x="877.00" y="530.00" font-size="20" fill="#bc294b" text-anchor="middle" font-weight="normal">Нулевой ток не означает нулевое напряжение</text>
-<text x="600.00" y="615.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="normal">Итог: K = [[r, h], [h, s]]  ·  три точных числа определяют отмеченную цепочку</text>
+<text x="600.00" y="615.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="normal">Два опыта · четыре показания: r, h, h, s · общая точка * является добавленной</text>
 </g></svg>

@@ -143,6 +143,77 @@ def direct_models():
             'forest_event_checks':4,'examples':examples}
 
 
+def original_graph_models(max_N=5,series_terms=32):
+    """Unaugmented graph: ordinary resistance, DN map, and heat resolvent.
+
+    U=I-L/3 is stochastic for these graphs. Integrating the uniformization
+    expansion of exp(-t L) against exp(-t) gives (1/4) sum (3U/4)^k.
+    Truncated sums and bounds below are checked entirely with rationals.
+    """
+    by_size={};count=0;series_count=0;examples={}
+    expected=sp.Rational(5,6)
+    for N in range(1,max_N+1):
+        if N>1:expected=(4+expected)/(5+expected)
+        words=[None] if N==1 else [''.join(w) for w in product('SLR',repeat=N-2)]
+        values=set()
+        for u in words:
+            if u is None:
+                edges={tuple(sorted((i,(i+1)%6))):1 for i in range(6)}
+                n=6;B=(0,1);name='C6'
+            else:
+                g,_,B,edges=v.graph(u);n=len(g);name='S'+u
+            L=v.laplacian(edges,n);x,y=B
+            assert L[x,x]==L[y,y]==2
+            # Unit injection at x, unit extraction at y; pin only y's potential.
+            remaining=[i for i in range(n) if i!=y]
+            source=sp.zeros(n-1,1);source[remaining.index(x)]=1
+            voltage=L.extract(remaining,remaining).inv()*source
+            resistance=voltage[remaining.index(x)]
+            assert resistance==expected
+            interior=[i for i in range(n) if i not in B]
+            ordinary_DN=L.extract(B,B)-L.extract(B,interior)*L.extract(interior,interior).inv()*L.extract(interior,B)
+            assert ordinary_DN==sp.Matrix([[1,-1],[-1,1]])/resistance
+            assert ordinary_DN.rank()==1
+            values.add(str(resistance));count+=1
+            if N<=4:
+                U=sp.eye(n)-L/3
+                assert min(U)>=0 and U*sp.ones(n,1)==sp.ones(n,1)
+                initial=sp.zeros(n,2)
+                for j,b in enumerate(B):initial[b,j]=1
+                term=initial/4;partial=sp.zeros(n,2)
+                for _ in range(series_terms):
+                    partial+=term
+                    term=sp.Rational(3,4)*U*term
+                full=(sp.eye(n)+L).inv()*initial
+                tail=sp.Rational(3,4)**series_terms
+                assert all(0<=err<=tail for err in full-partial)
+                assert (sp.eye(n)-sp.Rational(3,4)*U)*full==initial/4
+                series_count+=1
+            if name in ('C6','SS','SL'):
+                examples[name]={'boundary':list(B),'degrees':[2,2],
+                                'resistance':resistance,'ordinary_DN':ordinary_DN.tolist()}
+        by_size[str(N)]={'codes':len(words),'resistance':expected}
+        assert len(values)==1
+
+    # An independent exact continuous-time solution for C6, checked by its ODE.
+    t=sp.symbols('t',real=True,nonnegative=True)
+    L6=v.laplacian({tuple(sorted((i,(i+1)%6))):1 for i in range(6)},6)
+    coefficients=lambda d: [1,2*sp.cos(sp.pi*d/3),2*sp.cos(2*sp.pi*d/3),sp.cos(sp.pi*d)]
+    rates=[0,1,3,4]
+    F6=sp.Matrix(6,6,lambda i,j:sum(c*sp.exp(-rate*t) for c,rate in zip(coefficients(i-j),rates))/6)
+    assert F6.subs(t,0)==sp.eye(6)
+    assert (F6.diff(t)+L6*F6).applyfunc(sp.simplify)==sp.zeros(6)
+    assert F6==F6.T and (F6*sp.ones(6,1)).applyfunc(sp.simplify)==sp.ones(6,1)
+    integrals=[sp.integrate(sp.exp(-t)*F6[0,j],(t,0,sp.oo)) for j in (0,1)]
+    assert integrals==[sp.Rational(9,20),sp.Rational(7,40)]
+    return {'direct_graphs':count,'by_size':by_size,'examples':examples,
+            'heat_resolvent_series':{'graphs':series_count,'terms':series_terms,
+                                     'entry_tail_bound':sp.Rational(3,4)**series_terms},
+            'C6_heat':{'decay_rates':rates,'normalization':6,
+                       'self_coefficients':coefficients(0),'cross_coefficients':coefficients(1),
+                       'weighted_integrals':integrals,'initial_and_ODE_verified':True}}
+
+
 def hidden_bend(max_k=12):
     straight=working('S');bend=working('L')
     initial=max(abs(x-y) for x,y in zip(normalized(straight),normalized(bend)))
@@ -263,6 +334,8 @@ if __name__=='__main__':
     print('PASS: rational contraction and sector certificates',flush=True)
     data['direct_models']=direct_models()
     print('PASS: direct electrical, Schur, killed-walk, and forest interpretations',flush=True)
+    data['original_graph_models']=original_graph_models()
+    print('PASS: original-graph resistance (41 graphs), heat ODE, and rational heat-resolvent series (14 graphs)',flush=True)
     data['recovery']=exact_recovery()
     print('PASS: exact recovery',data['recovery'],flush=True)
     data['hidden_bend']=hidden_bend()

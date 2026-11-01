@@ -1,10 +1,10 @@
-"""Four SVG figures; exact numerical data come from the verification JSON.
+"""Six SVG figures; exact numerical data come from the verification JSON.
 
-Matplotlib draws the scientific plot; all other elements are native SVG.
+Matplotlib draws the scientific plots; all other elements are native SVG.
 """
 from pathlib import Path
 from fractions import Fraction as F
-from math import cos, sin, pi
+from math import cos, sin, pi, exp
 from io import StringIO
 import json
 import xml.etree.ElementTree as ET
@@ -31,7 +31,7 @@ def electrical():
     s=SVG(1200,650,'Два опыта с заземлённой цепочкой',
           'В каждой вершине, включая x и y, есть единичная проводимость к общей земле. '
           'Первый опыт с токами (1,0) даёт напряжения (r,h); второй с токами (0,1) даёт (h,s).')
-    s.text(600,42,'Одинаковое заземление во всех вершинах',28,anchor='middle',weight='bold')
+    s.text(600,42,'Вспомогательная сеть G*: по резистору к общей точке',27,anchor='middle',weight='bold')
     s.panel(20,75,520,495)
     s.text(280,112,'Один C₆ для иллюстрации',23,anchor='middle',weight='bold')
     cx,cy,R=255,315,110
@@ -42,11 +42,14 @@ def electrical():
         theta=-pi/6+i*pi/3
         end=(cx+1.72*R*cos(theta),cy+1.72*R*sin(theta))
         s.line((x,y),end,MUTED,2)
-        # A short transverse pair marks the unit shunt segment.
+        # A finite resistor, not a direct wire from the vertex to ground.
         mid=((x+end[0])/2,(y+end[1])/2)
         normal=(-sin(theta),cos(theta))
-        s.line((mid[0]-5*normal[0],mid[1]-5*normal[1]),
-               (mid[0]+5*normal[0],mid[1]+5*normal[1]),BLUE,3)
+        along=(cos(theta),sin(theta))
+        rect=[(mid[0]+a*along[0]+b*normal[0],mid[1]+a*along[1]+b*normal[1])
+              for a,b in ((-11,-5),(11,-5),(11,5),(-11,5))]
+        s.polygon(rect,'white')
+        for a,b in zip(rect,rect[1:]+rect[:1]):s.line(a,b,BLUE,2)
         s.text(mid[0]+12,mid[1]-6,'1',18,BLUE)
         ground(s,(end[0],end[1]+12))
         s.circle((x,y),7 if i in (0,1) else 5,'white' if i in (0,1) else INK,BLUE if i in (0,1) else INK,3)
@@ -64,8 +67,78 @@ def electrical():
         s.text(962,y+99,outputs.split(',')[0],24,GREEN)
         s.text(962,y+139,outputs.split(',')[1].strip(),24,GREEN)
     s.text(877,530,'Нулевой ток не означает нулевое напряжение',20,RED,'middle')
-    s.text(600,615,'Итог: K = [[r, h], [h, s]]  ·  три точных числа определяют отмеченную цепочку',23,anchor='middle')
+    s.text(600,615,'Два опыта · четыре показания: r, h, h, s · общая точка * является добавленной',23,anchor='middle')
     s.save('Два опыта с заземлённой цепочкой.svg')
+
+
+def embed_plot(s,fig,x,y,w,h):
+    stream=StringIO();fig.savefig(stream,format='svg',metadata={'Date':None});plt.close(fig)
+    root=ET.fromstring(stream.getvalue())
+    for key,value in [('x',x),('y',y),('width',w),('height',h)]:root.set(key,str(value))
+    s.parts.append('\n'.join(line.rstrip() for line in ET.tostring(root,encoding='unicode').splitlines()))
+
+
+def dynamic_response():
+    s=SVG(1200,820,'Динамический отклик исходной цепочки',
+          'Одинаковые единичные теплоёмкости в вершинах и теплопроводности рёбер. '
+          'Нет новых рёбер и внешнего теплообмена. На примере C6 показаны точные функции '
+          'собственного и перекрёстного откликов; взвешенные интегралы равны 9/20 и 7/40.')
+    s.text(600,42,'Исходный граф · распространение тепла без новых рёбер',27,anchor='middle',weight='bold')
+    s.panel(20,75,350,470)
+    s.text(195,115,'Один C₆: пример',25,anchor='middle',weight='bold')
+    p=[(180+95*cos(-pi/6+i*pi/3),255+95*sin(-pi/6+i*pi/3)) for i in range(6)]
+    s.polygon(p,FILLS[1])
+    for i in range(6):s.line(p[i],p[(i+1)%6],MUTED,3)
+    for i,q in enumerate(p):s.circle(q,7 if i<2 else 5,'white' if i<2 else INK,BLUE if i==0 else GREEN if i==1 else INK,3)
+    s.text(p[0][0]+18,p[0][1]+7,'x',25,BLUE)
+    s.text(p[1][0]+18,p[1][1]+7,'y',25,GREEN)
+    s.text(195,391,'У x и y по два соседа',21,anchor='middle')
+    s.text(195,437,'Импульс в x: Fₓₓ, Fᵧₓ',21,BLUE,'middle')
+    s.text(195,477,'Импульс в y: Fₓᵧ, Fᵧᵧ',21,GREEN,'middle')
+    s.text(195,516,'Записываем обе температуры',18,MUTED,'middle')
+    data=DATA['original_graph_models']['C6_heat']
+    ts=[i/80 for i in range(481)]
+    values=lambda key:[sum(float(c)*exp(-rate*t) for c,rate in zip(data[key],data['decay_rates']))/data['normalization'] for t in ts]
+    with plt.rc_context({'font.family':'DejaVu Sans','font.size':13,'svg.fonttype':'none','svg.hashsalt':'pmg-dynamic-response'}):
+        fig,ax=plt.subplots(figsize=(7.9,4.7),layout='constrained')
+        ax.plot(ts,values('self_coefficients'),color=BLUE,lw=2.5,label='Собственный Fₓₓ = Fᵧᵧ')
+        ax.plot(ts,values('cross_coefficients'),color=GREEN,lw=2.5,label='Перекрёстный Fₓᵧ = Fᵧₓ')
+        ax.set_xlabel('Время t');ax.set_ylabel('Температура')
+        ax.set_xlim(0,6);ax.set_ylim(0,1.02);ax.grid(alpha=.2);ax.legend(fontsize=12)
+        ax.spines[['top','right']].set_visible(False)
+        embed_plot(s,fig,390,75,790,470)
+    s.panel(20,572,1160,218)
+    s.text(600,610,'Обработка записи: умножить на e⁻ᵗ и проинтегрировать',25,anchor='middle',weight='bold')
+    r,h=data['weighted_integrals']
+    s.text(330,660,f'Для C₆: r = s = {r}',27,BLUE,'middle')
+    s.text(875,660,f'h = {h}',27,GREEN,'middle')
+    s.text(600,706,'В общем случае четыре интеграла: r, h, h, s',23,anchor='middle')
+    s.text(600,753,'Вес e⁻ᵗ применяется к данным; физической утечки во внешнюю среду нет',21,MUTED,'middle')
+    s.save('Динамический отклик исходной цепочки.svg')
+
+
+def ordinary_resistance():
+    s=SVG(1200,780,'Одинаковое конечное сопротивление',
+          'Исходные цепочки SS и SL из трёх ядер имеют одинаковое сопротивление на '
+          'каноническом конечном ребре: 169/204. Префикс заменяется его сопротивлением '
+          'R предыдущего шага; две ветви имеют сопротивления 1 и 4+R.')
+    s.text(600,42,'Обычный стационарный опыт на выбранном конечном ребре',26,anchor='middle',weight='bold')
+    for x,u,name in [(20,'S','SS'),(620,'L','SL')]:
+        s.panel(x,75,560,320)
+        s.text(x+45,119,name,28,BLUE if name=='SS' else RED,weight='bold')
+        ending_chain(s,u,(x+100,143,360,155),name=='SL')
+        R=DATA['original_graph_models']['examples'][name]['resistance']
+        s.text(x+280,363,'Rₓᵧ = '+R,27,anchor='middle',weight='bold')
+    s.text(600,441,'В обоих графах доступны только x и y; дополнительных рёбер нет',22,MUTED,'middle')
+    left,right=(340,560),(860,560)
+    s.line(left,right,BLUE,4)
+    for pt in (left,right):s.circle(pt,7,'white',GREEN,3)
+    s.text(310,567,'x',24,GREEN);s.text(880,567,'y',24,GREEN)
+    s.text(600,541,'Выбранное ребро: 1',22,BLUE,'middle')
+    s.line(left,(340,655),MUTED,3);s.line((340,655),(860,655),MUTED,3);s.line((860,655),right,MUTED,3)
+    s.text(600,638,'Оставшийся путь: 4 + Rₙ₋₁',24,anchor='middle')
+    s.text(600,731,'Параллельные ветви дают Rₙ = (4 + Rₙ₋₁) / (5 + Rₙ₋₁)',26,anchor='middle',weight='bold')
+    s.save('Одинаковое конечное сопротивление.svg')
 
 
 def probability():
@@ -193,5 +266,5 @@ def outcomes():
 
 
 if __name__=='__main__':
-    electrical();probability();attenuation();outcomes()
-    print('Wrote four boundary-response SVG figures')
+    dynamic_response();ordinary_resistance();electrical();probability();attenuation();outcomes()
+    print('Wrote six boundary-response SVG figures')

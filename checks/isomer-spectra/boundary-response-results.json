@@ -285,6 +285,127 @@
       }
     }
   },
+  "original_graph_models": {
+    "direct_graphs": 41,
+    "by_size": {
+      "1": {
+        "codes": 1,
+        "resistance": "5/6"
+      },
+      "2": {
+        "codes": 1,
+        "resistance": "29/35"
+      },
+      "3": {
+        "codes": 3,
+        "resistance": "169/204"
+      },
+      "4": {
+        "codes": 9,
+        "resistance": "985/1189"
+      },
+      "5": {
+        "codes": 27,
+        "resistance": "5741/6930"
+      }
+    },
+    "examples": {
+      "C6": {
+        "boundary": [
+          0,
+          1
+        ],
+        "degrees": [
+          2,
+          2
+        ],
+        "resistance": "5/6",
+        "ordinary_DN": [
+          [
+            "6/5",
+            "-6/5"
+          ],
+          [
+            "-6/5",
+            "6/5"
+          ]
+        ]
+      },
+      "SS": {
+        "boundary": [
+          11,
+          12
+        ],
+        "degrees": [
+          2,
+          2
+        ],
+        "resistance": "169/204",
+        "ordinary_DN": [
+          [
+            "204/169",
+            "-204/169"
+          ],
+          [
+            "-204/169",
+            "204/169"
+          ]
+        ]
+      },
+      "SL": {
+        "boundary": [
+          11,
+          12
+        ],
+        "degrees": [
+          2,
+          2
+        ],
+        "resistance": "169/204",
+        "ordinary_DN": [
+          [
+            "204/169",
+            "-204/169"
+          ],
+          [
+            "-204/169",
+            "204/169"
+          ]
+        ]
+      }
+    },
+    "heat_resolvent_series": {
+      "graphs": 14,
+      "terms": 32,
+      "entry_tail_bound": "1853020188851841/18446744073709551616"
+    },
+    "C6_heat": {
+      "decay_rates": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "normalization": 6,
+      "self_coefficients": [
+        1,
+        "2",
+        "2",
+        "1"
+      ],
+      "cross_coefficients": [
+        1,
+        "1",
+        "-1",
+        "-1"
+      ],
+      "weighted_integrals": [
+        "9/20",
+        "7/40"
+      ],
+      "initial_and_ODE_verified": true
+    }
+  },
   "recovery": {
     "full_states": 9841,
     "max_turn_length": 8,
