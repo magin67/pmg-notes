@@ -125,8 +125,8 @@ LABELS = {
 
 def main():
     repo = Path(__file__).resolve().parents[2]
-    source = repo / "pmg-library/ru/Матроидные параметры и лесные характеристики графов"
-    target = repo / "pmg-library/en/Matroid parameters and forest characteristics of graphs"
+    source = repo / "pmg-library/ru/Инварианты, разложения и спектры/Матроидные параметры и лесные характеристики графов"
+    target = repo / "pmg-library/en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs"
     target.mkdir(parents=True, exist_ok=True)
     used = set()
     for original, translated in FIGURES.items():

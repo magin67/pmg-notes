@@ -2,11 +2,11 @@
 
 Комплект сопровождает пять заметок серии на русском и английском языках, от «Ядра, швы и допустимые цепочки» до «Замыкание цепи: кольцо и эффект Мёбиуса». Требуется Python 3.10 или новее; используются только стандартная библиотека и проверочные функции серии «Граничные полиномы и сочленение графов» из `checks/boundary`. Запускать из корня репозитория без `-O`, отключающего утверждения `assert`.
 
-Итоги общей проверки, внесённые исправления и границы вычислительного покрытия зафиксированы в [REVIEW_RU.md](REVIEW_RU.md). Маршрут чтения и происхождение результатов собраны в [навигаторе серии](../../pmg-library/ru/Цепи%20из%20ядер/Цепи%20из%20ядер.md).
+Итоги общей проверки, внесённые исправления и границы вычислительного покрытия зафиксированы в [REVIEW_RU.md](REVIEW_RU.md). Маршрут чтения и происхождение результатов собраны в [навигаторе серии](../../pmg-library/ru/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B8%20%D1%81%D0%BE%D1%87%D0%BB%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2/%D0%A6%D0%B5%D0%BF%D0%B8%20%D0%B8%D0%B7%20%D1%8F%D0%B4%D0%B5%D1%80/%D0%A6%D0%B5%D0%BF%D0%B8%20%D0%B8%D0%B7%20%D1%8F%D0%B4%D0%B5%D1%80.md).
 
 ## English versions and figures
 
-The five notes and the [English navigator](../../pmg-library/en/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for translation, notation, link, and rendering checks.
+The five notes and the [English navigator](../../pmg-library/en/Graph%20Transformations%20and%20Gluing/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for translation, notation, link, and rendering checks.
 
 The five verification programs listed below use Python 3.10 or newer and the standard library, together with the repository's `checks/boundary` helpers. Run them from the repository root without `-O`. Their adjacent JSON outputs retain the cores, seam correspondences, final edge sets, and exact rational results.
 
@@ -16,7 +16,7 @@ Generate the Russian SVGs with the five drawing commands in the final section, t
 python checks/core-chains/translate_figures.py
 ```
 
-The explicit dictionary in `figure-translations-en.json` translates visible labels, titles, and descriptions without changing the graph geometry. The translator rejects missing or unused dictionary entries and remaining Cyrillic text. Output goes to `pmg-library/en/Chains of cores`.
+The explicit dictionary in `figure-translations-en.json` translates visible labels, titles, and descriptions without changing the graph geometry. The translator rejects missing or unused dictionary entries and remaining Cyrillic text. Output goes to `pmg-library/en/Graph Transformations and Gluing/Chains of cores`.
 
 ## Точные проверки
 
@@ -142,7 +142,7 @@ python checks/core-chains/draw_closures.py
 
 Перед `draw_spanning_figures.py` выполнить `verify_spanning_polynomials.py`; перед `draw_invariance_limits.py` - `verify_invariance_limits.py`; перед `draw_closures.py` - `verify_closures.py`. Подписи и конструкции берутся из сохранённых точных результатов.
 
-Создаются пятнадцать SVG в `pmg-library/ru/Цепи из ядер`:
+Создаются пятнадцать SVG в `pmg-library/ru/Преобразования и сочленения графов/Цепи из ядер`:
 
 1. `Две сборки трёх шестиугольников.svg`: две точные сборки и вспомогательная схема ядер.
 2. `Присоединение ядра и перенос активной границы.svg`: принадлежность общего ребра, смена отметок и вставка для трёхвершинного шва.

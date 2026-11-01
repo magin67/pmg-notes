@@ -49,7 +49,7 @@ python checks/boundary/draw_english.py
 
 The English generator uses `figure_translations_en.json` to translate titles, accessible descriptions, visible labels, and text following subscript spans. It preserves all geometry, edge weights, partition labels, and nontext attributes. Missing or unused dictionary entries fail explicitly. No image-generation service or additional Python package is needed.
 
-By default, figures are read from `pmg-library/ru/Граничные полиномы и сочленение графов` and English files are written to `pmg-library/en/Boundary polynomials and graph gluing`. Optional `--source` and `--destination` arguments select alternative library roots, for example for a separate review build.
+By default, figures are read from `pmg-library/ru/Преобразования и сочленения графов/Граничные полиномы и сочленение графов` and English files are written to `pmg-library/en/Graph Transformations and Gluing/Boundary polynomials and graph gluing`. Optional `--source` and `--destination` arguments select alternative library roots, for example for a separate review build.
 
 ## Translation verification
 

@@ -14,7 +14,7 @@ import re
 from verify_forest_power_sums import greenian, laplacian
 
 
-OUT = Path(__file__).resolve().parents[2] / "pmg-library/ru/Матроидные параметры и лесные характеристики графов"
+OUT = Path(__file__).resolve().parents[2] / "pmg-library/ru/Инварианты, разложения и спектры/Матроидные параметры и лесные характеристики графов"
 INK, MUTED = "#203444", "#566b7b"
 BLUE, TEAL, GOLD, RED = "#2767ad", "#167f77", "#b97716", "#b54e45"
 GHOST, LIGHT = "#c8d1d9", "#f3f6f9"

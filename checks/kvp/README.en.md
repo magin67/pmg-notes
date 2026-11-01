@@ -2,7 +2,7 @@
 
 [Русский](README.md) · English
 
-This directory contains one reproducible script, [verify.py](verify.py), for the [nine notes in the series](../../pmg-library/en/KVP%20decomposition/KVP%20Decomposition%20and%20Oriented%20Extensions.md).
+This directory contains one reproducible script, [verify.py](verify.py), for the [nine notes in the series](../../pmg-library/en/Invariants,%20Decompositions,%20and%20Spectra/KVP%20decomposition/KVP%20Decomposition%20and%20Oriented%20Extensions.md).
 
 Python 3.9 or later is required; no third-party packages are needed. All numerical comparisons are exact, using fractions.Fraction. The script neither accesses the network nor modifies files.
 
@@ -55,10 +55,10 @@ Additional graphs are specified in the code with fixed random seeds: 25102026, 2
 
 The common script reads two parts of the original Russian public series:
 
-- numeric tables of the [oriented examples](../../pmg-library/ru/KVP-разложение/Ориентированные%20расширения%20KVP%20-%20циркуляция%20и%20дисбаланс.md);
-- [integer P-toponome rank witnesses](../../pmg-library/ru/KVP-разложение/Проверка%20рангов%20P-топономов.json).
+- numeric tables of the [oriented examples](../../pmg-library/ru/%D0%98%D0%BD%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B,%20%D1%80%D0%B0%D0%B7%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B8%20%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D1%80%D1%8B/KVP-%D1%80%D0%B0%D0%B7%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9E%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%B8%D1%8F%20KVP%20-%20%D1%86%D0%B8%D1%80%D0%BA%D1%83%D0%BB%D1%8F%D1%86%D0%B8%D1%8F%20%D0%B8%20%D0%B4%D0%B8%D1%81%D0%B1%D0%B0%D0%BB%D0%B0%D0%BD%D1%81.md);
+- [integer P-toponome rank witnesses](../../pmg-library/ru/%D0%98%D0%BD%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B,%20%D1%80%D0%B0%D0%B7%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B8%20%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D1%80%D1%8B/KVP-%D1%80%D0%B0%D0%B7%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5/%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%80%D0%B0%D0%BD%D0%B3%D0%BE%D0%B2%20P-%D1%82%D0%BE%D0%BF%D0%BE%D0%BD%D0%BE%D0%BC%D0%BE%D0%B2.json).
 
-The English notes retain the same numeric tables. An [English-labeled copy of the rank data](../../pmg-library/en/KVP%20decomposition/P%20toponome%20rank%20verification.json) contains identical matrices, type orders, coefficient vectors, and ranks.
+The English notes retain the same numeric tables. An [English-labeled copy of the rank data](../../pmg-library/en/Invariants,%20Decompositions,%20and%20Spectra/KVP%20decomposition/P%20toponome%20rank%20verification.json) contains identical matrices, type orders, coefficient vectors, and ranks.
 
 All other input graphs and expected values are specified directly in the script. For the published witnesses, forests are enumerated anew, every coefficient vector is compared, and ranks are recomputed. The balance identity is not used to obtain these vectors.
 

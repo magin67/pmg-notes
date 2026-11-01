@@ -14,8 +14,8 @@ _ENGLISH = json.loads(
 def output_directory(lang):
     """Return the publication folder for the selected language."""
     folder = (
-        "en/Spectra and diagonalization in polyform algebra"
-        if lang == "en" else "ru/Спектры и диагонализация в алгебре полиформ"
+        "en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra"
+        if lang == "en" else "ru/Инварианты, разложения и спектры/Спектры и диагонализация в алгебре полиформ"
     )
     path = _ROOT / "pmg-library" / folder
     path.mkdir(parents=True, exist_ok=True)

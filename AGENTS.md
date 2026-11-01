@@ -11,11 +11,11 @@
 
 1. [Инструкцию по оформлению заметок](instructions/Оформление%20заметок.md).
 2. Актуальные файлы спецификации и терминологии:
-   - `pmg-library/ru/Основания/Спецификация ядра PMG.md`;
-   - `pmg-library/ru/Основания/Терминология PMG.md`.
+   - `pmg-library/ru/Начало работы и основания/Основания/Спецификация ядра PMG.md`;
+   - `pmg-library/ru/Начало работы и основания/Основания/Терминология PMG.md`.
 3. При работе с английским текстом также:
-   - `pmg-library/en/Foundations/Core specification.md`;
-   - `pmg-library/en/Foundations/PMG terminology.md`.
+   - `pmg-library/en/Getting Started and Foundations/Foundations/Core specification.md`;
+   - `pmg-library/en/Getting Started and Foundations/Foundations/PMG terminology.md`.
 4. Затрагиваемые заметки, навигацию соответствующей серии и непосредственно связанные материалы.
 
 Читать актуальные версии из репозитория, не подменять их копиями из прежних диалогов. Инструкции пользователя в текущей задаче имеют приоритет. Эти правила не предоставляют дополнительных технических прав доступа.

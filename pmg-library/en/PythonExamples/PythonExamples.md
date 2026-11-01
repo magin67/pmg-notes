@@ -18,7 +18,7 @@ This section connects the mathematical PMG notes with executable examples from `
 
 ## Library navigation
 
-[[en/Topics/Getting Started and Foundations|Getting Started and Foundations]] · [[en/Topics/Topics|Thematic Index]].
+[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] · [[en/Thematic Index|Thematic Index]].
 
 ## Getting started
 
@@ -32,7 +32,7 @@ This section connects the mathematical PMG notes with executable examples from `
 
 [[Triangle Coupling Variations in Python]] reproduces the strengthening of one and two couplings of a unit triangle from [[Variation of a Single Edge]] and [[Varying several couplings together]]. Edge factors update the metric polyform; formulas and direct matrix calculations check the results.
 
-Prerequisites: [[en/Introduction/PMG Introductory Series|PMG Introductory Series]], particularly [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]].
+Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]], particularly [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]].
 
 [[Path P5 and Cycle C4 Exponentials in Python]] covers exponential grades, forest weights, spanning-tree coefficients, and resistances of the path and cycle.
 

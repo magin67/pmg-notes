@@ -18,19 +18,19 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Getting started and foundations
 
-[[en/Topics/Getting Started and Foundations|Getting Started and Foundations]] brings together the introductory series, specification, terminology, and general reading routes.
+[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] brings together the introductory series, specification, terminology, and general reading routes.
 
 ## Thematic sections
 
 The library contains 16 series and 112 substantive notes in each language. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
-- **[[en/Topics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
-- **[[en/Topics/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
-- **[[en/Topics/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]**. Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?
-- **[[en/Topics/Graph Transformations and Gluing|Graph Transformations and Gluing]]**. How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?
-- **[[en/Topics/Directed Graphs and Extensions|Directed Graphs and Extensions]]**. What changes when couplings become directed and constructions become nonsymmetric?
+- **[[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
+- **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
+- **[[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]**. Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?
+- **[[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]**. How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?
+- **[[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]**. What changes when couplings become directed and constructions become nonsymmetric?
 
-[[en/Topics/Topics|All series and their primary homes]] · [[en/Topics/Cross-cutting Tags|Cross-cutting Tags]].
+[[en/Thematic Index|All series and their primary homes]] · [[en/Cross-cutting Tags|Cross-cutting Tags]].
 
 ## Programming examples
 

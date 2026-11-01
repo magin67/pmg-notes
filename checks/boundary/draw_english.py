@@ -16,8 +16,8 @@ def main():
     parser.add_argument('--destination', type=Path, default=LIBRARY)
     args = parser.parse_args()
     data = json.loads((HERE / 'figure_translations_en.json').read_text(encoding='utf-8'))
-    source = args.source / 'ru/Граничные полиномы и сочленение графов'
-    destination = args.destination / 'en/Boundary polynomials and graph gluing'
+    source = args.source / 'ru/Преобразования и сочленения графов/Граничные полиномы и сочленение графов'
+    destination = args.destination / 'en/Graph Transformations and Gluing/Boundary polynomials and graph gluing'
     destination.mkdir(parents=True, exist_ok=True)
     used = set()
     for ru, en in data['files'].items():

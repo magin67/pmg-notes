@@ -17,7 +17,7 @@ import re
 import sys
 
 REPO = Path(__file__).resolve().parents[2]
-NOTES = REPO / "pmg-library/ru/KVP-разложение"
+NOTES = REPO / "pmg-library/ru/Инварианты, разложения и спектры/KVP-разложение"
 SEED = 25102026
 
 from fractions import Fraction as F

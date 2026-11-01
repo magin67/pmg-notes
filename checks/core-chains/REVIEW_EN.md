@@ -4,7 +4,7 @@ Date: 2026-10-31. Russian source baseline: `1972b217b2b79a38b5013eeb42f039bd1c1c
 
 ## Scope and synchronization
 
-The five notes and their navigator have been translated in full into `pmg-library/en/Chains of cores`. Each English page shares its Russian counterpart's `translation_key` and records the corresponding Russian revision in `translated_revision`. Both versions link directly to one another. The two library indexes expose the complete route and the navigator in the other language.
+The five notes and their navigator have been translated in full into `pmg-library/en/Graph Transformations and Gluing/Chains of cores`. Each English page shares its Russian counterpart's `translation_key` and records the corresponding Russian revision in `translated_revision`. Both versions link directly to one another. The two library indexes expose the complete route and the navigator in the other language.
 
 Terminology follows the current English core specification (revision 15), PMG terminology (revision 16), and the published boundary, matroid, and spectral notes. The distinctions between cores and their auxiliary scheme, seam vertices and shared edges, ordinary and rooted forests, and full and reduced electrical data are retained. Statements, proofs, computational examples, and limitations have the same scope as in Russian. Internal series codes are absent from the public texts.
 

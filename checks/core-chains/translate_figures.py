@@ -9,8 +9,8 @@ import re
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / 'pmg-library/ru/Цепи из ядер'
-TARGET = ROOT / 'pmg-library/en/Chains of cores'
+SOURCE = ROOT / 'pmg-library/ru/Преобразования и сочленения графов/Цепи из ядер'
+TARGET = ROOT / 'pmg-library/en/Graph Transformations and Gluing/Chains of cores'
 DATA = json.loads(Path(__file__).with_name('figure-translations-en.json').read_text(encoding='utf-8'))
 CYRILLIC = re.compile('[А-Яа-яЁё]')
 ET.register_namespace('', 'http://www.w3.org/2000/svg')
