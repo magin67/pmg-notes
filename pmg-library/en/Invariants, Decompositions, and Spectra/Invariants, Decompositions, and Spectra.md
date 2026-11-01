@@ -1,8 +1,8 @@
 ---
 title: Invariants, Decompositions, and Spectra
 date: 2026-11-01
-updated: 2026-11-01
-revision: 5
+updated: 2026-11-02
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -23,7 +23,7 @@ Which features of a graph do its characteristics and decompositions retain? What
 - **[[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]]** (9 notes). Decomposing pair characteristics into overall, vertex, and pair components; circulation and imbalance.
 - **[[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]]** (6 notes). Eigendirections and projectors, diagonal grades, spectral cones, and information lost under projection.
 
-- **Spectra of Isomers** (four Russian notes; series in progress). [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]]: equal matroid parameters, different rooted forest coefficients and spectra, exact polynomials, and a derivation of their difference. [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]] proves closure of the five coordinates and provides explicit hexagon transitions. [[ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек|SLR Codes of Hexagonal Chains, in Russian]] gives reflection, reversal, and graph classification for abstract open hexagonal chains. The note [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральные разности SLR-цепочек|Spectral Differences of SLR Chains, in Russian]] derives local and mixed differences and relates bend counts to the fourth rooted coefficient. English translations pending.
+- **[[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers: Results and Open Questions, in Russian]]** (nine substantive notes and a navigator; the current Russian collection is complete). Spectral differences, five-coordinate transfer, exact decoding, boundary response and stability, constant-turn and periodic chains. Full distinguishability by a polynomial or one value remains conjectural. English translations are pending.
 
 ## Reading route
 
@@ -48,6 +48,6 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 ## Future directions
 
-“Spectra of Isomers” now includes an exact calculation for two chains and a proof of five-coordinate spectral transfer to a new active pair. The scope of subsequent notes will follow the research results. Its main question is which configuration features spectral data can distinguish when matroid parameters agree. Transfer methods connect it to gluing; decoding and injectivity connect it to reconstruction. Spectra of bipartite graphs and mutual projections form a separate future direction.
+The current Russian collection “Spectra of Isomers” is complete. [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers: Results and Open Questions, in Russian]] records the proven reconstruction from marked boundary data, scalar conjectures, and further questions about stability, general periods, closure, and infinite chains. Spectra of bipartite graphs and mutual projections form a separate future direction.
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]].
