@@ -1,13 +1,13 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-10-30
-revision: 16
+updated: 2026-11-01
+revision: 17
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: polyforms and metrics, forest and spectral parameters, boundary states and passports, groves and electrical response; Russian equivalents and usage conditions."
+description: "Terminology of the PMG core and published series: polyforms, metrics, forest and spectral data, boundary passports, chains of cores, direct and inverse variations; Russian equivalents and usage conditions."
 order: 2
 ---
 
@@ -361,6 +361,23 @@ Here the pencil is $\mathbf M_G(\xi)=\xi I-\mathbf L_G$ and the ordered pair is 
 | Jacobi identity for the passport | Тождество Якоби для паспорта | Standard | $AE=BC-D^2$. A polynomial determinant identity also valid at zeros of $E$; it rules out algebraic independence of the five coordinates. |
 | Input and output boundaries; active boundary | Входная и выходная граница; активная граница | Qualified | Marked sets and their correspondences at successive chain-assembly steps. Moving to a new active boundary requires a separate transfer rule; closure of a five-coordinate automaton does not follow from a passport for a fixed pair. |
 
+## Chains of cores and seams
+
+Definitions and scope of invariance: the [[Core specification#Chains of cores|specification]] and [[en/Chains of cores/Chains of Cores|series navigator]]. The core count $N$ differs from the vertex count $n$; here $N$ is unrelated to the Greenian exponential.
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Core of a construction | Ядро конструкции | Qualified | A specified graph used as an assembly part. In the basic chain model it is a cycle $C_{m_i}$; the term does not mean the kernel of a linear operator. |
+| Core assembly scheme | Схема сочленения ядер | Qualified | An auxiliary path or tree on the cores. Its vertices are entire cores, not vertices of the resulting graph. |
+| Seam; seam vertex correspondence | Шов; соответствие вершин шва | Qualified | A specified intersection of adjacent parts together with its vertex identification. Shared unit edges are counted once; their conductances are not added. |
+| Seam size | Размер шва | Qualified | In chains of cycles, $s_i$ counts vertices of the path $P_{s_i}$; the shared-edge count is $\ell_i=s_i-1$. A one-vertex seam has size $1$, an edge seam size $2$. |
+| Admissible open chain of cycles | Допустимая открытая цепочка циклов | Qualified | A sequence of cycles with proper induced path seams that are vertex-disjoint within each core; there are no nonadjacent contacts or closure. Sizes alone do not replace checking intersections. |
+| Chain configuration | Конфигурация цепочки | Qualified | Seam positions and vertex correspondences with ordered core and seam sizes fixed. Reordering or changing the assembly scheme is a different operation. |
+| Boundary unmarking; passport transfer | Снятие граничных отметок; перенос паспорта | Qualified | Grouping forest states by restriction of the partition to the output boundary after gluing. The full passport retains internal components; closure retains the initial boundary until the final step. |
+| Spanning-tree polynomial of a construction | Остовной полином конструкции | Qualified | The polynomial $\mathcal T_N=\det\mathbf M_N$ in core and seam sizes, equal to $\tau(G)$ on admissible integer data. It is neither an ordinary or rooted forest polynomial of a fixed graph nor the form $T_n$. |
+| Continuant | Континуант | Standard | The determinant of a tridiagonal matrix. For chains of cycles it gives $\tau_j=m_j\tau_{j-1}-\ell_{j-1}^2\tau_{j-2}$; $\tau_0=1$ is a formal initial condition. |
+| Ordinary and twisted closures | Обычное и скрученное замыкания | Qualified | Two specified correspondences at the final seam of the same open strip. Möbius-effect formulas concern the stated model; changing seams inside the strip is not merely changing the final correspondence. |
+
 ## Potentials, norms, and variations
 
 | English term | Russian equivalent | Status | Meaning and convention |
@@ -377,6 +394,24 @@ Here the pencil is $\mathbf M_G(\xi)=\xi I-\mathbf L_G$ and the ordered pair is 
 In the symmetric resistance model, for a quadratic form $[X]^2$ the normalized potential is $\|X\|^2$, not $\|X\|$. For a mixed form it can be negative even when the metric is positive definite. This does not mean that the exterior object has a negative norm.
 
 In PMG, “norm” without the qualifier “linear” means the quadratic norm $X^2=X\cdot X$. The notation $\|X\|$ is reserved for the linear norm. The norm of a form is defined through the normalized potential; the evaluation of a product of forms generally differs from the product of their evaluations.
+
+### Inverse variations and conductance constraints
+
+Definitions and formulas are recorded in the [[Core specification#Finite increments and the two metrics|specification]]; derivations and examples are linked in the [[en/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|series navigator]]. Locality when all other resistances are fixed does not carry over to the problem with partially prescribed resistances and constrained conductances.
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Finite increment; differential | Конечное приращение; дифференциал | Standard | Distinguish $\Delta X=X^{\prime}-X$ from $dX$. Finite normalized responses use the updated denominator; a differential formula cannot be used for a finite increment without derivation. |
+| Greenian coefficient variation | Вариация коэффициента гриниана | Qualified | The change $\mathrm{Gr}\mapsto\mathrm{Gr}+t[u]^2$ at fixed $u\in W$. The canonical pair case changes $\gamma_{kl}=-\mathrm{Gr}_{kl}$; signed coefficients are not automatically nonnegative conductances. |
+| Direction norm in the Greenian exponential metric | Норма направления в метрике экспоненты гриниана | PMG | The quadratic norm $q_u=\mathbf u^{\mathsf T}\mathbf L\mathbf u=P_N([u]^2)$. For a pair, $q_{kl}=L_{kk}+L_{ll}-2L_{kl}$; generally it equals neither $R_{kl}$ nor $1/R_{kl}$. |
+| Interaction Gram matrix of directions | Грамиан взаимодействия направлений | Qualified | Laplacian variations use $\mathbf U^{\mathsf T}\mathbf{Gr}\mathbf U$, Greenian variations use $\mathbf U^{\mathsf T}\mathbf L\mathbf U$. Mixed terms are determined by minors of the relevant Gram matrix; directions may be dependent. |
+| Independent resistance coordinate | Независимая координата резистенса | Qualified | One parameter $R_{kl}=R_{lk}$, $k<l$, of a symmetric zero-diagonal table. Changing it changes both symmetric entries and generally several Greenian coefficients. |
+| Quadric connectivity | Квадросвязность | PMG | $Lq^{ij,kl}=\tfrac12(L_{ik}L_{jl}+L_{il}L_{jk})=\partial L_{ij}/\partial R_{kl}$ for independent unordered pairs. Symmetric in endpoints and pairs; $\partial c_{ij}/\partial R_{kl}=-Lq^{ij,kl}$. |
+| Direct and inverse differential response matrices | Матрицы прямого и обратного дифференциального отклика | Qualified | $\mathbf S=(g_{ij,kl}^2)$ and $\mathbf{Lq}=(Lq^{ij,kl})$ on all $\binom n2$ pairs, including zero couplings; $\mathbf S\mathbf{Lq}=\mathbf I$. Squares are entrywise, not the matrix square of a Gram matrix. Inversion does not carry over to arbitrary submatrices. |
+| Constraint sets $P,Z,V$ | Множества ограничений $P,Z,V$ | Qualified | $P$ contains vertices with prescribed pairwise resistances, $Z$ mandatory zero pairs, and $V$ variable pairs; $Z\cap V=\varnothing$. Other conductances are fixed and unspecified resistances are free. Here $V$ does not denote the formal space. |
+| Nonnegative and strictly positive solutions | Неотрицательное и строго положительное решения | Standard | Finite $x_e\ge0$ or, in the stricter problem, $x_e>0$ on $V$. Both require connectedness of the graph of positive conductances. Nondegeneracy of the form alone does not guarantee graph signs. |
+| Exact feasibility | Точная выполнимость | Standard | Existence of finite conductances satisfying every equality and constraint. For rational or algebraic input it is decidable in principle as a polynomial problem with $\tau(x)>0$; a failed numerical search does not prove infeasibility. |
+| Residual; best approximation | Невязка; наилучшее приближение | Standard | The residual compares computed and prescribed resistances; the criterion is specified explicitly, for example a weighted sum of squares. A numerical candidate, a local minimum, a global minimum, and an unattained infimum are different results. |
 
 ## Balanced graphs and directional metrics
 
@@ -496,6 +531,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 17 | 2026-11-01 | Added terminology for chains of cores and variations: seams and admissibility, configuration and passport transfer, construction spanning-tree polynomial; two direction metrics, independent resistances, quadric connectivity, $P,Z,V$ constraints, and distinctions between exact feasibility, numerical candidates, and optima. Aligned with Russian revision 17. |
 | 16 | 2026-10-30 | Replaced the internal series code in the revision history with its descriptive title. Definitions and terminology conventions are unchanged. Aligned with Russian revision 16. |
 | 15 | 2026-10-30 | Added terminology of the completed “Boundary Polynomials and Graph Gluing” series: marked boundaries, full and reduced forest passports, tests, pairing radicals, groves, and electrical and spectral data. Distinguished states from forms, the two responses, minimality, and coordinate independence; clarified the effective network after vertex elimination. Aligned with Russian revision 15. |
 | 14 | 2026-10-30 | Added terminology from the completed spectral series: modes, eigenspaces, projectors, diagonal forms and elementary symmetric grade polynomials, exterior powers, cones, and projections. Distinguished coordinate and resistance evaluations, polynomial symmetry and SPF invariance, and complementary dual directions. Aligned with Russian revision 14. |

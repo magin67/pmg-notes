@@ -1,13 +1,13 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-10-30
-revision: 15
+updated: 2026-11-01
+revision: 16
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
 lang: en
-description: "Definitions and conventions of the PMG core: polyform algebra, resistance metric, Laplacian and Greenian, forest and spectral parameters, boundary passports and gluing laws; conditions for the balanced extension."
+description: "Definitions and conventions of the PMG core: polyform algebra, Laplacian and Greenian, metrics, forest and spectral parameters, boundary passports, chains of cores, and constrained variations; applicability conditions."
 order: 1
 ---
 
@@ -576,6 +576,152 @@ For vectors of distinct vertex pairs, (10)-(11) describe joint conductance varia
 
 Sources: [[Variation of a Single Edge]], [[Varying several couplings together]], and [[Laplacian Exponential#Algebraic variation and edge addition|algebraic variation]].
 
+### Finite increments and the two metrics
+
+The set of $n\ge2$ vertices is fixed below; the initial graph is connected, undirected, and has nonnegative conductances. Matrices act on the zero-sum coordinate space $H=\mathbf1^\perp$ corresponding to $W$. Invertibility on $H$, positive definiteness on $H$, nonnegativity of the recovered conductances, and preservation of prescribed zero couplings are checked separately. The sign of a single determinant does not replace these conditions.
+
+The symbol $\Delta$ before a quantity denotes its **finite increment**, whereas $d$ denotes a differential. The scalar $\Delta=n\tau$ in the spectral section has a different, explicitly specified meaning. The exterior exponentials $M=\exp L$ and $N=\exp(\mathrm{Gr})$ are not matrix exponentials. In the direct centered representation,
+
+$$
+\mathrm{Gr}=\sum_{i<j}\gamma_{ij}[a_{ij}]^2,
+\qquad \gamma_{ij}=-\mathrm{Gr}_{ij},
+\qquad \sigma=\tau(N)=\frac1{n^2\tau},\quad \tau=\tau(M)
+$$
+
+The coefficients $\gamma_{ij}$ may be negative. All variations below change coefficients at **fixed vectors**. It is the form $[u]^2$ that is nilpotent: $([u]^2)^2=0$; the factor $e+t[u]^2$ is not nilpotent. Normalized potentials after an update use the new top coefficient.
+
+Assemble the coordinate columns of the fixed vectors into $\mathbf U=(\mathbf u_1,\ldots,\mathbf u_m)$ and set $\mathbf D=\operatorname{diag}(t_1,\ldots,t_m)$. The interaction Gram matrix depends on which exponential is varied:
+
+$$
+\mathbf G_M=\mathbf U^{\mathsf T}\mathbf{Gr}\mathbf U,
+\qquad
+\mathbf G_N=\mathbf U^{\mathsf T}\mathbf L\mathbf U
+$$
+
+The first uses the resistance metric of $M$, the second the metric of $N$. In particular, $q_u=\mathbf u^{\mathsf T}\mathbf L\mathbf u=P_N([u]^2)$ is the quadratic norm of the direction in the Greenian exponential metric. For $u=a_{kl}$, $q_{kl}=L_{kk}+L_{ll}-2L_{kl}$; in general this is neither $R_{kl}$ nor $1/R_{kl}$.
+
+### Direct and inverse variations
+
+> [!info] Finite formulas at fixed directions
+> For either Gram matrix $\mathbf G=\mathbf G_M$ or $\mathbf G_N$, write
+>
+> $$
+> \Phi=\det(\mathbf I_m+\mathbf D\mathbf G),\qquad
+> \mathbf K=(\mathbf I_m+\mathbf D\mathbf G)^{-1}\mathbf D
+> =\mathbf D(\mathbf I_m+\mathbf G\mathbf D)^{-1}
+> $$
+>
+> The matrix $\mathbf K$ is symmetric. The following identities hold when $\Phi\ne0$.
+>
+> **Laplacian update**, $\mathbf L'=\mathbf L+\mathbf U\mathbf D\mathbf U^{\mathsf T}$, $\mathbf G=\mathbf G_M$:
+>
+> $$
+> M'=M\prod_\alpha(e+t_\alpha[u_\alpha]^2),\qquad
+> \tau'=\tau\Phi,\qquad
+> \mathbf{Gr}'=\mathbf{Gr}-\mathbf{Gr}\mathbf U\mathbf K\mathbf U^{\mathsf T}\mathbf{Gr}
+> $$
+>
+> **Greenian update**, $\mathbf{Gr}'=\mathbf{Gr}+\mathbf U\mathbf D\mathbf U^{\mathsf T}$, $\mathbf G=\mathbf G_N$:
+>
+> $$
+> N'=N\prod_\alpha(e+t_\alpha[u_\alpha]^2),\qquad
+> \sigma'=\sigma\Phi,\qquad \tau'=\frac{\tau}{\Phi},\qquad
+> \mathbf L'=\mathbf L-\mathbf L\mathbf U\mathbf K\mathbf U^{\mathsf T}\mathbf L
+> $$
+>
+> Zero parameters and linearly dependent directions are allowed: no inverse $\mathbf D^{-1}$ is needed. For an initially positive metric, positive definiteness after the update is equivalent to $\mathbf I_m+\mathbf G^{1/2}\mathbf D\mathbf G^{1/2}\succ0$. This does not guarantee nonnegative conductances.
+
+For a single conductance change $c_{kl}\mapsto c_{kl}+t$, with $g_{ij,kl}=\mathbf a_{ij}^{\mathsf T}\mathbf{Gr}\mathbf a_{kl}$,
+
+$$
+\tau'=\tau(1+tR_{kl}),\qquad
+\Delta R_{ij}=-\frac{t\,g_{ij,kl}^{\,2}}{1+tR_{kl}}
+$$
+
+For a single Greenian coefficient change $\mathrm{Gr}'=\mathrm{Gr}+t[u]^2$, with $\mathbf b=\mathbf L\mathbf u$,
+
+$$
+\tau'=\frac{\tau}{1+tq_u},\qquad
+\Delta c_{ij}=\frac{t b_i b_j}{1+tq_u}\quad(i\ne j)
+$$
+
+In both cases the denominator must be nonzero; positive definiteness requires it to be positive. For two directions the common denominator is $\Phi=1+t_1g_{11}+t_2g_{22}+t_1t_2(g_{11}g_{22}-g_{12}^2)$, using the Gram matrix of the relevant metric. The mixed term comes from multiplying factors, rather than adding two responses computed from the initial data. In sequential updates, each step uses the updated data.
+
+Derivations through factors, top grades, and exponential duality, with independent matrix checks: [[One Changing Edge]], [[Two Edges and Joint Variation]], [[One Greenian Coefficient]], and [[Joint Variation of Greenian Coefficients]].
+
+### Independent resistances and quadric connectivity
+
+On a fixed vertex set, the symmetric resistance matrix has zero diagonal. It satisfies
+
+$$
+\mathbf{Gr}=-\tfrac12\mathbf J\mathbf R\mathbf J,\qquad
+\Delta\mathbf{Gr}=-\tfrac12\mathbf J(\Delta\mathbf R)\mathbf J
+$$
+
+Changing one independent coordinate $R_{kl}=R_{lk}$ means changing both symmetric entries equally while preserving all other entries. It is different from changing one canonical coefficient $\gamma_{kl}$.
+
+> [!info] Quadric connectivity and inverse response matrices
+> **Definition.** For unordered pairs $i<j$ and $k<l$, quadric connectivity is
+>
+> $$
+> Lq^{ij,kl}=\tfrac12(L_{ik}L_{jl}+L_{il}L_{jk})
+> =\frac{\partial L_{ij}}{\partial R_{kl}}
+> $$
+>
+> It is unchanged by reversing either pair or exchanging the pairs. For conductances $c_{ij}=-L_{ij}$ the sign is reversed. If $\mathbf S=(g_{ij,kl}^{\,2})$ and $\mathbf{Lq}=(Lq^{ij,kl})$ are indexed by **all** $\binom n2$ pairs, including zero couplings, then
+>
+> $$
+> d\boldsymbol R= -\mathbf S\,d\boldsymbol c,\qquad
+> d\boldsymbol c= -\mathbf{Lq}\,d\boldsymbol R,\qquad
+> \mathbf S\mathbf{Lq}=\mathbf{Lq}\mathbf S=\mathbf I_{\binom n2}
+> $$
+>
+> In these three identities, $d\boldsymbol R$ and $d\boldsymbol c$ are columns of independent pair coordinates, not square matrices on vertices. Arbitrarily selected submatrices of the two responses need not be mutual inverses.
+
+> [!info] Finite change of a prescribed resistance matrix
+> In matrix notation on vertices, the exact equation and its solution are
+>
+> $$
+> \Delta\mathbf L=\tfrac12\mathbf L'(\Delta\mathbf R)\mathbf L
+> =\tfrac12\mathbf L(\Delta\mathbf R)\mathbf L',\qquad
+> \mathbf L'=\mathbf L\bigl(\mathbf I_n-\tfrac12(\Delta\mathbf R)\mathbf L\bigr)^{-1}
+> $$
+>
+> Invertibility of this matrix is equivalent to nondegeneracy of the new Greenian on $H$. The differential limit is $d\mathbf L=\tfrac12\mathbf L(d\mathbf R)\mathbf L$. Replacing $\mathbf L'$ by the initial $\mathbf L$ in the finite equation is generally incorrect.
+
+If resistance changes are supported on a vertex set $S$, write $\Delta\mathbf R=\mathbf E\mathbf F\mathbf E^{\mathsf T}$, where $\mathbf E$ selects the vertices of $S$ and $\mathbf F$ is symmetric with zero diagonal. Set $\mathbf H=\mathbf L_{SS}$, $\mathbf B=\mathbf L\mathbf E$, and $\mathbf A=\mathbf I_{\#S}-\tfrac12\mathbf F\mathbf H$. Then
+
+$$
+\Phi=\det\mathbf A,\qquad
+\mathbf K=\tfrac12\mathbf A^{-1}\mathbf F,\qquad
+\mathbf L'=\mathbf L+\mathbf B\mathbf K\mathbf B^{\mathsf T},\qquad
+\tau'=\frac{\tau}{\Phi}
+$$
+
+When $\Phi\ne0$, $\mathbf K$ is symmetric; neither $\mathbf F$ nor $\mathbf H$ needs to be invertible. Positive definiteness after the update is equivalent to $\mathbf I_{\#S}-\tfrac12\mathbf H^{1/2}\mathbf F\mathbf H^{1/2}\succ0$. A coupling update can be nonzero only if both endpoints lie in the union of $S$ and its original neighbors. New couplings and negative conductances are not excluded. This locality concerns the problem in which **all other resistances are fixed**.
+
+Definitions, proofs, and examples: [[One Resistance and Quadric Connectivity]] and [[Joint Variation of Resistances]]. The symbols $\mathbf H$, $\mathbf B$, $\mathbf K$, $\mathbf S$, and $\mathbf D$ in the variation formulas are local and do not replace identically named objects in other sections.
+
+### Conductance constraints and the scope of algorithmic results
+
+In the $P,Z,V$ problem, $P$ is a vertex set with prescribed resistances between its vertices, $Z$ is a set of pairs whose conductances must be zero, and $V$ is a set of pairs with variable conductances; $Z\cap V=\varnothing$. All other conductances are fixed. Resistances outside the prescribed pairs are free, so the preceding locality is not required. If all resistances are prescribed, the connected Laplacian is already uniquely determined and no independent conductance compensation is available.
+
+A nonnegative solution requires finite values $x_e=c_e\ge0$ on $V$ and connectedness of the graph of positive conductances. Requiring $x_e>0$ for every $e\in V$ defines a separate, stricter problem. The target matrix $\mathbf R^*_{PP}$ determines the required boundary response $\boldsymbol\Lambda_*=(-\tfrac12\mathbf J_P\mathbf R^*_{PP}\mathbf J_P)^+$. Positivity of the Greenian on $\mathbf1_P^\perp$, graph signs of the response, and restrictions from fixed conductances give necessary checks, but do not guarantee realization on the prescribed $Z,V$.
+
+> [!info] Exact feasibility and numerical approximation
+> For a reduced Laplacian $\widehat{\mathbf L}(x)$, set $\tau(x)=\det\widehat{\mathbf L}(x)$ and $F_q(x)=\widehat{\mathbf a}_q^{\mathsf T}\operatorname{adj}(\widehat{\mathbf L}(x))\widehat{\mathbf a}_q$. Here $q$ runs over prescribed pairs, and a hat means deletion of the reference-vertex coordinate. Then $R_q(x)=F_q(x)/\tau(x)$, and the exact problem is equivalent to
+>
+> $$
+> x_e\ge0,\qquad \tau(x)>0,\qquad
+> F_q(x)-R_q^*\tau(x)=0
+> $$
+>
+> Fixed and zero conductances have already been substituted into $\widehat{\mathbf L}(x)$. For rational or algebraic input, this is a polynomial problem over the reals; quantifier elimination provides an exact decision method in principle, but may be computationally impractical.
+
+When there is no exact solution, approximation is defined by chosen positive weights $w_q$ and the objective $\Psi(x)=\tfrac12\sum_qw_q(R_q(x)-R_q^*)^2$. A constrained Gauss–Newton step with checks of connectedness and objective decrease provides a numerical candidate search; a small residual, stationarity, or termination does not prove exact feasibility, infeasibility, or global optimality. On a noncompact domain, the infimum need not be attained at finite conductances. Global analysis through polynomial sublevel sets and exact quantifier elimination is described theoretically; the published numerical example is not an implementation of a general exact solver.
+
+The problem, the prism, and necessary conditions: [[Variations with Conductance Constraints]]. The algorithm, residuals, candidate checks, and limits of the conclusions: [[An Algorithm for Variations with Conductance Constraints]]. The complete series: [[en/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]]. The notes distinguish known matrix identities, their polyform expressions, proofs, and computational checks; inclusion in this specification does not establish scientific priority.
+
 ## The balanced extension
 
 This section extends the graph model to finite loopless balanced digraphs with nonnegative arc weights. The algebra of forms and its product are unchanged: symmetry of the arguments was never assumed. Graph and metric statements in the other sections use the symmetric model unless an extension is explicitly stated. Proofs and examples are collected in [[en/Balanced graphs/Balanced Graphs|Balanced Graphs]].
@@ -749,6 +895,8 @@ A full treatment of the following thematic extensions requires separate definiti
 - the cycle matroid, ordinary and rooted forest coefficients, and normalized forest and edge parameters;
 - spectral representations of a symmetric first grade and its exponential, spectral projectors, graph cones, and projections;
 - full boundary forest passports, their spanning-tree layer, and separate spectral boundary data;
+- chains and trees of cores, active-boundary transfer, construction spanning-tree polynomials, and closures;
+- direct and inverse variations, independent resistances, quadric connectivity, and conductance constraints;
 - metric-value decompositions and interval forms;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
@@ -1084,6 +1232,38 @@ The correction counts shared vertices once. If both parts contain the same edge 
 
 For a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. The static electrical response does not replace the dependence on $\xi$. A passport for a fixed pair does not establish closure of a transfer rule when input and output boundaries change; those rules and chain closures belong to the next stage.
 
+### Chains of cores
+
+The series [[en/Chains of cores/Chains of Cores|Chains of Cores]] applies matroid and boundary constructions to explicitly specified assemblies. Here $N$ is the number of cores and $n$ the number of vertices of the resulting graph; $N$ in this section does not denote the Greenian exponential.
+
+> [!info] Data of an admissible open chain of cycles
+> **Definition.** The cores $C_{m_1},\ldots,C_{m_N}$ are joined in order. The seam between adjacent cores is a proper induced path $P_{s_i}$ with a specified vertex correspondence. Its size $s_i$ counts vertices, whereas $\ell_i=s_i-1$ counts shared edges. The two seams within each intermediate core are vertex-disjoint; nonadjacent cores do not meet, and there is no closure.
+>
+> In the unit model, shared edges are identified and counted once. Their conductances are not added. Before applying the gluing law for parts with disjoint edge sets, copies of shared edges are explicitly assigned to the parts.
+>
+> Configuration describes seam positions and vertex correspondences with the ordered data $m_i,s_i$ fixed. Reordering these data or changing the assembly scheme is a separate change of construction.
+
+> [!info] Invariance and the spanning-tree polynomial
+> With ordered $m_i,s_i$ fixed, admissible open chains have a common dual multigraph and isomorphic cycle matroids. Consequently, the ordinary forest polynomial $F_G(t)$, spanning-tree count $\tau$, and resistance radius $\rho$ agree. Rooted forest coefficients and the spectrum need not agree.
+>
+> The spanning-tree polynomial of the construction is the determinant $\mathcal T_N=\det\mathbf M_N$, where $\mathbf M_N$ is tridiagonal with diagonal $m_1,\ldots,m_N$ and neighboring entries $-\ell_1,\ldots,-\ell_{N-1}$. On admissible integer data,
+>
+> $$
+> \tau(G)=\mathcal T_N,\qquad
+> \tau_0=1,\quad \tau_1=m_1,\quad
+> \tau_j=m_j\tau_{j-1}-\ell_{j-1}^{\,2}\tau_{j-2}\quad(2\le j\le N)
+> $$
+>
+> $\tau_0=1$ is a formal initial condition. $\mathcal T_N$ is a polynomial in construction parameters; it differs from $F_G(t)$, the rooted Laplacian polynomial $P_G(t)$, and the fixed spanning-tree form $T_n$.
+
+When transferring the full forest passport, input and output boundaries are specified separately. After aligning boundaries and selecting compatible forests, surplus vertices are unmarked: states are grouped by restriction of the partition to the new active boundary. Components that leave the boundary entirely are not discarded—the full passport allows internal components. For closure, the initial boundary is retained until the final identification. These rules do not establish closure of a five-coordinate spectral automaton under arbitrary boundary transfer.
+
+Invariance extends to a **fixed tree** of cycles when the seams within each core are pairwise vertex-disjoint and there are no other contacts. The tree itself and the core and seam sizes must be fixed. Sequential one-vertex gluings of arbitrary connected cores obey a different result: a direct sum of cycle matroids, multiplication of spanning-tree counts, and addition of resistance radii. Sizes alone do not imply general invariance for disconnected seams or arbitrary noncyclic cores.
+
+Closure includes the vertex correspondence at the final seam. For a square strip of $N\ge3$ cores, twisted closure increases $\tau$ by $2N$ and decreases $\rho$ relative to ordinary closure. For strips of even cycles $C_m$ with opposite edge seams and equal longitudinal paths, the spanning-tree count difference is $N(m-2)$ for $m\ge4$, $N\ge3$; no general radius-change law is established for $m>4$. Formulas for shifted prism closure concern a separately specified model. Agreement of one spanning-tree count does not by itself prove agreement of radii.
+
+Definitions, proofs, attribution, and reproducible checks: [[Cores, Seams, and Admissible Chains]], [[Why Chain Configuration Preserves Matroid Parameters]], [[Spanning-Tree Polynomials of Chains - Determinant and Recurrence]], [[Limits of Invariance - Branching, Disconnected Seams, and Other Cores]], and [[Closing a Chain - Rings and the Möbius Effect]]. A full spectral automaton, isomer classification, general injectivity of encoding, and composite cores are not established results of this series.
+
 ## Principal notation
 
 | Notation | Meaning |
@@ -1119,6 +1299,12 @@ For a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. The st
 | $\tau(G)=\tau(M_G)$ | Spanning-tree coefficient of the graph |
 | $u_M(f)$, $P_M(f)$ | Form potential and its normalized value $P_M(f)=\tau(Mf)/\tau(M)$ |
 | $N=\exp(\mathrm{Gr})$, $P_N(f)$ | Greenian exponential in the direct space and its normalized potential |
+| $\sigma=\tau(N)=1/(n^2\tau)$ | Spanning-tree coefficient of the Greenian exponential for fixed vertices and $T_n$ |
+| $q_u$, $\mathbf G_M$, $\mathbf G_N$ | Quadratic direction norm in the metric of $N$ and interaction Gram matrices in the two variation problems |
+| $Lq^{ij,kl}$, $\mathbf{Lq}$, $\mathbf S$ | Quadric connectivity, its matrix, and its inverse: the matrix of entrywise squares of resistance inner products on all pairs |
+| $P,Z,V$ | In the constrained problem: vertices with prescribed resistances, zero pairs, and variable pairs; here $V$ is not the formal space |
+| $N$, $m_i$, $s_i$, $\ell_i=s_i-1$ | In chains: core count, core and seam sizes in vertices, and shared-edge count |
+| $\mathcal T_N$, $\mathbf M_N$ | Construction spanning-tree polynomial and its dual determinant matrix; distinct from the form $T_n$ and polyform $M_G$ |
 | $B$, $\mathcal B$ | Marked graph boundary; ordered pair for a spectral passport, distinct from the operator $\partial$ |
 | $\mathcal F^{G,B}_\pi(t)$, $\mathbf f_G(t)$ | State polynomial and full forest passport; the degree of $t$ counts edges |
 | $\mathbf C_B$, $\mathbf u_G(t)$ | Forest compatibility matrix and vector of test responses |
@@ -1181,6 +1367,7 @@ The ten notes of the [[PMG Introductory Series|introductory series]] provide the
 
 | Revision | Date | Content |
 |---|---|---|
+| 16 | 2026-11-01 | Recorded conventions of the completed variations and chains-of-cores series: two metrics, finite inverse formulas, quadric connectivity, the $P,Z,V$ problem and limits of algorithmic conclusions; seams, admissibility, invariance, the spanning-tree recurrence, and closures. Aligned with Russian revision 16. |
 | 15 | 2026-10-30 | Replaced the internal series code in the revision history with its descriptive title. Mathematical conventions are unchanged. Aligned with Russian revision 15. |
 | 14 | 2026-10-30 | Recorded conventions of the completed “Boundary Polynomials and Graph Gluing” series: the full forest passport, contraction tests, pairing and the Catalan linear quotient, groves and electrical scale, and a separate spectral passport. Clarified formal states, determinant normalizations, shared vertices and edges, reconstruction conditions, and external foundations. Aligned with Russian revision 14. |
 | 13 | 2026-10-30 | Recorded spectral conventions: coordinate and resistance metrics, projectors, diagonal grades and their evaluations, complementary dual directions, and scaling. Distinguished exterior powers, additive action, graph cones, and projection types; added limitations and links to the completed series. Aligned with Russian revision 13. |
