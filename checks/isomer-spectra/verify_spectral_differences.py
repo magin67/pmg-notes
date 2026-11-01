@@ -155,7 +155,8 @@ def run():
     assert expand(polynomials['SS']-polynomials['SL']-polynomials['LS']+polynomials['LL']-(f-2)*q*q)==0
     assert expand(polynomials['SS']-polynomials['SL']-polynomials['LS']+polynomials['LR']-2*q*q)==0
     # A telescoping comparison in which every letter changes.
-    a,b='SLR','RLS'
+    a,b='SLR','RSL'
+    assert all(x!=y for x,y in zip(a,b))
     telescoped=sum((row*transfer(a[i+1:])*(U[a[i]]-U[b[i]])*transfer(b[:i])*initial)[0] for i in range(3))
     assert expand(telescoped-polynomials[a]+polynomials[b])==0
     values={'S'+u:int(polynomials[u].subs(xi,-1)) for u in ['S','L','SS','SL','LS','LL','LR','SSS','SLS']}
