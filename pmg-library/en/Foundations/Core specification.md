@@ -1230,7 +1230,7 @@ $$
 
 The correction counts shared vertices once. If both parts contain the same edge $ab$ of weight $w$, which is to occur only once in the result, add $\mathbf L_e=w\left(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\right)$ to the right-hand side. If two parallel copies are retained, there is no such correction. Polynomial formulas for all five coordinates, checks at degenerate values, and attribution of the determinant methods appear in [[en/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data]].
 
-For a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. The static electrical response does not replace the dependence on $\xi$. A passport for a fixed pair does not establish closure of a transfer rule when input and output boundaries change; those rules and chain closures belong to the next stage.
+For a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. The static electrical response does not replace the dependence on $\xi$. A passport for a fixed pair does not establish closure of a spectral transfer rule when input and output boundaries change. Full forest passport transfer and specific closures are already developed in [[en/Chains of cores/Chains of Cores|Chains of Cores]]; a general spectral automaton remains a separate continuation.
 
 ### Chains of cores
 
