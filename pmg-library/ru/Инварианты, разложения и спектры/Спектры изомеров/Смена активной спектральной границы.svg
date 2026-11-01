@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+<title id="title">Смена активной спектральной границы</title><desc id="desc">Старый фрагмент G соединяется с ядром K только через a,b. Его внутренность заменяется блоком S и множителем E. Пять новых миноров вычисляются на выходе c,d.</desc>
+<rect width="1200" height="460" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="355" height="420" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="420" y="20" width="355" height="420" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<rect x="820" y="20" width="360" height="420" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="197.00" y="57.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">1. Присоединить ядро</text>
+<polygon points="55.00,136.00 140.00,110.00 182.00,168.00 182.00,271.00 140.00,310.00 55.00,286.00" fill="#fff0d7"/>
+<polygon points="182.00,168.00 300.00,139.00 337.00,216.00 300.00,300.00 182.00,271.00" fill="#e2edff"/>
+<text x="107.00" y="222.00" font-size="32" fill="#172b43" text-anchor="middle" font-weight="bold">G</text>
+<text x="266.00" y="222.00" font-size="32" fill="#172b43" text-anchor="middle" font-weight="bold">K</text>
+<line x1="182.00" y1="168.00" x2="182.00" y2="271.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<circle cx="182.00" cy="168.00" r="7" fill="white" stroke="#bc294b" stroke-width="3"/>
+<text x="182.00" y="153.00" font-size="21" fill="#bc294b" text-anchor="middle" font-weight="normal">a</text>
+<circle cx="182.00" cy="271.00" r="7" fill="white" stroke="#bc294b" stroke-width="3"/>
+<text x="182.00" y="300.00" font-size="21" fill="#bc294b" text-anchor="middle" font-weight="normal">b</text>
+<circle cx="300.00" cy="139.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="300.00" y="124.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">c</text>
+<circle cx="300.00" cy="300.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="300.00" y="329.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">d</text>
+<text x="197.00" y="370.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">Общие вершины: только a, b</text>
+<text x="197.00" y="404.00" font-size="21" fill="#bc294b" text-anchor="middle" font-weight="normal">Активная пара: (a, b)</text>
+<line x1="385.00" y1="230.00" x2="410.00" y2="230.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="410.00,230.00 398.00,225.00 398.00,235.00" fill="#172b43"/>
+<text x="597.00" y="57.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">2. Исключить внутренность G</text>
+<polygon points="480.00,168.00 692.00,139.00 730.00,216.00 692.00,300.00 480.00,271.00" fill="#e2edff"/>
+<line x1="480.00" y1="168.00" x2="480.00" y2="271.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round"/>
+<circle cx="480.00" cy="168.00" r="7" fill="white" stroke="#bc294b" stroke-width="3"/>
+<text x="480.00" y="153.00" font-size="21" fill="#bc294b" text-anchor="middle" font-weight="normal">a</text>
+<circle cx="480.00" cy="271.00" r="7" fill="white" stroke="#bc294b" stroke-width="3"/>
+<text x="480.00" y="300.00" font-size="21" fill="#bc294b" text-anchor="middle" font-weight="normal">b</text>
+<circle cx="692.00" cy="139.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="692.00" y="124.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">c</text>
+<circle cx="692.00" cy="300.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="692.00" y="329.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">d</text>
+<text x="590.00" y="204.00" font-size="24" fill="#bc294b" text-anchor="middle" font-weight="normal">S на входе</text>
+<text x="590.00" y="246.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">K связывает пары</text>
+<text x="597.00" y="370.00" font-size="22" fill="#15815b" text-anchor="middle" font-weight="bold">Сохранить множитель E</text>
+<text x="597.00" y="404.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="normal">H = W + U S Uᵀ</text>
+<line x1="785.00" y1="230.00" x2="810.00" y2="230.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="810.00,230.00 798.00,225.00 798.00,235.00" fill="#172b43"/>
+<text x="1000.00" y="57.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">3. Вычислить новый паспорт</text>
+<line x1="940.00" y1="150.00" x2="1060.00" y2="150.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<circle cx="940.00" cy="150.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="940.00" y="135.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">c</text>
+<circle cx="1060.00" cy="150.00" r="7" fill="white" stroke="#196bb9" stroke-width="3"/>
+<text x="1060.00" y="135.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">d</text>
+<text x="1000.00" y="226.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">(A′, B′, C′, D′, E′)</text>
+<text x="1000.00" y="278.00" font-size="30" fill="#15815b" text-anchor="middle" font-weight="normal">s′ = T s</text>
+<text x="1000.00" y="370.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">Пять полиномов</text>
+<text x="1000.00" y="404.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Активная пара: (c, d)</text>
+</g></svg>

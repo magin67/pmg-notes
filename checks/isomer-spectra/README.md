@@ -1,4 +1,4 @@
-# Exact checks for “Two Isomers of Three Hexagons”
+# Exact checks for “Spectra of Isomers”
 
 The Russian note is `pmg-library/ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников.md`.
 The input consists solely of the explicitly listed cycles, with shared edges counted once.
@@ -40,3 +40,30 @@ All mathematical checks use integers, rational numbers, or exact polynomial expr
 The two graphs have `tau=204`, `rho=43595/41616`, and equal ordinary forest polynomials. Their characteristic difference is `xi^2*(xi^2-5*xi+5)^4`; the first rooted difference is `p4(A)-p4(B)=1`.
 
 The determinant identity in the note is proved algebraically. Exhaustive forest enumeration independently checks this particular pair. Neither calculation asserts transfer closure, injectivity for longer chains, or scientific priority.
+
+## Transfer to a new boundary
+
+The second Russian note is `pmg-library/ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы.md`.
+
+```text
+python checks/isomer-spectra/verify_boundary_transfer.py
+python checks/isomer-spectra/draw_boundary_transfer.py
+```
+
+The drawing script imports the standard-library SVG helper from `draw_three_hexagons.py`; keep the scripts together. It creates four SVG files beside the second note: the transfer mechanism, three ordered exits of a hexagon, different continuations of the same two-hexagon graph, and a transfer at a zero of the old interior minor.
+
+The verification derives each transfer row by symbolic determinant expansion in a symmetric two-by-two input block. It also recovers every coefficient from five exact evaluations of that block. Independently, it builds the complete glued graph and compares all five direct determinants/cofactors with the transferred state:
+
+- 64 overlapping-boundary cases: every pair of simple graphs on three vertices, including disconnected graphs and isolated vertices;
+- 64 disjoint-boundary cases: each old three-vertex graph combined with a four-vertex kernel containing a fixed path and any subset of its three remaining edges;
+- 32 weighted cases: rational conductances, either one shared edge or separate parallel copies, and four choices of output pair, including the input pair in both orders;
+- the same 32 weighted results with a nontrivial permutation of all vertices, checking cofactor signs;
+- the exact singular example `E_old(2)=0`, joining two paths to `C5`;
+- all five polynomial coordinates for the 13 words of length 0, 1, or 2 over the exits 2, 3, 4 (one to three hexagons);
+- 15 direct integer checks: five specified longer words at `xi=-1,0,2`, up to eight hexagons (34 vertices).
+
+The script verifies the compact recurrences, reflection identities, initial state, state-difference identity, and both complete characteristic polynomials against the independently generated `three-hexagons-results.json`. It also verifies the rooted specialization and its terminal row through the exact transfer matrices.
+
+The output `boundary-transfer-results.json` records all three polynomial transfer matrices, the initial state, their normalized specialization at `xi=-1`, both two-hexagon states, and the test counts. The input convention is `(0,1)=(a,b)`, the output is `(j,j+1)`, and a shared unit edge is counted once. Reversing only the input changes `T_j` to `T_j J`, not to `J T_j J`.
+
+Closure for every two-vertex attachment satisfying the note's conditions is proved algebraically in the note. These finite checks validate formulas and implementation; they do not prove minimality or injectivity of the state, characteristic polynomial, or one numerical value.

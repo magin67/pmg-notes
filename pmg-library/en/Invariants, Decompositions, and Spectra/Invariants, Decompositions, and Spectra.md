@@ -2,7 +2,7 @@
 title: Invariants, Decompositions, and Spectra
 date: 2026-11-01
 updated: 2026-11-01
-revision: 2
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -23,7 +23,7 @@ Which features of a graph do its characteristics and decompositions retain? What
 - **[[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]]** (9 notes). Decomposing pair characteristics into overall, vertex, and pair components; circulation and imbalance.
 - **[[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]]** (6 notes). Eigendirections and projectors, diagonal grades, spectral cones, and information lost under projection.
 
-- **Spectra of Isomers** (series started). [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]]: equal matroid parameters, different rooted forest coefficients and spectra, exact polynomials, and a derivation of their difference. English translation pending.
+- **Spectra of Isomers** (two Russian notes; series in progress). [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]]: equal matroid parameters, different rooted forest coefficients and spectra, exact polynomials, and a derivation of their difference. [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]] proves closure of the five coordinates and provides explicit hexagon transitions. English translations pending.
 
 ## Reading route
 
@@ -33,7 +33,7 @@ The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introd
 - [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]] - how to decompose a chosen table of pair characteristics; the initial route requires linear algebra, without the whole matroid series.
 - [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]] - eigenvalues together with eigenspaces, operator reconstruction, and information lost under projection.
 
-**Route towards spectra of isomers:** [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]] → [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]] → [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]], the first note of “Spectra of Isomers”. Its supporting material is the general theory in [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]] and [[From the Forest Passport to Spectral Boundary Data]].
+**Route towards spectra of isomers:** [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]] → [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]] → [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]] → [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]]. The supporting material is the general theory in [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]] and [[From the Forest Passport to Spectral Boundary Data]].
 
 ## Connections to other series
 
@@ -48,6 +48,6 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 ## Future directions
 
-“Spectra of Isomers” has begun with an exact calculation for two chains. The scope of subsequent notes will follow the research results. Its main question is which configuration features spectral data can distinguish when matroid parameters agree. Transfer methods connect it to gluing; decoding and injectivity connect it to reconstruction. Spectra of bipartite graphs and mutual projections form a separate future direction.
+“Spectra of Isomers” now includes an exact calculation for two chains and a proof of five-coordinate spectral transfer to a new active pair. The scope of subsequent notes will follow the research results. Its main question is which configuration features spectral data can distinguish when matroid parameters agree. Transfer methods connect it to gluing; decoding and injectivity connect it to reconstruction. Spectra of bipartite graphs and mutual projections form a separate future direction.
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]].

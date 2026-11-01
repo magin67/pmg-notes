@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="430" viewBox="0 0 1170 430" role="img" aria-labelledby="title desc">
+<title id="title">Три выходных шва шестиугольника</title><desc id="desc">Красный вход упорядочен от 0 к 1. Синие выходы упорядочены от 2 к 3, от 3 к 4 и от 4 к 5. Стрелки обозначают порядок пары, а не ориентацию графа.</desc>
+<rect width="1170" height="430" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="15" width="350" height="395" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="195.00" y="57.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Выход (2, 3)</text>
+<polygon points="245.00,298.60 295.00,212.00 245.00,125.40 145.00,125.40 95.00,212.00 145.00,298.60" fill="#ddf4e9"/>
+<line x1="245.00" y1="298.60" x2="295.00" y2="212.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="295.00" y1="212.00" x2="245.00" y2="125.40" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="245.00" y1="125.40" x2="145.00" y2="125.40" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<line x1="145.00" y1="125.40" x2="95.00" y2="212.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="95.00" y1="212.00" x2="145.00" y2="298.60" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="145.00" y1="298.60" x2="245.00" y2="298.60" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="233.00" y1="277.82" x2="271.00" y2="212.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="271.00,212.00 260.67,219.89 269.33,224.89" fill="#172b43"/>
+<line x1="233.00" y1="146.18" x2="157.00" y2="146.18" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="157.00,146.18 169.00,151.18 169.00,141.18" fill="#172b43"/>
+<circle cx="245.00" cy="298.60" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="256.00" y="324.66" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="295.00" cy="212.00" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="317.00" y="219.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="245.00" cy="125.40" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="256.00" y="113.34" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="145.00" cy="125.40" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="134.00" y="113.34" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="95.00" cy="212.00" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="73.00" y="219.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="145.00" cy="298.60" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="134.00" y="324.66" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="195.00" y="380.00" font-size="29" fill="#196bb9" text-anchor="middle" font-weight="bold">T₂</text>
+<rect x="410" y="15" width="350" height="395" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="585.00" y="57.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Выход (3, 4)</text>
+<polygon points="635.00,298.60 685.00,212.00 635.00,125.40 535.00,125.40 485.00,212.00 535.00,298.60" fill="#ddf4e9"/>
+<line x1="635.00" y1="298.60" x2="685.00" y2="212.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="685.00" y1="212.00" x2="635.00" y2="125.40" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="635.00" y1="125.40" x2="535.00" y2="125.40" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="535.00" y1="125.40" x2="485.00" y2="212.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<line x1="485.00" y1="212.00" x2="535.00" y2="298.60" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="535.00" y1="298.60" x2="635.00" y2="298.60" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="623.00" y1="277.82" x2="661.00" y2="212.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="661.00,212.00 650.67,219.89 659.33,224.89" fill="#172b43"/>
+<line x1="547.00" y1="146.18" x2="509.00" y2="212.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="509.00,212.00 519.33,204.11 510.67,199.11" fill="#172b43"/>
+<circle cx="635.00" cy="298.60" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="646.00" y="324.66" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="685.00" cy="212.00" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="707.00" y="219.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="635.00" cy="125.40" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="646.00" y="113.34" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="535.00" cy="125.40" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="524.00" y="113.34" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="485.00" cy="212.00" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="463.00" y="219.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="535.00" cy="298.60" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="524.00" y="324.66" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="585.00" y="380.00" font-size="29" fill="#196bb9" text-anchor="middle" font-weight="bold">T₃</text>
+<rect x="800" y="15" width="350" height="395" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="975.00" y="57.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Выход (4, 5)</text>
+<polygon points="1025.00,298.60 1075.00,212.00 1025.00,125.40 925.00,125.40 875.00,212.00 925.00,298.60" fill="#ddf4e9"/>
+<line x1="1025.00" y1="298.60" x2="1075.00" y2="212.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
+<line x1="1075.00" y1="212.00" x2="1025.00" y2="125.40" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1025.00" y1="125.40" x2="925.00" y2="125.40" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="925.00" y1="125.40" x2="875.00" y2="212.00" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="875.00" y1="212.00" x2="925.00" y2="298.60" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
+<line x1="925.00" y1="298.60" x2="1025.00" y2="298.60" stroke="#52657a" stroke-width="3" stroke-linecap="round"/>
+<line x1="1013.00" y1="277.82" x2="1051.00" y2="212.00" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="1051.00,212.00 1040.67,219.89 1049.33,224.89" fill="#172b43"/>
+<line x1="899.00" y1="212.00" x2="937.00" y2="277.82" stroke="#172b43" stroke-width="3" stroke-linecap="round"/>
+<polygon points="937.00,277.82 935.33,264.93 926.67,269.93" fill="#172b43"/>
+<circle cx="1025.00" cy="298.60" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="1036.00" y="324.66" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="1075.00" cy="212.00" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="1097.00" y="219.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="1025.00" cy="125.40" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="1036.00" y="113.34" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="925.00" cy="125.40" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="914.00" y="113.34" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="875.00" cy="212.00" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="853.00" y="219.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="925.00" cy="298.60" r="6" fill="white" stroke="#172b43" stroke-width="2"/>
+<text x="914.00" y="324.66" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="975.00" y="380.00" font-size="29" fill="#196bb9" text-anchor="middle" font-weight="bold">T₄</text>
+</g></svg>

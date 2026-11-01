@@ -2,7 +2,7 @@
 title: Graph Transformations and Gluing
 date: 2026-11-01
 updated: 2026-11-01
-revision: 2
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -41,7 +41,7 @@ These are secondary thematic entry points; each series navigator identifies its 
 - [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]: the Dirichlet problem, vertex elimination, and contraction.
 - [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]]: one-point gluing and Whitney twists.
 
-- **Spectra of Isomers**: [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]] uses a Schur complement to compare two seam positions; its primary home is [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]. English translation pending.
+- **Spectra of Isomers**: [[ru/Инварианты, разложения и спектры/Спектры изомеров/Два изомера трёх шестиугольников|Two Isomers of Three Hexagons, in Russian]] uses a Schur complement to compare two seam positions; [[ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]] proves five-coordinate closure under two-vertex attachment. Its primary home is [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]. English translations pending.
 
 ## Future directions
 
