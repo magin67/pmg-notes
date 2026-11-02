@@ -1,8 +1,8 @@
 ---
 title: Resistance Geometry and Duality
 date: 2026-11-01
-updated: 2026-11-02
-revision: 2
+updated: 2026-11-03
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -23,7 +23,7 @@ How are spaces, the resistance metric, geometric characteristics, and dual repre
 - **[[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]]** (5 notes). Resistance radius and diameter, centralities, dimensionless parameters, and vertex deletion.
 - **[[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|Greenian and Polyform Duality]]** (9 notes). Mutual duality of Laplacian and Greenian exponentials, forest coefficients, cuts, and metric potentials.
 
-- **[[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]]** (in progress; 1 Russian note). Finite edge influence, relative sensitivity, and metric distributions; path intersections and higher grades are planned.
+- **[[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]]** (in progress; 2 Russian notes). Finite edge influence, metric distributions, and path intersections on trees; graphs with cycles and higher grades are planned.
 
 ## Reading route
 

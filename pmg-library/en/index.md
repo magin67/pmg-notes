@@ -3,9 +3,9 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 31
+revision: 32
 translated_revision: 29
-updated: 2026-11-02
+updated: 2026-11-03
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -32,7 +32,7 @@ The 17 completed bilingual series contain 123 substantive notes in each language
 
 [[en/Thematic Index|All series and their primary homes]] · [[en/Cross-cutting Tags|Cross-cutting Tags]].
 
-A new series, [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]], is in progress with one substantive Russian note. The library now has 124 substantive Russian notes and 123 English notes; an English translation of the new note is not yet available.
+A new series, [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]], is in progress with two substantive Russian notes. The library now has 125 substantive Russian notes and 123 English notes; English translations of the new notes are not yet available.
 
 ## Programming examples
 
@@ -69,4 +69,4 @@ The approach developed through the study of object ranking, electrical networks,
 The library grows through small thematic collections. The Russian text serves as the basis for the English translation; links between language versions are added as the translations become available.
 
 - Project started: **2026**
-- Library last updated: **2 November 2026**
+- Library last updated: **3 November 2026**

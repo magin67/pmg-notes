@@ -1,8 +1,8 @@
 ---
 title: Thematic Index
 date: 2026-11-01
-updated: 2026-11-02
-revision: 10
+updated: 2026-11-03
+revision: 11
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -56,7 +56,7 @@ The 17 completed bilingual series contain 123 substantive notes in each language
 
 ## Series in progress
 
-A new series, [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]], is in progress with one substantive Russian note. The library now has 124 substantive Russian notes and 123 English notes; an English translation of the new note is not yet available.
+A new series, [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]], is in progress with two substantive Russian notes. The library now has 125 substantive Russian notes and 123 English notes; English translations of the new notes are not yet available.
 
 Primary home: Resistance Geometry and Duality; secondary entry: Graph Transformations and Gluing.
 
