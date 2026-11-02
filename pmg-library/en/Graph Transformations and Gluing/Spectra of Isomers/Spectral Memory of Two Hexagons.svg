@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520" role="img" aria-labelledby="title desc">
+<title id="title">Spectral memory of two hexagons</title><desc id="desc">Two identical two-hexagon graphs have P(1)=28435 but different marked outputs. Adding a third hexagon gives isomer B with value 2504096 or A with value 2518737.</desc>
+<rect width="1180" height="520" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="1140" height="230" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<polygon points="165.00,178.77 192.00,132.00 246.00,132.00 273.00,178.77 246.00,225.53 192.00,225.53" fill="#fff0d7" />
+<polygon points="165.00,178.77 192.00,132.00 165.00,85.23 111.00,85.23 84.00,132.00 111.00,178.77" fill="#ddf4e9" />
+<line x1="165.00" y1="178.77" x2="192.00" y2="132.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="192.00" y1="132.00" x2="165.00" y2="85.23" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="111.00" y1="85.23" x2="84.00" y2="132.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="178.77" x2="192.00" y2="225.53" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="85.23" x2="111.00" y2="85.23" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="192.00" y1="225.53" x2="246.00" y2="225.53" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="84.00" y1="132.00" x2="111.00" y2="178.77" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="273.00" y1="178.77" x2="246.00" y2="132.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="178.77" x2="111.00" y2="178.77" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="192.00" y1="132.00" x2="246.00" y2="132.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="246.00" y1="225.53" x2="273.00" y2="178.77" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="178.77" x2="192.00" y2="132.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round" />
+<line x1="165.00" y1="85.23" x2="111.00" y2="85.23" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<circle cx="165.00" cy="178.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="154.00" y="204.77" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="192.00" cy="132.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="200.00" y="122.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="165.00" cy="85.23" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
+<text x="172.29" y="78.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="111.00" cy="85.23" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
+<text x="103.71" y="78.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="84.00" cy="132.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="69.42" y="138.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="111.00" cy="178.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="103.71" y="197.39" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="246.00" cy="132.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<circle cx="273.00" cy="178.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<circle cx="246.00" cy="225.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<circle cx="192.00" cy="225.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="425.00" y="64.00" font-size="23.667" fill="#196bb9" text-anchor="middle" font-weight="bold">Output (2, 3)</text>
+<text x="425.00" y="111.00" font-size="26" fill="#172b43" text-anchor="middle" font-weight="bold">P(1) = 28 435</text>
+<text x="425.00" y="155.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">Other coordinates of z:</text>
+<text x="425.00" y="192.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">(12331, 12694, 4763, 4707)</text>
+<line x1="660.00" y1="136.00" x2="803.00" y2="136.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="803.00,136.00 791.00,131.00 791.00,141.00" fill="#172b43" />
+<text x="732.00" y="108.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="normal">+ C₆</text>
+<text x="732.00" y="171.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">at output</text>
+<text x="980.00" y="92.00" font-size="22.302" fill="#172b43" text-anchor="middle" font-weight="bold">Three cores · isomer B</text>
+<text x="980.00" y="147.00" font-size="28" fill="#15815b" text-anchor="middle" font-weight="bold">P(1) = 2 504 096</text>
+<text x="980.00" y="195.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">The same terminal row</text>
+<rect x="20" y="270" width="1140" height="230" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<polygon points="165.00,428.77 192.00,382.00 246.00,382.00 273.00,428.77 246.00,475.53 192.00,475.53" fill="#fff0d7" />
+<polygon points="165.00,428.77 192.00,382.00 165.00,335.23 111.00,335.23 84.00,382.00 111.00,428.77" fill="#ddf4e9" />
+<line x1="165.00" y1="428.77" x2="192.00" y2="382.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="192.00" y1="382.00" x2="165.00" y2="335.23" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="111.00" y1="335.23" x2="84.00" y2="382.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="428.77" x2="192.00" y2="475.53" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="335.23" x2="111.00" y2="335.23" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="192.00" y1="475.53" x2="246.00" y2="475.53" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="84.00" y1="382.00" x2="111.00" y2="428.77" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="273.00" y1="428.77" x2="246.00" y2="382.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="428.77" x2="111.00" y2="428.77" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="192.00" y1="382.00" x2="246.00" y2="382.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="246.00" y1="475.53" x2="273.00" y2="428.77" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="428.77" x2="192.00" y2="382.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round" />
+<line x1="111.00" y1="335.23" x2="84.00" y2="382.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<circle cx="165.00" cy="428.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="154.00" y="454.77" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<circle cx="192.00" cy="382.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="200.00" y="372.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<circle cx="165.00" cy="335.23" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="172.29" y="328.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<circle cx="111.00" cy="335.23" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
+<text x="103.71" y="328.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="84.00" cy="382.00" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
+<text x="69.42" y="388.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<circle cx="111.00" cy="428.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="103.71" y="447.39" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<circle cx="246.00" cy="382.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<circle cx="273.00" cy="428.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<circle cx="246.00" cy="475.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<circle cx="192.00" cy="475.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
+<text x="425.00" y="314.00" font-size="23.667" fill="#196bb9" text-anchor="middle" font-weight="bold">Output (3, 4)</text>
+<text x="425.00" y="361.00" font-size="26" fill="#172b43" text-anchor="middle" font-weight="bold">P(1) = 28 435</text>
+<text x="425.00" y="405.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">Other coordinates of z:</text>
+<text x="425.00" y="442.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">(12694, 12694, 4884, 4828)</text>
+<line x1="660.00" y1="386.00" x2="803.00" y2="386.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="803.00,386.00 791.00,381.00 791.00,391.00" fill="#172b43" />
+<text x="732.00" y="358.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="normal">+ C₆</text>
+<text x="732.00" y="421.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">at output</text>
+<text x="980.00" y="342.00" font-size="22.301" fill="#172b43" text-anchor="middle" font-weight="bold">Three cores · isomer A</text>
+<text x="980.00" y="397.00" font-size="28" fill="#15815b" text-anchor="middle" font-weight="bold">P(1) = 2 518 737</text>
+<text x="980.00" y="445.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">The same terminal row</text>
+</g></svg>

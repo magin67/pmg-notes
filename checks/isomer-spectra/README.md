@@ -2,6 +2,18 @@
 
 [Series-wide review, 2026-11-02 (Russian)](REVIEW_RU.md): proof boundaries, corrections, repeated exact checks, navigation, and preserved addresses.
 
+[English translation review, 2026-11-02](REVIEW_EN.md): nine translated notes, their navigator, 35 English figures, formula and status parity, and bilingual navigation. The English series is in `pmg-library/en/Graph Transformations and Gluing/Spectra of Isomers`; both language editions use the same exact verification programs and result files below.
+
+To reproduce all English figures after generating the Russian figures, run:
+
+```text
+python checks/isomer-spectra/draw_english.py
+```
+
+This requires Matplotlib and Pillow. `figure-labels-en.json` contains the English labels, titles, and accessible descriptions. Graph geometry and numerical data are shared with the Russian illustrations. The growth plot is redrawn from `periodic-slr-results.json` with English labels and decimal points; it introduces no new computation of the underlying exact values.
+
+`python checks/isomer-spectra/verify_translation.py` checks formula parity, table numbers, proof-callout structure, language pairs, links, image paths, and unchanged geometry of the 34 translated SVG diagrams. This standard-library check supplements the mathematical checks below; translation parity is not a new proof of the shared results.
+
 The Russian note is `pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров/Два изомера трёх шестиугольников.md`.
 The input consists solely of the explicitly listed cycles, with shared edges counted once.
 

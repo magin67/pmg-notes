@@ -2,7 +2,7 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-11-02
-revision: 17
+revision: 18
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -1232,7 +1232,7 @@ $$
 
 The correction counts shared vertices once. If both parts contain the same edge $ab$ of weight $w$, which is to occur only once in the result, add $\mathbf L_e=w\left(\begin{smallmatrix}1&-1\\-1&1\end{smallmatrix}\right)$ to the right-hand side. If two parallel copies are retained, there is no such correction. Polynomial formulas for all five coordinates, checks at degenerate values, and attribution of the determinant methods appear in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data]].
 
-For a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. The static electrical response does not replace the dependence on $\xi$. A passport for a fixed pair does not establish closure of a spectral transfer rule when input and output boundaries change. Full forest passport transfer and specific closures are already developed in [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]; closure on five spectral coordinates for attachment at exactly two vertices is proved separately in [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектральный перенос при смене границы|Spectral Transfer to a New Boundary, in Russian]]. The output pair lies in the attached core and may overlap the input; no other contacts are allowed.
+For a connected graph, $\mathbf S_G(0)=-\boldsymbol\Lambda_{\mathcal B}$. The static electrical response does not replace the dependence on $\xi$. A passport for a fixed pair does not establish closure of a spectral transfer rule when input and output boundaries change. Full forest passport transfer and specific closures are already developed in [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]; closure on five spectral coordinates for attachment at exactly two vertices is proved separately in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]]. The output pair lies in the attached core and may overlap the input; no other contacts are allowed.
 
 ### Chains of cores
 
@@ -1264,7 +1264,7 @@ Invariance extends to a **fixed tree** of cycles when the seams within each core
 
 Closure includes the vertex correspondence at the final seam. For a square strip of $N\ge3$ cores, twisted closure increases $\tau$ by $2N$ and decreases $\rho$ relative to ordinary closure. For strips of even cycles $C_m$ with opposite edge seams and equal longitudinal paths, the spanning-tree count difference is $N(m-2)$ for $m\ge4$, $N\ge3$; no general radius-change law is established for $m>4$. Formulas for shifted prism closure concern a separately specified model. Agreement of one spanning-tree count does not by itself prove agreement of radii.
 
-Definitions, proofs, attribution, and reproducible checks: [[Cores, Seams, and Admissible Chains]], [[Why Chain Configuration Preserves Matroid Parameters]], [[Spanning-Tree Polynomials of Chains - Determinant and Recurrence]], [[Limits of Invariance - Branching, Disconnected Seams, and Other Cores]], and [[Closing a Chain - Rings and the Möbius Effect]]. The companion series [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers, in Russian]] proves classification of the specified open SLR chains and recovery of their oriented words from the full marked state at $\xi=-1$, equivalently from three exact rational boundary-response coordinates. Injectivity of the characteristic polynomial or one scalar value remains conjectural for arbitrary length. These conclusions do not extend to arbitrary cores or closures; composite cores remain a separate question.
+Definitions, proofs, attribution, and reproducible checks: [[Cores, Seams, and Admissible Chains]], [[Why Chain Configuration Preserves Matroid Parameters]], [[Spanning-Tree Polynomials of Chains - Determinant and Recurrence]], [[Limits of Invariance - Branching, Disconnected Seams, and Other Cores]], and [[Closing a Chain - Rings and the Möbius Effect]]. The companion series [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]] proves classification of the specified open SLR chains and recovery of their oriented words from the full marked state at $\xi=-1$, equivalently from three exact rational boundary-response coordinates. Injectivity of the characteristic polynomial or one scalar value remains conjectural for arbitrary length. These conclusions do not extend to arbitrary cores or closures; composite cores remain a separate question.
 
 ## Principal notation
 
@@ -1369,6 +1369,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 18 | 2026-11-02 | Linked the English Spectra of Isomers proofs. Mathematical content and result boundaries are unchanged; synchronized with Russian revision 18. |
 | 17 | 2026-11-02 | Updated links and result boundaries after the Spectra of Isomers review: two-vertex transfer, SLR classification and marked-state recovery; scalar injectivity remains open. Synchronized with Russian revision 17. |
 | 16 | 2026-11-01 | Recorded conventions of the completed variations and chains-of-cores series: two metrics, finite inverse formulas, quadric connectivity, the $P,Z,V$ problem and limits of algorithmic conclusions; seams, admissibility, invariance, the spanning-tree recurrence, and closures. Aligned with Russian revision 16. |
 | 15 | 2026-10-30 | Replaced the internal series code in the revision history with its descriptive title. Mathematical conventions are unchanged. Aligned with Russian revision 15. |

@@ -3,7 +3,7 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 28
+revision: 29
 translated_revision: 29
 updated: 2026-11-02
 ---
@@ -22,7 +22,7 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Thematic sections
 
-The library contains 16 completed bilingual series and the completed Russian collection “Spectra of Isomers”: 123 substantive notes in Russian and 112 in English. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
+The library contains 17 completed bilingual series: 123 substantive notes in Russian and 121 in English. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
 - **[[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
@@ -38,7 +38,7 @@ The library contains 16 completed bilingual series and the completed Russian col
 
 ## Development plan
 
-The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers: Results and Open Questions, in Russian]] completes the current Russian series of nine substantive notes on spectral differences, boundary transfer, decoding, response, and periodic chains. The navigator separates proofs, finite computations, and conjectures. English translations are pending.
+The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]] completes the current bilingual series of nine substantive notes on spectral differences, boundary transfer, decoding, response, and periodic chains. The navigator separates proofs, finite computations, and conjectures. All notes, the navigator, and labels for 35 figures are available in English.
 
 ## Status of results
 

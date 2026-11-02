@@ -2,7 +2,7 @@
 title: Thematic Index
 date: 2026-11-01
 updated: 2026-11-02
-revision: 7
+revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -31,7 +31,7 @@ This index groups series by their main question. Each series has one primary hom
 
 ## Primary home of each series
 
-16 completed bilingual series and the completed Russian collection “Spectra of Isomers”: 123 substantive notes in Russian and 112 in English. Thematic pages, navigators, references, and programming examples are excluded from this count.
+17 completed bilingual series: 123 substantive notes in Russian and 121 in English. Thematic pages, navigators, references, and programming examples are excluded from this count.
 
 | Series | Primary home | Notes |
 | --- | --- | ---: |
@@ -52,7 +52,7 @@ This index groups series by their main question. Each series has one primary hom
 | [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 5 EN / 7 RU |
 | [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | [[en/Directed Graphs and Extensions/Directed Graphs and Extensions\|Directed Graphs and Extensions]] | 12 |
 
-**“Spectra of Isomers”** is complete in its current Russian scope: nine substantive notes and [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers: Results and Open Questions, in Russian]]. Its primary home is [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]], alongside Chains of Cores, with a secondary entry through [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]. The Russian collection has passed a series-wide review. English translations are pending; full scalar distinguishability remains an open research problem.
+**“Spectra of Isomers”** is complete in its current bilingual scope: nine substantive notes and [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]. Its primary home is [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]], alongside Chains of Cores, with a secondary entry through [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]. The Russian collection has passed a series-wide review. All notes, the navigator, and labels for 35 figures are available in English; full scalar distinguishability remains an open research problem.
 
 ## Finding connections and future directions
 

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610" role="img" aria-labelledby="title desc">
+<title id="title">Two probabilistic interpretations of the response</title><desc id="desc">Joint root law: outcomes 11,10,01,00 have probabilities k,r-k,s-k,1-r-s+k. For a walk along unit edges, the stopping rate is 1; at degree 2, each of the two moves and stopping has probability 1/3.</desc>
+<rect width="1200" height="610" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="550" height="560" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<rect x="600" y="20" width="580" height="560" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="295.00" y="66.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">A random rooted forest</text>
+<text x="295.00" y="101.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">Two indicators: is the contact a root?</text>
+<circle cx="115.00" cy="167.00" r="17" fill="#15815b" stroke="#15815b" stroke-width="3" />
+<text x="115.00" y="174.00" font-size="21" fill="white" text-anchor="middle" font-weight="normal">x</text>
+<circle cx="220.00" cy="167.00" r="17" fill="#15815b" stroke="#15815b" stroke-width="3" />
+<text x="220.00" y="174.00" font-size="21" fill="white" text-anchor="middle" font-weight="normal">y</text>
+<text x="310.00" y="174.00" font-size="25" fill="#196bb9" text-anchor="start" font-weight="normal">k</text>
+<circle cx="115.00" cy="252.00" r="17" fill="#15815b" stroke="#15815b" stroke-width="3" />
+<text x="115.00" y="259.00" font-size="21" fill="white" text-anchor="middle" font-weight="normal">x</text>
+<circle cx="220.00" cy="252.00" r="17" fill="white" stroke="#52657a" stroke-width="3" />
+<text x="220.00" y="259.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">y</text>
+<text x="310.00" y="259.00" font-size="25" fill="#196bb9" text-anchor="start" font-weight="normal">r − k</text>
+<circle cx="115.00" cy="337.00" r="17" fill="white" stroke="#52657a" stroke-width="3" />
+<text x="115.00" y="344.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">x</text>
+<circle cx="220.00" cy="337.00" r="17" fill="#15815b" stroke="#15815b" stroke-width="3" />
+<text x="220.00" y="344.00" font-size="21" fill="white" text-anchor="middle" font-weight="normal">y</text>
+<text x="310.00" y="344.00" font-size="25" fill="#196bb9" text-anchor="start" font-weight="normal">s − k</text>
+<circle cx="115.00" cy="422.00" r="17" fill="white" stroke="#52657a" stroke-width="3" />
+<text x="115.00" y="429.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">x</text>
+<circle cx="220.00" cy="422.00" r="17" fill="white" stroke="#52657a" stroke-width="3" />
+<text x="220.00" y="429.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">y</text>
+<text x="310.00" y="429.00" font-size="25" fill="#196bb9" text-anchor="start" font-weight="normal">1 − r − s + k</text>
+<text x="295.00" y="505.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">Filled circle: a chosen root</text>
+<text x="295.00" y="547.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="normal">k = rs − h²  ⇒  h = √(rs − k) &gt; 0</text>
+<text x="890.00" y="66.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">A stopped walk</text>
+<text x="890.00" y="101.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">Example: a degree-2 vertex</text>
+<line x1="890.00" y1="246.00" x2="720.00" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<circle cx="720.00" cy="200.00" r="15" fill="white" stroke="#52657a" stroke-width="3" />
+<line x1="825.00" y1="228.00" x2="785.00" y2="218.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="785.00,218.00 795.43,225.76 797.85,216.06" fill="#172b43" />
+<text x="805.00" y="194.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="normal">1/3</text>
+<line x1="890.00" y1="246.00" x2="1060.00" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<circle cx="1060.00" cy="200.00" r="15" fill="white" stroke="#52657a" stroke-width="3" />
+<line x1="955.00" y1="228.00" x2="995.00" y2="218.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="995.00,218.00 982.15,216.06 984.57,225.76" fill="#172b43" />
+<text x="975.00" y="194.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="normal">1/3</text>
+<circle cx="890.00" cy="246.00" r="19" fill="#196bb9" stroke="none" stroke-width="2" />
+<text x="890.00" y="253.00" font-size="23" fill="white" text-anchor="middle" font-weight="normal">v</text>
+<line x1="890.00" y1="277.00" x2="890.00" y2="349.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="890.00,349.00 895.00,337.00 885.00,337.00" fill="#172b43" />
+<text x="922.00" y="319.00" font-size="23" fill="#bc294b" text-anchor="start" font-weight="normal">1/3</text>
+<circle cx="890.00" cy="378.00" r="21" fill="#bc294b" stroke="none" stroke-width="2" />
+<text x="890.00" y="385.00" font-size="19" fill="white" text-anchor="middle" font-weight="normal">■</text>
+<text x="890.00" y="433.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="normal">Stop here</text>
+<text x="890.00" y="500.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="normal">Kᵢⱼ = probability of stopping at j</text>
+<text x="890.00" y="537.00" font-size="20.557" fill="#172b43" text-anchor="middle" font-weight="normal">when starting at i, with i, j ∈ {x, y}</text>
+</g></svg>

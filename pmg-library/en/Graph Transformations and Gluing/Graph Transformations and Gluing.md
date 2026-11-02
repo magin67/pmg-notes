@@ -2,7 +2,7 @@
 title: Graph Transformations and Gluing
 date: 2026-11-01
 updated: 2026-11-02
-revision: 7
+revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -22,14 +22,14 @@ How do characteristics change when couplings vary, vertices are eliminated, or a
 - **[[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]]** (8 notes). Direct and inverse changes to couplings, the Greenian, and resistances; compatibility and conductance constraints.
 - **[[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]]** (6 notes). Data sufficient for contraction and gluing: the forest passport, its spanning-tree layer, and spectral data.
 - **[[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]** (5 English notes; the Russian collection also includes 2 supplements on weaving). Admissible assemblies of cores, preserved parameters, spanning-tree recurrences, and chain closures.
-- **[[ru/Преобразования и сочленения графов/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers, in Russian]]** (9 substantive notes and a navigator; the Russian collection has passed a series-wide review). Spectral transfer, SLR codes, differences, exact decoding, boundary response, and constant and periodic chains. A continuation of Chains of Cores; English translations are pending.
+- **[[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]** (9 substantive notes, a navigator, and 35 figures in each language). Spectral transfer, SLR codes, differences, exact decoding, boundary response, and constant and periodic chains. A continuation of Chains of Cores; general scalar distinguishability remains conjectural.
 
 ## Reading route
 
 The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]]. Inverse variations require [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|Greenian and Polyform Duality]]; geometric operations use [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]].
 
 - **Changing couplings:** [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]], from one conductance to joint changes and constraints.
-- **Assembly from parts:** [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities|Structural Identities]] → [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] → [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]. Structural identities supply the language of partitions, boundary polynomials specify the retained data, and chains apply them to sequential assembly.
+- **Assembly from parts:** [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities|Structural Identities]] → [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] → [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]. Structural identities supply the language of partitions, boundary polynomials specify the retained data, and chains apply them to sequential assembly. The spectral continuation is [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]: transfer to a new pair, distinguishability, and reconstruction.
 - **Preserved parameters:** before the matroid results on chains, read the definitions and gluing laws in [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]].
 
 Characteristic polynomials additionally require [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]] and [[From the Forest Passport to Spectral Boundary Data]]. The full forest passport, spanning-tree layer, and spectral passport address different problems.

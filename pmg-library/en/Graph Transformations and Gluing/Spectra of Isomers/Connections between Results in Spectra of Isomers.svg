@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040" role="img" aria-labelledby="title desc">
+<title id="title">Connections between results in Spectra of Isomers</title><desc id="desc">A configuration gives matroid and boundary data. The boundary passport supports spectral calculation, boundary transfer, and decoding of the marked chain. The full integer vector at ξ=-1 is equivalent to three exact rational entries of the shifted response. Inverse problems from one polynomial or one number remain conjectural for arbitrary length.</desc>
+<rect width="1200" height="1040" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="345" y="20" width="510" height="126" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="365.00" y1="40.00" x2="835.00" y2="40.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<text x="600.00" y="77.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">SLR chain</text>
+<text x="600.00" y="114.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Cores, seams, and an ordered terminal pair</text>
+<line x1="400.00" y1="146.00" x2="185.00" y2="230.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="185.00,230.00 198.00,230.29 194.36,220.98" fill="#172b43" />
+<line x1="600.00" y1="146.00" x2="600.00" y2="230.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="600.00,230.00 605.00,218.00 595.00,218.00" fill="#172b43" />
+<rect x="20" y="240" width="330" height="165" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="40.00" y1="260.00" x2="330.00" y2="260.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<text x="185.00" y="297.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">Matroid data</text>
+<text x="185.00" y="334.00" font-size="16.636" fill="#172b43" text-anchor="middle" font-weight="normal">Ordinary forests, spanning-tree</text>
+<text x="185.00" y="363.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">count, and resistance radius</text>
+<text x="185.00" y="392.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Shared for fixed N</text>
+<rect x="435" y="240" width="330" height="165" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="455.00" y1="260.00" x2="745.00" y2="260.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<text x="600.00" y="297.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">Boundary passport</text>
+<text x="600.00" y="334.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Five polynomials in ξ</text>
+<text x="600.00" y="363.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Transfer to a new pair</text>
+<text x="600.00" y="392.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">preserves closure</text>
+<rect x="850" y="240" width="330" height="165" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="870.00" y1="260.00" x2="1160.00" y2="260.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<text x="1015.00" y="297.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="bold">Periodic block</text>
+<text x="1015.00" y="334.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Repeating a runner</text>
+<text x="1015.00" y="363.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Power of the period matrix</text>
+<text x="1015.00" y="392.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Scalar recurrences</text>
+<line x1="775.00" y1="320.00" x2="840.00" y2="320.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="840.00,320.00 828.00,315.00 828.00,325.00" fill="#172b43" />
+<text x="808.00" y="292.00" font-size="15" fill="#52657a" text-anchor="middle" font-weight="normal">period</text>
+<line x1="485.00" y1="405.00" x2="230.00" y2="488.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="230.00,488.00 242.96,489.04 239.86,479.53" fill="#172b43" />
+<line x1="600.00" y1="405.00" x2="600.00" y2="488.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="600.00,488.00 605.00,476.00 595.00,476.00" fill="#172b43" />
+<text x="625.00" y="457.00" font-size="20" fill="#52657a" text-anchor="start" font-weight="normal">ξ = −1</text>
+<rect x="20" y="500" width="330" height="165" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="40.00" y1="520.00" x2="330.00" y2="520.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<text x="185.00" y="557.00" font-size="20.868" fill="#196bb9" text-anchor="middle" font-weight="bold">Graph spectrum</text>
+<text x="185.00" y="594.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Characteristic polynomial</text>
+<text x="185.00" y="623.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">↔ rooted polynomial</text>
+<text x="185.00" y="652.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Turns appear in the moments</text>
+<rect x="435" y="500" width="330" height="165" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="455.00" y1="520.00" x2="745.00" y2="520.00" stroke="#15815b" stroke-width="4" stroke-linecap="round" />
+<text x="600.00" y="557.00" font-size="23" fill="#15815b" text-anchor="middle" font-weight="bold">Full state</text>
+<text x="600.00" y="594.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Five exact integers</text>
+<text x="600.00" y="623.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">The chosen end and order</text>
+<text x="600.00" y="652.00" font-size="19.054" fill="#172b43" text-anchor="middle" font-weight="normal">of both contacts are retained</text>
+<rect x="850" y="500" width="330" height="165" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="870.00" y1="520.00" x2="1160.00" y2="520.00" stroke="#15815b" stroke-width="4" stroke-linecap="round" />
+<text x="1015.00" y="557.00" font-size="23" fill="#15815b" text-anchor="middle" font-weight="bold">Shifted response</text>
+<text x="1015.00" y="594.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Three exact rational entries</text>
+<text x="1015.00" y="623.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">of the boundary block</text>
+<text x="1015.00" y="652.00" font-size="16.685" fill="#172b43" text-anchor="middle" font-weight="normal">of the matrix (I + L)⁻¹</text>
+<line x1="775.00" y1="566.00" x2="840.00" y2="566.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="840.00,566.00 828.00,561.00 828.00,571.00" fill="#172b43" />
+<line x1="840.00" y1="603.00" x2="775.00" y2="603.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="775.00,603.00 787.00,608.00 787.00,598.00" fill="#172b43" />
+<line x1="185.00" y1="665.00" x2="185.00" y2="748.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="185.00,748.00 190.00,736.00 180.00,736.00" fill="#172b43" />
+<line x1="600.00" y1="665.00" x2="600.00" y2="748.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="600.00,748.00 605.00,736.00 595.00,736.00" fill="#172b43" />
+<line x1="1015.00" y1="665.00" x2="1015.00" y2="748.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="1015.00,748.00 1020.00,736.00 1010.00,736.00" fill="#172b43" />
+<rect x="20" y="760" width="330" height="175" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="40.00" y1="780.00" x2="330.00" y2="780.00" stroke="#bc294b" stroke-width="4" stroke-linecap="round" />
+<text x="185.00" y="817.00" font-size="20" fill="#bc294b" text-anchor="middle" font-weight="bold">Scalar inverse problem</text>
+<text x="185.00" y="854.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">From χ or P(1) with given N</text>
+<text x="185.00" y="883.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">All lengths: conjectures</text>
+<text x="185.00" y="912.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Catalog: N ≤ 18</text>
+<rect x="435" y="760" width="745" height="175" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<line x1="455.00" y1="780.00" x2="1160.00" y2="780.00" stroke="#15815b" stroke-width="4" stroke-linecap="round" />
+<text x="807.50" y="817.00" font-size="23" fill="#15815b" text-anchor="middle" font-weight="bold">Exact recovery of the marked chain</text>
+<text x="807.50" y="854.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">The oriented word and number of cores are recovered</text>
+<text x="807.50" y="883.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Proved for every length in the chosen class</text>
+<text x="807.50" y="912.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Inexact data require stability analysis</text>
+<text x="600.00" y="984.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">The two-way connection holds on reachable SLR-chain states</text>
+<text x="600.00" y="1020.00" font-size="21" fill="#52657a" text-anchor="middle" font-weight="normal">The period-matrix spectrum and finite-graph spectrum are different data</text>
+</g></svg>

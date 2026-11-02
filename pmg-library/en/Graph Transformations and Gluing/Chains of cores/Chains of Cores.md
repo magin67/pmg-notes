@@ -1,9 +1,9 @@
 ---
 title: "Chains of Cores"
 date: 2026-10-31
-updated: 2026-11-01
-revision: 2
-translated_revision: 3
+updated: 2026-11-02
+revision: 3
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -23,7 +23,7 @@ Russian version: [[ru/Преобразования и сочленения гр�
 
 This series explains how cores, seams, and the gluing scheme determine the characteristics of an assembled graph. Its main positive result concerns admissible open chains of cycles: with fixed ordered core and seam sizes, changing the configuration preserves the cycle matroid, ordinary forest coefficients, spanning-tree count, and resistance radius. Reordering seams, changing the scheme, or changing the last correspondence at closure requires separate analysis.
 
-The five notes form a complete introductory reading route. This navigator collects their connections, applicability conditions, and the origins of the results. Full spectral classification of chains remains a continuation.
+The five bilingual notes form a complete introductory reading route. The Russian collection additionally contains [[ru/Преобразования и сочленения графов/Цепи из ядер/Плетение графов - вилка, розетка и рекурсия|Weaving Graphs: Plug, Socket, and Recurrence (in Russian)]] and [[ru/Преобразования и сочленения графов/Цепи из ядер/Экспонента лапласиана при плетении графов|The Laplacian Exponential in Graph Weaving (in Russian)]]; translations of these two supplements are pending. This navigator collects their connections, applicability conditions, and the origins of the results. The spectral continuation is [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]: nine bilingual notes on transfer, distinguishability, reconstruction, and periodic chains. Its scalar conjectures remain open.
 
 ## Place in the library
 
@@ -31,7 +31,7 @@ Primary section: [[en/Graph Transformations and Gluing/Graph Transformations and
 
 Secondary thematic entries:
 
-- [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: matroid invariance and the future problem of distinguishing isomers.
+- [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: matroid invariance and spectral distinguishability of isomers.
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
 
@@ -122,6 +122,6 @@ The five notes passed the [general review of the Russian series](https://github.
 
 Spanning-tree counts are compared with direct determinants of the assembled graph Laplacians. Radii are checked by independent formulas in rational arithmetic. Forest states and matroid correspondences use exhaustive enumeration of small graphs; the computational scope for larger constructions is specified separately. These calculations supplement proofs rather than replace them.
 
-In particular, the two nonisomorphic chains of three hexagons have $\tau=204$ and $\rho=43595/41616$, equal ordinary forest coefficients, and different rooted coefficients. This example connects the matroid part with the future “Spectra of Isomers” direction.
+In particular, the two nonisomorphic chains of three hexagons have $\tau=204$ and $\rho=43595/41616$, equal ordinary forest coefficients, and different rooted coefficients. This example connects the matroid part with [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]].
 
-The full spectral automaton with boundary transfer, isomer classification, and decoding questions remain for continuation. Their development will require consistent boundary-edge orientations and the variable $\xi$. Injectivity of a full state does not imply injectivity of one coordinate, and finite code enumeration does not prove a general conjecture. Composite cores made from rings of hexagons also remain a research problem; the results of this series do not provide their general classification.
+The companion series proves transfer to a new two-vertex boundary, classification of the specified open SLR chains, and decoding of their full marked boundary state. Boundary-edge orientations and the spectral variable $\xi$ are fixed explicitly there. Injectivity of a full state does not imply injectivity of one coordinate, and finite code enumeration does not prove a general conjecture. Composite cores made from rings of hexagons also remain a research problem; the results of this series do not provide their general classification.

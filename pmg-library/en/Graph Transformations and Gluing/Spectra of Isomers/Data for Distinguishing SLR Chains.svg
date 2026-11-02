@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img" aria-labelledby="title desc">
+<title id="title">Data for distinguishing SLR chains</title><desc id="desc">The full marked boundary vector can be decoded at every length. Distinguishability by the polynomial and by a single value is checked up to 18 cores; the general statements remain conjectures.</desc>
+<rect width="1200" height="550" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="360" height="385" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="200.00" y="65.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="bold">Five boundary numbers</text>
+<text x="200.00" y="127.00" font-size="26" fill="#15815b" text-anchor="middle" font-weight="normal">z = (a, b, c, d, e)</text>
+<text x="200.00" y="187.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Oriented word</text>
+<text x="200.00" y="219.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">with a chosen boundary</text>
+<line x1="45.00" y1="253.00" x2="355.00" y2="253.00" stroke="#dce4ed" stroke-width="2" stroke-linecap="round" />
+<text x="200.00" y="300.00" font-size="20" fill="#15815b" text-anchor="middle" font-weight="normal">Decoding is proved</text>
+<text x="200.00" y="335.00" font-size="20" fill="#15815b" text-anchor="middle" font-weight="normal">for every length</text>
+<rect x="420" y="20" width="360" height="385" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="600.00" y="65.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="bold">Full polynomial</text>
+<text x="600.00" y="127.00" font-size="26" fill="#196bb9" text-anchor="middle" font-weight="normal">χ(ξ)</text>
+<text x="600.00" y="187.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Graph class</text>
+<text x="600.00" y="219.00" font-size="19.001" fill="#172b43" text-anchor="middle" font-weight="normal">without boundary markings</text>
+<line x1="445.00" y1="253.00" x2="755.00" y2="253.00" stroke="#dce4ed" stroke-width="2" stroke-linecap="round" />
+<text x="600.00" y="300.00" font-size="19.884" fill="#196bb9" text-anchor="middle" font-weight="normal">Checked up to 18 cores</text>
+<text x="600.00" y="335.00" font-size="20" fill="#196bb9" text-anchor="middle" font-weight="normal">General case: Conjecture 1</text>
+<rect x="820" y="20" width="360" height="385" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="1000.00" y="65.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="bold">One value</text>
+<text x="1000.00" y="127.00" font-size="26" fill="#196bb9" text-anchor="middle" font-weight="normal">P(1) = χ(−1)</text>
+<text x="1000.00" y="187.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">Graph class</text>
+<text x="1000.00" y="219.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">with known N</text>
+<line x1="845.00" y1="253.00" x2="1155.00" y2="253.00" stroke="#dce4ed" stroke-width="2" stroke-linecap="round" />
+<text x="1000.00" y="300.00" font-size="19.884" fill="#196bb9" text-anchor="middle" font-weight="normal">Checked up to 18 cores</text>
+<text x="1000.00" y="335.00" font-size="20" fill="#196bb9" text-anchor="middle" font-weight="normal">General case: Conjecture 2</text>
+<text x="600.00" y="453.00" font-size="22.641" fill="#172b43" text-anchor="middle" font-weight="bold">A marked word and an unmarked graph class pose different problems</text>
+<text x="600.00" y="500.00" font-size="22" fill="#52657a" text-anchor="middle" font-weight="normal">A proof for five numbers does not prove injectivity of one number</text>
+</g></svg>

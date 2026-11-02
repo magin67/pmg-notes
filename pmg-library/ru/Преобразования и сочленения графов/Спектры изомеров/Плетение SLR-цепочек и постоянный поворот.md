@@ -2,7 +2,7 @@
 title: Плетение SLR-цепочек и постоянный поворот
 date: 2026-11-01
 updated: 2026-11-02
-revision: 5
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: ru
@@ -12,6 +12,9 @@ description: "Один путь и три розетки: SLR-цепочки к�
 aliases:
   - "ru/Инварианты, разложения и спектры/Спектры изомеров/Плетение SLR-цепочек и постоянный поворот"
 ---
+
+English version: [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns|Weaving SLR Chains and Constant Turns]].
+
 
 Итоги, статусы результатов и маршруты чтения: [[Спектры изомеров - результаты и открытые вопросы|навигатор серии «Спектры изомеров»]].
 

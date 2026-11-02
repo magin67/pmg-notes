@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="title desc">
+<title id="title">Reconstruction with inexact data</title><desc id="desc">With known bound N&lt;=7, the full catalog contains 365 marked states. Rounding the SLR response to 14 decimal places gives a unique candidate. The mean responses of SSSSSS and SLSSSS admit both codes. An unresolved sector in the interval algorithm does not prove ambiguity.</desc>
+<rect width="1200" height="670" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="43.00" font-size="28" fill="#172b43" text-anchor="middle" font-weight="bold">What a check of inexact data establishes</text>
+<rect x="20" y="80" width="370" height="515" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="205.00" y="125.00" font-size="27" fill="#15815b" text-anchor="middle" font-weight="bold">One candidate</text>
+<text x="205.00" y="174.00" font-size="16.563" fill="#52657a" text-anchor="middle" font-weight="normal">Exhaustive search for N ≤ 7</text>
+<text x="205.00" y="255.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">SLR response rounded</text>
+<text x="205.00" y="298.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">to 14 decimal places</text>
+<text x="205.00" y="341.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">ε = 5 · 10⁻¹⁵</text>
+<line x1="205.00" y1="389.00" x2="205.00" y2="436.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="205.00,436.00 210.00,424.00 200.00,424.00" fill="#172b43" />
+<text x="205.00" y="479.00" font-size="30" fill="#15815b" text-anchor="middle" font-weight="bold">SLR</text>
+<text x="205.00" y="526.00" font-size="19" fill="#15815b" text-anchor="middle" font-weight="normal">Unique in the catalog</text>
+<rect x="415" y="80" width="370" height="515" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="600.00" y="125.00" font-size="27" fill="#bc294b" text-anchor="middle" font-weight="bold">Two candidates</text>
+<text x="600.00" y="174.00" font-size="16.563" fill="#52657a" text-anchor="middle" font-weight="normal">Exhaustive search for N ≤ 7</text>
+<text x="600.00" y="255.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Midpoint of two responses</text>
+<text x="600.00" y="298.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Radius: half the distance</text>
+<text x="600.00" y="341.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">ε ≈ 1,23 · 10⁻¹¹</text>
+<line x1="600.00" y1="389.00" x2="600.00" y2="436.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="600.00,436.00 605.00,424.00 595.00,424.00" fill="#172b43" />
+<text x="600.00" y="479.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="bold">SSSSSS  or  SLSSSS</text>
+<text x="600.00" y="526.00" font-size="19" fill="#bc294b" text-anchor="middle" font-weight="normal">Ambiguity proved</text>
+<rect x="810" y="80" width="370" height="515" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="995.00" y="125.00" font-size="27" fill="#196bb9" text-anchor="middle" font-weight="bold">No conclusion</text>
+<text x="995.00" y="174.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">Interval inverse steps</text>
+<text x="995.00" y="255.00" font-size="15.881" fill="#172b43" text-anchor="middle" font-weight="normal">An interval crossed a threshold</text>
+<text x="995.00" y="298.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">or the divisor sign is unknown</text>
+<text x="995.00" y="341.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">The check stopped</text>
+<line x1="995.00" y1="389.00" x2="995.00" y2="436.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="995.00,436.00 1000.00,424.00 990.00,424.00" fill="#172b43" />
+<text x="995.00" y="479.00" font-size="18" fill="#196bb9" text-anchor="middle" font-weight="bold">A sharper check is needed</text>
+<text x="995.00" y="526.00" font-size="18" fill="#196bb9" text-anchor="middle" font-weight="normal">Ambiguity is not proved</text>
+<text x="600.00" y="639.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">Every candidate is checked against the original measurement intervals</text>
+</g></svg>

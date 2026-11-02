@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-11-02
-revision: 18
+revision: 19
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -363,7 +363,7 @@ Here the pencil is $\mathbf M_G(\xi)=\xi I-\mathbf L_G$ and the ordered pair is 
 | Jacobi identity for the passport | Тождество Якоби для паспорта | Standard | $AE=BC-D^2$. A polynomial determinant identity also valid at zeros of $E$; it rules out algebraic independence of the five coordinates. |
 | Input and output boundaries; active boundary | Входная и выходная граница; активная граница | Qualified | Marked sets and their correspondences at successive chain-assembly steps. Moving to a new active boundary requires a separate transfer rule; closure of a five-coordinate automaton does not follow from a passport for a fixed pair. |
 
-A separate [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектральный перенос при смене границы|transfer theorem, in Russian]] proves closure for attachment at exactly two input vertices with an output pair in the attached core and no other contacts. For the specified open SLR chains, [[ru/Преобразования и сочленения графов/Спектры изомеров/Корневые леса и декодирование граничного состояния|decoding of the full marked state, in Russian]] is proved; injectivity of the characteristic polynomial or one scalar value is a different, still open statement. The five coordinates are not algebraically independent, and their minimality is not claimed.
+A separate [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] proves closure for attachment at exactly two input vertices with an output pair in the attached core and no other contacts. For the specified open SLR chains, [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]] is proved; injectivity of the characteristic polynomial or one scalar value is a different, still open statement. The five coordinates are not algebraically independent, and their minimality is not claimed.
 
 ## Chains of cores and seams
 
@@ -535,6 +535,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 19 | 2026-11-02 | Linked the translated Spectra of Isomers definitions and results. Terms and applicability conditions are unchanged; synchronized with Russian revision 19. |
 | 18 | 2026-11-02 | Linked the proved two-vertex spectral transfer and SLR decoding theorem; distinguished full marked data, scalar injectivity, and minimality. Synchronized with Russian revision 18. |
 | 17 | 2026-11-01 | Added terminology for chains of cores and variations: seams and admissibility, configuration and passport transfer, construction spanning-tree polynomial; two direction metrics, independent resistances, quadric connectivity, $P,Z,V$ constraints, and distinctions between exact feasibility, numerical candidates, and optima. Aligned with Russian revision 17. |
 | 16 | 2026-10-30 | Replaced the internal series code in the revision history with its descriptive title. Definitions and terminology conventions are unchanged. Aligned with Russian revision 16. |

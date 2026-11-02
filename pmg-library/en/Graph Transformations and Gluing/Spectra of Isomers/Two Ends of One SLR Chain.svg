@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Two ends of one SLR chain</title><desc id="desc">One graph SLS, read from the other end as SSR. Terminal pairs 3,4 and 15,16 have different normalized spectral passports, although the first coordinate P(1)=221771751 is the same.</desc>
+<rect width="1200" height="680" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="40.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">One graph · two terminal boundaries</text>
+<polygon points="554.97,262.00 554.97,314.00 509.93,340.00 464.90,314.00 464.90,262.00 509.93,236.00" fill="#fff0d7" />
+<polygon points="554.97,314.00 554.97,262.00 600.00,236.00 645.03,262.00 645.03,314.00 600.00,340.00" fill="#ddf4e9" />
+<polygon points="645.03,262.00 600.00,236.00 600.00,184.00 645.03,158.00 690.07,184.00 690.07,236.00" fill="#e2edff" />
+<polygon points="690.07,184.00 645.03,158.00 645.03,106.00 690.07,80.00 735.10,106.00 735.10,158.00" fill="#fff0d7" />
+<line x1="554.97" y1="262.00" x2="554.97" y2="314.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="554.97" y1="262.00" x2="509.93" y2="236.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="554.97" y1="262.00" x2="600.00" y2="236.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="554.97" y1="314.00" x2="509.93" y2="340.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="554.97" y1="314.00" x2="600.00" y2="340.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="509.93" y1="340.00" x2="464.90" y2="314.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="464.90" y1="314.00" x2="464.90" y2="262.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="464.90" y1="262.00" x2="509.93" y2="236.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="600.00" y1="236.00" x2="645.03" y2="262.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="600.00" y1="236.00" x2="600.00" y2="184.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="645.03" y1="262.00" x2="645.03" y2="314.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="645.03" y1="262.00" x2="690.07" y2="236.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="645.03" y1="314.00" x2="600.00" y2="340.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="600.00" y1="184.00" x2="645.03" y2="158.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="645.03" y1="158.00" x2="690.07" y2="184.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="645.03" y1="158.00" x2="645.03" y2="106.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="690.07" y1="184.00" x2="690.07" y2="236.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="690.07" y1="184.00" x2="735.10" y2="158.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="645.03" y1="106.00" x2="690.07" y2="80.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="690.07" y1="80.00" x2="735.10" y2="106.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="735.10" y1="106.00" x2="735.10" y2="158.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="554.97" y1="262.00" x2="554.97" y2="314.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="600.00" y1="236.00" x2="645.03" y2="262.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="645.03" y1="158.00" x2="690.07" y2="184.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<circle cx="554.97" cy="262.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="554.97" cy="314.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="509.93" cy="340.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="464.90" cy="314.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="464.90" cy="262.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="509.93" cy="236.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="600.00" cy="236.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="645.03" cy="262.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="645.03" cy="314.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="600.00" cy="340.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="600.00" cy="184.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="645.03" cy="158.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="690.07" cy="184.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="690.07" cy="236.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="645.03" cy="106.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="690.07" cy="80.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="735.10" cy="106.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="735.10" cy="158.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="509.93" y="294.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">1</text>
+<text x="600.00" y="294.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">2</text>
+<text x="645.03" y="216.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">3</text>
+<text x="690.07" y="138.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">4</text>
+<line x1="464.90" y1="314.00" x2="464.90" y2="262.00" stroke="#bc294b" stroke-width="7" stroke-linecap="round" />
+<circle cx="464.90" cy="314.00" r="7" fill="white" stroke="#bc294b" stroke-width="3" />
+<text x="441.90" y="321.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="normal">3</text>
+<circle cx="464.90" cy="262.00" r="7" fill="white" stroke="#bc294b" stroke-width="3" />
+<text x="441.90" y="269.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="normal">4</text>
+<line x1="690.07" y1="80.00" x2="735.10" y2="106.00" stroke="#15815b" stroke-width="7" stroke-linecap="round" />
+<circle cx="690.07" cy="80.00" r="7" fill="white" stroke="#15815b" stroke-width="3" />
+<text x="714.07" y="87.00" font-size="22" fill="#15815b" text-anchor="middle" font-weight="normal">15</text>
+<circle cx="735.10" cy="106.00" r="7" fill="white" stroke="#15815b" stroke-width="3" />
+<text x="759.10" y="113.00" font-size="22" fill="#15815b" text-anchor="middle" font-weight="normal">16</text>
+<text x="600.00" y="388.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">Common value P(1) = 221 771 751</text>
+<rect x="20" y="423" width="560" height="177" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="300.00" y="464.00" font-size="23" fill="#bc294b" text-anchor="middle" font-weight="bold">SSR · left pair (3, 4)</text>
+<text x="300.00" y="511.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">−B = 98 976 277;  −C = 98 943 538</text>
+<text x="300.00" y="551.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">−D = 38 051 101;  E = 37 629 575</text>
+<rect x="620" y="423" width="560" height="177" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="900.00" y="464.00" font-size="23" fill="#15815b" text-anchor="middle" font-weight="bold">SLS · right pair (15, 16)</text>
+<text x="900.00" y="511.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">−B = 98 986 375;  −C = 98 986 738</text>
+<text x="900.00" y="551.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">−D = 38 074 862;  E = 37 645 206</text>
+<text x="600.00" y="645.00" font-size="22" fill="#52657a" text-anchor="middle" font-weight="normal">All coordinates are evaluated at ξ = −1; swapping B and C is insufficient</text>
+</g></svg>

@@ -1,0 +1,539 @@
+[
+  {
+    "source": "Буквы SLR и порядок концов шва.svg",
+    "target": "SLR Letters and Seam Endpoint Order.svg",
+    "labels": {
+      "Буквы SLR и порядок концов шва": "SLR letters and seam endpoint order",
+      "Все циклы обходятся по часовой стрелке. Новое ядро получает 0=b, 1=a. Выход 23 даёт левый поворот L, 34 — прямое продолжение S, 45 — правый поворот R.": "All cycles are traversed clockwise. The new core receives 0=b, 1=a. Output 23 gives a left turn L, 34 a straight continuation S, and 45 a right turn R.",
+      "L · выход (2, 3)": "L · output (2, 3)",
+      "поворот влево": "turn left",
+      "S · выход (3, 4)": "S · output (3, 4)",
+      "прямое продолжение": "continue straight",
+      "R · выход (4, 5)": "R · output (4, 5)",
+      "поворот вправо": "turn right"
+    }
+  },
+  {
+    "source": "Данные для различения SLR-цепочек.svg",
+    "target": "Data for Distinguishing SLR Chains.svg",
+    "labels": {
+      "Данные для различения SLR-цепочек": "Data for distinguishing SLR chains",
+      "Полный отмеченный граничный вектор декодируется для любой длины. Различимость по полиному и по одному значению подтверждена до 18 ядер; общие утверждения остаются гипотезами.": "The full marked boundary vector can be decoded at every length. Distinguishability by the polynomial and by a single value is checked up to 18 cores; the general statements remain conjectures.",
+      "Пять граничных чисел": "Five boundary numbers",
+      "Ориентированное слово": "Oriented word",
+      "с выбранной границей": "with a chosen boundary",
+      "Декодирование доказано": "Decoding is proved",
+      "для любой длины": "for every length",
+      "Полный полином": "Full polynomial",
+      "Класс графа": "Graph class",
+      "без граничных отметок": "without boundary markings",
+      "Проверено до 18 ядер": "Checked up to 18 cores",
+      "Общий случай: гипотеза 1": "General case: Conjecture 1",
+      "Одно значение": "One value",
+      "при известном N": "with known N",
+      "Общий случай: гипотеза 2": "General case: Conjecture 2",
+      "Отмеченное слово и неотмеченный класс графа - разные задачи": "A marked word and an unmarked graph class pose different problems",
+      "Доказательство для пяти чисел не доказывает инъективности одного числа": "A proof for five numbers does not prove injectivity of one number"
+    }
+  },
+  {
+    "source": "Два вероятностных прочтения отклика.svg",
+    "target": "Two Probabilistic Interpretations of the Response.svg",
+    "labels": {
+      "Два вероятностных прочтения отклика": "Two probabilistic interpretations of the response",
+      "Совместный закон корней: вероятности исходов 11,10,01,00 равны k,r-k,s-k,1-r-s+k. В блуждании по единичным рёбрам остановка имеет интенсивность 1; при степени 2 каждый из двух переходов и остановка имеет вероятность 1/3.": "Joint root law: outcomes 11,10,01,00 have probabilities k,r-k,s-k,1-r-s+k. For a walk along unit edges, the stopping rate is 1; at degree 2, each of the two moves and stopping has probability 1/3.",
+      "Случайный корневой лес": "A random rooted forest",
+      "Два признака: является ли контакт корнем?": "Two indicators: is the contact a root?",
+      "Заполненный кружок: выбранный корень": "Filled circle: a chosen root",
+      "Блуждание с остановкой": "A stopped walk",
+      "Пример: вершина степени 2": "Example: a degree-2 vertex",
+      "Остановиться здесь": "Stop here",
+      "Kᵢⱼ = вероятность остановки в j": "Kᵢⱼ = probability of stopping at j",
+      "при старте из i, где i, j ∈ {x, y}": "when starting at i, with i, j ∈ {x, y}"
+    }
+  },
+  {
+    "source": "Два конца одной SLR-цепи.svg",
+    "target": "Two Ends of One SLR Chain.svg",
+    "labels": {
+      "Два конца одной SLR-цепи": "Two ends of one SLR chain",
+      "Один граф SLS, прочитанный с другого конца как SSR. Конечные пары 3,4 и 15,16 имеют разные нормированные спектральные паспорта, хотя первая координата P(1)=221771751 одинакова.": "One graph SLS, read from the other end as SSR. Terminal pairs 3,4 and 15,16 have different normalized spectral passports, although the first coordinate P(1)=221771751 is the same.",
+      "Один граф · два выбора конечной границы": "One graph · two terminal boundaries",
+      "Общее значение P(1) = 221 771 751": "Common value P(1) = 221 771 751",
+      "SSR · левая пара (3, 4)": "SSR · left pair (3, 4)",
+      "SLS · правая пара (15, 16)": "SLS · right pair (15, 16)",
+      "Все координаты взяты при ξ = −1; перестановки B и C недостаточно": "All coordinates are evaluated at ξ = −1; swapping B and C is insufficient"
+    }
+  },
+  {
+    "source": "Два опыта с заземлённой цепочкой.svg",
+    "target": "Two Experiments with a Grounded Chain.svg",
+    "labels": {
+      "Два опыта с заземлённой цепочкой": "Two experiments with a grounded chain",
+      "В каждой вершине, включая x и y, есть единичная проводимость к общей земле. Первый опыт с токами (1,0) даёт напряжения (r,h); второй с токами (0,1) даёт (h,s).": "Every vertex, including x and y, has unit conductance to a common ground. The first experiment, with currents (1,0), gives voltages (r,h); the second, with currents (0,1), gives (h,s).",
+      "Вспомогательная сеть G*: по резистору к общей точке": "Auxiliary network G*: one resistor to a common node per vertex",
+      "Один C₆ для иллюстрации": "One C₆ for illustration",
+      "Все рёбра графа также имеют вес 1": "All graph edges also have weight 1",
+      "Опыт 1: ток подан в x": "Experiment 1: current at x",
+      "Опыт 2: ток подан в y": "Experiment 2: current at y",
+      "Нулевой ток не означает нулевое напряжение": "Zero current does not mean zero voltage",
+      "Два опыта · четыре показания: r, h, h, s · общая точка * является добавленной": "Two experiments · four readings: r, h, h, s · the common node * is added"
+    }
+  },
+  {
+    "source": "Два соглашения о периоде.svg",
+    "target": "Two Period Conventions.svg",
+    "labels": {
+      "Два соглашения о периоде": "Two period conventions",
+      "Для периода LR и двух повторений внутреннее слово LRLR даёт шесть ядер. Четыре бегунка LRLR от стартового ребра дают четыре ядра с внутренним словом RL.": "For period LR repeated twice, the internal word LRLR gives six cores. Four runners LRLR from the starting edge give four cores with internal word RL.",
+      "Один период LR · два повторения · разные концы": "One period LR · two repetitions · different ends",
+      "Периодическое внутреннее слово": "Periodic internal word",
+      "Выходы бегунков": "Runner outputs",
+      "Синие рёбра - швы; цифры - номера ядер": "Blue edges: seams; numbers: core indices",
+      "Бегунки от стартового ребра": "Runners from the starting edge"
+    }
+  },
+  {
+    "source": "Два сочетания в разности швов.svg",
+    "target": "Two Combinations in a Seam Difference.svg",
+    "labels": {
+      "Два сочетания в разности швов": "Two combinations in a seam difference",
+      "Префикс p даёт пятикоординатный паспорт. Матрица Q выделяет A−ξB+ξE и C−B. Правое продолжение даёт два коэффициента eta. Их скалярное произведение равно разности характеристических полиномов.": "Prefix p gives a five-coordinate passport. Matrix Q selects A−ξB+ξE and C−B. The right continuation gives two eta coefficients. Their scalar product is the difference of characteristic polynomials.",
+      "Окружение фиксировано · меняется одна буква S ↔ L": "Fixed context · one letter changes S ↔ L",
+      "Левый фрагмент p": "Left fragment p",
+      "Два сочетания": "Two combinations",
+      "Правый фрагмент v": "Right fragment v",
+      "Два сочетания достаточны для этой разности; общий паспорт сохраняет пять координат": "Two combinations suffice for this difference; the full passport retains five coordinates"
+    }
+  },
+  {
+    "source": "Две смешанные разности SLR.svg",
+    "target": "Two Mixed SLR Differences.svg",
+    "labels": {
+      "Две смешанные разности SLR": "Two mixed SLR differences",
+      "Обе суммы начинаются с chi SSS минус chi SSL минус chi SLS. При обычных S/L выборах четвёртый член SLL; с дополнительной перестановкой границы SLR. При xi=-1 суммы равны -102487 и 29282.": "Both sums start with chi SSS minus chi SSL minus chi SLS. With ordinary S/L choices the fourth term is SLL; with an additional boundary permutation it is SLR. At xi=-1 the sums are -102487 and 29282.",
+      "Три общих члена · два разных завершения суммы": "Three shared terms · two different final terms",
+      "Обычные выборы S/L": "Ordinary S/L choices",
+      "Сумма при ξ = −1: -102 487": "Sum at ξ = −1: -102 487",
+      "С перестановкой границы": "With boundary permutation",
+      "Сумма при ξ = −1: 29 282": "Sum at ξ = −1: 29 282"
+    }
+  },
+  {
+    "source": "Динамический отклик исходной цепочки.svg",
+    "target": "Dynamic Response of the Original Chain.svg",
+    "labels": {
+      "Динамический отклик исходной цепочки": "Dynamic response of the original chain",
+      "Одинаковые единичные теплоёмкости в вершинах и теплопроводности рёбер. Нет новых рёбер и внешнего теплообмена. На примере C6 показаны точные функции собственного и перекрёстного откликов; взвешенные интегралы равны 9/20 и 7/40.": "Equal unit vertex heat capacities and edge thermal conductances. No new edges or external heat exchange. Exact self-response and cross-response functions are shown for C6; their weighted integrals are 9/20 and 7/40.",
+      "Исходный граф · распространение тепла без новых рёбер": "Original graph · heat diffusion without added edges",
+      "Один C₆: пример": "One C₆: an example",
+      "У x и y по два соседа": "x and y each have two neighbors",
+      "Импульс в x: Fₓₓ, Fᵧₓ": "Impulse at x: Fₓₓ, Fᵧₓ",
+      "Импульс в y: Fₓᵧ, Fᵧᵧ": "Impulse at y: Fₓᵧ, Fᵧᵧ",
+      "Записываем обе температуры": "Record both temperatures",
+      "Время t": "Time t",
+      "Температура": "Temperature",
+      "Собственный Fₓₓ = Fᵧᵧ": "Self-response Fₓₓ = Fᵧᵧ",
+      "Перекрёстный Fₓᵧ = Fᵧₓ": "Cross-response Fₓᵧ = Fᵧₓ",
+      "Обработка записи: умножить на e⁻ᵗ и проинтегрировать": "Process the record: multiply by e⁻ᵗ and integrate",
+      "Для C₆: r = s = 9/20": "For C₆: r = s = 9/20",
+      "В общем случае четыре интеграла: r, h, h, s": "In general, four integrals: r, h, h, s",
+      "Вес e⁻ᵗ применяется к данным; физической утечки во внешнюю среду нет": "The weight e⁻ᵗ is applied to data; no heat physically leaks to the environment"
+    }
+  },
+  {
+    "source": "Изгиб и четвёртый корневой коэффициент.svg",
+    "target": "A Bend and the Fourth Rooted Coefficient.svg",
+    "labels": {
+      "Изгиб и четвёртый корневой коэффициент": "A bend and the fourth rooted coefficient",
+      "У промежуточного ядра концы двух швов имеют степень три. При противоположных швах S между ними нет дополнительного ребра. При L или R есть ровно одно такое ребро; число m33 равно N−1+b.": "In an intermediate core, the endpoints of both seams have degree three. Opposite seams S have no extra edge between them. For L or R, there is exactly one such edge; m33 equals N−1+b.",
+      "Добавочное ребро: 1": "Extra edges: 1",
+      "Добавочное ребро: 0": "Extra edges: 0",
+      "Красные рёбра — швы; синее — добавочное; числа у вершин — степени в цепочке": "Red edges: seams; blue: extra edge; vertex labels: degrees in the chain"
+    }
+  },
+  {
+    "source": "Исключение крайних ядер.svg",
+    "target": "Eliminating the End Cores.svg",
+    "labels": {
+      "Исключение крайних ядер": "Eliminating the end cores",
+      "Четыре внутренние вершины крайнего шестиугольника исключаются. На концах шва остаётся диагональ d и внедиагональный элемент w. Два положения второго шва задают разные сокращённые матрицы.": "The four internal vertices of an end hexagon are eliminated. At the seam endpoints, the remaining diagonal is d and the off-diagonal entry is w. Two positions of the second seam give different reduced matrices.",
+      "Один крайний блок: дополнение Шура": "One end block: Schur complement",
+      "шов: элемент 1": "seam: entry 1",
+      "T₄ · определитель k": "T₄ · determinant k",
+      "исключить": "eliminate",
+      "После двух исключений: χ = k² det H": "After two eliminations: χ = k² det H",
+      "А · HА": "A · H_A",
+      "Б · HБ": "B · H_B"
+    }
+  },
+  {
+    "source": "Корневые веса четырёхрёберных лесов.svg",
+    "target": "Root Weights of Four-Edge Forests.svg",
+    "labels": {
+      "Корневые веса четырёхрёберных лесов": "Root weights of four-edge forests",
+      "Пять типов размеров компонент: 5; 4,2; 3,3; 3,2,2; 2,2,2,2. Их корневые веса равны 5,8,9,12,16. Зелёным отмечен один пример выбора корней.": "Five component-size types: 5; 4,2; 3,3; 3,2,2; 2,2,2,2. Their root weights are 5,8,9,12,16. Green marks one example of root choices.",
+      "Четыре ребра · пять типов размеров компонент": "Four edges · five component-size types",
+      "5 выборов": "5 choices",
+      "А: 56 лесов": "A: 56 forests",
+      "Б: 60 лесов": "B: 60 forests",
+      "А: 314 лесов": "A: 314 forests",
+      "Б: 317 лесов": "B: 317 forests",
+      "А: 133 лесов": "A: 133 forests",
+      "Б: 128 лесов": "B: 128 forests",
+      "А: 888 лесов": "A: 888 forests",
+      "Б: 880 лесов": "B: 880 forests",
+      "А: 429 лесов": "A: 429 forests",
+      "Б: 435 лесов": "B: 435 forests",
+      "Один выбор корней; изолированные вершины не показаны": "One choice of roots; isolated vertices omitted"
+    }
+  },
+  {
+    "source": "Обратное чтение SLR.svg",
+    "target": "Reading SLR Backwards.svg",
+    "labels": {
+      "Обратное чтение SLR": "Reading SLR backwards",
+      "Полный код SLR имеет четыре ядра и слово операций LRS. Декодирование снимает S, затем R, затем L и достигает начального состояния. Последнее S относится к конечной отметке, начальное S в полном коде является маркером.": "Full code SLR has four cores and operation word LRS. Decoding removes S, then R, then L, reaching the initial state. The final S specifies the terminal marking; the initial S in the full code is a marker.",
+      "Код цепочки SLR · слово операций LRS": "Chain code SLR · operation word LRS",
+      "Зелёное ребро: конечная упорядоченная граница": "Green edge: ordered terminal boundary",
+      "z₀ · остановка": "z₀ · stop",
+      "Не снимать ещё одну букву S": "Do not remove another S",
+      "Восстановлено LRS → удалить конечное S → LR → добавить маркер S → SLR": "Recovered LRS → remove final S → LR → add marker S → SLR"
+    }
+  },
+  {
+    "source": "Один шов и две спектральные разности.svg",
+    "target": "One Seam and Two Spectral Differences.svg",
+    "labels": {
+      "Один шов и две спектральные разности": "One seam and two spectral differences",
+      "SS и SL различаются одним прямым продолжением или изгибом; SLL и SLR различаются направлением второго изгиба. Изменяемый шов красный; остальные синие.": "SS and SL differ by one straight continuation or bend; SLL and SLR differ in the direction of the second bend. The changed seam is red; the others are blue."
+    }
+  },
+  {
+    "source": "Одинаковое конечное сопротивление.svg",
+    "target": "Equal Terminal Resistance.svg",
+    "labels": {
+      "Одинаковое конечное сопротивление": "Equal terminal resistance",
+      "Исходные цепочки SS и SL из трёх ядер имеют одинаковое сопротивление на каноническом конечном ребре: 169/204. Префикс заменяется его сопротивлением R предыдущего шага; две ветви имеют сопротивления 1 и 4+R.": "The original three-core chains SS and SL have the same resistance at the canonical terminal edge: 169/204. Replace the prefix by its preceding resistance R; the two branches have resistances 1 and 4+R.",
+      "Обычный стационарный опыт на выбранном конечном ребре": "An ordinary steady experiment at the chosen terminal edge",
+      "В обоих графах доступны только x и y; дополнительных рёбер нет": "Only x and y are accessible in both graphs; no edges are added",
+      "Выбранное ребро: 1": "Chosen edge: 1",
+      "Оставшийся путь: 4 + Rₙ₋₁": "Remaining path: 4 + Rₙ₋₁",
+      "Параллельные ветви дают Rₙ = (4 + Rₙ₋₁) / (5 + Rₙ₋₁)": "Parallel branches give Rₙ = (4 + Rₙ₋₁) / (5 + Rₙ₋₁)"
+    }
+  },
+  {
+    "source": "Отражение и обращение SLR-кода.svg",
+    "target": "Reflection and Reversal of an SLR Code.svg",
+    "labels": {
+      "Отражение и обращение SLR-кода": "Reflection and reversal of an SLR code",
+      "Четыре записи одного абстрактного графа: SLS, SRS, SSR, SSL. Горизонтальная операция — отражение, вертикальная — обращение цепи. Цифры указывают выбранный порядок ядер.": "Four descriptions of one abstract graph: SLS, SRS, SSR, SSL. The horizontal operation is reflection; the vertical operation reverses the chain. Numbers show the chosen core order.",
+      "чтение: 1 → 2 → 3 → 4": "reading: 1 → 2 → 3 → 4"
+    }
+  },
+  {
+    "source": "Перенос при нулевом внутреннем миноре.svg",
+    "target": "Transfer with a Zero Interior Minor.svg",
+    "labels": {
+      "Перенос при нулевом внутреннем миноре": "Transfer with a zero interior minor",
+      "Путь a-u-b соединяется с путём a-c-d-b в цикл C5. Вход a,b не является ребром. При xi=2 старый внутренний минор нулевой, но оба полиномиальных паспорта определены.": "Path a-u-b joins path a-c-d-b to form C5. Input a,b is not an edge. At xi=2, the old interior minor is zero, but both polynomial passports are defined.",
+      "Два пути образуют C₅": "Two paths form C₅",
+      "Вход (a, b) · выход (c, d)": "Input (a, b) · output (c, d)",
+      "Старое: (−2, −1, −1, 1, 0)": "Old: (−2, −1, −1, 1, 0)",
+      "Новое: (2, 1, 1, 1, 0)": "New: (2, 1, 1, 1, 0)",
+      "Полиномиальный перенос без деления на E": "Polynomial transfer without division by E",
+      "Прямые миноры дают тот же результат": "Direct minors give the same result"
+    }
+  },
+  {
+    "source": "Периодический SLR-бегунок.svg",
+    "target": "A Periodic SLR Runner.svg",
+    "labels": {
+      "Периодический SLR-бегунок": "A periodic SLR runner",
+      "Две последовательно присоединённые копии P6 объединяются в один бегунок с двумя входами и двумя выходами. Перенос за период LR равен U_R U_L.": "Two successively attached copies of P6 are combined into one runner with two inputs and two outputs. Transfer over period LR is U_R U_L.",
+      "Два пути как одна деталь": "Two paths as one component",
+      "10 вершин, 10 рёбер; пунктир не входит в K.": "10 vertices, 10 edges; the dashed edge is not in K.",
+      "Порядок матриц за период LR": "Matrix order over period LR",
+      "Первым действует правый множитель.": "The rightmost factor acts first.",
+      "блок LR": "LR block",
+      "Один составной бегунок добавляет два ядра. После m блоков: s(2m) = (U_R U_L)^m s0.": "One composite runner adds two cores. After m blocks: s(2m) = (U_R U_L)^m s0."
+    }
+  },
+  {
+    "source": "Прямая цепочка зигзаг и спираль.svg",
+    "target": "A Straight Chain Zigzag and Spiral.svg",
+    "labels": {
+      "Прямая цепочка, зигзаг и спираль": "A straight chain, a zigzag, and a spiral",
+      "Верхние схемы показывают прямой и чередующийся код. Нижняя показывает пространственное расположение десяти циклов с постоянной буквой L; пересечения проекции не являются вершинами.": "The upper diagrams show straight and alternating codes. The lower one shows a spatial arrangement of ten cycles with constant letter L; crossings in projection are not vertices.",
+      "Прямое продолжение: SSS": "Straight continuation: SSS",
+      "Чередование: SLRLR": "Alternation: SLRLR",
+      "Постоянный L: пространственная цепочка из 10 ядер": "Constant L: a spatial chain of 10 cores",
+      "В каждом ядре одно и то же положение швов; общие рёбра выделены синим.": "Every core has the same seam positions; shared edges are blue.",
+      "Плоскость не фиксирована. Координаты нужны рисунку, а не спектральному переносу.": "No plane is fixed. Coordinates serve the drawing, not spectral transfer.",
+      "Поворот SLR задаёт локальное соединение; пространственная форма выбирается отдельно.": "The SLR turn specifies local joining; the spatial shape is chosen separately."
+    }
+  },
+  {
+    "source": "Пять корневых координат.svg",
+    "target": "Five Rooted Coordinates.svg",
+    "labels": {
+      "Пять корневых координат": "Five rooted coordinates",
+      "По одному корневому лесу на C6 для каждого из пяти условий. Зелёные вершины являются корнями; красное кольцо отмечает x, синее y. Пунктир показывает невыбранные рёбра цикла. Классы лесов пересекаются.": "One rooted forest on C6 for each of five conditions. Green vertices are roots; a red ring marks x and a blue ring marks y. Dashed lines show unselected cycle edges. The forest classes overlap.",
+      "Корни леса и отметки границы": "Forest roots and boundary markings",
+      "a · Все корневые леса": "a · All rooted forests",
+      "Один корень": "One root",
+      "в каждой компоненте": "in each component",
+      "b · x является корнем": "b · x is a root",
+      "Корень компоненты x": "The component of x",
+      "обязательно равен x": "must be rooted at x",
+      "c · y является корнем": "c · y is a root",
+      "Корень компоненты y": "The component of y",
+      "обязательно равен y": "must be rooted at y",
+      "d · x и y в одном дереве": "d · x and y in one tree",
+      "Общая компонента": "Their shared component",
+      "укоренена в y": "is rooted at y",
+      "e · Два предписанных корня": "e · Two prescribed roots",
+      "x и y являются корнями": "x and y are roots",
+      "разных компонент": "of distinct components",
+      "корень": "root",
+      "отметка x": "marking x",
+      "отметка y": "marking y",
+      "классы пересекаются": "classes overlap"
+    }
+  },
+  {
+    "source": "Результаты восстановления с погрешностью.svg",
+    "target": "Reconstruction with Inexact Data.svg",
+    "labels": {
+      "Результаты восстановления с погрешностью": "Reconstruction with inexact data",
+      "При известном ограничении N<=7 полный каталог содержит 365 отмеченных состояний. Округление отклика SLR до 14 знаков даёт единственного кандидата. Среднее откликов SSSSSS и SLSSSS допускает оба кода. Неопределённый сектор интервального алгоритма не доказывает неоднозначность.": "With known bound N<=7, the full catalog contains 365 marked states. Rounding the SLR response to 14 decimal places gives a unique candidate. The mean responses of SSSSSS and SLSSSS admit both codes. An unresolved sector in the interval algorithm does not prove ambiguity.",
+      "Что означает результат проверки неточных данных": "What a check of inexact data establishes",
+      "Один кандидат": "One candidate",
+      "Полный поиск при N ≤ 7": "Exhaustive search for N ≤ 7",
+      "Отклик SLR округлён": "SLR response rounded",
+      "до 14 знаков после запятой": "to 14 decimal places",
+      "Единственность в каталоге": "Unique in the catalog",
+      "Два кандидата": "Two candidates",
+      "Середина двух откликов": "Midpoint of two responses",
+      "Радиус: половина расстояния": "Radius: half the distance",
+      "SSSSSS  или  SLSSSS": "SSSSSS  or  SLSSSS",
+      "Доказана неоднозначность": "Ambiguity proved",
+      "Нет заключения": "No conclusion",
+      "Интервальное снятие шагов": "Interval inverse steps",
+      "Интервал пересёк порог": "An interval crossed a threshold",
+      "или знак делителя не установлен": "or the divisor sign is unknown",
+      "Проверка остановилась": "The check stopped",
+      "Нужна более точная проверка": "A sharper check is needed",
+      "Неоднозначность не доказана": "Ambiguity is not proved",
+      "Каждый найденный кандидат проверяется по исходным измерительным интервалам": "Every candidate is checked against the original measurement intervals"
+    }
+  },
+  {
+    "source": "Рост корневых лесов периодических цепочек.svg",
+    "target": "Rooted Forest Growth in Periodic Chains.svg",
+    "labels": {
+      "Рост корневых лесов периодических цепочек": "Rooted forest growth in periodic chains",
+      "Точный предел P(1) в степени 1/N: LR 88,047425; LLS 88,200892; SL 88,305091. Показаны округлённые значения.": "The exact limit of P(1) to the power 1/N: LR 88.047425; LLS 88.200892; SL 88.305091. Displayed values are rounded."
+    }
+  },
+  {
+    "source": "Связи результатов серии Спектры изомеров.svg",
+    "target": "Connections between Results in Spectra of Isomers.svg",
+    "labels": {
+      "Связи результатов серии Спектры изомеров": "Connections between results in Spectra of Isomers",
+      "Конфигурация даёт матроидные и граничные данные. Граничный паспорт позволяет вычислять спектр, переносить границу и декодировать отмеченную цепочку. Полный целый вектор при ξ=-1 эквивалентен трём точным рациональным элементам сдвинутого отклика. Обратные задачи по одному полиному и одному числу остаются гипотезами для всех длин.": "A configuration gives matroid and boundary data. The boundary passport supports spectral calculation, boundary transfer, and decoding of the marked chain. The full integer vector at ξ=-1 is equivalent to three exact rational entries of the shifted response. Inverse problems from one polynomial or one number remain conjectural for arbitrary length.",
+      "SLR-цепочка": "SLR chain",
+      "Ядра, швы и упорядоченная конечная пара": "Cores, seams, and an ordered terminal pair",
+      "Матроидные данные": "Matroid data",
+      "Обычные леса, остовное": "Ordinary forests, spanning-tree",
+      "число и резистивный радиус": "count, and resistance radius",
+      "Общие при фиксированном N": "Shared for fixed N",
+      "Граничный паспорт": "Boundary passport",
+      "Пять полиномов по ξ": "Five polynomials in ξ",
+      "Перенос на новую пару": "Transfer to a new pair",
+      "сохраняет замкнутость": "preserves closure",
+      "Периодический блок": "Periodic block",
+      "Повторение бегунка": "Repeating a runner",
+      "Степень матрицы периода": "Power of the period matrix",
+      "Скалярные рекурсии": "Scalar recurrences",
+      "период": "period",
+      "Спектр графа": "Graph spectrum",
+      "Характеристический полином": "Characteristic polynomial",
+      "↔ корневой полином": "↔ rooted polynomial",
+      "Повороты видны в моментах": "Turns appear in the moments",
+      "Полное состояние": "Full state",
+      "Пять точных целых чисел": "Five exact integers",
+      "Сохраняются отметка конца": "The chosen end and order",
+      "и порядок двух контактов": "of both contacts are retained",
+      "Сдвинутый отклик": "Shifted response",
+      "Три точных рациональных": "Three exact rational entries",
+      "элемента граничного блока": "of the boundary block",
+      "матрицы (I + L)⁻¹": "of the matrix (I + L)⁻¹",
+      "Скалярная обратная задача": "Scalar inverse problem",
+      "По χ или P(1) при заданном N": "From χ or P(1) with given N",
+      "Для всех длин: гипотезы": "All lengths: conjectures",
+      "Каталог: N ≤ 18": "Catalog: N ≤ 18",
+      "Точное восстановление отмеченной цепочки": "Exact recovery of the marked chain",
+      "Ориентированное слово и число ядер восстанавливаются": "The oriented word and number of cores are recovered",
+      "Доказано для любой длины в принятом классе": "Proved for every length in the chosen class",
+      "При ошибках данных требуется анализ устойчивости": "Inexact data require stability analysis",
+      "Двусторонняя связь действует на достижимых состояниях SLR-цепочек": "The two-way connection holds on reachable SLR-chain states",
+      "Спектр матрицы периода и спектр конечного графа - разные данные": "The period-matrix spectrum and finite-graph spectrum are different data"
+    }
+  },
+  {
+    "source": "Смена активной спектральной границы.svg",
+    "target": "Changing the Active Spectral Boundary.svg",
+    "labels": {
+      "Смена активной спектральной границы": "Changing the active spectral boundary",
+      "Старый фрагмент G соединяется с ядром K только через a,b. Его внутренность заменяется блоком S и множителем E. Пять новых миноров вычисляются на выходе c,d.": "The old fragment G meets core K only at a,b. Its interior is replaced by block S and factor E. Five new minors are computed at output c,d.",
+      "1. Присоединить ядро": "1. Attach a core",
+      "Общие вершины: только a, b": "Shared vertices: only a, b",
+      "Активная пара: (a, b)": "Active pair: (a, b)",
+      "2. Исключить внутренность G": "2. Eliminate the interior of G",
+      "S на входе": "S at the input",
+      "K связывает пары": "K connects the pairs",
+      "Сохранить множитель E": "Retain the factor E",
+      "3. Вычислить новый паспорт": "3. Compute the new passport",
+      "Пять полиномов": "Five polynomials",
+      "Активная пара: (c, d)": "Active pair: (c, d)"
+    }
+  },
+  {
+    "source": "Совпадающие начала корневых полиномов.svg",
+    "target": "Coinciding Leading Rooted Coefficients.svg",
+    "labels": {
+      "Совпадающие начала корневых полиномов": "Coinciding leading rooted coefficients",
+      "Пара SSSL и SSLS различается в p8; пара SLSLL и SLLSR различается в p10. Предшествующие коэффициенты каждой пары совпадают.": "The pair SSSL and SSLS differs at p8; the pair SLSLL and SLLSR differs at p10. Each pair shares all preceding coefficients.",
+      "p1, …, p7 совпадают; первая разность в p8": "p1, …, p7 coincide; first difference at p8",
+      "p1, …, p9 совпадают; первая разность в p10": "p1, …, p9 coincide; first difference at p10"
+    }
+  },
+  {
+    "source": "Соответствие контактов и SLR-поворот.svg",
+    "target": "Contact Matching and the SLR Turn.svg",
+    "labels": {
+      "Соответствие контактов и SLR-поворот": "Contact matching and the SLR turn",
+      "Фиксированный боковой выход при разных соответствиях вилки и розетки даёт SLL и SLR. Остовное число одинаково, корневые определители различны.": "A fixed side output with different plug-to-socket matchings gives SLL and SLR. Spanning-tree counts coincide; rooted determinants differ.",
+      "Постоянный поворот: SLL": "Constant turn: SLL",
+      "Чередование, с точностью до отражения: SLR": "Alternation, up to reflection: SLR",
+      "Одинаковый путь и боковой выход; разные правила отождествления контактов.": "The same path and side output; different contact identifications.",
+      "У обоих графов 4 ядра, 18 вершин, 21 ребро и τ = 1189.": "Both graphs have 4 cores, 18 vertices, 21 edges, and τ = 1189."
+    }
+  },
+  {
+    "source": "Спектральная память двух шестиугольников.svg",
+    "target": "Spectral Memory of Two Hexagons.svg",
+    "labels": {
+      "Спектральная память двух шестиугольников": "Spectral memory of two hexagons",
+      "Два одинаковых графа из двух шестиугольников имеют P(1)=28435, но разные отмеченные выходы. Добавление третьего шестиугольника даёт изомер Б со значением 2504096 или А со значением 2518737.": "Two identical two-hexagon graphs have P(1)=28435 but different marked outputs. Adding a third hexagon gives isomer B with value 2504096 or A with value 2518737.",
+      "Выход (2, 3)": "Output (2, 3)",
+      "Остальные координаты z:": "Other coordinates of z:",
+      "по выходу": "at output",
+      "Три ядра · изомер Б": "Three cores · isomer B",
+      "Та же завершающая строка": "The same terminal row",
+      "Выход (3, 4)": "Output (3, 4)",
+      "Три ядра · изомер А": "Three cores · isomer A"
+    }
+  },
+  {
+    "source": "Три SLR-бегунка.svg",
+    "target": "Three SLR Runners.svg",
+    "labels": {
+      "Три SLR-бегунка": "Three SLR runners",
+      "Один путь из пяти рёбер, вилка (1,0), три различных упорядоченных выхода. Входное ребро пунктиром уже принадлежит старому графу.": "One path of five edges, plug (1,0), and three distinct ordered outputs. The dashed input edge already belongs to the old graph.",
+      "L: розетка (2, 3)": "L: socket (2, 3)",
+      "Вилка (1, 0):  1 → a,  0 → b": "Plug (1, 0):  1 → a,  0 → b",
+      "S: розетка (3, 4)": "S: socket (3, 4)",
+      "R: розетка (4, 5)": "R: socket (4, 5)",
+      "Пять рёбер добавляются. Старое ребро ab замыкает новый C6.": "Five edges are added. The old edge ab closes the new C6.",
+      "Четыре новые вершины на каждом шаге; порядок контактов входит в правило.": "Four new vertices at each step; contact order is part of the rule."
+    }
+  },
+  {
+    "source": "Три выходных шва шестиугольника.svg",
+    "target": "Three Output Seams of a Hexagon.svg",
+    "labels": {
+      "Три выходных шва шестиугольника": "Three output seams of a hexagon",
+      "Красный вход упорядочен от 0 к 1. Синие выходы упорядочены от 2 к 3, от 3 к 4 и от 4 к 5. Стрелки обозначают порядок пары, а не ориентацию графа.": "The red input is ordered from 0 to 1. The blue outputs are ordered from 2 to 3, 3 to 4, and 4 to 5. Arrows indicate pair order, not graph orientation.",
+      "Выход (2, 3)": "Output (2, 3)",
+      "Выход (3, 4)": "Output (3, 4)",
+      "Выход (4, 5)": "Output (4, 5)"
+    }
+  },
+  {
+    "source": "Три сектора декодирования.svg",
+    "target": "Three Decoding Sectors.svg",
+    "labels": {
+      "Три сектора декодирования": "Three decoding sectors",
+      "Проекция инвариантной области на b/a,c/a. Пороги 4/9 разделяют L: минус плюс, S: плюс плюс, R: плюс минус. Нижний левый сектор невозможен для потомков. Начальное состояние лежит на верхнем правом углу и проверяется отдельно.": "Projection of the invariant region onto b/a,c/a. Thresholds 4/9 separate L: minus plus, S: plus plus, R: plus minus. The lower-left sector is impossible for descendants. The initial state is at the upper-right corner and is checked separately.",
+      "Последний переход определяется двумя знаками": "Two signs determine the last transition",
+      "нет непустых потомков": "no nonempty descendants",
+      "z₀: сначала проверка остановки": "z₀: check stopping first",
+      "L: снять Nₗ": "L: remove Nₗ",
+      "S: снять Nₛ": "S: remove Nₛ",
+      "R: снять Nᵣ": "R: remove Nᵣ",
+      "После выбора применить обратную матрицу": "After selection, apply the inverse matrix",
+      "Точки: слова операций длины 1–3": "Points: operation words of lengths 1–3",
+      "Цветные области показывают знаки,": "Colors show sign regions,",
+      "а не все достижимые состояния": "not all reachable states",
+      "Пороги точные; размещение точек на рисунке приближённое": "Thresholds are exact; plotted point positions are approximate"
+    }
+  },
+  {
+    "source": "Три фазы периода LLS.svg",
+    "target": "Three Phases of the LLS Period.svg",
+    "labels": {
+      "Три фазы периода LLS": "Three phases of the LLS period",
+      "Внутренние слова LLS, LSL, SLL при одном повторении задают пять ядер. LLS и SLL изоморфны; LSL имеет другой спектр. Матрицы всех трёх периодов подобны.": "The internal words LLS, LSL, SLL with one repetition give five cores. LLS and SLL are isomorphic; LSL has a different spectrum. All three period matrices are similar.",
+      "Один период · три начала · два класса графов": "One period · three starts · two graph classes",
+      "LLS и SLL: отражение и обращение сохраняют спектр": "LLS and SLL: reflection followed by reversal preserves the spectrum",
+      "LLS и LSL: Δp6 = −1 при любом числе повторений m ≥ 1": "LLS and LSL: Δp6 = −1 for every number of repetitions m ≥ 1"
+    }
+  },
+  {
+    "source": "Удалённый изгиб и точность отклика.svg",
+    "target": "A Distant Bend and Response Accuracy.svg",
+    "labels": {
+      "Удалённый изгиб и точность отклика": "A distant bend and response accuracy",
+      "Две цепочки из семи ядер: SSSSSS и SLSSSS. Измерения на правом конце. Логарифмический график точных расстояний отклика для N от 3 до 14 и доказанной верхней границы.": "Two chains of seven cores: SSSSSS and SLSSSS. Measurements are at the right end. A logarithmic plot shows exact response distances for N from 3 to 14 and the proved upper bound.",
+      "Один удалённый изгиб · измерения на правом конце": "One distant bend · measurements at the right end",
+      "Общий прямой конец всё сильнее скрывает левую часть": "A common straight end increasingly hides the left part",
+      "Число шестиугольников N": "Number of hexagons N",
+      "Максимум |ΔKᵢⱼ|": "Maximum |ΔKᵢⱼ|",
+      "Точное расстояние откликов": "Exact response distance",
+      "Доказанная верхняя граница": "Proved upper bound",
+      "Точки вычислены рационально; десятичная шкала используется только на рисунке": "Points are computed rationally; the decimal scale is used only in the figure"
+    }
+  },
+  {
+    "source": "Четыре класса четырёх шестиугольников.svg",
+    "target": "Four Classes of Four Hexagons.svg",
+    "labels": {
+      "Четыре класса четырёх шестиугольников": "Four classes of four hexagons",
+      "Канонические представители SSS, SSL, SLL, SLR при порядке S<L<R. Это четыре разных класса графов, а не четыре записи одного графа.": "Canonical representatives SSS, SSL, SLL, SLR under the order S<L<R. These are four different graph classes, not four descriptions of one graph."
+    }
+  },
+  {
+    "source": "Швы и вершины степени три.svg",
+    "target": "Seams and Degree-Three Vertices.svg",
+    "labels": {
+      "Два изомера трёх шестиугольников": "Two isomers of three hexagons",
+      "В А швы среднего ядра 01 и 34, в Б — 01 и 23. На вершинах степени три получаются два отдельных ребра и путь.": "In A, the middle core has seams 01 and 34; in B, 01 and 23. The degree-three vertices induce two separate edges and a path, respectively.",
+      "А · противоположные швы": "A · opposite seams",
+      "Подграф на вершинах степени 3": "Subgraph induced by degree-3 vertices",
+      "2 ребра": "2 edges",
+      "Б · смещённый шов": "B · shifted seam",
+      "3 ребра": "3 edges"
+    }
+  },
+  {
+    "source": "Шестой момент и соседние повороты.svg",
+    "target": "The Sixth Moment and Adjacent Turns.svg",
+    "labels": {
+      "Шестой момент и соседние повороты": "The sixth moment and adjacent turns",
+      "SLL и SLR имеют по четыре ядра и два изгиба. У SLL одна пара LL, у SLR одинаковых соседних поворотов нет. Разность шестых моментов равна 6.": "SLL and SLR each have four cores and two bends. SLL has one LL pair; SLR has no adjacent identical turns. The sixth-moment difference is 6.",
+      "Одинаковое число изгибов; разное соседство поворотов": "The same number of bends; different turn adjacencies"
+    }
+  }
+]

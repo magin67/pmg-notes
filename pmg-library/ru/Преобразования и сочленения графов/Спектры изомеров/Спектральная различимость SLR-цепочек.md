@@ -2,7 +2,7 @@
 title: Спектральная различимость SLR-цепочек
 date: 2026-11-01
 updated: 2026-11-02
-revision: 4
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: ru
@@ -12,6 +12,9 @@ description: "Число изгибов и соседних одинаковых
 aliases:
   - "ru/Инварианты, разложения и спектры/Спектры изомеров/Спектральная различимость SLR-цепочек"
 ---
+
+English version: [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains|Spectral Distinguishability of SLR Chains]].
+
 
 Итоги, статусы результатов и маршруты чтения: [[Спектры изомеров - результаты и открытые вопросы|навигатор серии «Спектры изомеров»]].
 

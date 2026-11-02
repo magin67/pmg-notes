@@ -2,7 +2,7 @@
 title: "From the Forest Passport to Spectral Boundary Data"
 date: 2026-10-30
 updated: 2026-11-02
-revision: 2
+revision: 3
 translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -294,7 +294,7 @@ Before calculation, specify the vertex order in both pairs, any overlap between 
 
 Formulas (12) and (15) retain the previous active pair $(a,b)$. Moving the boundary to other vertices is a separate operation: it requires the locations of the input and output in the attached core and a corresponding transformation of minors. It cannot be obtained merely by renaming the old $B,C$.
 
-For a specified family of cores, this setting prepares a transfer method. This note establishes passport sufficiency for gluing at a fixed two-point boundary. A separate [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектральный перенос при смене границы|transfer theorem, in Russian]] proves closure on five coordinates for the specified two-vertex attachment. Classification of open SLR chains and decoding of their full marked state are developed in [[ru/Преобразования и сочленения графов/Спектры изомеров/Спектры изомеров - результаты и открытые вопросы|Spectra of Isomers, in Russian]]; injectivity of one polynomial or one scalar value remains open for arbitrary length.
+For a specified family of cores, this setting prepares a transfer method. This note establishes passport sufficiency for gluing at a fixed two-point boundary. A separate [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] proves closure on five coordinates for the specified two-vertex attachment. Classification of open SLR chains and decoding of their full marked state are developed in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]; injectivity of one polynomial or one scalar value remains open for arbitrary length.
 
 ## Status of the results and checks
 

@@ -2,7 +2,7 @@
 title: "Периодические SLR-цепочки: рекурсии и спектры"
 date: 2026-11-01
 updated: 2026-11-02
-revision: 3
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: ru
@@ -12,6 +12,9 @@ description: "Периоды LR, SL и LLS: взаимно обратные мн
 aliases:
   - "ru/Инварианты, разложения и спектры/Спектры изомеров/Периодические SLR-цепочки - рекурсии и спектры"
 ---
+
+English version: [[en/Graph Transformations and Gluing/Spectra of Isomers/Periodic SLR Chains - Recurrences and Spectra|Periodic SLR Chains: Recurrences and Spectra]].
+
 
 Итоги, статусы результатов и маршруты чтения: [[Спектры изомеров - результаты и открытые вопросы|навигатор серии «Спектры изомеров»]].
 

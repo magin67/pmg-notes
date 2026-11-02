@@ -2,7 +2,7 @@
 title: SLR-код гексагональных цепочек
 date: 2026-11-01
 updated: 2026-11-02
-revision: 5
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: ru
@@ -12,6 +12,9 @@ description: "Три положения шва, согласование пор�
 aliases:
   - "ru/Инварианты, разложения и спектры/Спектры изомеров/SLR-код гексагональных цепочек"
 ---
+
+English version: [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]].
+
 
 Итоги, статусы результатов и маршруты чтения: [[Спектры изомеров - результаты и открытые вопросы|навигатор серии «Спектры изомеров»]].
 
