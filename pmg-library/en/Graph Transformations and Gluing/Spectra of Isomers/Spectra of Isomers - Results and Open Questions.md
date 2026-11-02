@@ -2,7 +2,7 @@
 title: 'Spectra of Isomers: Results and Open Questions'
 date: '2026-11-02'
 updated: '2026-11-02'
-revision: 1
+revision: 2
 translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -144,14 +144,14 @@ Cyclically shifting the period letters preserves the characteristic polynomial o
 
 | Note | Main problem |
 |---|---|
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons|Two Isomers of Three Hexagons]] | An exact pair of graphs, two polynomials, and a compact difference |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] | Sufficient data for attachment and a change of active pair |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] | Orientations, symmetries, and graph classification |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains|Spectral Differences of SLR Chains]] | Changing one or several seams and the first sensitive coefficients |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]] | Forest meanings of the coordinates, the inverse algorithm, and reachability |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response|Reconstructing a Chain from Its Boundary Response]] | Three rational data values, interpretations, and stability |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns|Weaving SLR Chains and Constant Turns]] | A fixed runner and recurrences for constant families |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains|Spectral Distinguishability of SLR Chains]] | Partial recovery, a finite catalog, and scalar conjectures |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons\|Two Isomers of Three Hexagons]] | An exact pair of graphs, two polynomials, and a compact difference |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary\|Spectral Transfer to a New Boundary]] | Sufficient data for attachment and a change of active pair |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains\|SLR Codes of Hexagonal Chains]] | Orientations, symmetries, and graph classification |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains\|Spectral Differences of SLR Chains]] | Changing one or several seams and the first sensitive coefficients |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State\|Rooted Forests and Decoding the Boundary State]] | Forest meanings of the coordinates, the inverse algorithm, and reachability |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response\|Reconstructing a Chain from Its Boundary Response]] | Three rational data values, interpretations, and stability |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns\|Weaving SLR Chains and Constant Turns]] | A fixed runner and recurrences for constant families |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains\|Spectral Distinguishability of SLR Chains]] | Partial recovery, a finite catalog, and scalar conjectures |
 | [[en/Graph Transformations and Gluing/Spectra of Isomers/Periodic SLR Chains - Recurrences and Spectra\|Periodic SLR Chains: Recurrences and Spectra]] | The period matrix, phase, ends, and rooted-forest asymptotics |
 
 For a first introduction, read [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons|Two Isomers of Three Hexagons]] and the plain-language result section in [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response|Reconstructing a Chain from Its Boundary Response]]. They show which differences arise and which data recover them.

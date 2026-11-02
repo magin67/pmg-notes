@@ -76,9 +76,11 @@ The current totals are **17 bilingual series, 123 substantive Russian notes, and
 The local Quartz build passes. Inspection of all 20 Russian and English pages confirms:
 
 - 2,077 English math expressions rendered without KaTeX errors;
-- 688 local article links and 260 section-anchor references resolve;
+- 696 local article links and 260 section-anchor references resolve;
 - all 70 image occurrences resolve;
 - all ten language pairs link in both directions;
 - ten former Russian page addresses and the former folder address still redirect.
+
+The final public-page inspection caught eight unescaped alias separators in the English navigator's contents table. They are corrected. The parity checker now rejects unescaped wiki-link aliases and inconsistent table widths in all twenty source pages; the rendered-page check also rejects raw wiki-link markers and inconsistent table widths. The corrected local build passes these additional checks.
 
 The English drawing filenames avoid punctuation that Quartz encodes inconsistently in image links. Existing Russian aliases and assets remain intact. No Quartz configuration, theme, or dependency changes are included.

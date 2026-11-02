@@ -42,6 +42,22 @@ def table_numbers(raw):
             for line in raw.splitlines() if re.match(r'^(?:> )?\|',line)]
 
 
+def check_tables(raw, filename):
+    """An alias pipe must not split a Markdown table cell."""
+    width = None
+    for number, line in enumerate(raw.splitlines(), 1):
+        line = re.sub(r'^> ?', '', line).strip()
+        if not line.startswith('|'):
+            width = None
+            continue
+        for link in re.findall(r'\[\[[^\]]+\]\]', line):
+            assert not re.search(r'(?<!\\)\|', link), (filename, number, 'unescaped alias')
+        cells = len(re.findall(r'(?<!\\)\|', line)) - 1
+        if width is None:
+            width = cells
+        assert cells == width, (filename, number, 'table width', cells, width)
+
+
 def main():
     pairs = {field(p.read_text(encoding='utf-8'),'translation_key'):p for p in RU.glob('*.md')}
     count = dict(pages=0, display_formulas=0, inline_formulas=0, callouts=0,
@@ -50,6 +66,8 @@ def main():
         en = p.read_text(encoding='utf-8')
         source = pairs.pop(field(en,'translation_key'))
         ru = source.read_text(encoding='utf-8')
+        check_tables(ru, source.name)
+        check_tables(en, p.name)
         assert field(en,'translated_revision') == field(ru,'revision'), p.name
         assert field(en,'order') == field(ru,'order'), p.name
         assert source.relative_to(LIB).with_suffix('').as_posix() in en
