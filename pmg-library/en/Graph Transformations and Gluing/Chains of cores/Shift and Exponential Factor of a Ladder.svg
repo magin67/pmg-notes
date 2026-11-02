@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="565" viewBox="0 0 1160 565" role="img" aria-labelledby="title desc">
+<title id="title">Shift and exponential factor of a ladder</title><desc id="desc">The old square ladder shifts its indices. Three new path edges are added on the left; the old input edge is retained once.</desc>
+<rect width="1160" height="565" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="350" height="375" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<rect x="405" y="20" width="350" height="375" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<rect x="790" y="20" width="350" height="375" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="40.00" y="60.00" font-size="23" fill="#172b43" text-anchor="start" font-weight="bold">1. Ladder G₁</text>
+<text x="425.00" y="60.00" font-size="23" fill="#172b43" text-anchor="start" font-weight="bold">2. Shift S</text>
+<text x="810.00" y="60.00" font-size="23" fill="#172b43" text-anchor="start" font-weight="bold">3. Multiply by Φ</text>
+<line x1="90.00" y1="140.00" x2="90.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="260.00" y1="140.00" x2="260.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="90.00" y1="140.00" x2="260.00" y2="140.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="90.00" y1="285.00" x2="260.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<circle cx="90.00" cy="140.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="90.00" y="120.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">a0</text>
+<circle cx="90.00" cy="285.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="90.00" y="318.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">b0</text>
+<circle cx="260.00" cy="140.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="260.00" y="120.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">a1</text>
+<circle cx="260.00" cy="285.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="260.00" y="318.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">b1</text>
+<line x1="475.00" y1="140.00" x2="475.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="645.00" y1="140.00" x2="645.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="475.00" y1="140.00" x2="645.00" y2="140.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="475.00" y1="285.00" x2="645.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<circle cx="475.00" cy="140.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="475.00" y="120.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">a1</text>
+<circle cx="475.00" cy="285.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="475.00" y="318.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">b1</text>
+<circle cx="645.00" cy="140.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="645.00" y="120.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">a2</text>
+<circle cx="645.00" cy="285.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="645.00" y="318.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">b2</text>
+<line x1="960.00" y1="140.00" x2="960.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="1060.00" y1="140.00" x2="1060.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="960.00" y1="140.00" x2="1060.00" y2="140.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="960.00" y1="285.00" x2="1060.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
+<line x1="860.00" y1="140.00" x2="860.00" y2="285.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<line x1="860.00" y1="140.00" x2="960.00" y2="140.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<line x1="860.00" y1="285.00" x2="960.00" y2="285.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
+<circle cx="860.00" cy="140.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="860.00" y="120.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">a0</text>
+<circle cx="860.00" cy="285.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="860.00" y="318.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">b0</text>
+<circle cx="960.00" cy="140.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="960.00" y="120.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">a1</text>
+<circle cx="960.00" cy="285.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="960.00" y="318.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">b1</text>
+<circle cx="1060.00" cy="140.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="1060.00" y="120.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">a2</text>
+<circle cx="1060.00" cy="285.00" r="6" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="1060.00" y="318.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">b2</text>
+<text x="40.00" y="366.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">M₁</text>
+<text x="425.00" y="366.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">S(M₁)</text>
+<text x="810.00" y="366.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">M₂ = Φ · S(M₁)</text>
+<line x1="370.00" y1="210.00" x2="398.00" y2="210.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round" />
+<polygon points="398.00,210.00 386.00,205.00 386.00,215.00" fill="#196bb9" />
+<line x1="755.00" y1="210.00" x2="783.00" y2="210.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round" />
+<polygon points="783.00,210.00 771.00,205.00 771.00,215.00" fill="#196bb9" />
+<rect x="20" y="420" width="1120" height="125" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="45.00" y="462.00" font-size="25" fill="#196bb9" text-anchor="start" font-weight="bold">Φ: a new rung and two longitudinal connections</text>
+<text x="45.00" y="507.00" font-size="21" fill="#52657a" text-anchor="start" font-weight="normal">Gray edges are already present. The piece repeats with fresh vertex labels.</text>
+</g></svg>

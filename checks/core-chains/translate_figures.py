@@ -8,6 +8,20 @@ import json
 import re
 import xml.etree.ElementTree as ET
 
+
+def fit_text(element, old, new):
+    """Keep longer translated labels within the source label's width."""
+    if not element.tag.endswith('}text') or not element.get('font-size'):
+        return
+    from PIL import ImageFont
+    from matplotlib import font_manager
+    weight = 'bold' if element.get('font-weight') == 'bold' else 'normal'
+    font = ImageFont.truetype(font_manager.findfont(
+        font_manager.FontProperties(family='DejaVu Sans', weight=weight)), 100)
+    ratio = font.getlength(old) / max(1, font.getlength(new))
+    if ratio < 1:
+        element.set('font-size', f"{float(element.get('font-size')) * ratio:.3f}")
+
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / 'pmg-library/ru/Преобразования и сочленения графов/Цепи из ядер'
 TARGET = ROOT / 'pmg-library/en/Graph Transformations and Gluing/Chains of cores'
@@ -26,6 +40,8 @@ def main():
             if element.text and CYRILLIC.search(element.text):
                 source_text = element.text
                 element.text = entry['text'][source_text]
+                if entry.get('fit_text'):
+                    fit_text(element, source_text, element.text)
                 used.add(source_text)
             for key, value in element.attrib.items():
                 if CYRILLIC.search(value):

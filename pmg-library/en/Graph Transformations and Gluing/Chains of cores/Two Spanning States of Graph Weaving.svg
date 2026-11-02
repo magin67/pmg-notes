@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640" role="img" aria-labelledby="title desc">
+<title id="title">Two spanning states of graph weaving</title><desc id="desc">One coordinate sums trees; the other sums two-component forests separating the marked contacts. For the square the coordinates are 4 and 3.</desc>
+<rect width="1120" height="640" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="20" y="20" width="520" height="345" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<rect x="560" y="20" width="540" height="345" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="42.00" y="60.00" font-size="25" fill="#172b43" text-anchor="start" font-weight="bold">Contacts joined</text>
+<text x="582.00" y="60.00" font-size="25" fill="#172b43" text-anchor="start" font-weight="bold">Contacts separated</text>
+<line x1="110.00" y1="130.00" x2="340.00" y2="130.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="340.00" y1="130.00" x2="340.00" y2="260.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="340.00" y1="260.00" x2="110.00" y2="260.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="110.00" y1="260.00" x2="110.00" y2="130.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="110.00" y1="130.00" x2="340.00" y2="130.00" stroke="#16816c" stroke-width="5" stroke-linecap="round" />
+<line x1="340.00" y1="130.00" x2="340.00" y2="260.00" stroke="#16816c" stroke-width="5" stroke-linecap="round" />
+<line x1="340.00" y1="260.00" x2="110.00" y2="260.00" stroke="#16816c" stroke-width="5" stroke-linecap="round" />
+<circle cx="110.00" cy="130.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="340.00" cy="130.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="340.00" cy="130.00" r="10" fill="white" stroke="#196bb9" stroke-width="3" />
+<circle cx="340.00" cy="130.00" r="4" fill="#196bb9" stroke="none" stroke-width="2" />
+<circle cx="340.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="340.00" cy="260.00" r="10" fill="white" stroke="#196bb9" stroke-width="3" />
+<circle cx="340.00" cy="260.00" r="4" fill="#196bb9" stroke="none" stroke-width="2" />
+<circle cx="110.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="365.00" y="137.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">x</text>
+<text x="365.00" y="267.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">y</text>
+<line x1="660.00" y1="130.00" x2="890.00" y2="130.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="890.00" y1="130.00" x2="890.00" y2="260.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="890.00" y1="260.00" x2="660.00" y2="260.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="660.00" y1="260.00" x2="660.00" y2="130.00" stroke="#c8d3df" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7" />
+<line x1="660.00" y1="130.00" x2="890.00" y2="130.00" stroke="#16816c" stroke-width="5" stroke-linecap="round" />
+<line x1="890.00" y1="260.00" x2="660.00" y2="260.00" stroke="#8953af" stroke-width="5" stroke-linecap="round" />
+<circle cx="660.00" cy="130.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="890.00" cy="130.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="890.00" cy="130.00" r="10" fill="white" stroke="#196bb9" stroke-width="3" />
+<circle cx="890.00" cy="130.00" r="4" fill="#196bb9" stroke="none" stroke-width="2" />
+<circle cx="890.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="890.00" cy="260.00" r="10" fill="white" stroke="#196bb9" stroke-width="3" />
+<circle cx="890.00" cy="260.00" r="4" fill="#196bb9" stroke="none" stroke-width="2" />
+<circle cx="660.00" cy="260.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="915.00" y="137.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">x</text>
+<text x="915.00" y="267.00" font-size="20" fill="#172b43" text-anchor="start" font-weight="normal">y</text>
+<text x="42.00" y="330.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">τ = 4 trees; one is shown</text>
+<text x="582.00" y="330.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="normal">σ = 3 separating forests; one is shown</text>
+<rect x="20" y="390" width="1080" height="230" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="42.00" y="432.00" font-size="22.681" fill="#172b43" text-anchor="start" font-weight="bold">The path runner updates both numbers</text>
+<text x="115.00" y="498.00" font-size="29" fill="#172b43" text-anchor="middle" font-weight="bold">(1, 1)</text>
+<text x="115.00" y="533.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">edge</text>
+<line x1="180.00" y1="488.00" x2="305.00" y2="488.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round" />
+<polygon points="305.00,488.00 293.00,483.00 293.00,493.00" fill="#196bb9" />
+<text x="387.00" y="498.00" font-size="29" fill="#172b43" text-anchor="middle" font-weight="bold">(4, 3)</text>
+<text x="387.00" y="533.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">square</text>
+<line x1="452.00" y1="488.00" x2="577.00" y2="488.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round" />
+<polygon points="577.00,488.00 565.00,483.00 565.00,493.00" fill="#196bb9" />
+<text x="659.00" y="498.00" font-size="29" fill="#172b43" text-anchor="middle" font-weight="bold">(15, 11)</text>
+<text x="659.00" y="533.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">two squares</text>
+<line x1="724.00" y1="488.00" x2="849.00" y2="488.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round" />
+<polygon points="849.00,488.00 837.00,483.00 837.00,493.00" fill="#196bb9" />
+<text x="931.00" y="498.00" font-size="29" fill="#172b43" text-anchor="middle" font-weight="bold">(56, 41)</text>
+<text x="931.00" y="533.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">three squares</text>
+<text x="42.00" y="587.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">τ′ = 3τ + σ</text>
+<text x="580.00" y="587.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">σ′ = 2τ + σ</text>
+</g></svg>

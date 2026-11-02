@@ -1,14 +1,14 @@
 ---
 title: "Limits of Invariance: Branching, Disconnected Seams, and Other Cores"
 date: 2026-10-31
-updated: 2026-10-31
-revision: 1
+updated: 2026-11-02
+revision: 2
 translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: limits-of-invariance-branching-seams-and-other-cores
-order: 4
+order: 6
 description: "Trees of cycles and the limits of invariance for disconnected seams, other cores, and changes of gluing scheme."
 aliases:
   - "en/Chains of cores/Limits of Invariance - Branching, Disconnected Seams, and Other Cores"

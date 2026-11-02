@@ -1,14 +1,14 @@
 ---
 title: "Closing a Chain: Rings and the Möbius Effect"
 date: 2026-10-31
-updated: 2026-10-31
-revision: 1
+updated: 2026-11-02
+revision: 2
 translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: closing-a-chain-rings-and-the-mobius-effect
-order: 5
+order: 7
 description: "Ordinary and M\u00f6bius closures of square and even-cycle strips, hexagonal rings, and shifted prism bases."
 aliases:
   - "en/Chains of cores/Closing a Chain - Rings and the Möbius Effect"

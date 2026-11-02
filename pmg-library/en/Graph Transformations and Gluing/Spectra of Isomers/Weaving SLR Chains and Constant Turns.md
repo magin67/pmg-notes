@@ -1,8 +1,8 @@
 ---
 title: Weaving SLR Chains and Constant Turns
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
+updated: 2026-11-02
+revision: 2
 translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
@@ -25,7 +25,7 @@ There is no planarity requirement. A spatial spiral provides an illustration of 
 >
 > Straight chains and chains with constant turns have the same spanning-tree recurrence. Their spectral recurrences differ. To compute the characteristic polynomial of the next chain, a few preceding polynomials suffice: four for a straight chain, and five for constant L or R, when the recurrence is linear and homogeneous. All these statements concern abstract graphs and require no planar layout.
 
-The runner is defined in [[ru/Преобразования и сочленения графов/Цепи из ядер/Плетение графов - вилка, розетка и рекурсия|Weaving Graphs: Plug, Socket, and Recurrence (in Russian)]], the factorization law in [[ru/Преобразования и сочленения графов/Цепи из ядер/Экспонента лапласиана при плетении графов|The Laplacian Exponential in Graph Weaving (in Russian)]], and the letter and orientation conventions in [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]]. Here we establish their precise correspondence and derive recurrences for the constant families.
+The runner is defined in [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]], the factorization law in [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]], and the letter and orientation conventions in [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]]. Here we establish their precise correspondence and derive recurrences for the constant families.
 
 ## One path and three marked runners
 
@@ -146,7 +146,7 @@ M_{G_{N+1}^{\alpha}}(t)=
 \tag{6}
 $$
 
-The embeddings account for shared contacts and fresh names for the other vertices. Law (6) follows from addition of the Laplacians of parts with disjoint edge sets; its proof and graded convolution are given in [[ru/Преобразования и сочленения графов/Цепи из ядер/Экспонента лапласиана при плетении графов|The Laplacian Exponential in Graph Weaving (in Russian)]].
+The embeddings account for shared contacts and fresh names for the other vertices. Law (6) follows from addition of the Laplacians of parts with disjoint edge sets; its proof and graded convolution are given in [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]].
 
 Fix a relabeling rule that returns the new socket to two standard names while keeping all other vertices distinct. The right-hand side of (6) then defines one growth operator $\mathcal W_{\alpha,t}$ on polyforms with a marked pair. For the starting edge $M_0(t)=e+t[b-a]^2$,
 
@@ -338,7 +338,7 @@ $$
 | 3 | 2518737 | 2504096 | 204 |
 | 4 | 223092224 | 220348791 | 1189 |
 
-The common spanning-tree matrix of the runner is $\left(\begin{smallmatrix}5&1\\4&1\end{smallmatrix}\right)$; its characteristic polynomial $q^2-6q+1$ gives $\tau_{N+2}=6\tau_{N+1}-\tau_N$. The derivation through trees and separating forests is given in [[ru/Преобразования и сочленения графов/Цепи из ядер/Плетение графов - вилка, розетка и рекурсия|Weaving Graphs: Plug, Socket, and Recurrence (in Russian)]]. This two-coordinate reduction loses the position of the path's output edge. The five spectral coordinates retain it.
+The common spanning-tree matrix of the runner is $\left(\begin{smallmatrix}5&1\\4&1\end{smallmatrix}\right)$; its characteristic polynomial $q^2-6q+1$ gives $\tau_{N+2}=6\tau_{N+1}-\tau_N$. The derivation through trees and separating forests is given in [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]]. This two-coordinate reduction loses the position of the path's output edge. The five spectral coordinates retain it.
 
 > [!note]- Proof of minimality of the orders
 > **Proof.** A homogeneous linear recurrence of order $d$, with coefficients constant in $N$, implies rank at most $d$ for the Hankel matrix $(\chi_{i+j})_{i,j\ge0}$. This follows from the same linear dependence of each subsequent column on the preceding $d$ columns.
@@ -402,4 +402,4 @@ The ternary description of hexagonal chains is classical: Milosavljević–Steva
 1. N. Milosavljević, D. Stevanović. *Detour Index of Hexagonal Chains*. MATCH **72** (2014), 137–152. [§2, Definition 1 and Figure 2](https://match.pmf.kg.ac.rs/electronic_versions/Match72/n1/match72n1_137-152.pdf#page=3).
 2. M. Noy, A. Ribó. *Recursively constructible families of graphs*. Advances in Applied Mathematics **32** (2004), 350–363. [DOI](https://doi.org/10.1016/S0196-8858(03)00088-5); [author's publication list](https://sites.google.com/view/marcnoy/publications).
 
-Related notes: [[ru/Преобразования и сочленения графов/Цепи из ядер/Плетение графов - вилка, розетка и рекурсия|Weaving Graphs: Plug, Socket, and Recurrence (in Russian)]], [[ru/Преобразования и сочленения графов/Цепи из ядер/Экспонента лапласиана при плетении графов|The Laplacian Exponential in Graph Weaving (in Russian)]], [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]], [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains|Spectral Differences of SLR Chains]]. Thematic entry points: [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]; [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].
+Related notes: [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]], [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]], [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]], [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains|Spectral Differences of SLR Chains]]. Thematic entry points: [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]; [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].

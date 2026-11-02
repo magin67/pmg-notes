@@ -1,14 +1,14 @@
 ---
 title: "Cores, Seams, and Admissible Chains"
 date: 2026-10-31
-updated: 2026-10-31
-revision: 1
+updated: 2026-11-02
+revision: 2
 translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: cores-seams-and-admissible-chains
-order: 1
+order: 3
 description: "Cores and seams, admissible open chains, shared-edge accounting, and transfer of the active boundary."
 aliases:
   - "en/Chains of cores/Cores, Seams, and Admissible Chains"

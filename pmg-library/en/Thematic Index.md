@@ -2,7 +2,7 @@
 title: Thematic Index
 date: 2026-11-01
 updated: 2026-11-02
-revision: 8
+revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -31,7 +31,7 @@ This index groups series by their main question. Each series has one primary hom
 
 ## Primary home of each series
 
-17 completed bilingual series: 123 substantive notes in Russian and 121 in English. Thematic pages, navigators, references, and programming examples are excluded from this count.
+17 completed bilingual series: 123 substantive notes in each language. Thematic pages, navigators, references, and programming examples are excluded from this count.
 
 | Series | Primary home | Notes |
 | --- | --- | ---: |
@@ -49,7 +49,7 @@ This index groups series by their main question. Each series has one primary hom
 | [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra\|Spectra and Diagonalization in Polyform Algebra]] | [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra\|Invariants, Decompositions, and Spectra]] | 6 |
 | [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations\|Laplacian, Greenian and Resistance Variations]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 8 |
 | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing\|Boundary Polynomials and Graph Gluing]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 6 |
-| [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 5 EN / 7 RU |
+| [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 7 |
 | [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | [[en/Directed Graphs and Extensions/Directed Graphs and Extensions\|Directed Graphs and Extensions]] | 12 |
 
 **“Spectra of Isomers”** is complete in its current bilingual scope: nine substantive notes and [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]. Its primary home is [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]], alongside Chains of Cores, with a secondary entry through [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]. The Russian collection has passed a series-wide review. All notes, the navigator, and labels for 35 figures are available in English; full scalar distinguishability remains an open research problem.

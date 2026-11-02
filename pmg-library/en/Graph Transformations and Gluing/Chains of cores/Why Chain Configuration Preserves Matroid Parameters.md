@@ -1,14 +1,14 @@
 ---
 title: "Why Chain Configuration Preserves Matroid Parameters"
 date: 2026-10-31
-updated: 2026-10-31
-revision: 1
+updated: 2026-11-02
+revision: 2
 translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: why-chain-configuration-preserves-matroid-parameters
-order: 2
+order: 4
 description: "A common plane dual proves matroid invariance; two nonisomorphic hexagonal chains have equal ordinary forest parameters and resistance radii."
 aliases:
   - "en/Chains of cores/Why Chain Configuration Preserves Matroid Parameters"

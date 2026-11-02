@@ -2,7 +2,7 @@
 title: Graph Transformations and Gluing
 date: 2026-11-01
 updated: 2026-11-02
-revision: 8
+revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -21,7 +21,7 @@ How do characteristics change when couplings vary, vertices are eliminated, or a
 
 - **[[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]]** (8 notes). Direct and inverse changes to couplings, the Greenian, and resistances; compatibility and conductance constraints.
 - **[[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]]** (6 notes). Data sufficient for contraction and gluing: the forest passport, its spanning-tree layer, and spectral data.
-- **[[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]** (5 English notes; the Russian collection also includes 2 supplements on weaving). Admissible assemblies of cores, preserved parameters, spanning-tree recurrences, and chain closures.
+- **[[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]** (7 notes in each language). Admissible assemblies of cores, preserved parameters, weaving, the Laplacian exponential, spanning-tree recurrences, and chain closures.
 - **[[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]** (9 substantive notes, a navigator, and 35 figures in each language). Spectral transfer, SLR codes, differences, exact decoding, boundary response, and constant and periodic chains. A continuation of Chains of Cores; general scalar distinguishability remains conjectural.
 
 ## Reading route

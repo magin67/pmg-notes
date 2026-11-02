@@ -1,8 +1,8 @@
 ---
 title: 'Spectra of Isomers: Results and Open Questions'
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 2
+updated: 2026-11-02
+revision: 3
 translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -125,7 +125,7 @@ The conjecture about $P_G(1)$ at fixed $N$ does not include recovery of an unkno
 
 Attaching a path $P_6$ with six vertices and five edges to an existing edge adds the next hexagon. The ordered plug specifies the input contact matching, while the socket choice specifies S, L, or R. Repeating a single marked runner realizes a constant turn; repeating a composite runner realizes a periodic word.
 
-The foundations of this description are in the “Chains of Cores” series: [[ru/Преобразования и сочленения графов/Цепи из ядер/Плетение графов - вилка, розетка и рекурсия|Weaving Graphs: Plug, Socket, and Recurrence (in Russian)]] and [[ru/Преобразования и сочленения графов/Цепи из ядер/Экспонента лапласиана при плетении графов|The Laplacian Exponential in Graph Weaving (in Russian)]]. These two notes belong to the neighboring series and support the spectral continuation.
+The foundations of this description are in the “Chains of Cores” series: [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]] and [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]]. These two notes belong to the neighboring series and support the spectral continuation.
 
 In the polyform exponential, a new attachment multiplies the previous expression by a factor embedded into new vertices. In reduced boundary coordinates, the same process is described by a growth operator. The Laplacian form $L$, its matrix $\mathbf L$, the exterior exponential $\exp L$, and the transfer matrix must be distinguished. A power of the transfer matrix is neither a power of the Laplacian nor a single unchanged factor in a fixed vertex space.
 

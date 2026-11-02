@@ -2,6 +2,8 @@
 
 Date: 2026-10-31. Russian source baseline: `1972b217b2b79a38b5013eeb42f039bd1c1c7b4a` on `v5`, following the [general mathematical review](REVIEW_RU.md).
 
+Update, 2026-11-02: the two weaving supplements and their eight figures are now also translated. The complete collection has seven substantive notes and 23 distinct figures per language. Their translation, repeated exact checks, and navigation updates are documented in the [weaving translation review](REVIEW_WEAVING_EN.md). The report below records the original five-note translation.
+
 ## Scope and synchronization
 
 The five notes and their navigator have been translated in full into `pmg-library/en/Graph Transformations and Gluing/Chains of cores`. Each English page shares its Russian counterpart's `translation_key` and records the corresponding Russian revision in `translated_revision`. Both versions link directly to one another. The two library indexes expose the complete route and the navigator in the other language.

@@ -1,12 +1,25 @@
 # Проверки серии «Цепи из ядер»
 
-Комплект сопровождает пять заметок серии на русском и английском языках, от «Ядра, швы и допустимые цепочки» до «Замыкание цепи: кольцо и эффект Мёбиуса». Требуется Python 3.10 или новее; используются только стандартная библиотека и проверочные функции серии «Граничные полиномы и сочленение графов» из `checks/boundary`. Запускать из корня репозитория без `-O`, отключающего утверждения `assert`.
+Комплект сопровождает семь заметок серии на русском и английском языках: пять исходных заметок, от «Ядра, швы и допустимые цепочки» до «Замыкание цепи: кольцо и эффект Мёбиуса», и два дополнения о плетении. Требуется Python 3.10 или новее; исходные проверки используют стандартную библиотеку и функции серии «Граничные полиномы и сочленение графов» из `checks/boundary`, а проверка экспоненты дополнительно использует SymPy. Запускать из корня репозитория без `-O`, отключающего утверждения `assert`.
 
 Итоги общей проверки, внесённые исправления и границы вычислительного покрытия зафиксированы в [REVIEW_RU.md](REVIEW_RU.md). Маршрут чтения и происхождение результатов собраны в [навигаторе серии](../../pmg-library/ru/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B8%20%D1%81%D0%BE%D1%87%D0%BB%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2/%D0%A6%D0%B5%D0%BF%D0%B8%20%D0%B8%D0%B7%20%D1%8F%D0%B4%D0%B5%D1%80/%D0%A6%D0%B5%D0%BF%D0%B8%20%D0%B8%D0%B7%20%D1%8F%D0%B4%D0%B5%D1%80.md).
 
 ## English versions and figures
 
-The five notes and the [English navigator](../../pmg-library/en/Graph%20Transformations%20and%20Gluing/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for translation, notation, link, and rendering checks.
+The seven notes and the [English navigator](../../pmg-library/en/Graph%20Transformations%20and%20Gluing/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for the original five-note translation and [REVIEW_WEAVING_EN.md](REVIEW_WEAVING_EN.md) for the two weaving supplements and eight additional figures, giving 23 distinct figures per language.
+
+The weaving supplements are reproduced with:
+
+```text
+python checks/core-chains/verify_weaving.py
+python checks/core-chains/verify_weaving_exponential.py
+python checks/core-chains/draw_weaving.py
+python checks/core-chains/draw_weaving_exponential.py
+python checks/core-chains/translate_figures.py
+python checks/core-chains/verify_weaving_translation.py
+```
+
+Run each verification program before its drawing program. The exponential check requires SymPy; fitting translated labels in the eight new SVGs uses Pillow and Matplotlib. The translation parity checker uses only the standard library. The exact programs write `weaving-results.json` and `weaving-exponential-results.json`; graph constructions, full boundary states, and the finite scope of each check are retained there and summarized in the notes.
 
 The five original verification programs listed below use Python 3.10 or newer and the standard library, together with the repository's `checks/boundary` helpers. Run them from the repository root without `-O`. Their adjacent JSON outputs retain the cores, seam correspondences, final edge sets, and exact rational results.
 

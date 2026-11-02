@@ -1,8 +1,8 @@
 ---
 title: 'Periodic SLR Chains: Recurrences and Spectra'
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
+updated: 2026-11-02
+revision: 2
 translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -523,4 +523,4 @@ Powers of a period matrix, linear recurrences, and rational generating functions
 
 1. L. G. Molinari. *Determinants of Block Tridiagonal Matrices*. Linear Algebra and its Applications **429** (2008), 2221-2226. [arXiv:0712.0681](https://arxiv.org/abs/0712.0681); [DOI](https://doi.org/10.1016/j.laa.2008.06.015).
 
-Related notes: [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]], [[ru/Преобразования и сочленения графов/Цепи из ядер/Плетение графов - вилка, розетка и рекурсия|Weaving Graphs: Plug, Socket, and Recurrence (in Russian)]], [[ru/Преобразования и сочленения графов/Цепи из ядер/Экспонента лапласиана при плетении графов|The Laplacian Exponential in Graph Weaving (in Russian)]], [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]]. Thematic entry points: [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]; [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].
+Related notes: [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]], [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]], [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]], [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]]. Thematic entry points: [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]; [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].

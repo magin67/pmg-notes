@@ -1,14 +1,14 @@
 ---
 title: "Spanning-Tree Polynomials of Chains: Determinant and Recurrence"
 date: 2026-10-31
-updated: 2026-10-31
-revision: 1
+updated: 2026-11-02
+revision: 2
 translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: spanning-tree-polynomials-of-chains
-order: 3
+order: 5
 description: "Dual determinants, continuants, matchings, Chebyshev polynomials, and the dependence of spanning-tree counts on seam order."
 aliases:
   - "en/Chains of cores/Spanning-Tree Polynomials of Chains - Determinant and Recurrence"

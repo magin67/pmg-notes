@@ -198,5 +198,138 @@
       "Длины путей: 2 и 2": "Path lengths: 2 and 2",
       "В обоих графах: 24 вершины, 30 рёбер; красным отмечен последний шов": "Both graphs: 24 vertices, 30 edges; the final seam is red"
     }
+  },
+  "Вилка и розетка при плетении.svg": {
+    "file": "Plug and Socket in Graph Weaving.svg",
+    "text": {
+      "Вилка и розетка при плетении": "Plug and socket in graph weaving",
+      "Начальное ребро, трёхрёберный путь с вилкой и розеткой, первый квадрат и три повторения того же пути.": "An initial edge, a three-edge path with plug and socket, the first square, and three repetitions of the same path.",
+      "1. Начало G₀": "1. Start G₀",
+      "Розетка: (a, b)": "Socket: (a, b)",
+      "2. Один бегунок K": "2. One runner K",
+      "Вилка": "Plug",
+      "Розетка": "Socket",
+      "Три ребра; между p₀ и p₁ ребра нет": "Three edges; no edge between p₀ and p₁",
+      "3. Вставить вилку в розетку": "3. Insert the plug into the socket",
+      "G₁: старое ребро + новый путь": "G₁: old edge + new path",
+      "Повторяем тот же шаг": "Repeat the same step",
+      "G₃: три квадрата": "G₃: three squares",
+      "8 вершин · 10 рёбер": "8 vertices · 10 edges",
+      "Новая розетка всегда справа": "The new socket is always on the right",
+      "Цветные кольца отмечают контакты. Они не добавляют рёбер к графу.": "Colored rings mark contacts. They add no edges to the graph."
+    },
+    "fit_text": true
+  },
+  "Два остовных состояния плетения.svg": {
+    "file": "Two Spanning States of Graph Weaving.svg",
+    "text": {
+      "Два остовных состояния плетения": "Two spanning states of graph weaving",
+      "Одна координата суммирует деревья, другая — двухкомпонентные леса, разделяющие отмеченные контакты. Для квадрата координаты равны 4 и 3.": "One coordinate sums trees; the other sums two-component forests separating the marked contacts. For the square the coordinates are 4 and 3.",
+      "Контакты соединены": "Contacts joined",
+      "Контакты разделены": "Contacts separated",
+      "τ = 4 дерева; показано одно": "τ = 4 trees; one is shown",
+      "σ = 3 разделяющих леса; показан один": "σ = 3 separating forests; one is shown",
+      "Путь-бегунок обновляет оба числа": "The path runner updates both numbers",
+      "ребро": "edge",
+      "квадрат": "square",
+      "два квадрата": "two squares",
+      "три квадрата": "three squares"
+    },
+    "fit_text": true
+  },
+  "Три бегунка и их рекурсии.svg": {
+    "file": "Three Runners and Their Recurrences.svg",
+    "text": {
+      "Три бегунка и их рекурсии": "Three runners and their recurrences",
+      "Два пути с собственным остовным числом 1 и граф K4 без входного ребра с собственным остовным числом 8. У всех отмечены входные и выходные контакты.": "Two paths with spanning-tree count 1, and K4 with its input edge removed and spanning-tree count 8. Input and output contacts are marked on each.",
+      "Путь P₄": "Path P₄",
+      "Путь P₆": "Path P₆",
+      "K₄ без ребра 01": "K₄ without edge 01"
+    },
+    "fit_text": true
+  },
+  "Начало плетения и замыкание.svg": {
+    "file": "Starting and Closing a Weaving.svg",
+    "text": {
+      "Начало плетения и замыкание": "Starting and closing a weaving",
+      "При замыкании нужно хранить начальные контакты. Прямое и перекрёстное соответствия крайних пар квадратной полосы дают разные замыкания.": "Closure requires retaining the initial contacts. Direct and crossed correspondences of the end pairs of a square strip give different closures.",
+      "Открытая полоса: начало сохраняется до последнего шага": "Open strip: retain the start until the final step",
+      "B₀: начальная пара": "B₀: initial pair",
+      "B₃: текущая розетка": "B₃: current socket",
+      "Прямое соответствие": "Direct correspondence",
+      "Цилиндрическое замыкание": "Cylindrical closure",
+      "Скрещённое соответствие": "Crossed correspondence",
+      "Мёбиусово замыкание": "Möbius closure",
+      "Пунктир обозначает отождествления, а не новые рёбра.": "Dashed lines denote identifications, not new edges.",
+      "Для единичного общего ребра одну из двух крайних копий удаляют.": "For a single unit shared edge, remove one of the two end copies."
+    },
+    "fit_text": true
+  },
+  "Сдвиг и фактор экспоненты лестницы.svg": {
+    "file": "Shift and Exponential Factor of a Ladder.svg",
+    "text": {
+      "Сдвиг и фактор экспоненты лестницы": "Shift and exponential factor of a ladder",
+      "Старая квадратная лестница сдвигает индексы. Три новых ребра пути добавляются слева; старое входное ребро сохраняется в одном экземпляре.": "The old square ladder shifts its indices. Three new path edges are added on the left; the old input edge is retained once.",
+      "1. Лестница G₁": "1. Ladder G₁",
+      "2. Сдвиг S": "2. Shift S",
+      "3. Умножение на Φ": "3. Multiply by Φ",
+      "Φ: новая перекладина и две продольные связи": "Φ: a new rung and two longitudinal connections",
+      "Серые рёбра уже присутствуют. Повторяется деталь с новыми именами вершин.": "Gray edges are already present. The piece repeats with fresh vertex labels."
+    },
+    "fit_text": true
+  },
+  "Размеры активных компонент леса.svg": {
+    "file": "Sizes of Active Forest Components.svg",
+    "text": {
+      "Размеры активных компонент леса": "Sizes of active forest components",
+      "Состояние C5 содержит одно активное дерево на пяти вершинах. Состояние D3,2 содержит два активных дерева. В обоих примерах закрытое дерево на трёх вершинах даёт z3.": "State C5 contains one active tree on five vertices. State D3,2 contains two active trees. In both examples a closed tree on three vertices contributes z3.",
+      "Оба контакта в одном дереве": "Both contacts in one tree",
+      "Контакты в разных деревьях": "Contacts in different trees",
+      "Закрытая компонента: z₃": "Closed component: z₃",
+      "При продолжении меняются только компоненты с отмеченными контактами.": "Only components with marked contacts change as the graph grows."
+    },
+    "fit_text": true
+  },
+  "От размеров компонент к двум и пяти координатам.svg": {
+    "file": "From Component Sizes to Two and Five Coordinates.svg",
+    "text": {
+      "От размеров компонент к двум и пяти координатам": "From component sizes to two and five coordinates",
+      "Полное граничное состояние хранит C_s и D_r,s с неограниченными размерами. Обычная оценка даёт две координаты, корневая оценка — пять определительных комбинаций.": "The full boundary state retains C_s and D_r,s with unbounded sizes. Ordinary evaluation gives two coordinates; rooted evaluation gives five determinantal combinations.",
+      "Размеры граничных компонент": "Boundary component sizes",
+      "Cₛ и Dᵣ,ₛ": "Cₛ and Dᵣ,ₛ",
+      "Закрытые компоненты: множители zₛ": "Closed components: factors zₛ",
+      "Обычные леса": "Ordinary forests",
+      "Корневые леса": "Rooted forests",
+      "Контакты соединены / разделены": "Contacts joined / separated",
+      "Свободные и закреплённые корни": "Free and forced roots",
+      "Две полиномиальные координаты": "Two polynomial coordinates",
+      "Пять комбинаций A₊, B₊, C₊, D₊, E₊": "Five combinations A₊, B₊, C₊, D₊, E₊",
+      "Сумма: F(t)": "Sum: F(t)",
+      "Обе оценки теряют часть распределения лесов по размерам компонент.": "Both evaluations lose part of the distribution of forests by component size."
+    },
+    "fit_text": true
+  },
+  "Третий грейд топономов двух изомеров.svg": {
+    "file": "Grade Three of the Toponomes of Two Isomers.svg",
+    "text": {
+      "Третий грейд топономов двух изомеров": "Grade three of the toponomes of two isomers",
+      "Три типа лесов с тремя рёбрами. Разность чисел А минус Б равна минус один, плюс два, минус один. Корневые веса 4, 6, 8 обращают её в нуль.": "Three forest types with three edges. The differences in counts A minus B are minus one, plus two, minus one. Rooted weights 4, 6, 8 cancel the difference.",
+      "Тип (3)": "Type (3)",
+      "А: 34     Б: 35": "A: 34     B: 35",
+      "Разность: -1": "Difference: -1",
+      "Корневой вес: 4": "Rooted weight: 4",
+      "Тип (2,1)": "Type (2,1)",
+      "А: 236     Б: 234": "A: 236     B: 234",
+      "Разность: +2": "Difference: +2",
+      "Корневой вес: 6": "Rooted weight: 6",
+      "Тип (1,1,1)": "Type (1,1,1)",
+      "А: 290     Б: 291": "A: 290     B: 291",
+      "Корневой вес: 8": "Rooted weight: 8",
+      "Показан один из видов дерева": "One tree shape is shown",
+      "Разность топономов: −x₃ + 2x₂x₁ − x₁³": "Toponome difference: −x₃ + 2x₂x₁ − x₁³",
+      "Корневая оценка: −4 + 2 · 6 − 8 = 0": "Rooted evaluation: −4 + 2 · 6 − 8 = 0",
+      "Всего 14 вершин; изолированные вершины на схемах не показаны.": "14 vertices in total; isolated vertices are omitted from the diagrams."
+    },
+    "fit_text": true
   }
 }

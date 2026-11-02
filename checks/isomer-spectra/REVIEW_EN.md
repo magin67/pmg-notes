@@ -20,6 +20,8 @@ The navigator, **Spectra of Isomers: Results and Open Questions**, preserves the
 
 The two supporting notes on graph weaving and the Laplacian exponential belong to **Chains of Cores**. They are outside this translation request and remain explicitly labeled “in Russian” wherever linked. The adjacent navigator now distinguishes these supplements from its five bilingual introductory notes and links to the completed spectral continuation.
 
+Subsequent update, 2026-11-02: both supplements have since been translated, with eight figures and repeated exact checks; see the [weaving translation review](../core-chains/REVIEW_WEAVING_EN.md). English isomer-series links now lead to these English pages. The scope and counts below describe the original isomer-series translation before that follow-up; the library now has 123 substantive notes in each language.
+
 ## Mathematical parity and result status
 
 The automated comparison passes for:
