@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="573.761576pt" height="308.335562pt" viewBox="0 0 573.761576 308.335562" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Добавление связи к цепочке</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Добавление связи к цепочке</dc:title>
+    <dc:date>2026-11-02T23:45:04.324710</dc:date>
+    <dc:description>Цепочка a-b-c с единичными проводимостями и треугольник после добавления единичной связи ac. Значение формы меняется с 2 до 2/3.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 308.335562 
+L 573.761576 308.335562 
+L 573.761576 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path d="M 39.93304 193.505551 
+L 121.765639 107.581322 
+" clip-path="url(#pde3199ac23)" style="fill: none; stroke: #246585; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 121.765639 107.581322 
+L 203.598238 193.505551 
+" clip-path="url(#pde3199ac23)" style="fill: none; stroke: #246585; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 39.93304 193.505551 
+L 203.598238 193.505551 
+" clip-path="url(#pde3199ac23)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #bf651f; stroke-width: 2"/>
+   </g>
+   <g id="text_1">
+    <g id="patch_2">
+     <path d="M 60.261971 148.161236 
+L 71.976971 148.161236 
+L 71.976971 132.467486 
+L 60.261971 132.467486 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #246585; font: 12px 'DejaVu Sans'; text-anchor: middle" x="66.119471" y="143.625611" transform="rotate(-0 66.119471 143.625611)">1</text>
+   </g>
+   <g id="text_2">
+    <g id="patch_3">
+     <path d="M 171.554306 148.161236 
+L 183.269306 148.161236 
+L 183.269306 132.467486 
+L 171.554306 132.467486 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #246585; font: 12px 'DejaVu Sans'; text-anchor: middle" x="177.411806" y="143.625611" transform="rotate(-0 177.411806 143.625611)">1</text>
+   </g>
+   <g id="text_3">
+    <g id="patch_4">
+     <path d="M 89.175326 214.445642 
+L 154.355951 214.445642 
+L 154.355951 198.751892 
+L 89.175326 198.751892 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #246585; font: 12px 'DejaVu Sans'; text-anchor: middle" x="121.765639" y="209.910017" transform="rotate(-0 121.765639 209.910017)">нет связи</text>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m0e8e720c10" d="M 0 11.726039 
+C 3.109782 11.726039 6.092614 10.49051 8.291562 8.291562 
+C 10.49051 6.092614 11.726039 3.109782 11.726039 0 
+C 11.726039 -3.109782 10.49051 -6.092614 8.291562 -8.291562 
+C 6.092614 -10.49051 3.109782 -11.726039 0 -11.726039 
+C -3.109782 -11.726039 -6.092614 -10.49051 -8.291562 -8.291562 
+C -10.49051 -6.092614 -11.726039 -3.109782 -11.726039 0 
+C -11.726039 3.109782 -10.49051 6.092614 -8.291562 8.291562 
+C -6.092614 10.49051 -3.109782 11.726039 0 11.726039 
+z
+" style="stroke: #657587"/>
+    </defs>
+    <g clip-path="url(#pde3199ac23)">
+     <use xlink:href="#m0e8e720c10" x="39.93304" y="193.505551" style="fill: #ffffff; stroke: #657587"/>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <g clip-path="url(#pde3199ac23)">
+     <use xlink:href="#m0e8e720c10" x="121.765639" y="107.581322" style="fill: #ffffff; stroke: #657587"/>
+    </g>
+   </g>
+   <g id="PathCollection_3">
+    <g clip-path="url(#pde3199ac23)">
+     <use xlink:href="#m0e8e720c10" x="203.598238" y="193.505551" style="fill: #ffffff; stroke: #657587"/>
+    </g>
+   </g>
+   <g id="text_4">
+    <!-- $N([(ac)]^2)=2$ -->
+    <g transform="translate(68.965639 234.42185)">
+     <text>
+      <tspan style="font: oblique 16px 'DejaVu Sans'" x="0 30.695312 40.5" y="-0.5625">Nac</tspan>
+      <tspan style="font: 16px 'DejaVu Sans'" x="11.96875 18.210938 24.453125 49.296875 55.539062 69.497656 78.857031 95.380469" y="-0.5625">([()])=2</tspan>
+      <tspan style="font: 11.2px 'DejaVu Sans'" x="61.934375" y="-6.6875">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_5">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="121.765639" y="63.12" transform="rotate(-0 121.765639 63.12)">Исходная цепочка</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="39.93304" y="197.368676" transform="rotate(-0 39.93304 197.368676)">a</text>
+   </g>
+   <g id="text_7">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="121.765639" y="111.444447" transform="rotate(-0 121.765639 111.444447)">b</text>
+   </g>
+   <g id="text_8">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="203.598238" y="197.368676" transform="rotate(-0 203.598238 197.368676)">c</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="line2d_4">
+    <path d="M 349.93304 193.505551 
+L 431.765639 107.581322 
+" clip-path="url(#p3f25c919e9)" style="fill: none; stroke: #246585; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 431.765639 107.581322 
+L 513.598238 193.505551 
+" clip-path="url(#p3f25c919e9)" style="fill: none; stroke: #246585; stroke-width: 2.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 349.93304 193.505551 
+L 513.598238 193.505551 
+" clip-path="url(#p3f25c919e9)" style="fill: none; stroke: #bf651f; stroke-width: 4; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <g id="patch_5">
+     <path d="M 370.261971 148.161236 
+L 381.976971 148.161236 
+L 381.976971 132.467486 
+L 370.261971 132.467486 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #246585; font: 12px 'DejaVu Sans'; text-anchor: middle" x="376.119471" y="143.625611" transform="rotate(-0 376.119471 143.625611)">1</text>
+   </g>
+   <g id="text_10">
+    <g id="patch_6">
+     <path d="M 481.554306 148.161236 
+L 493.269306 148.161236 
+L 493.269306 132.467486 
+L 481.554306 132.467486 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #246585; font: 12px 'DejaVu Sans'; text-anchor: middle" x="487.411806" y="143.625611" transform="rotate(-0 487.411806 143.625611)">1</text>
+   </g>
+   <g id="text_11">
+    <g id="patch_7">
+     <path d="M 425.908139 214.445642 
+L 437.623139 214.445642 
+L 437.623139 198.751892 
+L 425.908139 198.751892 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #bf651f; font: 12px 'DejaVu Sans'; text-anchor: middle" x="431.765639" y="209.910017" transform="rotate(-0 431.765639 209.910017)">1</text>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#p3f25c919e9)">
+     <use xlink:href="#m0e8e720c10" x="349.93304" y="193.505551" style="fill: #ffffff; stroke: #657587"/>
+    </g>
+   </g>
+   <g id="PathCollection_5">
+    <g clip-path="url(#p3f25c919e9)">
+     <use xlink:href="#m0e8e720c10" x="431.765639" y="107.581322" style="fill: #ffffff; stroke: #657587"/>
+    </g>
+   </g>
+   <g id="PathCollection_6">
+    <g clip-path="url(#p3f25c919e9)">
+     <use xlink:href="#m0e8e720c10" x="513.598238" y="193.505551" style="fill: #ffffff; stroke: #657587"/>
+    </g>
+   </g>
+   <g id="text_12">
+    <!-- $N^{\prime}([(ac)]^2)=2/3$ -->
+    <g transform="translate(368.805639 234.42185)">
+     <text>
+      <tspan style="font: oblique 16px 'DejaVu Sans'" x="0 35.335365 45.140052" y="-0.5625">Nac</tspan>
+      <tspan style="font: 11.2px 'cmsy10'" x="13.092396" y="-6.6875">0</tspan>
+      <tspan style="font: 16px 'DejaVu Sans'" x="16.608802 22.85099 29.093177 53.936927 60.179115 74.137708 83.497083 100.020521 110.200208 115.590833" y="-0.5625">([()])=2/3</tspan>
+      <tspan style="font: 11.2px 'DejaVu Sans'" x="66.574427" y="-6.6875">2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="431.765639" y="63.12" transform="rotate(-0 431.765639 63.12)">Добавлена связь ac проводимости 1</text>
+   </g>
+   <g id="text_14">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="349.93304" y="197.368676" transform="rotate(-0 349.93304 197.368676)">a</text>
+   </g>
+   <g id="text_15">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="431.765639" y="111.444447" transform="rotate(-0 431.765639 111.444447)">b</text>
+   </g>
+   <g id="text_16">
+    <text style="font: 14px 'DejaVu Sans'; text-anchor: middle" x="513.598238" y="197.368676" transform="rotate(-0 513.598238 197.368676)">c</text>
+   </g>
+  </g>
+  <g id="text_17">
+   <text style="font: 18px 'DejaVu Sans'; text-anchor: middle" x="267.765639" y="20.877187" transform="rotate(-0 267.765639 20.877187)">Одна форма в двух метриках</text>
+  </g>
+  <g id="text_18">
+   <!-- $N_t([(ac)]^2)=2/(1+2t),\qquad \Delta_{ac}(1)=-4/3$ -->
+   <g transform="translate(125.035639 298.224)">
+    <text>
+     <tspan style="font: oblique 14px 'DejaVu Sans'" x="0 31.083691 39.662793 141.769141" y="-0.3671875">Nact</tspan>
+     <tspan style="font: oblique 9.8px 'DejaVu Sans'" x="10.472656 196.88457 202.889941" y="1.9296875">tac</tspan>
+     <tspan style="font: 14px 'DejaVu Sans'" x="14.697949 20.159863 25.621777 47.360059 52.821973 65.035742 73.225195 87.683203 96.59043 101.307227 106.769141 118.403906 132.861914 147.258398 152.720312 187.173437 208.66084 214.122754 223.02998 231.219434 248.40498 262.862988 271.770215 276.487012" y="-0.3671875">([()])=2/(1+2),Δ(1)=−4/3</tspan>
+     <tspan style="font: 9.8px 'DejaVu Sans'" x="58.417871" y="-5.7265625">2</tspan>
+    </text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pde3199ac23">
+   <rect x="7.2" y="69.12" width="229.131278" height="185.76"/>
+  </clipPath>
+  <clipPath id="p3f25c919e9">
+   <rect x="317.2" y="69.12" width="229.131278" height="185.76"/>
+  </clipPath>
+ </defs>
+</svg>

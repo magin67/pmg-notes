@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "graphs": {
+    "path3": 72,
+    "triangle": 81,
+    "weighted_triangle": 81,
+    "weighted_path4": 540,
+    "weighted_square": 576
+  },
+  "finite_form_comparisons": 1350,
+  "path_addition": [
+    {
+      "t": "0",
+      "value": "2",
+      "change": "0"
+    },
+    {
+      "t": "1/3",
+      "value": "6/5",
+      "change": "-4/5"
+    },
+    {
+      "t": "1",
+      "value": "2/3",
+      "change": "-4/3"
+    },
+    {
+      "t": "2",
+      "value": "2/5",
+      "change": "-8/5"
+    }
+  ],
+  "triangle_probes": [
+    {
+      "edge": "ab",
+      "new_value": "3/5",
+      "change": "-1/15",
+      "m": "1/9"
+    },
+    {
+      "edge": "bc",
+      "new_value": "3/5",
+      "change": "-1/15",
+      "m": "1/9"
+    },
+    {
+      "edge": "ac",
+      "new_value": "2/5",
+      "change": "-4/15",
+      "m": "4/9"
+    }
+  ],
+  "triangle_coefficient_sum": "2/3",
+  "triangle_output_norm": "4/9",
+  "mixed_ab_bc": [
+    "-2/9",
+    "-2/9",
+    "1/9"
+  ]
+}

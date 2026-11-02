@@ -2,7 +2,7 @@
 title: Graph Transformations and Gluing
 date: 2026-11-01
 updated: 2026-11-02
-revision: 9
+revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -41,6 +41,8 @@ These are secondary thematic entry points; each series navigator identifies its 
 - [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities|Structural Identities]]: pairing forms and reducing boundary data.
 - [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]: the Dirichlet problem, vertex elimination, and contraction.
 - [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]]: one-point gluing and Whitney twists.
+
+- [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]]: from a finite single-edge change to a distribution of a form’s metric value. The series is in progress; its primary home is Resistance Geometry and Duality.
 
 ## Future directions
 
