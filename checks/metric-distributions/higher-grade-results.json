@@ -494,6 +494,32 @@
       ]
     }
   },
+  "review_examples": {
+    "square_same_field": {
+      "value": "1",
+      "edge_influences": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "pair_ab_bc": [
+        "1/4",
+        "1/8"
+      ],
+      "outputs_differ": true,
+      "finite_probe_comparisons": 16
+    },
+    "tree_joint_change": {
+      "initial": "1",
+      "separate_values": [
+        "1/2",
+        "1/2"
+      ],
+      "joint": "1/4",
+      "incorrect_sum_of_probes": "0"
+    }
+  },
   "limits": {
     "mixed_second_derivative": "5/27",
     "pair_coefficient": "1/9",

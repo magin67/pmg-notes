@@ -169,6 +169,55 @@ def example(n, weights, labels, vertices, other=None):
             'edges': edges}
 
 
+def review_examples():
+    """Two forms with equal edge probes; interacting changes on a tree."""
+    weights = {e: Q(1) for e in [(0,1),(1,2),(2,3),(0,3)]}
+    Hk, rows, blades = data(4, weights, 2)
+    triangles = [(0,1,2),(0,2,3),(0,1,3),(1,2,3)]
+    objects = [blade([vector(4,(i,j)),vector(4,(i,k))],3) for i,j,k in triangles]
+    forms = [objects[:2], objects[2:]]
+    evaluate = lambda form, metric: sum(pairing(X,metric,X) for X in form)
+    coeff = [{J: evaluate(form,row) for J,row in rows.items()} for form in forms]
+    fields = [{e:sum(m for J,m in field.items() if e in J) for e in weights}
+              for field in coeff]
+    assert fields[0] == fields[1] == {e:Q(1,2) for e in weights}
+    assert [evaluate(form,Hk) for form in forms] == [Q(1),Q(1)]
+    pair = ((0,1),(1,2))
+    assert [field[pair] for field in coeff] == [Q(1,4),Q(1,8)]
+    output_difference = zero(3)
+    for J,b in blades.items():
+        add_outer(output_difference,b,coeff[0][J]-coeff[1][J])
+    assert output_difference != zero(3)
+    probe_count = 0
+    for e in weights:
+        for t in (Q(1),Q(-1,2),Q(1,3),Q(-1)):
+            changed = dict(weights); changed[e] += t
+            metric = compound(inverse(reduced_laplacian(4,changed)),2)
+            expected = Q(1)-t*Q(1,2)/(1+t*Q(3,4))
+            assert [evaluate(form,metric) for form in forms] == [expected,expected]
+            tau = forest_metric(4,changed,0)[0][0]
+            assert metric == [[x/tau for x in row] for row in forest_metric(4,changed,2)]
+            probe_count += 1
+    X = blade([vector(3,(0,1)),vector(3,(0,2))],2)
+    tree_values = []
+    for x,y in ((Q(1),Q(1)),(Q(2),Q(1)),(Q(1),Q(2)),(Q(2),Q(2))):
+        tree = {(0,1):x,(1,2):y}
+        metric = compound(inverse(reduced_laplacian(3,tree)),2)
+        value = pairing(X,metric,X)
+        assert value == 1/(x*y)
+        tau = forest_metric(3,tree,0)[0][0]
+        assert value == pairing(X,forest_metric(3,tree,2),X)/tau
+        tree_values.append(value)
+    initial,left,right,joint = tree_values
+    additive = initial+(left-initial)+(right-initial)
+    assert joint == Q(1,4) and additive == 0
+    return {'square_same_field':{'value':'1','edge_influences':['1/2']*4,
+                'pair_ab_bc':[str(field[pair]) for field in coeff],
+                'outputs_differ':True,'finite_probe_comparisons':probe_count},
+            'tree_joint_change':{'initial':str(initial),'separate_values':[str(left),str(right)],
+                'joint':str(joint),'incorrect_sum_of_probes':str(additive)}}
+
+
 def main():
     tri = [(0,1),(1,2),(0,2)]
     square = [(0,1),(1,2),(2,3),(0,3)]
@@ -221,6 +270,7 @@ def main():
     assert separate == Q(1,15) and joint == Q(1,8)
     totals = {key:sum(v[key] for v in counts.values()) for key in next(iter(counts.values()))}
     result = {'status':'passed','graphs':counts,'totals':totals,'examples':examples,
+              'review_examples':review_examples(),
               'limits':{'mixed_second_derivative':str(mixed_derivative),'pair_coefficient':'1/9',
                         'joint_triangle_norm':str(joint),'incorrect_sum_of_probes':str(separate)}}
     Path(__file__).with_name('higher-grade-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
