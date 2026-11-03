@@ -1,9 +1,9 @@
 ---
-title: "PMG — библиотека заметок"
-description: Понятийная база резистивной геометрии и развитие алгебры полиформ.
+title: "PMG — Исследовательские заметки"
+description: Резистивная геометрия и алгебра полиформ.
 lang: ru
 translation_key: pmg-home
-revision: 55
+revision: 56
 updated: 2026-11-03
 ---
 [English](../en/index.md) · [Выбор языка](../index.md)

@@ -1,9 +1,9 @@
 ---
 title: "PMG — Research Notes"
-description: "The foundations of resistance geometry and the development of polyform algebra."
+description: "Resistance geometry and polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 35
+revision: 36
 translated_revision: 29
 updated: 2026-11-03
 ---
