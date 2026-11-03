@@ -2,7 +2,7 @@
 title: Thematic Index
 date: 2026-11-01
 updated: 2026-11-03
-revision: 13
+revision: 14
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -31,7 +31,7 @@ This index groups series by their main question. Each series has one primary hom
 
 ## Primary home of each series
 
-The 17 completed bilingual series contain 123 substantive notes in each language. Thematic pages, navigators, references, and programming examples are excluded from this count.
+The 18 completed bilingual series contain 127 substantive notes in each language. Thematic pages, navigators, references, and programming examples are excluded from this count.
 
 | Series | Primary home | Notes |
 | --- | --- | ---: |
@@ -44,6 +44,7 @@ The 17 completed bilingual series contain 123 substantive notes in each language
 | [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG\|Spaces and Subspaces in PMG]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 8 |
 | [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs\|Metric Parameters of Graphs]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 5 |
 | [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality\|Greenian and Polyform Duality]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 9 |
+| [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 4 |
 | [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs\|Matroid Parameters and Forest Characteristics of Graphs]] | [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra\|Invariants, Decompositions, and Spectra]] | 7 |
 | [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions\|KVP Decomposition and Oriented Extensions]] | [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra\|Invariants, Decompositions, and Spectra]] | 9 |
 | [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra\|Spectra and Diagonalization in Polyform Algebra]] | [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra\|Invariants, Decompositions, and Spectra]] | 6 |
@@ -56,7 +57,7 @@ The 17 completed bilingual series contain 123 substantive notes in each language
 
 ## Series in progress
 
-The series [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]] is complete in Russian, with four substantive notes and a navigator. The library now has 127 substantive Russian notes and 123 English notes; English translations of the new notes are not yet available.
+The series [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]] is available in both languages: four substantive notes, a navigator, and 12 figures in each language. The library contains 127 substantive notes in each language.
 
 Primary home: Resistance Geometry and Duality; secondary entry: Graph Transformations and Gluing.
 

@@ -3,7 +3,7 @@ title: "PMG — Research Notes"
 description: "The foundations of resistance geometry and the development of polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 34
+revision: 35
 translated_revision: 29
 updated: 2026-11-03
 ---
@@ -22,7 +22,7 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Thematic sections
 
-The 17 completed bilingual series contain 123 substantive notes in each language. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
+The 18 completed bilingual series contain 127 substantive notes in each language. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
 - **[[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
@@ -32,7 +32,7 @@ The 17 completed bilingual series contain 123 substantive notes in each language
 
 [[en/Thematic Index|All series and their primary homes]] · [[en/Cross-cutting Tags|Cross-cutting Tags]].
 
-The series [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Метрические распределения и влияние связей|Metric Distributions and Edge Influence (Russian)]] is complete in Russian, with four substantive notes and a navigator. The library now has 127 substantive Russian notes and 123 English notes; English translations of the new notes are not yet available.
+The series [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]] is available in both languages: four substantive notes, a navigator, and 12 figures in each language. The library contains 127 substantive notes in each language.
 
 ## Programming examples
 
