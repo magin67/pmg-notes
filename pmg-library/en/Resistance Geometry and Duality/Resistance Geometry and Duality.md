@@ -2,12 +2,13 @@
 title: Resistance Geometry and Duality
 date: 2026-11-01
 updated: 2026-11-03
-revision: 6
+revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: pmg-topic-geometry
 order: 0
+folder_order: 30
 description: "How are spaces, the resistance metric, geometric characteristics, and dual representations organized?"
 aliases:
   - "en/Topics/Resistance Geometry and Duality"

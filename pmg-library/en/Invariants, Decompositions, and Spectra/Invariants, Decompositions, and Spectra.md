@@ -1,13 +1,14 @@
 ---
 title: Invariants, Decompositions, and Spectra
 date: 2026-11-01
-updated: 2026-11-02
-revision: 8
+updated: 2026-11-03
+revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: pmg-topic-invariants
 order: 0
+folder_order: 40
 description: "Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?"
 aliases:
   - "en/Topics/Invariants, Decompositions, and Spectra"

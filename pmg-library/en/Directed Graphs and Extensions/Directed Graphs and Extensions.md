@@ -1,13 +1,14 @@
 ---
 title: Directed Graphs and Extensions
 date: 2026-11-01
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-03
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: pmg-topic-directed
 order: 0
+folder_order: 60
 description: "What changes when couplings become directed and constructions become nonsymmetric?"
 aliases:
   - "en/Topics/Directed Graphs and Extensions"

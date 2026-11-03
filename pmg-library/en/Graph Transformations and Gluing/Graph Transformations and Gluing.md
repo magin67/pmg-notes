@@ -2,12 +2,13 @@
 title: Graph Transformations and Gluing
 date: 2026-11-01
 updated: 2026-11-03
-revision: 11
+revision: 12
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: pmg-topic-transformations
 order: 0
+folder_order: 50
 description: "How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?"
 aliases:
   - "en/Topics/Graph Transformations and Gluing"

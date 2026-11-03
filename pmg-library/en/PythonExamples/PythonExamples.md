@@ -1,8 +1,8 @@
 ---
 title: "Programming Examples"
 date: 2026-10-29
-updated: 2026-11-01
-revision: 7
+updated: 2026-11-03
+revision: 8
 source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
@@ -10,6 +10,7 @@ translation_key: programming-examples
 lang: en
 description: "Reproducible PMG calculations with the Polyform Algebra Python library."
 order: 0
+folder_order: 70
 ---
 
 This section connects the mathematical PMG notes with executable examples from `polyform_algebra`. Each companion note states the problem, maps notation to code, gives expected results, and describes independent checks.

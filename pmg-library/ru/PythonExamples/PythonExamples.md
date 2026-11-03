@@ -1,14 +1,15 @@
 ---
 title: "Программные примеры"
 date: 2026-10-29
-updated: 2026-11-01
-revision: 7
+updated: 2026-11-03
+revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
 lang: ru
 description: "Воспроизводимые вычисления PMG с Python-библиотекой Алгебра полиформ."
 order: 0
+folder_order: 70
 ---
 
 Раздел связывает математические заметки PMG с исполняемыми примерами библиотеки `polyform_algebra`. Каждый материал содержит исходную задачу, соответствие обозначений коду, ожидаемые результаты и независимые проверки.

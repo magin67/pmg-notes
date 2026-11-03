@@ -14,14 +14,16 @@ function readingOrder(value: unknown): number | undefined {
   return Number.isFinite(number) ? number : undefined
 }
 
-// Folder pages: folders first, then order ascending, then title.
+// Folders use folder_order; notes use order. Unranked entries fall back to title.
 function sortPages(a: QuartzPluginData, b: QuartzPluginData): number {
   const aFolder = a.slug === "index" || (a.slug ?? "").endsWith("/index")
   const bFolder = b.slug === "index" || (b.slug ?? "").endsWith("/index")
   if (aFolder !== bFolder) return aFolder ? -1 : 1
 
-  const aOrder = readingOrder(a.frontmatter?.order) ?? Infinity
-  const bOrder = readingOrder(b.frontmatter?.order) ?? Infinity
+  const aOrder =
+    readingOrder(aFolder ? a.frontmatter?.folder_order : a.frontmatter?.order) ?? Infinity
+  const bOrder =
+    readingOrder(bFolder ? b.frontmatter?.folder_order : b.frontmatter?.order) ?? Infinity
   if (aOrder !== bOrder) return aOrder < bOrder ? -1 : 1
 
   return (a.frontmatter?.title ?? "").localeCompare(b.frontmatter?.title ?? "", undefined, {
@@ -33,7 +35,7 @@ function sortPages(a: QuartzPluginData, b: QuartzPluginData): number {
 interface ExplorerNode {
   isFolder: boolean
   displayName?: string
-  data: { order?: number } | null
+  data: { order?: number; folder_order?: number } | null
 }
 
 // Quartz serializes this function for the browser. Keep it self-contained:
@@ -41,8 +43,8 @@ interface ExplorerNode {
 function sortExplorer(a: ExplorerNode, b: ExplorerNode): number {
   if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
 
-  const aOrder = a.data?.order ?? Infinity
-  const bOrder = b.data?.order ?? Infinity
+  const aOrder = (a.isFolder ? a.data?.folder_order : a.data?.order) ?? Infinity
+  const bOrder = (b.isFolder ? b.data?.folder_order : b.data?.order) ?? Infinity
   if (aOrder !== bOrder) return aOrder < bOrder ? -1 : 1
 
   return (a.displayName ?? "").localeCompare(b.displayName ?? "", undefined, {
@@ -58,7 +60,7 @@ componentRegistry.setOptionOverrides("@quartz-community/explorer", { sortFn: sor
 const config = await loadQuartzConfig()
 
 // Explorer reads static/contentIndex.json, which normally omits custom YAML
-// properties. Extend the existing index with just the numeric order field.
+// properties. Extend the existing index with the numeric note and folder order fields.
 // Retain the standard index, RSS, sitemap, and publication filters.
 async function addReadingOrder(
   files: FilePath[],
@@ -77,9 +79,11 @@ async function addReadingOrder(
   for (const [, file] of content) {
     const slug = file.data.slug
     if (!slug || !Object.hasOwn(index, slug)) continue
-    const order = readingOrder(file.data.frontmatter?.order)
-    if (order === undefined) delete index[slug].order
-    else index[slug].order = order
+    for (const field of ["order", "folder_order"] as const) {
+      const order = readingOrder(file.data.frontmatter?.[field])
+      if (order === undefined) delete index[slug][field]
+      else index[slug][field] = order
+    }
   }
   await fs.writeFile(indexPath, JSON.stringify(index), "utf8")
   return files

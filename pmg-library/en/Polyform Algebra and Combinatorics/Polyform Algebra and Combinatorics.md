@@ -1,13 +1,14 @@
 ---
 title: Polyform Algebra and Combinatorics
 date: 2026-11-01
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-03
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: pmg-topic-algebra
 order: 0
+folder_order: 20
 description: "What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?"
 aliases:
   - "en/Topics/Polyform Algebra and Combinatorics"
