@@ -1,9 +1,9 @@
 ---
-title: "PMG — Research Notes"
+title: "PMG — Library"
 description: "Resistance geometry and polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 36
+revision: 37
 translated_revision: 29
 updated: 2026-11-03
 ---
