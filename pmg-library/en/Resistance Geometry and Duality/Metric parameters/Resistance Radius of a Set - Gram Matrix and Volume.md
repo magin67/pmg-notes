@@ -1,9 +1,9 @@
 ---
 title: "Resistance Radius of a Set: Gram Matrix and Volume"
 date: 2026-10-16
-updated: 2026-10-18
-revision: 3
-translated_revision: 5
+updated: 2026-11-03
+revision: 4
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -67,7 +67,7 @@ O_A=\sum_{i=0}^l\alpha_i x_i,
 \mathbf1^{\mathsf T}\boldsymbol\alpha=1
 $$
 
-In the isotropic representation, these coordinates specify the element $h_V=\sum_i\alpha_i a_i$. Its norm is $-\rho_A$, and its local center is $h=h_V+\rho_Az/2$. This distinction is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. The coordinates $\boldsymbol\alpha$ refer to $h_V$ and the Euclidean center $O_A$; representing the local point $h$ in the extended basis also requires a component along $z$.
+In the isotropic representation, these coordinates specify the element $p_V=\sum_i\alpha_i a_i$. Its norm is $-\rho_A$, and its local center is $p=p_V+\rho_Az/2$. This distinction is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. The coordinates $\boldsymbol\alpha$ refer to $p_V$ and the Euclidean center $O_A$; representing the local point $p$ in the extended basis also requires a component along $z$.
 
 > [!info] The radius and bi-coordinates of the center
 > **Theorem.** Under the stated assumptions, the matrix $\mathbf G$ is invertible and
@@ -85,23 +85,23 @@ In the isotropic representation, these coordinates specify the element $h_V=\sum
 > In particular, $\mathbf1^{\mathsf T}\mathbf G^{-1}\mathbf1<0$. The center coordinates need not be nonnegative.
 
 > [!note]- Invertibility and derivation of the formulas
-> **Proof.** For every vertex, $(a_i-h_V)^2=\rho_A$. Locality of the vertices gives
+> **Proof.** For every vertex, $(a_i-p_V)^2=\rho_A$. Locality of the vertices gives
 >
 > $$
-> a_i\cdot h_V=\frac{h_V^2-\rho_A}{2}
+> a_i\cdot p_V=\frac{p_V^2-\rho_A}{2}
 > $$
 >
-> Multiplying by $\alpha_i$ and summing yields $h_V^2=-\rho_A$. Therefore
+> Multiplying by $\alpha_i$ and summing yields $p_V^2=-\rho_A$. Therefore
 >
 > $$
-> a_i\cdot h_V=-\rho_A,
+> a_i\cdot p_V=-\rho_A,
 > \qquad
-> u_i\cdot h_V=0
+> u_i\cdot p_V=0
 > $$
 >
-> The elements $h_V,u_1,\ldots,u_l$ form a basis of the linear span of the original local vertices: $h_V$ has affine weight $1$, while the $u_i$ form a basis of its zero-weight directions. The Gram matrix in this basis is $\operatorname{diag}(-\rho_A,\mathbf G_u)$ and is nonsingular. Hence $\mathbf G$ is also nonsingular and has signature $(l,1)$.
+> The elements $p_V,u_1,\ldots,u_l$ form a basis of the linear span of the original local vertices: $p_V$ has affine weight $1$, while the $u_i$ form a basis of its zero-weight directions. The Gram matrix in this basis is $\operatorname{diag}(-\rho_A,\mathbf G_u)$ and is nonsingular. Hence $\mathbf G$ is also nonsingular and has signature $(l,1)$.
 >
-> The equalities $a_i\cdot h_V=-\rho_A$ can be written as $\mathbf G\boldsymbol\alpha=-\rho_A\mathbf1$. Inverting and normalizing the sum of the coordinates gives (1). $\square$
+> The equalities $a_i\cdot p_V=-\rho_A$ can be written as $\mathbf G\boldsymbol\alpha=-\rho_A\mathbf1$. Inverting and normalizing the sum of the coordinates gives (1). $\square$
 
 Since $\mathbf G^{-1}=-2\mathbf R^{-1}$, formula (1) gives $\rho_A=1/(2\mathbf1^{\mathsf T}\mathbf R^{-1}\mathbf1)$. This expression in terms of the resistance matrix is also derived in [[Resistance Radius and Diameter of a Graph]].
 
@@ -145,10 +145,10 @@ The sign matters. For the exterior object $\mathcal A=a_0\wedge\cdots\wedge a_l$
 > **Proof.** The change from $a_0,a_1,\ldots,a_l$ to $a_0,u_1,\ldots,u_l$ has determinant $1$: subtract $a_0$ from every vertex except the first. Next,
 >
 > $$
-> h_V=a_0+\sum_{i=1}^l\alpha_i u_i
+> p_V=a_0+\sum_{i=1}^l\alpha_i u_i
 > $$
 >
-> Replacing $a_0$ by $h_V$ also has determinant $1$. The Gram determinant is therefore preserved. The proof of (1) established that $h_V$ is orthogonal to every $u_i$, so
+> Replacing $a_0$ by $p_V$ also has determinant $1$. The Gram determinant is therefore preserved. The proof of (1) established that $p_V$ is orthogonal to every $u_i$, so
 >
 > $$
 > \det\mathbf G=\det\operatorname{diag}(-\rho_A,\mathbf G_u)

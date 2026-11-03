@@ -42,6 +42,17 @@ for n,edges in [(5,[(0,1),(1,2),(2,3),(3,4)]),(5,[(0,i) for i in range(1,5)]),(7
     T = distances(n,edges)
     assert L*T == 2*(n-1)*s.ones(n,1)-n*A*s.ones(n,1)
     assert beta == s.ones(n,1)/n+(s.ones(n,1)*sum(T)/n-T)/(2*n)
+    # Cross-note consequences: centroid ranking and equal displacements.
+    r = s.Matrix([G[i,i] for i in range(n)])
+    rmean = sum(r)/n
+    assert beta == s.ones(n,1)/n+(rmean*s.ones(n,1)-r)/2
+    assert L*r == -b
+    assert (b.T*G*b)[0] == (r.T*L*r)[0]
+    c = s.Rational(9,4)
+    Aw,Lw,Gw,bw,betaw = matrices(n,[(i,j,c) for i,j in edges])
+    rw = s.Matrix([Gw[i,i] for i in range(n)])
+    assert betaw == beta
+    assert (bw.T*Gw*bw)[0] == c**2*(rw.T*Lw*rw)[0]
     out['tree_'+str(n)+'_'+str(edges)] = list(map(str,beta))
 
 edges=[(0,1),(1,2),(0,2),(2,3),(3,4)]

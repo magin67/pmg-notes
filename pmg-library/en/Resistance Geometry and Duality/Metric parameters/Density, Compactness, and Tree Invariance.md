@@ -1,9 +1,9 @@
 ---
 title: Density, Compactness, and Tree Invariance
 date: 2026-10-17
-updated: 2026-10-18
-revision: 4
-translated_revision: 4
+updated: 2026-11-03
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -169,10 +169,10 @@ Forests are explicitly part of this parameter's construction. This is a concrete
 >
 > The inequalities $\lambda_2\le H_\lambda\le A_\lambda$ give the spectral bounds. The two means are equal only when $\lambda_2=\cdots=\lambda_n=a>0$. Then $\mathbf L=a(I-\mathbf1\mathbf1^{\mathsf T}/n)$, so every pair is joined by an edge of conductance $a/n$.
 >
-> Let $b$ be the centroid and $O$ the circumcenter in a Euclidean realization. The [[Centroid, Spanning-Tree, and Eigenvector Centralities#Total resistance to the centroid, the Kirchhoff index, and the radius|decomposition of the resistance radius]] establishes
+> Let $h$ be the centroid and $O$ the circumcenter in a Euclidean realization. The [[Centroid, Spanning-Tree, and Eigenvector Centralities#Total resistance to the centroid, the Kirchhoff index, and the radius|decomposition of the resistance radius]] establishes
 >
 > $$
-> \rho=\frac{Kf}{n^2}+(O-b)^2\ge\frac{Kf}{n^2}
+> \rho=\frac{Kf}{n^2}+(O-h)^2\ge\frac{Kf}{n^2}
 > $$
 >
 > Substituting into the definition of $\eta_\rho$ gives $\eta_\rho\le\eta_K$. All denominators are positive. $\square$
@@ -180,7 +180,7 @@ Forests are explicitly part of this parameter's construction. This is a concrete
 Introduce the ratio
 
 $$
-\chi=\frac{Kf}{n^2\rho}=1-\frac{(O-b)^2}{\rho},\qquad 0<\chi\le1
+\chi=\frac{Kf}{n^2\rho}=1-\frac{(O-h)^2}{\rho},\qquad 0<\chi\le1
 $$
 
 The definitions give the exact factorization
@@ -189,7 +189,9 @@ $$
 \boxed{\eta_\rho=\eta_K\chi}
 $$
 
-Radius compactness combines two properties: compactness based on mean pairwise resistance, and the relative displacement of the circumcenter from the centroid. Equality $\eta_\rho=\eta_K$ is equivalent to $O=b$, or to a constant Green diagonal. It does not require the graph to be complete. In particular, it holds when the conductance-preserving automorphism group acts transitively on the vertices: these symmetries make all diagonal entries of the Green matrix equal. Vertex transitivity of the underlying edge structure alone is insufficient for arbitrary conductances.
+Radius compactness combines two properties: compactness based on mean pairwise resistance, and the relative displacement of the circumcenter from the centroid. Equality $\eta_\rho=\eta_K$ is equivalent to $O=h$, or to a constant Green diagonal. It does not require the graph to be complete. In particular, it holds when the conductance-preserving automorphism group acts transitively on the vertices: these symmetries make all diagonal entries of the Green matrix equal. Vertex transitivity of the underlying edge structure alone is insufficient for arbitrary conductances.
+
+In the [[Sphere Centers and Graph Heterogeneity#Comparison with the resistance circumcenter|comparison of the two geometries]], $(O-h)^2$ is denoted by $\Delta_R$, so $\chi=1-\Delta_R/\rho$. That note also gives an asymmetric graph with $\chi=1$: coincidence of the circumcenter and centroid is not a criterion for structural symmetry. For unit-conductance trees, $\Delta_L=\Delta_R$ is proved; this additional relation does not transfer resistance compactness to Laplacian geometry.
 
 The two proved chains of inequalities do not establish an ordering between $\eta_\rho$ and $\eta_2$. For example, a star on ten vertices has $\eta_\rho=0.2<0.5=\eta_2$, whereas a path has $\eta_\rho=0.2>\eta_2\approx0.0489$.
 
@@ -212,19 +214,19 @@ $$
 
 The form $L_{K_n}$ is fixed by the chosen vertex set, but is evaluated in the metric of the original graph $G$. Using this form does not replace the original graph by a complete graph.
 
-Let $b_V=n^{-1}\sum_i a_i$, and let $h_V$ represent the circumcenter. The [[Centroid, Spanning-Tree, and Eigenvector Centralities#The Green matrix, centroid, and local part of the Laplacian|decomposition of centroid forms]] gives
+Let $h_V=n^{-1}\sum_i a_i$, and let $p_V$ represent the circumcenter. The [[Centroid, Spanning-Tree, and Eigenvector Centralities#The Green matrix, centroid, and local part of the Laplacian|decomposition of centroid forms]] gives
 
 $$
-\Psi=\sum_i[b_V-a_i]^2=\frac1nL_{K_n}
+\Psi=\sum_i[h_V-a_i]^2=\frac1nL_{K_n}
 $$
 
 Therefore,
 
 $$
-\rho=\frac{\tau\!\left(M_{n-2}\left(\frac1{n^2}L_{K_n}+[h_V-b_V]^2\right)\right)}{\tau(G)}
+\rho=\frac{\tau\!\left(M_{n-2}\left(\frac1{n^2}L_{K_n}+[p_V-h_V]^2\right)\right)}{\tau(G)}
 $$
 
-This is a polyform expression for the two terms of the radius, and hence for the two factors $\eta_K$ and $\chi$. The form $[h_V-b_V]^2$ depends on the metric through the center's position. All forms being evaluated belong to the subalgebra of forms on boundaries; norms of the point representatives themselves are not used.
+This is a polyform expression for the two terms of the radius, and hence for the two factors $\eta_K$ and $\chi$. The form $[p_V-h_V]^2$ depends on the metric through the center's position. All forms being evaluated belong to the subalgebra of forms on boundaries; norms of the point representatives themselves are not used.
 
 The combinatorial meaning of the next-to-top-grade component is visible in the spanning 2-forest expression
 

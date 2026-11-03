@@ -1,9 +1,9 @@
 ---
 title: Resistance Radius and Diameter of a Graph
 date: 2026-10-15
-updated: 2026-10-18
-revision: 4
-translated_revision: 4
+updated: 2026-11-03
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -59,9 +59,9 @@ In the affine hull of a nondegenerate simplex, there is a unique sphere passing 
 
 The physical dimensions of $\rho$ and $D_{\mathrm{res}}$ do not depend on the number of vertices. This allows values to be compared across graphs of different orders, but does not by itself remove dependence on the order or on the overall conductance scale.
 
-The center $O$ need not coincide with the centroid $b=n^{-1}\sum_i x_i$ and may lie outside the simplex. The center of the circumsphere is not the orthocenter, the intersection of the altitudes.
+The center $O$ need not coincide with the centroid $h=n^{-1}\sum_i x_i$ and may lie outside the simplex. The center of the circumsphere is not the orthocenter, the intersection of the altitudes.
 
-**Remark on the isotropic representation.** In this note, $O$ is the Euclidean center. Its bi-coordinates specify an affine combination of the original local vertices, $h_V=\sum_i\alpha_i a_i$, but $h_V$ need not be a local element of the extension. The distinction between $h_V$, its local center, and the sphere element is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. It does not change the Euclidean distances used here.
+**Remark on the isotropic representation.** In this note, $O$ is the Euclidean center. Its bi-coordinates specify an affine combination of the original local vertices, $p_V=\sum_i\alpha_i a_i$, but $p_V$ need not be a local element of the extension. The distinction between $p_V$, its local center, and the sphere element is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. It does not change the Euclidean distances used here.
 
 The earlier name "metric mass" is no longer used as a current term. When comparing older calculations, check whether their parameter equals $\rho$ or $4\rho$.
 
@@ -187,7 +187,7 @@ $$
 
 The form $[u,v]$ has grade $1$, so $M_{n-2}$ supplies its complement to the spanning-tree grade. This next-to-top-grade component contains the forms of spanning 2-forests. Together with normalization by $\tau(G)$, it determines the entire metric on vectors used to construct the circumsphere.
 
-Choose $a_n$ as the reference vertex and set $u_i=a_i-a_n$, $i=1,\ldots,n-1$. The required center corresponds to $h_V=a_n+y$, where $y$ is an affine vector.
+Choose $a_n$ as the reference vertex and set $u_i=a_i-a_n$, $i=1,\ldots,n-1$. The required center corresponds to $p_V=a_n+y$, where $y$ is an affine vector.
 
 > [!info] Computing the center and radius using polyforms
 > **Proposition.** The center and radius can be computed directly from potentials of forms:
@@ -208,7 +208,7 @@ Choose $a_n$ as the reference vertex and set $u_i=a_i-a_n$, $i=1,\ldots,n-1$. Th
 
 Thus matrix inversion in (4) and evaluation of potentials describe the same metric. The radius is obtained from it after determining the center. The vector $y$ depends on the graph, so this expression alone does not give the radius as a simple sum of coefficients of $M_{n-2}$.
 
-The vectors $u_i,y$ have zero affine weight. Applying the metric identity here does not require evaluating the form of the nonlocal element $h_V$ itself outside the subalgebra of boundaries.
+The vectors $u_i,y$ have zero affine weight. Applying the metric identity here does not require evaluating the form of the nonlocal element $p_V$ itself outside the subalgebra of boundaries.
 
 ## Reciprocal connectivity parameters
 

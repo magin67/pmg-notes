@@ -1,9 +1,9 @@
 ---
 title: "Centroid, Spanning-Tree, and Eigenvector Centralities"
 date: 2026-10-16
-updated: 2026-10-18
-revision: 4
-translated_revision: 5
+updated: 2026-11-03
+revision: 5
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -39,11 +39,11 @@ Let $x_1,\ldots,x_n$ be the vertices of a Euclidean realization of the resistanc
 
 $$
 (x_i-x_j)^2=R_{ij},\qquad
-b=\frac1n\sum_i x_i,\qquad
-r_i=(x_i-b)^2=\mathbf{Gr}_{ii}
+h=\frac1n\sum_i x_i,\qquad
+r_i=(x_i-h)^2=\mathbf{Gr}_{ii}
 $$
 
-Here $b$ is the centroid, and $r_i$ is the resistance from a vertex to the centroid. Under the PMG convention, norm is quadratic: $X^2=X\cdot X$; its square root is called the linear norm. Thus $r_i$ is a squared ordinary Euclidean distance.
+Here $h$ is the centroid, and $r_i$ is the resistance from a vertex to the centroid. Under the PMG convention, norm is quadratic: $X^2=X\cdot X$; its square root is called the linear norm. Thus $r_i$ is a squared ordinary Euclidean distance.
 
 All $r_i$ are positive: the centroid of a nondegenerate simplex on $n\ge2$ vertices does not coincide with any vertex. Set $\mathbf r=(r_1,\ldots,r_n)^{\mathsf T}$ and $\mathbf1=(1,\ldots,1)^{\mathsf T}$. We use the identities
 
@@ -63,7 +63,7 @@ $$
 
 The resistance radius is $\rho=R_{\mathrm{sph}}^2$, and the resistance diameter is $D_{\mathrm{res}}=4\rho$. Distances to $O$ are equal for all vertices, so they do not provide a ranking on their own.
 
-**Remark on the isotropic representation.** The average of local vertices $b_V=n^{-1}\sum_i a_i$ may be a nonlocal element. The geometric centroid corresponds to its local center $\pi(b_V)=b_V-b_V^2z/2$. Norms of differences are preserved, so the formulas for $r_i$ agree in both representations. This distinction is discussed in the [[Nonlocal Elements, Spheres, and Their Centers#What selecting the center preserves|note on local centers]].
+**Remark on the isotropic representation.** The average of local vertices $h_V=n^{-1}\sum_i a_i$ may be a nonlocal element. The geometric centroid corresponds to its local center $\pi(h_V)=h_V-h_V^2z/2$. Norms of differences are preserved, so the formulas for $r_i$ agree in both representations. This distinction is discussed in the [[Nonlocal Elements, Spheres, and Their Centers#What selecting the center preserves|note on local centers]].
 
 ## The centroid minimizes the sum of resistances
 
@@ -74,15 +74,15 @@ For a point $x$ in the entire affine space of the simplex, set $R(x,x_i)=(x-x_i)
 >
 > $$
 > \boxed{
-> \sum_i R(x,x_i)=\sum_i r_i+n(x-b)^2
+> \sum_i R(x,x_i)=\sum_i r_i+n(x-h)^2
 > }
 > \tag{1}
 > $$
 >
-> Consequently, the centroid $b$ is the unique minimizer of the sum of resistances to all vertices.
+> Consequently, the centroid $h$ is the unique minimizer of the sum of resistances to all vertices.
 
 > [!note]- Decomposition relative to the centroid
-> **Proof.** Write $x-x_i=(x-b)+(b-x_i)$ and expand the norm. On summation, the cross term vanishes because $\sum_i(b-x_i)=0$. This gives (1). The metric on the space of directions is positive definite, so $(x-b)^2\ge0$, with equality only at $x=b$. $\square$
+> **Proof.** Write $x-x_i=(x-h)+(h-x_i)$ and expand the norm. On summation, the cross term vanishes because $\sum_i(h-x_i)=0$. This gives (1). The metric on the space of directions is positive definite, so $(x-h)^2\ge0$, with equality only at $x=h$. $\square$
 
 The statement holds for every nondegenerate Euclidean simplex. It uses the sum of squared distances. Minimizing the sum of linear distances $\sum_i\sqrt{R(x,x_i)}$ is a different problem and generally gives a different point.
 
@@ -141,18 +141,18 @@ The relation to the radius also involves the distance between the two centers.
 >
 > $$
 > \boxed{
-> \rho=\frac{S_{\mathrm{cent}}}{n}+(O-b)^2
-> =\frac{Kf(G)}{n^2}+(O-b)^2
+> \rho=\frac{S_{\mathrm{cent}}}{n}+(O-h)^2
+> =\frac{Kf(G)}{n^2}+(O-h)^2
 > }
 > \tag{3}
 > $$
 >
-> In particular, $Kf(G)\le n^2\rho$, with equality if and only if $O=b$.
+> In particular, $Kf(G)\le n^2\rho$, with equality if and only if $O=h$.
 
 > [!note]- Substituting the circumcenter
 > **Proof.** At $x=O$, the left-hand side of (1) equals $n\rho$, since $O$ is equidistant from all vertices. Dividing by $n$ and using (2) gives (3). $\square$
 
-The centers coincide if and only if all $r_i$ are equal. Indeed, in this case $b$ is equidistant from the vertices and is the circumcenter. Thus the radius captures the mean resistance to the centroid together with the displacement of the circumcenter; in general, $S_{\mathrm{cent}}$ alone is insufficient to recover $\rho$.
+The centers coincide if and only if all $r_i$ are equal. Indeed, in this case $h$ is equidistant from the vertices and is the circumcenter. Thus the radius captures the mean resistance to the centroid together with the displacement of the circumcenter; in general, $S_{\mathrm{cent}}$ alone is insufficient to recover $\rho$.
 
 ## Centroid centrality
 
@@ -266,10 +266,10 @@ $$
 
 Greater spanning-tree centrality corresponds to a smaller coordinate of the circumcenter.
 
-Formula (5) also yields a computational supplement to (3). Since $(O-b)^2=\boldsymbol\alpha^{\mathsf T}\mathbf{Gr}\boldsymbol\alpha$ and $\mathbf L\mathbf{Gr}\mathbf L=\mathbf L$, we have
+Formula (5) also yields a computational supplement to (3). Since $(O-h)^2=\boldsymbol\alpha^{\mathsf T}\mathbf{Gr}\boldsymbol\alpha$ and $\mathbf L\mathbf{Gr}\mathbf L=\mathbf L$, we have
 
 $$
-(O-b)^2=\frac14\mathbf r^{\mathsf T}\mathbf L\mathbf r,
+(O-h)^2=\frac14\mathbf r^{\mathsf T}\mathbf L\mathbf r,
 \qquad
 \rho=\frac{S_{\mathrm{cent}}}{n}+\frac14\mathbf r^{\mathsf T}\mathbf L\mathbf r
 $$
@@ -290,7 +290,7 @@ It holds for affine vectors $u,v$. The form $[u,v]$ has grade $1$, so its potent
 
 ### The Green matrix, centroid, and local part of the Laplacian
 
-Set $b_V=n^{-1}\sum_i a_i$ and $v_i=b_V-a_i$. These vectors point from the vertices to the centroid; their Gram matrix is the Green matrix. Hence
+Set $h_V=n^{-1}\sum_i a_i$ and $v_i=h_V-a_i$. These vectors point from the vertices to the centroid; their Gram matrix is the Green matrix. Hence
 
 $$
 \mathbf{Gr}_{ij}=\frac{\tau(M_{n-2}[v_i,v_j])}{\tau},\qquad
@@ -367,13 +367,13 @@ Resistance to the centroid and expected spanning-tree degree are evaluations of 
 
 The latter normalization is also visible in polyforms: $\sum_iL_i=2L$ and $M_{n-2}L=(n-1)M_{n-1}$, giving $\sum_i\delta_i=2(n-1)$.
 
-If $h_V=\sum_i\alpha_i a_i$ corresponds to the Euclidean circumcenter $O$, then $h_V-b_V$ is an affine vector with norm $(O-b)^2$. The radius decomposition (3) becomes
+If $p_V=\sum_i\alpha_i a_i$ corresponds to the Euclidean circumcenter $O$, then $p_V-h_V$ is an affine vector with norm $(O-h)^2$. The radius decomposition (3) becomes
 
 $$
-\rho=\frac{\tau\!\left(M_{n-2}\left(\frac1n\Psi+[h_V-b_V]^2\right)\right)}{\tau}
+\rho=\frac{\tau\!\left(M_{n-2}\left(\frac1n\Psi+[p_V-h_V]^2\right)\right)}{\tau}
 $$
 
-This relates the radius to the same potential. The form $[h_V-b_V]^2$ depends on the center's position, which is itself determined by the metric; it cannot be held fixed when couplings change. The norms of the nonlocal elements $h_V,b_V$ themselves are not evaluated here: all formulas use their differences of zero affine weight.
+This relates the radius to the same potential. The form $[p_V-h_V]^2$ depends on the center's position, which is itself determined by the metric; it cannot be held fixed when couplings change. The norms of the nonlocal elements $p_V,h_V$ themselves are not evaluated here: all formulas use their differences of zero affine weight.
 
 ### Spanning 2-forest coefficients and component sizes
 
@@ -424,7 +424,7 @@ For vertex $i$, let $m_i(F)$ be the number of vertices in the component of the f
 > $$
 
 > [!note]- Substitution of the centroid vectors
-> **Proof.** The vector $v_i=b_V-a_i$ has coordinate $1/n-1$ at vertex $i$ and coordinates $1/n$ elsewhere. The absolute value of its coordinate sum on either component is $m_i(F)/n$. Substitution into the lemma gives the formula for $r_i$. If the component sizes are $p,q$, then
+> **Proof.** The vector $v_i=h_V-a_i$ has coordinate $1/n-1$ at vertex $i$ and coordinates $1/n$ elsewhere. The absolute value of its coordinate sum on either component is $m_i(F)/n$. Substitution into the lemma gives the formula for $r_i$. If the component sizes are $p,q$, then
 >
 > $$
 > \sum_i m_i(F)^2=pq^2+qp^2=npq
@@ -492,7 +492,7 @@ r_i=\frac{n-1}{n^2},\qquad
 \alpha_i=\frac1n
 $$
 
-All three centralities equal $1/n$, and $O=b$. Here $S_{\mathrm{cent}}=(n-1)/n$, $Kf=n-1$, and $\rho=(n-1)/n^2$.
+All three centralities equal $1/n$, and $O=h$. Here $S_{\mathrm{cent}}=(n-1)/n$, $Kf=n-1$, and $\rho=(n-1)/n^2$.
 
 ### A five-vertex path
 
@@ -547,7 +547,7 @@ The ranking is the same, but the degree to which the center stands out differs.
 
 For the above five-vertex graphs with unit conductances:
 
-| Graph | $S_{\mathrm{cent}}$ | $Kf$ | $\rho$ | $(O-b)^2$ |
+| Graph | $S_{\mathrm{cent}}$ | $Kf$ | $\rho$ | $(O-h)^2$ |
 | --- | --- | --- | --- | --- |
 | $K_5$ | $4/5$ | $4$ | $4/25$ | $0$ |
 | $P_5$ | $4$ | $20$ | $1$ | $1/5$ |
@@ -635,7 +635,7 @@ Geometric removal of one vertex admits an exact formula. Let $\rho_{\widehat i}$
 > Here $d_i$ is the weighted degree of the vertex in the original graph.
 
 > [!note]- Distance to the opposite face
-> **Proof.** Let $y_j=x_j-b$ and $w_i=\sum_j\mathbf L_{ij}y_j$. Since the Gram matrix of the $y_j$ is $\mathbf{Gr}$,
+> **Proof.** Let $y_j=x_j-h$ and $w_i=\sum_j\mathbf L_{ij}y_j$. Since the Gram matrix of the $y_j$ is $\mathbf{Gr}$,
 >
 > $$
 > w_i\cdot(x_j-x_k)=\delta_{ij}^{\mathrm{Kr}}-\delta_{ik}^{\mathrm{Kr}},
@@ -667,6 +667,8 @@ The minimizing property of the centroid (1), identities (2)-(3), the relation be
 > The decomposition of the centroid form through the star and complete graph was additionally checked by comparing coefficient matrices for $2\le n\le8$. Its metric evaluation was compared with independently computed Green diagonals on $P_3$, $K_{1,4}$, and the triangle with conductances $2,3,4$, using exact rational arithmetic.
 
 The two types of vertex removal, the ratios of spanning-tree coefficients and radii, and the case of disconnection are discussed in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]]. None of the three centralities considered here is assumed in advance to measure such damage. A compact expression for the radius after deleting a vertex together with its edges, in terms of a small number of vertex characteristics in the original graph, remains an open question. Dimensionless characteristics of the whole graph and a comparison of their interpretations are discussed in [[Density, Compactness, and Tree Invariance]].
+
+Ranking by the coordinates of the other, Laplacian, circumcenter is studied in [[Degree Potential and Centralities]]. On trees with equal conductances it agrees with centroid ranking; in general it is a different measure. The two centers and their displacements are compared in [[Sphere Centers and Graph Heterogeneity]]. Spanning-tree ranking favors smaller $\alpha_i$, whereas degree potential favors larger $\beta_i$.
 
 ## Sources
 
