@@ -85,6 +85,21 @@ assert distances(L4) * (S.ones(4, 1)/4) == 2*S.ones(4, 1)
 assert L4 * S.Matrix([1, 1, -1, -1]) == 2*eps*S.Matrix([1, 1, -1, -1])
 print("regular weak-cut C4: beta=1/4, sigma=1, DeltaL=0")
 
+# Fixed internal edges, only the middle bridge weakens.
+Lpath = laplacian(4, [(0, 1, 1), (1, 2, eps), (2, 3, 1)])
+e4 = S.ones(4, 1)
+Gpath = (Lpath + S.ones(4)/4).inv() - S.ones(4)/4
+dpath = Lpath.diagonal().T
+bpath = dpath - sum(dpath)*e4/4
+betapath, sigmapath = direct_centre(distances(Lpath))
+target = e4/4 + eps*S.Matrix([-1, 1, 1, -1])/8
+assert S.simplify(betapath-target) == S.zeros(4, 1)
+assert S.simplify(betapath-e4/4-Gpath*bpath/2) == S.zeros(4, 1)
+assert bpath[0]+bpath[1] == 0
+assert S.simplify((betapath.T*Lpath*betapath)[0]-eps**2/8) == 0
+assert S.simplify(sigmapath-1-eps/2-eps**2/8) == 0
+print("fixed-parts weak P4: DeltaL=eps**2/8, beta approaches uniform")
+
 # Exact diffusion normalization on P3.
 t = S.symbols("t", nonnegative=True)
 L3 = laplacian(3, [(0, 1, 1), (1, 2, 1)])
