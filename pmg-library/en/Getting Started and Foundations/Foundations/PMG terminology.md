@@ -1,13 +1,13 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-11-02
-revision: 19
+updated: 2026-11-03
+revision: 20
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: polyforms, metrics, forest and spectral data, boundary passports, chains of cores, direct and inverse variations; Russian equivalents and usage conditions."
+description: "Terminology of the PMG core and published series: polyforms, metrics, forest and spectral data, boundary passports, chains of cores, variations, and metric distributions; Russian equivalents and usage conditions."
 order: 2
 aliases:
   - "en/Foundations/PMG terminology"
@@ -388,7 +388,7 @@ Definitions and scope of invariance: the [[Core specification#Chains of cores|sp
 |---|---|---|---|
 | Electrical potential | Электрический потенциал вершины | Standard | The value $\varphi_i$ in a solution of the network equations for specified input, subject to the freedom to choose a reference potential. |
 | Polyform potential | Потенциал формы | PMG | The quantity $u_M(f)=\tau(Mf)$ for fixed $M$. It is not the electrical potential at a vertex. |
-| Normalized polyform potential | Нормированный потенциал | PMG | $P_M(f)=u_M(f)/u_M(e)=\tau(Mf)/\tau(M)$ when $\tau(M)\ne0$. The same definition applies in the symmetric and balanced models. |
+| Normalized polyform potential | Нормированный потенциал | PMG | $P_M(f)=u_M(f)/u_M(e)=\tau(Mf)/\tau(M)$ when $\tau(M)\ne0$. The same definition applies in the symmetric and balanced models. The metric distribution series uses $N_L(f)=P_{\exp L}(f)$. |
 | PMG form norm | Норма формы в PMG | PMG | An acceptable name for the normalized potential. For a general form this is a linear evaluation, not a norm in the usual sense. |
 | Metric identity | Метрическое тождество | PMG | For $M=M_G=\exp L$ in the symmetric model, the normalized potential of $[X,Y]$ equals the induced inner product $X\cdot Y$. The balanced model uses the full pairing $\beta$ and its determinant extension, rather than only the symmetric part $g$. |
 | Conductance variation | Вариация проводимости | Standard | A change $c_{ij}\mapsto c_{ij}+t$. The main graph model requires nonnegative final conductance. |
@@ -398,6 +398,23 @@ Definitions and scope of invariance: the [[Core specification#Chains of cores|sp
 In the symmetric resistance model, for a quadratic form $[X]^2$ the normalized potential is $\|X\|^2$, not $\|X\|$. For a mixed form it can be negative even when the metric is positive definite. This does not mean that the exterior object has a negative norm.
 
 In PMG, “norm” without the qualifier “linear” means the quadratic norm $X^2=X\cdot X$. The notation $\|X\|$ is reserved for the linear norm. The norm of a form is defined through the normalized potential; the evaluation of a product of forms generally differs from the product of their evaluations.
+
+### Metric distribution and the influence field
+
+These conventions concern a finite connected undirected network and a fixed form on boundaries. Definitions and identities are collected in the [[Core specification#Metric distribution and edge influence|specification]]; proofs and examples are linked in the [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|series navigator]].
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Finite influence of a coupling | Конечное влияние связи | PMG | The difference $\Delta_{ij}(t;f)=N_{L+tq_{ij}}(f)-N_L(f)$ for a specified conductance increment $t$ and unchanged input $f$. Final conductances must be admissible and connectivity must be preserved. |
+| Finite-influence field | Поле конечного влияния | PMG | The family $\Delta_{ij}(t;f)$ over selected pairs under a specified rule for choosing $t$. Each probe starts from the same initial metric; equal absolute and equal relative increments define different comparison rules. |
+| Relative-sensitivity coefficient | Коэффициент относительной чувствительности | Qualified | $A_\ell(f)=-c_\ell\partial N_L(f)/\partial c_\ell$ for an existing edge. “Relative” concerns the conductance change, not the change in the form's value; there is no division by $N_L(f)$. The sign is chosen so that a decrease in the norm of $[X]^2$ when the coupling is strengthened gives a positive coefficient. |
+| Edge influence field | Рёберное поле влияния | PMG | The family $(A_\ell(f))_\ell$. In grade one these are the coefficients of $D_L(f)$; in grade $k$ they are the sums $A_\ell(f)=\sum_{J\ni\ell}m_J(f)$. Their total is $kN_L(f)$; at $k>1$ they generally do not determine the edge-set distribution. |
+| Metric distribution; metric distribution operator | Метрическое распределение; оператор метрического распределения | PMG | For a fixed edge representation: the contributions $(m_J(f))_J$ and the assembled form $D_{L,k}(f)=\sum_Jm_J(f)q_J$, where $q_J=[\prod_{\ell\in J}a_\ell]^2$. The distribution is indexed by sets of $k$ existing edges; $D_L=D_{L,1}$. The contributions sum to $N_L(f)$; the output form generally has a different metric evaluation. |
+| Metric contribution of an edge set | Метрический вклад набора рёбер | PMG | For $f=[X,Y]$ and $B_J=\prod_{\ell\in J}a_\ell$, the coefficient $m_J(f)=(\prod_{\ell\in J}c_\ell)(X\cdot B_J)(Y\cdot B_J)$. It is nonnegative for a square and may have either sign for a mixed form. A pair contribution is not a mixed second derivative. |
+
+When using “influence field”, specify whether it consists of finite differences $\Delta$ or sensitivities $A_\ell$. This field differs from the influence matrix in the Dirichlet problem. At $c_{ij}=0$, the relative contribution is zero, but adding the coupling may have a nonzero finite influence.
+
+The notation $D_L$ does not replace $D=\exp Q_1$. Metric distribution is not identified with spanning-tree averaging or reduction to toponomes. Different output forms $q_J$ may coincide, so set labels are retained when working with individual contributions. The normalization $a_\ell=a_j-a_i$ is fixed; arbitrary rescaling of the output forms is not allowed.
 
 ### Inverse variations and conductance constraints
 
@@ -481,6 +498,7 @@ The following table also records earlier Russian usage, so that older research n
 | “Матрица резистенсов” | Resistance matrix; «резистивная матрица» | Consistent naming with the introductory series. |
 | “Двухлес” | Spanning 2-forest | The full name specifies that all vertices are included and there are two components. |
 | “Связь-форма” | Specify $[a_{ij}]^2$, $c_{ij}[a_{ij}]^2$, or $e+c_{ij}[a_{ij}]^2$ | A pair form, a Laplacian contribution, and an exponential factor are different objects. |
+| “Polyform reduction” for $D_L$ | Metric distribution | The historical name does not establish identity with reduction to toponomes or spanning-tree averaging. The edge representation and normalization are fixed for $D_{L,k}$. |
 | “Squared norm” for $X\cdot X$ | Norm or quadratic norm; also resistance norm in the resistance metric | In PMG, the norm is $X\cdot X$ itself; its square root for nonnegative norm is the linear norm. The formal form $[X]^2$ differs from its numerical evaluation. |
 | “Potential of an object” | “Potential of the form $f$” or “combinatorial potential of the collection $\mathbf x$”, as appropriate | For $u_M(f)$, specify the form and metric; for $s_2(\mathbf x)$ or $e_n(\mathbf x)$, specify the collection and counted partitions. |
 | “Independent components” in a product of boundaries | Product of component boundaries | Separate factors do not by themselves imply metric orthogonality or statistical independence. |
@@ -516,14 +534,14 @@ The following definitions are used in the published series “Spaces and Subspac
 | Resistance diameter | Резистивный диаметр | $D_{\mathrm{res}}=4\rho$. In the symmetric case it is the squared linear diameter of the circumsphere. The balanced model retains the algebraic normalization through $\rho$; generally different from the maximum pairwise resistance. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
 | Influence matrix | Матрица влияния | The matrix $\mathbf B$ of coefficients extending values from selected to internal vertices. Its rows give the bi-coordinates of projections. For a balanced graph, specify whether $\mathbf L$ or $\mathbf L^{\mathsf T}$ is used. [[Selected Vertices and the Dirichlet Problem]]. |
 | Fundamental matrix | Фундаментальная матрица | $\mathbf{Fm}=\mathbf A^{-1}$, where $\mathbf A$ is the internal Laplacian block. For a connected undirected graph, it is also the Gram matrix of residual vectors; for a disconnected graph, the metric statement applies component by component. Invertibility requires every component to contain a selected vertex. [[Selected Vertices and the Dirichlet Problem]]. |
-| Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed boundary potentials to currents after solving the internal equations. The Laplacian of the effective network obtained by eliminating internal vertices, not merely of the subgraph on the remaining vertices. [[Vertex Elimination and Induced Couplings]]; [[en/Getting Started and Foundations/Foundations/PMG terminology#Groves and electrical data|precise boundary conventions]]. |
+| Response matrix | Матрица отклика | The matrix $\boldsymbol\Lambda$ mapping prescribed boundary potentials to currents after solving the internal equations. The Laplacian of the effective network obtained by eliminating internal vertices, not merely of the subgraph on the remaining vertices. [[Vertex Elimination and Induced Couplings]]; [[en/Getting Started and Foundations/Foundations/PMG terminology#Groves and electrical data\|precise boundary conventions]]. |
 | Common spanning-tree parameter of the two parts | Общий остовной параметр двух долей | The locally introduced normalization $J(G)$ of the spanning-tree coefficient of a bipartite graph. It can be computed through either part while retaining its original degrees. [[Couplings Within One Part of a Bipartite Graph]]. |
 
-For extensions not yet developed here, including metric-value decompositions and interval forms, definitions and translations are added as the corresponding public sections are prepared. Published KVP/KVPOU definitions are given above. The following restrictions remain:
+Definitions of metric distributions and KVP/KVPOU are given above. For extensions not yet developed here, including interval forms, definitions and translations are added as the corresponding public sections are prepared. The following restrictions remain:
 
 - “Cocenter” is not used as a synonym for centroid or as the name of a separate geometric center without a definition.
 - For the linear operation $/$ in exponential duality, the terms exterior contraction and «внешнее удаление» are fixed. The historical expression «внешнее деление» without a definition does not automatically denote this operation; a different construction requires a separate comparison.
-- “Duality” and “metric-value decomposition” require a definition of the particular construction; their meaning does not follow from the name alone.
+- “Duality” and “metric distribution” require a definition of the particular construction; their meaning does not follow from the name alone.
 
 ## Usage rules and revision history
 
@@ -535,6 +553,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 20 | 2026-11-03 | Added metric distribution and coupling influence terminology; distinguished finite fields from sensitivity and edge contributions from edge-set contributions. Clarified notation and the historical name “reduction”; removed the obsolete undeveloped-extension status. Aligned with Russian revision 20. |
 | 19 | 2026-11-02 | Linked the translated Spectra of Isomers definitions and results. Terms and applicability conditions are unchanged; synchronized with Russian revision 19. |
 | 18 | 2026-11-02 | Linked the proved two-vertex spectral transfer and SLR decoding theorem; distinguished full marked data, scalar injectivity, and minimality. Synchronized with Russian revision 18. |
 | 17 | 2026-11-01 | Added terminology for chains of cores and variations: seams and admissibility, configuration and passport transfer, construction spanning-tree polynomial; two direction metrics, independent resistances, quadric connectivity, $P,Z,V$ constraints, and distinctions between exact feasibility, numerical candidates, and optima. Aligned with Russian revision 17. |

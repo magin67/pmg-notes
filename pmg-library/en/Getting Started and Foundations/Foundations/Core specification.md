@@ -1,13 +1,13 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-11-02
-revision: 18
+updated: 2026-11-03
+revision: 19
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
 lang: en
-description: "Definitions and conventions of the PMG core: polyform algebra, Laplacian and Greenian, metrics, forest and spectral parameters, boundary passports, chains of cores, and constrained variations; applicability conditions."
+description: "Definitions and conventions of the PMG core: polyform algebra, Laplacian and Greenian, metrics, forest and spectral parameters, boundary passports, chains of cores, constrained variations, and metric distributions; applicability conditions."
 order: 1
 aliases:
   - "en/Foundations/Core specification"
@@ -724,6 +724,104 @@ When there is no exact solution, approximation is defined by chosen positive wei
 
 The problem, the prism, and necessary conditions: [[Variations with Conductance Constraints]]. The algorithm, residuals, candidate checks, and limits of the conclusions: [[An Algorithm for Variations with Conductance Constraints]]. The complete series: [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]]. The notes distinguish known matrix identities, their polyform expressions, proofs, and computational checks; inclusion in this specification does not establish scientific priority.
 
+## Metric distribution and edge influence
+
+This section records the conventions of [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]] for the main symmetric model: a finite connected undirected graph, positive conductances on existing edges, and forms on boundaries. The input form, its arguments, and its coefficients remain fixed when the metric changes. The series notation
+
+$$
+N_L(f)=P_{\exp L}(f)=\frac{\tau((\exp L)f)}{\tau(\exp L)}
+$$
+
+denotes the same normalized potential, not a new evaluation; it differs from the polyform $N=\exp(\mathrm{Gr})$.
+
+### Finite influence and relative sensitivity
+
+For any vertex pair $ij$, set $q_{ij}=[a_j-a_i]^2$ and $R_{ij}=N_L(q_{ij})$. The change $L'=L+tq_{ij}$ is admissible when $c_{ij}+t\ge0$ and connectivity is preserved. For nonnegative final conductance, connectivity is equivalent to $1+tR_{ij}>0$.
+
+> [!info] Finite influence of a coupling
+> **Definition and formula.** For a fixed form $f$ of any grade,
+>
+> $$
+> \Delta_{ij}(t;f)=N_{L+tq_{ij}}(f)-N_L(f)
+> =\frac{t}{1+tR_{ij}}\bigl(N_L(fq_{ij})-R_{ij}N_L(f)\bigr)
+> $$
+>
+> A finite-influence field consists of these differences for selected pairs under a specified rule for choosing $t$. Every independent probe starts from the same initial graph.
+
+> [!info] Sensitivity of an existing edge
+> **Definition.** For an edge $\ell$ with $c_\ell>0$, $q_\ell=[a_\ell]^2$, and $R_\ell=N_L(q_\ell)$,
+>
+> $$
+> A_\ell(f)=-c_\ell\frac{\partial N_L(f)}{\partial c_\ell}
+> =c_\ell\bigl(R_\ell N_L(f)-N_L(fq_\ell)\bigr)
+> $$
+>
+> This is the sensitivity coefficient for a relative conductance change, with the chosen sign: under $c_\ell\mapsto(1+\varepsilon)c_\ell$, we have $\Delta_\ell=-\varepsilon A_\ell+O(\varepsilon^2)$. There is no division by the value $N_L(f)$.
+
+The exact relation to a finite probe is
+
+$$
+\Delta_\ell(t;f)=-\frac{t}{c_\ell(1+tR_\ell)}A_\ell(f)
+$$
+
+An absent coupling has zero relative contribution, but adding it may affect the form: use $\Delta_{ij}(t;f)$ directly in that case. Accumulating changes defines a different procedure; independent finite increments generally do not add.
+
+Source: [[Edge Influence and Metric Distribution#The finite influence of one coupling|the finite formula]] and [[Edge Influence and Metric Distribution#From finite influence to distribution coefficients|the passage to sensitivity]].
+
+### Distribution over edge sets
+
+Fix the initial edge representation $L=\sum_{\ell\in E}c_\ell[a_\ell]^2$, with $a_\ell=a_j-a_i$. In the pair representation, $c_{ij}$ is the aggregated conductance of the pair. Auxiliary orientations are arbitrary, but the vector scale is fixed by differences of the specified vertices.
+
+For an unordered set $J\subseteq E$ of $k$ distinct edges, put
+
+$$
+B_J=\prod_{\ell\in J}a_\ell,\qquad
+q_J=[B_J]^2,\qquad
+w_J=\prod_{\ell\in J}c_\ell
+$$
+
+> [!info] Metric distribution
+> **Definition.** For $f=[X,Y]$, $X,Y\in\Lambda^kW$, $0\le k\le n-1$,
+>
+> $$
+> m_J(f)=w_J(X\cdot B_J)(Y\cdot B_J),\qquad
+> D_{L,k}(f)=\sum_{|J|=k}m_J(f)q_J
+> $$
+>
+> Extend linearly to grade-$k$ forms and componentwise to polyforms on boundaries. Each unordered set is counted once; there is no factor $k!$. At $k=0$, use $B_\varnothing=1$, $q_\varnothing=e$, and $w_\varnothing=1$; the transformation is the identity.
+
+Bilinearity makes the definition independent of the decomposition of the input form. Reversing orientations or reordering factors in $B_J$ leaves the result unchanged; for a set containing a cycle, $B_J=0$. Arbitrary replacement of the initial edge representation is outside the definition. The operator preserves grade and annihilates the antisymmetric part of the input. For $f=[X]^2$, all contributions are nonnegative; a mixed form may have contributions of either sign.
+
+In grade one, write $D_L=D_{L,1}$. For $f=\{v,u\}/2$,
+
+$$
+m_\ell(f)=A_\ell(f)=c_\ell(v\cdot a_\ell)(u\cdot a_\ell),\qquad
+D_L(f)=\sum_\ell m_\ell(f)q_\ell
+$$
+
+The subscript is required wherever confusion with $D=\exp Q_1$ is possible. On a tree, for two vertex-pair vectors, the nonzero contributions select the common edges of the unique paths, with the sign of their directions and weight $1/c_\ell$. This statement concerns changes to existing tree edges; on a graph with cycles, responses of the entire network are used.
+
+> [!info] Contribution sums and the edge field
+> **Theorem.** For a fixed form $f$ of grade $k$,
+>
+> $$
+> \sum_{|J|=k}m_J(f)=N_L(f),\qquad
+> A_\ell(f)=\sum_{J\ni\ell}m_J(f),\qquad
+> \sum_\ell A_\ell(f)=kN_L(f)
+> $$
+>
+> At $k=0$, every $A_\ell$ is zero. At $k>1$, the edge field $(A_\ell)_\ell$ generally does not determine the contributions $m_J$.
+
+The coefficient sum refers to the specified edge-set distribution. Different $q_J$ may coincide or be linearly dependent, so the assembled form may lose individual contribution labels. Its metric evaluation is
+
+$$
+N_L(D_{L,k}(f))=\sum_{|J|=k}m_J(f)N_L(q_J)
+$$
+
+and generally differs from $N_L(f)$. Pair contributions are not mixed second derivatives and do not specify separate joint finite probes.
+
+Sources for the definition and identities: [[Metric Distribution in Higher Grades#One definition for every grade|the Cauchy-Binet formula and metric contraction]], [[Metric Distribution in Higher Grades#The edge field does not determine pair contributions|information loss on passing to the edge field]]. The tree case is proved in [[Path Intersection as an Influence Field on a Tree]], and examples with cycles appear in [[The Influence Field on Graphs with Cycles]]. The distribution is not identified with historical spanning-tree averaging, a complementary-grade forest distribution, or reduction to toponomes. No extension to balanced graphs, a global disconnected-graph metric, or forms outside the boundary subalgebra is established here.
+
 ## The balanced extension
 
 This section extends the graph model to finite loopless balanced digraphs with nonnegative arc weights. The algebra of forms and its product are unchanged: symmetry of the arguments was never assumed. Graph and metric statements in the other sections use the symmetric model unless an extension is explicitly stated. Proofs and examples are collected in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]].
@@ -899,7 +997,8 @@ A full treatment of the following thematic extensions requires separate definiti
 - full boundary forest passports, their spanning-tree layer, and separate spectral boundary data;
 - chains and trees of cores, active-boundary transfer, construction spanning-tree polynomials, and closures;
 - direct and inverse variations, independent resistances, quadric connectivity, and conductance constraints;
-- metric-value decompositions and interval forms;
+- metric distributions and edge influence, defined in [[#Metric distribution and edge influence]];
+- interval forms, which require a separate treatment;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
 Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]].
@@ -1300,6 +1399,10 @@ Definitions, proofs, attribution, and reproducible checks: [[Cores, Seams, and A
 | $\tau(P)$ | Coefficient of $T_n$ in a polyform on boundaries |
 | $\tau(G)=\tau(M_G)$ | Spanning-tree coefficient of the graph |
 | $u_M(f)$, $P_M(f)$ | Form potential and its normalized value $P_M(f)=\tau(Mf)/\tau(M)$ |
+| $N_L(f)=P_{\exp L}(f)$ | Normalized potential in the Laplacian metric; notation of the metric distribution series |
+| $\Delta_{ij}(t;f)$, $A_\ell(f)$ | Finite influence of a conductance change and relative-sensitivity coefficient of an existing edge |
+| $B_J$, $q_J$, $w_J$, $m_J(f)$ | Exterior product of the edges in a set, its quadratic form, conductance product, and metric contribution |
+| $D_{L,k}$, $D_L=D_{L,1}$ | Grade-$k$ metric distribution operator and its first grade; distinct from $D=\exp Q_1$ |
 | $N=\exp(\mathrm{Gr})$, $P_N(f)$ | Greenian exponential in the direct space and its normalized potential |
 | $\sigma=\tau(N)=1/(n^2\tau)$ | Spanning-tree coefficient of the Greenian exponential for fixed vertices and $T_n$ |
 | $q_u$, $\mathbf G_M$, $\mathbf G_N$ | Quadratic direction norm in the metric of $N$ and interaction Gram matrices in the two variation problems |
@@ -1369,6 +1472,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 19 | 2026-11-03 | Recorded definitions from the completed metric distribution series: finite influence, relative sensitivity, edge-set distributions, and higher-grade edge sums. Distinguished the contribution sum from output evaluation; clarified normalization, notation, and scope. Aligned with Russian revision 19. |
 | 18 | 2026-11-02 | Linked the English Spectra of Isomers proofs. Mathematical content and result boundaries are unchanged; synchronized with Russian revision 18. |
 | 17 | 2026-11-02 | Updated links and result boundaries after the Spectra of Isomers review: two-vertex transfer, SLR classification and marked-state recovery; scalar injectivity remains open. Synchronized with Russian revision 17. |
 | 16 | 2026-11-01 | Recorded conventions of the completed variations and chains-of-cores series: two metrics, finite inverse formulas, quadric connectivity, the $P,Z,V$ problem and limits of algorithmic conclusions; seams, admissibility, invariance, the spanning-tree recurrence, and closures. Aligned with Russian revision 16. |
