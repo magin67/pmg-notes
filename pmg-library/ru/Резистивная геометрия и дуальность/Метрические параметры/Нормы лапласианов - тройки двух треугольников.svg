@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="330" viewBox="0 0 960 330" role="img" aria-labelledby="title desc">
+<title id="title">Нормы троек в двух треугольниках с общей вершиной</title>
+<desc id="desc">Выделенные тройки hab, hac, abc имеют нормы 2, 4/3 и 2/3. Веса всех шести рёбер равны единице.</desc>
+<rect width="960" height="330" rx="12" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" fill="#183247">
+<g transform="translate(20, 40)">
+<text x="145" y="-15" text-anchor="middle" font-size="18" font-weight="bold">S = {h, a, b}</text>
+<line x1="145" y1="117" x2="55" y2="54" stroke="#1c6da8" stroke-width="4"/>
+<line x1="145" y1="117" x2="55" y2="180" stroke="#1c6da8" stroke-width="4"/>
+<line x1="55" y1="54" x2="55" y2="180" stroke="#1c6da8" stroke-width="4"/>
+<line x1="145" y1="117" x2="235" y2="54" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="145" y1="117" x2="235" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="235" y1="54" x2="235" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<circle cx="145" cy="117" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="145" y="123" text-anchor="middle" font-size="18">h</text>
+<circle cx="55" cy="54" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="55" y="60" text-anchor="middle" font-size="18">a</text>
+<circle cx="55" cy="180" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="55" y="186" text-anchor="middle" font-size="18">b</text>
+<circle cx="235" cy="54" r="17" fill="#ffffff" stroke="#7b8794" stroke-width="2"/>
+<text x="235" y="60" text-anchor="middle" font-size="18">c</text>
+<circle cx="235" cy="180" r="17" fill="#ffffff" stroke="#7b8794" stroke-width="2"/>
+<text x="235" y="186" text-anchor="middle" font-size="18">d</text>
+<text x="145" y="232" text-anchor="middle" font-size="20" font-weight="bold">Норма = 2</text>
+</g>
+<g transform="translate(340, 40)">
+<text x="145" y="-15" text-anchor="middle" font-size="18" font-weight="bold">S = {h, a, c}</text>
+<line x1="145" y1="117" x2="55" y2="54" stroke="#1c6da8" stroke-width="4"/>
+<line x1="145" y1="117" x2="55" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="55" y1="54" x2="55" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="145" y1="117" x2="235" y2="54" stroke="#1c6da8" stroke-width="4"/>
+<line x1="145" y1="117" x2="235" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="235" y1="54" x2="235" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<circle cx="145" cy="117" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="145" y="123" text-anchor="middle" font-size="18">h</text>
+<circle cx="55" cy="54" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="55" y="60" text-anchor="middle" font-size="18">a</text>
+<circle cx="55" cy="180" r="17" fill="#ffffff" stroke="#7b8794" stroke-width="2"/>
+<text x="55" y="186" text-anchor="middle" font-size="18">b</text>
+<circle cx="235" cy="54" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="235" y="60" text-anchor="middle" font-size="18">c</text>
+<circle cx="235" cy="180" r="17" fill="#ffffff" stroke="#7b8794" stroke-width="2"/>
+<text x="235" y="186" text-anchor="middle" font-size="18">d</text>
+<text x="145" y="232" text-anchor="middle" font-size="20" font-weight="bold">Норма = 4/3</text>
+</g>
+<g transform="translate(660, 40)">
+<text x="145" y="-15" text-anchor="middle" font-size="18" font-weight="bold">S = {a, b, c}</text>
+<line x1="145" y1="117" x2="55" y2="54" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="145" y1="117" x2="55" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="55" y1="54" x2="55" y2="180" stroke="#1c6da8" stroke-width="4"/>
+<line x1="145" y1="117" x2="235" y2="54" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="145" y1="117" x2="235" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<line x1="235" y1="54" x2="235" y2="180" stroke="#b5bdc6" stroke-width="2"/>
+<circle cx="145" cy="117" r="17" fill="#ffffff" stroke="#7b8794" stroke-width="2"/>
+<text x="145" y="123" text-anchor="middle" font-size="18">h</text>
+<circle cx="55" cy="54" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="55" y="60" text-anchor="middle" font-size="18">a</text>
+<circle cx="55" cy="180" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="55" y="186" text-anchor="middle" font-size="18">b</text>
+<circle cx="235" cy="54" r="17" fill="#dceefb" stroke="#1c6da8" stroke-width="3"/>
+<text x="235" y="60" text-anchor="middle" font-size="18">c</text>
+<circle cx="235" cy="180" r="17" fill="#ffffff" stroke="#7b8794" stroke-width="2"/>
+<text x="235" y="186" text-anchor="middle" font-size="18">d</text>
+<text x="145" y="232" text-anchor="middle" font-size="20" font-weight="bold">Норма = 2/3</text>
+</g>
+<text x="480" y="310" text-anchor="middle" font-size="15">Все проводимости равны 1; метрика во всех трёх случаях одна и та же.</text>
+</g></svg>
