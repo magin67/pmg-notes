@@ -1,9 +1,9 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-10-16
-revision: 5
-source_revision: 7
+updated: 2026-11-04
+revision: 6
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry
@@ -31,6 +31,8 @@ H=\mathbf1^\perp=\left\{u\in\mathbb R^n:\sum_i u_i=0\right\}
 $$
 
 Here $\mathbf1$ is the column vector of ones, and orthogonality is taken with respect to the ordinary inner product in $\mathbb R^n$. For a connected graph, the restriction of $L$ to $H$ is positive definite and invertible.
+
+The condition $\sum_i\varphi_i=0$ selects a unique solution among potentials that differ by a common constant. The Green matrix will perform the reverse calculation: given balanced external currents $J$, it will return these potentials $\varphi$. This requires inverting $L$ on $H$; its action on constant vectors is specified separately.
 
 > [!info] Green matrix
 > **Definition.** The Green matrix $\mathrm{Gr}$ inverts $L$ on $H$ and vanishes on constant columns:
@@ -146,16 +148,14 @@ Its geometry is uniquely determined up to a Euclidean isometry: a translation an
 
 ## Example: a three-vertex path
 
-Consider the path from the first note.
+Consider a path with conductances $c_{12}=1$ and $c_{23}=2$.
 
-```mermaid
-graph LR
-    a1((1)) ---|"c12 = 1"| a2((2))
-    a2 ---|"c23 = 2"| a3((3))
-```
+![[Path and resistance triangle.svg]]
+
+The left panel shows the couplings and their conductances; the right panel shows the resistance simplex of the same network. Labels on the right give **lengths** $\sqrt{R_{ij}}$. The dashed side joins vertices $1$ and $3$, which have no direct edge in the original graph.
 
 > [!example] Resistances and the Green matrix
-> The edge resistances are $r_{12}=1$ and $r_{23}=1/2$. When current is passed between the endpoints of the path, the two edges are in series, so $R_{13}=3/2$. When current is passed between adjacent vertices, the remaining edge carries no current. Thus,
+> The individual edge resistances are $1/c_{12}=1$ and $1/c_{23}=1/2$. When current is passed between the endpoints of the path, the two edges are in series, so $R_{13}=3/2$. When current is passed between adjacent vertices, the remaining edge carries no current. Thus,
 >
 > $$
 > R_{12}=1,\qquad R_{23}=\frac12,\qquad R_{13}=\frac32

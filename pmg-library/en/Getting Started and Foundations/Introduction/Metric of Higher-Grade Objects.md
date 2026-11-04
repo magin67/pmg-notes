@@ -1,9 +1,9 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-10-15
-revision: 4
-source_revision: 5
+updated: 2026-11-04
+revision: 5
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric
@@ -20,32 +20,23 @@ The original metric on $W$ is assumed to be positive definite. For a graph, this
 
 ## A simplex and its boundary
 
-We retain the conventions $\partial a=1$, $\partial1=0$, and parentheses for boundaries.
+Retain the [[Basic Objects and Operations of Polyform Algebra#The boundary operator|boundary and grade conventions]]: $\partial a=1$, $\partial1=0$, and parentheses for boundaries. For example, $[abc]$ is a simplex of grade $3$, while $(abc)=\partial[abc]$ is its boundary of grade $2$.
 
-| Object | Simplex and its grade | Boundary | Boundary grade |
-|---|---|---|---:|
-| Point | $a$, grade $1$ | $1$ | 0 |
-| Oriented segment | $[ab]$, grade $2$ | $(ab)=b-a$ | 1 |
-| Oriented triangle | $[abc]$, grade $3$ | $(abc)=[bc]-[ac]+[ab]$ | 2 |
-| Oriented tetrahedron | $[abcd]$, grade $4$ | $(abcd)=[bcd]-[acd]+[abd]-[abc]$ | 3 |
-
-A nonzero boundary has grade one less than the original simplex. Its grade equals the geometric dimension of a nondegenerate simplex.
-
-The difference $a_{ij}=a_j-a_i$ is also written as $(a_i a_j)$. The exterior product of consecutive affine vectors gives
+The exterior product
 
 $$
-(ab)\wedge(bc)=(ab)\wedge(ac)=(abc)
+(ab)(bc)=(ab)(ac)=(abc)
 $$
 
-The right-hand side is the triangle boundary of grade $2$, rather than the simplex $[abc]$ of grade $3$. As in the preceding note, the symbol $\wedge$ between exterior objects may be omitted below.
+gives the triangle boundary. It is the numerical norm of this boundary that we will define.
 
 ## The inner product within one grade
 
 An exterior object is called decomposable if it can be represented as a single product of vectors. Let
 
 $$
-X=u_1\wedge\cdots\wedge u_k,\qquad
-Y=v_1\wedge\cdots\wedge v_k,\qquad u_i,v_i\in W
+X=u_1 \cdots u_k,\qquad
+Y=v_1 \cdots v_k,\qquad u_i,v_i\in W
 $$
 
 > [!info] The induced inner product
@@ -73,7 +64,7 @@ For $k=1$, this is the original metric on $W$. For $k=0$, the inner product of s
 > **Proof.** Choose an orthonormal basis $w_1,\ldots,w_d$ of $W$. The products
 >
 > $$
-> w_{i_1}\wedge\cdots\wedge w_{i_k},\qquad i_1<\cdots<i_k
+> w_{i_1} \cdots w_{i_k},\qquad i_1<\cdots<i_k
 > $$
 >
 > form a basis of $\Lambda^kW$. Declare this basis orthonormal. This defines a positive definite inner product on all linear combinations.
@@ -93,7 +84,7 @@ For $k=1$, this is the original metric on $W$. For $k=0$, the inner product of s
 >
 > In PMG, this number is the **norm**, or quadratic norm; in the resistance metric, it is also called the resistance norm. The quantity $\|X\|=\sqrt{X^2}$ is the **linear norm**, which on $\Lambda^kW$ agrees with the usual Euclidean norm. The number $X^2$ differs from the exterior product $X\wedge X$ and from the formal quadratic form $[X]^2$. When needed, the product of an object with itself is written explicitly as $X\wedge X$.
 
-For a decomposable object $X=u_1\wedge\cdots\wedge u_k$, formula (1) gives
+For a decomposable object $X=u_1 \cdots u_k$, formula (1) gives
 
 $$
 X^2=\det(u_i\cdot u_j)_{i,j=1}^k=V_{\parallel}^2
@@ -118,7 +109,7 @@ $$
 u=(ab),\qquad v=(ac),\qquad w=(ad)
 $$
 
-The triangle boundaries are $X=(abc)=u\wedge v$ and $Y=(abd)=u\wedge w$. By (1),
+The triangle boundaries are $X=(abc)=u v$ and $Y=(abd)=u w$. By (1),
 
 $$
 (abc)\cdot(abd)
@@ -155,7 +146,7 @@ Reversing the orientation of one boundary changes the sign of the mixed inner pr
 A simplex boundary is expressed through vectors based at one vertex:
 
 $$
-(a_0\ldots a_k)=(a_1-a_0)\wedge\cdots\wedge(a_k-a_0)
+(a_0\ldots a_k)=(a_1-a_0) \cdots (a_k-a_0)
 $$
 
 Its norm is the squared volume of the corresponding parallelotope. The simplex itself has $1/k!$ times that volume, so
@@ -186,7 +177,7 @@ Formula (4) computes the geometric volume of a simplex from the norm of its boun
 
 ## Numerical evaluation of forms
 
-Forms, their transposition, and polarization were defined in [[Basic Objects and Operations of Polyform Algebra|the preceding note]]. Once the metric is specified, a form on boundaries $[X,Y]$ is assigned the numerical value $X\cdot Y$. Evaluation extends linearly to forms of a fixed grade.
+Forms, their transposition, and polarization were defined in [[Basic Objects and Operations of Polyform Algebra#Forms: bilinearity and basic operations|the section on forms and bilinearity]]. Once the metric is specified, a form on boundaries $[X,Y]$ is assigned the numerical value $X\cdot Y$. Evaluation extends linearly to forms of a fixed grade.
 
 | Formal object | Numerical evaluation |
 |---|---|
@@ -201,13 +192,13 @@ Symmetry of the numerical evaluation does not imply equality of the forms $[X,Y]
 The product of forms retains the rule
 
 $$
-[X,Y][A,B]=[X\wedge A,Y\wedge B]
+[X,Y][A,B]=[X A,Y B]
 $$
 
-Its numerical evaluation is $(X\wedge A)\cdot(Y\wedge B)$. For vectors of grade one, formula (1) gives
+Its numerical evaluation is $(X A)\cdot(Y B)$. For vectors of grade one, formula (1) gives
 
 $$
-(X\wedge A)\cdot(Y\wedge B)
+(X A)\cdot(Y B)
 =(X\cdot Y)(A\cdot B)-(X\cdot B)(A\cdot Y)
 $$
 
@@ -219,9 +210,25 @@ $$
 
 The evaluation of the right-hand side is $(abc)^2$, determined by (2), rather than the product $(ab)^2(ac)^2$.
 
+> [!example] Two different numbers for unit-conductance $K_3$
+> Using the values computed above,
+>
+> $$
+> (ab)^2(ac)^2=\frac23\cdot\frac23=\frac49
+> $$
+>
+> Multiplying the forms first and then evaluating the result instead gives
+>
+> $$
+> (abc)^2=(ab)^2(ac)^2-\bigl((ab)\cdot(ac)\bigr)^2
+> =\frac49-\frac19=\frac13
+> $$
+>
+> The difference accounts for the angle between the vectors. Thus evaluation is linear, but does not preserve the product of forms.
+
 ## Further reading
 
-The next note, [[Laplacian Exponential]], collects products of coupling forms by grade into a single polyform. It will prove that evaluating a form using the induced metric agrees with normalized extraction of the highest-grade coefficient from its product with the Laplacian exponential.
+The note [[Laplacian Exponential]] collects products of coupling forms by grade into a single polyform. It will prove that evaluating a form using the induced metric agrees with normalized extraction of the highest-grade coefficient from its product with the Laplacian exponential.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover exterior powers, bilinear forms, and Gram determinants; the geometry of the resistance simplex is discussed in [4].
 

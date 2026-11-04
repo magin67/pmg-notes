@@ -1,9 +1,9 @@
 ---
 title: "Laplacian: graph, electrical network and quadratic form"
 date: 2026-10-03
-updated: 2026-10-08
-revision: 2
-source_revision: 6
+updated: 2026-11-04
+revision: 3
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-graph-network-quadratic-form
@@ -33,11 +33,7 @@ We consider finite undirected graphs without loops and their corresponding netwo
 In the electrical interpretation, vertices correspond to network nodes and edges to resistors.
 
 > [!info] Definition. Conductance
-> The conductance $c_{ij}$ of an existing edge is the reciprocal of its resistance $r_{ij}$:
->
-> $$
-> r_{ij}=\frac1{c_{ij}}
-> $$
+> The resistance of an individual existing edge is $1/c_{ij}$, where $c_{ij}>0$ is its conductance.
 
 Conductance is measured in siemens and resistance in ohms. Increasing the conductance strengthens the coupling: a larger current flows through the edge under the same voltage. Path length or travel time therefore cannot directly replace conductance in this model.
 
@@ -50,7 +46,7 @@ graph LR
 ```
 
 > [!example] Adjacency matrix of the path
-> With conductances in siemens, the edge resistances are $r_{12}=1$ ohm and $r_{23}=1/2$ ohm. The adjacency matrix is
+> With conductances in siemens, the individual edge resistances are $1/c_{12}=1$ ohm and $1/c_{23}=1/2$ ohm. The adjacency matrix is
 >
 > $$
 > C=\begin{pmatrix}
@@ -280,7 +276,7 @@ Let the graph be connected. Inject a current $I>0$ at vertex $i$ and withdraw th
 
 Linearity of equation (3) means that changing the magnitude of the test current scales all potential differences by the same factor. The ratio (6) therefore depends only on the network and the chosen pair of vertices. It is independent of the reference potential.
 
-Effective resistance is defined even when there is no direct edge. If an edge exists, its own resistance $r_{ij}=1/c_{ij}$ may differ from $R_{ij}$ because current can also flow along other paths.
+Effective resistance is defined even when there is no direct edge. If an edge exists, its own resistance $1/c_{ij}$ may differ from $R_{ij}$ because current can also flow along other paths.
 
 The power balance (5) gives
 

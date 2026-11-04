@@ -1,9 +1,9 @@
 ---
 title: "Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations"
 date: 2026-10-04
-updated: 2026-10-16
-revision: 3
-source_revision: 3
+updated: 2026-11-04
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-green-resistance-matrices
@@ -39,7 +39,7 @@ $$
 > Jx=x-\bar x\mathbf1,\qquad \bar x=\frac1n\sum_i x_i
 > $$
 
-In the preceding notes, $J$ denoted the column vector of external currents. In this note and in the matrix transformation formulas, $J$ denotes the centering matrix; external current vectors do not occur in these formulas.
+In the [[Laplacian - graph, electrical network and quadratic form|electrical network equation]], $J$ denoted the column vector of external currents. In this note and in the matrix transformation formulas, $J$ denotes the centering matrix; external current vectors do not occur in these formulas.
 
 For $x\in H$, we have $Jx=x$, while $J\mathbf1=0$. Moreover,
 
@@ -62,7 +62,7 @@ This follows by substituting the definition of $J$ and using $A\mathbf1=0$ and $
 
 ## The Laplacian and the Green matrix
 
-For a connected graph, the kernel of $L$ consists of constant column vectors, and the restriction of $L$ to $H$ is positive definite. The Green matrix $\mathrm{Gr}=L^+$ inverts $L$ on $H$ and acts as zero on constant column vectors. This definition and its electrical meaning are discussed in [[Effective Resistance and Graph Geometry#The Green matrix|the preceding note on the Green matrix]].
+For a connected graph, the kernel of $L$ consists of constant column vectors, and the restriction of $L$ to $H$ is positive definite. The Green matrix $\mathrm{Gr}=L^+$ inverts $L$ on $H$ and acts as zero on constant column vectors. This definition and its electrical meaning are discussed in [[Effective Resistance and Graph Geometry#The Green matrix|the section on the Green matrix]].
 
 Both matrices are symmetric and have zero row and column sums. Their product acts as the identity on $H$ and sends constant column vectors to zero. Therefore,
 
@@ -180,7 +180,7 @@ Zero conductances correspond to absent edges. Thus the complete set of pairwise 
 
 ## Example: a three-vertex path
 
-Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resistances were computed electrically in the first two notes: $R_{12}=1$, $R_{23}=1/2$, $R_{13}=3/2$.
+Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resistances were computed in the [[Effective Resistance and Graph Geometry#Example: a three-vertex path|three-vertex path example]]: $R_{12}=1$, $R_{23}=1/2$, $R_{13}=3/2$.
 
 > [!example] The network matrices
 >

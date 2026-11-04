@@ -1,9 +1,9 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-10-20
-revision: 6
-source_revision: 6
+updated: 2026-11-04
+revision: 7
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-exponential
@@ -14,7 +14,7 @@ aliases:
   - "en/Introduction/Laplacian Exponential"
 ---
 
-The Laplacian exponential combines products of coupling forms into a single polyform. Its grade components describe spanning forests, and the top-grade component of a connected graph contains the spanning-tree coefficient. Multiplying this exponential by the form of an object and extracting the top-grade coefficient reproduces the metric defined in [[Metric of Higher-Grade Objects]].
+The Laplacian exponential combines products of coupling forms into a single polyform. Its grade components describe spanning forests, and the top-grade component of a connected graph contains the spanning-tree coefficient. Multiplying this exponential by the form of an object, extracting the top-grade coefficient, and dividing by the spanning-tree coefficient reproduces the metric defined in [[Metric of Higher-Grade Objects]].
 
 ## The exponential in the algebra of forms
 
@@ -27,7 +27,7 @@ $$
 All products of forms use the [[Basic Objects and Operations of Polyform Algebra#Polyforms and the product of forms|definition of the product of forms]]:
 
 $$
-[X,Y][A,B]=[X\wedge A,Y\wedge B]
+[X,Y][A,B]=[XA,YB]
 $$
 
 The identity of this algebra is denoted by $e=[1,1]$. For every vector $v$, we have $([v]^2)^2=0$. Also, $L^n=0$, since a product of $n$ forms of grade one on $W$ has zero exterior arguments.
@@ -54,58 +54,24 @@ $$
 
 The factor $e+c_{ij}[a_{ij}]^2$ is called the edge factor. In the expansion of (2), each coupling is either selected once or omitted.
 
-### Adding and deleting an edge
+### Example: a weighted triangle
 
-Let $p=[a_{ij}]^2$, and change the conductance of the pair $ij$ by $t$. An absent coupling has conductance $0$; the graph interpretation requires $c_{ij}+t\ge0$. Then $L'=L+tp$ and
-
-$$
-\boxed{M_{G'}=M_G(e+tp)}
-$$
-
-For $t=c>0$, this adds conductance $c$, including strengthening an existing coupling. For $t=-c_{ij}$, the existing edge is deleted entirely:
+Let $c_{12}=\alpha$, $c_{23}=\beta$, and $c_{13}=\gamma$. Here and below, abbreviate the boundaries as $(12)=(a_1a_2)$ and $(123)=(a_1a_2a_3)$.
 
 $$
-\boxed{M_{G'}=M_G(e-c_{ij}p)}
+M_G=(e+\alpha[(12)]^2)(e+\beta[(23)]^2)(e+\gamma[(13)]^2)
 $$
 
-> [!note]- Proof
-> **Proof.** Since $p^2=0$, we have $\exp(tp)=e+tp$ and
->
-> $$
-> (e+cp)(e-cp)=e
-> $$
->
-> Commutativity of forms gives $\exp(L+tp)=\exp L\exp(tp)$. When the edge is deleted, the multiplier $e-c_{ij}p$ turns its edge factor into the identity. $\square$
-
-If a set $S$ of existing edges is deleted, then
+Selecting one coupling gives its form weighted by its conductance. Any two couplings form a tree on three vertices, so their product gives $[(123)]^2$. Selecting all three gives zero because the cycle vectors are dependent. Thus
 
 $$
-M_{G-S}=M_G\prod_{\{i,j\}\in S}\bigl(e-c_{ij}[a_{ij}]^2\bigr)
+\begin{aligned}
+M_G={}&e+\alpha[(12)]^2+\beta[(23)]^2+\gamma[(13)]^2+\\
+&+(\alpha\beta+\alpha\gamma+\beta\gamma)[(123)]^2
+\end{aligned}
 $$
 
-The order of deletion does not affect the result. These algebraic equalities remain valid if connectivity is lost: the exponential in that case is described under [[#Disconnected graphs]].
-
-### The inverse exponential
-
-Invertibility of every edge factor makes the whole exponential invertible:
-
-$$
-\boxed{
-M_G^{-1}=\exp(-L)
-=\prod_{\{i,j\}\in E}\bigl(e-c_{ij}[a_{ij}]^2\bigr)
-}
-$$
-
-> [!note]- Proof
-> **Proof.** Multiplication by (2) pairs each edge factor with its inverse; every pair gives $e$. The product of the factors with minus signs equals $\exp(-L)$ because forms commute. $\square$
-
-Writing $M_k=L^k/k!$, inversion changes the signs of precisely the odd grades:
-
-$$
-M_G^{-1}=\sum_{k=0}^{n-1}(-1)^kM_k,\qquad M_0=e
-$$
-
-All sums are finite. Invertibility here refers to the polyform product and requires neither graph connectivity nor invertibility of the Laplacian matrix. The inverse exponential of the complement is used in the [[Symmetric Polyforms of the Complete Graph#Deleting edges from the complete graph|representation by deleting edges from the complete graph]].
+The three spanning trees have weights $\alpha\beta$, $\alpha\gamma$, and $\beta\gamma$. Their forms coincide, so their weights add. The general forest expansion below works in the same way: any edge set may be selected, but a cycle makes its product vanish.
 
 ## Grade components and spanning forests
 
@@ -149,7 +115,7 @@ With unit conductances, this is the number of forests with $k$ edges. The quanti
 
 ## Example: a path on five vertices
 
-In the examples, we use the abbreviated notation $(12)=(a_1a_2)$, $(123)=(a_1a_2a_3)$, and similarly for other boundaries.
+Continue with a graph that also has forests with several nontrivial components.
 
 ```mermaid
 graph LR
@@ -242,17 +208,58 @@ For a connected graph, $\tau(G)>0$. Hence $L^{n-1}\ne0$, $L^n=0$, and the highes
 | $P_5$ with unit conductances | $1,4,6,4,1$ | 4 | 1 |
 | $C_4$ with unit conductances | $1,4,6,4$ | 3 | 4 |
 
-> [!example] A weighted triangle
-> For conductances $c_{12}=\alpha$, $c_{23}=\beta$, $c_{13}=\gamma$,
+## Adding and deleting an edge
+
+Let $p=[a_{ij}]^2$, and change the conductance of the pair $ij$ by $t$. An absent coupling has conductance $0$; the graph interpretation requires $c_{ij}+t\ge0$. Then $L'=L+tp$ and
+
+$$
+\boxed{M_{G'}=M_G(e+tp)}
+$$
+
+For $t=c>0$, this adds conductance $c$, including strengthening an existing coupling. For $t=-c_{ij}$, the existing edge is deleted entirely:
+
+$$
+\boxed{M_{G'}=M_G(e-c_{ij}p)}
+$$
+
+> [!note]- Proof
+> **Proof.** Since $p^2=0$, we have $\exp(tp)=e+tp$ and
 >
 > $$
-> \begin{aligned}
-> M_G={}&e+\alpha[(12)]^2+\beta[(23)]^2+\gamma[(13)]^2+\\
-> &+(\alpha\beta+\alpha\gamma+\beta\gamma)[(123)]^2
-> \end{aligned}
+> (e+cp)(e-cp)=e
 > $$
 >
-> The three spanning trees have weights $\alpha\beta$, $\alpha\gamma$, $\beta\gamma$. Their forms coincide, and their weights add to $\tau(G)=\alpha\beta+\alpha\gamma+\beta\gamma$.
+> Commutativity of forms gives $\exp(L+tp)=\exp L\exp(tp)$. When the edge is deleted, the multiplier $e-c_{ij}p$ turns its edge factor into the identity. $\square$
+
+If a set $S$ of existing edges is deleted, then
+
+$$
+M_{G-S}=M_G\prod_{\{i,j\}\in S}\bigl(e-c_{ij}[a_{ij}]^2\bigr)
+$$
+
+The order of deletion does not affect the result. These algebraic equalities remain valid if connectivity is lost: the exponential in that case is described under [[#Disconnected graphs]].
+
+### The inverse exponential
+
+Invertibility of every edge factor makes the whole exponential invertible:
+
+$$
+\boxed{
+M_G^{-1}=\exp(-L)
+=\prod_{\{i,j\}\in E}\bigl(e-c_{ij}[a_{ij}]^2\bigr)
+}
+$$
+
+> [!note]- Proof
+> **Proof.** Multiplication by (2) pairs each edge factor with its inverse; every pair gives $e$. The product of the factors with minus signs equals $\exp(-L)$ because forms commute. $\square$
+
+Writing $M_k=L^k/k!$, inversion changes the signs of precisely the odd grades:
+
+$$
+M_G^{-1}=\sum_{k=0}^{n-1}(-1)^kM_k,\qquad M_0=e
+$$
+
+All sums are finite. Invertibility here refers to the polyform product and requires neither graph connectivity nor invertibility of the Laplacian matrix. The inverse exponential of the complement is used in the [[Symmetric Polyforms of the Complete Graph#Deleting edges from the complete graph|representation by deleting edges from the complete graph]].
 
 ## Disconnected graphs
 
@@ -304,6 +311,47 @@ $$
 
 In the project, the normalized potential is also called the PMG norm of the form. For an arbitrary form, this is not a norm in the usual sense: the evaluation is linear and may have either sign. For a quadratic form, it will equal the quadratic norm of its argument.
 
+### Example: normalization on a unit-conductance triangle
+
+For unit-conductance $K_3$ with vertices $a,b,c$, set $p=[(ab)]^2$. The expansion already computed is
+
+$$
+M_G=e+[(ab)]^2+[(bc)]^2+[(ac)]^2+3T_3,\qquad T_3=[(abc)]^2
+$$
+
+Thus $\tau(M_G)=3$. After multiplication by $p$, only $Lp$ contributes to the top grade. The term $p^2$ vanishes, while the other two terms each give $T_3$:
+
+$$
+Lp=[(bc)]^2[(ab)]^2+[(ac)]^2[(ab)]^2=2T_3
+$$
+
+Consequently,
+
+$$
+u_{M_G}(p)=\tau(M_Gp)=2,\qquad
+\frac{\tau(M_Gp)}{\tau(M_G)}=\frac23=R_{ab}
+$$
+
+The number $2$ is the potential of the form; dividing by $3$ gives the resistance. We can now state this rule for boundaries of any grade.
+
+## Agreement with the resistance metric
+
+> [!info] The metric identity
+> **Theorem.** For any boundaries $X,Y\in\Lambda^kW$, $0\le k\le n-1$,
+>
+> $$
+> \frac{\tau(M_G[X,Y])}{\tau(M_G)}=X\cdot Y,\qquad
+> \frac{\tau(M_G[X]^2)}{\tau(M_G)}=X^2
+> \tag{7}
+> $$
+>
+> The right-hand sides use the induced metric from [[Metric of Higher-Grade Objects]]; $X^2=X\cdot X$ is a number, while $[X]^2$ is a formal object.
+
+
+This result does not define the evaluation of forms of points or arbitrary simplices outside the boundary subalgebra.
+
+The general justification uses the determinant lemma below. Its proof can be skipped on a first reading: the triangle already illustrates the normalization, and formula (7) gives the calculation rule.
+
 ## A general lemma on the top-grade coefficient
 
 > [!info] The determinant lemma
@@ -311,16 +359,16 @@ In the project, the normalized potential is also called the PMG norm of the form
 >
 > $$
 > L_A=\sum_{p,q=1}^d A_{pq}[b_p,b_q],\qquad
-> T=[b_1\wedge\cdots\wedge b_d]^2
+> T=[b_1 \cdots b_d]^2
 > $$
 >
-> Let $\tau_b$ denote the coefficient of $T$. For decomposable objects $X=u_1\wedge\cdots\wedge u_k$, $Y=v_1\wedge\cdots\wedge v_k$, let $U,V$ contain the coordinate columns of their factors in the basis $b$. Then
+> Let $\tau_b$ denote the coefficient of $T$. For decomposable objects $X=u_1 \cdots u_k$, $Y=v_1 \cdots v_k$, let $U,V$ contain the coordinate columns of their factors in the basis $b$. Then
 >
 > $$
 > \tau_b(\exp L_A)=\det A,\qquad
 > \frac{\tau_b(\exp L_A[X,Y])}{\det A}
 > =\det(U^{\mathsf T}A^{-1}V)
-> \tag{7}
+> \tag{8}
 > $$
 >
 > The formula includes $k=0$ with $X=Y=1$ and the empty determinant equal to one. It extends to general objects of the same grade by bilinearity.
@@ -350,34 +398,20 @@ In the project, the normalized potential is also called the PMG norm of the form
 > =\det A\det(I_k+DV^{\mathsf T}A^{-1}U)
 > $$
 >
-> The coefficient of $t_1\cdots t_k$ on the right is $\det A\det(V^{\mathsf T}A^{-1}U)$. Since $A$ is symmetric, the last determinant equals $\det(U^{\mathsf T}A^{-1}V)$. Comparing coefficients proves (7). Decomposable exterior objects span each grade, so bilinear extension covers all $X,Y$. $\square$
+> The coefficient of $t_1\cdots t_k$ on the right is $\det A\det(V^{\mathsf T}A^{-1}U)$. Since $A$ is symmetric, the last determinant equals $\det(U^{\mathsf T}A^{-1}V)$. Comparing coefficients proves (8). Decomposable exterior objects span each grade, so bilinear extension covers all $X,Y$. $\square$
 
-## Agreement with the resistance metric
-
-Choose $d=n-1$ and the basis $b_i=a_i-a_n$ of $W$. In this basis, the coefficient matrix of the polyform $L$ is the reduced Laplacian $A=\mathbf L_0$, obtained by deleting the row and column of vertex $n$.
-
-The boundary and the basis volume are related by
-
-$$
-b_1\wedge\cdots\wedge b_{n-1}=(-1)^{n-1}(a_1\ldots a_n)
-$$
-
-Hence $T=T_n$ and $\tau_b=\tau$: the orientation sign disappears in the quadratic form. The matrix $A$ is positive definite, and the [[From Lengths to Areas and Volumes|Gram matrix relative to the reference vertex]] shows that the matrix of inner products of the $b_i$ is $A^{-1}$. Lemma (7) directly gives the following result.
-
-> [!info] The metric identity
-> **Theorem.** For any boundaries $X,Y\in\Lambda^kW$, $0\le k\le n-1$,
->
+> [!note]- Applying the lemma to the resistance metric
+> **Proof.** Choose $d=n-1$ and the basis $b_i=a_i-a_n$ of $W$. In this basis, the coefficient matrix of the polyform $L$ is the reduced Laplacian $A=\mathbf L_0$, obtained by deleting the row and column of vertex $n$.
+> 
+> The boundary and the basis volume are related by
+> 
 > $$
-> \frac{\tau(M_G[X,Y])}{\tau(M_G)}=X\cdot Y,\qquad
-> \frac{\tau(M_G[X]^2)}{\tau(M_G)}=X^2
-> \tag{8}
+> b_1 \cdots b_{n-1}=(-1)^{n-1}(a_1\ldots a_n)
 > $$
->
-> The right-hand sides use the induced metric from [[Metric of Higher-Grade Objects]]; $X^2=X\cdot X$ is a number, while $[X]^2$ is a formal object.
-
-For decomposable $X,Y$, the right-hand side of (7) is the mixed Gram determinant. For linear combinations, both sides of (8) extend bilinearly. Thus the theorem applies to nondecomposable exterior objects as well as to products of edge vectors.
-
-This result does not define the evaluation of forms of points or arbitrary simplices outside the boundary subalgebra.
+> 
+> Hence $T=T_n$ and $\tau_b=\tau$: the orientation sign disappears in the quadratic form. The matrix $A$ is positive definite, and the [[From Lengths to Areas and Volumes|Gram matrix relative to the reference vertex]] shows that the matrix of inner products of the $b_i$ is $A^{-1}$.
+> 
+> For decomposable $X,Y$, the right-hand side of (8) is the mixed Gram determinant. For linear combinations, both sides of (7) extend bilinearly. Thus the theorem applies to nondecomposable exterior objects as well as to products of edge vectors. $\square$
 
 ## Algebraic variation and edge addition
 
@@ -387,7 +421,7 @@ $$
 \exp(L+t[v]^2)=M_G(e+t[v]^2)
 $$
 
-By (6) and (8),
+By (6) and (7),
 
 $$
 \frac{\tau(\exp(L+t[v]^2))}{\tau(M_G)}=1+t\,v^2
@@ -412,7 +446,7 @@ $$
 
 Indeed, $\tau(M'f)=\tau(M_Gf)+t\tau(M_Gpf)$. Setting $f=e$ recovers the change in the spanning-tree coefficient from [[Variation of a Single Edge]]. The formula for unnormalized potentials remains valid when a bridge is deleted; normalization by $\tau(M')$ requires the modified graph to be connected.
 
-Similarly, lemma (7) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant formula is algebraic and does not require each direction to correspond to an edge.
+Similarly, lemma (8) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant formula is algebraic and does not require each direction to correspond to an edge.
 
 ## Computing potentials and norms
 
@@ -436,9 +470,9 @@ Similarly, lemma (7) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant 
 >
 > The potential is $3$, and the normalized potential is $3/4$, since $\tau(C_4)=4$. An electrical check uses parallel paths with resistances $1$ and $3$: $R_{12}=1\cdot3/(1+3)=3/4$.
 
-## Connections with the preceding notes and further reading
+## Connections with geometry and further reading
 
-The forest expansion describes the coefficients of the exponential, while theorem (8) relates extraction of its top-grade coefficient to the induced metric. At grade one, it recovers effective resistances and inner products; at higher grades, it gives mixed Gram determinants and squared volumes.
+The forest expansion describes the coefficients of the exponential, while theorem (7) relates extraction of its top-grade coefficient to the induced metric. At grade one, it recovers effective resistances and inner products; at higher grades, it gives mixed Gram determinants and squared volumes.
 
-In [[Further Reading for the PMG Introductory Series|the reading recommendations]], source [3] covers the matrix-tree theorem, [5] the matrix determinant lemma, and [7] and [8] exterior algebra and the Cauchy-Binet formula. The metric identity in the adopted algebra of forms is proved by lemma (7) and its application to the reduced Laplacian.
+In [[Further Reading for the PMG Introductory Series|the reading recommendations]], source [3] covers the matrix-tree theorem, [5] the matrix determinant lemma, and [7] and [8] exterior algebra and the Cauchy-Binet formula. The metric identity in the adopted algebra of forms is proved by lemma (8) and its application to the reduced Laplacian.
 

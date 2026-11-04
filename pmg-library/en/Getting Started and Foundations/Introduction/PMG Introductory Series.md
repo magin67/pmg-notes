@@ -1,9 +1,9 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-11-01
-revision: 5
-source_revision: 6
+updated: 2026-11-04
+revision: 6
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
@@ -19,7 +19,7 @@ aliases:
   - "en/Introduction/index"
 ---
 
-This series introduces the graph Laplacian, electrical networks, and resistance geometry. Polyform algebra naturally extends the matrix approach to these concepts. The series develops the connection from current equations and effective resistance to the extraction of metric quantities from the Laplacian exponential in the algebra of forms.
+This series shows how to compute resistances from the couplings of a graph, then use them to obtain lengths, angles, areas, and volumes. Starting with the equations of an electrical network, we gradually combine these calculations into one algebraic construction: the Laplacian exponential. Polyform algebra lets us treat a collection of vectors as a single object and extract its metric quantities by a common rule.
 
 The first seven notes present results from linear algebra, electrical network theory, and random spanning trees. The final three introduce the formal objects and operations adopted in PMG, the extension of the metric to exterior powers, and the construction of the metric polyform. Standard results and project definitions are distinguished as they are introduced.
 
@@ -43,9 +43,9 @@ This group constructs a metric representation of a connected graph. Linear algeb
 
 2. **[[Effective Resistance and Graph Geometry]].** The Green matrix is introduced as the inverse of the Laplacian on the zero-sum subspace. It defines the resistance simplex, in which resistances equal squared Euclidean distances. A separate proof shows that resistance itself also defines a metric on the vertices.
 
-3. **[[Inner Product of Graph Vectors]].** The inner product of affine vectors is computed from four resistances and interpreted as a transfer voltage. The note discusses orientation, reciprocity of measurements, and the four-point identity. The eighth note returns to the structural form of this identity.
+3. **[[Inner Product of Graph Vectors]].** The inner product of affine vectors is computed from four resistances and interpreted as a transfer voltage. The note discusses orientation, reciprocity of measurements, and the four-point identity. Its structural form is discussed in [[Basic Objects and Operations of Polyform Algebra#The four-point identity|polyform algebra]].
 
-4. **[[Laplacian, Green Matrix, and Effective Resistance Matrix|Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations]].** Forward and inverse transformations between the three matrices, double centering, and reconstruction of conductances from resistances. This develops the construction of the second note; the definition of the Green matrix is assumed to be known.
+4. **[[Laplacian, Green Matrix, and Effective Resistance Matrix|Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations]].** Forward and inverse transformations between the three matrices, double centering, and reconstruction of conductances from resistances. This uses the definition of the Green matrix from [[Effective Resistance and Graph Geometry#The Green matrix|the note on effective resistance]].
 
 5. **[[From Lengths to Areas and Volumes]].** Gram and Cayley-Menger determinants compute areas and higher-dimensional volumes. The matrix-tree theorem relates the volume of the full resistance simplex to the spanning-tree coefficient. Gram determinants of edge vectors also express joint edge-inclusion probabilities in a random spanning tree.
 
@@ -69,7 +69,7 @@ This group introduces formal objects that can be manipulated before a metric is 
 
 9. **[[Metric of Higher-Grade Objects]].** The inner product of affine vectors extends to boundaries at each grade through mixed Gram determinants. The numerical norm is distinguished from the quadratic form of an object; simplex areas and volumes are computed from the norms of their boundaries.
 
-10. **[[Laplacian Exponential]].** The exponential in the algebra of forms expands over spanning forests, and its top-grade component contains the spanning-tree coefficient. A general determinant lemma proves that normalized extraction of the top-grade coefficient reproduces the metric of the preceding note. Disconnected graphs and the distinction between algebraic variation and edge addition are also discussed.
+10. **[[Laplacian Exponential]].** The exponential in the algebra of forms expands over spanning forests, and its top-grade component contains the spanning-tree coefficient. A general determinant lemma proves that normalized extraction of the top-grade coefficient reproduces the metric defined in [[Metric of Higher-Grade Objects]]. Disconnected graphs and the distinction between algebraic variation and edge addition are also discussed.
 
 Reading: [[Further Reading for the PMG Introductory Series#Exterior algebra and metric polyforms|exterior algebra, Gram determinants, and spanning trees]]. Forms and the metric polyform are defined directly in notes 8-10.
 

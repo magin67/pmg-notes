@@ -1,9 +1,9 @@
 ---
 title: From Lengths to Areas and Volumes
 date: 2026-10-04
-updated: 2026-10-16
-revision: 3
-source_revision: 3
+updated: 2026-11-04
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: lengths-areas-volumes
@@ -16,7 +16,7 @@ aliases:
 
 Inner products determine lengths and angles as well as areas, volumes, and their higher-dimensional analogues. The squares of these quantities are expressed by Gram determinants. In the resistance representation of a graph, Gram matrix entries are computed from effective resistances, and Gram determinants are related to spanning trees.
 
-We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for affine vectors and $\mathrm{Gr}=L^+$ for the Green matrix. From the preceding notes,
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for affine vectors and $\mathrm{Gr}=L^+$ for the Green matrix. By the [[Inner Product of Graph Vectors|resistance inner-product formulas]],
 
 $$
 \|a_{ij}\|^2=R_{ij},\qquad
@@ -142,6 +142,8 @@ The Gram determinant vanishes if and only if the vectors are linearly dependent.
 
 ## The Cayley-Menger determinant
 
+This section gives an alternative volume formula directly in terms of distances. On a first reading, you may proceed to [[#The spanning-tree coefficient as a Gram determinant|the spanning-tree coefficient]]: the subsequent arguments use the Gram formula.
+
 Let $\ell_{ij}=\|p_j-p_i\|$ for vertices $p_0,\ldots,p_k$, and define the matrix
 
 $$
@@ -191,7 +193,7 @@ For a resistance simplex, the entries substituted into $M$ are the effective res
 >
 > where the sum runs over all spanning trees. A spanning tree contains every vertex of the graph, is connected, and has no cycles. When all conductances are one, $\tau$ is the number of spanning trees.
 
-Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$ and contains the bi-coordinates of its vector in the vertex basis. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
+Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$ and contains the coefficients of the vertex difference: $-1$ in position $i$, $+1$ in position $j$, and zero elsewhere. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
 
 Choose a vertex $0$, relabeling the vertices as $0,1,\ldots,n-1$. Delete its row from $B$ to obtain $B_0$. Deleting the row and column of this vertex from $L$ gives the reduced Laplacian
 
@@ -258,6 +260,15 @@ V_R^2=\frac1{((n-1)!)^2\tau}
 \tag{8}
 $$
 
+Two different sets of vectors are involved here. Their Gram matrices are inverses, so their determinants are reciprocals:
+
+| Vectors | Gram matrix | Squared parallelotope volume |
+|---|---|---|
+| Rows of $A=B_0W^{1/2}$ in edge-coordinate space | $L_0$ | $\tau$ |
+| Resistance vectors $a_{01},\ldots,a_{0,n-1}$ | $L_0^{-1}$ | $1/\tau$ |
+
+Thus increasing $\tau$ increases the first volume and decreases the second. The volume of the resistance simplex also differs from that of its parallelotope by a factor of $1/(n-1)!$.
+
 > [!example] The spanning-tree coefficient and area for $K_3$
 > The triangle graph with unit conductances has three spanning trees, so $\tau=3$. Choosing vertex $1$ as the reference vertex gives
 >
@@ -269,6 +280,8 @@ $$
 > The inverse matrix equals the previously computed Gram matrix $G(a_{12},a_{13})$. Formula (8) gives $S_\triangle^2=1/((2!)^2\cdot3)=1/12$, in agreement with the direct area calculation.
 
 ## Edge-inclusion probabilities in a spanning tree
+
+This is an additional interpretation of the same determinants: they compute joint edge-inclusion probabilities. This section can be deferred when proceeding to polyform algebra.
 
 For an edge $e$ oriented from $i$ to $j$, set $t_e=a_{ij}$, $R_e=R_{ij}$, and $g(e,f)=t_e\cdot t_f$. Choose a random spanning tree $T$ according to the distribution
 

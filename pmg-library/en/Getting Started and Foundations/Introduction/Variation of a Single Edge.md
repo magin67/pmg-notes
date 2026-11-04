@@ -1,9 +1,9 @@
 ---
 title: Variation of a Single Edge
 date: 2026-10-04
-updated: 2026-10-16
-revision: 3
-source_revision: 3
+updated: 2026-11-04
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: single-edge-variation
@@ -64,7 +64,7 @@ where the sum runs over spanning trees. By the [[From Lengths to Areas and Volum
 > \det L'_0=\det L_0\bigl(1+\delta b^{\mathsf T}L_0^{-1}b\bigr)
 > $$
 >
-> The preceding note established that the Gram matrix of resistance vectors based at one vertex equals the inverse reduced Laplacian. Hence $b^{\mathsf T}L_0^{-1}b=R_{kl}$. The matrix-tree theorem gives (2), including when $L'_0$ is singular.
+> The [[From Lengths to Areas and Volumes#The volume of the full resistance simplex|Gram matrix of resistance vectors based at one vertex equals the inverse reduced Laplacian]]. Hence $b^{\mathsf T}L_0^{-1}b=R_{kl}$. The matrix-tree theorem gives (2), including when $L'_0$ is singular.
 >
 > With nonnegative conductances, $\tau'>0$ is equivalent to the existence of a spanning tree, hence to connectivity. Since $\tau>0$, this proves the criterion $1+\delta R_{kl}>0$. $\square$
 
@@ -145,6 +145,29 @@ $$
 
 For $\delta>0$, the second identity expresses the addition of conductance $\delta$ in parallel between the same vertices.
 
+## Example: strengthening an edge of a triangle
+
+> [!example] Resistances and the spanning-tree coefficient
+> In $K_3$ with unit conductances, $\tau=3$ and $R_{12}=R_{13}=R_{23}=2/3$. Increase $c_{12}$ from $1$ to $2$, so $\delta=1$.
+>
+> Formulas (6) and (5), with $a_{13}\cdot a_{12}=1/3$, give
+>
+> $$
+> R'_{12}=\frac{2/3}{1+2/3}=\frac25,\qquad
+> R'_{13}=\frac23-\frac{1/9}{1+2/3}=\frac35
+> $$
+>
+> By symmetry, $R'_{23}=3/5$. Formula (2) gives $\tau'=3(1+2/3)=5$.
+>
+> An independent check of the resistances uses parallel paths. Between $1$ and $2$, the branch resistances are $1/2$ and $2$; between $1$ and $3$, they are $1$ and $3/2$:
+>
+> $$
+> R'_{12}=\frac{(1/2)\cdot2}{1/2+2}=\frac25,\qquad
+> R'_{13}=\frac{1\cdot(3/2)}{1+3/2}=\frac35
+> $$
+>
+> The three spanning trees have weights $2,2,1$, whose sum is $5$.
+
 ## Derivatives with respect to conductance
 
 Dividing (5) by $\delta$ and taking the limit as $\delta\to0$ gives
@@ -165,6 +188,8 @@ $$
 \Pr(kl\in T)=\frac{c_{kl}}\tau\frac{\partial\tau}{\partial c_{kl}}
 =c_{kl}R_{kl}
 $$
+
+In the triangle example above, strengthening edge $12$ increases its inclusion probability from $2/3$ to $c'_{12}R'_{12}=2\cdot(2/5)=4/5$.
 
 When the edge is deleted completely, $\delta=-c_{kl}$, formula (2) becomes
 
@@ -217,7 +242,7 @@ $$
 \Delta m_{ij}=\delta\tau\bigl(R_{ij}R_{kl}-(a_{ij}\cdot a_{kl})^2\bigr)
 $$
 
-The expression in parentheses is the Gram determinant of two affine vectors. Using the notation of the preceding note, we obtain the following result.
+The expression in parentheses is the Gram determinant of two affine vectors. By the [[From Lengths to Areas and Volumes#The Gram determinant and area|area formula using the Gram determinant]], we obtain the following result.
 
 > [!info] Change in spanning 2-forest weight
 > **Corollary.** For every $\delta\ge-c_{kl}$, including bridge deletion,
@@ -237,28 +262,7 @@ The expression in parentheses is the Gram determinant of two affine vectors. Usi
 
 For the varied pair itself, $i=k$, $j=l$, the determinant in (9) is zero, so $m'_{kl}=m_{kl}$. This agrees with the definition: a forest separating $k$ and $l$ cannot contain the edge $kl$.
 
-## Example: strengthening an edge of a triangle
-
-> [!example] Resistances and the spanning-tree coefficient
-> In $K_3$ with unit conductances, $\tau=3$ and $R_{12}=R_{13}=R_{23}=2/3$. Increase $c_{12}$ from $1$ to $2$, so $\delta=1$.
->
-> Formulas (6) and (5), with $a_{13}\cdot a_{12}=1/3$, give
->
-> $$
-> R'_{12}=\frac{2/3}{1+2/3}=\frac25,\qquad
-> R'_{13}=\frac23-\frac{1/9}{1+2/3}=\frac35
-> $$
->
-> By symmetry, $R'_{23}=3/5$. Formula (2) gives $\tau'=3(1+2/3)=5$.
->
-> An independent check of the resistances uses parallel paths. Between $1$ and $2$, the branch resistances are $1/2$ and $2$; between $1$ and $3$, they are $1$ and $3/2$:
->
-> $$
-> R'_{12}=\frac{(1/2)\cdot2}{1/2+2}=\frac25,\qquad
-> R'_{13}=\frac{1\cdot(3/2)}{1+3/2}=\frac35
-> $$
->
-> The three spanning trees have weights $2,2,1$, whose sum is $5$. The probability of edge $12$ increases from $2/3$ to $c'_{12}R'_{12}=4/5$.
+### Example: the change in forest weight
 
 > [!example] Forest weight
 > Before the change, $m_{13}=\tau R_{13}=2$. After the change, $m'_{13}=\tau'R'_{13}=3$. Formula (9) gives
