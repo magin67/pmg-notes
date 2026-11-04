@@ -2,8 +2,8 @@
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
 updated: 2026-11-04
-revision: 6
-source_revision: 9
+revision: 7
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
@@ -94,7 +94,7 @@ $$
 \partial[abc]=[bc]-[ac]+[ab]=[ab]+[bc]+[ca]
 $$
 
-![[Oriented boundary of a triangle.svg]]
+![Oriented boundary of a triangle](<Oriented boundary of a triangle.svg>)
 
 The arrows specify the orientations of the **sides** $[ab]$, $[bc]$, $[ca]$, which are objects of grade two. Their sum is the triangle boundary. Applying the boundary once more gives the sum of endpoint differences, $(b-a)+(c-b)+(a-c)=0$. This illustrates the rule that the boundary of a boundary is zero.
 

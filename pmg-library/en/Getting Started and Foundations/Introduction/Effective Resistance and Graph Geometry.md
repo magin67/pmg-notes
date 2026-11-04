@@ -2,8 +2,8 @@
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
 updated: 2026-11-04
-revision: 6
-source_revision: 8
+revision: 7
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry
@@ -150,7 +150,7 @@ Its geometry is uniquely determined up to a Euclidean isometry: a translation an
 
 Consider a path with conductances $c_{12}=1$ and $c_{23}=2$.
 
-![[Path and resistance triangle.svg]]
+![A path and its resistance simplex](<Path and resistance triangle.svg>)
 
 The left panel shows the couplings and their conductances; the right panel shows the resistance simplex of the same network. Labels on the right give **lengths** $\sqrt{R_{ij}}$. The dashed side joins vertices $1$ and $3$, which have no direct edge in the original graph.
 

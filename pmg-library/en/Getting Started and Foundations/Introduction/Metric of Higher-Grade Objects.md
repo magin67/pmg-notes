@@ -2,8 +2,8 @@
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
 updated: 2026-11-04
-revision: 5
-source_revision: 7
+revision: 6
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric
@@ -118,7 +118,7 @@ $$
 \tag{3}
 $$
 
-![[Metric of Higher-Grade Objects - two triangles.svg]]
+![Two triangles sharing a side](<Metric of Higher-Grade Objects - two triangles.svg>)
 
 The figure shows general Euclidean configurations. Its planar case does not represent four distinct base vertices of a resistance simplex: such vertices are affinely independent.
 
