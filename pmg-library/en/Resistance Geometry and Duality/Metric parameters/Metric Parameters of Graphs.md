@@ -1,14 +1,14 @@
 ---
 title: Metric Parameters of Graphs
 date: 2026-10-18
-updated: 2026-11-03
-revision: 3
-translated_revision: 5
+updated: 2026-11-04
+revision: 4
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: metric-parameters-series-navigation
 lang: en
-description: "Reading order for seven notes on resistance radius, Gram matrices and volumes, centralities, dimensionless parameters, vertex deletion, the centers of both graph simplices, and degree potential. A guide to results and their polyform representations."
+description: "Reading order for eight notes on resistance radius, Gram matrices and volumes, centralities, dimensionless parameters, vertex deletion, the centers of both graph simplices, degree potential, and internal Laplacian norms. A guide to results and their polyform representations."
 order: 0
 tags:
   - resistances
@@ -19,7 +19,7 @@ aliases:
   - "en/Metric parameters/index"
 ---
 
-How can the size of a graph's resistance simplex be described by a single number? How do central vertices differ from critical ones? Which parameters distinguish a path from a star, and which are the same for all trees of the same order? The seven notes in this series connect these questions with circumsphere geometry, the Green matrix, spanning trees, and the Laplacian exponential.
+How can the size of a graph's resistance simplex be described by a single number? How do central vertices differ from critical ones? Which parameters distinguish a path from a star, and which are the same for all trees of the same order? The eight notes in this series connect these questions with circumsphere geometry, the Green matrix, spanning trees, and the Laplacian exponential.
 
 The series considers finite connected undirected loopless graphs with positive conductances on existing edges. Parameters of the whole graph are distinguished from characteristics of individual vertices; restrictions concerning the number of vertices, degeneracy, and disconnection are stated in the relevant notes.
 
@@ -59,6 +59,8 @@ General definitions and notation are given in the [[Core specification|core spec
 
 7. **[[Degree Potential and Centralities]].** Ranking by the Laplacian circumcenter coordinates; agreement with closeness and centroid centrality on unit-conductance trees, links to generalized degree and eigenvector centrality. Exact counterexamples, positive normalization, and comparison on the Krackhardt kite graph.
 
+8. **[[Norms of Subgraph Laplacians]].** Internal Laplacians evaluated in the metric of the whole graph: expected internal edge counts in random spanning trees, bounds, trees and blocks, partitions and sensitivity. Partial observations and Kron reduction, comparison with boundary and Greenian norms, and the search for a group of maximum norm.
+
 ## Reading routes
 
 **For the full series:** follow the order above. Definitions and examples are in the main text; proofs and details of independent computational checks are available in collapsible blocks.
@@ -70,6 +72,8 @@ General definitions and notation are given in the [[Core specification|core spec
 **Comparing centers and heterogeneity:** after the [[Centroid, Spanning-Tree, and Eigenvector Centralities|resistance center]], move to the [[Sphere Centers and Graph Heterogeneity|two simplex geometries]]. Coincidence of the circumcenter and centroid characterizes the corresponding type of regularity and does not guarantee structural symmetry.
 
 **Degree potential as a centrality:** after the geometric definition of the center, read [[Degree Potential and Centralities]]. Agreement with established rankings depends on the graph class; positive normalization does not remove nonmonotonicity.
+
+**Comparing vertex groups:** read [[Norms of Subgraph Laplacians]]. Keep the metric of the whole graph fixed; distinguish internal connectivity in a random spanning tree from density and criticality under vertex deletion.
 
 ## Guide to results
 
@@ -87,6 +91,8 @@ General definitions and notation are given in the [[Core specification|core spec
 | Why zero displacement does not imply structural symmetry | [[Sphere Centers and Graph Heterogeneity#Coincident centers and structural symmetry\|An asymmetric graph with coincident centers]] |
 | Equal displacements on unit-conductance trees | [[Sphere Centers and Graph Heterogeneity#Equal displacements on unit-conductance trees\|Equality of displacements]] |
 | Degree potential, closeness on trees, and eigenvector centrality | [[Degree Potential and Centralities]] |
+| Internal Laplacian norms, spanning-tree interpretation, and partial observations | [[Norms of Subgraph Laplacians]] |
+| Why a fixed group's norm can decrease under enlarged observations | [[Norms of Subgraph Laplacians#Enlarging the observed set\|Effective couplings and the Schur complement]] |
 
 ## How the parameters are expressed through polyforms
 
@@ -100,7 +106,7 @@ Definitions, proved claims, and computational examples are distinguished in each
 
 A compact expression for the radius after deleting a vertex together with its edges, in terms of a small number of vertex characteristics in the original graph, remains an open question. Computation from the new Laplacian and its polyform exponential is defined; this computation is not equivalent to the sought compact formula.
 
-All seven notes are available in Russian and English, with matching notation and reading orders.
+All eight notes are available in Russian and English, with matching notation and reading orders.
 
 
 ## Origins of the results in the centrality supplement
@@ -112,3 +118,12 @@ All seven notes are available in Russian and English, with matching notation and
 | Closeness and centroid centrality on trees; eigenvector centrality to first order | Proofs in the note | Conditions for agreement of rankings | None |
 | Disagreement and nonmonotonicity | Exact finite examples | Limits of application | Illustrations, not a priority claim |
 | Equal displacements on unit-conductance trees | Consequence of the Green diagonal and distance-sum formulas | Relation between the two geometries | None |
+
+## Origins of the results on subgraph norms
+
+| Result | Source or derivation | Role in PMG | Novelty claim |
+|---|---|---|---|
+| Internal Laplacian norm and its bounds | Kirchhoff's edge formula and forest edge counts | Evaluating groups in a fixed metric | None |
+| Trees and biconnected blocks | Uniqueness of the spanning tree; local Foster formula | Exact extremal examples | None |
+| Sensitivity and decrease under enlarged observations | Spanning-tree derivative and Kron reduction | Distinguishing forms, metrics, and observations | Consequences of established formulas |
+| Comparison with boundary and Greenian norms | Gram determinants, the two exponential metrics, and signed forest sums | Distinguishing grades and interpretations | Exposition and examples, not a priority claim |
