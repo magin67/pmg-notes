@@ -1,9 +1,9 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-11-04
-revision: 6
-source_revision: 7
+updated: 2026-11-05
+revision: 7
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
@@ -19,7 +19,7 @@ aliases:
   - "en/Introduction/index"
 ---
 
-This series shows how to compute resistances from the couplings of a graph, then use them to obtain lengths, angles, areas, and volumes. Starting with the equations of an electrical network, we gradually combine these calculations into one algebraic construction: the Laplacian exponential. Polyform algebra lets us treat a collection of vectors as a single object and extract its metric quantities by a common rule.
+This series shows how to compute resistances from the couplings of a graph, then use them to obtain lengths, angles, areas, and volumes. Starting with coupling strengths and the Laplacian matrix, we gradually combine these calculations into one algebraic construction: the Laplacian exponential. Polyform algebra lets us treat a collection of vectors as a single object and extract its metric quantities by a common rule.
 
 The first seven notes present results from linear algebra, electrical network theory, and random spanning trees. The final three introduce the formal objects and operations adopted in PMG, the extension of the metric to exterior powers, and the construction of the metric polyform. Standard results and project definitions are distinguished as they are introduced.
 
@@ -39,7 +39,7 @@ The main reading order is **1-5, then 6-7, then 8-10**. These three groups corre
 
 This group constructs a metric representation of a connected graph. Linear algebra is sufficient for the main development; the probabilistic interpretation appears at the end of the fifth note.
 
-1. **[[Laplacian - graph, electrical network and quadratic form|Laplacian: Graph, Electrical Network and Quadratic Form]].** Conductances, potentials, and currents; the network equation and the freedom to choose a reference potential. The Laplacian quadratic form expresses network power and leads to the definition of effective resistance.
+1. **[[Laplacian - graph, electrical network and quadratic form|Laplacian: Graph, Electrical Network and Quadratic Form]].** Coupling strengths and the Laplacian matrix; its action on vertex values and the associated scalar-valued quadratic form. An electrical network serves as an application. Effective resistances are computed through the Green matrix and interpreted using a test current.
 
 2. **[[Effective Resistance and Graph Geometry]].** The Green matrix is introduced as the inverse of the Laplacian on the zero-sum subspace. It defines the resistance simplex, in which resistances equal squared Euclidean distances. A separate proof shows that resistance itself also defines a metric on the vertices.
 

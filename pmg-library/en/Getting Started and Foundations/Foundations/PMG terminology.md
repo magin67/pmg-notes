@@ -1,8 +1,8 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-11-03
-revision: 20
+updated: 2026-11-05
+revision: 21
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -94,6 +94,7 @@ The merging and vanishing rules apply to simplex boundaries on basis vertices. F
 | Polar form | Полярная форма | Qualified | The unnormalized sum $\{X,Y\}=[X,Y]+[Y,X]$. The definition includes no factor of $1/2$. |
 | Skew-symmetric form | Антисимметричная форма | Qualified | A form $F$ satisfying $F^{\mathsf T}=-F$. Its evaluation under a symmetric metric is zero. A directional evaluation for a balanced graph can be nonzero. |
 | Polyform in PMG | Полиформа | PMG | A finite linear combination of forms, possibly of different grades. After definition, “polyform” may be used. |
+| Polyform coefficient | Коэффициент полиформы | Standard | A scalar multiplier of a form in a chosen linear-combination representation of a polyform. |
 | Homogeneous polyform | Однородная полиформа | Qualified | A polyform of one grade. |
 | Grade component | Грейд-компонента | Qualified | A homogeneous component $P_k$ of a specified polyform. “Грейд-полиформа” is an acceptable Russian synonym. |
 | Polyform product | Произведение форм | PMG | The operation $[X,Y][A,B]=[XA,YB]$. It is commutative and differs from matrix multiplication. |
@@ -101,7 +102,7 @@ The merging and vanishing rules apply to simplex boundaries on basis vertices. F
 | Form on boundaries | Форма на границах | PMG | A form with arguments in $\Lambda^kW$. These forms constitute the subalgebra on which the core's metric evaluation is defined. |
 | Nilpotency | Нильпотентность | Standard | A positive power of an element being zero. For example, $([v]^2)^2=0$ for a vector $v$, although the form of a nonzero vector is itself nonzero. |
 
-In the electrical part of the introductory series, “the quadratic form of the Laplacian” also denotes the numerical function $\varphi\mapsto\varphi^{\mathsf T}\mathbf L\varphi$. When it appears alongside the formal polyform $L$, the representation must be specified.
+In linear algebra, a quadratic form also means a scalar-valued function $x\mapsto x^{\mathsf T}\mathbf Lx$. For clarity, this is called the “scalar-valued quadratic form of a matrix”. The Laplacian polyform $L=\sum_{i<j}c_{ij}[a_{ij}]^2$ is a linear combination of quadratic forms of vertex-pair vectors; these objects must be distinguished.
 
 ## Structural identities and symmetric polyforms
 
@@ -168,7 +169,7 @@ For a graph toponome, the expansion of the factors of the Laplacian exponential 
 
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
-| Coupling coefficient | Коэффициент связи | PMG | The pair coefficient $c_{ij}=\sum_{\ell:\,\ell=\{i,j\}}c_\ell$. In the main model it is symmetric and nonnegative. Summing parallel conductors preserves the Laplacian and metric, but changes the matroid ground set. |
+| Coupling strength | Величина связи | PMG | The weight of the coupling between a pair of vertices, $c_{ij}=\sum_{\ell:\,\ell=\{i,j\}}c_\ell$. In the main model it is symmetric and nonnegative. Summing parallel conductors preserves the Laplacian and metric, but changes the matroid ground set. |
 | Edge conductance | Проводимость ребра | Standard | The positive weight $c_\ell$ of an individual conductor; it equals $c_{ij}$ when the pair has a single edge. Conductivity is not used in this sense. |
 | Edge weight | Вес ребра | Standard | A general name for a numerical edge parameter. In this model the weight represents conductance, not length. |
 | Weighted degree | Взвешенная степень вершины | Standard | The sum $d_i=\sum_jc_{ij}$. |
@@ -545,6 +546,8 @@ Definitions of metric distributions and KVP/KVPOU are given above. For extension
 
 ## Usage rules and revision history
 
+The quantity $c_{ij}$ is called a **coupling strength** (conductance in the electrical interpretation). The earlier name “coupling coefficient” is no longer the preferred term. “Coefficient” is retained for scalar multipliers in linear combinations: for example, $c_{ij}$ is the coefficient of $[a_{ij}]^2$ in the Laplacian polyform.
+
 Russian texts use «остовной» in «остовной лес», «остовной 2-лес», and «остовной коэффициент»; the neuter form is «остовное дерево».
 
 The first use of a PMG-specific term should include a definition or a precise link to one. Sharing a name with a term from another field does not replace a definition. Where needed, English text uses the qualifiers “polyform in PMG”, “polyform potential”, and “PMG form norm”.
@@ -553,6 +556,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 21 | 2026-11-05 | Replaced “coupling coefficient” with “coupling strength”; clarified polyform coefficients. Explicitly distinguished the scalar-valued quadratic form of a matrix from the Laplacian polyform. Aligned with Russian revision 21. |
 | 20 | 2026-11-03 | Added metric distribution and coupling influence terminology; distinguished finite fields from sensitivity and edge contributions from edge-set contributions. Clarified notation and the historical name “reduction”; removed the obsolete undeveloped-extension status. Aligned with Russian revision 20. |
 | 19 | 2026-11-02 | Linked the translated Spectra of Isomers definitions and results. Terms and applicability conditions are unchanged; synchronized with Russian revision 19. |
 | 18 | 2026-11-02 | Linked the proved two-vertex spectral transfer and SLR decoding theorem; distinguished full marked data, scalar injectivity, and minimality. Synchronized with Russian revision 18. |

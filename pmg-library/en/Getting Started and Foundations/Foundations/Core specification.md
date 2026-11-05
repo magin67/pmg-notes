@@ -1,8 +1,8 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-11-03
-revision: 19
+updated: 2026-11-05
+revision: 20
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -215,11 +215,13 @@ Sources: [[Basic Objects and Operations of Polyform Algebra#Forms: bilinearity a
 
 ## The graph and representations of its Laplacian
 
-For an undirected graph $G$, conductances satisfy
+For an undirected graph $G$, coupling strengths $c_{ij}$ satisfy
 
 $$
 c_{ij}=c_{ji}\ge0,\qquad c_{ii}=0,\qquad d_i=\sum_jc_{ij}
 $$
+
+In the electrical interpretation, coupling strengths are conductances. In the polyform representation below, they are the coefficients of the forms of vertex-pair vectors.
 
 > [!info] Laplacian
 > **Definition.** The matrix and polyform representations of the Laplacian are
@@ -981,7 +983,7 @@ Source: [[Laplacian Exponential#Disconnected graphs|disconnected graphs]].
 
 A metric on $W$ and its exterior powers does not automatically define metric evaluations of forms of points or arbitrary simplices outside the boundary subalgebra. Such evaluations require an additional construction on $V$ or an extension of it.
 
-Algebraic polynomial identities may remain valid for real coupling coefficients of either sign. This does not imply positivity of the metric, an electrical interpretation, positivity of the spanning-tree coefficient, or the connectedness criteria established for nonnegative conductances.
+Algebraic polynomial identities may remain valid for real coupling strengths of either sign. This does not imply positivity of the metric, an electrical interpretation, positivity of the spanning-tree coefficient, or the connectedness criteria established for nonnegative conductances.
 
 ### Thematic extensions
 
@@ -1472,6 +1474,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 20 | 2026-11-05 | Clarified coupling strengths and their role as coefficients in the polyform representation. Definitions and normalizations are unchanged. Aligned with Russian revision 20. |
 | 19 | 2026-11-03 | Recorded definitions from the completed metric distribution series: finite influence, relative sensitivity, edge-set distributions, and higher-grade edge sums. Distinguished the contribution sum from output evaluation; clarified normalization, notation, and scope. Aligned with Russian revision 19. |
 | 18 | 2026-11-02 | Linked the English Spectra of Isomers proofs. Mathematical content and result boundaries are unchanged; synchronized with Russian revision 18. |
 | 17 | 2026-11-02 | Updated links and result boundaries after the Spectra of Isomers review: two-vertex transfer, SLR classification and marked-state recovery; scalar injectivity remains open. Synchronized with Russian revision 17. |
