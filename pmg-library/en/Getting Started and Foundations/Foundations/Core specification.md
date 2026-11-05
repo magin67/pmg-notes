@@ -2,7 +2,7 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-11-05
-revision: 21
+revision: 22
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -52,7 +52,9 @@ $$
 a_{ij}=a_j-a_i=(a_i a_j)=(ij)
 $$
 
-The vector $a_{ij}$ is directed from $a_i$ to $a_j$, and $a_{ji}=-a_{ij}$. Its definition does not require an edge between the vertices.
+The **two-point vector**, or **vertex-pair vector**, $a_{ij}$ is directed from $a_i$ to $a_j$, and $a_{ji}=-a_{ij}$. Its definition does not require an edge between the vertices.
+
+A vector $u=\sum_i u_i a_i\in W$ with three or more nonzero coefficients in the fixed vertex basis is called **multipoint**. This describes its expression in the chosen basis; if arbitrary affine points are allowed, every $u\in W$ is a difference of two points.
 
 Formal basis vertices in $V$ are distinct from the centered position vectors of a Euclidean realization. The linear independence of $a_1,\ldots,a_n$ concerns the formal space, not the centered position vectors, whose sum is zero.
 
@@ -1474,6 +1476,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 22 | 2026-11-05 | Clarified the names of two-point and multipoint vectors; the number of points in an expression refers to the fixed vertex basis. Algebraic definitions are unchanged. Aligned with Russian revision 22. |
 | 21 | 2026-11-05 | Aligned the name of $d_i$ in the notation summary with the introductory note and glossary: “vertex degree”. Definitions and formulas are unchanged. Aligned with Russian revision 21. |
 | 20 | 2026-11-05 | Clarified coupling strengths and their role as coefficients in the polyform representation. Definitions and normalizations are unchanged. Aligned with Russian revision 20. |
 | 19 | 2026-11-03 | Recorded definitions from the completed metric distribution series: finite influence, relative sensitivity, edge-set distributions, and higher-grade edge sums. Distinguished the contribution sum from output evaluation; clarified normalization, notation, and scope. Aligned with Russian revision 19. |

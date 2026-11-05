@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-11-05
-revision: 22
+revision: 23
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -56,7 +56,8 @@ The notation $[x_i!]$ first constructs a new collection using the same indices a
 | Point | Точка | Qualified | An element $x=\sum_i x_i a_i$ with $\sum_i x_i=1$. Not every point is a basis vertex. |
 | Affine weight | Аффинный вес | PMG | The value of the linear functional $\varepsilon(x)=\sum_i x_i$. It is neither an edge weight nor a physical mass. |
 | Affine vector | Аффинный вектор | Qualified | An element $u\in W=\ker\varepsilon$. Within the core, “vector” may be used for brevity. |
-| Vertex-pair vector | Вектор пары вершин | Qualified | The difference $a_{ij}=a_j-a_i=(ij)$. It is defined even without an edge; reversing the order changes its sign. |
+| Two-point vector; vertex-pair vector | Двуточечный вектор; вектор пары вершин | Qualified | The difference $a_{ij}=a_j-a_i=(ij)$. It is defined even without an edge; reversing the order changes its sign. |
+| Multipoint vector | Многоточечный вектор | PMG | An affine vector $u=\sum_i u_i a_i$, $\sum_i u_i=0$, with three or more nonzero coefficients in the chosen vertex basis. The number of points describes this expression. |
 | Space of affine vectors | Пространство аффинных векторов | Qualified | The $(n-1)$-dimensional subspace $W\subset V$ consisting of combinations with zero coefficient sum. |
 | Exterior product; wedge product | Внешнее произведение | Standard | The product $XY$ in the exterior algebra, usually denoted by $X\wedge Y$. Exchanging homogeneous objects introduces a sign depending on their grades. |
 | Exterior-algebra element | Внешний объект | Qualified | An element of $\Lambda^kV$ or $\Lambda^kW$. It may be a linear combination of exterior products. |
@@ -556,6 +557,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 23 | 2026-11-05 | Matched “two-point vector” with “vertex-pair vector”; added the multipoint representation of an affine vector and its dependence on the basis. Aligned with Russian revision 23. |
 | 22 | 2026-11-05 | Adopted the shorter name “vertex degree” in place of “weighted degree” for the sum of coupling strengths. The definition is unchanged; the unit-coupling case is stated explicitly. Aligned with Russian revision 22. |
 | 21 | 2026-11-05 | Replaced “coupling coefficient” with “coupling strength”; clarified polyform coefficients. Explicitly distinguished the scalar-valued quadratic form of a matrix from the Laplacian polyform. Aligned with Russian revision 21. |
 | 20 | 2026-11-03 | Added metric distribution and coupling influence terminology; distinguished finite fields from sensitivity and edge contributions from edge-set contributions. Clarified notation and the historical name “reduction”; removed the obsolete undeveloped-extension status. Aligned with Russian revision 20. |

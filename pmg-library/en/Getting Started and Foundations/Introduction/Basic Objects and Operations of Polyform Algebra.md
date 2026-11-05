@@ -1,9 +1,9 @@
 ---
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
-updated: 2026-11-04
-revision: 7
-source_revision: 10
+updated: 2026-11-05
+revision: 8
+source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
@@ -37,11 +37,28 @@ The affine weight distinguishes points from affine vectors.
 > W=\ker\varepsilon=\left\{\sum_i u_i a_i:\sum_i u_i=0\right\},\qquad \dim W=n-1
 > $$
 
-For example, $(a+b)/2$ is a point, while $a+b-2c$ is an affine vector. The element $a+b$ has weight $2$ and is neither a point nor an affine vector. The difference of two points belongs to $W$. We retain the notation
+For example, $(a+b)/2$ is a point, while $a+b-2c$ is an affine vector. The element $a+b$ has weight $2$ and is neither a point nor an affine vector. The difference of two points belongs to $W$.
+
+> [!info] Two-point and multipoint vectors
+> **Definition.** For an ordered pair of basis vertices, the **two-point vector**, or **vertex-pair vector**, is defined by
+>
+> $$
+> a_{ij}=a_j-a_i
+> $$
+>
+> Its direction is specified by the vertex order: $a_{ji}=-a_{ij}$. An edge need not be present for the vector to be defined.
+>
+> An affine vector $u=\sum_i u_i a_i$ with $\sum_i u_i=0$ is called **multipoint** if three or more vertices have nonzero coefficients in its expansion in the chosen basis vertices.
+
+For example,
 
 $$
-a_{ij}=a_j-a_i
+u=a_1+a_2-2a_3=(a_1-a_3)+(a_2-a_3)=a_{31}+a_{32}
 $$
+
+This is one vector expressed using three points and decomposed into two two-point vectors. The number of points refers to the chosen basis. If arbitrary affine points are allowed, every vector can be written as a difference of two points: for a point $p$, the element $q=p+u$ is also a point, and $u=q-p$.
+
+The elements $a_i$ must be distinguished from numerical values $x_i$ assigned to them. The difference $a_j-a_i$ is a vector, whereas $x_j-x_i$ is a number. The assignment extends linearly: the element $\sum_i u_i a_i$ is assigned the number $\sum_i u_i x_i$. For example, the vector $u$ above is assigned $x_1+x_2-2x_3$. This numerical value depends on the assigned $x_i$, whereas $u$ itself is specified by its coefficients at the $a_i$.
 
 The connection with the [[Effective Resistance and Graph Geometry#A Euclidean representation of the vertices|centered Euclidean representation]] can be written explicitly. In the formal space, introduce the centroid and differences
 

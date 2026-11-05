@@ -2,8 +2,8 @@
 title: "Laplacian: graph, electrical network and quadratic form"
 date: 2026-10-03
 updated: 2026-11-05
-revision: 5
-source_revision: 9
+revision: 6
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-graph-network-quadratic-form
@@ -188,15 +188,15 @@ $$
 ## Quadratic form and network power
 
 > [!info] Definition. Scalar-valued quadratic form of a matrix
-> For an arbitrary column of numerical vertex values $x=(x_1,\ldots,x_n)^{\mathsf T}$, set
+> For any collection of numerical vertex values $x_1,\ldots,x_n$, set
 >
 > $$
 > \mathcal Q(x)=x^{\mathsf T}Lx
 > $$
 >
+> Here $x$ denotes the entire collection of values. In the matrix product, $x$ is written as a column and $x^{\mathsf T}$ as the corresponding row; this is a notation convention for the collection.
+>
 > This is a scalar-valued quadratic form in the usual linear-algebra sense: a homogeneous polynomial of degree two in the values $x_i$.
-
-The Laplacian polyform is a linear combination of quadratic forms of vertex-pair vectors. Its [[Basic Objects and Operations of Polyform Algebra#The polyform representation of the Laplacian|definition and relation to the scalar-valued quadratic form]] are discussed in polyform algebra. In this note, $\mathcal Q$ denotes the function of numerical vertex values.
 
 Symmetry of the coupling strengths gives
 
@@ -237,6 +237,31 @@ $$
 
 The right-hand side is the power supplied by external sources. Its equality to the sum of the edge powers expresses the power balance of the network.
 
+### Numerical differences and vectors
+
+For the geometric description of a graph, its vertices are represented by formal basis elements $a_1,\ldots,a_n$. Linear combinations of these elements can be formed. The elements $a_i$ and the numbers $x_i$ assigned to the vertices play different roles.
+
+> [!info] Two-point and multipoint vectors
+> **Definition.** The difference between the elements representing two vertices,
+>
+> $$
+> a_{ij}=a_j-a_i
+> $$
+>
+> is called a **two-point vector**, or **vertex-pair vector**. It is directed from $a_i$ to $a_j$ and is defined whether or not an edge joins them.
+>
+> A more general vector has the form $u=\sum_i u_i a_i$, where the $u_i$ are numerical coefficients and $\sum_i u_i=0$. If three or more basis points have nonzero coefficients in this expression, we call the vector **multipoint**.
+
+For example, $a_1+a_2-2a_3$ is one vector expressed using three basis points: its coefficients sum to $1+1-2=0$. It decomposes into two two-point vectors:
+
+$$
+a_1+a_2-2a_3=(a_1-a_3)+(a_2-a_3)
+$$
+
+By contrast, $x_j-x_i$ is a difference of **numbers** assigned to the vertices. In the temperature example, $x_2-x_1=21-20=1$, while $a_{12}=a_2-a_1$ remains a vertex-pair vector. Changing the temperatures changes the numerical difference but does not change $a_{12}$. The number of points in a multipoint expression refers to the chosen basis elements; the general case is discussed in the [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|definition of affine vectors]].
+
+The Laplacian polyform is a linear combination of quadratic forms of two-point vectors. Its [[Basic Objects and Operations of Polyform Algebra#The polyform representation of the Laplacian|definition and relation to the scalar-valued quadratic form]] are discussed in polyform algebra. In this note, $\mathcal Q$ denotes the function of numerical vertex values.
+
 ## Choosing a reference potential
 
 Adding the same constant $\alpha$ to every potential preserves voltages and currents:
@@ -245,7 +270,14 @@ $$
 L(\varphi+\alpha\mathbf1)=L\varphi
 $$
 
-A graph is **connected** if any two vertices are joined by a path. In a connected graph, agreement of the potentials at the endpoints of every edge implies that the potential is the same at all vertices.
+> [!info] Paths, connectedness, and connected components
+> **Definition.** A path between vertices is a sequence of vertices in which consecutive vertices are joined by an edge and no vertex is repeated. A path may consist of a single vertex.
+>
+> A graph is **connected** if any two of its vertices are joined by a path.
+>
+> A **connected component** consists of a chosen vertex, all vertices reachable from it by paths, and all edges between these vertices. A vertex with no edges joining it to other vertices is **isolated** and forms a component of its own. A graph with several components is **disconnected**.
+
+In a connected graph, agreement of the potentials at the endpoints of every edge implies that the potential is the same at all vertices.
 
 > [!info] Solvability of the network equations
 > **Theorem.** For a connected graph, the equation $L\varphi=J$ has a solution if and only if $\sum_iJ_i=0$. Any two solutions differ by a constant column $\alpha\mathbf1$.
@@ -304,6 +336,8 @@ Both conditions choose a reference potential without changing the network or the
 > $$
 
 > [!note] Disconnected graph
+> For example, adding an isolated vertex $4$ to the path $1$-$2$-$3$ gives two components: the path and the isolated vertex.
+>
 > Each connected component admits its own independent additive constant for the potentials. A solution exists if and only if the external currents sum to zero within each component separately. Injecting current into one component and withdrawing it from another is impossible without an additional connection between them.
 
 ## Effective resistance
