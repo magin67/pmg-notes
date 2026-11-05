@@ -2,8 +2,8 @@
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
 updated: 2026-11-05
-revision: 8
-source_revision: 11
+revision: 9
+source_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
@@ -60,13 +60,13 @@ This is one vector expressed using three points and decomposed into two two-poin
 
 The elements $a_i$ must be distinguished from numerical values $x_i$ assigned to them. The difference $a_j-a_i$ is a vector, whereas $x_j-x_i$ is a number. The assignment extends linearly: the element $\sum_i u_i a_i$ is assigned the number $\sum_i u_i x_i$. For example, the vector $u$ above is assigned $x_1+x_2-2x_3$. This numerical value depends on the assigned $x_i$, whereas $u$ itself is specified by its coefficients at the $a_i$.
 
-The connection with the [[Effective Resistance and Graph Geometry#A Euclidean representation of the vertices|centered Euclidean representation]] can be written explicitly. In the formal space, introduce the centroid and differences
+The connection with the [[Effective Resistance and Graph Geometry#Euclidean geometry of the graph|centered vertex vectors]] can be written explicitly. In the formal space, introduce the centroid and differences
 
 $$
 h=\frac1n\sum_i a_i,\qquad p_i=a_i-h\in W
 $$
 
-Then $\sum_i p_i=0$, although the original $a_i$ remain linearly independent. Once the resistance metric is chosen, the vectors $p_i$ correspond to the Euclidean position vectors $x_i$. The zero-sum relation concerns $p_i$ and $x_i$, not the formal vertices $a_i$. Both descriptions give the same differences: $p_j-p_i=a_j-a_i$.
+Then $\sum_i p_i=0$, although the original $a_i$ remain linearly independent. In the resistance metric, their inner products are $p_i\cdot p_j=\mathrm{Gr}_{ij}$. The zero-sum relation concerns $p_i$, not the formal vertices $a_i$. Differences are preserved: $p_j-p_i=a_j-a_i$.
 
 ## The exterior product and grade
 

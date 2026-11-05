@@ -2,7 +2,7 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-11-05
-revision: 22
+revision: 23
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -257,7 +257,9 @@ Sources: [[Laplacian - graph, electrical network and quadratic form]] and [[Basi
 ### The Green matrix and resistances
 
 > [!info] Green matrix
-> **Definition.** For a connected graph, $\mathbf{Gr}$ inverts $\mathbf L$ on $H$ and vanishes on constant columns. Equivalently, $\mathbf{Gr}=\mathbf L^+$, where $+$ denotes the Moore-Penrose pseudoinverse.
+> **Definition.** The Green matrix of a connected graph is $\mathbf{Gr}=\mathbf L^+$, where $+$ denotes the Moore-Penrose pseudoinverse.
+
+It inverts $\mathbf L$ on the subspace $H$ defined above and sends collections of equal values $\alpha\mathbf1$ to zero.
 
 For the centering projector $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$,
 
@@ -1476,6 +1478,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 23 | 2026-11-05 | Defined the Green matrix directly by the Moore-Penrose pseudoinverse; its action on the zero-sum subspace is stated separately as a property. Aligned with Russian revision 23. |
 | 22 | 2026-11-05 | Clarified the names of two-point and multipoint vectors; the number of points in an expression refers to the fixed vertex basis. Algebraic definitions are unchanged. Aligned with Russian revision 22. |
 | 21 | 2026-11-05 | Aligned the name of $d_i$ in the notation summary with the introductory note and glossary: “vertex degree”. Definitions and formulas are unchanged. Aligned with Russian revision 21. |
 | 20 | 2026-11-05 | Clarified coupling strengths and their role as coefficients in the polyform representation. Definitions and normalizations are unchanged. Aligned with Russian revision 20. |

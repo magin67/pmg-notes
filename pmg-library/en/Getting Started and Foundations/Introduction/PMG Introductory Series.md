@@ -2,8 +2,8 @@
 title: PMG Introductory Series
 date: 2026-10-08
 updated: 2026-11-05
-revision: 7
-source_revision: 8
+revision: 8
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
@@ -41,7 +41,7 @@ This group constructs a metric representation of a connected graph. Linear algeb
 
 1. **[[Laplacian - graph, electrical network and quadratic form|Laplacian: Graph, Electrical Network and Quadratic Form]].** Coupling strengths and the Laplacian matrix; its action on vertex values and the associated scalar-valued quadratic form. An electrical network serves as an application. Effective resistances are computed through the Green matrix and interpreted using a test current.
 
-2. **[[Effective Resistance and Graph Geometry]].** The Green matrix is introduced as the inverse of the Laplacian on the zero-sum subspace. It defines the resistance simplex, in which resistances equal squared Euclidean distances. A separate proof shows that resistance itself also defines a metric on the vertices.
+2. **[[Effective Resistance and Graph Geometry]].** The Green matrix is defined as the pseudoinverse of the Laplacian, and the distance operator gives resistances from it. In the resistance simplex, these are squared Euclidean distances. A separate proof shows that resistance itself also defines a metric on the vertices.
 
 3. **[[Inner Product of Graph Vectors]].** The inner product of affine vectors is computed from four resistances and interpreted as a transfer voltage. The note discusses orientation, reciprocity of measurements, and the four-point identity. Its structural form is discussed in [[Basic Objects and Operations of Polyform Algebra#The four-point identity|polyform algebra]].
 
