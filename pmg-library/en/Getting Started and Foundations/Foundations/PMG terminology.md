@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-11-05
-revision: 23
+revision: 24
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -253,7 +253,7 @@ In a symmetric metric, the norm of a simplex boundary is the squared volume of a
 
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
-| Metric polyform | Метрическая полиформа | PMG | The exponential $M_G=\exp L$ in the algebra of forms. It is not the matrix exponential $\exp\mathbf L$. |
+| Metric polyform | Метрическая полиформа | PMG | The exponential $M_G=\exp L$ in the algebra of forms; abbreviate it to $M$ for a fixed graph. It is not the matrix exponential $\exp\mathbf L$. |
 | Edge form; pair form | Форма связи | PMG | The quadratic form $[a_{ij}]^2$. Its weighted contribution to the Laplacian is $c_{ij}[a_{ij}]^2$. |
 | Edge factor | Фактор-форма связи | PMG | The multiplier $e+c_{ij}[a_{ij}]^2$ in the factorization of $M_G$. “Фактор-форма” is the shortened Russian name. |
 | Spanning tree | Остовное дерево | Standard | A connected acyclic subgraph containing every vertex of the original graph. |
@@ -557,6 +557,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
 | 23 | 2026-11-05 | Matched “two-point vector” with “vertex-pair vector”; added the multipoint representation of an affine vector and its dependence on the basis. Aligned with Russian revision 23. |
 | 22 | 2026-11-05 | Adopted the shorter name “vertex degree” in place of “weighted degree” for the sum of coupling strengths. The definition is unchanged; the unit-coupling case is stated explicitly. Aligned with Russian revision 22. |
 | 21 | 2026-11-05 | Replaced “coupling coefficient” with “coupling strength”; clarified polyform coefficients. Explicitly distinguished the scalar-valued quadratic form of a matrix from the Laplacian polyform. Aligned with Russian revision 21. |

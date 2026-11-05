@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-labelledby="title desc"><title id="title">Треугольник - половина параллелограмма</title><desc id="desc">Те же векторы u, v: отношение площадей 1/2, их квадратов 1/4</desc>
+<rect width="760" height="320" rx="12" fill="#fafbfc"/>
+<g font-family="Arial, sans-serif" font-size="22" fill="#263444" text-anchor="middle"><text x="380" y="35">Треугольник - половина параллелограмма</text>
+<path d="M155 235L475 235L575 80L255 80Z" fill="#edf3f9" stroke="#536d88" stroke-width="2"/>
+<path d="M155 235L475 235L255 80Z" fill="#a9cbed" stroke="#2864a0" stroke-width="3"/>
+<path d="M475 235L255 80" stroke="#536d88" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="290" y="190">S</text><text x="450" y="130">S</text><text x="315" y="261">u</text><text x="185" y="150">v</text><text x="139" y="258">0</text>
+<text x="380" y="300" font-size="19">Те же векторы u, v: отношение площадей 1/2, их квадратов 1/4</text></g></svg>

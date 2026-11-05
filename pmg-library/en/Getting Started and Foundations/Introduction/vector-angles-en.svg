@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" role="img" aria-labelledby="title desc">
+<title id="title">Angles of 60 and 120 degrees</title><desc id="desc">The angle compares directions, not the placement of the arrows.</desc>
+<defs><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#2864a0"/></marker><marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#23805a"/></marker></defs>
+<rect width="880" height="340" rx="12" fill="#fafbfc"/>
+<g font-family="Arial, sans-serif" font-size="20" fill="#263444" text-anchor="middle">
+<text x="220" y="35">Vectors with a common origin</text><text x="650" y="35">Consecutive vectors: translate to compare</text>
+<path d="M120 230L200 91.436L280 230Z" fill="#e7eff8" stroke="#a6b3c2" stroke-width="2"/>
+<path d="M120 230L280 230" stroke="#2864a0" stroke-width="3" marker-end="url(#blue)"/><path d="M120 230L200 91.436" stroke="#23805a" stroke-width="3" marker-end="url(#green)"/>
+<path d="M155 230A35 35 0 0 0 137.5 199.689" fill="none" stroke="#556575" stroke-width="2"/>
+<text x="171" y="212">60°</text><text x="107" y="255">a₁</text><text x="295" y="255">a₂</text><text x="200" y="78">a₃</text><text x="202" y="256" fill="#2864a0">a₁₂</text><text x="137" y="155" fill="#23805a">a₁₃</text>
+<path d="M620 230L780 230" stroke="#2864a0" stroke-width="3" marker-end="url(#blue)"/><path d="M620 230L540 91.436" stroke="#23805a" stroke-width="3" marker-end="url(#green)"/>
+<path d="M660 230A40 40 0 0 0 600 195.359" fill="none" stroke="#556575" stroke-width="2"/>
+<circle cx="620" cy="230" r="4" fill="#263444"/><text x="651" y="184">120°</text><text x="700" y="256" fill="#2864a0">a₁₂</text><text x="555" y="162" fill="#23805a">a₂₃</text>
+<text x="440" y="315" font-size="19">The angle compares directions, not the placement of the arrows.</text></g></svg>

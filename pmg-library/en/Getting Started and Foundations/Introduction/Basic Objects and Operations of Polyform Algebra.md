@@ -2,8 +2,8 @@
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
 updated: 2026-11-05
-revision: 9
-source_revision: 12
+revision: 10
+source_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
@@ -70,6 +70,8 @@ Then $\sum_i p_i=0$, although the original $a_i$ remain linearly independent. In
 
 ## The exterior product and grade
 
+An area requires two vectors and a volume requires three. The exterior product lets us treat them as a single oriented object. For example, $uv$ corresponds to the oriented parallelogram spanned by $u,v$: exchanging the vectors reverses its orientation, while linear dependence makes the object zero. At this stage it is an algebraic object; a numerical area will require a metric.
+
 The exterior product $\wedge$ is bilinear and associative. For elements $x,y\in V$, it satisfies
 
 $$
@@ -83,13 +85,15 @@ $$
 
 From this point on, exterior products are written without $\wedge$: $xy$ means $x\wedge y$. A self-product $X\wedge X$ retains the explicit symbol to distinguish it from the numerical norm $X^2$.
 
-For homogeneous objects,
+An object of one fixed grade is called **homogeneous**. For homogeneous $X,Y$ of grades $k,m$,
 
 $$
 X Y=(-1)^{km}Y X
 $$
 
 The exterior product of $k$ elements of grade one vanishes if and only if those elements are linearly dependent.
+
+For example, bilinearity gives $(u+v)v=uv+vv=uv$: adding the second vector to the first leaves the exterior product unchanged. Geometrically, this shear preserves the oriented area of the parallelogram.
 
 An oriented simplex is written as
 
@@ -111,7 +115,7 @@ $$
 \partial[abc]=[bc]-[ac]+[ab]=[ab]+[bc]+[ca]
 $$
 
-![Oriented boundary of a triangle](<Oriented boundary of a triangle.svg>)
+![Oriented boundary of a triangle](Oriented%20boundary%20of%20a%20triangle.svg)
 
 The arrows specify the orientations of the **sides** $[ab]$, $[bc]$, $[ca]$, which are objects of grade two. Their sum is the triangle boundary. Applying the boundary once more gives the sum of endpoint differences, $(b-a)+(c-b)+(a-c)=0$. This illustrates the rule that the boundary of a boundary is zero.
 
@@ -217,8 +221,10 @@ These rules apply specifically to boundaries of simplices on base vertices. For 
 > (ab) (cd)=[bd]-[bc]-[ad]+[ac]
 > $$
 
+A forest is a graph without cycles; each of its components is a tree or an isolated vertex. In a product over edges, an isolated vertex contributes the empty product, equal to $1$.
+
 > [!info] Products of edge vectors
-> **Theorem.** The exterior product of the vectors of selected edges is nonzero if and only if those edges form a forest. For a tree on vertices $a_{i_1},\ldots,a_{i_s}$, the product equals $\pm(a_{i_1}\ldots a_{i_s})$. For a forest, it is the product of the boundaries of its components, up to an orientation sign.
+> **Theorem.** The exterior product of the vectors of selected edges is nonzero if and only if those edges form a forest. For a tree on vertices $p_1,\ldots,p_s$, the product equals $\pm(p_1\ldots p_s)$. For a forest, it is the product of the boundaries of its components, up to an orientation sign.
 
 > [!note]- Proof
 > **Proof.** The edge vectors of a cycle are linearly dependent: after their directions are aligned around the cycle, their sum is zero. Thus a cycle makes the entire product vanish, even in the presence of other components.
@@ -228,6 +234,8 @@ These rules apply specifically to boundaries of simplices on base vertices. For 
 > For a tree, applying the rule for merging at one common vertex as leaves are successively attached gives the boundary of the whole tree, up to sign. For a forest, this is done in each component. An isolated vertex contributes the factor $\partial a_i=1$. $\square$
 
 ## Forms: bilinearity and basic operations
+
+Reversing orientation changes the sign of an exterior object. For an unoriented edge, this sign should not affect the result. We therefore introduce a quadratic form $[X]^2$ with $[-X]^2=[X]^2$. To expand $[X+Y]^2$ and multiply forms, we will also need mixed symbols $[X,Y]$. We define their bilinearity first, then obtain the quadratic form by taking equal arguments.
 
 > [!info] Forms of a fixed grade
 > **Definition.** For $X,Y\in\Lambda^kV$, introduce formal symbols $[X,Y]$. They generate the vector space of forms of grade $k$, subject only to the bilinearity relations
@@ -391,23 +399,29 @@ Identity (7) is structural: it expresses a linear dependence among polar forms o
 
 ## Metric evaluation
 
-Suppose $W$ is equipped with a positive definite inner product, such as the resistance metric of a connected graph. It induces a metric on each exterior power $\Lambda^kW$. For a decomposable exterior element,
+Let the space of affine vectors $W$ carry a positive definite inner product, such as the resistance metric of a connected graph. Assign numerical values to forms of grade one:
 
 $$
-\|u_1 \cdots u_k\|^2=\det(u_i\cdot u_j)_{i,j=1}^k
+[u,v]\longmapsto u\cdot v,\qquad
+[u]^2\longmapsto u\cdot u,\qquad
+\{u,v\}\longmapsto 2u\cdot v
 $$
 
-Under numerical evaluation, the form $[X,Y]$ is assigned the value $X\cdot Y$. By bilinearity, this defines a linear evaluation of forms on boundaries of a fixed grade. In particular, $[X]^2$ evaluates to $\|X\|^2$, and $\{X,Y\}/2$ evaluates to $X\cdot Y$.
-
-The metric evaluation of each term in (7) is twice the corresponding inner product. Dividing by $2$ gives
+Evaluation is linear: the value of a sum of forms is the sum of their values with the same coefficients. Each term in (7) therefore gives twice an inner product. Dividing by $2$ yields
 
 $$
 a_{ij}\cdot a_{kl}+a_{jk}\cdot a_{il}+a_{ik}\cdot a_{lj}=0
 $$
 
-The evaluation of the product (6) is the Gram determinant of the original vectors. In general, it is not the product of the evaluations of the individual forms: for two vectors, it is $\|u\|^2\|v\|^2-(u\cdot v)^2$.
+For higher grades, we still need to define an inner product of exterior objects themselves. This is done in [[Metric of Higher-Grade Objects]]. The main rule is already familiar from the [[From Lengths to Areas and Volumes|Gram formula]]: the quadratic form of a vector product receives the value
 
-A metric on $W$ does not automatically assign a norm to a formal point or an arbitrary simplex in $V$. The [[Metric of Higher-Grade Objects|note on higher grades]] concerns the metric on boundaries.
+$$
+[u_1\cdots u_k]^2\longmapsto\det(u_i\cdot u_j)_{i,j=1}^k
+$$
+
+Thus evaluating a product of forms generally differs from multiplying their separate values. For $[u]^2[v]^2=[uv]^2$, the result is $\|u\|^2\|v\|^2-(u\cdot v)^2$, whereas the product of the separate values is $\|u\|^2\|v\|^2$. The missing term accounts for the angle between the vectors.
+
+A metric on $W$ does not automatically assign a norm to a formal point or an arbitrary simplex in $V$. The higher-grade note defines the metric specifically on boundaries; a form $[X,Y]$ on boundaries then receives the value $X\cdot Y$.
 
 ## The polyform representation of the Laplacian
 

@@ -1,9 +1,9 @@
 ---
 title: Varying Several Couplings Together
 date: 2026-10-05
-updated: 2026-11-04
-revision: 4
-source_revision: 5
+updated: 2026-11-05
+revision: 5
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: joint-edge-variation
@@ -14,7 +14,7 @@ aliases:
   - "en/Introduction/Varying several couplings together"
 ---
 
-When several conductances change, their effect on resistances is determined by the same Green matrix. The interaction of the selected couplings is described by the matrix of inner products of the corresponding affine vectors. Its principal minors are coefficients in the change of the spanning-tree coefficient and squared higher-dimensional volumes.
+When two couplings change, adding their separate effects computed in the original graph generally gives the wrong result: the first change alters the effect of the second. We begin with two couplings, then express the general result through their matrix of inner products.
 
 ## Two couplings and sequential changes
 
@@ -60,23 +60,24 @@ Sequentially, strengthening $12$ gives $\tau_e=5$ and $R_f^{(e)}=3/5$, then $\ta
 
 ## Problem setup
 
-We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with nonnegative conductances. Choose $m$ distinct unordered vertex pairs $e_\alpha$, assigning each an orientation from $k_\alpha$ to $l_\alpha$. A pair may be an existing edge or an absent coupling with zero conductance.
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with nonnegative coupling strengths. Choose $m$ distinct unordered vertex pairs and denote them by $e_1,\ldots,e_m$. A pair may be an existing edge or an absent coupling of strength zero.
 
-Set
+Choose an orientation for each pair. If pair $\alpha$ is directed from $i$ to $j$, set
 
 $$
-b_\alpha=\mathbf e_{l_\alpha}-\mathbf e_{k_\alpha},\qquad
-a_{e_\alpha}=a_{l_\alpha}-a_{k_\alpha}
+t_\alpha=a_j-a_i,\qquad b_\alpha=\mathbf e_j-\mathbf e_i
 $$
 
-Change the conductances by $\delta_\alpha$, keeping $c_{e_\alpha}+\delta_\alpha\ge0$. Write
+Thus $t_\alpha$ is a two-point vector, and $b_\alpha$ is its coefficient column: $-1$ at the start, $1$ at the end, and zeros elsewhere. Denote the coupling strength by $c_\alpha$ and the resistance between its endpoints by $R_\alpha$. Here $i,j$ name the endpoints of the selected pair and vary from pair to pair.
+
+Change the coupling strengths by $\delta_\alpha$, keeping $c_\alpha+\delta_\alpha\ge0$. Collect the coefficients and changes into matrices:
 
 $$
 B=(b_1\ \cdots\ b_m),\qquad
 \Delta=\operatorname{diag}(\delta_1,\ldots,\delta_m)
 $$
 
-The column $b_\alpha$ contains the coefficients of $a_{l_\alpha}-a_{k_\alpha}$: $-1$ at the start of the selected pair, $+1$ at its end, and zero elsewhere. A prime denotes the modified network; all unprimed quantities refer to the original network. In particular, $\mathrm{Gr}=L^+$ and $\tau>0$ are the original Green matrix and spanning-tree coefficient.
+A prime denotes the modified graph; all unprimed quantities refer to the original graph. In particular, $\mathrm{Gr}=L^+$ and $\tau>0$ are the original Green matrix and spanning-tree coefficient.
 
 Summing the contributions of the couplings gives
 
@@ -94,15 +95,17 @@ The rank of the perturbation is at most $\min(m,n-1)$ and may be smaller because
 >
 > $$
 > G=(g_{\alpha\beta})=B^{\mathsf T}\mathrm{Gr}B,\qquad
-> g_{\alpha\beta}=a_{e_\alpha}\cdot a_{e_\beta}
+> g_{\alpha\beta}=t_\alpha\cdot t_\beta
 > \tag{3}
 > $$
 >
-> is the Gram matrix of the selected affine vectors. Its diagonal entries are $g_{\alpha\alpha}=R_{e_\alpha}$, where $R_{e_\alpha}$ denotes the resistance between the endpoints of the pair.
+> is the Gram matrix of the selected two-point vectors. Its diagonal entries are $g_{\alpha\alpha}=R_\alpha$, where $R_\alpha$ denotes the resistance between the endpoints of the pair.
 
 The matrix $G$ is symmetric and positive semidefinite. It describes the selected directions and differs from the Green matrix $\mathrm{Gr}$, which is indexed by all vertices.
 
-For a unit current injected at $l_\beta$ and withdrawn at $k_\beta$, the entry $g_{\alpha\beta}$ equals the potential difference $\varphi_{l_\alpha}-\varphi_{k_\alpha}$. Reversing the orientation of one pair changes the signs of the corresponding row and column of $G$, preserving its principal minors and all resulting network quantities.
+For a unit current injected at the end of pair $\beta$ and withdrawn at its start, $g_{\alpha\beta}$ is the end-minus-start potential difference across pair $\alpha$.
+
+For a set of indices $S$, retain only the rows and columns of $G$ with indices in $S$. The resulting matrix $G_S$ is a **principal submatrix**, and its determinant $\det G_S$ is a **principal minor**. For example, $S=\{1,3\}$ retains rows $1,3$ and columns $1,3$. Reversing one pair changes the signs of the corresponding row and column of $G$, so every principal minor is preserved.
 
 ## The spanning-tree coefficient and the connectivity condition
 
@@ -159,13 +162,13 @@ For $m=2$, expanding the determinant in (4) reproduces (1). Thus the two-couplin
 > =J+B(\Delta-M-\Delta GM)B^{\mathsf T}\mathrm{Gr}=J
 > $$
 >
-> Here $J=I_n-\mathbf1\mathbf1^{\mathsf T}/n$ is the centering matrix. The right-hand side of (5) sends constant column vectors to zero and maps $H$ into $H$. Therefore it equals $\mathrm{Gr}'$. $\square$
+> Here $J=I_n-\mathbf1\mathbf1^{\mathsf T}/n$ is the centering matrix. The right-hand side of (5) sends lists with equal entries to zero and maps $H$ into $H$. Therefore it equals $\mathrm{Gr}'$. $\square$
 
-For a measured pair $i,j$, set
+To find the resistance change between $i$ and $j$, we need the inner product of the measured vector $a_{ij}$ with each varied direction $t_\alpha$. Collect these inner products in a list $q$, written as a column:
 
 $$
 q=B^{\mathsf T}\mathrm{Gr}\mathbf e_{ij},\qquad
-q_\alpha=a_{ij}\cdot a_{e_\alpha}
+q_\alpha=a_{ij}\cdot t_\alpha
 $$
 
 Substituting (5) into $R'_{ij}=\mathbf e_{ij}^{\mathsf T}\mathrm{Gr}'\mathbf e_{ij}$ gives the exact formula
@@ -174,120 +177,6 @@ $$
 R'_{ij}=R_{ij}-q^{\mathsf T}(I_m+\Delta G)^{-1}\Delta q
 \tag{6}
 $$
-
-For $m=1$, formulas (4)-(6) reduce to the results of [[Variation of a Single Edge]]. If $\Delta\succeq0$, then
-
-$$
-(I_m+\Delta G)^{-1}\Delta
-=\Delta^{1/2}(I_m+\Delta^{1/2}G\Delta^{1/2})^{-1}\Delta^{1/2}\succeq0
-$$
-
-The middle matrix is positive definite because $G\succeq0$. Hence the correction subtracted in (6) is nonnegative: strengthening several couplings together cannot increase any resistance. This statement includes zero variations.
-
-> [!note] Connectivity of intermediate graphs
-> The order of changes does not affect the final graph. However, applying the Green matrix and resistance formulas one step at a time requires every intermediate graph to be connected.
->
-> For example, in the path $1-2-3$, one can delete edge $12$ and add edge $13$. The final graph is connected, but deleting $12$ first disconnects the network. The simultaneous formulas (5)-(6) apply, while sequential inversion in this order is impossible.
->
-> If the initial and final graphs are connected, a valid order is to perform all strengthening and additions first, followed by weakening and deletions. The first stage retains the original connected graph. During the second stage, every intermediate graph contains all couplings of the final graph, with conductances at least as large as their final values.
-
-
-## Mixed coefficients and volumes
-
-For an index set $S\subseteq\{1,\ldots,m\}$, let $G_S$ denote the principal submatrix with those indices. Multilinearity of the determinant in its rows gives the expansion
-
-$$
-\frac{\tau'}\tau=\det(I_m+\Delta G)
-=\sum_{S\subseteq\{1,\ldots,m\}}
-\left(\prod_{\alpha\in S}\delta_\alpha\right)\det G_S
-\tag{7}
-$$
-
-For the empty set, both the product and the determinant are one. When rows with indices in $S$ are selected from $\Delta G$, the remaining identity rows select the corresponding principal minor. This proves (7).
-
-By the Gram formula, $\det G_S$ is the squared $|S|$-dimensional volume of the parallelotope spanned by the selected affine vectors. For one vector, it is a squared length; for two, a squared area; for three, a squared volume. If the vectors are linearly dependent, both the volume and the coefficient vanish. In particular, this occurs when the selected pairs contain a cycle.
-
-For $r$ distinct indices $\alpha_1,\ldots,\alpha_r$, formula (7) implies
-
-$$
-\frac1\tau
-\frac{\partial^r\tau}{\partial c_{e_{\alpha_1}}\cdots\partial c_{e_{\alpha_r}}}
-=\det G_S,\qquad S=\{\alpha_1,\ldots,\alpha_r\}
-\tag{8}
-$$
-
-There is no factor $r!$: each variable occurs once in the monomial. Differentiating twice with respect to the same conductance gives zero, since the spanning-tree coefficient has degree at most one in each conductance. At zero conductance, physically admissible derivatives are understood as right derivatives; as polynomial derivatives, they are defined without this restriction.
-
-## Random spanning trees and transfer currents
-
-Suppose the selected pairs are existing edges with positive conductances. Choose a spanning tree with probability $\Pr(T)=\tau^{-1}\prod_{e\in T}c_e$. The mixed derivative in (8) selects trees containing all the chosen edges and removes the corresponding factors from their weights. Therefore,
-
-$$
-\Pr(e_\alpha\in T\text{ for all }\alpha\in S)
-=\left(\prod_{\alpha\in S}c_{e_\alpha}\right)\det G_S
-\tag{9}
-$$
-
-> [!info] Transfer current
-> **Definition.** For oriented edges $e:k_e\to l_e$ and $f:k_f\to l_f$, inject a unit current at $k_e$ and withdraw it at $l_e$. The external current column vector is $-b_e$, and the centered potentials are $\varphi=-\mathrm{Gr}b_e$.
->
-> The transfer current $Y(e,f)$ is measured in the direction $k_f\to l_f$. By Ohm's law,
->
-> $$
-> Y(e,f)=c_f(\varphi_{k_f}-\varphi_{l_f})
-> =c_f b_f^{\mathsf T}\mathrm{Gr}b_e=c_f g_{ef}
-> $$
-
-The injection direction is specified explicitly: in the definition of $Y$, current enters at the initial vertex of the oriented edge. In the potential convention for (3), it enters at the terminal vertex. This distinction gives the consistent sign for current measured along the edge orientation.
-
-Multiplying the columns of $G_S$ by the conductances gives the matrix $Y_S$, so (9) is equivalent to $\Pr(S\subseteq T)=\det Y_S$. This is the transfer-current theorem, given in source [9] of [[Further Reading for the PMG Introductory Series|the reading recommendations]], Section 4.2, formula (4.5).
-
-For two distinct edges, (9) gives
-
-$$
-\Pr(e,f\in T)-\Pr(e\in T)\Pr(f\in T)
-=-c_ec_f g_{ef}^2\le0
-$$
-
-Thus the two edge-inclusion events have nonpositive covariance. When $g_{ef}=0$, these two events are independent.
-
-## Deleting a set of edges
-
-Let $S$ be a set of existing edges to be deleted completely. Write $W_S=\operatorname{diag}(c_e:e\in S)$. Substituting $\Delta=-W_S$ into (4) gives
-
-$$
-\frac{\tau'}\tau=\det(I_{|S|}-W_SG_S)
-=\Pr(T\cap S=\varnothing)
-\tag{10}
-$$
-
-The last equality follows by directly counting weights: the modified network retains exactly those spanning trees that use no edge from $S$.
-
-The determinant in (10) is zero if and only if deleting $S$ disconnects the graph. For one edge, this recovers the bridge criterion $c_eR_e=1$. When the determinant is zero, formula (4) remains valid, but the inversion formulas (5)-(6) do not apply.
-
-## Concavity of the logarithm of the spanning-tree coefficient
-
-This is an additional consequence for conductance optimization; it is not needed for the transition to polyform algebra.
-
-The single-coupling formula $\partial\log\tau/\partial c_e=R_e$ and resistance sensitivity give
-
-$$
-\frac{\partial^2\log\tau}{\partial c_{e_\alpha}\partial c_{e_\beta}}
-=-g_{\alpha\beta}^2
-\tag{11}
-$$
-
-The matrix of entrywise squares of $G$ is positive semidefinite. Hence the matrix of second derivatives (the Hessian) in (11) is negative semidefinite, and $\log\tau$ is concave in the conductances on the domain of connected networks.
-
-> [!note]- Sign of the Hessian
-> **Proof.** Write $G=P^{\mathsf T}P$, where the columns of $P$ are Euclidean coordinates of the selected affine vectors. For any real column vector $h$,
->
-> $$
-> \sum_{\alpha,\beta}h_\alpha h_\beta g_{\alpha\beta}^2
-> =\sum_{r,s}\left(\sum_\alpha h_\alpha P_{r\alpha}P_{s\alpha}\right)^2\ge0
-> $$
->
-> Therefore the second derivative of $\log\tau$ along any linear conductance variation is nonpositive. The domain of nonnegative conductances with a connected graph is convex: at an interior point of a line segment between two such networks, every positive coupling of either network remains positive. On the boundary of the domain, concavity extends by continuity wherever $\tau>0$. $\square$
 
 ## Example: strengthening two couplings of a triangle
 
@@ -313,6 +202,131 @@ $$
 > $$
 >
 > An independent electrical check: the direct edge $23$ has resistance $1$, and the path through vertex $1$ has resistance $1/2+1/2=1$. Their parallel connection gives $R'_{23}=1/2$.
+
+### Strengthening and intermediate graphs
+
+For $m=1$, formulas (4)-(6) reduce to the results of [[Variation of a Single Edge]]. Consider strengthening the couplings, so that $\delta_\alpha\ge0$ for every $\alpha$. For the diagonal matrix $\Delta$, this is written as $\Delta\succeq0$. In general, $A\succeq0$ means $z^{\mathsf T}Az\ge0$ for every real list $z$; a symmetric matrix with this property is called positive semidefinite. We have
+
+$$
+(I_m+\Delta G)^{-1}\Delta
+=\Delta^{1/2}(I_m+\Delta^{1/2}G\Delta^{1/2})^{-1}\Delta^{1/2}\succeq0
+$$
+
+The middle matrix is positive definite because $G\succeq0$. Hence the correction subtracted in (6) is nonnegative: strengthening several couplings together cannot increase any resistance. This statement includes zero variations.
+
+> [!note] Connectivity of intermediate graphs
+> The order of changes does not affect the final graph. However, applying the Green matrix and resistance formulas one step at a time requires every intermediate graph to be connected.
+>
+> For example, in the path $1-2-3$, one can delete edge $12$ and add edge $13$. The final graph is connected, but deleting $12$ first disconnects the network. The simultaneous formulas (5)-(6) apply, while sequential inversion in this order is impossible.
+>
+> If the initial and final graphs are connected, a valid order is to perform all strengthening and additions first, followed by weakening and deletions. The first stage retains the original connected graph. During the second stage, every intermediate graph contains all couplings of the final graph, with conductances at least as large as their final values.
+
+
+## Mixed coefficients and volumes
+
+Use the principal submatrices $G_S$ defined above, with $S\subseteq\{1,\ldots,m\}$. Multilinearity of the determinant in its rows gives the expansion
+
+$$
+\frac{\tau'}\tau=\det(I_m+\Delta G)
+=\sum_{S\subseteq\{1,\ldots,m\}}
+\left(\prod_{\alpha\in S}\delta_\alpha\right)\det G_S
+\tag{7}
+$$
+
+For the empty set, both the product and the determinant are one. When rows with indices in $S$ are selected from $\Delta G$, the remaining identity rows select the corresponding principal minor. This proves (7).
+
+By the Gram formula, $\det G_S$ is the squared $|S|$-dimensional volume of the parallelotope spanned by the selected two-point vectors. For one vector, it is a squared length; for two, a squared area; for three, a squared volume. If the vectors are linearly dependent, both the volume and the coefficient vanish. In particular, this occurs when the selected pairs contain a cycle.
+
+Choose any $r$ pairs and, for brevity, relabel them $1,\ldots,r$. Formula (7) implies
+
+$$
+\frac1\tau
+\frac{\partial^r\tau}{\partial c_1\cdots\partial c_r}
+=\det G_S,\qquad S=\{1,\ldots,r\}
+\tag{8}
+$$
+
+There is no factor $r!$: each variable occurs once in the monomial. Differentiating twice with respect to the same conductance gives zero, since the spanning-tree coefficient has degree at most one in each conductance. At zero conductance, physically admissible derivatives are understood as right derivatives; as polynomial derivatives, they are defined without this restriction.
+
+## Random spanning trees and transfer currents
+
+Suppose the selected pairs are existing edges with positive conductances. Choose a spanning tree with probability $\Pr(T)=\tau^{-1}\prod_{e\in T}c_e$. The mixed derivative in (8) selects trees containing all the chosen edges and removes the corresponding factors from their weights. Therefore,
+
+$$
+\Pr(e_\alpha\in T\text{ for all }\alpha\in S)
+=\left(\prod_{\alpha\in S}c_\alpha\right)\det G_S
+\tag{9}
+$$
+
+> [!info] Transfer current
+> **Definition.** Orient the edges as $e:i\to j$ and $f:k\to l$. Inject a unit current at $i$ and withdraw it at $j$. With $b_e=\mathbf e_j-\mathbf e_i$, the external current list is $-b_e$ and the centered potentials are $\varphi=-\mathrm{Gr}b_e$.
+>
+> The transfer current $Y(e,f)$ is measured in the direction $k\to l$. By Ohm's law,
+>
+> $$
+> Y(e,f)=c_f(\varphi_k-\varphi_l)
+> =c_f b_f^{\mathsf T}\mathrm{Gr}b_e=c_f g_{ef}
+> $$
+>
+> Here $b_f=\mathbf e_l-\mathbf e_k$ and $g_{ef}=a_{ij}\cdot a_{kl}$.
+
+The two measurements use different direction conventions. For the same pairs $e:i\to j$, $f:k\to l$:
+
+| Quantity | Injection vertex | Withdrawal vertex | Measurement across $f$ |
+|---|---|---|---|
+| $g_{ef}$ | $j$ | $i$ | $\varphi_l-\varphi_k$ |
+| $Y(e,f)$ | $i$ | $j$ | $c_f(\varphi_k-\varphi_l)$ |
+
+In the second row, both the current and the order of potential subtraction are reversed. The two sign changes cancel, so $Y(e,f)=c_f g_{ef}$.
+
+Multiplying the columns of $G_S$ by the conductances gives the matrix $Y_S$, so (9) is equivalent to $\Pr(S\subseteq T)=\det Y_S$. This is the transfer-current theorem, given in source [9] of [[Further Reading for the PMG Introductory Series|the reading recommendations]], Section 4.2, formula (4.5).
+
+For two distinct edges, (9) gives
+
+$$
+\Pr(e,f\in T)-\Pr(e\in T)\Pr(f\in T)
+=-c_ec_f g_{ef}^2\le0
+$$
+
+The probability that both edges are included is no greater than the product of their separate inclusion probabilities. This is called nonpositive covariance of the events. When $g_{ef}=0$, these two events are independent.
+
+## Deleting a set of edges
+
+Let $S$ be a set of existing edges to be deleted completely. Write $W_S=\operatorname{diag}(c_e:e\in S)$. Substituting $\Delta=-W_S$ into (4) gives
+
+$$
+\frac{\tau'}\tau=\det(I_{|S|}-W_SG_S)
+=\Pr(T\cap S=\varnothing)
+\tag{10}
+$$
+
+The last equality follows by directly counting weights: the modified network retains exactly those spanning trees that use no edge from $S$.
+
+The determinant in (10) is zero if and only if deleting $S$ disconnects the graph. For one edge, this recovers the bridge criterion $c_eR_e=1$. When the determinant is zero, formula (4) remains valid, but the inversion formulas (5)-(6) do not apply.
+
+## Concavity of the logarithm of the spanning-tree coefficient
+
+This is an additional consequence for conductance optimization; it is not needed for the transition to polyform algebra.
+
+The single-coupling formula $\partial\log\tau/\partial c_e=R_e$ and resistance sensitivity give
+
+$$
+\frac{\partial^2\log\tau}{\partial c_\alpha\partial c_\beta}
+=-g_{\alpha\beta}^2
+\tag{11}
+$$
+
+The matrix of entrywise squares of $G$ is positive semidefinite. Hence the matrix of second derivatives (the Hessian) in (11) is negative semidefinite, and $\log\tau$ is concave in the conductances on the domain of connected networks.
+
+> [!note]- Sign of the Hessian
+> **Proof.** Write $G=P^{\mathsf T}P$, where the columns of $P$ are Euclidean coordinates of the selected two-point vectors. For any real column vector $h$,
+>
+> $$
+> \sum_{\alpha,\beta}h_\alpha h_\beta g_{\alpha\beta}^2
+> =\sum_{r,s}\left(\sum_\alpha h_\alpha P_{r\alpha}P_{s\alpha}\right)^2\ge0
+> $$
+>
+> Therefore the second derivative of $\log\tau$ along any linear conductance variation is nonpositive. The domain of nonnegative conductances with a connected graph is convex: at an interior point of a line segment between two such networks, every positive coupling of either network remains positive. On the boundary of the domain, concavity extends by continuity wherever $\tau>0$. $\square$
 
 ## Further reading
 

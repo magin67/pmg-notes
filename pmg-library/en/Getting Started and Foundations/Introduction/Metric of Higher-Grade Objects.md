@@ -1,9 +1,9 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-11-04
-revision: 6
-source_revision: 8
+updated: 2026-11-05
+revision: 7
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric
@@ -14,7 +14,9 @@ aliases:
   - "en/Introduction/Metric of Higher-Grade Objects"
 ---
 
-In [[Basic Objects and Operations of Polyform Algebra]], boundaries of grade $k$ were identified with the exterior power $\Lambda^kW$ of the space of affine vectors $W$. An inner product on $W$ determines a metric on each of these exterior powers. Objects are compared within the same grade; no inner product between different grades is introduced here.
+Vector inner products compare directions. How can we compare two oriented triangles, for example triangles sharing a side? Their boundaries are products of two vectors. We define an inner product of these objects through the inner products of their constituent vectors, then extend the rule to every grade.
+
+In [[Basic Objects and Operations of Polyform Algebra]], boundaries of grade $k$ form $\Lambda^kW$, where $W$ is the space of affine vectors. We compare objects within one grade; no inner product between different grades is introduced here.
 
 The original metric on $W$ is assumed to be positive definite. For a graph, this is the resistance metric of a finite connected undirected graph with positive conductances on its existing edges. This note does not define a metric on the entire space of formal vertices $V$.
 
@@ -28,9 +30,18 @@ $$
 (ab)(bc)=(ab)(ac)=(abc)
 $$
 
-gives the triangle boundary. It is the numerical norm of this boundary that we will define.
+gives the triangle boundary. Here its norm will measure the squared area of the parallelogram spanned by $(ab),(ac)$, namely $4S_{abc}^2$. It is not the triangle perimeter: side lengths are not added. We define the norm below and derive this relation to area.
 
 ## The inner product within one grade
+
+Begin with two products $u_1u_2$ and $v_1v_2$. Define their inner product by
+
+$$
+(u_1u_2)\cdot(v_1v_2)
+=(u_1\cdot v_1)(u_2\cdot v_2)-(u_1\cdot v_2)(u_2\cdot v_1)
+$$
+
+When the two vector pairs coincide, the right-hand side is the Gram determinant, already familiar as the squared area of a parallelogram. Exchanging $u_1,u_2$ reverses the sign, just as it reverses the exterior product. The general formula preserves these properties.
 
 An exterior object is called decomposable if it can be represented as a single product of vectors. Let
 
@@ -64,10 +75,10 @@ For $k=1$, this is the original metric on $W$. For $k=0$, the inner product of s
 > **Proof.** Choose an orthonormal basis $w_1,\ldots,w_d$ of $W$. The products
 >
 > $$
-> w_{i_1} \cdots w_{i_k},\qquad i_1<\cdots<i_k
+> \prod_{i\in I}w_i,\qquad I\subseteq\{1,\ldots,d\},\quad |I|=k
 > $$
 >
-> form a basis of $\Lambda^kW$. Declare this basis orthonormal. This defines a positive definite inner product on all linear combinations.
+> taken in increasing order of $i$ form a basis of $\Lambda^kW$. Declare this basis orthonormal. This defines a positive definite inner product on all linear combinations.
 >
 > If $U$ and $V$ contain the coordinate columns of $u_i$ and $v_i$, then the coordinates of the decomposable objects $X$ and $Y$ in this exterior basis are the corresponding minors of $U$ and $V$. By the Cauchy-Binet formula, the sum of the products of these minors is $\det(U^{\mathsf T}V)$, the right-hand side of (1).
 >
@@ -118,7 +129,7 @@ $$
 \tag{3}
 $$
 
-![Two triangles sharing a side](<Metric of Higher-Grade Objects - two triangles.svg>)
+![Two triangles sharing a side](Metric%20of%20Higher-Grade%20Objects%20-%20two%20triangles.svg)
 
 The figure shows general Euclidean configurations. Its planar case does not represent four distinct base vertices of a resistance simplex: such vertices are affinely independent.
 
@@ -149,10 +160,10 @@ $$
 (a_0\ldots a_k)=(a_1-a_0) \cdots (a_k-a_0)
 $$
 
-Its norm is the squared volume of the corresponding parallelotope. The simplex itself has $1/k!$ times that volume, so
+Its norm is the squared volume of the corresponding parallelotope. Denote the simplex volume by $V_\triangle$. It is $1/k!$ times the parallelotope volume, so
 
 $$
-V_{a_0\ldots a_k}^2=\frac{(a_0\ldots a_k)^2}{(k!)^2}
+V_\triangle^2=\frac{(a_0\ldots a_k)^2}{(k!)^2}
 \tag{4}
 $$
 

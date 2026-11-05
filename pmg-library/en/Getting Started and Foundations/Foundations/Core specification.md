@@ -2,7 +2,7 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-11-05
-revision: 23
+revision: 24
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -482,6 +482,8 @@ The functional is linear. If the grade-$(n-1)$ component is absent, its value is
 
 ## Potential and the metric identity
 
+For a fixed graph, use the abbreviation $M=M_G$. This keeps $u_M(f)$ to one subscript level. When comparing different metric polyforms, retain the dependence explicitly, for example $u_M(f)$ and $u_N(f)$.
+
 > [!info] Potential of a form
 > **Definition.** For a fixed metric polyform $M=M_G$ and a form $f$ on boundaries,
 >
@@ -507,8 +509,8 @@ $$
 > **Theorem.** For a connected graph with nonnegative conductances and any $X,Y\in\Lambda^kW$, $0\le k\le n-1$,
 >
 > $$
-> \frac{\tau(M_G[X,Y])}{\tau(M_G)}=X\cdot Y,\qquad
-> \frac{\tau(M_G[X]^2)}{\tau(M_G)}=X^2
+> \frac{\tau(M[X,Y])}{\tau(M)}=X\cdot Y,\qquad
+> \frac{\tau(M[X]^2)}{\tau(M)}=X^2
 > $$
 >
 > The right-hand sides use the resistance metric and its induced extension. The identities also hold for nondecomposable exterior objects.
@@ -540,7 +542,7 @@ $$
 Consequently,
 
 $$
-\tau\bigl(\exp(L+t[v]^2)\bigr)=\tau(M_G)+t\,u_{M_G}([v]^2)
+\tau\bigl(\exp(L+t[v]^2)\bigr)=\tau(M)+t\,u_M([v]^2)
 \tag{9}
 $$
 
@@ -1478,6 +1480,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
 | 23 | 2026-11-05 | Defined the Green matrix directly by the Moore-Penrose pseudoinverse; its action on the zero-sum subspace is stated separately as a property. Aligned with Russian revision 23. |
 | 22 | 2026-11-05 | Clarified the names of two-point and multipoint vectors; the number of points in an expression refers to the fixed vertex basis. Algebraic definitions are unchanged. Aligned with Russian revision 22. |
 | 21 | 2026-11-05 | Aligned the name of $d_i$ in the notation summary with the introductory note and glossary: “vertex degree”. Definitions and formulas are unchanged. Aligned with Russian revision 21. |

@@ -1,9 +1,9 @@
 ---
 title: "Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations"
 date: 2026-10-04
-updated: 2026-11-04
-revision: 4
-source_revision: 4
+updated: 2026-11-05
+revision: 5
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-green-resistance-matrices
@@ -14,13 +14,15 @@ aliases:
   - "en/Introduction/Laplacian, Green Matrix, and Effective Resistance Matrix"
 ---
 
-The Laplacian $L$, Green matrix $\mathrm{Gr}$, and effective resistance matrix $R$ are mutually reconstructible representations of the same network. The Laplacian specifies the conductances, the Green matrix specifies the inner products of centered position vectors, and the resistance matrix contains the squared pairwise distances.
+The coupling strengths of a graph determine its effective resistances. The reverse calculation is also possible: all pairwise resistances determine the coupling strengths and reveal which edges are absent. We first recover the Green matrix $\mathrm{Gr}$ from the resistance matrix $R$, then recover the Laplacian as $L=\mathrm{Gr}^+$.
 
-We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive conductances on its edges. Its geometric representation was constructed in [[Effective Resistance and Graph Geometry]]. This note derives the inverse transformations and collects all the formulas in one table.
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive coupling strengths on its edges. The matrices $L$, $\mathrm{Gr}$, and $R$ are defined in [[Effective Resistance and Graph Geometry]]. Here we derive the inverse transformations and collect the formulas in a table.
 
 ## The centering matrix
 
-Let $\mathbf1$ denote the column vector of $n$ ones and $I$ the identity matrix. Column vectors whose coordinates sum to zero form the subspace
+Translating all points by the same vector preserves distances but changes their position vectors. To recover their inner products uniquely from distances, choose the centroid as the origin. This requires centering: subtracting the mean.
+
+Let $\mathbf1$ denote a list of $n$ ones and $I$ the identity matrix. Lists of numbers whose sum is zero form the subspace
 
 $$
 H=\mathbf1^\perp=\left\{x\in\mathbb R^n:\sum_i x_i=0\right\}
@@ -33,7 +35,7 @@ $$
 > J=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
 > $$
 >
-> is called the centering matrix. It subtracts the mean from each coordinate of a column vector:
+> is called the centering matrix. It subtracts the mean from each entry of a list:
 >
 > $$
 > Jx=x-\bar x\mathbf1,\qquad \bar x=\frac1n\sum_i x_i
@@ -62,9 +64,9 @@ This follows by substituting the definition of $J$ and using $A\mathbf1=0$ and $
 
 ## The Laplacian and the Green matrix
 
-For a connected graph, the kernel of $L$ consists of constant column vectors, and the restriction of $L$ to $H$ is positive definite. The Green matrix $\mathrm{Gr}=L^+$ inverts $L$ on $H$ and acts as zero on constant column vectors. This definition and its electrical meaning are discussed in [[Effective Resistance and Graph Geometry#The Green matrix|the section on the Green matrix]].
+For a connected graph, the kernel of $L$ consists of lists with equal entries, and the restriction of $L$ to $H$ is positive definite. The Green matrix $\mathrm{Gr}=L^+$ inverts $L$ on $H$ and acts as zero on lists with equal entries. The definition of the pseudoinverse and the meaning of these properties are discussed in [[Effective Resistance and Graph Geometry#The Green matrix|the section on the Green matrix]].
 
-Both matrices are symmetric and have zero row and column sums. Their product acts as the identity on $H$ and sends constant column vectors to zero. Therefore,
+Both matrices are symmetric and have zero row and column sums. Their product acts as the identity on $H$ and sends lists with equal entries to zero. Therefore,
 
 $$
 L\mathrm{Gr}=\mathrm{Gr}L=J
@@ -77,27 +79,27 @@ $$
 L=\mathrm{Gr}^+
 $$
 
-Indeed, on $H$ this operation inverts $(L|_H)^{-1}$, while on constant column vectors it retains the zero action. Formula (1) expresses the fact that $L$ and $\mathrm{Gr}$ are inverses on $H$.
+Indeed, on $H$ this operation inverts $(L|_H)^{-1}$, while on lists with equal entries it retains the zero action. Formula (1) expresses the fact that $L$ and $\mathrm{Gr}$ are inverses on $H$.
 
 ## From the Green matrix to resistances
 
-Let $x_i$ be the position vectors of the points in the resistance representation, with the centroid as the origin. Then
+Let $p_i=a_i-h$ be the vectors from the centroid $h$ to the vertices. Then
 
 $$
-x_i\cdot x_j=\mathrm{Gr}_{ij},\qquad \sum_i x_i=0
+p_i\cdot p_j=\mathrm{Gr}_{ij},\qquad \sum_i p_i=0
 $$
 
-The effective resistance equals the squared distance:
+Recall the [[Effective Resistance and Graph Geometry#The distance operator|distance operator]]: it computes a squared difference length from inner products. For graph vertices,
 
 $$
-R_{ij}=\|x_j-x_i\|^2=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
+R_{ij}=\|p_j-p_i\|^2=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}
 \tag{2}
 $$
 
 > [!info] The resistance matrix and the distance operator
 > **Definition.** The symmetric matrix $R=(R_{ij})$ of all pairwise effective resistances is called the resistance matrix. Its diagonal entries are zero.
 >
-> For a symmetric matrix $A$, the distance operator is defined by
+> For a symmetric matrix $A$, its formula is
 >
 > $$
 > \mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}
@@ -109,7 +111,7 @@ The distance operator converts inner products into squared distances. This opera
 
 ## Reconstructing the Green matrix
 
-A common translation of the points preserves their differences and pairwise distances. The Gram matrix of their position vectors depends on the choice of origin. The condition $\sum_i x_i=0$ fixes the origin at the centroid and allows the Gram matrix to be reconstructed uniquely from the distances.
+A common translation of the points preserves their differences and pairwise distances. The Gram matrix of their position vectors depends on the choice of origin. The condition $\sum_i p_i=0$ fixes the origin at the centroid and allows the Gram matrix to be reconstructed uniquely from the distances.
 
 > [!info] Double centering
 > **Lemma.** The Green matrix can be reconstructed from the resistance matrix:
@@ -154,7 +156,7 @@ Multiplication by $J$ on the left subtracts the column means, while multiplicati
 
 | Transformation | Formula | Meaning |
 |---|---|---|
-| $L\to \mathrm{Gr}$ | $\mathrm{Gr}=L^+$ | Inversion on $H$, zero action on constant column vectors |
+| $L\to \mathrm{Gr}$ | $\mathrm{Gr}=L^+$ | Inversion on $H$, zero action on lists with equal entries |
 | $\mathrm{Gr}\to L$ | $L=\mathrm{Gr}^+$ | The inverse transformation on the same subspace |
 | $\mathrm{Gr}\to R$ | $R=\mathcal D(\mathrm{Gr})$ | From inner products to squared distances |
 | $R\to \mathrm{Gr}$ | $\mathrm{Gr}=-\frac12JRJ$ | Reconstruction of the centered Gram matrix |
@@ -171,7 +173,7 @@ $$
 c_{ij}=-L_{ij}\qquad(i\ne j)
 $$
 
-Zero conductances correspond to absent edges. Thus the complete set of pairwise resistances determines the original weighted graph for a fixed vertex labeling.
+Zero conductances correspond to absent edges. Thus the complete set of pairwise resistances determines the original graph for a fixed vertex labeling.
 
 > [!note] Conditions for the inverse transformation
 > Double centering applies to any matrix of squared Euclidean distances: it yields the Gram matrix of the centered configuration. However, the pseudoinverse of that Gram matrix need not be the Laplacian of a graph with positive conductances.
@@ -240,7 +242,13 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > \end{pmatrix}=-2\mathrm{Gr}
 > $$
 >
-> From $\mathrm{Gr}$, we recover $L=\mathrm{Gr}^+$ and obtain $c_{12}=1$, $c_{23}=2$, $c_{13}=0$. The inverse transformation recovers both the conductances and the absence of an edge between vertices $1$ and $3$.
+> Now recover the first column of $L$, denoted by $y=(y_1,y_2,y_3)$. The identities $\mathrm{Gr}L=J$ and $\mathbf1^{\mathsf T}L=0$ give
+>
+> $$
+> \mathrm{Gr}y=\begin{pmatrix}2/3\\-1/3\\-1/3\end{pmatrix},\qquad y_1+y_2+y_3=0
+> $$
+>
+> The third row gives $-y_1+y_3=-1$ and the second gives $-y_1+y_2=-2$. Thus $y_3=y_1-1$ and $y_2=y_1-2$; the zero-sum condition gives $3y_1-3=0$. Hence $y=(1,-1,0)$, so $c_{12}=1$ and $c_{13}=0$. The other columns and $c_{23}=2$ follow in the same way. This recovers both the coupling strengths and the absence of an edge between vertices $1$ and $3$.
 
 ## Further reading
 

@@ -2,8 +2,8 @@
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
 updated: 2026-11-05
-revision: 8
-source_revision: 10
+revision: 9
+source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry
@@ -198,6 +198,8 @@ $$
 The rank of a Gram matrix equals the dimension of the linear span of its vectors. Hence $p_1,\ldots,p_n$ span a space of dimension $n-1$.
 
 The origin is the centroid of the points and belongs to their affine hull. The affine hull therefore also has dimension $n-1$: the points $a_1,\ldots,a_n$ are affinely independent.
+
+A simplex generalizes a segment, a filled triangle, and a solid tetrahedron. For vertices $a_1,\ldots,a_n$, it consists of all points $\sum_i t_i a_i$ with $t_i\ge0$ and $\sum_i t_i=1$. If $a_2-a_1,\ldots,a_n-a_1$ are linearly independent, the simplex is nondegenerate and has dimension $n-1$.
 
 > [!info] Resistance simplex
 > **Definition.** A simplex with vertices $a_1,\ldots,a_n$ satisfying (3) is called the resistance simplex of the graph. For a connected graph, it is nondegenerate and has dimension $n-1$.

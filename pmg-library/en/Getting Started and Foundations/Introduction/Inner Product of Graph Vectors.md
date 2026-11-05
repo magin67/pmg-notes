@@ -1,9 +1,9 @@
 ---
 title: Inner Product of Graph Vectors
 date: 2026-10-03
-updated: 2026-10-16
-revision: 5
-source_revision: 8
+updated: 2026-11-05
+revision: 6
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: inner-product-vectors
@@ -14,22 +14,18 @@ aliases:
   - "en/Introduction/Inner Product of Graph Vectors"
 ---
 
-In [[Effective Resistance and Graph Geometry]], the vertices of a connected graph were represented by points in Euclidean space whose squared distances equal the effective resistances. The same construction determines inner products of affine vectors between vertices. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
+In [[Effective Resistance and Graph Geometry]], resistances determined the squared distances between vertices. We now compute inner products of two-point vectors and use them to find angles. In an electrical network, the same inner product can be measured as the potential difference across one vertex pair when a unit current passes through another pair.
 
-We consider a finite connected undirected graph without loops, with positive conductances on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $\mathrm{Gr}=L^+$. For the points of the resistance representation, we retain the notation
+We consider a finite connected undirected graph without loops and with positive coupling strengths on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $\mathrm{Gr}=L^+$. The two-point vector $a_{ij}=a_j-a_i$ has coefficient $-1$ at $a_i$, coefficient $1$ at $a_j$, and zero coefficients at the remaining vertices.
 
-$$
-a_{ij}=a_j-a_i,\qquad \mathbf e_{ij}=\mathbf e_j-\mathbf e_i
-$$
-
-where $\mathbf e_i$ are the standard coordinate columns. The column $\mathbf e_{ij}$ records the coefficients of the affine vector $a_{ij}$ with respect to the vertices.
+To record these coefficients, let $\mathbf e_i$ denote a list of $n$ numbers with a one in position $i$ and zeros elsewhere. The coefficient list of $a_{ij}$ is then $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$. For three vertices, for example, $\mathbf e_{13}=(-1,0,1)$. In matrix products we write these lists as columns; $\mathsf T$ transposes a column into a row.
 
 ## Inner product through the Green matrix
 
-Let $x_i$ denote the position vector of $a_i$ relative to the centroid. By construction of the resistance representation, $x_i\cdot x_j=\mathrm{Gr}_{ij}$, so
+Let $h=(a_1+\cdots+a_n)/n$ be the centroid and $p_i=a_i-h$ the vector from it to vertex $a_i$. By the definition of the graph metric, $p_i\cdot p_j=\mathrm{Gr}_{ij}$, so
 
 $$
-a_{ij}\cdot a_{kl}=(x_j-x_i)\cdot(x_l-x_k)=\mathrm{Gr}_{jl}-\mathrm{Gr}_{jk}-\mathrm{Gr}_{il}+\mathrm{Gr}_{ik}
+a_{ij}\cdot a_{kl}=(p_j-p_i)\cdot(p_l-p_k)=\mathrm{Gr}_{jl}-\mathrm{Gr}_{jk}-\mathrm{Gr}_{il}+\mathrm{Gr}_{ik}
 $$
 
 > [!info] Inner product
@@ -40,7 +36,7 @@ $$
 > \tag{1}
 > $$
 >
-> This is the numerical inner product of affine vectors in the Euclidean resistance representation.
+> This number is the inner product of two two-point vectors in the graph metric.
 
 Some indices may coincide. In particular, when the two pairs coincide, (1) gives
 
@@ -55,7 +51,7 @@ u=\sum_i u_i a_i,\qquad v=\sum_i v_i a_i,\qquad
 \sum_i u_i=\sum_i v_i=0
 $$
 
-denote their coefficient columns by $\mathbf u=(u_i)$ and $\mathbf v=(v_i)$. Bilinearity and the identity $x_i\cdot x_j=\mathrm{Gr}_{ij}$ give
+denote their coefficient columns by $\mathbf u=(u_i)$ and $\mathbf v=(v_i)$. Bilinearity and the identity $p_i\cdot p_j=\mathrm{Gr}_{ij}$ give
 
 $$
 u\cdot v=\sum_{i,j}u_i\mathrm{Gr}_{ij}v_j=\mathbf u^{\mathsf T}\mathrm{Gr}\mathbf v
@@ -173,6 +169,16 @@ Equality (4) follows from the bilinearity and symmetry of the inner product and 
 
 By (3), the same relation holds for three electrical measurements with the corresponding current and measurement pairs. Each of the three values equals minus the sum of the other two.
 
+## Angles and further reading
+
+For nonzero vectors, that is, when $i\ne j$ and $k\ne l$, the angle $\theta$ between them is determined by
+
+$$
+\cos\theta=\frac{a_{ij}\cdot a_{kl}}{\sqrt{R_{ij}R_{kl}}}
+$$
+
+A positive inner product means $0\le\theta<90^\circ$, a zero inner product means orthogonality, and a negative inner product means $90^\circ<\theta\le180^\circ$. Electrically, the sign determines the sign of the measured potential difference for the chosen orientations of the pairs.
+
 ## Example: a triangle
 
 Consider the complete graph $K_3$ with unit conductances on all edges.
@@ -196,7 +202,16 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 > a_{12}\cdot a_{23}=\frac12(R_{13}+R_{22}-R_{12}-R_{23})=-\frac13
 > $$
 >
-> The norms of all three vectors are $2/3$. The resistance simplex is an equilateral triangle. The angle between $a_{12}$ and $a_{13}$ is $60^\circ$, while the angle between $a_{12}$ and $a_{23}$ is $120^\circ$.
+> All three vectors have squared length $2/3$. Hence
+>
+> $$
+> \cos\angle(a_{12},a_{13})=\frac{1/3}{2/3}=\frac12,\qquad
+> \cos\angle(a_{12},a_{23})=\frac{-1/3}{2/3}=-\frac12
+> $$
+>
+> The first angle is $60^\circ$ and the second is $120^\circ$. To compare vector directions, translate the vectors to a common origin. The angle between the consecutively directed vectors $a_{12}$ and $a_{23}$ therefore differs from the interior angle at vertex $a_2$.
+
+![Angles between triangle vectors](vector-angles-en.svg)
 
 > [!example] Independent calculation of potentials
 > For this graph,
@@ -223,15 +238,7 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 >
 > Both measurements agree with (3), including the sign.
 
-## Angles and further reading
-
-For nonzero vectors, that is, when $i\ne j$ and $k\ne l$, the angle $\theta$ between them is determined by
-
-$$
-\cos\theta=\frac{a_{ij}\cdot a_{kl}}{\sqrt{R_{ij}R_{kl}}}
-$$
-
-A positive inner product means $0\le\theta<90^\circ$, a zero inner product means orthogonality, and a negative inner product means $90^\circ<\theta\le180^\circ$. Electrically, the sign determines the sign of the measured potential difference for the chosen orientations of the pairs.
+## Further reading
 
 The next note, [[Laplacian, Green Matrix, and Effective Resistance Matrix]], collects the forward and inverse transformations between $L$, $\mathrm{Gr}$, and $R$. In [[From Lengths to Areas and Volumes]], inner products are used to compute Gram determinants, which express squared areas and volumes.
 

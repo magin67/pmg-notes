@@ -1,9 +1,9 @@
 ---
 title: From Lengths to Areas and Volumes
 date: 2026-10-04
-updated: 2026-11-04
-revision: 4
-source_revision: 4
+updated: 2026-11-05
+revision: 5
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: lengths-areas-volumes
@@ -16,7 +16,7 @@ aliases:
 
 Inner products determine lengths and angles as well as areas, volumes, and their higher-dimensional analogues. The squares of these quantities are expressed by Gram determinants. In the resistance representation of a graph, Gram matrix entries are computed from effective resistances, and Gram determinants are related to spanning trees.
 
-We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for affine vectors and $\mathrm{Gr}=L^+$ for the Green matrix. By the [[Inner Product of Graph Vectors|resistance inner-product formulas]],
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for two-point vectors and $\mathrm{Gr}=L^+$ for the Green matrix. By the [[Inner Product of Graph Vectors|resistance inner-product formulas]],
 
 $$
 \|a_{ij}\|^2=R_{ij},\qquad
@@ -48,6 +48,8 @@ $$
 S_\triangle^2=\frac14\det G(u,v)
 \tag{2}
 $$
+
+![A triangle occupies half the parallelogram](triangle-area-en.svg)
 
 ## The area of a triangle from its side lengths
 
@@ -109,6 +111,15 @@ $$
 > $$
 >
 > Its dimension is the rank of the system of vectors. If they are linearly dependent, it is degenerate as a $k$-dimensional figure and its $k$-dimensional volume is zero.
+
+> [!info] A simplex
+> **Definition.** The simplex with vertices $p_0,\ldots,p_k$ consists of the points
+>
+> $$
+> \left\{\sum_{i=0}^k t_i p_i:t_i\ge0,\ \sum_{i=0}^k t_i=1\right\}
+> $$
+>
+> For $k=1$ it is a segment, for $k=2$ a filled triangle, and for $k=3$ a solid tetrahedron. It is nondegenerate when $p_1-p_0,\ldots,p_k-p_0$ are linearly independent; its dimension is then $k$.
 
 > [!info] Volume formulas
 > **Theorem.** The squared $k$-dimensional volume of the parallelotope is
@@ -184,24 +195,18 @@ For a resistance simplex, the entries substituted into $M$ are the effective res
 
 ## The spanning-tree coefficient as a Gram determinant
 
+A cycle is a closed path with no repeated vertices except its coinciding start and end. A tree is a connected graph without cycles. A spanning tree contains every vertex of the original graph.
+
 > [!info] The spanning-tree coefficient
-> **Definition.** For a weighted graph,
+> **Definition.** For a graph with coupling strengths $c_e$,
 >
 > $$
 > \tau=\sum_T\prod_{e\in T}c_e
 > $$
 >
-> where the sum runs over all spanning trees. A spanning tree contains every vertex of the graph, is connected, and has no cycles. When all conductances are one, $\tau$ is the number of spanning trees.
+> where the sum runs over all spanning trees. When all coupling strengths are one, $\tau$ is the number of spanning trees.
 
-Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$ and contains the coefficients of the vertex difference: $-1$ in position $i$, $+1$ in position $j$, and zero elsewhere. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
-
-Choose a vertex $0$, relabeling the vertices as $0,1,\ldots,n-1$. Delete its row from $B$ to obtain $B_0$. Deleting the row and column of this vertex from $L$ gives the reduced Laplacian
-
-$$
-L_0=B_0WB_0^{\mathsf T}=AA^{\mathsf T},\qquad A=B_0W^{1/2}
-$$
-
-Thus $L_0$ is the Gram matrix of the $n-1$ rows of $A$. By the weighted matrix-tree theorem,
+Choose vertex $0$, relabeling the vertices as $0,1,\ldots,n-1$. Delete its row and column from $L$. Denote the resulting matrix by $L_0$, the reduced Laplacian. The matrix-tree theorem states:
 
 $$
 \det L_0=\tau
@@ -209,19 +214,25 @@ $$
 $$
 
 > [!note]- Derivation by the Cauchy-Binet formula
-> **Proof.** For an edge set $F$ of size $n-1$, let $B_{0,F}$ be the square submatrix consisting of the corresponding columns. The Cauchy-Binet formula gives
+> **Proof.** Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$ and contains the coefficients of the vertex difference: $-1$ in position $i$, $+1$ in position $j$, and zero elsewhere. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
+>
+> Delete the row of vertex $0$ from $B$ to obtain $B_0$. Then
+>
+> $$
+> L_0=B_0WB_0^{\mathsf T}=AA^{\mathsf T},\qquad A=B_0W^{1/2}
+> $$
+>
+> For an edge set $F$ of size $n-1$, let $B_{0,F}$ be the square submatrix consisting of the corresponding columns. The Cauchy-Binet formula gives
 >
 > $$
 > \det L_0=\sum_{|F|=n-1}(\det B_{0,F})^2\prod_{e\in F}c_e
 > $$
 >
-> If $F$ contains a cycle, the columns are linearly dependent and the determinant is zero. An acyclic set of $n-1$ edges on $n$ vertices is a spanning tree. For a tree, $\det B_{0,F}=\pm1$: this follows by successively expanding along rows corresponding to leaves other than vertex $0$. Exactly the weights of spanning trees remain in the sum, proving (6). $\square$
-
-By (3), the spanning-tree coefficient is the squared volume of the parallelotope spanned by the rows of $A$. These vectors lie in the space of edge coordinates and differ from the affine vectors of the resistance representation.
+> If $F$ contains a cycle, the columns are linearly dependent and the determinant is zero. An acyclic set of $n-1$ edges on $n$ vertices is a spanning tree. For a tree, $\det B_{0,F}=\pm1$: this follows by successively expanding along rows corresponding to leaves other than vertex $0$, where a leaf is a vertex incident to exactly one edge. Exactly the weights of spanning trees remain in the sum, proving (6). $\square$
 
 ## The volume of the full resistance simplex
 
-Consider the affine vectors $a_{0i}$ for $i=1,\ldots,n-1$, and denote their Gram matrix by $G_R$. Its entries are
+Consider the two-point vectors $a_{0i}$ for $i=1,\ldots,n-1$, and denote their Gram matrix by $G_R$. Its entries are
 
 $$
 (G_R)_{ij}=a_{0i}\cdot a_{0j}=\frac12(R_{0i}+R_{0j}-R_{ij})
@@ -260,15 +271,6 @@ V_R^2=\frac1{((n-1)!)^2\tau}
 \tag{8}
 $$
 
-Two different sets of vectors are involved here. Their Gram matrices are inverses, so their determinants are reciprocals:
-
-| Vectors | Gram matrix | Squared parallelotope volume |
-|---|---|---|
-| Rows of $A=B_0W^{1/2}$ in edge-coordinate space | $L_0$ | $\tau$ |
-| Resistance vectors $a_{01},\ldots,a_{0,n-1}$ | $L_0^{-1}$ | $1/\tau$ |
-
-Thus increasing $\tau$ increases the first volume and decreases the second. The volume of the resistance simplex also differs from that of its parallelotope by a factor of $1/(n-1)!$.
-
 > [!example] The spanning-tree coefficient and area for $K_3$
 > The triangle graph with unit conductances has three spanning trees, so $\tau=3$. Choosing vertex $1$ as the reference vertex gives
 >
@@ -278,6 +280,18 @@ Thus increasing $\tau$ increases the first volume and decreases the second. The 
 > $$
 >
 > The inverse matrix equals the previously computed Gram matrix $G(a_{12},a_{13})$. Formula (8) gives $S_\triangle^2=1/((2!)^2\cdot3)=1/12$, in agreement with the direct area calculation.
+
+> [!note]- Two mutually inverse Gram matrices
+> There is also a volume whose square equals $\tau$ itself. Take the matrix $A=B_0W^{1/2}$ from the proof of the matrix-tree theorem: its rows contain edge coordinates multiplied by square roots of coupling strengths. Their Gram matrix is $AA^{\mathsf T}=L_0$. The Gram formula therefore gives $\tau$ as the squared volume spanned by these rows.
+>
+> Two different sets of vectors are involved here. Their Gram matrices are inverses, so their determinants are reciprocals:
+>
+> | Vectors | Gram matrix | Squared parallelotope volume |
+> |---|---|---|
+> | Rows of $A=B_0W^{1/2}$ in edge-coordinate space | $L_0$ | $\tau$ |
+> | Resistance vectors $a_{01},\ldots,a_{0,n-1}$ | $L_0^{-1}$ | $1/\tau$ |
+>
+> Thus increasing $\tau$ increases the first volume and decreases the second. The volume of the resistance simplex also differs from that of its parallelotope by a factor of $1/(n-1)!$.
 
 ## Edge-inclusion probabilities in a spanning tree
 
@@ -290,11 +304,11 @@ $$
 $$
 
 > [!info] The transfer-current theorem
-> For pairwise distinct unoriented edges $e_1,\ldots,e_k$, each assigned an arbitrary orientation,
+> For pairwise distinct unoriented edges $e_1,\ldots,e_k$, choose orientations. Denote their coupling strengths by $c_1,\ldots,c_k$ and their two-point vectors by $t_1,\ldots,t_k$. Then
 >
 > $$
 > \Pr(e_1,\ldots,e_k\in T)
-> =\left(\prod_{r=1}^k c_{e_r}\right)\det G(t_{e_1},\ldots,t_{e_k})
+> =\left(\prod_{r=1}^k c_r\right)\det G(t_1,\ldots,t_k)
 > \tag{9}
 > $$
 

@@ -1,9 +1,9 @@
 ---
 title: Variation of a Single Edge
 date: 2026-10-04
-updated: 2026-11-04
-revision: 4
-source_revision: 4
+updated: 2026-11-05
+revision: 5
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: single-edge-variation
@@ -14,11 +14,11 @@ aliases:
   - "en/Introduction/Variation of a Single Edge"
 ---
 
-Changing one conductance produces a perturbation of rank at most one in the Laplacian. This yields exact formulas for the Green matrix, effective resistances, and spanning-tree coefficient. Resistance sensitivities are expressed through inner products of affine vectors, while changes in the weights of separating spanning forests are related to Gram determinants.
+What happens to graph resistances when one coupling is strengthened, weakened, or removed? The change can affect any vertex pair, not only the endpoints of that coupling. We derive exact formulas for the change and identify the inner products that determine it.
 
 ## Setup and change in the Laplacian
 
-We consider a finite connected undirected graph without loops on $n\ge2$ vertices. The conductances $c_{ij}=c_{ji}$ are nonnegative; positive values correspond to existing edges. Choose distinct vertices $k,l$ and change only one conductance:
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices. The coupling strengths $c_{ij}=c_{ji}$ are nonnegative; positive values correspond to existing edges. Choose distinct vertices $k,l$ and change only one coupling strength:
 
 $$
 c'_{kl}=c_{kl}+\delta,\qquad \delta\ge-c_{kl}
@@ -26,12 +26,21 @@ $$
 
 For $\delta>0$, the coupling is strengthened or added; for $-c_{kl}<\delta<0$, it is weakened; and for $\delta=-c_{kl}$, an existing edge is removed. A prime denotes quantities after the change, and $\Delta$ denotes the new value minus the original value.
 
-We retain $a_{ij}=a_j-a_i$ and $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$. All unprimed resistances and inner products are computed in the **original graph**. The contribution of the coupling $kl$ to the Laplacian is $c_{kl}\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}$, so
+By the definition of the Laplacian, only four entries change:
+
+$$
+\Delta L_{kk}=\Delta L_{ll}=\delta,\qquad
+\Delta L_{kl}=\Delta L_{lk}=-\delta
+$$
+
+All other entries remain unchanged. Recall that $a_{ij}=a_j-a_i$ is a two-point vector, and $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$ is its coefficient list, written as a column for matrix operations (see [[Inner Product of Graph Vectors]]). The product $\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}$ has ones in positions $kk,ll$, minus ones in $kl,lk$, and zeros elsewhere. The four changes therefore combine into one formula:
 
 $$
 L'=L+\delta\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}
 \tag{1}
 $$
+
+All unprimed resistances and inner products are computed in the **original graph**.
 
 For $\delta\ne0$, the perturbation has rank one; for $\delta=0$, it is zero. The change preserves zero row and column sums.
 
@@ -99,7 +108,7 @@ For the formulas in this section and the formulas for finite resistance changes,
 > =A^{-1}-\frac{\delta A^{-1}bb^{\mathsf T}A^{-1}}{1+\delta b^{\mathsf T}A^{-1}b}
 > $$
 >
-> Apply this identity to the restriction of (1) to $H$, using an orthonormal basis of that subspace. The column vector $\mathbf e_{kl}$ belongs to $H$, and $\mathbf e_{kl}^{\mathsf T}\mathrm{Gr}\mathbf e_{kl}=R_{kl}$. Both sides of (4) act as zero on constant column vectors. Thus the formula holds on the full space. $\square$
+> Apply this identity to the restriction of (1) to $H$, using an orthonormal basis of that subspace. The column vector $\mathbf e_{kl}$ belongs to $H$, and $\mathbf e_{kl}^{\mathsf T}\mathrm{Gr}\mathbf e_{kl}=R_{kl}$. Both sides of (4) act as zero on lists with equal entries. Thus the formula holds on the full space. $\square$
 
 Formula (4) is exact and requires no smallness assumption on $\delta$. The column vector $\mathrm{Gr}\mathbf e_{kl}$ gives the centered potentials for a unit current injected at $l$ and withdrawn at $k$. For $\delta\ne0$, the change in $\mathrm{Gr}$ has rank one because this column vector is nonzero.
 
@@ -209,6 +218,8 @@ If the edge is not a bridge, there is a spanning tree of positive weight that do
 When a bridge is deleted, the denominator vanishes and $\tau'=0$. Resistances between different components cease to be finite: injecting current into one component and withdrawing it from another admits no steady-state solution, even though the total external current is balanced. The pseudoinverse of the disconnected Laplacian exists, but formula (4) does not compute it, and the usual resistance formula using that pseudoinverse does not give an effective resistance between components.
 
 ## Weights of separating spanning forests
+
+A resistance can be written as a ratio of two weight sums: the denominator is the spanning-tree coefficient $\tau$, and the numerator is the total weight of forests separating the measured vertices. Denote this numerator by $m_{ij}$. We first specify which forests enter the sum, then prove $R_{ij}=m_{ij}/\tau$.
 
 > [!info] A separating spanning 2-forest
 > **Definition.** For distinct vertices $i,j$, a separating spanning 2-forest contains all vertices of the graph, has no cycles, and has exactly two components, with $i$ and $j$ in different components. Its weight is the product of its edge conductances. Denote the sum of these weights by
