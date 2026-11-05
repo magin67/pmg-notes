@@ -208,7 +208,7 @@ Its geometry is uniquely determined up to a Euclidean isometry: a translation an
 
 Consider a path with coupling strengths $c_{12}=1$ and $c_{23}=2$.
 
-![[Path and resistance triangle.svg]]
+![A path and its resistance simplex](Path%20and%20resistance%20triangle.svg)
 
 The left panel shows the couplings and their strengths; the right panel shows the resistance simplex of the same graph. Labels on the right give **lengths** $\sqrt{R_{ij}}$. The dashed side joins vertices $1$ and $3$, which have no direct edge in the original graph.
 
