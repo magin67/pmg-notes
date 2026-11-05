@@ -2,8 +2,8 @@
 title: "Laplacian: graph, electrical network and quadratic form"
 date: 2026-10-03
 updated: 2026-11-05
-revision: 4
-source_revision: 8
+revision: 5
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-graph-network-quadratic-form
@@ -14,7 +14,7 @@ aliases:
   - "en/Introduction/Laplacian - graph, electrical network and quadratic form"
 ---
 
-A weighted graph is specified by the strengths of the couplings between its vertices. The Laplacian collects these strengths into a matrix: its action on vertex values is expressed through differences across edges. This matrix is used to construct graph geometry, describe Markov chains, and calculate electrical networks.
+In these notes, a graph is specified by the strengths of the couplings between its vertices. The Laplacian collects these strengths into a matrix: its action on vertex values is expressed through differences across edges. This matrix is used to construct graph geometry, describe Markov chains, and calculate electrical networks.
 
 Here we define the Laplacian matrix and examine its action. An electrical network serves as an example: coupling strengths are interpreted as conductances, and vertex values as potentials. This example explains the electrical meaning of effective resistance and of the quadratic function associated with the Laplacian matrix.
 
@@ -22,7 +22,7 @@ We consider finite undirected graphs without loops, with nonnegative coupling st
 
 ## Couplings and conductances
 
-> [!info] Definition. Weighted graph
+> [!info] Definition. Graph
 > A graph consists of vertices and edges joining them. The vertices are labeled $1,\ldots,n$, where $n\ge2$. The coupling strengths $c_{ij}$ satisfy
 >
 > $$
@@ -30,17 +30,15 @@ We consider finite undirected graphs without loops, with nonnegative coupling st
 > \qquad c_{ii}=0
 > $$
 >
-> An edge between distinct vertices $i,j$ exists when $c_{ij}>0$; the value $c_{ij}=0$ means that no edge is present. The matrix $C=(c_{ij})$ is called the **weighted adjacency matrix**.
+> An edge between distinct vertices $i,j$ exists when $c_{ij}>0$; the value $c_{ij}=0$ means that no edge is present. The matrix $C=(c_{ij})$ is called the **adjacency matrix**.
 
 The coupling strength is the weight of an edge. In the electrical interpretation, this weight is called its **conductance**. Other notes in the library also use this name for the same quantity $c_{ij}$.
 
 Consider a path on three vertices with coupling strengths $c_{12}=1$ and $c_{23}=2$.
 
-```mermaid
-graph LR
-    a(("1")) ---|"c12 = 1"| b(("2"))
-    b ---|"c23 = 2"| c(("3"))
-```
+![A path with coupling strengths inside rectangles](<Path with coupling strengths.svg>)
+
+Circles represent vertices and rectangles represent couplings. The labels inside the rectangles give the coupling strengths $c_{ij}$; in the electrical interpretation, these are conductances.
 
 > [!example] Adjacency matrix of the path
 > The adjacency matrix is
@@ -57,8 +55,8 @@ graph LR
 
 ## The Laplacian matrix
 
-> [!info] Definition. Weighted degree and Laplacian
-> The **weighted degree of a vertex** is the sum of its coupling strengths to neighboring vertices:
+> [!info] Definition. Vertex degree and Laplacian
+> In these notes, the **degree of a vertex** is the sum of its coupling strengths to neighboring vertices:
 >
 > $$
 > d_i=\sum_jc_{ij}
@@ -72,17 +70,10 @@ graph LR
 >
 > Its entries are $L_{ii}=d_i$ and $L_{ij}=-c_{ij}$ for $i\ne j$. For unit edge weights, $d_i$ equals the number of neighbors of the vertex.
 
-For arbitrary numerical values $x_i$ at the vertices, the action of this matrix is
-
-$$
-(Lx)_i=d_i x_i-\sum_jc_{ij}x_j
-=\sum_jc_{ij}(x_i-x_j)
-$$
-
-For each vertex, subtract each neighboring value from its own value, multiply by the corresponding coupling strength, and sum the results. If all values are equal, the result is zero. Throughout this note, $L$ denotes the Laplacian matrix.
+Throughout this note, $L$ denotes the Laplacian matrix.
 
 > [!example] Laplacian of the path
-> For coupling strengths $c_{12}=1$, $c_{23}=2$, the weighted degrees are $d_1=1$, $d_2=3$, $d_3=2$. Hence
+> For coupling strengths $c_{12}=1$, $c_{23}=2$, the vertex degrees are $d_1=1$, $d_2=3$, $d_3=2$. Hence
 >
 > $$
 > L=\begin{pmatrix}
@@ -91,6 +82,42 @@ For each vertex, subtract each neighboring value from its own value, multiply by
 > 0&-2&2
 > \end{pmatrix}
 > $$
+
+Suppose numerical values $x_i$ are assigned to the graph vertices. For example, the vertices may represent observation sites, with $x_i$ giving the temperature measured at each site. Collect these values into a column:
+
+$$
+x=\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}
+$$
+
+The matrix $L$ transforms the column $x$ into a new column $Lx$. Its $i$th entry is calculated as follows:
+
+$$
+(Lx)_i=d_i x_i-\sum_jc_{ij}x_j
+=\sum_jc_{ij}(x_i-x_j)
+$$
+
+In other words, for each vertex, subtract each neighboring value from its own value, multiply by the corresponding coupling strength, and add the results. The second sum follows from the definition $d_i=\sum_jc_{ij}$. If all values are equal, every difference and the result are zero.
+
+> [!example] Applying the Laplacian to vertex values
+> Suppose the temperatures measured at the three observation sites on the path are $20$, $21$, and $24$ degrees. Then
+>
+> $$
+> Lx=\begin{pmatrix}
+> 1&-1&0\\
+> -1&3&-2\\
+> 0&-2&2
+> \end{pmatrix}
+> \begin{pmatrix}20\\21\\24\end{pmatrix}
+> =\begin{pmatrix}-1\\-5\\6\end{pmatrix}
+> $$
+>
+> Consider the middle vertex. It has two neighbors, with coupling strengths $1$ and $2$:
+>
+> $$
+> (Lx)_2=1\cdot(21-20)+2\cdot(21-24)=1-6=-5
+> $$
+>
+> The difference from the first neighbor contributes $1$, and the difference from the second contributes $-6$. The column $Lx$ contains the sum of these contributions at each vertex.
 
 The Laplacian is symmetric and its rows sum to zero:
 
@@ -335,9 +362,9 @@ For a nonzero test current, the potentials cannot be constant. Hence, in a conne
 
 | Representation | Content |
 |---|---|
-| Weighted graph | The edges present and their coupling strengths |
-| Laplacian matrix $L$ | The operator $x\mapsto Lx$, summing weighted differences from neighbors |
-| Scalar-valued quadratic form $\mathcal Q$ | The weighted sum of squared differences across edges |
+| Graph | The edges present and their coupling strengths |
+| Laplacian matrix $L$ | The operator $x\mapsto Lx$, summing differences from neighbors multiplied by the coupling strengths |
+| Scalar-valued quadratic form $\mathcal Q$ | The sum of squared differences across edges, multiplied by the coupling strengths |
 
 With fixed vertex labels, these representations determine one another. Coupling strengths are recovered from the off-diagonal Laplacian entries as $c_{ij}=-L_{ij}$. In the expanded quadratic form, the coefficient of $x_i x_j$ for $i<j$ is $-2c_{ij}$. Reconstruction requires the entire quadratic function, rather than its value at a single choice of numbers $x_i$.
 

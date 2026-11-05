@@ -2,7 +2,7 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-11-05
-revision: 20
+revision: 21
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -1381,7 +1381,7 @@ Definitions, proofs, attribution, and reproducible checks: [[Cores, Seams, and A
 | $1$, $e=[1,1]$ | Identity for exterior objects and the unit form |
 | $XY$ | Exterior product of objects; the exterior self-product is written as $X\wedge X$ |
 | $X\cdot Y$, $X^2=\lVert X\rVert^2$ | Numerical inner product and quadratic norm; $\|X\|$ is the linear norm |
-| $c_{ij}$, $d_i$ | Conductances and weighted vertex degrees |
+| $c_{ij}$, $d_i$ | Conductances and vertex degrees |
 | $G$ | Graph |
 | $L$, $\mathbf L$ | Laplacian polyform and Laplacian matrix |
 | $\mathrm{Gr}$, $Q_1$, $D$ | Greenian, its dual representation, and the exponential $D=\exp Q_1$ |
@@ -1474,6 +1474,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 21 | 2026-11-05 | Aligned the name of $d_i$ in the notation summary with the introductory note and glossary: “vertex degree”. Definitions and formulas are unchanged. Aligned with Russian revision 21. |
 | 20 | 2026-11-05 | Clarified coupling strengths and their role as coefficients in the polyform representation. Definitions and normalizations are unchanged. Aligned with Russian revision 20. |
 | 19 | 2026-11-03 | Recorded definitions from the completed metric distribution series: finite influence, relative sensitivity, edge-set distributions, and higher-grade edge sums. Distinguished the contribution sum from output evaluation; clarified normalization, notation, and scope. Aligned with Russian revision 19. |
 | 18 | 2026-11-02 | Linked the English Spectra of Isomers proofs. Mathematical content and result boundaries are unchanged; synchronized with Russian revision 18. |

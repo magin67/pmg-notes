@@ -2,7 +2,7 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-11-05
-revision: 21
+revision: 22
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -172,7 +172,7 @@ For a graph toponome, the expansion of the factors of the Laplacian exponential 
 | Coupling strength | Величина связи | PMG | The weight of the coupling between a pair of vertices, $c_{ij}=\sum_{\ell:\,\ell=\{i,j\}}c_\ell$. In the main model it is symmetric and nonnegative. Summing parallel conductors preserves the Laplacian and metric, but changes the matroid ground set. |
 | Edge conductance | Проводимость ребра | Standard | The positive weight $c_\ell$ of an individual conductor; it equals $c_{ij}$ when the pair has a single edge. Conductivity is not used in this sense. |
 | Edge weight | Вес ребра | Standard | A general name for a numerical edge parameter. In this model the weight represents conductance, not length. |
-| Weighted degree | Взвешенная степень вершины | Standard | The sum $d_i=\sum_jc_{ij}$. |
+| Vertex degree | Степень вершины | Qualified | In PMG, the sum of coupling strengths $d_i=\sum_jc_{ij}$. For unit coupling strengths, this equals the number of neighbors. |
 | Conductor resistance; resistance of an individual conductor | Собственное сопротивление ребра | Standard | The value $1/c_\ell$ for an individual conductor. It can differ from the effective resistance between its endpoints, $R_\ell=R_{ij}$. An aggregated coupling has conductor resistance $1/c_{ij}$. The notation $r_{ij}$ is reserved for one-way resistance. |
 | Graph Laplacian matrix | Матрица лапласиана | Standard | In the symmetric model, $\mathbf L$ has diagonal entries $d_i$ and off-diagonal entries $-c_{ij}$. A digraph uses the outgoing convention $L_{ii}=\sum_jf_{ij}$, $L_{ij}=-f_{ij}$ for $i\ne j$. |
 | Laplacian; Laplacian polyform | Лапласиан; полиформа лапласиана | PMG | The grade-one form with the Laplacian matrix as its coefficients. For an undirected graph, $L=\sum_{i<j}c_{ij}[a_{ij}]^2$; a balanced graph admits a nonsymmetric bilinear representation on boundaries. |
@@ -556,6 +556,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 22 | 2026-11-05 | Adopted the shorter name “vertex degree” in place of “weighted degree” for the sum of coupling strengths. The definition is unchanged; the unit-coupling case is stated explicitly. Aligned with Russian revision 22. |
 | 21 | 2026-11-05 | Replaced “coupling coefficient” with “coupling strength”; clarified polyform coefficients. Explicitly distinguished the scalar-valued quadratic form of a matrix from the Laplacian polyform. Aligned with Russian revision 21. |
 | 20 | 2026-11-03 | Added metric distribution and coupling influence terminology; distinguished finite fields from sensitivity and edge contributions from edge-set contributions. Clarified notation and the historical name “reduction”; removed the obsolete undeveloped-extension status. Aligned with Russian revision 20. |
 | 19 | 2026-11-02 | Linked the translated Spectra of Isomers definitions and results. Terms and applicability conditions are unchanged; synchronized with Russian revision 19. |

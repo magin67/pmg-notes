@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="140" viewBox="0 0 640 140" role="img" aria-labelledby="title desc">
+  <title id="title">Path with coupling strengths</title>
+  <desc id="desc">Three circular vertices 1, 2, 3. Rectangular couplings between them are labeled c₁₂ = 1 and c₂₃ = 2. There is no direct coupling 1–3.</desc>
+  <rect width="640" height="140" fill="#ffffff"/>
+  <g fill="none" stroke="#334155" stroke-width="2.5">
+    <path d="M83 70H134 M246 70H297 M343 70H394 M506 70H557"/>
+    <rect x="134" y="49" width="112" height="42" fill="#f1f5f9"/>
+    <rect x="394" y="49" width="112" height="42" fill="#f1f5f9"/>
+    <circle cx="60" cy="70" r="23" fill="#ffffff"/>
+    <circle cx="320" cy="70" r="23" fill="#ffffff"/>
+    <circle cx="580" cy="70" r="23" fill="#ffffff"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="23" fill="#172b4d" text-anchor="middle">
+    <text x="60" y="78">1</text>
+    <text x="320" y="78">2</text>
+    <text x="580" y="78">3</text>
+    <text x="190" y="78">c₁₂ = 1</text>
+    <text x="450" y="78">c₂₃ = 2</text>
+  </g>
+</svg>
