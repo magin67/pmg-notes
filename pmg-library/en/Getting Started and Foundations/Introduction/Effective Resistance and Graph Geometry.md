@@ -1,8 +1,9 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-11-05
-revision: 9
+updated: 2026-11-06
+revision: 10
+translated_revision: 12
 source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
@@ -20,7 +21,7 @@ Resistances can be calculated from the Laplacian through the Green matrix. We fi
 
 We consider a finite connected undirected graph without loops on $n\ge2$ vertices. Existing edges have positive coupling strengths; for absent edges, $c_{ij}=0$. The Laplacian matrix is denoted by $L$.
 
-In PMG, the norm of a vector is $u\cdot u$, its squared Euclidean length; the square root is called its linear norm. In the resistance metric, the norm of a two-point vector equals effective resistance.
+In PMG, the norm of a vector is $u\cdot u$, its squared Euclidean length; the square root is called its linear norm. In the resistance metric, the norm of a vertex-pair vector equals effective resistance.
 
 ## The Green matrix
 
@@ -121,18 +122,20 @@ The last equality uses the symmetry of the Green matrix. For unit current, this 
 
 ## Euclidean geometry of the graph
 
+In the algebraic description, vertices are elements of weight $1$. A geometric drawing depicts their locations as points; the norms of their position vectors are not the norms of the elements themselves. Below, the metric is defined only on differences. Choosing vertices to be local points of zero norm is explained in the [[The Null Vector, Isotropic Representation, and the Boundary|isotropic model]].
+
 We treat the vertices as points $a_1,\ldots,a_n$. Their positions in an arbitrary drawing of the graph do not yet specify distances: the drawing usually shows only which edges are present. To define lengths and angles, we specify an inner product of graph vectors.
 
-> [!info] Two-point vector
+> [!info] Vertex-pair vector
 > **Definition.** The vector from vertex $a_i$ to vertex $a_j$ is
 >
 > $$
 > a_{ij}=a_j-a_i
 > $$
 >
-> It is called a two-point vector, or vertex-pair vector, and is defined whether or not an edge is present.
+> It is called a vertex-pair vector, and is defined whether or not an edge is present.
 
-Two-point vectors are a special case of **affine vectors** $u=\sum_i u_i a_i$ with $\sum_i u_i=0$. Here the $u_i$ are numerical coefficients of points. We treat the vertices as independent in these formal linear combinations. For $a_{ij}$, the nonzero coefficients are $-1$ and $1$. A general affine vector may involve more points, for example $a_1+a_2-2a_3$. The zero-sum condition is essential: an arbitrary linear combination of points need not be an affine vector. See the [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|definition of points and affine vectors]] for details.
+Vertex-pair vectors are a special case of **affine vectors** $u=\sum_i u_i a_i$ with $\sum_i u_i=0$. Here the $u_i$ are numerical coefficients at vertices. We treat the vertices as independent in these formal linear combinations. For $a_{ij}$, the nonzero coefficients are $-1$ and $1$. A general affine vector may involve more vertices, for example $a_1+a_2-2a_3$. The zero-sum condition is essential: an arbitrary linear combination of vertices need not be an affine vector. See the [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|definition of points and affine vectors]] for details.
 
 > [!info] Resistance inner product
 > **Definition.** For affine vectors $u=\sum_i u_i a_i$ and $v=\sum_i v_i a_i$, set
@@ -183,7 +186,7 @@ $$
 \end{aligned}
 $$
 
-> [!info] Resistance and the length of a two-point vector
+> [!info] Resistance and the length of a vertex-pair vector
 > **Theorem.** In the graph's Euclidean resistance metric,
 >
 > $$
@@ -311,6 +314,6 @@ By (3), pairwise distances in the resistance simplex also cannot increase. Some 
 
 ## Further reading
 
-In [[Inner Product of Graph Vectors]], we pass from norms of $a_{ij}$ to inner products of two two-point vectors. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
+In [[Inner Product of Graph Vectors]], we pass from norms of $a_{ij}$ to inner products of two vertex-pair vectors. Electrically, these express the potential difference across one pair of vertices when a unit current is passed through another pair.
 
 Sources on electrical networks and resistance geometry are collected in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].

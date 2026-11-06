@@ -1,8 +1,9 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-11-05
-revision: 24
+updated: 2026-11-06
+revision: 25
+translated_revision: 25
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -52,19 +53,22 @@ The notation $[x_i!]$ first constructs a new collection using the same indices a
 
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
-| Basis vertex | Базовая вершина | PMG | An element $a_i$ of the fixed linearly independent basis of the formal space $V$. |
-| Point | Точка | Qualified | An element $x=\sum_i x_i a_i$ with $\sum_i x_i=1$. Not every point is a basis vertex. |
+| Basis vertex; node | Базовая вершина; узел | PMG | An element $a_i$ of the fixed independent basis of $V$. “Vertex” and “node” specify a graph role, not a norm condition. |
+| Object of the space | Объект пространства | PMG | A structure of grade one $U\in V$ or its extension; its affine weight is arbitrary. |
+| Element | Элемент | PMG | An object $A$ of affine weight $1$, with no norm condition. Ordinary phrases such as “matrix element” and “element of a set” do not carry this specialized meaning. |
+| Point; local element | Точка; локальный элемент | PMG | An element of zero norm: $\varepsilon(a)=1$, $a^2=0$. A metric on objects is required; in the isotropic model, $\varepsilon(a)=a\cdot z$. Not every element is a point. |
 | Affine weight | Аффинный вес | PMG | The value of the linear functional $\varepsilon(x)=\sum_i x_i$. It is neither an edge weight nor a physical mass. |
-| Affine vector | Аффинный вектор | Qualified | An element $u\in W=\ker\varepsilon$. Within the core, “vector” may be used for brevity. |
-| Two-point vector; vertex-pair vector | Двуточечный вектор; вектор пары вершин | Qualified | The difference $a_{ij}=a_j-a_i=(ij)$. It is defined even without an edge; reversing the order changes its sign. |
-| Multipoint vector | Многоточечный вектор | PMG | An affine vector $u=\sum_i u_i a_i$, $\sum_i u_i=0$, with three or more nonzero coefficients in the chosen vertex basis. The number of points describes this expression. |
+| Affine vector | Аффинный вектор | Qualified | An object $u$ of weight $0$; in the core, $u\in W=\ker\varepsilon$. “Vector” may be used for brevity. |
+| Vertex-pair vector | Вектор пары вершин | PMG | The difference $a_{ij}=a_j-a_i=(ij)$, regardless of vertex norms or the presence of an edge. Reversing the order changes its sign. |
+| Two-point vector | Двуточечный вектор | PMG | The difference of two points. For a graph with local vertices, it is a vertex-pair vector. For arbitrary elements, use “difference of elements”. |
+| Multipoint expression of a vector | Многоточечная запись вектора | PMG | Three or more nonzero coefficients in a chosen basis of local vertices. The point count describes the expression, not another grade. Without locality, refer to the number of vertices involved. |
 | Space of affine vectors | Пространство аффинных векторов | Qualified | The $(n-1)$-dimensional subspace $W\subset V$ consisting of combinations with zero coefficient sum. |
-| Exterior product; wedge product | Внешнее произведение | Standard | The product $XY$ in the exterior algebra, usually denoted by $X\wedge Y$. Exchanging homogeneous objects introduces a sign depending on their grades. |
-| Exterior-algebra element | Внешний объект | Qualified | An element of $\Lambda^kV$ or $\Lambda^kW$. It may be a linear combination of exterior products. |
-| Decomposable exterior element | Простой внешний объект | Standard | An object expressible as one exterior product. The Russian adjective “простой” means decomposable here. |
-| Grade | Грейд | Qualified | The exterior degree $k$ of an object in $\Lambda^kV$. For a form, it is the common grade of its arguments. |
-| Simplex | Симплекс | Qualified | The formal expression $[a_1\ldots a_k]=a_1\cdots a_k$. Its grade is $k$; the geometric dimension of a nondegenerate simplex is $k-1$. |
-| Orientation | Ориентация | Standard | A choice of sign for an exterior object specified by the order of its generators. Exchanging two generators changes the sign. |
+| Exterior product; wedge product | Внешнее произведение | Standard | The product $XY$ in the exterior algebra, usually denoted by $X\wedge Y$. Exchanging homogeneous structures introduces a sign depending on their grades. |
+| Exterior structure of grade $k$ | Внешняя структура грейда $k$ | PMG | A structure in $\Lambda^kV$ or $\Lambda^kW$, including linear combinations of exterior products. Earlier headings use the general name “exterior structure”. At $k=1$, it is an object of the underlying space. |
+| Decomposable exterior structure | Простая внешняя структура | Qualified | A structure expressible as a single exterior product. A sum of decomposable structures need not be decomposable. |
+| Grade | Грейд | Qualified | The exterior degree $k$ of a structure in $\Lambda^kV$. For a form, it is the common grade of its arguments. |
+| Simplex | Симплекс | Qualified | A decomposable structure $[a_1\ldots a_k]=a_1\cdots a_k$ on chosen elements. Grade $k$ is one greater than the geometric dimension of a nondegenerate simplex. An arbitrary sum of simplices or a simplex form is not called a single simplex. |
+| Orientation | Ориентация | Standard | A choice of sign for an exterior structure specified by the order of its generators. Exchanging two generators changes the sign. |
 
 In the algebraic construction, $a_i$ does not denote a centered position vector of a Euclidean realization. Formal vertices are linearly independent; centered position vectors sum to zero.
 
@@ -73,8 +77,8 @@ In the algebraic construction, $a_i$ does not denote a centered position vector 
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
 | Boundary operator | Граничный оператор | Qualified | The linear operator $\partial$, with $\partial a_i=1$, $\partial1=0$, and the usual alternating vertex-deletion formula. This convention includes the scalar grade. |
-| Simplex boundary | Граница симплекса | Qualified | The object $(a_1\ldots a_k)=\partial[a_1\ldots a_k]$, of grade $k-1$ when nonzero. |
-| Boundary | Граница | Qualified | Any object in the image of $\partial$ in this algebra. In grade $k$, the space of boundaries is $\Lambda^kW$. |
+| Simplex boundary | Граница симплекса | Qualified | The structure $(a_1\ldots a_k)=\partial[a_1\ldots a_k]$, of grade $k-1$ when nonzero. |
+| Boundary | Граница | Qualified | Any structure in the image of $\partial$ in this algebra. In grade $k$, the space of boundaries is $\Lambda^kW$. |
 | Space of boundaries | Пространство границ | Qualified | The space $\Lambda^kW$ in a fixed grade; it also equals the kernel of $\partial$ in that grade. Equality of kernel and image refers to this construction. |
 | Boundary merging rule | Правило слияния | PMG | The product of simplex boundaries with exactly one shared basis vertex gives the boundary of the combined simplex, with the appropriate orientation sign. |
 | Vanishing rule | Правило обнуления | PMG | The product of simplex boundaries with at least two shared basis vertices is zero. |
@@ -182,7 +186,7 @@ For a graph toponome, the expansion of the factors of the Laplacian exponential 
 | Resistance matrix | Резистивная матрица | Qualified | The symmetric matrix $\mathbf R=(R_{ij})$ of pair resistances. For a balanced graph, $R_{ij}=r_{ij}+r_{ji}$; distinguish it from the one-way resistance matrix $\mathbf r$. |
 | Distance operator | Дистанционный оператор | Qualified | The linear operator $\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}$ on symmetric matrices. Applied to a symmetric Gram matrix, it gives squared distances. A nonsymmetric Gram matrix uses $A_{ij}+A_{ji}$ instead of $2A_{ij}$. |
 | Centering matrix; centering projector | Центрирующий проектор | Standard | The matrix $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$. |
-| Centroid | Центроид | Standard | The equal-weight mean of the points: $n^{-1}\sum_i a_i$. |
+| Centroid | Центроид | Standard | The equal-weight mean of the elements: $n^{-1}\sum_i a_i$. |
 | Centering | Центрирование | Standard | Choosing the centroid as the origin in a Euclidean realization, so position vectors sum to zero. This introduces no new linear relation between formal basis vertices. |
 
 When representations occur together, the polyform retains an ordinary letter and the matrix is bold: $L$ and $\mathbf L$. Scalar matrix entries are not bold: $L_{ij}$, $\mathrm{Gr}_{ij}$. Where the matrix representation is unambiguous, the introductory notes may use ordinary letters $L,G,R$.
@@ -245,9 +249,9 @@ Reversal of dual grade order means taking complementary sets of eigendirections,
 | Metric evaluation of a form | Численная метрическая оценка формы | PMG | The linear evaluation $[X,Y]\mapsto X\cdot Y$ on forms on boundaries of a fixed grade. |
 
 > [!info] Object, form, and number
-> The notations $X$, $[X]^2$, and $X^2$ are distinct: they denote an exterior object, a formal quadratic form, and a numerical norm, respectively. The exterior product of an object with itself is written explicitly as $X\wedge X$.
+> The notations $X$, $[X]^2$, and $X^2$ are distinct: they denote an exterior structure, a formal quadratic form, and a numerical norm, respectively. The exterior product of an object with itself is written explicitly as $X\wedge X$.
 
-In a symmetric metric, the norm of a simplex boundary is the squared volume of a parallelotope, while its linear norm is the volume itself. The squared volume of the $k$-dimensional simplex is the norm of its boundary divided by $(k!)^2$. The metric on boundaries does not automatically define the norm of a formal point or simplex outside $\Lambda^kW$.
+In a symmetric metric, the norm of a simplex boundary is the squared volume of a parallelotope, while its linear norm is the volume itself. The squared volume of the $k$-dimensional simplex is the norm of its boundary divided by $(k!)^2$. The metric on boundaries does not automatically define the norm of a formal element or simplex outside $\Lambda^kW$.
 
 ## Metric polyforms, forests, and the spanning-tree coefficient
 
@@ -397,7 +401,7 @@ Definitions and scope of invariance: the [[Core specification#Chains of cores|sp
 | Algebraic Laplacian variation | Алгебраическая вариация лапласиана | PMG | In the symmetric model, an elementary update $t[v]^2$ with $v\in W$; in the balanced model, $t[u,v]$ with $u,v\in W$. It generally changes several couplings; weight admissibility is checked separately. |
 | Joint conductance variation | Совместная вариация связей | Qualified | Simultaneous changes in conductances of several vertex pairs; their interaction is determined by the Gram matrix of the corresponding vectors. |
 
-In the symmetric resistance model, for a quadratic form $[X]^2$ the normalized potential is $\|X\|^2$, not $\|X\|$. For a mixed form it can be negative even when the metric is positive definite. This does not mean that the exterior object has a negative norm.
+In the symmetric resistance model, for a quadratic form $[X]^2$ the normalized potential is $\|X\|^2$, not $\|X\|$. For a mixed form it can be negative even when the metric is positive definite. This does not mean that the exterior structure has a negative norm.
 
 In PMG, “norm” without the qualifier “linear” means the quadratic norm $X^2=X\cdot X$. The notation $\|X\|$ is reserved for the linear norm. The norm of a form is defined through the normalized potential; the evaluation of a product of forms generally differs from the product of their evaluations.
 
@@ -487,12 +491,14 @@ Components of couplings, the Green matrix, and resistances belong to different i
 
 ## Earlier names and ambiguous usages
 
+Earlier revisions called every object of weight $1$ a point. In the current terminology this is an element; “point” in the algebraic model also requires zero norm. A geometric drawing may show element locations as ordinary points, without identifying the elements with their local centers.
+
 The following table also records earlier Russian usage, so that older research notes can be read consistently with the public core.
 
 | Earlier or ambiguous name | Recommended expression | Reason for clarification |
 |---|---|---|
 | “Metric mass” | Resistance radius for $R_{\mathrm{sph}}^2$; resistance diameter for $4R_{\mathrm{sph}}^2$ | The earlier name is replaced with geometric terminology that explicitly distinguishes the normalizations. |
-| “2-вектор” | Vertex-pair vector, $a_{ij}=a_j-a_i$ | In English, 2-vector normally means an object of exterior grade $2$, whereas $a_{ij}$ has grade $1$. “Two-point vector” is acceptable when explicitly defined. |
+| “2-вектор” | Vertex-pair vector, $a_{ij}=a_j-a_i$ | In English, 2-vector normally means an object of exterior grade $2$, whereas $a_{ij}$ has grade $1$. “Two-point vector” is acceptable when the endpoints are local. |
 | “Order” without specifying the object | Grade | A simplex and its boundary differ in grade by one. |
 | “Кратность” of a linear element | Affine weight | The coefficient-sum functional need not take integer values. |
 | “Остовное число” for a weighted graph | Spanning-tree coefficient | A weighted sum need not be an integer. “Spanning-tree count” is appropriate when counting trees. |
@@ -517,18 +523,19 @@ The following definitions are used in the published series “Spaces and Subspac
 | Term | Russian equivalent | Meaning and source |
 | --- | --- | --- |
 | Frame of an object | Фрейм объекта | A representation of an object as a linear combination of selected elements, including the elements and coefficients. The set may be dependent; different frames may represent one object. [[Projections, Bi-coordinates, and Di-coordinates#Bi-coordinates and frames]]. |
-| Bi-coordinates | Би-координаты | Coefficients of the unique expansion of an object in a chosen basis of the corresponding linear space. A point basis is not required; barycentric coordinates of points are a special case. [[Projections, Bi-coordinates, and Di-coordinates#Bi-coordinates and frames]]. |
+| Bi-coordinates | Би-координаты | Coefficients of the unique expansion of an object in a chosen basis of the corresponding linear space. A basis of weight-one elements is not required; barycentric coordinates of elements are a special case. [[Projections, Bi-coordinates, and Di-coordinates#Bi-coordinates and frames]]. |
 | Bi-coordinate matrix | Матрица би-координат | The matrix $\mathbf B$ of expansion coefficients of selected objects in a specified basis. Its definition must state whether the coordinates of each object occupy a row or a column. The influence matrix is a particular case. |
 | Extended isotropic Gram matrix | Расширенный изотропный грамиан | The matrix $\mathbf G_z=G(a_1,\ldots,a_n,z)$ for local vertices and the null vector. With $z$ last, its blocks are $\left(\begin{smallmatrix}\mathbf G&\mathbf1\\\mathbf1^{\mathsf T}&0\end{smallmatrix}\right)$. [[The Null Vector, Isotropic Representation, and the Boundary#The vertex Gram matrix and the extended Gram matrix]]. |
 | Di-coordinates | Ди-координаты | Inner products of an object with the elements of the chosen basis. When the metric on its subspace is nondegenerate, these are also the coefficients of the projection in the reciprocal basis. [[Projections, Bi-coordinates, and Di-coordinates#Di-coordinates: inner products]]. |
 | Reciprocal basis | Взаимный базис | A basis of the same subspace whose inner products with the original basis elements are $1$ for matching indices and $0$ otherwise. It exists when the metric on the subspace is nondegenerate. [[Projections, Bi-coordinates, and Di-coordinates#The reciprocal basis]]. |
 | Laplacian of a frame | Лапласиан фрейма | The difference part of the form decomposition for a fixed frame: $L_q=\sum_{i<j}q^iq^j[a_j-a_i]^2$. It may change with the frame and is not determined by the object $q$ alone. [[Projections, Bi-coordinates, and Di-coordinates#The difference part and the Laplacian of a frame]]. |
-| Local element; local point | Локальный элемент; локальная точка | An element of unit affine weight and zero norm: $x\cdot z=1$, $x^2=0$. It represents a point in the isotropic model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
-| Nonlocal element of unit weight | Нелокальный элемент единичного веса | An element $p$ with $p\cdot z=1$ and $p^2\ne0$. A PMG term in the isotropic model. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
-| Local center | Локальный центр | The point $\pi(p)=p-p^2z/2$ for $p\cdot z=1$. Selecting the center is a nonlinear correction along $z$. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
-| Sphere element | Элемент сферы | In the symmetric isotropic space, $S=O+\rho z/2$, where $O=\pi(S)$ is the local sphere center; $x\cdot S=0$ specifies its local points and $S^2=\rho$. The center $O$ is not identified with the centroid $h$. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. In a balanced graph, one sphere functional has two metric representatives. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
-| Distinguished null vector | Выделенный нуль-вектор | A nonzero element $z$ with $z^2=0$ that specifies the normalization of local points. It is not the zero element of the space. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
-| Isotropic element | Изотропный элемент | A nonzero linear element $u$ with zero norm $u\cdot u=0$, regardless of affine weight. Local elements are isotropic; the null vector $z$ is isotropic but not local, since its weight is $0$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
+| Point; local element | Точка; локальный элемент | An element of zero norm: $x\cdot z=1$, $x^2=0$. “Local point” may emphasize the model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
+| Nonlocal element | Нелокальный элемент | An element $p$ with $p^2\ne0$; weight $p\cdot z=1$ is already part of the definition of element. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
+| Center of an element; local center | Центр элемента; локальный центр | The point $\pi(p)=p-p^2z/2$ associated with an element $p$. A point is its own center. “Center” describes a relation to the original element, not a separate class of all points. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
+| Sphere element | Элемент сферы | In the symmetric model with positive displacement metric, $S=O+\rho z/2$, $S^2=\rho$. For $\rho>0$, the sphere consists of points $x$ with $x\cdot S=0$, and $O=\pi(S)$ is its center. For $\rho=0$ one point remains; for $\rho<0$ there are no real points. The element $S$, sphere, and center are distinct; $O$ need not be the centroid. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. Directed extension: [[The Isotropic Space and Sphere of a Balanced Graph]]. |
+| Zero vector | Нулевой вектор | The zero $0$ of the vector space, distinct from nonzero $z$. |
+| Distinguished null vector | Выделенный нуль-вектор | The vector $z\ne0$, $z^2=0$, specifying affine weight by $\varepsilon(U)=U\cdot z$. Zero norm alone does not single out $z$: for example, $2z$ would specify a different functional. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
+| Isotropic object; isotropic vector | Изотропный объект; изотропный вектор | A nonzero object $U$ with $U^2=0$: an isotropic vector at weight $0$, a point at weight $1$. In the symmetric extension with positive displacement metric, isotropic vectors are multiples of $z$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Metric square | Метрический квадрат | A previous explanatory name for the norm $Y^2=Y\cdot Y$. The current text uses “norm”. It may be negative in an indefinite metric and differs from the form $[Y]^2$. |
 | Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension]]. |
 | Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#The linear midpoint and its local center]]. |
@@ -557,6 +564,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |
 | 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
 | 23 | 2026-11-05 | Matched “two-point vector” with “vertex-pair vector”; added the multipoint representation of an affine vector and its dependence on the basis. Aligned with Russian revision 23. |
 | 22 | 2026-11-05 | Adopted the shorter name “vertex degree” in place of “weighted degree” for the sum of coupling strengths. The definition is unchanged; the unit-coupling case is stated explicitly. Aligned with Russian revision 22. |

@@ -1,9 +1,9 @@
 ---
 title: Nonlocal Elements, Spheres, and Their Centers
 date: 2026-10-15
-updated: 2026-10-15
-revision: 2
-translated_revision: 3
+updated: 2026-11-06
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -14,15 +14,15 @@ aliases:
   - "en/Spaces/Nonlocal Elements, Spheres, and Their Centers"
 ---
 
-An element of unit affine weight need not be a local point. Its nonzero norm carries an additional parameter that can change while the center remains fixed. This note explains the geometric meaning of that parameter and proves that such changes preserve the norms and inner products of differences, as well as metric evaluations of boundaries of every grade.
+An element need not be a point: its affine weight is $1$ by definition, but its norm can be nonzero. Its nonzero norm carries an additional parameter that can change while the center remains fixed. This note explains the geometric meaning of that parameter and proves that such changes preserve the norms and inner products of differences, as well as metric evaluations of boundaries of every grade.
 
 The construction uses the [[The Null Vector, Isotropic Representation, and the Boundary|extension with a null vector]]. Throughout, norm has its PMG meaning: $U^2=U\cdot U$. For $U^2\ge0$, the square root $\|U\|=\sqrt{U^2}$ is called the linear norm. The formal form $[U]^2$ is distinct from the numerical norm $U^2$.
 
 ## Assumptions and notation
 
-We work in a single extended space $\widetilde V$ with a nondegenerate metric of signature $(d+1,1)$ and a distinguished null vector $z$. The displacement space $z^\perp/\mathbb Rz$ is positive definite and has dimension $d\ge1$. For a connected graph with positive conductances, this is its resistance space, with $d=n-1$.
+We work in a single extended space $\widetilde V$ with a nondegenerate metric of signature $(d+1,1)$ and a distinguished null vector $z$. The displacement space $z^\perp/\mathbb Rz$ is positive definite and has dimension $d\ge1$. For a connected graph with positive coupling strengths, this is its resistance space, with $d=n-1$.
 
-The affine weight of an element is $\varepsilon(U)=U\cdot z$. We consider the affine hyperplane
+The affine weight of an object is $\varepsilon(U)=U\cdot z$. We consider the affine hyperplane
 
 $$
 \mathcal H=\{S\in\widetilde V:S\cdot z=1\},\qquad z^2=0
@@ -31,7 +31,7 @@ $$
 > [!info] Assumptions and notation
 > **Definition.** An element $S\in\mathcal H$ is local if $S^2=0$ and nonlocal if $S^2\ne0$. Local elements are denoted directly as points $x,h,a_i$. No separate notation for their representatives is introduced.
 
-Elements of zero weight, including $z$, are not called local points. Differences of elements of $\mathcal H$ belong to $z^\perp$; in the extended space, this extends the notion of an affine vector from the PMG core. The metric on $z^\perp$ is degenerate: $z$ is orthogonal to this entire subspace.
+Objects of zero weight, including $z$, are not called local points. Differences of elements of $\mathcal H$ belong to $z^\perp$; in the extended space, this extends the notion of an affine vector from the PMG core. The metric on $z^\perp$ is degenerate: $z$ is orthogonal to this entire subspace.
 
 ## Decomposing an element into its center and norm
 
@@ -58,9 +58,11 @@ $$
 \pi(S+\lambda z)=\pi(S),\qquad (S+\lambda z)^2=S^2+2\lambda
 $$
 
-Thus the center and norm are independent data of a normalized element. With the center fixed, the norm can take any real value.
+Thus the center and norm are independent data of an element. With the center fixed, the norm can take any real value.
 
 ## A sphere as an orthogonality condition
+
+A sphere and its defining element are different objects. The sphere consists of points $x$, while the element $S$ specifies one equation that those points must satisfy. When its norm is nonzero, $S$ itself is not a point.
 
 > [!info] A sphere as an orthogonality condition
 > **Theorem.** Let $S=h+\rho z/2$, and let $x$ be a local point. Then
@@ -81,7 +83,7 @@ Thus the center and norm are independent data of a normalized element. With the 
 
 For $\rho>0$, this is a sphere with center $h$ and linear radius $\sqrt\rho$. In a displacement space of dimension $d$, the sphere has dimension $d-1$. For $\rho=0$, the set consists of the single local point $h$. For $\rho<0$, it has no real local points, since $(x-h)^2\ge0$.
 
-Thus a positive norm of a normalized element has the precise meaning of a squared sphere radius. A negative norm retains its algebraic meaning as the parameter in (2), but is not the squared radius of a real sphere. The center exists in all three cases.
+Thus a positive norm of an element has the precise meaning of a squared sphere radius. A negative norm retains its algebraic meaning as the parameter in (2), but is not the squared radius of a real sphere. The center exists in all three cases.
 
 ### The circumsphere of a graph
 
@@ -126,6 +128,32 @@ $$
 
 Here $h_V$ denotes the original affine combination, $h$ its local center, and $S_G$ the circumsphere element. These symbols identify particular elements of one model, rather than additional types of geometric center.
 
+### Example: three elements associated with one circle
+
+Take the local vertices of the unit path $a-b-c$. In the coordinate model of the preceding note,
+
+$$
+a=p_0,\qquad b=p_0+u-\frac12z,\qquad c=p_0+u+v-z
+$$
+
+Here $u^2=v^2=1$ and $u\cdot v=0$, while $p_0,z$ are orthogonal to $u,v$ and satisfy $p_0^2=z^2=0$ and $p_0\cdot z=1$. The pairwise effective resistances are $1,1,2$.
+
+The circumcenter of the right triangle lies midway between $a,c$. Its affine combination, local center, and circle element are
+
+$$
+h_V=\frac{a+c}{2},\qquad h=h_V+\frac14z,\qquad S_G=h_V+\frac12z
+$$
+
+A direct calculation gives
+
+$$
+h_V^2=-\frac12,\qquad h^2=0,\qquad S_G^2=\frac12,\qquad
+S_G\cdot a=S_G\cdot b=S_G\cdot c=0
+$$
+
+Hence $\rho(G)=1/2$ and $D_{\mathrm{res}}(G)=2$. For $h_V$, the condition of orthogonality to a local point does not define a real circle: its norm is negative. Nevertheless, $h_V$ has the same center as $S_G$.
+
+
 ## What selecting the center preserves
 
 Let $S,T\in\mathcal H$, $h=\pi(S)$, and $k=\pi(T)$. Equation (1) gives
@@ -167,6 +195,8 @@ Preservation of (4) therefore does not make $\pi$ a linear or affine projection.
 
 ## Inner products of vectors
 
+Replacing the endpoints by their centers changes their difference only by a multiple of $z$. This term is orthogonal to every vector of weight $0$, including $z$ itself, so it does not change their inner products. This is the reason for the next identity.
+
 > [!info] Inner products of vectors
 > **Theorem.** For any $S_0,S_1,T_0,T_1\in\mathcal H$,
 >
@@ -204,7 +234,9 @@ Arbitrarily changing only the diagonal entries of the Gram matrix is not such a 
 
 ## Higher-grade boundaries
 
-For elements $S_0,\ldots,S_k$ of unit weight, the boundary formula remains
+The inner product of boundaries is a determinant of inner products of their constituent vectors. Passing to centers preserves every entry of this matrix and therefore its determinant. This extends the vector result to areas and volumes.
+
+For elements $S_0,\ldots,S_k$, the boundary formula remains
 
 $$
 B=(S_0\ldots S_k)=\bigwedge_{i=1}^k(S_i-S_0)
@@ -235,22 +267,22 @@ The statement therefore includes nondecomposable boundaries. In particular, it p
 
 ### What happens to the objects and forms themselves
 
-Equal norms do not imply equal exterior objects. Expanding the factors gives
+Equal norms do not imply equal exterior structures. Expanding the factors gives
 
 $$
-B-B_h=z\wedge K,\qquad K\in\Lambda^{k-1}(z^\perp)
+B-B_h=z  K,\qquad K\in\Lambda^{k-1}(z^\perp)
 $$
 
-All terms containing two factors $z$ vanish. For any boundary $C\in\Lambda^k(z^\perp)$, we have $(z\wedge K)\cdot C=0$: the determinant of inner products contains a zero row. This explains why the metric evaluation is preserved while the object changes.
+All terms containing two factors $z$ vanish. For any boundary $C\in\Lambda^k(z^\perp)$, we have $(z  K)\cdot C=0$: the determinant of inner products contains a zero row. This explains why the metric evaluation is preserved while the object changes.
 
 The forms $[B,C]$ and $[B_h,C_h]$ need not coincide either. Their numerical evaluations $B\cdot C$ and $B_h\cdot C_h$ coincide. The same applies to sums of forms and products of forms on boundaries: their exterior arguments lie in powers of $z^\perp$, where additional terms containing $z$ do not affect the evaluation.
 
-This restriction matters. In the full exterior algebra of the extension, $z$ is not orthogonal to every element. For example, for a local point $a$, we have $(z\wedge a)^2=-1$. The result therefore does not extend to arbitrary simplices and forms outside the boundary subalgebra. The core metric identity through normalized potentials likewise does not automatically extend to all forms of the extended space.
+This restriction matters. In the full exterior algebra of the extension, $z$ is not orthogonal to every element. For example, for a local point $a$, we have $(z  a)^2=-1$. The result therefore does not extend to arbitrary simplices and forms outside the boundary subalgebra. The core metric identity through normalized potentials likewise does not automatically extend to all forms of the extended space.
 
 ## Local basis vertices do not restrict the graph model
 
 > [!info] Local basis vertices do not restrict the graph model
-> **Corollary.** Let $A_1,\ldots,A_n$ have unit affine weight, and let their local centers $h_i=\pi(A_i)$ form the resistance simplex of a connected graph with positive conductances. Replacing $A_i\mapsto h_i$ preserves the resistance metric and gives an isomorphic representation of the algebra of forms on boundaries. The Laplacian and its exponential map to the corresponding forms on local vertices with the same coupling coefficients.
+> **Corollary.** Let $A_1,\ldots,A_n$ be elements, and let their local centers $h_i=\pi(A_i)$ form the resistance simplex of a connected graph with positive coupling strengths. Replacing $A_i\mapsto h_i$ preserves the resistance metric and gives an isomorphic representation of the algebra of forms on boundaries. The Laplacian and its exponential map to the corresponding forms on local vertices with the same coupling strengths.
 >
 > Thus the basis vertices can be chosen local without restricting the graph model under consideration. Their individual norms are additional data of the realization and are not determined by the metric on boundaries.
 
@@ -295,43 +327,16 @@ There are two distinct extensions of the graph description here.
 
 First, even with the resistance metric fixed, we can consider all elements $h+\rho z/2$, rather than only local vertices. Their norms matter for describing spheres, orthogonality conditions with points, and inner products of the elements themselves. Passing to centers preserves the metric on boundaries but discards each element's parameter $\rho$. Thus freedom to choose the norms of basis vertices does not mean that the norms of all geometric objects lack content.
 
-Second, a positive definite displacement metric can itself be specified independently of a graph. Not every Euclidean simplex is the resistance simplex of a graph with positive conductances: the recovered Laplacian matrix must have nonpositive off-diagonal entries, as stated in the [[Core specification#The distance operator|core specification]]. Positivity of couplings is an additional condition of the graph model, rather than a condition for defining an arbitrary Euclidean simplex.
+Second, a positive definite displacement metric can itself be specified independently of a graph. Not every Euclidean simplex is the resistance simplex of a graph with positive coupling strengths: the recovered Laplacian matrix must have nonpositive off-diagonal entries, as stated in the [[Core specification#The distance operator|core specification]]. Positivity of couplings is an additional condition of the graph model, rather than a condition for defining an arbitrary Euclidean simplex.
 
 The geometric description therefore covers a broader class of metrics and objects. This is not simply a claim about a greater dimension: for a graph on $n$ vertices, the minimal extension with $z$ has dimension $n+1$.
 
-In this note, the displacement metric remains positive definite, although the extended metric has signature $(d+1,1)$ and normalized elements may have norms of any sign. Arbitrary signs of coupling coefficients do not by themselves guarantee positivity or nondegeneracy of the displacement metric. Graphs with couplings of both signs and geometries with an indefinite displacement metric require separate conditions; results for positively weighted graphs do not automatically extend to them.
+In this note, the displacement metric remains positive definite, although the extended metric has signature $(d+1,1)$ and elements may have norms of any sign. Arbitrary signs of coupling strengths do not by themselves guarantee positivity or nondegeneracy of the displacement metric. Graphs with couplings of both signs and geometries with an indefinite displacement metric require separate conditions; results for positively weighted graphs do not automatically extend to them.
 
 
-## Example on a three-vertex path
+## Example: nonlocal vertices and an unchanged boundary norm
 
-Take the local vertices of the unit path $a-b-c$. In the coordinate model of the preceding note,
-
-$$
-a=o,\qquad b=o+u-\frac12z,\qquad c=o+u+v-z
-$$
-
-Here $u^2=v^2=1$ and $u\cdot v=0$, while $o,z$ are orthogonal to $u,v$ and satisfy $o^2=z^2=0$ and $o\cdot z=1$. The pairwise effective resistances are $1,1,2$.
-
-### The center and the circumcircle element
-
-The circumcenter of the right triangle lies midway between $a,c$. Its affine combination, local center, and circle element are
-
-$$
-h_V=\frac{a+c}{2},\qquad h=h_V+\frac14z,\qquad S_G=h_V+\frac12z
-$$
-
-A direct calculation gives
-
-$$
-h_V^2=-\frac12,\qquad h^2=0,\qquad S_G^2=\frac12,\qquad
-S_G\cdot a=S_G\cdot b=S_G\cdot c=0
-$$
-
-Hence $\rho(G)=1/2$ and $D_{\mathrm{res}}(G)=2$. For $h_V$, the condition of orthogonality to a local point does not define a real circle: its norm is negative. Nevertheless, $h_V$ has the same center as $S_G$.
-
-### Nonlocal vertices and an unchanged boundary norm
-
-Replace the vertices by
+Return to the local vertices of the same path $a-b-c$. Replace them by the elements
 
 $$
 A=a+z,\qquad B=b-2z,\qquad C=c+3z
@@ -352,7 +357,7 @@ $$
 The squared area of the triangle of centers is $1/4$. The boundaries themselves differ:
 
 $$
-(ABC)-(abc)=z\wedge\bigl(-3(c-a)-2(b-a)\bigr)
+(ABC)-(abc)=z \bigl(-3(c-a)-2(b-a)\bigr)
 $$
 
 The additional term is nonzero but orthogonal to every grade-$2$ boundary in $\Lambda^2(z^\perp)$.
@@ -361,7 +366,7 @@ The additional term is nonzero but orthogonal to every grade-$2$ boundary in $\L
 
 Decomposition (1), the spherical interpretation (2), the change in inner product (3), and invariance (4)-(5) are proved under the stated assumptions. The corollary on choosing local basis vertices additionally establishes the correspondence between Laplacians, their exponentials, and potentials of forms on boundaries. The numerical example was calculated directly from the bilinear metric of the extension. Additional checks using exact rational arithmetic covered the formula for selecting the center of an affine combination, the metric identities for vectors, and 226 mixed Gram determinants of boundaries in a model with a three-dimensional displacement space. These checks control formulas and signs; the general theorems rest on their proofs. The note contains no working conjectures.
 
-Representation of a sphere by a normalized element is established in conformal geometric algebra. The comparison uses [H. Li, D. Hestenes, A. Rockwood, *Generalized Homogeneous Coordinates for Computational Geometry*](https://davidhestenes.net/geocalc/pdf/CompGeom-ch2.pdf), §2.3, equations (2.38)-(2.42). The source uses $x\cdot e=-1$, so our $z$ corresponds to $-e$. Its linear radius is denoted by $\rho$; here $\rho$ denotes the squared linear radius. The Clifford product is not identified with the product of PMG forms.
+Representation of a sphere by an element is established in conformal geometric algebra. The comparison uses [H. Li, D. Hestenes, A. Rockwood, *Generalized Homogeneous Coordinates for Computational Geometry*](https://davidhestenes.net/geocalc/pdf/CompGeom-ch2.pdf), §2.3, equations (2.38)-(2.42). The source uses $x\cdot e=-1$, so our $z$ corresponds to $-e$. Its linear radius is denoted by $\rho$; here $\rho$ denotes the squared linear radius. The Clifford product is not identified with the product of PMG forms.
 
 This note completes the geometric foundation needed to study a graph's resistance radius and diameter. Their behavior under changes in couplings and their dimensionless combinations with other parameters belong to the series on metric parameters. The reciprocal $1/D_{\mathrm{res}}$ does not by itself acquire the electrical interpretation of conductance between specified terminals: such an interpretation requires a separate justification.
 

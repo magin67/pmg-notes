@@ -15,7 +15,7 @@
 <text x="75" y="263" text-anchor="middle" font-style="italic">a</text><text x="212.5" y="263" text-anchor="middle" font-style="italic">b</text><text x="350" y="263" text-anchor="middle" font-style="italic">c</text>
 <text x="144" y="202" text-anchor="middle">1</text><text x="281" y="202" text-anchor="middle">1</text>
 <text x="212" y="323" text-anchor="middle" fill="#64748b" font-size="18">Numbers above the links:</text>
-<text x="212" y="349" text-anchor="middle" fill="#64748b" font-size="18">coupling coefficients</text>
+<text x="212" y="349" text-anchor="middle" fill="#64748b" font-size="18">coupling strengths</text>
 <path d="M550 375 H845 V80 Z" fill="#eff6fc"/>
 <path d="M550 375 H845 V80" fill="none" stroke="#64748b" stroke-width="3"/>
 <path d="M530 395 L865 60" stroke="#2563a6" stroke-width="3"/>

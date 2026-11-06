@@ -1,8 +1,9 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-11-05
-revision: 24
+updated: 2026-11-06
+revision: 25
+translated_revision: 25
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -29,51 +30,57 @@ Connectedness is required for the resistance metric on the entire space of affin
 
 ## The underlying space, points, and vectors
 
-Let $V$ be a real vector space with a linearly independent basis $a_1,\ldots,a_n$. The basis elements represent graph vertices. The coefficient-sum functional is
+Let $V$ be a real linear space with a linearly independent basis $a_1,\ldots,a_n$. Structures of grade one are called **objects of the space**. The sum of an object's coefficients is its **affine weight**:
 
 $$
 \varepsilon\left(\sum_i x_i a_i\right)=\sum_i x_i
 $$
 
-Its value is called the affine weight.
-
-> [!info] Points and affine vectors
-> **Definition.** An element $x\in V$ is a point if $\varepsilon(x)=1$. The space of affine vectors is
+> [!info] Elements and affine vectors
+> **Definition.** An object $A\in V$ of weight $1$ is an **element**; an object of weight $0$ is an **affine vector**. The affine-vector space is
 >
 > $$
 > W=\ker\varepsilon=\left\{\sum_i u_i a_i:\sum_i u_i=0\right\},\qquad \dim W=n-1
 > $$
 
-Unless otherwise specified, a vector below means an affine vector in $W$. An arbitrary element of $V$ need be neither a point nor an affine vector. The difference of two points belongs to $W$; the sum of a point and an affine vector is a point.
+Below, “vector” means affine vector. An arbitrary object need be neither an element nor a vector: for example, $a_1+a_2$ has weight $2$. The difference of elements is a vector; the sum of an element and a vector is an element. The set $\mathcal A=\{A:\varepsilon(A)=1\}$ is an affine space with direction space $W$.
 
-For an ordered pair of vertices, the notation is
+**Vertex**, or **node**, describes an element's role in a graph and imposes no norm condition. The basis vertices $a_i$ have weight $1$. “Element” has this specialized meaning here; ordinary phrases such as “matrix element” or “element of a set” carry no such restriction.
+
+When a metric on objects is specified, a **point**, or **local element**, is an element of zero norm: $\varepsilon(a)=1$, $a^2=a\cdot a=0$. An element of nonzero norm is **nonlocal**. The norms of vertices themselves are not needed to define a graph or the resistance metric of their differences. In the isotropic model, vertices can be chosen to be points. Zero norm of such a point does not mean zero length of its position vector in Euclidean geometry.
+
+For an ordered vertex pair, retain the notation
 
 $$
 a_{ij}=a_j-a_i=(a_i a_j)=(ij)
 $$
 
-The **two-point vector**, or **vertex-pair vector**, $a_{ij}$ is directed from $a_i$ to $a_j$, and $a_{ji}=-a_{ij}$. Its definition does not require an edge between the vertices.
+The **vertex-pair vector** $a_{ij}$ is directed from $a_i$ to $a_j$, with $a_{ji}=-a_{ij}$. Its definition does not require an edge. If its endpoints are points, it is a **two-point vector**. For arbitrary elements, use “difference of elements”; no separate term “two-element vector” is introduced.
 
-A vector $u=\sum_i u_i a_i\in W$ with three or more nonzero coefficients in the fixed vertex basis is called **multipoint**. This describes its expression in the chosen basis; if arbitrary affine points are allowed, every $u\in W$ is a difference of two points.
+An expression with three or more nonzero coefficients in a chosen basis of local vertices is called **multipoint**. The number of points describes that expression. Before local vertices are chosen, refer to the number of vertices involved. Every affine vector is a difference of two elements, $u=(A+u)-A$; those elements need not both be points.
 
-Formal basis vertices in $V$ are distinct from the centered position vectors of a Euclidean realization. The linear independence of $a_1,\ldots,a_n$ concerns the formal space, not the centered position vectors, whose sum is zero.
+In the symmetric isotropic extension, the distinguished **null vector** $z$ specifies weight: $\varepsilon(U)=U\cdot z$, with $z\ne0$ and $z^2=0$. It differs from the zero vector $0$. An arbitrary nonzero object of zero norm is an **isotropic object**; if its weight is $0$, it is an **isotropic vector**. Zero norm alone does not single out $z$.
 
-Source: [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|points and affine vectors]].
+The center of an element $A$ in this model is the point $\pi(A)=A-A^2z/2$. For $S=h+\rho z/2$, where $h$ is a point, one has $S^2=\rho$. If $\rho>0$, the **sphere element** $S$ specifies the sphere of points $x$ with $x\cdot S=0$, or equivalently $(x-h)^2=\rho$. The element $S$, the sphere as a point set, and its center $h$ are distinct. For $\rho=0$ only one point remains; for $\rho<0$ there are no real sphere points. These statements assume a positive definite displacement metric; the directed extension is treated separately.
+
+Formal basis vertices in $V$ differ from the centered position vectors of a Euclidean realization. Linear independence of $a_1,\ldots,a_n$ concerns the formal space, not the centered position vectors, whose sum is zero.
+
+Sources: [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|objects, elements, and vectors]], [[The Null Vector, Isotropic Representation, and the Boundary|the isotropic extension]], and [[Nonlocal Elements, Spheres, and Their Centers|sphere elements and centers]].
 
 ## Exterior objects and boundaries
 
 ### The exterior product and grade
 
 > [!info] The exterior product and grade
-> **Definition.** The space $\Lambda^kV$ consists of linear combinations of exterior products of $k$ elements of $V$. Its elements are called exterior objects of grade $k$. An object is decomposable if it can be expressed as a single exterior product.
+> **Definition.** The space $\Lambda^kV$ consists of linear combinations of exterior products of $k$ objects of $V$. These are called exterior structures of grade $k$ (also “exterior objects” in earlier headings). A structure is decomposable if it is a single exterior product. At grade one these are objects of the underlying space, with arbitrary affine weight.
 
-Juxtaposition of exterior objects denotes their exterior product: $XY=X\wedge Y$. The inner product is written explicitly as $X\cdot Y$, and the exterior self-product as $X\wedge X$, since $X^2$ denotes the norm. The exterior product is bilinear and associative. For homogeneous objects $X\in\Lambda^kV$ and $Y\in\Lambda^mV$,
+Juxtaposition of exterior structures denotes their exterior product: $XY=X\wedge Y$. The inner product is written explicitly as $X\cdot Y$, and the exterior self-product as $X\wedge X$, since $X^2$ denotes the norm. The exterior product is bilinear and associative. For homogeneous objects $X\in\Lambda^kV$ and $Y\in\Lambda^mV$,
 
 $$
 XY=(-1)^{km}YX
 $$
 
-In particular, $x\wedge x=0$ for $x\in V$. The scalar $1\in\Lambda^0V$ is the identity for the exterior product. A nonzero product of objects of grades $k$ and $m$ has grade $k+m$.
+In particular, $x\wedge x=0$ for $x\in V$. The scalar $1\in\Lambda^0V$ is the identity for the exterior product. A nonzero product of structures of grades $k$ and $m$ has grade $k+m$.
 
 An oriented simplex is written as
 
@@ -81,7 +88,9 @@ $$
 [a_{i_1}\ldots a_{i_k}]=a_{i_1}\cdots a_{i_k}
 $$
 
-Its grade is the number of vertices, one greater than the usual geometric dimension of a nondegenerate simplex. The term “order” may be used as a synonym for grade when the object is explicitly specified. This specification consistently uses “grade”.
+Its grade is the number of vertices, one greater than the usual geometric dimension of a nondegenerate simplex.
+
+A simplex is a decomposable exterior structure. A sum of simplices of one grade need not be a single simplex; a simplex form also differs from the simplex itself. The term “order” may be used as a synonym for grade when the object is explicitly specified. This specification consistently uses “grade”.
 
 ### The boundary operator
 
@@ -123,7 +132,7 @@ Thus boundaries form a subalgebra of the exterior algebra. Nonzero boundaries ha
 
 ### Products of simplex boundaries
 
-For points $p,a_1,\ldots,a_r$,
+For elements $p,a_1,\ldots,a_r$,
 
 $$
 (pa_1\ldots a_r)=(a_1-p)\cdots(a_r-p)
@@ -190,7 +199,7 @@ The notation $[X]^2$ denotes neither $X\wedge X$ nor a numerical norm. For nonze
 > [!info] Polyforms and their product
 > **Proposition.** The product of forms is associative, distributive, and commutative. Grades add in nonzero products of homogeneous forms. On exchanging the factors, the two signs $(-1)^{km}$ from the exterior arguments cancel.
 >
-> The scalar $1$ is the identity for exterior objects, whereas $e$ is the identity for polyforms. For scalars $s,t$, one has $[s,t]=st\,e$.
+> The scalar $1$ is the identity for exterior structures, whereas $e$ is the identity for polyforms. For scalars $s,t$, one has $[s,t]=st\,e$.
 >
 > For quadratic forms,
 >
@@ -335,7 +344,7 @@ These reconstruction formulas use symmetry of the Green matrix. The distance tra
 Let $W$ carry a positive-definite inner product. The graph model uses (3).
 
 > [!info] Induced metric
-> **Definition.** For decomposable objects of the same grade,
+> **Definition.** For decomposable structures of the same grade,
 >
 > $$
 > X=u_1\cdots u_k,\qquad Y=v_1\cdots v_k
@@ -350,7 +359,7 @@ Let $W$ carry a positive-definite inner product. The graph model uses (3).
 > Extend this rule to linear combinations by bilinearity. In grade $0$, it is ordinary scalar multiplication.
 
 > [!info] Metrics of higher-grade objects
-> **Proposition.** This extension is well-defined and positive definite on each $\Lambda^kW$. This revision does not introduce an inner product between objects of different grades.
+> **Proposition.** This extension is well-defined and positive definite on each $\Lambda^kW$. This revision does not introduce an inner product between structures of different grades.
 
 **Norm convention.** In PMG, the norm is the quadratic quantity $X^2=X\cdot X$. In the resistance metric it is the resistance norm. For $X^2\ge0$, its square root is called the **linear norm**, denoted $\|X\|=\sqrt{X^2}$. Thus, for a boundary $X$,
 
@@ -513,7 +522,7 @@ $$
 > \frac{\tau(M[X]^2)}{\tau(M)}=X^2
 > $$
 >
-> The right-hand sides use the resistance metric and its induced extension. The identities also hold for nondecomposable exterior objects.
+> The right-hand sides use the resistance metric and its induced extension. The identities also hold for nondecomposable exterior structures.
 
 In particular,
 
@@ -888,7 +897,7 @@ g(u,v)=\frac{\beta(u,v)+\beta(v,u)}2,\qquad
 \gamma(u,v)=\frac{\beta(u,v)-\beta(v,u)}2
 $$
 
-The form $g$ is positive definite on $W$. The formal circulation $\omega(u,v)=[u,v]-[v,u]$ has PMG grade one. For three points, $w(abc)=\omega(b-a,c-a)$, and its numerical evaluation is $\chi_{abc}=P_M(w(abc))=2\gamma(b-a,c-a)$. Distinguish the form from its potential.
+The form $g$ is positive definite on $W$. The formal circulation $\omega(u,v)=[u,v]-[v,u]$ has PMG grade one. For three vertices, $w(abc)=\omega(b-a,c-a)$, and its numerical evaluation is $\chi_{abc}=P_M(w(abc))=2\gamma(b-a,c-a)$. Distinguish the form from its potential.
 
 > [!info] Directional pairing and resistances
 > **Definition.** One-way resistance is defined algebraically:
@@ -987,7 +996,7 @@ Source: [[Laplacian Exponential#Disconnected graphs|disconnected graphs]].
 
 ### Scope of the metric model
 
-A metric on $W$ and its exterior powers does not automatically define metric evaluations of forms of points or arbitrary simplices outside the boundary subalgebra. Such evaluations require an additional construction on $V$ or an extension of it.
+A metric on $W$ and its exterior powers does not automatically define metric evaluations of forms of elements or arbitrary simplices outside the boundary subalgebra. Such evaluations require an additional construction on $V$ or an extension of it.
 
 Algebraic polynomial identities may remain valid for real coupling strengths of either sign. This does not imply positivity of the metric, an electrical interpretation, positivity of the spanning-tree coefficient, or the connectedness criteria established for nonnegative conductances.
 
@@ -1384,7 +1393,7 @@ Definitions, proofs, attribution, and reproducible checks: [[Cores, Seams, and A
 | $a_{ij}=(ij)$ | The vector $a_j-a_i$ |
 | $[X,Y]$, $[X]^2$ | Formal bilinear and quadratic forms |
 | $\{X,Y\}$ | Polar form without a factor of $1/2$ |
-| $1$, $e=[1,1]$ | Identity for exterior objects and the unit form |
+| $1$, $e=[1,1]$ | Identity for exterior structures and the unit form |
 | $XY$ | Exterior product of objects; the exterior self-product is written as $X\wedge X$ |
 | $X\cdot Y$, $X^2=\lVert X\rVert^2$ | Numerical inner product and quadratic norm; $\|X\|$ is the linear norm |
 | $c_{ij}$, $d_i$ | Conductances and vertex degrees |
@@ -1480,6 +1489,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |
 | 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
 | 23 | 2026-11-05 | Defined the Green matrix directly by the Moore-Penrose pseudoinverse; its action on the zero-sum subspace is stated separately as a property. Aligned with Russian revision 23. |
 | 22 | 2026-11-05 | Clarified the names of two-point and multipoint vectors; the number of points in an expression refers to the fixed vertex basis. Algebraic definitions are unchanged. Aligned with Russian revision 22. |

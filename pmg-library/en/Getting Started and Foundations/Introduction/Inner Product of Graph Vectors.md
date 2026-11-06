@@ -1,8 +1,9 @@
 ---
 title: Inner Product of Graph Vectors
 date: 2026-10-03
-updated: 2026-11-05
-revision: 6
+updated: 2026-11-06
+revision: 7
+translated_revision: 10
 source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
@@ -14,9 +15,9 @@ aliases:
   - "en/Introduction/Inner Product of Graph Vectors"
 ---
 
-In [[Effective Resistance and Graph Geometry]], resistances determined the squared distances between vertices. We now compute inner products of two-point vectors and use them to find angles. In an electrical network, the same inner product can be measured as the potential difference across one vertex pair when a unit current passes through another pair.
+In [[Effective Resistance and Graph Geometry]], resistances determined the squared distances between vertices. We now compute inner products of vertex-pair vectors and use them to find angles. In an electrical network, the same inner product can be measured as the potential difference across one vertex pair when a unit current passes through another pair.
 
-We consider a finite connected undirected graph without loops and with positive coupling strengths on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $\mathrm{Gr}=L^+$. The two-point vector $a_{ij}=a_j-a_i$ has coefficient $-1$ at $a_i$, coefficient $1$ at $a_j$, and zero coefficients at the remaining vertices.
+We consider a finite connected undirected graph without loops and with positive coupling strengths on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $\mathrm{Gr}=L^+$. The vertex-pair vector $a_{ij}=a_j-a_i$ has coefficient $-1$ at $a_i$, coefficient $1$ at $a_j$, and zero coefficients at the remaining vertices.
 
 To record these coefficients, let $\mathbf e_i$ denote a list of $n$ numbers with a one in position $i$ and zeros elsewhere. The coefficient list of $a_{ij}$ is then $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$. For three vertices, for example, $\mathbf e_{13}=(-1,0,1)$. In matrix products we write these lists as columns; $\mathsf T$ transposes a column into a row.
 
@@ -36,7 +37,7 @@ $$
 > \tag{1}
 > $$
 >
-> This number is the inner product of two two-point vectors in the graph metric.
+> This number is the inner product of two vertex-pair vectors in the graph metric.
 
 Some indices may coincide. In particular, when the two pairs coincide, (1) gives
 
@@ -243,5 +244,3 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 The next note, [[Laplacian, Green Matrix, and Effective Resistance Matrix]], collects the forward and inverse transformations between $L$, $\mathrm{Gr}$, and $R$. In [[From Lengths to Areas and Volumes]], inner products are used to compute Gram determinants, which express squared areas and volumes.
 
 Sources on resistance geometry and electrical networks are listed in [[Further Reading for the PMG Introductory Series#Graphs, electric networks, and resistance geometry|the first section of the reading recommendations]].
-
-

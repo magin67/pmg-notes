@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1040" height="470" viewBox="0 0 1040 470" role="img" aria-labelledby="title desc">
 <title id="title">A path on three vertices and its resistance geometry</title>
-<desc id="desc">Left: the path a-b-c with unit coupling coefficients and selected vertices a and c. Right: its Euclidean realization, a right triangle a b c with unit legs and hypotenuse of length square root of two. Blue marks the affine line through a and c.</desc>
+<desc id="desc">Left: the path a-b-c with unit coupling strengths and selected vertices a and c. Right: its Euclidean realization, a right triangle a b c with unit legs and hypotenuse of length square root of two. Blue marks the affine line through a and c.</desc>
 <rect width="1040" height="470" fill="white"/>
 <g font-family="Arial, DejaVu Sans, sans-serif" fill="#202c3b">
-<text x="250" y="42" text-anchor="middle" font-size="23">Graph: coupling coefficients</text>
+<text x="250" y="42" text-anchor="middle" font-size="23">Graph: coupling strengths</text>
 <text x="777" y="42" text-anchor="middle" font-size="23">Resistance geometry</text>
 <path d="M516 66V413" stroke="#dce1e7"/>
 <g stroke="#657588" stroke-width="3" fill="none">

@@ -1,8 +1,9 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-11-05
-revision: 9
+updated: 2026-11-06
+revision: 10
+translated_revision: 11
 source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
@@ -43,7 +44,7 @@ This group constructs a metric representation of a connected graph. Linear algeb
 
 2. **[[Effective Resistance and Graph Geometry]].** The Green matrix is defined as the pseudoinverse of the Laplacian, and the distance operator gives resistances from it. In the resistance simplex, these are squared Euclidean distances. A separate proof shows that resistance itself also defines a metric on the vertices.
 
-3. **[[Inner Product of Graph Vectors]].** The inner product of two-point vectors is computed from four resistances and used to determine angles. In an electrical network, it is measured as a transfer voltage. The note discusses orientation, reciprocity of measurements, and the four-point identity. Its structural form is discussed in [[Basic Objects and Operations of Polyform Algebra#The four-point identity|polyform algebra]].
+3. **[[Inner Product of Graph Vectors]].** The inner product of vertex-pair vectors is computed from four resistances and used to determine angles. In an electrical network, it is measured as a transfer voltage. The note discusses orientation, reciprocity of measurements, and the four-point identity. Its structural form is discussed in [[Basic Objects and Operations of Polyform Algebra#The four-point identity|polyform algebra]].
 
 4. **[[Laplacian, Green Matrix, and Effective Resistance Matrix|Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations]].** Forward and inverse transformations between the three matrices, double centering, and reconstruction of coupling strengths from resistances. This uses the definition of the Green matrix from [[Effective Resistance and Graph Geometry#The Green matrix|the note on effective resistance]].
 
@@ -65,7 +66,7 @@ Reading: [[Further Reading for the PMG Introductory Series#Coupling variations|t
 
 This group introduces formal objects that can be manipulated before a metric is chosen. For a first reading, the preceding material on inner products and determinants is sufficient; prior familiarity with exterior algebra makes the proofs easier to follow.
 
-8. **[[Basic Objects and Operations of Polyform Algebra]].** Points, affine vectors, exterior products, simplices, and their boundaries. Forms are defined through bilinearity, and their product through the exterior product of their arguments. The note proves the structural four-point identity, the rules for products of edge vectors, and nilpotence results for forms on boundaries.
+8. **[[Basic Objects and Operations of Polyform Algebra]].** Objects, elements and points, affine vectors, exterior products, simplices, and their boundaries. Forms are defined through bilinearity, and their product through the exterior product of their arguments. The note proves the structural four-point identity, the rules for products of edge vectors, and nilpotence results for forms on boundaries.
 
 9. **[[Metric of Higher-Grade Objects]].** The inner product of affine vectors extends to boundaries at each grade through mixed Gram determinants. The numerical norm is distinguished from the quadratic form of an object; simplex areas and volumes are computed from the norms of their boundaries.
 

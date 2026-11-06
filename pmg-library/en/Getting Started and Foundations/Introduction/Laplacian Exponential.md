@@ -1,8 +1,9 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-11-05
-revision: 8
+updated: 2026-11-06
+revision: 9
+translated_revision: 9
 source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
@@ -291,7 +292,7 @@ The number $2$ is the potential of the form; dividing by $3$ gives the resistanc
 > The right-hand sides use the induced metric from [[Metric of Higher-Grade Objects]]; $X^2=X\cdot X$ is a number, while $[X]^2$ is a formal object.
 
 
-This result does not define the evaluation of forms of points or arbitrary simplices outside the boundary subalgebra.
+This result does not define the evaluation of forms of elements or arbitrary simplices outside the boundary subalgebra.
 
 The general justification uses the determinant lemma below. Its proof can be skipped on a first reading: the triangle already illustrates the normalization, and formula (7) gives the calculation rule.
 
@@ -314,7 +315,7 @@ The general justification uses the determinant lemma below. Its proof can be ski
 > \tag{8}
 > $$
 >
-> The formula includes $k=0$ with $X=Y=1$ and the empty determinant equal to one. It extends to general objects of the same grade by bilinearity.
+> The formula includes $k=0$ with $X=Y=1$ and the empty determinant equal to one. It extends to general structures of the same grade by bilinearity.
 
 > [!note]- Proof of the lemma
 > **Proof.** For any matrix $C$, set $L_C=\sum C_{pq}[b_p,b_q]$. At the top grade, expanding the product gives
@@ -341,7 +342,7 @@ The general justification uses the determinant lemma below. Its proof can be ski
 > =\det A\det(I_k+DV^{\mathsf T}A^{-1}U)
 > $$
 >
-> The coefficient of $t_1\cdots t_k$ on the right is $\det A\det(V^{\mathsf T}A^{-1}U)$. Since $A$ is symmetric, the last determinant equals $\det(U^{\mathsf T}A^{-1}V)$. Comparing coefficients proves (8). Decomposable exterior objects span each grade, so bilinear extension covers all $X,Y$. $\square$
+> The coefficient of $t_1\cdots t_k$ on the right is $\det A\det(V^{\mathsf T}A^{-1}U)$. Since $A$ is symmetric, the last determinant equals $\det(U^{\mathsf T}A^{-1}V)$. Comparing coefficients proves (8). Decomposable exterior structures span each grade, so bilinear extension covers all $X,Y$. $\square$
 
 > [!note]- Applying the lemma to the resistance metric
 > **Proof.** Choose $d=n-1$ and the basis $b_i=a_i-a_n$ of $W$. In this basis, the coefficient matrix of the polyform $L$ is the reduced Laplacian $A=\mathbf L_0$, obtained by deleting the row and column of vertex $n$.
@@ -354,7 +355,7 @@ The general justification uses the determinant lemma below. Its proof can be ski
 >
 > Hence $T=T_n$ and $\tau_b=\tau$: the orientation sign disappears in the quadratic form. The matrix $A$ is positive definite, and the [[From Lengths to Areas and Volumes|Gram matrix relative to the reference vertex]] shows that the matrix of inner products of the $b_i$ is $A^{-1}$.
 >
-> For decomposable $X,Y$, the right-hand side of (8) is the mixed Gram determinant. For linear combinations, both sides of (7) extend bilinearly. Thus the theorem applies to nondecomposable exterior objects as well as to products of edge vectors. $\square$
+> For decomposable $X,Y$, the right-hand side of (8) is the mixed Gram determinant. For linear combinations, both sides of (7) extend bilinearly. Thus the theorem applies to nondecomposable exterior structures as well as to products of edge vectors. $\square$
 
 ## Adding and deleting an edge
 
@@ -492,4 +493,3 @@ Similarly, lemma (8) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant 
 The forest expansion describes the coefficients of the exponential, while theorem (7) relates extraction of its top-grade coefficient to the induced metric. At grade one, it recovers effective resistances and inner products; at higher grades, it gives mixed Gram determinants and squared volumes.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], source [3] covers the matrix-tree theorem, [5] the matrix determinant lemma, and [7] and [8] exterior algebra and the Cauchy-Binet formula. The metric identity in the adopted algebra of forms is proved by lemma (8) and its application to the reduced Laplacian.
-

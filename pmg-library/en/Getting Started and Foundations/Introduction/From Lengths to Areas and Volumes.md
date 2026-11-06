@@ -1,8 +1,9 @@
 ---
 title: From Lengths to Areas and Volumes
 date: 2026-10-04
-updated: 2026-11-05
-revision: 5
+updated: 2026-11-06
+revision: 6
+translated_revision: 6
 source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
@@ -16,7 +17,7 @@ aliases:
 
 Inner products determine lengths and angles as well as areas, volumes, and their higher-dimensional analogues. The squares of these quantities are expressed by Gram determinants. In the resistance representation of a graph, Gram matrix entries are computed from effective resistances, and Gram determinants are related to spanning trees.
 
-We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for two-point vectors and $\mathrm{Gr}=L^+$ for the Green matrix. By the [[Inner Product of Graph Vectors|resistance inner-product formulas]],
+We consider a finite connected undirected graph without loops on $n\ge2$ vertices, with positive edge conductances. We retain the notation $a_{ij}=a_j-a_i$ for vertex-pair vectors and $\mathrm{Gr}=L^+$ for the Green matrix. By the [[Inner Product of Graph Vectors|resistance inner-product formulas]],
 
 $$
 \|a_{ij}\|^2=R_{ij},\qquad
@@ -113,11 +114,13 @@ $$
 > Its dimension is the rank of the system of vectors. If they are linearly dependent, it is degenerate as a $k$-dimensional figure and its $k$-dimensional volume is zero.
 
 > [!info] A simplex
-> **Definition.** The simplex with vertices $p_0,\ldots,p_k$ consists of the points
+> **Definition.** The geometric simplex with vertices $p_0,\ldots,p_k$ is specified by the affine combinations
 >
 > $$
 > \left\{\sum_{i=0}^k t_i p_i:t_i\ge0,\ \sum_{i=0}^k t_i=1\right\}
 > $$
+>
+> Here $p_i$ and their combinations belong to the affine space of elements, with a metric on differences. In the isotropic model, the locations of these elements are described by their local centers.
 >
 > For $k=1$ it is a segment, for $k=2$ a filled triangle, and for $k=3$ a solid tetrahedron. It is nondegenerate when $p_1-p_0,\ldots,p_k-p_0$ are linearly independent; its dimension is then $k$.
 
@@ -232,7 +235,7 @@ $$
 
 ## The volume of the full resistance simplex
 
-Consider the two-point vectors $a_{0i}$ for $i=1,\ldots,n-1$, and denote their Gram matrix by $G_R$. Its entries are
+Consider the vertex-pair vectors $a_{0i}$ for $i=1,\ldots,n-1$, and denote their Gram matrix by $G_R$. Its entries are
 
 $$
 (G_R)_{ij}=a_{0i}\cdot a_{0j}=\frac12(R_{0i}+R_{0j}-R_{ij})
@@ -304,7 +307,7 @@ $$
 $$
 
 > [!info] The transfer-current theorem
-> For pairwise distinct unoriented edges $e_1,\ldots,e_k$, choose orientations. Denote their coupling strengths by $c_1,\ldots,c_k$ and their two-point vectors by $t_1,\ldots,t_k$. Then
+> For pairwise distinct unoriented edges $e_1,\ldots,e_k$, choose orientations. Denote their coupling strengths by $c_1,\ldots,c_k$ and their vertex-pair vectors by $t_1,\ldots,t_k$. Then
 >
 > $$
 > \Pr(e_1,\ldots,e_k\in T)
@@ -332,4 +335,3 @@ Higher-order determinants describe volumes and joint edge-inclusion probabilitie
 [[Variation of a Single Edge]] examines how resistances and the spanning-tree coefficient change when one conductance varies. The connection between Gram determinants and exterior products will be introduced after the algebra is defined, in [[Basic Objects and Operations of Polyform Algebra]] and [[Metric of Higher-Grade Objects]].
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover Gram determinants and multilinear algebra, [3] covers the matrix-tree theorem, and [9] covers random spanning trees and the transfer-current theorem.
-

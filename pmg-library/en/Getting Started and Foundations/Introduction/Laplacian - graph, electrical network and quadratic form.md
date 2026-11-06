@@ -1,8 +1,9 @@
 ---
 title: "Laplacian: graph, electrical network and quadratic form"
 date: 2026-10-03
-updated: 2026-11-05
-revision: 6
+updated: 2026-11-06
+revision: 7
+translated_revision: 11
 source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
@@ -241,26 +242,26 @@ The right-hand side is the power supplied by external sources. Its equality to t
 
 For the geometric description of a graph, its vertices are represented by formal basis elements $a_1,\ldots,a_n$. Linear combinations of these elements can be formed. The elements $a_i$ and the numbers $x_i$ assigned to the vertices play different roles.
 
-> [!info] Two-point and multipoint vectors
+> [!info] Vertex-pair vectors and affine vectors
 > **Definition.** The difference between the elements representing two vertices,
 >
 > $$
 > a_{ij}=a_j-a_i
 > $$
 >
-> is called a **two-point vector**, or **vertex-pair vector**. It is directed from $a_i$ to $a_j$ and is defined whether or not an edge joins them.
+> is called a **vertex-pair vector**. It is directed from $a_i$ to $a_j$ and is defined whether or not an edge joins them.
 >
-> A more general vector has the form $u=\sum_i u_i a_i$, where the $u_i$ are numerical coefficients and $\sum_i u_i=0$. If three or more basis points have nonzero coefficients in this expression, we call the vector **multipoint**.
+> A more general vector has the form $u=\sum_i u_i a_i$, where the $u_i$ are numerical coefficients and $\sum_i u_i=0$. If three or more basis vertices have nonzero coefficients in this expression, the expression involves several vertices; with local vertices it is called **multipoint**.
 
-For example, $a_1+a_2-2a_3$ is one vector expressed using three basis points: its coefficients sum to $1+1-2=0$. It decomposes into two two-point vectors:
+For example, $a_1+a_2-2a_3$ is one vector expressed using three basis vertices: its coefficients sum to $1+1-2=0$. It decomposes into two vertex-pair vectors:
 
 $$
 a_1+a_2-2a_3=(a_1-a_3)+(a_2-a_3)
 $$
 
-By contrast, $x_j-x_i$ is a difference of **numbers** assigned to the vertices. In the temperature example, $x_2-x_1=21-20=1$, while $a_{12}=a_2-a_1$ remains a vertex-pair vector. Changing the temperatures changes the numerical difference but does not change $a_{12}$. The number of points in a multipoint expression refers to the chosen basis elements; the general case is discussed in the [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|definition of affine vectors]].
+By contrast, $x_j-x_i$ is a difference of **numbers** assigned to the vertices. In the temperature example, $x_2-x_1=21-20=1$, while $a_{12}=a_2-a_1$ remains a vertex-pair vector. Changing the temperatures changes the numerical difference but does not change $a_{12}$. The number of vertices involved refers to the chosen basis; the general case is discussed in the [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|definition of affine vectors]].
 
-The Laplacian polyform is a linear combination of quadratic forms of two-point vectors. Its [[Basic Objects and Operations of Polyform Algebra#The polyform representation of the Laplacian|definition and relation to the scalar-valued quadratic form]] are discussed in polyform algebra. In this note, $\mathcal Q$ denotes the function of numerical vertex values.
+The Laplacian polyform is a linear combination of quadratic forms of vertex-pair vectors. Its [[Basic Objects and Operations of Polyform Algebra#The polyform representation of the Laplacian|definition and relation to the scalar-valued quadratic form]] are discussed in polyform algebra. In this note, $\mathcal Q$ denotes the function of numerical vertex values.
 
 ## Choosing a reference potential
 

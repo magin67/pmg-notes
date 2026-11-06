@@ -1,8 +1,9 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-11-05
-revision: 7
+updated: 2026-11-06
+revision: 8
+translated_revision: 10
 source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
@@ -16,7 +17,7 @@ aliases:
 
 Vector inner products compare directions. How can we compare two oriented triangles, for example triangles sharing a side? Their boundaries are products of two vectors. We define an inner product of these objects through the inner products of their constituent vectors, then extend the rule to every grade.
 
-In [[Basic Objects and Operations of Polyform Algebra]], boundaries of grade $k$ form $\Lambda^kW$, where $W$ is the space of affine vectors. We compare objects within one grade; no inner product between different grades is introduced here.
+In [[Basic Objects and Operations of Polyform Algebra]], boundaries of grade $k$ form $\Lambda^kW$, where $W$ is the space of affine vectors. We compare structures within one grade; no inner product between different grades is introduced here.
 
 The original metric on $W$ is assumed to be positive definite. For a graph, this is the resistance metric of a finite connected undirected graph with positive conductances on its existing edges. This note does not define a metric on the entire space of formal vertices $V$.
 
@@ -43,7 +44,7 @@ $$
 
 When the two vector pairs coincide, the right-hand side is the Gram determinant, already familiar as the squared area of a parallelogram. Exchanging $u_1,u_2$ reverses the sign, just as it reverses the exterior product. The general formula preserves these properties.
 
-An exterior object is called decomposable if it can be represented as a single product of vectors. Let
+An exterior structure is called decomposable if it can be represented as a single product of vectors. Let
 
 $$
 X=u_1 \cdots u_k,\qquad
@@ -51,7 +52,7 @@ Y=v_1 \cdots v_k,\qquad u_i,v_i\in W
 $$
 
 > [!info] The induced inner product
-> **Definition.** For decomposable objects of grade $k$, set
+> **Definition.** For decomposable structures of grade $k$, set
 >
 > $$
 > X\cdot Y=\det(u_i\cdot v_j)_{i,j=1}^k
@@ -102,7 +103,7 @@ X^2=\det(u_i\cdot u_j)_{i,j=1}^k=V_{\parallel}^2
 \tag{2}
 $$
 
-Here $V_{\parallel}$ is the $k$-dimensional volume of the parallelotope spanned by the vectors $u_i$. It is zero when those vectors are linearly dependent. Positive definiteness gives $X^2=0$ if and only if $X=0$, including for nondecomposable exterior objects.
+Here $V_{\parallel}$ is the $k$-dimensional volume of the parallelotope spanned by the vectors $u_i$. It is zero when those vectors are linearly dependent. Positive definiteness gives $X^2=0$ if and only if $X=0$, including for nondecomposable exterior structures.
 
 For a general object, the norm is computed using the bilinear extension. For example, if $X,Y$ have the same grade, then
 
@@ -242,4 +243,3 @@ The evaluation of the right-hand side is $(abc)^2$, determined by (2), rather th
 The note [[Laplacian Exponential]] collects products of coupling forms by grade into a single polyform. It will prove that evaluating a form using the induced metric agrees with normalized extraction of the highest-grade coefficient from its product with the Laplacian exponential.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover exterior powers, bilinear forms, and Gram determinants; the geometry of the resistance simplex is discussed in [4].
-

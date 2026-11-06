@@ -1,14 +1,15 @@
 ---
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
-updated: 2026-11-05
-revision: 10
+updated: 2026-11-06
+revision: 11
+translated_revision: 14
 source_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
 lang: en
-description: Points, affine vectors, exterior products, boundaries, and forms. The four-point identity, polyform multiplication, grades, and the polyform representation of the Laplacian.
+description: Objects, elements, points, affine vectors, exterior products, boundaries, and forms. The four-point identity, polyform multiplication, grades, and the polyform representation of the Laplacian.
 order: "8"
 aliases:
   - "en/Introduction/Basic Objects and Operations of Polyform Algebra"
@@ -26,10 +27,10 @@ $$
 \varepsilon\left(\sum_i x_i a_i\right)=\sum_i x_i
 $$
 
-The affine weight distinguishes points from affine vectors.
+An object of the space is an arbitrary structure of grade one. Affine weight distinguishes elements from affine vectors. Below, “element” has the specialized meaning of weight $1$; ordinary phrases such as “matrix element” carry no such restriction.
 
-> [!info] Points and vectors
-> **Definition.** A combination $x=\sum_i x_i a_i$ is a point if $\sum_i x_i=1$, and an affine vector if $\sum_i x_i=0$.
+> [!info] Elements and vectors
+> **Definition.** A combination $x=\sum_i x_i a_i$ is an element if $\sum_i x_i=1$, and an affine vector if $\sum_i x_i=0$.
 >
 > Denote the space of affine vectors by
 >
@@ -37,10 +38,12 @@ The affine weight distinguishes points from affine vectors.
 > W=\ker\varepsilon=\left\{\sum_i u_i a_i:\sum_i u_i=0\right\},\qquad \dim W=n-1
 > $$
 
-For example, $(a+b)/2$ is a point, while $a+b-2c$ is an affine vector. The element $a+b$ has weight $2$ and is neither a point nor an affine vector. The difference of two points belongs to $W$.
+For example, $(a+b)/2$ is an element, while $a+b-2c$ is an affine vector. The object $a+b$ has weight $2$ and is neither an element nor a vector. The difference of two elements belongs to $W$. A graph vertex, or node, is an element; the graph term imposes no norm condition.
+
+A **point**, or **local element**, is an element of zero norm once a metric on objects is specified. The algebra here is constructed without that metric, so locality is not assumed. In the [[The Null Vector, Isotropic Representation, and the Boundary|isotropic model]], vertices can be chosen to be points; an arbitrary affine combination of these points remains an element but need not have zero norm.
 
 > [!info] Two-point and multipoint vectors
-> **Definition.** For an ordered pair of basis vertices, the **two-point vector**, or **vertex-pair vector**, is defined by
+> **Definition.** For an ordered pair of basis vertices, the **vertex-pair vector** is defined by
 >
 > $$
 > a_{ij}=a_j-a_i
@@ -48,7 +51,7 @@ For example, $(a+b)/2$ is a point, while $a+b-2c$ is an affine vector. The eleme
 >
 > Its direction is specified by the vertex order: $a_{ji}=-a_{ij}$. An edge need not be present for the vector to be defined.
 >
-> An affine vector $u=\sum_i u_i a_i$ with $\sum_i u_i=0$ is called **multipoint** if three or more vertices have nonzero coefficients in its expansion in the chosen basis vertices.
+> If the endpoints are points, their difference is a **two-point vector**. In a local basis, an affine-vector expression with three or more nonzero coefficients is **multipoint**. Without locality, refer to the number of vertices involved.
 
 For example,
 
@@ -56,9 +59,9 @@ $$
 u=a_1+a_2-2a_3=(a_1-a_3)+(a_2-a_3)=a_{31}+a_{32}
 $$
 
-This is one vector expressed using three points and decomposed into two two-point vectors. The number of points refers to the chosen basis. If arbitrary affine points are allowed, every vector can be written as a difference of two points: for a point $p$, the element $q=p+u$ is also a point, and $u=q-p$.
+This is one vector expressed using three vertices as a sum of two vertex-pair vectors. The vertex count refers to the chosen basis. For any element $p$, the object $q=p+u$ also has weight $1$, so $u=q-p$ is a difference of two elements. Their locality does not follow.
 
-The elements $a_i$ must be distinguished from numerical values $x_i$ assigned to them. The difference $a_j-a_i$ is a vector, whereas $x_j-x_i$ is a number. The assignment extends linearly: the element $\sum_i u_i a_i$ is assigned the number $\sum_i u_i x_i$. For example, the vector $u$ above is assigned $x_1+x_2-2x_3$. This numerical value depends on the assigned $x_i$, whereas $u$ itself is specified by its coefficients at the $a_i$.
+The elements $a_i$ must be distinguished from numerical values $x_i$ assigned to them. The difference $a_j-a_i$ is a vector, whereas $x_j-x_i$ is a number. The assignment extends linearly: the object $\sum_i u_i a_i$ is assigned the number $\sum_i u_i x_i$. For example, the vector $u$ above is assigned $x_1+x_2-2x_3$. This numerical value depends on the assigned $x_i$, whereas $u$ itself is specified by its coefficients at the $a_i$.
 
 The connection with the [[Effective Resistance and Graph Geometry#Euclidean geometry of the graph|centered vertex vectors]] can be written explicitly. In the formal space, introduce the centroid and differences
 
@@ -79,19 +82,19 @@ x\wedge y=-y\wedge x,\qquad x\wedge x=0
 $$
 
 > [!info] Exterior objects
-> **Definition.** Linear combinations of products $x_1\wedge\cdots\wedge x_k$ form the space $\Lambda^kV$. Its elements are called exterior objects of grade $k$.
+> **Definition.** Linear combinations of products $x_1\wedge\cdots\wedge x_k$ form the space $\Lambda^kV$. Its elements are called exterior structures of grade $k$.
 >
-> The scalar $1$ has grade $0$ and is the identity for the exterior product. The product of objects of grades $k$ and $m$ has grade $k+m$ if it is nonzero.
+> The scalar $1$ has grade $0$ and is the identity for the exterior product. The product of structures of grades $k$ and $m$ has grade $k+m$ if it is nonzero.
 
 From this point on, exterior products are written without $\wedge$: $xy$ means $x\wedge y$. A self-product $X\wedge X$ retains the explicit symbol to distinguish it from the numerical norm $X^2$.
 
-An object of one fixed grade is called **homogeneous**. For homogeneous $X,Y$ of grades $k,m$,
+An exterior structure of one fixed grade is called **homogeneous**. For homogeneous $X,Y$ of grades $k,m$,
 
 $$
 X Y=(-1)^{km}Y X
 $$
 
-The exterior product of $k$ elements of grade one vanishes if and only if those elements are linearly dependent.
+The exterior product of $k$ objects of grade one vanishes if and only if those elements are linearly dependent.
 
 For example, bilinearity gives $(u+v)v=uv+vv=uv$: adding the second vector to the first leaves the exterior product unchanged. Geometrically, this shear preserves the oriented area of the parallelogram.
 
@@ -101,10 +104,10 @@ $$
 [a_1\ldots a_k]=a_1 \cdots a_k
 $$
 
-Its grade equals the number of vertices. Thus $[abc]$ has grade $3$, although a geometric triangle is two-dimensional. Interchanging two vertices changes the sign; repeating a vertex gives zero. A general exterior object may be a linear combination of simplices and need not be a single exterior product.
+Its grade equals the number of vertices. Thus $[abc]$ has grade $3$, although a geometric triangle is two-dimensional. Interchanging two vertices changes the sign; repeating a vertex gives zero. A general exterior structure may be a linear combination of simplices and need not be a single exterior product.
 
 > [!info] The exterior product and grade
-> **Definition.** An exterior element is decomposable (also called simple) if it can be expressed as a single exterior product of elements of grade one.
+> **Definition.** An exterior element is decomposable (also called simple) if it can be expressed as a single exterior product of objects of grade one.
 
 ## The boundary operator
 
@@ -117,7 +120,7 @@ $$
 
 ![Oriented boundary of a triangle](Oriented%20boundary%20of%20a%20triangle.svg)
 
-The arrows specify the orientations of the **sides** $[ab]$, $[bc]$, $[ca]$, which are objects of grade two. Their sum is the triangle boundary. Applying the boundary once more gives the sum of endpoint differences, $(b-a)+(c-b)+(a-c)=0$. This illustrates the rule that the boundary of a boundary is zero.
+The arrows specify the orientations of the **sides** $[ab]$, $[bc]$, $[ca]$, which are structures of grade two. Their sum is the triangle boundary. Applying the boundary once more gives the sum of endpoint differences, $(b-a)+(c-b)+(a-c)=0$. This illustrates the rule that the boundary of a boundary is zero.
 
 > [!info] The boundary
 > **Definition.** The linear boundary operator is specified by
@@ -141,7 +144,7 @@ $$
 \partial\left(\sum_i x_i a_i\right)=\sum_i x_i
 $$
 
-Thus the boundary of an affine vector is zero, and the boundary of a point is one.
+Thus the boundary of an affine vector is zero, and the boundary of an element is one.
 
 We denote simplex boundaries by parentheses:
 
@@ -150,11 +153,11 @@ $$
 (abc)=\partial[abc]=[bc]-[ac]+[ab]
 $$
 
-In particular, $(a_i a_j)=a_{ij}$. The abbreviated index notation $(ij)$ also means $a_{ij}$. The simplex $[abc]$ and its boundary $(abc)$ are distinct objects of grades $3$ and $2$.
+In particular, $(a_i a_j)=a_{ij}$. The abbreviated index notation $(ij)$ also means $a_{ij}$. The simplex $[abc]$ and its boundary $(abc)$ are distinct structures of grades $3$ and $2$.
 
 | Object | Simplex and its grade | Boundary | Boundary grade |
 |---|---|---|---:|
-| Point | $a$, grade $1$ | $1$ | 0 |
+| Element | $a$, grade $1$ | $1$ | 0 |
 | Oriented segment | $[ab]$, grade $2$ | $(ab)=b-a$ | 1 |
 | Oriented triangle | $[abc]$, grade $3$ | $(abc)=[bc]-[ac]+[ab]$ | 2 |
 | Oriented tetrahedron | $[abcd]$, grade $4$ | $(abcd)=[bcd]-[acd]+[abd]-[abc]$ | 3 |
@@ -178,7 +181,7 @@ For the first equality, each deletion of two vertices in (1) occurs twice with o
 > **Lemma.** At each grade $k$, the space of boundaries equals $\Lambda^kW$. Equivalently, for $B\in\Lambda^kV$, the following conditions are equivalent: $B$ is a boundary, $\partial B=0$, and $B\in\Lambda^kW$.
 
 > [!note]- Proof
-> **Proof.** Fix the base point $a_1$. It complements $W$ in $V$, so every object $B$ of grade $k\ge1$ has a unique representation
+> **Proof.** Fix the basis vertex $a_1$. It complements $W$ in $V$, so every structure $B$ of grade $k\ge1$ has a unique representation
 >
 > $$
 > B=D+a_1 C,\qquad
@@ -235,7 +238,7 @@ A forest is a graph without cycles; each of its components is a tree or an isola
 
 ## Forms: bilinearity and basic operations
 
-Reversing orientation changes the sign of an exterior object. For an unoriented edge, this sign should not affect the result. We therefore introduce a quadratic form $[X]^2$ with $[-X]^2=[X]^2$. To expand $[X+Y]^2$ and multiply forms, we will also need mixed symbols $[X,Y]$. We define their bilinearity first, then obtain the quadratic form by taking equal arguments.
+Reversing orientation changes the sign of an exterior structure. For an unoriented edge, this sign should not affect the result. We therefore introduce a quadratic form $[X]^2$ with $[-X]^2=[X]^2$. To expand $[X+Y]^2$ and multiply forms, we will also need mixed symbols $[X,Y]$. We define their bilinearity first, then obtain the quadratic form by taking equal arguments.
 
 > [!info] Forms of a fixed grade
 > **Definition.** For $X,Y\in\Lambda^kV$, introduce formal symbols $[X,Y]$. They generate the vector space of forms of grade $k$, subject only to the bilinearity relations
@@ -271,7 +274,7 @@ $$
 [X+Y]^2=[X]^2+\{X,Y\}+[Y]^2
 $$
 
-For example, $[a]^2$ is a form of a point, $[(ab)]^2$ is a form of an affine vector, and $[(abc)]^2$ is a form of a boundary of grade two. Reversing the orientation of the argument leaves the quadratic form unchanged: $[-X]^2=[X]^2$.
+For example, $[a]^2$ is a form of an element, $[(ab)]^2$ is a form of an affine vector, and $[(abc)]^2$ is a form of a boundary of grade two. Reversing the orientation of the argument leaves the quadratic form unchanged: $[-X]^2=[X]^2$.
 
 The notation $[X]^2$ denotes a form. It means neither the exterior product $X\wedge X$ nor a numerical norm. Numerical metric quantities will be defined separately.
 
@@ -360,15 +363,17 @@ $$
 
 ## The four-point identity
 
+The familiar name is retained. The algebraic identity holds for any four elements and requires no zero-norm condition.
+
 > [!info] The polar-form identity
-> **Lemma.** For any four points $a_i,a_j,a_k,a_l$ and their affine differences $a_{ij}=a_j-a_i$, the following identity of forms holds:
+> **Lemma.** For any four elements $a_i,a_j,a_k,a_l$ and their affine differences $a_{ij}=a_j-a_i$, the following identity of forms holds:
 >
 > $$
 > \{a_{ij},a_{kl}\}+\{a_{jk},a_{il}\}+\{a_{ik},a_{lj}\}=0
 > \tag{7}
 > $$
 >
-> Coincident points are allowed. No choice of metric is required.
+> Coincident elements are allowed. No choice of metric is required.
 
 > [!note]- Proof
 > **Proof.** Set $u=a_{ij}$, $v=a_{jk}$, $w=a_{kl}$. Then
@@ -395,7 +400,7 @@ $$
 >
 > Substitution cancels all terms. $\square$
 
-Identity (7) is structural: it expresses a linear dependence among polar forms of differences of four points. Its scalar version was considered in [[Inner Product of Graph Vectors#The four-point identity|the note on inner products]]. The passage to that version by metric evaluation is described below.
+Identity (7) is structural: it expresses a linear dependence among polar forms of differences of four elements. Its scalar version was considered in [[Inner Product of Graph Vectors#The four-point identity|the note on inner products]]. The passage to that version by metric evaluation is described below.
 
 ## Metric evaluation
 
@@ -413,7 +418,7 @@ $$
 a_{ij}\cdot a_{kl}+a_{jk}\cdot a_{il}+a_{ik}\cdot a_{lj}=0
 $$
 
-For higher grades, we still need to define an inner product of exterior objects themselves. This is done in [[Metric of Higher-Grade Objects]]. The main rule is already familiar from the [[From Lengths to Areas and Volumes|Gram formula]]: the quadratic form of a vector product receives the value
+For higher grades, we still need to define an inner product of exterior structures themselves. This is done in [[Metric of Higher-Grade Objects]]. The main rule is already familiar from the [[From Lengths to Areas and Volumes|Gram formula]]: the quadratic form of a vector product receives the value
 
 $$
 [u_1\cdots u_k]^2\longmapsto\det(u_i\cdot u_j)_{i,j=1}^k
@@ -421,7 +426,7 @@ $$
 
 Thus evaluating a product of forms generally differs from multiplying their separate values. For $[u]^2[v]^2=[uv]^2$, the result is $\|u\|^2\|v\|^2-(u\cdot v)^2$, whereas the product of the separate values is $\|u\|^2\|v\|^2$. The missing term accounts for the angle between the vectors.
 
-A metric on $W$ does not automatically assign a norm to a formal point or an arbitrary simplex in $V$. The higher-grade note defines the metric specifically on boundaries; a form $[X,Y]$ on boundaries then receives the value $X\cdot Y$.
+A metric on $W$ does not automatically assign a norm to a formal element or an arbitrary simplex in $V$. The higher-grade note defines the metric specifically on boundaries; a form $[X,Y]$ on boundaries then receives the value $X\cdot Y$.
 
 ## The polyform representation of the Laplacian
 
@@ -497,4 +502,3 @@ graph LR
 The note [[Metric of Higher-Grade Objects]] defines inner products of boundaries of the same grade and their numerical norms. The note [[Laplacian Exponential]] combines the powers of $L$ into a single polyform; the grade bound proved here makes its exponential series finite.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], sources [7] and [8] cover exterior algebra, bilinearity, and Gram determinants. The definition of the formal symbols $[X,Y]$ and their product (4) specifies the polyform algebra used in this series.
-

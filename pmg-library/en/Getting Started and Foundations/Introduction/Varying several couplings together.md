@@ -1,8 +1,9 @@
 ---
 title: Varying Several Couplings Together
 date: 2026-10-05
-updated: 2026-11-05
-revision: 5
+updated: 2026-11-06
+revision: 6
+translated_revision: 7
 source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
@@ -68,7 +69,7 @@ $$
 t_\alpha=a_j-a_i,\qquad b_\alpha=\mathbf e_j-\mathbf e_i
 $$
 
-Thus $t_\alpha$ is a two-point vector, and $b_\alpha$ is its coefficient column: $-1$ at the start, $1$ at the end, and zeros elsewhere. Denote the coupling strength by $c_\alpha$ and the resistance between its endpoints by $R_\alpha$. Here $i,j$ name the endpoints of the selected pair and vary from pair to pair.
+Thus $t_\alpha$ is a vertex-pair vector, and $b_\alpha$ is its coefficient column: $-1$ at the start, $1$ at the end, and zeros elsewhere. Denote the coupling strength by $c_\alpha$ and the resistance between its endpoints by $R_\alpha$. Here $i,j$ name the endpoints of the selected pair and vary from pair to pair.
 
 Change the coupling strengths by $\delta_\alpha$, keeping $c_\alpha+\delta_\alpha\ge0$. Collect the coefficients and changes into matrices:
 
@@ -99,7 +100,7 @@ The rank of the perturbation is at most $\min(m,n-1)$ and may be smaller because
 > \tag{3}
 > $$
 >
-> is the Gram matrix of the selected two-point vectors. Its diagonal entries are $g_{\alpha\alpha}=R_\alpha$, where $R_\alpha$ denotes the resistance between the endpoints of the pair.
+> is the Gram matrix of the selected vertex-pair vectors. Its diagonal entries are $g_{\alpha\alpha}=R_\alpha$, where $R_\alpha$ denotes the resistance between the endpoints of the pair.
 
 The matrix $G$ is symmetric and positive semidefinite. It describes the selected directions and differs from the Green matrix $\mathrm{Gr}$, which is indexed by all vertices.
 
@@ -235,7 +236,7 @@ $$
 
 For the empty set, both the product and the determinant are one. When rows with indices in $S$ are selected from $\Delta G$, the remaining identity rows select the corresponding principal minor. This proves (7).
 
-By the Gram formula, $\det G_S$ is the squared $|S|$-dimensional volume of the parallelotope spanned by the selected two-point vectors. For one vector, it is a squared length; for two, a squared area; for three, a squared volume. If the vectors are linearly dependent, both the volume and the coefficient vanish. In particular, this occurs when the selected pairs contain a cycle.
+By the Gram formula, $\det G_S$ is the squared $|S|$-dimensional volume of the parallelotope spanned by the selected vertex-pair vectors. For one vector, it is a squared length; for two, a squared area; for three, a squared volume. If the vectors are linearly dependent, both the volume and the coefficient vanish. In particular, this occurs when the selected pairs contain a cycle.
 
 Choose any $r$ pairs and, for brevity, relabel them $1,\ldots,r$. Formula (7) implies
 
@@ -319,7 +320,7 @@ $$
 The matrix of entrywise squares of $G$ is positive semidefinite. Hence the matrix of second derivatives (the Hessian) in (11) is negative semidefinite, and $\log\tau$ is concave in the conductances on the domain of connected networks.
 
 > [!note]- Sign of the Hessian
-> **Proof.** Write $G=P^{\mathsf T}P$, where the columns of $P$ are Euclidean coordinates of the selected two-point vectors. For any real column vector $h$,
+> **Proof.** Write $G=P^{\mathsf T}P$, where the columns of $P$ are Euclidean coordinates of the selected vertex-pair vectors. For any real column vector $h$,
 >
 > $$
 > \sum_{\alpha,\beta}h_\alpha h_\beta g_{\alpha\beta}^2
@@ -333,4 +334,3 @@ The matrix of entrywise squares of $G$ is positive semidefinite. Hence the matri
 The determinants in (7) express volumes, mixed derivatives, and joint edge-inclusion probabilities. The note [[Basic Objects and Operations of Polyform Algebra]] introduces the algebraic language for treating several affine vectors as one object. Its metric properties are discussed in [[Metric of Higher-Grade Objects]].
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], matrix identities for inverses and determinants are collected in [5] and [6], Gram determinants and multilinear algebra in [7] and [8], and random spanning trees and transfer currents in [9].
-

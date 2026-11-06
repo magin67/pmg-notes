@@ -1,20 +1,20 @@
 ---
 title: Spaces, Subspaces, and the Choice of a Basis
 date: 2026-10-12
-updated: 2026-10-15
-revision: 3
-translated_revision: 2
+updated: 2026-11-06
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: spaces-subspaces-and-bases
 order: 1
-description: "Choosing a subspace in PMG: points and vectors, bases, exterior elements, forms, and their metric evaluations."
+description: "Choosing a subspace in PMG: elements and vectors, bases, exterior structures, forms, and their metric evaluations."
 aliases:
   - "en/Spaces/Spaces, Subspaces, and the Choice of a Basis"
 ---
 
-Suppose that several vertices of a graph have been selected. We want to study their relative positions, form points and vectors from them, and calculate lengths and areas. To do this, we need to determine which subspace the selected vertices generate and which forms can be constructed on it.
+Suppose that several vertices of a graph have been selected. We want to study their relative positions, form elements and vectors from them, and calculate lengths and areas. To do this, we need to determine which subspace the selected vertices generate and which forms can be constructed on it.
 
 Selecting vertices does not yet change the graph. All the original couplings still contribute to the metric. Constructing another graph on the selected vertices alone will be a separate problem.
 
@@ -22,9 +22,9 @@ This is the first note in the series “Spaces and Subspaces in PMG”. It uses 
 
 ## Selected vertices and graph geometry
 
-Consider the path on three vertices $a,b,c$, with unit coupling coefficients on $ab$ and $bc$. Select the two end vertices $a,c$.
+Consider the path on three vertices $a,b,c$, with unit coupling strengths on $ab$ and $bc$. Select the two end vertices $a,c$.
 
-![[Subspace.svg]]
+![Subspace](<Subspace.svg>)
 
 *The left panel shows the graph's couplings; the positions of the vertices in this diagram are arbitrary. The right panel shows its resistance geometry. The blue points $a,c$ determine an affine line, whose extensions are dashed. The blue segment in the right panel does not represent an additional graph coupling.*
 
@@ -38,7 +38,9 @@ In resistance geometry, these are squared Euclidean distances. The vertices ther
 
 The selected vertices determine a line and the direction $c-a$. There is no direct coupling between $a,c$, but the squared length of $c-a$ is determined by the original graph and equals $2$.
 
-## Three spaces: linear elements, vectors, and points
+## Three spaces: objects, vectors, and elements
+
+In [[PMG terminology]], a point is an element of zero norm. We first work with algebra before specifying a metric on objects, so we use “element” and “vertex”. Points in the drawings show their geometric locations.
 
 Let $a_1,\ldots,a_n$ be formally independent basis vertices. Denote their linear space by
 
@@ -46,18 +48,18 @@ $$
 V=\operatorname{span}(a_1,\ldots,a_n)
 $$
 
-The notation $\operatorname{span}$ means the **linear span**: the set of all linear combinations of the listed elements with real coefficients. For example, with three vertices, every element of $V$ has the form $\alpha a+\beta b+\gamma c$.
+The notation $\operatorname{span}$ means the **linear span**: the set of all linear combinations of the listed elements with real coefficients. For example, with three vertices, every object of $V$ has the form $\alpha a+\beta b+\gamma c$.
 
-The affine weight of an element is the sum of its coefficients:
+The affine weight of an object is the sum of its coefficients:
 
 $$
 \varepsilon\left(\sum_i x_i a_i\right)=\sum_i x_i
 $$
 
-> [!info] Points and vectors
-> **Definition.** Elements of affine weight $1$ are called points. Elements of weight $0$ are called affine vectors. In this note, “vector” is used in this sense.
+> [!info] Elements and vectors
+> **Definition.** Objects of affine weight $1$ are called elements. Objects of weight $0$ are called affine vectors. In this note, “vector” is used in this sense.
 
-Denote the space of vectors and the set of points by
+Denote the space of vectors and the set of elements by
 
 $$
 W=\ker\varepsilon=\{u\in V:\varepsilon(u)=0\},\qquad
@@ -65,14 +67,14 @@ W=\ker\varepsilon=\{u\in V:\varepsilon(u)=0\},\qquad
 \tag{1}
 $$
 
-Here $\ker\varepsilon$ means the **kernel of the functional** $\varepsilon$: the set of elements on which it is zero. The notation $u\in V$ means that $u$ belongs to $V$.
+Here $\ker\varepsilon$ means the **kernel of the functional** $\varepsilon$: the set of objects on which it is zero. The notation $u\in V$ means that $u$ belongs to $V$.
 
 > [!example] Elements on three vertices
-> The elements $b-a$ and $b+c-2a$ are vectors: their coefficients sum to zero. The elements $a$ and $(a+c)/2$ are points. The element $a+c$ has weight $2$ and is neither a point nor an affine vector.
+> The elements $b-a$ and $b+c-2a$ are vectors: their coefficients sum to zero. The objects $a$ and $(a+c)/2$ are elements. The object $a+c$ has weight $2$ and is neither an element nor an affine vector.
 
-Vectors form a linear space: the sum of vectors and any scalar multiple of a vector again have weight $0$. Points do not have this property. For example, the sum of two points has weight $2$.
+Vectors form a linear space: the sum of vectors and any scalar multiple of a vector again have weight $0$. Elements do not have this property. For example, the sum of two elements has weight $2$.
 
-Choose the point $a_1$. Every point $x$ can then be written uniquely as $x=a_1+u$, where $u=x-a_1\in W$. Hence
+Choose the element $a_1$. Every element $x$ can then be written uniquely as $x=a_1+u$, where $u=x-a_1\in W$. Hence
 
 $$
 \mathcal A=a_1+W
@@ -86,7 +88,7 @@ $$
 u=(ab)=b-a,\qquad v=(bc)=c-b
 $$
 
-The vectors $u,v$ are independent and form a basis of $W$. All points have the form $a+\alpha u+\beta v$. In these coordinates, the vertices $a,b,c$ correspond to $(0,0)$, $(1,0)$, and $(1,1)$.
+The vectors $u,v$ are independent and form a basis of $W$. All elements have the form $a+\alpha u+\beta v$. In these coordinates, the vertices $a,b,c$ correspond to $(0,0)$, $(1,0)$, and $(1,1)$.
 
 Thus $V$ has dimension $3$, while both $W$ and the affine space $\mathcal A$ have dimension $2$. In general, these dimensions are $n$ and $n-1$, respectively.
 
@@ -106,12 +108,12 @@ The symbol $\cap$ denotes set intersection. Thus $W_P$ consists of combinations 
 | --- | --- | ---: |
 | $V_P$ | All linear combinations of the selected vertices | $m$ |
 | $W_P$ | Vectors on the selected vertices | $m-1$ |
-| $\mathcal A_P$ | Points in the affine hull of the selected vertices | $m-1$ |
+| $\mathcal A_P$ | Elements in the affine hull of the selected vertices | $m-1$ |
 
-To obtain a basis of $W_P$, choose one vertex $a_{p_0}$ and form the differences $a_p-a_{p_0}$ for the remaining $p\in P$. These $m-1$ vectors are independent: in any linear combination equal to zero, the coefficient of each vertex $a_p$ other than $a_{p_0}$ must vanish. They generate all combinations with coefficient sum zero. Moreover,
+To obtain a basis of $W_P$, choose one of them and denote it by $a_0$ and form the differences $a_p-a_0$ for the remaining $p\in P$. These $m-1$ vectors are independent: in any linear combination equal to zero, the coefficient of each vertex $a_p$ other than $a_0$ must vanish. They generate all combinations with coefficient sum zero. Moreover,
 
 $$
-\mathcal A_P=a_{p_0}+W_P
+\mathcal A_P=a_0+W_P
 $$
 
 > [!example] Two selected vertices
@@ -123,9 +125,9 @@ $$
 > \mathcal A_P=\{(1-t)a+tc\}
 > $$
 >
-> All parameters in these three sets are real. The linear span $V_P$ is two-dimensional. The space $W_P$ is a one-dimensional space of vectors, while $\mathcal A_P$ is a line of points. The values $0\le t\le1$ select a segment on that line, but the full line allows every real $t$.
+> All parameters in these three sets are real. The linear span $V_P$ is two-dimensional. The space $W_P$ is a one-dimensional space of vectors, while $\mathcal A_P$ is a line of elements. The values $0\le t\le1$ select a segment on that line, but the full line allows every real $t$.
 
-The selected vertices form a linear basis of $V_P$ and an affine basis of $\mathcal A_P$. An **affine basis** means that every point of the hull has a unique expression in terms of the basis points with coefficient sum $1$. A vector basis of $W_P$, however, consists of differences of vertices.
+The selected vertices form a linear basis of $V_P$ and an affine basis of $\mathcal A_P$. An **affine basis** means that every element of the hull has a unique expression in terms of the basis elements with coefficient sum $1$. A vector basis of $W_P$, however, consists of differences of vertices.
 
 With a single selected vertex $a$, we obtain $V_P=\{ta\}$, $W_P=\{0\}$, and $\mathcal A_P=\{a\}$. This is the simplest example of why these three objects cannot all be called “the subspace” without specifying which one is meant.
 
@@ -139,7 +141,7 @@ $$
 
 The directions of the vertex pairs are $u$, $v$, and $u+v$. The vector $u+2v$ is not proportional to any of them. Therefore, $U$ is not the space of differences generated by any pair of vertices.
 
-An affine subspace is specified by a direction space $U\subseteq W$ and a point $q\in\mathcal A$. The symbol $\subseteq$ denotes inclusion: every element of $U$ belongs to $W$.
+An affine subspace is specified by a direction space $U\subseteq W$ and an element $q\in\mathcal A$. The symbol $\subseteq$ denotes inclusion: every vector of $U$ belongs to $W$.
 
 $$
 q+U=\{q+w:w\in U\}
@@ -147,23 +149,23 @@ $$
 
 For example, the lines $a+\operatorname{span}(c-a)$ and $b+\operatorname{span}(c-a)$ are parallel and distinct. Their direction spaces coincide, but the vertex $b$ does not belong to the first line.
 
-Changing the basis of $U$ does not change the subspace. Replacing $q$ by another point $q+w_0$ in the same affine subspace also changes nothing: if $w_0\in U$, the sets $q+w_0+U$ and $q+U$ coincide. For the line through $a,c$, we may choose the origin at $a$, at $c$, or at their midpoint.
+Changing the basis of $U$ does not change the subspace. Replacing $q$ by another element $q+w_0$ in the same affine subspace also changes nothing: if $w_0\in U$, the sets $q+w_0+U$ and $q+U$ coincide. For the line through $a,c$, we may choose the origin at $a$, at $c$, or at their midpoint.
 
-## Specifying a subspace by an exterior element
+## Specifying a subspace by an exterior structure
 
-Let $u_1,\ldots,u_k$ be a basis of a nonzero subspace $U\subseteq W$. Form the exterior element
+Let $u_1,\ldots,u_k$ be a basis of a nonzero subspace $U\subseteq W$. Form the exterior structure
 
 $$
-\Omega=u_1\wedge\cdots\wedge u_k
+\Omega=u_1 \cdots  u_k
 $$
 
-The symbol $\wedge$ denotes the exterior product. Independence of the factors means that $\Omega\ne0$. Such an element is called **decomposable**, because it can be written as a single exterior product.
+Exterior multiplication is implicit between factors; its explicit symbol is $\wedge$. Independence of the factors means that $\Omega\ne0$. Such an element is called **decomposable**, because it can be written as a single exterior product.
 
 > [!info] Membership criterion
 > **Lemma.** For every $w\in W$,
 >
 > $$
-> w\in U\quad\Longleftrightarrow\quad w\wedge\Omega=0
+> w\in U\quad\Longleftrightarrow\quad w \Omega=0
 > \tag{2}
 > $$
 
@@ -174,12 +176,12 @@ The symbol $\wedge$ denotes the exterior product. Independence of the factors me
 > For the direction of the line through $a,c$, set $\Omega=u+v$. An arbitrary vector $w=\alpha u+\beta v$ satisfies
 >
 > $$
-> w\wedge\Omega=(\alpha-\beta)u\wedge v
+> w \Omega=(\alpha-\beta)u  v
 > $$
 >
 > The product vanishes precisely when $\alpha=\beta$, that is, when $w$ is a multiple of $u+v=c-a$.
 >
-> For the entire two-dimensional space $W$, we may take $\Omega=u\wedge v$. Then $w\wedge\Omega=0$ for every $w\in W$, since this space contains no three independent vectors.
+> For the entire two-dimensional space $W$, we may take $\Omega=u  v$. Then $w \Omega=0$ for every $w\in W$, since this space contains no three independent vectors.
 
 Under a change of basis $u'_i=\sum_j S_{ij}u_j$, we obtain
 
@@ -189,47 +191,47 @@ $$
 
 Here $S$ is the matrix of change-of-basis coefficients, and $\det(S)$ is its determinant. The formula follows by expanding the exterior product: terms with repeated factors vanish, and the remaining terms give the determinant. For two bases of the same subspace, $\det(S)\ne0$.
 
-For example, replacing $(u,v)$ by $(2u,v)$ gives $2u\wedge v$, while interchanging $(u,v)$ to obtain $(v,u)$ gives $-u\wedge v$. In both cases, the subspace stays the same.
+For example, replacing $(u,v)$ by $(2u,v)$ gives $2u  v$, while interchanging $(u,v)$ to obtain $(v,u)$ gives $-u  v$. In both cases, the subspace stays the same.
 
-Thus the subspace $U$ determines $\Omega$ up to a nonzero scalar factor. Conversely, any such $\Omega$ uniquely determines the subspace. The zero element cannot serve this purpose: the condition $w\wedge0=0$ holds for every $w$.
+Thus the subspace $U$ determines $\Omega$ up to a nonzero scalar factor. Conversely, any such $\Omega$ uniquely determines the subspace. The zero element cannot serve this purpose: the condition $w 0=0$ holds for every $w$.
 
 ### The boundary of a simplex and its affine hull
 
-For affinely independent points $q_0,\ldots,q_k$, the simplex boundary can be expressed in terms of differences:
+For affinely independent elements $q_0,\ldots,q_k$, the simplex boundary can be expressed in terms of differences:
 
 $$
 \Omega=(q_0\ldots q_k)
-=(q_1-q_0)\wedge\cdots\wedge(q_k-q_0)
+=(q_1-q_0) \cdots (q_k-q_0)
 $$
 
-Parentheses denote the PMG boundary, the result of applying the operator $\partial$ to the simplex $[q_0\ldots q_k]$. This exterior element specifies the direction space of the affine hull. For a point $x\in\mathcal A$, the criterion for membership in the hull is
+Parentheses denote the PMG boundary, the result of applying the operator $\partial$ to the simplex $[q_0\ldots q_k]$. This exterior structure specifies the direction space of the affine hull. For an element $x\in\mathcal A$, the criterion for membership in the hull is
 
 $$
-(x-q_0)\wedge\Omega=0
+(x-q_0) \Omega=0
 $$
 
-For example, for the two points $a,c$, we have $\Omega=(ac)=u+v$. If $x=a+\alpha u+\beta v$, the condition for membership in the line again gives $\alpha=\beta$.
+For example, for the two elements $a,c$, we have $\Omega=(ac)=u+v$. If $x=a+\alpha u+\beta v$, the condition for membership in the line again gives $\alpha=\beta$.
 
 For the three vertices of the path,
 
 $$
-(abc)=(b-a)\wedge(c-a)=u\wedge(u+v)=u\wedge v
+(abc)=(b-a) (c-a)=u (u+v)=u  v
 $$
 
-This boundary specifies the entire plane of directions $W$. The element $(ac)$ does not distinguish the line through $a,c$ from the parallel line through $b$. The position is specified by an additional choice of a point.
+This boundary specifies the entire plane of directions $W$. The element $(ac)$ does not distinguish the line through $a,c$ from the parallel line through $b$. The position is specified by an additional choice of an element.
 
 ## Forms and polyforms on a subspace
 
-Write $\Lambda^jU$ for the space of exterior-algebra elements of grade $j$ constructed from vectors in $U$. It contains exterior products of $j$ vectors and their linear combinations. For $j=1$, it is $U$ itself; for $j=0$, it is the space of scalars. The notation $\dim U=k$ means that $U$ has dimension $k$. For $j>k$, only the zero element remains.
+Write $\Lambda^jU$ for the space of exterior structures of grade $j$ constructed from vectors in $U$. It contains exterior products of $j$ vectors and their linear combinations. For $j=1$, it is $U$ itself; for $j=0$, it is the space of scalars. The notation $\dim U=k$ means that $U$ has dimension $k$. For $j>k$, only the zero structure remains.
 
-For example, if $U=\operatorname{span}(u,v)$ is two-dimensional, every element of grade $2$ has the form $t\,u\wedge v$, and grade $3$ is zero. For a one-dimensional $U=\operatorname{span}(w)$, even grade $2$ is zero, since $w\wedge w=0$.
+For example, if $U=\operatorname{span}(u,v)$ is two-dimensional, every structure of grade $2$ has the form $t\,u  v$, and grade $3$ is zero. For a one-dimensional $U=\operatorname{span}(w)$, even grade $2$ is zero, since $w\wedge w=0$.
 
 > [!info] Forms on a subspace
 > **Definition.** Forms of grade $j$ on $U$ are formal forms $[X,Y]$ with arguments $X,Y\in\Lambda^jU$ and their linear combinations. Polyforms on $U$ are sums of such forms of different grades.
 
 The word “on” specifies the space from which the arguments are taken. The formal form $[X,Y]$ is not the number $X\cdot Y$ and is not defined by choosing a numerical bilinear function on $U$.
 
-For a form with identical arguments, we use the abbreviation $[X]^2=[X,X]$. This denotes a quadratic form, not the square of an exterior element.
+For a form with identical arguments, we use the abbreviation $[X]^2=[X,X]$. This denotes a quadratic form, not the square of an exterior structure.
 
 > [!info] Forms and polyforms on a subspace
 > **Proposition.** Polyforms on $U$ form a subalgebra of polyforms on $W$: addition, scalar multiplication, and multiplication of polyforms preserve this class. Its unit is $e=[1,1]$.
@@ -238,7 +240,7 @@ For a form with identical arguments, we use the abbreviation $[X]^2=[X,X]$. This
 > **Proof.** Multiplication of forms is defined by
 >
 > $$
-> [X,Y][A,B]=[X\wedge A,Y\wedge B]
+> [X,Y][A,B]=[X  A,Y  B]
 > $$
 >
 > If all arguments are constructed from vectors in $U$, their exterior products are also constructed from these vectors. When the total grade exceeds $k=\dim U$, these products vanish. Addition and scalar multiplication preserve membership by definition. $\square$
@@ -259,19 +261,19 @@ For a form with identical arguments, we use the abbreviation $[X]^2=[X,X]$. This
 In a two-dimensional space, a product of forms of grade $1$ can be nonzero:
 
 $$
-[u]^2[v]^2=[u\wedge v]^2
+[u]^2[v]^2=[u  v]^2
 $$
 
 At the same time, $[u,v]$ and $[v,u]$ are generally distinct formal forms. Symmetry of the numerical inner product does not make them equal in PMG algebra.
 
-### The subspace, the exterior element, and the form
+### The subspace, the exterior structure, and the form
 
 These objects are related but distinct:
 
 | Object | Meaning |
 | --- | --- |
 | $U$ | A linear subspace of vectors |
-| $\Omega=u_1\wedge\cdots\wedge u_k$ | The exterior element of the chosen basis |
+| $\Omega=u_1 \cdots  u_k$ | The exterior structure of the chosen basis |
 | $[\Omega]^2$ | The formal quadratic form on this element |
 | $\Omega^2=\Omega\cdot\Omega$ | Its numerical norm in the given metric |
 
@@ -282,7 +284,7 @@ $$
 (t\Omega)^2=t^2\Omega^2
 $$
 
-For example, replacing $(u,v)$ by $(2u,v)$ multiplies both the form and its metric evaluation by four. Interchanging $u,v$ changes the sign of the exterior element but leaves its quadratic form unchanged. The subspace itself is the same in these examples. Thus the unnormalized form $[\Omega]^2$ also retains information about the scale of the chosen basis.
+For example, replacing $(u,v)$ by $(2u,v)$ multiplies both the form and its metric evaluation by four. Interchanging $u,v$ changes the sign of the exterior structure but leaves its quadratic form unchanged. The subspace itself is the same in these examples. Thus the unnormalized form $[\Omega]^2$ also retains information about the scale of the chosen basis.
 
 ## The subspace metric through potentials of forms
 
@@ -294,29 +296,29 @@ $$
 u^2=v^2=1,\qquad (u+v)^2=R_{ac}=2
 $$
 
-Expanding the square gives $u\cdot v=0$. Hence for the direction $w=u+v$, we have $w^2=2$, and the distance between the points $a+tw$ and $a+sw$ is $\sqrt2\,|t-s|$.
+Expanding the square gives $u\cdot v=0$. Hence for the direction $w=u+v$, we have $w^2=2$, and the distance between the elements $a+tw$ and $a+sw$ is $\sqrt2\,|t-s|$.
 
-The metric of exterior elements is inherited as well. For a decomposable element of grade $2$,
+The metric of exterior structures is inherited as well. For a decomposable structure of grade $2$,
 
 $$
-(u\wedge v)^2=u^2v^2-(u\cdot v)^2
+(u  v)^2=u^2v^2-(u\cdot v)^2
 $$
 
-In this example, the value is $1$. It is the squared area of the parallelogram spanned by $u,v$. The triangle $abc$ has area $1/2$ and squared area $1/4$. For arbitrary grades, we use the Gram determinant: the determinant of the matrix of pairwise inner products of the vectors. The rule extends to linear combinations of exterior elements by bilinearity, as in [[Metric of Higher-Grade Objects]].
+In this example, the value is $1$. It is the squared area of the parallelogram spanned by $u,v$. The triangle $abc$ has area $1/2$ and squared area $1/4$. For arbitrary grades, we use the Gram determinant: the determinant of the matrix of pairwise inner products of the vectors. The rule extends to linear combinations of exterior structures by bilinearity, as in [[Metric of Higher-Grade Objects]].
 
 In the language of polyforms, these evaluations are expressed through potentials. Recall the notation. The Laplacian polyform and its exponential are
 
 $$
-L=\sum_{i<j}c_{ij}[a_j-a_i]^2,\qquad M_G=\exp L
+L=\sum_{i<j}c_{ij}[a_j-a_i]^2,\qquad M=\exp L
 $$
 
-Here $c_{ij}$ is the coupling coefficient. The exponential uses the PMG product of forms. The functional $\tau$ extracts the coefficient of the fixed spanning-tree form $T_n=[(a_1\ldots a_n)]^2$. The potential of a form $f$ is denoted by $u_{M_G}(f)=\tau(M_Gf)$; the subscript in $u_{M_G}$ distinguishes this functional from the vector $u$ in our example.
+Here $c_{ij}$ is the coupling strength. The exponential uses the PMG product of forms. The functional $\tau$ extracts the coefficient of the fixed spanning-tree form $T_n=[(a_1\ldots a_n)]^2$. The potential of a form $f$ is denoted by $u_M(f)=\tau(Mf)$; the subscript in $u_M$ distinguishes this functional from the vector $u$ in our example.
 
 > [!info] Metric evaluation on a subspace
 > **Corollary of the core metric identity.** For any $X,Y\in\Lambda^jU$,
 >
 > $$
-> \frac{u_{M_G}([X,Y])}{u_{M_G}(e)}=X\cdot Y
+> \frac{u_M([X,Y])}{u_M(e)}=X\cdot Y
 > \tag{3}
 > $$
 >
@@ -327,7 +329,7 @@ Here $c_{ij}$ is the coupling coefficient. The exponential uses the PMG product 
 
 ### A direct calculation on the path
 
-For the path with unit coupling coefficients, the Laplacian and metric polyform are
+For the path with unit coupling strengths, the Laplacian and metric polyform are
 
 $$
 L=[u]^2+[v]^2
@@ -335,54 +337,53 @@ $$
 
 $$
 \begin{aligned}
-M_G&=(e+[u]^2)(e+[v]^2)\\
-&=e+[u]^2+[v]^2+[u\wedge v]^2
+M&=(e+[u]^2)(e+[v]^2)\\
+&=e+[u]^2+[v]^2+[u  v]^2
 \end{aligned}
 $$
 
-Since $u\wedge v=(abc)$, the spanning-tree form is $T_3=[u\wedge v]^2$, and $\tau(M_G)=1$.
+Since $u  v=(abc)$, the spanning-tree form is $T_3=[u  v]^2$, and $\tau(M)=1$.
 
-Let us calculate the potential of $[w]^2$, where $w=c-a=u+v$. When multiplying by $M_G$, only two terms contribute to grade $2$:
-
-$$
-[u]^2[w]^2=[u\wedge(u+v)]^2=T_3
-$$
+Let us calculate the potential of $[w]^2$, where $w=c-a=u+v$. When multiplying by $M$, only two terms contribute to grade $2$:
 
 $$
-[v]^2[w]^2=[v\wedge(u+v)]^2=[-u\wedge v]^2=T_3
+[u]^2[w]^2=[u (u+v)]^2=T_3
+$$
+
+$$
+[v]^2[w]^2=[v (u+v)]^2=[-u  v]^2=T_3
 $$
 
 Therefore,
 
 $$
-\frac{u_{M_G}([w]^2)}{u_{M_G}(e)}=\frac21=2
+\frac{u_M([w]^2)}{u_M(e)}=\frac21=2
 $$
 
 This calculation uses the product of forms directly, without substituting a known resistance into the metric identity. It agrees with the value $R_{ac}=2$ obtained above.
 
-For the form $[u\wedge v]^2$ of grade $2$, only the unit $e$ in $M_G$ contributes to the top-grade coefficient. Its normalized potential is therefore $1$, equal to the squared area of the parallelogram.
+For the form $[u  v]^2$ of grade $2$, only the unit $e$ in $M$ contributes to the top-grade coefficient. Its normalized potential is therefore $1$, equal to the squared area of the parallelogram.
 
 > [!note] A subspace and a subgraph
 > Simply deleting the vertex $b$ and all its incident edges leaves two disconnected vertices $a,c$. Such a graph does not reproduce the metric of the selected line. For that line, we retained the original evaluation $(c-a)^2=2$. Constructing couplings on $a,c$ alone that reproduce this evaluation will be considered in the note on vertex elimination.
 
 ## Applicability and the next construction
 
-Linear spans, affine weight, exterior elements, and forms are defined without a metric. The positive resistance metric and normalization by $\tau(M_G)$ used in this note require the graph to be connected. For a disconnected graph, the metric can be considered within each connected component; normalization by the common spanning-tree form is no longer applicable.
+Linear spans, affine weight, exterior structures, and forms are defined without a metric. The positive resistance metric and normalization by $\tau(M)$ used in this note require the graph to be connected. For a disconnected graph, the metric can be considered within each connected component; normalization by the common spanning-tree form is no longer applicable.
 
-A simple example of dependent generators is the pair $w,2w$: these vectors specify one direction, not a two-dimensional subspace. Their exterior product is zero. Distinct selected basis vertices in the formal space $V$ are independent, but this cannot be assumed for arbitrary points formed from them. For example, $a,(a+c)/2,c$ are affinely dependent.
+A simple example of dependent generators is the pair $w,2w$: these vectors specify one direction, not a two-dimensional subspace. Their exterior product is zero. Distinct selected basis vertices in the formal space $V$ are independent, but this cannot be assumed for arbitrary elements formed from them. For example, $a,(a+c)/2,c$ are affinely dependent.
 
-Throughout this note, points belong to $\mathcal A$, while the metric is applied to their differences and to exterior elements constructed from $W$. Thus $\mathcal A$ is a flat Euclidean affine space. No condition that a point itself have zero norm has been introduced here.
+Throughout this note, elements belong to $\mathcal A$, while the metric is applied to their differences and to exterior structures constructed from $W$. Thus $\mathcal A$ is a flat Euclidean affine space. No condition that the element itself have zero norm has been introduced here.
 
-[[The Null Vector, Isotropic Representation, and the Boundary]] introduces the isotropic representation and the distinguished null vector. It distinguishes an affine point from its representative in an extended space. The forms on $W$ and their metric evaluations obtained here retain their meaning.
+[[The Null Vector, Isotropic Representation, and the Boundary]] introduces the isotropic representation and the distinguished null vector. It distinguishes an element from its local center: the center is a point, that is, an element of zero norm. The forms on $W$ and their metric evaluations obtained here retain their meaning.
 
 ## Foundations and status
 
-The definitions of points, vectors, boundaries, and forms follow the [[Core specification|core specification]]. The subspace membership criterion, the change-of-basis rule for the exterior element, and closure of the algebra of forms are derived in this note. The metric identity is taken from the introductory series; the path example is checked by direct multiplication of forms.
+The definitions of elements, vectors, boundaries, and forms follow the [[Core specification|core specification]]. The subspace membership criterion, the change-of-basis rule for the exterior structure, and closure of the algebra of forms are derived in this note. The metric identity is taken from the introductory series; the path example is checked by direct multiplication of forms.
 
 For a review of the underlying constructions:
 
 - [[Basic Objects and Operations of Polyform Algebra]]: affine weight, boundaries, and formal forms.
 - [[Effective Resistance and Graph Geometry]]: the resistance representation of vertices.
-- [[Metric of Higher-Grade Objects]]: metric evaluation of exterior elements.
+- [[Metric of Higher-Grade Objects]]: metric evaluation of exterior structures.
 - [[Laplacian Exponential]]: the metric polyform, potential, and spanning-tree coefficient.
-

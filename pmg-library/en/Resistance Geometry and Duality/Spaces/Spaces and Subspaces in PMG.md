@@ -1,9 +1,9 @@
 ---
 title: Spaces and Subspaces in PMG
 date: 2026-10-14
-updated: 2026-11-01
-revision: 5
-translated_revision: 5
+updated: 2026-11-06
+revision: 6
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: spaces-subspaces-series-navigation
@@ -21,7 +21,7 @@ aliases:
 
 Choose several vertices of a graph. They generate a subspace relative to which we can describe the remaining vertices and their positions. Which coordinates do we need? How are projection onto the chosen subspace, extension of prescribed values, and construction of a graph on the selected vertices related?
 
-The eight notes in this series connect these questions. We begin with spaces of points and vectors, then consider nonlocal elements, spheres, coordinates, and graph operations. We finish with an application: using a table of employee-document couplings to construct couplings between employees or between documents.
+The eight notes in this series connect these questions. We begin with spaces of elements and vectors, then consider nonlocal elements, spheres, coordinates, and graph operations. We finish with an application: using a table of employee-document couplings to construct couplings between employees or between documents.
 
 Forms and polyforms participate at every stage: they provide metric evaluations and describe projections and changes of space under graph operations. Matrices are used for proofs, computation, and comparison with established constructions.
 
@@ -39,19 +39,19 @@ Secondary thematic entries:
 
 The foundation is the [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]]. The following topics are particularly useful here:
 
-- points, affine vectors, exterior products, boundaries, and forms - [[Basic Objects and Operations of Polyform Algebra]];
-- resistance geometry, inner products, and norms of exterior elements - [[Effective Resistance and Graph Geometry]], [[Inner Product of Graph Vectors]], and [[Metric of Higher-Grade Objects]];
+- objects, elements, affine vectors, exterior products, boundaries, and forms - [[Basic Objects and Operations of Polyform Algebra]];
+- resistance geometry, inner products, and norms of exterior structures - [[Effective Resistance and Graph Geometry]], [[Inner Product of Graph Vectors]], and [[Metric of Higher-Grade Objects]];
 - the metric polyform and computation of the metric through normalized potentials - [[Laplacian Exponential]].
 
 Definitions and notation are collected in the [[Core specification|core specification]], and names and terminological distinctions in [[PMG terminology|PMG terminology]]. The results on coupling variations from the introductory series are not required for the main route.
 
 ## Notes in the series
 
-1. **[[Spaces, Subspaces, and the Choice of a Basis]].** We distinguish the linear space of formal vertices, the space of affine vectors, and the affine space of points. Selected vertices generate subspaces; a basis lets us write their exterior elements and forms. Metric evaluations are obtained through potentials of forms.
+1. **[[Spaces, Subspaces, and the Choice of a Basis]].** We distinguish the linear space of formal vertices, the space of affine vectors, and the affine space of elements. Selected vertices generate subspaces; a basis lets us write their exterior structures and forms. Metric evaluations are obtained through potentials of forms.
 
-2. **[[The Null Vector, Isotropic Representation, and the Boundary]].** We construct an isotropic model with local points and a correction selecting the center of a normalized element. The distinguished null vector connects affine weight, flat geometry, and the boundary operator. This note develops the geometric part of the series; its constructions are also used in the section on isotropic coordinates.
+2. **[[The Null Vector, Isotropic Representation, and the Boundary]].** We construct an isotropic model with local points and a correction selecting the center of an element. The distinguished null vector connects affine weight, flat geometry, and the boundary operator. This note develops the geometric part of the series; its constructions are also used in the section on isotropic coordinates.
 
-3. **[[Nonlocal Elements, Spheres, and Their Centers]].** The norm of a normalized element specifies a sphere parameter, while a nonlinear correction selects its local center. We distinguish the sphere element from its center and prove that the norms and inner products of vectors and boundaries of every grade are preserved when vertex norms change with centers fixed.
+3. **[[Nonlocal Elements, Spheres, and Their Centers]].** The norm of an element specifies a sphere parameter, while a nonlinear correction selects its local center. We distinguish the sphere element from its center and prove that the norms and inner products of vectors and boundaries of every grade are preserved when vertex norms change with centers fixed.
 
 4. **[[Projections, Bi-coordinates, and Di-coordinates]].** Bi-coordinates specify an expansion of an object in chosen elements; di-coordinates are inner products with those elements. We consider frames, coordinates of a projection, and uniqueness conditions. We decompose quadratic and polar forms using frame elements and their differences, and express projection through polyforms.
 
@@ -67,7 +67,7 @@ Definitions and notation are collected in the [[Core specification|core specific
 
 **For the full series:** follow the order above. Examples explain the constructions, while collapsible proofs give general derivations. Conditions on connectivity, nondegeneracy, and the presence of selected vertices in each component are stated where they are needed.
 
-**Graphs and applications:** start with [[Spaces, Subspaces, and the Choice of a Basis|spaces and the choice of a basis]], then move to [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]]. Continue with [[Vertex Contraction and Graph Gluing|contraction and gluing]], [[Selected Vertices and the Dirichlet Problem|the Dirichlet problem]], [[Vertex Elimination and Induced Couplings|vertex elimination]], and [[Couplings Within One Part of a Bipartite Graph|the bipartite application]]. The isotropic extension is not required for this route.
+**Graphs and applications:** start with [[Spaces, Subspaces, and the Choice of a Basis|spaces and the choice of a basis]], then move to [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]]. Continue with [[Vertex Contraction and Graph Gluing|contraction and gluing]], [[Selected Vertices and the Dirichlet Problem|the Dirichlet problem]], [[Vertex Elimination and Induced Couplings|vertex elimination]], and [[Couplings Within One Part of a Bipartite Graph|the bipartite application]]. The isotropic extension is not required for this route. The supplement on the two Dirichlet problems in a balanced directed graph can be skipped until the directed model has been studied.
 
 **Isotropic geometry:** after [[Spaces, Subspaces, and the Choice of a Basis|spaces and the choice of a basis]], read about [[The Null Vector, Isotropic Representation, and the Boundary|the null vector and the boundary]], then [[Nonlocal Elements, Spheres, and Their Centers|nonlocal elements and spheres]] and [[Projections, Bi-coordinates, and Di-coordinates|coordinates]], including the section on [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension|the isotropic extension]]. The main part of the coordinates note builds on spaces and the metric; the null vector is needed for its isotropic constructions and the example of a degenerate subspace.
 

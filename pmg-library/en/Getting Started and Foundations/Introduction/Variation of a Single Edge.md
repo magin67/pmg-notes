@@ -1,8 +1,9 @@
 ---
 title: Variation of a Single Edge
 date: 2026-10-04
-updated: 2026-11-05
-revision: 5
+updated: 2026-11-06
+revision: 6
+translated_revision: 6
 source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
@@ -33,7 +34,7 @@ $$
 \Delta L_{kl}=\Delta L_{lk}=-\delta
 $$
 
-All other entries remain unchanged. Recall that $a_{ij}=a_j-a_i$ is a two-point vector, and $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$ is its coefficient list, written as a column for matrix operations (see [[Inner Product of Graph Vectors]]). The product $\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}$ has ones in positions $kk,ll$, minus ones in $kl,lk$, and zeros elsewhere. The four changes therefore combine into one formula:
+All other entries remain unchanged. Recall that $a_{ij}=a_j-a_i$ is a vertex-pair vector, and $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$ is its coefficient list, written as a column for matrix operations (see [[Inner Product of Graph Vectors]]). The product $\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}$ has ones in positions $kk,ll$, minus ones in $kl,lk$, and zeros elsewhere. The four changes therefore combine into one formula:
 
 $$
 L'=L+\delta\mathbf e_{kl}\mathbf e_{kl}^{\mathsf T}
@@ -289,4 +290,3 @@ For the varied pair itself, $i=k$, $j=l$, the determinant in (9) is zero, so $m'
 [[Varying several couplings together]] considers simultaneous changes in several conductances. Their interactions are described by the matrix of inner products of the corresponding affine vectors.
 
 In [[Further Reading for the PMG Introductory Series|the reading recommendations]], the Sherman-Morrison formula is covered in sources [5] and [6], Rayleigh monotonicity in [2], the matrix-tree theorem in [3], and the probabilistic interpretation of edges in [9]. The forest formula (8) and its variation (9) are derived directly in this note.
-
