@@ -1,9 +1,9 @@
 ---
-title: Spaces, Subspaces, and the Choice of a Basis
+title: Basis
 date: 2026-10-12
-updated: 2026-11-06
-revision: 4
-translated_revision: 4
+updated: 2026-11-07
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -12,13 +12,14 @@ order: 1
 description: "Choosing a subspace in PMG: elements and vectors, bases, exterior structures, forms, and their metric evaluations."
 aliases:
   - "en/Spaces/Spaces, Subspaces, and the Choice of a Basis"
+  - "en/Resistance Geometry and Duality/Spaces/Spaces, Subspaces, and the Choice of a Basis"
 ---
 
-Suppose that several vertices of a graph have been selected. We want to study their relative positions, form elements and vectors from them, and calculate lengths and areas. To do this, we need to determine which subspace the selected vertices generate and which forms can be constructed on it.
+Suppose that several vertices of a graph have been selected. Consider their relative positions, the elements and vectors formed from them, and the calculation of lengths and areas. This requires determining which subspace the selected vertices generate and which forms can be constructed on it.
 
 Selecting vertices does not yet change the graph. All the original couplings still contribute to the metric. Constructing another graph on the selected vertices alone will be a separate problem.
 
-This is the first note in the series “Spaces and Subspaces in PMG”. It uses the definitions in [[Basic Objects and Operations of Polyform Algebra]] and the metric identity in [[Laplacian Exponential]]. The conventions are collected in the [[Core specification|core specification]]. The notation needed here is explained as it appears.
+This is the first note in the series “Spaces”. It uses the definitions in [[Basic Objects and Operations of Polyform Algebra]] and the metric identity in [[Laplacian Exponential]]. The conventions are collected in the [[Core specification|core specification]]. The notation needed here is explained as it appears.
 
 ## Selected vertices and graph geometry
 
@@ -40,7 +41,7 @@ The selected vertices determine a line and the direction $c-a$. There is no dire
 
 ## Three spaces: objects, vectors, and elements
 
-In [[PMG terminology]], a point is an element of zero norm. We first work with algebra before specifying a metric on objects, so we use “element” and “vertex”. Points in the drawings show their geometric locations.
+In [[PMG terminology]], a point is an element of zero norm. The initial algebraic construction does not specify a metric on objects, so it uses “element” and “vertex”. Points in the drawings show their geometric locations.
 
 Let $a_1,\ldots,a_n$ be formally independent basis vertices. Denote their linear space by
 
@@ -117,7 +118,7 @@ $$
 $$
 
 > [!example] Two selected vertices
-> For $P=\{a,c\}$, using the vertex labels themselves in place of their indices, we obtain
+> For $P=\{a,c\}$, using the vertex labels themselves in place of their indices, the result is
 >
 > $$
 > V_P=\{\alpha a+\beta c\},\qquad
@@ -129,11 +130,11 @@ $$
 
 The selected vertices form a linear basis of $V_P$ and an affine basis of $\mathcal A_P$. An **affine basis** means that every element of the hull has a unique expression in terms of the basis elements with coefficient sum $1$. A vector basis of $W_P$, however, consists of differences of vertices.
 
-With a single selected vertex $a$, we obtain $V_P=\{ta\}$, $W_P=\{0\}$, and $\mathcal A_P=\{a\}$. This is the simplest example of why these three objects cannot all be called “the subspace” without specifying which one is meant.
+With a single selected vertex $a$, the result is $V_P=\{ta\}$, $W_P=\{0\}$, and $\mathcal A_P=\{a\}$. This is the simplest example of why these three objects cannot all be called “the subspace” without specifying which one is meant.
 
 ### An arbitrary subspace
 
-A vector subspace need not arise by selecting a subset of the vertices. For example, in our two-dimensional $W$, we can choose
+A vector subspace need not arise by selecting a subset of the vertices. For example, in the two-dimensional $W$ of this example, take
 
 $$
 U=\operatorname{span}(u+2v)
@@ -149,7 +150,7 @@ $$
 
 For example, the lines $a+\operatorname{span}(c-a)$ and $b+\operatorname{span}(c-a)$ are parallel and distinct. Their direction spaces coincide, but the vertex $b$ does not belong to the first line.
 
-Changing the basis of $U$ does not change the subspace. Replacing $q$ by another element $q+w_0$ in the same affine subspace also changes nothing: if $w_0\in U$, the sets $q+w_0+U$ and $q+U$ coincide. For the line through $a,c$, we may choose the origin at $a$, at $c$, or at their midpoint.
+Changing the basis of $U$ does not change the subspace. Replacing $q$ by another element $q+w_0$ in the same affine subspace also changes nothing: if $w_0\in U$, the sets $q+w_0+U$ and $q+U$ coincide. For the line through $a,c$, the origin can be chosen at $a$, at $c$, or at their midpoint.
 
 ## Specifying a subspace by an exterior structure
 
@@ -181,9 +182,9 @@ Exterior multiplication is implicit between factors; its explicit symbol is $\we
 >
 > The product vanishes precisely when $\alpha=\beta$, that is, when $w$ is a multiple of $u+v=c-a$.
 >
-> For the entire two-dimensional space $W$, we may take $\Omega=u  v$. Then $w \Omega=0$ for every $w\in W$, since this space contains no three independent vectors.
+> For the entire two-dimensional space $W$, take $\Omega=u  v$. Then $w \Omega=0$ for every $w\in W$, since this space contains no three independent vectors.
 
-Under a change of basis $u'_i=\sum_j S_{ij}u_j$, we obtain
+Under a change of basis $u'_i=\sum_j S_{ij}u_j$, the result is
 
 $$
 \Omega'=\det(S)\Omega
@@ -210,7 +211,7 @@ $$
 (x-q_0) \Omega=0
 $$
 
-For example, for the two elements $a,c$, we have $\Omega=(ac)=u+v$. If $x=a+\alpha u+\beta v$, the condition for membership in the line again gives $\alpha=\beta$.
+For example, for the two elements $a,c$, the result is $\Omega=(ac)=u+v$. If $x=a+\alpha u+\beta v$, the condition for membership in the line again gives $\alpha=\beta$.
 
 For the three vertices of the path,
 
@@ -231,7 +232,7 @@ For example, if $U=\operatorname{span}(u,v)$ is two-dimensional, every structure
 
 The word “on” specifies the space from which the arguments are taken. The formal form $[X,Y]$ is not the number $X\cdot Y$ and is not defined by choosing a numerical bilinear function on $U$.
 
-For a form with identical arguments, we use the abbreviation $[X]^2=[X,X]$. This denotes a quadratic form, not the square of an exterior structure.
+For a form with identical arguments, the abbreviation is $[X]^2=[X,X]$. This denotes a quadratic form, not the square of an exterior structure.
 
 > [!info] Forms and polyforms on a subspace
 > **Proposition.** Polyforms on $U$ form a subalgebra of polyforms on $W$: addition, scalar multiplication, and multiplication of polyforms preserve this class. Its unit is $e=[1,1]$.
@@ -288,15 +289,15 @@ For example, replacing $(u,v)$ by $(2u,v)$ multiplies both the form and its metr
 
 ## The subspace metric through potentials of forms
 
-From now on, assume that the graph is connected and undirected, with positive coefficients for all existing couplings. The resistance inner product on $W$ is then positive definite. On a subspace $U$, we use the same inner products of its vectors as in $W$. This is called **restricting the metric**.
+From now on, assume that the graph is connected and undirected, with positive coefficients for all existing couplings. The resistance inner product on $W$ is then positive definite. A subspace $U$ inherits the inner products of its vectors from $W$. This is called **restricting the metric**.
 
-In our example, $u=(ab)$ and $v=(bc)$. The effective resistances of the path give
+In this example, $u=(ab)$ and $v=(bc)$. The effective resistances of the path give
 
 $$
 u^2=v^2=1,\qquad (u+v)^2=R_{ac}=2
 $$
 
-Expanding the square gives $u\cdot v=0$. Hence for the direction $w=u+v$, we have $w^2=2$, and the distance between the elements $a+tw$ and $a+sw$ is $\sqrt2\,|t-s|$.
+Expanding the square gives $u\cdot v=0$. Hence for the direction $w=u+v$, the result is $w^2=2$, and the distance between the elements $a+tw$ and $a+sw$ is $\sqrt2\,|t-s|$.
 
 The metric of exterior structures is inherited as well. For a decomposable structure of grade $2$,
 
@@ -304,15 +305,15 @@ $$
 (u  v)^2=u^2v^2-(u\cdot v)^2
 $$
 
-In this example, the value is $1$. It is the squared area of the parallelogram spanned by $u,v$. The triangle $abc$ has area $1/2$ and squared area $1/4$. For arbitrary grades, we use the Gram determinant: the determinant of the matrix of pairwise inner products of the vectors. The rule extends to linear combinations of exterior structures by bilinearity, as in [[Metric of Higher-Grade Objects]].
+In this example, the value is $1$. It is the squared area of the parallelogram spanned by $u,v$. The triangle $abc$ has area $1/2$ and squared area $1/4$. For arbitrary grades, the rule uses the Gram determinant: the determinant of the matrix of pairwise inner products of the vectors. The rule extends to linear combinations of exterior structures by bilinearity, as in [[Metric of Higher-Grade Objects]].
 
-In the language of polyforms, these evaluations are expressed through potentials. Recall the notation. The Laplacian polyform and its exponential are
+In the language of polyforms, these evaluations are expressed through potentials. [[Laplacian Exponential]] defines the metric polyform $M=\exp L$. The same notation for the Laplacian and its exponential is used here:
 
 $$
 L=\sum_{i<j}c_{ij}[a_j-a_i]^2,\qquad M=\exp L
 $$
 
-Here $c_{ij}$ is the coupling strength. The exponential uses the PMG product of forms. The functional $\tau$ extracts the coefficient of the fixed spanning-tree form $T_n=[(a_1\ldots a_n)]^2$. The potential of a form $f$ is denoted by $u_M(f)=\tau(Mf)$; the subscript in $u_M$ distinguishes this functional from the vector $u$ in our example.
+Here $c_{ij}$ is the coupling strength. The exponential uses the PMG product of forms. The functional $\tau$ extracts the coefficient of the fixed spanning-tree form $T_n=[(a_1\ldots a_n)]^2$. The potential of a form $f$ is denoted by $u_M(f)=\tau(Mf)$; the subscript in $u_M$ distinguishes this functional from the vector $u$ in this example.
 
 > [!info] Metric evaluation on a subspace
 > **Corollary of the core metric identity.** For any $X,Y\in\Lambda^jU$,
@@ -322,10 +323,10 @@ Here $c_{ij}$ is the coupling strength. The exponential uses the PMG product of 
 > \tag{3}
 > $$
 >
-> In particular, the evaluation of $[X]^2$ is $X^2$. We use the original metric polyform of the entire graph.
+> In particular, the evaluation of $[X]^2$ is $X^2$. The evaluation uses the original metric polyform of the entire graph.
 
 > [!note]- Proof
-> **Proof.** Since $U\subseteq W$, we have $\Lambda^jU\subseteq\Lambda^jW$. The metric identity proved in [[Laplacian Exponential]] therefore applies to these arguments. $\square$
+> **Proof.** Since $U\subseteq W$, the result is $\Lambda^jU\subseteq\Lambda^jW$. The metric identity proved in [[Laplacian Exponential]] therefore applies to these arguments. $\square$
 
 ### A direct calculation on the path
 
@@ -365,7 +366,7 @@ This calculation uses the product of forms directly, without substituting a know
 For the form $[u  v]^2$ of grade $2$, only the unit $e$ in $M$ contributes to the top-grade coefficient. Its normalized potential is therefore $1$, equal to the squared area of the parallelogram.
 
 > [!note] A subspace and a subgraph
-> Simply deleting the vertex $b$ and all its incident edges leaves two disconnected vertices $a,c$. Such a graph does not reproduce the metric of the selected line. For that line, we retained the original evaluation $(c-a)^2=2$. Constructing couplings on $a,c$ alone that reproduce this evaluation will be considered in the note on vertex elimination.
+> Simply deleting the vertex $b$ and all its incident edges leaves two disconnected vertices $a,c$. Such a graph does not reproduce the metric of the selected line. For that line, the original evaluation remains $(c-a)^2=2$. Constructing couplings on $a,c$ alone that reproduce this evaluation will be considered in the note on vertex elimination.
 
 ## Applicability and the next construction
 

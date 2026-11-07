@@ -1,9 +1,9 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-11-06
-revision: 10
-translated_revision: 11
+updated: 2026-11-07
+revision: 11
+translated_revision: 12
 source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
@@ -93,7 +93,7 @@ Full bibliographic details, recommended sections, and access information are col
 
 ## Next steps
 
-The next stage is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].
+The next stage is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].
 
 ## Programming companions
 

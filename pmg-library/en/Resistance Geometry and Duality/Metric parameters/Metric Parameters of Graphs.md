@@ -1,9 +1,9 @@
 ---
 title: Metric Parameters of Graphs
 date: 2026-10-18
-updated: 2026-11-04
-revision: 4
-translated_revision: 7
+updated: 2026-11-07
+revision: 5
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: metric-parameters-series-navigation
@@ -39,7 +39,7 @@ Secondary thematic entries:
 
 The graph part requires [[Effective Resistance and Graph Geometry|effective resistance and the resistance simplex]], and [[Laplacian, Green Matrix, and Effective Resistance Matrix|conversions between the Laplacian, Green matrix, and resistance matrix]]. The polyform expressions build on [[Laplacian Exponential|the Laplacian exponential and normalized potentials]].
 
-The geometric background is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]. Particularly relevant are [[Nonlocal Elements, Spheres, and Their Centers|the distinction between a sphere element and its center]], [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]], and, for comparing the two types of vertex removal, [[Vertex Elimination and Induced Couplings|elimination that preserves the metric]].
+The geometric background is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]. Particularly relevant are [[Nonlocal Elements, Spheres, and Their Centers|the distinction between a sphere element and its center]], [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]], and, for comparing the two types of vertex removal, [[Vertex Elimination and Induced Couplings|elimination that preserves the metric]].
 
 General definitions and notation are given in the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]].
 

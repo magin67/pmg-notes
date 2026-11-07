@@ -1,9 +1,9 @@
 ---
-title: Spaces and Subspaces in PMG
+title: Spaces
 date: 2026-10-14
-updated: 2026-11-06
-revision: 6
-translated_revision: 6
+updated: 2026-11-07
+revision: 7
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: spaces-subspaces-series-navigation
@@ -17,6 +17,7 @@ tags:
 aliases:
   - "en/Spaces/Spaces and Subspaces in PMG"
   - "en/Spaces/index"
+  - "en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG"
 ---
 
 Choose several vertices of a graph. They generate a subspace relative to which we can describe the remaining vertices and their positions. Which coordinates do we need? How are projection onto the chosen subspace, extension of prescribed values, and construction of a graph on the selected vertices related?
@@ -47,7 +48,7 @@ Definitions and notation are collected in the [[Core specification|core specific
 
 ## Notes in the series
 
-1. **[[Spaces, Subspaces, and the Choice of a Basis]].** We distinguish the linear space of formal vertices, the space of affine vectors, and the affine space of elements. Selected vertices generate subspaces; a basis lets us write their exterior structures and forms. Metric evaluations are obtained through potentials of forms.
+1. **[[Basis]].** We distinguish the linear space of formal vertices, the space of affine vectors, and the affine space of elements. Selected vertices generate subspaces; a basis lets us write their exterior structures and forms. Metric evaluations are obtained through potentials of forms.
 
 2. **[[The Null Vector, Isotropic Representation, and the Boundary]].** We construct an isotropic model with local points and a correction selecting the center of an element. The distinguished null vector connects affine weight, flat geometry, and the boundary operator. This note develops the geometric part of the series; its constructions are also used in the section on isotropic coordinates.
 
@@ -67,9 +68,9 @@ Definitions and notation are collected in the [[Core specification|core specific
 
 **For the full series:** follow the order above. Examples explain the constructions, while collapsible proofs give general derivations. Conditions on connectivity, nondegeneracy, and the presence of selected vertices in each component are stated where they are needed.
 
-**Graphs and applications:** start with [[Spaces, Subspaces, and the Choice of a Basis|spaces and the choice of a basis]], then move to [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]]. Continue with [[Vertex Contraction and Graph Gluing|contraction and gluing]], [[Selected Vertices and the Dirichlet Problem|the Dirichlet problem]], [[Vertex Elimination and Induced Couplings|vertex elimination]], and [[Couplings Within One Part of a Bipartite Graph|the bipartite application]]. The isotropic extension is not required for this route. The supplement on the two Dirichlet problems in a balanced directed graph can be skipped until the directed model has been studied.
+**Graphs and applications:** start with [[Basis|spaces and the choice of a basis]], then move to [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]]. Continue with [[Vertex Contraction and Graph Gluing|contraction and gluing]], [[Selected Vertices and the Dirichlet Problem|the Dirichlet problem]], [[Vertex Elimination and Induced Couplings|vertex elimination]], and [[Couplings Within One Part of a Bipartite Graph|the bipartite application]]. The isotropic extension is not required for this route. The supplement on the two Dirichlet problems in a balanced directed graph can be skipped until the directed model has been studied.
 
-**Isotropic geometry:** after [[Spaces, Subspaces, and the Choice of a Basis|spaces and the choice of a basis]], read about [[The Null Vector, Isotropic Representation, and the Boundary|the null vector and the boundary]], then [[Nonlocal Elements, Spheres, and Their Centers|nonlocal elements and spheres]] and [[Projections, Bi-coordinates, and Di-coordinates|coordinates]], including the section on [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension|the isotropic extension]]. The main part of the coordinates note builds on spaces and the metric; the null vector is needed for its isotropic constructions and the example of a degenerate subspace.
+**Isotropic geometry:** after [[Basis|spaces and the choice of a basis]], read about [[The Null Vector, Isotropic Representation, and the Boundary|the null vector and the boundary]], then [[Nonlocal Elements, Spheres, and Their Centers|nonlocal elements and spheres]] and [[Projections, Bi-coordinates, and Di-coordinates|coordinates]], including the section on [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension|the isotropic extension]]. The main part of the coordinates note builds on spaces and the metric; the null vector is needed for its isotropic constructions and the example of a degenerate subspace.
 
 All eight notes are available in Russian and English, with matching reading orders.
 

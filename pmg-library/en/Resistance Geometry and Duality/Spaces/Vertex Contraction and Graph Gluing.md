@@ -1,9 +1,9 @@
 ---
 title: Vertex Contraction and Graph Gluing
 date: 2026-10-14
-updated: 2026-11-06
-revision: 7
-translated_revision: 5
+updated: 2026-11-07
+revision: 8
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -18,7 +18,7 @@ Suppose two vertices of a graph are to be treated as one. For example, several o
 
 Consider another problem as well. Two graphs are given independently. Select one vertex in each and identify them. The resulting graph allows us to compare vertices from the two original parts. Here, identification joins two spaces.
 
-It uses the [[Spaces, Subspaces, and the Choice of a Basis|distinction between elements and affine vectors]], [[Projections, Bi-coordinates, and Di-coordinates|orthogonal projection]], and the [[Laplacian Exponential|metric polyform]]. All existing couplings have positive strengths. Connectedness is assumed wherever the resistance metric of an entire graph is calculated.
+It uses the [[Basis|distinction between elements and affine vectors]], [[Projections, Bi-coordinates, and Di-coordinates|orthogonal projection]], and the [[Laplacian Exponential|metric polyform]]. All existing couplings have positive strengths. Connectedness is assumed wherever the resistance metric of an entire graph is calculated.
 
 ## Three ways to reduce the number of vertices
 

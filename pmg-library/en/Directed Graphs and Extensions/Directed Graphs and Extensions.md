@@ -1,8 +1,8 @@
 ---
 title: Directed Graphs and Extensions
 date: 2026-11-01
-updated: 2026-11-03
-revision: 2
+updated: 2026-11-07
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -27,7 +27,7 @@ What changes when couplings become directed and constructions become nonsymmetri
 The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]], especially the algebra of forms and the Laplacian exponential.
 
 1. Start with balance and the bilinear Laplacian in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]], then proceed to the exponential and circulation.
-2. For directional geometry, first use [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]], then read about resistances, coordinates, and the sphere in the balanced series.
+2. For directional geometry, first use [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]], then read about resistances, coordinates, and the sphere in the balanced series.
 3. For directed data, proceed to the oriented extensions in [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]]; for forest toponomes, use [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]].
 
 Balance does not imply symmetry. Results from the symmetric spectral series and positive resistance geometry require separately checked conditions before being extended.
