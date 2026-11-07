@@ -1,0 +1,36 @@
+---
+sorting-spec: |-
+  target-folder: ru/*
+  target-folder: en/*
+  < a-z by-metadata: order
+
+  target-folder: ru
+  /:files
+    < a-z by-metadata: order
+  /folders Основания
+  /folders Введение
+  /folders Пространства
+  /folders Метрические параметры
+  /folders Структурные тождества
+  /folders Симметрические полиформы
+  /folders Комбинаторные потенциалы
+  /folders Топономы разбиений
+  /folders Полиномиальные топономы
+  /folders
+    < a-z
+
+  target-folder: en
+  /:files
+    < a-z by-metadata: order
+  /folders Foundations
+  /folders Introduction
+  /folders Spaces
+  /folders Metric parameters
+  /folders Structural identities
+  /folders Symmetric polyforms
+  /folders Symmetric polyforms
+  /folders Combinatorial potentials
+  /folders Partitions toponomes
+    < a-z
+
+---
