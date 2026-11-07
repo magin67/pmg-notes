@@ -12,6 +12,7 @@ configuration:
     - private
     - templates
     - .obsidian
+    - "**/sortspec.md"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
