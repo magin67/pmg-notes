@@ -1,9 +1,9 @@
 ---
 title: Nonlocal Elements, Spheres, and Their Centers
 date: 2026-10-15
-updated: 2026-11-06
-revision: 3
-translated_revision: 4
+updated: 2026-11-07
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -370,4 +370,4 @@ Representation of a sphere by an element is established in conformal geometric a
 
 This note completes the geometric foundation needed to study a graph's resistance radius and diameter. Their behavior under changes in couplings and their dimensionless combinations with other parameters belong to the series on metric parameters. The reciprocal $1/D_{\mathrm{res}}$ does not by itself acquire the electrical interpretation of conductance between specified terminals: such an interpretation requires a separate justification.
 
-Next: [[Projections, Bi-coordinates, and Di-coordinates]]. Navigation: [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]].
+Next: [[Projections, Bi-coordinates, and Di-coordinates]]. Navigation: [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]].

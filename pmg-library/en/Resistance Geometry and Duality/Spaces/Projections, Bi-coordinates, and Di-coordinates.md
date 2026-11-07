@@ -1,9 +1,9 @@
 ---
 title: Projections, Bi-coordinates, and Di-coordinates
 date: 2026-10-13
-updated: 2026-11-06
-revision: 7
-translated_revision: 9
+updated: 2026-11-07
+revision: 8
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -18,7 +18,7 @@ Select several vertices of a graph. How can we describe the other vertices relat
 
 This note examines which coordinates describe the object itself, which describe its projection, and how to calculate them using metric polyforms.
 
-The main part builds on [[Spaces, Subspaces, and the Choice of a Basis]]. [[The Null Vector, Isotropic Representation, and the Boundary]] is needed for the section “Coordinates in the isotropic extension” and the example of degeneracy along $\mathbb Rz$. Definitions of forms and potentials are collected in the [[Core specification|core specification]]. The graph model remains the same: the graph is connected and undirected, with positive strengths for all existing couplings. The space of affine vectors $W$ carries a positive definite resistance metric.
+The main part builds on [[Basis]]. [[The Null Vector, Isotropic Representation, and the Boundary]] is needed for the section “Coordinates in the isotropic extension” and the example of degeneracy along $\mathbb Rz$. Definitions of forms and potentials are collected in the [[Core specification|core specification]]. The graph model remains the same: the graph is connected and undirected, with positive strengths for all existing couplings. The space of affine vectors $W$ carries a positive definite resistance metric.
 
 We first compare bi- and di-coordinates, introduce the reciprocal basis, and find the projection. We then decompose frame forms and express the calculations through polyforms. A separate final section treats isotropic coordinates.
 
@@ -455,7 +455,7 @@ Formula (7) gives $\pi_U(u)=w/2$, the same result obtained earlier from effectiv
 
 ### Distance to a subspace
 
-Let $h_1,\ldots,h_k$ form a basis of a nonzero subspace $U\subseteq W$, with $x,p_0\in\mathcal A$. Use the positive definite resistance metric on $W$ and set $\Omega=h_1 \cdots  h_k$. The nonzero exterior structure $\Omega$ specifies the direction subspace, as shown in the [[Spaces, Subspaces, and the Choice of a Basis#Specifying a subspace by an exterior structure|note on choosing a subspace]].
+Let $h_1,\ldots,h_k$ form a basis of a nonzero subspace $U\subseteq W$, with $x,p_0\in\mathcal A$. Use the positive definite resistance metric on $W$ and set $\Omega=h_1 \cdots  h_k$. The nonzero exterior structure $\Omega$ specifies the direction subspace, as shown in the [[Basis#Specifying a subspace by an exterior structure|note on choosing a subspace]].
 
 > [!info] Distance to a subspace
 > **Lemma.** If $q$ is the projection of $x$ onto $p_0+U$, then

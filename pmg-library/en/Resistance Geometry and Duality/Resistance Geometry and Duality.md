@@ -1,8 +1,8 @@
 ---
 title: Resistance Geometry and Duality
 date: 2026-11-01
-updated: 2026-11-03
-revision: 7
+updated: 2026-11-07
+revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -20,7 +20,7 @@ How are spaces, the resistance metric, geometric characteristics, and dual repre
 
 ## Series in this section
 
-- **[[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]]** (8 notes). Subspaces, the null vector, coordinates, the Dirichlet problem, elimination, and contraction.
+- **[[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]** (8 notes). Subspaces, the null vector, coordinates, the Dirichlet problem, elimination, and contraction.
 - **[[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]]** (5 notes). Resistance radius and diameter, centralities, dimensionless parameters, and vertex deletion.
 - **[[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|Greenian and Polyform Duality]]** (9 notes). Mutual duality of Laplacian and Greenian exponentials, forest coefficients, cuts, and metric potentials.
 
@@ -30,7 +30,7 @@ How are spaces, the resistance metric, geometric characteristics, and dual repre
 
 The prerequisites are the Laplacian, Green matrix, resistances, and algebra of forms from [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]].
 
-1. [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG|Spaces and Subspaces in PMG]] introduces spaces, coordinates, and operations on selected vertices.
+1. [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]] introduces spaces, coordinates, and operations on selected vertices.
 2. [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]] connects this geometry with the radius, centralities, and other characteristics.
 3. [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|Greenian and Polyform Duality]] develops dual representations and metric potentials. Its algebraic route can also begin directly after the introductory series.
 

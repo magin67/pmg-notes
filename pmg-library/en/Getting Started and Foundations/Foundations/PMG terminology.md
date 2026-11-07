@@ -1,9 +1,9 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-11-06
-revision: 25
-translated_revision: 25
+updated: 2026-11-07
+revision: 26
+translated_revision: 26
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -518,7 +518,7 @@ The following table also records earlier Russian usage, so that older research n
 
 ## Terminology of extensions
 
-The following definitions are used in the published series “Spaces and Subspaces in PMG”. They extend the glossary; the required core definitions remain in the [[Core specification|specification]]. Conditions and examples are given in the linked notes.
+The following definitions are used in the published series “Spaces”. They extend the glossary; the required core definitions remain in the [[Core specification|specification]]. Conditions and examples are given in the linked notes.
 
 | Term | Russian equivalent | Meaning and source |
 | --- | --- | --- |

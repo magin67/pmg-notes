@@ -1,8 +1,8 @@
 ---
 title: Thematic Index
 date: 2026-11-01
-updated: 2026-11-03
-revision: 14
+updated: 2026-11-07
+revision: 15
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -41,7 +41,7 @@ The 18 completed bilingual series contain 127 substantive notes in each language
 | [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials\|Combinatorial Potentials]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 6 |
 | [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes\|Partition Toponomes]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 6 |
 | [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes\|Polynomial Toponomes]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 5 |
-| [[en/Resistance Geometry and Duality/Spaces/Spaces and Subspaces in PMG\|Spaces and Subspaces in PMG]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 8 |
+| [[en/Resistance Geometry and Duality/Spaces/Spaces\|Spaces]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 8 |
 | [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs\|Metric Parameters of Graphs]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 5 |
 | [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality\|Greenian and Polyform Duality]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 9 |
 | [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 4 |

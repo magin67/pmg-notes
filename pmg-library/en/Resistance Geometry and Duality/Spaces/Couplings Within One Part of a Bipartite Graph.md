@@ -1,9 +1,9 @@
 ---
 title: Couplings Within One Part of a Bipartite Graph
 date: 2026-10-14
-updated: 2026-11-06
-revision: 6
-translated_revision: 7
+updated: 2026-11-07
+revision: 7
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -18,7 +18,7 @@ Suppose we know which documents each employee has contributed to. We want to obt
 
 In PMG, this transition has a metric requirement: effective resistances between the retained vertices must remain unchanged. This determines the new coupling strengths. We will examine how this requirement relates to projections and polyforms, how to perform the calculation column by column, and what the results for the two sides of the table have in common.
 
-This is the final note in the series “Spaces and Subspaces in PMG”. It uses [[Projections, Bi-coordinates, and Di-coordinates|bi-coordinates and the Laplacian of a frame]], [[Selected Vertices and the Dirichlet Problem|projections in the Dirichlet problem]], and [[Vertex Elimination and Induced Couplings|elimination of internal vertices]].
+This is the final note in the series “Spaces”. It uses [[Projections, Bi-coordinates, and Di-coordinates|bi-coordinates and the Laplacian of a frame]], [[Selected Vertices and the Dirichlet Problem|projections in the Dirichlet problem]], and [[Vertex Elimination and Induced Couplings|elimination of internal vertices]].
 
 ## The participation table and the choice of a subspace
 

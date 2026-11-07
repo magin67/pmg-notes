@@ -2,8 +2,8 @@
 title: The Null Vector, Isotropic Representation, and the Boundary
 date: 2026-10-12
 updated: 2026-11-07
-revision: 8
-translated_revision: 8
+revision: 9
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -18,7 +18,7 @@ Effective resistances specify squared distances between vertices, but do not det
 
 An object of weight $1$ is an element; an object of weight $0$ is a vector. A point is an element of zero norm. An affine combination of points is an element but need not be a point; its local center is obtained by a correction along the distinguished null vector $z$.
 
-The construction uses [[Spaces, Subspaces, and the Choice of a Basis|the vector space and affine weight]]. We first specify the extended metric and explain the normal and the null vector. We then construct local points, examine translation of a two-point vector, and represent the null vector by inward arrows. After that, we turn to local centers, exterior structures, and the boundary.
+The construction uses [[Basis|the vector space and affine weight]]. We first specify the extended metric and explain the normal and the null vector. We then construct local points, examine translation of a two-point vector, and represent the null vector by inward arrows. After that, we turn to local centers, exterior structures, and the boundary.
 
 ## The original points and the extended space
 
