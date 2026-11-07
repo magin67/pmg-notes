@@ -1,9 +1,9 @@
 ---
 title: The Null Vector, Isotropic Representation, and the Boundary
 date: 2026-10-12
-updated: 2026-11-06
-revision: 7
-translated_revision: 7
+updated: 2026-11-07
+revision: 8
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -18,7 +18,7 @@ Effective resistances specify squared distances between vertices, but do not det
 
 An object of weight $1$ is an element; an object of weight $0$ is a vector. A point is an element of zero norm. An affine combination of points is an element but need not be a point; its local center is obtained by a correction along the distinguished null vector $z$.
 
-The construction uses [[Spaces, Subspaces, and the Choice of a Basis|the vector space and affine weight]]. We first specify the extended metric and points, then work through a midpoint, and only then turn to exterior structures and the boundary.
+The construction uses [[Spaces, Subspaces, and the Choice of a Basis|the vector space and affine weight]]. We first specify the extended metric and explain the normal and the null vector. We then construct local points, examine translation of a two-point vector, and represent the null vector by inward arrows. After that, we turn to local centers, exterior structures, and the boundary.
 
 ## The original points and the extended space
 
@@ -44,7 +44,27 @@ The objects $(p_0+z)/\sqrt2$ and $(p_0-z)/\sqrt2$ are orthogonal and have norms 
 
 Signature $(d+1,1)$ means that, in a suitable basis, the norm is a sum of $d+1$ positive squares and one negative square.
 
-Define affine weight in the extension using $z$:
+## The normal and the null vector
+
+How can affine weight be expressed through the metric? In a finite-dimensional space with a nondegenerate symmetric inner product, every specified nonzero linear functional $\varepsilon$ has a unique representation
+
+$$
+\varepsilon(U)=U\cdot N
+$$
+
+> [!info] The normal to an affine hyperplane
+> **Definition.** The object $N$ in this expression is a normal to the hyperplane of elements $\mathcal H=\{A:\varepsilon(A)=1\}$. It is orthogonal to all its directions:
+>
+> $$
+> \mathcal H=\{A:A\cdot N=1\},\qquad
+> \ker\varepsilon=N^\perp
+> $$
+
+Indeed, any two elements $A,B$ satisfy $(B-A)\cdot N=1-1=0$. This orthogonality condition characterizes the normal, and the normalization $A\cdot N=1$ fixes its scale.
+
+In general, $N^2$ need not vanish. If $N^2\ne0$, the normal does not belong to the direction space $N^\perp$. In the specialized terminology of PMG, such a normal is an object but not an affine vector: its weight $\varepsilon(N)=N^2$ is nonzero.
+
+In the extension constructed above, the normal is $z$:
 
 $$
 \varepsilon(U)=U\cdot z,\qquad
@@ -53,8 +73,24 @@ $$
 
 Thus an element has coefficient $1$ at $p_0$, while a vector has coefficient $0$. Once vertices are chosen, this rule agrees with the sum of their coefficients.
 
-> [!info] The null vector and the zero vector
-> A nonzero linear object with zero norm $U\cdot U=0$ is **isotropic**. At weight $0$, it is an isotropic vector. The distinguished vector $z\ne0$, with $z^2=0$, is called the null vector. It is not the zero vector: $z\cdot p_0=1$.
+> [!info] The distinguished null vector
+> **Definition.** The nonzero isotropic normal $z$ representing the specified affine weight is called the **distinguished null vector**:
+>
+> $$
+> z\ne0,\qquad z^2=0,\qquad \varepsilon(U)=U\cdot z
+> $$
+>
+> Since $\varepsilon(z)=z^2=0$, it is a vector in the PMG sense. It is orthogonal to every vector of weight zero and itself belongs to their space $z^\perp$.
+
+### The null vector and the zero vector are different concepts
+
+The **zero vector** $0$ is the additive identity: $U+0=U$. All its inner products vanish. The **null vector** $z$ is a nonzero object with zero norm. In particular,
+
+$$
+0\cdot p_0=0,\qquad z\cdot p_0=1
+$$
+
+The equality $z^2=0$ does not imply $z=0$: the metric of the extension is indefinite. A nonzero object $U$ with $U^2=0$ is called an **isotropic object**; at weight $0$, it is an **isotropic vector**. Isotropy alone does not single out $z$. For example, $2z$ also has zero norm, but represents twice the affine weight.
 
 ## Local points
 
@@ -107,6 +143,86 @@ a=p_0,\qquad b=p_0+u-\frac12z,\qquad c=p_0+u+v-z
 $$
 
 Thus $a\cdot b=b\cdot c=-1/2$ and $a\cdot c=-1$, giving $R_{ab}=R_{bc}=1$ and $R_{ac}=2$. In the extension, the vertex differences are $b-a=u-z/2$ and $c-b=v-z/2$; their metric products agree with those of $u,v$.
+
+## Translating a two-point vector
+
+An ordinary arrow shows a displacement between points. In the isotropic representation, their difference also records the arrow's position along its direction. To see this, write the point with coordinate $q\in W_0$ as
+
+$$
+x(q)=p_0+q-\frac{q^2}{2}z
+$$
+
+Let $h\in W_0$ be the nonzero displacement from the tail of the arrow to its tip. The arrow from $x(q)$ to $x(q+h)$ corresponds to the two-point vector
+
+$$
+v=x(q+h)-x(q)
+=h-\left(q\cdot h+\frac{h^2}{2}\right)z
+$$
+
+Translating the arrow by $t\in W_0$ means translating both endpoints in the geometry of $W_0$. In the extension, the new arrow is $v_t=x(q+t+h)-x(q+t)$.
+
+> [!info] How translation changes a vector
+> **Proposition.** Under this translation,
+>
+> $$
+> \boxed{v_t=v-(t\cdot h)z}
+> $$
+>
+> For any fixed local point $y$,
+>
+> $$
+> v_t\cdot y=v\cdot y-t\cdot h
+> $$
+
+> [!note]- Proof
+> **Proof.** Replacing $q$ by $q+t$ in the expression for $v$ adds $-(t\cdot h)z$. Taking the inner product with $y$ and using $z\cdot y=1$ gives the second formula. $\square$
+
+A perpendicular translation, with $t\cdot h=0$, preserves the vector $v$ itself. A parallel translation $t=\lambda h$ gives $v_t=v-\lambda h^2z$: the displacement and the norm $v_t^2=h^2$ are preserved, but inner products with fixed points change by $-\lambda h^2$. If the point $y$ is translated along with the arrow, their inner product is preserved, since the distances from $y$ to both endpoints are preserved.
+
+The component along $z$ thus distinguishes two-point vectors with the same displacement. In the section on [[The Null Vector, Isotropic Representation, and the Boundary#Affine weight and the space of displacements|the space of displacements]], these vectors will be grouped into a single class.
+
+## The null vector as two inward arrows
+
+Choose three local points on a line:
+
+$$
+a_-=x(q-h),\qquad m=x(q),\qquad a_+=x(q+h)
+$$
+
+The point $m$ is the local midpoint of the segment from $a_-$ to $a_+$. Direct two arrows from the endpoints toward this midpoint:
+
+$$
+v_-=m-a_-,\qquad v_+=m-a_+
+$$
+
+Their displacements in $W_0$ are $h$ and $-h$, so they face one another in an ordinary diagram. Each arrow has norm $h^2$.
+
+> [!info] Representing the null vector by inward arrows
+> **Proposition.** In the extended space, the sum of these vectors is nonzero:
+>
+> $$
+> \boxed{v_-+v_+=2m-a_--a_+=h^2z}
+> $$
+>
+> Thus, when $h^2=1$, the two arrows represent exactly $z$. For any $h\ne0$, we obtain $z=(v_-+v_+)/h^2$.
+
+> [!note]- Proof
+> **Proof.** The expression for a local point gives
+>
+> $$
+> \begin{aligned}
+> v_-&=h-\left(q\cdot h-\frac{h^2}{2}\right)z\\
+> v_+&=-h+\left(q\cdot h+\frac{h^2}{2}\right)z
+> \end{aligned}
+> $$
+>
+> On adding, the spatial parts cancel and the coefficients of $z$ sum to $h^2$. Since the metric of $W_0$ is positive definite and $h\ne0$, we have $h^2>0$, so the sum is nonzero. $\square$
+
+![The null vector as inward arrows and the effect of translation](<The Null Vector as Inward Arrows.svg>)
+
+*At the top, two equal arrows meet at the local midpoint $m$. When each arrow has unit norm, their sum in the extension is $z$, although their displacements in $W_0$ sum to zero. The lower panels show why the arrow's position matters: perpendicular translation preserves the vector, while parallel translation adds a multiple of $z$. The diagram shows the geometry of $W_0$; the direction $z$ is not drawn as a separate spatial arrow.*
+
+The connection with translation can also be read without coordinates. The arrow opposite to $v_-$ runs from $m$ to $a_-$. Translate it along the line by $h$: it becomes the arrow from $a_+$ to $m$, namely $v_+$. The translation formula gives $v_+=-v_-+h^2z$. Thus the inward arrows are not opposite vectors of the extension. Their sum has zero norm, but its inner product with any local point is the nonzero value $h^2$.
 
 ## Linear combinations and correction along the null vector
 
@@ -200,7 +316,7 @@ For example, $m-a=(u+v)/2-z/4$ and $(c-a)/2=(u+v)/2-z/2$ are different vectors b
 
 ## Where the flat geometry appears, and which normal is involved
 
-The condition $x\cdot z=1$ defines an affine hyperplane in $\widetilde V$. Its direction space is $z^\perp$, so $z$ is a normal to it. Since $z^2=0$, this normal also belongs to the direction space.
+The section on [[The Null Vector, Isotropic Representation, and the Boundary#The normal and the null vector|the normal and the null vector]] defines the hyperplane of elements $x\cdot z=1$, with normal $z$. We now distinguish this hyperplane from the geometry of local points.
 
 Local points lie at the intersection of this hyperplane with the null cone $x^2=0$. This intersection is not an affine plane in the ambient linear space. Nevertheless, its distances reproduce flat Euclidean geometry. The curvature of the coordinate parabola is not the intrinsic curvature of that geometry.
 
@@ -436,3 +552,4 @@ The previous revision included exact rational checks in the four-dimensional mod
 The note is based on the author's PMG research. Local points are denoted directly; their linear combinations and local centers are explicitly distinguished.
 
 The isotropic model of Euclidean points and the exterior description of lines are known constructions in conformal geometric algebra. The correspondence was checked against [H. Li, D. Hestenes, A. Rockwood, *Generalized Homogeneous Coordinates for Computational Geometry*](https://davidhestenes.net/geocalc/pdf/CompGeom-ch2.pdf), §2.3, equations (2.25), (2.26), and (2.32)–(2.34). That source uses $x\cdot e=-1$; our notation corresponds to $z=-e$ and $p_0=e_0$. The geometric product of Clifford algebra is not identified with the PMG product of forms.
+

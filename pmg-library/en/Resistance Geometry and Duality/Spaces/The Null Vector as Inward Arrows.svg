@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="730" viewBox="0 0 1100 730" role="img" aria-labelledby="title desc">
+<title id="title">The null vector as two inward arrows</title>
+<desc id="desc">Two equal arrows meet at their common midpoint. Their displacement sum is zero, but their vector sum in the isotropic extension is h squared times z. Perpendicular translation preserves a vector; parallel translation changes its z component.</desc>
+<defs>
+<marker id="blue" markerWidth="28" markerHeight="22" refX="28" refY="11" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L28 11L0 22Z" fill="#176ba4"/></marker>
+<marker id="orange" markerWidth="28" markerHeight="22" refX="28" refY="11" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L28 11L0 22Z" fill="#b15d25"/></marker>
+<marker id="gray" markerWidth="17" markerHeight="14" refX="17" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L17 7L0 14Z" fill="#617184"/></marker>
+</defs>
+<rect width="1100" height="730" fill="#fff"/>
+<g font-family="Arial, sans-serif" fill="#203348">
+<rect x="25" y="76" width="1050" height="226" rx="14" fill="#f5f8fb"/>
+<rect x="25" y="326" width="515" height="306" rx="14" fill="#f8fafc" stroke="#dfe7ee"/>
+<rect x="560" y="326" width="515" height="306" rx="14" fill="#f8fafc" stroke="#dfe7ee"/>
+
+<text x="305.00" y="48.00" font-size="30" fill="#203348">The null vector as two inward arrows</text>
+<path d="M205 163L550 163" fill="none" stroke="#176ba4" stroke-width="4" marker-end="url(#blue)"/>
+<path d="M895 163L550 163" fill="none" stroke="#b15d25" stroke-width="4" marker-end="url(#orange)"/>
+<circle cx="205" cy="163" r="5" fill="#203348"/>
+<circle cx="895" cy="163" r="5" fill="#203348"/>
+<text x="193.50" y="202.00" font-size="24" fill="#203348">a</text>
+<text x="206.50" y="207.76" font-size="17" fill="#203348">−</text>
+<text x="540.00" y="202.00" font-size="24" fill="#203348">m</text>
+<text x="883.50" y="202.00" font-size="24" fill="#203348">a</text>
+<text x="896.50" y="207.76" font-size="17" fill="#203348">+</text>
+<text x="311.00" y="137.00" font-size="25" fill="#176ba4">v</text>
+<text x="324.00" y="143.00" font-size="18" fill="#176ba4">−</text>
+<text x="335.00" y="137.00" font-size="25" fill="#176ba4"> = m − a</text>
+<text x="428.00" y="143.00" font-size="18" fill="#176ba4">−</text>
+<text x="661.00" y="137.00" font-size="25" fill="#b15d25">v</text>
+<text x="674.00" y="143.00" font-size="18" fill="#b15d25">+</text>
+<text x="685.00" y="137.00" font-size="25" fill="#b15d25"> = m − a</text>
+<text x="778.00" y="143.00" font-size="18" fill="#b15d25">+</text>
+<text x="388.00" y="247.00" font-size="28" fill="#203348">For h² = 1:  v</text>
+<text x="549.00" y="253.72" font-size="20" fill="#203348">−</text>
+<text x="561.00" y="247.00" font-size="28" fill="#203348"> + v</text>
+<text x="607.00" y="253.72" font-size="20" fill="#203348">+</text>
+<text x="619.00" y="247.00" font-size="28" fill="#203348"> = z ≠ 0</text>
+<text x="386.50" y="281.00" font-size="21" fill="#617184">Displacements in W</text>
+<text x="577.50" y="286.04" font-size="15" fill="#617184">0</text>
+<text x="585.50" y="281.00" font-size="21" fill="#617184">:  h + (−h) = 0</text>
+<text x="142.00" y="365.00" font-size="25" fill="#203348">Perpendicular translation</text>
+<text x="712.50" y="365.00" font-size="25" fill="#203348">Parallel translation</text>
+<path d="M160 524L430 524" fill="none" stroke="#176ba4" stroke-width="4" marker-end="url(#blue)"/>
+<path d="M160 421L430 421" fill="none" stroke="#b15d25" stroke-width="4" marker-end="url(#orange)"/>
+<path d="M111 524L111 421" fill="none" stroke="#617184" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#gray)"/>
+<text x="289.00" y="510.00" font-size="24" fill="#176ba4">v</text>
+<text x="286.50" y="408.00" font-size="24" fill="#b15d25">v</text>
+<text x="298.50" y="413.76" font-size="17" fill="#b15d25">t</text>
+<text x="87.00" y="480.00" font-size="23" fill="#617184">t</text>
+<text x="258.00" y="473.00" font-size="22" fill="#617184">t · h = 0</text>
+<text x="249.00" y="595.00" font-size="28" fill="#203348">v</text>
+<text x="263.00" y="601.72" font-size="20" fill="#203348">t</text>
+<text x="269.00" y="595.00" font-size="28" fill="#203348"> = v</text>
+<path d="M615 468L780 468" fill="none" stroke="#176ba4" stroke-width="4" marker-end="url(#blue)"/>
+<path d="M875 468L1040 468" fill="none" stroke="#b15d25" stroke-width="4" marker-end="url(#orange)"/>
+<text x="691.00" y="447.00" font-size="24" fill="#176ba4">v</text>
+<text x="948.50" y="447.00" font-size="24" fill="#b15d25">v</text>
+<text x="960.50" y="452.76" font-size="17" fill="#b15d25">t</text>
+<path d="M615 535L875 535" fill="none" stroke="#617184" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#gray)"/>
+<text x="718.00" y="520.00" font-size="22" fill="#617184">t = λh</text>
+<text x="741.50" y="595.00" font-size="28" fill="#203348">v</text>
+<text x="755.50" y="601.72" font-size="20" fill="#203348">t</text>
+<text x="761.50" y="595.00" font-size="28" fill="#203348"> = v − λh²z</text>
+<text x="308.00" y="677.00" font-size="22" fill="#617184">The diagram shows displacement geometry in W</text>
+<text x="777.00" y="682.28" font-size="16" fill="#617184">0</text>
+<text x="786.00" y="677.00" font-size="22" fill="#617184">.</text>
+<text x="303.50" y="708.00" font-size="22" fill="#617184">The component along z is recorded in the formulas.</text>
+</g></svg>
