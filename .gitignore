@@ -6,7 +6,8 @@ prof
 tsconfig.tsbuildinfo
 .obsidian
 .quartz-cache
-private/
+private/*
+!/pmg-library/private/sortspec.md
 .replit
 replit.nix
 .quartz/
