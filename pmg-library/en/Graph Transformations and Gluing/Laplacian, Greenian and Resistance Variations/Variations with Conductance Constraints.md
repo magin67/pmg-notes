@@ -1,15 +1,15 @@
 ---
 title: Variations with Conductance Constraints
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-constrained-couplings
 lang: en
 description: 'The prism and the problem with sets P, Z, and V: prescribed resistances, preserved zero couplings, nonnegative conductances, and boundaries of solution existence.'
 order: 7
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Variations with Conductance Constraints"
 ---
@@ -21,6 +21,8 @@ In [[Joint Variation of Resistances]], the entire new resistance matrix was pres
 We now prescribe resistances only between vertices of a set $P$. Some couplings must remain zero; the others may change only on a specified set $V$, while remaining nonnegative. Resistances outside $P$ result from the solution and are not fixed in advance. Relaxing the resistance conditions in this way creates freedom to satisfy conductance constraints.
 
 ## The prism example
+
+In this example, $P$ is a vertex set, whereas $V$ and $Z$ are sets of vertex pairs. Colored edges may vary and grey edges are fixed; absent forbidden pairs are listed separately.
 
 Consider a triangular prism with faces $123$ and $456$ and connecting edges $14,25,36$. Initially, all nine conductances equal $1$.
 
@@ -83,6 +85,10 @@ $$
 Conductances $q'_{ij}$ belong to the graph after internal-vertex elimination, not to the original couplings $c'_{ij}=1$ on face $P$. The elimination formula and general derivation are given below.
 
 If instead $R_{12}$ is required to double while the same two other resistances are preserved, there is no solution with nonnegative conductances. Free couplings therefore do not make every resistance change admissible.
+
+![The Prism and Its Boundary Triangle](<images/The Prism and Its Boundary Triangle.svg>)
+
+*Eliminating vertices $4,5,6$ produces another graph on $P$. Its conductance $q_{12}$ is the fixed $c_{12}=1$ plus an induced contribution; this is not a change of the original edge $12$.*
 
 ## Formulating the problem with P, Z, and V
 
@@ -231,7 +237,13 @@ Conditions $a,b\ge0$ give a candidate solution region. Attainability of one endp
 >
 > If all six conductances on $V$ must be strictly positive, the left inequality is strict as well. For an increase of the original resistance, the region is $1\le k<k_{\max}$.
 
+![The Prism Feasibility Interval](<images/The Prism Feasibility Interval.svg>)
+
+*The lower endpoint is included for nonnegative conductances. No finite network attains the upper endpoint. Requiring every variable conductance to be positive excludes both endpoints.*
+
 ### Constructing the conductances
+
+The following construction gives an explicit recipe within the feasible interval. On a first reading, proceed to [[#Why the upper endpoint is unattainable|the unattainable upper endpoint]], then return to the conductance calculation.
 
 Let $a>0$, $b\ge0$ be given by (8). Choose all three connecting conductances equal to $g$ and set
 
@@ -272,6 +284,8 @@ Then for $b>0$, all six conductances are positive. At $b=0$, we get $c_{46}=c_{5
 > At $k=1$, we have $a=b=1/4$; choosing $g=1$ recovers all original conductances $1$. At $k=9/8$, we have $a=1/69$, $b=7/23$. Choosing $g=7$ gives $\mu=\nu=7/20$ and precisely (1). Here the last inequality in (11) is replaced by equality: conductance $45$ is zero. Any $g>7$ in (10) gives the same resistances with strictly positive conductances. $\square$
 
 ### Why the upper endpoint is unattainable
+
+At the upper endpoint, the induced contribution between $1$ and $2$ must be zero, while those between $1,3$ and $2,3$ must be positive. In the prism’s finite internal network, the latter two connections also provide a path between $1$ and $2$. Its induced contribution is positive, so the required zero is impossible. The boundary can be approached but not attained with finite conductances.
 
 > [!note]- Proof that the solution region is exact
 > **Proof.** From (8) and $0<k<4$: $b\ge0$ requires $k\ge1/4$, and $a\ge0$ requires $k\le k_{\max}$. For $1/4\le k<k_{\max}$, construction (10)-(11) gives a solution. At $k=1/4$, we have $a=6$, $b=0$; for example, take $g=24$, $c_{45}=12$, $c_{46}=c_{56}=0$.
@@ -405,6 +419,6 @@ From the repository root:
 
     python checks/variations/verify_constrained_couplings.py
 
-Kron reduction, preservation of boundary resistances, and signs of induced couplings are classical results. The formulation with $P,Z,V$, calculation of the prism solution region, and its agreement with variation formulas are presented here with explicit justifications; this does not assert scientific priority. The general algorithm for finding exact solutions and best approximations is given in [[An Algorithm for Variations with Conductance Constraints]].
+Kron reduction, preservation of boundary resistances, and signs of induced couplings are classical results. The formulation with $P,Z,V$, calculation of the prism solution region, and its agreement with variation formulas are presented here with explicit justifications. The general algorithm for finding exact solutions and best approximations is given in [[An Algorithm for Variations with Conductance Constraints]].
 
 Reading order and summary of results: [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]].

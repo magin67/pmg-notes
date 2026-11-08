@@ -1,15 +1,15 @@
 ---
 title: One Changing Edge
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-changing-edge
 lang: en
 description: From strengthening a triangle edge to exact variations of the spanning-tree coefficient and resistances. A derivation through one exterior Laplacian exponential factor, forest potentials, and their normalization.
 order: 1
-translated_revision: 5
+translated_revision: 6
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Changing Edge"
 ---
@@ -192,6 +192,16 @@ $$
 
 ## How normalization gives the resistance variation
 
+Keep three quantities in view:
+
+| Quantity | Before the change | After the change |
+|---|---|---|
+| Forest numerator | $m_{ij}$ | $m'_{ij}$ |
+| Spanning-tree denominator | $\tau$ | $\tau'$ |
+| Resistance | $m_{ij}/\tau$ | $m'_{ij}/\tau'$ |
+
+Both coefficients vary linearly with $t$, but the new numerator must be divided by the new denominator. Their ratio is therefore generally fractional-linear. Below, $m_{ij}$ denotes an unnormalized forest potential, rather than a metric-distribution coefficient.
+
 For the measured pair $ij$, set $f=[a_{ij}]^2$ and write
 
 $$
@@ -281,6 +291,15 @@ R'_{kl}=\frac{R_{kl}}{1+tR_{kl}},\qquad
 \frac1{R'_{kl}}=\frac1{R_{kl}}+t
 $$
 
+To connect with [[Edge Influence and Metric Distribution|metric distributions]], multiply the derivative by the original conductance and reverse its sign. For input $f=[a_{ij}]^2$, the coefficient of the changed coupling $kl$ is
+
+$$
+m_{kl}(f)=-c_{kl}\frac{\partial R_{ij}}{\partial c_{kl}}
+=c_{kl}g_{ij,kl}^{\,2}
+$$
+
+The derivative measures response to an absolute change in $c_{kl}$; the coefficient $m_{kl}(f)$ measures response to a relative change of that conductance.
+
 ## Edge removal and the boundary of applicability
 
 To remove an existing edge with $c_{kl}>0$, set $t=-c_{kl}$ and obtain
@@ -296,6 +315,10 @@ $$
 > **Proof.** Removing a bridge disconnects the graph, so $\tau'=0$. Removing a non-bridge leaves a spanning tree of positive weight, so $\tau'>0$. Substitute these two cases into the formula for $\tau'$. $\square$
 
 Upon removal of a bridge, resistances between components cease to be finite; (2) cannot be extended to this boundary by division by zero. The polyform and unnormalized forest-potential formulas remain valid. The exterior exponential itself remains invertible as a polyform because its grade-zero term is $e$; this invertibility differs from nondegeneracy of the Laplacian on the zero-sum space.
+
+![Removing an Edge or a Bridge](<images/Removing an Edge or a Bridge.svg>)
+
+*Removing a triangle edge leaves a connected path. Removing a bridge disconnects the graph: unnormalized coefficients remain meaningful, but resistance between components is no longer finite.*
 
 ## Independent verification and provenance of the formulas
 
@@ -314,7 +337,7 @@ The matrix description uses $\mathbf L$, $\mathbf{Gr}=\mathbf L^+$, and the coor
 
 The spanning-tree and resistance update formulas are instances of known rank-one perturbation identities. Their matrix treatment and references are given in [[Variation of a Single Edge]] and [[Further Reading for the PMG Introductory Series]]. Established properties of effective resistances and their dependence on conductances are also discussed by Ghosh, Boyd, and Saberi [1].
 
-The derivation in this note connects these results with the factor $e+t[a_{kl}]^2$, linear changes of grades, and normalization of potentials. Providing this derivation does not establish scientific priority.
+The derivation in this note connects these results with the factor $e+t[a_{kl}]^2$, linear changes of grades, and normalization of potentials.
 
 The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/variations/verify_single_edge.py) compares factor expansion in every grade, direct enumeration of trees and separating two-component forests, and matrix inversion. Checks use exact rational arithmetic on a weighted edge, unit and weighted triangles, the path $P_4$, and a weighted cycle $C_4$. They cover strengthening, weakening, adding a missing edge, and removal, including bridges. These checks supplement the proofs.
 

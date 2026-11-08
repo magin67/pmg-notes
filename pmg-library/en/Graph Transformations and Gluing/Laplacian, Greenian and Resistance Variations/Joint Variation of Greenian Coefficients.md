@@ -1,15 +1,15 @@
 ---
 title: Joint Variation of Greenian Coefficients
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-joint-greenian-coefficients
 lang: en
 description: 'Two Greenian coefficients: a triangle example, exact spanning-tree and conductance changes, and interaction. A factor derivation and generalization through the direction Gram matrix in the Greenian exponential metric.'
 order: 4
-translated_revision: 5
+translated_revision: 6
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Joint Variation of Greenian Coefficients"
 ---
@@ -58,6 +58,15 @@ Compare this result with separate increases by $1/3$, each starting from the ori
 Each separate change preserves $c_{23}$. Together, they decrease this conductance by $3/8$. Adding separate responses is therefore insufficient even for a coupling unchanged in either experiment.
 
 ## Data for two changing coefficients
+
+Compare with [[Two Edges and Joint Variation|direct variation]]:
+
+| Changed data | Metric on directions | Spanning-tree response |
+|---|---|---|
+| Conductances | Matrix $\mathbf{Gr}$ | $\tau'=\tau\Phi$ |
+| Greenian coefficients | Matrix $\mathbf L$ | $\tau'=\tau/\Phi$ |
+
+Each row uses its own Gram matrix and factor $\Phi$. The shared formula structure does not allow the data of one row to be used in the other.
 
 The original graph is undirected, its set of $n\ge2$ vertices is fixed, and its conductances are nonnegative. Positive-conductance edges form a connected graph. Work with the direct centered Greenian representation
 
@@ -350,6 +359,8 @@ If an intermediate Greenian is degenerate, stepwise inversion through it is inap
 
 ## Several Greenian coefficients
 
+This section and the next give the general extension. On a first reading, after the two-factor calculation, proceed to [[#Invertibility, positivity, and conductance signs|admissibility conditions]]: a nonzero determinant permits inversion but alone guarantees neither metric positivity nor conductance signs.
+
 For fixed directions $u_1,\ldots,u_m$, prescribe
 
 $$
@@ -516,7 +527,7 @@ At $\Phi=0$, the product of factors and all its grades remain defined, but the t
 >
 > The last equality follows from $(\mathbf I_m+\mathbf D\mathbf G)\mathbf K=\mathbf D$. Symmetry gives the reverse-order product; both matrices annihilate the constant column. This independently verifies inversion on $\mathbf1^\perp$. The finite-rank determinant formula gives the same factor $\Phi$. $\square$
 
-The matrix equalities are variants of the Woodbury identity and the determinant formula for finite-rank updates; sources are collected in [[Further Reading for the PMG Introductory Series]]. Here they are derived through vector factors of the Greenian exponential, potentials, and duality normalization. An independent presentation does not establish scientific priority.
+The matrix equalities are variants of the Woodbury identity and the determinant formula for finite-rank updates; sources are collected in [[Further Reading for the PMG Introductory Series]]. Here they are derived through vector factors of the Greenian exponential, potentials, and duality normalization.
 
 The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/variations/verify_joint_greenian_coefficients.py) uses exact rational arithmetic. It compares factor expansions in every grade, recovery through exterior contraction, direct matrix inversion, spanning-tree enumeration, explicit two-factor formulas, and sequential recalculation. Checks include weighted triangles, the path $P_4$, the cycle $C_4$, dependent directions, zero increments, degeneracy, and the distinction between a positive determinant and positive definiteness.
 

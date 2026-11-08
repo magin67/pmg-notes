@@ -1,15 +1,15 @@
 ---
 title: Two Edges and Joint Variation
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-two-edges-and-joint-variation
 lang: en
 description: Two changing triangle edges, explicit finite variations, and interaction. A derivation through Laplacian exponential factors, forest-potential normalization, and Gram determinants, extended to several couplings.
 order: 2
-translated_revision: 5
+translated_revision: 6
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Two Edges and Joint Variation"
 ---
@@ -170,6 +170,10 @@ As in [[One Changing Edge#Extracting the spanning-tree coefficient from the fact
 > [!note]- Proof
 > **Proof.** Multiply (4) by $f$ and apply the linear functional $\tau$. Connectedness of the final graph is not required. $\square$
 
+![Where the Mixed Term Comes From](<images/Where the Mixed Term Comes From.svg>)
+
+*Only the triangle tree containing both changed edges contributes the product $st$. Repeating one edge within an exterior product gives zero.*
+
 ## The spanning-tree coefficient and the Gram determinant
 
 In [[Laplacian Exponential#Agreement with the resistance metric|the metric identity]], the potential of a product of vector forms is expressed by the norm of the exterior product. In particular,
@@ -315,7 +319,13 @@ Here $g^2$ describes how changing one selected pair affects the resistance of th
 >
 > When both the original and final graphs are connected, the order “all additions and strengthenings first, then weakenings and removals” is safe: the first stage retains the original connected network, and every intermediate graph in the second stage contains the final connected network.
 
+![Recalculation Between Two Steps](<images/Recalculation Between Two Steps.svg>)
+
+*The second step uses resistance $3/5$ from the intermediate graph. Reusing the original $2/3$ would give the incorrect $25/3$ instead of $8$.*
+
 ## Several changing edges
+
+The generalization below is intended for a second reading. The two-factor example already contains the mechanism: expand the factors, evaluate the potentials, and divide by the new normalization.
 
 Choose $m$ distinct pairs $e_\alpha$ with vectors $u_\alpha=a_{e_\alpha}$ and prescribe finite increments $t_\alpha\ge-c_{e_\alpha}$. Keep all other couplings fixed. The factor representation is
 
@@ -432,7 +442,7 @@ $$
 >
 > Both sides annihilate the constant column. Multiplication on the left and right by the coordinate column of the measured vector gives (9). A detailed verification by multiplication appears in [[Varying several couplings together#The Green matrix and resistances|the matrix treatment of the joint update]]. $\square$
 
-The determinant and inverse formulas for finite-rank updates are established results. Their graph application is presented in [[Varying several couplings together]], with external sources in [[Further Reading for the PMG Introductory Series]]. This note obtains the same answers from exponential factorization and potential normalization; this presentation does not establish scientific priority.
+The determinant and inverse formulas for finite-rank updates are established results. Their graph application is presented in [[Varying several couplings together]], with external sources in [[Further Reading for the PMG Introductory Series]]. This note obtains the same answers from exponential factorization and potential normalization.
 
 The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/variations/verify_joint_edges.py) uses exact rational arithmetic to compare independent calculations: vector-factor expansions by grade, enumeration of trees and separating forests, direct matrix inversion, explicit two-factor formulas, and sequential changes in both orders. It checks unit and weighted triangles, the path $P_4$, a weighted cycle $C_4$, dependent directions, zero increments, and loss of connectedness. These computational checks supplement the proofs.
 

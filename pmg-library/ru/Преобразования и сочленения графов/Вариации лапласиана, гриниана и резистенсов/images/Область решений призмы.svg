@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="665" viewBox="0 0 1120 665" role="img" aria-labelledby="title"><title id="title">Область решений призмы</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="665" fill="white"/>
+<text xml:space="preserve" x="560" y="45" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Допустимые значения множителя k</text>
+<text xml:space="preserve" x="366.5" y="95" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">k</text>
+<text xml:space="preserve" x="380.5" y="101.21" font-size="18" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">max</text>
+<text xml:space="preserve" x="414.5" y="95" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = (31 − √481)/8 ≈ 1.133536</text>
+<line x1="130" y1="235" x2="1040" y2="235" stroke="#a7b3bb" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="222.5" y1="235" x2="620.0911887803013" y2="235" stroke="#24628a" stroke-width="8"/>
+<line x1="222.5" y1="226" x2="222.5" y2="244" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="206.0" y="276" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1/4</text>
+<line x1="560" y1="226" x2="560" y2="244" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="553.5" y="276" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<line x1="620.0911887803013" y1="226" x2="620.0911887803013" y2="244" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="599.0911887803013" y="205" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">k</text>
+<text xml:space="preserve" x="611.0911887803013" y="210.52" font-size="16" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">max</text>
+<line x1="1010" y1="226" x2="1010" y2="244" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="1003.5" y="276" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<circle cx="222.5" cy="235" r="8" fill="#24628a"/>
+<circle cx="620.0911887803013" cy="235" r="8" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="850" y="187" font-size="24" fill="#b33e39" style="fill:#b33e39" font-weight="400" text-anchor="middle">недопустимо</text>
+<text xml:space="preserve" x="390" y="176" font-size="23" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">неотрицательные c</text>
+<rect x="110" y="335" width="900" height="220" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="374" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Увеличенный фрагмент верхней границы</text>
+<line x1="170" y1="446" x2="970" y2="446" stroke="#a7b3bb" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="180" y1="446" x2="813.6475512120534" y2="446" stroke="#24628a" stroke-width="6"/>
+<line x1="210.0" y1="437" x2="210.0" y2="455" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="189.0" y="491" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1.10</text>
+<line x1="659.9999999999984" y1="437" x2="659.9999999999984" y2="455" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="605.4999999999984" y="491" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">9/8 = 1.125</text>
+<line x1="813.6475512120534" y1="437" x2="813.6475512120534" y2="455" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="793.6475512120534" y="417" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">k</text>
+<text xml:space="preserve" x="804.6475512120534" y="422.06" font-size="15" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">max</text>
+<circle cx="813.6475512120534" cy="446" r="8" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="560" y="534" font-size="22" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">Масштаб увеличен; точка 9/8 лежит внутри интервала</text>
+<text xml:space="preserve" x="560" y="620" font-size="24" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">Если все переменные c &gt; 0, нижний конец тоже исключён</text>
+</svg>

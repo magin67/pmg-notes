@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="610" viewBox="0 0 1120 610" role="img" aria-labelledby="title"><title id="title">Admissible Greenian Parameter</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="610" fill="white"/>
+<text xml:space="preserve" x="341.5" y="45" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">Path 1–2–3–4: increment γ</text>
+<text xml:space="preserve" x="698.5" y="51.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">12</text>
+<text xml:space="preserve" x="720.5" y="45" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start"> by t</text>
+<text xml:space="preserve" x="560" y="92" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Φ = 1 + 5t</text>
+<text xml:space="preserve" x="28" y="157" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">Positive Gr</text>
+<line x1="140" y1="190" x2="1040" y2="190" stroke="#a7b3bb" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="163.0" y1="183" x2="163.0" y2="197" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="163.0" y="224" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">−1/5</text>
+<line x1="275" y1="183" x2="275" y2="197" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="275" y="224" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<line x1="835" y1="183" x2="835" y2="197" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="835" y="224" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
+<text xml:space="preserve" x="28" y="277" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">All c ≥ 0</text>
+<line x1="140" y1="310" x2="1040" y2="310" stroke="#a7b3bb" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="163.0" y1="303" x2="163.0" y2="317" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="163.0" y="344" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">−1/5</text>
+<line x1="275" y1="303" x2="275" y2="317" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="275" y="344" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<line x1="835" y1="303" x2="835" y2="317" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="835" y="344" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
+<text xml:space="preserve" x="28" y="397" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">Also require c</text>
+<text xml:space="preserve" x="170.0" y="402.06" font-size="16" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">13</text>
+<text xml:space="preserve" x="188.0" y="397" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = 0</text>
+<line x1="140" y1="430" x2="1040" y2="430" stroke="#a7b3bb" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="163.0" y1="423" x2="163.0" y2="437" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="163.0" y="464" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">−1/5</text>
+<line x1="275" y1="423" x2="275" y2="437" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="275" y="464" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<line x1="835" y1="423" x2="835" y2="437" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="835" y="464" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
+<line x1="170.0" y1="190" x2="1030" y2="190" stroke="#30765e" stroke-width="7" marker-end="url(#arrow)"/>
+<circle cx="163.0" cy="190" r="7" fill="white" stroke="#203344" stroke-width="2"/>
+<line x1="275" y1="310" x2="835" y2="310" stroke="#24628a" stroke-width="7"/>
+<circle cx="275" cy="310" r="7" fill="#24628a"/>
+<circle cx="835" cy="310" r="7" fill="#24628a"/>
+<circle cx="275" cy="430" r="8" fill="#b56414"/>
+<text xml:space="preserve" x="560" y="520" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">At t = 1 edge 12 disappears, but the graph remains connected</text>
+<text xml:space="preserve" x="560" y="570" font-size="24" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">A nonzero Φ alone does not guarantee an admissible graph</text>
+</svg>

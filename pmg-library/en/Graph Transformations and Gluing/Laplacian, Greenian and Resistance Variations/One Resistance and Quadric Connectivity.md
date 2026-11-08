@@ -1,15 +1,15 @@
 ---
 title: One Resistance and Quadric Connectivity
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-resistance-and-quadric-connectivity
 lang: en
 description: 'Changing one resistance while preserving the others: an example, finite spanning-tree and conductance variations, and two Greenian factors. Quadric connectivity and its inverse relation to squared inner products on all pairs.'
 order: 5
-translated_revision: 5
+translated_revision: 6
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Resistance and Quadric Connectivity"
 ---
@@ -20,6 +20,8 @@ We now prescribe a change in exactly one resistance $R_{kl}$, keeping all others
 
 The differential limit introduces quadric connectivity. Its matrix is the inverse of the matrix of squared resistance inner products. This identity applies to the full set of vertex pairs, including pairs with zero conductance.
 
+The first part restores conductances after a finite change. The second begins with [[#Quadric connectivity|quadric connectivity]] and treats small changes and inverse sensitivity matrices.
+
 ## Example - only one side resistance changes
 
 A unit triangle has all conductances equal to $1$, all resistances equal to $2/3$, and spanning-tree coefficient $\tau=3$. Prescribe
@@ -28,7 +30,7 @@ $$
 R'_{12}=1,\qquad R'_{13}=R'_{23}=\frac23
 $$
 
-Thus only $R_{12}$ increases, by $\rho=1/3$.
+Thus only $R_{12}$ increases, by $\delta=1/3$.
 
 ![A unit triangle and the recovered conductances when only resistance 12 increases from two thirds to one](<images/One Resistance of a Triangle.svg>)
 
@@ -60,11 +62,11 @@ Changing conductance $c_{12}$ alone would also decrease or increase the other re
 The original graph is undirected, its set of $n\ge2$ vertices is fixed, and its conductances are nonnegative. Its positive-conductance edges form a connected graph. Prescribe one independent symmetric coordinate:
 
 $$
-R'_{kl}=R_{kl}+\rho,\qquad R'_{lk}=R_{lk}+\rho,
+R'_{kl}=R_{kl}+\delta,\qquad R'_{lk}=R_{lk}+\delta,
 \qquad k<l
 $$
 
-All other entries of $\mathbf R$ remain fixed, including the zero diagonal. The quantity $\rho$ is a finite increment. All unprimed data refer to the original graph.
+All other entries of $\mathbf R$ remain fixed, including the zero diagonal. The quantity $\delta$ is a finite increment. All unprimed data refer to the original graph.
 
 For brevity, set
 
@@ -78,17 +80,17 @@ $$
 Here $\mathbf L$ is the Laplacian matrix, $A,B$ are weighted degrees, and $C=-c_{kl}$. Define
 
 $$
-\Phi(\rho)=1-\rho C-\frac{\rho^2}{4}(AB-C^2),
-\qquad \eta(\rho)=1-\frac{\rho C}{2}
+\Phi(\delta)=1-\delta C-\frac{\delta^2}{4}(AB-C^2),
+\qquad \eta(\delta)=1-\frac{\delta C}{2}
 \tag{1}
 $$
 
 > [!info] The spanning-tree coefficient and conductances
-> For $\Phi(\rho)\ne0$,
+> For $\Phi(\delta)\ne0$,
 >
 > $$
-> \boxed{\tau'=\frac{\tau}{\Phi(\rho)},\qquad
-> \Delta\tau=\tau\left(\frac1{\Phi(\rho)}-1\right)}
+> \boxed{\tau'=\frac{\tau}{\Phi(\delta)},\qquad
+> \Delta\tau=\tau\left(\frac1{\Phi(\delta)}-1\right)}
 > \tag{2}
 > $$
 >
@@ -96,8 +98,8 @@ $$
 >
 > $$
 > \boxed{\begin{aligned}
-> \Delta c_{ij}={}&-\frac{\rho\eta(\rho)(x_i y_j+y_i x_j)}{2\Phi(\rho)}\\
-> &-\frac{\rho^2(Bx_i x_j+Ay_i y_j)}{4\Phi(\rho)}
+> \Delta c_{ij}={}&-\frac{\delta\eta(\delta)(x_i y_j+y_i x_j)}{2\Phi(\delta)}\\
+> &-\frac{\delta^2(Bx_i x_j+Ay_i y_j)}{4\Phi(\delta)}
 > \end{aligned}}
 > \tag{3}
 > $$
@@ -117,22 +119,22 @@ $$
 Formulas (1)-(3) give
 
 $$
-\Phi(\rho)=1+\rho-\frac34\rho^2,\qquad
-\tau'=\frac3{\Phi(\rho)}
+\Phi(\delta)=1+\delta-\frac34\delta^2,\qquad
+\tau'=\frac3{\Phi(\delta)}
 $$
 
 $$
-c'_{12}=\frac{1-3\rho/2}{\Phi(\rho)},\qquad
-c'_{13}=c'_{23}=\frac{1+3\rho/2}{\Phi(\rho)}
+c'_{12}=\frac{1-3\delta/2}{\Phi(\delta)},\qquad
+c'_{13}=c'_{23}=\frac{1+3\delta/2}{\Phi(\delta)}
 $$
 
-Substituting $\rho=1/3$ gives $\Phi=5/4$ and the numbers in the example. All conductances are nonnegative exactly when
+Substituting $\delta=1/3$ gives $\Phi=5/4$ and the numbers in the example. All conductances are nonnegative exactly when
 
 $$
--\frac23<\rho\le\frac23
+-\frac23<\delta\le\frac23
 $$
 
-At the right endpoint, $c'_{12}=0$, $c'_{13}=c'_{23}=3/2$: the graph becomes a path, and $R'_{12}=4/3$ equals the sum of the two preserved resistances. Positive definiteness of the Greenian alone allows the wider interval $-2/3<\rho<2$.
+At the right endpoint, $c'_{12}=0$, $c'_{13}=c'_{23}=3/2$: the graph becomes a path, and $R'_{12}=4/3$ equals the sum of the two preserved resistances. Positive definiteness of the Greenian alone allows the wider interval $-2/3<\delta<2$.
 
 ## Which Greenian coefficients change
 
@@ -146,7 +148,7 @@ For one changing coordinate, it gives
 
 $$
 \Delta\mathbf{Gr}
-=-\frac\rho2(\mathbf p_k\mathbf p_l^{\mathsf T}
+=-\frac\delta2(\mathbf p_k\mathbf p_l^{\mathsf T}
 +\mathbf p_l\mathbf p_k^{\mathsf T}),\qquad
 \mathbf p_i=\mathbf e_i-\frac1n\mathbf1
 \tag{4}
@@ -157,16 +159,16 @@ $$
 >
 > | Pair $ij$ | Increment $\Delta\gamma_{ij}$ |
 > |---|---:|
-> | The pair $kl$ itself | $\displaystyle\frac{\rho(n^2-2n+2)}{2n^2}$ |
-> | Exactly one vertex shared with $kl$ | $\displaystyle-\frac{\rho(n-2)}{2n^2}$ |
-> | No vertex shared with $kl$ | $\displaystyle\frac\rho{n^2}$ |
+> | The pair $kl$ itself | $\displaystyle\frac{\delta(n^2-2n+2)}{2n^2}$ |
+> | Exactly one vertex shared with $kl$ | $\displaystyle-\frac{\delta(n-2)}{2n^2}$ |
+> | No vertex shared with $kl$ | $\displaystyle\frac\delta{n^2}$ |
 
 > [!note]- Proof of the coefficient transformation
 > **Proof.** For $i<j$, (4) gives
 >
 > $$
 > \begin{aligned}
-> \Delta\gamma_{ij}=\frac\rho2\bigl[&
+> \Delta\gamma_{ij}=\frac\delta2\bigl[&
 > (\delta_{ik}-1/n)(\delta_{jl}-1/n)\\
 > &+(\delta_{il}-1/n)(\delta_{jk}-1/n)\bigr]
 > \end{aligned}
@@ -174,7 +176,7 @@ $$
 >
 > Substituting the three possible pair-intersection types gives the table. For $n=2$ and $n=3$, some pair types are absent. $\square$
 
-In the triangle example, for $\rho=1/3$ we obtain
+In the triangle example, for $\delta=1/3$ we obtain
 
 $$
 \Delta\gamma_{12}=\frac5{54},\qquad
@@ -192,7 +194,7 @@ $$
 \{p_i,p_j\}=[p_i,p_j]+[p_j,p_i]
 $$
 
-Hence $\Delta\mathrm{Gr}=-(\rho/2)\{p_k,p_l\}$. Set
+Hence $\Delta\mathrm{Gr}=-(\delta/2)\{p_k,p_l\}$. Set
 
 $$
 u=p_k-p_l,\qquad v=p_k+p_l
@@ -202,22 +204,22 @@ $$
 > **Proposition.** A change in one resistance is represented by
 >
 > $$
-> \boxed{\mathrm{Gr}'=\mathrm{Gr}+\frac\rho4[u]^2-\frac\rho4[v]^2}
+> \boxed{\mathrm{Gr}'=\mathrm{Gr}+\frac\delta4[u]^2-\frac\delta4[v]^2}
 > \tag{5}
 > $$
 >
 > Thus, for $N=\exp(\mathrm{Gr})$,
 >
 > $$
-> \boxed{N'=N\left(e+\frac\rho4[u]^2\right)
-> \left(e-\frac\rho4[v]^2\right)}
+> \boxed{N'=N\left(e+\frac\delta4[u]^2\right)
+> \left(e-\frac\delta4[v]^2\right)}
 > \tag{6}
 > $$
 
 > [!note]- Proof of the two-factor representation
-> **Proof.** Polarization gives $[u]^2-[v]^2=-2\{p_k,p_l\}$. Multiplication by $\rho/4$ yields (5). The vanishing squares of vector forms and their commutativity give (6). For $n=2$, we have $v=0$, so the second factor is $e$. $\square$
+> **Proof.** Polarization gives $[u]^2-[v]^2=-2\{p_k,p_l\}$. Multiplication by $\delta/4$ yields (5). The vanishing squares of vector forms and their commutativity give (6). For $n=2$, we have $v=0$, so the second factor is $e$. $\square$
 
-The directions are fixed and independent of $\rho$. In general, $v$ is not a difference of two vertices, so its coefficient does not coincide with a single canonical $\gamma_{ij}$. Formulas for arbitrary affine directions were obtained in [[Joint Variation of Greenian Coefficients]].
+The directions are fixed and independent of $\delta$. In general, $v$ is not a difference of two vertices, so its coefficient does not coincide with a single canonical $\gamma_{ij}$. Formulas for arbitrary affine directions were obtained in [[Joint Variation of Greenian Coefficients]].
 
 ## Deriving the finite formulas
 
@@ -233,7 +235,7 @@ $$
 $$
 
 > [!info] Substitution into the joint Greenian variation
-> **Theorem.** Formulas (2)-(3) follow from the two-factor representation (6) with parameters $s=\rho/4$, $t=-\rho/4$.
+> **Theorem.** Formulas (2)-(3) follow from the two-factor representation (6) with parameters $s=\delta/4$, $t=-\delta/4$.
 
 > [!note]- Proof of the spanning-tree and conductance formulas
 > **Proof.** In [[Joint Variation of Greenian Coefficients#Explicit formulas for two coefficients|the two-factor multiplier]], we obtain
@@ -241,8 +243,8 @@ $$
 > $$
 > \begin{aligned}
 > 1+s q_u+tq_v+st(q_uq_v-g^2)
-> &=1-\rho C-\frac{\rho^2}{4}(AB-C^2)\\
-> &=\Phi(\rho)
+> &=1-\delta C-\frac{\delta^2}{4}(AB-C^2)\\
+> &=\Phi(\delta)
 > \end{aligned}
 > $$
 >
@@ -252,8 +254,8 @@ $$
 >
 > $$
 > \begin{aligned}
-> &-\frac\rho2\left(1-\frac{\rho C}{2}\right)(x_i y_j+y_i x_j)\\
-> &-\frac{\rho^2}{4}(Bx_i x_j+Ay_i y_j)
+> &-\frac\delta2\left(1-\frac{\delta C}{2}\right)(x_i y_j+y_i x_j)\\
+> &-\frac{\delta^2}{4}(Bx_i x_j+Ay_i y_j)
 > \end{aligned}
 > $$
 >
@@ -266,8 +268,8 @@ The resistances are preserved in precisely the prescribed sense: (4) defines the
 > [!info] Invertibility and graph constraints
 > **Proposition.** For this single-resistance variation:
 >
-> - $\Phi(\rho)\ne0$ is equivalent to nondegeneracy of the new Greenian on $\mathbf1^\perp$;
-> - $\Phi(\rho)>0$ is equivalent to its positive definiteness on that space;
+> - $\Phi(\delta)\ne0$ is equivalent to nondegeneracy of the new Greenian on $\mathbf1^\perp$;
+> - $\Phi(\delta)>0$ is equivalent to its positive definiteness on that space;
 > - a connected graph with nonnegative conductances additionally requires, and is ensured by, all inequalities $c_{ij}+\Delta c_{ij}\ge0$.
 >
 > Preserving absent couplings also requires $\Delta c_{ij}=0$ on the corresponding pairs.
@@ -278,12 +280,12 @@ The resistances are preserved in precisely the prescribed sense: (4) defines the
 > The polynomial $\Phi$ has a negative leading coefficient and $\Phi(0)=1$. Its positive region is one interval between two roots:
 >
 > $$
-> \frac2{C-\sqrt{AB}}<\rho<\frac2{C+\sqrt{AB}}
+> \frac2{C-\sqrt{AB}}<\delta<\frac2{C+\sqrt{AB}}
 > $$
 >
-> Within this interval, no Greenian eigenvalue vanishes, and at $\rho=0$ all are positive on $\mathbf1^\perp$. Positivity therefore holds throughout the interval. Outside it, the determinant is negative, so positive definiteness is impossible.
+> Within this interval, no Greenian eigenvalue vanishes, and at $\delta=0$ all are positive on $\mathbf1^\perp$. Positivity therefore holds throughout the interval. Outside it, the determinant is negative, so positive definiteness is impossible.
 >
-> For $n=2$ and conductance $c$, we have $\Phi=1+c\rho$ and $c'=c/(1+c\rho)$; the condition is again $\Phi>0$. Finally, positive definiteness of the recovered matrix on $\mathbf1^\perp$, zero row sums, and nonnegative conductances give a connected graph. $\square$
+> For $n=2$ and conductance $c$, we have $\Phi=1+c\delta$ and $c'=c/(1+c\delta)$; the condition is again $\Phi>0$. Finally, positive definiteness of the recovered matrix on $\mathbf1^\perp$, zero row sums, and nonnegative conductances give a connected graph. $\square$
 
 Sufficiency of the sign $\Phi>0$ here is specific to a single-resistance update. It fails for arbitrary multiple Greenian contributions, as shown by [[Joint Variation of Greenian Coefficients#Invertibility, positivity, and conductance signs|the general criterion]].
 
@@ -291,10 +293,19 @@ At $\Phi=0$, the factor product remains defined, but inversion on the whole zero
 
 ## Quadric connectivity
 
+Return to the unit triangle and denote a small increment of $R_{12}$ by $\delta$. With $R_{13},R_{23}$ preserved, the first responses are
+
+$$
+\begin{pmatrix}\Delta c_{12}\\\Delta c_{13}\\\Delta c_{23}\end{pmatrix}
+=\delta\begin{pmatrix}-5/2\\1/2\\1/2\end{pmatrix}+O(\delta^2)
+$$
+
+One sensitivity column answers: how do all conductances respond to changing one resistance? At the finite increment $\delta=1/3$, linearization would give $c'_{12}=1/6$, whereas the exact formula gives $2/5$. A derivative therefore cannot replace the finite response.
+
 To first order, formula (3) gives
 
 $$
-\left.\frac{dL_{ij}}{d\rho}\right|_{\rho=0}
+\left.\frac{dL_{ij}}{d\delta}\right|_{\delta=0}
 =\frac12(L_{ik}L_{jl}+L_{il}L_{jk})
 $$
 
@@ -325,7 +336,7 @@ $$
 > $$
 
 > [!note]- Proof of the differential formulas
-> **Proof.** Differentiate (1)-(3) at $\rho=0$, where $\Phi=\eta=1$. The diagonal identities follow from the same formula for $\Delta L_{ij}$ with $i=j$. Equivalently, from $d\mathbf{Gr}=-\mathbf J(d\mathbf R)\mathbf J/2$ and the differential of inversion on $\mathbf1^\perp$,
+> **Proof.** Differentiate (1)-(3) at $\delta=0$, where $\Phi=\eta=1$. The diagonal identities follow from the same formula for $\Delta L_{ij}$ with $i=j$. Equivalently, from $d\mathbf{Gr}=-\mathbf J(d\mathbf R)\mathbf J/2$ and the differential of inversion on $\mathbf1^\perp$,
 >
 > $$
 > d\mathbf L=\frac12\mathbf L(d\mathbf R)\mathbf L
@@ -463,6 +474,10 @@ This is the differential limit of the finite formulas already obtained for the t
 
 ## Restricting to existing edges
 
+![All Pairs and Existing Edges](<images/All Pairs and Existing Edges.svg>)
+
+*The path has two edges but three pairwise resistance coordinates in the full variation space. Pair $13$ belongs to the full sensitivity matrix even though $c_{13}=0$. Preserving the path structure imposes $R_{13}=R_{12}+R_{23}$.*
+
 In general, rows and columns corresponding to zero couplings cannot be deleted from both matrices while preserving (11). Differentiating with respect to one resistance while holding all others fixed may require previously absent conductances to appear.
 
 For example, for the unit path $1-2-3$ and its existing edge set $E=\{12,23\}$,
@@ -499,7 +514,7 @@ Thus mutual inversion on all pairs describes independent variations of all resis
 
 The name “quadric connectivity” and formula (7) were used in the original PMG materials; this note fixes its differential meaning, the sign for conductances, and the precise domain of the matrix inverse identity. Identity (11) is proved directly. The finite formulas (2)-(3) are derived afresh from two Greenian vector contributions; they do not result from applying a differential equality to finite increments.
 
-Double centering, differentiation of an inverse matrix, and the Schur complement belong to classical matrix theory; sources are listed in [[Further Reading for the PMG Introductory Series]]. The PMG term and an independent proof do not establish scientific priority for these matrix results.
+Double centering, differentiation of an inverse matrix, and the Schur complement belong to classical matrix theory; sources are listed in [[Further Reading for the PMG Introductory Series]].
 
 The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/variations/verify_one_resistance.py) uses exact rational arithmetic. It compares the prescribed resistance matrix, double centering, two vector factors, recovery through exterior contraction, direct inversion, and spanning-tree sums. For one edge, triangles, the path $P_4$, and the cycle $C_4$, it checks finite formulas, preservation of other resistances, both inverse identities in (11), conductance signs, and degenerate cases. Submatrices and the Schur complement are checked separately.
 

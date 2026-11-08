@@ -1,15 +1,15 @@
 ---
 title: Laplacian, Greenian and Resistance Variations
 date: 2026-11-01
-updated: 2026-11-01
-revision: 2
+updated: 2026-11-08
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: laplacian-greenian-resistance-variations-series-navigation
 order: 0
 description: 'Reading order for eight notes: direct and inverse variations, exterior exponential factors, quadric connectivity, prescribed resistances, and conductance constraints. Main formulas, applicability, and provenance.'
-translated_revision: 3
+translated_revision: 4
 tags:
   - variations
   - resistances
@@ -52,21 +52,40 @@ For a sequential introduction, follow the table. For direct variations alone, [[
 
 Foundations of the factor derivation are collected in [[Laplacian Exponential]], [[The Canonical Vector Representation of the Greenian]], [[The Greenian Metric and Potentials]], and [[Laplacian and Greenian - Mutual Duality of Exponentials]]. Current conventions are given by [[Core specification]] and [[PMG terminology]].
 
+## Prescribed data and unknowns
+
+| Problem | Change | Preserve | Compute |
+|---|---|---|---|
+| Direct variation | Selected $c_{ij}$ | Other conductances | $\tau'$, the Greenian, and resistances |
+| Greenian variation | Selected $\gamma_{ij}$ | Other coefficients and the vectors | $\tau'$ and conductances |
+| Prescribed resistances | Selected $R_{ij}$ | All other resistances | The unique restored Laplacian, if inversion is admissible |
+| Constrained problem | Conductances of permitted pairs $V$ | Forbidden and fixed couplings | A graph with prescribed resistances on $P$; other resistances are free |
+
+A prime denotes the final value, $\Delta$ a finite increment, and $d$ a differential. The letter $\delta$ denotes a prescribed resistance increment; $\rho$ remains the resistance radius. The symbol $\Phi$ denotes a common normalization factor; its formula depends on the problem.
+
+![Three Variation Problems](<images/Three Variation Problems.svg>)
+
+*The first three problems hold different coordinates fixed. Conductance constraints require a separate formulation.*
+
+In [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]], coefficients describe relative conductance changes. Here direct derivatives are taken with respect to conductances themselves; [[One Changing Edge#Sensitivity and resistance preservation|the sensitivity section]] relates the two conventions.
+
 ## Common data and normalizations
 
-The original graph is undirected, its set of $n\ge2$ vertices is fixed, and conductances are nonnegative. Positive-conductance edges form a connected graph. The notation $\tau$ denotes the spanning-tree coefficient, the sum of spanning-tree weights; for unit weights, it is the spanning-tree count.
-
-The forms $L$ and $\mathrm{Gr}$ differ from their coefficient matrices $\mathbf L$ and $\mathbf{Gr}$. In the direct centered representation,
-
-$$
-L=\sum_{i<j}c_{ij}[a_{ij}]^2,\qquad
-\mathrm{Gr}=\sum_{i<j}\gamma_{ij}[a_{ij}]^2,
-\qquad a_{ij}=a_j-a_i
-$$
-
-For $i\ne j$, we have $c_{ij}=-L_{ij}$ and $\gamma_{ij}=-\mathrm{Gr}_{ij}$. Coefficients $\gamma_{ij}$ may have either sign. Matrices $\mathbf L$ and $\mathbf{Gr}$ are mutual inverses on $\mathbf1^\perp$ and annihilate the constant column. Write $\mathbf J=\mathbf I-\mathbf1\mathbf1^{\mathsf T}/n$.
-
-> [!info] Two exterior exponentials
+> [!info]- Reference formulas and explanations
+>
+> The original graph is undirected, its set of $n\ge2$ vertices is fixed, and conductances are nonnegative. Positive-conductance edges form a connected graph. The notation $\tau$ denotes the spanning-tree coefficient, the sum of spanning-tree weights; for unit weights, it is the spanning-tree count.
+>
+> The forms $L$ and $\mathrm{Gr}$ differ from their coefficient matrices $\mathbf L$ and $\mathbf{Gr}$. In the direct centered representation,
+>
+> $$
+> L=\sum_{i<j}c_{ij}[a_{ij}]^2,\qquad
+> \mathrm{Gr}=\sum_{i<j}\gamma_{ij}[a_{ij}]^2,
+> \qquad a_{ij}=a_j-a_i
+> $$
+>
+> For $i\ne j$, we have $c_{ij}=-L_{ij}$ and $\gamma_{ij}=-\mathrm{Gr}_{ij}$. Coefficients $\gamma_{ij}$ may have either sign. Matrices $\mathbf L$ and $\mathbf{Gr}$ are mutual inverses on $\mathbf1^\perp$ and annihilate the constant column. Write $\mathbf J=\mathbf I-\mathbf1\mathbf1^{\mathsf T}/n$.
+>
+> **Two exterior exponentials**
 > Set $M=\exp L$, $N=\exp(\mathrm{Gr})$, $T_n=[(a_1\ldots a_n)]^2$. Then
 >
 > $$
@@ -76,16 +95,18 @@ For $i\ne j$, we have $c_{ij}=-L_{ij}$ and $\gamma_{ij}=-\mathrm{Gr}_{ij}$. Coef
 > $$
 >
 > Multiplication here is the exterior multiplication of forms. Mutual duality of exponentials through exterior contraction is not multiplicative inversion. The reference form $T_n$ is the same before and after a variation.
-
-A prime denotes a final value, $\Delta$ a finite increment, and $d$ a differential. All unprimed data in variation formulas refer to the original state.
+>
+> A prime denotes a final value, $\Delta$ a finite increment, and $d$ a differential. All unprimed data in variation formulas refer to the original state.
 
 ## Main results
 
 ### One edge and one Greenian coefficient
 
-Changing $c_{kl}$ by $t$ adds the factor $e+t[a_{kl}]^2$ to $M$. Set $g_{ij,kl}=a_{ij}\cdot_M a_{kl}$, with the inner product taken in the original resistance metric.
-
-> [!info] Direct variation
+> [!info]- Reference formulas and explanations
+>
+> Changing $c_{kl}$ by $t$ adds the factor $e+t[a_{kl}]^2$ to $M$. Set $g_{ij,kl}=a_{ij}\cdot_M a_{kl}$, with the inner product taken in the original resistance metric.
+>
+> **Direct variation**
 > If connectedness is preserved,
 >
 > $$
@@ -94,15 +115,15 @@ Changing $c_{kl}$ by $t$ adds the factor $e+t[a_{kl}]^2$ to $M$. Set $g_{ij,kl}=
 > $$
 >
 > In the differential limit, $\partial R_{ij}/\partial c_{kl}=-g_{ij,kl}^2$. The formula for $\tau'$ remains valid when a bridge is removed; the resistance formula requires a nonzero denominator.
-
-The proof through grades and normalization appears in [[One Changing Edge]]. In the inverse direction, prescribe $\mathrm{Gr}'=\mathrm{Gr}+t[u]^2$ with vector $u$ fixed. Its coordinate column $\mathbf u$ has zero sum. Set
-
-$$
-q=\mathbf u^{\mathsf T}\mathbf L\mathbf u,\qquad
-\mathbf b=\mathbf L\mathbf u
-$$
-
-> [!info] Inverse variation
+>
+> The proof through grades and normalization appears in [[One Changing Edge]]. In the inverse direction, prescribe $\mathrm{Gr}'=\mathrm{Gr}+t[u]^2$ with vector $u$ fixed. Its coordinate column $\mathbf u$ has zero sum. Set
+>
+> $$
+> q=\mathbf u^{\mathsf T}\mathbf L\mathbf u,\qquad
+> \mathbf b=\mathbf L\mathbf u
+> $$
+>
+> **Inverse variation**
 > For $1+tq\ne0$,
 >
 > $$
@@ -111,21 +132,23 @@ $$
 > $$
 >
 > For $u=a_{kl}$, we have $b_i=L_{il}-L_{ik}$. The numerator therefore contains the product $(L_{ik}-L_{il})(L_{jk}-L_{jl})$.
-
-This is [[One Greenian Coefficient#Two formulas for one coefficient|the variation of one fixed vector contribution]]. For $u=a_{kl}$, one canonical coefficient $\gamma_{kl}$ changes; for arbitrary $u$, several canonical coefficients may change. Condition $1+tq>0$ preserves positive definiteness of the Greenian; signs of the recovered conductances are checked separately.
+>
+> This is [[One Greenian Coefficient#Two formulas for one coefficient|the variation of one fixed vector contribution]]. For $u=a_{kl}$, one canonical coefficient $\gamma_{kl}$ changes; for arbitrary $u$, several canonical coefficients may change. Condition $1+tq>0$ preserves positive definiteness of the Greenian; signs of the recovered conductances are checked separately.
 
 ### Two factors and several directions
 
-The product of two factors contains a mixed term:
-
-$$
-(e+sp)(e+tr)=e+sp+tr+stpr,
-\qquad p=[u]^2,\quad r=[v]^2
-$$
-
-The squares of $p^2$ and $r^2$ vanish. Their product $pr$ is generally nonzero and gives the Gram determinant of two directions.
-
-> [!info] The joint spanning-tree multiplier
+> [!info]- Reference formulas and explanations
+>
+> The product of two factors contains a mixed term:
+>
+> $$
+> (e+sp)(e+tr)=e+sp+tr+stpr,
+> \qquad p=[u]^2,\quad r=[v]^2
+> $$
+>
+> The squares of $p^2$ and $r^2$ vanish. Their product $pr$ is generally nonzero and gives the Gram determinant of two directions.
+>
+> **The joint spanning-tree multiplier**
 > For two changing couplings $u,v$, set $g_M=u\cdot_Mv$, $R_u=u\cdot_Mu$, $R_v=v\cdot_Mv$. Then
 >
 > $$
@@ -139,38 +162,40 @@ The squares of $p^2$ and $r^2$ vanish. Their product $pr$ is generally nonzero a
 > \frac{\tau'}\tau
 > =\frac1{(1+sq_u)(1+tq_v)-stg_N^2}
 > $$
-
-Explicit resistance and conductance responses are given in [[Two Edges and Joint Variation]] and [[Joint Variation of Greenian Coefficients]], respectively. For $m$ directions, form $\mathbf U=(\mathbf u_1,\ldots,\mathbf u_m)$ and $\mathbf D=\operatorname{diag}(t_1,\ldots,t_m)$. Both spanning-tree formulas generalize:
-
-$$
-\begin{aligned}
-\Delta\mathbf L=\mathbf U\mathbf D\mathbf U^{\mathsf T}
-&:\quad \frac{\tau'}\tau=\det(\mathbf I_m+\mathbf D\mathbf G_M),\\
-\Delta\mathbf{Gr}=\mathbf U\mathbf D\mathbf U^{\mathsf T}
-&:\quad \frac{\tau'}\tau=\frac1{\det(\mathbf I_m+\mathbf D\mathbf G_N)}
-\end{aligned}
-$$
-
-Here $\mathbf G_M=\mathbf U^{\mathsf T}\mathbf{Gr}\mathbf U$, $\mathbf G_N=\mathbf U^{\mathsf T}\mathbf L\mathbf U$; for conductance variations, the columns of $\mathbf U$ are vectors of the selected pairs. The second formula requires a nonzero determinant. Dependent directions are allowed. The joint response accounts for mixed terms, whereas sequential calculation uses updated data and requires nondegenerate intermediate states.
+>
+> Explicit resistance and conductance responses are given in [[Two Edges and Joint Variation]] and [[Joint Variation of Greenian Coefficients]], respectively. For $m$ directions, form $\mathbf U=(\mathbf u_1,\ldots,\mathbf u_m)$ and $\mathbf D=\operatorname{diag}(t_1,\ldots,t_m)$. Both spanning-tree formulas generalize:
+>
+> $$
+> \begin{aligned}
+> \Delta\mathbf L=\mathbf U\mathbf D\mathbf U^{\mathsf T}
+> &:\quad \frac{\tau'}\tau=\det(\mathbf I_m+\mathbf D\mathbf G_M),\\
+> \Delta\mathbf{Gr}=\mathbf U\mathbf D\mathbf U^{\mathsf T}
+> &:\quad \frac{\tau'}\tau=\frac1{\det(\mathbf I_m+\mathbf D\mathbf G_N)}
+> \end{aligned}
+> $$
+>
+> Here $\mathbf G_M=\mathbf U^{\mathsf T}\mathbf{Gr}\mathbf U$, $\mathbf G_N=\mathbf U^{\mathsf T}\mathbf L\mathbf U$; for conductance variations, the columns of $\mathbf U$ are vectors of the selected pairs. The second formula requires a nonzero determinant. Dependent directions are allowed. The joint response accounts for mixed terms, whereas sequential calculation uses updated data and requires nondegenerate intermediate states.
 
 ### Prescribed resistances and the finite matrix equation
 
-With fixed vertices, the transformation from resistances to the Greenian is exactly linear:
-
-$$
-\Delta\mathbf{Gr}=-\frac12\mathbf J(\Delta\mathbf R)\mathbf J
-$$
-
-Changing only $R_{kl}=R_{lk}$ by $\rho$ is represented by two vector contributions. For centroid $h=n^{-1}\sum_i a_i$ and $p_i=a_i-h$,
-
-$$
-\Delta\mathrm{Gr}
-=\frac\rho4[p_k-p_l]^2-\frac\rho4[p_k+p_l]^2
-$$
-
-Substitution into the two-factor formulas gives [[One Resistance and Quadric Connectivity#Explicit finite formulas|changes in the spanning-tree coefficient and all couplings while preserving the other resistances]]. Several independent increments add in $\Delta\mathbf{Gr}$; the responding Laplacian depends on them nonlinearly.
-
-> [!info] Solving the finite equation
+> [!info]- Reference formulas and explanations
+>
+> With fixed vertices, the transformation from resistances to the Greenian is exactly linear:
+>
+> $$
+> \Delta\mathbf{Gr}=-\frac12\mathbf J(\Delta\mathbf R)\mathbf J
+> $$
+>
+> Changing only $R_{kl}=R_{lk}$ by $\delta$ is represented by two vector contributions. For centroid $h=n^{-1}\sum_i a_i$ and $p_i=a_i-h$,
+>
+> $$
+> \Delta\mathrm{Gr}
+> =\frac\delta4[p_k-p_l]^2-\frac\delta4[p_k+p_l]^2
+> $$
+>
+> Substitution into the two-factor formulas gives [[One Resistance and Quadric Connectivity#Explicit finite formulas|changes in the spanning-tree coefficient and all couplings while preserving the other resistances]]. Several independent increments add in $\Delta\mathbf{Gr}$; the responding Laplacian depends on them nonlinearly.
+>
+> **Solving the finite equation**
 > Let $\Delta\mathbf R$ be symmetric with zero diagonal. For a nondegenerate new Greenian,
 >
 > $$
@@ -185,12 +210,14 @@ Substitution into the two-factor formulas gives [[One Resistance and Quadric Con
 > \tau'=\frac{\tau}{\det\left(\mathbf I_n-\frac12\Delta\mathbf R\mathbf L\right)}
 > \end{gathered}
 > $$
-
-If increments are prescribed only within $S$ and all other resistances are preserved, [[Joint Variation of Resistances#Changes on a prescribed vertex set|the reduced calculation]] uses a matrix of size $\lvert S\rvert$ and the original block $\mathbf L_{SS}$. The conductance update is supported on pairs of vertices in $S$ and its original neighbors. This location alone ensures neither the required conductance signs nor preservation of zero couplings.
+>
+> If increments are prescribed only within $S$ and all other resistances are preserved, [[Joint Variation of Resistances#Changes on a prescribed vertex set|the reduced calculation]] uses a matrix of size $\lvert S\rvert$ and the original block $\mathbf L_{SS}$. The conductance update is supported on pairs of vertices in $S$ and its original neighbors. This location alone ensures neither the required conductance signs nor preservation of zero couplings.
 
 ### Quadric connectivity and inverse sensitivities
 
-> [!info] Two differential transformations
+> [!info]- Reference formulas and explanations
+>
+> **Two differential transformations**
 > **Definition.** In the normalization used here, quadric connectivity is
 >
 > $$
@@ -206,29 +233,31 @@ If increments are prescribed only within $S$ and all other resistances are prese
 > \mathbf S\mathbf{Lq}=\mathbf{Lq}\mathbf S=\mathbf I
 > \end{gathered}
 > $$
-
-Here $\boldsymbol R$ and $\boldsymbol c$ are columns of independent pair coordinates $i<j$, including pairs whose original conductance is zero. At such points, derivatives are taken in the space of nondegenerate centered forms; admissibility of a direction for nonnegative conductances is checked separately. For the Laplacian matrix, the sign is positive: $d\mathbf L=\mathbf L(d\mathbf R)\mathbf L/2$; the conductance sign changes because $c_{ij}=-L_{ij}$.
-
-The definition, symmetries, and inverse-identity proof are given in [[One Resistance and Quadric Connectivity]]. If only existing edges are retained, the corresponding principal submatrices are generally no longer mutual inverses; the required transformation contains a Schur complement.
+>
+> Here $\boldsymbol R$ and $\boldsymbol c$ are columns of independent pair coordinates $i<j$, including pairs whose original conductance is zero. At such points, derivatives are taken in the space of nondegenerate centered forms; admissibility of a direction for nonnegative conductances is checked separately. For the Laplacian matrix, the sign is positive: $d\mathbf L=\mathbf L(d\mathbf R)\mathbf L/2$; the conductance sign changes because $c_{ij}=-L_{ij}$.
+>
+> The definition, symmetries, and inverse-identity proof are given in [[One Resistance and Quadric Connectivity]]. If only existing edges are retained, the corresponding principal submatrices are generally no longer mutual inverses; the required transformation contains a Schur complement.
 
 ### Conductance constraints and the algorithm
 
-In [[Variations with Conductance Constraints]], vertices $P$ specify controlled resistances, pairs $Z$ mandatory zero couplings, and pairs $V$ permitted variable conductances. Sets $Z$ and $V$ are disjoint; the other conductances are fixed. Resistances outside the controlled pairs may change. The freedom needed to meet the constraints therefore comes from the problem formulation itself; locality of a full resistance variation is not guaranteed here.
-
-For a unit triangular prism with fixed edges of the $P$ face and six variable couplings, the target is $R_{12}=8k/15$, $R_{13}=R_{23}=8/15$. The exact region of finite nonnegative solutions is
-
-$$
-\frac14\le k<\frac{31-\sqrt{481}}8
-$$
-
-If all six variable conductances must be strictly positive, the left endpoint is excluded as well. The construction and boundaries are proved in [[Variations with Conductance Constraints#Which changes the prism permits|the prism analysis]].
-
-> [!info] What the general algorithm provides
+> [!info]- Reference formulas and explanations
+>
+> In [[Variations with Conductance Constraints]], vertices $P$ specify controlled resistances, pairs $Z$ mandatory zero couplings, and pairs $V$ permitted variable conductances. Sets $Z$ and $V$ are disjoint; the other conductances are fixed. Resistances outside the controlled pairs may change. The freedom needed to meet the constraints therefore comes from the problem formulation itself; locality of a full resistance variation is not guaranteed here.
+>
+> For a unit triangular prism with fixed edges of the $P$ face and six variable couplings, the target is $R_{12}=8k/15$, $R_{13}=R_{23}=8/15$. The exact region of finite nonnegative solutions is
+>
+> $$
+> \frac14\le k<\frac{31-\sqrt{481}}8
+> $$
+>
+> If all six variable conductances must be strictly positive, the left endpoint is excluded as well. The construction and boundaries are proved in [[Variations with Conductance Constraints#Which changes the prism permits|the prism analysis]].
+>
+> **What the general algorithm provides**
 > For prescribed $P,Z,V$, first check the available connected structure and necessary conditions on target resistances. Numerical search then uses rows of $\mathbf S$ for controlled pairs within $P$ and columns for couplings in $V$, conductance bounds, and a finite-step check.
 >
 > For rational or exactly specified real algebraic data, existence reduces to polynomial equalities and inequalities with the essential condition $\tau>0$. Quantifier elimination can decide existence, construct a solution, or determine the global error infimum and whether it is attained.
-
-[[An Algorithm for Variations with Conductance Constraints]] distinguishes an exact solution, a numerical candidate, proved impossibility, and global approximation. Termination of numerical iterations does not prove absence of a solution; stationarity does not prove a minimum. If finite conductances do not attain the infimum, the algorithmic aim is to obtain approximations within a prescribed tolerance in error value. The general exact algorithm may be computationally expensive; the published examples implement numerical search, not a universal quantifier-elimination solver.
+>
+> [[An Algorithm for Variations with Conductance Constraints]] distinguishes an exact solution, a numerical candidate, proved impossibility, and global approximation. Termination of numerical iterations does not prove absence of a solution; stationarity does not prove a minimum. If finite conductances do not attain the infimum, the algorithmic aim is to obtain approximations within a prescribed tolerance in error value. The general exact algorithm may be computationally expensive; the published examples implement numerical search, not a universal quantifier-elimination solver.
 
 ## Applicability conditions
 
@@ -244,16 +273,18 @@ Changing a coefficient at a fixed vector is not a change of the vector itself. R
 
 ## Provenance and status of the results
 
-This table distinguishes established matrix identities, their PMG expressions, and derivations developed in detail in the series. An independent proof or computational check does not establish scientific priority.
-
-| Result | Source or derivation | Role in PMG | Status of a novelty claim |
-| --- | --- | --- | --- |
-| Inversion under one or several vector contributions | Sherman-Morrison and Woodbury identities; references in [[Further Reading for the PMG Introductory Series]] | Derivation through factors, potentials, and changing normalization | Established matrix result |
-| Reciprocal spanning-tree multipliers for the Laplacian and Greenian | [[Laplacian and Greenian - Mutual Duality of Exponentials]]; factor derivations in [[Joint Variation of Greenian Coefficients]] | Agreement of top grades with fixed $T_n$ | PMG presentation; no priority claimed |
-| Finite recovery from resistances | Double centering and inversion; derivation in [[Joint Variation of Resistances]] | Passage from independent resistances to vector factors and conductances | Derivation from classical methods |
-| Quadric connectivity and inverse sensitivity matrices | Direct proof in [[One Resistance and Quadric Connectivity]] | Differential relation between full pair coordinates | PMG term; no priority claimed for the identity |
-| Boundary constraints and the prism region | Kron reduction and calculation in [[Variations with Conductance Constraints]] | The $P,Z,V$ formulation and an exact example of a solution region | Reduction is established; no priority claimed for the calculation |
-| Search and rigorous certificates | Gauss-Newton, backtracking, and quantifier elimination; sources and application in [[An Algorithm for Variations with Conductance Constraints]] | Distinguishing numerical search, existence, minimum, and infimum | Application of established algorithmic tools |
+> [!info]- Reference formulas and explanations
+>
+> This table distinguishes established matrix identities, their PMG expressions, and derivations developed in detail in the series. An independent proof or computational check does not establish scientific priority.
+>
+> | Result | Source or derivation | Role in PMG | Status of a novelty claim |
+> | --- | --- | --- | --- |
+> | Inversion under one or several vector contributions | Sherman-Morrison and Woodbury identities; references in [[Further Reading for the PMG Introductory Series]] | Derivation through factors, potentials, and changing normalization | Established matrix result |
+> | Reciprocal spanning-tree multipliers for the Laplacian and Greenian | [[Laplacian and Greenian - Mutual Duality of Exponentials]]; factor derivations in [[Joint Variation of Greenian Coefficients]] | Agreement of top grades with fixed $T_n$ | PMG presentation; no priority claimed |
+> | Finite recovery from resistances | Double centering and inversion; derivation in [[Joint Variation of Resistances]] | Passage from independent resistances to vector factors and conductances | Derivation from classical methods |
+> | Quadric connectivity and inverse sensitivity matrices | Direct proof in [[One Resistance and Quadric Connectivity]] | Differential relation between full pair coordinates | PMG term; no priority claimed for the identity |
+> | Boundary constraints and the prism region | Kron reduction and calculation in [[Variations with Conductance Constraints]] | The $P,Z,V$ formulation and an exact example of a solution region | Reduction is established; no priority claimed for the calculation |
+> | Search and rigorous certificates | Gauss-Newton, backtracking, and quantifier elimination; sources and application in [[An Algorithm for Variations with Conductance Constraints]] | Distinguishing numerical search, existence, minimum, and infimum | Application of established algorithmic tools |
 
 ## Reproducible checks
 

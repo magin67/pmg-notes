@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title"><title id="title">Три задачи вариаций</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="620" fill="white"/>
+<text xml:space="preserve" x="560" y="45" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Какие координаты меняем?</text>
+<rect x="35" y="95" width="440" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="255" y="131" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Проводимости</text>
+<text xml:space="preserve" x="255" y="177" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Δc; фиксируем остальные c</text>
+<line x1="495" y1="153" x2="605" y2="153" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="625" y="95" width="460" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="855" y="159" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">гриниан и резистенсы</text>
+<rect x="35" y="240" width="440" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="255" y="276" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Коэффициенты гриниана</text>
+<text xml:space="preserve" x="255" y="322" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Δγ; фиксируем остальные γ</text>
+<line x1="495" y1="298" x2="605" y2="298" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="625" y="240" width="460" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="855" y="304" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">лапласиан и проводимости</text>
+<rect x="35" y="385" width="440" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="255" y="421" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Резистенсы</text>
+<text xml:space="preserve" x="255" y="467" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">ΔR; фиксируем остальные R</text>
+<line x1="495" y1="443" x2="605" y2="443" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="625" y="385" width="460" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="855" y="449" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">единственный лапласиан</text>
+<text xml:space="preserve" x="560" y="565" font-size="23" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">Сначала проверяем допустимость восстановления</text>
+<text xml:space="preserve" x="560" y="597" font-size="23" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">Ограничения на связи задают отдельную обратную задачу</text>
+</svg>

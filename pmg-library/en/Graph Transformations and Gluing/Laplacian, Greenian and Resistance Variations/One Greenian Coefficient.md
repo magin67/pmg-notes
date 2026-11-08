@@ -1,15 +1,15 @@
 ---
 title: One Greenian Coefficient
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-greenian-coefficient
 lang: en
 description: 'Changing one vector coefficient of the Greenian: a path example, exact variations of the spanning-tree coefficient and conductances, an exponential-factor derivation, and admissible parameters.'
 order: 3
-translated_revision: 5
+translated_revision: 6
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Greenian Coefficient"
 ---
@@ -55,6 +55,16 @@ $$
 $$
 
 Why did one coefficient change affect several couplings, and where did these fractions come from? Two general formulas answer these questions.
+
+For a fixed direction $u=a_{kl}$, denote its coordinates by $u_i$.
+
+Changing one Greenian coefficient is not equivalent to independently changing one resistance. Since $\mathbf{Gr}'=\mathbf{Gr}+t\mathbf u\mathbf u^{\mathsf T}$ and $R_{ij}=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}$, the following exact linear equality holds:
+
+$$
+\Delta R_{ij}=t(u_i-u_j)^2
+$$
+
+For $u=a_{kl}$, resistance $R_{kl}$ changes by $4t$, resistances of pairs with exactly one endpoint in $\{k,l\}$ change by $t$, and all others remain fixed. Thus “change only $R_{kl}$” requires a different combination of vector contributions. Joint vector contributions are treated in [[Joint Variation of Greenian Coefficients]], and their required combination for a single resistance in [[One Resistance and Quadric Connectivity]].
 
 ## Two formulas for one coefficient
 
@@ -154,6 +164,10 @@ Coupling $34$ is preserved, while $14$ and $24$ remain zero. At $t=1/5$, we reco
 Within $t>-1/5$, all conductances are nonnegative exactly when $0\le t\le1$. At the right endpoint $t=1$, coupling $12$ disappears, but the graph remains connected: $c'_{13}=1/3$, $c'_{23}=1/2$, $c'_{34}=1$. For $t>1$, conductance $12$ becomes negative; for $-1/5<t<0$, the new coupling $13$ is negative.
 
 Positive definiteness of the new Greenian therefore permits a wider range than nonnegativity of all conductances. If the previously absent coupling $13$ is also forbidden, this example allows only $t=0$.
+
+![Admissible Greenian Parameter](<images/Admissible Greenian Parameter.svg>)
+
+*Nonsingularity, metric positivity, and nonnegative conductances impose different conditions. This diagram shows the positive region; preserving the absent edge $13$ reduces the graph region to $t=0$.*
 
 ## One factor of the Greenian exponential
 
@@ -351,13 +365,7 @@ $$
 
 For a finite increment, the denominator $1+tq_{kl}$ must be retained. Before a subsequent coefficient change, the data $\mathbf L$, $q_{kl}$, and $\tau$ must be recalculated.
 
-Changing one Greenian coefficient is not equivalent to independently changing one resistance. Since $\mathbf{Gr}'=\mathbf{Gr}+t\mathbf u\mathbf u^{\mathsf T}$ and $R_{ij}=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}$, the following exact linear equality holds:
-
-$$
-\Delta R_{ij}=t(u_i-u_j)^2
-$$
-
-For $u=a_{kl}$, resistance $R_{kl}$ changes by $4t$, resistances of pairs with exactly one endpoint in $\{k,l\}$ change by $t$, and all others remain fixed. Thus “change only $R_{kl}$” requires a different combination of vector contributions. Joint vector contributions are treated in [[Joint Variation of Greenian Coefficients]], and their required combination for a single resistance in [[One Resistance and Quadric Connectivity]].
+Resistance changes under one coefficient update are given before the general formulas above.
 
 ## Independent matrix verification
 
@@ -383,7 +391,7 @@ For $u=a_{kl}$, resistance $R_{kl}$ changes by $4t$, resistances of pairs with e
 >
 > This agrees with directly inverting $\gamma'_{12}=1/(4c)+t$. The entire admissible domain here is $t>-1/(4c)$.
 
-The matrix formula (6) is the Sherman-Morrison identity applied to the Greenian on the zero-sum space; sources for the classical inversion formulas are collected in [[Further Reading for the PMG Introductory Series]]. The polyform derivation uses factor (4), the top-grade normalization of duality, and the second-grade potential determinant. It yields the same established identity and does not establish scientific priority.
+The matrix formula (6) is the Sherman-Morrison identity applied to the Greenian on the zero-sum space; sources for the classical inversion formulas are collected in [[Further Reading for the PMG Introductory Series]]. The polyform derivation uses factor (4), the top-grade normalization of duality, and the second-grade potential determinant.
 
 The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/variations/verify_one_greenian_coefficient.py) compares factor expansions by grade, recovery through exterior contraction, direct matrix inversion, and spanning-tree enumeration. All calculations use exact rational arithmetic. Cases include one weighted edge, triangles, the path $P_4$, and the cycle $C_4$, negative Greenian coefficients, new couplings, approach to degeneracy, and the degenerate point itself.
 

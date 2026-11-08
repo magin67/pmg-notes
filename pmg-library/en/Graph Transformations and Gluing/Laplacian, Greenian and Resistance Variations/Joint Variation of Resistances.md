@@ -1,15 +1,15 @@
 ---
 title: Joint Variation of Resistances
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-joint-resistances
 lang: en
 description: 'Two changing resistances and the general case on a vertex set: the spanning-tree coefficient, conductances, Greenian factors, and direct solution of the matrix equation.'
 order: 6
-translated_revision: 5
+translated_revision: 6
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Joint Variation of Resistances"
 ---
@@ -89,6 +89,8 @@ $$
 The joint response is therefore not the sum of two responses calculated from the original graph. A sequential calculation gives the same answer if the intermediate Greenian is nondegenerate; the second step uses the changed Laplacian. In the numerical example, the first step gives $\tau_1=12/5$ and conductances $2/5,6/5,6/5$. The multiplier at the second step is $4/3$, so $\tau'=(12/5)/(4/3)=9/5$.
 
 ## Changes on a prescribed vertex set
+
+Here the **entire** new resistance table is prescribed: increments outside the selected block are zero. In [[Variations with Conductance Constraints|the constrained problem]], only boundary resistances will be prescribed and the others will be free. These are different inverse problems.
 
 The original graph is undirected, its conductances are nonnegative, and its set of $n\ge2$ vertices is fixed. Connectedness is determined by edges of positive conductance and is assumed initially. Matrices $\mathbf L$ and $\mathbf{Gr}$ are mutual inverses on $\mathbf1^\perp$ and annihilate the constant column.
 
@@ -177,6 +179,34 @@ These are finite formulas. Sign and metric constraints are given after the deriv
 >
 > Calculating $\det(\mathbf I_3-\mathbf F\mathbf L/2)$ gives (1). Substitution into (5)-(8) gives (2). An independent check substitutes conductances (2) into the three triangle resistance formulas and the spanning-tree sum. $\square$
 
+### Calculation guide
+
+| Matrix | Size | Role |
+|---|---|---|
+| $\mathbf E$ | $n\times r$ | Selects the vertices in $S$ |
+| $\mathbf F$ | $r\times r$ | Prescribed resistance increments |
+| $\mathbf H$ | $r\times r$ | Initial block $\mathbf L_{SS}$ |
+| $\mathbf B$ | $n\times r$ | Selected columns of the initial Laplacian |
+| $\mathbf A$ | $r\times r$ | System matrix in $\mathbf A\mathbf K=\mathbf F/2$ |
+| $\mathbf K$ | $r\times r$ | Update matrix yielding $\Delta\mathbf L$ |
+
+First form $\mathbf F,\mathbf H,\mathbf B$, then check admissibility and solve one linear system for $\mathbf K$. Compute the new conductances and verify the resistances. This fully prescribed table does not require iterative search.
+
+For example, in the unit triangle take $S=\{1,2\}$ and $\Delta R_{12}=1/3$. Then
+
+$$
+\mathbf F=\frac13\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+\mathbf H=\begin{pmatrix}2&-1\\-1&2\end{pmatrix},\quad
+\mathbf A=\begin{pmatrix}7/6&-1/3\\-1/3&7/6\end{pmatrix}
+$$
+
+$$
+\Phi=\frac54,\qquad
+\mathbf K=\frac1{45}\begin{pmatrix}2&7\\7&2\end{pmatrix}
+$$
+
+For pair $12$, the columns $\mathbf b_1=(2,-1)^{\mathsf T}$, $\mathbf b_2=(-1,2)^{\mathsf T}$ give $\Delta c_{12}=-3/5$, hence $c'_{12}=2/5$. This recovers the verified example with one changed resistance coordinate.
+
 ## Derivation through Greenian factors
 
 Set $h=n^{-1}\sum_i a_i$, $p_i=a_i-h$, and $\mathbf J=\mathbf I_n-\mathbf1\mathbf1^{\mathsf T}/n$. By [[The Canonical Vector Representation of the Greenian|the linear transformation from resistances]],
@@ -193,7 +223,7 @@ In particular, the canonical coefficients change linearly: $\Delta\gamma_{ij}=(\
 
 ### Two factors for each changing pair
 
-For each pair $k<l$ with increment $\rho_{kl}$, introduce fixed directions
+For each pair $k<l$ with increment $\delta_{kl}$, introduce fixed directions
 
 $$
 u_{kl}=p_k-p_l,\qquad v_{kl}=p_k+p_l
@@ -202,7 +232,7 @@ $$
 As shown by [[One Resistance and Quadric Connectivity#One resistance as two vector contributions|the two-factor representation of a single-resistance change]],
 
 $$
-\Delta\mathrm{Gr}=\sum_{k<l}\frac{\rho_{kl}}4
+\Delta\mathrm{Gr}=\sum_{k<l}\frac{\delta_{kl}}4
 \bigl([u_{kl}]^2-[v_{kl}]^2\bigr)
 $$
 
@@ -210,8 +240,8 @@ Thus, for the exterior exponential $N=\exp(\mathrm{Gr})$,
 
 $$
 N'=N\prod_{k<l}
-\left(e+\frac{\rho_{kl}}4[u_{kl}]^2\right)
-\left(e-\frac{\rho_{kl}}4[v_{kl}]^2\right)
+\left(e+\frac{\delta_{kl}}4[u_{kl}]^2\right)
+\left(e-\frac{\delta_{kl}}4[v_{kl}]^2\right)
 \tag{10}
 $$
 
@@ -393,6 +423,10 @@ This does not mean that a changing coupling must have an endpoint in $S$. For ex
 
 To preserve $c_{ij}=0$ on a selected pair, one must check $\mathbf b_i^{\mathsf T}\mathbf K\mathbf b_j=0$. When $\mathbf R'$ is fully prescribed, the solution is already unique: its conductances cannot be adjusted further while preserving the entire resistance matrix. A fixed-edge-set problem needs other free data, for example permission to change some of the remaining resistances.
 
+![Where a Coupling Can Change](<images/Where a Coupling Can Change.svg>)
+
+*Changing the resistance of pair $23$ can affect pair $14$, although both endpoints lie outside $S$. The diagram shows the algebraic support of the update; conductance signs must be checked separately.*
+
 ## Differentials and sequential changes
 
 For a small update $\mathbf F$, we have $\mathbf K=\mathbf F/2+O(\|\mathbf F\|^2)$. The finite formulas therefore reduce to
@@ -413,6 +447,10 @@ Thus [[One Resistance and Quadric Connectivity#Quadric connectivity|quadric conn
 If changes are applied sequentially, recalculate $\mathbf L$, $\mathbf H$, $\mathbf B$, and $\tau$ at every step. If intermediate forms are invertible, the result agrees with the simultaneous calculation: updates of $\mathbf{Gr}$ add, and its inverse is unique. The normalization factors of consecutive steps multiply. If an intermediate form is degenerate, that order of recalculation is inapplicable even when the joint final update is invertible.
 
 For example, in the triangle with $\alpha=\beta=2$, formulas (1)-(2) give positive conductances $1/5,1/5,7/5$. But changing only one of the two resistances by $2$ first makes its separate multiplier $1+2-3\cdot2^2/4$ zero. Both two-step sequences break down, whereas the joint calculation is defined.
+
+![A Joint Step and a Singular Intermediate State](<images/A Joint Step and a Singular Intermediate State.svg>)
+
+*At $\alpha=\beta=2$, the joint response has positive conductances. Either full first step makes the intermediate Greenian singular.*
 
 ### Is iteration needed?
 
@@ -439,7 +477,7 @@ From the repository root:
 
     python checks/variations/verify_joint_resistances.py
 
-Finite-rank matrix inversion and the determinant identity belong to classical matrix theory; further sources are collected in [[Further Reading for the PMG Introductory Series]]. This note establishes their agreement with Greenian vector factors, spanning-tree normalization, and independent resistance coordinates. These derivations and computational checks do not assert scientific priority.
+Finite-rank matrix inversion and the determinant identity belong to classical matrix theory; further sources are collected in [[Further Reading for the PMG Introductory Series]]. This note establishes their agreement with Greenian vector factors, spanning-tree normalization, and independent resistance coordinates.
 
 In [[Variations with Conductance Constraints]], resistances are prescribed only on a selected vertex set, leaving the others free. This allows the problem of preserving zero couplings and nonnegativity of permitted conductances to be posed; the prism example shows the limits of its solvability.
 

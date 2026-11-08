@@ -1,15 +1,15 @@
 ---
 title: An Algorithm for Variations with Conductance Constraints
 date: 2026-10-31
-updated: 2026-11-01
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-constrained-algorithm
 lang: en
 description: Finding nonnegative conductances for prescribed P, Z, and V, proving impossibility of an exact solution, and determining a best approximation or an unattainable limit.
 order: 8
-translated_revision: 4
+translated_revision: 5
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/An Algorithm for Variations with Conductance Constraints"
 ---
@@ -61,7 +61,34 @@ $$
 
 This is a problem with an upper bound. Such a bound cannot be introduced merely for computational convenience and the result declared a solution of the original unbounded problem.
 
+![Three Targets on a Resistance Plot](<images/Three Targets on a Resistance Plot.svg>)
+
+*The target line $r=2$ meets the curve at $x=1$. Target $r=1$ is a limit. Under $x\le2$, the smallest resistance is $3/2$ and the objective for target $1$ is $1/8$.*
+
+## Calculation workflow
+
+1. **Specify the model.** Give boundary vertices $P$, forbidden pairs $Z$, variable pairs $V$, fixed conductances, target resistances, and permitted bounds.
+2. **Check feasibility.** Verify that the permitted couplings can produce a connected graph. Then apply [[#Checks before iteration|simple necessary conditions]] to the target resistances.
+3. **Find a numerical candidate.** Repeat [[#A practical search step|the search step]], recomputing resistances and sensitivities each time. Check the actual error decrease, constraints, and connectedness.
+4. **Check exactness.** A small residual gives an approximate candidate. To prove exact existence, verify [[#A rigorous existence check|the polynomial system]] in exact arithmetic or solve it.
+5. **Check global quality if required.** Use the separate section on [[#Global approximation and an unattainable limit|global approximation]]. Stalled iterations alone do not establish this result.
+6. **Report the result and its status.** Give conductances, actual resistances, error, and the justification for the conclusion.
+
+| Calculation result | What has been established |
+|---|---|
+| Exact conductances satisfy every condition | A nonnegative exact solution exists |
+| A necessary condition fails or the exact system is proved infeasible | No exact solution exists |
+| A small numerical residual is found | A numerical candidate has the stated error |
+| Iteration stops with a nonzero residual | Impossibility of an exact solution is not proved |
+| The candidate is feasible and an improvement greater than $\varepsilon$ is proved impossible | A global approximation is obtained within $\varepsilon$ in the objective value |
+| The lower bound of attainable errors does not belong to that set | The minimum is not attained; the infimum can be approached |
+
+Multiple starting points may improve the numerical result but do not prove global optimality. An additional objective, such as minimizing the change from original conductances among exact solutions, should be posed separately: adding it to the objective changes the problem.
+
+
 ## Data and the feasible region
+
+The practical route is numerical candidate search with verification of each step. Polynomial tests of existence and global quality form a separate theoretical route. The published code implements numerical search on small examples; it does not include a general quantifier-elimination solver.
 
 The vertex set $\Omega$ is fixed; $n=\lvert\Omega\rvert$. All conductances are finite. Assume $2\le\lvert P\rvert\le n$ and $Z\cap V=\varnothing$. Conductances on $Z$ are zero; on other pairs outside $V$, they are fixed and nonnegative. Denote the corresponding matrix by $\mathbf L_{\mathrm{fix}}$.
 
@@ -251,6 +278,17 @@ This justifies a single step, not convergence to a global minimum. At $\boldsymb
 
 The substitution $x_e=\exp\theta_e$ is inconvenient here: it excludes zero conductances that may be part of an exact solution. Setting small couplings to zero afterwards also requires checking the resistances again.
 
+### One numerical step on the path
+
+For the path $1-2-3$, choose target $r=3/2$, initial $x=1$, weight $w=1$, and damping $\mu=1$. Then $R=2$, residual $f=1/2$, and sensitivity $S=1/x^2=1$. Problem (9) becomes
+
+$$
+\min_{d\ge-1}\ \frac12\left(\frac12-d\right)^2+\frac12d^2,
+\qquad d=\frac14
+$$
+
+With the full step $\alpha=1$, we obtain $x'=5/4$, $R'=9/5$, and $\Psi'=9/200$ instead of $\Psi=1/8$. For $\omega=1/4$, the right side of (10) is $1/8-1/32=3/32$; since $9/200<3/32$, the step is accepted. The new sensitivity is $S'=16/25$ and must be recomputed before the next step. The error has decreased, but the target has not yet been reached; the exact solution here is $x=2$.
+
 ## A rigorous existence check
 
 Numerical search supplies a useful candidate, but failure does not mean that no solution exists. For a rigorous answer, use spanning-tree and forest coefficients.
@@ -363,26 +401,6 @@ If none does, the candidate lies at most $\varepsilon$ above the global infimum.
 
 If the graph at the lower bounds is disconnected, this sufficient condition does not apply, but a minimum may still exist. The path with $0<x\le2$ above is such an example. Upper bounds alone, without connectedness control, do not make $\mathcal A$ closed.
 
-## Calculation workflow
-
-1. **Specify the model.** Fix $P,Z,V$, the other conductances, target resistances, weights, and the bounds actually imposed by the problem. Check consistency.
-2. **Check the permitted structure.** Connectedness of the available edges decides whether $\mathcal A\ne\varnothing$. If the region is empty, there is neither an exact solution nor a feasible approximation.
-3. **Apply simple obstructions.** Target-response conditions and bounds (5) may immediately prove that no exact solution exists. Continue with approximation if required.
-4. **Find a numerical candidate.** Repeat (6)-(10), checking actual resistances, bounds, and connectedness. Stop at the required error, stationarity, or exhaustion of the computational budget.
-5. **Certify the required result.** For a candidate with exact rational or algebraic coordinates, check (12) in exact arithmetic; otherwise, solve the existence problem (12). For global approximation, use (14)-(16). Numerical search and exact verification serve different purposes.
-6. **Report the result and its status.** Give conductances, actual resistances, error, and the justification for the conclusion.
-
-| Calculation result | What has been established |
-|---|---|
-| Exact conductances satisfy (12) | A nonnegative exact solution exists |
-| A necessary condition is contradicted or (12) is proved infeasible | No exact solution exists |
-| A small numerical residual is found | A numerical candidate has the stated error |
-| Iteration stops with a nonzero residual | A candidate exists; impossibility of an exact solution is not proved |
-| The candidate is feasible and (16) is proved infeasible | A global approximation is obtained within $\varepsilon$ in the value of (3) |
-| The left endpoint in (15) is excluded | The minimum is not attained; approximations to the infimum can be sought |
-
-Multiple starting points may improve the numerical result but do not themselves give a global certificate. An additional objective, such as minimizing the change from original conductances among exact solutions, should be posed separately: adding it to (3) would change the original problem.
-
 ## Returning to the prism and verification
 
 In [[Variations with Conductance Constraints#The prism example|the prism example]], the target is $R_{12}=8k/15$ with $R_{13}=R_{23}=8/15$. Its known exact solution region tests the statuses of the general algorithm:
@@ -414,6 +432,6 @@ From the repository root:
     python checks/variations/constrained_search.py
     python checks/variations/verify_series_consistency.py
 
-Sensitivity formulas and forest ratios rely on [[One Changing Edge]], and the restriction of variable conductances on [[Variations with Conductance Constraints]]. Gauss-Newton, backtracking, and quantifier elimination are established algorithmic tools. This note applies them to specified $P,Z,V$ while explicitly distinguishing a numerical result, exact existence, a global minimum, and an unattainable limit; no scientific priority is claimed.
+Sensitivity formulas and forest ratios rely on [[One Changing Edge]], and the restriction of variable conductances on [[Variations with Conductance Constraints]]. Gauss-Newton, backtracking, and quantifier elimination are established algorithmic tools. This note applies them to specified $P,Z,V$ while explicitly distinguishing a numerical result, exact existence, a global minimum, and an unattainable limit.
 
 Reading order and summary of results: [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]].
