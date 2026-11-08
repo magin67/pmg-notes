@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="550" viewBox="0 0 1120 550" role="img" aria-labelledby="title"><title id="title">Root Weights in One P6 Cell</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="550" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">One cell: k = 4, r = 2</text>
+<text xml:space="preserve" x="123.0" y="102" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">Forest in P</text>
+<text xml:space="preserve" x="248.0" y="107.28" font-size="17" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">6</text>
+<text xml:space="preserve" x="470" y="102" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Type</text>
+<text xml:space="preserve" x="705" y="102" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Without roots</text>
+<text xml:space="preserve" x="970" y="102" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">With roots</text>
+<line x1="61" y1="180" x2="84" y2="180" stroke="#24628a" stroke-width="4"/>
+<line x1="116" y1="180" x2="139" y2="180" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="171" y1="180" x2="194" y2="180" stroke="#24628a" stroke-width="4"/>
+<line x1="226" y1="180" x2="249" y2="180" stroke="#24628a" stroke-width="4"/>
+<line x1="281" y1="180" x2="304" y2="180" stroke="#24628a" stroke-width="4"/>
+<circle cx="45" cy="180" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="45" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="100" cy="180" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="100" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="155" cy="180" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="155" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="210" cy="180" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="210" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="265" cy="180" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="265" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<circle cx="320" cy="180" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="320" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">f</text>
+<text xml:space="preserve" x="470" y="188" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">(3,1)</text>
+<text xml:space="preserve" x="705" y="188" font-size="27" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">1</text>
+<text xml:space="preserve" x="970" y="188" font-size="27" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">4 × 2 = 8</text>
+<line x1="61" y1="280" x2="84" y2="280" stroke="#24628a" stroke-width="4"/>
+<line x1="116" y1="280" x2="139" y2="280" stroke="#24628a" stroke-width="4"/>
+<line x1="171" y1="280" x2="194" y2="280" stroke="#24628a" stroke-width="4"/>
+<line x1="226" y1="280" x2="249" y2="280" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="281" y1="280" x2="304" y2="280" stroke="#24628a" stroke-width="4"/>
+<circle cx="45" cy="280" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="45" y="287" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="100" cy="280" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="100" y="287" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="155" cy="280" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="155" y="287" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="210" cy="280" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="210" y="287" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="265" cy="280" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="265" y="287" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<circle cx="320" cy="280" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="320" y="287" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">f</text>
+<text xml:space="preserve" x="470" y="288" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">(3,1)</text>
+<text xml:space="preserve" x="705" y="288" font-size="27" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">1</text>
+<text xml:space="preserve" x="970" y="288" font-size="27" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">4 × 2 = 8</text>
+<line x1="61" y1="380" x2="84" y2="380" stroke="#24628a" stroke-width="4"/>
+<line x1="116" y1="380" x2="139" y2="380" stroke="#24628a" stroke-width="4"/>
+<line x1="171" y1="380" x2="194" y2="380" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="226" y1="380" x2="249" y2="380" stroke="#24628a" stroke-width="4"/>
+<line x1="281" y1="380" x2="304" y2="380" stroke="#24628a" stroke-width="4"/>
+<circle cx="45" cy="380" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="45" y="387" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="100" cy="380" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="100" y="387" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="155" cy="380" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="155" y="387" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="210" cy="380" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="210" y="387" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="265" cy="380" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="265" y="387" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<circle cx="320" cy="380" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="320" y="387" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">f</text>
+<text xml:space="preserve" x="470" y="388" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">(2²)</text>
+<text xml:space="preserve" x="705" y="388" font-size="27" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">1</text>
+<text xml:space="preserve" x="970" y="388" font-size="27" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">3 × 3 = 9</text>
+<line x1="620" y1="430" x2="1080" y2="430" stroke="#647481" stroke-width="2"/>
+<text xml:space="preserve" x="470" y="485" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Total</text>
+<text xml:space="preserve" x="705" y="485" font-size="32" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">3</text>
+<text xml:space="preserve" x="970" y="485" font-size="32" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">25</text>
+</svg>

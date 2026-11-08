@@ -1,9 +1,9 @@
 ---
 title: Graph Realizability of Toponomes
 date: 2026-10-23
-updated: 2026-10-23
-revision: 1
-source_revision: 1
+updated: 2026-11-08
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: graph-realizability-of-toponomes
@@ -19,6 +19,13 @@ The canonical forest expansion of the Laplacian exponential produces a partition
 **Graph realizability can be expressed by an exact finite system of equations. Necessary conditions on individual coefficients provide simpler tests but do not replace that system. For the one-variable vertex toponome with arbitrary positive conductances, there is a short complete criterion: the constant term is one and all roots are real and negative.**
 
 ## What graph realizability means
+
+| Problem | Prescribed data | Allowed graphs |
+| --- | --- | --- |
+| Main part | A table $A(t,u)$ in vector normalization | Simple undirected graphs, all conductances equal to $1$ |
+| Final criterion | A polynomial $P(t)$ in vertex normalization | Simple undirected graphs with arbitrary positive conductances |
+
+The vertex count can be prescribed additionally; isolated vertices do not change the polynomial. The two rows differ in allowed weights, normalization, and number of variables.
 
 > [!info] What graph realizability means
 > **Definition.** Graph realizability of a toponome or coefficient table in a specified graph class means that some graph in that class has a canonical forest expansion producing the prescribed object under the chosen reduction and normalization.
@@ -40,6 +47,10 @@ f_0=1,\qquad f_k=\sum_r a_{k,r},\qquad A(t,1)=\sum_k f_kt^k
 $$
 
 The case $A=1$ is realized by an edgeless graph. When discussing the highest column below, assume $d=\deg_t A\geqslant1$.
+
+### Why individual cells need checking
+
+The counterexample below has column sums $1,3,3,1$, the same as every tree with three edges. But splitting its second column into one adjacent pair and two independent pairs is impossible: on four nonisolated vertices, a path has two adjacent pairs and a star has three. Even the valid polynomial $(1+t)^3$ therefore does not guarantee validity of the original table.
 
 ## First necessary conditions
 
@@ -160,9 +171,10 @@ $$
 Its triangle in our chosen orientation is
 
 $$
-\begin{array}{ccc}
-3&1&1\\
-&2&
+\begin{array}{c|ccc}
+r\backslash k&1&2&3\\\hline
+1&3&1&1\\
+2&&2&
 \end{array}
 $$
 
@@ -291,6 +303,21 @@ The Boolean conditions can be written as equations $x_{ij}^2-x_{ij}=0$ over the 
 
 If $n$ is unknown, the highest column must first have the form $\gamma u^q$. It suffices to check realization on $N=d+q$ vertices: isolated vertices can be removed from any solution. For a prescribed $n\geqslant N$, they are then added back. The case $A=1$ is treated separately.
 
+### The system on three vertices
+
+On vertices $1,2,3$, there are three possible edges. The empty forest contributes $1$, each edge contributes a term of degree one in $t$, and each pair of edges is a tree on three vertices. All three edges together form a cycle and are excluded. Hence
+
+$$
+\mathcal U_3(t,u;\mathbf x)=1+(x_{12}+x_{13}+x_{23})tu
++(x_{12}x_{13}+x_{12}x_{23}+x_{13}x_{23})t^2u
+$$
+
+To obtain $A(t,u)=1+2tu+t^2u$, the variables must sum to $2$ and their pairwise products to $1$, with $x_{ij}\in\{0,1\}$. The solution $x_{12}=x_{23}=1$, $x_{13}=0$ gives a path. Vertex permutations give other labeled solutions to the same existence problem.
+
+![Three possible-edge variables and a path solution](Edge%20Variables%20on%20Three%20Vertices.svg)
+
+*Figure 2. The left panel shows possible connections of the complete graph, not a selected forest. On the right, one variable is set to zero and two to one. Comparing coefficients checks all forests of the resulting graph together.*
+
 ### Other normalizations and reductions
 
 For graphs with arbitrary positive conductances on existing edges, replace the Boolean conditions by $x_{ij}\geqslant0$. Zero means an absent edge, and a positive value is its conductance. The same system now sums forest weights.
@@ -332,6 +359,10 @@ $$
 is realized by a triangle with all three conductances equal to $1/3$: its Laplacian is $I_3-J_3/3$, where $J_3$ is the all-ones matrix, and its spectrum is $0,1,1$. An unweighted realization is impossible: $p_1=2$ would require exactly one edge, whose toponome has degree $1$.
 
 This criterion does not extend to vector normalization, the coefficient triangle, or a prescribed graph structure.
+
+![A triangle with conductances 1/3 realizes P(t)=(1+t)²](A%20Weighted%20Realization%20of%20a%20Square.svg)
+
+*Figure 3. This is vertex normalization: three one-edge forests give $p_1=3\cdot(1/3)\cdot2=2$, and three trees give $p_2=3\cdot(1/9)\cdot3=1$. Edge labels are conductances. Requiring unit conductances makes this polynomial unrealizable.*
 
 ## Status of the results and independent checks
 

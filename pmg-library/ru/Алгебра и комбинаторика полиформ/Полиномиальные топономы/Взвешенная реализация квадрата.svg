@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="600" viewBox="0 0 1120 600" role="img" aria-labelledby="title"><title id="title">Взвешенная реализация квадрата</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="600" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Вершинная нормировка и проводимости 1/3</text>
+<line x1="137.0" y1="347.5" x2="343.0" y2="347.5" stroke="#24628a" stroke-width="3"/>
+<line x1="351.58636326130676" y1="330.0622722396988" x2="253.41363673869324" y2="202.4377277603012" stroke="#24628a" stroke-width="3"/>
+<line x1="128.41363673869324" y1="330.0622722396988" x2="226.58636326130676" y2="202.4377277603012" stroke="#24628a" stroke-width="3"/>
+<circle cx="115" cy="347.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="115" y="354.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="365" cy="347.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="365" y="354.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="240" cy="185.0" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="240" y="192.0" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="240" y="405" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/3</text>
+<text xml:space="preserve" x="118" y="235" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/3</text>
+<text xml:space="preserve" x="363" y="235" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/3</text>
+<rect x="485" y="115" width="610" height="320" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="790" y="165" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Леса × вес × выборы корней</text>
+<text xml:space="preserve" x="752.0" y="235" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">p</text>
+<text xml:space="preserve" x="768.0" y="241.38" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">0</text>
+<text xml:space="preserve" x="779.0" y="235" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = 1</text>
+<text xml:space="preserve" x="659.5" y="310" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">p</text>
+<text xml:space="preserve" x="675.5" y="316.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="686.5" y="310" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = 3 × (1/3) × 2 = 2</text>
+<text xml:space="preserve" x="659.5" y="385" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">p</text>
+<text xml:space="preserve" x="675.5" y="391.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="686.5" y="385" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = 3 × (1/9) × 3 = 1</text>
+<text xml:space="preserve" x="560" y="505" font-size="32" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">P(t) = 1 + 2t + t² = (1 + t)²</text>
+<text xml:space="preserve" x="560" y="565" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Спектр лапласиана: 0, 1, 1</text>
+</svg>

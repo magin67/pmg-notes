@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660" role="img" aria-labelledby="title"><title id="title">Главный минор и удаление вершин</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="660" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Удалить строки матрицы или вершины графа?</text>
+<line x1="103.0" y1="170.0" x2="232.0" y2="170.0" stroke="#24628a" stroke-width="3"/>
+<line x1="255.0" y1="193.0" x2="255.0" y2="317.0" stroke="#24628a" stroke-width="3"/>
+<line x1="232.0" y1="340.0" x2="103.0" y2="340.0" stroke="#24628a" stroke-width="3"/>
+<line x1="80.0" y1="317.0" x2="80.0" y2="193.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="80" cy="170" r="20" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="80" y="177" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="255" cy="170" r="20" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="255" y="177" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="255" cy="340" r="20" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="255" y="347" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">c</text>
+<circle cx="80" cy="340" r="20" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="80" y="347" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="165" y="410" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Корни a, c отмечены</text>
+<line x1="300" y1="255" x2="375" y2="255" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="478.0" y="193.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2</text>
+<text xml:space="preserve" x="526.0" y="193.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<text xml:space="preserve" x="574.0" y="193.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="622.0" y="193.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<text xml:space="preserve" x="478.0" y="241.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<rect x="505.0" y="214.0" width="42" height="40" rx="14" fill="#e5f1f8" stroke="#9abbd0" stroke-width="1.5"/>
+<text xml:space="preserve" x="526.0" y="241.0" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">2</text>
+<text xml:space="preserve" x="574.0" y="241.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<rect x="601.0" y="214.0" width="42" height="40" rx="14" fill="#e5f1f8" stroke="#9abbd0" stroke-width="1.5"/>
+<text xml:space="preserve" x="622.0" y="241.0" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="478.0" y="289.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="526.0" y="289.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<text xml:space="preserve" x="574.0" y="289.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2</text>
+<text xml:space="preserve" x="622.0" y="289.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<text xml:space="preserve" x="478.0" y="337.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<rect x="505.0" y="310.0" width="42" height="40" rx="14" fill="#e5f1f8" stroke="#9abbd0" stroke-width="1.5"/>
+<text xml:space="preserve" x="526.0" y="337.0" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="574.0" y="337.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">-1</text>
+<rect x="601.0" y="310.0" width="42" height="40" rx="14" fill="#e5f1f8" stroke="#9abbd0" stroke-width="1.5"/>
+<text xml:space="preserve" x="622.0" y="337.0" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">2</text>
+<path d="M443.0 161.0 H435.0 V352.0 H443.0" fill="none" stroke="#203344" stroke-width="2"/>
+<path d="M657.0 161.0 H665.0 V352.0 H657.0" fill="none" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="478.0" y="140.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<text xml:space="preserve" x="410.0" y="193.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<text xml:space="preserve" x="526.0" y="140.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<text xml:space="preserve" x="410.0" y="241.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<text xml:space="preserve" x="574.0" y="140.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="410.0" y="289.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="622.0" y="140.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="410.0" y="337.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="463" y1="185" x2="638" y2="185" stroke="#aa5d12" stroke-width="2"/>
+<line x1="463" y1="281" x2="638" y2="281" stroke="#aa5d12" stroke-width="2"/>
+<line x1="478" y1="163" x2="478" y2="350" stroke="#aa5d12" stroke-width="2"/>
+<line x1="574" y1="163" x2="574" y2="350" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="550" y="410" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Вычеркнуты a, c</text>
+<line x1="695" y1="255" x2="785" y2="255" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="896.0" y="241.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2</text>
+<text xml:space="preserve" x="944.0" y="241.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="896.0" y="289.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="944.0" y="289.0" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2</text>
+<path d="M861.0 209.0 H853.0 V304.0 H861.0" fill="none" stroke="#203344" stroke-width="2"/>
+<path d="M979.0 209.0 H987.0 V304.0 H979.0" fill="none" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="896.0" y="188.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<text xml:space="preserve" x="828.0" y="241.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<text xml:space="preserve" x="944.0" y="188.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="828.0" y="289.0" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="920" y="410" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">Минор: det = 4</text>
+<rect x="25" y="465" width="1070" height="160" rx="14" fill="#fff7eb" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="230" y="510" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Если удалить вершины a, c:</text>
+<circle cx="480" cy="555" r="20" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="480" y="562" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="610" cy="555" r="20" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="610" y="562" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="680" y1="555" x2="765" y2="555" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="851.5" y="541.5" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="888.5" y="541.5" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="851.5" y="578.5" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="888.5" y="578.5" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<path d="M816.5 509.5 H808.5 V593.5 H816.5" fill="none" stroke="#203344" stroke-width="2"/>
+<path d="M923.5 509.5 H931.5 V593.5 H923.5" fill="none" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1030" y="568" font-size="22" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">det = 0</text>
+</svg>

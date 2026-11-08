@@ -1,9 +1,9 @@
 ---
 title: Coefficients and Kirchhoff Indices
 date: 2026-10-23
-updated: 2026-10-23
-revision: 1
-source_revision: 2
+updated: 2026-11-08
+revision: 2
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: coefficients-and-kirchhoff-indices
@@ -75,6 +75,18 @@ For unit conductances, the numerator counts separating 2-forests and the denomin
 
 A principal minor thus acquires a metric meaning: after division by the spanning-tree coefficient, the weight of forests with two prescribed roots becomes the resistance between those roots.
 
+### Example: resistance in a triangle
+
+The triangle $K_3$ with unit conductances has three spanning trees. Exactly two spanning 2-forests separate vertices $a,b$: the single edge $ac$ or the single edge $bc$, with the remaining vertex isolated. The forest consisting of edge $ab$ does not separate them. Hence
+
+$$
+\tau=3,\qquad \tau_{ab}^{(2)}=2,\qquad R_{ab}=\frac23
+$$
+
+![Three trees and two separating forests give resistance 2/3](Resistance%20from%20Triangle%20Forests.svg)
+
+*Figure 1. The top row lists all three spanning trees; the bottom row lists the two 2-forests in which $a$ and $b$ lie in different components. Dashed gray edges are unselected. Color highlights the pair $a,b$ whose resistance is being computed; it does not select two tree roots. No sum over root choices is needed in the numerator: the pair $a,b$ is already fixed.*
+
 ## The Kirchhoff index from the two highest coefficients
 
 > [!info] The Kirchhoff index from the two highest coefficients
@@ -112,57 +124,6 @@ The same factor has two meanings. In [[Vector and Vertex Normalizations of Topon
 
 The vector coefficient $f_{n-2}$ sums 2-forest weights without accounting for component sizes. Substituting $f_{n-2}$ for $p_{n-2}$ in (2) is generally incorrect.
 
-### Comparison with the spectrum and Green matrix
-
-Let $\lambda_1,\ldots,\lambda_{n-1}>0$ be the nonzero eigenvalues of $\mathbf L$. From
-
-$$
-P_G(t)=\prod_{j=1}^{n-1}(1+t\lambda_j)
-$$
-
-we obtain
-
-$$
-p_{n-1}=\prod_j\lambda_j,
-\qquad
-p_{n-2}=\left(\prod_j\lambda_j\right)\sum_j\frac1{\lambda_j}
-$$
-
-Thus (2) agrees with the classical representations of the Kirchhoff index:
-
-$$
-\boxed{
-\frac{p_{n-2}}{p_{n-1}}
-=\sum_j\frac1{\lambda_j}
-=\operatorname{tr}\mathbf{Gr}
-=\frac{Kf(G)}n
-}
-\tag{3}
-$$
-
-The identity $Kf=n\operatorname{tr}\mathbf{Gr}$ is independently derived from the distance formula in the [[Centroid, Spanning-Tree, and Eigenvector Centralities#Total resistance to the centroid, the Kirchhoff index, and the radius|note on centralities]]. The forest derivation of (2) and the matrix derivation through the Green matrix therefore lead to the same parameter.
-
-### Root sums and the two ends of the coefficient list
-
-Let $t_1,\ldots,t_{n-1}$ be the roots of $P_G(t)$, counted with multiplicity. By the [[Forest Coefficients and the Laplacian Polynomial#Roots and factorization over the reals|relation between roots and spectrum]], $t_j=-1/\lambda_j$.
-
-> [!info] Two sums involving toponome roots
-> **Corollary.** For a connected graph, the negative sum of reciprocal roots of the vertex toponome equals the sum of weighted vertex degrees. The negative sum of the roots themselves equals the Kirchhoff index divided by the vertex count:
->
-> $$
-> \boxed{
-> \begin{aligned}
-> -\sum_j\frac1{t_j}&=p_1=\sum_i d_i\\
-> -\sum_j t_j&=\frac{p_{n-2}}{p_{n-1}}=\frac{Kf(G)}n
-> \end{aligned}
-> }
-> $$
-
-> [!note]- Proof
-> **Proof.** The first identity follows from $\sum_j\lambda_j=\operatorname{tr}\mathbf L$. The second follows from (3), or from Vieta's formula for the root sum together with (2). $\square$
-
-Thus the low-order coefficient $p_1$ describes total conductance, while the ratio of the two highest coefficients describes total resistance. For example, $P_{K_3}(t)=(1+3t)^2$ has two roots equal to $-1/3$: the negative sum of reciprocal roots is $6$, and the negative root sum is $2/3=Kf(K_3)/3$. Meanwhile, the roots of the characteristic polynomial sum to $6$; these are different polynomial conventions.
-
 ## A path and a star on four vertices
 
 Consider the path $P_4$ with edges $ab,bc,cd$ and the star $K_{1,3}$ with edges $ab,ac,ad$, all of conductance $1$.
@@ -179,7 +140,7 @@ A spanning 2-forest is obtained by deleting one edge. Vector normalization gives
 
 ![Deleting each edge of a path and star: component-size products and the Kirchhoff index](Two-Forest%20Weights%20of%20the%20Path%20and%20Star.svg)
 
-*Figure 1. Each edge of each tree is deleted in turn and shown dashed. Vertex colors identify the two components of the remaining forest. For the path, the component-size products are $3,4,3$; for the star, they are $3,3,3$. Their sums give $p_2$ and, since $\tau=1$, also the Kirchhoff index.*
+*Figure 2. Each edge of each tree is deleted in turn and shown dashed. Vertex colors identify the two components of the remaining forest. For the path, the component-size products are $3,4,3$; for the star, they are $3,3,3$. Their sums give $p_2$ and, since $\tau=1$, also the Kirchhoff index.*
 
 | Graph | Partitions after edge deletion | Root weights | $p_2$ |
 | --- | --- | --- | ---: |
@@ -236,6 +197,61 @@ R_{bc}=\frac4{11},\qquad
 R_{ca}=\frac3{11},\qquad
 R_{ab}+R_{bc}+R_{ca}=\frac{12}{11}
 $$
+
+## Further details: spectra and geometry
+
+Formula (2) and the forest examples above suffice to compute the ordinary Kirchhoff index. The following part relates coefficients to the spectrum, higher indices, and the geometry of the resistance simplex.
+
+### Comparison with the spectrum and Green matrix
+
+Let $\lambda_1,\ldots,\lambda_{n-1}>0$ be the nonzero eigenvalues of $\mathbf L$. From
+
+$$
+P_G(t)=\prod_{j=1}^{n-1}(1+t\lambda_j)
+$$
+
+we obtain
+
+$$
+p_{n-1}=\prod_j\lambda_j,
+\qquad
+p_{n-2}=\left(\prod_j\lambda_j\right)\sum_j\frac1{\lambda_j}
+$$
+
+Thus (2) agrees with the classical representations of the Kirchhoff index:
+
+$$
+\boxed{
+\frac{p_{n-2}}{p_{n-1}}
+=\sum_j\frac1{\lambda_j}
+=\operatorname{tr}\mathbf{Gr}
+=\frac{Kf(G)}n
+}
+\tag{3}
+$$
+
+The identity $Kf=n\operatorname{tr}\mathbf{Gr}$ is independently derived from the distance formula in the [[Centroid, Spanning-Tree, and Eigenvector Centralities#Total resistance to the centroid, the Kirchhoff index, and the radius|note on centralities]]. The forest derivation of (2) and the matrix derivation through the Green matrix therefore lead to the same parameter.
+
+### Root sums and the two ends of the coefficient list
+
+Let $t_1,\ldots,t_{n-1}$ be the roots of $P_G(t)$, counted with multiplicity. By the [[Forest Coefficients and the Laplacian Polynomial#Roots and factorization over the reals|relation between roots and spectrum]], $t_j=-1/\lambda_j$.
+
+> [!info] Two sums involving toponome roots
+> **Corollary.** For a connected graph, the negative sum of reciprocal roots of the vertex toponome equals the sum of weighted vertex degrees. The negative sum of the roots themselves equals the Kirchhoff index divided by the vertex count:
+>
+> $$
+> \boxed{
+> \begin{aligned}
+> -\sum_j\frac1{t_j}&=p_1=\sum_i d_i\\
+> -\sum_j t_j&=\frac{p_{n-2}}{p_{n-1}}=\frac{Kf(G)}n
+> \end{aligned}
+> }
+> $$
+
+> [!note]- Proof
+> **Proof.** The first identity follows from $\sum_j\lambda_j=\operatorname{tr}\mathbf L$. The second follows from (3), or from Vieta's formula for the root sum together with (2). $\square$
+
+Thus the low-order coefficient $p_1$ describes total conductance, while the ratio of the two highest coefficients describes total resistance. For example, $P_{K_3}(t)=(1+3t)^2$ has two roots equal to $-1/3$: the negative sum of reciprocal roots is $6$, and the negative root sum is $2/3=Kf(K_3)/3$. Meanwhile, the roots of the characteristic polynomial sum to $6$; these are different polynomial conventions.
 
 ## Other coefficient ratios and the reciprocal spectrum
 
@@ -382,6 +398,21 @@ $$
 $$
 
 This concerns the circumsphere of the three-dimensional resistance simplex, not the circle on which a cycle is usually drawn.
+
+### An example with distinct centers
+
+For the unit-weight path $P_3$, a resistance-simplex realization has vertices $a_1=(1,0)$, $a_2=(0,0)$, $a_3=(0,1)$. Squared distances equal the resistances: $1,1,2$. The simplex is a right triangle, although the original graph is a path.
+
+Its centroid is $b=(1/3,1/3)$ and its circumcenter is $O=(1/2,1/2)$. Here $Kf=4$, so
+
+$$
+\rho=\frac12=\frac49+\frac1{18}
+=\frac{Kf}{n^2}+(O-b)^2
+$$
+
+![The centroid and circumcenter of the P3 resistance triangle differ](Centroid%20and%20Circumcenter%20of%20the%20P3%20Simplex.svg)
+
+*Figure 3. The left panel shows graph edges; the right panel is a Euclidean realization of its resistances. The dashed side $a_1a_3$ is not an edge of the original graph. Segment $bO$ shows the correction to the centroid contribution to the radius. All values marked with a square are quadratic.*
 
 ## Results and checks
 

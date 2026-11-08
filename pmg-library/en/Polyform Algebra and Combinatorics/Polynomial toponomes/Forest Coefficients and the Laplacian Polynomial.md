@@ -1,9 +1,9 @@
 ---
 title: Forest Coefficients and the Laplacian Polynomial
 date: 2026-10-23
-updated: 2026-10-23
-revision: 1
-source_revision: 8
+updated: 2026-11-08
+revision: 2
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-and-the-laplacian-polynomial
@@ -94,6 +94,10 @@ Set $S=V\setminus R$. Write $\mathbf L[S,S]$ for the principal submatrix of the 
 
 **Remark.** Rows and columns of the matrix are deleted; all graph vertices remain in the forests being counted. The submatrix $\mathbf L[S,S]$ retains the original diagonal entries $d_i$. It is not the Laplacian of the graph obtained by deleting the vertices of $R$ and their incident edges: connections to roots still contribute to the degrees of the remaining vertices.
 
+![A principal minor retains degrees from the original graph](A%20Principal%20Minor%20and%20Vertex%20Deletion.svg)
+
+*Figure 1. For $C_4$, the rows and columns of roots $a,c$ are crossed out, but the vertices and their connections remain in the forest problem. The retained minor therefore has diagonal entries $2,2$. Deleting graph vertices is a different operation: it leaves isolated vertices $b,d$ with a zero Laplacian.*
+
 ### Example with a fixed root set
 
 Take the unit-weight cycle $C_4$ with edges $ab,bc,cd,da$. For $R=\{a,c\}$ and $S=\{b,d\}$,
@@ -111,7 +115,7 @@ $$
 
 ![Four admissible and two excluded forests of C4 with roots a and c](Prescribed%20Roots%20in%20C4.svg)
 
-*Figure 1. The roots $a,c$ are circled. The four forests on the left have exactly one root in each component and contribute to the minor. The two on the right are excluded: the path $abc$ or $adc$ contains both roots, while the isolated vertex has no root. Solid lines denote selected forest edges; dashed lines denote the remaining edges of the original cycle.*
+*Figure 2. The roots $a,c$ are circled. The four forests on the left have exactly one root in each component and contribute to the minor. The two on the right are excluded: the path $abc$ or $adc$ contains both roots, while the isolated vertex has no root. Solid lines denote selected forest edges; dashed lines denote the remaining edges of the original cycle.*
 
 The induced graph on $\{b,d\}$ has no edges, so its own Laplacian would be zero. Retaining the diagonal entries equal to two in the principal minor is essential.
 
@@ -199,6 +203,8 @@ The ordinary sum of principal minors gives $p_k$, not $f_k$. Relative to the vec
 
 ## Relation to the characteristic polynomial
 
+The word “root” now has a different meaning: a forest root is a marked vertex, while a polynomial root is a variable value at which the polynomial vanishes. These notions are related through the coefficients but are not the same object.
+
 Call $P_G(t)$ the **Laplacian polynomial** in our ascending-grade notation. The standard characteristic polynomial of the Laplacian matrix is defined differently:
 
 $$
@@ -225,49 +231,104 @@ $$
 
 Thus $p_k$ is the elementary symmetric function of degree $k$ in these values. This is a spectral interpretation of the forest coefficients already obtained; it was not used to prove (4). The number $n$ is retained separately: together with the degree of $P_G$, it determines the multiplicity of the zero eigenvalue. Hence, for known $n$, the one-variable vertex reduction of the exponential determines the entire Laplacian spectrum with multiplicities.
 
-### Roots and factorization over the reals
+![Coefficients and roots of two Laplacian polynomials](Two%20Laplacian%20Polynomials.svg)
 
-> [!info] Roots of the vertex toponome
-> **Corollary.** The roots of the one-variable vertex toponome are the negative reciprocals of the nonzero Laplacian eigenvalues, with multiplicities preserved. All roots are real and negative:
->
-> $$
-> t_j=-\lambda_j^{-1},\qquad j=1,\ldots,n-c
-> $$
+*Figure 3. Substituting $t=-1/x$ and multiplying by $x^n$ reverses powers and alternates signs. A nonzero eigenvalue $\lambda$ corresponds to the root $-1/\lambda$ of $P_G$. Zero eigenvalues appear in $\chi_{\mathbf L}$; zero is never a root of $P_G$.*
 
-> [!note]- Proof
-> **Proof.** Each factor $1+t\lambda_j$ vanishes at $t=-1/\lambda_j$. For an undirected graph with positive conductances, the nonzero Laplacian eigenvalues are positive. Zero eigenvalues contribute factors of $1$ and produce no roots of the toponome. $\square$
+## A complete example: the cycle on four vertices
 
-In particular, **the vertex toponome of a connected graph on $n>2$ vertices is reducible over $\mathbb R$ and splits completely into linear factors**. For an arbitrary graph, the condition is $n-c\geqslant2$. One edge together with isolated vertices gives a polynomial of degree $1$, regardless of the total vertex count.
+Consider $C_4$ with edges $ab,bc,cd,da$ and unit conductances. Every edge subset except the full cycle is a forest.
 
-The conclusion about real linear factors concerns vertex normalization over $\mathbb R$. Reducibility over $\mathbb Q$ is not guaranteed; in vector normalization, irreducibility is possible even over $\mathbb R$. Examples showing the roles of the field and normalization appear in the [[Reducibility of Toponomes#What changes after passing to one variable|discussion of one-variable factorization]].
+![All groups of spanning forests of C4 and their contributions in both normalizations](Forest%20Coefficients%20of%20C4.svg)
 
-By contrast, the full and two-variable toponomes of a connected graph are irreducible over $\mathbb C$ in both normalizations. [[Reducibility of Toponomes]] compares these statements and explains the role of substituting $u=1$.
+*Figure 4. Fifteen of the sixteen edge sets are forests. Among two-edge sets, four adjacent pairs have root weight $3$, and two disjoint pairs have root weight $4$. Solid lines denote forest edges; dashed lines retain the positions of the remaining connections of the original cycle. The right columns show each group's total contributions to $f_k$ and $p_k$.*
 
-If arbitrary positive conductances are allowed and the graph structure is not prescribed, negative real roots together with $P(0)=1$ are also sufficient. The proof and limitations of this conclusion appear in the [[Graph Realizability of Toponomes#A complete criterion for the weighted vertex polynomial|spectral criterion for graph realizability]].
+| Edges $k$ | Forest form | Number of forests | Root weight per forest | Contribution to $f_k$ | Contribution to $p_k$ |
+| ---: | --- | ---: | ---: | ---: | ---: |
+| $0$ | Four singleton vertices | $1$ | $1$ | $1$ | $1$ |
+| $1$ | One edge and two singleton vertices | $4$ | $2$ | $4$ | $8$ |
+| $2$ | Two adjacent edges and a singleton vertex | $4$ | $3$ | $4$ | $12$ |
+| $2$ | Two disjoint edges | $2$ | $4$ | $2$ | $8$ |
+| $3$ | A spanning tree | $4$ | $4$ | $4$ | $16$ |
 
-### Factorization does not determine components
+These forest groups give the partition toponome
 
-By the [[Vector and Vertex Normalizations of Toponomes#Disjoint union and multiplication|disjoint-union lemma]], independent graphs correspond to products of toponomes. The converse fails for a one-variable polynomial: writing it as a product of toponomes does not imply that the original graph is disconnected.
+$$
+T_{C_4}(\mathbf x)=1+4x_1+(4x_2+2x_1^2)+4x_3
+$$
 
-For the unit-weight cycle $C_6$, triangle $K_3$, and star $K_{1,3}$, direct determinant computation gives
+In grade $2$, the four adjacent pairs have type $(2)$ and the two disjoint pairs have type $(1^2)$. The vector substitution $x_j=t^j$ gives
+
+$$
+\boxed{F_{C_4}(t)=1+4t+6t^2+4t^3}
+$$
+
+The vertex substitution $x_j=(j+1)t^j$ gives
+
+$$
+\boxed{P_{C_4}(t)=1+8t+20t^2+16t^3}
+$$
+
+In particular, $p_2=4\cdot3+2\cdot4=20$. Formula (6) independently computes it from degrees: $C=4$, $d_a=d_b=d_c=d_d=2$, and $\sum_e c_e^2=4$, so
+
+$$
+p_2=\frac12(64-16-8)=20
+$$
+
+All four three-edge forests are spanning trees, so $\tau(C_4)=4$ and $p_3=4\tau=16$.
+
+### Checking the determinant
+
+In vertex order $a,b,c,d$,
+
+$$
+I+t\mathbf L=
+\begin{pmatrix}
+1+2t&-t&0&-t\\
+-t&1+2t&-t&0\\
+0&-t&1+2t&-t\\
+-t&0&-t&1+2t
+\end{pmatrix}
+$$
+
+Direct determinant computation gives
 
 $$
 \begin{aligned}
-P_{C_6}(t)&=(1+t)^2(1+3t)^2(1+4t)\\
-P_{K_3}(t)&=(1+3t)^2\\
-P_{K_{1,3}}(t)&=(1+t)^2(1+4t)
+\det(I+t\mathbf L)
+&=(1+2t)^2\bigl((1+2t)^2-4t^2\bigr)\\
+&=(1+2t)^2(1+4t)\\
+&=1+8t+20t^2+16t^3
 \end{aligned}
 $$
 
-Consequently,
+This agrees with the polynomial obtained from the exponential through the partition toponome and the vertex substitution. By (5), the characteristic polynomial is
 
 $$
-\boxed{P_{C_6}(t)=P_{K_3}(t)P_{K_{1,3}}(t)}
+\chi_{\mathbf L}(x)=x^4-8x^3+20x^2-16x
 $$
 
-Expansion gives $1+12t+54t^2+112t^3+105t^4+36t^5$. The left side represents a connected graph on six vertices; the right side is the toponome of a union on seven vertices. Their nonzero Laplacian spectra agree, but their zero multiplicities differ. Comparisons therefore retain the data $(n,P_G)$.
+The full four-edge set contains a cycle and gives the zero form in the [[Laplacian Exponential|Laplacian exponential]]. The forest polynomials have no degree-$4$ term; in the determinant it is $t^4\det\mathbf L=0$.
 
-If we additionally require $n_G=n_H+n_K$ for two graphs with nonempty vertex sets, equality $P_G=P_HP_K$ is impossible for connected $G$: the degree on the left is $n_G-1$, while the degree on the right is at most $n_G-2$. This is a restriction on graph sizes, not a statement of algebraic irreducibility.
+### A short weighted check
+
+For a triangle with conductances $a,b,c>0$, every two-edge set is a spanning tree. Set $C=a+b+c$ and $\tau=ab+ac+bc$. Then
+
+$$
+F_G(t)=1+Ct+\tau t^2,
+\qquad
+P_G(t)=1+2Ct+3\tau t^2
+$$
+
+For $a=1$, $b=2$, and $c=3$,
+
+$$
+F_G(t)=1+6t+11t^2,
+\qquad
+P_G(t)=1+12t+33t^2
+$$
+
+Here $\tau=11$ is the sum of the weights of three spanning trees, not their number. This distinction applies to all coefficients of a weighted graph.
 
 ## The first coefficients
 
@@ -439,6 +500,54 @@ For $n\geqslant1$, zero has multiplicity $c-1$ in $\chi_{\mathbf L}(x)/x$. If th
 
 These statements concern undirected graphs with positive conductances. Extending component statements to directed graphs requires separate definitions and results.
 
+## Further details: spectra and factorization
+
+The forest construction has now been established and checked on $C_4$. The following part treats its spectral interpretation and connection with Abel polynomials.
+
+### Roots and factorization over the reals
+
+> [!info] Roots of the vertex toponome
+> **Corollary.** The roots of the one-variable vertex toponome are the negative reciprocals of the nonzero Laplacian eigenvalues, with multiplicities preserved. All roots are real and negative:
+>
+> $$
+> t_j=-\lambda_j^{-1},\qquad j=1,\ldots,n-c
+> $$
+
+> [!note]- Proof
+> **Proof.** Each factor $1+t\lambda_j$ vanishes at $t=-1/\lambda_j$. For an undirected graph with positive conductances, the nonzero Laplacian eigenvalues are positive. Zero eigenvalues contribute factors of $1$ and produce no roots of the toponome. $\square$
+
+In particular, **the vertex toponome of a connected graph on $n>2$ vertices is reducible over $\mathbb R$ and splits completely into linear factors**. For an arbitrary graph, the condition is $n-c\geqslant2$. One edge together with isolated vertices gives a polynomial of degree $1$, regardless of the total vertex count.
+
+The conclusion about real linear factors concerns vertex normalization over $\mathbb R$. Reducibility over $\mathbb Q$ is not guaranteed; in vector normalization, irreducibility is possible even over $\mathbb R$. Examples showing the roles of the field and normalization appear in the [[Reducibility of Toponomes#What changes after passing to one variable|discussion of one-variable factorization]].
+
+By contrast, the full and two-variable toponomes of a connected graph are irreducible over $\mathbb C$ in both normalizations. [[Reducibility of Toponomes]] compares these statements and explains the role of substituting $u=1$.
+
+If arbitrary positive conductances are allowed and the graph structure is not prescribed, negative real roots together with $P(0)=1$ are also sufficient. The proof and limitations of this conclusion appear in the [[Graph Realizability of Toponomes#A complete criterion for the weighted vertex polynomial|spectral criterion for graph realizability]].
+
+### Factorization does not determine components
+
+By the [[Vector and Vertex Normalizations of Toponomes#Disjoint union and multiplication|disjoint-union lemma]], independent graphs correspond to products of toponomes. The converse fails for a one-variable polynomial: writing it as a product of toponomes does not imply that the original graph is disconnected.
+
+For the unit-weight cycle $C_6$, triangle $K_3$, and star $K_{1,3}$, direct determinant computation gives
+
+$$
+\begin{aligned}
+P_{C_6}(t)&=(1+t)^2(1+3t)^2(1+4t)\\
+P_{K_3}(t)&=(1+3t)^2\\
+P_{K_{1,3}}(t)&=(1+t)^2(1+4t)
+\end{aligned}
+$$
+
+Consequently,
+
+$$
+\boxed{P_{C_6}(t)=P_{K_3}(t)P_{K_{1,3}}(t)}
+$$
+
+Expansion gives $1+12t+54t^2+112t^3+105t^4+36t^5$. The left side represents a connected graph on six vertices; the right side is the toponome of a union on seven vertices. Their nonzero Laplacian spectra agree, but their zero multiplicities differ. Comparisons therefore retain the data $(n,P_G)$.
+
+If we additionally require $n_G=n_H+n_K$ for two graphs with nonempty vertex sets, equality $P_G=P_HP_K$ is impossible for connected $G$: the degree on the left is $n_G-1$, while the degree on the right is at most $n_G-2$. This is a restriction on graph sizes, not a statement of algebraic irreducibility.
+
 ## Complete graphs and Abel polynomials
 
 Reversing the direction of powers has a combinatorial meaning for any graph. A forest with $k$ edges has $m=n-k$ components, including singleton vertices. Thus the polynomial extension of $x^nP_G(1/x)$ is
@@ -499,101 +608,6 @@ The numbers $[1,6,9]$ correspond to ascending powers of $t$ in $P_{K_3}$ and des
 The zero root of $A_n$ is simple; the remaining $n-1$ roots equal $-n$. By comparison, the roots of $P_{K_n}$ equal $-1/n$, while the nonzero roots of $\chi_{\mathbf L}(x)=x(x-n)^{n-1}$ equal $n$. In general, $\det(xI+\mathbf L)=(-1)^n\chi_{\mathbf L}(-x)$, so the sum of the roots of this expression must not be identified with the positive sum of vertex degrees.
 
 The expansion of $A_n$ in falling factorials and the corresponding forest coefficients $\operatorname{St}(n,m)$ are discussed in [[Forest Coefficients and Abel Polynomials]]. They differ from the ordinary coefficients $[x^m]A_n$: there, a forest additionally carries a grouping of its components.
-
-## A complete example: the cycle on four vertices
-
-Consider $C_4$ with edges $ab,bc,cd,da$ and unit conductances. Every edge subset except the full cycle is a forest.
-
-![All groups of spanning forests of C4 and their contributions in both normalizations](Forest%20Coefficients%20of%20C4.svg)
-
-*Figure 2. Fifteen of the sixteen edge sets are forests. Among two-edge sets, four adjacent pairs have root weight $3$, and two disjoint pairs have root weight $4$. Solid lines denote forest edges; dashed lines retain the positions of the remaining connections of the original cycle. The right columns show each group's total contributions to $f_k$ and $p_k$.*
-
-| Edges $k$ | Forest form | Number of forests | Root weight per forest | Contribution to $f_k$ | Contribution to $p_k$ |
-| ---: | --- | ---: | ---: | ---: | ---: |
-| $0$ | Four singleton vertices | $1$ | $1$ | $1$ | $1$ |
-| $1$ | One edge and two singleton vertices | $4$ | $2$ | $4$ | $8$ |
-| $2$ | Two adjacent edges and a singleton vertex | $4$ | $3$ | $4$ | $12$ |
-| $2$ | Two disjoint edges | $2$ | $4$ | $2$ | $8$ |
-| $3$ | A spanning tree | $4$ | $4$ | $4$ | $16$ |
-
-These forest groups give the partition toponome
-
-$$
-T_{C_4}(\mathbf x)=1+4x_1+(4x_2+2x_1^2)+4x_3
-$$
-
-In grade $2$, the four adjacent pairs have type $(2)$ and the two disjoint pairs have type $(1^2)$. The vector substitution $x_j=t^j$ gives
-
-$$
-\boxed{F_{C_4}(t)=1+4t+6t^2+4t^3}
-$$
-
-The vertex substitution $x_j=(j+1)t^j$ gives
-
-$$
-\boxed{P_{C_4}(t)=1+8t+20t^2+16t^3}
-$$
-
-In particular, $p_2=4\cdot3+2\cdot4=20$. Formula (6) independently computes it from degrees: $C=4$, $d_a=d_b=d_c=d_d=2$, and $\sum_e c_e^2=4$, so
-
-$$
-p_2=\frac12(64-16-8)=20
-$$
-
-All four three-edge forests are spanning trees, so $\tau(C_4)=4$ and $p_3=4\tau=16$.
-
-### Checking the determinant
-
-In vertex order $a,b,c,d$,
-
-$$
-I+t\mathbf L=
-\begin{pmatrix}
-1+2t&-t&0&-t\\
--t&1+2t&-t&0\\
-0&-t&1+2t&-t\\
--t&0&-t&1+2t
-\end{pmatrix}
-$$
-
-Direct determinant computation gives
-
-$$
-\begin{aligned}
-\det(I+t\mathbf L)
-&=(1+2t)^2\bigl((1+2t)^2-4t^2\bigr)\\
-&=(1+2t)^2(1+4t)\\
-&=1+8t+20t^2+16t^3
-\end{aligned}
-$$
-
-This agrees with the polynomial obtained from the exponential through the partition toponome and the vertex substitution. By (5), the characteristic polynomial is
-
-$$
-\chi_{\mathbf L}(x)=x^4-8x^3+20x^2-16x
-$$
-
-The full four-edge set contains a cycle and gives the zero form in the [[Laplacian Exponential|Laplacian exponential]]. The forest polynomials have no degree-$4$ term; in the determinant it is $t^4\det\mathbf L=0$.
-
-### A short weighted check
-
-For a triangle with conductances $a,b,c>0$, every two-edge set is a spanning tree. Set $C=a+b+c$ and $\tau=ab+ac+bc$. Then
-
-$$
-F_G(t)=1+Ct+\tau t^2,
-\qquad
-P_G(t)=1+2Ct+3\tau t^2
-$$
-
-For $a=1$, $b=2$, and $c=3$,
-
-$$
-F_G(t)=1+6t+11t^2,
-\qquad
-P_G(t)=1+12t+33t^2
-$$
-
-Here $\tau=11$ is the sum of the weights of three spanning trees, not their number. This distinction applies to all coefficients of a weighted graph.
 
 ## Results and continuation
 

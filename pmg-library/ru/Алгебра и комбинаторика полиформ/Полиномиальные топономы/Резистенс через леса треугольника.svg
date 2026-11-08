@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-labelledby="title"><title id="title">Резистенс через леса треугольника</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="690" fill="white"/>
+<text xml:space="preserve" x="293.0" y="40" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">Единичный K</text>
+<text xml:space="preserve" x="483.0" y="46.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">3</text>
+<text xml:space="preserve" x="494.0" y="40" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">: резистенс между a и b</text>
+<text xml:space="preserve" x="560" y="100" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Знаменатель: три остовных дерева</text>
+<line x1="142.0" y1="280.0" x2="278.0" y2="280.0" stroke="#24628a" stroke-width="3"/>
+<line x1="286.58636326130676" y1="262.5622722396988" x2="223.41363673869324" y2="180.43772776030121" stroke="#24628a" stroke-width="3"/>
+<line x1="120" y1="280.0" x2="210" y2="163.0" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="120" cy="280.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="120" y="287.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="300" cy="280.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="300" y="287.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="210" cy="163.0" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="210" y="170.0" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<line x1="492.0" y1="280.0" x2="628.0" y2="280.0" stroke="#24628a" stroke-width="3"/>
+<line x1="650" y1="280.0" x2="560" y2="163.0" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="483.41363673869324" y1="262.5622722396988" x2="546.5863632613068" y2="180.43772776030121" stroke="#24628a" stroke-width="3"/>
+<circle cx="470" cy="280.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="470" y="287.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="650" cy="280.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="650" y="287.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="560" cy="163.0" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="560" y="170.0" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<line x1="820" y1="280.0" x2="1000" y2="280.0" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="986.5863632613068" y1="262.5622722396988" x2="923.4136367386932" y2="180.43772776030121" stroke="#24628a" stroke-width="3"/>
+<line x1="833.4136367386932" y1="262.5622722396988" x2="896.5863632613068" y2="180.43772776030121" stroke="#24628a" stroke-width="3"/>
+<circle cx="820" cy="280.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="820" y="287.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="1000" cy="280.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="1000" y="287.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="910" cy="163.0" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="910" y="170.0" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="560" y="365" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Числитель: два 2-леса, разделяющих a и b</text>
+<line x1="235" y1="535.0" x2="415" y2="535.0" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="415" y1="535.0" x2="325" y2="418.0" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="248.41363673869324" y1="517.5622722396988" x2="311.58636326130676" y2="435.4377277603012" stroke="#24628a" stroke-width="3"/>
+<circle cx="235" cy="535.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="235" y="542.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="415" cy="535.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="415" y="542.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="325" cy="418.0" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="325" y="425.0" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<line x1="705" y1="535.0" x2="885" y2="535.0" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="871.5863632613068" y1="517.5622722396988" x2="808.4136367386932" y2="435.4377277603012" stroke="#24628a" stroke-width="3"/>
+<line x1="705" y1="535.0" x2="795" y2="418.0" stroke="#a9b6bf" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="705" cy="535.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="705" y="542.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="885" cy="535.0" r="18" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="885" y="542.0" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="795" cy="418.0" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="795" y="425.0" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="560" y="650" font-size="32" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">R(a, b) = 2 / 3</text>
+</svg>

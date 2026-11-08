@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title"><title id="title">Два произведения для двух рёбер</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="650" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Два независимых ребра: 1 + 2(1) + (1²)</text>
+<line x1="381" y1="115" x2="479" y2="115" stroke="#24628a" stroke-width="4"/>
+<line x1="641" y1="115" x2="739" y2="115" stroke="#24628a" stroke-width="4"/>
+<circle cx="365" cy="115" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="365" y="122" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="495" cy="115" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="495" y="122" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="625" cy="115" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="625" y="122" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="755" cy="115" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="755" y="122" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<rect x="20" y="180" width="510" height="390" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="590" y="180" width="510" height="390" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="275" y="225" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Обычное произведение</text>
+<text xml:space="preserve" x="845" y="225" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Произведение второго рода</text>
+<text xml:space="preserve" x="144.0" y="290" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">(1 + x</text>
+<text xml:space="preserve" x="209.0" y="295.5" font-size="18" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="219.0" y="290" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">)² = 1 + 2x</text>
+<text xml:space="preserve" x="335.0" y="295.5" font-size="18" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="345.0" y="290" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start"> + x</text>
+<text xml:space="preserve" x="388.0" y="295.5" font-size="18" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="398.0" y="290" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">²</text>
+<line x1="131" y1="385" x2="204" y2="385" stroke="#24628a" stroke-width="4"/>
+<line x1="341" y1="385" x2="414" y2="385" stroke="#24628a" stroke-width="4"/>
+<circle cx="115" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="115" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="220" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="220" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="325" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="325" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="430" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="430" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="275" y="465" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Только две отдельные компоненты</text>
+<text xml:space="preserve" x="845" y="290" font-size="25" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">(1 + (1)) * (1 + (1))</text>
+<line x1="646" y1="385" x2="679" y2="385" stroke="#24628a" stroke-width="4"/>
+<line x1="776" y1="385" x2="809" y2="385" stroke="#24628a" stroke-width="4"/>
+<circle cx="630" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="630" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="695" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="695" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="760" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="760" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="825" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="825" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="870" y="395" font-size="34" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">+</text>
+<line x1="936" y1="385" x2="969" y2="385" stroke="#24628a" stroke-width="4"/>
+<line x1="1001" y1="385" x2="1034" y2="385" stroke="#24628a" stroke-width="4"/>
+<circle cx="920" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="920" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="985" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="985" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="1050" cy="385" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1050" y="392" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="845" y="465" font-size="26" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">1 + 2(1) + (1²) + (2)</text>
+<text xml:space="preserve" x="275" y="535" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">Множители есть</text>
+<text xml:space="preserve" x="845" y="535" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">Получен другой топоном</text>
+<text xml:space="preserve" x="560" y="620" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Сопоставление добавляет тип (2), отсутствующий у двух независимых рёбер</text>
+</svg>

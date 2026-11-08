@@ -1,9 +1,9 @@
 ---
 title: Polynomial Toponomes
 date: 2026-10-23
-updated: 2026-11-01
-revision: 3
-source_revision: 9
+updated: 2026-11-08
+revision: 4
+source_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polynomial-toponomes-series-navigation
@@ -35,11 +35,19 @@ Secondary thematic entries:
 
 The series is complete in its current form of five substantive notes, with Russian and English versions available.
 
-1. **[[Vector and Vertex Normalizations of Toponomes]].** Original forest coefficients and root weights; passage to one-variable and two-variable polynomials; triangles of the path $P_6$; multiplication under disjoint union; and preservation of structural identities.
-2. **[[Forest Coefficients and the Laplacian Polynomial]].** Principal minors and forests with prescribed roots; proof of $P_G(t)=\det(I+t\mathbf L)$; first and highest coefficients. Roots, factorization, and component count; the complete graph and Abel polynomials. A full analysis of $C_4$ and a weighted example.
-3. **[[Coefficients and Kirchhoff Indices]].** Two-forest sums and resistances; the Kirchhoff index from the ratio of the two highest coefficients; root sums and reciprocal spectral sums; and the relation to the resistance radius. A path and a star illustrate the distinction between normalizations.
-4. **[[Reducibility of Toponomes]].** Irreducibility of full and two-variable toponomes of a connected graph with edges; factorization by independent components; irreducibility of the full forest toponome and its coefficient table under the second-kind product; and new factors after passage to one variable.
-5. **[[Graph Realizability of Toponomes]].** The inverse question: which coefficients come from a graph? Necessary conditions, a nonrealizable triangle, Mason's theorem on forest counts with sources, an exact system of equations, and a complete criterion for the weighted vertex polynomial.
+1. **[[Vector and Vertex Normalizations of Toponomes]].** What does a coefficient count? From one edge and root choices to six representations of a toponome and the $P_6$ example.
+2. **[[Forest Coefficients and the Laplacian Polynomial]].** Why does forest counting agree with a determinant? Prescribed roots, principal minors, and a complete $C_4$ example, followed by the meaning of the first and highest coefficients.
+3. **[[Coefficients and Kirchhoff Indices]].** How do coefficients give resistances and the Kirchhoff index? From two forest sums to a comparison of a path and a star. Reciprocal spectra and geometry form a further part.
+4. **[[Reducibility of Toponomes]].** When does a toponome factor? Start with two edges and the substitution $u=1$, then follow the proofs for each product.
+5. **[[Graph Realizability of Toponomes]].** Can prescribed coefficients come from a graph? Simple restrictions, a counterexample, and an exact system in edge variables. The weighted vertex polynomial is treated separately.
+
+## How the six representations are related
+
+The full toponome retains the type of each group of forests. Passing to $t,u$ retains only the edge count $k$ and the number $r$ of nontrivial components. Setting $u=1$ retains only $k$. At each level, contributions may use the original forest weight or additionally count all root choices.
+
+![Two normalizations and three levels of forest grouping](Six%20Representations%20of%20a%20Toponome.svg)
+
+*Figure 1. The top row retains forest weights; the bottom row counts root choices. The vertical passage is invertible while types remain distinct. Rightward arrows group coefficients and may lose information, so no universal vertical passage remains after grouping. The original vertex count $n$ is retained separately.*
 
 ## Main results
 
@@ -56,6 +64,6 @@ Required concepts are the [[From Polyforms to Partitions|toponome of a chosen re
 
 The series concerns undirected graphs with positive conductances. Requirements of unit conductances and connectivity are stated in the relevant results. Irreducibility always refers to the specified product and coefficient field; an edgeless graph gives the unit.
 
-Balanced graphs are reserved for a separate future series: first balance, potentials, and circulation; then the bilinear exponential and directed forests; and then toponomes, normalizations, and the characteristic polynomial. That continuation must establish the correspondence between forest grouping and reduction of the full bilinear exponential, and determine which results require symmetry. The plan is recorded in the [[ru/Карта библиотеки PMG#Серия «Балансовые графы»|“Balanced Graphs” section of the library map (in Russian)]].
+The directed continuation is available in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]]. The note [[Toponomes of Balanced Graphs and Directed Forests]] relates directed rooted forests, two normalizations, and the determinant, and treats the symmetric limit. Conditions for a directed Laplacian are checked there separately; this series' assertions about a positive real nonzero spectrum concern undirected graphs.
 
 Basic root properties are treated here as polynomial characteristics. Full diagonalization of a polyform, eigenvectors, and spectral subspaces remain a separate continuation. Toponomes of the dual polyform follow introduction of the dual construction itself; the [[ru/Карта библиотеки PMG|PMG library map (in Russian)]] records the status of these topics.

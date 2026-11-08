@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title"><title id="title">Six Representations of a Toponome</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="620" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Two normalizations, three levels of grouping</text>
+<rect x="30" y="170" width="300" height="125" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="410" y="170" width="300" height="125" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="790" y="170" width="300" height="125" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="30" y="375" width="300" height="125" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="410" y="375" width="300" height="125" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="790" y="375" width="300" height="125" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="180" y="110" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Individual types</text>
+<text xml:space="preserve" x="560" y="110" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">One pair (k, r)</text>
+<text xml:space="preserve" x="940" y="110" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">One grade k</text>
+<text xml:space="preserve" x="180" y="210" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Without root choices</text>
+<text xml:space="preserve" x="180" y="415" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">With root choices</text>
+<text xml:space="preserve" x="145" y="253" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">T</text>
+<text xml:space="preserve" x="170" y="240" font-size="17" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">vec</text>
+<text xml:space="preserve" x="210" y="253" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">(x)</text>
+<text xml:space="preserve" x="145" y="458" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">T</text>
+<text xml:space="preserve" x="170" y="445" font-size="17" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">vert</text>
+<text xml:space="preserve" x="210" y="458" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">(x)</text>
+<text xml:space="preserve" x="560" y="215" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">F(t, u)</text>
+<text xml:space="preserve" x="560" y="255" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a(k, r)</text>
+<text xml:space="preserve" x="560" y="420" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">P(t, u)</text>
+<text xml:space="preserve" x="560" y="460" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b(k, r)</text>
+<text xml:space="preserve" x="940" y="215" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">F(t)</text>
+<text xml:space="preserve" x="940" y="255" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">f(k)</text>
+<text xml:space="preserve" x="940" y="413" font-size="26" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">P(t)</text>
+<text xml:space="preserve" x="940" y="455" font-size="26" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">det(I + tL)</text>
+<line x1="340" y1="232" x2="400" y2="232" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="720" y1="232" x2="780" y2="232" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="750" y="207" font-size="18" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">u = 1</text>
+<line x1="340" y1="437" x2="400" y2="437" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="720" y1="437" x2="780" y2="437" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="750" y="412" font-size="18" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">u = 1</text>
+<line x1="180" y1="305" x2="180" y2="365" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="320" y="342" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">× h(λ)</text>
+<text xml:space="preserve" x="560" y="555" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">Rightward: group coefficients and lose distinctions</text>
+<text xml:space="preserve" x="560" y="590" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Keep n separately; the index of x is the component grade</text>
+</svg>

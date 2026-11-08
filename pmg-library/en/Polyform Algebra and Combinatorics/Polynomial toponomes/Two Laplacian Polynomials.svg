@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="600" viewBox="0 0 1120 600" role="img" aria-labelledby="title"><title id="title">Two Laplacian Polynomials</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="600" fill="white"/>
+<text xml:space="preserve" x="306.0" y="40" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">C</text>
+<text xml:space="preserve" x="326.0" y="45.94" font-size="19" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">4</text>
+<text xml:space="preserve" x="337.0" y="40" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">: the same data in different variables</text>
+<rect x="25" y="100" width="1070" height="110" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="142" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">P(t) = 1 + 8t + 20t² + 16t³</text>
+<text xml:space="preserve" x="560" y="185" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Ascending powers; P(0) = 1</text>
+<line x1="560" y1="222" x2="560" y2="288" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="820" y="263" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">χ(x) = x⁴ P(−1/x)</text>
+<rect x="25" y="300" width="1070" height="110" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="342" font-size="30" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">χ(x) = x⁴ − 8x³ + 20x² − 16x</text>
+<text xml:space="preserve" x="560" y="385" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Descending powers; zero is a root</text>
+<text xml:space="preserve" x="230" y="470" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Nonzero roots of χ</text>
+<text xml:space="preserve" x="230" y="515" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2, 2, 4</text>
+<line x1="405" y1="510" x2="685" y2="510" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="545" y="480" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">t = −1/λ</text>
+<text xml:space="preserve" x="890" y="470" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Roots of P</text>
+<text xml:space="preserve" x="890" y="515" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">−1/2, −1/2, −1/4</text>
+<text xml:space="preserve" x="560" y="575" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">In general: c components give c zero roots of χ</text>
+</svg>

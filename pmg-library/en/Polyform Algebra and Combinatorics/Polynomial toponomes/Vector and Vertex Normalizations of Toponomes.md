@@ -1,9 +1,9 @@
 ---
 title: Vector and Vertex Normalizations of Toponomes
 date: 2026-10-23
-updated: 2026-10-23
-revision: 1
-source_revision: 6
+updated: 2026-11-08
+revision: 2
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: vector-and-vertex-normalizations-of-toponomes
@@ -21,6 +21,18 @@ In **vector normalization**, the original coefficients of the forest representat
 The construction starts with the Laplacian exponential in the polyform algebra and passes through partition types. The key result, proved in the [[Forest Coefficients and the Laplacian Polynomial#Summing minors and the Laplacian polynomial|theorem identifying the two constructions]], is that the resulting one-variable vertex toponome equals $\det(I+t\mathbf L)$, constructed directly from the Laplacian matrix. The normalization thus also determines the relation between reduction and the matrix characteristic polynomial.
 
 Prerequisites are the [[From Polyforms to Partitions|toponome of a chosen representation]], the [[Toponomes and Structural Identities|criterion for representation-independent reduction]], and [[Coefficient Tables of Toponomes|coefficient triangles]]. The overall reading route appears in [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]].
+
+## The smallest example: one edge
+
+For now, the variable $t$ records only the number of selected edges. The empty forest contributes $1$ in both normalizations.
+
+A single connection of conductance $c$ already distinguishes the normalizations:
+
+$$
+F_G(t)=1+ct,\qquad P_G(t)=1+2ct
+$$
+
+The nonempty forest of this graph has one two-vertex component and two root choices.
 
 ## Initial data and two kinds of weight
 
@@ -171,6 +183,10 @@ $$
 
 Knowing the unweighted sum does not determine the weighted sum. Both tables are naturally obtained from the full partition toponome, rather than one from the other using a universal cell multiplier. This statement concerns information lost under grouping; it does not assert that every arbitrarily prescribed pair of coefficients is realized by graphs.
 
+![Three forests in one cell contribute 3 without roots and 25 with roots](Root%20Weights%20in%20One%20P6%20Cell.svg)
+
+*Figure 2. Delete one of the three interior edges of $P_6$. Two deletions give component sizes $4+2$, and one gives $3+3$. Hence $a_{4,2}=2+1=3$, whereas $b_{4,2}=2\cdot8+9=25$. Apply the root weight to each type before adding; the full $P_6$ calculation appears below.*
+
 ## One-variable toponomes
 
 If we no longer distinguish the number of nontrivial components, set $u=1$:
@@ -200,13 +216,17 @@ $$
 
 The first arrow expands the exponential into its forest representation and replaces partition forms by their types. The second incorporates component sizes and groups types of the same grade. Neither the determinant nor the eigenvalues of the Laplacian matrix enter this definition of $P_G(t)$; equality with the matrix polynomial is a separate statement requiring proof.
 
-A single connection of conductance $c$ already distinguishes the normalizations:
 
-$$
-F_G(t)=1+ct,\qquad P_G(t)=1+2ct
-$$
+### What each representation retains
 
-The nonempty forest of this graph has one two-vertex component and two root choices.
+| Object | Contributions grouped together | Additional weight |
+| --- | --- | --- |
+| $T_G^{\mathrm{vec}}(\mathbf x)$ | One positive type | $1$ |
+| $T_G^{\mathrm{vert}}(\mathbf x)$ | One positive type | $h(\lambda)$ |
+| $F_G(t,u)$ | One grade $k$ and nontrivial component count $r$ | $1$ |
+| $P_G(t,u)$ | One grade $k$ and nontrivial component count $r$ | $h(\lambda)$ before grouping |
+| $F_G(t)$ | One grade $k$ | $1$ |
+| $P_G(t)$ | One grade $k$ | $h(\lambda)$ before grouping |
 
 ## Disjoint union and multiplication
 
@@ -230,9 +250,7 @@ For the full toponome in vertex normalization, the identity follows from the sam
 
 ### What changes after passing to one variable
 
-**Irreducibility theorem.** The full and two-variable toponomes of a connected graph on $n\geqslant2$ vertices are irreducible under ordinary multiplication over $\mathbb R$ and $\mathbb C$ in both normalizations. For an arbitrary graph, their irreducible factors correspond to components with edges; isolated vertices contribute a factor of $1$.
-
-Proofs appear in the [[Reducibility of Toponomes#The full toponome under ordinary multiplication|theorem for the full toponome]] and the [[Reducibility of Toponomes#The two-variable toponome and the coefficient triangle|theorem for two variables]]. They exclude arbitrary nonconstant polynomial factors, not only factors that are themselves graph toponomes.
+Under ordinary multiplication, the full and two-variable toponomes of a connected graph with edges are irreducible over $\mathbb R$ and $\mathbb C$ in both normalizations. Conditions and proofs are collected in [[Reducibility of Toponomes]]. The relevant point here is the effect of the next reduction.
 
 Irreducibility can be lost after substituting $u=1$. Already for the unit-weight path on three vertices,
 
@@ -279,16 +297,18 @@ $$
 Their coefficient triangles, with $k$ indexing columns and $r$ indexing rows, are
 
 $$
-\mathcal A_{P_6}=\begin{array}{ccccc}
-5&4&3&2&1\\
-&6&6&3&\\
-&&1&&
+\mathcal A_{P_6}=\begin{array}{c|ccccc}
+r\backslash k&1&2&3&4&5\\\hline
+1&5&4&3&2&1\\
+2&&6&6&3&\\
+3&&&1&&
 \end{array}
 \qquad
-\mathcal B_{P_6}=\begin{array}{ccccc}
-10&12&12&10&6\\
-&24&36&25&\\
-&&8&&
+\mathcal B_{P_6}=\begin{array}{c|ccccc}
+r\backslash k&1&2&3&4&5\\\hline
+1&10&12&12&10&6\\
+2&&24&36&25&\\
+3&&&8&&
 \end{array}
 $$
 
@@ -358,14 +378,6 @@ Vector toponomes and the two-variable vertex toponome remain characteristics of 
 
 ## Meaning of the coefficients and continuation
 
-| Object | Contributions grouped together | Additional weight |
-| --- | --- | --- |
-| $T_G^{\mathrm{vec}}(\mathbf x)$ | One positive type | $1$ |
-| $T_G^{\mathrm{vert}}(\mathbf x)$ | One positive type | $h(\lambda)$ |
-| $F_G(t,u)$ | One grade $k$ and nontrivial component count $r$ | $1$ |
-| $P_G(t,u)$ | One grade $k$ and nontrivial component count $r$ | $h(\lambda)$ before grouping |
-| $F_G(t)$ | One grade $k$ | $1$ |
-| $P_G(t)$ | One grade $k$ | $h(\lambda)$ before grouping |
 
 We have proved the root interpretation of $h$, the coefficient-grouping formulas, and representation independence of the one-variable vertex evaluation. Both normalizations have been computed explicitly for $P_6$. We have also proved multiplicativity under disjoint union and explained why passing to one variable changes conclusions about factorization into graph toponomes.
 

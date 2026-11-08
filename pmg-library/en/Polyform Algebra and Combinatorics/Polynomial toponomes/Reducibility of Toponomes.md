@@ -1,9 +1,9 @@
 ---
 title: Reducibility of Toponomes
 date: 2026-10-23
-updated: 2026-10-23
-revision: 1
-source_revision: 4
+updated: 2026-11-08
+revision: 2
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: reducibility-of-toponomes
@@ -63,34 +63,22 @@ $$
 
 This algebra consists of finite sums of types; irreducibility is defined relative to $*$, and its units are the nonzero constants. Statements about two-variable and one-variable polynomials concern ordinary multiplication. The [[Coefficient Tables of Toponomes#Multiplication of tables|second-kind product induced on tables]] is considered separately below through a falling-power representation.
 
-## Two products of cells
+## Comparison of results
 
-A pair $(k,r)$ specifies a cell of the coefficient triangle: $k$ connections and $r$ nontrivial components. It is not a numerical partition type. For example, cell $(3,1)$ corresponds to forests with one nontrivial component of three connections, whereas positive type $(3,1)$ describes two nontrivial components, with three and one connections.
+Let $G$ have at least one edge, and let $r$ be the number of components with edges. Rows concerning one-variable polynomials assume degree at least $2$.
 
-Let $u_{k,r}$ denote the table with a one in cell $(k,r)$ and zeros elsewhere. The unit $u_{0,0}$ corresponds to the empty forest. To distinguish the two table products, denote coordinatewise addition of pairs by $\circ$:
+| Object and product | Result |
+| --- | --- |
+| Full toponome, ordinary product, both normalizations | Exactly $r$ irreducible factors over $\mathbb R$ and $\mathbb C$, with multiplicities: the toponomes of nontrivial components |
+| Two-variable toponome, ordinary product, both normalizations | The same factorization by nontrivial components |
+| Full forest toponome, second-kind product, both normalizations | Irreducible over $\mathbb R$ and $\mathbb C$ regardless of connectivity |
+| Coefficient table, induced second-kind product, both normalizations | Irreducible over $\mathbb R$ and $\mathbb C$ regardless of connectivity |
+| One-variable vertex toponome | Splits into real linear factors; may be irreducible over $\mathbb Q$ |
+| One-variable vector toponome | Either case is possible over $\mathbb R$; reducible over $\mathbb C$ |
 
-$$
-\boxed{u_{k,r}\circ u_{l,s}=u_{k+l,r+s}}
-$$
+Factorization of full and two-variable toponomes describes component toponomes but does not solve graph reconstruction. In one variable, even a product representation by toponomes of other graphs does not prove disconnectedness: see the $C_6$ example in [[Forest Coefficients and the Laplacian Polynomial#Factorization does not determine components]].
 
-Extend the rule bilinearly to linear combinations. Under $u_{k,r}\leftrightarrow t^ku^r$, it becomes ordinary monomial multiplication. Thus $\circ$ and ordinary multiplication of two-variable polynomials are two notations for the same operation.
-
-> [!info] Two products of cells
-> **Lemma.** The $\circ$-product of the coefficient tables of two graphs is the table of their disjoint union.
-
-> [!note]- Proof
-> **Proof.** Each forest of the union is uniquely assembled from forests of the two original graphs. Edge counts and nontrivial component counts add, while weights multiply. The bilinear expansion of $\circ$ enumerates all such pairs. The same holds in vertex normalization, since root weights of independent components also multiply. $\square$
-
-The second-kind table product [[Coefficient Tables of Toponomes#Multiplication of tables|additionally enumerates component matchings]] and reduces the component count at every gluing. The difference already appears for two unit cells:
-
-$$
-\begin{aligned}
-u_{1,1}\circ u_{1,1}&=u_{2,2}\\
-u_{1,1}*u_{1,1}&=u_{2,2}+u_{2,1}
-\end{aligned}
-$$
-
-The first rule leaves the two components separate. The second includes both the separate case and the case in which they are joined. Factorization statements must specify the product concerned.
+Irreducibility alone does not guarantee that a formal toponome comes from a graph. The note on [[Graph Realizability of Toponomes#What reducibility conditions provide|graph realizability]] gives a triangle that passes both irreducibility tests but requires an impossible number of adjacent edge pairs.
 
 ## Why exponential factors do not become type factors
 
@@ -126,6 +114,88 @@ $$
 $$
 
 This follows from $([a]^2)^2=0$. Consequently, the factor representation of the exponential is not a factorization into irreducible nonunits in the polynomial-theoretic sense; the exponential itself is invertible as well. See the [[Laplacian Exponential#The inverse exponential|inverse exponential]].
+
+### One coefficient list and two products
+
+For two independent unit-weight edges, the forest toponome is $1+2(1)+(1^2)$. Under ordinary multiplication, it is written as $(1+x_1)^2$. But squaring $1+(1)$ under $*$ also produces type $(2)$, as the figure shows. Thus the same coefficient list is not the product of these two factors under $*$.
+
+The general theorem below proves more: the two-edge forest toponome has no other nontrivial $*$-factors either. The figure explains the difference between the rules; it does not replace the irreducibility proof.
+
+![Ordinary multiplication retains two components; the second-kind product adds a matching](Two%20Products%20for%20Two%20Edges.svg)
+
+*Figure 1. The common empty-forest and one-edge contribution is $1+2(1)$. Only the two-edge contribution differs: ordinary multiplication gives $(1^2)$, while $*$ also gives $(2)$. Here $x_1^2$ denotes an ordinary monomial, not the $*$-square of type $(1)$.*
+
+## Two products of cells
+
+A pair $(k,r)$ specifies a cell of the coefficient triangle: $k$ connections and $r$ nontrivial components. It is not a numerical partition type. For example, cell $(3,1)$ corresponds to forests with one nontrivial component of three connections, whereas positive type $(3,1)$ describes two nontrivial components, with three and one connections.
+
+Let $u_{k,r}$ denote the table with a one in cell $(k,r)$ and zeros elsewhere. The unit $u_{0,0}$ corresponds to the empty forest. To distinguish the two table products, denote coordinatewise addition of pairs by $\circ$:
+
+$$
+\boxed{u_{k,r}\circ u_{l,s}=u_{k+l,r+s}}
+$$
+
+Extend the rule bilinearly to linear combinations. Under $u_{k,r}\leftrightarrow t^ku^r$, it becomes ordinary monomial multiplication. Thus $\circ$ and ordinary multiplication of two-variable polynomials are two notations for the same operation.
+
+> [!info] Two products of cells
+> **Lemma.** The $\circ$-product of the coefficient tables of two graphs is the table of their disjoint union.
+
+> [!note]- Proof
+> **Proof.** Each forest of the union is uniquely assembled from forests of the two original graphs. Edge counts and nontrivial component counts add, while weights multiply. The bilinear expansion of $\circ$ enumerates all such pairs. The same holds in vertex normalization, since root weights of independent components also multiply. $\square$
+
+The second-kind table product [[Coefficient Tables of Toponomes#Multiplication of tables|additionally enumerates component matchings]] and reduces the component count at every gluing. The difference already appears for two unit cells:
+
+$$
+\begin{aligned}
+u_{1,1}\circ u_{1,1}&=u_{2,2}\\
+u_{1,1}*u_{1,1}&=u_{2,2}+u_{2,1}
+\end{aligned}
+$$
+
+The first rule leaves the two components separate. The second includes both the separate case and the case in which they are joined. Factorization statements must specify the product concerned.
+
+## What changes after passing to one variable
+
+First consider the passage for $P_3$. The general two-variable result is stated in the table above and proved below.
+
+The substitution $u=1$ groups forests of the same grade with different nontrivial component counts. The condition underlying the two-variable theorem disappears: the leading coefficient $\gamma u$ becomes the number $\gamma$.
+
+For the unit-weight path $P_3$,
+
+$$
+\begin{aligned}
+F_{P_3}(t,u)&=1+2tu+t^2u\\
+P_{P_3}(t,u)&=1+4tu+3t^2u
+\end{aligned}
+$$
+
+Both polynomials are irreducible. After the substitution,
+
+$$
+F_{P_3}(t,1)=(1+t)^2,
+\qquad
+P_{P_3}(t,1)=(1+t)(1+3t)
+$$
+
+Thus, under ordinary multiplication, passing from the full toponome to two variables preserves irreducibility for a connected graph, while further reduction may create new factors.
+
+For the vertex toponome there is a stronger [[Forest Coefficients and the Laplacian Polynomial#Roots and factorization over the reals|spectral result]]. If $c$ is the total number of connected components, including isolated vertices, and $\lambda_1,\ldots,\lambda_{n-c}$ are the nonzero Laplacian eigenvalues, then
+
+$$
+P_G(t)=\det(I+t\mathbf L)=\prod_{j=1}^{n-c}(1+\lambda_jt)
+$$
+
+All $\lambda_j$ are positive. Thus, for $n-c\geqslant2$, $P_G(t)$ is reducible over $\mathbb R$ and splits completely into linear factors. This need not hold over $\mathbb Q$: for the path with conductances $1,2$, the polynomial $1+6t+6t^2$ has discriminant $12$ and is irreducible over $\mathbb Q$.
+
+Vector normalization does not guarantee reducibility over the reals. For the unit-weight triangle, $F_{K_3}(t)=1+3t+3t^2$ has discriminant $-3$ and is irreducible over $\mathbb R$. Over $\mathbb C$, every one-variable polynomial of degree at least $2$ is reducible. A one-variable statement must therefore specify both the normalization and the coefficient field.
+
+![The connected path P3 gains factors after setting u=1](Substituting%20One%20for%20u.svg)
+
+*Figure 2. Two variables distinguish the edge count and the number of nontrivial components. After setting $u=1$, only the edge count remains. Both two-variable polynomials are irreducible over $\mathbb C$, while their one-variable specializations have the displayed factors. The graph itself does not change.*
+
+## Proofs for the full toponome and its table
+
+The following sections treat ordinary multiplication and the second-kind product in turn. Free generators and falling powers are proof tools: they represent $*$ by ordinary multiplication in different coordinates.
 
 ## The full toponome under ordinary multiplication
 
@@ -208,33 +278,36 @@ Grouping types into cells $(k,r)$ loses some information. Nevertheless, it retai
 
 ### Example: two disjoint three-edge paths
 
-The path $P_4$ has four vertices and three connections. For unit conductances, its vector toponome in cell notation is
+A detailed convolution check on six edges; the two-edge example above suffices to understand the difference between products.
 
-$$
-\mathcal A_{P_4}=u_{0,0}+3u_{1,1}+2u_{2,1}+u_{3,1}+u_{2,2}
-$$
-
-Among two-edge choices, two adjacent choices give one nontrivial component, and the choice of the two end edges gives two. The polynomial expression is
-
-$$
-F_{P_4}(t,u)=1+(3t+2t^2+t^3)u+t^2u^2
-$$
-
-By the lemma, $\mathcal A_{P_4\sqcup P_4}=\mathcal A_{P_4}\circ\mathcal A_{P_4}$. In polynomial notation,
-
-$$
-\begin{aligned}
-F_{P_4\sqcup P_4}(t,u)={}&1+(6t+4t^2+2t^3)u+\\
-&+(11t^2+12t^3+10t^4+4t^5+t^6)u^2+\\
-&+(6t^3+4t^4+2t^5)u^3+t^4u^4
-\end{aligned}
-$$
-
-For example, the coefficient $11$ of $t^2u^2$ consists of $9=3\cdot3$ pairs choosing one connection in each path, plus two choices of both end connections in one path while the other is empty.
-
-The toponome of one path is irreducible under ordinary multiplication. The union's toponome is reducible and has two identical irreducible factors. This factorization is relative to $\circ$, not to the second-kind product.
-
-**Independent check.** The coefficients of the expanded square were compared with direct enumeration of all $64$ subsets of the union's six edges. All subsets are forests; the edge and nontrivial component counts were computed separately for each. The tables agreed, and the coefficient sum is $64=2^6$.
+> [!example]- Expand the calculation for two paths
+> The path $P_4$ has four vertices and three connections. For unit conductances, its vector toponome in cell notation is
+>
+> $$
+> \mathcal A_{P_4}=u_{0,0}+3u_{1,1}+2u_{2,1}+u_{3,1}+u_{2,2}
+> $$
+>
+> Among two-edge choices, two adjacent choices give one nontrivial component, and the choice of the two end edges gives two. The polynomial expression is
+>
+> $$
+> F_{P_4}(t,u)=1+(3t+2t^2+t^3)u+t^2u^2
+> $$
+>
+> By the lemma, $\mathcal A_{P_4\sqcup P_4}=\mathcal A_{P_4}\circ\mathcal A_{P_4}$. In polynomial notation,
+>
+> $$
+> \begin{aligned}
+> F_{P_4\sqcup P_4}(t,u)={}&1+(6t+4t^2+2t^3)u+\\
+> &+(11t^2+12t^3+10t^4+4t^5+t^6)u^2+\\
+> &+(6t^3+4t^4+2t^5)u^3+t^4u^4
+> \end{aligned}
+> $$
+>
+> For example, the coefficient $11$ of $t^2u^2$ consists of $9=3\cdot3$ pairs choosing one connection in each path, plus two choices of both end connections in one path while the other is empty.
+>
+> The toponome of one path is irreducible under ordinary multiplication. The union's toponome is reducible and has two identical irreducible factors. This factorization is relative to $\circ$, not to the second-kind product.
+>
+> **Independent check.** The coefficients of the expanded square were compared with direct enumeration of all $64$ subsets of the union's six edges. All subsets are forests; the edge and nontrivial component counts were computed separately for each. The tables agreed, and the coefficient sum is $64=2^6$.
 
 ## Irreducibility in the second-kind algebra
 
@@ -417,56 +490,6 @@ $$
 The first polynomial represents $\circ$ and is reducible. The second represents $*$ and is irreducible; its leading coefficient in $t$, $u(u-1)$, is divisible by $u$ but not by $u^2$. Thus the same table has different reducibility status under the two multiplication rules.
 
 An edgeless graph has the unit table. Isolated vertices change neither the table nor the result. The statement concerns the full table with its unit term; additional triangle-row normalizations are outside its scope.
-
-## What changes after passing to one variable
-
-The substitution $u=1$ groups forests of the same grade with different nontrivial component counts. The condition underlying the two-variable theorem disappears: the leading coefficient $\gamma u$ becomes the number $\gamma$.
-
-For the unit-weight path $P_3$,
-
-$$
-\begin{aligned}
-F_{P_3}(t,u)&=1+2tu+t^2u\\
-P_{P_3}(t,u)&=1+4tu+3t^2u
-\end{aligned}
-$$
-
-Both polynomials are irreducible. After the substitution,
-
-$$
-F_{P_3}(t,1)=(1+t)^2,
-\qquad
-P_{P_3}(t,1)=(1+t)(1+3t)
-$$
-
-Thus, under ordinary multiplication, passing from the full toponome to two variables preserves irreducibility for a connected graph, while further reduction may create new factors.
-
-For the vertex toponome there is a stronger [[Forest Coefficients and the Laplacian Polynomial#Roots and factorization over the reals|spectral result]]. If $c$ is the total number of connected components, including isolated vertices, and $\lambda_1,\ldots,\lambda_{n-c}$ are the nonzero Laplacian eigenvalues, then
-
-$$
-P_G(t)=\det(I+t\mathbf L)=\prod_{j=1}^{n-c}(1+\lambda_jt)
-$$
-
-All $\lambda_j$ are positive. Thus, for $n-c\geqslant2$, $P_G(t)$ is reducible over $\mathbb R$ and splits completely into linear factors. This need not hold over $\mathbb Q$: for the path with conductances $1,2$, the polynomial $1+6t+6t^2$ has discriminant $12$ and is irreducible over $\mathbb Q$.
-
-Vector normalization does not guarantee reducibility over the reals. For the unit-weight triangle, $F_{K_3}(t)=1+3t+3t^2$ has discriminant $-3$ and is irreducible over $\mathbb R$. Over $\mathbb C$, every one-variable polynomial of degree at least $2$ is reducible. A one-variable statement must therefore specify both the normalization and the coefficient field.
-
-## Comparison of results
-
-Let $G$ have at least one edge, and let $r$ be the number of components with edges. Rows concerning one-variable polynomials assume degree at least $2$.
-
-| Object and product | Result |
-| --- | --- |
-| Full toponome, ordinary product, both normalizations | Exactly $r$ irreducible factors over $\mathbb R$ and $\mathbb C$, with multiplicities: the toponomes of nontrivial components |
-| Two-variable toponome, ordinary product, both normalizations | The same factorization by nontrivial components |
-| Full forest toponome, second-kind product, both normalizations | Irreducible over $\mathbb R$ and $\mathbb C$ regardless of connectivity |
-| Coefficient table, induced second-kind product, both normalizations | Irreducible over $\mathbb R$ and $\mathbb C$ regardless of connectivity |
-| One-variable vertex toponome | Splits into real linear factors; may be irreducible over $\mathbb Q$ |
-| One-variable vector toponome | Either case is possible over $\mathbb R$; reducible over $\mathbb C$ |
-
-Factorization of full and two-variable toponomes describes component toponomes but does not solve graph reconstruction. In one variable, even a product representation by toponomes of other graphs does not prove disconnectedness: see the $C_6$ example in [[Forest Coefficients and the Laplacian Polynomial#Factorization does not determine components]].
-
-Irreducibility alone does not guarantee that a formal toponome comes from a graph. The note on [[Graph Realizability of Toponomes#What reducibility conditions provide|graph realizability]] gives a triangle that passes both irreducibility tests but requires an impossible number of adjacent edge pairs.
 
 ## Status and independent checks
 
