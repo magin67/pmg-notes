@@ -1,9 +1,9 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-11-07
-revision: 26
-translated_revision: 26
+updated: 2026-11-08
+revision: 27
+translated_revision: 27
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -532,7 +532,7 @@ The following definitions are used in the published series “Spaces”. They ex
 | Point; local element | Точка; локальный элемент | An element of zero norm: $x\cdot z=1$, $x^2=0$. “Local point” may emphasize the model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
 | Nonlocal element | Нелокальный элемент | An element $p$ with $p^2\ne0$; weight $p\cdot z=1$ is already part of the definition of element. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
 | Center of an element; local center | Центр элемента; локальный центр | The point $\pi(p)=p-p^2z/2$ associated with an element $p$. A point is its own center. “Center” describes a relation to the original element, not a separate class of all points. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
-| Sphere element | Элемент сферы | In the symmetric model with positive displacement metric, $S=O+\rho z/2$, $S^2=\rho$. For $\rho>0$, the sphere consists of points $x$ with $x\cdot S=0$, and $O=\pi(S)$ is its center. For $\rho=0$ one point remains; for $\rho<0$ there are no real points. The element $S$, sphere, and center are distinct; $O$ need not be the centroid. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. Directed extension: [[The Isotropic Space and Sphere of a Balanced Graph]]. |
+| Sphere element | Элемент сферы | In the symmetric model with positive displacement metric, $s=s_0+s^2z/2$, where $s_0=\pi(s)$ is the local center. For $s^2>0$, the sphere consists of points $x$ with $x\cdot s=0$; its linear radius is $\sqrt{s^2}$. For $s^2=0$ one point remains; for $s^2<0$ there are no real points. The element $s$, sphere, and center are distinct; $s_0$ need not be the centroid. For a graph's circumsphere, $s_G^2=\rho(G)$. [[Nonlocal Elements, Spheres, and Their Centers#A sphere as an orthogonality condition]]. Directed extension: [[The Isotropic Space and Sphere of a Balanced Graph]]. |
 | Zero vector | Нулевой вектор | The zero $0$ of the vector space, distinct from nonzero $z$. |
 | Distinguished null vector | Выделенный нуль-вектор | The vector $z\ne0$, $z^2=0$, specifying affine weight by $\varepsilon(U)=U\cdot z$. Zero norm alone does not single out $z$: for example, $2z$ would specify a different functional. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Isotropic object; isotropic vector | Изотропный объект; изотропный вектор | A nonzero object $U$ with $U^2=0$: an isotropic vector at weight $0$, a point at weight $1$. In the symmetric extension with positive displacement metric, isotropic vectors are multiples of $z$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
@@ -564,6 +564,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 27 | 2026-11-08 | Aligned sphere-element notation with the revised note on nonlocal elements: $s=s_0+s^2z/2$, norm $s^2$, and graph resistance radius $\rho(G)$. Aligned with Russian revision 27. |
 | 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |
 | 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
 | 23 | 2026-11-05 | Matched “two-point vector” with “vertex-pair vector”; added the multipoint representation of an affine vector and its dependence on the basis. Aligned with Russian revision 23. |

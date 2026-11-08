@@ -1,9 +1,9 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-11-06
-revision: 25
-translated_revision: 25
+updated: 2026-11-08
+revision: 26
+translated_revision: 26
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -61,7 +61,7 @@ An expression with three or more nonzero coefficients in a chosen basis of local
 
 In the symmetric isotropic extension, the distinguished **null vector** $z$ specifies weight: $\varepsilon(U)=U\cdot z$, with $z\ne0$ and $z^2=0$. It differs from the zero vector $0$. An arbitrary nonzero object of zero norm is an **isotropic object**; if its weight is $0$, it is an **isotropic vector**. Zero norm alone does not single out $z$.
 
-The center of an element $A$ in this model is the point $\pi(A)=A-A^2z/2$. For $S=h+\rho z/2$, where $h$ is a point, one has $S^2=\rho$. If $\rho>0$, the **sphere element** $S$ specifies the sphere of points $x$ with $x\cdot S=0$, or equivalently $(x-h)^2=\rho$. The element $S$, the sphere as a point set, and its center $h$ are distinct. For $\rho=0$ only one point remains; for $\rho<0$ there are no real sphere points. These statements assume a positive definite displacement metric; the directed extension is treated separately.
+The center of an element $s$ in this model is the point $s_0=\pi(s)=s-s^2z/2$. The decomposition $s=s_0+s^2z/2$ separates the center from the norm $s^2=s\cdot s$. If $s^2>0$, the **sphere element** $s$ specifies the sphere of points $x$ with $x\cdot s=0$, or equivalently $(x-s_0)^2=s^2$. The element $s$, the sphere as a point set, and its center $s_0$ are distinct. For $s^2=0$ only one point remains; for $s^2<0$ there are no real sphere points. The notation $\rho(G)$ is reserved for the resistance radius of a graph; its circumsphere element satisfies $s_G^2=\rho(G)$. These statements assume a positive definite displacement metric; the directed extension is treated separately.
 
 Formal basis vertices in $V$ differ from the centered position vectors of a Euclidean realization. Linear independence of $a_1,\ldots,a_n$ concerns the formal space, not the centered position vectors, whose sum is zero.
 
@@ -1489,6 +1489,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 26 | 2026-11-08 | Clarified the notation for a sphere element, its center, and its norm: $s=s_0+s^2z/2$. Reserved $\rho(G)$ for a graph's resistance radius. Aligned with Russian revision 26. |
 | 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |
 | 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
 | 23 | 2026-11-05 | Defined the Green matrix directly by the Moore-Penrose pseudoinverse; its action on the zero-sum subspace is stated separately as a property. Aligned with Russian revision 23. |
