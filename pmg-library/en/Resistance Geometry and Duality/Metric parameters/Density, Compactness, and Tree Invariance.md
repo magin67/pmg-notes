@@ -1,9 +1,9 @@
 ---
 title: Density, Compactness, and Tree Invariance
 date: 2026-10-17
-updated: 2026-11-03
-revision: 5
-translated_revision: 5
+updated: 2026-11-08
+revision: 6
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -17,6 +17,19 @@ aliases:
 The number of edges, the size of the resistance simplex, and the presence of a weak connection between parts of a graph describe different properties. To compare them, we consider several dimensionless measures. The main focus is normalized radius compactness: we explain its geometric meaning, prove its independence of tree shape, and compare it with characteristics that distinguish branching patterns.
 
 The resistance radius is defined in [[Resistance Radius and Diameter of a Graph]], and its relation to the Gram matrix and volume is discussed in [[Resistance Radius of a Set - Gram Matrix and Volume]]. The decomposition through the centroid and the polyform expressions build on [[Centroid, Spanning-Tree, and Eigenvector Centralities]]. This note studies parameters of the whole graph; it does not redefine individual vertex centralities.
+
+## Choosing a characteristic
+
+This table states the questions guiding the note. The following sections define the notation and normalizations.
+
+| Question | Suitable measure | Important limitation |
+| --- | --- | --- |
+| What fraction of vertex pairs are directly joined? | $p$ | Ignores conductances and edge arrangement |
+| Is there a dense subgraph? | $a(G)$ | Does not assess weak connections between dense parts |
+| How small is the circumsphere radius relative to the reference? | $\eta_\rho$ | Does not distinguish tree shape for unit conductances; includes center displacement |
+| How small are mean pairwise resistances relative to the reference? | $\eta_K$ | Averages over pairs; the normalization changes with total conductance |
+| How weak is the least-energy spectral direction relative to the mean? | $\eta_2$ | Describes one end of the spectrum |
+| How short are the shortest routes? | $E$ | Does not account for parallel paths as an electrical network does |
 
 ## The model and comparable scales
 
@@ -50,6 +63,21 @@ $$
 
 The last quantity is the common value of the $n-1$ nonzero eigenvalues of the reference Laplacian.
 
+
+### A numerical reference example
+
+The unit path $a-b-c$ has $n=3$, $C=2$, and $\bar d=4/3$. Distribute the same total conductance equally over the three edges of the complete graph:
+
+$$
+c_*=\frac23,\qquad \rho_*=\frac1{3},\qquad \rho(P_3)=\frac12
+$$
+
+The ratio is $\rho_*/\rho=2/3$. Equal total conductance fixes the resource being compared: the reference acquires an extra edge by reducing each of its three conductances. This does not compare the path with the unit $K_3$, whose total conductance is $3$.
+
+![The path and complete reference both have three vertices and total conductance $2$](<A Graph and Its Compactness Reference.svg>)
+
+*The path and complete reference both have three vertices and total conductance $2$. Edge labels are conductances, not geometric lengths.*
+
 ## What the measures capture
 
 ### Edge density
@@ -77,7 +105,7 @@ This is the ratio of the reference radius to the radius of the graph under study
 
 In [2], the original parameter $r(G)$ is defined as the squared linear radius and therefore corresponds to $\rho$. The product $r(G)\bar d$ was called a sparsity index, and its reciprocal a compactness or density index. Applying the complete-graph normalization specified there gives $\eta_\rho$. When using $D_{\mathrm{res}}$, the factor $4$ in the numerator is essential.
 
-Here, “normalized” refers to the choice of reference graph. It does not assert statistical unbiasedness: no probability model or statistical estimand has been specified. The qualifier “radius” identifies the circumsphere; its radius generally differs both from a mean resistance and from the radius of the minimum enclosing ball.
+Here, “normalized” refers to the choice of reference graph. The qualifier “radius” identifies the circumsphere; its radius generally differs both from a mean resistance and from the radius of the minimum enclosing ball.
 
 ### Compactness based on the Kirchhoff index
 
@@ -195,47 +223,6 @@ In the [[Sphere Centers and Graph Heterogeneity#Comparison with the resistance c
 
 The two proved chains of inequalities do not establish an ordering between $\eta_\rho$ and $\eta_2$. For example, a star on ten vertices has $\eta_\rho=0.2<0.5=\eta_2$, whereas a path has $\eta_\rho=0.2>\eta_2\approx0.0489$.
 
-## Representation through polyforms
-
-Let $L=\sum_{i<j}c_{ij}[a_j-a_i]^2$, $M=\exp L$, and $M_{n-2}=L^{n-2}/(n-2)!$. Products here are polyform products. Write $\tau(P)$ for the coefficient of the fixed spanning-tree form $T_n=[(a_1\ldots a_n)]^2$; then $\tau(M)=\tau(G)$.
-
-For the auxiliary form of the complete graph with unit conductances,
-
-$$
-L_{K_n}=\sum_{i<j}[a_j-a_i]^2
-$$
-
-the metric identity gives
-
-$$
-Kf=\frac{\tau(M_{n-2}L_{K_n})}{\tau(G)},\qquad
-\boxed{\eta_K=\frac{(n-1)^2\tau(G)}{\bar d\,\tau(M_{n-2}L_{K_n})}}
-$$
-
-The form $L_{K_n}$ is fixed by the chosen vertex set, but is evaluated in the metric of the original graph $G$. Using this form does not replace the original graph by a complete graph.
-
-Let $h_V=n^{-1}\sum_i a_i$, and let $p_V$ represent the circumcenter. The [[Centroid, Spanning-Tree, and Eigenvector Centralities#The Green matrix, centroid, and local part of the Laplacian|decomposition of centroid forms]] gives
-
-$$
-\Psi=\sum_i[h_V-a_i]^2=\frac1nL_{K_n}
-$$
-
-Therefore,
-
-$$
-\rho=\frac{\tau\!\left(M_{n-2}\left(\frac1{n^2}L_{K_n}+[p_V-h_V]^2\right)\right)}{\tau(G)}
-$$
-
-This is a polyform expression for the two terms of the radius, and hence for the two factors $\eta_K$ and $\chi$. The form $[p_V-h_V]^2$ depends on the metric through the center's position. All forms being evaluated belong to the subalgebra of forms on boundaries; norms of the point representatives themselves are not used.
-
-The combinatorial meaning of the next-to-top-grade component is visible in the spanning 2-forest expression
-
-$$
-Kf=\frac1{\tau(G)}\sum_{F\in\mathcal F_2}w(F)|A_F|\,|B_F|
-$$
-
-Here $\mathcal F_2$ is the set of spanning forests with two components, $A_F,B_F$ are their components, and $w(F)$ is the product of conductances. The coefficients of the next-to-top grade enter with factors determined by component sizes. Simply summing coefficients in an arbitrary expression for the polyform does not reproduce this quantity. The derivation is given in [[Centroid, Spanning-Tree, and Eigenvector Centralities#Spanning 2-forest coefficients and component sizes]].
-
 ## Tree invariance
 
 > [!info] Tree invariance
@@ -335,6 +322,15 @@ Here “No” means that the general property fails, not that every pair of noni
 
 ## Comparing graphs of the same order
 
+
+Three comparisons help read the full table:
+
+| Graph pair | Question | What the values show |
+| --- | --- | --- |
+| Path and star | Does branching matter at the same edge count? | $p$ and $\eta_\rho$ agree; $\eta_K$, $\eta_2$, and $E$ differ |
+| Cycle and fan | Do more edges imply greater compactness? | The answer depends on choosing $\eta_\rho$ or $\eta_K$ |
+| Two cliques with a bridge and graphs without that narrow connection | Does density inside the parts compensate for their weak connection? | A small $\eta_2$ identifies a difference that density $p$ alone does not explain |
+
 In all the following examples, $n=10$ and every conductance equals $1$. The fan is $K_1\vee P_9$: a new vertex joined to every vertex of a path. The wheel is $K_1\vee C_9$: a new vertex joined to every vertex of a cycle. Thus both names refer to ten vertices in total, including the hub.
 
 The pentagonal prism consists of two cycles $C_5$ joined by five edges between corresponding vertices. The Petersen graph has an outer cycle $C_5$, five edges to the inner vertices, and inner edges joining vertices $2$ steps apart in cyclic order. “Two $K_5$ graphs and a bridge” means two disjoint cliques joined by a single edge. The incomplete graph is obtained from $K_{10}$ by deleting a perfect matching of five edges.
@@ -396,6 +392,10 @@ Kf(t)=6+\frac5{3+2t},\qquad
 \bar d(t)=\frac{12+2t}{5}
 $$
 
+![An edge is added inside the part of size $2$](<Adding an Edge to a Bipartite Graph.svg>)
+
+*An edge is added inside the part of size $2$. At $t=1$, the radius itself rises from $1/3$ to $17/50$, while the reference radius falls because total conductance grows. For $\eta_K$, the graph’s Kirchhoff index decreases, but its reference changes more strongly.*
+
 > [!example]- Checking the radius from the circumcenter system
 > Symmetry partitions the vertices into parts of sizes $2$ and $3$. The resistances within the first part, within the second part, and between the parts are respectively
 >
@@ -434,20 +434,50 @@ The radius formula follows by gluing the two cliques and the edge at single vert
 
 As $\varepsilon\to0+$, both compactness measures tend to zero. The bound $0<\eta_2\le\eta_K$ gives the same limit for $\eta_2$. This shows why structural density alone is insufficient to describe metric connectivity. At $\varepsilon=0$, the graph is disconnected; common values of $\rho$ and $Kf$ are not defined in the adopted finite resistance model. The limiting statement does not automatically define parameters for a disconnected graph.
 
-## Choosing a characteristic
-
-| Question | Suitable measure | Important limitation |
-| --- | --- | --- |
-| What fraction of vertex pairs are directly joined? | $p$ | Ignores conductances and edge arrangement |
-| Is there a dense subgraph? | $a(G)$ | Does not assess weak connections between dense parts |
-| How small is the circumsphere radius relative to the reference? | $\eta_\rho$ | Does not distinguish tree shape for unit conductances; includes center displacement |
-| How small are mean pairwise resistances relative to the reference? | $\eta_K$ | Averages over pairs; the normalization changes with total conductance |
-| How weak is the least-energy spectral direction relative to the mean? | $\eta_2$ | Describes one end of the spectrum |
-| How short are the shortest routes? | $E$ | Does not account for parallel paths as an electrical network does |
-
 Tree invariance is not inherently a drawback: it is useful when all minimal connected structures of a given order are to receive the same value. But such a measure is insufficient for distinguishing long chains from highly branched trees. A name based on geometric meaning, together with an explicit statement of tree invariance, is more precise than a general label such as “spanning-tree density”.
 
 No universal ranking of graphs by a single “density” is specified here. For metric comparison, retaining the pair $(\eta_K,\chi)$ is useful: it explains which part of radius compactness comes from mean resistances and which from the circumcenter's position.
+
+## Representation through polyforms
+
+Let $L=\sum_{i<j}c_{ij}[a_j-a_i]^2$, $M=\exp L$, and $M_{n-2}=L^{n-2}/(n-2)!$. Products here are polyform products. Write $\tau(P)$ for the coefficient of the fixed spanning-tree form $T_n=[(a_1\ldots a_n)]^2$; then $\tau(M)=\tau(G)$.
+
+For the auxiliary form of the complete graph with unit conductances,
+
+$$
+L_{K_n}=\sum_{i<j}[a_j-a_i]^2
+$$
+
+the metric identity gives
+
+$$
+Kf=\frac{\tau(M_{n-2}L_{K_n})}{\tau(G)},\qquad
+\boxed{\eta_K=\frac{(n-1)^2\tau(G)}{\bar d\,\tau(M_{n-2}L_{K_n})}}
+$$
+
+The form $L_{K_n}$ is fixed by the chosen vertex set, but is evaluated in the metric of the original graph $G$. Using this form does not replace the original graph by a complete graph.
+
+Let $h_V=n^{-1}\sum_i a_i$, and let $p_V$ represent the circumcenter. The [[Centroid, Spanning-Tree, and Eigenvector Centralities#The Green matrix, centroid, and local part of the Laplacian|decomposition of centroid forms]] gives
+
+$$
+\Psi=\sum_i[h_V-a_i]^2=\frac1nL_{K_n}
+$$
+
+Therefore,
+
+$$
+\rho=\frac{\tau\!\left(M_{n-2}\left(\frac1{n^2}L_{K_n}+[p_V-h_V]^2\right)\right)}{\tau(G)}
+$$
+
+This is a polyform expression for the two terms of the radius, and hence for the two factors $\eta_K$ and $\chi$. The form $[p_V-h_V]^2$ depends on the metric through the center's position. All forms being evaluated belong to the subalgebra of forms on boundaries; norms of the point representatives themselves are not used.
+
+The combinatorial meaning of the next-to-top-grade component is visible in the spanning 2-forest expression
+
+$$
+Kf=\frac1{\tau(G)}\sum_{F\in\mathcal F_2}w(F)|A_F|\,|B_F|
+$$
+
+Here $\mathcal F_2$ is the set of spanning forests with two components, $A_F,B_F$ are their components, and $w(F)$ is the product of conductances. The coefficients of the next-to-top grade enter with factors determined by component sizes. Simply summing coefficients in an arbitrary expression for the polyform does not reproduce this quantity. The derivation is given in [[Centroid, Spanning-Tree, and Eigenvector Centralities#Spanning 2-forest coefficients and component sizes]].
 
 ## Status of the results
 

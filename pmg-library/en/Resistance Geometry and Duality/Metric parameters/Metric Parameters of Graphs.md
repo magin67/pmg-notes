@@ -1,9 +1,9 @@
 ---
 title: Metric Parameters of Graphs
 date: 2026-10-18
-updated: 2026-11-07
-revision: 5
-translated_revision: 8
+updated: 2026-11-08
+revision: 6
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: metric-parameters-series-navigation
@@ -63,7 +63,9 @@ General definitions and notation are given in the [[Core specification|core spec
 
 ## Reading routes
 
-**For the full series:** follow the order above. Definitions and examples are in the main text; proofs and details of independent computational checks are available in collapsible blocks.
+**Main route:** follow the note order, starting with the question, definition, and nearest small example. Figures show the circumcircle and center projection, centrality comparisons, the compactness reference, two removal operations, the current interpretation of degree potential, and observations with a hidden vertex.
+
+**Further detail:** after the main comparison, return to polyform computations and spanning 2-forests; in the center note, to duality and bordering; in the degree-potential note, to limit and spectral comparisons. Applications of subgraph norms can be selected independently. Proofs are collapsible, while definitions needed for understanding remain visible.
 
 **Choosing a characteristic:** start with [[Resistance Radius and Diameter of a Graph|the radius and diameter]], then move to [[Centroid, Spanning-Tree, and Eigenvector Centralities|vertex centralities]] or [[Density, Compactness, and Tree Invariance|dimensionless parameters of the whole graph]]. Equal parameter values do not imply identical graph structures.
 
@@ -108,7 +110,6 @@ A compact expression for the radius after deleting a vertex together with its ed
 
 All eight notes are available in Russian and English, with matching notation and reading orders.
 
-
 ## Origins of the results in the centrality supplement
 
 | Result | Source or derivation | Role in PMG | Novelty claim |
@@ -127,4 +128,3 @@ All eight notes are available in Russian and English, with matching notation and
 | Trees and biconnected blocks | Uniqueness of the spanning tree; local Foster formula | Exact extremal examples | None |
 | Sensitivity and decrease under enlarged observations | Spanning-tree derivative and Kron reduction | Distinguishing forms, metrics, and observations | Consequences of established formulas |
 | Comparison with boundary and Greenian norms | Gram determinants, the two exponential metrics, and signed forest sums | Distinguishing grades and interpretations | Exposition and examples, not a priority claim |
-

@@ -1,9 +1,9 @@
 ---
 title: Resistance Radius and Diameter of a Graph
 date: 2026-10-15
-updated: 2026-11-03
-revision: 5
-translated_revision: 5
+updated: 2026-11-08
+revision: 6
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -17,6 +17,8 @@ aliases:
 Resistances $R_{ij}$ characterize pairs of vertices. To obtain a metric characteristic of the entire graph, consider the sphere passing through every vertex of its resistance simplex. Its radius provides a parameter with the same physical dimension for graphs with different numbers of vertices. However, the size of the circumsphere determines neither all pairwise distances nor the network's robustness to edge deletion.
 
 This note opens the series "Metric Parameters of Graphs". The geometry of a sphere and its center is developed in [[Nonlocal Elements, Spheres, and Their Centers]], and additivity of the radius under gluing is established in [[Vertex Contraction and Graph Gluing]]. Here we align the normalizations, derive matrix and polyform representations for computing the radius, and check them on simple graphs.
+
+Bi-coordinates $\alpha^i$ carry upper indices; these are coordinate indices, not powers. A repeated upper/lower pair in a product denotes summation. Coefficient sums and matrix expressions without such a pair retain an explicit summation sign.
 
 ## The underlying model
 
@@ -61,9 +63,21 @@ The physical dimensions of $\rho$ and $D_{\mathrm{res}}$ do not depend on the nu
 
 The center $O$ need not coincide with the centroid $h=n^{-1}\sum_i x_i$ and may lie outside the simplex. The center of the circumsphere is not the orthocenter, the intersection of the altitudes.
 
-**Remark on the isotropic representation.** In this note, $O$ is the Euclidean center. Its bi-coordinates specify an affine combination of the original local vertices, $p_V=\sum_i\alpha_i a_i$, but $p_V$ need not be a local element of the extension. The distinction between $p_V$, its local center, and the sphere element is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. It does not change the Euclidean distances used here.
+**Remark on the isotropic representation.** In this note, $O$ is the Euclidean center. Its bi-coordinates specify an affine combination of the original local vertices, $p_V=\alpha^i a_i$, but $p_V$ need not be a local element of the extension. The distinction between $p_V$, its local center, and the sphere element is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. It does not change the Euclidean distances used here.
 
 The earlier name "metric mass" is no longer used as a current term. When comparing older calculations, check whether their parameter equals $\rho$ or $4\rho$.
+
+### A single edge
+
+Let two vertices be joined by conductance $c>0$. Their resistance is $r=1/c$, and the resistance simplex is a segment of linear length $\sqrt r$. Its center is the midpoint. Hence
+
+$$
+\rho=\frac{r}{4}=\frac1{4c},\qquad
+D_{\mathrm{res}}=r=\frac1c,\qquad
+c_{\mathrm{diam}}=c
+$$
+
+This direct geometric calculation checks the factor of $4$ in (1).
 
 ## Difference from the maximum pairwise resistance
 
@@ -96,13 +110,33 @@ Thus $D_{\mathrm{res}}$ is the sharp upper bound on squared distances between ar
 
 The circumsphere also differs from the smallest ball containing all vertices. Some vertices may lie in the interior of that ball; equality of its radius with $R_{\mathrm{sph}}$ requires an additional condition.
 
+### A triangle with unit conductances
+
+In $K_3$ with unit conductances, each vertex pair is connected by an edge of resistance $1$ in parallel with an alternative path of resistance $2$. Therefore,
+
+$$
+R_{ij}=\frac{1\cdot2}{1+2}=\frac23
+$$
+
+The resistance simplex is an equilateral triangle with squared side length $2/3$. Its squared circumradius is one third of the squared side length:
+
+$$
+\rho=\frac29,\qquad
+D_{\mathrm{res}}=\frac89,\qquad
+R_{\max}=\frac23<\frac89
+$$
+
+![The unit triangle as a network and its resistance realization](<Radius, Diameter, and Chord.svg>)
+
+*The unit triangle as a network and its resistance realization. The diagram shows linear side, radius, and diameter lengths; their squares are $2/3$, $2/9$, and $8/9$, respectively. The circle diameter does not join two graph vertices.*
+
 ## Computation from the resistance matrix
 
 Write the center in bi-coordinates relative to the vertices:
 
 $$
-O=\sum_i\alpha_i x_i,\qquad
-\sum_i\alpha_i=1
+O=\alpha^i x_i,\qquad
+\sum_i\alpha^i=1
 $$
 
 For an affine point basis, these are the ordinary barycentric coordinates. They are unique but need not be nonnegative. Write $\mathbf1$ for the column of ones and $\boldsymbol\alpha$ for the coordinate column.
@@ -119,11 +153,11 @@ For an affine point basis, these are the ordinary barycentric coordinates. They 
 > $$
 
 > [!note]- Derivation from equal distances to the vertices
-> **Proof.** Set $y_i=x_i-O$. Then $y_i^2=\rho$ and $\sum_i\alpha_i y_i=0$. For each row of the resistance matrix,
+> **Proof.** Set $y_i=x_i-O$. Then $y_i^2=\rho$ and $\alpha^i y_i=0$. For each row of the resistance matrix,
 >
 > $$
-> \sum_jR_{ij}\alpha_j
-> =\sum_j\bigl(y_i^2+y_j^2-2y_i\cdot y_j\bigr)\alpha_j
+> R_{ij}\alpha^j
+> =\sum_j\bigl(y_i^2+y_j^2-2y_i\cdot y_j\bigr)\alpha^j
 > =2\rho
 > $$
 >
@@ -167,48 +201,28 @@ For computation, the full inverse matrix is unnecessary. Solve $\mathbf R\mathbf
 
 Formula (4) uses the resistance matrix. It cannot be replaced by the Green matrix $\mathbf{Gr}=\mathbf L^+$: the latter satisfies $\mathbf{Gr}\mathbf1=0$ and is singular. The representation using the Gram matrix of local vertices is given in [[Resistance Radius of a Set - Gram Matrix and Volume]].
 
-## Computing the center and radius using polyforms
 
-In polyform algebra, the vertices $x_i$ correspond to basis elements $a_i$. Set
+### A complete calculation for a three-vertex path
 
-$$
-L=\sum_{i<j}c_{ij}[a_j-a_i]^2,\qquad
-M=\exp L,\qquad M_k=\frac{L^k}{k!}
-$$
-
-Here $L$ is the Laplacian polyform and $\mathbf L$ its matrix representation. The exponential $M$ uses the product of forms and differs from the matrix exponential.
-
-The spanning-tree form $T_n=[(a_1\ldots a_n)]^2$ has grade $n-1$. Write $\tau(P)$ for the coefficient of $T_n$; in particular, $\tau(M)=\tau(G)$. For any affine vectors $u,v$, the [[Laplacian Exponential#Agreement with the resistance metric|metric identity]] gives
+For the unit path $a-b-c$, the resistances are $R_{ab}=R_{bc}=1$, $R_{ac}=2$. Form the matrix and solve for the column $v$:
 
 $$
-u\cdot v=\frac{\tau(M_{n-2}[u,v])}{\tau(G)},\qquad
-R_{ij}=\frac{\tau(M_{n-2}[a_j-a_i]^2)}{\tau(G)}
+\mathbf R=\begin{pmatrix}0&1&2\\1&0&1\\2&1&0\end{pmatrix},\qquad
+\mathbf Rv=\mathbf1
 $$
 
-The form $[u,v]$ has grade $1$, so $M_{n-2}$ supplies its complement to the spanning-tree grade. This next-to-top-grade component contains the forms of spanning 2-forests. Together with normalization by $\tau(G)$, it determines the entire metric on vectors used to construct the circumsphere.
+Its rows give $v_2+2v_3=1$, $v_1+v_3=1$, $2v_1+v_2=1$. Hence
 
-Choose $a_n$ as the reference vertex and set $u_i=a_i-a_n$, $i=1,\ldots,n-1$. The required center corresponds to $p_V=a_n+y$, where $y$ is an affine vector.
+$$
+v=\begin{pmatrix}1/2\\0\\1/2\end{pmatrix},\qquad
+s=v_1+v_2+v_3=1,\qquad
+\rho=\frac1{2s}=\frac12,\qquad
+D_{\mathrm{res}}=2,\qquad \boldsymbol\alpha=v
+$$
 
-> [!info] Computing the center and radius using polyforms
-> **Proposition.** The center and radius can be computed directly from potentials of forms:
->
-> $$
-> 2\tau(M_{n-2}[u_i,y])=\tau(M_{n-2}[u_i]^2),
-> \qquad i=1,\ldots,n-1
-> $$
->
-> $$
-> \boxed{\rho=\frac{\tau(M_{n-2}[y]^2)}{\tau(G)}}
-> $$
->
-> The first system is linear in the coordinates of $y$; after it is solved, the second equality gives the radius.
+The center is the midpoint of $ac$: $O=(x_a+x_c)/2$. The resistance triangle is right-angled because $R_{ac}=R_{ab}+R_{bc}$. Its hypotenuse has linear length $\sqrt2$, so geometrically $R_{\mathrm{sph}}=\sqrt2/2$ and $\rho=1/2$. Both coordinates and radius have been obtained without forming the full inverse matrix.
 
-> [!note]- Equidistance expressed through potentials
-> **Proof.** Equidistance of the center from $a_i$ and $a_n$ means $(u_i-y)^2=y^2$, or $2u_i\cdot y=u_i^2$. Substituting the metric identity and canceling the common denominator gives the system. The vectors $u_i$ form a basis of directions, and their metric is positive definite, so the system has a unique solution. The radius equals $y^2$, which gives the second formula. $\square$
-
-Thus matrix inversion in (4) and evaluation of potentials describe the same metric. The radius is obtained from it after determining the center. The vector $y$ depends on the graph, so this expression alone does not give the radius as a simple sum of coefficients of $M_{n-2}$.
-
-The vectors $u_i,y$ have zero affine weight. Applying the metric identity here does not require evaluating the form of the nonlocal element $p_V$ itself outside the subalgebra of boundaries.
+For the unit $K_3$, symmetry gives $\alpha^i=1/3$. Every entry of $\mathbf R\boldsymbol\alpha$ is $4/9=2\rho$, checking the earlier value $\rho=2/9$.
 
 ## Reciprocal connectivity parameters
 
@@ -238,38 +252,6 @@ Both quantities have the physical dimension of conductance. A larger value corre
 For a pair of vertices with resistance $r$, one obtains $c_{\mathrm{diam}}=1/r$. This is the effective conductance between the selected vertices. For a graph consisting of a single edge, it equals that edge's conductance; within a larger network, alternative paths also contribute. This normalization makes diametral connectivity convenient for comparison with a two-terminal network.
 
 ## Simple examples
-
-### A single edge
-
-Let two vertices be joined by conductance $c>0$. Their resistance is $r=1/c$, and the resistance simplex is a segment of linear length $\sqrt r$. Its center is the midpoint. Hence
-
-$$
-\rho=\frac{r}{4}=\frac1{4c},\qquad
-D_{\mathrm{res}}=r=\frac1c,\qquad
-c_{\mathrm{diam}}=c
-$$
-
-This direct geometric calculation checks the factor of $4$ in (1).
-
-The polyform check gives the same value. For $v=a_2-a_1$, we have $T_2=[v]^2$, $M=e+c[v]^2$, $M_0=e$, and $\tau(G)=c$. Relative to the reference vertex $a_2$, the center corresponds to $y=-v/2$, so $\tau(M_0[y]^2)=1/4$ and $\rho=1/(4c)$.
-
-### A triangle with unit conductances
-
-In $K_3$ with unit conductances, each vertex pair is connected by an edge of resistance $1$ in parallel with an alternative path of resistance $2$. Therefore,
-
-$$
-R_{ij}=\frac{1\cdot2}{1+2}=\frac23
-$$
-
-The resistance simplex is an equilateral triangle with squared side length $2/3$. Its squared circumradius is one third of the squared side length:
-
-$$
-\rho=\frac29,\qquad
-D_{\mathrm{res}}=\frac89,\qquad
-R_{\max}=\frac23<\frac89
-$$
-
-Symmetry gives $\alpha_i=1/3$. Substitution into (3) independently checks the matrix normalization: every entry of $\mathbf R\boldsymbol\alpha$ equals $4/9=2\rho$.
 
 ### Trees
 
@@ -322,7 +304,7 @@ $$
 R_{ij}=\frac2{nc}\qquad(i\ne j)
 $$
 
-The resistance simplex is regular, its center is the centroid, and $\alpha_i=1/n$. Substitution into (3) yields
+The resistance simplex is regular, its center is the centroid, and $\alpha^i=1/n$. Substitution into (3) yields
 
 $$
 \boxed{
@@ -341,6 +323,55 @@ c_{\mathrm{diam}}(K_n)=\frac{n^2c}{4(n-1)},\qquad
 $$
 
 For $n>2$, inequality (2) is strict even for the complete graph. For $K_5$ with unit conductances, $\rho=4/25$ and $D_{\mathrm{res}}=16/25$.
+
+## Computing the center and radius using polyforms
+
+This section gives the same computation through forms and potentials. The preceding definitions and examples suffice for the geometric meaning of the radius.
+
+In polyform algebra, the vertices $x_i$ correspond to basis elements $a_i$. Set
+
+$$
+L=\sum_{i<j}c_{ij}[a_j-a_i]^2,\qquad
+M=\exp L,\qquad M_k=\frac{L^k}{k!}
+$$
+
+Here $L$ is the Laplacian polyform and $\mathbf L$ its matrix representation. The exponential $M$ uses the product of forms and differs from the matrix exponential.
+
+The spanning-tree form $T_n=[(a_1\ldots a_n)]^2$ has grade $n-1$. Write $\tau(P)$ for the coefficient of $T_n$; in particular, $\tau(M)=\tau(G)$. For any affine vectors $u,v$, the [[Laplacian Exponential#Agreement with the resistance metric|metric identity]] gives
+
+$$
+u\cdot v=\frac{\tau(M_{n-2}[u,v])}{\tau(G)},\qquad
+R_{ij}=\frac{\tau(M_{n-2}[a_j-a_i]^2)}{\tau(G)}
+$$
+
+The form $[u,v]$ has grade $1$, so $M_{n-2}$ supplies its complement to the spanning-tree grade. This next-to-top-grade component contains the forms of spanning 2-forests. Together with normalization by $\tau(G)$, it determines the entire metric on vectors used to construct the circumsphere.
+
+Choose $a_n$ as the reference vertex and set $u_i=a_i-a_n$, $i=1,\ldots,n-1$. The required center corresponds to $p_V=a_n+y$, where $y$ is an affine vector.
+
+> [!info] Computing the center and radius using polyforms
+> **Proposition.** The center and radius can be computed directly from potentials of forms:
+>
+> $$
+> 2\tau(M_{n-2}[u_i,y])=\tau(M_{n-2}[u_i]^2),
+> \qquad i=1,\ldots,n-1
+> $$
+>
+> $$
+> \boxed{\rho=\frac{\tau(M_{n-2}[y]^2)}{\tau(G)}}
+> $$
+>
+> The first system is linear in the coordinates of $y$; after it is solved, the second equality gives the radius.
+
+> [!note]- Equidistance expressed through potentials
+> **Proof.** Equidistance of the center from $a_i$ and $a_n$ means $(u_i-y)^2=y^2$, or $2u_i\cdot y=u_i^2$. Substituting the metric identity and canceling the common denominator gives the system. The vectors $u_i$ form a basis of directions, and their metric is positive definite, so the system has a unique solution. The radius equals $y^2$, which gives the second formula. $\square$
+
+Thus matrix inversion in (4) and evaluation of potentials describe the same metric. The radius is obtained from it after determining the center. The vector $y$ depends on the graph, so this expression alone does not give the radius as a simple sum of coefficients of $M_{n-2}$.
+
+The vectors $u_i,y$ have zero affine weight. Applying the metric identity here does not require evaluating the form of the nonlocal element $p_V$ itself outside the subalgebra of boundaries.
+
+### A check on a single edge
+
+The polyform check gives the same value. For $v=a_2-a_1$, we have $T_2=[v]^2$, $M=e+c[v]^2$, $M_0=e$, and $\tau(G)=c$. Relative to the reference vertex $a_2$, the center corresponds to $y=-v/2$, so $\tau(M_0[y]^2)=1/4$ and $\rho=1/(4c)$.
 
 ## What the parameter measures and its limitations
 

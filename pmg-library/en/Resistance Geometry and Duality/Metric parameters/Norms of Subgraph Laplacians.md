@@ -1,9 +1,9 @@
 ---
 title: Norms of Subgraph Laplacians
 date: 2026-11-04
-updated: 2026-11-04
-revision: 1
-translated_revision: 1
+updated: 2026-11-08
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: norms-of-subgraph-laplacians
@@ -15,6 +15,8 @@ order: 8
 For each group of vertices, we can select its internal couplings and evaluate their Laplacian in the metric of the whole graph. The result is dimensionless: the expected number of internal edges of the group in a random spanning tree. It allows groups to be compared, but differs from density, geometric volume, and criticality under deletion.
 
 The underlying edge formula is proved in [[Edge Resistances and Random Spanning Trees]]. Here it is applied to subgraph Laplacians. The norm means the [[Laplacian Exponential#The potential of a form|normalized potential of a form]], rather than a matrix norm or the square root of a numerical evaluation.
+
+The main route covers the norm in a fixed metric, its spanning-tree meaning, small examples, and partitions. The sections on observations, boundaries, the Greenian, and maximum-norm groups are applications that can be read separately.
 
 ## The internal Laplacian and a fixed metric
 
@@ -70,6 +72,21 @@ w(T)=\prod_{ij\in T}c_{ij}
 $$
 
 With unit conductances, all spanning trees are equally likely. Kirchhoff's formula gives $\mathbb P(ij\in\mathcal T)=c_{ij}R_{ij}$; see [[Edge Resistances and Random Spanning Trees#Kirchhoff's formula in three representations|three representations of the edge formula]] and [1, §13.5, Theorem 13.5.1].
+
+
+### Counting across the triangle's three spanning trees
+
+The unit triangle has three equally likely spanning trees. Edge $ab$ occurs in two of them. For $S=\{a,b\}$, the internal edge counts are $1,1,0$, so
+
+$$
+\mu_G(\{a,b\})=\frac{1+1+0}{3}=\frac23=c_{ab}R_{ab}
+$$
+
+For the entire triple, each spanning tree has two internal edges, giving norm $2$. The probability that the triple is internally connected in the tree is $1$. Expected edge count and connectivity probability are different quantities.
+
+![Edge $ab$ occurs in the first two spanning trees and is absent from the third](<Three Spanning Trees of a Triangle.svg>)
+
+*Edge $ab$ occurs in the first two spanning trees and is absent from the third. All three trees are equally likely. This computes the pair norm directly, without matrix inversion.*
 
 > [!info] Internal edges of a random spanning tree
 > **Corollary of Kirchhoff's formula.** Let $K_S$ count the edges of $\mathcal T$ with both endpoints in $S$, and let $\kappa(\mathcal T[S])$ count the components of the induced forest, including isolated vertices. Then
@@ -205,6 +222,10 @@ For example, the same observed resistances $R_{ab}=R_{ac}=R_{bc}=2/3$ arise in t
 | Triangle | Three conductances of $1$ between observed vertices | $2$ |
 | Star with hidden center $d$ | Conductances $ad,bd,cd$ are $3$ | $0$ |
 
+![Both networks give resistance $2/3$ between observed vertices $a,b,c$](<A Triangle and a Hidden Center.svg>)
+
+*Both networks give resistance $2/3$ between observed vertices $a,b,c$. All triangle edges are internal to the observed triple; every star edge leads to hidden vertex $d$. Thus the actual norms are $2$ and $0$, although the observed triple has the same metric.*
+
 Nevertheless, these resistances uniquely determine an effective graph on $B$. For $m=|B|$, its matrices are recovered as
 
 $$
@@ -249,8 +270,6 @@ $$
 > **Proof.** Reduction preserves resistances. Multiply the conductance difference by $R_{ij}$ and sum over internal pairs of $S$. Every term is nonnegative. For distinct vertices, $R_{ij}>0$, so the decrease is strict if and only if $d$ is coupled to at least two vertices of $S$ in the new effective graph. $\square$
 
 In the star example, revealing the center $d$ changes the triple's norm from $2$ to $0$. Its metric is unchanged, but the evaluated form changes. Eliminating $d$ again restores the previous norm $2$.
-
-Non-identifiability persists for infinite networks: an infinite ray of unit resistances can be attached at $a$ in each example without changing the measurements. However, the main theory of this note is finite-dimensional. For a general infinite network, the definition of resistance and the boundary condition at infinity must be fixed; free and wired conditions may differ [4, §2]. The finite expression $\sum c_{ij}R_{ij}$ does not require a formal exponential of the whole infinite graph.
 
 ## Difference from the norm of a triple's boundary
 
@@ -368,6 +387,12 @@ The main statements follow from established edge, spanning-tree, and determinant
 | Comparison with the Greenian | The two metrics in the published series; signed forest sums | Limits of the probabilistic interpretation |
 
 The [exact-arithmetic verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/metric-parameters/verify_subgraph_norms.py) compares matrix calculations through pseudoinversion with independent spanning-tree enumeration. It checks all subsets of selected small graphs, the example tables, cofactor variation, Kron reduction, the second grade of a triple, and the signed spanning-tree interpretation of the Greenian. These checks verify calculations but do not replace the proofs above.
+
+### Beyond the finite model
+
+Non-identifiability persists for infinite networks: an infinite ray of unit resistances can be attached at $a$ in each example without changing the measurements. However, the main theory of this note is finite-dimensional. For a general infinite network, the definition of resistance and the boundary condition at infinity must be fixed; free and wired conditions may differ [4, §2]. The finite expression $\sum c_{ij}R_{ij}$ does not require a formal exponential of the whole infinite graph.
+
+### Sources
 
 1. Spielman D. A. [Spectral and Algebraic Graph Theory](https://www.cs.yale.edu/homes/spielman/sagt/sagt.pdf). Author's version dated April 2, 2025, §13.5, Theorem 13.5.1: edge-inclusion probability in a random spanning tree.
 2. Devriendt K. [Graphs with Nonnegative Resistance Curvature](https://doi.org/10.1007/s00026-025-00774-x). *Annals of Combinatorics*, 30 (2026), 415-438; Theorem 2.8: the local Foster formula.

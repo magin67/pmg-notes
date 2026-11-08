@@ -1,9 +1,9 @@
 ---
 title: "Vertex Deletion: Spanning-Tree Coefficient and Resistance Radius"
 date: 2026-10-18
-updated: 2026-10-18
-revision: 2
-translated_revision: 2
+updated: 2026-11-08
+revision: 3
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -17,6 +17,8 @@ aliases:
 A vertex property can be defined through the change in a parameter of the whole graph after that vertex is removed. Here we compare the spanning-tree coefficient and resistance radius. For each parameter, we distinguish between deleting a vertex together with its edges and removing a point from a set while preserving the metric of the remaining points.
 
 The radius and Gram matrix are defined in [[Resistance Radius and Diameter of a Graph]] and [[Resistance Radius of a Set - Gram Matrix and Volume]]. We also use the [[Centroid, Spanning-Tree, and Eigenvector Centralities|expected spanning-tree degree and circumcenter coordinates]] and [[Vertex Elimination and Induced Couplings|elimination by a Schur complement]].
+
+Bi-coordinates $\alpha^i$ have upper indices. We use the upper/lower summation convention from [[Bi-coordinates and Di-coordinates|the coordinate note]].
 
 ## Two types of removal
 
@@ -33,6 +35,19 @@ For unit conductances, $\tau(G)$ is the number of spanning trees. The PMG norm i
 **Deletion from the network.** The graph $H_i=G-i$ is obtained by deleting vertex $i$ and all its incident edges. The conductances of the remaining edges are unchanged, but the resistances must be recomputed. The graph may become disconnected.
 
 **Removal preserving the metric.** Row and column $i$ are deleted from the Gram matrix of local vertices, $\mathbf G=-\mathbf R/2$. All resistances between the remaining vertices are preserved. This metric corresponds to a connected graph $\widehat G_i$ obtained by eliminating the vertex through a Schur complement; new edges may appear between its neighbors. This is classical Kron reduction [1].
+
+
+### A triangle: two different remaining networks
+
+The unit triangle $abc$ has original resistance $R_{ab}=2/3$. Deleting $c$ with its edges leaves edge $ab$ of conductance $1$, with new resistance $1$. Eliminating $c$ while preserving the metric replaces the alternative route by conductance $1/2$: the resulting conductance of $ab$ is $3/2$, and its resistance remains $2/3$.
+
+Thus, specifying the remaining vertices does not specify the outcome. The first operation changes the network and its metric; the second reproduces the original metric using new couplings.
+
+![One original triangle and two outcomes of removing vertex $c$](<Two Types of Vertex Removal.svg>)
+
+*One original triangle and two outcomes of removing vertex $c$. Labels give conductances; $R_{ab}$ and $\rho$ are computed for each resulting network. For two vertices, $\rho=R_{ab}/4$.*
+
+### Matrix forms of the two operations
 
 Let $S=V\setminus\{i\}$ and $\mathbf c=(c_{ij})_{j\in S}$. The two resulting Laplacian matrices are
 
@@ -104,12 +119,12 @@ The geometric spanning-tree ratio $\widehat s_i$ is determined entirely by the w
 
 ## The radius ratio under preservation of the metric
 
-Let $\alpha_i$ be the bi-coordinate of the circumcenter and $\delta_i=\mathbb E[\deg_T(i)]$ the expected spanning-tree degree. The [[Centroid, Spanning-Tree, and Eigenvector Centralities#Removing a point while preserving the metric|formula for geometric removal]] establishes
+Let $\alpha^i$ be a circumcenter bi-coordinate and $\delta_i=\mathbb E[\deg_T(i)]$ the expected spanning-tree degree. Their relation $\alpha^i=1-\delta_i/2$ is derived in [[Centroid, Spanning-Tree, and Eigenvector Centralities#Expected spanning-tree degree and circumcenter coordinates|the centrality note]]. Removing a point while preserving the metric gives
 
 $$
-\rho-\rho(\widehat G_i)=\frac{\alpha_i^2}{d_i},
+\rho-\rho(\widehat G_i)=\frac{(\alpha^i)^2}{d_i},
 \qquad
-\alpha_i=1-\frac{\delta_i}{2}
+\alpha^i=1-\frac{\delta_i}{2}
 $$
 
 Consequently,
@@ -117,14 +132,82 @@ Consequently,
 $$
 \boxed{
 \widehat\gamma_i
-=1-\frac{\alpha_i^2}{d_i\rho}
+=1-\frac{(\alpha^i)^2}{d_i\rho}
 =1-\frac{(1-\delta_i/2)^2}{d_i\rho}
 }
 $$
 
-Geometrically, the circumcenter of the remaining points is the projection of the original circumcenter onto the affine hull of the opposite facet of the simplex. The difference between the radii equals the norm of the center's displacement. Hence $0<\widehat\gamma_i\le1$, with equality to one when $\alpha_i=0$, or equivalently $\delta_i=2$.
+> [!note]- Distance to the opposite face
+> **Proof.** Let $x_j$ be the resistance-simplex points, $h$ their centroid, and $\mathbf{Gr}=\mathbf L^+$ the Green matrix. Set $y_j=x_j-h$ and $w_i=\sum_j\mathbf L_{ij}y_j$. Since the Gram matrix of the $y_j$ is $\mathbf{Gr}$,
+>
+> $$
+> w_i\cdot(x_j-x_k)=\delta_{ij}^{\mathrm{Kr}}-\delta_{ik}^{\mathrm{Kr}},
+> \qquad
+> w_i^2=(\mathbf L\mathbf{Gr}\mathbf L)_{ii}=d_i
+> $$
+>
+> Here $\delta_{ij}^{\mathrm{Kr}}$ denotes the Kronecker delta, not expected spanning-tree degree.
+>
+> Thus $w_i$ is the gradient of the affine function giving the $i$-th barycentric coordinate. This function is zero on the affine hull of the opposite face and one at $x_i$. Its value at the center $O$ is $\alpha^i$, so the squared distance from $O$ to that affine hull is $(\alpha^i)^2/w_i^2=(\alpha^i)^2/d_i$.
+>
+> By the [[Resistance Radius of a Set - Gram Matrix and Volume#The radius of a subset and projection of the center|center-projection theorem]], this squared distance equals the difference of resistance radii $\rho-\rho(\widehat G_i)$. Substituting $\alpha^i=1-\delta_i/2$ completes the proof. $\square$
+
+Geometrically, the circumcenter of the remaining points is the projection of the original circumcenter onto the affine hull of the opposite facet of the simplex. The difference between the radii equals the norm of the center's displacement. Hence $0<\widehat\gamma_i\le1$, with equality to one when $\alpha^i=0$, or equivalently $\delta_i=2$.
 
 This formula does not apply to $\gamma_i$ after deletion from the network: the metric itself changes. The computation uses the new Laplacian; the examples below show both an increase and a decrease in radius.
+
+## Small examples
+
+### Triangle and path
+
+All conductances of the original graphs in the table are $1$.
+
+| Original graph and removed vertex | $s_i$ | $\widehat s_i$ | $\gamma_i$ | $\widehat\gamma_i$ |
+| --- | ---: | ---: | ---: | ---: |
+| $K_3$, any vertex | $1/3$ | $1/2$ | $9/8$ | $3/4$ |
+| $P_4$, endpoint | $1$ | $1$ | $2/3$ | $2/3$ |
+| $P_4$, internal vertex | $0$ | $1/2$ | Undefined: disconnected graph | $1$ |
+
+For the triangle, $\tau=3$, $\rho=2/9$,. Deletion from the network leaves a unit-conductance edge with $\tau=1$, $\rho=1/4$. Preserving the metric leaves an edge of conductance $3/2$, since the original resistance between the pair is $2/3$; its radius is $1/6$.
+
+The path $P_4$ has a unique spanning tree and $\rho=3/4$. An endpoint has spanning-tree degree $1$: both operations leave a unit-conductance $P_3$ with radius $1/2$. An internal vertex has spanning-tree degree $2$. Geometric removal preserves the radius because $\delta_i=2$, whereas deletion from the network breaks the path.
+
+This gives three different outcomes for the radius after deletion from the network: an increase, a decrease, and the absence of a common finite value. A value $\gamma_i<1$ does not by itself mean that the remaining network has become stronger: the vertex set has also become smaller.
+
+### A limitation of the criticality interpretation
+
+A small $s_i$ means a large relative loss of spanning-tree count in a graph with unit conductances. It does not imply that the remaining graph must be less resilient to the next deletion.
+
+Consider the following graph with unit conductances on six vertices:
+
+```mermaid
+graph TD
+    v1(("1")) --- v2(("2"))
+    v1 --- v3(("3"))
+    v1 --- v4(("4"))
+    v2 --- v3
+    v2 --- v4
+    v3 --- v5(("5"))
+    v4 --- v6(("6"))
+    v5 --- v6
+```
+
+The diagram specifies only the edge topology. The edge set is $\{12,13,14,23,24,35,46,56\}$, where $jk$ denotes an unordered pair. Direct counting gives $\tau(G)=32$.
+
+| Removed vertex | $\tau(H_i)$ | $s_i$ | Remaining graph | $\lambda_2(H_i)$ |
+| --- | ---: | ---: | --- | ---: |
+| $1$ | $5$ | $5/32$ | Cycle $2-3-5-6-4-2$ | $1.3820$ |
+| $5$ | $8$ | $1/4$ | $K_4$ on $1,2,3,4$ without edge $34$, with leaf $6$ attached to vertex $4$ | $0.8299$ |
+
+By the spanning-tree ratio, vertex $1$ is more critical. Yet after it is deleted, the graph remains connected upon deletion of any one further vertex. After vertex $5$ is deleted, deleting vertex $4$ disconnects the graph. Thus rankings by spanning-tree loss and by resilience to the next deletion differ even within the same original graph.
+
+The spectral connection explains another distinction: for a connected graph $H$ on $m$ vertices [3],
+
+$$
+\tau(H)=\frac1m\prod_{k=2}^{m}\lambda_k(H)
+$$
+
+Here $0=\lambda_1<\lambda_2\le\ldots\le\lambda_m$ are its Laplacian eigenvalues. The spanning-tree count involves the product of the entire nonzero spectrum, whereas $\lambda_2$ singles out its smallest element. Both remaining graphs in the table have five vertices; the lower spanning-tree count comes with higher algebraic connectivity. The $\lambda_2$ values provide an additional comparison, rather than a definition of universal criticality.
 
 ## Vertex properties through polyforms
 
@@ -156,6 +239,22 @@ $$
 
 > [!note]- Marked factors in the forest expansion
 > **Proof.** In the [[Laplacian Exponential#The exponential in the algebra of forms|factorization of the exponential]], each edge corresponds to a factor $e+c_{jk}[a_k-a_j]^2$. After the substitution $c_{ij}\mapsto tc_{ij}$, each spanning tree acquires a factor $t^{\deg_T(i)}$. Extracting the top-grade coefficient sums the spanning-tree weights, and dividing by $\tau(G)$ turns the weights into probabilities. $\square$
+
+
+### Reading the polynomial on a triangle
+
+The unit triangle has three equally likely spanning trees. The marked vertex $a$ has degree $2$ in the tree with edges $ab,ac$ and degree $1$ in the other two. Thus
+
+$$
+F_a(t)=\frac{t^2+t+t}{3}=\frac{2t+t^2}{3},\qquad
+F_a'(0)=\frac23,\qquad F_a'(1)=\frac43
+$$
+
+The derivative at zero selects the coefficient of $t$: the leaf probability is $2/3$. The derivative at one counts the degree in each tree: $(2+1+1)/3=4/3$. With $d_a=2$, this gives $s_a=1/3$ and $\widehat s_a=1/2$.
+
+![Each spanning tree has probability $1/3$](<Three Spanning Trees of a Triangle.svg>)
+
+*Each spanning tree has probability $1/3$. The marked vertex $a$ is a leaf in two of them; its expected degree is $4/3$.*
 
 Derivatives of a single polynomial give two different vertex characteristics:
 
@@ -212,59 +311,6 @@ $$
 $$
 
 Thus the top-grade coefficient of the new exponential determines the spanning-tree ratio, while its next-to-top-grade component determines the new metric and radius. The functionals $\tau$ and $\tau_S$ refer to different spanning-tree forms; they are not interchangeable.
-
-## Small examples
-
-### Triangle and path
-
-All conductances of the original graphs in the table are $1$.
-
-| Original graph and removed vertex | $s_i$ | $\widehat s_i$ | $\gamma_i$ | $\widehat\gamma_i$ |
-| --- | ---: | ---: | ---: | ---: |
-| $K_3$, any vertex | $1/3$ | $1/2$ | $9/8$ | $3/4$ |
-| $P_4$, endpoint | $1$ | $1$ | $2/3$ | $2/3$ |
-| $P_4$, internal vertex | $0$ | $1/2$ | Undefined: disconnected graph | $1$ |
-
-For the triangle, $\tau=3$, $\rho=2/9$, and $F_i(t)=(2t+t^2)/3$. Deletion from the network leaves a unit-conductance edge with $\tau=1$, $\rho=1/4$. Preserving the metric leaves an edge of conductance $3/2$, since the original resistance between the pair is $2/3$; its radius is $1/6$.
-
-The path $P_4$ has a unique spanning tree and $\rho=3/4$. At an endpoint, $F_i(t)=t$: both operations leave a unit-conductance $P_3$ with radius $1/2$. At an internal vertex, $F_i(t)=t^2$. Geometric removal preserves the radius because $\delta_i=2$, whereas deletion from the network breaks the path.
-
-This gives three different outcomes for the radius after deletion from the network: an increase, a decrease, and the absence of a common finite value. A value $\gamma_i<1$ does not by itself mean that the remaining network has become stronger: the vertex set has also become smaller.
-
-### A limitation of the criticality interpretation
-
-A small $s_i$ means a large relative loss of spanning-tree count in a graph with unit conductances. It does not imply that the remaining graph must be less resilient to the next deletion.
-
-Consider the following graph with unit conductances on six vertices:
-
-```mermaid
-graph TD
-    v1(("1")) --- v2(("2"))
-    v1 --- v3(("3"))
-    v1 --- v4(("4"))
-    v2 --- v3
-    v2 --- v4
-    v3 --- v5(("5"))
-    v4 --- v6(("6"))
-    v5 --- v6
-```
-
-The diagram specifies only the edge topology. The edge set is $\{12,13,14,23,24,35,46,56\}$, where $jk$ denotes an unordered pair. Direct counting gives $\tau(G)=32$.
-
-| Removed vertex | $\tau(H_i)$ | $s_i$ | Remaining graph | $\lambda_2(H_i)$ |
-| --- | ---: | ---: | --- | ---: |
-| $1$ | $5$ | $5/32$ | Cycle $2-3-5-6-4-2$ | $1.3820$ |
-| $5$ | $8$ | $1/4$ | $K_4$ on $1,2,3,4$ without edge $34$, with leaf $6$ attached to vertex $4$ | $0.8299$ |
-
-By the spanning-tree ratio, vertex $1$ is more critical. Yet after it is deleted, the graph remains connected upon deletion of any one further vertex. After vertex $5$ is deleted, deleting vertex $4$ disconnects the graph. Thus rankings by spanning-tree loss and by resilience to the next deletion differ even within the same original graph.
-
-The spectral connection explains another distinction: for a connected graph $H$ on $m$ vertices [3],
-
-$$
-\tau(H)=\frac1m\prod_{k=2}^{m}\lambda_k(H)
-$$
-
-Here $0=\lambda_1<\lambda_2\le\ldots\le\lambda_m$ are its Laplacian eigenvalues. The spanning-tree count involves the product of the entire nonzero spectrum, whereas $\lambda_2$ singles out its smallest element. Both remaining graphs in the table have five vertices; the lower spanning-tree count comes with higher algebraic connectivity. The $\lambda_2$ values provide an additional comparison, rather than a definition of universal criticality.
 
 ## Status of the results and an open question
 

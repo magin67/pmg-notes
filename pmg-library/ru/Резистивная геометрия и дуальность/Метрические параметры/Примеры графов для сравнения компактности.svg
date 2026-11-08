@@ -145,7 +145,7 @@ z
     </g>
    </g>
    <g id="text_1">
-    <text style="font-size: 12.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183b56" x="177.989189" y="21.808" transform="rotate(-0 177.989189 21.808)">Фен: 10 вершин, 17 рёбер</text>
+    <text style="font-size: 12.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183b56" x="177.989189" y="21.808" transform="rotate(-0 177.989189 21.808)">Веер: 10 вершин, 17 рёбер</text>
    </g>
   </g>
   <g id="axes_2">
@@ -491,3 +491,4 @@ L 563.115955 425.424
   </clipPath>
  </defs>
 </svg>
+

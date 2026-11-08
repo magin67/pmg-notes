@@ -1,9 +1,9 @@
 ---
 title: "Resistance Radius of a Set: Gram Matrix and Volume"
 date: 2026-10-16
-updated: 2026-11-03
-revision: 4
-translated_revision: 6
+updated: 2026-11-08
+revision: 5
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -18,6 +18,8 @@ The resistance radius can be considered for more than the full vertex set of a g
 
 The normalizations $\rho=R_{\mathrm{sph}}^2$ and $D_{\mathrm{res}}=4\rho$ are introduced in [[Resistance Radius and Diameter of a Graph]]. Here we derive determinant formulas, check them on a segment, a triangle, and a tetrahedron, and prove monotonicity of the radius under passage to a subset. The geometric background is given in [[The Null Vector, Isotropic Representation, and the Boundary]] and [[Nonlocal Elements, Spheres, and Their Centers]].
 
+Bi-coordinates $\alpha^i$ have upper indices. We use the upper/lower summation convention from [[Bi-coordinates and Di-coordinates|the coordinate note]].
+
 ## A set of points and two Gram matrices
 
 Let $A=\{a_0,\ldots,a_l\}$ consist of $n=l+1\ge2$ local points in the isotropic representation. Their Euclidean coordinates $x_0,\ldots,x_l$ are assumed to be affinely independent. Equivalently, the differences $u_i=a_i-a_0$, $i=1,\ldots,l$, are independent and their metric is positive definite. In PMG, the norm is quadratic: $X^2=X\cdot X$; its square root, when the value is nonnegative, is called the linear norm.
@@ -31,15 +33,6 @@ $$
 $$
 
 Thus $\mathbf G=-\mathbf R/2$. We denote the graph's Green matrix by $\mathbf{Gr}=\mathbf L^+$: it is the Gram matrix of the vectors from the vertices to the centroid, rather than of the local vertices themselves. For the full vertex set, $\mathbf{Gr}=\mathbf J\mathbf G\mathbf J$, where $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$ is the centering projector.
-
-Adding the null vector to the set gives the extended Gram matrix
-
-$$
-\mathbf G_z=G(a_0,\ldots,a_l,z)
-=\begin{pmatrix}\mathbf G&\mathbf1\\\mathbf1^{\mathsf T}&0\end{pmatrix}
-$$
-
-Its last row and column follow from $a_i\cdot z=1$ and $z^2=0$. The radius formulas below use $\mathbf G$, without the added row and column for $z$.
 
 Denote the Gram matrix of the differences by $\mathbf G_u$:
 
@@ -57,17 +50,26 @@ $$
 
 This is the [[From Lengths to Areas and Volumes#Volumes of parallelotopes and simplices|volume formula using the Gram matrix of differences]]. It differs from the determinant of $\mathbf G$, which concerns the local points themselves in the indefinite metric.
 
+
+| Matrix | Objects whose Gram matrix is formed | Size and purpose |
+| --- | --- | --- |
+| $\mathbf G$ | Local points $a_0,\ldots,a_l$ | $(l+1)\times(l+1)$; center and radius, indefinite metric |
+| $\mathbf G_u$ | Independent differences $a_i-a_0$ | $l\times l$; ordinary simplex volume, positive metric |
+| $\mathbf{Gr}$ | Vectors from all graph vertices to the centroid | $N\times N$ for an $N$-vertex graph; singular because these vectors are dependent |
+
+A subset of local vertices gives a principal submatrix of $\mathbf G$. After recentering, the subset's Green matrix is generally not a principal submatrix of the original $\mathbf{Gr}$.
+
 ## The radius and center coordinates from the inverse Gram matrix
 
 There is a unique circumsphere in the affine hull of $x_0,\ldots,x_l$. Denote its Euclidean center by $O_A$ and its squared linear radius by $\rho_A>0$. The center's bi-coordinates are defined by
 
 $$
-O_A=\sum_{i=0}^l\alpha_i x_i,
+O_A=\alpha^i x_i,
 \qquad
 \mathbf1^{\mathsf T}\boldsymbol\alpha=1
 $$
 
-In the isotropic representation, these coordinates specify the element $p_V=\sum_i\alpha_i a_i$. Its norm is $-\rho_A$, and its local center is $p=p_V+\rho_Az/2$. This distinction is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. The coordinates $\boldsymbol\alpha$ refer to $p_V$ and the Euclidean center $O_A$; representing the local point $p$ in the extended basis also requires a component along $z$.
+In the isotropic representation, these coordinates specify the element $p_V=\alpha^i a_i$. Its norm is $-\rho_A$, and its local center is $p=p_V+\rho_Az/2$. This distinction is established in the [[Nonlocal Elements, Spheres, and Their Centers#The center in the affine hull of the original vertices|note on spheres]]. The coordinates $\boldsymbol\alpha$ refer to $p_V$ and the Euclidean center $O_A$; representing the local point $p$ in the extended basis also requires a component along $z$.
 
 > [!info] The radius and bi-coordinates of the center
 > **Theorem.** Under the stated assumptions, the matrix $\mathbf G$ is invertible and
@@ -91,7 +93,7 @@ In the isotropic representation, these coordinates specify the element $p_V=\sum
 > a_i\cdot p_V=\frac{p_V^2-\rho_A}{2}
 > $$
 >
-> Multiplying by $\alpha_i$ and summing yields $p_V^2=-\rho_A$. Therefore
+> Multiplying by $\alpha^i$ and summing yields $p_V^2=-\rho_A$. Therefore
 >
 > $$
 > a_i\cdot p_V=-\rho_A,
@@ -121,6 +123,17 @@ The computation does not require the entire inverse matrix: it suffices to solve
 
 ## Determinant, radius, and volume
 
+
+### A geometric guide: the triangle
+
+Let a triangle have ordinary side lengths $a,b,c$, area $S$, and linear circumradius $R_{\mathrm{sph}}$. Let $\theta$ be the angle between sides $b,c$. The identities $S=bc\sin\theta/2$ and $a=2R_{\mathrm{sph}}\sin\theta$ give $abc=4R_{\mathrm{sph}}S$. In the quadratic normalization,
+
+$$
+\frac{a^2b^2c^2}{4}=\rho_A(2S)^2
+$$
+
+The left side will be $-\det\mathbf G$; the right side is the radius multiplied by the Gram determinant of two sides. The next formula extends this familiar relation to any dimension. The examples section gives the triangle's determinant calculation in detail.
+
 > [!info] Determinant, radius, and volume
 > **Definition.** Introduce the positive determinant parameter of the set
 >
@@ -128,7 +141,7 @@ The computation does not require the entire inverse matrix: it suffices to solve
 > g_A=-\det\mathbf G
 > $$
 
-The sign matters. For the exterior object $\mathcal A=a_0\wedge\cdots\wedge a_l$, the induced metric of the isotropic space gives $\mathcal A^2=\det\mathbf G<0$. Thus $g_A=-\mathcal A^2$ is the negative of the exterior object's norm, rather than the norm itself under PMG conventions. Calling $g_A$ the “norm of the set” would require a separate naming convention; here we retain the determinant notation.
+The sign matters. For the exterior object $\mathcal A=a_0 \cdots  a_l$, the induced metric of the isotropic space gives $\mathcal A^2=\det\mathbf G<0$. Thus $g_A=-\mathcal A^2$ is the negative of the exterior object's norm, rather than the norm itself under PMG conventions. Calling $g_A$ the “norm of the set” would require a separate naming convention; here we retain the determinant notation.
 
 > [!info] The relation between radius and volume
 > **Theorem.** For a nondegenerate set of $l+1$ local points,
@@ -145,7 +158,7 @@ The sign matters. For the exterior object $\mathcal A=a_0\wedge\cdots\wedge a_l$
 > **Proof.** The change from $a_0,a_1,\ldots,a_l$ to $a_0,u_1,\ldots,u_l$ has determinant $1$: subtract $a_0$ from every vertex except the first. Next,
 >
 > $$
-> p_V=a_0+\sum_{i=1}^l\alpha_i u_i
+> p_V=a_0+\alpha^i u_i
 > $$
 >
 > Replacing $a_0$ by $p_V$ also has determinant $1$. The Gram determinant is therefore preserved. The proof of (1) established that $p_V$ is orthogonal to every $u_i$, so
@@ -207,7 +220,7 @@ Formula (2) is geometric and applies to any set satisfying the stated assumption
 Let the original connected graph have $N$ vertices, and let $A=\{a_0,\ldots,a_l\}$ be a subset with the metric preserved. The letter $N$ denotes the order of the full graph; the subset has $l+1$ vertices, possibly fewer than $N$. For its boundary, set
 
 $$
-X_A=(a_0\ldots a_l)=u_1\wedge\cdots\wedge u_l,
+X_A=(a_0\ldots a_l)=u_1 \cdots  u_l,
 \qquad u_i=a_i-a_0
 $$
 
@@ -252,7 +265,7 @@ $$
 
 Each of the two terms gives the spanning-tree form after multiplication, since $(ac)=(ab)+(bc)$. Thus $X_A^2=2$, $\rho_A=1/2$, and $g_A=1$. For the full triangle formed by the path's vertices, the boundary has norm $1$, so at the same radius $g_{\{a,b,c\}}=1/2$. This checks the distinction between the full set and a subset without inverting a Gram matrix.
 
-**The boundary and the simplex are distinct.** The potential formula applies to $X_A=(a_0\ldots a_l)$, an exterior product of affine vectors. The exterior object $a_0\wedge\cdots\wedge a_l$ itself is not a boundary. Its negative norm $\det\mathbf G$ in the isotropic extension cannot be obtained by applying the original graph's metric identity directly. The parameter $g_A$ was computed above using the geometric identity $g_A=\rho_A X_A^2$, already proved.
+**The boundary and the simplex are distinct.** The potential formula applies to $X_A=(a_0\ldots a_l)$, an exterior product of affine vectors. The exterior object $a_0 \cdots  a_l$ itself is not a boundary. Its negative norm $\det\mathbf G$ in the isotropic extension cannot be obtained by applying the original graph's metric identity directly. The parameter $g_A$ was computed above using the geometric identity $g_A=\rho_A X_A^2$, already proved.
 
 ## Examples and normalization checks
 
@@ -376,6 +389,10 @@ Let $C\subseteq A$ contain at least two vertices. We retain the original inner p
 
 Denote the circumsphere centers in the respective Euclidean affine hulls by $O_A,O_C$.
 
+![The center $O_C$ of the two side endpoints is the projection of the circumcenter $O_A$ onto that side](<Projecting the Center onto a Side.svg>)
+
+*The center $O_C$ of the two side endpoints is the projection of the circumcenter $O_A$ onto that side. The right triangle with common vertex $a$ gives $R_A^2=R_C^2+d^2$, hence $\rho_A=\rho_C+(O_A-O_C)^2$. Here $R_A,R_C,d$ are linear lengths.*
+
 > [!info] Monotonicity under passage to a subset
 > **Theorem.** The center $O_C$ is the orthogonal projection of $O_A$ onto the affine hull of $C$, and
 >
@@ -430,6 +447,17 @@ $$
 If the centers are affinely independent, all the geometric formulas above apply to $\mathbf G$. One cannot substitute $\mathbf G_p$ directly into (1) and (2): the norms of the original elements change its determinant and inverse, even though the metric of their differences agrees with that of the centers.
 
 An arbitrary Gram matrix, without assumptions on weight, locality, and positivity of the metric on directions, does not guarantee the existence of a Euclidean circumsphere. For affinely dependent sets, a sphere may fail to exist or may exist in a lower dimension, but inversion of the full Gram matrix in the preceding form is inapplicable. These cases are not covered by the present theorems.
+
+### The extended Gram matrix
+
+Adding the null vector to the set gives the extended Gram matrix
+
+$$
+\mathbf G_z=G(a_0,\ldots,a_l,z)
+=\begin{pmatrix}\mathbf G&\mathbf1\\\mathbf1^{\mathsf T}&0\end{pmatrix}
+$$
+
+Its last row and column follow from $a_i\cdot z=1$ and $z^2=0$. The radius formulas above use $\mathbf G$, without the added row and column for $z$.
 
 ## Status of the results and continuation
 

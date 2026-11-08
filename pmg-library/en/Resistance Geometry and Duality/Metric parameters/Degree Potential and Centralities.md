@@ -1,9 +1,9 @@
 ---
 title: Degree Potential and Centralities
 date: 2026-11-03
-updated: 2026-11-03
-revision: 1
-translated_revision: 2
+updated: 2026-11-08
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -14,9 +14,11 @@ description: "Ranking by Laplacian circumcenter coordinates: the potential of de
 
 The coordinates of the Laplacian circumcenter define a vertex ranking that accounts for the degree distribution throughout the graph. Its meaning can be expressed without a simplex: it is the potential arising from redistribution of degree surpluses and deficits relative to the mean. On unit-conductance trees, this ranking agrees with closeness; near a regular graph, it agrees with eigenvector centrality to first order. These agreements fail in general.
 
-The geometric definition and diffusion formulas are given in [[Sphere Centers and Graph Heterogeneity]]. This note studies the ranking itself: its relation to the established generalized degree, positive normalization, and limits of interpretation. We also use the [[Centroid, Spanning-Tree, and Eigenvector Centralities|comparison of three centralities]]. “Degree potential” is a working name for an explicitly defined quantity; no separate new centrality with established priority is claimed.
+The geometric definition and diffusion formulas are given in [[Sphere Centers and Graph Heterogeneity]]. This note studies the ranking itself: its relation to the established generalized degree, positive normalization, and limits of interpretation. We also use the [[Centroid, Spanning-Tree, and Eigenvector Centralities|comparison of three centralities]].
 
 Russian version: [[Потенциал степеней и центральности]].
+
+Bi-coordinates $\beta^i$ have upper indices. We use the upper/lower summation convention from [[Bi-coordinates and Di-coordinates|the coordinate note]].
 
 ## Degree potential and center coordinates
 
@@ -65,50 +67,47 @@ $$
 
 This is an accumulated **signed** deviation from the mean: surpluses and deficits can cancel. Convergence and the identity are proved in the [[Sphere Centers and Graph Heterogeneity#Center displacement and diffusion|diffusion section]]. The exponential $e^{-t\mathbf L}$ in this process is a matrix exponential, not the exterior exponential of a polyform.
 
-## Invariance and choice of scale
 
-> [!info] Basic properties
-> **Proposition.** The potential $\varphi$ and coordinates $\beta$ are preserved by uniform scaling of all conductances. Relabeling vertices permutes their coordinates; conductance-preserving automorphisms relate vertices with equal values. Furthermore,
->
-> $$
-> \varphi=0\quad\Longleftrightarrow\quad
-> \beta=u\quad\Longleftrightarrow\quad d_1=\cdots=d_n
-> $$
+### A first calculation: a three-vertex path
 
-> [!note]- Proof
-> **Proof.** Under $c_{ij}\mapsto a c_{ij}$, $a>0$, $\mathbf{Gr}$ is divided by $a$ and $b$ is multiplied by $a$, preserving their product. For a permutation matrix $\mathbf P$, uniqueness sends the solution of (1) to $\mathbf P\varphi$. Finally, $\varphi=0$ is equivalent to $b=0$, since $\mathbf L\varphi=b$. $\square$
-
-Thus the measure does not distinguish vertices of a regular graph, even when no automorphism relates them. Equal scores do not provide a criterion for structural symmetry.
-
-Positivity is unnecessary for ranking. If a positive unit-sum column is required, one may choose
+The unit path $a-b-c$ has degrees $(1,2,1)$, so $\bar d=4/3$ and $b=(-1,2,-1)^{\mathsf T}/3$. The endpoint equations and zero-mean condition give
 
 $$
-C_i^{(\beta)}=
-\frac{\beta_i-\beta_{\min}+1/n}{2-n\beta_{\min}},
-\qquad \beta_{\min}=\min_j\beta_j
+\varphi_a-\varphi_b=-\frac13,\qquad
+\varphi_c-\varphi_b=-\frac13,\qquad
+\varphi_a+\varphi_b+\varphi_c=0
 $$
 
-Since $\beta_{\min}\le1/n$, the denominator is positive, every $C_i^{(\beta)}>0$, the scores sum to $1$, and their order is preserved. The additive term $1/n$ is a scale convention. It does not follow from the geometric definition and does not by itself provide a probabilistic interpretation. Other positive additive terms give the same order but different shares.
-
-For example, on the unit-conductance path $a-b-c-d-e$,
+Hence
 
 $$
-\beta=\left(0,\frac3{10},\frac25,\frac3{10},0\right)^{\mathsf T},
-\qquad
-C^{(\beta)}=\left(\frac1{10},\frac14,\frac3{10},\frac14,\frac1{10}\right)^{\mathsf T}
+\varphi=\frac19(-1,2,-1)^{\mathsf T},\qquad
+\beta=\left(\frac5{18},\frac49,\frac5{18}\right)^{\mathsf T}
 $$
 
-Unlike [[Centroid, Spanning-Tree, and Eigenvector Centralities#Expected spanning-tree degree and circumcenter coordinates|expected spanning-tree degree]], this positive normalization currently serves only to display a ranking. Comparing score magnitudes across different graphs requires a separate justification of the chosen scale.
+The middle vertex supplies current $2/3$, while each endpoint receives $1/3$. The potential drop across either unit edge is $1/3$. Degrees first produce a current distribution, then the potential, and finally center coordinates and a ranking.
 
-### Ranking direction and the two centers
+![The path calculation displays degrees, deviations from mean degree, and potentials separately](<Degree Potential on a Path.svg>)
 
-For the resistance circumcenter, $\alpha_i=1-\delta_i/2$, so [[Centroid, Spanning-Tree, and Eigenvector Centralities#Expected spanning-tree degree and circumcenter coordinates|spanning-tree centrality]] is
+*The path calculation displays degrees, deviations from mean degree, and potentials separately. Arrows point from the source to the sinks; prescribed currents and potentials both sum to zero.*
 
-$$
-C_i^{\mathrm{tree}}=\frac{1-\alpha_i}{n-1}
-$$
+## Why cycles change the result
 
-A larger spanning-tree score corresponds to a **smaller** $\alpha_i$. In (2), preference is instead assigned to a **larger** $\beta_i$, hence a larger potential $\varphi_i$. These are different rules justified by different interpretations. Geometric duality of the two centers does not itself establish a common direction of “greater vertex importance”.
+Take the triangle $a,b,c$ and attach the path $c-d-e$. All five edges have unit conductance. To compare with ordinary closeness, let $T_i$ be the sum of shortest-path distances from $i$ to the other vertices, measured by edge count.
+
+| Vertex | $a$ | $b$ | $c$ | $d$ | $e$ |
+|---|---:|---:|---:|---:|---:|
+| Degree $d_i$ | $2$ | $2$ | $3$ | $2$ | $1$ |
+| Coordinate $\beta^i$ | $1/2$ | $1/2$ | $1/2$ | $0$ | $-1/2$ |
+| Distance sum $T_i$ | $7$ | $7$ | $5$ | $6$ | $9$ |
+
+Vertex $d$ is closer to the others on average than $a$, but receives a smaller $\beta$. All three triangle vertices have the same potential despite having different degrees.
+
+Here $\bar d=2$ and $b=(0,0,1,0,-1)^{\mathsf T}$. Unit current flows from $c$ to $e$ along $c-d-e$. Vertices $a,b$ have no external sources or sinks, and all current supplied at $c$ leaves along the attached path. Thus no current flows along the triangle edges, and its vertices are equipotential. The example shows what the measure captures and why it differs from closeness.
+
+![Current flows from $c$ to $e$ through $d$](<Equal Potentials in a Triangle.svg>)
+
+*Current flows from $c$ to $e$ through $d$. The triangle vertices $a,b,c$ have equal potential, indicated by equal color. Arrows show this external-current distribution, not an orientation of the graph edges.*
 
 ## Agreement with closeness on trees
 
@@ -126,7 +125,7 @@ Closeness centrality in a connected graph can be normalized as $(n-1)/T_i$: a sm
 >
 > $$
 > \boxed{\varphi_i=\frac{\overline T-T_i}{n},\qquad
-> \beta_i=\frac1n+\frac{\overline T-T_i}{2n}}
+> \beta^i=\frac1n+\frac{\overline T-T_i}{2n}}
 > \tag{3}
 > $$
 >
@@ -157,7 +156,7 @@ This also gives agreement with resistance closeness: on a unit-conductance tree,
 >
 > $$
 > \boxed{\varphi_i=\bar r-r_i,\qquad
-> \beta_i=\frac1n+\frac{\bar r-r_i}{2}}
+> \beta^i=\frac1n+\frac{\bar r-r_i}{2}}
 > $$
 >
 > Rankings by $\beta$, closeness, and centroid centrality $C_i^{\mathrm{cent}}\propto1/r_i$ agree, including ties. The numerical values of the normalized centralities still differ.
@@ -170,25 +169,117 @@ This also gives agreement with resistance closeness: on a unit-conductance tree,
 > \overline T=2\operatorname{tr}\mathbf{Gr}
 > $$
 >
-> Substitution into (3) gives both formulas. A smaller $r_i>0$ corresponds to a larger $\beta_i$ and greater centroid centrality. $\square$
+> Substitution into (3) gives both formulas. A smaller $r_i>0$ corresponds to a larger $\beta^i$ and greater centroid centrality. $\square$
 
 For any common conductance $c>0$, we have $\varphi_i=c(\bar r-r_i)$; agreement of the rankings is preserved. The unit-scale formula also leads to [[Sphere Centers and Graph Heterogeneity#Equal displacements on unit-conductance trees|equality of the two center displacements]].
 
-### Why cycles change the result
+## Invariance and choice of scale
 
-Take the triangle $a,b,c$ and attach the path $c-d-e$. All five edges have unit conductance.
+> [!info] Basic properties
+> **Proposition.** The potential $\varphi$ and coordinates $\beta$ are preserved by uniform scaling of all conductances. Relabeling vertices permutes their coordinates; conductance-preserving automorphisms relate vertices with equal values. Furthermore,
+>
+> $$
+> \varphi=0\quad\Longleftrightarrow\quad
+> \beta=u\quad\Longleftrightarrow\quad d_1=\cdots=d_n
+> $$
 
-| Vertex | $a$ | $b$ | $c$ | $d$ | $e$ |
-|---|---:|---:|---:|---:|---:|
-| Degree $d_i$ | $2$ | $2$ | $3$ | $2$ | $1$ |
-| Coordinate $\beta_i$ | $1/2$ | $1/2$ | $1/2$ | $0$ | $-1/2$ |
-| Distance sum $T_i$ | $7$ | $7$ | $5$ | $6$ | $9$ |
+> [!note]- Proof
+> **Proof.** Under $c_{ij}\mapsto a c_{ij}$, $a>0$, $\mathbf{Gr}$ is divided by $a$ and $b$ is multiplied by $a$, preserving their product. For a permutation matrix $\mathbf P$, uniqueness sends the solution of (1) to $\mathbf P\varphi$. Finally, $\varphi=0$ is equivalent to $b=0$, since $\mathbf L\varphi=b$. $\square$
 
-Vertex $d$ is closer to the others on average than $a$, but receives a smaller $\beta$. All three triangle vertices have the same potential despite having different degrees.
+Thus the measure does not distinguish vertices of a regular graph, even when no automorphism relates them. Equal scores do not provide a criterion for structural symmetry.
 
-Here $\bar d=2$ and $b=(0,0,1,0,-1)^{\mathsf T}$. Unit current flows from $c$ to $e$ along $c-d-e$. There are no sources or sinks inside the triangle; its vertices are equipotential. The example shows what the measure captures and why it differs from closeness.
+Positivity is unnecessary for ranking. If a positive unit-sum column is required, one may choose
+
+$$
+C_i^{(\beta)}=
+\frac{\beta^i-\beta_{\min}+1/n}{2-n\beta_{\min}},
+\qquad \beta_{\min}=\min_j\beta^j
+$$
+
+Since $\beta_{\min}\le1/n$, the denominator is positive, every $C_i^{(\beta)}>0$, the scores sum to $1$, and their order is preserved. The additive term $1/n$ is a scale convention. It does not follow from the geometric definition and does not by itself provide a probabilistic interpretation. Other positive additive terms give the same order but different shares.
+
+For example, on the unit-conductance path $a-b-c-d-e$,
+
+$$
+\beta=\left(0,\frac3{10},\frac25,\frac3{10},0\right)^{\mathsf T},
+\qquad
+C^{(\beta)}=\left(\frac1{10},\frac14,\frac3{10},\frac14,\frac1{10}\right)^{\mathsf T}
+$$
+
+Unlike [[Centroid, Spanning-Tree, and Eigenvector Centralities#Expected spanning-tree degree and circumcenter coordinates|expected spanning-tree degree]], this positive normalization currently serves only to display a ranking. Comparing score magnitudes across different graphs requires a separate justification of the chosen scale.
+
+### Ranking direction and the two centers
+
+For the resistance circumcenter, $\alpha^i=1-\delta_i/2$, so [[Centroid, Spanning-Tree, and Eigenvector Centralities#Expected spanning-tree degree and circumcenter coordinates|spanning-tree centrality]] is
+
+$$
+C_i^{\mathrm{tree}}=\frac{1-\alpha^i}{n-1}
+$$
+
+A larger spanning-tree score corresponds to a **smaller** $\alpha^i$. In (2), preference is instead assigned to a **larger** $\beta^i$, hence a larger potential $\varphi_i$. These are different rules justified by different interpretations. Geometric duality of the two centers does not itself establish a common direction of “greater vertex importance”.
+
+## Adding an edge does not guarantee a better rank
+
+Adding an edge changes both the degree distribution $b$ and the operator $\mathbf{Gr}$. An increase in degree therefore need not increase the potential. Preserving the relative advantage of a vertex that acquires an edge is a rank-monotonicity requirement; it is discussed for generalized degree in [1, §3].
+
+Consider the unit-conductance graph on vertices $1,\ldots,6$ with edges
+
+$$
+12,\ 13,\ 14,\ 15,\ 24,\ 26,\ 34,\ 36
+$$
+
+Add the unit-conductance edge $25$.
+
+| Coordinate | Before addition | After addition |
+|---|---:|---:|
+| $\beta^1$ | $43/144$ | $112/366$ |
+| $\beta^2$ | $49/144$ | $97/366$ |
+
+Before addition, $\beta^2>\beta^1$; afterward, $\beta^2<\beta^1$. Vertex $2$ acquires an edge but falls below vertex $1$, which is not incident to the new edge. Its own coordinate decreases as well. Every strictly increasing normalization preserves this rank reversal, although changes in the normalized numerical scores may differ.
+
+This is an exact counterexample, not a conclusion from rounded numbers. It limits interpretation as a “vertex's gain from a new edge”, but does not contradict the definition as a potential of degree redistribution.
+
+## Comparison on the Krackhardt kite graph
+
+Use the same numbering and unit conductances as in the [[Centroid, Spanning-Tree, and Eigenvector Centralities#Comparison on the Krackhardt kite graph|centrality comparison on the Krackhardt kite graph]]. For reproducibility, repeat the edge list:
+
+$$
+E=\{01,02,03,05,13,14,16,23,25,34,35,36,46,56,57,67,78,89\}
+$$
+
+Spanning-tree centrality is $C_i^{\mathrm{tree}}=\delta_i/[2(n-1)]$, where $\delta_i$ is the expected degree of vertex $i$ in a random spanning tree; a tree's probability is proportional to the product of its edge conductances. With unit conductances, the trees are equally likely. The eigenvector $v$ is normalized to sum to $1$.
+
+| Vertex | Coordinate $\beta^i$ | Eigenvector, % | Spanning-tree, % |
+|---|---:|---:|---:|
+| $0,1$ | $89/80$ | $12.545$ | $9.422$ |
+| $2,4$ | $79/80$ | $10.181$ | $7.620$ |
+| $3$ | $97/80$ | $17.133$ | $12.838$ |
+| $5,6$ | $15/16$ | $14.165$ | $12.125$ |
+| $7$ | $-21/80$ | $6.976$ | $12.162$ |
+| $8$ | $-189/80$ | $1.712$ | $11.111$ |
+| $9$ | $-293/80$ | $0.398$ | $5.556$ |
+
+Grouped rows give the value for each vertex. The ten coordinates $\beta^i$ sum to $1$; these coordinates are **not percentages**. Negative values and values exceeding one are valid affine center coordinates.
+
+The leading ranks are:
+
+| Measure | Highest positions |
+|---|---|
+| Eigenvector centrality | $3>5=6>0=1$ |
+| Spanning-tree centrality | $3>7>5=6$ |
+| Degree potential | $3>0=1>2=4>5=6$ |
+
+The mean degree is $18/5$. The degrees along the chain $7-8-9$ are below the mean, so these vertices act as sinks in (1); the potential decreases toward the end of the chain. The spanning-tree score answers a different question: the two bridge edges at vertex $8$ belong to every spanning tree, giving $\delta_8=2$. Its spanning-tree share therefore remains substantial, even though degree potential and eigenvector centrality rank it low.
+
+## What the measure captures
+
+Degree potential favors vertices with a larger accumulated excess over the mean during degree equalization. It combines the initial imbalance with the structure of redistribution paths. In the spectral representation, nonzero Laplacian modes receive factors $1/\lambda_k$, but only modes present in $b$ contribute.
+
+This does not imply a universal measure of vertex importance. Regular graphs produce a constant ranking; adding an edge can worsen a rank; closeness is reproduced on unit-conductance trees but not on all graphs. Positive normalization does not change these limitations. Applicability depends on whether degree equalization matches the meaning of the particular task.
 
 ## Relation to generalized degree
+
+Further detail: the meaning of the measure and its examples have been covered. The following sections establish links with other centrality families; applying definition (1) does not require these limit arguments.
 
 László Csató defines **generalized degree** for an unweighted undirected graph by [1, Definition 4]
 
@@ -225,7 +316,7 @@ This is a derivation from the definition of the known family, carried out here. 
 >
 > Summing over a finite orthonormal eigenbasis gives the stated expansion and (4). $\square$
 
-If $\beta_i>\beta_j$, then $x_i(s)>x_j(s)$ for sufficiently large $s$. If $\beta_i=\beta_j$, subsequent expansion terms may distinguish the vertices. Thus the precise statement concerns the first nonconstant part of the limit, not full agreement of rankings for all parameter values.
+If $\beta^i>\beta^j$, then $x_i(s)>x_j(s)$ for sufficiently large $s$. If $\beta^i=\beta^j$, subsequent expansion terms may distinguish the vertices. Thus the precise statement concerns the first nonconstant part of the limit, not full agreement of rankings for all parameter values.
 
 The diffusion connection can also be seen directly:
 
@@ -302,7 +393,7 @@ $$
 \frac{57}{200},\frac{57}{200}\right)^{\mathsf T}
 $$
 
-Thus $\beta_c>\beta_b$. Yet subtracting the eigenvector equations at $b,c$ gives
+Thus $\beta^c>\beta^b$. Yet subtracting the eigenvector equations at $b,c$ gives
 
 $$
 (\lambda+1)(v_b-v_c)=v_a>0
@@ -313,7 +404,7 @@ so eigenvector centrality prefers $b$.
 For a continuous transition from a regular graph, start from $K_5$. Keep conductance $1$ on the six listed edges and assign $1-\varepsilon$ to the other four, where $0\le\varepsilon\le1$. Exact solution gives
 
 $$
-\beta_b-\beta_c=
+\beta^b-\beta^c=
 \frac{\varepsilon(8\varepsilon^2-35\varepsilon+25)}
 {10(\varepsilon-5)(4\varepsilon-5)}
 $$
@@ -331,70 +422,11 @@ $$
 \qquad(\varepsilon>0)
 $$
 
-Thus both measures prefer $b$ for $0<\varepsilon<\varepsilon_*$; at $\varepsilon=\varepsilon_*$, the coordinates $\beta_b,\beta_c$ are equal; and for $\varepsilon_*<\varepsilon\le1$, the orders are opposite. Disagreement begins while all edge conductances are still positive.
+Thus both measures prefer $b$ for $0<\varepsilon<\varepsilon_*$; at $\varepsilon=\varepsilon_*$, the coordinates $\beta^b,\beta^c$ are equal; and for $\varepsilon_*<\varepsilon\le1$, the orders are opposite. Disagreement begins while all edge conductances are still positive.
 
 ![[Degree Potential - Ranking Disagreement.svg]]
 
-*Figure 1. Left: the final graph at $\varepsilon=1$. Right: score differences along the family. Eigenvector centrality is normalized to sum to $1$; its difference is multiplied by $n/2=5/2$ to match the first-order approximation (5). The comparison concerns the signs of the differences, not the absolute scales of centralities.*
-
-## Adding an edge does not guarantee a better rank
-
-Adding an edge changes both the degree distribution $b$ and the operator $\mathbf{Gr}$. An increase in degree therefore need not increase the potential. Preserving the relative advantage of a vertex that acquires an edge is a rank-monotonicity requirement; it is discussed for generalized degree in [1, §3].
-
-Consider the unit-conductance graph on vertices $1,\ldots,6$ with edges
-
-$$
-12,\ 13,\ 14,\ 15,\ 24,\ 26,\ 34,\ 36
-$$
-
-Add the unit-conductance edge $25$.
-
-| Coordinate | Before addition | After addition |
-|---|---:|---:|
-| $\beta_1$ | $43/144$ | $112/366$ |
-| $\beta_2$ | $49/144$ | $97/366$ |
-
-Before addition, $\beta_2>\beta_1$; afterward, $\beta_2<\beta_1$. Vertex $2$ acquires an edge but falls below vertex $1$, which is not incident to the new edge. Its own coordinate decreases as well. Every strictly increasing normalization preserves this rank reversal, although changes in the normalized numerical scores may differ.
-
-This is an exact counterexample, not a conclusion from rounded numbers. It limits interpretation as a “vertex's gain from a new edge”, but does not contradict the definition as a potential of degree redistribution.
-
-## Comparison on the Krackhardt kite graph
-
-Use the same numbering and unit conductances as in the [[Centroid, Spanning-Tree, and Eigenvector Centralities#Comparison on the Krackhardt kite graph|centrality comparison on the Krackhardt kite graph]]. For reproducibility, repeat the edge list:
-
-$$
-E=\{01,02,03,05,13,14,16,23,25,34,35,36,46,56,57,67,78,89\}
-$$
-
-Spanning-tree centrality is $C_i^{\mathrm{tree}}=\delta_i/[2(n-1)]$, where $\delta_i$ is the expected degree of vertex $i$ in a random spanning tree; a tree's probability is proportional to the product of its edge conductances. With unit conductances, the trees are equally likely. The eigenvector $v$ is normalized to sum to $1$.
-
-| Vertex | Coordinate $\beta_i$ | Eigenvector, % | Spanning-tree, % |
-|---|---:|---:|---:|
-| $0,1$ | $89/80$ | $12.545$ | $9.422$ |
-| $2,4$ | $79/80$ | $10.181$ | $7.620$ |
-| $3$ | $97/80$ | $17.133$ | $12.838$ |
-| $5,6$ | $15/16$ | $14.165$ | $12.125$ |
-| $7$ | $-21/80$ | $6.976$ | $12.162$ |
-| $8$ | $-189/80$ | $1.712$ | $11.111$ |
-| $9$ | $-293/80$ | $0.398$ | $5.556$ |
-
-Grouped rows give the value for each vertex. The ten coordinates $\beta_i$ sum to $1$; these coordinates are **not percentages**. Negative values and values exceeding one are valid affine center coordinates.
-
-The leading ranks are:
-
-| Measure | Highest positions |
-|---|---|
-| Eigenvector centrality | $3>5=6>0=1$ |
-| Spanning-tree centrality | $3>7>5=6$ |
-| Degree potential | $3>0=1>2=4>5=6$ |
-
-The mean degree is $18/5$. The degrees along the chain $7-8-9$ are below the mean, so these vertices act as sinks in (1); the potential decreases toward the end of the chain. The spanning-tree score answers a different question: the two bridge edges at vertex $8$ belong to every spanning tree, giving $\delta_8=2$. Its spanning-tree share therefore remains substantial, even though degree potential and eigenvector centrality rank it low.
-
-## What the measure captures
-
-Degree potential favors vertices with a larger accumulated excess over the mean during degree equalization. It combines the initial imbalance with the structure of redistribution paths. In the spectral representation, nonzero Laplacian modes receive factors $1/\lambda_k$, but only modes present in $b$ contribute.
-
-This does not imply a universal measure of vertex importance. Regular graphs produce a constant ranking; adding an edge can worsen a rank; closeness is reproduced on unit-conductance trees but not on all graphs. Positive normalization does not change these limitations. Applicability depends on whether degree equalization matches the meaning of the particular task.
+*Left: the final graph at $\varepsilon=1$. Right: score differences along the family. Eigenvector centrality is normalized to sum to $1$; its difference is multiplied by $n/2=5/2$ to match the first-order approximation (5). The comparison concerns the signs of the differences, not the absolute scales of centralities.*
 
 ## Status of the results and verification
 

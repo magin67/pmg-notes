@@ -1,9 +1,9 @@
 ---
 title: "Centroid, Spanning-Tree, and Eigenvector Centralities"
 date: 2026-10-16
-updated: 2026-11-03
-revision: 5
-translated_revision: 6
+updated: 2026-11-08
+revision: 6
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -19,6 +19,8 @@ Parameters of a graph as a whole do not determine the roles of individual vertic
 The centroid and spanning-tree characteristics connect matrix data with simplex geometry. The diagonal of the Green matrix gives resistances to the centroid, while expected spanning-tree degrees determine the bi-coordinates of the circumcenter. In polyform terms, both characteristics are obtained by evaluating grade-$1$ forms through the next-to-top-grade component of the Laplacian exponential. Comparison with eigenvector centrality shows which differences between vertices each approach captures.
 
 Definitions of the resistance radius and center coordinates are given in [[Resistance Radius and Diameter of a Graph]] and [[Resistance Radius of a Set - Gram Matrix and Volume]]. The same normalizations are used here.
+
+Bi-coordinates $\alpha^i$ have upper indices. We use the upper/lower summation convention from [[Bi-coordinates and Di-coordinates|the coordinate note]].
 
 ## The underlying model and notation
 
@@ -53,17 +55,28 @@ $$
 =\mathbf J=I-\frac1n\mathbf1\mathbf1^{\mathsf T}
 $$
 
-Denote the circumcenter by $O$ and its bi-coordinates by $\alpha_i$:
+Denote the circumcenter by $O$ and its bi-coordinates by $\alpha^i$:
 
 $$
-O=\sum_i\alpha_i x_i,\qquad
-\sum_i\alpha_i=1,\qquad
+O=\alpha^i x_i,\qquad
+\sum_i\alpha^i=1,\qquad
 (x_i-O)^2=\rho
 $$
 
 The resistance radius is $\rho=R_{\mathrm{sph}}^2$, and the resistance diameter is $D_{\mathrm{res}}=4\rho$. Distances to $O$ are equal for all vertices, so they do not provide a ranking on their own.
 
 **Remark on the isotropic representation.** The average of local vertices $h_V=n^{-1}\sum_i a_i$ may be a nonlocal element. The geometric centroid corresponds to its local center $\pi(h_V)=h_V-h_V^2z/2$. Norms of differences are preserved, so the formulas for $r_i$ agree in both representations. This distinction is discussed in the [[Nonlocal Elements, Spheres, and Their Centers#What selecting the center preserves|note on local centers]].
+
+
+### Three questions about one vertex
+
+Centroid centrality asks how close the vertex is to the centroid. Spanning-tree centrality asks how many edges, on average, meet it in a random spanning tree. Eigenvector centrality asks how highly its neighbors are rated. A larger value means a higher rank in all three cases, but the questions differ.
+
+A unit five-vertex path has only one spanning tree. Its three internal vertices therefore share spanning-tree degree $2$. Centroid proximity and eigenvector centrality distinguish them, favoring the middle vertex. The figure shows normalized values; the section “The complete graph, a path, and a star” derives them.
+
+![One path and three centrality distributions](<Three Centralities of a Path.svg>)
+
+*One path and three centrality distributions. Percentages sum to $100\%$ in each row; node sizes are fixed so comparison uses the labeled values. Spanning-tree centrality does not distinguish the three internal vertices.*
 
 ## The centroid minimizes the sum of resistances
 
@@ -230,7 +243,7 @@ Expected spanning-tree degree must be distinguished from expected degree over ar
 > \boxed{
 > \boldsymbol\alpha=\frac1n\mathbf1+\frac12\mathbf L\mathbf r,
 > \qquad
-> \alpha_i=1-\frac{\delta_i}{2}
+> \alpha^i=1-\frac{\delta_i}{2}
 > }
 > \tag{5}
 > $$
@@ -258,10 +271,10 @@ Expected spanning-tree degree must be distinguished from expected degree over ar
 
 The quantity $1-\delta_i/2$ is also known as vertex resistance curvature; its relation to the coordinates of the circumcenter is described in [3]. It differs from the reciprocal resistance radius of the entire graph, called radial connectivity in PMG.
 
-Formula (5) explains the signs of the coordinates: $\alpha_i$ is positive when $\delta_i<2$, zero when $\delta_i=2$, and negative when $\delta_i>2$. Thus the $\alpha_i$ themselves are unsuitable as positive centrality weights. With the chosen normalization,
+Formula (5) explains the signs of the coordinates: $\alpha^i$ is positive when $\delta_i<2$, zero when $\delta_i=2$, and negative when $\delta_i>2$. Thus the $\alpha^i$ themselves are unsuitable as positive centrality weights. With the chosen normalization,
 
 $$
-C_i^{\mathrm{tree}}=\frac{1-\alpha_i}{n-1}
+C_i^{\mathrm{tree}}=\frac{1-\alpha^i}{n-1}
 $$
 
 Greater spanning-tree centrality corresponds to a smaller coordinate of the circumcenter.
@@ -276,7 +289,202 @@ $$
 
 The quadratic form on the right is nonnegative and vanishes exactly when the column $\mathbf r$ is constant.
 
+## Eigenvector centrality and a common normalization
+
+> [!info] Eigenvector centrality and a common normalization
+> **Definition.** Eigenvector centrality is defined by a positive eigenvector of the adjacency matrix:
+>
+> $$
+> \mathbf A v=\lambda_{\max}(\mathbf A)v,\qquad v_i>0,
+> \qquad
+> C_i^{\mathrm{eig}}=\frac{v_i}{\sum_jv_j}
+> $$
+
+For a connected graph, this vector exists and is unique up to scaling by the Perron-Frobenius theorem [4]. In component form, $\lambda_{\max}v_i=\sum_jc_{ij}v_j$: the score of a vertex is determined by the weighted scores of its neighbors.
+
+This definition uses the adjacency matrix $\mathbf A$, not the Laplacian $\mathbf L$. The sum of reciprocal nonzero Laplacian eigenvalues in the formula for $S_{\mathrm{cent}}$ concerns a different spectral object.
+
+All three centralities use a common normalization:
+
+| Centrality | Initial positive score $s_i$ | Normalized score |
+| --- | --- | --- |
+| Eigenvector | $v_i$ | $C_i^{\mathrm{eig}}=v_i/\sum_jv_j$ |
+| Spanning-tree | $\delta_i$ | $C_i^{\mathrm{tree}}=\delta_i/[2(n-1)]$ |
+| Centroid | $1/r_i$ | $C_i^{\mathrm{cent}}=(1/r_i)/\sum_j(1/r_j)$ |
+
+> [!info] Eigenvector centrality and a common normalization
+> **Corollary.** Every column satisfies $C_i>0$, $\sum_iC_i=1$. The uniform score is $1/n$; comparison with it can use $nC_i$, whose mean is $1$.
+>
+> Multiplying all conductances by $t>0$ multiplies $\mathbf A,\mathbf L$ by $t$ and divides $\mathbf{Gr},\mathbf R$ by $t$. The eigenvector $v$ and the products $c_{ij}R_{ij}$ remain unchanged; all $1/r_i$ are multiplied by the same factor. Therefore the three normalized centralities are unchanged.
+>
+> A common sum allows the distributions of scores across vertices to be compared, but does not turn different definitions into one measure of importance. A value of $0.15$ in one column has no universal substantive equivalent in another. Comparisons between graphs of different sizes must also account for the baseline $1/n$.
+>
+> Normalization on the complete graph is a check of consistency with symmetry.
+
+## The complete graph, a path, and a star
+
+### The complete graph
+
+For $K_n$ with unit conductances,
+
+$$
+\mathbf{Gr}=\frac1n\mathbf J,\qquad
+r_i=\frac{n-1}{n^2},\qquad
+\delta_i=\frac{2(n-1)}n,\qquad
+\alpha^i=\frac1n
+$$
+
+All three centralities equal $1/n$, and $O=h$. Here $S_{\mathrm{cent}}=(n-1)/n$, $Kf=n-1$, and $\rho=(n-1)/n^2$.
+
+### A five-vertex path
+
+Let a path with unit conductances visit the vertices $1,2,3,4,5$ in order. Its unique spanning tree is the graph itself, so
+
+$$
+\boldsymbol\delta=(1,2,2,2,1)^{\mathsf T},\qquad
+\boldsymbol\alpha=(1/2,0,0,0,1/2)^{\mathsf T}
+$$
+
+The resistances are $R_{ij}=|i-j|$. The row sums of the resistance matrix are $(10,7,6,7,10)^{\mathsf T}$, and $S_{\mathrm{cent}}=4$. Hence
+
+$$
+\mathbf r=(6/5,3/5,2/5,3/5,6/5)^{\mathsf T}
+$$
+
+The three centralities are
+
+$$
+C^{\mathrm{eig}}=
+\frac{(1,\sqrt3,2,\sqrt3,1)^{\mathsf T}}{4+2\sqrt3},
+\qquad
+C^{\mathrm{tree}}=\frac{(1,2,2,2,1)^{\mathsf T}}8,
+\qquad
+C^{\mathrm{cent}}=\frac{(1,2,3,2,1)^{\mathsf T}}9
+$$
+
+The eigenvector is verified by direct multiplication by the adjacency matrix: its eigenvalue is $\sqrt3$. The spanning-tree score does not distinguish the three internal vertices. The eigenvector and centroid scores single out the middle vertex, but give different score ratios.
+
+### A five-vertex star
+
+Consider the star $K_{1,4}$ with unit conductances, a central vertex $a$, and four leaves. Again, there is exactly one spanning tree, so $\delta_a=4$ and $\delta_{\mathrm{leaf}}=1$. The circumcenter coordinates are $\alpha^a=-1$ and $\alpha^{\mathrm{leaf}}=1/2$.
+
+For the centroid, we obtain
+
+$$
+r_a=\frac4{25},\qquad r_{\mathrm{leaf}}=\frac{19}{25}
+$$
+
+**Independent geometric check.** Realize the star by the points $0,e_1,e_2,e_3,e_4$, where the $e_i$ are orthonormal. Their centroid is $(e_1+e_2+e_3+e_4)/5$. Direct norms of differences give $4/25$ for the central vertex and $19/25$ for each leaf.
+
+The eigenvector is proportional to $(2,1,1,1,1)$ and has eigenvalue $2$. Therefore
+
+| Vertex | Eigenvector | Spanning-tree | Centroid |
+| --- | --- | --- | --- |
+| Center $a$ | $1/3$ | $1/2$ | $19/35$ |
+| Each leaf | $1/6$ | $1/8$ | $4/35$ |
+
+The ranking is the same, but the degree to which the center stands out differs.
+
+### Equal radii do not imply equal Green-matrix traces
+
+For the above five-vertex graphs with unit conductances:
+
+| Graph | $S_{\mathrm{cent}}$ | $Kf$ | $\rho$ | $(O-h)^2$ |
+| --- | --- | --- | --- | --- |
+| $K_5$ | $4/5$ | $4$ | $4/25$ | $0$ |
+| $P_5$ | $4$ | $20$ | $1$ | $1/5$ |
+| $K_{1,4}$ | $16/5$ | $16$ | $1$ | $9/25$ |
+
+The path and the star have the same resistance radius but different total resistances to the centroid. Their values agree with (3). For an independent check of the radius, use the star realization already given and realize the path by $0,e_1,e_1+e_2,e_1+e_2+e_3,e_1+e_2+e_3+e_4$. In both cases, the circumcenter is $(e_1+e_2+e_3+e_4)/2$, and every vertex has resistance $1$ to it.
+
+## Comparison on the Krackhardt kite graph
+
+The Krackhardt kite graph was introduced to compare different centralities. We use its standard ten-vertex implementation from NetworkX, with vertices numbered $0,\ldots,9$ [5]. All conductances are one.
+
+For reproducibility, the 18 edges are listed below; $ij$ denotes the unordered pair of vertices $i,j$:
+
+$$
+E=\{01,02,03,05,13,14,16,23,25,34,35,36,46,56,57,67,78,89\}
+$$
+
+Vertices $0,\ldots,6$ form the dense part. Vertex $7$ is adjacent to $5,6$ and leads into the chain $7-8-9$. Vertex $3$ has the largest degree, namely $6$.
+
+![[Vertex Centralities - Krackhardt Kite Graph.svg]]
+
+*Three centralities of the same graph. Vertex positions are identical; circle area is proportional to the normalized score, with the same area scale in all panels. The layout shows the connections and is not a Euclidean realization of the resistance simplex. Labels 8 and 9 are placed outside the circles so that small scores remain legible.*
+
+Computed values are given as percentages. In grouped rows, the value is for each vertex, not for the pair as a whole.
+
+| Vertex | Eigenvector, % | Spanning-tree, % | Centroid, % |
+| --- | ---: | ---: | ---: |
+| $0,1$ | $12.545$ | $9.422$ | $10.741$ |
+| $2,4$ | $10.181$ | $7.620$ | $8.609$ |
+| $3$ | **$17.133$** | **$12.838$** | $14.806$ |
+| $5,6$ | $14.165$ | $12.125$ | **$15.150$** |
+| $7$ | $6.976$ | $12.162$ | $10.419$ |
+| $8$ | $1.712$ | $11.111$ | $3.751$ |
+| $9$ | $0.398$ | $5.556$ | $2.024$ |
+
+Before rounding, scores over the ten vertices sum to $100\%$ in each column. Equality within the pairs $0,1$, $2,4$, and $5,6$ follows from graph symmetry.
+
+**Eigenvector score.** Vertex $3$, with six neighbors in the dense part, has the largest value. Scores decrease rapidly along the chain: vertex $8$ receives only about $1.7\%$, and vertex $9$ about $0.4\%$.
+
+**Centroid score.** The maximum is attained at $5,6$. Their resistance to the centroid is $687/2960$, whereas vertex $3$ has resistance $19/80=703/2960$. Thus $5,6$ are slightly closer to the centroid and have a smaller sum of resistances to all vertices.
+
+**Spanning-tree score.** The maximum remains at $3$, but vertices $7,8$ receive substantially larger shares than under eigenvector ranking. Both edges incident to vertex $8$ are bridges and occur in every spanning tree, so $\delta_8=2$ and $C_8^{\mathrm{tree}}=2/18=1/9$. Vertex $7$ has expected spanning-tree degree $81/37$, slightly greater than the value $323/148$ at each of $5,6$.
+
+The graph's spanning-tree coefficient is $\tau=2368$. The expected spanning-tree degrees from (4) were independently checked by enumerating all 2368 trees. The total metric parameters are
+
+$$
+S_{\mathrm{cent}}=\frac{1535}{296},\qquad
+Kf=\frac{7675}{148}
+$$
+
+## Spanning-tree degree and disconnection after vertex deletion
+
+The high score of vertex $8$ has a specific cause: its two mandatory edges. The number of components after deletion is related to expected spanning-tree degree but does not determine it completely.
+
+> [!info] Spanning-tree degree and disconnection after vertex deletion
+> **Lemma.** Suppose deleting vertex $i$ together with its incident edges leaves $q_i$ components. Then
+>
+> $$
+> \delta_i\ge q_i
+> $$
+
+> [!note]- Component count and degree in a spanning tree
+> **Proof.** For every spanning tree $T$, deleting $i$ produces exactly $\deg_T(i)$ components. The graph $T-i$ is a spanning subgraph of $G-i$, so it cannot have fewer components than $G-i$. Therefore $\deg_T(i)\ge q_i$ for every $T$. Taking expectations proves the claim. $\square$
+
+At vertex $8$ of the Krackhardt kite graph, $q_8=\delta_8=2$. However, the common vertex of two triangles with unit conductances glued at one point also has $q_i=2$, but $\delta_i=8/3$: each triangle contributes an average of $4/3$ incident edges. The same number of components after deletion is compatible with different expected spanning-tree degrees.
+
+In the Krackhardt kite graph, vertices $7,8$ are articulation points, whereas vertex $3$, which leads in spanning-tree centrality, is not. Consequently, ranking by $C^{\mathrm{tree}}$ does not coincide with ranking by the ability of a vertex's deletion to disconnect the graph.
+
+## Removing a point while preserving the metric
+
+Geometric removal of one vertex admits an exact formula. Let $\rho_{\widehat i}$ denote the radius of the remaining vertex set with the original pairwise resistances preserved; for a single remaining vertex, set $\rho_{\widehat i}=0$. This set corresponds to a principal submatrix of the original Gram matrix. For the graph $G-i$ obtained by deleting the vertex and its incident edges, the resistances must be computed anew.
+
+> [!info] Change in radius on removing one point
+> **Theorem.** Under the stated assumptions,
+>
+> $$
+> \boxed{
+> \rho-\rho_{\widehat i}
+> =\frac{(\alpha^i)^2}{d_i}
+> =\frac{(1-\delta_i/2)^2}{d_i}
+> }
+> \tag{6}
+> $$
+>
+> Here $d_i$ is the weighted degree of the vertex in the original graph.
+
+The proof using distance to the opposite face is given in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius#The radius ratio under preservation of the metric|the section on geometric removal]]. Here the formula connects expected spanning-tree degree with the change in radius.
+
+In particular, when $\delta_i=2$, geometric removal of the vertex preserves the radius. This is exactly what happens at vertex $8$ of the Krackhardt kite graph: $\alpha^8=0$ and $\rho_{\widehat8}=\rho$. At the same time, deleting node $8$ with its edges makes the graph disconnected.
+
+Formula (6) also explains why spanning-tree centrality and influence on the radius do not give the same ranking. The radius difference depends on the square of $1-\delta_i/2$ and on $d_i$, rather than monotonically on $\delta_i$ alone.
+
 ## The next-to-top-grade component and vertex parameters
+
+Further detail: after comparing the centralities, this section derives their underlying quantities from one normalized potential and gives their forest interpretation.
 
 Let $M=\exp L$, $M_k=L^k/k!$ be the polyform exponential of the Laplacian and its grade components. The functional $\tau(P)$ extracts the coefficient of $T_n=[(a_1\ldots a_n)]^2$, so $\tau(M)=\tau(G)$. Below, write $\tau=\tau(G)$ for brevity.
 
@@ -367,7 +575,7 @@ Resistance to the centroid and expected spanning-tree degree are evaluations of 
 
 The latter normalization is also visible in polyforms: $\sum_iL_i=2L$ and $M_{n-2}L=(n-1)M_{n-1}$, giving $\sum_i\delta_i=2(n-1)$.
 
-If $p_V=\sum_i\alpha_i a_i$ corresponds to the Euclidean circumcenter $O$, then $p_V-h_V$ is an affine vector with norm $(O-h)^2$. The radius decomposition (3) becomes
+If $p_V=\alpha^i a_i$ corresponds to the Euclidean circumcenter $O$, then $p_V-h_V$ is an affine vector with norm $(O-h)^2$. The radius decomposition (3) becomes
 
 $$
 \rho=\frac{\tau\!\left(M_{n-2}\left(\frac1n\Psi+[p_V-h_V]^2\right)\right)}{\tau}
@@ -400,7 +608,7 @@ Here $\mathcal F_2$ is the set of spanning 2-forests, and $X_F$ is the exterior 
 > v\equiv\left(\sum_{i\in A_F}q_i\right)(a_p-a_q)
 > $$
 >
-> The discarded differences vanish under exterior multiplication by $X_F$. Adding an edge between $p,q$ turns the forest into a spanning tree, so $X_F\wedge(a_p-a_q)$ equals the boundary of the full vertex set up to sign. The sign disappears in the quadratic form, and the coefficient of $T_n$ is the square of the indicated sum. $\square$
+> The discarded differences vanish under exterior multiplication by $X_F$. Adding an edge between $p,q$ turns the forest into a spanning tree, so $X_F (a_p-a_q)$ equals the boundary of the full vertex set up to sign. The sign disappears in the quadratic form, and the coefficient of $T_n$ is the square of the indicated sum. $\square$
 
 Consequently, spanning 2-forest weights determine the norm of any affine vector:
 
@@ -445,213 +653,7 @@ Here “coefficients” means weights in the fixed forest expansion. Forest form
 
 In the path row, the four entries refer to four distinct forests, not two ways of naming the components of the same forest. For the middle vertex of the path, the opposite component sizes are $1,2,2,1$, so $r_3=(1+4+4+1)/25=2/5$. For an end vertex they are $4,3,2,1$, giving $r_1=(16+9+4+1)/25=6/5$.
 
-In the star, the central vertex has $r_o=4/25$, while each leaf has $r_{\mathrm{leaf}}=(16+1+1+1)/25=19/25$. These values agree with the direct geometric calculations below. Equal numbers and weights of spanning 2-forests do not make the centroid characteristics of the path and star equal.
-
-## Eigenvector centrality and a common normalization
-
-> [!info] Eigenvector centrality and a common normalization
-> **Definition.** Eigenvector centrality is defined by a positive eigenvector of the adjacency matrix:
->
-> $$
-> \mathbf A v=\lambda_{\max}(\mathbf A)v,\qquad v_i>0,
-> \qquad
-> C_i^{\mathrm{eig}}=\frac{v_i}{\sum_jv_j}
-> $$
-
-For a connected graph, this vector exists and is unique up to scaling by the Perron-Frobenius theorem [4]. In component form, $\lambda_{\max}v_i=\sum_jc_{ij}v_j$: the score of a vertex is determined by the weighted scores of its neighbors.
-
-This definition uses the adjacency matrix $\mathbf A$, not the Laplacian $\mathbf L$. The sum of reciprocal nonzero Laplacian eigenvalues in the formula for $S_{\mathrm{cent}}$ concerns a different spectral object.
-
-All three centralities use a common normalization:
-
-| Centrality | Initial positive score $s_i$ | Normalized score |
-| --- | --- | --- |
-| Eigenvector | $v_i$ | $C_i^{\mathrm{eig}}=v_i/\sum_jv_j$ |
-| Spanning-tree | $\delta_i$ | $C_i^{\mathrm{tree}}=\delta_i/[2(n-1)]$ |
-| Centroid | $1/r_i$ | $C_i^{\mathrm{cent}}=(1/r_i)/\sum_j(1/r_j)$ |
-
-> [!info] Eigenvector centrality and a common normalization
-> **Corollary.** Every column satisfies $C_i>0$, $\sum_iC_i=1$. The uniform score is $1/n$; comparison with it can use $nC_i$, whose mean is $1$.
->
-> Multiplying all conductances by $t>0$ multiplies $\mathbf A,\mathbf L$ by $t$ and divides $\mathbf{Gr},\mathbf R$ by $t$. The eigenvector $v$ and the products $c_{ij}R_{ij}$ remain unchanged; all $1/r_i$ are multiplied by the same factor. Therefore the three normalized centralities are unchanged.
->
-> A common sum allows the distributions of scores across vertices to be compared, but does not turn different definitions into one measure of importance. A value of $0.15$ in one column has no universal substantive equivalent in another. Comparisons between graphs of different sizes must also account for the baseline $1/n$.
->
-> Normalization on the complete graph is a check of consistency with symmetry. It does not imply statistical unbiasedness: that claim would require a statistical model and an estimand.
-
-## The complete graph, a path, and a star
-
-### The complete graph
-
-For $K_n$ with unit conductances,
-
-$$
-\mathbf{Gr}=\frac1n\mathbf J,\qquad
-r_i=\frac{n-1}{n^2},\qquad
-\delta_i=\frac{2(n-1)}n,\qquad
-\alpha_i=\frac1n
-$$
-
-All three centralities equal $1/n$, and $O=h$. Here $S_{\mathrm{cent}}=(n-1)/n$, $Kf=n-1$, and $\rho=(n-1)/n^2$.
-
-### A five-vertex path
-
-Let a path with unit conductances visit the vertices $1,2,3,4,5$ in order. Its unique spanning tree is the graph itself, so
-
-$$
-\boldsymbol\delta=(1,2,2,2,1)^{\mathsf T},\qquad
-\boldsymbol\alpha=(1/2,0,0,0,1/2)^{\mathsf T}
-$$
-
-The resistances are $R_{ij}=|i-j|$. The row sums of the resistance matrix are $(10,7,6,7,10)^{\mathsf T}$, and $S_{\mathrm{cent}}=4$. Hence
-
-$$
-\mathbf r=(6/5,3/5,2/5,3/5,6/5)^{\mathsf T}
-$$
-
-The three centralities are
-
-$$
-C^{\mathrm{eig}}=
-\frac{(1,\sqrt3,2,\sqrt3,1)^{\mathsf T}}{4+2\sqrt3},
-\qquad
-C^{\mathrm{tree}}=\frac{(1,2,2,2,1)^{\mathsf T}}8,
-\qquad
-C^{\mathrm{cent}}=\frac{(1,2,3,2,1)^{\mathsf T}}9
-$$
-
-The eigenvector is verified by direct multiplication by the adjacency matrix: its eigenvalue is $\sqrt3$. The spanning-tree score does not distinguish the three internal vertices. The eigenvector and centroid scores single out the middle vertex, but give different score ratios.
-
-### A five-vertex star
-
-Consider the star $K_{1,4}$ with unit conductances, a central vertex $o$, and four leaves. Again, there is exactly one spanning tree, so $\delta_o=4$ and $\delta_{\mathrm{leaf}}=1$. The circumcenter coordinates are $\alpha_o=-1$ and $\alpha_{\mathrm{leaf}}=1/2$.
-
-For the centroid, we obtain
-
-$$
-r_o=\frac4{25},\qquad r_{\mathrm{leaf}}=\frac{19}{25}
-$$
-
-**Independent geometric check.** Realize the star by the points $0,e_1,e_2,e_3,e_4$, where the $e_i$ are orthonormal. Their centroid is $(e_1+e_2+e_3+e_4)/5$. Direct norms of differences give $4/25$ for the central vertex and $19/25$ for each leaf.
-
-The eigenvector is proportional to $(2,1,1,1,1)$ and has eigenvalue $2$. Therefore
-
-| Vertex | Eigenvector | Spanning-tree | Centroid |
-| --- | --- | --- | --- |
-| Center $o$ | $1/3$ | $1/2$ | $19/35$ |
-| Each leaf | $1/6$ | $1/8$ | $4/35$ |
-
-The ranking is the same, but the degree to which the center stands out differs.
-
-### Equal radii do not imply equal Green-matrix traces
-
-For the above five-vertex graphs with unit conductances:
-
-| Graph | $S_{\mathrm{cent}}$ | $Kf$ | $\rho$ | $(O-h)^2$ |
-| --- | --- | --- | --- | --- |
-| $K_5$ | $4/5$ | $4$ | $4/25$ | $0$ |
-| $P_5$ | $4$ | $20$ | $1$ | $1/5$ |
-| $K_{1,4}$ | $16/5$ | $16$ | $1$ | $9/25$ |
-
-The path and the star have the same resistance radius but different total resistances to the centroid. Their values agree with (3). For an independent check of the radius, use the star realization already given and realize the path by $0,e_1,e_1+e_2,e_1+e_2+e_3,e_1+e_2+e_3+e_4$. In both cases, the circumcenter is $(e_1+e_2+e_3+e_4)/2$, and every vertex has resistance $1$ to it.
-
-## Comparison on the Krackhardt kite graph
-
-The Krackhardt kite graph was introduced to compare different centralities. We use its standard ten-vertex implementation from NetworkX, with vertices numbered $0,\ldots,9$ [5]. All conductances are one.
-
-For reproducibility, the 18 edges are listed below; $ij$ denotes the unordered pair of vertices $i,j$:
-
-$$
-E=\{01,02,03,05,13,14,16,23,25,34,35,36,46,56,57,67,78,89\}
-$$
-
-Vertices $0,\ldots,6$ form the dense part. Vertex $7$ is adjacent to $5,6$ and leads into the chain $7-8-9$. Vertex $3$ has the largest degree, namely $6$.
-
-![[Vertex Centralities - Krackhardt Kite Graph.svg]]
-
-*Figure 1. Three centralities of the same graph. Vertex positions are identical; circle area is proportional to the normalized score, with the same area scale in all panels. The layout shows the connections and is not a Euclidean realization of the resistance simplex. Labels 8 and 9 are placed outside the circles so that small scores remain legible.*
-
-Computed values are given as percentages. In grouped rows, the value is for each vertex, not for the pair as a whole.
-
-| Vertex | Eigenvector, % | Spanning-tree, % | Centroid, % |
-| --- | ---: | ---: | ---: |
-| $0,1$ | $12.545$ | $9.422$ | $10.741$ |
-| $2,4$ | $10.181$ | $7.620$ | $8.609$ |
-| $3$ | **$17.133$** | **$12.838$** | $14.806$ |
-| $5,6$ | $14.165$ | $12.125$ | **$15.150$** |
-| $7$ | $6.976$ | $12.162$ | $10.419$ |
-| $8$ | $1.712$ | $11.111$ | $3.751$ |
-| $9$ | $0.398$ | $5.556$ | $2.024$ |
-
-Before rounding, scores over the ten vertices sum to $100\%$ in each column. Equality within the pairs $0,1$, $2,4$, and $5,6$ follows from graph symmetry.
-
-**Eigenvector score.** Vertex $3$, with six neighbors in the dense part, has the largest value. Scores decrease rapidly along the chain: vertex $8$ receives only about $1.7\%$, and vertex $9$ about $0.4\%$.
-
-**Centroid score.** The maximum is attained at $5,6$. Their resistance to the centroid is $687/2960$, whereas vertex $3$ has resistance $19/80=703/2960$. Thus $5,6$ are slightly closer to the centroid and have a smaller sum of resistances to all vertices.
-
-**Spanning-tree score.** The maximum remains at $3$, but vertices $7,8$ receive substantially larger shares than under eigenvector ranking. Both edges incident to vertex $8$ are bridges and occur in every spanning tree, so $\delta_8=2$ and $C_8^{\mathrm{tree}}=2/18=1/9$. Vertex $7$ has expected spanning-tree degree $81/37$, slightly greater than the value $323/148$ at each of $5,6$.
-
-The graph's spanning-tree coefficient is $\tau=2368$. The expected spanning-tree degrees from (4) were independently checked by enumerating all 2368 trees. The total metric parameters are
-
-$$
-S_{\mathrm{cent}}=\frac{1535}{296},\qquad
-Kf=\frac{7675}{148}
-$$
-
-## Spanning-tree degree and disconnection after vertex deletion
-
-The high score of vertex $8$ has a specific cause: its two mandatory edges. The number of components after deletion is related to expected spanning-tree degree but does not determine it completely.
-
-> [!info] Spanning-tree degree and disconnection after vertex deletion
-> **Lemma.** Suppose deleting vertex $i$ together with its incident edges leaves $q_i$ components. Then
->
-> $$
-> \delta_i\ge q_i
-> $$
-
-> [!note]- Component count and degree in a spanning tree
-> **Proof.** For every spanning tree $T$, deleting $i$ produces exactly $\deg_T(i)$ components. The graph $T-i$ is a spanning subgraph of $G-i$, so it cannot have fewer components than $G-i$. Therefore $\deg_T(i)\ge q_i$ for every $T$. Taking expectations proves the claim. $\square$
-
-At vertex $8$ of the Krackhardt kite graph, $q_8=\delta_8=2$. However, the common vertex of two triangles with unit conductances glued at one point also has $q_i=2$, but $\delta_i=8/3$: each triangle contributes an average of $4/3$ incident edges. The same number of components after deletion is compatible with different expected spanning-tree degrees.
-
-In the Krackhardt kite graph, vertices $7,8$ are articulation points, whereas vertex $3$, which leads in spanning-tree centrality, is not. Consequently, ranking by $C^{\mathrm{tree}}$ does not coincide with ranking by the ability of a vertex's deletion to disconnect the graph.
-
-## Removing a point while preserving the metric
-
-Geometric removal of one vertex admits an exact formula. Let $\rho_{\widehat i}$ denote the radius of the remaining vertex set with the original pairwise resistances preserved; for a single remaining vertex, set $\rho_{\widehat i}=0$. This set corresponds to a principal submatrix of the original Gram matrix. For the graph $G-i$ obtained by deleting the vertex and its incident edges, the resistances must be computed anew.
-
-> [!info] Change in radius on removing one point
-> **Theorem.** Under the stated assumptions,
->
-> $$
-> \boxed{
-> \rho-\rho_{\widehat i}
-> =\frac{\alpha_i^2}{d_i}
-> =\frac{(1-\delta_i/2)^2}{d_i}
-> }
-> \tag{6}
-> $$
->
-> Here $d_i$ is the weighted degree of the vertex in the original graph.
-
-> [!note]- Distance to the opposite face
-> **Proof.** Let $y_j=x_j-h$ and $w_i=\sum_j\mathbf L_{ij}y_j$. Since the Gram matrix of the $y_j$ is $\mathbf{Gr}$,
->
-> $$
-> w_i\cdot(x_j-x_k)=\delta_{ij}^{\mathrm{Kr}}-\delta_{ik}^{\mathrm{Kr}},
-> \qquad
-> w_i^2=(\mathbf L\mathbf{Gr}\mathbf L)_{ii}=d_i
-> $$
->
-> Here $\delta_{ij}^{\mathrm{Kr}}$ denotes the Kronecker delta, not expected spanning-tree degree.
->
-> Thus $w_i$ is the gradient of the affine function giving the $i$-th barycentric coordinate. This function is zero on the affine hull of the opposite face and one at $x_i$. Its value at the center $O$ is $\alpha_i$, so the squared distance from $O$ to that affine hull is $\alpha_i^2/w_i^2=\alpha_i^2/d_i$.
->
-> By the [[Resistance Radius of a Set - Gram Matrix and Volume#The radius of a subset and projection of the center|center-projection theorem]], this squared distance equals the difference of resistance radii $\rho-\rho_{\widehat i}$. Substituting (5) completes the proof. $\square$
-
-In particular, when $\delta_i=2$, geometric removal of the vertex preserves the radius. This is exactly what happens at vertex $8$ of the Krackhardt kite graph: $\alpha_8=0$ and $\rho_{\widehat8}=\rho$. At the same time, deleting node $8$ with its edges makes the graph disconnected.
-
-Formula (6) also explains why spanning-tree centrality and influence on the radius do not give the same ranking. The radius difference depends on the square of $1-\delta_i/2$ and on $d_i$, rather than monotonically on $\delta_i$ alone.
+In the star, the central vertex has $r_a=4/25$, while each leaf has $r_{\mathrm{leaf}}=(16+1+1+1)/25=19/25$. These values agree with the direct geometric calculations in the examples section. Equal numbers and weights of spanning 2-forests do not make the centroid characteristics of the path and star equal.
 
 ## Status of the results and continuation
 
@@ -668,7 +670,7 @@ The minimizing property of the centroid (1), identities (2)-(3), the relation be
 
 The two types of vertex removal, the ratios of spanning-tree coefficients and radii, and the case of disconnection are discussed in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]]. None of the three centralities considered here is assumed in advance to measure such damage. A compact expression for the radius after deleting a vertex together with its edges, in terms of a small number of vertex characteristics in the original graph, remains an open question. Dimensionless characteristics of the whole graph and a comparison of their interpretations are discussed in [[Density, Compactness, and Tree Invariance]].
 
-Ranking by the coordinates of the other, Laplacian, circumcenter is studied in [[Degree Potential and Centralities]]. On trees with equal conductances it agrees with centroid ranking; in general it is a different measure. The two centers and their displacements are compared in [[Sphere Centers and Graph Heterogeneity]]. Spanning-tree ranking favors smaller $\alpha_i$, whereas degree potential favors larger $\beta_i$.
+Ranking by the coordinates of the other, Laplacian, circumcenter is studied in [[Degree Potential and Centralities]]. On trees with equal conductances it agrees with centroid ranking; in general it is a different measure. The two centers and their displacements are compared in [[Sphere Centers and Graph Heterogeneity]]. Spanning-tree ranking favors smaller $\alpha^i$, whereas degree potential favors larger $\beta^i$.
 
 ## Sources
 
@@ -678,4 +680,3 @@ Ranking by the coordinates of the other, Laplacian, circumcenter is studied in [
 4. NetworkX. [Eigenvector centrality](https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.centrality.eigenvector_centrality.html). The adjacency-matrix definition and conditions for a positive eigenvector. This note normalizes by the sum, not the Euclidean length of the vector.
 5. NetworkX. [Krackhardt kite graph](https://networkx.org/documentation/stable/reference/generated/networkx.generators.small.krackhardt_kite_graph.html), [edge list in the source code](https://networkx.org/documentation/stable/_modules/networkx/generators/small.html#krackhardt_kite_graph). Source of the graph topology and numbering; the figure and the three centrality calculations were prepared for this note.
 6. D. Malyugin. [Express Analysis of Metric Parameters of Graphs](https://habr.com/ru/articles/534182/), 2020 (in Russian), section “Spanning-tree degree and centrality”. The earlier definition uses $\delta_i-1$; this note explicitly distinguishes the chosen normalization.
-
