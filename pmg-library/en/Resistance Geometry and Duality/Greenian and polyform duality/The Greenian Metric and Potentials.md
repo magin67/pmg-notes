@@ -24,7 +24,7 @@ For the vector form of $a_{ij}=a_j-a_i=(a_i a_j)$, the normalized potential is $
 
 Energy is the sum of squared differences multiplied by conductances. First compare three assignments on one graph. Below, $p_a=a-h$ and $p_b=b-h$ are centered vectors.
 
-![[Prescribed-values-and-Greenian-energy.svg]]
+![[images/Prescribed-values-and-Greenian-energy.svg]]
 
 In the figure, all three edges of the path $a-b-c-d$ have unit conductance. For the difference $b-a$, the specified assignment is $(-1,1,0,0)$, with energy $4+1=5$. For the sum $p_a+p_b$, the assignment $(1,1,0,0)$ may be used: its energy is $1$, concentrated on the cut $ab\mid cd$. If only $a=-1$ and $b=1$ are fixed, the free vertices take values $c=d=1$, and the minimum is $4=4/R_{ab}$. Here $R_{ab}=1$.
 
@@ -337,7 +337,7 @@ Formula (11) calculates the potential of a **specified form** through the origin
 
 ### Where the path coefficients come from
 
-![Three edge pairs give coefficients 9 4 and 1](Edge%20Pairs%20and%20the%20Potential%20of%20a%20Boundary.svg)
+![Three edge pairs give coefficients 9 4 and 1](images/Edge%20Pairs%20and%20the%20Potential%20of%20a%20Boundary.svg)
 
 *Figure 1. For $X=(abc)$, select two columns of $U^{\mathsf T}B$. Their determinants are $3,-2,1$; squaring gives the factors multiplying $pq,pr,qr$. A dashed edge is not selected.*
 

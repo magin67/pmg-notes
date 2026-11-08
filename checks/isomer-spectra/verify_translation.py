@@ -99,10 +99,10 @@ def main():
     assert not pairs and count['pages'] == 10
     entries = json.loads((HERE/'figure-labels-en.json').read_text(encoding='utf-8'))
     for entry in entries:
-        raw = (EN/entry['target']).read_text(encoding='utf-8')
+        raw = (EN/'images'/entry['target']).read_text(encoding='utf-8')
         assert not re.search('[А-Яа-яЁё]',raw), entry['target']
         if entry['target'] != 'Rooted Forest Growth in Periodic Chains.svg':
-            a = list(ET.fromstring((RU/entry['source']).read_text(encoding='utf-8')).iter())
+            a = list(ET.fromstring((RU/'images'/entry['source']).read_text(encoding='utf-8')).iter())
             b = list(ET.fromstring(raw).iter())
             assert len(a) == len(b)
             for x,y in zip(a,b):
@@ -110,7 +110,7 @@ def main():
                 attrs = lambda e: {k:v for k,v in e.attrib.items() if k!='font-size'}
                 assert attrs(x) == attrs(y), (entry['target'],'geometry')
         count['figures'] += 1
-    assert count['figures'] == 35 == len(list(EN.glob('*.svg')))
+    assert count['figures'] == 35 == len(list((EN/'images').glob('*.svg')))
     print('PASS: '+json.dumps(count,sort_keys=True))
 
 

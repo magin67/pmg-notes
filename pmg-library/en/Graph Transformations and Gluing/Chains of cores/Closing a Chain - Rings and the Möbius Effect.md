@@ -44,7 +44,7 @@ The drawings show graph constructions, not resistance embeddings.
 >
 > **Ordinary closure** identifies $a_N\sim a_0$ and $b_N\sim b_0$; **twisted closure**, or Möbius closure, identifies $a_N\sim b_0$ and $b_N\sim a_0$. In both cases, $a_Nb_N$ and $a_0b_0$ become one edge.
 
-![Two exact endpoint correspondences for the end edges of a square strip](Two%20Closures%20of%20a%20Square%20Strip.svg)
+![Two exact endpoint correspondences for the end edges of a square strip](images/Two%20Closures%20of%20a%20Square%20Strip.svg)
 
 **One open construction, two correspondences.** Arrows along the end seams specify how their endpoints are matched. After identification, one unit seam edge remains. “Cylinder” and “Möbius” describe the boundary correspondence; the listed identifications suffice to specify the graph.
 
@@ -214,7 +214,7 @@ The equality $\rho=\operatorname{tr}\mathbf{Gr}/n$ here relies on all vertices b
 
 Here $\ell$ denotes the length of a **longitudinal path**, not the number of seam edges: each seam still consists of one edge. The final graph has $n=2N\ell=N(m-2)$ vertices and $|E|=N(2\ell+1)=N(m-1)$ edges. Opposite seams are essential; an even core size alone does not imply the next formula.
 
-![Replacing the two longitudinal paths of a hexagonal core by equivalent conductances](An%20Even%20Cycle%20and%20Reduction%20of%20Longitudinal%20Paths.svg)
+![Replacing the two longitudinal paths of a hexagonal core by equivalent conductances](images/An%20Even%20Cycle%20and%20Reduction%20of%20Longitudinal%20Paths.svg)
 
 **Example $m=6$, $\ell=2$.** Both transverse edges retain conductance $1$; each two-edge path is replaced by a connection of conductance $1/2$. This is an electrical reduction eliminating internal vertices, not another graph on the same vertex set.
 
@@ -284,7 +284,7 @@ $$
 
 Each arrow in these expressions denotes one undirected unit edge. The lists exhaust the edge sets; each six-cycle consists of the two indicated paths and two consecutive transverse edges. In the twisted version of the second construction, only the last paths end at $v_0$ and $u_0$, respectively.
 
-![A plane ring of six hexagons and a cylindrical strip with opposite seams](A%20Hexagonal%20Ring%20and%20a%20Closed%20Strip.svg)
+![A plane ring of six hexagons and a cylindrical strip with opposite seams](images/A%20Hexagonal%20Ring%20and%20a%20Closed%20Strip.svg)
 
 **The configuration of each core differs.** Transverse seams are highlighted and the last seam is red. The ordinary cylindrical strip also admits a plane drawing. “Plane” in the name of the first construction describes the particular ring of cells, not a criterion for invariance.
 
@@ -307,7 +307,7 @@ v_{N-1,j}v_{0,j+r}
 \tag{10}
 $$
 
-![Zero and unit shifts when square bases are identified](Shifting%20the%20Final%20Prism%20Base.svg)
+![Zero and unit shifts when square bases are identified](images/Shifting%20the%20Final%20Prism%20Base.svg)
 
 **A square-base example.** Arrows denote vertex correspondences, not additional graph edges. The shift $r=1$ maps $j$ to $j+1$ modulo $4$. This permutation of an entire base differs from interchanging the two endpoints of an edge seam.
 

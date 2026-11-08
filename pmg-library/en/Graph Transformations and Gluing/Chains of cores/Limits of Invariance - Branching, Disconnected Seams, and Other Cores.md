@@ -95,7 +95,7 @@ If all gluings are at one vertex, a more general positive result holds: arbitrar
 
 Take four copies of $C_6$ with single-edge seams. For the path, each next cycle is glued by its edge $01$ to edge $34$ of the preceding cycle. For the star, the three outer cycles are glued by their edges $01$ to edges $01,23,45$ of the central cycle. Local vertex labels in each core follow cyclic order; endpoint correspondences preserve the indicated order. New vertices of outer cores are distinct.
 
-![Four hexagons with equal seams: a path and a star](A%20Path%20and%20a%20Star%20of%20Four%20Cycles.svg)
+![Four hexagons with equal seams: a path and a star](images/A%20Path%20and%20a%20Star%20of%20Four%20Cycles.svg)
 
 **The scheme changes, not the seam size.** Both graphs have $N=4$, $n=18$, and $|E|=21$; each gluing has two vertices and one shared edge. In the star, the three marked seams of the central core are pairwise disjoint. Both constructions satisfy the definition of an admissible tree of cycles, but their schemes differ.
 
@@ -140,7 +140,7 @@ $$
 
 The remaining vertices of the outer cores are new and distinct. In both cases the middle core's input and output are vertex-disjoint. Individual seams are related by rotations of $C_{12}$; their relative placement changes.
 
-![Two placements of equal disconnected seams on the middle dodecagon](Two%20Disconnected%20Seams%20in%20a%20Cycle.svg)
+![Two placements of equal disconnected seams on the middle dodecagon](images/Two%20Disconnected%20Seams%20in%20a%20Cycle.svg)
 
 **The middle core of two assemblies.** Red marks input $01\cup45$ and blue marks the output. Vertex-list labels supplement the colors. The four shared vertices do not form $P_4$: the actual intersection contains exactly two nonadjacent edges.
 
@@ -184,7 +184,7 @@ In the second row, the seams intersect. Moreover, both outer cores share vertex 
 
 Represent the cube as $C_4\square K_2$: base cycles $0123$ and $4567$ are joined by $04,15,26,37$. In each of three assemblies, the first seam of the middle cube is $01$, and the second is $23$, $67$, or $26$. Each outer core is glued by its edge $(0,1)$ to the corresponding ordered pair of the middle core; there are no other identifications.
 
-![Three inequivalent pairs of disjoint cube edges](Pairs%20of%20Edge%20Seams%20of%20a%20Cube.svg)
+![Three inequivalent pairs of disjoint cube edges](images/Pairs%20of%20Edge%20Seams%20of%20a%20Cube.svg)
 
 **The graph itself distinguishes the pairs.** The four seam endpoints induce, respectively, $C_4$, two disjoint edges, and the path $P_4$. These subgraphs differ, so no cube automorphism relates the pairs. Spatial descriptions such as “parallel” or “skew” are unnecessary for this argument.
 
@@ -280,7 +280,7 @@ $$
 
 Here $ij$ denotes the undirected edge $\{i,j\}$.
 
-![Two graphs with twelve spanning trees and different resistance radii](Equal%20Spanning-Tree%20Counts%20and%20Different%20Radii.svg)
+![Two graphs with twelve spanning trees and different resistance radii](images/Equal%20Spanning-Tree%20Counts%20and%20Different%20Radii.svg)
 
 **Equal sizes and spanning-tree counts.** Both graphs have $n=6$, $|E|=7$, and $\tau=12$. Only B has a pendant vertex, so the graphs are nonisomorphic independently of the radius calculation. This compares different collections of cores, rather than two configurations of one fixed system of identical cores.
 

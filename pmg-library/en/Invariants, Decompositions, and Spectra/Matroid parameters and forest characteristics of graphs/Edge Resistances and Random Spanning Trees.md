@@ -337,7 +337,7 @@ $$
 \tau=c_1c_2+c_1c_3+c_2c_3=11
 $$
 
-![[Three Random Trees of a Weighted Triangle.svg]]
+![[images/Three Random Trees of a Weighted Triangle.svg]]
 
 **All spanning trees.** Write $T_1=\{ab,ac\}$, $T_2=\{ab,bc\}$, $T_3=\{ac,bc\}$. Their weights are $2,3,6$ and probabilities $2/11,3/11,6/11$. An edge's inclusion probability is the sum of probabilities of drawings in which it is solid. For example, $ab$ belongs to $T_1,T_2$, so $\eta_{\ell_1}=5/11$.
 
@@ -363,7 +363,7 @@ $$
 
 For $H_2$, all nine intersections can be displayed:
 
-![[Tree Intersections and Parameter H2.svg]]
+![[images/Tree Intersections and Parameter H2.svg]]
 
 **Weighted averaging of intersections.** Every cell uses the same vertex layout: $a$ above, $b$ left, $c$ right. For example, $T_1\cap T_2=\{ab\}$ contributes conductor resistance $1$, while $T_1\cap T_3=\{ac\}$ contributes $1/2$. In the diagonal cell $T_1\cap T_1=T_1$, the sum is $1+1/2=3/2$. Each value is multiplied by its ordered-pair probability $\Pr(T_i)\Pr(T_j)$; all nine contributions sum to $84/121$. Cells are not equally likely. For $H_3$, one similarly uses 27 ordered triples.
 

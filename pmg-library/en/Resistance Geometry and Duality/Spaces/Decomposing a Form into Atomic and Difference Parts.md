@@ -230,7 +230,7 @@ $$
 
 The element $q$ is the orthogonal projection of $b$ onto the selected line. The coefficient pair $(1/2,1/2)$ describes $q$ in the basis $(a,c)$. The vertex $b$ itself has no such expansion.
 
-![Projection](<Projection.svg>)
+![Projection](<images/Projection.svg>)
 
 *The left panel shows the graph; the right panel shows its resistance geometry. The line through $a,c$ is blue, and the residual $b-q$ is red. The segment $ac$ in the geometric diagram does not imply a coupling $ac$ in the graph.*
 

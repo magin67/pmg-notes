@@ -65,7 +65,7 @@ In PMG these geometries already appear as the metrics of normalized potentials i
 
 In the figure, one network with conductances $7,1,1$ defines two different triangles. Each geometry shows its centroid $h$ and circumcenter $O$. The symbols $\alpha$ and $\beta$ denote circumcenter bi-coordinates in the resistance and Laplacian geometries, respectively, and $\rho$ and $\sigma$ their squared radii; the values are calculated below. First distinguish the geometries themselves.
 
-![[Centers of Two Simplices - Triangle 7 1 1.svg]]
+![[images/Centers of Two Simplices - Triangle 7 1 1.svg]]
 
 *One network and its two simplex geometries. $O$ denotes the circumcenter and $h$ the centroid. The geometric panels use independent scales. The resistance center lies inside the triangle; the Laplacian center lies beyond side $12$.*
 
@@ -471,7 +471,7 @@ A weak bridge can remain invisible even when the internal conductances of the pa
 
 Thus sensitivity to a weak cut is proved subject to a current imbalance. Universal bottleneck detection from $(\beta,\sigma)$ does not follow from the definition.
 
-![Two weak connections give different displacement behavior](<Weak Edges and Degree Imbalance.svg>)
+![Two weak connections give different displacement behavior](<images/Weak Edges and Degree Imbalance.svg>)
 
 *Two weak connections give different displacement behavior. In the three-vertex path, current imbalance across the weak edge remains nonzero and $\Delta_L$ grows. In the symmetric four-vertex path, each half has zero net imbalance: the weak bridge carries no current for this distribution, and $\Delta_L$ decreases.*
 

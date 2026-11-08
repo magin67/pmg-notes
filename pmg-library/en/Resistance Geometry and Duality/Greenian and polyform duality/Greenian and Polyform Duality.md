@@ -42,7 +42,7 @@ Start with the single edge in the first note: it shows why reciprocal coefficien
 
 For applications, next choose vertex attachment in the fifth note and the energy example in the seventh. The sixth is a reference collection of examples. The eighth and ninth connect this series with structural identities and toponomes developed earlier.
 
-![Spaces, exponentials, and two numerical evaluations](Map%20of%20Greenian%20Representations.svg)
+![Spaces, exponentials, and two numerical evaluations](images/Map%20of%20Greenian%20Representations.svg)
 
 *Figure 1. The map $\mathcal C$ carries the dual representation $D$ to $N$. The potential of a prescribed form and the spectral specialization of a toponome use different operations.*
 

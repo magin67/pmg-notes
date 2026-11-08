@@ -5,7 +5,7 @@ from pathlib import Path
 
 def main():
     target = (Path(__file__).resolve().parents[2] / 'pmg-library' / 'ru' / 'Резистивная геометрия и дуальность'
-              / 'Гриниан и дуальность полиформ'
+              / 'Гриниан и дуальность полиформ' / 'images'
               / 'Заданные значения и энергия в метрике гриниана.svg')
     parts = ['<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="850" viewBox="0 0 1040 850" role="img" aria-labelledby="title desc">',
              '<title id="title">Потенциалы и энергия на единичном пути</title>',

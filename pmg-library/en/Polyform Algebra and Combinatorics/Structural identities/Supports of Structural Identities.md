@@ -67,7 +67,7 @@ For the zero relation, set $U(0)=\varnothing$. This is the support of an element
 
 Different terms may have different supports. In the tetrahedron identity, the partitions into two pairs have support on four vertices, whereas each partition of block sizes $3+1$ has support on three. The support of the entire relation contains all four vertices.
 
-![Supports of Partitions and an Identity](<Supports of Partitions and an Identity.svg>)
+![Supports of Partitions and an Identity](<images/Supports of Partitions and an Identity.svg>)
 
 *The support is highlighted in green. It contains four vertices for $ab\mid cd\mid e$ and three for $abc\mid d\mid e$. Terms of the tetrahedron identity have different supports, whose union is $\{a,b,c,d\}$.*
 
@@ -75,13 +75,13 @@ Different terms may have different supports. In the tetrahedron identity, the pa
 
 Let $R_{abcd}$ be the tetrahedron relation in the free space: the left side minus the right side of the identity, with each form $q_\pi$ replaced by its symbol $b_\pi$. It has grade $2$ and support $\{a,b,c,d\}$. Now add vertices $e,f$.
 
-![Transferring and Multiplying an Identity](<Transferring and Multiplying an Identity.svg>)
+![Transferring and Multiplying an Identity](<images/Transferring and Multiplying an Identity.svg>)
 
 *Adjoining singleton blocks $e,f$ preserves grade $2$ and the original support. Multiplying every term of the identity by $[(ef)]^2$ gives a grade-$3$ relation supported on six vertices. Only the first operation is called transfer here.*
 
 The support of a sum may exceed the support of either summand. Transfer $R_{abcd}$ and $R_{abce}$ to $\{a,b,c,d,e\}$. Their sum has grade $2$ but support on five vertices: for example, $b_{ac\mid bd\mid e}$ and $b_{ac\mid be\mid d}$ retain nonzero coefficients. Thus the bound $2r$ concerns the supports of generating relations, not every linear combination of them.
 
-![Support of a Sum of Two Relations](<Support of a Sum of Two Relations.svg>)
+![Support of a Sum of Two Relations](<images/Support of a Sum of Two Relations.svg>)
 
 *Two four-vertex supports give a five-vertex support for the sum. The relations are nonzero elements of the free space; their corresponding polyforms are zero.*
 

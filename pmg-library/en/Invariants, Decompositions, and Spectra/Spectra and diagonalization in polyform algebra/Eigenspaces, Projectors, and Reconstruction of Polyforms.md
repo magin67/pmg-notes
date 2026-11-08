@@ -83,7 +83,7 @@ $$
 
 For the first two modes, nonzero values are concentrated on opposite vertices; for the rotated modes, all four components are nonzero. These are different descriptions of one eigenspace. With a repeated eigenvalue, the signs and locations of components of an individual eigenvector are not uniquely determined graph characteristics.
 
-![[Two Bases and a Common Projector of C4.svg]]
+![[images/Two Bases and a Common Projector of C4.svg]]
 
 *Figure 1. Two orthonormal bases of the eigenspace $H_2$ of $C_4$. Color indicates the sign of a component; labels give exact values. The right-hand panel shows the same projector matrix $\mathbf E_2$ obtained in both bases. Individual modes change, but the eigenspace and its projector do not.*
 
@@ -346,7 +346,7 @@ Write the dual forms as $A^\vee=[u^\vee]^2$, $B^\vee=[v^\vee]^2$, and $C^\vee=[w
 | $2$ | $4AB+8(A+B)C$ | $\frac14A^\vee B^\vee+\frac18(A^\vee+B^\vee)C^\vee$ |
 | $3$ | $16ABC$ | $\frac1{16}A^\vee B^\vee C^\vee$ |
 
-![[Grades and Complementary Directions of C4.svg]]
+![[images/Grades and Complementary Directions of C4.svg]]
 
 *Figure 2. The six possible direction-count tuples $(k_2,k_4)$: choose $0$, $1$, or $2$ directions from $H_2$ and $0$ or $1$ from $H_4$. The cells show contributions to the direct and dual exponentials. Complementation sends $(k_2,k_4)$ to $(2-k_2,1-k_4)$, grade $g$ to $3-g$, and divides the direct coefficient by $\Delta=16$. The forms $S_{2,1}$ and $S_{2,1}^\vee$ already contain two terms each.*
 
@@ -402,7 +402,7 @@ For $C_4$,
 | Adjacent, for example $1,2$ | $1/2$ | $1/4$ | $3/4$ |
 | Opposite, for example $1,3$ | $1$ | $0$ | $1$ |
 
-![[Spectral Contributions to Resistances in C4.svg]]
+![[images/Spectral Contributions to Resistances in C4.svg]]
 
 *Figure 3. Left: resistances of an adjacent and an opposite pair decomposed by eigenspaces. Right: the contribution of $H_2$ to $R_{12}$ decomposed into individual modes in two bases: $1/4+1/4$ and $0+1/2$. The total eigenspace contribution is preserved although its distribution among modes changes. Colors on the left denote eigenspaces; on the right they denote the two modes of the selected basis.*
 
@@ -456,7 +456,7 @@ $$
 
 The projector ranks are $1$ and $2$. Both graphs consequently have spectrum $0,4,4,8$, but their projectors for eigenvalue $8$ differ.
 
-![[Cospectral Graphs and Eigendirections.svg]]
+![[images/Cospectral Graphs and Eigendirections.svg]]
 
 *Figure 4. A cospectral pair and normalized modes for eigenvalue $8$. Edge labels are conductances; vertex labels give mode components. Blue means positive, orange negative, and grey zero. Edge crossings do not introduce vertices. The same spectrum does not specify the position of an eigendirection in vertex coordinates.*
 
@@ -502,7 +502,7 @@ $$
 
 In $G_1$, the difference $\mathbf b_{12}$ lies entirely in the direction $\mathbf z_1$, so $R_{12}=2/8=1/4$. In $G_2$, it is orthogonal to $\mathbf z_2$ and belongs to the eigenspace for $4$, so $R_{12}=2/4=1/2$.
 
-![[The Same Spectrum and Different Resistances.svg]]
+![[images/The Same Spectrum and Different Resistances.svg]]
 
 *Figure 5. Contributions of the eigenspaces for $4$ and $8$ to two pairwise effective resistances. For pair $12$, the eigenspace containing the entire vertex difference changes; for pair $13$, both contributions are nonzero. The values of $R_{13}$ are $7/16$ and $3/8$. The total Kirchhoff index remains $5/2$.*
 

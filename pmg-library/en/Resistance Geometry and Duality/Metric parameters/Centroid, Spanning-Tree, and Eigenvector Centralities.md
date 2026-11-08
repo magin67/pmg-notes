@@ -74,7 +74,7 @@ Centroid centrality asks how close the vertex is to the centroid. Spanning-tree 
 
 A unit five-vertex path has only one spanning tree. Its three internal vertices therefore share spanning-tree degree $2$. Centroid proximity and eigenvector centrality distinguish them, favoring the middle vertex. The figure shows normalized values; the section “The complete graph, a path, and a star” derives them.
 
-![One path and three centrality distributions](<Three Centralities of a Path.svg>)
+![One path and three centrality distributions](<images/Three Centralities of a Path.svg>)
 
 *One path and three centrality distributions. Percentages sum to $100\%$ in each row; node sizes are fixed so comparison uses the labeled values. Spanning-tree centrality does not distinguish the three internal vertices.*
 
@@ -409,7 +409,7 @@ $$
 
 Vertices $0,\ldots,6$ form the dense part. Vertex $7$ is adjacent to $5,6$ and leads into the chain $7-8-9$. Vertex $3$ has the largest degree, namely $6$.
 
-![[Vertex Centralities - Krackhardt Kite Graph.svg]]
+![[images/Vertex Centralities - Krackhardt Kite Graph.svg]]
 
 *Three centralities of the same graph. Vertex positions are identical; circle area is proportional to the normalized score, with the same area scale in all panels. The layout shows the connections and is not a Euclidean realization of the resistance simplex. Labels 8 and 9 are placed outside the circles so that small scores remain legible.*
 

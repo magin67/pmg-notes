@@ -126,7 +126,7 @@ D_{\mathrm{res}}=\frac89,\qquad
 R_{\max}=\frac23<\frac89
 $$
 
-![The unit triangle as a network and its resistance realization](<Radius, Diameter, and Chord.svg>)
+![The unit triangle as a network and its resistance realization](<images/Radius, Diameter, and Chord.svg>)
 
 *The unit triangle as a network and its resistance realization. The diagram shows linear side, radius, and diameter lengths; their squares are $2/3$, $2/9$, and $8/9$, respectively. The circle diameter does not join two graph vertices.*
 

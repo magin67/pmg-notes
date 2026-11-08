@@ -288,7 +288,7 @@ At $r=n-1$, we have $p+rq=1$, so $\tau_\gamma=p=1/n^2$, in agreement with $\tau=
 >
 > The coefficient $11/256$ is obtained as $(1\cdot1+1\cdot5+1\cdot5)/16^2$. The triple of leaves gives $3\cdot5^2/16^2=75/256$.
 
-![Original and Greenian couplings for the star and the complete graph minus one edge](Greenian-star-and-incomplete-graph.svg)
+![Original and Greenian couplings for the star and the complete graph minus one edge](images/Greenian-star-and-incomplete-graph.svg)
 
 *Figure 1. Each row shows the original graph on the left and Greenian coefficients on the right. The star acquires couplings between leaves. For $K_4$ without edge $12$, the absent original coupling corresponds to the largest Greenian weight. All Greenian weights here are positive. The vertex layout is schematic and does not depict resistance geometry.*
 
@@ -415,7 +415,7 @@ $$
 Q_5=\frac1{216}\Theta=\frac16T^\vee
 $$
 
-![Changes in Greenian couplings for cycles C4, C5, and C6](Greenian-cycle-couplings.svg)
+![Changes in Greenian couplings for cycles C4, C5, and C6](images/Greenian-cycle-couplings.svg)
 
 *Figure 2. The upper row shows the original cycles; the lower row shows Greenian couplings. Solid blue lines denote positive weights, dashed red lines negative weights. Zero couplings are omitted. All six pairs are positive for $C_4$; only diagonals remain for $C_5$; every original edge has negative weight for $C_6$. Within each panel, line width increases with absolute weight.*
 
@@ -459,7 +459,7 @@ The original Laplacian cofactor is $\tau=8$. The absent original edge correspond
 
 ## A path with arbitrary positive weights
 
-![Two conductance systems on one path](A%20Path%20and%20Its%20Greenian%20Couplings.svg)
+![Two conductance systems on one path](images/A%20Path%20and%20Its%20Greenian%20Couplings.svg)
 
 *Figure 3. The top row repeats the unit example from the canonical-representation note; the bottom matches the numerical example $2,3,5$ below. Red dashed couplings denote negative coefficients.*
 
@@ -572,7 +572,7 @@ Q_1=\frac1{198}\sum_{i<j}m_{ij}[a_{ij}]^2,\qquad
 D=\prod_{i<j}\left(e+\frac{m_{ij}}{198}[a_{ij}]^2\right)
 $$
 
-![The original graph from the Kirchhoff matrix article and the signs of its Greenian weights](Greenian-Wikipedia-graph.svg)
+![The original graph from the Kirchhoff matrix article and the signs of its Greenian weights](images/Greenian-Wikipedia-graph.svg)
 
 *Figure 4. Left: the original graph with unit conductances. Right: the numerators $198\gamma_{ij}$; blue cells indicate positive weights, red cells negative weights. For pendant vertex $6$, the sole original coupling $46$ becomes negative; its other five Greenian couplings are positive. The values are calculated from the displayed matrix.*
 
@@ -702,7 +702,7 @@ $$
 
 As an additional check, resistances are $3/5$ on original edges and $4/5$ on nonadjacent pairs.
 
-![The Petersen graph and its two classes of Greenian couplings](Greenian-Petersen-couplings.svg)
+![The Petersen graph and its two classes of Greenian couplings](images/Greenian-Petersen-couplings.svg)
 
 *Figure 5. Left: the original Petersen graph. Center: the fifteen negative Greenian couplings of weight $-3/100$. Right: the thirty positive couplings of weight $7/100$. The center and right panels together specify $Q_1$. Vertices have identical positions in all panels; line crossings are not vertices.*
 

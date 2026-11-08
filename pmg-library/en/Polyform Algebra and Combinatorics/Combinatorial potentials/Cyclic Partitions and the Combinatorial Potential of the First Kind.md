@@ -28,7 +28,7 @@ The first represents $a\to b\to c\to a$, the second its reverse. Shifting the wr
 
 A block of $k\geqslant1$ distinguishable elements has $(k-1)!$ cyclic orders: fix one specified element first and order the others freely. For $k=1$, the sole cycle is a fixed point; for $k=2$, there is also one cycle.
 
-![Two cyclic orders on a triple with a fixed singleton](Two%20Cyclic%20Orders%20on%20a%20Triple.svg)
+![Two cyclic orders on a triple with a fixed singleton](images/Two%20Cyclic%20Orders%20on%20a%20Triple.svg)
 
 *Figure 1. The partition $abc\mid d$ gives two permutations, $(a\,b\,c)(d)$ and $(a\,c\,b)(d)$. The loop at $d$ denotes a fixed point. Four choices of singleton give $8$ permutations of type $[3,1]$.*
 
@@ -111,7 +111,7 @@ On a triple, the two directions give distinct cycles. For a pair, $(a\,b)=(b\,a)
 
 Here $c(n,m)$ denotes first-kind numbers. The function $c_r(w,m)$ in [[Falling Factorials, Rooted Forests, and Stirling Numbers]] concerns distinguished elements and second-kind numbers.
 
-![Blocks and Cyclic Orders on Four Labels](<Blocks and Cyclic Orders on Four Labels.svg>)
+![Blocks and Cyclic Orders on Four Labels](<images/Blocks and Cyclic Orders on Four Labels.svg>)
 
 Four partitions of type $[3,1]$ give eight permutations, while three partitions of type $[2,2]$ give three. The two oppositely directed arcs between $a$ and $b$ together form one 2-cycle.
 

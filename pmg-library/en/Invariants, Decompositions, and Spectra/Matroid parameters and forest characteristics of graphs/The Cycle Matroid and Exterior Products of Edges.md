@@ -116,7 +116,7 @@ $$
 (ab)(bc)(ca)=0
 $$
 
-![[Forest and Cycle - Exterior Products.svg]]
+![[images/Forest and Cycle - Exterior Products.svg]]
 
 **Forest and cycle.** On the left, $ab,bc$ are selected; on the right, $ca$ is added. Around a closed traversal the edge vectors sum to zero, so their exterior product also vanishes. The gray dashed edge on the left belongs to the original triangle but is not selected. Arrows indicate the chosen orientation, not a directed graph.
 
@@ -358,7 +358,7 @@ The sum runs over spanning forests of the complete set of pairs; zero coefficien
 
 This distinction already appears for the unit path on four vertices:
 
-![[Path P4 - Laplacian and Signed Greenian Connections.svg]]
+![[images/Path P4 - Laplacian and Signed Greenian Connections.svg]]
 
 **Original and Greenian couplings.** The left panel shows conductances of the path $a-b-c-d$; the right shows the coefficients $\gamma_{ij}=-\mathrm{Gr}_{ij}$ in its canonical Greenian expression. The couplings $ac,ad,bd$ appear only on the right; the coefficients at $ab,cd$ equal $-1/8$. Yet edge resistances are positive and equal $1$, while $R_{ad}=3$. Thus $c_{ij}$, $\gamma_{ij}$, and $R_{ij}$ have different values and meanings. The layout is schematic: segment lengths do not represent $\sqrt{R_{ij}}$.
 
@@ -442,7 +442,7 @@ Consider the unit path $P_4$ with edges $ab,bc,cd$ and the unit star $K_{1,3}$ w
 
 Both matroids are free on three elements: every edge subset is independent. Their matroid isomorphism is therefore proved independently of the numerical coincidences below.
 
-![[Path and Star Matroid - Edge Correspondence.svg]]
+![[images/Path and Star Matroid - Edge Correspondence.svg]]
 
 **Edge correspondence.** The labels $\ell_1,\ell_2,\ell_3$ specify a bijection: $ab\mapsto ab$, $bc\mapsto ac$, $cd\mapsto ad$. Every subset remains a forest. The vertex structure changes, so the sums of all pairwise resistances are $10$ and $9$, as computed below. This does not affect edge resistances: they equal $1$ in both unit trees.
 

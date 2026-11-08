@@ -218,7 +218,7 @@ Their displacements in $W_0$ are $h$ and $-h$, so they face one another in an or
 >
 > On adding, the spatial parts cancel and the coefficients of $z$ sum to $h^2$. Since the metric of $W_0$ is positive definite and $h\ne0$, we have $h^2>0$, so the sum is nonzero. $\square$
 
-![The null vector as inward arrows and the effect of translation](<The Null Vector as Inward Arrows.svg>)
+![The null vector as inward arrows and the effect of translation](<images/The Null Vector as Inward Arrows.svg>)
 
 *At the top, two equal arrows meet at the local midpoint $m$. When each arrow has unit norm, their sum in the extension is $z$, although their displacements in $W_0$ sum to zero. The lower panels show why the arrow's position matters: perpendicular translation preserves the vector, while parallel translation adds a multiple of $z$. The diagram shows the geometry of $W_0$; the direction $z$ is not drawn as a separate spatial arrow.*
 
@@ -264,7 +264,7 @@ $$
 
 This also shows nonlinearity: $\pi((a+c)/2)\ne(\pi(a)+\pi(c))/2$.
 
-![Isotropic](<Isotropic.svg>)
+![Isotropic](<images/Isotropic.svg>)
 
 *The left panel shows the Euclidean geometry of centers in the resistance plane. The right panel uses the coordinates of expressions $(1-t)a+tc+\eta z$: the horizontal coordinate is $t$ and the vertical coordinate is $\eta$. The line $\eta=0$ contains the linear combinations $p(t)$; the parabola $\eta=t(1-t)$ contains the local points $x(t)$. This is a coordinate diagram, not a depiction of Euclidean lengths in the extension.*
 

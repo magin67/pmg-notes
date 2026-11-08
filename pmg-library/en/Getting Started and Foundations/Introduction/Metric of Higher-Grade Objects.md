@@ -130,7 +130,7 @@ $$
 \tag{3}
 $$
 
-![Two triangles sharing a side](Metric%20of%20Higher-Grade%20Objects%20-%20two%20triangles.svg)
+![Two triangles sharing a side](images/Metric%20of%20Higher-Grade%20Objects%20-%20two%20triangles.svg)
 
 The figure shows general Euclidean configurations. Its planar case does not represent four distinct base vertices of a resistance simplex: such vertices are affinely independent.
 

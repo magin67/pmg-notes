@@ -46,7 +46,7 @@ $$
 
 The first block contains three vertices and gives a boundary of grade $2$; the second contains two vertices and gives a boundary of grade $1$.
 
-![Two blocks of three and two vertices and the corresponding form type (2,1)](Partition%20form%20type.svg)
+![Two blocks of three and two vertices and the corresponding form type (2,1)](images/Partition%20form%20type.svg)
 
 *Figure 1. The block sizes are $3$ and $2$, while their boundary grades are $2$ and $1$. Edges depict tree representatives of the blocks; the type records grades rather than vertex names or the chosen tree shapes.*
 
@@ -129,7 +129,7 @@ $$
 
 The coefficient $p+q$ combines two distinct one-edge contributions, while $pq$ is the weight of the unique two-edge tree. With positive noninteger weights, these coefficients need not be integers.
 
-![Two one-edge forests contribute to the coefficient p+q](Collecting%20Contributions%20of%20One%20Type.svg)
+![Two one-edge forests contribute to the coefficient p+q](images/Collecting%20Contributions%20of%20One%20Type.svg)
 
 *Figure 2. All three vertices remain in the picture, including the isolated one. Distinct labelled forests have the same positive type; their weights are added, not their edges.*
 
@@ -210,7 +210,7 @@ $$
 
 Two selected edges are either adjacent or share no vertex. In the first case, they form a three-vertex component of type $(2)$; in the second, they form two two-vertex components of type $(1^2)$.
 
-![All six two-edge spanning forests of P5, grouped by types (2) and (1²)](Two-edge%20forests%20of%20P5.svg)
+![All six two-edge spanning forests of P5, grouped by types (2) and (1²)](images/Two-edge%20forests%20of%20P5.svg)
 
 *Figure 3. Three forests of type $(2)$ on the left and three of type $(1^2)$ on the right. Solid colored edges belong to the forest; dashed lines show unselected edges of the original path. All five vertices are retained. Both columns have $m=3$ components in total, but the numbers of nontrivial components are $r=1$ and $r=2$, respectively.*
 

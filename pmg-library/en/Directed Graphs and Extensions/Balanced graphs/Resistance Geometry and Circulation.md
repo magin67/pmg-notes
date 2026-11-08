@@ -102,7 +102,7 @@ R_{ab}=R_{bc}=R_{ca}=1,\qquad
 \chi_{abc}=1-2=-1
 $$
 
-![[Geometry of a Unit Directed 3-Cycle.svg]]
+![[images/Geometry of a Unit Directed 3-Cycle.svg]]
 
 *Left: the original unit-weight cycle. Right: its resistance geometry, an equilateral triangle of side $1$. One-way resistances sum to $1$ along the forward traversal and $2$ along the reverse; their difference $\chi_{abc}=-1$ is invisible in the side lengths. Corresponding mean traversal times are $3$ and $6$.*
 
@@ -200,7 +200,7 @@ In this experiment, $\mathrm{out}$ denotes current excitation $u$, and $\mathrm{
 - Exchanging excitation and measurement gives $\beta(v,u)$. The difference between experiments is $P_M(\omega(u,v))$.
 - For $u=b-a$, $v=c-a$, this difference is $\chi_{abc}$.
 
-![[Circulation and Response Reciprocity.svg]]
+![[images/Circulation and Response Reciprocity.svg]]
 
 *Both experiments use the same network. First, current enters at $b$ and leaves at $a$, while voltage is measured between $c$ and $a$. The second experiment exchanges the roles of $b,c$. The difference of the measured responses equals $\chi_{abc}$.*
 

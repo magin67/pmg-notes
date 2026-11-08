@@ -49,7 +49,7 @@ $$
 
 ## Standard graphs on four vertices
 
-![[Standard graphs for KVP.svg]]
+![[images/Standard graphs for KVP.svg]]
 
 *All six graphs use vertices $a,b,c,d$; each drawn edge has weight $1$. The nonzero components of the coupling table are listed below each graph. The star and the triangle with an isolated vertex have no P. The cycle and the two separate edges have no V. The path has K, V, and P.*
 
@@ -239,7 +239,7 @@ d=(6,8,5,5),\qquad \bar d=6,\qquad
 \mu=2,\qquad v=(0,2,-1,-1)
 $$
 
-![[KVP decomposition of a weighted graph.svg]]
+![[images/KVP decomposition of a weighted graph.svg]]
 
 *The original nonnegative couplings appear on the left, followed by K, V, and P. On the absent pair $ad$, the values $2,-1/2,-3/2$ cancel. In P, opposite pairs have equal values: $1$ on $ab,cd$, $1/2$ on $ac,bd$, and $-3/2$ on $ad,bc$. Zero pairs are omitted; dashed lines indicate negative coefficients.*
 

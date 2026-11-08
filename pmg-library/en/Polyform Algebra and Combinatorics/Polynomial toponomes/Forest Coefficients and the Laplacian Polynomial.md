@@ -94,7 +94,7 @@ Set $S=V\setminus R$. Write $\mathbf L[S,S]$ for the principal submatrix of the 
 
 **Remark.** Rows and columns of the matrix are deleted; all graph vertices remain in the forests being counted. The submatrix $\mathbf L[S,S]$ retains the original diagonal entries $d_i$. It is not the Laplacian of the graph obtained by deleting the vertices of $R$ and their incident edges: connections to roots still contribute to the degrees of the remaining vertices.
 
-![A principal minor retains degrees from the original graph](A%20Principal%20Minor%20and%20Vertex%20Deletion.svg)
+![A principal minor retains degrees from the original graph](images/A%20Principal%20Minor%20and%20Vertex%20Deletion.svg)
 
 *Figure 1. For $C_4$, the rows and columns of roots $a,c$ are crossed out, but the vertices and their connections remain in the forest problem. The retained minor therefore has diagonal entries $2,2$. Deleting graph vertices is a different operation: it leaves isolated vertices $b,d$ with a zero Laplacian.*
 
@@ -113,7 +113,7 @@ $$
 \{ab,ad\},\quad \{ab,cd\},\quad \{bc,ad\},\quad \{bc,cd\}
 $$
 
-![Four admissible and two excluded forests of C4 with roots a and c](Prescribed%20Roots%20in%20C4.svg)
+![Four admissible and two excluded forests of C4 with roots a and c](images/Prescribed%20Roots%20in%20C4.svg)
 
 *Figure 2. The roots $a,c$ are circled. The four forests on the left have exactly one root in each component and contribute to the minor. The two on the right are excluded: the path $abc$ or $adc$ contains both roots, while the isolated vertex has no root. Solid lines denote selected forest edges; dashed lines denote the remaining edges of the original cycle.*
 
@@ -231,7 +231,7 @@ $$
 
 Thus $p_k$ is the elementary symmetric function of degree $k$ in these values. This is a spectral interpretation of the forest coefficients already obtained; it was not used to prove (4). The number $n$ is retained separately: together with the degree of $P_G$, it determines the multiplicity of the zero eigenvalue. Hence, for known $n$, the one-variable vertex reduction of the exponential determines the entire Laplacian spectrum with multiplicities.
 
-![Coefficients and roots of two Laplacian polynomials](Two%20Laplacian%20Polynomials.svg)
+![Coefficients and roots of two Laplacian polynomials](images/Two%20Laplacian%20Polynomials.svg)
 
 *Figure 3. Substituting $t=-1/x$ and multiplying by $x^n$ reverses powers and alternates signs. A nonzero eigenvalue $\lambda$ corresponds to the root $-1/\lambda$ of $P_G$. Zero eigenvalues appear in $\chi_{\mathbf L}$; zero is never a root of $P_G$.*
 
@@ -239,7 +239,7 @@ Thus $p_k$ is the elementary symmetric function of degree $k$ in these values. T
 
 Consider $C_4$ with edges $ab,bc,cd,da$ and unit conductances. Every edge subset except the full cycle is a forest.
 
-![All groups of spanning forests of C4 and their contributions in both normalizations](Forest%20Coefficients%20of%20C4.svg)
+![All groups of spanning forests of C4 and their contributions in both normalizations](images/Forest%20Coefficients%20of%20C4.svg)
 
 *Figure 4. Fifteen of the sixteen edge sets are forests. Among two-edge sets, four adjacent pairs have root weight $3$, and two disjoint pairs have root weight $4$. Solid lines denote forest edges; dashed lines retain the positions of the remaining connections of the original cycle. The right columns show each group's total contributions to $f_k$ and $p_k$.*
 

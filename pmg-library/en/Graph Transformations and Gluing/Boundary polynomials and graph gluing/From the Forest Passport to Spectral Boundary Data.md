@@ -38,7 +38,7 @@ The last expression for $\chi_G$ is a polynomial identity, including at $\xi=0$.
 
 **An example computed here.** Take two trees with vertex names $a,b,c,d$: the path with edges $ab,bc,cd$ and the star with edges $ab,bc,bd$. All conductances are $1$; both have the ordered boundary $(a,b)$. We are comparing separate components with identical boundary labels.
 
-![[The same forest passport and different spectra.svg]]
+![[images/The same forest passport and different spectra.svg]]
 
 In each tree, the unique path between $a$ and $b$ is the edge $ab$. Selecting it gives state $ab$; omitting it gives $a|b$. The other two edges are chosen independently, so the **full ordinary forest passports coincide**:
 
@@ -212,7 +212,7 @@ E_i&=\xi-2
 \end{aligned}
 $$
 
-![[Spectral gluing of two paths.svg]]
+![[images/Spectral gluing of two paths.svg]]
 
 Formula (12) gives
 
@@ -254,7 +254,7 @@ $$
 
 This correction for the specified counting rule is also derived from the Schur complement. At $w=0$, it reduces to (12). Another way to obtain the same graph is to assign the shared edge to one component beforehand, recompute the other component's passport without that edge, and apply (12). Removing an edge instance from the construction while retaining the old component passport is invalid.
 
-![[A shared edge and parallel copies.svg]]
+![[images/A shared edge and parallel copies.svg]]
 
 For example, two unit-weight triangles $a-u-b-a$ and $a-v-b-a$ have the same marked pair $(a,b)$. If $ab$ is retained once, the resulting graph has five edges:
 
@@ -288,7 +288,7 @@ But $\mathbf S_G(0)$ does not determine the rational matrix $\mathbf S_G(\xi)$ f
 
 Successively attaching cores requires two ordered pairs on each core: an input $\mathcal B_{\mathrm{in}}$ and an output $\mathcal B_{\mathrm{out}}$. The output of the assembled fragment is identified with the input of the new core by a specified correspondence. The new core's output then becomes the active boundary.
 
-![[Spectral input and output boundaries.svg]]
+![[images/Spectral input and output boundaries.svg]]
 
 Before calculation, specify the vertex order in both pairs, any overlap between them inside the core, and the shared-edge counting rule. In the illustrated scheme, the two pairs inside the core are disjoint, the shared edge belongs to one fragment, and each shared vertex is counted once after gluing.
 

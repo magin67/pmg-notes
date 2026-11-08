@@ -58,7 +58,7 @@ For example, in the order $a,b,c,d$, the partition $ac|bd$ is crossing, whereas 
 
 The order serves to choose a basis. The definitions of forms and structural identities do not depend on it. No graph is assumed to be planar.
 
-![Crossing and Noncrossing Partitions](<Crossing and Noncrossing Partitions.svg>)
+![Crossing and Noncrossing Partitions](<images/Crossing and Noncrossing Partitions.svg>)
 
 *One cyclic order $a,b,c,d$, three pair partitions. In the middle panel, chords from different blocks cross. This concerns the partition in the chosen order; no planarity assumption on an original graph is needed.*
 
@@ -308,7 +308,7 @@ Write $b(\pi)$ for the number of blocks of a partition. The partition $\pi\vee\r
 
 Formula (6) contains no factorial factors or tree weights. One tree is chosen in each block for the calculation; there is no sum over trees. Orientation signs disappear in quadratic forms.
 
-![Pairing Partitions - A Tree or a Cycle](<Pairing Partitions - A Tree or a Cycle.svg>)
+![Pairing Partitions - A Tree or a Cycle](<images/Pairing Partitions - A Tree or a Cycle.svg>)
 
 *Blue edges represent the first partition and the orange edge the second. Left: their union is a tree on four vertices, so the top coefficient is $1$. Right: the cycle on $a,b,c$ leaves $d$ isolated, so the product is zero. In both cases the grades sum to $3$.*
 

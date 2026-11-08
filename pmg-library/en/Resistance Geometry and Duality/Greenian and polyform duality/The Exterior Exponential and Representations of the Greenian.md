@@ -73,7 +73,7 @@ These conditions link the grades. An arbitrary polyform with grade-zero term $e$
 
 ## How grades two and three arise
 
-![Selecting two distinct factors out of three](Choosing%20Factors%20of%20the%20Exterior%20Exponential.svg)
+![Selecting two distinct factors out of three](images/Choosing%20Factors%20of%20the%20Exterior%20Exponential.svg)
 
 *Figure 1. Each pair occurs in two orders in the square of a sum. Quadratic forms commute, so division by $2!$ leaves one copy. Likewise, three distinct factors give $3!$ identical terms in the cube.*
 
@@ -382,7 +382,7 @@ For example, for $(\lambda_1,\lambda_2,\lambda_3)=(2,3,5)$, the grade-two coeffi
 
 ### Three factors but only two nonzero positive grades
 
-![Three arguments lie in a two-dimensional space](Dependent%20Arguments%20and%20the%20Top%20Grade.svg)
+![Three arguments lie in a two-dimensional space](images/Dependent%20Arguments%20and%20the%20Top%20Grade.svg)
 
 *Figure 2. The arguments $a,b,a+b$ are pairwise independent but jointly dependent. Grade two survives and grade three vanishes. This is a coordinate diagram of exterior arguments, with no PMG metric chosen.*
 

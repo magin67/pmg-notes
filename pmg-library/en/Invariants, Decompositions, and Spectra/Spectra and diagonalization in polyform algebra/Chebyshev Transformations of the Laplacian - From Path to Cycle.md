@@ -148,7 +148,7 @@ $$
 
 If the columns of the permutation matrix $\mathbf P$ list the vertices in this order, then $\mathbf P^{\mathsf T}\mathbf L^{(2)}\mathbf P=\mathbf L_{C_6}$ for standard cyclic labeling. Thus the statement concerns the matrix itself, not merely its spectrum.
 
-![[Chebyshev Transition from P6 to a Cycle.svg]]
+![[images/Chebyshev Transition from P6 to a Cycle.svg]]
 
 *Figure 1. Left: the original path. Right: the resulting cycle with the original vertex labels. The two end edges are retained, and pairs at distance two become adjacent. The table shows how eigenvalues change in the fixed path basis and gives the reciprocal nonzero eigenvalues of the new Greenian.*
 
@@ -237,7 +237,7 @@ $$
 
 This gives edges of conductance $2$ between mirror vertices. For odd $n$, the central vertex is isolated. This is a weighted graph, not a simple graph with unit conductances.
 
-![[Graphs in the Chebyshev Orbit of P6.svg]]
+![[images/Graphs in the Chebyshev Orbit of P6.svg]]
 
 *Figure 2. Steps $m=1,\ldots,5$ and the extreme step $m=6$ for $P_6$. Original vertex labels are preserved. At $m=3$ the result is $P_2$ and $C_4$; at $m=4$, two triangles. In both cases the Laplacian has rank $4$ and is singular on the five-dimensional space $H$. More components mean a higher multiplicity of the zero eigenvalue. Labels 2 on the last diagram denote conductances.*
 

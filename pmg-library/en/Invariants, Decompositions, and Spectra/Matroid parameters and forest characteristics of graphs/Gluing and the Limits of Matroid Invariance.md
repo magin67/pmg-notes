@@ -151,7 +151,7 @@ Take the path $a_1-x-b_1$ with a leaf $p$ attached to $a_1$ as the first part. T
 
 In the straight gluing, both leaves attach to the same vertex of the cycle $C_4$. After the twist, they attach to opposite vertices. The graphs are nonisomorphic: the first has a vertex of degree $4$, whereas the maximum degree of the second is $3$.
 
-![[Whitney Twist - One Matroid and Different Geometry.svg]]
+![[images/Whitney Twist - One Matroid and Different Geometry.svg]]
 
 **Reading the figure.** Color identifies the original part; each label $\ell_i$ is preserved by the twist. The sole simple cycle in both graphs consists of $\ell_1,\ell_2,\ell_4,\ell_5$; $\ell_3,\ell_6$ are bridges. The attachment point of the leaf $q$ and the endpoint correspondence for edges of the second part change.
 
@@ -187,7 +187,7 @@ The twist (5) preserves the chosen pair in each part. It does not permit replaci
 
 Keep the parts $G_1=P_3$ and $G_2=P_4$ fixed, with all conductances equal to one. Mark both endpoints in $P_3$. In $P_4$, compare marking both endpoints with marking two vertices at distance two edges.
 
-![[Boundary Choice - Cycle and Cycle with a Leaf.svg]]
+![[images/Boundary Choice - Cycle and Cycle with a Leaf.svg]]
 
 **One part, two boundaries.** The top row shows two markings of the same path $P_4$; gold circles mark the chosen vertices. Below, the same two-edge path $P_3$ is attached to them. The results are $C_5$ and $C_4$ with one pendant edge.
 
@@ -310,7 +310,7 @@ The twist example displays both sides at once: the matroid coefficients and $\rh
 
 If two cores have chosen seam edges, one must specify what happens to those edges. The distinction already matters for two unit-weight triangles.
 
-![[Shared Edge - Three Different Gluing Laws.svg]]
+![[images/Shared Edge - Three Different Gluing Laws.svg]]
 
 **Three different graphs.** Vertices $a,b$ are identified in all three cases. On the left, both copies of $ab$ remain as parallel conductors; in the middle, they are identified as one edge of conductance $1$; on the right, both copies are deleted. The other four edges are the same.
 

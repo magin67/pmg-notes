@@ -37,7 +37,7 @@ The coupling strength is the weight of an edge. In the electrical interpretation
 
 Consider a path on three vertices with coupling strengths $c_{12}=1$ and $c_{23}=2$.
 
-![A path with coupling strengths inside rectangles](<Path with coupling strengths.svg>)
+![A path with coupling strengths inside rectangles](<images/Path with coupling strengths.svg>)
 
 Circles represent vertices and rectangles represent couplings. The labels inside the rectangles give the coupling strengths $c_{ij}$; in the electrical interpretation, these are conductances.
 

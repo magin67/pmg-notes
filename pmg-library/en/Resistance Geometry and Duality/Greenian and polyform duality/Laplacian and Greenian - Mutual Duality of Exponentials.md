@@ -449,7 +449,7 @@ In all three exponentials $M,D,N$, grade zero is $e$. Their normalization must b
 
 ## Full example: a path on four vertices
 
-![Dual grade k contracts the direct top grade 3](Complementary%20Grades%20on%20Four%20Vertices.svg)
+![Dual grade k contracts the direct top grade 3](images/Complementary%20Grades%20on%20Four%20Vertices.svg)
 
 *Figure 1. For the four-vertex path, $d=3$ and $\tau=1$. Each arrow denotes $T/Q_k=M_{3-k}$, a correspondence between polyform grades rather than individual forests.*
 

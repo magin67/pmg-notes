@@ -100,7 +100,7 @@ $$
 
 Different colors preserve the two parts $2$ and $1$. A shared color merges the vertices into a class of weight $3$. In both cases the graph has two vertices.
 
-![Two color-class partitions of two separate vertices, first with weights 1 and 1, then with weights 2 and 1](Color%20classes%20of%20two%20vertices.svg)
+![Two color-class partitions of two separate vertices, first with weights 1 and 1, then with weights 2 and 1](images/Color%20classes%20of%20two%20vertices.svg)
 
 *Figure 1. The number inside a circle is the vertex weight, and the letter below it is the vertex name. On the left, the vertices have different colors; on the right, they share a color. In the row with weights $2$ and $1$, the shared class gives a part $3$, although it contains two vertices. There are no edges between the vertices. Each panel shows one representative of a color-class partition; the colors may be renamed.*
 
@@ -163,7 +163,7 @@ Each factor is represented by a complete graph on two vertices of unit weight, t
 
 The figure enumerates all color-class partitions of this graph.
 
-![Seven color-class partitions of two disjoint edges: one with four classes, four with three classes, and two with two classes](Seven%20color-class%20partitions.svg)
+![Seven color-class partitions of two disjoint edges: one with four classes, four with three classes, and two with two classes](images/Seven%20color-class%20partitions.svg)
 
 *Figure 2. Every panel retains the edges $ab$ and $cd$ and the unit vertex weights. Letters inside the circles identify vertices, and colors indicate class membership. The classes are listed below each panel. No new edges are drawn between equally colored vertices from different edges.*
 
@@ -219,7 +219,7 @@ For two disjoint edges, this gives:
 
 A direct check is also available: each edge admits $q(q-1)$ colorings, and the two edges are colored independently. Their number is therefore $q^2(q-1)^2$, giving the same $4$ and $36$.
 
-![Two named-color assignments give the same partition ac|bd](Class%20Partitions%20and%20Color%20Names.svg)
+![Two named-color assignments give the same partition ac|bd](images/Class%20Partitions%20and%20Color%20Names.svg)
 
 *Figure 3. The vertices and edges do not change. Exchanging blue and orange gives a different coloring with named colors but preserves the partition $ac\mid bd$.*
 

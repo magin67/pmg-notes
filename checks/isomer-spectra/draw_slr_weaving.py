@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT/'checks/core-chains'))
 from draw_admissible_chains import SVG as BaseSVG, INK, MUTED, BLUE, PURPLE, RED
 import verify_slr_code as slr
 
-OUT = ROOT/'pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров'
+OUT = ROOT/'pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров/images'
 GREEN = '#16816c'
 COLORS = {'S': BLUE, 'L': GREEN, 'R': PURPLE}
 DATA = json.loads(Path(__file__).with_name('slr-weaving-results.json').read_text(encoding='utf-8'))

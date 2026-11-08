@@ -194,7 +194,7 @@ The same contradiction can be seen by listing possible trees. After removing iso
 | Star $K_{1,3}$ | 3 | 0 |
 | Table $A_*$ | 1 | 2 |
 
-![The four-vertex path and star have two and three adjacent edge pairs, respectively; the proposed triangle requires only one](Graph%20Realizability%20-%20Path%20and%20Star.svg)
+![The four-vertex path and star have two and three adjacent edge pairs, respectively; the proposed triangle requires only one](images/Graph%20Realizability%20-%20Path%20and%20Star.svg)
 
 *Figure 1. All trees on four vertices up to isomorphism. In both cases, the second column sums to three, but its distribution between adjacent and independent pairs differs.*
 
@@ -314,7 +314,7 @@ $$
 
 To obtain $A(t,u)=1+2tu+t^2u$, the variables must sum to $2$ and their pairwise products to $1$, with $x_{ij}\in\{0,1\}$. The solution $x_{12}=x_{23}=1$, $x_{13}=0$ gives a path. Vertex permutations give other labeled solutions to the same existence problem.
 
-![Three possible-edge variables and a path solution](Edge%20Variables%20on%20Three%20Vertices.svg)
+![Three possible-edge variables and a path solution](images/Edge%20Variables%20on%20Three%20Vertices.svg)
 
 *Figure 2. The left panel shows possible connections of the complete graph, not a selected forest. On the right, one variable is set to zero and two to one. Comparing coefficients checks all forests of the resulting graph together.*
 
@@ -360,7 +360,7 @@ is realized by a triangle with all three conductances equal to $1/3$: its Laplac
 
 This criterion does not extend to vector normalization, the coefficient triangle, or a prescribed graph structure.
 
-![A triangle with conductances 1/3 realizes P(t)=(1+t)²](A%20Weighted%20Realization%20of%20a%20Square.svg)
+![A triangle with conductances 1/3 realizes P(t)=(1+t)²](images/A%20Weighted%20Realization%20of%20a%20Square.svg)
 
 *Figure 3. This is vertex normalization: three one-edge forests give $p_1=3\cdot(1/3)\cdot2=2$, and three trees give $p_2=3\cdot(1/9)\cdot3=1$. Edge labels are conductances. Requiring unit conductances makes this polynomial unrealizable.*
 

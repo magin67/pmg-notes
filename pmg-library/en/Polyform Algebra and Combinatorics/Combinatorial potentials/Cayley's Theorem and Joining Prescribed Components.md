@@ -40,7 +40,7 @@ Denote the number of completions by $T(\mathbf x)$. The proof will establish tha
 
 Take four vertices $a,b,c,d$. The edge $ab$ is prescribed, while $c$ and $d$ are isolated. The component sizes are $[2,1,1]$. Two new edges are needed to obtain a tree.
 
-![Eight ways to complete the prescribed edge ab and isolated vertices c and d to a tree](Eight%20Completions%20of%20Three%20Components.svg)
+![Eight ways to complete the prescribed edge ab and isolated vertices c and d to a tree](images/Eight%20Completions%20of%20Three%20Components.svg)
 
 *Figure 1. The prescribed edge $ab$ is blue; new edges are black. In the upper group the new edges are disjoint, with positive type $[1,1]$. In the lower group they share a vertex, giving type $[2]$. A crossing without a marked vertex does not create a connection. Adapted from the author's research materials.*
 
@@ -91,7 +91,7 @@ Both types of new edges produce a connected tree because $ab$ is already present
 >
 > For the proof, first consider trees on the components themselves. Temporarily number them from $1$ to $m$, and let $\mathcal T_m$ be the set of all trees on these labels. For $S\in\mathcal T_m$, let $d_i(S)$ be the degree of vertex $i$ in $S$.
 
-![Blocks of sizes two, two, and one contracted to a weighted triangle with conductances four, two, and two](Block%20Contraction%20for%20Cayleys%20Formula.svg)
+![Blocks of sizes two, two, and one contracted to a weighted triangle with conductances four, two, and two](images/Block%20Contraction%20for%20Cayleys%20Formula.svg)
 
 *Figure 2. The prescribed components on the left are $A=\{a,b\}$, $B=\{c,d\}$, and $C=\{e\}$. All complete-graph edges between them are available. After contraction, the number of choices for each interblock edge becomes its conductance: $c_{AB}=4$ and $c_{AC}=c_{BC}=2$.*
 
@@ -113,7 +113,7 @@ $$
 
 For example, take the tree with edges $ab,bc,bd,de$ and label order $a<b<c<d<e$. While more than two vertices remain, delete the smallest leaf and record its neighbour: $a\mapsto b$, $c\mapsto b$, $b\mapsto d$. The code is $(b,b,d)$; the last two vertices $d,e$ are joined by an edge. To reconstruct the tree, choose the smallest remaining label absent from the remaining code. This recovers the same edges.
 
-![Leaf Deletion and the Prufer Code](<Leaf Deletion and the Prufer Code.svg>)
+![Leaf Deletion and the Prufer Code](<images/Leaf Deletion and the Prufer Code.svg>)
 
 The code records the neighbours of deleted leaves. Each step shows the remaining tree and the recorded label; the last edge contributes no code entry.
 
@@ -219,7 +219,7 @@ For five vertices:
 
 The total is $5+60+60=125$. Summing over types with $h$ parts gives $S(n-2,h)n_{\underline h}$ trees with $n-h$ leaves. The falling factorial counts assignments of distinct labels to blocks; this principle and its extension to rooted forests are developed in [[Falling Factorials, Rooted Forests, and Stirling Numbers]].
 
-![Three Tree Types on Five Vertices](<Three Tree Types on Five Vertices.svg>)
+![Three Tree Types on Five Vertices](<images/Three Tree Types on Five Vertices.svg>)
 
 Code multiplicities $[3]$, $[2,1]$, and $[1,1,1]$ correspond to the three tree shapes on five vertices. The counts refer to trees on a fixed set of five labelled vertices, not to the number of displayed shapes.
 

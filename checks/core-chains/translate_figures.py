@@ -23,8 +23,8 @@ def fit_text(element, old, new):
         element.set('font-size', f"{float(element.get('font-size')) * ratio:.3f}")
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / 'pmg-library/ru/Преобразования и сочленения графов/Цепи из ядер'
-TARGET = ROOT / 'pmg-library/en/Graph Transformations and Gluing/Chains of cores'
+SOURCE = ROOT / 'pmg-library/ru/Преобразования и сочленения графов/Цепи из ядер/images'
+TARGET = ROOT / 'pmg-library/en/Graph Transformations and Gluing/Chains of cores/images'
 DATA = json.loads(Path(__file__).with_name('figure-translations-en.json').read_text(encoding='utf-8'))
 CYRILLIC = re.compile('[А-Яа-яЁё]')
 ET.register_namespace('', 'http://www.w3.org/2000/svg')

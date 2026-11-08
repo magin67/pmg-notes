@@ -28,7 +28,7 @@ Partition six vertices as $abc\mid de\mid f$. The block sizes are $3,2,1$, and t
 
 The partition form is $[(abc)(de)]^2$: the singleton contributes the multiplicative identity. This is one term of a symmetric sum. To obtain all of $E_6[2,1,0]$, count each partition of the six vertices into blocks of sizes $3,2,1$ exactly once.
 
-![A Partition and Its Block Grades](<A Partition and Its Block Grades.svg>)
+![A Partition and Its Block Grades](<images/A Partition and Its Block Grades.svg>)
 
 Color and outlines distinguish the blocks. The picture specifies their vertex sets; choosing a tree inside a block is unnecessary for defining the type.
 
@@ -220,7 +220,7 @@ The difference arises because this sum makes $n$ choices of a distinguished sing
 
 On four vertices there are three partitions into two pairs: $ab\mid cd$, $ac\mid bd$, and $ad\mid bc$. Each of the $4!=24$ permutations produces one of them. Eight permutations preserve a given partition: two orders within each pair and two orders of the pairs. Thus the number of partitions is $24/(2!\,2!\,2!)=3$.
 
-![Three Partitions and Twenty-Four Permutations](<Three Partitions and Twenty-Four Permutations.svg>)
+![Three Partitions and Twenty-Four Permutations](<images/Three Partitions and Twenty-Four Permutations.svg>)
 
 Each partition corresponds to eight permutations. The sum over partitions counts it once; the sum over all permutations counts it eight times.
 

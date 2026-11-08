@@ -8,7 +8,7 @@ from html import escape
 from pathlib import Path
 from verify_forest_states import forests, state_name
 
-OUT = Path(__file__).resolve().parents[2] / 'pmg-library/ru/Преобразования и сочленения графов/Граничные полиномы и сочленение графов'
+OUT = Path(__file__).resolve().parents[2] / 'pmg-library/ru/Преобразования и сочленения графов/Граничные полиномы и сочленение графов/images'
 INK, MUTED, TEAL, GOLD = '#203444', '#566b7b', '#167f77', '#b97716'
 PURPLE, BLUE, GHOST, LIGHT = '#9464af', '#2767ad', '#c8d1d9', '#f3f6f9'
 EDGES = [(a, b, 1) for a, b in zip('abcde', 'bcde')]

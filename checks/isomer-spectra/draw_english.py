@@ -20,8 +20,8 @@ from matplotlib.ticker import FormatStrFormatter
 
 HERE = Path(__file__).resolve().parent
 LIB = HERE.parents[1] / 'pmg-library'
-RU = LIB / 'ru/Преобразования и сочленения графов/Спектры изомеров'
-EN = LIB / 'en/Graph Transformations and Gluing/Spectra of Isomers'
+RU = LIB / 'ru/Преобразования и сочленения графов/Спектры изомеров/images'
+EN = LIB / 'en/Graph Transformations and Gluing/Spectra of Isomers/images'
 LABELS = json.loads((HERE / 'figure-labels-en.json').read_text(encoding='utf-8'))
 SVG = 'http://www.w3.org/2000/svg'
 ET.register_namespace('', SVG)

@@ -188,7 +188,7 @@ $$
 
 The same object is therefore written as $v=-h_1+h_2=0h^1+1h^2$.
 
-![Coordinates](<Coordinates.svg>)
+![Coordinates](<images/Coordinates.svg>)
 
 *The basis vectors $h_1,h_2$ are not orthogonal. The expansion coefficients of $v$ are $(-1,1)$, while its inner products with the basis vectors are $(0,1)$. The reciprocal basis connects these two descriptions.*
 

@@ -265,7 +265,7 @@ $$
 
 The unique pair selecting both complete paths is subtracted. The constant term of $D_1D_2$ includes two isolated internal vertices $x,y$; excluding forests that are not groves would lose this contribution and other lower coefficients.
 
-![[Two paths and two-point pairing.svg]]
+![[images/Two paths and two-point pairing.svg]]
 
 **The forest polynomial of a cycle.** Green and blue edges belong to different parts; gold circles mark the shared boundary. Only the simultaneous selection of all four edges is forbidden. The drawing specifies the graphs and boundary correspondence, not resistance distances.
 
@@ -295,7 +295,7 @@ $$
 \det\mathbf C_3=-2
 $$
 
-![[Compatibility of five three-point states.svg]]
+![[images/Compatibility of five three-point states.svg]]
 
 **Compatibility table.** An entry is $1$ if the pair of states produces a forest and $0$ if it creates a cycle. Color repeats the numerical information. The table applies to all graphs with this boundary; the parts need not be planar.
 
@@ -380,7 +380,7 @@ $$
 
 Their difference is $tQ=t^3+2t^4$. It gives exactly the contribution of the boundary state whose role changed when the marking was permuted.
 
-![[One partner and two markings of a path.svg]]
+![[images/One partner and two markings of a path.svg]]
 
 **The same graphs, evaluated by pairing.** The figure from the forest-state note shows a triangle with a tail and the cycle $C_5$. Here their polynomials are obtained from passports; directly excluding the unique cycle in each graph gives an independent check.
 
@@ -405,7 +405,7 @@ $$
 
 The term $pq\,t^2$ is excluded: selecting both parallel edges forms a cycle. They may be replaced by one connection of conductance $p+q$ while preserving the weighted forest polynomial. This does not identify the two copies as one edge of conductance $p$ or $q$.
 
-![[Distinct copies and one shared edge.svg]]
+![[images/Distinct copies and one shared edge.svg]]
 
 **Two different seam rules.** With unit conductances, retaining both copies gives $1+2t$, while retaining one shared unit edge gives $1+t$. In the first case, the parallel copies may be combined into conductance $2$; in the second, the single label is counted once.
 

@@ -435,7 +435,7 @@ Here $G-S$ means deleting vertices together with incident edges and recalculatin
 
 ## Adding a vertex and the contribution of every grade
 
-![The new vertex chooses one coupling into each component](Attaching%20a%20Vertex%20to%20Forest%20Components.svg)
+![The new vertex chooses one coupling into each component](images/Attaching%20a%20Vertex%20to%20Forest%20Components.svg)
 
 *Figure 1. Deleting the new vertex $p$ from a spanning tree leaves a forest. Reconstruction chooses exactly one attachment site in each component: none may remain isolated, and two edges into one component would create a cycle. Multiply the chosen forest weight by the product of the attachment-conductance sums.*
 

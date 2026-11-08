@@ -25,7 +25,7 @@ This is the first note in the series “Spaces”. It uses the definitions in [[
 
 Consider the path on three vertices $a,b,c$, with unit coupling strengths on $ab$ and $bc$. Select the two end vertices $a,c$.
 
-![Subspace](<Subspace.svg>)
+![Subspace](<images/Subspace.svg>)
 
 *The left panel shows the graph's couplings; the positions of the vertices in this diagram are arbitrary. The right panel shows its resistance geometry. The blue points $a,c$ determine an affine line, whose extensions are dashed. The blue segment in the right panel does not represent an additional graph coupling.*
 

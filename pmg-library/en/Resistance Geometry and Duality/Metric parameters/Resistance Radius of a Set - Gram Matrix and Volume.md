@@ -389,7 +389,7 @@ Let $C\subseteq A$ contain at least two vertices. We retain the original inner p
 
 Denote the circumsphere centers in the respective Euclidean affine hulls by $O_A,O_C$.
 
-![The center $O_C$ of the two side endpoints is the projection of the circumcenter $O_A$ onto that side](<Projecting the Center onto a Side.svg>)
+![The center $O_C$ of the two side endpoints is the projection of the circumcenter $O_A$ onto that side](<images/Projecting the Center onto a Side.svg>)
 
 *The center $O_C$ of the two side endpoints is the projection of the circumcenter $O_A$ onto that side. The right triangle with common vertex $a$ gives $R_A^2=R_C^2+d^2$, hence $\rho_A=\rho_C+(O_A-O_C)^2$. Here $R_A,R_C,d$ are linear lengths.*
 

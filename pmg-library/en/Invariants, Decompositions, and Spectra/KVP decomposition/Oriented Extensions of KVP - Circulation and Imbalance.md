@@ -278,7 +278,7 @@ For $n\ge3$, the space of balanced tables has dimension $n(n-1)-(n-1)=(n-1)^2$. 
 
 ## Directed graph examples
 
-![[Graph examples for KVPOU.svg]]
+![[images/Graph examples for KVPOU.svg]]
 
 *The first four examples. Unlabeled arcs have weight 1. The two opposite arcs between $a$ and $d$ are drawn separately. Nonzero components of the coupling tables are listed below the graphs. Only the last graph has weight 2 on $a\to b$.*
 
@@ -446,7 +446,7 @@ The decomposition is
 | $ac$ | $1/6$ | $-1/6$ | $0$ | $-1/6$ | $1/6$ |
 | $bc$ | $1/6$ | $-1/6$ | $0$ | $1/6$ | $-1/6$ |
 
-![[One arc - decomposition into U and O.svg]]
+![[images/One arc - decomposition into U and O.svg]]
 
 *Decomposition of the skew-symmetric part H of one arc: $H=C_U+C_O$. In these three panels, an arrow labeled $t>0$ means coefficient $+t$ in its direction and $-t$ in reverse. O forms a triangular circulation of weight $1/6$. On pairs $ac$ and $bc$, U and O cancel.*
 

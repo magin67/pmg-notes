@@ -231,7 +231,7 @@ All coefficients $A_\lambda$ in the following discussion refer to $C_P$.
 >
 > There are no other cases. The two contributions sum to zero, proving (10). Positivity of weights was not used. $\square$
 
-![[Balance of P-component forest coefficients.svg]]
+![[images/Balance of P-component forest coefficients.svg]]
 
 *For grade three, the initial matching has two edges. Adding an edge between free vertices gives type $(1,1,1)$ with multiplicity 6; attaching it to an occupied vertex gives type $(2,1)$ with multiplicity 2. Summing over all initial matchings yields $A_{21}=-3A_{111}$. Color indicates the edge's role in the counting argument, not the sign of its weight.*
 

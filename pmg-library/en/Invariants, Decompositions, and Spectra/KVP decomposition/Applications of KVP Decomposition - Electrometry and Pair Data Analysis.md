@@ -211,7 +211,7 @@ A real electrode of finite size may change the current distribution in the mediu
 
 Take the cycle $a-b-c-d-a$ with unit conductances. Compare it with two changes: adding series contacts and increasing the conductance of $ab$ from 1 to 2.
 
-![[Electrometry example for KVP.svg]]
+![[images/Electrometry example for KVP.svg]]
 
 *Left: the original unit cycle. Center: leaf terminals are attached to its four nodes through resistors of resistance $1/4,1/2,3/4,1$; KVP is applied to the table on the four external terminals. Right: the internal conductance $ab$ is changed, with no contacts present. Numbers in the center panel are contact resistances; the 2 on the right is a coupling conductance.*
 
@@ -297,7 +297,7 @@ Now consider two changes:
 1. Anna has 4 additional interactions with each of the other three participants. The increment $E^{(a)}$ equals 4 on pairs involving a and zero elsewhere.
 2. Vera and Gleb carry out joint work that adds 6 events only to pair $cd$. Denote this increment by $E^{(cd)}$.
 
-![[Vertex and pair changes in KVP interactions.svg]]
+![[images/Vertex and pair changes in KVP interactions.svg]]
 
 *The panels show increments to the common initial table, in which every pair had value 10. Left: three equal increases incident to one vertex form a purely additive vertex correction. Right: one pair changes. Its P-projection also has coefficients on other pairs, as required by the zero-row-sum conditions.*
 

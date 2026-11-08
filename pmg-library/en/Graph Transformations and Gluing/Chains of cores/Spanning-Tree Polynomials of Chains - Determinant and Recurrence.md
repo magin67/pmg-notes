@@ -88,7 +88,7 @@ edges between $f_i$ and $f_\infty$. There are no other edges. The full degree of
 > [!note]- Proof of Theorem 1
 > **Proof.** The stated multiplicities give off-diagonal entries $-\ell_i$, while the full degrees give diagonal entries $m_i$. By the matrix-tree theorem, $\det\mathbf M_N=\tau(H)$. The complement of a spanning tree of a plane graph corresponds to a spanning tree of its dual, so $\tau(G)=\tau(H)$; the precise correspondence appears in the [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters#From the dual graph to the cycle matroid|proof of matroid invariance]]. This gives (1). $\square$
 
-![The dual multigraph of three hexagons, including the outer vertex](The%20Common%20Dual%20Multigraph%20of%20the%20Chains.svg)
+![The dual multigraph of three hexagons, including the outer vertex](images/The%20Common%20Dual%20Multigraph%20of%20the%20Chains.svg)
 
 **Example of the dual graph.** For three hexagons and two shared edges, the full degrees of the internal dual vertices are $6$. The bundles to the outer vertex contain $5,4,5$ edges. After its row and column are deleted, the diagonal remains $(6,6,6)$ and neighboring entries are $-1$. Parallel edges are drawn separately; their unit conductances add in the Laplacian. This calculation in the dual graph does not change the rule that shared edges of the original chain are counted once.
 
@@ -175,7 +175,7 @@ This is the standard determinant expansion for a matrix whose graph of nonzero o
 >
 > The transpositions form a matching $Q$. Each contributes a minus sign and the product $(-\ell_i)(-\ell_i)=\ell_i^2$. An uncovered index contributes $m_j$. Summing over all such permutations gives (4). $\square$
 
-![The five matchings of the path on four cores and their terms](Matchings%20and%20the%20Spanning-Tree%20Polynomial.svg)
+![The five matchings of the path on four cores and their terms](images/Matchings%20and%20the%20Spanning-Tree%20Polynomial.svg)
 
 **Five terms for four cores.** Highlighted edges belong to a matching of the auxiliary path. The possibilities are the empty set, three individual edges, and the pair consisting of the first and third edges. Adjacent seams cannot both belong to a matching because they share a core. Therefore
 
@@ -222,7 +222,7 @@ The sum of squares is unchanged by permutation. The last product depends on whic
 
 All these orders allow disjoint seams when $m\ge5$. If the one-vertex seam is at an end, the product in (6) is zero; if it is in the middle, the product is $1^2\cdot2^2=4$.
 
-![Three seam orders on the auxiliary path of four octagonal cores](Seam%20Order%20and%20the%20Spanning-Tree%20Count.svg)
+![Three seam orders on the auxiliary path of four octagonal cores](images/Seam%20Order%20and%20the%20Spanning-Tree%20Count.svg)
 
 **Seam orders and determinant values.** Circles represent entire cores $C_8$. Lines specify the gluing scheme, including the one-vertex contact; the numbers above them are seam sizes in vertices. This is the auxiliary path, not the original graph or its dual. Moving the one-vertex seam changes the tree count from $3776$ to $3780$.
 

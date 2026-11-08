@@ -40,7 +40,7 @@ $$
 \boxed{E_4[1,1]=E_4[2,0]}
 $$
 
-![Three partitions of four vertices into pairs and four partitions into a triple and a singleton](Partitions%20in%20the%20tetrahedron%20identity.svg)
+![Three partitions of four vertices into pairs and four partitions into a triple and a singleton](images/Partitions%20in%20the%20tetrahedron%20identity.svg)
 
 *Figure 1. Each diagram shows all four vertices. The three upper partitions have positive type $(1^2)$; the four lower partitions have type $(2)$. Outlines mark partition blocks; no graph edges are drawn inside them. Both cases have grade $k=2$ and total component count $m=2$; their numbers of nontrivial components and singleton vertices differ.*
 
@@ -58,7 +58,7 @@ $$
 
 Thus, equality of polyforms is not preserved when each form is replaced by its type. The tetrahedron identity remains valid; the reduction rule is incompatible with it.
 
-![One polyform, two toponomes, one numerical evaluation](Two%20Expansions%20and%20One%20Evaluation.svg)
+![One polyform, two toponomes, one numerical evaluation](images/Two%20Expansions%20and%20One%20Evaluation.svg)
 
 *Figure 2. Two expansions represent one polyform but give different toponomes. Evaluating a part $j$ as $j+1$ sends both toponomes to $12$. Equality of that final evaluation does not imply equality of types.*
 

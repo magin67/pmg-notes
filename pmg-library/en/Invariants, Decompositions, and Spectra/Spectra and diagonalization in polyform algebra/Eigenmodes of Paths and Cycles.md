@@ -98,7 +98,7 @@ $$
 2-\sqrt3,\quad 1,\quad 2,\quad 3,\quad 2+\sqrt3
 $$
 
-![[Eigenmodes of the Path P6.svg]]
+![[images/Eigenmodes of the Path P6.svg]]
 
 *Figure 1. All six coordinate-normalized modes of $P_6$, including the constant mode. Color indicates component sign; numerical labels are rounded to three decimal places. The Laplacian and Greenian eigenvalues are compared on the right. Both matrices vanish on the constant mode, while all other multipliers are reciprocal.*
 
@@ -140,7 +140,7 @@ $$
 \operatorname{spec}\mathbf L_{C_6}=(0,1,1,3,3,4)
 $$
 
-![[Real Modes of the Cycle C6.svg]]
+![[images/Real Modes of the Cycle C6.svg]]
 
 *Figure 2. A real basis for the cycle $C_6$. The top row shows the one-dimensional constant and alternating modes; the next two rows contain cosine-sine pairs for eigenvalues $1$ and $3$. Components are coordinate-normalized and rounded to three decimal places. Vertex labels agree across all diagrams.*
 
@@ -152,7 +152,7 @@ $$
 \operatorname{spec}\mathbf L_{C_5}=(0,\mu_1,\mu_1,\mu_2,\mu_2)
 $$
 
-![[Paired Modes of the Odd Cycle C5.svg]]
+![[images/Paired Modes of the Odd Cycle C5.svg]]
 
 *Figure 3. The four nonzero modes of $C_5$, grouped into two pairs. Together with the constant mode $1/\sqrt5$, they form a complete basis. There is no separate alternating direction with eigenvalue $4$. Component labels are rounded to three decimal places.*
 
@@ -382,7 +382,7 @@ For $C_6$, the spectral contributions are
 | $1,3$ | $1$ | $1/3$ | $0$ | $4/3$ |
 | $1,4$ | $4/3$ | $0$ | $1/6$ | $3/2$ |
 
-![[Spectral Contributions to Resistances in P6 and C6.svg]]
+![[images/Spectral Contributions to Resistances in P6 and C6.svg]]
 
 *Figure 4. Distribution of resistance among path modes and cycle eigenspaces. For the endpoints of $P_6$, the first mode provides the largest share; for the central edge, the three odd modes contribute equally. For $C_6$, the full contributions of paired eigenspaces and the separate mode $4$ are shown. Labels give exact values; segment heights use their numerical values. The vertical scales of the two panels differ.*
 

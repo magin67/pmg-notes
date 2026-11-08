@@ -92,7 +92,7 @@ The vertex $\rho_i$ is distinguished in advance as the root. It is attached to i
 
 Although the sizes of the augmented trees agree with the sizes of the nontrivial components in the SPF type, this is a separate model on $k$ labelled vertices and $m$ added roots. It does not count all forests of the original $K_n$.
 
-![Adding and Deleting Roots](<Adding and Deleting Roots.svg>)
+![Adding and Deleting Roots](<images/Adding and Deleting Roots.svg>)
 
 An example with $k=4$, $m=2$. Roots are added to the blocks $abc$ and $d$. Deleting the added roots leaves three components, $ab$, $c$, and $d$, arranged in two groups. Double circles mark roots.
 
@@ -325,7 +325,7 @@ $$
 
 In $32$ forests, one root is isolated and the other belongs to a tree containing the three ordinary vertices. In $18$ forests, both roots belong to nontrivial components.
 
-![Fifty Forests with Two Prescribed Roots](<Fifty Forests with Two Prescribed Roots.svg>)
+![Fifty Forests with Two Prescribed Roots](<images/Fifty Forests with Two Prescribed Roots.svg>)
 
 One representative of each case is shown. Left: one prescribed root is isolated, giving $2\cdot16=32$ forests. Right: both roots are occupied, giving $2!\cdot9=18$ forests. The total is $50$.
 

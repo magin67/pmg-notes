@@ -61,7 +61,7 @@ $$
 
 The type probability is $s_1(\mathbf k)/D_n$. Uniformity refers to concrete permutations of distinguishable vertices; numerical types are generally not equiprobable.
 
-![Two types of loopless permutation digraphs on four vertices](Two%20Permutation%20Types%20on%20Four%20Vertices.svg)
+![Two types of loopless permutation digraphs on four vertices](images/Two%20Permutation%20Types%20on%20Four%20Vertices.svg)
 
 *Figure 1. Four vertices permit one directed 4-cycle or two directed 2-cycles. One representative of each type is shown. There are $6$ graphs of the first type and $3$ of the second, totaling $D_4=9$.*
 
@@ -139,7 +139,7 @@ $$
 
 The first closes a path; the second joins two different paths. Closing $\underline0\to1$ is excluded by the no-loop condition. Already closed cycles cannot participate in arc addition.
 
-![A cycle with an open path, path closure, and joining two paths](Open%20Paths%20and%20Closing%20Directed%20Cycles.svg)
+![A cycle with an open path, path closure, and joining two paths](images/Open%20Paths%20and%20Closing%20Directed%20Cycles.svg)
 
 *Figure 2. Top: state $[3,\underline1]$. Below: closing $\underline2$ into a 3-cycle and joining two paths $\underline1$ into $\underline3$. The green arc is added to the blue arcs; the vertex count is unchanged.*
 

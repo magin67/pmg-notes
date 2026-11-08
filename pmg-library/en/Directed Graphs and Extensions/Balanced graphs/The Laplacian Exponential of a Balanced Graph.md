@@ -318,7 +318,7 @@ $$
 
 Grade one equals $L$. Grade two contains three trees, while the product of all three arc forms vanishes.
 
-![[Spanning Trees of a Directed 3-Cycle.svg]]
+![[images/Spanning Trees of a Directed 3-Cycle.svg]]
 
 *Each root gives one tree: $b\to c\to a$, $c\to a\to b$, or $a\to b\to c$. The cycle arc leaving the chosen root is omitted. The three tree contributions depend on the reference point.*
 

@@ -22,7 +22,7 @@ NAMES={
  'flow':('Равные потенциалы треугольника','Equal Potentials in a Triangle'),
  'hidden':('Треугольник и скрытый центр','A Triangle and a Hidden Center'),
  'ranking':('Потенциал степеней - расхождение ранжирований','Degree Potential - Ranking Disagreement')}
-PREFIX={'ru':'pmg-library/ru/Резистивная геометрия и дуальность/Метрические параметры','en':'pmg-library/en/Resistance Geometry and Duality/Metric parameters'}
+PREFIX={'ru':'pmg-library/ru/Резистивная геометрия и дуальность/Метрические параметры/images','en':'pmg-library/en/Resistance Geometry and Duality/Metric parameters/images'}
 
 def tr(lang,a,b):return a if lang=='ru' else b
 def canvas(n=1,width=10.8,height=3.8):

@@ -75,7 +75,7 @@ Here $\mathcal F(G)$ is the set of spanning forests, $r(F)$ is the number of the
 
 ## Example: a path on six vertices
 
-![Two forests of type (3,1) and one of type (2²) enter the cell a4,2=3](Different%20Types%20in%20One%20Cell.svg)
+![Two forests of type (3,1) and one of type (2²) enter the cell a4,2=3](images/Different%20Types%20in%20One%20Cell.svg)
 
 *Figure 1. The three interior edge deletions of $P_6$ are shown. Forests are first grouped by type, then two different types by the same pair $(k,r)=(4,2)$. The resulting cell is highlighted in the table.*
 
@@ -186,7 +186,7 @@ $$
 E(T_2)=\{ab,ac,ad,be,bf,cg,eh,gi,hj\}
 $$
 
-![Two trees on ten vertices with the same coefficient table: the branches at their adjacent degree-three vertices have lengths 4,2 and 1,1 in the first tree, and 3,1 and 3,1 in the second](Trees%20with%20the%20same%20coefficient%20table.svg)
+![Two trees on ten vertices with the same coefficient table: the branches at their adjacent degree-three vertices have lengths 4,2 and 1,1 in the first tree, and 3,1 and 3,1 in the second](images/Trees%20with%20the%20same%20coefficient%20table.svg)
 
 *Figure 2. In both trees, vertices $a$ and $b$ have degree $3$ and are joined by an edge. In $T_1$, the two additional branches at $a$ have lengths $4$ and $2$, and those at $b$ have lengths $1$ and $1$. In $T_2$, the branch lengths at each of these vertices are $3$ and $1$.*
 
@@ -257,7 +257,7 @@ $$
 
 Thus the theorem gives identical ratios $a_{k,r}/a_{k,1}$. Division is performed column by column. This is a separate normalization of the table; it does not select roots in the components.
 
-![Cutting at an unselected edge turns a cycle into a path while retaining the forest](Cutting%20a%20Cycle%20at%20an%20Unselected%20Edge.svg)
+![Cutting at an unselected edge turns a cycle into a path while retaining the forest](images/Cutting%20a%20Cycle%20at%20an%20Unselected%20Edge.svg)
 
 *Figure 3. Blue edges belong to the forest; dashed gray edges are unselected. The orange mark picks one unselected edge to cut. On the left, choose a forest and then one of $n-k$ cuts; on the right, choose one of the $n$ cycle cuts and then a forest of the resulting path.*
 

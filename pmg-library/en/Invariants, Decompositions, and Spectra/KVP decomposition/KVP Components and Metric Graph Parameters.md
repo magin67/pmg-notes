@@ -214,7 +214,7 @@ Both tables are realized by connected graphs with positive conductances. This is
 | $bd$ | $1/4$ | $8/51$ |
 | $cd$ | $1/4$ | $26/51$ |
 
-![[Same resistance K and V - different radii.svg]]
+![[images/Same resistance K and V - different radii.svg]]
 
 *The two positive coupling networks from the table. Vertex positions are schematic and do not form a resistance embedding. The graphs have identical K- and V-components of R and identical centroid centralities, but different P-components of R, sphere-center coordinates, and radii.*
 

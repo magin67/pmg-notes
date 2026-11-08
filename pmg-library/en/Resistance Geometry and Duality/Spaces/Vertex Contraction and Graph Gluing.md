@@ -32,7 +32,7 @@ Let us retain two objects instead of three. The result depends on the operation 
 | Delete vertex $c$ and both its couplings | A graph with one coupling of coefficient $1$ | $R_{ab}=1$ |
 | Identify $b,c$ as a vertex $s$ | The coefficients of $ab,ac$ add; the coupling $bc$ disappears | $R_{as}=1/2$ |
 
-![Three Ways to Obtain Two Vertices](<Three Ways to Obtain Two Vertices.svg>)
+![Three Ways to Obtain Two Vertices](<images/Three Ways to Obtain Two Vertices.svg>)
 
 *Figure 1. In the first case, the metric of the selected vertices is preserved. In the other two, the metric is calculated for the transformed graph. Numbers beside lines denote coupling strengths; the dashed line marks the selected affine line.*
 
@@ -166,7 +166,7 @@ The product $M[d]^2$ in (4) and (5) is used to extract potentials in the origina
 >
 > Hence $\|\varphi(v)\|^2=1-1/2=1/2$, in agreement with the direct calculation for the new graph. Formula (4) gives $\tau(G')=1\cdot2=2$.
 
-![Contraction as Projection](<Contraction as Projection.svg>)
+![Contraction as Projection](<images/Contraction as Projection.svg>)
 
 *Figure 2. The resistance realization of the unit path is a right triangle. Projection onto the altitude from $b$ identifies $a,c$ at their midpoint $s$. The squared length of $bs$ is $1/2$.*
 
@@ -312,7 +312,7 @@ Here centers are calculated as elements of affine space: vertex combinations who
 >
 > The same argument applies to the second part. All vertices lie on the sphere with center $h$ and the stated squared radius. Uniqueness of the circumsphere completes the proof. $\square$
 
-![Gluing and Resistance Radius](<Gluing and Resistance Radius.svg>)
+![Gluing and Resistance Radius](<images/Gluing and Resistance Radius.svg>)
 
 *Figure 3. Gluing two unit couplings. In the resistance realization, their internal directions are orthogonal. The midpoints $h_1,h_2$ of the original segments give the circumcenter $h=h_1+h_2-s$ of the combined triangle; its resistance radius is $1/4+1/4=1/2$.*
 

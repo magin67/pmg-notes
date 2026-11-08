@@ -30,7 +30,7 @@ $$
 \text{boundary grade and number of edges }q-1
 $$
 
-![Six forests with types specified by vertex block sizes and by edge counts](Forest%20Types%20by%20Edges.svg)
+![Six forests with types specified by vertex block sizes and by edge counts](images/Forest%20Types%20by%20Edges.svg)
 
 *Figure 1. One forest is described by two numerical collections. Each block size is one greater than the corresponding part of the type by edges. An isolated vertex has size $1$ and grade $0$.*
 
@@ -95,7 +95,7 @@ $$
 \end{aligned}
 $$
 
-![All ten partitions of five vertices into blocks of sizes three and two, represented by forests](Ten%20Partitions%20of%20Type%2021.svg)
+![All ten partitions of five vertices into blocks of sizes three and two, represented by forests](images/Ten%20Partitions%20of%20Type%2021.svg)
 
 *Figure 2. Each drawing has two adjacent edges and one separate edge, giving type $[2,1]$ by edges. One way to connect each triple has been chosen. Thus ten block partitions are represented by ten forests; the other trees within each triple have not yet been listed.*
 
@@ -150,7 +150,7 @@ For type $[2,1]$ by edges on five vertices, we will distinguish the following co
 
 The equality $s_2([2,1])=t([2,1])=3$ belongs to this example. These are different functions: for instance, $s_2([2])=1$, whereas $t([2])=3$.
 
-![Two Different Counts of Three](<Two Different Counts of Three.svg>)
+![Two Different Counts of Three](<images/Two Different Counts of Three.svg>)
 
 On the left, three auxiliary labels are partitioned; on the right, trees are chosen on an already fixed triple of vertices. The answer $3$ counts different objects. For five original vertices, choose one of $10$ partitions and then one of $3$ trees: there are $30$ forests.
 
@@ -162,7 +162,7 @@ $$
 \{ab,ac\},\qquad \{ab,bc\},\qquad \{ac,bc\}
 $$
 
-![Three trees on the same three-vertex set](Three%20Trees%20on%20Three%20Vertices.svg)
+![Three trees on the same three-vertex set](images/Three%20Trees%20on%20Three%20Vertices.svg)
 
 *Figure 3. In every case, the vertices form one block of size $3$, and the type by edges is $[2]$. The edge sets differ; each tree has a different central vertex.*
 
@@ -283,7 +283,7 @@ $$
 
 The first count distinguishes a singleton in the chosen subset from an unchosen element. Forgetting this distinction and treating both as ordinary singleton blocks turns each pair of partial partitions into one full partition. For example, $ab\mid c$ with $d$ left outside and $ab\mid d$ with $c$ left outside both give $ab\mid c\mid d$.
 
-![Selected and Unselected Singletons](<Selected and Unselected Singletons.svg>)
+![Selected and Unselected Singletons](<images/Selected and Unselected Singletons.svg>)
 
 Two partial partitions become one full partition when we forget which singleton was selected. Thus $e_4([2,1])=12$, whereas $s_2([2,1,1])=6$. The outline marks the selected subset.
 

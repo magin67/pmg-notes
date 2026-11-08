@@ -97,7 +97,7 @@ $$
 
 The last equality uses evenness of $n=4N+2$. This is one exact integer, not a rounded numerical estimate. It involves every rooted coefficient.
 
-![The full boundary state, the spectrum, and a single value](Data%20for%20Distinguishing%20SLR%20Chains.svg)
+![The full boundary state, the spectrum, and a single value](images/Data%20for%20Distinguishing%20SLR%20Chains.svg)
 
 **Three reconstruction problems.** The full boundary state retains markings and admits proved decoding. For the two scalar spectral representations, a general inverse passage to the graph class remains conjectural. A value can always be computed from the polynomial; injectivity of that value on the family requires separate study.
 
@@ -236,7 +236,7 @@ The dependence of $s_4$ on the number of bends was already established in [[en/G
 > [!note]- Proof of the corollary
 > **Proof.** The recovery formulas follow from (7). With the same $N,b$, the values $s_1,\ldots,s_5$ coincide, so (4) gives equality of $p_1,\ldots,p_5$. Subtracting Newton's identities at $j=6$ leaves $6\Delta p_6=-\Delta s_6=-6\Delta h$. $\square$
 
-![The same number of bends with different adjacent turn pairs](The%20Sixth%20Moment%20and%20Adjacent%20Turns.svg)
+![The same number of bends with different adjacent turn pairs](images/The%20Sixth%20Moment%20and%20Adjacent%20Turns.svg)
 
 **Two bends, different adjacencies.** In SLL, one endpoint of the middle seam has three degree-3 neighbors; SLR has no such endpoint. This local difference gives $\Delta h=1$, $\Delta s_6=6$, and $\Delta p_6=-1$. Blue marks seams; red marks degree-3 vertices and additional connections between them. The filled red vertex has three degree-3 neighbors.
 
@@ -280,7 +280,7 @@ $$
 
 The full polynomials of both pairs, edge lists, and isomorphism checks are recorded in the [exact data](https://github.com/magin67/pmg-notes/blob/v5/checks/isomer-spectra/spectral-distinguishability-results.json). The polynomial differences here are computed directly from Laplacians; the moment formulas provide a separate check of their leading coefficients.
 
-![Chain differences appear at different depths in the polynomial](Coinciding%20Leading%20Rooted%20Coefficients.svg)
+![Chain differences appear at different depths in the polynomial](images/Coinciding%20Leading%20Rooted%20Coefficients.svg)
 
 **Depth of the first difference.** The pair with one bend shares its first seven coefficients; the displayed pair with three bends shares its first nine. Colored cells mark the first differing coefficient, and gray cells the common leading segment. The figure shows only this segment, not all coefficients.
 

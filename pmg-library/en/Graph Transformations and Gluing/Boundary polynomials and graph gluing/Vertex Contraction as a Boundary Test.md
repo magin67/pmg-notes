@@ -109,7 +109,7 @@ $$
 r(\pi)=r(\sigma)=2,\qquad r(\pi\vee\sigma)=r(abcd)=3
 $$
 
-![[A cycle between two contracted blocks.svg]]
+![[images/A cycle between two contracted blocks.svg]]
 
 **A cycle between blocks.** The green edges $ac,bd$ form the original forest. Gold dashed lines mark the auxiliary pairs $ab,cd$ specifying the identifications; these are not edges of the original graph. After contraction, the two selected edges have the same endpoints. Criterion (1) detects the dependence of the entire system of identifications.
 
@@ -212,7 +212,7 @@ $$
 
 The quotient graph has three vertices $h,b,d$ and two parallel pairs, one between $h,b$ and one between $h,d$. The choices in these pairs are independent.
 
-![[Three contractions of the boundary of P5.svg]]
+![[images/Three contractions of the boundary of P5.svg]]
 
 **Three results for one component.** Each pair of parallel unit edges is replaced in the drawing by one connection of conductance $2$. The formulas below the graphs follow both from the passport test and from direct forest enumeration. Their leading coefficients are $2,4,4$, and their degrees are $3,3,2$.
 
@@ -238,7 +238,7 @@ $$
 
 The product $(1+3t)(1+5t)$ is incorrect here: its term $15t^2$ selects both parallel edges and creates a cycle. The conductance of the former edge $ab$ does not enter the result.
 
-![[A loop and parallel edges after contraction.svg]]
+![[images/A loop and parallel edges after contraction.svg]]
 
 **Transferring labels and summing weights.** The middle panel retains all three original labels: the loop of conductance $2$ is excluded from forests, and at most one edge of the parallel pair $3,5$ is selected. The right panel shows the connection of conductance $8$ that is equivalent for forest counting.
 

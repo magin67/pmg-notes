@@ -42,7 +42,7 @@ Graph applications use the [[Laplacian Exponential|Laplacian exponential]]. Part
 
 The notes on types and the fundamental theorem suffice for the main result. The graph route continues through products and the complete graph; the combinatorial route continues through forest coefficients.
 
-![From Partitions to Forest Coefficients](<From Partitions to Forest Coefficients.svg>)
+![From Partitions to Forest Coefficients](<images/From Partitions to Forest Coefficients.svg>)
 
 The route shows how the topics depend on one another. The main algebraic result precedes graph applications and numerical counting.
 

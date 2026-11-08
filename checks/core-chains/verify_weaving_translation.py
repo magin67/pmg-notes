@@ -93,10 +93,10 @@ def main():
         counts['proofs'] += sum(fold == '-' for _, fold in calls(e))
     labels = json.loads((HERE/'figure-translations-en.json').read_text(encoding='utf-8'))
     for source, entry in labels.items():
-        if entry['file'] not in figures:
+        if 'images/' + entry['file'] not in figures:
             continue
-        r = list(ET.parse(RU/source).iter())
-        raw = (EN/entry['file']).read_text(encoding='utf-8')
+        r = list(ET.parse(RU/'images'/source).iter())
+        raw = (EN/'images'/entry['file']).read_text(encoding='utf-8')
         e = list(ET.fromstring(raw).iter())
         assert not re.search('[А-Яа-яЁё]', raw), entry['file']
         assert len(r) == len(e)

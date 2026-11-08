@@ -176,7 +176,7 @@ For four vertices, the correspondence is:
 
 The other partitions follow by permuting vertices. Under (5), the tetrahedron identity (2) becomes the cut identity (4). Grade $2$ is replaced by grade $1$, while the coefficients remain one. No particular Greenian needs to be constructed for this transfer.
 
-![Three pair partitions and four one-plus-three partitions](The%20Tetrahedron%20Identity%20and%20Cut%20Forms.svg)
+![Three pair partitions and four one-plus-three partitions](images/The%20Tetrahedron%20Identity%20and%20Cut%20Forms.svg)
 
 *Figure 1. Orange marks the block whose centered-vector sum defines the lower cut form. In each column, the direct grade-two identity passes to the centered grade-one identity. A partition weight is the product of its block sizes: $3\cdot4=4\cdot3=12$. The raw counts 3 and 4 do not preserve the identity.*
 

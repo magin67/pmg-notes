@@ -51,7 +51,7 @@ The matrix, its operator on the vertex coordinate space, and the Laplacian form 
 
 The requirement of exactly two shared vertices excludes connections between the new core and already eliminated vertices of the old fragment. For an edge-glued chain, this is precisely what allows us to forget the internal structure of the accumulated graph.
 
-![Old fragment, core attachment, and change of the active pair](Changing%20the%20Active%20Spectral%20Boundary.svg)
+![Old fragment, core attachment, and change of the active pair](images/Changing%20the%20Active%20Spectral%20Boundary.svg)
 
 **What passes from step to step.** The interior of the old fragment is eliminated, but its determinant factor is retained. The core connects the input pair to the output pair. Once the five new coordinates have been computed, the passport on $(c,d)$ is stored; the old pair is no longer active.
 
@@ -203,7 +203,7 @@ These substitutions use formal entries of the block $\mathbf X$, not conductance
 
 Take $K=C(0,1,2,3,4,5)$. Identify the input $(0,1)$ with the old pair $(a,b)$ **in the same order**: $0\mapsto a$, $1\mapsto b$. Count the shared edge $01$ of conductance $1$ once. Choose output $(j,j+1)$, where $j=2,3,4$, and denote the corresponding transfer by $\mathbf T_j$.
 
-![Three output edges with a fixed order of the input pair](Three%20Output%20Seams%20of%20a%20Hexagon.svg)
+![Three output edges with a fixed order of the input pair](images/Three%20Output%20Seams%20of%20a%20Hexagon.svg)
 
 **The pair order is part of the data.** Arrows specify the order of the seam endpoints; the graph remains undirected. Each of the three output edges is disjoint from the input. Every individual cycle edge has the same spectral passport, but its position relative to the input differs.
 
@@ -320,7 +320,7 @@ Here $j_i$ specifies the output of core $i$, $\mathbf e_1=(1,0,0,0,0)^{\mathsf T
 
 The passports $\mathbf T_3s_1$ and $\mathbf T_2s_1$ belong to the same two-hexagon graph but to different output edges. Their first coordinates agree; the full vectors differ.
 
-![The same polynomial for two cores and different results after attaching a third](Spectral%20Memory%20of%20Two%20Hexagons.svg)
+![The same polynomial for two cores and different results after attaching a third](images/Spectral%20Memory%20of%20Two%20Hexagons.svg)
 
 **The difference is retained at the boundary until the next attachment.** The figure uses the numerical check $P_G(1)$, where $P_G(t)=\det(\mathbf I+t\mathbf L_G)$ is the rooted polynomial, not the ordinary forest polynomial. Equal values for two cores become different values for three after the same attachment rule is applied at the marked output.
 
@@ -389,7 +389,7 @@ Evaluation at $\xi=-1$ serves here as an exact check. It neither replaces polyno
 
 Take the old path $G=a-u-b$ with active pair $(a,b)$. Attach the path $K=a-c-d-b$ with no shared edges, and transfer the boundary to $(c,d)$. The result is the cycle $C_5$.
 
-![Transfer between two pairs when the internal minor is zero](Transfer%20with%20a%20Zero%20Interior%20Minor.svg)
+![Transfer between two pairs when the internal minor is zero](images/Transfer%20with%20a%20Zero%20Interior%20Minor.svg)
 
 **Rational elimination has a pole; polynomial transfer remains defined.** For the old path, $E=\xi-2$. At $\xi=2$, the formula expressing $\mathbf S_G$ through $1/E$ cannot be used. Yet all five new coordinates are obtained from (7).
 

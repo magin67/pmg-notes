@@ -9,7 +9,7 @@ import numpy as np
 
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':15,'svg.fonttype':'none','svg.hashsalt':'pmg-structural-2026-11-08','mathtext.fontset':'dejavusans','figure.facecolor':'white','savefig.facecolor':'white'})
 BLUE='#276b9c';ORANGE='#d17a29';TEAL='#1e8a72';RED='#bd4d43';INK='#263d4c';GRAY='#aebbc4';PALE='#edf3f7'
-PREFIX={'ru':'pmg-library/ru/Алгебра и комбинаторика полиформ/Структурные тождества','en':'pmg-library/en/Polyform Algebra and Combinatorics/Structural identities'}
+PREFIX={'ru':'pmg-library/ru/Алгебра и комбинаторика полиформ/Структурные тождества/images','en':'pmg-library/en/Polyform Algebra and Combinatorics/Structural identities/images'}
 NAMES={
 'seven':('Семь разбиений в тождестве тетраэдра','Seven Partitions in the Tetrahedron Identity'),
 'box':('Тетраэдр и три площади параллелепипеда','A Tetrahedron and Three Parallelepiped Areas'),

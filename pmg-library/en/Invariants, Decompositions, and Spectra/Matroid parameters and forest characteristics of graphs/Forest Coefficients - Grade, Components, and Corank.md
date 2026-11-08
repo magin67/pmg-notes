@@ -90,7 +90,7 @@ $$
 
 In the figure, edge count increases from left to right, while component count and corank decrease:
 
-![[Three Forest Indices of Cycle C4.svg]]
+![[images/Three Forest Indices of Cycle C4.svg]]
 
 **Three indices.** The original cycle $C_4$ has rank $d=3$. One forest of each grade is shown, not every forest of the graph. All four vertices remain even when $g=0$; at $g=2$, the selected forest is a three-vertex path and one isolated vertex. Thus all four cases satisfy $m=4-g$ and $k=3-g$.
 
@@ -368,7 +368,7 @@ $$
 
 Directly listing roots shows the source of this extra factor:
 
-![[Ordinary and Rooted Forests - Two Component Types.svg]]
+![[images/Ordinary and Rooted Forests - Two Component Types.svg]]
 
 **An ordinary forest and choices of roots.** Both illustrated forests of unit $K_4$ have two edges and contribute $1$ each to $f_2$. For type $3+1$, the three-vertex component has three possible roots, while the isolated vertex is already its component's root. For type $2+2$, there are $2\cdot2=4$ choices. These extra choices give contributions $3$ and $4$ to $p_2$. The smaller drawings below list all choices for each of the two fixed forests.
 

@@ -89,7 +89,7 @@ For $d$, one may choose $x$ instead of $y$ as the root: reassigning the root of 
 >
 > The derivative with respect to $q_x$, evaluated at all $q_v=1$, equals $b$ and requires $x$ to be chosen as a root. The mixed derivative with respect to $q_x,q_y$ equals $e$: the two variables can only come from distinct components. This proves the remaining interpretation and accounts for all the principal minors. $\square$
 
-![Five conditions on forest roots and marked vertices](Five%20Rooted%20Coordinates.svg)
+![Five conditions on forest roots and marked vertices](images/Five%20Rooted%20Coordinates.svg)
 
 **Roots and boundary markings have different roles.** The figure shows one forest satisfying each condition. A filled green vertex is a root; rings mark $x,y$. The same rooted forest may contribute to several coordinates.
 
@@ -285,7 +285,7 @@ $$
 >
 > These bounds follow from the signs of the coefficients of the affine functions; exchanging $r,s$ preserves the region. This proves the sign table. $\square$
 
-![Separation of states by ratios of two rooted coordinates](Three%20Decoding%20Sectors.svg)
+![Separation of states by ratios of two rooted coordinates](images/Three%20Decoding%20Sectors.svg)
 
 **The thresholds are $b/a=c/a=4/9$.** Colors show the three possible sectors of the last transition within the projection $\mathcal K$; the points represent the initial state and several of its descendants. Shading a sector does not mean that every point in it is reachable. The initial state also lies in sector $(+,+)$, so it must be checked before selecting a letter.
 
@@ -390,7 +390,7 @@ $$
 \mathbf z(L)=(28435,12331,12694,4763,4707)^{\mathsf T}
 $$
 
-![Removing the last core and recovering the operation word LRS](Reading%20SLR%20Backwards.svg)
+![Removing the last core and recovering the operation word LRS](images/Reading%20SLR%20Backwards.svg)
 
 **The inverse computation reads operations from right to left.** First it removes the terminal operation $S$, which specifies the marked last core. It then removes $R$ and $L$. In forward order, this is $LRS$; the corresponding chain code is $SLR$.
 

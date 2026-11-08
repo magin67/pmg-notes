@@ -58,7 +58,7 @@ $$
 
 All four conductances are $1$; the internal vertices are $b,d$.
 
-![[Path P5 with a three-point boundary.svg]]
+![[images/Path P5 with a three-point boundary.svg]]
 
 **The fixed boundary.** Gold circles mark $a,c,e$. Every forest of this graph retains all five vertices, including an isolated $b$ or $d$. Segment lengths in the drawing indicate only vertex placement, not resistance.
 
@@ -83,7 +83,7 @@ $$
 ace,\qquad ac|e,\qquad ae|c,\qquad a|ce,\qquad a|c|e
 $$
 
-![[Five partitions of a three-point boundary.svg]]
+![[images/Five partitions of a three-point boundary.svg]]
 
 **Blocks and edges.** Colored regions group vertices belonging to the same block. These are partition diagrams, not subgraphs of $P_5$: the region joining $a$ and $e$ does not indicate an edge $ae$. The state $ae|c$ belongs to $\Pi(B)$, although no forest of this path realizes it.
 
@@ -179,7 +179,7 @@ We derive these formulas directly from the edge choices.
 
 **State $ac|e$.** The edges $ab,bc$ are required. From the pair $cd,de$, we may select neither edge or exactly one; selecting both would connect $e$ to $c$. The contribution is therefore $t^2(1+t+t)$. In the first of these three forests, $d$ is an isolated internal component; in the other two, every component meets the boundary.
 
-![[Three forests of one boundary state.svg]]
+![[images/Three forests of one boundary state.svg]]
 
 **One state, three forests.** The boundary partition is $ac|e$ in every panel. Purple marks the internal component $\{d\}$; dashed lines show edges of the original path that are not selected. Every panel contains all vertices. Reflecting the path gives the three forests of state $a|ce$; its two-edge forest has internal component $\{b\}$.
 
@@ -187,7 +187,7 @@ We derive these formulas directly from the edge choices.
 
 **State $a|c|e$.** On the segment $a-b-c$, select no edge or one of the two edges. The same three possibilities arise independently on $c-d-e$. Combining any two such choices keeps distinct boundary vertices disconnected. This gives $3\cdot3=9$ forests and the polynomial $(1+2t)^2$.
 
-![[Nine forests with separated boundary.svg]]
+![[images/Nine forests with separated boundary.svg]]
 
 **Two independent choices.** Rows specify the edge choice on $a-b-c$; columns specify the choice on $c-d-e$. The empty choice on the first segment leaves the internal component $\{b\}$, and on the second leaves $\{d\}$. The four panels with one selected edge on each segment have no internal components.
 
@@ -283,7 +283,7 @@ $$
 
 Fix a partner $J$ on vertices $x,y,z$: its only edge $xy$ has conductance $1$, and $z$ is isolated. In each gluing, identify boundary vertices with the same name. The edge sets of the parts are disjoint, no internal vertices are identified, and the edge $xy$ is included exactly once.
 
-![[One partner and two markings of a path.svg]]
+![[images/One partner and two markings of a path.svg]]
 
 **The same partner.** The blue edge $xy$ belongs to $J$; the green edges belong to the chosen copy of the path. For $X$, the result is a triangle with a two-edge tail; for $X'$, it is the cycle $C_5$. Both graphs have five vertices and five edges; the boundary and the matching of names are specified before gluing.
 

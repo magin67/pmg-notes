@@ -121,7 +121,7 @@ For two independent unit-weight edges, the forest toponome is $1+2(1)+(1^2)$. Un
 
 The general theorem below proves more: the two-edge forest toponome has no other nontrivial $*$-factors either. The figure explains the difference between the rules; it does not replace the irreducibility proof.
 
-![Ordinary multiplication retains two components; the second-kind product adds a matching](Two%20Products%20for%20Two%20Edges.svg)
+![Ordinary multiplication retains two components; the second-kind product adds a matching](images/Two%20Products%20for%20Two%20Edges.svg)
 
 *Figure 1. The common empty-forest and one-edge contribution is $1+2(1)$. Only the two-edge contribution differs: ordinary multiplication gives $(1^2)$, while $*$ also gives $(2)$. Here $x_1^2$ denotes an ordinary monomial, not the $*$-square of type $(1)$.*
 
@@ -189,7 +189,7 @@ All $\lambda_j$ are positive. Thus, for $n-c\geqslant2$, $P_G(t)$ is reducible o
 
 Vector normalization does not guarantee reducibility over the reals. For the unit-weight triangle, $F_{K_3}(t)=1+3t+3t^2$ has discriminant $-3$ and is irreducible over $\mathbb R$. Over $\mathbb C$, every one-variable polynomial of degree at least $2$ is reducible. A one-variable statement must therefore specify both the normalization and the coefficient field.
 
-![The connected path P3 gains factors after setting u=1](Substituting%20One%20for%20u.svg)
+![The connected path P3 gains factors after setting u=1](images/Substituting%20One%20for%20u.svg)
 
 *Figure 2. Two variables distinguish the edge count and the number of nontrivial components. After setting $u=1$, only the edge count remains. Both two-variable polynomials are irreducible over $\mathbb C$, while their one-variable specializations have the displayed factors. The graph itself does not change.*
 

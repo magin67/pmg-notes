@@ -32,7 +32,7 @@ Secondary thematic entries:
 
 ## Reading order
 
-![Routes through Combinatorial Counts](<Routes through Combinatorial Counts.svg>)
+![Routes through Combinatorial Counts](<images/Routes through Combinatorial Counts.svg>)
 
 The starting note serves all three routes. The cycle route does not require Cayley’s theorem; the forest route does not require polyforms.
 

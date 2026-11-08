@@ -44,7 +44,7 @@ $$
 >
 > The second pair has the same number of bends. The spectrum detects their relative direction, not only their presence.
 
-![Two pairs of chains differing at one seam position](One%20Seam%20and%20Two%20Spectral%20Differences.svg)
+![Two pairs of chains differing at one seam position](images/One%20Seam%20and%20Two%20Spectral%20Differences.svg)
 
 **One changed letter, different difference polynomials.** In the upper pair, $S$ is replaced by $L$; in the lower pair, the second $L$ is replaced by $R$. At $\xi=-1$, the differences are $14641$ and $-131769$. They are also differences of $P_G(1)$, because $n$ is even and $P_G(1)=(-1)^n\chi_G(-1)$.
 
@@ -150,7 +150,7 @@ Here $\mathbf P,\mathbf Q$ denote auxiliary rectangular matrices, not the rooted
 > [!note]- Checking the factorization and rank
 > **Proof.** Subtract the recurrences for outputs $(3,4)$ and $(2,3)$, then interchange the input coordinates $B,C$. The result is product (6). The minor of $\mathbf P$ on rows $C,D$ equals $1$, and the minor of $\mathbf Q$ on columns $A,C$ also equals $1$. Thus $\mathbf P$ is injective from a two-dimensional space, $\mathbf Q$ is surjective onto it, and the product has rank $2$ with no exceptional parameter values. Formulas (7), (8) follow by multiplication. $\square$
 
-![Left passport and right continuation in the local difference formula](Two%20Combinations%20in%20a%20Seam%20Difference.svg)
+![Left passport and right continuation in the local difference formula](images/Two%20Combinations%20in%20a%20Seam%20Difference.svg)
 
 **The difference is reduced, not the entire spectral calculation.** The chosen change requires two combinations of the old passport and two coefficients of the right continuation. This does not imply a two-coordinate automaton for all chain letters: these two combinations are not asserted to form a closed state under ordinary continuation.
 
@@ -339,7 +339,7 @@ D_2&=\chi_{SSS}-\chi_{SSL}-\chi_{SLS}+\chi_{SLL},\\
 \tag{21}
 $$
 
-![Ordinary and reoriented mixed differences of four chains](Two%20Mixed%20SLR%20Differences.svg)
+![Ordinary and reoriented mixed differences of four chains](images/Two%20Mixed%20SLR%20Differences.svg)
 
 **The final graph changes the recurrence.** At $\xi=-1$, the ordinary sum is $-102487$, and the sum with an extra permutation is $29282$. Their difference is $\chi_{SLL}(-1)-\chi_{SLR}(-1)=-131769$, as in (1). Identity (19) is valid, but cannot be applied to the ordinary $D_r$ in (17).
 
@@ -400,7 +400,7 @@ Here $p_k$ are the rooted forest coefficients from [[en/Polyform Algebra and Com
 >
 > The coefficients $p_k$ are elementary symmetric polynomials in the eigenvalues. The classical Newton identities read $kp_k=\sum_{j=1}^k(-1)^{j-1}p_{k-j}\sigma_j$. The first three traces agree, so $p_1,p_2,p_3$ agree as well. Subtracting the formulas for $4p_4$ leaves $-(\sigma_4(G)-\sigma_4(H))=-4(b(G)-b(H))$. This is (23). $\square$
 
-![Edges between degree-three vertices at a straight continuation and a bend](A%20Bend%20and%20the%20Fourth%20Rooted%20Coefficient.svg)
+![Edges between degree-three vertices at a straight continuation and a bend](images/A%20Bend%20and%20the%20Fourth%20Rooted%20Coefficient.svg)
 
 **A bend adds one edge between seam endpoints.** The figure shows an internal core after its neighbors have been attached. Endpoints of the red seams have degree $3$. The additional blue edge occurs for $L$ or $R$ and increases the fourth spectral moment by $4$.
 

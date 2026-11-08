@@ -103,7 +103,7 @@ Labels in the table refer to arcs.
 
 For $[\underline2]$, the labels along the path may occur as $1,2$ or $2,1$. For $[2]$, these two sequences describe one cyclic order. For $[1,\underline1]$, choose which of the two labels goes to the loop and which goes to the open path.
 
-![[Arc Labels in Paths and Cycles.svg]]
+![[images/Arc Labels in Paths and Cycles.svg]]
 
 *Figure 1. Numbers beside arrows are arc labels; circles have no individual labels. Direction distinguishes the initial vertex of an open path, whereas a cycle has no distinguished initial position. A loop and an open arc are components of different kinds.*
 
@@ -152,7 +152,7 @@ The six graphs correspond to the six orders of the three vertices along the path
 
 Formulas (1)-(2) remain valid in the loopless model for types with $c_1=0$. Probabilities under sequential random choice require a separately specified rule for choosing arcs; a potential alone does not determine that rule.
 
-![Potential Graphs and Histories](<Potential Graphs and Histories.svg>)
+![Potential Graphs and Histories](<images/Potential Graphs and Histories.svg>)
 
 For a path of two arcs, $u=2$. On vertices $a,b,c$, there are $N_3=6$ directed paths, one for each vertex order. Each allows two arc-addition orders, so $H_3=12$. The right panel shows the two histories of just one graph, $a	o b	o c$.
 
@@ -162,7 +162,7 @@ In the literature, digraphs with indegree and outdegree at most $1$ are called *
 
 To relate this model to $u$, turn each labelled arc of the original state into a vertex of an auxiliary graph. Join two such vertices by an arc when the corresponding original arcs immediately follow one another along a path or cycle. A cycle of length $j$ remains a cycle on $j$ vertices; a path $\underline j$ becomes a path on $j$ vertices. A loop remains a loop, whereas $\underline1$ becomes an isolated vertex.
 
-![Arcs Become Vertices](<Arcs Become Vertices.svg>)
+![Arcs Become Vertices](<images/Arcs Become Vertices.svg>)
 
 A path of two arcs has three original vertices but two vertices in the auxiliary graph. A single open arc becomes an isolated vertex; a loop remains a loop. Labels are preserved as they move from arcs to vertices.
 

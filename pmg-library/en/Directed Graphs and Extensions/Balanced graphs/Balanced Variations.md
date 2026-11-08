@@ -152,7 +152,7 @@ $$
 
 Start with unit 2-cycles $a\leftrightarrow c$ and $b\leftrightarrow d$, reassigning $a\to c$ and $b\to d$. At $t=1$, the result is the unit cycle $a\to d\to b\to c\to a$.
 
-![[Reassigning Two Couplings.svg]]
+![[images/Reassigning Two Couplings.svg]]
 
 *All arcs in the two endpoint diagrams have weight $1$. Orange arcs are reassigned; gray arcs are retained. Two separate 2-cycles become one 4-cycle. For $0<t<1$, old orange arcs have weight $1-t$ and new ones weight $t$; all incoming and outgoing totals remain $1$.*
 
@@ -227,7 +227,7 @@ Suppose $G$ contains $a\to c$ of weight $q>0$. Add a new vertex $b$ and replace 
 
 Vertices $a,c$ retain their incoming and outgoing totals. Both totals at $b$ are $q$, so the new graph $G'$ is balanced.
 
-![[Inserting a Vertex into a Directed Arc.svg]]
+![[images/Inserting a Vertex into a Directed Arc.svg]]
 
 *An arc $a\to c$ of weight $q$ is replaced by two successive arcs of the same weight. Vertex $b$ is new; the rest of the graph is retained. The Laplacian change is $-q[(ab),(bc)]$.*
 

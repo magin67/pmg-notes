@@ -45,7 +45,7 @@ A grove $F_i$ induces a partition $\pi(F_i)$ of $S$: two selected vertices lie i
 
 ## Two shared vertices
 
-![Gluing Two Paths into a Cycle](<Gluing Two Paths into a Cycle.svg>)
+![Gluing Two Paths into a Cycle](<images/Gluing Two Paths into a Cycle.svg>)
 
 *The pieces initially have separate copies of $a,b$. Identifying them joins the two paths into a cycle. Shared vertices are blue; $x,y$ remain internal vertices of their pieces.*
 
@@ -53,7 +53,7 @@ Let $S=\{a,b\}$. The first piece is the path $a-x-b$ with edge weights $\alpha,\
 
 In the first piece, the grove of type $ab$ contains both edges and has weight $\alpha\beta$. Groves of type $a|b$ contain exactly one edge, with weights $\alpha$ and $\beta$. The empty forest is not a grove because its isolated vertex $x$ does not belong to $S$.
 
-![Groves of a Path with an Internal Vertex](<Groves of a Path with an Internal Vertex.svg>)
+![Groves of a Path with an Internal Vertex](<images/Groves of a Path with an Internal Vertex.svg>)
 
 *The path $a-x-b$ has three groves relative to $S=\{a,b\}$. The first joins the boundary vertices and has weight $\alpha\beta$; the other two separate them and have weights $\alpha,\beta$. The empty forest is not a grove: its internal vertex $x$ forms a component disjoint from $S$.*
 
@@ -253,7 +253,7 @@ $$
 
 Their edge sets are disjoint, and all four vertices are shared: $S=\{a,b,c,d\}$. Their union contains all six vertex pairs and equals $K_4$.
 
-![[Gluing Two Paths into K4.svg]]
+![[images/Gluing Two Paths into K4.svg]]
 
 *Two paths and their union after identifying vertices with the same names. Solid blue edges belong to $G_1$; dashed orange edges belong to $G_2$. The vertices are arranged in the cyclic order $a,b,c,d$. The crossing of diagonals in the figure is not a vertex.*
 

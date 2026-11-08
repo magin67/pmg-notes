@@ -43,7 +43,7 @@ Let $v=\beta_1\cdots\beta_p$ be a nonempty word over S, L, R. The letter S denot
 
 There is another convention: repeat the composite runner $v$ directly from the starting edge. Then $N=pm$, and at $m=0$ the graph is a single edge. This is the family in [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns#A periodic code and a composite runner|A periodic code and a composite runner]]. The two families share a period matrix but have different initial and terminal conditions.
 
-![Repeating the internal word and repeating the runner from an edge](Two%20Period%20Conventions.svg)
+![Repeating the internal word and repeating the runner from an edge](images/Two%20Period%20Conventions.svg)
 
 In runner language, the main family corresponds to the output sequence $Sv^mS$. The first S creates the first core; the last S selects the boundary after the final attachment. The internal letters $v^m$ specify seam positions. If only $v^m$ is repeated from an edge, then for $pm\ge2$ its internal word is obtained by removing the first and last letters. At $pm=0$, the starting edge remains; at $pm=1$, there is one core with no internal word. This is why the two additional cores in (1) cannot be omitted.
 
@@ -370,7 +370,7 @@ A cyclic shift of a period replaces $v=\beta_1\cdots\beta_p$ by $v'=\beta_2\cdot
 >
 > Hence the first differing coefficient of the characteristic polynomials is that of $\xi^{n-6}$, with difference $-1$. $\square$
 
-![Three starting phases of LLS and two different finite-chain spectra](Three%20Phases%20of%20the%20LLS%20Period.svg)
+![Three starting phases of LLS and two different finite-chain spectra](images/Three%20Phases%20of%20the%20LLS%20Period.svg)
 
 In the figure, $h$ is the number of adjacent LL or RR pairs in the internal word.
 
@@ -490,7 +490,7 @@ $$
 
 The numbers in this table are rounded; their exact definition is given by (20)–(21). The multipliers for LR and LLS cannot be compared directly without accounting for period length: one step adds different numbers of cores.
 
-![Growth rate of rooted forest counts per core](Rooted%20Forest%20Growth%20in%20Periodic%20Chains.svg)
+![Growth rate of rooted forest counts per core](images/Rooted%20Forest%20Growth%20in%20Periodic%20Chains.svg)
 
 This asymptotic result concerns the total number of rooted forests of finite graphs. It does not itself describe spectral bands of an infinite chain or prove that a period can be recovered from a single growth rate.
 

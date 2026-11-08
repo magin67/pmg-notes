@@ -43,7 +43,7 @@ The unit triangle $abc$ has original resistance $R_{ab}=2/3$. Deleting $c$ with 
 
 Thus, specifying the remaining vertices does not specify the outcome. The first operation changes the network and its metric; the second reproduces the original metric using new couplings.
 
-![One original triangle and two outcomes of removing vertex $c$](<Two Types of Vertex Removal.svg>)
+![One original triangle and two outcomes of removing vertex $c$](<images/Two Types of Vertex Removal.svg>)
 
 *One original triangle and two outcomes of removing vertex $c$. Labels give conductances; $R_{ab}$ and $\rho$ are computed for each resulting network. For two vertices, $\rho=R_{ab}/4$.*
 
@@ -252,7 +252,7 @@ $$
 
 The derivative at zero selects the coefficient of $t$: the leaf probability is $2/3$. The derivative at one counts the degree in each tree: $(2+1+1)/3=4/3$. With $d_a=2$, this gives $s_a=1/3$ and $\widehat s_a=1/2$.
 
-![Each spanning tree has probability $1/3$](<Three Spanning Trees of a Triangle.svg>)
+![Each spanning tree has probability $1/3$](<images/Three Spanning Trees of a Triangle.svg>)
 
 *Each spanning tree has probability $1/3$. The marked vertex $a$ is a leaf in two of them; its expected degree is $4/3$.*
 

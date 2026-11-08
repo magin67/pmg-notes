@@ -65,7 +65,7 @@ It is linear in both arguments: a coefficient of the dual form multiplies the de
 
 ## Two forest representations
 
-![Grade one of one Greenian through two different forest families](Two%20Forest%20Representations%20of%20Grade%20One.svg)
+![Grade one of one Greenian through two different forest families](images/Two%20Forest%20Representations%20of%20Grade%20One.svg)
 
 *Figure 1. For the unit path, $n=4$. Original forests on the left have two edges; Greenian forests on the right have one. Their sums of forms agree after $\mathcal C$, without an individual-forest correspondence. Weights on the right are ordered as $ab,ac,ad,bc,bd,cd$. Forms on the left use sums of centered vectors over blocks.*
 
@@ -345,7 +345,7 @@ The total conductance of crossing edges appears as the normalized potential of t
 
 ### The partition, cut edges, and forest
 
-![Three different objects for the partition ab and cd](Partition%20Forest%20and%20Cut%20Edges.svg)
+![Three different objects for the partition ab and cd](images/Partition%20Forest%20and%20Cut%20Edges.svg)
 
 *Figure 2. In unit $K_4$, the coefficient of this cut form is $1/16$: each two-vertex block has one tree and $\tau(K_4)=16$. The four crossing edges have total conductance $4$, which is a different quantity.*
 

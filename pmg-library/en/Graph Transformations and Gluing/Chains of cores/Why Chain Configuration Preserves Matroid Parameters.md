@@ -96,7 +96,7 @@ In (3), the missing term for an end core is taken to be zero. For internal cores
 
 A one-vertex contact $s_i=1$ contributes no edge between $f_i$ and $f_{i+1}$: a shared primal vertex is not a shared edge. The graph $H$ nevertheless remains connected through $f_\infty$.
 
-![The common dual multigraph of two chains of three hexagons](The%20Common%20Dual%20Multigraph%20of%20the%20Chains.svg)
+![The common dual multigraph of two chains of three hexagons](images/The%20Common%20Dual%20Multigraph%20of%20the%20Chains.svg)
 
 **Three hexagons.** For $(m_1,m_2,m_3)=(6,6,6)$ and $(s_1,s_2)=(2,2)$, adjacent faces are joined by one edge, while bundles of $5,4,5$ edges join them to the outer face. This is one abstract multigraph for both configurations. All parallel edges remain distinct; a single line with their total weight does not replace them in the matroid.
 
@@ -215,7 +215,7 @@ $$
 
 Equal labels specify identified vertices. The middle core has input ordered pair $(0,1)$ and output $(3,4)$ in configuration A or $(2,3)$ in configuration B. The final edge set is the ordinary union of the three sets, with duplicate copies of shared edges removed. Both have $N=3$, $n=14$, and $|E|=16$; nonadjacent cores are disjoint, and the middle core's seams share no vertices.
 
-![Two chains and the subgraphs induced by their degree-three vertices](Nonisomorphism%20of%20Two%20Hexagonal%20Chains.svg)
+![Two chains and the subgraphs induced by their degree-three vertices](images/Nonisomorphism%20of%20Two%20Hexagonal%20Chains.svg)
 
 > [!note]- Proof that the two chains are nonisomorphic
 > **Proof.** In configuration A, the vertices of degree $3$ are $0,1,3,4$. They induce the edges $01$ and $34$. In configuration B, the degree-$3$ vertices are $0,1,2,3$, inducing $01,12,23$. An isomorphism preserves degrees and induced subgraphs, but two disjoint edges are not isomorphic to a three-edge path. Hence $G_{\text{A}}\not\cong G_{\text{B}}$. $\square$

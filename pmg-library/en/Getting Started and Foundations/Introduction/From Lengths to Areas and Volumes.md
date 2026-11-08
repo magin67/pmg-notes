@@ -50,7 +50,7 @@ S_\triangle^2=\frac14\det G(u,v)
 \tag{2}
 $$
 
-![A triangle occupies half the parallelogram](triangle-area-en.svg)
+![A triangle occupies half the parallelogram](images/triangle-area-en.svg)
 
 ## The area of a triangle from its side lengths
 

@@ -212,7 +212,7 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 >
 > The first angle is $60^\circ$ and the second is $120^\circ$. To compare vector directions, translate the vectors to a common origin. The angle between the consecutively directed vectors $a_{12}$ and $a_{23}$ therefore differs from the interior angle at vertex $a_2$.
 
-![Angles between triangle vectors](vector-angles-en.svg)
+![Angles between triangle vectors](images/vector-angles-en.svg)
 
 > [!example] Independent calculation of potentials
 > For this graph,

@@ -59,7 +59,7 @@ Choose a traversal direction and an ordered attachment edge on the first core. O
 >
 > These are all edges vertex-disjoint from the input $01$. In a development by regular hexagons, successive center-to-center directions turn by $+\pi/3$, $0$, and $-\pi/3$, respectively.
 
-![Reversed input endpoint order and the three output seams](SLR%20Letters%20and%20Seam%20Endpoint%20Order.svg)
+![Reversed input endpoint order and the three output seams](images/SLR%20Letters%20and%20Seam%20Endpoint%20Order.svg)
 
 **A letter belongs to an internal core.** The red seam is the input; the blue seam is the output. Center-to-center arrows explain the letters; the graph itself remains undirected. Reversing the order in (2) gives “left” and “right” the same meaning at every step.
 
@@ -133,7 +133,7 @@ For $u=\alpha_2\cdots\alpha_{N-1}$, write $u^{\leftarrow}=\alpha_{N-1}\cdots\alp
 >
 > Applying reflection twice or reversal twice restores the code. Letterwise substitution commutes with reversal of their order, giving (6). $\square$
 
-![Four representations of one chain under reflection and reversal](Reflection%20and%20Reversal%20of%20an%20SLR%20Code.svg)
+![Four representations of one chain under reflection and reversal](images/Reflection%20and%20Reversal%20of%20an%20SLR%20Code.svg)
 
 **Four representations of one graph.** For $w=SLS$, the results are $SLS$, $SRS$, $SSR$, and $SSL$. The starting end and traversal direction change, but suitable relabeling makes the vertex and edge sets coincide. Some of these four representations coincide for symmetric words.
 
@@ -209,7 +209,7 @@ This counts graph classes under (7), not distinct spectra.
 | 7 | 30 | 243 | 70 |
 | 8 | 34 | 729 | 196 |
 
-![Four nonisomorphic graphs made from four hexagons](Four%20Classes%20of%20Four%20Hexagons.svg)
+![Four nonisomorphic graphs made from four hexagons](images/Four%20Classes%20of%20Four%20Hexagons.svg)
 
 **Four classes for $N=4$.** In the adopted order, their representatives are $SSS$, $SSL$, $SLL$, and $SLR$. All have the same matroid parameters by [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|Why Chain Configuration Preserves Matroid Parameters]]. Their nonisomorphism follows from (7), not from the appearance of the drawings.
 
@@ -299,7 +299,7 @@ $$
 
 This is equality of polynomials, not the assertion $s_{\iota(w)}=s_w$ or $s_{\iota(w)}=\mathbf J s_w$. The terminal marking of the reversed code lies at the other end of the original graph. Reversing letter order in the matrix product also does not mean inverting the matrices themselves.
 
-![One graph with different spectral passports at its two ends](Two%20Ends%20of%20One%20SLR%20Chain.svg)
+![One graph with different spectral passports at its two ends](images/Two%20Ends%20of%20One%20SLR%20Chain.svg)
 
 **One graph, different marked boundaries.** The codes $SLS$ and $SSR=\iota(SLS)$ describe the same four-core graph. In the figure's construction, its right terminal pair is $(15,16)$ and its left pair $(3,4)$. Direct minors on these pairs differ.
 

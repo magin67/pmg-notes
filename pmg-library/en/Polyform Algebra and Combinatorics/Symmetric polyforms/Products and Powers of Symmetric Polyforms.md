@@ -70,7 +70,7 @@ $$
 
 These rules apply to individual terms. After summing over blocks, the contribution of disjoint blocks can also be expressed through the principal polyform by the fundamental theorem.
 
-![Three Cases of Boundary Multiplication](<Three Cases of Boundary Multiplication.svg>)
+![Three Cases of Boundary Multiplication](<images/Three Cases of Boundary Multiplication.svg>)
 
 The first two products are nonzero. Two shared vertices make the boundary product zero; the highlighted common edge illustrates this case.
 

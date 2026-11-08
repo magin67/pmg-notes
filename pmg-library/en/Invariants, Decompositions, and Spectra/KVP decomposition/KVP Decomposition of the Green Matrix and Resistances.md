@@ -420,7 +420,7 @@ Ordinary double centering of $R$ does not recover the lost O-component. The unit
 
 ## Examples: five different effects
 
-![[Graphs for Green and resistance decompositions.svg]]
+![[images/Graphs for Green and resistance decompositions.svg]]
 
 *The figure shows the four original examples: a path, a weighted undirected graph, a directed 3-cycle, and a directed 3-cycle with a bidirectionally attached vertex. Unspecified weights of existing couplings are 1. The path has asymmetric one-way resistances without circulation; the weighted graph acquires P after inversion; the directed cycle illustrates the loss of O on passing to R; the last balanced graph gives all five components of r. An additional regular weighted example is specified below by its conductance matrix.*
 

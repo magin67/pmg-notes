@@ -60,7 +60,7 @@ $$
 
 This is the normalization of [[Resistance Radius and Diameter of a Graph]]. The parameter $\rho$ has resistance dimension; it is neither a linear radius nor the maximum pairwise resistance. “Mass” is not used as its current name.
 
-![[Weighted Triangle - Resistance Circumcircle.svg]]
+![[images/Weighted Triangle - Resistance Circumcircle.svg]]
 
 **From graph to geometry.** For a triangle with conductances $c_{ab}=1$, $c_{ac}=2$, $c_{bc}=3$, the resistances are $R_{ab}=5/11$, $R_{ac}=4/11$, $R_{bc}=3/11$. The left panel is the network diagram; the right is its exact Euclidean realization, with side lengths equal to the square roots of these values. All vertices lie on a circle with $\rho=15/121$. The circumcenter $O$ and centroid $h$ are marked separately.
 
@@ -212,7 +212,7 @@ A short derivation clarifies the weights. After deleting root coordinates, expan
 >
 > Summing over all 2-forests proves (6). Distinct labels on parallel edges preserve this bijection and the weight equality. $\square$
 
-![[Two-Forest - Counting Vertices and Deleted Edges.svg]]
+![[images/Two-Forest - Counting Vertices and Deleted Edges.svg]]
 
 **Three choices minus two choices.** The upper drawing shows a fixed 2-forest: $q$ lies in component $A$, and $B$ is the path $b-c-d$. The first sum in (6) chooses one of the three vertices of $B$. The second deletes one of its two edges; the endpoints and $q$ become three prescribed roots. Restoring the deleted edge gives the original forest with weight $w(F)$ in either case. The remainder is $(3-2)w(F)=w(F)$.
 
@@ -400,7 +400,7 @@ Thus $(O-A)^2=(55+5)/22^2=15/121$, with $O\ne h$. This realization is used in th
 | Unit $K_4$ | $15/16$ | $3/2$ | $3/16$ |
 | Triangle with conductances $1,2,3$ | $6/11$ | $84/121$ | $15/121$ |
 
-![[Forest Contribution and Edge Correction to the Radius.svg]]
+![[images/Forest Contribution and Edge Correction to the Radius.svg]]
 
 **Two contributions and the result.** The full bar has length $\xi_1/3$. The red hatched part has length $H_2/12$ and is subtracted; the remaining green part equals $\rho$. Every row uses the same scale. This depicts the exact difference, not a decomposition of the sphere into geometric pieces.
 

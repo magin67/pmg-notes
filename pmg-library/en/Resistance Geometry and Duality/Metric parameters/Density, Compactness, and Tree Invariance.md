@@ -74,7 +74,7 @@ $$
 
 The ratio is $\rho_*/\rho=2/3$. Equal total conductance fixes the resource being compared: the reference acquires an extra edge by reducing each of its three conductances. This does not compare the path with the unit $K_3$, whose total conductance is $3$.
 
-![The path and complete reference both have three vertices and total conductance $2$](<A Graph and Its Compactness Reference.svg>)
+![The path and complete reference both have three vertices and total conductance $2$](<images/A Graph and Its Compactness Reference.svg>)
 
 *The path and complete reference both have three vertices and total conductance $2$. Edge labels are conductances, not geometric lengths.*
 
@@ -335,7 +335,7 @@ In all the following examples, $n=10$ and every conductance equals $1$. The fan 
 
 The pentagonal prism consists of two cycles $C_5$ joined by five edges between corresponding vertices. The Petersen graph has an outer cycle $C_5$, five edges to the inner vertices, and inner edges joining vertices $2$ steps apart in cyclic order. “Two $K_5$ graphs and a bridge” means two disjoint cliques joined by a single edge. The incomplete graph is obtained from $K_{10}$ by deleting a perfect matching of five edges.
 
-![[Graph Examples for Comparing Compactness.svg]]
+![[images/Graph Examples for Comparing Compactness.svg]]
 
 The figure shows the fan, wheel, Petersen graph, and two cliques joined by a bridge. Each drawing specifies only the edge topology; the point positions in the plane are not a resistance realization. Adding the closing edge turns the fan into the wheel. The bridge between the cliques is highlighted; deleting it disconnects the graph.
 
@@ -392,7 +392,7 @@ Kf(t)=6+\frac5{3+2t},\qquad
 \bar d(t)=\frac{12+2t}{5}
 $$
 
-![An edge is added inside the part of size $2$](<Adding an Edge to a Bipartite Graph.svg>)
+![An edge is added inside the part of size $2$](<images/Adding an Edge to a Bipartite Graph.svg>)
 
 *An edge is added inside the part of size $2$. At $t=1$, the radius itself rises from $1/3$ to $17/50$, while the reference radius falls because total conductance grows. For $\eta_K$, the graph’s Kirchhoff index decreases, but its reference changes more strongly.*
 

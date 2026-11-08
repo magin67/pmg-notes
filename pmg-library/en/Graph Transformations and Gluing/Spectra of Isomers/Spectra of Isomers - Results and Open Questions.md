@@ -54,7 +54,7 @@ One result has a wider scope. In [[en/Graph Transformations and Gluing/Spectra o
 
 ## How the data and problems are related
 
-![Connections between configurations, boundary data, spectra, and reconstruction](Connections%20between%20Results%20in%20Spectra%20of%20Isomers.svg)
+![Connections between configurations, boundary data, spectra, and reconstruction](images/Connections%20between%20Results%20in%20Spectra%20of%20Isomers.svg)
 
 The spectral passport supports two directions: computing the polynomial of the whole graph and retaining marked data for subsequent attachment or reconstruction. A periodic code turns a sequence of transitions into a power of one matrix. In the diagram, the two-way connection between five integer coordinates and three rational data values holds on reachable states of the chosen class. Scalar inverse problems are marked as conjectures.
 

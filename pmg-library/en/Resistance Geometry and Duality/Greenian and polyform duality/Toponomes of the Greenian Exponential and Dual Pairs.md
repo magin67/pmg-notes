@@ -182,7 +182,7 @@ Here $\varnothing$ indexes the empty type and is not a separate monomial; $Kf(G)
 
 ## Two normalizations and symmetric identities
 
-![Each grouping retains less information](From%20Greenian%20Forests%20to%20a%20Spectral%20Polynomial.svg)
+![Each grouping retains less information](images/From%20Greenian%20Forests%20to%20a%20Spectral%20Polynomial.svg)
 
 *Figure 1. Before types are grouped, the root weight multiplies each coefficient separately. In grade two, $x_2$ receives factor 3 and $x_1^2$ factor 4. Spectral reversal concerns the resulting sum $3g_{(2)}+4g_{(1,1)}$, not the two coefficients separately.*
 
@@ -352,7 +352,7 @@ Indeed, $P_{\mathrm{Gr}}(t)=t^3P_L(1/t)/4$. The vector polynomials are not relat
 
 ### A weighted path and a negative type coefficient
 
-![A negative type coefficient contributes to a positive rooted sum](A%20Negative%20Coefficient%20and%20the%20Rooted%20Sum.svg)
+![A negative type coefficient contributes to a positive rooted sum](images/A%20Negative%20Coefficient%20and%20the%20Rooted%20Sum.svg)
 
 *Figure 2. The path has conductances $1,1/2,1$. In grade two, $g_{(2)}=-5/16$ and $g_{(1,1)}=55/64$. Root choices give $-15/16+55/16=5/2$. This is an example for one graph, not a claim that this type is negative for every Greenian.*
 

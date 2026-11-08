@@ -118,7 +118,7 @@ $$
 \partial[abc]=[bc]-[ac]+[ab]=[ab]+[bc]+[ca]
 $$
 
-![Oriented boundary of a triangle](Oriented%20boundary%20of%20a%20triangle.svg)
+![Oriented boundary of a triangle](images/Oriented%20boundary%20of%20a%20triangle.svg)
 
 The arrows specify the orientations of the **sides** $[ab]$, $[bc]$, $[ca]$, which are structures of grade two. Their sum is the triangle boundary. Applying the boundary once more gives the sum of endpoint differences, $(b-a)+(c-b)+(a-c)=0$. This illustrates the rule that the boundary of a boundary is zero.
 

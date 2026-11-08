@@ -93,7 +93,7 @@ $$
 h(2,1)=3\cdot2\cdot1=6
 $$
 
-![Six root choices in the components abc, de, and f](Six%20Root%20Choices.svg)
+![Six root choices in the components abc, de, and f](images/Six%20Root%20Choices.svg)
 
 *Figure 1. All six diagrams show the same forest, with edges $ab,bc,de$ and singleton vertex $f$. The selected roots are circled. The root of the three-vertex component runs through $a,b,c$, and that of the two-vertex component is $d$ or $e$; vertex $f$ is always the root of its component. Choosing roots changes neither the edges nor their weights.*
 
@@ -183,7 +183,7 @@ $$
 
 Knowing the unweighted sum does not determine the weighted sum. Both tables are naturally obtained from the full partition toponome, rather than one from the other using a universal cell multiplier. This statement concerns information lost under grouping; it does not assert that every arbitrarily prescribed pair of coefficients is realized by graphs.
 
-![Three forests in one cell contribute 3 without roots and 25 with roots](Root%20Weights%20in%20One%20P6%20Cell.svg)
+![Three forests in one cell contribute 3 without roots and 25 with roots](images/Root%20Weights%20in%20One%20P6%20Cell.svg)
 
 *Figure 2. Delete one of the three interior edges of $P_6$. Two deletions give component sizes $4+2$, and one gives $3+3$. Hence $a_{4,2}=2+1=3$, whereas $b_{4,2}=2\cdot8+9=25$. Apply the root weight to each type before adding; the full $P_6$ calculation appears below.*
 

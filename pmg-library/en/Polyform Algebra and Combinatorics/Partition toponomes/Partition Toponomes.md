@@ -52,7 +52,7 @@ For a positive type $\lambda=(k_1,\ldots,k_r)$, write $k=w(\lambda)$ and $r=\#\l
 
 ## Which data are retained
 
-![An expansion, types, a table, and column sums](From%20an%20Expansion%20to%20a%20Table.svg)
+![An expansion, types, a table, and column sums](images/From%20an%20Expansion%20to%20a%20Table.svg)
 
 *Figure 1. Each arrow to the right groups data. Passage to types forgets labels and individual contributions; passage to a cell forgets individual component sizes; summing a column forgets the number of nontrivial components. The vertex count $n$ is retained separately. Encoding a type as a monomial is reversible.*
 

@@ -230,7 +230,7 @@ $$
 L=[x_a,x_a-x_b]+[x_b,x_b-x_c]+[x_c,x_c-x_a]
 $$
 
-![[A Directed 3-Cycle and Centroid Vectors.svg]]
+![[images/A Directed 3-Cycle and Centroid Vectors.svg]]
 
 *Left: the arcs of the unit directed 3-cycle. Right: the affine vectors $x_a=a-h$, $x_b=b-h$, $x_c=c-h$ from the centroid. The right-hand arrows represent vectors, not additional graph arcs. The figure shows affine relations and specifies no resistance lengths.*
 

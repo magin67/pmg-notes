@@ -45,7 +45,7 @@ Its plug is $\mathcal P=(1,0)$. At each attachment, identify $1\mapsto a$ and $0
 
 All three outputs are vertex-disjoint from the plug. Thus repetition of the runner introduces no common vertices between nonadjacent cores, and the two seams within an intermediate core remain disjoint. This is exactly the class of open chains in [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|Cores, Seams, and Admissible Chains]].
 
-![A path of five edges, an ordered plug, and three socket positions](Three%20SLR%20Runners.svg)
+![A path of five edges, an ordered plug, and three socket positions](images/Three%20SLR%20Runners.svg)
 
 The dashed edge in the figure already belongs to the assembled graph. The blue edges are added; the colored output arrow shows the contact order. The plug and socket are vertex markings, not additional connections.
 
@@ -80,7 +80,7 @@ The dashed edge in the figure already belongs to the assembled graph. The blue e
 
 Here “turn” means the relative position of two seams in a core, taking contact order into account. In a local planar drawing with regular hexagons, the letters S, L, R correspond to angles $0,+\pi/3,-\pi/3$. These angles help read the code but do not require the entire chain to lie in one plane.
 
-![A straight chain, alternating turns, and a spatial spiral with constant letter L](A%20Straight%20Chain%20Zigzag%20and%20Spiral.svg)
+![A straight chain, alternating turns, and a spatial spiral with constant letter L](images/A%20Straight%20Chain%20Zigzag%20and%20Spiral.svg)
 
 The lower part of the figure joins six-edge cycles in sequence with a constant L choice. Adjacent cycles share an edge; the viewpoint shows their spatial arrangement. A crossing of projected lines creates no vertex. Geometric coordinates serve only to draw the graph.
 
@@ -94,7 +94,7 @@ Closure requires an additional identification of the initial and terminal bounda
 
 The socket position alone does not determine the SLR turn. If $0\mapsto a$ and $1\mapsto b$ are used at every step instead of $1\mapsto a$ and $0\mapsto b$, the local cycle order relative to the continuation changes. For a fixed side output, this produces alternating L and R, up to a global reflection.
 
-![Two fixed contact matchings produce constant and alternating turns](Contact%20Matching%20and%20the%20SLR%20Turn.svg)
+![Two fixed contact matchings produce constant and alternating turns](images/Contact%20Matching%20and%20the%20SLR%20Turn.svg)
 
 Both rules are fixed weaving constructions. They use the same unmarked path but different marked runners. The distinction is already visible with four cores:
 
@@ -358,7 +358,7 @@ This concerns the minimal order of a scalar recurrence for two specific families
 
 Let a block of outputs $v=\beta_1\cdots\beta_p$ be given. Combine $p$ successive paths into one component, retaining the first plug and the last socket. The composite runner itself has no starting edge. It has $4p+2$ vertices and $5p$ edges; the other seams are already internal to the component.
 
-![Two paths as one composite runner and the product of spectral transitions](A%20Periodic%20SLR%20Runner.svg)
+![Two paths as one composite runner and the product of spectral transitions](images/A%20Periodic%20SLR%20Runner.svg)
 
 > [!info] Transfer over one period
 > **Proposition 3.** Repetition of the composite runner has spectral matrix

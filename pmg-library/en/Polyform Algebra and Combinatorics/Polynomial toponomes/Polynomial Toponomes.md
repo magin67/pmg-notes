@@ -45,7 +45,7 @@ The series is complete in its current form of five substantive notes, with Russi
 
 The full toponome retains the type of each group of forests. Passing to $t,u$ retains only the edge count $k$ and the number $r$ of nontrivial components. Setting $u=1$ retains only $k$. At each level, contributions may use the original forest weight or additionally count all root choices.
 
-![Two normalizations and three levels of forest grouping](Six%20Representations%20of%20a%20Toponome.svg)
+![Two normalizations and three levels of forest grouping](images/Six%20Representations%20of%20a%20Toponome.svg)
 
 *Figure 1. The top row retains forest weights; the bottom row counts root choices. The vertical passage is invertible while types remain distinct. Rightward arrows group coefficients and may lose information, so no universal vertical passage remains after grouping. The original vertex count $n$ is retained separately.*
 

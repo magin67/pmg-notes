@@ -138,7 +138,7 @@ $$
 =\frac13\left([(ab)]^2+[(ac)]^2+[(bc)]^2\right)+3[r_x]^2
 $$
 
-![Eliminating the Center of a Star](<Eliminating the Center of a Star.svg>)
+![Eliminating the Center of a Star](<images/Eliminating the Center of a Star.svg>)
 
 *Figure 1. Eliminating the center of a unit star. The numbers beside the couplings are their coefficients; vertex positions are schematic. The center $x$ is not identified with any retained vertex.*
 
@@ -154,7 +154,7 @@ $$
 c^{(P)}_{ab}=\frac{(2/3)\cdot3}{2/3+3}=\frac6{11}
 $$
 
-![Sequential Elimination Along a Path](<Sequential Elimination Along a Path.svg>)
+![Sequential Elimination Along a Path](<images/Sequential Elimination Along a Path.svg>)
 
 *Figure 2. Two elimination steps. Each step uses the current coupling strengths. Vertices $a,b$ are retained throughout the calculation.*
 

@@ -67,7 +67,7 @@ $$
 
 The chosen trees provide a way to compute the product. The pairs need not be edges of any given graph. Multiplication preserves the equality, but may turn it into $0=0$ or produce an identity dependent on those already known.
 
-![Joining a Pair to a Partition](<Joining a Pair to a Partition.svg>)
+![Joining a Pair to a Partition](<images/Joining a Pair to a Partition.svg>)
 
 *The red pair $ac$ joins different blocks $ab$ and $cd$ in the first case. In the second, its endpoints already belong to block $abc$: the selected edge vectors become dependent, so the product of forms is zero. The drawn trees represent blocks.*
 
@@ -140,7 +140,7 @@ Let $A,B,C,D$ be nonempty, pairwise disjoint sets of basis vertices, and let $S=
 >
 > All seven forms have grade $|S|-2$.
 
-![From Four Vertices to Four Blocks](<From Four Vertices to Four Blocks.svg>)
+![From Four Vertices to Four Blocks](<images/From Four Vertices to Four Blocks.svg>)
 
 *Here $A=\{a\}$, $B=\{b\}$, $C=\{c\}$, $D=\{d,e,f\}$. Multiplication by $[(de)]^2[(df)]^2$ joins $e,f$ to the block containing $d$ in every term. The same operation expands all seven partitions.*
 

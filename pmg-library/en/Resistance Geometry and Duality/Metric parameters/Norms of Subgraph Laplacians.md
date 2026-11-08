@@ -84,7 +84,7 @@ $$
 
 For the entire triple, each spanning tree has two internal edges, giving norm $2$. The probability that the triple is internally connected in the tree is $1$. Expected edge count and connectivity probability are different quantities.
 
-![Edge $ab$ occurs in the first two spanning trees and is absent from the third](<Three Spanning Trees of a Triangle.svg>)
+![Edge $ab$ occurs in the first two spanning trees and is absent from the third](<images/Three Spanning Trees of a Triangle.svg>)
 
 *Edge $ab$ occurs in the first two spanning trees and is absent from the third. All three trees are equally likely. This computes the pair norm directly, without matrix inversion.*
 
@@ -151,7 +151,7 @@ In a unit-conductance cycle on four vertices, each edge contributes $3/4$. An ad
 
 Let the graph consist of unit-conductance triangles $hab$ and $hcd$, glued only at $h$. Every edge retains resistance $2/3$. Each spanning tree contains two edges from each triangle.
 
-![Three types of triples in two triangles with a common vertex](<Subgraph Laplacian Norms - triples in two triangles.svg>)
+![Three types of triples in two triangles with a common vertex](<images/Subgraph Laplacian Norms - triples in two triangles.svg>)
 
 Selected vertices and their internal edges are blue. The three panels represent all types of triples; gray couplings remain in the larger graph and contribute to its metric.
 
@@ -222,7 +222,7 @@ For example, the same observed resistances $R_{ab}=R_{ac}=R_{bc}=2/3$ arise in t
 | Triangle | Three conductances of $1$ between observed vertices | $2$ |
 | Star with hidden center $d$ | Conductances $ad,bd,cd$ are $3$ | $0$ |
 
-![Both networks give resistance $2/3$ between observed vertices $a,b,c$](<A Triangle and a Hidden Center.svg>)
+![Both networks give resistance $2/3$ between observed vertices $a,b,c$](<images/A Triangle and a Hidden Center.svg>)
 
 *Both networks give resistance $2/3$ between observed vertices $a,b,c$. All triangle edges are internal to the observed triple; every star edge leads to hidden vertex $d$. Thus the actual norms are $2$ and $0$, although the observed triple has the same metric.*
 

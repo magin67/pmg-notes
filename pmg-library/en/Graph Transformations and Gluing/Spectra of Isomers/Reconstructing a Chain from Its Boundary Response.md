@@ -229,7 +229,7 @@ Write $F_{ij}(t)=(e^{-t\mathbf L_G})_{ij}$ for the temperature at $i$ after a un
 
 Thus there are two experiments with two time records in each. Of the four records, one duplicates another by reciprocity. Geometric symmetry of the graph is unnecessary; in special symmetric cases, the self-responses may also coincide. Theorem (8) establishes sufficiency of three passport entries, not minimality of the number of physical measurements.
 
-![Two heat impulses and processing of time records without adding edges](Dynamic%20Response%20of%20the%20Original%20Chain.svg)
+![Two heat impulses and processing of time records without adding edges](images/Dynamic%20Response%20of%20the%20Original%20Chain.svg)
 
 **The graph is unchanged; a process on it is observed.** For a single $C_6$, the figure shows a self-response, a cross-response, and their weighted integrals. The curve formulas and integral values are checked exactly; the curves are drawn on a numerical scale. For a general chain, both experiments are needed because $F_{xx}$ and $F_{yy}$ may differ.
 
@@ -285,7 +285,7 @@ R_3=\frac{169}{204},\quad R_4=\frac{985}{1189},\quad
 R_5=\frac{5741}{6930}
 $$
 
-![Straight and bent chains have the same terminal-edge resistance](Equal%20Terminal%20Resistance.svg)
+![Straight and bent chains have the same terminal-edge resistance](images/Equal%20Terminal%20Resistance.svg)
 
 **A steady experiment on this pair loses the positions of the turns.** The straight chain $SS$ and the bent chain $SL$, each with three cores, have resistance $169/204$. Their spectral responses $\mathbf K_B$ differ. The lower diagram shows the series and parallel connections used in the proof.
 
@@ -313,7 +313,7 @@ $$
 
 The two experiments $\mathbf j_B=(1,0)^{\mathsf T}$ and $\mathbf j_B=(0,1)^{\mathsf T}$ give the two columns of $\mathbf K_B$. In each experiment, two voltages relative to $*$ are measured. Two of the four readings are equal by electrical reciprocity, so the matrix is specified by $r,s,h$. The contact with no external current remains connected to the network and to its resistor leading to $*$; its potential is **not fixed at zero**. Alternatively, prescribe two basis voltage vectors and measure the currents to obtain the columns of $\boldsymbol\Lambda_B^{(1)}$.
 
-![A network with unit shunts to ground and two boundary experiments](Two%20Experiments%20with%20a%20Grounded%20Chain.svg)
+![A network with unit shunts to ground and two boundary experiments](images/Two%20Experiments%20with%20a%20Grounded%20Chain.svg)
 
 **The auxiliary circuit: two experiments, four readings, three matrix entries.** The figure shows one core of the original graph and added resistors at all its vertices. Every ground symbol denotes the same common vertex $*$. This circuit realizes the required operator but changes the original electrical network.
 
@@ -376,7 +376,7 @@ An equivalent discrete rule is: at vertex $v$, stop with probability $1/(\deg(v)
 
 The block $\mathbf W_{BB}$ equals $\mathbf K_B$. Starting at $x$ or $y$, one needs the probabilities of final stopping at $x$ and $y$; these give the same three numbers. Each full row of $\mathbf W$ sums to $1$, but a row of the boundary block usually sums to less than $1$: the process may stop at an internal vertex.
 
-![Root probabilities and a stopped walk give the same matrix](Two%20Probabilistic%20Interpretations%20of%20the%20Response.svg)
+![Root probabilities and a stopped walk give the same matrix](images/Two%20Probabilistic%20Interpretations%20of%20the%20Response.svg)
 
 **The same data have two probabilistic meanings.** The left panel shows the four joint outcomes of the two root indicators. The right panel shows one step at a vertex of degree $2$: two moves and stopping are equally likely. The equivalence concerns the probabilities in (11) and (14), not an identification of individual forests with trajectories.
 
@@ -472,7 +472,7 @@ Strict positivity follows from the exact reconstruction theorem. Meanwhile, the 
 > [!note]- Proof of instability for unbounded length
 > **Proof.** Given $\varepsilon>0$, choose $j$ so that the right-hand side of (20) is at most $2\varepsilon$. The mean of the two exact responses is at distance at most $\varepsilon$ from each in the coordinatewise norm. Thus the same observation with this error bound is compatible with two different chains. $\square$
 
-![A distant bend and decreasing response differences as the common end grows](A%20Distant%20Bend%20and%20Response%20Accuracy.svg)
+![A distant bend and decreasing response differences as the common end grows](images/A%20Distant%20Bend%20and%20Response%20Accuracy.svg)
 
 **A common continuation weakens the visible difference.** The upper diagram shows two chains of seven cores, with measurements at the right end. The plot shows response distances for the family (19); its points are computed as exact rational numbers, and the logarithmic scale is used only for display. The upper line is the proved bound (20).
 
@@ -574,7 +574,7 @@ Intervals usually widen because simple interval arithmetic loses dependencies be
 
 With known $M$, one can also enumerate all codes and test their exact responses against the original measurement box. This is a finite procedure with a completeness guarantee, but the number of candidates grows exponentially. Any candidate produced by the inverse algorithm should be checked against the original data, not merely the widened intermediate intervals.
 
-![Three distinct outcomes when boundary data are inexact](Reconstruction%20with%20Inexact%20Data.svg)
+![Three distinct outcomes when boundary data are inexact](images/Reconstruction%20with%20Inexact%20Data.svg)
 
 **Uniqueness, ambiguity, and lack of a conclusion are different.** A single exact candidate after an exhaustive search up to the specified $M$ establishes uniqueness within that catalog. Two exact candidates prove ambiguity of the observation. Stopping the interval algorithm merely shows that the verification performed was insufficient.
 

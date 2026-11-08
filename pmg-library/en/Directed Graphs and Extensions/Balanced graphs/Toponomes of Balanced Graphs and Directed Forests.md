@@ -140,7 +140,7 @@ The second row's coefficient $3/2$ divides three rooted forests by their two-ver
 
 Take $C_+:a\to b\to c\to d\to a$ with unit weights. Every proper subset of its arcs is a directed rooted forest.
 
-![[Forest Types of a Directed 4-Cycle.svg]]
+![[images/Forest Types of a Directed 4-Cycle.svg]]
 
 *Left: the original 4-cycle. Center: arcs $a\to b$, $b\to c$ give a triple rooted at $c$ and singleton $d$, type $(2)$. Right: $a\to b$, $c\to d$ give two pairs rooted at $b,d$, type $(1^2)$. Roots have a light background.*
 

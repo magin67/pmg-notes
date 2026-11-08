@@ -57,7 +57,7 @@ $$
 n=3\cdot6-2\cdot2=14,\qquad |E|=3\cdot6-2=16
 $$
 
-![Seam positions and induced subgraphs on degree-three vertices](Seams%20and%20Degree-Three%20Vertices.svg)
+![Seam positions and induced subgraphs on degree-three vertices](images/Seams%20and%20Degree-Three%20Vertices.svg)
 
 **One core scheme, two graphs.** The seam $01$ is red; the other seam is blue. The highlighted vertices have degree $3$. Their induced subgraph consists of two separate edges in A and a three-edge path in B. The layouts depict abstract graphs and are not resistance embeddings.
 
@@ -236,7 +236,7 @@ $$
 
 The shortest cycle in either graph has length $6$, so every four-edge subset is a forest and $f_4=\binom{16}{4}=1820$. However, these forests have different distributions of component sizes.
 
-![Component types of a four-edge forest and numbers of root choices](Root%20Weights%20of%20Four-Edge%20Forests.svg)
+![Component types of a four-edge forest and numbers of root choices](images/Root%20Weights%20of%20Four-Edge%20Forests.svg)
 
 **From ordinary to rooted forests.** The figure shows representatives of the five types of non-singleton component sizes. Any vertex of a component can serve as its root; the numbers of choices multiply. Isolated vertices bring the total to $14$ and contribute a factor of $1$. The shape of a tree within a component does not affect this factor.
 
@@ -337,7 +337,7 @@ $$
 
 The term $y-1=\xi-3$ accounts for the seam vertex's degree $3$. The one in $w$ represents the single original seam edge, while $1/k$ is the correction from the eliminated path. No second copy of the shared edge is added.
 
-![Eliminating the end cores and the two pencils on the middle hexagon](Eliminating%20the%20End%20Cores.svg)
+![Eliminating the end cores and the two pencils on the middle hexagon](images/Eliminating%20the%20End%20Cores.svg)
 
 **Two identical eliminated blocks, two seam positions.** Each end block contributes a factor $k$ to the determinant. On the six remaining vertices, seam endpoints have diagonal entries $d$ and the other vertices $y$; seam entries are $w$, and other edge entries $1$. These are spectral matrices depending on $\xi$, not Laplacians of new unit-weight graphs.
 

@@ -83,7 +83,7 @@ Star forests and general rooted forests differ in the choice of tree within each
 
 For $U=\{a,b,c\}$ and two nonempty blocks, there are three partitions: $ac\mid b$, $bc\mid a$, and $ab\mid c$. A two-vertex ordinary block with an added root has three trees; a singleton ordinary block with a root has one. Therefore $\operatorname{St}(3,2)=3\cdot3=9$.
 
-![Nine forests: three partitions of ordinary vertices into a pair and a singleton, with three trees on each pair and its root](Nine%20Rooted%20Forests.svg)
+![Nine forests: three partitions of ordinary vertices into a pair and a singleton, with three trees on each pair and its root](images/Nine%20Rooted%20Forests.svg)
 
 *Figure 1. The scheme of nine possibilities is retained from the author's research drawing. Ordinary vertices are labelled $a,b,c$; added roots are coloured and marked by a small star inside a circle. The roots have no individual labels. Each row fixes the partition of ordinary vertices and varies the tree on the triple.*
 
@@ -111,7 +111,7 @@ The last entry must be a root: no other ordinary vertex can still be adjacent to
 
 **Example.** Let the ordinary vertices be ordered $a<b<c<d$, let the roots be $\alpha,\beta$, and let the forest edges be $ab,b\alpha,cd,d\beta$.
 
-![A rooted forest with paths from a to alpha and from c to beta; leaf deletion gives the code b, alpha, d, beta](Encoding%20a%20Rooted%20Forest.svg)
+![A rooted forest with paths from a to alpha and from c to beta; leaf deletion gives the code b, alpha, d, beta](images/Encoding%20a%20Rooted%20Forest.svg)
 
 *Figure 2. Delete $a,b,c,d$ and record their neighbours $b,\alpha,d,\beta$. The code is $(b,\alpha,d;\beta)$. Numbers beside the ordinary vertices show the deletion order. A root occurs in the code as many times as its degree.*
 
@@ -186,7 +186,7 @@ In the partition on the right, marker elements represent **allowed code values**
 > [!example] An example of the bijection
 > For the forest in Figure 2, the final root is $\rho_0=\beta$. The first three code positions are $(b,\alpha,d)$: position one is attached to distinguished label $b$, position three to distinguished label $d$, and position two forms the sole block without a marker. There are five distinguished labels: $a,b,c,d,\rho_0$. This gives a partition of eight elements into six blocks with five separated markers, an object counted by $\left\{\begin{smallmatrix}8\\6\end{smallmatrix}\right\}_5$.
 
-![From a Forest to a Partition of Positions](<From a Forest to a Partition of Positions.svg>)
+![From a Forest to a Partition of Positions](<images/From a Forest to a Partition of Positions.svg>)
 
 The example continues the code $(b,\alpha,d;\beta)$. There are five markers: $a,b,c,d,\rho_0$, with $\rho_0=\beta$. Positions $1,2,3$ are shown separately from the markers. The blocks are $\{a\}$, $\{b,1\}$, $\{c\}$, $\{d,3\}$, $\{\rho_0\}$, and $\{2\}$: eight elements, six blocks, and five separated markers.
 
@@ -204,7 +204,7 @@ The first term chooses the singleton and a tree on the other three vertices with
 
 **All 27 possibilities for two pairs**
 
-![Three partitions of four ordinary vertices into two pairs, with nine independent tree choices for each partition](Twenty%20Seven%20Rooted%20Forests.svg)
+![Three partitions of four ordinary vertices into two pairs, with nine independent tree choices for each partition](images/Twenty%20Seven%20Rooted%20Forests.svg)
 
 *Figure 3. All $27$ possibilities from the author's research drawing are retained, regrouped by $ab\mid cd$, $ac\mid bd$, and $ad\mid bc$. Within each panel, rows vary the tree on the first pair and columns vary the tree on the second. Roots are coloured and have no individual labels.*
 

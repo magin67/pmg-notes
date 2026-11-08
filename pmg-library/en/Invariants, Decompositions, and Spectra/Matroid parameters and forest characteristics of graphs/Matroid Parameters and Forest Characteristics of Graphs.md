@@ -128,7 +128,7 @@ Forest power-sum parameters can be negative and are not spectral sums by definit
 
 ## What the matroid preserves and what the parameters do not determine
 
-![[Path and Star Matroid - Edge Correspondence.svg]]
+![[images/Path and Star Matroid - Edge Correspondence.svg]]
 
 **The same independence, different vertex geometry.** Every edge set of the unit-weight path $P_4$ and star $K_{1,3}$ is a forest. All ordinary forest coefficients and matroid parameters therefore agree, including $\rho=3/4$. But the sums of resistances over all vertex pairs are $10$ and $9$. The computation and comparison of Laplacians and Greenians are given in the [[The Cycle Matroid and Exterior Products of Edges#One matroid, different vertex geometry|path and star example]].
 

@@ -9,7 +9,7 @@ from math import cos, sin, pi
 from html import escape
 from verify_typical import matrix_data
 
-DEST=Path(__file__).resolve().parents[2]/'pmg-library/ru/Резистивная геометрия и дуальность/Гриниан и дуальность полиформ'
+DEST=Path(__file__).resolve().parents[2]/'pmg-library/ru/Резистивная геометрия и дуальность/Гриниан и дуальность полиформ/images'
 BLUE='#176c9e'; RED='#b13a32'; INK='#263443'; GREY='#6a7684'
 class SVG:
  def __init__(self,w,h,title,desc):

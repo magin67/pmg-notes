@@ -233,7 +233,7 @@ d=(1,2,2,1),\qquad
 v=\left(-\frac12,\frac12,\frac12,-\frac12\right)
 $$
 
-![[KVP decomposition of path P4.svg]]
+![[images/KVP decomposition of path P4.svg]]
 
 *The original path and its three components on the same vertex set. K assigns weight $1/2$ to every pair. V contains two corrections: $+1/2$ on $bc$ and $-1/2$ on $ad$. In P, the coefficients on $ab,cd$ are positive and those on $ac,bd$ negative; their sum at each vertex is zero. Zero pairs are omitted. Dashed lines indicate negative coefficients.*
 

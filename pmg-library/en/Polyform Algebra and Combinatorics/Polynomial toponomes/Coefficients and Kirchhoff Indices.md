@@ -83,7 +83,7 @@ $$
 \tau=3,\qquad \tau_{ab}^{(2)}=2,\qquad R_{ab}=\frac23
 $$
 
-![Three trees and two separating forests give resistance 2/3](Resistance%20from%20Triangle%20Forests.svg)
+![Three trees and two separating forests give resistance 2/3](images/Resistance%20from%20Triangle%20Forests.svg)
 
 *Figure 1. The top row lists all three spanning trees; the bottom row lists the two 2-forests in which $a$ and $b$ lie in different components. Dashed gray edges are unselected. Color highlights the pair $a,b$ whose resistance is being computed; it does not select two tree roots. No sum over root choices is needed in the numerator: the pair $a,b$ is already fixed.*
 
@@ -138,7 +138,7 @@ $$
 
 A spanning 2-forest is obtained by deleting one edge. Vector normalization gives $f_2=3$ in both cases. The vertex coefficient depends on the sizes of the pieces into which the tree splits.
 
-![Deleting each edge of a path and star: component-size products and the Kirchhoff index](Two-Forest%20Weights%20of%20the%20Path%20and%20Star.svg)
+![Deleting each edge of a path and star: component-size products and the Kirchhoff index](images/Two-Forest%20Weights%20of%20the%20Path%20and%20Star.svg)
 
 *Figure 2. Each edge of each tree is deleted in turn and shown dashed. Vertex colors identify the two components of the remaining forest. For the path, the component-size products are $3,4,3$; for the star, they are $3,3,3$. Their sums give $p_2$ and, since $\tau=1$, also the Kirchhoff index.*
 
@@ -410,7 +410,7 @@ $$
 =\frac{Kf}{n^2}+(O-b)^2
 $$
 
-![The centroid and circumcenter of the P3 resistance triangle differ](Centroid%20and%20Circumcenter%20of%20the%20P3%20Simplex.svg)
+![The centroid and circumcenter of the P3 resistance triangle differ](images/Centroid%20and%20Circumcenter%20of%20the%20P3%20Simplex.svg)
 
 *Figure 3. The left panel shows graph edges; the right panel is a Euclidean realization of its resistances. The dashed side $a_1a_3$ is not an edge of the original graph. Segment $bO$ shows the correction to the centroid contribution to the radius. All values marked with a square are quadratic.*
 

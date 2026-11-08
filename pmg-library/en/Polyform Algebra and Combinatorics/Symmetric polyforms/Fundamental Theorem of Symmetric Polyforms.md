@@ -32,7 +32,7 @@ $$
 
 The coefficient $3$ is obtained in the block-merging lemma as $\binom32$. The number of terms alone does not determine it: there are ten forms on the left and five forms with coefficient $3$ on the right. Both this identity and the formula for every admissible type are proved below.
 
-![Sums of Forms on Five Vertices](<Sums of Forms on Five Vertices.svg>)
+![Sums of Forms on Five Vertices](<images/Sums of Forms on Five Vertices.svg>)
 
 Each row depicts one partition and denotes its quadratic form. The equality relates the sums of all rows; it does not pair individual forms row by row.
 

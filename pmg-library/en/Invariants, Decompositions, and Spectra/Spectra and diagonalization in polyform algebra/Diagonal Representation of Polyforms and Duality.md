@@ -96,7 +96,7 @@ $$
 
 The first mode distinguishes the endpoints; the second distinguishes the middle vertex from the two endpoints. Reversing the signs of all components of a mode changes neither its projector nor its quadratic form.
 
-![[Eigenmodes of the Path P3.svg]]
+![[images/Eigenmodes of the Path P3.svg]]
 
 *Figure 1. Eigenvector components at the path vertices. Blue means a positive component, orange a negative one, and grey zero; the numbers are exact. The multipliers of the Laplacian and Green matrices are shown on the right. The constant mode is separated from the two directions of the centered space.*
 
@@ -349,7 +349,7 @@ All grades are collected in the table.
 
 Here $T_3=3AB$, so $M_2=T_3$ and $N_2=T_3/9$. In particular, $A^2=B^2=0$ and commutativity give $L^2=6AB$ and $M_2=L^2/2=3AB$.
 
-![[Complementary Grades of the Path P3.svg]]
+![[images/Complementary Grades of the Path P3.svg]]
 
 *Figure 2. Termwise correspondence between the direct and dual exponentials. Each row replaces a direction set by its complement and divides its coefficient by $\Delta=3$. Direct grade zero becomes dual grade two, and direct grade two becomes dual grade zero. In grade one the directions are also exchanged: the coefficient of $A$ determines that of $B^\vee$, and the coefficient of $B$ determines that of $A^\vee$.*
 
@@ -383,7 +383,7 @@ $$
 
 These are quadratic norms. The auxiliary coordinate quadratic norm of the same vector is $a^2+b^2$.
 
-![[Two Metrics in the P3 Basis.svg]]
+![[images/Two Metrics in the P3 Basis.svg]]
 
 *Figure 3. Unit level sets of the resistance and energy evaluations in the coefficient plane $(a,b)$. The dashed curve is the unit level set of the auxiliary coordinate metric. Along $u_1$ the evaluations agree; along $u_2$ their coefficients $1/3$ and $3$ are reciprocal. The figure depicts the vector space $W$, not positions of graph vertices.*
 

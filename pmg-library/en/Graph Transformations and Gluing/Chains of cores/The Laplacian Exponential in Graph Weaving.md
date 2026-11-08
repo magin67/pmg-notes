@@ -86,7 +86,7 @@ $$
 
 The factor $\Phi$ is the exponential of the path $a_1-a_0-b_0-b_1$. Its plug is $(a_1,b_1)$, and its socket is $(a_0,b_0)$. Here growth is depicted toward decreasing indices; the shift makes room for the next copy.
 
-![Shifting the old ladder and adding the runner's three new factors](Shift%20and%20Exponential%20Factor%20of%20a%20Ladder.svg)
+![Shifting the old ladder and adding the runner's three new factors](images/Shift%20and%20Exponential%20Factor%20of%20a%20Ladder.svg)
 
 In the figure, old edges after the shift are gray, and the three new edges are blue. The former rung becomes the input edge and is not added again.
 
@@ -145,7 +145,7 @@ Let the active pair be $(a,b)$. Call a forest component **active** if it contain
 >
 > These symbols are counting states, not forms in the polyform algebra.
 
-![One or two active components and a forest component that is already closed](Sizes%20of%20Active%20Forest%20Components.svg)
+![One or two active components and a forest component that is already closed](images/Sizes%20of%20Active%20Forest%20Components.svg)
 
 Rings mark the contacts in the figure; for brevity, $t=1$. The size of the closed tree is already recorded by the coefficient $z_3$; sizes of active trees remain in the state indices and may increase as the graph is extended.
 
@@ -345,7 +345,7 @@ This gives six sums. The following five combinations form the familiar determina
 >
 > Finally, Theorem 6 of [3] expresses the cofactor through forests in which $a,b$ lie in the same tree rooted at one specified contact. Symmetry makes the sum independent of the index direction. The root of the active tree is already fixed, so $c_0$ remains. Jacobi's identity gives the final equality. $\square$
 
-![Full boundary component sizes and two different specializations of transfer](From%20Component%20Sizes%20to%20Two%20and%20Five%20Coordinates.svg)
+![Full boundary component sizes and two different specializations of transfer](images/From%20Component%20Sizes%20to%20Two%20and%20Five%20Coordinates.svg)
 
 Ordinary evaluation forgets sizes. Rooted evaluation retains the five combinations (12), corresponding to free and forced roots. The full toponome itself cannot be recovered from these combinations.
 
@@ -376,7 +376,7 @@ Exact enumeration shows that their full toponomes agree in grades $0,1,2$ and fi
 
 All other vertices are isolated. Row $(3)$ combines all shapes of a tree on four vertices, including the path and the star.
 
-![Three forest types distinguishing the isomers and cancellation of the difference under rooted weights](Grade%20Three%20of%20the%20Toponomes%20of%20Two%20Isomers.svg)
+![Three forest types distinguishing the isomers and cancellation of the difference under rooted weights](images/Grade%20Three%20of%20the%20Toponomes%20of%20Two%20Isomers.svg)
 
 Hence, for the homogeneous part of total grade $3$,
 

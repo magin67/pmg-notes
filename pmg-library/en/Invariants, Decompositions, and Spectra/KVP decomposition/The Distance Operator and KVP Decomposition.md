@@ -359,7 +359,7 @@ Q=\mathcal D(L)=
 \end{pmatrix}
 $$
 
-![[Distance transformation for path P4.svg]]
+![[images/Distance transformation for path P4.svg]]
 
 *Left: the original path's couplings. Center: its Laplacian. Right: pair values $Q$. The right panel shows distance-table values, not couplings of a new resistive network. For example, $Q$ equals 2 on the absent coupling $ad$ and 5 on the existing coupling $ab$.*
 

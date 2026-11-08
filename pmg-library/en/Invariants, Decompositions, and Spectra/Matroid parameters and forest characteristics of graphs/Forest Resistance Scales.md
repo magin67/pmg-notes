@@ -90,7 +90,7 @@ $$
 
 This is the total conductance of original edges that can be added to $F$ without creating a cycle. Addition reduces the component count by one. Connectedness of $G$ and the presence of at least two components in $F$ ensure $A(F)>0$.
 
-![[Admissible Extensions of K4 Two-Forests.svg]]
+![[images/Admissible Extensions of K4 Two-Forests.svg]]
 
 **Admissible additions.** In unit $K_4$, a 2-forest of type $3+1$ admits three edges to its isolated vertex; the unused edge within the three-vertex component would close a cycle. For type $2+2$, all four edges between components are admissible. There are $12$ and $3$ such forests, respectively, and all $15$ have weight $1$. Hence $\mathbb E_1 A=(12\cdot3+3\cdot4)/15=16/5$. The formula below gives $\xi_1=3/(16/5)=15/16$. Line crossings without a circle are not vertices.
 

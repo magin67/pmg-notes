@@ -48,7 +48,7 @@ $$
 \tag{1}
 $$
 
-![[The Circulation Form of a Directed 3-Cycle.svg]]
+![[images/The Circulation Form of a Directed 3-Cycle.svg]]
 
 *Left and center: opposite unit directed cycles. Their Laplacian difference $L_{acb}-L_{abc}$ equals $w(abc)$. Right: the same points define $u=b-a$ and $v=c-a$, giving $[u,v]-[v,u]$. The figure specifies directions and arguments, without a metric.*
 

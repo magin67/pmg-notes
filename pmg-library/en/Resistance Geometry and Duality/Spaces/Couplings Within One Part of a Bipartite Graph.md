@@ -153,7 +153,7 @@ $$
 L_P=\frac56[(ab)]^2+\frac13[(ac)]^2+\frac56[(bc)]^2
 $$
 
-![From Documents to Employee Couplings](<From Documents to Employee Couplings.svg>)
+![From Documents to Employee Couplings](<images/From Documents to Employee Couplings.svg>)
 
 *Figure 1. Left: the original bipartite graph, with all eight coupling strengths equal to $1$. Right: the employee graph after eliminating the documents. Vertex positions are schematic; the lengths of the drawn lines do not represent effective resistances.*
 
@@ -365,7 +365,7 @@ Their common origin does not require the two graphs to have equal resistance rad
 
 After eliminating the documents, the coupling strength of $ab$ is $1\cdot2/3=2/3$. After eliminating the employees, the coefficient of $xy$ is $1\cdot1/2=1/2$.
 
-![Two Parts and Two Induced Graphs](<Two Parts and Two Induced Graphs.svg>)
+![Two Parts and Two Induced Graphs](<images/Two Parts and Two Induced Graphs.svg>)
 
 *Figure 2. One weighted bipartite graph and two results of elimination. Colors identify the parts; edge labels give coupling strengths. The lower graphs correspond to two alternative choices of the retained subspace.*
 

@@ -5,7 +5,7 @@ from pathlib import Path
 
 from verify_admissible_chains import cycle, hex_pair, validate, negative_cases
 
-OUT = Path(__file__).resolve().parents[2] / 'pmg-library/ru/Преобразования и сочленения графов/Цепи из ядер'
+OUT = Path(__file__).resolve().parents[2] / 'pmg-library/ru/Преобразования и сочленения графов/Цепи из ядер/images'
 INK, MUTED, EDGE = '#172b43', '#52657a', '#52657a'
 RED, BLUE, PURPLE = '#bc294b', '#196bb9', '#8953af'
 FILLS = ['#fff0d7','#ddf4e9','#e2edff']

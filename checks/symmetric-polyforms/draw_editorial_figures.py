@@ -9,7 +9,7 @@ from matplotlib.patches import Circle, FancyBboxPatch, FancyArrowPatch, Polygon
 
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':15,'svg.fonttype':'none','svg.hashsalt':'pmg-symmetric-2026-11-08','mathtext.fontset':'dejavusans','figure.facecolor':'white','savefig.facecolor':'white'})
 BLUE='#276b9c';ORANGE='#bc641b';TEAL='#147b66';RED='#b9413c';INK='#263d4c';GRAY='#aebbc4';PALE='#edf3f7'
-PREFIX={'ru':'pmg-library/ru/Алгебра и комбинаторика полиформ/Симметрические полиформы','en':'pmg-library/en/Polyform Algebra and Combinatorics/Symmetric polyforms'}
+PREFIX={'ru':'pmg-library/ru/Алгебра и комбинаторика полиформ/Симметрические полиформы/images','en':'pmg-library/en/Polyform Algebra and Combinatorics/Symmetric polyforms/images'}
 NAMES={
 'route':('Путь от разбиений к лесным коэффициентам','From Partitions to Forest Coefficients'),
 'types':('Разбиение и грейды его блоков','A Partition and Its Block Grades'),

@@ -40,7 +40,7 @@ $$
 
 The plug consists of the path endpoints $(p_0,p_1)$; the socket is the middle pair $(q_0,q_1)$. Identify $p_0$ with $a$, and $p_1$ with $b$. The old edge and the new three-edge path form a square. Now attach the same kind of path to $(q_0,q_1)$ and repeat.
 
-![The plug and socket of a path, the first square, and three repetitions of one runner](Plug%20and%20Socket%20in%20Graph%20Weaving.svg)
+![The plug and socket of a path, the first square, and three repetitions of one runner](images/Plug%20and%20Socket%20in%20Graph%20Weaving.svg)
 
 **Exactly what is added.** The plug consists of two vertices with no edge between them in the runner. The existing socket edge remains in the assembled graph. Each step adds two vertices and three edges. After $k$ steps, we obtain a ladder of $k$ squares with $2k+2$ vertices and $3k+1$ edges.
 
@@ -114,7 +114,7 @@ $$
 
 Vertex degrees of the original graph are retained in the principal minor. For a graph with two vertices, the empty determinant equals $1$. This is a special case of [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry|The Spanning-Tree Layer and Boundary Resistance Geometry]]; see also [Barrett et al., §1, Theorem 3](https://arxiv.org/html/1901.00053v2#S1).
 
-![A tree and a separating two-component forest as the two states of the current socket](Two%20Spanning%20States%20of%20Graph%20Weaving.svg)
+![A tree and a separating two-component forest as the two states of the current socket](images/Two%20Spanning%20States%20of%20Graph%20Weaving.svg)
 
 **Two weights, rather than two individual forests.** For the square in the figure, $\tau=4$, $\sigma=3$: each coordinate sums all admissible choices. The next runner transforms this vector into $(15,11)^{\mathsf T}$, and one more transforms it into $(56,41)^{\mathsf T}$.
 
@@ -272,7 +272,7 @@ $$
 
 For a unit initial edge, $s_0=(1,1)^{\mathsf T}$, so $\tau_1=m$. For an initial unit path of $\ell$ edges with its socket at the endpoints, $s_0=(1,\ell)^{\mathsf T}$ and $\tau_1=m-1+\ell$: the initial data change, while the runner matrix stays the same.
 
-![A path for squares, a path for hexagons, and a runner with cycles and eight spanning trees](Three%20Runners%20and%20Their%20Recurrences.svg)
+![A path for squares, a path for hexagons, and a runner with cycles and eight spanning trees](images/Three%20Runners%20and%20Their%20Recurrences.svg)
 
 **Count vertices and edges separately.** A square is formed by attaching $P_4$: three edges and four vertices. A hexagon is formed by attaching $P_6$: five edges and six vertices, two of which are identified with old vertices. Each new hexagon therefore adds four vertices. Attaching the endpoints of a five-vertex path to an edge would form a pentagon.
 
@@ -365,7 +365,7 @@ A fixed output specifies a constant local continuation rule. For hexagonal marki
 
 In open weaving, the starting graph supplies the initial conditions. Closure additionally requires choosing an initial boundary, the final socket, and a correspondence between them. It is a separate operation on the assembled chain.
 
-![Open repetition of a runner and two contact correspondences at closure](Starting%20and%20Closing%20a%20Weaving.svg)
+![Open repetition of a runner and two contact correspondences at closure](images/Starting%20and%20Closing%20a%20Weaving.svg)
 
 **Two different final steps.** In a square strip, the top contact may be identified with the top contact and the bottom with the bottom, or they may be exchanged. These choices give ordinary and twisted closures. If the end edges must become one unit edge, one duplicate copy is removed before identification.
 

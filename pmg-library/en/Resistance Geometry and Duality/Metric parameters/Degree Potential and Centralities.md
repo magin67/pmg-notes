@@ -87,7 +87,7 @@ $$
 
 The middle vertex supplies current $2/3$, while each endpoint receives $1/3$. The potential drop across either unit edge is $1/3$. Degrees first produce a current distribution, then the potential, and finally center coordinates and a ranking.
 
-![The path calculation displays degrees, deviations from mean degree, and potentials separately](<Degree Potential on a Path.svg>)
+![The path calculation displays degrees, deviations from mean degree, and potentials separately](<images/Degree Potential on a Path.svg>)
 
 *The path calculation displays degrees, deviations from mean degree, and potentials separately. Arrows point from the source to the sinks; prescribed currents and potentials both sum to zero.*
 
@@ -105,7 +105,7 @@ Vertex $d$ is closer to the others on average than $a$, but receives a smaller $
 
 Here $\bar d=2$ and $b=(0,0,1,0,-1)^{\mathsf T}$. Unit current flows from $c$ to $e$ along $c-d-e$. Vertices $a,b$ have no external sources or sinks, and all current supplied at $c$ leaves along the attached path. Thus no current flows along the triangle edges, and its vertices are equipotential. The example shows what the measure captures and why it differs from closeness.
 
-![Current flows from $c$ to $e$ through $d$](<Equal Potentials in a Triangle.svg>)
+![Current flows from $c$ to $e$ through $d$](<images/Equal Potentials in a Triangle.svg>)
 
 *Current flows from $c$ to $e$ through $d$. The triangle vertices $a,b,c$ have equal potential, indicated by equal color. Arrows show this external-current distribution, not an orientation of the graph edges.*
 
@@ -424,7 +424,7 @@ $$
 
 Thus both measures prefer $b$ for $0<\varepsilon<\varepsilon_*$; at $\varepsilon=\varepsilon_*$, the coordinates $\beta^b,\beta^c$ are equal; and for $\varepsilon_*<\varepsilon\le1$, the orders are opposite. Disagreement begins while all edge conductances are still positive.
 
-![[Degree Potential - Ranking Disagreement.svg]]
+![[images/Degree Potential - Ranking Disagreement.svg]]
 
 *Left: the final graph at $\varepsilon=1$. Right: score differences along the family. Eigenvector centrality is normalized to sum to $1$; its difference is multiplied by $n/2=5/2$ to match the first-order approximation (5). The comparison concerns the signs of the differences, not the absolute scales of centralities.*
 

@@ -115,7 +115,7 @@ $$
 
 Here “resistance” specifies a quadratic quantity. The linear diameter is $2R_{\mathrm{sph}}$. The parameter $D_{\mathrm{res}}$ is determined by the circumsphere and generally differs from the maximum pairwise effective resistance. Additivity under single-vertex gluing is proved in the [[Vertex Contraction and Graph Gluing#Resistance radius is additive|note on graph gluing]].
 
-![The circumcircle of a resistance triangle and the circumsphere of a tetrahedron, with their local centers](Circumcircle%20and%20Circumsphere.svg)
+![The circumcircle of a resistance triangle and the circumsphere of a tetrahedron, with their local centers](images/Circumcircle%20and%20Circumsphere.svg)
 
 *Left: the unit path $a-b-c$ in the resistance metric, where its vertices form a right triangle. Right: the circumsphere of a tetrahedron. In both cases, the vertices are orthogonal to the sphere element $s_G$ and lie at equal distances from its local center $h$.*
 
@@ -204,7 +204,7 @@ This is the orthogonality condition for ordinary spheres: at any common point $x
 >
 > A zero inner product of the elements is equivalent to perpendicular radius vectors. $\square$
 
-![Orthogonal spheres in a section through their centers and a common point; a point lying on a sphere](Sphere%20Orthogonality%20and%20Point%20Incidence.svg)
+![Orthogonal spheres in a section through their centers and a common point; a point lying on a sphere](images/Sphere%20Orthogonality%20and%20Point%20Incidence.svg)
 
 *Left: a section of two spheres by the plane through their centers and a common point $x$. The radius vectors form a right triangle, so the squared center distance equals the sum of the squared radii. Right: a point $x$ on the circle is orthogonal to its element, while the inner product for an interior point $y$ is positive.*
 
@@ -231,7 +231,7 @@ Thus the affine average of the local representatives differs from the local poin
 
 An element $s$ with $s^2=-\ell^2<0$ admits a visual representation. Add one perpendicular direction to the Euclidean space. Two points $q_+,q_-$ at distance $\ell$ on opposite sides of the original space have the same Euclidean projection $s_0$. In the isotropic model, their linear orthogonal projections onto $\widetilde V$ coincide with the element $s$.
 
-![An element of negative norm as the projection of two symmetric external points](Negative%20Norm%20and%20External%20Points.svg)
+![An element of negative norm as the projection of two symmetric external points](images/Negative%20Norm%20and%20External%20Points.svg)
 
 *The figure shows the original Euclidean plane and two external points. Their ordinary projection onto the plane is the point $s_0$. The linear projection of their isotropic representatives onto the extended space of the plane is the element $s=s_0-\ell^2z/2$. The negative norm therefore encodes the squared height with the opposite sign. The condition $x\cdot s=0$ does not define a real circle.*
 
@@ -287,7 +287,7 @@ $$
 
 Therefore $v\cdot s=0$ if and only if the center $s_0$ is equidistant from $a$ and $b$. In the plane, these centers form the perpendicular bisector of the segment $ab$; in three-dimensional space, they form the plane perpendicular to the segment through its midpoint. The norm of the element $s$ is arbitrary.
 
-![Orthogonality of an element to a vector between two points depends on the center position and not on the radius](Vector%20and%20Sphere%20Element.svg)
+![Orthogonality of an element to a vector between two points depends on the center position and not on the radius](images/Vector%20and%20Sphere%20Element.svg)
 
 *Left: two elements of positive norm have a common center on the perpendicular bisector, so both are orthogonal to $v=b-a$ despite their different radii. Right: the center is shifted toward $b$. Its distance to $b$ is smaller than its distance to $a$, and the product is positive. A shift toward $a$ makes it negative.*
 

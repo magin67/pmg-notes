@@ -26,7 +26,7 @@ $$
 
 The vertical bar separates blocks. For example, $ab\mid c$ denotes the collection of two subsets $\{a,b\}$ and $\{c\}$. Neither the order of elements within a block nor the order of blocks matters: $ab\mid c$, $ba\mid c$, and $c\mid ab$ denote the same partition.
 
-![Three partitions of a three-element set into a pair and a singleton](Partitions%2021.svg)
+![Three partitions of a three-element set into a pair and a singleton](images/Partitions%2021.svg)
 
 *Figure 1. An edge joins two elements into a pair; the remaining vertex forms a singleton block. The pair changes, while the collection of block sizes remains $[2,1]$.*
 
@@ -55,7 +55,7 @@ $$
 ab\mid cd,\qquad ac\mid bd,\qquad ad\mid bc
 $$
 
-![Three partitions of four elements into two pairs](Partitions%2022.svg)
+![Three partitions of four elements into two pairs](images/Partitions%2022.svg)
 
 *Figure 2. All partitions of type $[2,2]$. Each drawing contains two two-element blocks; exchanging the blocks does not create a new partition.*
 
@@ -77,7 +77,7 @@ $$
 abc\mid d,\qquad abd\mid c,\qquad acd\mid b,\qquad bcd\mid a
 $$
 
-![Four partitions of four elements into a triple and a singleton](Partitions%2031.svg)
+![Four partitions of four elements into a triple and a singleton](images/Partitions%2031.svg)
 
 *Figure 3. All partitions of type $[3,1]$. The outline marks the members of the three-element block. No edges within that block have been chosen.*
 
@@ -230,7 +230,7 @@ The brackets in $[x_i!]!$ preserve the sequence of operations: first transform t
 
 ## From repeated counts to the general formula
 
-![Two Steps of Removing Repetitions](<Two Steps of Removing Repetitions.svg>)
+![Two Steps of Removing Repetitions](<images/Two Steps of Removing Repetitions.svg>)
 
 For type $[2,2]$, there are initially $4!=24$ rows. Forgetting the order within both pairs leaves $24/(2!2!)=6$ assignments to two positions. Forgetting the order of the positions leaves $6/2!=3$ partitions.
 

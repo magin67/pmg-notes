@@ -102,7 +102,7 @@ The second inequality concerns internal cores only. These numerical inequalities
 
 These conditions concern the abstract graph. Crossing lines in a drawing without a marked vertex do not create a contact. Regularity of the polygons and the spatial dimension of the drawing are not part of the definition.
 
-![An admissible chain and three violations of its conditions](An%20Admissible%20Chain%20and%20Violations.svg)
+![An admissible chain and three violations of its conditions](images/An%20Admissible%20Chain%20and%20Violations.svg)
 
 **Four constructions.** In the admissible case, the two seams of the middle core share no vertices. The other panels separately show a common vertex of two seams, an additional contact between the end cores, and a disconnected intersection of adjacent cores. The last example retains two shared edges, but they do not form a path. Leaving the conditions of the definition does not mean that every invariant must change; it requires a different analysis.
 
@@ -135,7 +135,7 @@ After matching the boundary names, $H_{j+1}=H_j\cup K_{j+1}^-$ has disjoint cons
 
 If the input seam has $s\ge3$ vertices, its $s-2$ internal vertices become isolated in the separate part $K_{j+1}^-$. In the assembled graph, they remain connected by the seam edges retained in $H_j$. These vertices must not be removed from the data. The full forest passport allows disconnected parts; resistance formulas that require each part to be connected do not automatically apply to this decomposition.
 
-![Attaching a core, changing the active boundary, and an isolated input vertex](Attaching%20a%20Core%20and%20Transferring%20the%20Active%20Boundary.svg)
+![Attaching a core, changing the active boundary, and an isolated input vertex](images/Attaching%20a%20Core%20and%20Transferring%20the%20Active%20Boundary.svg)
 
 **One assembly step.** The red seam stays with the assembled part; the blue seam becomes the new output. After gluing, the red vertices remain but are no longer active. In the inset for $s=3$, the middle input vertex is isolated only in the separate fragment $K^-$. This explains why the vertex set must be stored independently of the edge list.
 
@@ -201,7 +201,7 @@ Formula (6) concerns the full ordinary forest passport. Transferring reduced coo
 
 Let $N=3$, $m_1=m_2=m_3=6$, and $s_1=s_2=2$. Number the vertices of the middle core $K_2$ as $0,1,\ldots,5$ around the cycle. The input seam is the edge $01$. Choose the output seam as $34$ in configuration A and $23$ in configuration B.
 
-![Two assemblies of three hexagons with marked seams and the core scheme](Two%20Assemblies%20of%20Three%20Hexagons.svg)
+![Two assemblies of three hexagons with marked seams and the core scheme](images/Two%20Assemblies%20of%20Three%20Hexagons.svg)
 
 **One scheme, two configurations.** In both cases the core scheme is the path $1-2-3$. The red input and blue output of the middle core each have two vertices and are disjoint. Arrows specify the order of seam endpoints; equal numbers denote the same vertex. The geometric drawings represent abstract graphs, not their resistance embeddings.
 

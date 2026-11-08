@@ -185,7 +185,7 @@ $$
 
 The trace of the unconstrained projection equals the original trace $18$, whereas the trace of $\mathbf L_*$ is $1046/57$. The trace change is computed directly here.
 
-![[Diagonal Projection and the Nearest Graph on Four Vertices.svg]]
+![[images/Diagonal Projection and the Nearest Graph on Four Vertices.svg]]
 
 *Figure 1. The original cycle with an additional conductance of $5$, its unconstrained diagonal projection, and the nearest graph in the cone. The dashed orange links in the middle diagram have negative coefficients. These links are absent from the nearest admissible graph. The vertex labels are the same in all three diagrams.*
 
@@ -234,7 +234,7 @@ For example:
 
 The graph at $r=-4$ has no edge $\{2,4\}$, whereas all six edges are present at $r=-2$. These are different weighted graphs, already distinguished by $\tau$. Their common projection determines neither the forest polynomials nor the individual resistances; the latter may change in opposite directions.
 
-![[Different Graphs with One Spectral Projection.svg]]
+![[images/Different Graphs with One Spectral Projection.svg]]
 
 *Figure 2. Two members of the family $\mathbf S_r$ have the same diagonal projection but different conductances, spanning-tree coefficients, and resistances. The right panel shows how two resistances vary over the full admissible parameter interval. The marked points identify the graphs in the table.*
 

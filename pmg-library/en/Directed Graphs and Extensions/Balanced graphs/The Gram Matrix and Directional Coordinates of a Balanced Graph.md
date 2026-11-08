@@ -218,7 +218,7 @@ $$
 
 Other weights are zero. Incoming and outgoing weighted degrees at the vertices are $2,2,1$.
 
-![[A Balanced Graph with Different Sphere Coordinates.svg]]
+![[images/A Balanced Graph with Different Sphere Coordinates.svg]]
 
 *Arrows show directions and numbers show weights. The two arcs between $a,b$ have unequal weights; arcs through $c$ maintain balance.*
 

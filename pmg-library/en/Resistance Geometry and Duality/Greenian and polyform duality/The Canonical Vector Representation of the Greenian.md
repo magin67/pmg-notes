@@ -107,7 +107,7 @@ Polar forms also form a basis, but in this series “the canonical working repre
 
 Here all $p_i=a_i-h$ lie in the direct space $W$, and the inner product is that of the original resistance metric. The sign change of a coefficient has a simple geometric meaning.
 
-![The coefficient has the opposite sign to the inner product](Angles%20and%20Signs%20of%20Greenian%20Coefficients.svg)
+![The coefficient has the opposite sign to the inner product](images/Angles%20and%20Signs%20of%20Greenian%20Coefficients.svg)
 
 *Figure 1. In $\gamma_{ij}=-p_i\cdot p_j$, an acute angle gives a negative coefficient, a right angle gives zero, and an obtuse angle gives a positive coefficient. These are pairs of vectors; a negative coefficient does not mean a negative vector norm.*
 
@@ -343,7 +343,7 @@ The last form is the top grade of the Greenian exponential. This reconciles its 
 
 ## Full example: a path on four vertices
 
-![The original path and the signed couplings of its Greenian](A%20Path%20and%20Its%20Greenian%20Couplings.svg)
+![The original path and the signed couplings of its Greenian](images/A%20Path%20and%20Its%20Greenian%20Couplings.svg)
 
 *Figure 2. The top row is the unit path worked out below. The bottom shows conductances $2,3,5$, treated in the standard-graphs note. The tables specify all six pairs, including pairs without an original edge.*
 

@@ -28,7 +28,7 @@ $$
 a\longrightarrow b\longrightarrow c\longrightarrow a
 $$
 
-![[The Unit Directed 3-Cycle.svg]]
+![[images/The Unit Directed 3-Cycle.svg]]
 
 *A unit directed 3-cycle. Each vertex has one incoming and one outgoing arc of weight $1$. There are no reverse arcs: balance holds without symmetric couplings.*
 
@@ -123,7 +123,7 @@ The unique recipient of an arc from $a_i$ defines a permutation $\sigma$ by $a_i
 
 Such a graph decomposes uniquely into vertex-disjoint directed cycles. Following the unique outgoing arc reaches a cycle, and indegree $1$ excludes any attached incoming path. All cycle lengths are at least $2$. On five vertices, for example, there may be separate cycles $a\to b\to a$ and $c\to d\to e\to c$.
 
-![[A Loopless Permutation Digraph.svg]]
+![[images/A Loopless Permutation Digraph.svg]]
 
 *A degree-one balanced graph on five vertices: a directed 2-cycle and a directed 3-cycle, all weights $1$. Each vertex belongs to exactly one cycle. The graph is balanced although it has two connected components.*
 
@@ -296,7 +296,7 @@ $$
 \tau_a=\tau_b=\tau_c=1
 $$
 
-![[Spanning Trees of a Directed 3-Cycle.svg]]
+![[images/Spanning Trees of a Directed 3-Cycle.svg]]
 
 *The three root choices for a unit directed 3-cycle. Root $a$ retains $b\to c\to a$, root $b$ retains $c\to a\to b$, and root $c$ retains $a\to b\to c$. In each case the root's outgoing arc is removed. All remaining arcs point toward the highlighted root.*
 

@@ -65,7 +65,7 @@ $$
 
 For example, the term $t^2$ of state $ac|e$ represents a forest with internal component $\{d\}$. The two contributions of degree $3$ are groves.
 
-![[Three forests of one boundary state.svg]]
+![[images/Three forests of one boundary state.svg]]
 
 **One polynomial, different layers.** The figure from the full-passport note shows three forests of state $ac|e$. Spanning-tree gluing uses the two forests with no internal component; the full forest polynomial needs all three.
 
@@ -226,7 +226,7 @@ $$
 
 The effective graph is the path $a-c-e$ with conductances $1/2,1/2$. Its spanning-tree coefficient is $1/4$, whereas the original path has $\tau=1$. Formula (4) recovers $1=4\cdot(1/4)$; formula (5) gives $\delta_B=1\cdot4=4$, as does the direct grove count in (1).
 
-![[Boundary response of P5 and spanning-tree scale.svg]]
+![[images/Boundary response of P5 and spanning-tree scale.svg]]
 
 **Response is preserved, scale changes.** Both graphs have $R_{ac}=2$, $R_{ce}=2$, $R_{ae}=4$. The original path has four groves with fully separated boundary. Their weight $\delta_B=4$ compensates for the change in the spanning-tree coefficient when $b,d$ are eliminated.
 
@@ -342,7 +342,7 @@ $$
 =\begin{pmatrix}1&1\\1&2\end{pmatrix}
 $$
 
-![[Two copies of P5 and spanning-tree gluing.svg]]
+![[images/Two copies of P5 and spanning-tree gluing.svg]]
 
 **Three ways to obtain $16$.** The graph consists of two four-cycles with one shared vertex. Colors identify the parts containing the edges; all conductances are $1$. The determinant of the sum of Gram matrices, grove pairing, and direct tree counting agree. Boundary resistances are halved by gluing.
 
@@ -400,7 +400,7 @@ $$
 
 The difference comes from forests in which an internal leaf becomes a separate component. Such forests are absent from the grove layer.
 
-![[The same response and different forest passports.svg]]
+![[images/The same response and different forest passports.svg]]
 
 **Electrically indistinguishable parts with different passports.** The boundary and topology are identical; only two conductances change, with their product remaining $1$. The response, spanning-tree coefficient, and all grove weights therefore agree, but lower forest coefficients differ. Both graphs admit a circular planar realization with boundary $\{a,b\}$.
 

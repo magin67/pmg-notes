@@ -46,7 +46,7 @@ def make_svg():
 
 if __name__ == "__main__":
     repo = Path(__file__).resolve().parents[2]
-    default = repo / "pmg-library/ru/Резистивная геометрия и дуальность/Метрические параметры/Нормы лапласианов - тройки двух треугольников.svg"
+    default = repo / "pmg-library/ru/Резистивная геометрия и дуальность/Метрические параметры/images/Нормы лапласианов - тройки двух треугольников.svg"
     destination = Path(sys.argv[1]) if len(sys.argv) > 1 else default
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(make_svg(), encoding="utf-8")

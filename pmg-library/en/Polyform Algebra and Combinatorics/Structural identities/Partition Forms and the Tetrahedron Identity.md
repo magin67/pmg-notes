@@ -105,7 +105,7 @@ Consider four distinct basis vertices $a,b,c,d$. They admit three partitions int
 
 The quantities being added here are forms. Both sides represent the same polyform of the second grade; no lengths or areas have been assigned in (1). The name refers to the geometric interpretation of the four vertices.
 
-![Seven Partitions in the Tetrahedron Identity](<Seven Partitions in the Tetrahedron Identity.svg>)
+![Seven Partitions in the Tetrahedron Identity](<images/Seven Partitions in the Tetrahedron Identity.svg>)
 
 *Top: three partitions into pairs. Bottom: four partitions into a triple and a singleton. Lines indicate block membership. The identity adds the corresponding forms $q_\pi$, not the partitions themselves; no areas have been assigned.*
 
@@ -282,7 +282,7 @@ A nondegenerate tetrahedron can be inscribed in a parallelepiped so that its ver
 
 In the figure, $p=(ad_1)$, $q=(ac_1)$, and $r=(aa_1)$ are the three edge vectors of the parallelepiped.
 
-![A Tetrahedron and Three Parallelepiped Areas](<A Tetrahedron and Three Parallelepiped Areas.svg>)
+![A Tetrahedron and Three Parallelepiped Areas](<images/A Tetrahedron and Three Parallelepiped Areas.svg>)
 
 *Left: tetrahedron $abcd$ is inscribed in a parallelepiped; the three pairs of opposite edges have different colors. Right: the faces on $p,q$, $q,r$, and $p,r$ are shown separately, with areas $F_1,F_2,F_3$. These are parallelepiped-face areas, not areas of the tetrahedron faces.*
 

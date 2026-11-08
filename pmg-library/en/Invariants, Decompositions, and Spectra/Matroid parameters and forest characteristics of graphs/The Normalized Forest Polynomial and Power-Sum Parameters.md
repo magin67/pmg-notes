@@ -233,7 +233,7 @@ $$
 >
 > Division gives $\Phi_{G_1\vee G_2}=\Phi_{G_1}\Phi_{G_2}$. The formal logarithm of a product of series with constant coefficient $1$ is the sum of their logarithms. This can be checked by differentiation: derivatives agree and constant coefficients are zero. Comparing coefficients using (2) completes the proof. $\square$
 
-![[Forests under One-Point Gluing.svg]]
+![[images/Forests under One-Point Gluing.svg]]
 
 **Choosing in each piece.** Solid edges form $F_1$ and $F_2$; dashed edges show the remaining original edges. Identifying $p_1,p_2$ creates no cycle. The illustrated choice has $g_1=2$, $g_2=1$, and total $g=3$; with $d_1=d_2=2$, this gives $k_1=0$, $k_2=1$, $k=1$. The isolated vertex $d$ is retained.
 

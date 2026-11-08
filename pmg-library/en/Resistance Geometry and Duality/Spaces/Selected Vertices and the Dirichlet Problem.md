@@ -56,7 +56,7 @@ In the literature, $P$ is usually called the boundary of the Dirichlet problem. 
 >
 > Hence $3f_x-f_y=0$, $-f_x+4f_y=33$, and therefore $f_x=3$, $f_y=9$.
 
-![Values on the Selected Path](<Values on the Selected Path.svg>)
+![Values on the Selected Path](<images/Values on the Selected Path.svg>)
 
 *Figure 1. The numbers above the couplings are their coefficients. Blue values are prescribed; red values are obtained from the internal equations. The drawing shows the graph's couplings, not distances in its resistance geometry.*
 
@@ -225,7 +225,7 @@ $$
 
 The matrix rows are ordered as $x,y$ and the columns as $a,b$. With $f_a=0$, $f_b=11$, formula (4) again gives $3$ and $9$.
 
-![Projections and Residuals in the Dirichlet Problem](<Projections and Residuals in the Dirichlet Problem.svg>)
+![Projections and Residuals in the Dirichlet Problem](<images/Projections and Residuals in the Dirichlet Problem.svg>)
 
 *Figure 2. Two planar sections of the same three-dimensional resistance realization of the path. The left panel shows $a,x,b$, the right panel $a,y,b$, together with the projections onto the common line $ab$. Both sections use the same length scale; numbers beside the sides denote squared distances. The vectors $r_x,r_y$ lie in different planes; the drawing does not imply that they are parallel.*
 
@@ -269,7 +269,7 @@ $$
 \widehat L=2[v_x]^2+[v_y-v_x]^2+3[v_y]^2
 $$
 
-![The Contracted Graph of the Dirichlet Problem](<The Contracted Graph of the Dirichlet Problem.svg>)
+![The Contracted Graph of the Dirichlet Problem](<images/The Contracted Graph of the Dirichlet Problem.svg>)
 
 *Figure 3. The selected vertices $a,b$ are identified as $s$. The contracted graph retains the metric of residuals. To compute influence, we separately retain which original selected vertex was the endpoint of each coupling.*
 

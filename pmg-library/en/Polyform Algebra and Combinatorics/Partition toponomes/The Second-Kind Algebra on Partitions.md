@@ -110,7 +110,7 @@ $$
 
 The figure shows all the matchings contributing to the coefficients of this expansion.
 
-![Seven partial matchings of two pairs of components: one with no pairs, four with one pair, and two with two pairs](Partial%20matchings%20of%20partition%20components.svg)
+![Seven partial matchings of two pairs of components: one with no pairs, four with one pair, and two with two pairs](images/Partial%20matchings%20of%20partition%20components.svg)
 
 *Figure 1. The product $(1^2)*(1^2)$. Blue circles represent occurrences of parts in the first factor, and orange circles represent those in the second. Each circle has weight $1$; a line matches two parts. The temporary labels $a_1,a_2,b_1,b_2$ distinguish the matchings and are forgotten in the resulting type. This is a diagram of an operation on parts, rather than a drawing of the edges of the original graph.*
 
@@ -148,7 +148,7 @@ $$
 
 Here $\mathcal A_k$ is spanned by the partitions of weight $k$, and $\dim\mathcal A_k=p(k)$ is the number of integer partitions of $k$. If $q$ pairs are matched, the resulting type has $r+s-q$ parts. The number of parts therefore does not define an analogous grading: a single product can contain types with different numbers of parts.
 
-![One grouping of three colors with either parenthesization](Three%20Factors%20and%20Groups%20of%20Parts.svg)
+![One grouping of three colors with either parenthesization](images/Three%20Factors%20and%20Groups%20of%20Parts.svg)
 
 *Figure 2. One final grouping for three factors $(1)$ is shown. Either parenthesization produces it in exactly one way. The general proof uses such groups, each containing at most one part from each factor.*
 
@@ -174,7 +174,7 @@ $$
 
 The part $(b)$ is added as a whole. It differs from the product $(1)^b$, which is itself a sum of different types.
 
-![Three possibilities for (2,1)*(2)](Multiplication%20by%20One%20Part.svg)
+![Three possibilities for (2,1)*(2)](images/Multiplication%20by%20One%20Part.svg)
 
 *Figure 3. The orange part of weight $2$ remains separate, joins the blue part of weight $2$, or joins the blue part of weight $1$. The three resulting types each have coefficient $1$.*
 

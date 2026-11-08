@@ -107,7 +107,7 @@ $$
 
 The same coefficient $3$ occurs for each of the ten set partitions of type $[2,1]$. The full contribution of this type is therefore $3E_5[2,1]$ and accounts for $30$ forests.
 
-![Three Forests for One Partition](<Three Forests for One Partition.svg>)
+![Three Forests for One Partition](<images/Three Forests for One Partition.svg>)
 
 Three different forests give the same form $[(abc)(de)]^2$. Five vertices admit ten partitions of this type, so there are $10\cdot3=30$ forests in total.
 
@@ -380,7 +380,7 @@ Here $(M_{K_n})_0=e$, and $(M_{K_n})_r=n^{r-1}E_n[r]$ for $r\ge1$. Dividing an i
 
 ### Example: deleting the diagonals of a four-cycle
 
-![From the Complete Graph to the Four-Cycle](<From the Complete Graph to the Four-Cycle.svg>)
+![From the Complete Graph to the Four-Cycle](<images/From the Complete Graph to the Four-Cycle.svg>)
 
 The top row shows the deletion of the diagonals from $K_4$. Below are all four spanning trees and all six two-edge forests of the resulting cycle. Missing edges are dashed.
 
