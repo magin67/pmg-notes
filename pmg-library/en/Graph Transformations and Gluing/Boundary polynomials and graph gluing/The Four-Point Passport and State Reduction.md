@@ -1,9 +1,9 @@
 ---
 title: "The Four-Point Passport and State Reduction"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 6
+updated: 2026-11-08
+revision: 2
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -22,7 +22,6 @@ The starting point is [[en/Graph Transformations and Gluing/Boundary polynomials
 > **From the literature.** The matrix, reduction by its responses, and the Catalan upper bound appear in [Mannens–Nederlof, §§4.2–4.3](https://arxiv.org/html/2307.01046#S4.SS2); nondegeneracy of the spanning-tree pairing appears in [Kenyon–Wilson, §§2.1–2.2](https://arxiv.org/html/math/0608422v4#S2.SS1).
 >
 > **Derivations and interpretation here.** We give the four-point relation and matrix explicitly and derive the exact Catalan rank from the two external results. Comparing the forest radical with the structural kernel uses the language of PMG. Minimality follows from rank in an explicitly defined class of passports.
-> “Derived here” identifies where a proof is given; no claim of scientific priority is made.
 
 ## Which information may be identified
 
@@ -119,6 +118,38 @@ s_{abc|d}+s_{abd|c}+s_{acd|b}+s_{a|bcd}-\\
 $$
 
 The symbol $\equiv$ means equality of classes in $\mathscr H_B$. It is neither an equality of graphs nor a rule allowing the state $ac|bd$ simply to be deleted.
+
+### An example with a crossing state
+
+Take a graph $G$ on the boundary $B=\{a,b,c,d\}$ itself, with two unit edges $ac$ and $bd$. Its only nonzero coordinates are
+
+$$
+f_{a|b|c|d}=1,\qquad
+f_{ac|b|d}=f_{a|bd|c}=t,\qquad
+f_{ac|bd}=t^2
+$$
+
+By (3), the contribution $t^2$ is distributed among seven retained coordinates. The table shows only degree $t^2$; lower coefficients remain unchanged.
+
+| Coordinate | Before reduction | After reduction |
+| --- | ---: | ---: |
+| $ac\mid bd$ | $t^2$ | Removed after redistribution |
+| Each of $abc\mid d$, $abd\mid c$, $acd\mid b$, $a\mid bcd$ | $0$ | $+t^2$ |
+| Each of $ab\mid cd$, $ad\mid bc$, $abcd$ | $0$ | $-t^2$ |
+
+After reduction, the four coordinates of type $3+1$ equal $t^2$, while those of $ab|cd$, $ad|bc$, and $abcd$ equal $-t^2$. Rank-$0$ and rank-$1$ coordinates remain unchanged. In particular, the formal combination $\sum_\pi\eta_\pi f_\pi=t^2\ne0$: the original coefficients do not satisfy the radical relation.
+
+The partner $J$ has the same boundary, the single unit edge $ab$, and isolated vertices $c,d$. Boundaries are identified by name; there are no shared edges. The result is the path $c-a-b-d$, so
+
+$$
+F_{G\#_B J}(t)=(1+t)^3
+$$
+
+The reduced law (7), derived below, gives the same answer. Simply deleting $f_{ac|bd}$ without transforming the other coordinates would give $1+3t+2t^2$, losing $t^2+t^3$.
+
+![[images/Reducing a crossing state without losing forests.svg]]
+
+**Changing coordinates retains the contribution; deletion loses it.** The crossing of $ac$ and $bd$ in the left diagram is not a vertex. After adding $ab$, the graph is redrawn as an ordinary path. Negative reduced coordinates compensate for excess contributions; they do not represent negative edge weights.
 
 ## The reduced matrix and rank fourteen
 
@@ -258,30 +289,6 @@ $$
 
 Relation (9) holds for responses; no analogous identity holds for the original $f_\pi$. The inverse matrix in (8) defines dual coordinates for this algebraic pairing. It is not a resistance Gram matrix and does not express Laplacian–Greenian duality.
 
-### An example with a crossing state
-
-Take a graph $G$ on the boundary $B=\{a,b,c,d\}$ itself, with two unit edges $ac$ and $bd$. Its only nonzero coordinates are
-
-$$
-f_{a|b|c|d}=1,\qquad
-f_{ac|b|d}=f_{a|bd|c}=t,\qquad
-f_{ac|bd}=t^2
-$$
-
-After reduction, the four coordinates of type $3+1$ equal $t^2$, while those of $ab|cd$, $ad|bc$, and $abcd$ equal $-t^2$. Rank-$0$ and rank-$1$ coordinates remain unchanged. In particular, the formal combination $\sum_\pi\eta_\pi f_\pi=t^2\ne0$: the original coefficients do not satisfy the radical relation.
-
-The partner $J$ has the same boundary, the single unit edge $ab$, and isolated vertices $c,d$. Boundaries are identified by name; there are no shared edges. The result is the path $c-a-b-d$, so
-
-$$
-F_{G\#_B J}(t)=(1+t)^3
-$$
-
-Formula (7) gives the same answer. Simply deleting $f_{ac|bd}$ without transforming the other coordinates would give $1+3t+2t^2$, losing $t^2+t^3$.
-
-![[images/Reducing a crossing state without losing forests.svg]]
-
-**Changing coordinates retains the contribution; deletion loses it.** The crossing of $ac$ and $bd$ in the left diagram is not a vertex. After adding $ab$, the graph is redrawn as an ordinary path. Negative reduced coordinates compensate for excess contributions; they do not represent negative edge weights.
-
 ## Why this is not the tetrahedron identity
 
 **Comparison in the language of PMG.** We compare the forest pairing of [1] with the map to partition forms from [[en/Polyform Algebra and Combinatorics/Structural identities/Partition Forms and the Tetrahedron Identity|Partition Forms and the Tetrahedron Identity]]. The calculation below distinguishes their kernels; it interprets the two constructions within this series.
@@ -366,7 +373,7 @@ Their notation is $\mathcal M_{\mathsf t}$. In §2.1, they justify nonsingularit
 >
 > Moreover, for the same index ordering, $\det\mathbf M=\det\mathbf T_k$: after the same permutation of column groups, both matrices have identical diagonal blocks. The upper bound of [1] completes the proof of (10). The independent classes $\mathrm{NC}_k$ have the dimension of the entire quotient, so they form a basis. $\square$
 
-The exact equality is obtained here by combining two external results. It is proved, but priority for this deduction has not been established; the statement does not claim novelty relative to the entire literature. Graphs to which (10) is applied may be nonplanar: noncrossing partitions are chosen as coordinates of a universal matrix. Circular-planarity hypotheses in theorems reconstructing groves from electrical response are discussed separately in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry|The Spanning-Tree Layer and Boundary Resistance Geometry]].
+The exact equality is obtained here by combining two external results. Graphs to which (10) is applied may be nonplanar: noncrossing partitions are chosen as coordinates of a universal matrix. Circular-planarity hypotheses in theorems reconstructing groves from electrical response are discussed separately in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry|The Spanning-Tree Layer and Boundary Resistance Geometry]].
 
 For any boundary, one may therefore retain $\mathrm{Cat}_k$ responses $F_{G/\sigma}(t)$ with $\sigma\in\mathrm{NC}_k$ and use $\mathbf M^{-1}$ in the analogue of (8). The cyclic order affects the coordinate choice, not the rank.
 

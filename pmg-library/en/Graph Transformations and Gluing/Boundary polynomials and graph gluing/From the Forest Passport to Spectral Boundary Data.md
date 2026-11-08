@@ -1,9 +1,9 @@
 ---
 title: "From the Forest Passport to Spectral Boundary Data"
 date: 2026-10-30
-updated: 2026-11-02
-revision: 3
-translated_revision: 4
+updated: 2026-11-08
+revision: 4
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -16,9 +16,9 @@ aliases:
 
 [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Gluing Components by Pairing Boundary Data|Gluing Components by Pairing Boundary Data]] reconstructs the full forest polynomial of a gluing from boundary partitions. [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction|The Four-Point Passport and State Reduction]] establishes how many linear coordinates suffice. We now change the quantity to be computed: the goal is the Laplacian characteristic polynomial. In general, the retained forest states do not suffice for it.
 
-For a two-point boundary, a new passport can be formed from five polynomials: the determinant of the spectral pencil, three principal minors, and one cofactor. They satisfy Jacobi's identity. We derive their gluing law, then specify the setting for chains with input and output boundaries.
+For a two-point boundary, a new passport can be formed from five polynomials: the determinant of the spectral pencil (the matrix family $\mathbf M_G(\xi)=\xi I-\mathbf L_G$), three principal minors, and one cofactor. They satisfy Jacobi's identity. We derive their gluing law, then specify the setting for chains with input and output boundaries.
 
-**Provenance of the results.** Jacobi's identity and elimination of internal variables by a Schur complement are classical matrix constructions. Here they are applied to the spectral pencil used in PMG and to specified gluing rules. The particular formulas and examples are derived in the text; this does not assert scientific priority. Transfer matrices for particular chain families remain a subject for the next stage.
+**Provenance of the results.** Jacobi's identity and elimination of internal variables by a Schur complement are classical matrix constructions. Here they are applied to the spectral pencil used in PMG and to specified gluing rules. The gluing formulas and examples are derived below. The continuation is already published in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]]; the closing section points to results on boundary transfer and chain classification, together with the remaining open questions.
 
 ## Two forest states do not determine the spectral polynomial
 
@@ -214,12 +214,43 @@ $$
 
 ![[images/Spectral gluing of two paths.svg]]
 
-Formula (12) gives
+In (11), temporarily set $h=\xi-2$. Then
+
+$$
+\begin{aligned}
+U=V&=2(\xi^2-3\xi+1)h,\qquad W=2h,\qquad Z=h^2\\
+Q&=2\xi(\xi-1)(\xi-3)h+2(\xi^2-3\xi+1)^2-2
+\end{aligned}
+$$
+
+Substitution into (12) gives all five coordinates of the result on the same pair $(a,b)$:
+
+$$
+\begin{aligned}
+A_G&=\xi(\xi-2)^2(\xi-4)\\
+B_G=C_G&=(\xi-2)(\xi^2-4\xi+2)\\
+D_G&=2(\xi-2),\qquad E_G=(\xi-2)^2
+\end{aligned}
+$$
+
+In particular, the characteristic polynomial is
 
 $$
 \chi_{C_4}(\xi)=\xi(\xi-2)^2(\xi-4)
 \tag{13}
 $$
+
+Check Jacobi's identity for the resulting passport:
+
+$$
+\begin{aligned}
+B_GC_G-D_G^2
+&=(\xi-2)^2\bigl[(\xi^2-4\xi+2)^2-4\bigr]\\
+&=\xi(\xi-4)(\xi-2)^4=A_GE_G
+\end{aligned}
+$$
+
+These five polynomials can be used in the next gluing along the same pair $(a,b)$. Moving to a different active pair requires the separate boundary transformation discussed in the closing section.
 
 At $\xi=2$, both $E_i$ vanish, so the rational expression (6) cannot be evaluated there. Formula (12) remains valid: $B_i=C_i=-1$ and $D_i=1$, so the only surviving terms in $A_G$ give $2-2=0$. Eliminating internal vertices has not lost the characteristic-polynomial root.
 
@@ -303,7 +334,7 @@ For a specified family of cores, this setting prepares a transfer method. This n
 | Relation of $\chi_G$ to rooted coefficients | The established matrix-forest formula, applied in PMG notation |
 | $AE=BC-D^2$ | The classical Jacobi identity [1], with a short proof in our coordinates |
 | Schur complement and electrical value at $\xi=0$ | Standard variable elimination; electrical interpretation in [2] |
-| Formulas (12), (15) | Direct derivations from these matrix identities for explicitly specified gluing; no independent priority claim |
+| Formulas (12), (15) | Direct derivations from these matrix identities for explicitly specified gluing |
 | Examples and reconstruction limits | Calculations checked here, distinguishing ordinary, electrical, and spectral passports |
 
 The formulas are proved above. The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/verify_spectral_boundary.py) separately computes pencil determinants and cofactors in exact rational polynomial arithmetic. For 80 components, it checks Jacobi's identity and agreement of $\chi_G$ with independent enumeration of rooted forests. For 528 gluings with disjoint edges and 48 with a shared weighted edge, all five coordinates are compared with direct minors of the result.

@@ -1,9 +1,9 @@
 ---
 title: "The Spanning-Tree Layer and Boundary Resistance Geometry"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 7
+updated: 2026-11-08
+revision: 2
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -21,8 +21,7 @@ The main law is established in [[en/Graph Transformations and Gluing/Boundary po
 > [!info] Provenance of the results
 > **From the literature.** Groves, their spanning-tree pairing, and electrical identities appear in [Kenyon–Wilson, §§2.1–2.2 and Appendix A](https://arxiv.org/html/math/0608422v4#S2.SS1). Schur complements and preservation of resistances belong to established electrical-network theory [2].
 >
-> **Derivations and exposition here.** These identities yield a law involving the sum of Gram matrices, connected here with the full passport in PMG notation. The examples demonstrate reconstruction limits, without claiming priority for the examples.
-> “Derived here” identifies where a proof is given; no claim of scientific priority is made.
+> **Derivations and exposition here.** These identities yield a law involving the sum of Gram matrices, connected here with the full passport in PMG notation. The examples demonstrate reconstruction limits.
 
 ## Extracting groves from the full passport
 
@@ -353,6 +352,10 @@ $$
 In a circular planar graph, all boundary vertices lie on the outer face in a specified cyclic order. For such a graph, the Kenyon–Wilson theorem [1, Theorem 1.1] expresses normalized grove weights $g_\pi/\delta_B$ for noncrossing partitions through the response matrix. Crossing states are impossible and have zero weight. Together with $\delta_B$, this recovers absolute grove weights as well. The boundary-placement condition matters for $k\ge4$.
 
 A simple example of the limitation is a star with an internal center and four unit edges to $B=\{1,2,3,4\}$. It has $\delta_B=4$ and $g_{12|34}=0$: connecting both pairs would require the same center. Its effective graph is the complete $K_4$ on the boundary with conductances $1/4$. That graph has $\delta_B=1$ and $g_{12|34}=1/16$. The electrical responses coincide, but the normalized weights of this state differ: $0$ and $1/16$.
+
+![[images/The same response for a star and a complete graph.svg]]
+
+**The same response, different groves.** All four marked vertices form the boundary. In the star, paths $1-2$ and $3-4$ pass through the same internal center and cannot form two separate components. In $K_4$, the two highlighted edges form a grove $12|34$ of weight $(1/4)^2$. The crossing of the diagonals on the right is not a vertex.
 
 The graph $K_4$ is planar, but all four vertices cannot lie on a single outer face without edge crossings. Thus the example does not contradict the theorem for circular planar networks. Nor does it contradict (7): for arbitrary graphs, $(\tau,\mathbf G_B)$ suffices for spanning-tree gluing, but this does not promise recovery of every original grove coordinate.
 

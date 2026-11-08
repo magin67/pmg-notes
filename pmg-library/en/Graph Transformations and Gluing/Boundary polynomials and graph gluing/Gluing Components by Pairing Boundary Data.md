@@ -1,9 +1,9 @@
 ---
 title: "Gluing Components by Pairing Boundary Data"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 8
+updated: 2026-11-08
+revision: 2
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -22,7 +22,6 @@ The passport is defined in [[en/Graph Transformations and Gluing/Boundary polyno
 > **From the literature.** The forest compatibility matrix and the combination of state tables appear in [Mannens–Nederlof, §§4.2–4.3](https://arxiv.org/html/2307.01046#S4.SS2).
 >
 > **Derivations and exposition here.** The established combination rule is written for weighted generating polynomials and proved by a bijection. Passing from states to test responses is linear algebra for this matrix; the rules for shared edges and the examples specify its conditions of use.
-> “Derived here” identifies where a proof is given; no claim of scientific priority is made.
 
 ## Which parts are joined, and how
 
@@ -49,6 +48,32 @@ w(H)t^{|E(H)|},\qquad
 $$
 
 All vertices belong to the forest, including isolated vertices. Components with no boundary vertices are not excluded. The sum of the coordinates is $F_{G_i}(t)$.
+
+### Two paths form a cycle
+
+Take unit-weight paths $a-x-b$ and $a-y-b$ with common boundary $\{a,b\}$ and distinct internal vertices $x,y$. Their edges are distinct. Let $D$ count forests separating $a,b$, and let $S$ count forests connecting them. Each path has
+
+$$
+D=1+2t,\qquad S=t^2,\qquad F=(1+t)^2
+$$
+
+The result is the cycle $a-x-b-y-a$. Of the four state pairs, $D_1D_2$, $D_1S_2$, and $S_1D_2$ are allowed. The pair $S_1S_2$ is forbidden: the two complete paths close a cycle. Thus
+
+$$
+F_G=D_1D_2+D_1S_2+S_1D_2
+$$
+
+Substituting the two path polynomials gives
+
+$$
+F_{C_4}(t)=(1+t)^4-t^4=1+4t+6t^2+4t^3
+$$
+
+The unique pair selecting both complete paths is subtracted. The constant term of $D_1D_2$ includes two isolated internal vertices $x,y$; excluding forests that are not groves would lose this contribution and other lower coefficients.
+
+![[images/Two paths and two-point pairing.svg]]
+
+**The forest polynomial of a cycle.** Green and blue edges belong to different parts; gold circles mark the shared boundary. Only the simultaneous selection of all four edges is forbidden. The drawing specifies the graphs and boundary correspondence, not resistance distances.
 
 ## Compatibility of two forest states
 
@@ -196,29 +221,6 @@ $$
 
 The inverse matrix comes from changing coordinates. Substituting $\mathbf u_i$ for $\mathbf f_i$ in (2) without this change would give a different quantity.
 
-### Where inversion is allowed
-
-Singularity is also a known issue for the forest specialization of the Tutte polynomial: Burgos [2, §4, Theorem 4.2; §5] uses an equation for a generalized inverse. His variable and normalization differ from ours; we work directly with the compatibility matrix.
-
-For an arbitrary boundary, the full matrix is not assumed invertible. The natural nondegenerate space for the scalar pairing is the quotient
-
-$$
-\mathscr R_B=\{x:\mathcal C_B(x,y)=0\text{ for all }y\}
-=\ker\mathbf C_B,\qquad
-\mathscr H_B=\mathscr S_B/\mathscr R_B
-$$
-
-The pairing is well-defined on classes: adding an element of $\mathscr R_B$ changes no result in (2). It is nondegenerate on the quotient by definition of the radical. Choosing a basis $b_1,\ldots,b_m$ there gives a nonsingular matrix $K_{ij}=\mathcal C_B(b_i,b_j)$ and a formula of the form (5), with $\mathbf K^{-1}$, for responses to this basis. The explicit four-point reduction, the general Catalan rank, and minimality among linear passports are proved in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction|The Four-Point Passport and State Reduction]].
-
-The dual basis with respect to this pairing is
-
-$$
-b^j=\sum_\ell(\mathbf K^{-1})_{\ell j}b_\ell,\qquad
-\mathcal C_B(b_i,b^j)=\delta_i^j
-$$
-
-This is coordinate duality. It is not Laplacian–Greenian duality and does not automatically transfer structural polyform identities to free forest states. The quotient preserves the scalar pairing (2); no reconstruction of all original coordinates from it is asserted.
-
 ## Two boundary vertices
 
 Let $B=\{a,b\}$, with state order $a|b,ab$. Denote the separated-state and connected-state polynomials by $D_i,S_i$. Then
@@ -248,26 +250,6 @@ F_G=F_{G_1}U_2(ab)+U_1(ab)F_{G_2}-U_1(ab)U_2(ab)
 $$
 
 Even on this boundary, the pairing is not positive definite: for $v=s_{a|b}-2s_{ab}$, we have $\mathcal C_B(v,v)=-3$. Negative entries of the inverse matrix are not negative conductances; they arise when states are recovered from overlapping test sums.
-
-### Two paths form a cycle
-
-Take unit-weight paths $a-x-b$ and $a-y-b$ with common boundary $\{a,b\}$ and distinct internal vertices $x,y$. Their edges are distinct. Each path has
-
-$$
-D=1+2t,\qquad S=t^2,\qquad F=(1+t)^2
-$$
-
-The result is the cycle $a-x-b-y-a$. By (6),
-
-$$
-F_{C_4}(t)=(1+t)^4-t^4=1+4t+6t^2+4t^3
-$$
-
-The unique pair selecting both complete paths is subtracted. The constant term of $D_1D_2$ includes two isolated internal vertices $x,y$; excluding forests that are not groves would lose this contribution and other lower coefficients.
-
-![[images/Two paths and two-point pairing.svg]]
-
-**The forest polynomial of a cycle.** Green and blue edges belong to different parts; gold circles mark the shared boundary. Only the simultaneous selection of all four edges is forbidden. The drawing specifies the graphs and boundary correspondence, not resistance distances.
 
 ## Three boundary vertices
 
@@ -394,6 +376,29 @@ F_{G_1\#_\beta G_2}
 $$
 
 Simultaneously permuting the names on both boundaries preserves compatibility: $\mathbf P^{\mathsf T}\mathbf C_B\mathbf P=\mathbf C_B$. Permuting only one side changes the contact correspondence and can change the result, as in the path example. Numbering coordinates alone does not specify the bijection.
+
+## Where inversion is allowed
+
+Singularity is also a known issue for the forest specialization of the Tutte polynomial: Burgos [2, §4, Theorem 4.2; §5] uses an equation for a generalized inverse. His variable and normalization differ from ours; we work directly with the compatibility matrix.
+
+For an arbitrary boundary, the full matrix is not assumed invertible. The natural nondegenerate space for the scalar pairing is the quotient
+
+$$
+\mathscr R_B=\{x:\mathcal C_B(x,y)=0\text{ for all }y\}
+=\ker\mathbf C_B,\qquad
+\mathscr H_B=\mathscr S_B/\mathscr R_B
+$$
+
+The pairing is well-defined on classes: adding an element of $\mathscr R_B$ changes no result in (2). It is nondegenerate on the quotient by definition of the radical. Choosing a basis $b_1,\ldots,b_m$ there gives a nonsingular matrix $K_{ij}=\mathcal C_B(b_i,b_j)$ and a formula of the form (5), with $\mathbf K^{-1}$, for responses to this basis. The explicit four-point reduction, the general Catalan rank, and minimality among linear passports are proved in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction|The Four-Point Passport and State Reduction]].
+
+The dual basis with respect to this pairing is
+
+$$
+b^j=\sum_\ell(\mathbf K^{-1})_{\ell j}b_\ell,\qquad
+\mathcal C_B(b_i,b^j)=\delta_i^j
+$$
+
+This is coordinate duality. It is not Laplacian–Greenian duality and does not automatically transfer structural polyform identities to free forest states. The quotient preserves the scalar pairing (2); no reconstruction of all original coordinates from it is asserted.
 
 ## If the parts are intended to share an edge
 

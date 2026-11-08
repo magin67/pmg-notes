@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="750" viewBox="0 0 1100 750" role="img" aria-labelledby="title desc">
+<title id="title">What a boundary passport retains</title><desc id="desc">Build the full forest and spectral passports separately from the graph. Extract groves from the forest passport, then electrical response and scale.</desc>
+<defs><marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#53677a"/></marker></defs>
+<rect width="1100" height="750" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="40" y="46" font-size="29" fill="#20354b" text-anchor="start" font-weight="bold">What a boundary passport retains</text>
+<text x="40" y="80" font-size="20" fill="#53677a" text-anchor="start" font-weight="normal">The data to retain depend on what the gluing must compute.</text>
+<rect x="315" y="108" width="470" height="74" rx="14" fill="#f2f5f8" stroke="#ccd8e2"/>
+<text x="550" y="139" font-size="22" fill="#20354b" text-anchor="middle" font-weight="bold">Graph G with a marked boundary</text>
+<text x="550" y="165" font-size="17" fill="#53677a" text-anchor="middle" font-weight="normal">Boundary labels and vertex count are known</text>
+<line x1="440" y1="184" x2="300" y2="236" stroke="#53677a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="660" y1="184" x2="812" y2="236" stroke="#53677a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="248" width="480" height="106" rx="14" fill="#eaf2f9" stroke="#ccd8e2"/>
+<text x="64" y="281" font-size="24" fill="#2168a6" text-anchor="start" font-weight="bold">Full forest passport</text>
+<text x="64" y="312" font-size="21" fill="#20354b" text-anchor="start" font-weight="normal">All state polynomials: f<tspan baseline-shift="sub" font-size="75%">π</tspan>(t)</text>
+<text x="64" y="338" font-size="18" fill="#53677a" text-anchor="start" font-weight="normal">Including internal forest components</text>
+<rect x="580" y="248" width="480" height="174" rx="14" fill="#f1edf8" stroke="#ccd8e2"/>
+<text x="604" y="281" font-size="24" fill="#705295" text-anchor="start" font-weight="bold">Spectral passport</text>
+<text x="604" y="312" font-size="21" fill="#20354b" text-anchor="start" font-weight="normal">For a pair: A, B, C, D, E</text>
+<text x="604" y="343" font-size="23" fill="#20354b" text-anchor="start" font-weight="normal">AE = BC − D²</text>
+<text x="604" y="376" font-size="18" fill="#53677a" text-anchor="start" font-weight="normal">Computes the characteristic polynomial</text>
+<text x="604" y="404" font-size="18" fill="#53677a" text-anchor="start" font-weight="normal">and retains data of the marked pair</text>
+<line x1="280" y1="358" x2="280" y2="414" stroke="#53677a" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="305" y="391" font-size="16" fill="#53677a" text-anchor="start" font-weight="normal">Coefficient of tⁿ⁻ᵇ⁽π⁾</text>
+<rect x="40" y="426" width="480" height="100" rx="14" fill="#eaf5ef" stroke="#ccd8e2"/>
+<text x="64" y="460" font-size="24" fill="#17826b" text-anchor="start" font-weight="bold">Grove weights: g<tspan baseline-shift="sub" font-size="75%">π</tspan></text>
+<text x="64" y="493" font-size="18" fill="#53677a" text-anchor="start" font-weight="normal">Every component meets the boundary</text>
+<line x1="280" y1="530" x2="280" y2="586" stroke="#53677a" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="305" y="563" font-size="17" fill="#53677a" text-anchor="start" font-weight="normal">For a connected component</text>
+<rect x="40" y="598" width="480" height="100" rx="14" fill="#fff7e6" stroke="#ccd8e2"/>
+<text x="64" y="634" font-size="21" fill="#20354b" text-anchor="start" font-weight="bold">Electrical response Λ and scale δ<tspan baseline-shift="sub" font-size="75%">B</tspan></text>
+<text x="64" y="670" font-size="18" fill="#53677a" text-anchor="start" font-weight="normal">Suffice for spanning-tree gluing</text>
+<text x="600" y="483" font-size="20" fill="#20354b" text-anchor="start" font-weight="bold">The forest passport does not</text>
+<text x="600" y="512" font-size="19" fill="#20354b" text-anchor="start" font-weight="normal">determine the spectral passport in general.</text>
+<text x="600" y="565" font-size="19" fill="#53677a" text-anchor="start" font-weight="normal">Reconstructing data in the reverse</text>
+<text x="600" y="594" font-size="19" fill="#53677a" text-anchor="start" font-weight="normal">direction on the electrical branch is limited:</text>
+<text x="600" y="623" font-size="19" fill="#53677a" text-anchor="start" font-weight="normal">see assumptions and examples in note 4.</text>
+</g></svg>

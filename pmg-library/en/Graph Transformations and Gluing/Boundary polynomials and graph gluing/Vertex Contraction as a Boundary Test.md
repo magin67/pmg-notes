@@ -1,9 +1,9 @@
 ---
 title: "Vertex Contraction as a Boundary Test"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 7
+updated: 2026-11-08
+revision: 2
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -22,7 +22,6 @@ The input consists of the state polynomials from [[en/Graph Transformations and 
 > **From the literature.** Forest compatibility is defined in [Mannens–Nederlof, §4.2](https://arxiv.org/html/2307.01046#S4.SS2); the relation between contractions and spanning groves is described in [Kenyon–Wilson, §2.2](https://arxiv.org/html/math/0608422v4#S2.SS2).
 >
 > **Derivations and interpretation here.** The criterion is expressed through partition ranks and proved by counting components. The polynomial formula follows from a bijection of forests. The distinction between the polyform map and the test, and the metric formulation, use previously introduced PMG constructions.
-> “Derived here” identifies where a proof is given; no claim of scientific priority is made.
 
 ## What contracting a partition means
 
@@ -52,6 +51,16 @@ $$
 Each original edge is transferred between the images of its endpoints with the same label and conductance. If the endpoints coincide, it becomes a loop and cannot be selected in a forest. Edges with identical new endpoints remain distinguishable parallel edges. The rule for combining their weights will be justified separately.
 
 Contraction does not require an edge between the identified vertices. It is an operation on vertices, not the selection of an obligatory forest edge. The discrete partition into singleton blocks changes nothing.
+
+### Start with one contraction of the path
+
+Return to the unit path $a-b-c-d-e$ with boundary $\{a,c,e\}$. Identify $a$ and $c$ as a vertex $h$. Edges $ab$ and $bc$ become two distinct parallel edges between $h$ and $b$, followed by the path $h-d-e$. From the parallel pair we may choose neither edge or either one, but not both: choosing both creates a cycle. The other two edges are chosen independently. Hence
+
+$$
+F_{G/(ac|e)}(t)=(1+2t)(1+t)^2
+$$
+
+This is the forest selection that the boundary test must reproduce. The criterion below handles an arbitrary partition; the section “Example: three contractions of P5” then obtains this answer and two others from the passport coordinates.
 
 ## When the image of a forest remains a forest
 

@@ -41,7 +41,7 @@ python checks/boundary/draw_reduction.py
 python checks/boundary/draw_spectral_boundary.py
 ```
 
-Then generate all 21 English figures:
+Then generate their 21 English counterparts:
 
 ```bash
 python checks/boundary/draw_english.py
@@ -49,10 +49,20 @@ python checks/boundary/draw_english.py
 
 The English generator uses `figure_translations_en.json` to translate titles, accessible descriptions, visible labels, and text following subscript spans. It preserves all geometry, edge weights, partition labels, and nontext attributes. Missing or unused dictionary entries fail explicitly. No image-generation service or additional Python package is needed.
 
-By default, figures are read from `pmg-library/ru/Преобразования и сочленения графов/Граничные полиномы и сочленение графов` and English files are written to `pmg-library/en/Graph Transformations and Gluing/Boundary polynomials and graph gluing`. Optional `--source` and `--destination` arguments select alternative library roots, for example for a separate review build.
+By default, figures are read from `pmg-library/ru/Преобразования и сочленения графов/Граничные полиномы и сочленение графов/images` and English files are written to `pmg-library/en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/images`. Optional `--source` and `--destination` arguments select alternative library roots, for example for a separate review build.
 
 ## Translation verification
 
-The English edition retains all 180 displayed equations across the six notes and navigator; only explanatory words within formulas are translated. Inline mathematical expressions, equation numbering, proof structure, applicability assumptions, and source attribution are checked against the reviewed Russian text. State and response coordinates remain distinct from actual partition forms and resistance Gram matrices; ordinary forest data remain distinct from spectral data.
+The English edition retains all 185 displayed equations across the six notes and navigator; only explanatory words within formulas are translated. Inline mathematical expressions, equation numbering, proof structure, applicability assumptions, and source attribution are checked against the reviewed Russian text. State and response coordinates remain distinct from actual partition forms and resistance Gram matrices; ordinary forest data remain distinct from spectral data.
 
-All 21 English SVGs are rendered and visually checked. Reciprocal language links, translated section links, figure paths, navigator tables, and the complete website build are checked before publication.
+The 21 original English SVGs were rendered and visually checked; the two editorial additions are checked in both languages. Reciprocal language links, translated section links, figure paths, navigator tables, and the complete website build are checked before publication.
+
+## Editorial additions
+
+```bash
+python checks/boundary/draw_editorial_figures.py
+```
+
+This program draws two further figures in each language: the navigator's overview of boundary data and the star versus effective K4 example. The series therefore has 23 distinct figures per language. All drawing programs write to the `images` subfolder of the corresponding language series. The editorial program accepts `--root` to select a different repository root.
+
+The 2026-11-08 edition expands the spectral example with U,V,W,Z,Q, all five C4 passport coordinates, and Jacobi's identity. These agree with the direct minors checked by `verify_spectral_boundary.py`. Moving examples preserves the proofs and mathematical checks; the original 21 figures are relocated without content changes.

@@ -1,9 +1,9 @@
 ---
 title: "Boundary Polynomials and Graph Gluing"
 date: 2026-10-30
-updated: 2026-11-01
-revision: 3
-translated_revision: 2
+updated: 2026-11-08
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -46,7 +46,7 @@ Secondary thematic entries:
 | 3 | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Gluing Components by Pairing Boundary Data\|Gluing Components by Pairing Boundary Data]] | The bilinear law for the full forest polynomial and the passport of the result. States are distinguished from test responses, with two- and three-point examples. |
 | 4 | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry\|The Spanning-Tree Layer and Boundary Resistance Geometry]] | Grove extraction, spanning-tree pairing, the boundary Gram matrix, and the Schur complement. The capabilities and limits of electrical response are established. |
 | 5 | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction\|The Four-Point Passport and State Reduction]] | Reduction from 15 states to 14 coordinates, the distinction between the forest radical and the structural identity, and the general Catalan rank. Minimality concerns linear passports. |
-| 6 | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data\|From the Forest Passport to Spectral Boundary Data]] | A separate two-point passport of minors and a cofactor, Jacobi's identity, and spectral gluing rules. Input and output boundaries for future chains are introduced. |
+| 6 | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data\|From the Forest Passport to Spectral Boundary Data]] | A separate two-point passport of minors and a cofactor, Jacobi's identity, and spectral gluing rules. The transition to input and output boundaries of a chain is explained. |
 
 The table gives a sequential reading order. For a particular task, choose one of these routes:
 
@@ -56,25 +56,30 @@ The table gives a sequential reading order. For a particular task, choose one of
 
 ## Which data solve which problem
 
-For a marked boundary $B$, a forest $H$ defines a partition $\pi_B(H)$: two boundary vertices belong to the same block if they are connected in $H$. The full passport coordinates are
+![[images/What boundary passports retain.svg]]
 
-$$
-\mathcal F_\pi(t)=
-\sum_{H:\,\pi_B(H)=\pi}w(H)t^{|E(H)|},\qquad
-F_G(t)=\sum_{\pi\in\Pi(B)}\mathcal F_\pi(t)
-$$
+**Three kinds of data.** Arrows show which information can be extracted from known data; the vertex count and boundary labels are given. The electrical branch assumes a connected component. The spectral passport is built separately from the graph: in general, the ordinary forest passport does not determine it. Here $n$ is the vertex count and $b(\pi)$ is the number of blocks in the boundary partition.
 
-The sum includes all spanning forests, $w(H)$ is the product of the selected edge conductances, and $\Pi(B)$ is the set of boundary partitions. The boundary vertex names and the component's vertex count are retained alongside the polynomial vector. The latter is needed, in particular, to extract groves; it cannot always be recovered from the polynomials.
-
-The matrix $\mathbf C_B$ marks partition pairs for which joining the corresponding forests creates no cycle. If $\mathbf f_i$ are the passports of two components with disjoint edges, and $\mathbf u_i$ their responses to all contractions, then
-
-$$
-\mathbf u_i=\mathbf C_B\mathbf f_i,\qquad
-F_{G_1\#_B G_2}(t)=
-\mathbf f_1(t)^{\mathsf T}\mathbf C_B\mathbf f_2(t)
-$$
-
-Both formulas are proved in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Gluing Components by Pairing Boundary Data|Gluing Components by Pairing Boundary Data]]. The exponent of $t$ counts edges, so there is no additional corank factor. A compressed passport preserves every response of this pairing but need not recover every original polynomial $\mathcal F_\pi$.
+> [!note]- Definitions and two working formulas
+> For a marked boundary $B$, a forest $H$ defines a partition $\pi_B(H)$: two boundary vertices belong to the same block if they are connected in $H$. The full passport coordinates are
+>
+> $$
+> \mathcal F_\pi(t)=
+> \sum_{H:\,\pi_B(H)=\pi}w(H)t^{|E(H)|},\qquad
+> F_G(t)=\sum_{\pi\in\Pi(B)}\mathcal F_\pi(t)
+> $$
+>
+> The sum includes all spanning forests, $w(H)$ is the product of the selected edge conductances, and $\Pi(B)$ is the set of boundary partitions. The boundary vertex names and the component's vertex count are retained alongside the polynomial vector. The latter is needed, in particular, to extract groves; it cannot always be recovered from the polynomials.
+>
+> The matrix $\mathbf C_B$ marks partition pairs for which joining the corresponding forests creates no cycle. If $\mathbf f_i$ are the passports of two components with disjoint edges, and $\mathbf u_i$ their responses to all contractions, then
+>
+> $$
+> \mathbf u_i=\mathbf C_B\mathbf f_i,\qquad
+> F_{G_1\#_B G_2}(t)=
+> \mathbf f_1(t)^{\mathsf T}\mathbf C_B\mathbf f_2(t)
+> $$
+>
+> Both formulas are proved in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Gluing Components by Pairing Boundary Data|Gluing Components by Pairing Boundary Data]]. The exponent of $t$ counts edges, so there is no additional corank factor. A compressed passport preserves every response of this pairing but need not recover every original polynomial $\mathcal F_\pi$.
 
 | Problem | Sufficient data | Essential limitation |
 | --- | --- | --- |
@@ -101,37 +106,38 @@ Useful supporting texts:
 
 ## Provenance and status of the results
 
-Having a proof and having scientific priority are different properties. In the table, “derived in the series” means that the passage from the named foundations to the result is given. It does not assert that the result is absent from other authors' work. Precise references and proofs also appear beside the statements in the substantive notes.
-
-| Result | External source or derivation | Role in PMG | Status of the novelty claim |
-| --- | --- | --- | --- |
-| Forest states, compatibility, and combination of tables | Mannens–Nederlof [1, Definitions 4.3–4.5, 4.14; Lemma 4.21] | The vector of weighted generating polynomials is called the full forest passport; internal components are retained | Adaptation of an established construction |
-| Contraction as a test and passage to test responses | Component counting and a forest bijection in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test\|Vertex Contraction as a Boundary Test]]; Burgos treats singular forest splittings [3, §§4–5] | The quotient map, the test in the original space, and the variable degree are coordinated | Direct derivation; no independent priority claim |
-| Groves, spanning-tree pairing, and electrical data | Kenyon–Wilson [2, Theorem 1.1, §§2.1–2.3, Appendix A]; Schur complements and resistances in Dörfler–Bullo [4] | The spanning-tree layer is connected to the full passport; scale and reconstruction conditions are specified | Established results in PMG notation |
-| Spanning-tree law using the determinant of a sum of Gram matrices | Derived from electrical determinant identities and the Schur complement in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry\|The Spanning-Tree Layer and Boundary Resistance Geometry]] | The spanning-tree coefficient formula is distinguished from the metric of the result; basis normalization is specified | Consequence of established identities; no priority claim |
-| Four-point reduction and the distinction between two kernels | Explicit forest-matrix calculation in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction\|The Four-Point Passport and State Reduction]]; the compared spanning-tree relation appears in Kenyon–Wilson [2, Lemma 2.3] | The forest relation mixes ranks, whereas the structural identity preserves grade | Calculation and PMG interpretation; no novelty claim |
-| Exact Catalan rank | The upper bound of Mannens–Nederlof [1, Theorem 4.2] and the nondegenerate spanning-tree pairing of Kenyon–Wilson [2, §§2.1–2.2]; the series connects them through block antidiagonals | A basis and coordinate count for the full forest pairing on any boundary | Proved consequence of two results; priority for this combination has not been established |
-| Minimality of a linear passport | The standard bilinear-form rank bound, applied in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction#In what sense the coordinate count is minimal\|In what sense the coordinate count is minimal]] | The class of passports in which the minimum is attained is specified precisely | A linear-algebra consequence |
-| Spectral passport and its gluing law | The classical Desnanot–Jacobi identity [5] and the Schur complement; laws for a shared pair and a shared edge are derived in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data\|From the Forest Passport to Spectral Boundary Data]] | A separate problem with variable $\xi$, five related coordinates, and explicit counting of shared elements | Application of classical constructions; no independent priority claim |
-
-In particular, the exact rank
-
-$$
-\operatorname{rank}\mathbf C_B=
-\mathrm{Cat}_{|B|}=\frac{1}{|B|+1}\binom{2|B|}{|B|}
-$$
-
-over $\mathbb Q$ or $\mathbb R$ has a general proof in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction#The general Catalan rank|The general Catalan rank]]. The values $2,5,14,42$ for boundary sizes $2,3,4,5$ are computational illustrations. Neither agreement with the dimension of the partition-form space nor these finite checks alone proves the theorem or identifies the two spaces.
-
-The path, star, crossing matching, and electrically indistinguishable components serve as concrete calculations and counterexamples to reconstruction from incomplete data. No priority is claimed for these examples.
+> [!note]- Sources, derivations, and status of the results
+> Having a proof and having scientific priority are different properties. In the table, “derived in the series” means that the passage from the named foundations to the result is given. It does not assert that the result is absent from other authors' work. Precise references and proofs also appear beside the statements in the substantive notes.
+>
+> | Result | External source or derivation | Role in PMG | Status of the novelty claim |
+> | --- | --- | --- | --- |
+> | Forest states, compatibility, and combination of tables | Mannens–Nederlof [1, Definitions 4.3–4.5, 4.14; Lemma 4.21] | The vector of weighted generating polynomials is called the full forest passport; internal components are retained | Adaptation of an established construction |
+> | Contraction as a test and passage to test responses | Component counting and a forest bijection in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test\|Vertex Contraction as a Boundary Test]]; Burgos treats singular forest splittings [3, §§4–5] | The quotient map, the test in the original space, and the variable degree are coordinated | Direct derivation; no independent priority claim |
+> | Groves, spanning-tree pairing, and electrical data | Kenyon–Wilson [2, Theorem 1.1, §§2.1–2.3, Appendix A]; Schur complements and resistances in Dörfler–Bullo [4] | The spanning-tree layer is connected to the full passport; scale and reconstruction conditions are specified | Established results in PMG notation |
+> | Spanning-tree law using the determinant of a sum of Gram matrices | Derived from electrical determinant identities and the Schur complement in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Spanning-Tree Layer and Boundary Resistance Geometry\|The Spanning-Tree Layer and Boundary Resistance Geometry]] | The spanning-tree coefficient formula is distinguished from the metric of the result; basis normalization is specified | Consequence of established identities; no priority claim |
+> | Four-point reduction and the distinction between two kernels | Explicit forest-matrix calculation in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction\|The Four-Point Passport and State Reduction]]; the compared spanning-tree relation appears in Kenyon–Wilson [2, Lemma 2.3] | The forest relation mixes ranks, whereas the structural identity preserves grade | Calculation and PMG interpretation; no novelty claim |
+> | Exact Catalan rank | The upper bound of Mannens–Nederlof [1, Theorem 4.2] and the nondegenerate spanning-tree pairing of Kenyon–Wilson [2, §§2.1–2.2]; the series connects them through block antidiagonals | A basis and coordinate count for the full forest pairing on any boundary | Proved consequence of two results; priority for this combination has not been established |
+> | Minimality of a linear passport | The standard bilinear-form rank bound, applied in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction#In what sense the coordinate count is minimal\|In what sense the coordinate count is minimal]] | The class of passports in which the minimum is attained is specified precisely | A linear-algebra consequence |
+> | Spectral passport and its gluing law | The classical Desnanot–Jacobi identity [5] and the Schur complement; laws for a shared pair and a shared edge are derived in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data\|From the Forest Passport to Spectral Boundary Data]] | A separate problem with variable $\xi$, five related coordinates, and explicit counting of shared elements | Application of classical constructions; no independent priority claim |
+>
+> In particular, the exact rank
+>
+> $$
+> \operatorname{rank}\mathbf C_B=
+> \mathrm{Cat}_{|B|}=\frac{1}{|B|+1}\binom{2|B|}{|B|}
+> $$
+>
+> over $\mathbb Q$ or $\mathbb R$ has a general proof in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction#The general Catalan rank|The general Catalan rank]]. The values $2,5,14,42$ for boundary sizes $2,3,4,5$ are computational illustrations. Neither agreement with the dimension of the partition-form space nor these finite checks alone proves the theorem or identifies the two spaces.
+>
+> The path, star, crossing matching, and electrically indistinguishable components serve as concrete calculations and counterexamples to reconstruction from incomplete data. No priority is claimed for these examples.
 
 ## Checks and continuation
 
-The six Russian notes underwent a [joint review (in Russian)](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/REVIEW_RU.md). Their English versions were checked against that edition, including formulas, references, and figure labels. The series contains 21 distinct figures in each language; [six verification programs and SVG reproduction instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/README_EN.md) are available. Exact arithmetic compares the formulas with direct enumeration of forests, determinants, cofactors, and ranks. These checks supplement the proofs.
+The six Russian notes underwent a [joint review (in Russian)](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/REVIEW_RU.md). Their English versions were checked against that edition, including formulas, references, and figure labels. The series contains 23 distinct figures in each language; [six verification programs and SVG reproduction instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/README_EN.md) are available. Exact arithmetic compares the formulas with direct enumeration of forests, determinants, cofactors, and ranks. These checks supplement the proofs.
 
 In [[ru/Карта библиотеки PMG|the library roadmap (Russian)]], the series follows [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|the general spectral series]] and precedes “Chains of Cores.” It also continues [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]].
 
-For chains, the next step is transforming the passport when the active boundary moves from a core's input to its output. Seam rules, shared edges, and closure must be specified before calculation; closure of a particular transfer automaton on the chosen coordinates needs a separate derivation. The automaton itself and classification of isomers are outside this series. “Spectra of Isomers” and “Spectra of Bipartite Graphs and Mutual Projections” remain separate directions.
+The continuation is already published: [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]] defines the chain constructions, while [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] proves closure of the five spectral coordinates when the active pair moves. [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] gives an encoding and classification of open hexagonal chains. Seam rules, shared edges, and closure are specified before calculation. Distinguishability by a single spectral polynomial or a single number remains a research question: see [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains|Spectral Distinguishability of SLR Chains]].
 
 ## External sources
 

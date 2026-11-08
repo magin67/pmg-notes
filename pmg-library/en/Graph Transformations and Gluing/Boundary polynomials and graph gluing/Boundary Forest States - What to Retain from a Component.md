@@ -1,9 +1,9 @@
 ---
 title: "Boundary Forest States: What to Retain from a Component"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 7
+updated: 2026-11-08
+revision: 2
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -24,7 +24,6 @@ This note defines the initial coordinates of the full forest passport. The main 
 > **From the literature.** Boundary partitions and tables of forest states appear in [Mannens–Nederlof, §4](https://arxiv.org/html/2307.01046#S4); groves appear in [Kenyon–Wilson, §1.1](https://arxiv.org/html/math/0608422v4#S1.SS1).
 >
 > **PMG exposition.** “Full forest passport” is the name used here for the vector of generating polynomials. Its comparison with partition forms and the examples serve the purposes of this series. The formulas counting internal components and extracting groves are elementary consequences of the definition of a forest.
-> “Derived here” identifies where a proof is given; no claim of scientific priority is made.
 
 ## A graph with a marked boundary
 
@@ -35,7 +34,7 @@ Let $G=(V,E)$ be a finite undirected loopless graph, let $n=|V|$, and give each 
 >
 > Here “component” means a part of a future assembly, not necessarily a connected component. The boundary is part of the input data. Gluing also requires a specified correspondence between the boundary vertices of the parts. We assume neither a planar embedding nor a boundary on the outer face.
 
-> [!info] A graph with a marked boundary
+> [!info] Spanning forest
 > **Definition.** A spanning forest $H=(V,A)$ of $G$ is an acyclic subgraph on the entire vertex set $V$, where $A\subseteq E$. The set $A$ need not be maximal. In particular, the empty edge set gives a forest of $n$ isolated vertices.
 
 Write the number of edges and the weight of a forest as
@@ -114,50 +113,6 @@ An unrealizable state has polynomial zero. We omit the superscripts when $G,B$ a
 
 The boundary vertex names and the number $n$ are retained alongside this vector. The latter matters: adding an isolated internal vertex leaves the polynomials (1) unchanged but changes the number of components of every forest. “Full” means that all states and all spanning forests are included; it asserts neither reconstruction of the graph itself nor minimality of the number of coordinates.
 
-### Free states and partition forms
-
-For linear operations, first introduce the free space
-
-$$
-\mathscr S_B=\bigoplus_{\pi\in\Pi(B)}\mathbb R\,s_\pi,
-\qquad
-\mathbf f_{G,B}(t)=\sum_{\pi\in\Pi(B)}\mathcal F^{G,B}_\pi(t)s_\pi
-$$
-
-The symbols $s_\pi$ are linearly independent by definition. The vector $\mathbf f_{G,B}(t)$ is a polynomial with values in $\mathscr S_B$.
-
-The linear functional that forgets the boundary is well-defined on this space:
-
-$$
-\varepsilon(s_\pi)=1
-$$
-
-> [!info] Free states and partition forms
-> **Proposition.** Forgetting the state gives the ordinary forest polynomial:
->
-> $$
-> \boxed{
-> \varepsilon\bigl(\mathbf f_{G,B}(t)\bigr)
-> =\sum_{\pi\in\Pi(B)}\mathcal F^{G,B}_\pi(t)
-> =F_G(t)
-> }
-> \tag{2}
-> $$
-
-> [!note]- Proof
-> **Proof.** Every forest induces exactly one boundary partition. Hence the sums in (1) divide all forests into disjoint classes without changing their weights or numbers of edges. $\square$
-
-A state $s_\pi$ must be distinguished from the partition form
-
-$$
-q_\pi=[(B_1)\cdots(B_{b(\pi)})]^2,
-\qquad \pi=B_1|\cdots|B_{b(\pi)}
-$$
-
-Singleton blocks contribute unit factors. The forms $q_\pi$, defined in [[en/Polyform Algebra and Combinatorics/Structural identities/Partition Forms and the Tetrahedron Identity|Partition Forms and the Tetrahedron Identity]], satisfy structural identities. The map $s_\pi\mapsto q_\pi$ can therefore have a nonzero kernel. For $\varepsilon$ to descend to its image, it must vanish on this kernel; this is not automatic. In particular, the tetrahedron identity equates a sum of three forms with a sum of four forms, while the sums of their formal coefficients differ.
-
-Here the passport is defined before taking such a quotient. Gluing rules and valid reductions of its coordinates require their own justification.
-
 ## The five polynomials of the path P5
 
 The path has four edges, and every subset is acyclic. There are $2^4=16$ forests in total. In the state order listed above, we obtain
@@ -170,7 +125,7 @@ $$
 \mathcal F_{a|ce}(t)&=t^2(1+2t)\\
 \mathcal F_{a|c|e}(t)&=(1+2t)^2
 \end{aligned}
-\tag{3}
+\tag{2}
 $$
 
 We derive these formulas directly from the edge choices.
@@ -202,6 +157,50 @@ $$
 $$
 
 The equality $\mathcal F_{ac|e}=\mathcal F_{a|ce}$ comes from the symmetry of this marked path. It is not an identity between two coordinates for an arbitrary graph with a three-point boundary.
+
+## Free states and partition forms
+
+For linear operations, first introduce the free space
+
+$$
+\mathscr S_B=\bigoplus_{\pi\in\Pi(B)}\mathbb R\,s_\pi,
+\qquad
+\mathbf f_{G,B}(t)=\sum_{\pi\in\Pi(B)}\mathcal F^{G,B}_\pi(t)s_\pi
+$$
+
+The symbols $s_\pi$ are linearly independent by definition. The vector $\mathbf f_{G,B}(t)$ is a polynomial with values in $\mathscr S_B$.
+
+The linear functional that forgets the boundary is well-defined on this space:
+
+$$
+\varepsilon(s_\pi)=1
+$$
+
+> [!info] Free states and partition forms
+> **Proposition.** Forgetting the state gives the ordinary forest polynomial:
+>
+> $$
+> \boxed{
+> \varepsilon\bigl(\mathbf f_{G,B}(t)\bigr)
+> =\sum_{\pi\in\Pi(B)}\mathcal F^{G,B}_\pi(t)
+> =F_G(t)
+> }
+> \tag{3}
+> $$
+
+> [!note]- Proof
+> **Proof.** Every forest induces exactly one boundary partition. Hence the sums in (1) divide all forests into disjoint classes without changing their weights or numbers of edges. $\square$
+
+A state $s_\pi$ must be distinguished from the partition form
+
+$$
+q_\pi=[(B_1)\cdots(B_{b(\pi)})]^2,
+\qquad \pi=B_1|\cdots|B_{b(\pi)}
+$$
+
+Singleton blocks contribute unit factors. The forms $q_\pi$, defined in [[en/Polyform Algebra and Combinatorics/Structural identities/Partition Forms and the Tetrahedron Identity|Partition Forms and the Tetrahedron Identity]], satisfy structural identities. The map $s_\pi\mapsto q_\pi$ can therefore have a nonzero kernel. For $\varepsilon$ to descend to its image, it must vanish on this kernel; this is not automatic. In particular, the tetrahedron identity equates a sum of three forms with a sum of four forms, while the sums of their formal coefficients differ.
+
+Here the passport is defined before taking such a quotient. Gluing rules and valid reductions of its coordinates require their own justification.
 
 ## Internal components and groves
 
@@ -268,7 +267,7 @@ For a connected graph, the one-block state $\{B\}$ satisfies $g_{\{B\}}=\tau(G)$
 
 ## One forest polynomial, different gluing results
 
-Formula (2) sums the passport coordinates. To show that the lost information matters, take two markings of the same unit-weight path using the boundary names $x,y,z$:
+Formula (3) sums the passport coordinates. To show that the lost information matters, take two markings of the same unit-weight path using the boundary names $x,y,z$:
 
 $$
 X:\quad x-b-y-d-z,\qquad
@@ -332,9 +331,9 @@ The ordinary forest passport must not automatically be regarded as spectral. [[e
 
 ## Status of the results and computational verification
 
-Equality (2), the count of internal components (4), and grove extraction (5) have been proved for the stated class of graphs. Formulas (3), (6), and (7) were derived directly for the specific examples. The general forest gluing formula, coordinate reduction, and spectral continuation are not proved in this note.
+Equality (3), the count of internal components (4), and grove extraction (5) have been proved for the stated class of graphs. Formulas (2), (6), and (7) were derived directly for the specific examples. The general forest gluing formula, coordinate reduction, and spectral continuation are not proved in this note.
 
-An independent [exact verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/verify_forest_states.py) enumerates all $16$ edge subsets of $P_5$, determines their components and boundary partitions, and checks every coefficient in (3), the grove count, and the internal components. It also enumerates all $32$ edge subsets of each graph in (6), (7). Additional weighted and disconnected examples check that isolated vertices are retained, parallel edges are distinguished, and groves are extracted from the polynomials. [Instructions for running the checks and reproducing the figures](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/README_EN.md) accompany the script.
+An independent [exact verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/verify_forest_states.py) enumerates all $16$ edge subsets of $P_5$, determines their components and boundary partitions, and checks every coefficient in (2), the grove count, and the internal components. It also enumerates all $32$ edge subsets of each graph in (6), (7). Additional weighted and disconnected examples check that isolated vertices are retained, parallel edges are distinguished, and groves are extracted from the polynomials. [Instructions for running the checks and reproducing the figures](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/README_EN.md) accompany the script.
 
 These finite checks supplement the proofs; they do not replace them.
 
