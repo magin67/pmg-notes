@@ -1,12 +1,12 @@
 ---
 title: Metric Distributions and Edge Influence
 date: 2026-11-03
-updated: 2026-11-03
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 6
+translated_revision: 7
 translation_key: metric-distributions-navigation
 order: 0
 tags:
@@ -27,19 +27,32 @@ The primary home of this series is [[en/Resistance Geometry and Duality/Resistan
 
 ## Available notes
 
-1. [[Edge Influence and Metric Distribution]]. Adding conductance, finite influence, the passage to relative sensitivity, and the derivation of $D_L$. The distinction between a coefficient sum and the metric evaluation of the output form.
+1. **What does one coupling change?** [[Edge Influence and Metric Distribution]]: from a finite probe to sensitivity and the operator $D_L$.
+2. **Why does a tree select path intersection?** [[Path Intersection as an Influence Field on a Tree]]: shared edges, directions, conductances, and side branches.
+3. **What do cycles change?** [[The Influence Field on Graphs with Cycles]]: splitting flows, signed contributions, zero influence, and simultaneous changes.
+4. **Why are edge pairs and sets needed?** [[Metric Distribution in Higher Grades]]: from a minimal grade-two example to the general definition.
 
-2. [[Path Intersection as an Influence Field on a Tree]]. The common segment as the exact support of existing-edge influence; directions, conductances, and independent finite probes.
-
-3. [[The Influence Field on Graphs with Cycles]]. Distribution through two flows, signed cancellation, a cross-edge with zero influence, and network refinement.
-
-4. [[Metric Distribution in Higher Grades]]. The norm of a triangle boundary, distribution over edge pairs, sums giving individual-edge influences, and the general rule for grade $k$.
-
-The series is available in Russian and English: four substantive notes, this navigator, and 12 figures in each language.
+The series is available in Russian and English: four substantive notes, this navigator, and 17 figures in each language.
 
 ## Prerequisites
 
 The prerequisites are [[Laplacian - graph, electrical network and quadratic form]], [[Basic Objects and Operations of Polyform Algebra]], and [[Laplacian Exponential]]. The mechanism of changing one exponential factor is described in [[One Changing Edge]]. Triangle boundaries use [[Metric of Higher-Grade Objects]].
+
+## Reading the notation
+
+| Notation | Meaning |
+|---|---|
+| $N_L(f)$ | Numerical value of a fixed form $f$ in metric $L$ |
+| $\Delta_\ell(t;f)$ | Finite change of that value when conductance $t$ is added to coupling $\ell$ |
+| $m_J(f)$ | Contribution of a set $J$ of $k$ edges; at $k=1$, a single-edge contribution |
+| $A_\ell(f)$ | Sensitivity to a relative conductance change: $-c_\ell\partial N_L(f)/\partial c_\ell$ |
+| $D_{L,k}$ and $D_{L,k}(f)$ | The distribution operator and its assembled output form; in grade one, write $D_L$ |
+
+The coefficients $m_J$ sum to $N_L(f)$, not to one. Mixed forms can have negative coefficients. Thus “distribution” here does not mean a probability distribution.
+
+![From a Probe to a Distribution](<images/From a Probe to a Distribution.svg>)
+
+*In grade one, an edge contribution equals its sensitivity. In higher grades, sensitivity is the sum of contributions of sets containing that edge.*
 
 ## Main distinctions
 
@@ -53,14 +66,18 @@ Historically, the subject arose from path intersections and polyform transformat
 
 ## Results and origins
 
-| Result | Source or derivation | Role in PMG | Status |
-|---|---|---|---|
-| Finite influence of one coupling | Exponential factor and normalization in Edge Influence and Metric Distribution; the matrix formula for one variation | The initial procedure for measuring influence | Proved; no novelty claim |
-| Grade-one coefficients of $D_L$ | Relative sensitivity; electrical energy and its polarization | Assembling metric contributions into a form | Definition and derivation from known identities |
-| Grade-one coefficient sum equals the value of the form | Homogeneity of degree $-1$ and Euler's identity | Justification of the distribution's normalization | Proved |
-| Path intersection as the support of influence | Orthogonality of the edge basis of a tree and the relative-sensitivity formula | Signed selection of the common segment with edge resistances | Proved in the tree note; no novelty claim |
-| Two flows on a graph with cycles | The energy identity of a resistive network and its polarization | Signs of contributions, zero response, and consistency under refinement | Classical basis; examples checked exactly |
-| Distribution in higher grades | Exterior powers of the metric and the Cauchy-Binet formula; Stanley, Theorem 9.4 | Edge sets in place of individual edges; preservation of grade | Definition and derivation from a classical identity |
-| Edge sums in higher grades | The Parseval identity for contractions and variation of the normalized potential | Exact influence of one coupling; sum $kN_L(f)$ | Proved; no novelty claim |
+The construction uses classical resistance metrics, inverse-matrix variations, and exterior algebra. These connections are expressed in PMG notation; no scientific priority is claimed.
+
+> [!info]- Sources and status of the results
+>
+> | Result | Source or derivation | Role in PMG | Status |
+> |---|---|---|---|
+> | Finite influence of one coupling | Exponential factor and normalization in Edge Influence and Metric Distribution; the matrix formula for one variation | The initial procedure for measuring influence | Proved |
+> | Grade-one coefficients of $D_L$ | Relative sensitivity; electrical energy and its polarization | Assembling metric contributions into a form | Definition and derivation from known identities |
+> | Grade-one coefficient sum equals the value of the form | Homogeneity of degree $-1$ and Euler's identity | Justification of the contribution sum | Proved |
+> | Path intersection as the support of influence | Orthogonality of the edge basis of a tree and the relative-sensitivity formula | Signed selection of the common segment with edge resistances | Proved in the tree note |
+> | Two flows on a graph with cycles | The energy identity of a resistive network and its polarization | Signs of contributions, zero response, and consistency under refinement | Classical basis; examples checked exactly |
+> | Distribution in higher grades | Exterior powers of the metric and the Cauchy-Binet formula; Stanley, Theorem 9.4 | Edge sets in place of individual edges; preservation of grade | Definition and derivation from a classical identity |
+> | Edge sums in higher grades | The Parseval identity for contractions and variation of the normalized potential | Exact influence of one coupling; sum $kN_L(f)$ | Proved |
 
 Detailed proofs and references to classical sources are given in [[Edge Influence and Metric Distribution]], [[Path Intersection as an Influence Field on a Tree]], [[The Influence Field on Graphs with Cycles]], and [[Metric Distribution in Higher Grades]].

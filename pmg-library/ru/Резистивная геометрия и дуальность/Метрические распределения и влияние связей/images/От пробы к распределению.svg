@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title"><title id="title">От пробы к распределению</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="760" fill="white"/>
+<text xml:space="preserve" x="560" y="45" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Одна форма, одна исходная метрика</text>
+<rect x="55" y="90" width="440" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="275" y="130" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Конечная проба</text>
+<text xml:space="preserve" x="237.5" y="176" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">Δ</text>
+<text xml:space="preserve" x="256.5" y="182.44" font-size="19" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ℓ</text>
+<text xml:space="preserve" x="262.5" y="176" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">(t; f)</text>
+<line x1="515" y1="148" x2="605" y2="148" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="560" y="120" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">t → 0</text>
+<rect x="625" y="90" width="440" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="845" y="130" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Относительная чувствительность</text>
+<text xml:space="preserve" x="757.5" y="176" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">A</text>
+<text xml:space="preserve" x="774.5" y="181.75" font-size="17" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ℓ</text>
+<text xml:space="preserve" x="780.5" y="176" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = −c</text>
+<text xml:space="preserve" x="837.5" y="181.75" font-size="17" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ℓ</text>
+<text xml:space="preserve" x="843.5" y="176" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> ∂N / ∂c</text>
+<text xml:space="preserve" x="926.5" y="181.75" font-size="17" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ℓ</text>
+<rect x="55" y="265" width="440" height="140" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="275" y="309" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Первый грейд: одно ребро</text>
+<text xml:space="preserve" x="231.015625" y="363" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">m</text>
+<text xml:space="preserve" x="255.015625" y="369.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ℓ</text>
+<text xml:space="preserve" x="261.015625" y="363" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = A</text>
+<text xml:space="preserve" x="312.984375" y="369.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ℓ</text>
+<rect x="625" y="265" width="440" height="140" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="845" y="309" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Грейд k: набор J из k рёбер</text>
+<text xml:space="preserve" x="786.0" y="353" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">A</text>
+<text xml:space="preserve" x="805.0" y="359.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ℓ</text>
+<text xml:space="preserve" x="811.0" y="353" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = Σ m</text>
+<text xml:space="preserve" x="894.0" y="359.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">J</text>
+<text xml:space="preserve" x="845" y="389" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">по всем J, содержащим ℓ</text>
+<path d="M845 215 V235 H275 V255" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="845" y1="215" x2="845" y2="255" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="560" y="445" font-size="24" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">В высших грейдах вклады наборов задаются отдельно</text>
+<rect x="55" y="505" width="440" height="145" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="275" y="548" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Сложить коэффициенты</text>
+<text xml:space="preserve" x="275" y="603" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Σ m = N(f)</text>
+<rect x="625" y="505" width="440" height="145" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="845" y="548" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Собрать выходную форму</text>
+<text xml:space="preserve" x="750.0" y="603" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">D</text>
+<text xml:space="preserve" x="770.0" y="609.21" font-size="18" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">L,k</text>
+<text xml:space="preserve" x="794.0" y="603" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">(f) = Σ m</text>
+<text xml:space="preserve" x="899.0" y="609.21" font-size="18" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">J</text>
+<text xml:space="preserve" x="908.0" y="603" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> q</text>
+<text xml:space="preserve" x="931.0" y="609.21" font-size="18" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">J</text>
+<path d="M560 465 V480 H275 V495" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M560 465 V480 H845 V495" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="560" y="710" font-size="23" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">Сумма вкладов и оценка выходной формы — разные операции</text>
+</svg>

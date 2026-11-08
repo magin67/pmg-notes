@@ -1,12 +1,12 @@
 ---
 title: Metric Distribution in Higher Grades
 date: 2026-11-03
-updated: 2026-11-03
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 3
+translated_revision: 4
 translation_key: metric-distributions-higher-grades
 order: 4
 description: "The norm of a triangle boundary, distribution over edge pairs, and recovery of individual-edge influence; extending D to every grade."
@@ -18,6 +18,28 @@ description: "The norm of a triangle boundary, distribution over edge pairs, and
 Adding a coupling also changes a triangle's norm. The influence-measurement procedure remains the same: fix the form, change one conductance, and compare values. In grade two, however, the metric distribution is indexed by pairs of edges. The influence of one edge is obtained by summing over all pairs containing it.
 
 For vectors these two levels coincided: one distribution coefficient belonged to one edge. Here the contribution of a pair must be distinguished from the total influence of an edge. This extends the operator in [[Edge Influence and Metric Distribution]], with the same variation mechanism and with the grade of the output form preserved.
+
+## The smallest example: two edges
+
+Take the path $a-b-c$ with conductances $c_{ab}=x>0$, $c_{bc}=y>0$ and form $f=[(abc)]^2$. The boundary $X=(abc)=(ab)(bc)$ has grade two. Tree edges are orthogonal and have norms $1/x,1/y$, so
+
+$$
+N_L(f)=X^2=\frac1{xy},\qquad
+m_{ab,bc}=\frac1{xy},\qquad A_{ab}=A_{bc}=\frac1{xy}
+$$
+
+There is only one edge pair. Its contribution equals the norm, but enters the sensitivity of each of the two edges. Thus the pair contributions sum to $N_L(f)$, while the edge sensitivities sum to $2N_L(f)$.
+
+![One Pair and Two Edge Influences](<images/One Pair and Two Edge Influences.svg>)
+
+*At $x=y=1$, the only pair contribution is $1$. It enters each of the two edge sums in full.*
+
+| Object | What it records |
+|---|---|
+| $m_{\ell m}$ | A pair's contribution to the norm |
+| $A_\ell$ | Sum of contributions of all pairs containing edge $\ell$ |
+| $\Delta_\ell$ | Finite change in value under a single-edge probe |
+| $D_{L,2}(f)$ | Output form assembled from pair contributions |
 
 ## Triangle norm and a probe of one coupling
 
@@ -86,6 +108,10 @@ $$
 > $$
 
 The form $q_\ell q_m=[a_\ell a_m]^2$ has grade two. The edges in a pair need not be adjacent. Exchanging the edges or reversing their auxiliary orientations changes neither the contribution nor the output form.
+
+The coefficient $m_{\ell m}$ belongs to a pair in the decomposition of the norm. It **is not a mixed second derivative** or the finite effect of changing two couplings together; a numerical example appears in the section on limits of interpretation.
+
+It is useful to retain coefficients together with their pair labels. Different pairs can yield the same output form $q_\ell q_m$. Collecting like terms removes those labels from the shortened expression for $D_{L,2}(f)$; a triangle graph illustrates this below.
 
 The determinant in (2) measures the difference between two response directions. If the pairs of numbers $(s_\ell,t_\ell)$ and $(s_m,t_m)$ are proportional, the contribution is zero, even when both edges participate in both vector responses.
 
@@ -173,7 +199,7 @@ Their sum is $X^2=1/2$. An independent check gives $v^2=3/4$, $w^2=1$, and $v\cd
 
 ![Pair contributions and edge sums for a triangle boundary on a square](<images/Pairs and Edge Influence on a Square.svg>)
 
-*On the left are the coefficients of unordered pairs, with each pair counted once. On the right are the sums $A_\ell$ over all pairs containing an edge. The input boundary has vertices $a,b,c$; vertex $d$ belongs to the network and affects its metric.*
+*All pairs containing $bc$ are highlighted: their cells occur in both its row and its column. Their sum is $A_{bc}=1/4+1/16+1/16=3/8$. Each pair is listed once but enters two edge sums. The input boundary has vertices $a,b,c$; vertex $d$ belongs to the network and affects its metric.*
 
 On $cd$ and $ad$, the response pairs are opposite, so their determinant vanishes. At the same time,
 
@@ -221,9 +247,15 @@ $$
 
 Both have value $1$ and the same field $A_{ab}=A_{bc}=A_{cd}=A_{ad}=1/2$. However, $m_{ab,bc}(f_1)=1/4$, whereas $m_{ab,bc}(f_2)=1/8$. These values follow from (2) by adding the contributions of two squares; formula (4) independently gives identical edge sums.
 
+![Different Pairs and the Same Field](<images/Different Pairs and the Same Field.svg>)
+
+*The differing pair contributions are highlighted. Summing all cells bearing each edge label gives $1/2$ in both cases.*
+
 Since the initial $R_\ell$ are also identical, (1) gives identical results for every admissible independent finite probe of one existing edge. The pair distributions nevertheless differ. The edge field is obtained by summing pair contributions, but those contributions cannot in general be recovered from the field alone.
 
 ## One definition for every grade
+
+The general part below is intended for a second reading. The examples and formulas (1)–(4) suffice for triangle norms; the following definitions and proofs explain why the same construction works in every grade.
 
 Let $X,Y\in\Lambda^kW$, where $W$ is the affine-vector space. For an unordered set $J$ of $k$ distinct existing edges, set
 
@@ -357,6 +389,6 @@ This is the derivative of the Gram determinant with the metric change included. 
 
 The general identities are proved above. Examples were checked in exact rational arithmetic by comparing exterior powers of the inverse Laplacian, an independent expansion of the normalized potential over forests of complementary grade, and direct recomputation of changed metrics. On nine graphs, 37 grades and 8024 scalar equalities for finite variations of forms were checked, including mixed inputs, addition of absent couplings, and admissible deletion. The [reproducible checks](https://github.com/magin67/pmg-notes/tree/v5/checks/metric-distributions) also test orientations and a nondecomposable exterior input. The forest formula independently checks the numerical evaluation; its individual forest contributions are not identified with the coefficients of $D_{L,k}$.
 
-Exterior powers, the Cauchy-Binet formula, and differentiation of the metric justify the construction beyond tree examples. Expressing these identities in PMG and interpreting edge sums as an influence field do not establish scientific priority.
+Exterior powers, the Cauchy-Binet formula, and differentiation of the metric justify the construction beyond tree examples.
 
 [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Back to Metric Distributions and Edge Influence]].

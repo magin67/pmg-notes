@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="835" viewBox="0 0 1120 835" role="img" aria-labelledby="title"><title id="title">Different Pairs and the Same Field</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="835" fill="white"/>
+<text xml:space="preserve" x="560" y="45" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Different pair contributions, the same edge field</text>
+<text xml:space="preserve" x="134.0" y="100" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="142.0" y="105.5" font-size="18" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="152.0" y="100" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start"> = [(abc)]² + [(acd)]²</text>
+<text xml:space="preserve" x="139.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ab</text>
+<text xml:space="preserve" x="227.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">bc</text>
+<text xml:space="preserve" x="315.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">cd</text>
+<text xml:space="preserve" x="403.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ad</text>
+<text xml:space="preserve" x="65" y="195" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ab</text>
+<rect x="97" y="162" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="139.0" y="195" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="185" y="162" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="227.0" y="195" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/4</text>
+<rect x="273" y="162" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="315.0" y="195" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/8</text>
+<rect x="361" y="162" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="403.0" y="195" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/8</text>
+<text xml:space="preserve" x="65" y="250" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">bc</text>
+<rect x="97" y="217" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="139.0" y="250" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="185" y="217" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="227.0" y="250" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="273" y="217" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="315.0" y="250" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/8</text>
+<rect x="361" y="217" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="403.0" y="250" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/8</text>
+<text xml:space="preserve" x="65" y="305" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">cd</text>
+<rect x="97" y="272" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="139.0" y="305" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="185" y="272" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="227.0" y="305" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="273" y="272" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="315.0" y="305" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="361" y="272" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="403.0" y="305" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/4</text>
+<text xml:space="preserve" x="65" y="360" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ad</text>
+<rect x="97" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="139.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="185" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="227.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="273" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="315.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="361" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="403.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<text xml:space="preserve" x="265" y="420" font-size="26" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Σ m = 1</text>
+<text xml:space="preserve" x="693.0" y="100" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="701.0" y="105.5" font-size="18" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">2</text>
+<text xml:space="preserve" x="711.0" y="100" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start"> = [(abd)]² + [(bcd)]²</text>
+<text xml:space="preserve" x="699.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ab</text>
+<text xml:space="preserve" x="787.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">bc</text>
+<text xml:space="preserve" x="875.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">cd</text>
+<text xml:space="preserve" x="963.0" y="142" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ad</text>
+<text xml:space="preserve" x="625" y="195" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ab</text>
+<rect x="657" y="162" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="699.0" y="195" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="745" y="162" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="787.0" y="195" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/8</text>
+<rect x="833" y="162" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="875.0" y="195" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/8</text>
+<rect x="921" y="162" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="963.0" y="195" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/4</text>
+<text xml:space="preserve" x="625" y="250" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">bc</text>
+<rect x="657" y="217" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="699.0" y="250" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="745" y="217" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="787.0" y="250" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="833" y="217" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="875.0" y="250" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/4</text>
+<rect x="921" y="217" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="963.0" y="250" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/8</text>
+<text xml:space="preserve" x="625" y="305" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">cd</text>
+<rect x="657" y="272" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="699.0" y="305" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="745" y="272" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="787.0" y="305" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="833" y="272" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="875.0" y="305" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="921" y="272" width="84" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="963.0" y="305" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/8</text>
+<text xml:space="preserve" x="625" y="360" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ad</text>
+<rect x="657" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="699.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="745" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="787.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="833" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="875.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="921" y="327" width="84" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="963.0" y="360" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<text xml:space="preserve" x="825" y="420" font-size="26" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Σ m = 1</text>
+<path d="M280 445 V470 H470 V505" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M840 445 V470 H650 V505" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="560" y="545" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">Both forms: A = 1/2 on every edge</text>
+<line x1="504.5" y1="589.5" x2="615.5" y2="589.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="560.0" y="565.5" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/2</text>
+<line x1="637.5" y1="611.5" x2="637.5" y2="722.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="685.5" y="675.0" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/2</text>
+<line x1="615.5" y1="744.5" x2="504.5" y2="744.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="560.0" y="777.5" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/2</text>
+<line x1="482.5" y1="611.5" x2="482.5" y2="722.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="434.5" y="675.0" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/2</text>
+<circle cx="482.5" cy="589.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="482.5" y="596.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="637.5" cy="589.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="637.5" y="596.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="637.5" cy="744.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="637.5" y="751.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="482.5" cy="744.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="482.5" y="751.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="560" y="805" font-size="25" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">Edge sums alone do not determine the pair contributions</text>
+</svg>

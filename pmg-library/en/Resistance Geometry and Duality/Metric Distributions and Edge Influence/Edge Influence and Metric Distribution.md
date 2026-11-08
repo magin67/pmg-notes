@@ -1,12 +1,12 @@
 ---
 title: Edge Influence and Metric Distribution
 date: 2026-11-03
-updated: 2026-11-03
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 4
+translated_revision: 5
 translation_key: metric-distributions-edge-influence
 order: 1
 description: "From adding a coupling and the finite change in a form's value to a sensitivity field and the metric distribution operator D_L."
@@ -15,7 +15,7 @@ description: "From adding a coupling and the finite change in a form's value to 
 [[ru/Резистивная геометрия и дуальность/Метрические распределения и влияние связей/Влияние связей и метрическое распределение|Русский]]
 
 
-Adding a coupling changes the graph metric and hence the values of measured forms. Fix a form of grade one, change one conductance, and subtract the original value from the new one. Repeating this probe for different couplings, always from the same initial graph, gives their influence field on the form. From this field we derive a metric distribution: normalized influence coefficients of existing edges whose sum equals the original value of the form.
+Adding a coupling changes the graph metric and hence the values of measured forms. Fix a form of grade one, change one conductance, and subtract the original value from the new one. Repeating this probe for different couplings, always from the same initial graph, gives their influence field on the form. From this field we derive a metric distribution: sensitivity coefficients of existing edges whose sum equals the original value of the form.
 
 ## Adding a coupling to a path
 
@@ -44,6 +44,8 @@ At $t=1$ we obtain a unit triangle: the value changes from $2$ to $2/3$, and the
 *On the left, coupling $ac$ is absent; the dashed line marks where it will be added. On the right, conductance $1$ has been added. The form $[(ac)]^2$ is unchanged; its metric evaluation changes. Edge labels indicate conductances.*
 
 A coupling can also be added between vertices that are already joined by an edge. This increases the existing conductance. In both cases we compare the values of one fixed form in two metrics.
+
+The absent coupling $ac$ has zero coefficient in the distribution over existing edges. This example already shows that adding it still affects the metric. Below we distinguish adding a new coupling from changing an existing one relatively.
 
 ## The form and the initial metric
 
@@ -177,6 +179,8 @@ $$
 
 Here $R_{kl}$ is the effective resistance in the full network, generally different from the edge's own resistance $1/c_{kl}$. Formula (4) also shows that a zero coefficient is equivalent to zero influence under every admissible change of this coupling alone.
 
+For example, on a unit triangle with $f=[(ac)]^2$, we will obtain $m_{ac}=4/9$. Increase the conductance of $ac$ by $1\%$, so $\varepsilon=0.01$. To first order, the value of the form decreases by $\varepsilon m_{ac}=1/225$. The exact decrease from (4) is $2/453$. The minus sign in the definition of $m$ represents a decrease in the norm under strengthening by a positive coefficient. The relative change is that of **conductance**; the change in $N_L(f)$ is measured in its original units.
+
 ### Absent couplings
 
 Addition can be tested between any vertices. A relative change of a zero conductance, however, does not create a coupling. The metric distribution is therefore indexed by existing edges; when $c_{kl}=0$, we set $m_{kl}=0$.
@@ -214,6 +218,16 @@ The subscript $L$ distinguishes this operator from the notation $D=\exp Q_1$ use
 For a square $f=[v]^2$, the coefficients are nonnegative: $m_{kl}=c_{kl}(v\cdot a_{kl})^2$. For a mixed form, either sign is possible. Reversing an auxiliary edge orientation changes the signs of both inner-product factors and leaves the coefficient and output form unchanged.
 
 The definition is independent of a decomposition of the input $f$ into squares or mixed forms: formula (3) is linear in the form itself. The output edge forms are normalized by the fixed vertex differences $a_l-a_k$.
+
+Compare the three levels:
+
+| Quantity | Meaning |
+|---|---|
+| $\Delta_{kl}(t;f)$ | Result of a finite probe with prescribed $t$ |
+| $m_{kl}(f)$ | Sensitivity coefficient for a relative conductance change |
+| $D_L(f)$ | Form assembled from contributions and edge forms $[a_{kl}]^2$ |
+
+The coefficient sum equals $N_L(f)$, not one. For the unit triangle and input $[(ac)]^2$, below we obtain $\sum m_{kl}=2/3$, but $N_L(D_L(f))=4/9$: evaluating the output form additionally multiplies each coefficient by the effective resistance of the corresponding vertex pair. These are different operations.
 
 ## Why the coefficients sum to the value of the form
 
@@ -280,7 +294,7 @@ The probing procedure explains what the coefficients mean. Computing the entire 
 
 For $[v]^2$, the coefficients $c_{kl}(v\cdot a_{kl})^2$ have the classical electrical interpretation of edge energy contributions for a prescribed vector of external currents. Conductance derivatives follow from differentiating the inverse matrix; the method and electrical interpretation are described by Ghosh, Boyd, and Saberi, [Minimizing Effective Resistance of a Graph](https://web.stanford.edu/~boyd/papers/pdf/eff_res.pdf), Sections 2.9 and 3.2. The sum formula is also Euler's identity for a homogeneous function of degree $-1$.
 
-The polyform derivation through $M(e+tp)$ connects these known results to potential normalization and the assembly of a sensitivity field into the form $D_L(f)$. This presentation does not establish scientific priority.
+The polyform derivation through $M(e+tp)$ connects these known results to potential normalization and the assembly of a sensitivity field into the form $D_L(f)$.
 
 The numerical examples were checked in exact rational arithmetic. Independent comparisons used inversion of the reduced Laplacian, enumeration of spanning trees and separating forests, and finite probes for squares and mixed forms. Reproducible calculations are available in the [checks for this note](https://github.com/magin67/pmg-notes/tree/v5/checks/metric-distributions).
 

@@ -1,12 +1,12 @@
 ---
 title: Path Intersection as an Influence Field on a Tree
 date: 2026-11-03
-updated: 2026-11-03
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 4
+translated_revision: 5
 translation_key: metric-distributions-tree-path-influence
 order: 2
 description: "The common segment of two paths as the exact support of existing-edge influence on their inner product: directions, resistances, and finite changes."
@@ -18,6 +18,8 @@ description: "The common segment of two paths as the exact support of existing-e
 On a tree there is a unique path between any two vertices. For two vectors specified by vertex pairs, the metric distribution selects the edges shared by their paths. Changing precisely these existing edges affects the inner product. Directions determine the sign of influence, and conductances determine the size of each contribution.
 
 We use the operator from [[Edge Influence and Metric Distribution]]. The graph here is a finite undirected tree with positive conductances. The vectors and measured form remain fixed in every probe.
+
+We first vary only existing-edge conductances while keeping the tree connected. Adding a new coupling can create a cycle; that different case is discussed at the end of the note.
 
 ## The common segment of two paths
 
@@ -116,6 +118,14 @@ The inner product is therefore the sum of the resistances along the common segme
 
 Reversing one of the **selected paths** changes the sign of the result; reversing both preserves it. Reversing an **auxiliary edge orientation** simultaneously negates $a_\ell,x_\ell,y_\ell$. The product $x_\ell y_\ell$ and the form $q_\ell$ are unchanged. These two operations on directions have different meanings.
 
+### A tree with a side branch
+
+Add an edge $cz$ from the path $a-b-c-d-e$ to a new vertex $z$. All conductances are $1$. For $v=(ad)$ and $u=(be)$, the paths still share exactly $bc,cd$. Branch $cz$ belongs to neither path, so $m_{cz}=0$. Changing its positive conductance leaves $v\cdot u=2$ unchanged.
+
+![A Side Branch and Shared Edges](<images/A Side Branch and Shared Edges.svg>)
+
+*Orange edges contribute $1$ each; all other edges contribute zero. Drawing angles show the tree structure, not angles in resistance geometry.*
+
 ## Unequal conductances
 
 Keep $v=(ad)$ and $u=(be)$, and assign conductances
@@ -213,6 +223,6 @@ $$
 
 Thus a zero distribution over existing edges does not mean insensitivity to new couplings. Distributions over alternative routes and cancellation of signed contributions are discussed in [[The Influence Field on Graphs with Cycles]].
 
-The formulas follow from the classical resistance metric of a tree and the definition of $D_L$; the influence-field interpretation is not a claim of scientific priority. Examples were checked in exact rational arithmetic: unique-path coordinates were compared with independent Laplacian inversion, forest-based resistance calculations, and direct calculations on changed graphs. Code and results are available in the [series checks](https://github.com/magin67/pmg-notes/tree/v5/checks/metric-distributions).
+The formulas follow from the classical resistance metric of a tree and the definition of $D_L$. Examples were checked in exact rational arithmetic: unique-path coordinates were compared with independent Laplacian inversion, forest-based resistance calculations, and direct calculations on changed graphs. Code and results are available in the [series checks](https://github.com/magin67/pmg-notes/tree/v5/checks/metric-distributions).
 
 [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Back to Metric Distributions and Edge Influence]].

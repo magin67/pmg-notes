@@ -1,276 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="580.322135pt" height="324.929425pt" viewBox="0 0 580.322135 324.929425" version="1.1">
- <title>Pairs and Edge Influence on a Square</title>
- <metadata>
-  <rdf:RDF>
-   <cc:Work>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title>Pairs and Edge Influence on a Square</dc:title>
-    <dc:date>2026-11-03T10:16:06.354489</dc:date>
-    <dc:description>For X=(abc) on a unit square, pair contributions are ab,bc=1/4; ab,cd=ab,ad=bc,cd=bc,ad=1/16; cd,ad=0. Edge sums are A_ab=A_bc=3/8 and A_cd=A_ad=1/8. Pair sum 1/2; influence sum 1.</dc:description>
-    <dc:format>image/svg+xml</dc:format>
-    <dc:creator>
-     <cc:Agent>
-      <dc:title>Matplotlib v3.8.2, https://matplotlib.org/</dc:title>
-     </cc:Agent>
-    </dc:creator>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs>
-  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
- </defs>
- <g id="figure_1">
-  <g id="patch_1">
-   <path d="M 0 324.929425  L 580.322135 324.929425  L 580.322135 0  L 0 0  z " style="fill: #ffffff" />
-  </g>
-  <g id="axes_1">
-   <g id="patch_2">
-    <path d="M 34.1625 278.605187  L 251.8905 278.605187  L 251.8905 60.877187  L 34.1625 60.877187  z " style="fill: #ffffff" />
-   </g>
-   <g id="patch_3">
-    <path d="M 34.1625 60.877187  L 88.5945 60.877187  L 88.5945 115.309187  L 34.1625 115.309187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_4">
-    <path d="M 88.5945 60.877187  L 143.0265 60.877187  L 143.0265 115.309187  L 88.5945 115.309187  z " clip-path="url(#p0cbc7fd728)" style="fill: #9fc5d4; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_5">
-    <path d="M 143.0265 60.877187  L 197.4585 60.877187  L 197.4585 115.309187  L 143.0265 115.309187  z " clip-path="url(#p0cbc7fd728)" style="fill: #d9e9ef; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_6">
-    <path d="M 197.4585 60.877187  L 251.8905 60.877187  L 251.8905 115.309187  L 197.4585 115.309187  z " clip-path="url(#p0cbc7fd728)" style="fill: #d9e9ef; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_7">
-    <path d="M 34.1625 115.309187  L 88.5945 115.309187  L 88.5945 169.741187  L 34.1625 169.741187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_8">
-    <path d="M 88.5945 115.309187  L 143.0265 115.309187  L 143.0265 169.741187  L 88.5945 169.741187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_9">
-    <path d="M 143.0265 115.309187  L 197.4585 115.309187  L 197.4585 169.741187  L 143.0265 169.741187  z " clip-path="url(#p0cbc7fd728)" style="fill: #d9e9ef; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_10">
-    <path d="M 197.4585 115.309187  L 251.8905 115.309187  L 251.8905 169.741187  L 197.4585 169.741187  z " clip-path="url(#p0cbc7fd728)" style="fill: #d9e9ef; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_11">
-    <path d="M 34.1625 169.741187  L 88.5945 169.741187  L 88.5945 224.173187  L 34.1625 224.173187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_12">
-    <path d="M 88.5945 169.741187  L 143.0265 169.741187  L 143.0265 224.173187  L 88.5945 224.173187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_13">
-    <path d="M 143.0265 169.741187  L 197.4585 169.741187  L 197.4585 224.173187  L 143.0265 224.173187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_14">
-    <path d="M 197.4585 169.741187  L 251.8905 169.741187  L 251.8905 224.173187  L 197.4585 224.173187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_15">
-    <path d="M 34.1625 224.173187  L 88.5945 224.173187  L 88.5945 278.605187  L 34.1625 278.605187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_16">
-    <path d="M 88.5945 224.173187  L 143.0265 224.173187  L 143.0265 278.605187  L 88.5945 278.605187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_17">
-    <path d="M 143.0265 224.173187  L 197.4585 224.173187  L 197.4585 278.605187  L 143.0265 278.605187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="patch_18">
-    <path d="M 197.4585 224.173187  L 251.8905 224.173187  L 251.8905 278.605187  L 197.4585 278.605187  z " clip-path="url(#p0cbc7fd728)" style="fill: #f1f3f5; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter" />
-   </g>
-   <g id="matplotlib.axis_1">
-    <g id="xtick_1">
-     <g id="line2d_1" />
-     <g id="text_1">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: middle" x="61.3785" y="50.549687" transform="rotate(-0 61.3785 50.549687)">ab</text>
-     </g>
-    </g>
-    <g id="xtick_2">
-     <g id="line2d_2" />
-     <g id="text_2">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: middle" x="115.8105" y="50.549687" transform="rotate(-0 115.8105 50.549687)">bc</text>
-     </g>
-    </g>
-    <g id="xtick_3">
-     <g id="line2d_3" />
-     <g id="text_3">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: middle" x="170.2425" y="50.549687" transform="rotate(-0 170.2425 50.549687)">cd</text>
-     </g>
-    </g>
-    <g id="xtick_4">
-     <g id="line2d_4" />
-     <g id="text_4">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: middle" x="224.6745" y="50.549687" transform="rotate(-0 224.6745 50.549687)">ad</text>
-     </g>
-    </g>
-   </g>
-   <g id="matplotlib.axis_2">
-    <g id="ytick_1">
-     <g id="line2d_5" />
-     <g id="text_5">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: end" x="27.1625" y="94.171937" transform="rotate(-0 27.1625 94.171937)">ab</text>
-     </g>
-    </g>
-    <g id="ytick_2">
-     <g id="line2d_6" />
-     <g id="text_6">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: end" x="27.1625" y="148.603937" transform="rotate(-0 27.1625 148.603937)">bc</text>
-     </g>
-    </g>
-    <g id="ytick_3">
-     <g id="line2d_7" />
-     <g id="text_7">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: end" x="27.1625" y="203.035937" transform="rotate(-0 27.1625 203.035937)">cd</text>
-     </g>
-    </g>
-    <g id="ytick_4">
-     <g id="line2d_8" />
-     <g id="text_8">
-      <text style="font: 16px 'DejaVu Sans'; text-anchor: end" x="27.1625" y="257.467937" transform="rotate(-0 27.1625 257.467937)">ad</text>
-     </g>
-    </g>
-   </g>
-   <g id="text_9">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="61.3785" y="93.060062" transform="rotate(-0 61.3785 93.060062)">·</text>
-   </g>
-   <g id="text_10">
-    <text style="fill: #263d48; font: 18px 'DejaVu Sans'; text-anchor: middle" x="115.8105" y="93.060062" transform="rotate(-0 115.8105 93.060062)">1/4</text>
-   </g>
-   <g id="text_11">
-    <text style="fill: #263d48; font: 18px 'DejaVu Sans'; text-anchor: middle" x="170.2425" y="93.060062" transform="rotate(-0 170.2425 93.060062)">1/16</text>
-   </g>
-   <g id="text_12">
-    <text style="fill: #263d48; font: 18px 'DejaVu Sans'; text-anchor: middle" x="224.6745" y="93.060062" transform="rotate(-0 224.6745 93.060062)">1/16</text>
-   </g>
-   <g id="text_13">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="61.3785" y="147.492062" transform="rotate(-0 61.3785 147.492062)">·</text>
-   </g>
-   <g id="text_14">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="115.8105" y="147.492062" transform="rotate(-0 115.8105 147.492062)">·</text>
-   </g>
-   <g id="text_15">
-    <text style="fill: #263d48; font: 18px 'DejaVu Sans'; text-anchor: middle" x="170.2425" y="147.492062" transform="rotate(-0 170.2425 147.492062)">1/16</text>
-   </g>
-   <g id="text_16">
-    <text style="fill: #263d48; font: 18px 'DejaVu Sans'; text-anchor: middle" x="224.6745" y="147.492062" transform="rotate(-0 224.6745 147.492062)">1/16</text>
-   </g>
-   <g id="text_17">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="61.3785" y="201.924062" transform="rotate(-0 61.3785 201.924062)">·</text>
-   </g>
-   <g id="text_18">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="115.8105" y="201.924062" transform="rotate(-0 115.8105 201.924062)">·</text>
-   </g>
-   <g id="text_19">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="170.2425" y="201.924062" transform="rotate(-0 170.2425 201.924062)">·</text>
-   </g>
-   <g id="text_20">
-    <text style="fill: #263d48; font: 18px 'DejaVu Sans'; text-anchor: middle" x="224.6745" y="201.924062" transform="rotate(-0 224.6745 201.924062)">0</text>
-   </g>
-   <g id="text_21">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="61.3785" y="256.356062" transform="rotate(-0 61.3785 256.356062)">·</text>
-   </g>
-   <g id="text_22">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="115.8105" y="256.356062" transform="rotate(-0 115.8105 256.356062)">·</text>
-   </g>
-   <g id="text_23">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="170.2425" y="256.356062" transform="rotate(-0 170.2425 256.356062)">·</text>
-   </g>
-   <g id="text_24">
-    <text style="fill: #a8b2bb; font: 18px 'DejaVu Sans'; text-anchor: middle" x="224.6745" y="256.356062" transform="rotate(-0 224.6745 256.356062)">·</text>
-   </g>
-   <g id="text_25">
-    <text style="font: 18px 'DejaVu Sans'; text-anchor: middle" x="143.0265" y="313.985987" transform="rotate(-0 143.0265 313.985987)">Sum = 1/2</text>
-   </g>
-   <g id="text_26">
-    <text style="font: 18px 'DejaVu Sans'; text-anchor: middle" x="143.0265" y="20.877187" transform="rotate(-0 143.0265 20.877187)">Pair contributions m</text>
-   </g>
-  </g>
-  <g id="axes_2">
-   <g id="line2d_9">
-    <path d="M 400.889538 103.122919  L 530.876403 103.122919  " clip-path="url(#p5d5c4f1b7f)" style="fill: none; stroke: #246585; stroke-width: 2.6; stroke-linecap: square" />
-   </g>
-   <g id="line2d_10">
-    <path d="M 530.876403 103.122919  L 530.876403 233.109785  " clip-path="url(#p5d5c4f1b7f)" style="fill: none; stroke: #246585; stroke-width: 2.6; stroke-linecap: square" />
-   </g>
-   <g id="line2d_11">
-    <path d="M 530.876403 233.109785  L 400.889538 233.109785  " clip-path="url(#p5d5c4f1b7f)" style="fill: none; stroke: #246585; stroke-width: 2.6; stroke-linecap: square" />
-   </g>
-   <g id="line2d_12">
-    <path d="M 400.889538 103.122919  L 400.889538 233.109785  " clip-path="url(#p5d5c4f1b7f)" style="fill: none; stroke: #246585; stroke-width: 2.6; stroke-linecap: square" />
-   </g>
-   <g id="text_27">
-    <g id="patch_19">
-     <path d="M 450.318596 94.71507  L 481.447346 94.71507  L 481.447346 75.134445  L 450.318596 75.134445  z " style="fill: #ffffff" />
-    </g>
-    <text style="fill: #246585; font: 18px 'DejaVu Sans'; text-anchor: middle" x="465.882971" y="89.891633" transform="rotate(-0 465.882971 89.891633)">3/8</text>
-   </g>
-   <g id="text_28">
-    <g id="patch_20">
-     <path d="M 533.51019 177.906664  L 564.63894 177.906664  L 564.63894 158.326039  L 533.51019 158.326039  z " style="fill: #ffffff" />
-    </g>
-    <text style="fill: #246585; font: 18px 'DejaVu Sans'; text-anchor: middle" x="549.074565" y="173.083227" transform="rotate(-0 549.074565 173.083227)">3/8</text>
-   </g>
-   <g id="text_29">
-    <g id="patch_21">
-     <path d="M 450.318596 261.098258  L 481.447346 261.098258  L 481.447346 241.517633  L 450.318596 241.517633  z " style="fill: #ffffff" />
-    </g>
-    <text style="fill: #246585; font: 18px 'DejaVu Sans'; text-anchor: middle" x="465.882971" y="256.274821" transform="rotate(-0 465.882971 256.274821)">1/8</text>
-   </g>
-   <g id="text_30">
-    <g id="patch_22">
-     <path d="M 367.127002 177.906664  L 398.255752 177.906664  L 398.255752 158.326039  L 367.127002 158.326039  z " style="fill: #ffffff" />
-    </g>
-    <text style="fill: #246585; font: 18px 'DejaVu Sans'; text-anchor: middle" x="382.691377" y="173.083227" transform="rotate(-0 382.691377 173.083227)">1/8</text>
-   </g>
-   <g id="text_31">
-    <text style="font: 18px 'DejaVu Sans'; text-anchor: middle" x="465.882971" y="276.655385" transform="rotate(-0 465.882971 276.655385)">Sum = 1</text>
-   </g>
-   <g id="text_32">
-    <text style="font: 18px 'DejaVu Sans'; text-anchor: middle" x="465.882971" y="36.877187" transform="rotate(-0 465.882971 36.877187)">Edge influences A</text>
-   </g>
-   <g id="PathCollection_1">
-    <defs>
-     <path id="mc577b864aa" d="M 0 12.247449  C 3.248061 12.247449 6.363528 10.95698 8.660254 8.660254  C 10.95698 6.363528 12.247449 3.248061 12.247449 0  C 12.247449 -3.248061 10.95698 -6.363528 8.660254 -8.660254  C 6.363528 -10.95698 3.248061 -12.247449 0 -12.247449  C -3.248061 -12.247449 -6.363528 -10.95698 -8.660254 -8.660254  C -10.95698 -6.363528 -12.247449 -3.248061 -12.247449 0  C -12.247449 3.248061 -10.95698 6.363528 -8.660254 8.660254  C -6.363528 10.95698 -3.248061 12.247449 0 12.247449  z " style="stroke: #246585; stroke-width: 1.8" />
-    </defs>
-    <g clip-path="url(#p5d5c4f1b7f)">
-     <use xlink:href="#mc577b864aa" x="400.889538" y="103.122919" style="fill: #ffffff; stroke: #246585; stroke-width: 1.8" />
-    </g>
-   </g>
-   <g id="PathCollection_2">
-    <g clip-path="url(#p5d5c4f1b7f)">
-     <use xlink:href="#mc577b864aa" x="530.876403" y="103.122919" style="fill: #ffffff; stroke: #246585; stroke-width: 1.8" />
-    </g>
-   </g>
-   <g id="PathCollection_3">
-    <g clip-path="url(#p5d5c4f1b7f)">
-     <use xlink:href="#mc577b864aa" x="530.876403" y="233.109785" style="fill: #ffffff; stroke: #246585; stroke-width: 1.8" />
-    </g>
-   </g>
-   <g id="PathCollection_4">
-    <defs>
-     <path id="mb17ff38cb7" d="M 0 12.247449  C 3.248061 12.247449 6.363528 10.95698 8.660254 8.660254  C 10.95698 6.363528 12.247449 3.248061 12.247449 0  C 12.247449 -3.248061 10.95698 -6.363528 8.660254 -8.660254  C 6.363528 -10.95698 3.248061 -12.247449 0 -12.247449  C -3.248061 -12.247449 -6.363528 -10.95698 -8.660254 -8.660254  C -10.95698 -6.363528 -12.247449 -3.248061 -12.247449 0  C -12.247449 3.248061 -10.95698 6.363528 -8.660254 8.660254  C -6.363528 10.95698 -3.248061 12.247449 0 12.247449  z " style="stroke: #677587; stroke-width: 1.8" />
-    </defs>
-    <g clip-path="url(#p5d5c4f1b7f)">
-     <use xlink:href="#mb17ff38cb7" x="400.889538" y="233.109785" style="fill: #ffffff; stroke: #677587; stroke-width: 1.8" />
-    </g>
-   </g>
-   <g id="text_33">
-    <text style="fill: #246585; font: 18px 'DejaVu Sans'; text-anchor: middle" x="400.889538" y="108.089794" transform="rotate(-0 400.889538 108.089794)">a</text>
-   </g>
-   <g id="text_34">
-    <text style="fill: #246585; font: 18px 'DejaVu Sans'; text-anchor: middle" x="530.876403" y="108.089794" transform="rotate(-0 530.876403 108.089794)">b</text>
-   </g>
-   <g id="text_35">
-    <text style="fill: #246585; font: 18px 'DejaVu Sans'; text-anchor: middle" x="530.876403" y="238.07666" transform="rotate(-0 530.876403 238.07666)">c</text>
-   </g>
-   <g id="text_36">
-    <text style="fill: #677587; font: 18px 'DejaVu Sans'; text-anchor: middle" x="400.889538" y="238.07666" transform="rotate(-0 400.889538 238.07666)">d</text>
-   </g>
-  </g>
- </g>
- <defs>
-  <clipPath id="p0cbc7fd728">
-   <rect x="34.1625" y="60.877187" width="217.728" height="217.728" />
-  </clipPath>
-  <clipPath id="p5d5c4f1b7f">
-   <rect x="358.643806" y="60.877187" width="214.478328" height="217.728" />
-  </clipPath>
- </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="670" viewBox="0 0 1120 670" role="img" aria-labelledby="title"><title id="title">Pairs and Edge Influence on a Square</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="670" fill="white"/>
+<text xml:space="preserve" x="560" y="45" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Each pair enters two edge sums</text>
+<text xml:space="preserve" x="560" y="93" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">f = [(abc)]²</text>
+<text xml:space="preserve" x="290" y="143" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Pair contributions m</text>
+<text xml:space="preserve" x="157.0" y="182" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ab</text>
+<text xml:space="preserve" x="241.0" y="182" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">bc</text>
+<text xml:space="preserve" x="325.0" y="182" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">cd</text>
+<text xml:space="preserve" x="409.0" y="182" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ad</text>
+<text xml:space="preserve" x="85" y="235" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ab</text>
+<rect x="117" y="202" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="157.0" y="235" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="201" y="202" width="80" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="241.0" y="235" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/4</text>
+<rect x="285" y="202" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="325.0" y="235" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/16</text>
+<rect x="369" y="202" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="409.0" y="235" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/16</text>
+<text xml:space="preserve" x="85" y="290" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">bc</text>
+<rect x="117" y="257" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="157.0" y="290" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="201" y="257" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="241.0" y="290" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="285" y="257" width="80" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="325.0" y="290" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/16</text>
+<rect x="369" y="257" width="80" height="51" rx="14" fill="#fff0dc" stroke="#b56414" stroke-width="1.5"/>
+<text xml:space="preserve" x="409.0" y="290" font-size="23" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">1/16</text>
+<text xml:space="preserve" x="85" y="345" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">cd</text>
+<rect x="117" y="312" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="157.0" y="345" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="201" y="312" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="241.0" y="345" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="285" y="312" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="325.0" y="345" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="369" y="312" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="409.0" y="345" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">0</text>
+<text xml:space="preserve" x="85" y="400" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">ad</text>
+<rect x="117" y="367" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="157.0" y="400" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="201" y="367" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="241.0" y="400" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="285" y="367" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="325.0" y="400" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<rect x="369" y="367" width="80" height="51" rx="14" fill="#f7fafc" stroke="#dce4e9" stroke-width="1.5"/>
+<text xml:space="preserve" x="409.0" y="400" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">·</text>
+<text xml:space="preserve" x="855" y="143" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Edge sums A</text>
+<line x1="779.5" y1="217.5" x2="930.5" y2="217.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="855.0" y="193.5" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">3/8</text>
+<line x1="952.5" y1="239.5" x2="952.5" y2="390.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="1000.5" y="323.0" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">3/8</text>
+<line x1="930.5" y1="412.5" x2="779.5" y2="412.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="855.0" y="445.5" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/8</text>
+<line x1="757.5" y1="239.5" x2="757.5" y2="390.5" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="709.5" y="323.0" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1/8</text>
+<circle cx="757.5" cy="217.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="757.5" y="224.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="952.5" cy="217.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="952.5" y="224.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="952.5" cy="412.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="952.5" y="419.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="757.5" cy="412.5" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="757.5" y="419.5" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="495" y1="315" x2="665" y2="315" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="580" y="286" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">sum</text>
+<text xml:space="preserve" x="371.5" y="495" font-size="29" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">A</text>
+<text xml:space="preserve" x="392.5" y="501.67" font-size="20" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">bc</text>
+<text xml:space="preserve" x="415.5" y="495" font-size="29" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start"> = m</text>
+<text xml:space="preserve" x="474.5" y="501.67" font-size="20" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">ab,bc</text>
+<text xml:space="preserve" x="526.5" y="495" font-size="29" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start"> + m</text>
+<text xml:space="preserve" x="585.5" y="501.67" font-size="20" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">bc,cd</text>
+<text xml:space="preserve" x="637.5" y="495" font-size="29" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start"> + m</text>
+<text xml:space="preserve" x="696.5" y="501.67" font-size="20" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">bc,ad</text>
+<text xml:space="preserve" x="560" y="540" font-size="28" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">= 1/4 + 1/16 + 1/16 = 3/8</text>
+<text xml:space="preserve" x="560" y="596" font-size="27" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">Σ m = 1/2;    Σ A = 1 = 2N(f)</text>
+<text xml:space="preserve" x="560" y="642" font-size="23" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">All cells bearing bc are highlighted — in its row and column</text>
 </svg>
