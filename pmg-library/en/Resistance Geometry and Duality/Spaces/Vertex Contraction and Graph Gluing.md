@@ -8,7 +8,7 @@ status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: vertex-contraction-and-graph-gluing
-order: 5
+order: 6
 description: "Contraction as a passage to a subspace, independent components in the Laplacian exponential, gluing spaces, spanning-tree coefficients, and additivity of resistance radius."
 aliases:
   - "en/Spaces/Vertex Contraction and Graph Gluing"
@@ -18,7 +18,7 @@ Suppose two vertices of a graph are to be treated as one. For example, several o
 
 Consider another problem as well. Two graphs are given independently. Select one vertex in each and identify them. The resulting graph allows us to compare vertices from the two original parts. Here, identification joins two spaces.
 
-It uses the [[Basis|distinction between elements and affine vectors]], [[Projections, Bi-coordinates, and Di-coordinates|orthogonal projection]], and the [[Laplacian Exponential|metric polyform]]. All existing couplings have positive strengths. Connectedness is assumed wherever the resistance metric of an entire graph is calculated.
+It uses the [[Basis|distinction between elements and affine vectors]], [[Decomposing a Form into Atomic and Difference Parts|orthogonal projection]], and the [[Laplacian Exponential|metric polyform]]. All existing couplings have positive strengths. Connectedness is assumed wherever the resistance metric of an entire graph is calculated.
 
 ## Three ways to reduce the number of vertices
 
@@ -371,3 +371,4 @@ The examples were calculated directly. Formulas (3), (4), (7), and (9)-(11) were
 
 1. Chan, S. H.; Kontorovich, A.; Pak, I. [Effective Resistance in Planar Graphs and Continued Fractions](https://www.math.ucla.edu/~pak/papers/KirchhoffCF10.pdf). Version dated May 15, 2025, formula (1.1): the effective resistance of an edge in a unit graph as the ratio of the spanning-tree count after contraction to the original count. In this note, (4) is derived for an arbitrary pair of vertices in a positively weighted graph.
 2. Devriendt, K. [Effective resistance is more than distance: Laplacians, Simplices and the Schur complement](https://arxiv.org/abs/2010.04521). *Linear Algebra and its Applications*, 639 (2022), 24-49, §2.4: the resistance simplex and the center and radius of its circumsphere. DOI: [10.1016/j.laa.2022.01.002](https://doi.org/10.1016/j.laa.2022.01.002).
+

@@ -2,8 +2,8 @@
 title: Core Specification of PMG
 date: 2026-10-09
 updated: 2026-11-08
-revision: 26
-translated_revision: 26
+revision: 27
+translated_revision: 27
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -1018,7 +1018,7 @@ A full treatment of the following thematic extensions requires separate definiti
 - interval forms, which require a separate treatment;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
 
-Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates and frames in [[Projections, Bi-coordinates, and Di-coordinates]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]].
+Definitions of the isotropic representation and the null vector are given in [[The Null Vector, Isotropic Representation, and the Boundary]], coordinates in [[Bi-coordinates and Di-coordinates]], frames and form decompositions in [[Decomposing a Form into Atomic and Difference Parts]], and the problem with prescribed values in [[Selected Vertices and the Dirichlet Problem]]. Their terminology is collected in the [[PMG terminology#Terminology of extensions|glossary of extensions]].
 
 Partition forms and their structural identities are defined in [[Partition Forms and the Tetrahedron Identity]], and symmetric sums and representation sizes in [[Symmetric Polyforms - Types and Normalizations]]. The [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials|Combinatorial Potentials]] series establishes the combinatorial coefficients of these sums and the distinction between partition counts and forest counts. Its general collection notation is recorded below; terminology from these series is included in the [[PMG terminology|glossary]]. Thematic definitions do not remove the applicability conditions of the base model or the explicitly stated balanced extension.
 
@@ -1489,6 +1489,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 27 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |
 | 26 | 2026-11-08 | Clarified the notation for a sphere element, its center, and its norm: $s=s_0+s^2z/2$. Reserved $\rho(G)$ for a graph's resistance radius. Aligned with Russian revision 26. |
 | 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |
 | 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
@@ -1515,3 +1516,4 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 | 1 | 2026-10-09 | First public core specification, aligned with the introductory series. Clarified formal forms, the space of boundaries, the domain of metric evaluation, the spanning-tree coefficient, and conditions for variation formulas. |
 
 Internal specification version 0.2 of 2026-09-21 was used as source material. Its core definitions are superseded by this document; its material on thematic extensions does not automatically become part of the core. Earlier revisions are historical records, not parallel current specifications.
+

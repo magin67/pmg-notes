@@ -355,7 +355,7 @@ $$
 =\frac{a+b}{2}+\frac{(a-b)^2}{8}z
 $$
 
-Preservation of (4) therefore does not make $\pi$ a linear or affine projection. Linear orthogonal projection onto a subspace and nonlinear selection of the center perform different tasks; they are compared in the [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension|note on coordinates]].
+Preservation of (4) therefore does not make $\pi$ a linear or affine projection. Linear orthogonal projection onto a subspace and nonlinear selection of the center perform different tasks; they are compared in the [[Decomposing a Form into Atomic and Difference Parts#Coordinates in the isotropic extension|section on projection]].
 
 ## Inner products of vectors
 
@@ -534,4 +534,5 @@ Representation of a sphere by an element is established in conformal geometric a
 
 This note completes the geometric foundation needed to study a graph's resistance radius and diameter. Their behavior under changes in couplings and their dimensionless combinations with other parameters belong to the series on metric parameters. The reciprocal $1/D_{\mathrm{res}}$ does not by itself acquire the electrical interpretation of conductance between specified terminals: such an interpretation requires a separate justification.
 
-Next: [[Projections, Bi-coordinates, and Di-coordinates]]. Navigation: [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]].
+Next: [[Bi-coordinates and Di-coordinates]]. Navigation: [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]].
+

@@ -2,8 +2,8 @@
 title: PMG Terminology
 date: 2026-10-09
 updated: 2026-11-08
-revision: 27
-translated_revision: 27
+revision: 28
+translated_revision: 28
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -522,13 +522,13 @@ The following definitions are used in the published series “Spaces”. They ex
 
 | Term | Russian equivalent | Meaning and source |
 | --- | --- | --- |
-| Frame of an object | Фрейм объекта | A representation of an object as a linear combination of selected elements, including the elements and coefficients. The set may be dependent; different frames may represent one object. [[Projections, Bi-coordinates, and Di-coordinates#Bi-coordinates and frames]]. |
-| Bi-coordinates | Би-координаты | Coefficients of the unique expansion of an object in a chosen basis of the corresponding linear space. A basis of weight-one elements is not required; barycentric coordinates of elements are a special case. [[Projections, Bi-coordinates, and Di-coordinates#Bi-coordinates and frames]]. |
+| Frame of an object | Фрейм объекта | A representation of an object as a linear combination of selected elements, including the elements and coefficients. The set may be dependent; different frames may represent one object. [[Decomposing a Form into Atomic and Difference Parts#The frame of an object]]. |
+| Bi-coordinates | Би-координаты | Coefficients of the unique expansion of an object in a chosen basis of the corresponding linear space. A basis of weight-one elements is not required; barycentric coordinates of elements are a special case. [[Bi-coordinates and Di-coordinates#Bi-coordinates]]. |
 | Bi-coordinate matrix | Матрица би-координат | The matrix $\mathbf B$ of expansion coefficients of selected objects in a specified basis. Its definition must state whether the coordinates of each object occupy a row or a column. The influence matrix is a particular case. |
 | Extended isotropic Gram matrix | Расширенный изотропный грамиан | The matrix $\mathbf G_z=G(a_1,\ldots,a_n,z)$ for local vertices and the null vector. With $z$ last, its blocks are $\left(\begin{smallmatrix}\mathbf G&\mathbf1\\\mathbf1^{\mathsf T}&0\end{smallmatrix}\right)$. [[The Null Vector, Isotropic Representation, and the Boundary#The vertex Gram matrix and the extended Gram matrix]]. |
-| Di-coordinates | Ди-координаты | Inner products of an object with the elements of the chosen basis. When the metric on its subspace is nondegenerate, these are also the coefficients of the projection in the reciprocal basis. [[Projections, Bi-coordinates, and Di-coordinates#Di-coordinates: inner products]]. |
-| Reciprocal basis | Взаимный базис | A basis of the same subspace whose inner products with the original basis elements are $1$ for matching indices and $0$ otherwise. It exists when the metric on the subspace is nondegenerate. [[Projections, Bi-coordinates, and Di-coordinates#The reciprocal basis]]. |
-| Laplacian of a frame | Лапласиан фрейма | The difference part of the form decomposition for a fixed frame: $L_q=\sum_{i<j}q^iq^j[a_j-a_i]^2$. It may change with the frame and is not determined by the object $q$ alone. [[Projections, Bi-coordinates, and Di-coordinates#The difference part and the Laplacian of a frame]]. |
+| Di-coordinates | Ди-координаты | Inner products of an object with the elements of the chosen basis. When the metric on its subspace is nondegenerate, these are also the coefficients of the projection in the reciprocal basis. [[Bi-coordinates and Di-coordinates#Di-coordinates: inner products]]. |
+| Reciprocal basis | Взаимный базис | A basis of the same subspace whose inner products with the original basis elements are $1$ for matching indices and $0$ otherwise. It exists when the metric on the subspace is nondegenerate. [[Bi-coordinates and Di-coordinates#The reciprocal basis]]. |
+| Laplacian of a frame | Лапласиан фрейма | The difference part of the form decomposition for a fixed frame: $L_q=\sum_{i<j}q^iq^j[a_j-a_i]^2$. It may change with the frame and is not determined by the object $q$ alone. [[Decomposing a Form into Atomic and Difference Parts#The difference part and the Laplacian of a frame]]. |
 | Point; local element | Точка; локальный элемент | An element of zero norm: $x\cdot z=1$, $x^2=0$. “Local point” may emphasize the model. [[The Null Vector, Isotropic Representation, and the Boundary#Local points]]. |
 | Nonlocal element | Нелокальный элемент | An element $p$ with $p^2\ne0$; weight $p\cdot z=1$ is already part of the definition of element. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
 | Center of an element; local center | Центр элемента; локальный центр | The point $\pi(p)=p-p^2z/2$ associated with an element $p$. A point is its own center. “Center” describes a relation to the original element, not a separate class of all points. [[Nonlocal Elements, Spheres, and Their Centers#Decomposing an element into its center and norm]]. |
@@ -537,8 +537,8 @@ The following definitions are used in the published series “Spaces”. They ex
 | Distinguished null vector | Выделенный нуль-вектор | The vector $z\ne0$, $z^2=0$, specifying affine weight by $\varepsilon(U)=U\cdot z$. Zero norm alone does not single out $z$: for example, $2z$ would specify a different functional. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Isotropic object; isotropic vector | Изотропный объект; изотропный вектор | A nonzero object $U$ with $U^2=0$: an isotropic vector at weight $0$, a point at weight $1$. In the symmetric extension with positive displacement metric, isotropic vectors are multiples of $z$. [[The Null Vector, Isotropic Representation, and the Boundary]]. |
 | Metric square | Метрический квадрат | A previous explanatory name for the norm $Y^2=Y\cdot Y$. The current text uses “norm”. It may be negative in an indefinite metric and differs from the form $[Y]^2$. |
-| Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension]]. |
-| Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Projections, Bi-coordinates, and Di-coordinates#The linear midpoint and its local center]]. |
+| Orbital relative to the chosen extended basis | Орбиталь относительно расширенного базиса | The bi-coordinate along $z$ in the specified extended basis. It differs from the di-coordinate $Y\cdot z$. [[Decomposing a Form into Atomic and Difference Parts#Coordinates in the isotropic extension]]. |
+| Sub-basis | Суб-базис | A selected subset of a full basis that generates its own subspace. An object outside that subspace has no expansion in the sub-basis, although its di-coordinates relative to these elements are defined. [[Decomposing a Form into Atomic and Difference Parts#The linear midpoint and its local center]]. |
 | Resistance radius | Резистивный радиус | For a connected undirected graph, $\rho=R_{\mathrm{sph}}^2$ is the squared Euclidean circumradius of the resistance simplex. The forest formula is $\rho=\xi_1/3-H_2/12$. [[Resistance Radius - Forest Formula and Matroid Invariance]]. In the isotropic representation, $\rho=(\mathbf G_z^{-1})_{n+1,n+1}$; this algebraic normalization extends to balanced graphs, where it can differ from the squared radius of the Euclidean realization of the symmetric metric part. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
 | Resistance diameter | Резистивный диаметр | $D_{\mathrm{res}}=4\rho$. In the symmetric case it is the squared linear diameter of the circumsphere. The balanced model retains the algebraic normalization through $\rho$; generally different from the maximum pairwise resistance. [[Vertex Contraction and Graph Gluing#Resistance radius is additive]]. |
 | Influence matrix | Матрица влияния | The matrix $\mathbf B$ of coefficients extending values from selected to internal vertices. Its rows give the bi-coordinates of projections. For a balanced graph, specify whether $\mathbf L$ or $\mathbf L^{\mathsf T}$ is used. [[Selected Vertices and the Dirichlet Problem]]. |
@@ -564,6 +564,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 28 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |
 | 27 | 2026-11-08 | Aligned sphere-element notation with the revised note on nonlocal elements: $s=s_0+s^2z/2$, norm $s^2$, and graph resistance radius $\rho(G)$. Aligned with Russian revision 27. |
 | 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |
 | 24 | 2026-11-05 | Recorded the fixed-graph abbreviation M and single-level potential subscripts; aligned with the second editorial pass through the introductory series. |
@@ -592,3 +593,4 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 | 1 | 2026-10-09 | First public core glossary, aligned with core specification revision 2 and the introductory series. Clarifies the levels of objects and evaluations, the spanning-tree coefficient, edge factors, and earlier names. This English version follows Russian revision 1. |
 
 Internal glossary version 1.1 of 2026-09-21 was used as source material. Its information about extensions remains relevant to their later preparation, but does not automatically form part of the current core terminology. Earlier revisions are records of changes, not parallel terminology standards.
+

@@ -79,7 +79,7 @@ The first index of $r_{ij}$ is the initial vertex, the second the target. For a 
 ## Reading routes
 
 - **Algebra:** notes 1-5, after [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]]. The main questions are what survives without symmetry and how to compute products.
-- **Metrics and geometry:** notes 1-3 followed by 6-9. [[The Null Vector, Isotropic Representation, and the Boundary]] and [[Projections, Bi-coordinates, and Di-coordinates]] provide the symmetric starting point.
+- **Metrics and geometry:** notes 1-3 followed by 6-9. [[The Null Vector, Isotropic Representation, and the Boundary]] and [[Bi-coordinates and Di-coordinates]] provide the symmetric starting point.
 - **Balancing data and flows:** notes 1 and 10; add 6-9 for the resulting metric. Scaling preserves directions and outgoing proportions while changing weights.
 - **Forests and toponomes:** notes 1-3 and 11 alongside [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. Numerical types alone do not determine products on a common vertex set.
 - **Permutation combinatorics:** notes 1 and 12, then [[Cyclic Partitions and the Combinatorial Potential of the First Kind]]. This route does not require the directional metric.

@@ -8,7 +8,7 @@ status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: vertex-elimination-and-induced-couplings
-order: 7
+order: 8
 description: "A graph on selected vertices: projecting the Laplacian, induced couplings, the response matrix, and preservation of the resistance metric through factorization of the metric polyform."
 aliases:
   - "en/Spaces/Vertex Elimination and Induced Couplings"
@@ -18,7 +18,7 @@ Select several vertices of a graph. Can we construct a graph on just these verti
 
 We will call this operation elimination of the internal vertices. Geometrically, it preserves the metric of the selected subspace. In polyform algebra, it is expressed by projecting the Laplacian and factoring its exponential.
 
-It uses [[Selected Vertices and the Dirichlet Problem|projections and the influence matrix]], the [[Projections, Bi-coordinates, and Di-coordinates|decomposition of the quadratic form of a frame]], and the [[Core specification|metric identity]]. We consider a finite, connected, undirected graph without loops. All existing couplings have positive coefficients; absent couplings have coefficient zero.
+It uses [[Selected Vertices and the Dirichlet Problem|projections and the influence matrix]], the [[Decomposing a Form into Atomic and Difference Parts|decomposition of the quadratic form of a frame]], and the [[Core specification|metric identity]]. We consider a finite, connected, undirected graph without loops. All existing couplings have positive coefficients; absent couplings have coefficient zero.
 
 ## What should remain after elimination
 
@@ -395,3 +395,4 @@ The text uses the current definitions in the [[Core specification|core specifica
 The path and star calculations are given in the text. In addition, eight settings were checked using exact rational arithmetic, including cases with one selected vertex and with all vertices selected. Projections computed from the original Gram matrix were compared with induced couplings and the response matrix. Direct exterior multiplication verified the factorization of the exponential and normalized potentials on bases of every exterior grade of the retained subspace. Elimination order and disconnected cases were checked separately. These checks verify formulas and examples; the general statements rest on the proofs given above. The note contains no hypotheses.
 
 1. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011. Formula (3.4): single-vertex elimination; Lemma 3.3: sequential elimination; Theorem 3.9: preservation of effective resistances.
+

@@ -8,7 +8,7 @@ status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: couplings-within-one-part-of-a-bipartite-graph
-order: 8
+order: 9
 description: "From a participation table to couplings between objects: projections, decomposition of the Laplacian and its exponential, preservation of effective resistances, and the meaning of the common spanning-tree parameter."
 aliases:
   - "en/Spaces/Couplings Within One Part of a Bipartite Graph"
@@ -18,7 +18,7 @@ Suppose we know which documents each employee has contributed to. We want to obt
 
 In PMG, this transition has a metric requirement: effective resistances between the retained vertices must remain unchanged. This determines the new coupling strengths. We will examine how this requirement relates to projections and polyforms, how to perform the calculation column by column, and what the results for the two sides of the table have in common.
 
-This is the final note in the series “Spaces”. It uses [[Projections, Bi-coordinates, and Di-coordinates|bi-coordinates and the Laplacian of a frame]], [[Selected Vertices and the Dirichlet Problem|projections in the Dirichlet problem]], and [[Vertex Elimination and Induced Couplings|elimination of internal vertices]].
+This is the final note in the series “Spaces”. It uses [[Bi-coordinates and Di-coordinates|bi-coordinates]] and [[Decomposing a Form into Atomic and Difference Parts#The difference part and the Laplacian of a frame|the Laplacian of a frame]], [[Selected Vertices and the Dirichlet Problem|projections in the Dirichlet problem]], and [[Vertex Elimination and Induced Couplings|elimination of internal vertices]].
 
 ## The participation table and the choice of a subspace
 
@@ -446,7 +446,7 @@ Here $\rho_P+\rho_X=1/2<29/48=\rho(G)$, whereas in the example of Figure 2 the s
 > \end{aligned}
 > $$
 >
-> By the [[Projections, Bi-coordinates, and Di-coordinates#Decomposing a form using frame elements and their differences|frame form decomposition]], the vector $v-h$ has norm
+> By the [[Decomposing a Form into Atomic and Difference Parts#Decomposing a form using frame elements and their differences|frame form decomposition]], the vector $v-h$ has norm
 >
 > $$
 > \|v-h\|^2=t(v)-\frac12\sum_w h^w t(w)
@@ -575,3 +575,4 @@ The numerical examples were checked using exact rational arithmetic. Effective r
 
 1. Malugin, D. V. [How to Connect the Unconnected](https://habr.com/ru/articles/533544/) (in Russian). Habr, 24 December 2020. The application, the transformation of a coupling table, and the example with three objects and four intermediaries.
 2. Dörfler, F.; Bullo, F. [Kron Reduction of Graphs with Applications to Electrical Networks](https://arxiv.org/abs/1102.2950). Preprint, 2011. Formula (3.4): single-vertex elimination; Theorem 3.9: preservation of effective resistances. The general vertex-elimination result is applied here to a part with no internal couplings.
+

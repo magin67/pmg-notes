@@ -167,7 +167,7 @@ No pairing of two sources or two receivers is separately introduced. The existin
 
 ## Bi-coordinates and di-coordinates
 
-As in [[Projections, Bi-coordinates, and Di-coordinates]], bi-coordinates are expansion coefficients. For specified representatives,
+As in [[Bi-coordinates and Di-coordinates]], bi-coordinates are expansion coefficients. For specified representatives,
 
 $$
 X_{\mathrm{out}}=\sum_i b^i_{\mathrm{out}}(X)a_i^{\mathrm{out}},

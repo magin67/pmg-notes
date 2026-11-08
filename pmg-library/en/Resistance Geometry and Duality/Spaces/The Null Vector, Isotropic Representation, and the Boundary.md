@@ -541,7 +541,7 @@ The exterior description of a subspace requires affine independence of the Eucli
 
 Introducing $z$ is not necessary for calculating effective resistances, finding projections in $W$, or solving the Dirichlet problem. Here it connects local points, affine weight, exterior descriptions of subspaces, and the metric realization of the boundary. The geometry of spheres and preservation of metric evaluations of boundaries under changes in vertex norms are discussed in the [[Nonlocal Elements, Spheres, and Their Centers|next note]].
 
-The [[Projections, Bi-coordinates, and Di-coordinates#Coordinates in the isotropic extension|note on coordinates in the isotropic extension]] distinguishes linear orthogonal projection from selection of the local center.
+The [[Decomposing a Form into Atomic and Difference Parts#Coordinates in the isotropic extension|note on coordinates in the isotropic extension]] distinguishes linear orthogonal projection from selection of the local center.
 
 ## Sources and status of the results
 
@@ -552,4 +552,5 @@ The previous revision included exact rational checks in the four-dimensional mod
 The note is based on the author's PMG research. Local points are denoted directly; their linear combinations and local centers are explicitly distinguished.
 
 The isotropic model of Euclidean points and the exterior description of lines are known constructions in conformal geometric algebra. The correspondence was checked against [H. Li, D. Hestenes, A. Rockwood, *Generalized Homogeneous Coordinates for Computational Geometry*](https://davidhestenes.net/geocalc/pdf/CompGeom-ch2.pdf), §2.3, equations (2.25), (2.26), and (2.32)–(2.34). That source uses $x\cdot e=-1$; our notation corresponds to $z=-e$ and $p_0=e_0$. The geometric product of Clifford algebra is not identified with the PMG product of forms.
+
 

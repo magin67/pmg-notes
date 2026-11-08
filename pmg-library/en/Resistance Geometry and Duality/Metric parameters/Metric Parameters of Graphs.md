@@ -39,7 +39,7 @@ Secondary thematic entries:
 
 The graph part requires [[Effective Resistance and Graph Geometry|effective resistance and the resistance simplex]], and [[Laplacian, Green Matrix, and Effective Resistance Matrix|conversions between the Laplacian, Green matrix, and resistance matrix]]. The polyform expressions build on [[Laplacian Exponential|the Laplacian exponential and normalized potentials]].
 
-The geometric background is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]. Particularly relevant are [[Nonlocal Elements, Spheres, and Their Centers|the distinction between a sphere element and its center]], [[Projections, Bi-coordinates, and Di-coordinates|projections and coordinates]], and, for comparing the two types of vertex removal, [[Vertex Elimination and Induced Couplings|elimination that preserves the metric]].
+The geometric background is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]. Particularly relevant are [[Nonlocal Elements, Spheres, and Their Centers|the distinction between a sphere element and its center]], [[Decomposing a Form into Atomic and Difference Parts|projections]] and [[Bi-coordinates and Di-coordinates|coordinates]], and, for comparing the two types of vertex removal, [[Vertex Elimination and Induced Couplings|elimination that preserves the metric]].
 
 General definitions and notation are given in the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]].
 
@@ -127,3 +127,4 @@ All eight notes are available in Russian and English, with matching notation and
 | Trees and biconnected blocks | Uniqueness of the spanning tree; local Foster formula | Exact extremal examples | None |
 | Sensitivity and decrease under enlarged observations | Spanning-tree derivative and Kron reduction | Distinguishing forms, metrics, and observations | Consequences of established formulas |
 | Comparison with boundary and Greenian norms | Gram determinants, the two exponential metrics, and signed forest sums | Distinguishing grades and interpretations | Exposition and examples, not a priority claim |
+

@@ -320,7 +320,7 @@ This star connects $i$ to every other vertex, regardless of whether these coupli
 > q^i=-\frac{n-1}{n},\qquad q^j=\frac1n\quad(j\ne i),\qquad \sum_jq^j=0
 > $$
 >
-> In the [[Projections, Bi-coordinates, and Di-coordinates#Decomposing a form using frame elements and their differences|form decomposition in a point frame]], the point part vanishes because the coefficients sum to zero. Separating pairs containing $i$ from pairs of the other vertices gives
+> In the [[Decomposing a Form into Atomic and Difference Parts#Decomposing a form using frame elements and their differences|form decomposition in a point frame]], the point part vanishes because the coefficients sum to zero. Separating pairs containing $i$ from pairs of the other vertices gives
 >
 > $$
 > [v_i]^2=\frac{n-1}{n^2}L_{\star_i}-\frac1{n^2}(L_{K_n}-L_{\star_i})
@@ -678,3 +678,4 @@ Ranking by the coordinates of the other, Laplacian, circumcenter is studied in [
 4. NetworkX. [Eigenvector centrality](https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.centrality.eigenvector_centrality.html). The adjacency-matrix definition and conditions for a positive eigenvector. This note normalizes by the sum, not the Euclidean length of the vector.
 5. NetworkX. [Krackhardt kite graph](https://networkx.org/documentation/stable/reference/generated/networkx.generators.small.krackhardt_kite_graph.html), [edge list in the source code](https://networkx.org/documentation/stable/_modules/networkx/generators/small.html#krackhardt_kite_graph). Source of the graph topology and numbering; the figure and the three centrality calculations were prepared for this note.
 6. D. Malyugin. [Express Analysis of Metric Parameters of Graphs](https://habr.com/ru/articles/534182/), 2020 (in Russian), section “Spanning-tree degree and centrality”. The earlier definition uses $\delta_i-1$; this note explicitly distinguishes the chosen normalization.
+
