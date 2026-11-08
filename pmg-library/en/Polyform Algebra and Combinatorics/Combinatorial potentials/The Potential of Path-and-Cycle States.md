@@ -1,9 +1,9 @@
 ---
 title: The Potential of Path-and-Cycle States
 date: 2026-10-25
-updated: 2026-10-25
-revision: 1
-source_revision: 1
+updated: 2026-11-08
+revision: 2
+source_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: path-and-cycle-state-potential
@@ -14,9 +14,9 @@ aliases:
   - "en/Combinatorial potentials/The Potential of Path-and-Cycle States"
 ---
 
-The [[Cyclic Partitions and the Combinatorial Potential of the First Kind|potential of the first kind]] counts permutations of a prescribed cycle type. Intermediate states in the process of adding arcs also contain open paths. The author's research suggested the formula $u(\lambda_k)=k!/(f[m_j!]!)$ for these states. Here it receives a precise combinatorial definition and a proof.
+Along a directed path of two arcs, the arc labels can occur in order $1,2$ or $2,1$. On a directed 2-cycle, these written sequences differ only in the starting position and specify one cyclic order. How can we count the possibilities for a state containing both paths and cycles?
 
-The essential distinction concerns the labels: $u$ counts ways to arrange **distinct arcs** within components of prescribed types. Counting graphs on distinct vertices introduces an additional factor. This explains both the factorial of the arc count and the coefficients accompanying falling factorials.
+The [[Cyclic Partitions and the Combinatorial Potential of the First Kind|first-kind potential]] answers this question for cycles alone. Here it is extended to open paths. The potential $u$ counts structures with distinguishable arcs and no individual vertex labels. After labelling the vertices, we separately obtain the graph count $N_n$ and the number $H_n$ of construction orders.
 
 ## The state type and vertex count
 
@@ -152,11 +152,19 @@ The six graphs correspond to the six orders of the three vertices along the path
 
 Formulas (1)-(2) remain valid in the loopless model for types with $c_1=0$. Probabilities under sequential random choice require a separately specified rule for choosing arcs; a potential alone does not determine that rule.
 
+![Potential Graphs and Histories](<Potential Graphs and Histories.svg>)
+
+For a path of two arcs, $u=2$. On vertices $a,b,c$, there are $N_3=6$ directed paths, one for each vertex order. Each allows two arc-addition orders, so $H_3=12$. The right panel shows the two histories of just one graph, $a	o b	o c$.
+
 ## The connection to Laguerre configurations
 
 In the literature, digraphs with indegree and outdegree at most $1$ are called **Laguerre digraphs**. Their description as collections of paths and cycles appears in Foata and Strehl [1, §§2-3] and in the modern work of Deb, Dyachenko, Pétréolle, and Sokal [2, §1.2].
 
 To relate this model to $u$, turn each labelled arc of the original state into a vertex of an auxiliary graph. Join two such vertices by an arc when the corresponding original arcs immediately follow one another along a path or cycle. A cycle of length $j$ remains a cycle on $j$ vertices; a path $\underline j$ becomes a path on $j$ vertices. A loop remains a loop, whereas $\underline1$ becomes an isolated vertex.
+
+![Arcs Become Vertices](<Arcs Become Vertices.svg>)
+
+A path of two arcs has three original vertices but two vertices in the auxiliary graph. A single open arc becomes an isolated vertex; a loop remains a loop. Labels are preserved as they move from arcs to vertices.
 
 This is a bijection between objects counted by $u$ and Laguerre digraphs on $k$ labelled vertices with prescribed component sizes and kinds. The auxiliary graph's vertex count equals the original graph's **arc count**.
 

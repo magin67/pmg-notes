@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title"><title id="title">Потенциал графы и истории</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="650" fill="white"/>
+<text x="560" y="38" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Один тип пути, три разных подсчёта</text>
+<rect x="20" y="75" width="320" height="480" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="400" y="75" width="320" height="480" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="780" y="75" width="320" height="480" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text x="180" y="115" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Метки связей</text>
+<text x="180" y="144" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">u = 2</text>
+<line x1="83.0" y1="240.0" x2="167.0" y2="240.0" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="193.0" y1="240.0" x2="277.0" y2="240.0" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="70" cy="240" r="10" fill="white" stroke="#203344" stroke-width="2"/>
+<circle cx="180" cy="240" r="10" fill="white" stroke="#203344" stroke-width="2"/>
+<circle cx="290" cy="240" r="10" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="125" y="220" font-size="25" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">1</text>
+<text x="235" y="220" font-size="25" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">2</text>
+<line x1="83.0" y1="390.0" x2="167.0" y2="390.0" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="193.0" y1="390.0" x2="277.0" y2="390.0" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="70" cy="390" r="10" fill="white" stroke="#203344" stroke-width="2"/>
+<circle cx="180" cy="390" r="10" fill="white" stroke="#203344" stroke-width="2"/>
+<circle cx="290" cy="390" r="10" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="125" y="370" font-size="25" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">2</text>
+<text x="235" y="370" font-size="25" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">1</text>
+<text x="560" y="115" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Метки вершин</text>
+<text x="526.5" y="144" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">N</text>
+<text x="543.5" y="149.28" font-size="17" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">3</text>
+<text x="552.5" y="144" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start"> = 6</text>
+<text x="560" y="220" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a → b → c</text>
+<text x="560" y="270" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a → c → b</text>
+<text x="560" y="320" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b → a → c</text>
+<text x="560" y="370" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b → c → a</text>
+<text x="560" y="420" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c → a → b</text>
+<text x="560" y="470" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c → b → a</text>
+<text x="940" y="115" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Порядок добавления</text>
+<text x="863.5" y="144" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">H</text>
+<text x="880.5" y="149.06" font-size="16" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">3</text>
+<text x="889.5" y="144" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start"> = 6 × 2 = 12</text>
+<text x="940" y="220" font-size="28" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">a → b → c</text>
+<text x="940" y="300" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Сначала ab, затем bc</text>
+<text x="940" y="385" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Сначала bc, затем ab</text>
+<text x="940" y="475" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Две истории</text>
+<text x="940" y="504" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">одного из шести графов</text>
+<line x1="345" y1="310" x2="395" y2="310" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="725" y1="310" x2="775" y2="310" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="560" y="610" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Каждое промежуточное состояние удовлетворяет ограничениям степеней</text>
+</svg>

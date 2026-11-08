@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="470" viewBox="0 0 1120 470" role="img" aria-labelledby="title"><title id="title">Два разных числа три</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="470" fill="white"/>
+<rect x="20" y="20" width="520" height="355" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="580" y="20" width="520" height="355" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text x="280" y="65" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Вспомогательные метки 1, 2, 3</text>
+<text x="280" y="94" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Разбиения размеров [2, 1]</text>
+<text x="280" y="180" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">12 | 3</text>
+<text x="280" y="233" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">13 | 2</text>
+<text x="280" y="286" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">23 | 1</text>
+<text x="213.0" y="345" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">s</text>
+<text x="227.0" y="350.5" font-size="18" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">2</text>
+<text x="237.0" y="345" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">([2,1]) = 3</text>
+<text x="840" y="65" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Фиксированные вершины a, b, c</text>
+<text x="840" y="94" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Деревья на одном блоке</text>
+<text x="840" y="130" font-size="18" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">На фиксированной паре - один вариант</text>
+<line x1="641.0" y1="180.0" x2="714.0" y2="180.0" stroke="#24628a" stroke-width="3"/>
+<line x1="630.9428176394412" y1="197.92358061632598" x2="667.0571823605588" y2="257.076419383674" stroke="#24628a" stroke-width="3"/>
+<circle cx="620" cy="180" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="620" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="735" cy="180" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="735" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="678" cy="275" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="678" y="282" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<line x1="806.0" y1="180.0" x2="879.0" y2="180.0" stroke="#24628a" stroke-width="3"/>
+<line x1="889.1955891360219" y1="198.00735143996343" x2="853.8044108639781" y2="256.99264856003657" stroke="#24628a" stroke-width="3"/>
+<circle cx="785" cy="180" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="785" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="900" cy="180" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="900" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="843" cy="275" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="843" y="282" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<line x1="960.9428176394412" y1="197.92358061632598" x2="997.0571823605588" y2="257.076419383674" stroke="#24628a" stroke-width="3"/>
+<line x1="1054.195589136022" y1="198.00735143996343" x2="1018.8044108639781" y2="256.99264856003657" stroke="#24628a" stroke-width="3"/>
+<circle cx="950" cy="180" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="950" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="1065" cy="180" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="1065" y="187" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="1008" cy="275" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="1008" y="282" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text x="840" y="345" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">t([2,1]) = 3</text>
+<text x="560" y="430" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">На пяти вершинах: 10 разбиений × 3 дерева = 30 лесов</text>
+</svg>

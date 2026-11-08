@@ -1,9 +1,9 @@
 ---
 title: Combinatorial Potentials in Symmetric Polyforms
 date: 2026-10-20
-updated: 2026-10-20
-revision: 1
-source_revision: 3
+updated: 2026-11-08
+revision: 2
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: combinatorial-potentials-in-symmetric-polyforms
@@ -137,79 +137,22 @@ $$
 
 The sign $\#$ denotes the size of this particular representation: the number of terms before applying structural identities. It does not denote a vector-space dimension or an invariant of the polyform itself.
 
-## The size of a symmetric sum
+## What the numbers 3, 10, and 30 mean
 
-Let $J$ be the set of distinct positive grades in $\boldsymbol k$. For $j\in J$, let $\mu_j$ be the number of parts $k_i$ equal to $j$. Then $\boldsymbol\mu=[\mu_j]_{j\in J}$ is their collection of positive multiplicities.
+For type $[2,1]$ by edges on five vertices, we will distinguish the following counts:
 
-We use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|collection product notation]]: $[u_i]!$ is the product of the elements and $[u_i!]!$ is the product of their factorials.
+| Quantity | Objects counted | Value |
+| --- | --- | ---: |
+| $s_2([2,1])$ | Partitions of three auxiliary labels into a pair and a singleton | 3 |
+| $\#E_5[2,1]=s_2([3,2])$ | Partitions of five vertices into a triple and a pair | 10 |
+| $t([2,1])$ | Choices of trees on already fixed vertex blocks | 3 |
+| $F_5([2,1])$ | All complete-graph forests with component sizes $3$ and $2$ | 30 |
 
-> [!info] The size of a symmetric sum
-> **Proposition.** For $r\geqslant1$, $k_i\geqslant1$, and $\ell=n-k-r\geqslant0$, the size of the symmetric sum is
->
-> $$
-> \boxed{
-> \#E_n[k_1,\ldots,k_r,0^\ell]
-> =s_2([k_1+1,\ldots,k_r+1,1^\ell])
-> =\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
-> }
-> $$
+The equality $s_2([2,1])=t([2,1])=3$ belongs to this example. These are different functions: for instance, $s_2([2])=1$, whereas $t([2])=3$.
 
-> [!note]- Proof
-> **Proof.** Partition the original vertices into blocks of sizes $k_i+1$ and $\ell$ singletons. Apply the potential formula to this collection of sizes. The shift $k_i\mapsto k_i+1$ preserves the multiplicities of the positive parts. All these blocks have size at least $2$, so the singletons form a separate group of multiplicity $\ell$. Their permutations supply the factor $\ell!$, giving the stated formula. $\square$
+![Two Different Counts of Three](<Two Different Counts of Three.svg>)
 
-For type $[2,1,0]$ on six vertices,
-
-$$
-\#E_6[2,1,0]
-=s_2([3,2,1])
-=\frac{6!}{1!\,[3!,2!]!\,[1!,1!]!}
-=60
-$$
-
-The number $60$ also follows directly: choose the isolated vertex in six ways, then partition the remaining five vertices into a triple and a pair in ten ways.
-
-For type $[2,1,0,0]$ on seven vertices, choose the two isolated vertices as an unordered pair:
-
-$$
-\#E_7[2,1,0,0]=\binom72\cdot10=210
-$$
-
-### Choosing a subset and the external potential
-
-Let a numerical type $\mathbf x$ have positive parts and weight $v\leqslant n$. First choose $v$ elements from an $n$-element set, then partition the chosen subset according to $\mathbf x$.
-
-> [!info] Choosing a subset and the external potential
-> **Definition.** The number of such partial partitions is the **external combinatorial potential**:
->
-> $$
-> e_n(\mathbf x)=\binom nv s_2(\mathbf x),\qquad v=w(\mathbf x)
-> $$
-
-Unchosen elements remain outside the partitioned subset. This condition is part of the object being counted.
-
-If every part of $\mathbf x$ is at least $2$, the unchosen vertices can be added uniquely as singleton blocks. This is precisely the count for symmetric sums:
-
-$$
-\#E_n[k_1,\ldots,k_r,0^\ell]
-=e_n([k_1+1,\ldots,k_r+1])
-=\binom{n}{k+r}s_2([k_1+1,\ldots,k_r+1])
-$$
-
-For positive type $[2,1]$, this gives the single expression
-
-$$
-\#E_n[2,1,0^{n-5}]=10\binom n5,\qquad n\geqslant5
-$$
-
-The absence of parts equal to $1$ is essential for uniqueness of this extension. For example,
-
-$$
-e_4([2,1])=\binom43\cdot3=12,
-\qquad
-s_2([2,1,1])=6
-$$
-
-The first count distinguishes a singleton in the chosen subset from an unchosen element. Forgetting this distinction and treating both as ordinary singleton blocks turns each pair of partial partitions into one full partition. For example, $ab\mid c$ with $d$ left outside and $ab\mid d$ with $c$ left outside both give $ab\mid c\mid d$.
+On the left, three auxiliary labels are partitioned; on the right, trees are chosen on an already fixed triple of vertices. The answer $3$ counts different objects. For five original vertices, choose one of $10$ partitions and then one of $3$ trees: there are $30$ forests.
 
 ## Why there are ten partitions but thirty forests
 
@@ -265,6 +208,84 @@ For $\boldsymbol k=[2,1]$, $t(\boldsymbol k)=[3,1]!=3$. For $[1,1]$, both blocks
 In the formula for $t$, the exponents in the explicitly defined collection $[(k_i+1)^{k_i-1}]$ are ordinary numerical powers. This differs from the shorthand for multiplicities in a type, such as $[1^r]$.
 
 The count $F_n$ applies to the complete graph, where all edges within each block are available. In a general graph, some trees may be absent. The number of its spanning forests with fixed vertex blocks depends on the spanning-tree counts of the induced subgraphs; block sizes alone are insufficient.
+
+## The size of a symmetric sum
+
+Let $J$ be the set of distinct positive grades in $\boldsymbol k$. For $j\in J$, let $\mu_j$ be the number of parts $k_i$ equal to $j$. Then $\boldsymbol\mu=[\mu_j]_{j\in J}$ is their collection of positive multiplicities.
+
+We use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|collection product notation]]: $[u_i]!$ is the product of the elements and $[u_i!]!$ is the product of their factorials.
+
+> [!info] The size of a symmetric sum
+> **Proposition.** For $r\geqslant1$, $k_i\geqslant1$, and $\ell=n-k-r\geqslant0$, the size of the symmetric sum is
+>
+> $$
+> \boxed{
+> \#E_n[k_1,\ldots,k_r,0^\ell]
+> =s_2([k_1+1,\ldots,k_r+1,1^\ell])
+> =\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
+> }
+> $$
+
+> [!note]- Proof
+> **Proof.** Partition the original vertices into blocks of sizes $k_i+1$ and $\ell$ singletons. Apply the potential formula to this collection of sizes. The shift $k_i\mapsto k_i+1$ preserves the multiplicities of the positive parts. All these blocks have size at least $2$, so the singletons form a separate group of multiplicity $\ell$. Their permutations supply the factor $\ell!$, giving the stated formula. $\square$
+
+For type $[2,1,0]$ on six vertices,
+
+$$
+\#E_6[2,1,0]
+=s_2([3,2,1])
+=\frac{6!}{1!\,[3!,2!]!\,[1!,1!]!}
+=60
+$$
+
+The number $60$ also follows directly: choose the isolated vertex in six ways, then partition the remaining five vertices into a triple and a pair in ten ways.
+
+For type $[2,1,0,0]$ on seven vertices, choose the two isolated vertices as an unordered pair:
+
+$$
+\#E_7[2,1,0,0]=\binom72\cdot10=210
+$$
+
+## Choosing a subset and the external potential
+
+Let a numerical type $\mathbf x$ have positive parts and weight $v\leqslant n$. First choose $v$ elements from an $n$-element set, then partition the chosen subset according to $\mathbf x$.
+
+> [!info] Choosing a subset and the external potential
+> **Definition.** The number of such partial partitions is the **external combinatorial potential**:
+>
+> $$
+> e_n(\mathbf x)=\binom nv s_2(\mathbf x),\qquad v=w(\mathbf x)
+> $$
+
+Unchosen elements remain outside the partitioned subset. This condition is part of the object being counted.
+
+If every part of $\mathbf x$ is at least $2$, the unchosen vertices can be added uniquely as singleton blocks. This is precisely the count for symmetric sums:
+
+$$
+\#E_n[k_1,\ldots,k_r,0^\ell]
+=e_n([k_1+1,\ldots,k_r+1])
+=\binom{n}{k+r}s_2([k_1+1,\ldots,k_r+1])
+$$
+
+For positive type $[2,1]$, this gives the single expression
+
+$$
+\#E_n[2,1,0^{n-5}]=10\binom n5,\qquad n\geqslant5
+$$
+
+The absence of parts equal to $1$ is essential for uniqueness of this extension. For example,
+
+$$
+e_4([2,1])=\binom43\cdot3=12,
+\qquad
+s_2([2,1,1])=6
+$$
+
+The first count distinguishes a singleton in the chosen subset from an unchosen element. Forgetting this distinction and treating both as ordinary singleton blocks turns each pair of partial partitions into one full partition. For example, $ab\mid c$ with $d$ left outside and $ab\mid d$ with $c$ left outside both give $ab\mid c\mid d$.
+
+![Selected and Unselected Singletons](<Selected and Unselected Singletons.svg>)
+
+Two partial partitions become one full partition when we forget which singleton was selected. Thus $e_4([2,1])=12$, whereas $s_2([2,1,1])=6$. The outline marks the selected subset.
 
 ## The potential in the fundamental theorem coefficient
 
@@ -344,19 +365,6 @@ $$
 The additional factor is $2!=2$.
 
 Grade zero is treated separately: $E_n[0^n]=e$. Its sole partition consists of singletons, and its sole forest has no edges. The formula involving $s_2(\boldsymbol k)$ assumes at least one positive part and does not apply to this case.
-
-## What the numbers 3, 10, and 30 mean
-
-For type $[2,1]$ by edges on five vertices, the results are:
-
-| Quantity | Objects counted | Value |
-| --- | --- | ---: |
-| $s_2([2,1])$ | Partitions of three auxiliary labels into a pair and a singleton | 3 |
-| $\#E_5[2,1]=s_2([3,2])$ | Partitions of five vertices into a triple and a pair | 10 |
-| $t([2,1])$ | Choices of trees on already fixed vertex blocks | 3 |
-| $F_5([2,1])$ | All complete-graph forests with component sizes $3$ and $2$ | 30 |
-
-The equality $s_2([2,1])=t([2,1])=3$ belongs to this example. These are different functions: for instance, $s_2([2])=1$, whereas $t([2])=3$.
 
 The identity coefficient cannot be found by dividing representation sizes either. The sum $E_5[3]$ has five terms, since its four-vertex block can be chosen in five ways. Thus in
 

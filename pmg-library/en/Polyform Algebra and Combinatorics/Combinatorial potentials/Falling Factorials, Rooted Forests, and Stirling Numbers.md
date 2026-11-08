@@ -1,9 +1,9 @@
 ---
 title: "Falling Factorials, Rooted Forests, and Stirling Numbers"
 date: 2026-10-20
-updated: 2026-10-20
-revision: 2
-source_revision: 2
+updated: 2026-11-08
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: falling-factorials-rooted-forests-and-stirling-numbers
@@ -17,6 +17,17 @@ aliases:
 Ordinary powers, falling factorials, and Abel polynomials arise from different rules for constructing graphs. Their expansions group constructions by the number of occupied roots or by partition type. A shift of the variable also has a combinatorial meaning: some possible values are distinguished in advance.
 
 We use [[Partitions and the Combinatorial Potential of the Second Kind|partitions and the potential of the second kind]] and [[Cayley's Theorem and Joining Prescribed Components|Cayley's formula]]. The coefficients introduced in [[Forest Coefficients and Abel Polynomials]] receive a further interpretation through forest codes. This establishes an explicit correspondence with $r$-Stirling numbers; the proof does not require polyforms.
+
+The main route is: star forests → general rooted forests → a code → a partition of code positions. It explains why forest coefficients are $r$-Stirling numbers. Finite differences, shifted expansions, and Newton’s formula form a supplementary part after this explanation.
+
+| Letter | Role |
+| --- | --- |
+| $w$ or $k$ | Number of ordinary labelled vertices; the code has $k-1$ free positions and one final entry |
+| $q$ | Number of prescribed labelled roots, including isolated roots |
+| $m$ | Number of nonisolated roots, or the corresponding nonempty blocks of ordinary vertices |
+| $r$ | Number of markers in a partition counted by an $r$-Stirling number |
+
+The indices $k,m$ in $\operatorname{St}(k,m)$ refer to the auxiliary rooted forest. In [[Forest Coefficients and Abel Polynomials]], the number of components of the original partition is denoted separately by $c$.
 
 ## Star forests and ordinary powers
 
@@ -74,7 +85,7 @@ For $U=\{a,b,c\}$ and two nonempty blocks, there are three partitions: $ac\mid b
 
 ![Nine forests: three partitions of ordinary vertices into a pair and a singleton, with three trees on each pair and its root](Nine%20Rooted%20Forests.svg)
 
-*Figure 1. The scheme of nine possibilities is retained from the author's research drawing. Ordinary vertices are labelled $a,b,c$; added roots are coloured and marked $\circledast$. The roots have no individual labels. Each row fixes the partition of ordinary vertices and varies the tree on the triple.*
+*Figure 1. The scheme of nine possibilities is retained from the author's research drawing. Ordinary vertices are labelled $a,b,c$; added roots are coloured and marked by a small star inside a circle. The roots have no individual labels. Each row fixes the partition of ordinary vertices and varies the tree on the triple.*
 
 Giving the roots two distinct labels produces $2!\cdot9=18$ possibilities. This is not the count of all forests of type $[2,1]$ on an arbitrary five-element labelled vertex set: [[Combinatorial Potentials in Symmetric Polyforms#What the numbers 3, 10, and 30 mean|that count is $30$]]. Here the roles of ordinary vertices and roots are fixed in advance.
 
@@ -115,31 +126,6 @@ A_w(q)=q(q+w)^{w-1}
 $$
 
 The combinatorial proof applies to integers $q\geqslant1$. Since both sides are polynomials, the identity extends to an arbitrary variable $x$. For $w=0$, define $A_0(x)=1$ separately: all roots are isolated and the forest is unique.
-
-## Finite differences exclude unused roots
-
-Now take exactly $m$ prescribed labelled roots and require each to be nonisolated. The block construction gives $m!\operatorname{St}(w,m)$ such forests.
-
-Inclusion-exclusion gives the same result. If only $j$ roots may be used, the others remain isolated, and the forest on the ordinary vertices and allowed roots can be chosen in $A_w(j)$ ways. Thus, for $w\geqslant1$,
-
-$$
-m!\operatorname{St}(w,m)
-=\sum_{j=0}^{m}(-1)^{m-j}\binom mj A_w(j)
-=\Delta^m A_w(0)
-$$
-
-Here $\Delta f(x)=f(x+1)-f(x)$ and $A_w(0)=0$. The finite difference therefore has a concrete meaning: it excludes constructions leaving at least one prescribed root unused.
-
-For star forests, the same count gives
-
-$$
-m!S(w,m)=\Delta^m(x^w)\big|_{x=0}
-=\sum_{j=0}^{m}(-1)^{m-j}\binom mj j^w
-$$
-
-For example, $S(4,2)=s_2([3,1])+s_2([2,2])=4+3=(2^4-2)/2!$. The positive sum groups objects by block type; the alternating sum removes empty blocks. These are two counts of the same set.
-
-For three ordinary vertices and two roots, the total forest count is $A_3(2)=50$. There are $A_3(1)=16$ forests with each specified root isolated. Both roots cannot be isolated simultaneously. Thus $50-16-16=18=2!\operatorname{St}(3,2)$, agreeing with Figure 1.
 
 ## Distinguished values and r-Stirling numbers
 
@@ -200,6 +186,10 @@ In the partition on the right, marker elements represent **allowed code values**
 > [!example] An example of the bijection
 > For the forest in Figure 2, the final root is $\rho_0=\beta$. The first three code positions are $(b,\alpha,d)$: position one is attached to distinguished label $b$, position three to distinguished label $d$, and position two forms the sole block without a marker. There are five distinguished labels: $a,b,c,d,\rho_0$. This gives a partition of eight elements into six blocks with five separated markers, an object counted by $\left\{\begin{smallmatrix}8\\6\end{smallmatrix}\right\}_5$.
 
+![From a Forest to a Partition of Positions](<From a Forest to a Partition of Positions.svg>)
+
+The example continues the code $(b,\alpha,d;\beta)$. There are five markers: $a,b,c,d,\rho_0$, with $\rho_0=\beta$. Positions $1,2,3$ are shown separately from the markers. The blocks are $\{a\}$, $\{b,1\}$, $\{c\}$, $\{d,3\}$, $\{\rho_0\}$, and $\{2\}$: eight elements, six blocks, and five separated markers.
+
 Thus row $k$ of the forest table corresponds to parameter $r=k+1$. For example, $16,9,1$ belong to $r=4$, while $125,91,18,1$ belong to $r=5$. The whole forest table is not a table for one fixed $r$.
 
 ### Two graph interpretations of the number 91
@@ -227,6 +217,35 @@ $$
 $$
 
 A root's number of occurrences equals its degree in the graph. The first sum therefore groups forests by component sizes; the second groups them by the degree of the root that does not end the code. The individual counts $64,27$ and $75,15,1$ need not match: they partition the same set of forests into different classes.
+
+## Supplementary route: differences and polynomial expansions
+
+The main combinatorial correspondence is now established. The remaining sections use the same count to extract coefficients by finite differences and to change a polynomial basis. This part is not a prerequisite for the proved bijection.
+
+## Finite differences exclude unused roots
+
+Now take exactly $m$ prescribed labelled roots and require each to be nonisolated. The block construction gives $m!\operatorname{St}(w,m)$ such forests.
+
+Inclusion-exclusion gives the same result. If only $j$ roots may be used, the others remain isolated, and the forest on the ordinary vertices and allowed roots can be chosen in $A_w(j)$ ways. Thus, for $w\geqslant1$,
+
+$$
+m!\operatorname{St}(w,m)
+=\sum_{j=0}^{m}(-1)^{m-j}\binom mj A_w(j)
+=\Delta^m A_w(0)
+$$
+
+Here $\Delta f(x)=f(x+1)-f(x)$ and $A_w(0)=0$. The finite difference therefore has a concrete meaning: it excludes constructions leaving at least one prescribed root unused.
+
+For star forests, the same count gives
+
+$$
+m!S(w,m)=\Delta^m(x^w)\big|_{x=0}
+=\sum_{j=0}^{m}(-1)^{m-j}\binom mj j^w
+$$
+
+For example, $S(4,2)=s_2([3,1])+s_2([2,2])=4+3=(2^4-2)/2!$. The positive sum groups objects by block type; the alternating sum removes empty blocks. These are two counts of the same set.
+
+For three ordinary vertices and two roots, the total forest count is $A_3(2)=50$. There are $A_3(1)=16$ forests with each specified root isolated. Both roots cannot be isolated simultaneously. Thus $50-16-16=18=2!\operatorname{St}(3,2)$, agreeing with Figure 1.
 
 ## Why one power admits different expansions
 
@@ -299,4 +318,3 @@ This note is based on the author's research within PMG. The two figures showing 
 1. Andrei Z. Broder. *The r-Stirling numbers*. Discrete Mathematics 49 (1984), 241-259. [DOI](https://doi.org/10.1016/0012-365X(84)90161-4), [open Stanford technical report](https://i.stanford.edu/pub/cstr/reports/cs/tr/82/949/CS-TR-82-949.pdf). Definition by separated distinguished elements; indices denote full sizes.
 2. Grzegorz Serafin. *Identities behind some congruences for r-Bell and derangement polynomials*. Research in Number Theory 6, 39 (2020). [Open text, §2.1](https://link.springer.com/article/10.1007/s40993-020-00216-y). Shifted indexing, the expansion of $(x+r)^w$, and the finite-difference formula.
 3. NIST Digital Library of Mathematical Functions. [§3.3(iv), Newton's Interpolation Formula](https://dlmf.nist.gov/3.3.iv). Newton's formula in terms of divided differences; for equally spaced nodes it is expressed using finite differences.
-

@@ -1,15 +1,15 @@
 ---
 title: Cyclic Partitions and the Combinatorial Potential of the First Kind
 date: 2026-10-24
-updated: 2026-10-25
-revision: 2
+updated: 2026-11-08
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cyclic-partitions-and-first-kind-combinatorial-potential
 lang: en
 description: Cyclic orders within partition blocks, the first-kind combinatorial potential, Stirling numbers, and the exclusion of fixed points.
 order: 5
-source_revision: 2
+source_revision: 3
 aliases:
   - "en/Combinatorial potentials/Cyclic Partitions and the Combinatorial Potential of the First Kind"
 ---
@@ -99,6 +99,22 @@ $$
 
 The full row for $n=4$ is $6,11,6,1$. The comparison with [[Partitions and the Combinatorial Potential of the Second Kind#From type potentials to Stirling and Bell numbers|second-kind Stirling numbers]] is direct: there one sums ordinary partitions, here cyclic partitions.
 
+On one four-label set, the difference between the two kinds can be seen without the general formula:
+
+| Two-block type | Ordinary partitions | Cyclic orders per partition | Permutations |
+| --- | ---: | ---: | ---: |
+| $[3,1]$ | $4$ | $2$ | $8$ |
+| $[2,2]$ | $3$ | $1$ | $3$ |
+| Total with two blocks or cycles | $S(4,2)=7$ | | $c(4,2)=11$ |
+
+On a triple, the two directions give distinct cycles. For a pair, $(a\,b)=(b\,a)$: the written starting element changes, but the permutation does not. Thus type $[2,2]$ gives exactly one set of cycles on the chosen blocks.
+
+Here $c(n,m)$ denotes first-kind numbers. The function $c_r(w,m)$ in [[Falling Factorials, Rooted Forests, and Stirling Numbers]] concerns distinguished elements and second-kind numbers.
+
+![Blocks and Cyclic Orders on Four Labels](<Blocks and Cyclic Orders on Four Labels.svg>)
+
+Four partitions of type $[3,1]$ give eight permutations, while three partitions of type $[2,2]$ give three. The two oppositely directed arcs between $a$ and $b$ together form one 2-cycle.
+
 ## Excluding fixed points
 
 The general formula permits parts $1$. For loopless digraphs, retain only types whose parts are at least $2$. Their total potential is the derangement count:
@@ -144,4 +160,3 @@ The note draws on the author's PMG research. The potential terminology and notat
 1. NIST DLMF. [§26.4, equations 26.4.7 and 26.4.8](https://dlmf.nist.gov/26.4#E7): permutation and set-partition counts by type.
 2. NIST DLMF. [§26.13, Permutations: Cycle Notation](https://dlmf.nist.gov/26.13): cycle types, unsigned first-kind Stirling numbers, and derangements.
 3. Howard, F. T. [Weighted Associated Stirling Numbers](https://www.fq.math.ca/Scanned/22-2/howard.pdf). *The Fibonacci Quarterly*, 22(2), 1984, 156-165. §1: associated first-kind numbers count permutations with cycles of length at least $2$.
-

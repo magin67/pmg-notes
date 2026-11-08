@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="480" viewBox="0 0 1120 480" role="img" aria-labelledby="title"><title id="title">Удаление листьев и код Прюфера</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="480" fill="white"/>
+<text x="560" y="40" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Код Прюфера: удаляем наименьший лист</text>
+<rect x="15" y="85" width="250" height="290" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<line x1="70.0" y1="230.0" x2="110.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
+<line x1="130.0" y1="210.0" x2="130.0" y2="175.0" stroke="#24628a" stroke-width="3"/>
+<line x1="150.0" y1="230.0" x2="190.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
+<line x1="210.0" y1="250.0" x2="210.0" y2="295.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="50" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="50" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="130" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="130" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="130" cy="155" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="130" y="162" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="210" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="210" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="210" cy="315" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="210" y="322" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<text x="140" y="350" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">a → b</text>
+<line x1="269" y1="230" x2="289" y2="230" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="295" y="85" width="250" height="290" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<line x1="410.0" y1="210.0" x2="410.0" y2="175.0" stroke="#24628a" stroke-width="3"/>
+<line x1="430.0" y1="230.0" x2="470.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
+<line x1="490.0" y1="250.0" x2="490.0" y2="295.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="410" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="410" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="410" cy="155" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="410" y="162" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="490" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="490" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="490" cy="315" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="490" y="322" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<text x="420" y="350" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">c → b</text>
+<line x1="549" y1="230" x2="569" y2="230" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="575" y="85" width="250" height="290" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<line x1="710.0" y1="230.0" x2="750.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
+<line x1="770.0" y1="250.0" x2="770.0" y2="295.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="690" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="690" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="770" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="770" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="770" cy="315" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="770" y="322" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<text x="700" y="350" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">b → d</text>
+<line x1="829" y1="230" x2="849" y2="230" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="855" y="85" width="250" height="290" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<line x1="1050.0" y1="250.0" x2="1050.0" y2="295.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="1050" cy="230" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="1050" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="1050" cy="315" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="1050" y="322" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<text x="980" y="350" font-size="22" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">последнее ребро</text>
+<text x="560" y="430" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">(b, b, d)</text>
+</svg>

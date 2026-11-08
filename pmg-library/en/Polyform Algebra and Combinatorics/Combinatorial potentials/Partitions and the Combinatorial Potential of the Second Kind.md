@@ -1,9 +1,9 @@
 ---
 title: Partitions and the Combinatorial Potential of the Second Kind
 date: 2026-10-20
-updated: 2026-10-24
-revision: 2
-source_revision: 3
+updated: 2026-11-08
+revision: 3
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partitions-and-second-kind-combinatorial-potential
@@ -38,7 +38,60 @@ $$
 
 The number $3$ does not depend on the names of the elements. It characterises the partition type itself.
 
+## The combinatorial potential of the second kind
+
+> [!info] Definition
+> Let $\mathbf x=[x_1,\ldots,x_m]$ be a collection of positive block sizes with sum $w$. The **combinatorial potential of the second kind** $s_2(\mathbf x)$ is the number of partitions of a set of $w$ distinguishable elements into unordered nonempty blocks with collection of sizes $\mathbf x$.
+
+All block sizes are fixed. Specifying only $w$ and $m$ is insufficient: on four elements, two blocks may have sizes $[3,1]$ or $[2,2]$, and these types have different potentials.
+
+Here, “combinatorial potential” is the PMG term for this counting function. The qualifier “of the second kind” will be explained by its relation to Stirling numbers of the second kind. Giving the blocks cyclic orders leads to the [[Cyclic Partitions and the Combinatorial Potential of the First Kind|combinatorial potential of the first kind]].
+
+### Two pairs
+
+Partition $\{a,b,c,d\}$ into two pairs. There are exactly three partitions:
+
+$$
+ab\mid cd,\qquad ac\mid bd,\qquad ad\mid bc
+$$
+
+![Three partitions of four elements into two pairs](Partitions%2022.svg)
+
+*Figure 2. All partitions of type $[2,2]$. Each drawing contains two two-element blocks; exchanging the blocks does not create a new partition.*
+
+A single pair can be chosen from four elements in six ways. This counts each resulting partition twice. Choosing $ab$ leaves $cd$, while choosing $cd$ leaves $ab$. Both choices give the same partition $ab\mid cd$.
+
+Therefore,
+
+$$
+s_2([2,2])=\frac{\binom42}{2!}=3
+$$
+
+Here $\binom42=6$ is the number of ways to choose two elements from four. Division by $2!$ removes the repetition caused by choosing one of two interchangeable pairs.
+
+### A triple and a singleton
+
+Type $[3,1]$ gives four partitions:
+
+$$
+abc\mid d,\qquad abd\mid c,\qquad acd\mid b,\qquad bcd\mid a
+$$
+
+![Four partitions of four elements into a triple and a singleton](Partitions%2031.svg)
+
+*Figure 3. All partitions of type $[3,1]$. The outline marks the members of the three-element block. No edges within that block have been chosen.*
+
+It is enough to choose the singleton. Its complement is the triple, so
+
+$$
+s_2([3,1])=4
+$$
+
+There is no further division by $2!$. The blocks are still unordered, but their sizes distinguish them: the singleton cannot be mistaken for the triple. Choosing the singleton produces each partition exactly once.
+
 ## A collection, its size, and its weight
+
+We now collect the notation for the general formula. The type $[3,3,2]$ provides a running example for each operation.
 
 ### Numerical collections
 
@@ -86,7 +139,7 @@ $$
 \#\mathbf x=m,\qquad w(\mathbf x)=\#\mathbf A
 $$
 
-For example, the partition $abc\mid de\mid fg$ has three components, type $[3,2,2]$, and seven elements in the original set. The number of components is the size of the collection of block sizes; the number of original elements is its weight.
+For example, the partition $abc\mid def\mid gh$ has three components, type $[3,3,2]$, and eight elements in the original set. The number of components is the size of the collection of block sizes; the number of original elements is its weight.
 
 ### Multiplicities
 
@@ -175,58 +228,11 @@ The three operations give different results:
 
 The brackets in $[x_i!]!$ preserve the sequence of operations: first transform the elements, then multiply the results. We do not abbreviate this to $\mathbf x!!$; below, $n!!$ has its usual meaning as the double factorial of a number.
 
-## The combinatorial potential of the second kind
-
-> [!info] Definition
-> Let $\mathbf x=[x_1,\ldots,x_m]$ be a partition of $w$. The **combinatorial potential of the second kind** $s_2(\mathbf x)$ is the number of partitions of a set of $w$ distinguishable elements into unordered nonempty blocks with collection of sizes $\mathbf x$.
-
-All block sizes are fixed. Specifying only $w$ and $m$ is insufficient: on four elements, two blocks may have sizes $[3,1]$ or $[2,2]$, and these types have different potentials.
-
-Here, “combinatorial potential” is the PMG term for this counting function. The qualifier “of the second kind” will be explained by its relation to Stirling numbers of the second kind. Giving the blocks cyclic orders leads to the [[Cyclic Partitions and the Combinatorial Potential of the First Kind|combinatorial potential of the first kind]].
-
-### Two pairs
-
-Partition $\{a,b,c,d\}$ into two pairs. There are exactly three partitions:
-
-$$
-ab\mid cd,\qquad ac\mid bd,\qquad ad\mid bc
-$$
-
-![Three partitions of four elements into two pairs](Partitions%2022.svg)
-
-*Figure 2. All partitions of type $[2,2]$. Each drawing contains two two-element blocks; exchanging the blocks does not create a new partition.*
-
-A single pair can be chosen from four elements in six ways. This counts each resulting partition twice. Choosing $ab$ leaves $cd$, while choosing $cd$ leaves $ab$. Both choices give the same partition $ab\mid cd$.
-
-Therefore,
-
-$$
-s_2([2,2])=\frac{\binom42}{2!}=3
-$$
-
-Here $\binom42=6$ is the number of ways to choose two elements from four. Division by $2!$ removes the repetition caused by choosing one of two interchangeable pairs.
-
-### A triple and a singleton
-
-Type $[3,1]$ gives four partitions:
-
-$$
-abc\mid d,\qquad abd\mid c,\qquad acd\mid b,\qquad bcd\mid a
-$$
-
-![Four partitions of four elements into a triple and a singleton](Partitions%2031.svg)
-
-*Figure 3. All partitions of type $[3,1]$. The outline marks the members of the three-element block. No edges within that block have been chosen.*
-
-It is enough to choose the singleton. Its complement is the triple, so
-
-$$
-s_2([3,1])=4
-$$
-
-There is no further division by $2!$. The blocks are still unordered, but their sizes distinguish them: the singleton cannot be mistaken for the triple. Choosing the singleton produces each partition exactly once.
-
 ## From repeated counts to the general formula
+
+![Two Steps of Removing Repetitions](<Two Steps of Removing Repetitions.svg>)
+
+For type $[2,2]$, there are initially $4!=24$ rows. Forgetting the order within both pairs leaves $24/(2!2!)=6$ assignments to two positions. Forgetting the order of the positions leaves $6/2!=3$ partitions.
 
 Let $\mathbf x=[x_1,\ldots,x_m]$ be a numerical type, let $w=w(\mathbf x)$, and let $\boldsymbol\mu=[\mu_j]_{j\in J}$ be its collection of positive multiplicities. The indices $i$ range over all occurrences of parts; the indices $j$ range over their distinct values.
 
@@ -415,4 +421,3 @@ The potential formula was proved by counting repetitions. Its relations to Stirl
 1. NIST Digital Library of Mathematical Functions. [§26.8(i), Set Partitions: Stirling Numbers](https://dlmf.nist.gov/26.8#i): definition of $S(w,m)$ and Table 26.8.2.
 2. NIST Digital Library of Mathematical Functions. [§26.7(i), Set Partitions: Bell Numbers](https://dlmf.nist.gov/26.7#i): definition of Bell numbers and their relation to Stirling numbers.
 3. NIST Digital Library of Mathematical Functions. [§26.9(i), Integer Partitions](https://dlmf.nist.gov/26.9#i): definitions of integer partitions and $p(w)$.
-

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="410" viewBox="0 0 1120 410" role="img" aria-labelledby="title"><title id="title">Three Tree Types on Five Vertices</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="410" fill="white"/>
+<text x="560" y="35" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Code multiplicities and the tree shape on five vertices</text>
+<rect x="15" y="70" width="350" height="290" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="385" y="70" width="350" height="290" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="755" y="70" width="350" height="290" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<line x1="172.79612966910014" y1="192.95729076837011" x2="107.20387033089985" y2="147.04270923162989" stroke="#24628a" stroke-width="3"/>
+<line x1="207.20387033089986" y1="192.95729076837011" x2="272.79612966910014" y2="147.04270923162989" stroke="#24628a" stroke-width="3"/>
+<line x1="172.3926840576866" y1="216.44475536250368" x2="107.60731594231338" y2="258.5552446374963" stroke="#24628a" stroke-width="3"/>
+<line x1="207.6073159423134" y1="216.44475536250368" x2="272.3926840576866" y2="258.5552446374963" stroke="#24628a" stroke-width="3"/>
+<circle cx="190" cy="205" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="190" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="90" cy="135" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="90" y="142" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="290" cy="135" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="290" y="142" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="90" cy="270" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="90" y="277" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="290" cy="270" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="290" y="277" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<line x1="477.0242637963975" y1="152.29530163073153" x2="532.9757362036025" y2="192.70469836926847" stroke="#24628a" stroke-width="3"/>
+<line x1="532.9757362036025" y1="217.29530163073153" x2="477.0242637963975" y2="257.7046983692685" stroke="#24628a" stroke-width="3"/>
+<line x1="571.0" y1="205.0" x2="624.0" y2="205.0" stroke="#24628a" stroke-width="3"/>
+<line x1="645.0" y1="184.0" x2="645.0" y2="146.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="460" cy="140" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="460" y="147" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="550" cy="205" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="550" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="460" cy="270" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="460" y="277" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="645" cy="205" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="645" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="645" cy="125" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="645" y="132" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<line x1="801.6487041207298" y1="167.4730561810947" x2="838.3512958792702" y2="222.5269438189053" stroke="#24628a" stroke-width="3"/>
+<line x1="861.6487041207298" y1="222.5269438189053" x2="898.3512958792702" y2="167.4730561810947" stroke="#24628a" stroke-width="3"/>
+<line x1="921.6487041207298" y1="167.4730561810947" x2="958.3512958792702" y2="222.5269438189053" stroke="#24628a" stroke-width="3"/>
+<line x1="981.6487041207298" y1="222.5269438189053" x2="1018.3512958792702" y2="167.4730561810947" stroke="#24628a" stroke-width="3"/>
+<circle cx="790" cy="150" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="790" y="157" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="850" cy="240" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="850" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="910" cy="150" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="910" y="157" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="970" cy="240" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="970" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="1030" cy="150" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text x="1030" y="157" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">e</text>
+<text x="190" y="105" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">[3]</text>
+<text x="190" y="335" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">5</text>
+<text x="560" y="105" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">[2, 1]</text>
+<text x="560" y="335" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">60</text>
+<text x="930" y="105" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">[1, 1, 1]</text>
+<text x="930" y="335" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">60</text>
+<text x="560" y="395" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">5 + 60 + 60 = 125</text>
+</svg>

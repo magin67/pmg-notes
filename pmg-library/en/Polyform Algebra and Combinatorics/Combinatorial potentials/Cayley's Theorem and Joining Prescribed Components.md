@@ -1,9 +1,9 @@
 ---
 title: Cayley's Theorem and Joining Prescribed Components
 date: 2026-10-20
-updated: 2026-10-20
-revision: 1
-source_revision: 3
+updated: 2026-11-08
+revision: 2
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cayleys-formula-and-connecting-given-components
@@ -91,6 +91,16 @@ Both types of new edges produce a connected tree because $ab$ is already present
 >
 > For the proof, first consider trees on the components themselves. Temporarily number them from $1$ to $m$, and let $\mathcal T_m$ be the set of all trees on these labels. For $S\in\mathcal T_m$, let $d_i(S)$ be the degree of vertex $i$ in $S$.
 
+![Blocks of sizes two, two, and one contracted to a weighted triangle with conductances four, two, and two](Block%20Contraction%20for%20Cayleys%20Formula.svg)
+
+*Figure 2. The prescribed components on the left are $A=\{a,b\}$, $B=\{c,d\}$, and $C=\{e\}$. All complete-graph edges between them are available. After contraction, the number of choices for each interblock edge becomes its conductance: $c_{AB}=4$ and $c_{AC}=c_{BC}=2$.*
+
+A triangle has three spanning trees, giving
+
+$$
+T([2,2,1])=4\cdot2+4\cdot2+2\cdot2=20
+$$
+
 > [!info] The general formula for joining components
 > **Lemma (weighted Cayley formula).** For $m\geqslant2$,
 >
@@ -100,6 +110,12 @@ Both types of new edges produce a connected tree because $ab$ is already present
 > $$
 >
 > The exponents in $[x_i^{d_i(S)}]$ are ordinary numerical powers. The index $i$ ranges over all $m$ components.
+
+For example, take the tree with edges $ab,bc,bd,de$ and label order $a<b<c<d<e$. While more than two vertices remain, delete the smallest leaf and record its neighbour: $a\mapsto b$, $c\mapsto b$, $b\mapsto d$. The code is $(b,b,d)$; the last two vertices $d,e$ are joined by an edge. To reconstruct the tree, choose the smallest remaining label absent from the remaining code. This recovers the same edges.
+
+![Leaf Deletion and the Prufer Code](<Leaf Deletion and the Prufer Code.svg>)
+
+The code records the neighbours of deleted leaves. Each step shows the remaining tree and the recorded label; the last edge contributes no code entry.
 
 > [!note]- Proof of the weighted formula by the Prüfer code
 > **Proof.** A tree on labels $1,\ldots,m$ corresponds to a Prüfer code of $m-2$ labels. Construct the code by repeatedly deleting the least-labelled leaf and recording its neighbour until two vertices remain.
@@ -147,27 +163,6 @@ The proof explains both factors. In the Prüfer code, each component supplies on
 
 **Remark.** $T(\mathbf x)$ counts completions of one fixed forest. If its internal trees still have to be chosen, that is a separate count. For fixed blocks $abc\mid de$, the triple admits three trees, and each resulting forest has six completions. Thus there are $3\cdot6=18$ trees in which both prescribed blocks are connected. If the vertex partition is also varied, the same final tree may be counted more than once.
 
-## Prüfer code type and the number of leaves
-
-For $n\geqslant3$, the count $n^{n-2}$ can be refined by the multiplicities of labels in the Prüfer code. Let $\lambda\vdash n-2$ be the collection of positive multiplicities, and let $m=\#\lambda$ be the number of blocks obtained by grouping code positions with equal values. There are $s_2(\lambda)$ partitions of this type and $n_{\underline m}$ assignments of distinct vertices to the blocks. Thus the number of trees of this multiplicity type is
-
-$$
-s_2(\lambda)n_{\underline m},\qquad
-n^{n-2}=\sum_{\lambda\vdash n-2}s_2(\lambda)n_{\underline{\#\lambda}}
-$$
-
-Here $n_{\underline m}=[n,n-1,\ldots,n-m+1]!$. A vertex of degree $d$ occurs in the code $d-1$ times. Consequently, $m$ is the number of nonleaf vertices and $n-m$ is the number of leaves. The positive parts of $\lambda$ are the degrees of nonleaf vertices **minus one**; this is not a forest type by component edge counts.
-
-For five vertices:
-
-| Code multiplicities | Vertex degrees of the tree | Number of trees |
-| --- | --- | ---: |
-| $[3]$ | $[4,1,1,1,1]$ | $1\cdot5=5$ |
-| $[2,1]$ | $[3,2,1,1,1]$ | $3\cdot5\cdot4=60$ |
-| $[1,1,1]$ | $[2,2,2,1,1]$ | $1\cdot5\cdot4\cdot3=60$ |
-
-The total is $5+60+60=125$. Summing over types with $m$ parts gives $S(n-2,m)n_{\underline m}$ trees with $n-m$ leaves. The falling factorial counts assignments of distinct labels to blocks; this principle and its extension to rooted forests are developed in [[Falling Factorials, Rooted Forests, and Stirling Numbers]].
-
 ## Contraction to a weighted graph
 
 After contracting the components, $x_i x_j$ possible original edges remain between vertices $i$ and $j$. These parallel edges can be replaced by one coupling of conductance
@@ -183,16 +178,6 @@ $$
 $$
 
 This is precisely the graph obtained by [[Vertex Contraction and Graph Gluing|contracting the blocks]] of $K_n$: edges within blocks disappear, while conductances between blocks add.
-
-![Blocks of sizes two, two, and one contracted to a weighted triangle with conductances four, two, and two](Block%20Contraction%20for%20Cayleys%20Formula.svg)
-
-*Figure 2. The prescribed components on the left are $A=\{a,b\}$, $B=\{c,d\}$, and $C=\{e\}$. All complete-graph edges between them are available. After contraction, the number of choices for each interblock edge becomes its conductance: $c_{AB}=4$ and $c_{AC}=c_{BC}=2$.*
-
-A triangle has three spanning trees, giving
-
-$$
-T([2,2,1])=4\cdot2+4\cdot2+2\cdot2=20
-$$
 
 ### How the new edges are distributed
 
@@ -210,6 +195,33 @@ For the blocks $A,B,C$ in Figure 2:
 | **Total** | **20** | **12** | **8** |
 
 Contraction preserves the total completion count but hides the distinction between two endpoints within a block. The type of the new edges must therefore be determined **on the original vertices**, before contraction. Two adjacent edges on five vertices have full type $[2,0,0]$; two disjoint edges have type $[1,1,0]$.
+
+## Prüfer code type and the number of leaves
+
+Here $h$ counts distinct labels in the code; $m$ remains the number of original components.
+
+For $n\geqslant3$, the count $n^{n-2}$ can be refined by the multiplicities of labels in the Prüfer code. Let $\lambda\vdash n-2$ be the collection of positive multiplicities, and let $h=\#\lambda$ be the number of blocks obtained by grouping code positions with equal values. There are $s_2(\lambda)$ partitions of this type and $n_{\underline h}$ assignments of distinct vertices to the blocks. Thus the number of trees of this multiplicity type is
+
+$$
+s_2(\lambda)n_{\underline h},\qquad
+n^{n-2}=\sum_{\lambda\vdash n-2}s_2(\lambda)n_{\underline{\#\lambda}}
+$$
+
+Here $n_{\underline h}=[n,n-1,\ldots,n-h+1]!$. A vertex of degree $d$ occurs in the code $d-1$ times. Consequently, $h$ is the number of nonleaf vertices and $n-h$ is the number of leaves. The positive parts of $\lambda$ are the degrees of nonleaf vertices **minus one**; this is not a forest type by component edge counts.
+
+For five vertices:
+
+| Code multiplicities | Vertex degrees of the tree | Number of trees |
+| --- | --- | ---: |
+| $[3]$ | $[4,1,1,1,1]$ | $1\cdot5=5$ |
+| $[2,1]$ | $[3,2,1,1,1]$ | $3\cdot5\cdot4=60$ |
+| $[1,1,1]$ | $[2,2,2,1,1]$ | $1\cdot5\cdot4\cdot3=60$ |
+
+The total is $5+60+60=125$. Summing over types with $h$ parts gives $S(n-2,h)n_{\underline h}$ trees with $n-h$ leaves. The falling factorial counts assignments of distinct labels to blocks; this principle and its extension to rooted forests are developed in [[Falling Factorials, Rooted Forests, and Stirling Numbers]].
+
+![Three Tree Types on Five Vertices](<Three Tree Types on Five Vertices.svg>)
+
+Code multiplicities $[3]$, $[2,1]$, and $[1,1,1]$ correspond to the three tree shapes on five vertices. The counts refer to trees on a fixed set of five labelled vertices, not to the number of displayed shapes.
 
 ## Passage to polyforms
 

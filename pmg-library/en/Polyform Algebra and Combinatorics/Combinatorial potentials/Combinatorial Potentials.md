@@ -1,9 +1,9 @@
 ---
 title: Combinatorial Potentials
 date: 2026-10-20
-updated: 2026-11-01
-revision: 4
-source_revision: 6
+updated: 2026-11-08
+revision: 5
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: combinatorial-potentials-series-navigation
@@ -18,7 +18,7 @@ aliases:
   - "en/Combinatorial potentials/index"
 ---
 
-This series explains how component sizes determine the counts of concrete partitions and graph constructions. Its central concept is the **combinatorial potential of the second kind**: the number of partitions of a given set into unordered blocks of prescribed sizes. This count is then applied to symmetric polyforms and compared with the number of forests. A separate note counts ways to join prescribed components into a tree. The relation between forest coefficients and $r$-Stirling numbers is explained through rooted forests. The potential of the first kind counts cyclic partitions of a prescribed type, connecting the series to permutation digraphs. The final note extends this count to states made of open paths and closed cycles.
+How many concrete objects have a prescribed component type? This series starts with set partitions, then branches towards trees, cycles, or symmetric polyforms. Each count specifies what is labelled, what has already been chosen, and which rearrangements describe the same object.
 
 ## Place in the library
 
@@ -29,6 +29,48 @@ Secondary thematic entries:
 - [[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]: cyclic partitions and permutation digraphs.
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+
+## Reading order
+
+![Routes through Combinatorial Counts](<Routes through Combinatorial Counts.svg>)
+
+The starting note serves all three routes. The cycle route does not require Cayley’s theorem; the forest route does not require polyforms.
+
+1. **[[Partitions and the Combinatorial Potential of the Second Kind]].** Collections and multiplicities, integer and set partitions, the product of a collection, the derivation of $s_2$, and relations to Stirling and Bell numbers.
+2. **[[Combinatorial Potentials in Symmetric Polyforms]].** Types by edges, zero components, representation size, choosing subsets, forest counts, and the fundamental identity coefficient. Figures accompany the main examples.
+3. **[[Cayley's Theorem and Joining Prescribed Components]].** Joining fixed blocks, the weighted Cayley formula, component contraction, refinement by Prüfer code type, and a brief passage to polyforms.
+4. **[[Falling Factorials, Rooted Forests, and Stirling Numbers]].** Star and general rooted forests, leaf-deletion codes, inclusion-exclusion, $r$-Stirling numbers, and shifted expansions.
+
+5. **[[Cyclic Partitions and the Combinatorial Potential of the First Kind]].** Cyclic orders within blocks, the relation between $s_1$ and $s_2$, sums over types, Stirling numbers of the first kind, and excluding fixed points.
+
+6. **[[The Potential of Path-and-Cycle States]].** The mixed-type potential formula and its proof, separate path and cycle multiplicities, graph and history counts, and Laguerre configurations.
+
+The first-kind note can be read immediately after the definition of the second kind; its graph application appears in [[Permutation Digraphs and Cycle Combinatorics]].
+
+The combinatorial route passes through the notes on partitions, joining components, and [[Falling Factorials, Rooted Forests, and Stirling Numbers|rooted forests and Stirling numbers]]; their main proofs do not require polyforms. For the passage to PMG, read the SPF potential note alongside [[Symmetric Polyforms - Types and Normalizations|types and normalisations]] and the [[Fundamental Theorem of Symmetric Polyforms|fundamental theorem]]. A further application to rooted forests, Abel polynomials, and finite differences appears in [[Forest Coefficients and Abel Polynomials]].
+
+## Notation and scope
+
+The size of a collection is $\#\mathbf x$, its weight is $w(\mathbf x)$, and the product of its elements is $\mathbf x!$. The notation $[x_i!]$ defines the collection of factorials, and $[x_i!]!$ its product. Repetitions are retained. The full number of partition components is $m$; in SPF types, $r$ counts nontrivial components and $\ell=m-r$ counts singletons.
+
+Block sizes and boundary grades differ by one. A component's edge count equals its grade in a forest; this equality does not apply in the presence of cycles. Representation size, forest count, and form-identity coefficient have different definitions.
+
+Notation and links are consistent with the [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] series. The potential of the first kind counts cyclic partitions; the mixed-state potential also admits linearly ordered blocks. For the latter, labels belong to arcs and isolated vertices are accounted for separately. The general algebra of marked components remains a further topic. The formulas in this series are proved under their stated conditions; enumeration of small examples provides additional checks.
+
+### What the symbols count
+
+| Symbol | What is fixed and what is counted |
+| --- | --- |
+| $s_2(\mathbf x)$ | All block sizes; ordinary set partitions of this type |
+| $S(w,m)$ | $w$ elements and $m$ blocks; individual block sizes are unrestricted |
+| $\operatorname{St}(w,m)$ | $w$ ordinary vertices and $m$ added roots without individual labels; one root per component and no isolated roots |
+| $c_r(w,m)$ | $w$ ordinary elements and $r$ separate markers; markers lie in distinct blocks, with $m$ further blocks containing no marker |
+| $s_1(\mathbf x)$ | All cycle lengths; permutations of this cycle type |
+| $c(n,m)$ | $n$ elements and $m$ cycles; an unsigned Stirling number of the first kind |
+| $u(\lambda_k)$ | A path-and-cycle type; the $k$ arcs are labelled, vertices have no individual labels |
+| $N_n(\lambda_k),\ H_n(\lambda_k)$ | The type and $n$ labelled vertices; graphs and orders of adding their arcs, respectively |
+
+The symbols $c_r(w,m)$ and $c(n,m)$ refer to different families: the former extends numbers of the **second** kind, while the latter counts cycles and belongs to the **first** kind. In rooted-forest counts, $q$ is the number of prescribed roots and $m$ counts those used; the parameter $r$ in $r$-Stirling numbers counts markers. Each note states the local roles of its letters.
 
 ## Main results
 
@@ -80,26 +122,3 @@ $$
 $$
 
 The right side counts partitions of $2k$ elements into $k+m$ blocks with $k+1$ distinguished elements in different blocks. The graph meaning of this identity, the role of isolated roots, and two counts of the number $91$ are explained in [[Falling Factorials, Rooted Forests, and Stirling Numbers]].
-
-## Reading order
-
-1. **[[Partitions and the Combinatorial Potential of the Second Kind]].** Collections and multiplicities, integer and set partitions, the product of a collection, the derivation of $s_2$, and relations to Stirling and Bell numbers.
-2. **[[Combinatorial Potentials in Symmetric Polyforms]].** Types by edges, zero components, representation size, choosing subsets, forest counts, and the fundamental identity coefficient. Figures accompany the main examples.
-3. **[[Cayley's Theorem and Joining Prescribed Components]].** Joining fixed blocks, the weighted Cayley formula, component contraction, refinement by Prüfer code type, and a brief passage to polyforms.
-4. **[[Falling Factorials, Rooted Forests, and Stirling Numbers]].** Star and general rooted forests, leaf-deletion codes, inclusion-exclusion, $r$-Stirling numbers, and shifted expansions.
-
-5. **[[Cyclic Partitions and the Combinatorial Potential of the First Kind]].** Cyclic orders within blocks, the relation between $s_1$ and $s_2$, sums over types, Stirling numbers of the first kind, and excluding fixed points.
-
-6. **[[The Potential of Path-and-Cycle States]].** The mixed-type potential formula and its proof, separate path and cycle multiplicities, graph and history counts, and Laguerre configurations.
-
-The first-kind note can be read immediately after the definition of the second kind; its graph application appears in [[Permutation Digraphs and Cycle Combinatorics]].
-
-The combinatorial route passes through the notes on partitions, joining components, and [[Falling Factorials, Rooted Forests, and Stirling Numbers|rooted forests and Stirling numbers]]; their main proofs do not require polyforms. For the passage to PMG, read the SPF potential note alongside [[Symmetric Polyforms - Types and Normalizations|types and normalisations]] and the [[Fundamental Theorem of Symmetric Polyforms|fundamental theorem]]. A further application to rooted forests, Abel polynomials, and finite differences appears in [[Forest Coefficients and Abel Polynomials]].
-
-## Notation and scope
-
-The size of a collection is $\#\mathbf x$, its weight is $w(\mathbf x)$, and the product of its elements is $\mathbf x!$. The notation $[x_i!]$ defines the collection of factorials, and $[x_i!]!$ its product. Repetitions are retained. The full number of partition components is $m$; in SPF types, $r$ counts nontrivial components and $\ell=m-r$ counts singletons.
-
-Block sizes and boundary grades differ by one. A component's edge count equals its grade in a forest; this equality does not apply in the presence of cycles. Representation size, forest count, and form-identity coefficient have different definitions.
-
-Notation and links are consistent with the [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] series. The potential of the first kind counts cyclic partitions; the mixed-state potential also admits linearly ordered blocks. For the latter, labels belong to arcs and isolated vertices are accounted for separately. The general algebra of marked components remains a further topic. The formulas in this series are proved under their stated conditions; enumeration of small examples provides additional checks.
