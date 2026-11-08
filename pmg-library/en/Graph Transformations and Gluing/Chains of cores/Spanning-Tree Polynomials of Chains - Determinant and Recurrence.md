@@ -1,9 +1,9 @@
 ---
 title: "Spanning-Tree Polynomials of Chains: Determinant and Recurrence"
 date: 2026-10-31
-updated: 2026-11-02
-revision: 2
-translated_revision: 5
+updated: 2026-11-08
+revision: 3
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -289,6 +289,8 @@ $$
 
 The admissible values for fixed $m$ are discrete. For $N=2$, there is no internal core and only $1\le s\le m-1$ is required, giving a wider range. For $N=1$, there are no seams and $D_1=1$ is independent of the formal variable $x$.
 
+**Back to three hexagons.** With $m=6$ and one-edge seams, $\ell=1$, so $x=1/6$. Since $D_3(x)=1-2x^2$, we obtain $\tau=6^3D_3(1/6)=216(1-2/36)=204$. Normalization preserves the familiar answer while separating the common factor $m^N$.
+
 ## Chebyshev polynomials and the auxiliary spectrum
 
 Chebyshev polynomials of the **second kind** satisfy [DLMF, Table 18.9.1](https://dlmf.nist.gov/18.9.i):
@@ -388,9 +390,10 @@ Thus the input and output of an internal core occupy disjoint segments of its cy
 
 Here $\tau$ is computed directly as a Laplacian minor of the **assembled original graph**. It is compared with the dual determinant, recurrence, and matching sum. For $N=3$, $m_i=6$, $s_i=2$, this rule places the middle core's output immediately after its input; the opposite-output variant is checked separately and also gives $204$.
 
-The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_spanning_polynomials.py) checks $76$ configurations and $286$ subchain Laplacian minors in exact arithmetic. It checks connectivity, exact intersections and absence of additional contacts, vertex and edge counts, both correspondence directions, one-vertex and multi-edge seams, different core sizes, and the case $s_{i-1}+s_i=m_i$. All permutations of seam sizes $(1,2,3)$ and $(2,3,4)$ are checked for four octagons.
-
-The algebraic part independently compares the permutation expansion of the determinant with (4) for $1\le N\le7$, and the coefficients from the recurrence, binomial formula, and transformed $U_N$ polynomials for $0\le N\le20$. It also checks characteristic determinants of the auxiliary path and the boundary value $x=1/2$. See the [reproduction and drawing instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md).
+> [!note]- Computational verification details
+> The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_spanning_polynomials.py) checks $76$ configurations and $286$ subchain Laplacian minors in exact arithmetic. It checks connectivity, exact intersections and absence of additional contacts, vertex and edge counts, both correspondence directions, one-vertex and multi-edge seams, different core sizes, and the case $s_{i-1}+s_i=m_i$. All permutations of seam sizes $(1,2,3)$ and $(2,3,4)$ are checked for four octagons.
+> 
+> The algebraic part independently compares the permutation expansion of the determinant with (4) for $1\le N\le7$, and the coefficients from the recurrence, binomial formula, and transformed $U_N$ polynomials for $0\le N\le20$. It also checks characteristic determinants of the auxiliary path and the boundary value $x=1/2$. See the [reproduction and drawing instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md).
 
 The general formulas are proved in the text; finite computations check examples and implementation. Branching, disconnected seams, and cores other than cycles are treated in [[en/Graph Transformations and Gluing/Chains of cores/Limits of Invariance - Branching, Disconnected Seams, and Other Cores|Limits of Invariance - Branching, Disconnected Seams, and Other Cores]], and ordinary and twisted closures in [[en/Graph Transformations and Gluing/Chains of cores/Closing a Chain - Rings and the Möbius Effect|Closing a Chain - Rings and the Möbius Effect]]. Matrix (1) does not transfer automatically to these models.
 

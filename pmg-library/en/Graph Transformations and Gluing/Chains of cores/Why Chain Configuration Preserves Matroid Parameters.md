@@ -1,9 +1,9 @@
 ---
 title: "Why Chain Configuration Preserves Matroid Parameters"
 date: 2026-10-31
-updated: 2026-11-02
-revision: 2
-translated_revision: 5
+updated: 2026-11-08
+revision: 3
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -95,6 +95,10 @@ $$
 In (3), the missing term for an end core is taken to be zero. For internal cores, seam disjointness gives $b_i\ge2$; for end cores the same bound follows because the seam is a proper path. Thus every $f_i$ is adjacent to $f_\infty$, and $H$ is connected. For $N=1$, there are two dual vertices and $m_1$ parallel edges.
 
 A one-vertex contact $s_i=1$ contributes no edge between $f_i$ and $f_{i+1}$: a shared primal vertex is not a shared edge. The graph $H$ nevertheless remains connected through $f_\infty$.
+
+**Constructing the dual graph.** Place a vertex $f_i$ inside each core face and $f_\infty$ in the outer face. Across each original edge, draw a dual edge between its incident faces. A seam gives an edge $f_i f_{i+1}$; an external core edge gives $f_i f_\infty$. The picture shows three such correspondences; the complete dual multigraph follows below.
+
+![Faces of the chain become vertices of the dual graph](images/From%20a%20chain%20to%20its%20dual%20graph.svg)
 
 ![The common dual multigraph of two chains of three hexagons](images/The%20Common%20Dual%20Multigraph%20of%20the%20Chains.svg)
 
@@ -281,7 +285,8 @@ Finally, enumerating all $2^{16}$ edge subsets of **each** graph gives ordinary 
 
 The proof uses cycle cores, connected seams, no contacts between nonadjacent cores, disjoint input and output seams, and an open chain. Reordering seams, changing the gluing scheme, adding contacts, closing the chain, or using other cores requires a fresh analysis of the dual graph or a different proof. A boundary gluing formula does not by itself establish matroid invariance.
 
-The general assertion is proved through (3) and (4). Computations separately check particular constructions. The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_matroid_invariance.py) and [exact results](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/matroid-invariance-results.json) contain the cyclic core orders, seam vertex correspondences, final edges, and an explicit edge bijection for the two hexagonal chains.
+> [!note]- Computational verification details
+> The general assertion is proved through (3) and (4). Computations separately check particular constructions. The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_matroid_invariance.py) and [exact results](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/matroid-invariance-results.json) contain the cyclic core orders, seam vertex correspondences, final edges, and an explicit edge bijection for the two hexagonal chains.
 
 The checks cover $11$ configurations and $278\,536$ edge subsets. For each subset, the rank identity of matroid duality is checked, rather than just equality of tree counts. Additional examples include a single cycle, one-vertex and multi-edge seams, both identification directions, different core sizes, and the limiting admissible case $s_{i-1}+s_i=m_i$. Finite enumeration does not replace the general proof. See the [reproduction and drawing instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md).
 

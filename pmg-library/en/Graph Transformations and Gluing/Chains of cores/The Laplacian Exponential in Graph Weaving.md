@@ -1,9 +1,9 @@
 ---
 title: "The Laplacian Exponential in Graph Weaving"
 date: 2026-11-02
-updated: 2026-11-02
-revision: 1
-translated_revision: 3
+updated: 2026-11-08
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -201,6 +201,44 @@ Denote the new contacts by $a',b'$. The runner adds edges $aa'$, $bb'$, and $a'b
 > In state $\mathsf D_{r,s}$, all eight subsets are allowed. With no longitudinal edges, both old components close. One longitudinal edge without the rung closes the opposite component. Two longitudinal edges preserve separation. The rung together with one longitudinal edge forms one active component and closes the other old component. All three edges join the old components through the two new vertices. These cases give the lines of (8). No forest is lost or counted twice. Formula (6) and induction give (9). $\square$
 
 The same procedure defines one operator for any fixed runner and its marked pairs. Two families of symbols do not mean two numerical coordinates: the size indices are unbounded.
+
+### The complete first step: from an edge to a square
+
+Set $z_1=1$ and substitute the initial state $\mathcal H_0=\mathsf D_{1,1}+t\mathsf C_2$ into (7)-(8). Collecting identical states gives
+
+$$
+\begin{aligned}
+\mathcal H_1={}&(1+tz_2)(\mathsf D_{1,1}+t\mathsf C_2)+{}\\
+&+t(\mathsf D_{2,1}+\mathsf D_{1,2})+{}\\
+&+t^2(\mathsf D_{2,2}+\mathsf D_{3,1}+\mathsf D_{1,3}+2\mathsf C_3)+{}\\
+&+4t^3\mathsf C_4
+\end{aligned}
+$$
+
+In the state $t\mathsf C_2$, the initial edge is selected. Adding no new edges closes the old component and contributes $tz_2\mathsf D_{1,1}$. Any two of the three new edges produce a tree on four vertices, giving $3t^3\mathsf C_4$. The fourth tree comes from $\mathsf D_{1,1}$ by selecting all three new edges. This explains the final coefficient $4$.
+
+![A selected initial edge: closing a component and three ways to extend a tree](images/The%20first%20square%20toponome%20step.svg)
+
+Applying completion (6) yields the full toponome of the square:
+
+$$
+\mathcal T_{C_4}(t,\mathbf z)=1+4tz_2+t^2(4z_3+2z_2^2)+4t^3z_4
+$$
+
+The coefficients can also be checked without transfer. A single edge can be chosen in four ways. Among the six pairs of edges, four pairs are adjacent and form a three-vertex component; two pairs are opposite and give two two-vertex components. Any three edges form a spanning tree.
+
+Both evaluations are now visible in one example:
+
+$$
+\begin{aligned}
+z_s=1:&\qquad F_{C_4}(t)=1+4t+6t^2+4t^3,\\
+z_s=s:&\qquad P_{C_4}(t)=1+8t+20t^2+16t^3
+\end{aligned}
+$$
+
+Under the rooted evaluation, a component with $s$ vertices has $s$ choices of root. Hence the coefficient of $t^2$ is $4\cdot3+2\cdot2^2=20$. These evaluations allow states to be reduced. Before turning to them, clarify the limitation for the full toponome.
+
+### Limitation of a scalar recurrence
 
 > [!info] A limitation on scalar recurrences
 > **Proposition.** For a growing sequence of connected graphs with positive conductances and $n_N\to\infty$, the full toponomes cannot satisfy a fixed-order linear recurrence whose coefficients are independent of $N$ and polynomial in a finite set of variables $x_j$.

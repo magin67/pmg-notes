@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="510" viewBox="0 0 1180 510" role="img" aria-labelledby="title desc">
+<title id="title">Два маршрута по цепям из ядер</title><desc id="desc">Основная линия: ядра, инвариантность, остовная рекурсия, ограничения, замыкание. Дополнительная: плетение и полный топоном.</desc>
+<rect width="1180" height="510" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="30.00" y="43.00" font-size="27" fill="#172b43" text-anchor="start" font-weight="bold">Основной маршрут: конструкция и её параметры</text>
+<rect x="30" y="75" width="195" height="118" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="127.00" y="118.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">Ядра</text>
+<text x="127.00" y="153.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">и швы</text>
+<line x1="231.00" y1="134.00" x2="254.00" y2="134.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="254.00,134.00 242.00,129.00 242.00,139.00" fill="#196bb9"/>
+<rect x="260" y="75" width="195" height="118" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="357.00" y="118.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">Матроидная</text>
+<text x="357.00" y="153.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">инвариантность</text>
+<line x1="461.00" y1="134.00" x2="484.00" y2="134.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="484.00,134.00 472.00,129.00 472.00,139.00" fill="#196bb9"/>
+<rect x="490" y="75" width="195" height="118" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="587.00" y="118.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">Остовной</text>
+<text x="587.00" y="153.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">определитель</text>
+<line x1="691.00" y1="134.00" x2="714.00" y2="134.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="714.00,134.00 702.00,129.00 702.00,139.00" fill="#196bb9"/>
+<rect x="720" y="75" width="195" height="118" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="817.00" y="118.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">Границы</text>
+<text x="817.00" y="153.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">инвариантности</text>
+<line x1="921.00" y1="134.00" x2="944.00" y2="134.00" stroke="#196bb9" stroke-width="3" stroke-linecap="round"/>
+<polygon points="944.00,134.00 932.00,129.00 932.00,139.00" fill="#196bb9"/>
+<rect x="950" y="75" width="195" height="118" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="1047.00" y="118.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="bold">Замыкание</text>
+<text x="1047.00" y="153.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">цепи</text>
+<text x="30.00" y="236.00" font-size="21" fill="#52657a" text-anchor="start" font-weight="normal">От условий допустимости к результату и его ограничениям</text>
+<text x="30.00" y="300.00" font-size="27" fill="#172b43" text-anchor="start" font-weight="bold">Продолжение: вычисление повторяемым шагом</text>
+<rect x="30" y="330" width="495" height="110" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="277.00" y="370.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">Плетение графов</text>
+<text x="277.00" y="411.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Бегунок и два остовных состояния</text>
+<rect x="650" y="330" width="495" height="110" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="897.00" y="370.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">Экспонента и топономы</text>
+<text x="897.00" y="411.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">Размеры компонент и их оценки</text>
+<line x1="545.00" y1="384.00" x2="630.00" y2="384.00" stroke="#8953af" stroke-width="4" stroke-linecap="round"/>
+<polygon points="630.00,384.00 618.00,379.00 618.00,389.00" fill="#8953af"/>
+<text x="30.00" y="484.00" font-size="20" fill="#52657a" text-anchor="start" font-weight="normal">Плетение можно читать первым; полный топоном требует лесных состояний.</text>
+</g></svg>

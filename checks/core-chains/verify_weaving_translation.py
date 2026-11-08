@@ -110,7 +110,7 @@ def main():
                 assert a.text == b.text, (source, 'unchanged mathematical label')
         counts['figures'] += 1
         counts['translated_labels'] += len(entry['text'])
-    assert counts['figures'] == 8
+    assert counts['figures'] == 9
     orders = [int(field(p.read_text(encoding='utf-8'), 'order')) for p in EN.glob('*.md')]
     assert sorted(orders) == list(range(8)), ('series order', orders)
     print('PASS: '+json.dumps(counts, sort_keys=True))

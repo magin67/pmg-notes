@@ -1,9 +1,9 @@
 ---
 title: "Limits of Invariance: Branching, Disconnected Seams, and Other Cores"
 date: 2026-10-31
-updated: 2026-11-02
-revision: 2
-translated_revision: 4
+updated: 2026-11-08
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -215,6 +215,10 @@ $$
 
 The four shared edges of each face pair are counted once. For $r=0$, edge types are preserved: base edges and longitudinal edges. For $r=1$, the types are interchanged. This is a permutation of seam vertices; no drawing of a physical prism rotation is required to define the graph.
 
+![Choosing side faces and two vertex correspondences of a four-cycle](images/Prism%20side%20faces%20and%20vertex%20correspondences.svg)
+
+In the upper diagrams, red marks the input $F_0$ and blue marks the output $F_2$ or $F_3$ of the middle core. The lower diagrams spell out the correspondences for output $F_2$: arrows identify vertices of different cores. Here the seams are lateral four-cycles; closing whole prism bases is a separate construction in [[en/Graph Transformations and Gluing/Chains of cores/Closing a Chain - Rings and the Möbius Effect#Shifting the base when closing a chain of prisms|the closure note]].
+
 | Middle-core faces | Shift $r$ | $\tau$ | $\rho$, rounded |
 |---|---:|---:|---:|
 | $F_0,F_2$ | $0$ | $25708969440$ | $0.687521270$ |
@@ -331,11 +335,12 @@ Spectral characteristics require a separate [[en/Graph Transformations and Gluin
 
 ## Checks and scope
 
-The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_invariance_limits.py) and [exact results](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/invariance-limits-results.json) specify the local graphs of all cores, vertex correspondences, shared edges, all actual intersections, and final edge sets. They check $20$ explicitly defined graphs. The common vertex of nonadjacent tetrahedra in the second table row is recorded as an intentional violation of the original conditions; the other constructions have no accidental extra contacts.
-
-For each graph, $\tau$ is computed from a minor of the original Laplacian. The radius is calculated by two independent methods in rational arithmetic: the energy of the diagonal of the inverse grounded Laplacian, and a separate construction of the centered Green matrix and resistance matrix followed by solving the circumcenter equidistance equations. The energy is additionally checked for every reference vertex. Decimal table entries are rounded; full fractions are available in the results.
-
-For trees of cycles, the dual determinant and matroid duality rank identity are checked on selected edge sets; Theorem 1 proves the general result. Additional configurations of one tree cover a one-vertex seam, a multi-edge seam, and seam movement and reversal. For the cube, the orbits of disjoint edge pairs are checked. For prisms, the explicit Cartesian-product correspondence for aligned layers and formula (5) are checked. The two small graphs (6) are checked by full forest enumeration and a separate evaluation of the forest formula for the radius. See the [reproduction and drawing instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md).
+> [!note]- Computational verification details
+> The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_invariance_limits.py) and [exact results](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/invariance-limits-results.json) specify the local graphs of all cores, vertex correspondences, shared edges, all actual intersections, and final edge sets. They check $20$ explicitly defined graphs. The common vertex of nonadjacent tetrahedra in the second table row is recorded as an intentional violation of the original conditions; the other constructions have no accidental extra contacts.
+> 
+> For each graph, $\tau$ is computed from a minor of the original Laplacian. The radius is calculated by two independent methods in rational arithmetic: the energy of the diagonal of the inverse grounded Laplacian, and a separate construction of the centered Green matrix and resistance matrix followed by solving the circumcenter equidistance equations. The energy is additionally checked for every reference vertex. Decimal table entries are rounded; full fractions are available in the results.
+> 
+> For trees of cycles, the dual determinant and matroid duality rank identity are checked on selected edge sets; Theorem 1 proves the general result. Additional configurations of one tree cover a one-vertex seam, a multi-edge seam, and seam movement and reversal. For the cube, the orbits of disjoint edge pairs are checked. For prisms, the explicit Cartesian-product correspondence for aligned layers and formula (5) are checked. The two small graphs (6) are checked by full forest enumeration and a separate evaluation of the forest formula for the radius. See the [reproduction and drawing instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md).
 
 Theorem 1 gives sufficient conditions for invariance. The counterexamples delimit particular extensions but do not establish that cycle cores are the only possible ones. Ordinary and twisted closures are treated in [[en/Graph Transformations and Gluing/Chains of cores/Closing a Chain - Rings and the Möbius Effect|Closing a Chain - Rings and the Möbius Effect]], where the initial boundary must be retained and the last vertex correspondence specified exactly.
 

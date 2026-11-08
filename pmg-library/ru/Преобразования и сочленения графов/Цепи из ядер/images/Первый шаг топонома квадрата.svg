@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="770" viewBox="0 0 1120 770" role="img" aria-labelledby="title desc">
+<title id="title">Первый шаг топонома квадрата</title><desc id="desc">Начальное ребро ab выбрано. Без новых рёбер старая компонента закрывается. Любые два новых ребра дают дерево на четырёх вершинах, объясняя коэффициент три.</desc>
+<rect width="1120" height="770" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="30.00" y="42.00" font-size="26" fill="#172b43" text-anchor="start" font-weight="bold">Начальное состояние tC₂: ребро ab уже выбрано</text>
+<rect x="25" y="75" width="510" height="285" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="45.00" y="110.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="bold">Нет новых рёбер</text>
+<line x1="135.00" y1="165.00" x2="135.00" y2="270.00" stroke="#138570" stroke-width="6" stroke-linecap="round"/>
+<line x1="135.00" y1="165.00" x2="390.00" y2="165.00" stroke="#cbd6e3" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<line x1="135.00" y1="270.00" x2="390.00" y2="270.00" stroke="#cbd6e3" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<line x1="390.00" y1="165.00" x2="390.00" y2="270.00" stroke="#cbd6e3" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<circle cx="135.00" cy="165.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="112.00" y="171.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a</text>
+<circle cx="135.00" cy="270.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="112.00" y="276.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b</text>
+<circle cx="390.00" cy="165.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="408.00" y="171.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a′</text>
+<circle cx="390.00" cy="270.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="408.00" y="276.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b′</text>
+<text x="280.00" y="329.00" font-size="25" fill="#8953af" text-anchor="middle" font-weight="bold">t z₂ D₁,₁</text>
+<rect x="585" y="75" width="510" height="285" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="605.00" y="110.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="bold">Две продольные связи</text>
+<line x1="695.00" y1="165.00" x2="695.00" y2="270.00" stroke="#138570" stroke-width="6" stroke-linecap="round"/>
+<line x1="695.00" y1="165.00" x2="950.00" y2="165.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<line x1="695.00" y1="270.00" x2="950.00" y2="270.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<line x1="950.00" y1="165.00" x2="950.00" y2="270.00" stroke="#cbd6e3" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<circle cx="695.00" cy="165.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="672.00" y="171.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a</text>
+<circle cx="695.00" cy="270.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="672.00" y="276.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b</text>
+<circle cx="950.00" cy="165.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="968.00" y="171.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a′</text>
+<circle cx="950.00" cy="270.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="968.00" y="276.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b′</text>
+<text x="840.00" y="329.00" font-size="25" fill="#8953af" text-anchor="middle" font-weight="bold">t³ C₄</text>
+<rect x="25" y="385" width="510" height="285" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="45.00" y="420.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="bold">Верхняя связь и перекладина</text>
+<line x1="135.00" y1="475.00" x2="135.00" y2="580.00" stroke="#138570" stroke-width="6" stroke-linecap="round"/>
+<line x1="135.00" y1="475.00" x2="390.00" y2="475.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<line x1="135.00" y1="580.00" x2="390.00" y2="580.00" stroke="#cbd6e3" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<line x1="390.00" y1="475.00" x2="390.00" y2="580.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<circle cx="135.00" cy="475.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="112.00" y="481.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a</text>
+<circle cx="135.00" cy="580.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="112.00" y="586.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b</text>
+<circle cx="390.00" cy="475.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="408.00" y="481.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a′</text>
+<circle cx="390.00" cy="580.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="408.00" y="586.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b′</text>
+<text x="280.00" y="639.00" font-size="25" fill="#8953af" text-anchor="middle" font-weight="bold">t³ C₄</text>
+<rect x="585" y="385" width="510" height="285" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
+<text x="605.00" y="420.00" font-size="21" fill="#172b43" text-anchor="start" font-weight="bold">Нижняя связь и перекладина</text>
+<line x1="695.00" y1="475.00" x2="695.00" y2="580.00" stroke="#138570" stroke-width="6" stroke-linecap="round"/>
+<line x1="695.00" y1="475.00" x2="950.00" y2="475.00" stroke="#cbd6e3" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 7"/>
+<line x1="695.00" y1="580.00" x2="950.00" y2="580.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<line x1="950.00" y1="475.00" x2="950.00" y2="580.00" stroke="#196bb9" stroke-width="5" stroke-linecap="round"/>
+<circle cx="695.00" cy="475.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="672.00" y="481.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a</text>
+<circle cx="695.00" cy="580.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="672.00" y="586.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b</text>
+<circle cx="950.00" cy="475.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="968.00" y="481.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">a′</text>
+<circle cx="950.00" cy="580.00" r="5" fill="#172b43" stroke="none" stroke-width="2"/>
+<text x="968.00" y="586.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">b′</text>
+<text x="840.00" y="639.00" font-size="25" fill="#8953af" text-anchor="middle" font-weight="bold">t³ C₄</text>
+<text x="560.00" y="714.00" font-size="24" fill="#172b43" text-anchor="middle" font-weight="bold">Три выбора пары новых рёбер дают вклад 3t³C₄.</text>
+<text x="560.00" y="748.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">Все три новых ребра вместе с ab образовали бы цикл.</text>
+</g></svg>

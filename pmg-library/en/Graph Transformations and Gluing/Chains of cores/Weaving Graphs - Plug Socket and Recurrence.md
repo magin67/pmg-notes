@@ -1,9 +1,9 @@
 ---
 title: "Weaving Graphs: Plug, Socket, and Recurrence"
 date: 2026-11-02
-updated: 2026-11-02
-revision: 1
-translated_revision: 4
+updated: 2026-11-08
+revision: 2
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -29,6 +29,8 @@ We begin with an ordinary ladder. We then define weaving and prove a two-coordin
 > The scheme continues the internal discussion of graph weaving in the PMG project. Dmitry Malyugin introduced the words “plug” and “socket” as intuitive names for the marked boundaries. They do not denote a new graph operation.
 >
 > Repeated constructions and linear recurrences belong to the classical transfer-matrix method; Noy–Ribó [1] give a general formulation. Two-contact laws for trees and separating forests appear in [Barrett et al., Theorems 7 and 9](https://arxiv.org/html/1901.00053v2#S2). Below, these laws are written as a single matrix and expressed through the resistance geometry of the runner. The weighted version, normalizations, examples, and transitions are justified explicitly; no scientific priority is claimed.
+
+For a visual introduction, the first sections suffice: one edge, a square runner, and two spanning states. Then continue to [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|chain admissibility]] or follow the computational route in [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|the note on the exponential and toponomes]].
 
 ## Starting with a square ladder
 

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="480" viewBox="0 0 1160 480" role="img" aria-labelledby="title desc">
+<title id="title">From a chain to its dual graph</title><desc id="desc">Two seams are crossed by dual edges f1f2 and f2f3. An external edge is crossed by a connection from f1 to the outer face. Only part of the dual graph is shown.</desc>
+<rect width="1160" height="480" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="30.00" y="42.00" font-size="26" fill="#172b43" text-anchor="start" font-weight="bold">Each edge links its two incident faces</text>
+<polygon points="251.60,300.00 165.00,350.00 78.40,300.00 78.40,200.00 165.00,150.00 251.60,200.00" fill="#fff0d7" />
+<line x1="251.60" y1="300.00" x2="165.00" y2="350.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="350.00" x2="78.40" y2="300.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="78.40" y1="300.00" x2="78.40" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="78.40" y1="200.00" x2="165.00" y2="150.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="165.00" y1="150.00" x2="251.60" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="251.60" y1="200.00" x2="251.60" y2="300.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<circle cx="251.60" cy="300.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="165.00" cy="350.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="78.40" cy="300.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="78.40" cy="200.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="165.00" cy="150.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="251.60" cy="200.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<polygon points="424.81,300.00 338.21,350.00 251.60,300.00 251.60,200.00 338.21,150.00 424.81,200.00" fill="#ddf4e9" />
+<line x1="424.81" y1="300.00" x2="338.21" y2="350.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="338.21" y1="350.00" x2="251.60" y2="300.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="251.60" y1="300.00" x2="251.60" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="251.60" y1="200.00" x2="338.21" y2="150.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="338.21" y1="150.00" x2="424.81" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="424.81" y1="200.00" x2="424.81" y2="300.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<circle cx="424.81" cy="300.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="338.21" cy="350.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="251.60" cy="300.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="251.60" cy="200.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="338.21" cy="150.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="424.81" cy="200.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<polygon points="598.01,300.00 511.41,350.00 424.81,300.00 424.81,200.00 511.41,150.00 598.01,200.00" fill="#e2edff" />
+<line x1="598.01" y1="300.00" x2="511.41" y2="350.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="511.41" y1="350.00" x2="424.81" y2="300.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="424.81" y1="300.00" x2="424.81" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="424.81" y1="200.00" x2="511.41" y2="150.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="511.41" y1="150.00" x2="598.01" y2="200.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<line x1="598.01" y1="200.00" x2="598.01" y2="300.00" stroke="#52657a" stroke-width="3" stroke-linecap="round" />
+<circle cx="598.01" cy="300.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="511.41" cy="350.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="424.81" cy="300.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="424.81" cy="200.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="511.41" cy="150.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="598.01" cy="200.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
+<line x1="165.00" y1="250.00" x2="338.21" y2="250.00" stroke="#8953af" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 5" />
+<line x1="338.21" y1="250.00" x2="511.41" y2="250.00" stroke="#8953af" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 5" />
+<line x1="165.00" y1="250.00" x2="208.30" y2="175.00" stroke="#8953af" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 5" />
+<line x1="208.30" y1="175.00" x2="340.00" y2="92.00" stroke="#8953af" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 5" />
+<circle cx="165.00" cy="250.00" r="17" fill="white" stroke="#8953af" stroke-width="3" />
+<text x="165.00" y="257.00" font-size="20" fill="#8953af" text-anchor="middle" font-weight="normal">f1</text>
+<circle cx="338.21" cy="250.00" r="17" fill="white" stroke="#8953af" stroke-width="3" />
+<text x="338.21" y="257.00" font-size="20" fill="#8953af" text-anchor="middle" font-weight="normal">f2</text>
+<circle cx="511.41" cy="250.00" r="17" fill="white" stroke="#8953af" stroke-width="3" />
+<text x="511.41" y="257.00" font-size="20" fill="#8953af" text-anchor="middle" font-weight="normal">f3</text>
+<circle cx="340.00" cy="92.00" r="20" fill="white" stroke="#8953af" stroke-width="3" />
+<text x="340.00" y="99.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">f∞</text>
+<text x="365.00" y="98.00" font-size="19" fill="#52657a" text-anchor="start" font-weight="normal">outer face</text>
+<text x="695.00" y="160.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">A seam between cores:</text>
+<text x="695.00" y="198.00" font-size="25" fill="#8953af" text-anchor="start" font-weight="normal">f₁ — f₂  /  f₂ — f₃</text>
+<text x="695.00" y="260.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">An outer boundary edge:</text>
+<text x="695.00" y="298.00" font-size="25" fill="#8953af" text-anchor="start" font-weight="normal">f₁ — f∞</text>
+<text x="580.00" y="405.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">3 of the 16 dual edges are shown.</text>
+<text x="580.00" y="446.00" font-size="21" fill="#172b43" text-anchor="middle" font-weight="normal">In the full graph, the three cores have 5, 4 and 5 edges to f∞.</text>
+</g></svg>

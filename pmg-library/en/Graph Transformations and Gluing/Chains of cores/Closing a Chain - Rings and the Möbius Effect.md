@@ -1,9 +1,9 @@
 ---
 title: "Closing a Chain: Rings and the Möbius Effect"
 date: 2026-10-31
-updated: 2026-11-02
-revision: 2
-translated_revision: 3
+updated: 2026-11-08
+revision: 3
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -99,6 +99,8 @@ $$
 Here $C(\pi,\sigma)=1$ if $r(\pi\vee\sigma)=r(\pi)+r(\sigma)$ and $0$ otherwise; $r(\pi)=4-b(\pi)$, where $b(\pi)$ is the number of blocks and $\pi\vee\sigma$ their common coarsening. The condition selects forests that do not acquire a cycle under identification. The duplicate end edge must be excluded before forming the passport for the last step. Data transfer is described by the [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains#Transferring the full forest passport|active-boundary transfer rule]]. Spectral data require a separate [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data|spectral passport]].
 
 ## Periodic and antiperiodic modes
+
+First follow the meaning of the twist without calculation. In a symmetric mode, the values on $a_i,b_i$ agree, so exchanging the seam endpoints changes nothing. In an antisymmetric mode they are opposite, so exchanging the endpoints reverses the sign. After a full circuit, the ordinary strip therefore returns the original value, whereas the twisted strip returns its negative in the antisymmetric sector. This condition is called antiperiodic; it explains the two signs in the formulas below.
 
 We need the Chebyshev polynomials $T_k$ and $U_k$ of the first and second kinds. Their normalizations are $T_0=U_0=1$, $T_1(z)=z$, and $U_1(z)=2z$, with the common recurrence $p_{k+1}(z)=2zp_k(z)-p_{k-1}(z)$. Here $z$ is the Chebyshev argument; it is distinct from the spectral variable $\xi$ in $\det(\xi I-\mathbf L)$.
 
@@ -350,11 +352,12 @@ Proposition 1 compares $\tau_r$ with $\tau_0$; it does not assert pairwise disti
 
 ## Checks and applicability conditions
 
-The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_closures.py) and [exact data](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/closure-results.json) record the open graphs, local core vertices, last correspondence, duplicate edges to remove, maps of all vertices to the closed graph, and its final edges. They check $37$ closed graphs: $24$ strips with $3\le N\le6$, $m\in\{4,6,8\}$, and both closures; the hexagonal ring; and $12$ prism closures with different shifts.
-
-For each assembly, the checks cover connectivity, sizes, preservation of core images, and every pairwise intersection. The Laplacian from the final edge set is compared with (2), including the correction for all duplicate final-seam edges. Its minor gives the spanning-tree count. The radius is computed independently from the energy of the diagonal of the inverse grounded Laplacian and through a separately constructed Green matrix and circumcenter equidistance equations, using exact rational arithmetic. The energy is additionally checked for every reference vertex.
-
-For strips, the Chebyshev formulas are compared with direct determinants; the symmetric and antisymmetric blocks and the determinant factor from eliminating internal vertices are checked separately. Boundary rule (3) is checked by full forest enumeration for square strips with $N=3,4$. An explicit correspondence identifies the ring with an independent assembly on the hexagonal lattice. For prisms, product (11) is evaluated exactly through the cyclic-shift matrix, without approximate trigonometric values; the isomorphism between shifts $r$ and $m-r$ is checked by an explicit vertex permutation. See the [reproduction and drawing instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md).
+> [!note]- Computational verification details
+> The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_closures.py) and [exact data](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/closure-results.json) record the open graphs, local core vertices, last correspondence, duplicate edges to remove, maps of all vertices to the closed graph, and its final edges. They check $37$ closed graphs: $24$ strips with $3\le N\le6$, $m\in\{4,6,8\}$, and both closures; the hexagonal ring; and $12$ prism closures with different shifts.
+> 
+> For each assembly, the checks cover connectivity, sizes, preservation of core images, and every pairwise intersection. The Laplacian from the final edge set is compared with (2), including the correction for all duplicate final-seam edges. Its minor gives the spanning-tree count. The radius is computed independently from the energy of the diagonal of the inverse grounded Laplacian and through a separately constructed Green matrix and circumcenter equidistance equations, using exact rational arithmetic. The energy is additionally checked for every reference vertex.
+> 
+> For strips, the Chebyshev formulas are compared with direct determinants; the symmetric and antisymmetric blocks and the determinant factor from eliminating internal vertices are checked separately. Boundary rule (3) is checked by full forest enumeration for square strips with $N=3,4$. An explicit correspondence identifies the ring with an independent assembly on the hexagonal lattice. For prisms, product (11) is evaluated exactly through the cyclic-shift matrix, without approximate trigonometric values; the isomorphism between shifts $r$ and $m-r$ is checked by an explicit vertex permutation. See the [reproduction and drawing instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md).
 
 General assertions are proved in the text; finite checks confirm constructions and examples. Increased $\tau$ and decreased $\rho$ under Möbius closure are proved together here for the square strip. For even cycles joined along opposite edges, the formula for $\tau$ is proved; for a cyclic prism-base shift, comparison with the zero shift is proved. These conditions cannot be replaced by a general statement that “twisting improves connectivity.”
 

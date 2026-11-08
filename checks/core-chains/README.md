@@ -4,9 +4,31 @@
 
 Итоги общей проверки, внесённые исправления и границы вычислительного покрытия зафиксированы в [REVIEW_RU.md](REVIEW_RU.md). Маршрут чтения и происхождение результатов собраны в [навигаторе серии](../../pmg-library/ru/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B8%20%D1%81%D0%BE%D1%87%D0%BB%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2/%D0%A6%D0%B5%D0%BF%D0%B8%20%D0%B8%D0%B7%20%D1%8F%D0%B4%D0%B5%D1%80/%D0%A6%D0%B5%D0%BF%D0%B8%20%D0%B8%D0%B7%20%D1%8F%D0%B4%D0%B5%D1%80.md).
 
+## Editorial additions, 2026-11-08
+
+The bilingual pass separates the main reading route from the weaving continuation, brings the three-hexagon example forward, computes the first square state and toponome, illustrates side-face prism correspondences and primal/dual construction, and aligns translated revision metadata.
+
+The new example is independently checked by exhaustive enumeration of all 16 edge subsets of the square and by the determinant of its Laplacian polynomial:
+
+```text
+python checks/core-chains/verify_editorial_examples.py
+```
+
+To reproduce the five added diagrams and the adjusted vertex labels in the two existing hexagonal-chain diagrams, run:
+
+```text
+python checks/core-chains/draw_admissible_chains.py
+python checks/core-chains/draw_matroid_figures.py
+python checks/core-chains/draw_editorial_figures.py
+python checks/core-chains/translate_figures.py
+python checks/core-chains/verify_weaving_translation.py
+```
+
+The new diagram generator also supplies its English labels to `figure-translations-en.json`. The original figures must be present before translating the full set. All outputs are written to the corresponding series `images` directories. The seven general mathematical checks below remain the checks for the series-wide results; the square check only verifies the newly displayed small example.
+
 ## English versions and figures
 
-The seven notes and the [English navigator](../../pmg-library/en/Graph%20Transformations%20and%20Gluing/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for the original five-note translation and [REVIEW_WEAVING_EN.md](REVIEW_WEAVING_EN.md) for the two weaving supplements and eight additional figures, giving 23 distinct figures per language.
+The seven notes and the [English navigator](../../pmg-library/en/Graph%20Transformations%20and%20Gluing/Chains%20of%20cores/Chains%20of%20Cores.md) use the same graph definitions and exact data as the Russian series. See [REVIEW_EN.md](REVIEW_EN.md) for the original five-note translation and [REVIEW_WEAVING_EN.md](REVIEW_WEAVING_EN.md) for the two weaving supplements and eight additional figures, giving the original 23 distinct figures per language. The November 8 editorial pass adds five diagrams per language, for a total of 28.
 
 The weaving supplements are reproduced with:
 

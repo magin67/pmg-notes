@@ -1,9 +1,9 @@
 ---
 title: "Cores, Seams, and Admissible Chains"
 date: 2026-10-31
-updated: 2026-11-02
-revision: 2
-translated_revision: 7
+updated: 2026-11-08
+revision: 3
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -106,6 +106,16 @@ These conditions concern the abstract graph. Crossing lines in a drawing without
 
 **Four constructions.** In the admissible case, the two seams of the middle core share no vertices. The other panels separately show a common vertex of two seams, an additional contact between the end cores, and a disconnected intersection of adjacent cores. The last example retains two shared edges, but they do not form a path. Leaving the conditions of the definition does not mean that every invariant must change; it requires a different analysis.
 
+### First example: three hexagons
+
+Let $N=3$, $m_1=m_2=m_3=6$, and $s_1=s_2=2$. Number the vertices of the middle core $K_2$ as $0,1,\ldots,5$ around the cycle. The input seam is the edge $01$. Choose the output seam as $34$ in configuration A and $23$ in configuration B.
+
+![Two assemblies of three hexagons with marked seams and the core scheme](images/Two%20Assemblies%20of%20Three%20Hexagons.svg)
+
+**One scheme, two configurations.** In both cases the core scheme is the path $1-2-3$. The red input and blue output of the middle core each have two vertices and are disjoint. Arrows specify the order of seam endpoints; equal numbers denote the same vertex. The geometric drawings represent abstract graphs, not their resistance embeddings.
+
+Each assembly has $n=3\cdot6-2\cdot2=14$ vertices and $|E|=3\cdot6-2=16$ edges. The graphs differ, although their spanning-tree count and resistance radius agree: $\tau=204$, $\rho=43595/41616$. Exact edge lists, the nonisomorphism proof, and an independent calculation appear below in [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains#Two assemblies of three hexagons|Two assemblies of three hexagons]].
+
 ## Input, output, and active boundaries
 
 > [!info] Input, output, and active boundaries
@@ -141,6 +151,8 @@ If the input seam has $s\ge3$ vertices, its $s-2$ internal vertices become isola
 
 ### Transferring the full forest passport
 
+This section develops the computational side of assembly. On a first reading, you can continue to [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|the explanation of invariance]]. To understand transfer, first follow one forest and its boundary marks.
+
 > [!info] Boundary forest state polynomial
 > Recall the definition. For a nonempty boundary $B$ and a partition $\pi\in\Pi(B)$, the polynomial
 >
@@ -169,6 +181,10 @@ This is the polynomial form of the standard operation of forgetting a boundary v
 > [!note]- Proof of Lemma 2
 > **Proof.** For each forest $T$, the partition on the smaller boundary is $\pi_C(T)=\pi_D(T)|_C$. Thus the right-hand side groups exactly the same forests as the left-hand side. No edges or vertices of the forest are removed, and the power of $t$ does not change. A component losing its last boundary mark becomes internal and remains in the sum. $\square$
 
+**One forest as the boundary changes.** Take the square with edges $ab,ac,cd,db$ and the forest $T=\{ab\}$. With the marked set $D=\{a,b,c,d\}$, its state is $\omega=\{a,b\}\mid\{c\}\mid\{d\}$. Retaining only $C=\{c,d\}$ gives $\omega|_C=\{c\}\mid\{d\}$. The component $ab$ becomes internal; its edge and weight $t$ remain. It contributes to the coefficient of $t$ in the separated output state.
+
+![A component becomes internal but remains in the forest](images/One%20forest%20as%20the%20boundary%20changes.svg)
+
 For a step with a new output, set $B=B_j$, $C=B_{j+1}$, and $D=B\cup C$; after renaming, $B$ is also the input of the new core. Admissibility gives $C\cap V(H_j)=\varnothing$. Transfer consists of three operations:
 
 1. **Enlarge the marked set.** Temporarily add the vertices of $C$ to $H_j$ as isolated vertices. A state $\pi$ on $B$ becomes $\pi^\uparrow=\pi\cup\{\{c\}:c\in C\}$ on $D$, with the same polynomial. All other states of this extension are zero.
@@ -195,15 +211,20 @@ For a step with a new output, set $B=B_j$, $C=B_{j+1}$, and $D=B\cup C$; after r
 
 Thus open assembly requires the full passport on the current input and the passport of the new fragment on the union of its input and output. The boundary size may change. For $N>1$, the initial data are the passport of $K_1$ on its output; at the last step, gluing along the input and summing states suffice. For $N=1$, no gluing is required.
 
+**The complete first step.** Start with the edge $ab$: $\mathcal F^{H,B}_{ab}=t$, $\mathcal F^{H,B}_{a\mid b}=1$. Attach the path $a-c-d-b$ and retain the output $C=\{c,d\}$. The compatible states in (6) give
+
+$$
+\mathcal F^{H_1,C}_{cd}=t+3t^2+4t^3,\qquad
+\mathcal F^{H_1,C}_{c\mid d}=1+3t+3t^2
+$$
+
+The first polynomial counts forests connecting $c$ and $d$: the edge $cd$ can be supplemented by any of the other three edges except all three at once; one further possibility is the path $c-a-b-d$ without $cd$. For a separated output, $cd$ is absent and the remaining three edges cannot all be selected. The sum is $1+4t+6t^2+4t^3$, the ordinary forest polynomial of the square. The pictured component $ab$ contributes to the second polynomial.
+
 Formula (6) concerns the full ordinary forest passport. Transferring reduced coordinates requires compatibility with their quotient construction. The characteristic polynomial $\chi_G(\xi)=\det(\xi I-\mathbf L_G)$ requires separate data from [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data|From the Forest Passport to Spectral Boundary Data]]; sufficiency of a passport for a fixed pair does not by itself define a spectral automaton when the pair changes.
 
 ## Two assemblies of three hexagons
 
-Let $N=3$, $m_1=m_2=m_3=6$, and $s_1=s_2=2$. Number the vertices of the middle core $K_2$ as $0,1,\ldots,5$ around the cycle. The input seam is the edge $01$. Choose the output seam as $34$ in configuration A and $23$ in configuration B.
-
-![Two assemblies of three hexagons with marked seams and the core scheme](images/Two%20Assemblies%20of%20Three%20Hexagons.svg)
-
-**One scheme, two configurations.** In both cases the core scheme is the path $1-2-3$. The red input and blue output of the middle core each have two vertices and are disjoint. Arrows specify the order of seam endpoints; equal numbers denote the same vertex. The geometric drawings represent abstract graphs, not their resistance embeddings.
+Specify the two assemblies pictured above and check their parameters.
 
 To specify the graphs independently of the drawing, let $C(v_0,\ldots,v_5)$ denote the cycle in the indicated order, including the last edge $v_5v_0$. Take
 
@@ -252,7 +273,8 @@ Other schemes and core types are considered in [[en/Graph Transformations and Gl
 
 The counting formulas (2), removal of marks (5), and full forest passport transfer (6) are proved. Formula (6) applies established connectivity-table operations and the [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Gluing Components by Pairing Boundary Data#The passport of the result|pairing law for boundary forest states]]. For the pair (7), nonisomorphism is justified structurally and the parameters (8) are computed directly.
 
-The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_admissible_chains.py) records explicit cores, vertex correspondences, and final edges. It checks connectivity, intersections, sizes, transfer of every forest state, one-vertex and multi-edge seams, reversed endpoint correspondence, isolated vertices of separate parts, and the three violations in the figure. The two hexagonal chains are evaluated exactly using two radius formulas. The [instructions and SVG drawing program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md) reproduce the three figures. Finite checks supplement the proofs.
+> [!note]- Computational verification details
+> The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_admissible_chains.py) records explicit cores, vertex correspondences, and final edges. It checks connectivity, intersections, sizes, transfer of every forest state, one-vertex and multi-edge seams, reversed endpoint correspondence, isolated vertices of separate parts, and the three violations in the figure. The two hexagonal chains are evaluated exactly using two radius formulas. The [instructions and SVG drawing program](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md) reproduce the figures. Finite checks supplement the proofs.
 
 ## Sources
 

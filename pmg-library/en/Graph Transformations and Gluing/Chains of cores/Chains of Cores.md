@@ -1,9 +1,9 @@
 ---
 title: "Chains of Cores"
 date: 2026-10-31
-updated: 2026-11-02
-revision: 4
-translated_revision: 9
+updated: 2026-11-08
+revision: 5
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -23,7 +23,7 @@ Russian version: [[ru/Преобразования и сочленения гр�
 
 This series explains how cores, seams, and the gluing scheme determine the characteristics of an assembled graph. Its main positive result concerns admissible open chains of cycles: with fixed ordered core and seam sizes, changing the configuration preserves the cycle matroid, ordinary forest coefficients, spanning-tree count, and resistance radius. Reordering seams, changing the scheme, or changing the last correspondence at closure requires separate analysis.
 
-The seven bilingual notes form a complete reading route. [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]] defines a fixed growth rule, while [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]] studies repeated factors, toponomes, and reduced forest states. This navigator collects their connections, applicability conditions, and the origins of the results. The spectral continuation is [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]]: nine bilingual notes on transfer, distinguishability, reconstruction, and periodic chains. Its scalar conjectures remain open.
+The series contains seven bilingual notes. The two routes below separate the geometry of assembly from computation by repeating one runner. The spectral continuation is published in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers]]: nine notes on transfer, distinguishability, reconstruction, and periodic chains.
 
 ## Place in the library
 
@@ -37,13 +37,22 @@ Secondary thematic entries:
 
 ## Reading route
 
+**Main route: from the construction to its parameters.** Start with cores and admissibility, then continue to invariance, spanning-tree counts, and the limits of the results. The general forest-passport formulas in the first note can wait until a second reading.
+
+1. [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|Cores, Seams, and Admissible Chains]]. Definitions of cores and schemes, seam vertex correspondences, and counting shared edges once. Input, output, and active boundaries; transfer of the full forest passport. The initial example of two assemblies of three hexagons.
+2. [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|Why Chain Configuration Preserves Matroid Parameters]]. A plane embedding and a common dual multigraph for fixed ordered data. The passage to the cycle matroid, ordinary forests, and the radius; an independent check of the example and the difference between rooted forests.
+3. [[en/Graph Transformations and Gluing/Chains of cores/Spanning-Tree Polynomials of Chains - Determinant and Recurrence|Spanning-Tree Polynomials of Chains - Determinant and Recurrence]]. A dual determinant indexed by the cores, a two-step recurrence, continuants, and matchings. Homogeneous normalization, Chebyshev polynomials, chain reversal, and dependence on seam order.
+4. [[en/Graph Transformations and Gluing/Chains of cores/Limits of Invariance - Branching, Disconnected Seams, and Other Cores|Limits of Invariance - Branching, Disconnected Seams, and Other Cores]]. The theorem for a fixed tree of cycles; the difference between a path and a star. Disconnected seams, seam pairs in tetrahedra and cubes, and gluing prisms along lateral faces. A counterexample with equal spanning-tree counts but different radii.
+5. [[en/Graph Transformations and Gluing/Chains of cores/Closing a Chain - Rings and the Möbius Effect|Closing a Chain - Rings and the Möbius Effect]]. Exact ordinary and twisted closures of a square strip; their spanning-tree counts and radii. Strips of even cycles, a hexagonal ring around a hole, and the separate model of closing prisms along their bases.
+
+**Further route: a repeated step and toponomes.** The weaving note also provides a visual first introduction through ladders. Continue to the exponential after it, once forest states and component-size variables are familiar.
+
 1. [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]]. Fixed plug, socket, contact correspondence, and initial graph. Two spanning states, the matrix of an arbitrary connected runner, and a recurrence. Ladders, hexagons, weights, variable outputs, and closure conditions.
 2. [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]]. The growth operator of the full polyform, component-size transfer, and the ordinary forest recurrence; the rooted meaning of five minors and the grade-three difference between isomer toponomes.
-3. [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|Cores, Seams, and Admissible Chains]]. Definitions of cores and schemes, seam vertex correspondences, and counting shared edges once. Input, output, and active boundaries; transfer of the full forest passport. The initial example of two assemblies of three hexagons.
-4. [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|Why Chain Configuration Preserves Matroid Parameters]]. A plane embedding and a common dual multigraph for fixed ordered data. The passage to the cycle matroid, ordinary forests, and the radius; an independent check of the example and the difference between rooted forests.
-5. [[en/Graph Transformations and Gluing/Chains of cores/Spanning-Tree Polynomials of Chains - Determinant and Recurrence|Spanning-Tree Polynomials of Chains - Determinant and Recurrence]]. A dual determinant indexed by the cores, a two-step recurrence, continuants, and matchings. Homogeneous normalization, Chebyshev polynomials, chain reversal, and dependence on seam order.
-6. [[en/Graph Transformations and Gluing/Chains of cores/Limits of Invariance - Branching, Disconnected Seams, and Other Cores|Limits of Invariance - Branching, Disconnected Seams, and Other Cores]]. The theorem for a fixed tree of cycles; the difference between a path and a star. Disconnected seams, seam pairs in tetrahedra and cubes, and gluing prisms along lateral faces. A counterexample with equal spanning-tree counts but different radii.
-7. [[en/Graph Transformations and Gluing/Chains of cores/Closing a Chain - Rings and the Möbius Effect|Closing a Chain - Rings and the Möbius Effect]]. Exact ordinary and twisted closures of a square strip; their spanning-tree counts and radii. Strips of even cycles, a hexagonal ring around a hole, and the separate model of closing prisms along their bases.
+
+![The main chain route and a separate continuation through weaving and toponomes](images/Two%20routes%20through%20chains%20of%20cores.svg)
+
+The upper track explains conditions and results for chains; the lower track develops computation by repeating one step. File numbering is retained and does not prescribe a required reading order.
 
 For particular tasks, a shorter route is possible:
 
@@ -121,13 +130,10 @@ External foundations:
 
 ## Reproducibility and continuation
 
-Translation of the texts and figure labels, formula consistency, bilingual links, and rendered pages are documented in the [English translation review](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/REVIEW_EN.md).
+[Verification programs, exact data, and figure-generation instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md) are supplied with the library. The set contains 28 figures in each language. Component-size transfer is checked by forest enumeration, and rooted evaluations by Laplacian minors.
 
-The original five notes passed the [general review of the Russian series](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/REVIEW_RU.md). The [verification programs, exact results, and construction of 15 figures](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/README.md) are available with the library. Example data retain cores, seams, vertex correspondences, and final edge sets.
-
-The weaving supplement has [separate exact checks](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_weaving.py), [saved results](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/weaving-results.json), and four figures; its computational scope is specified in the note.
-
-[[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|The Laplacian Exponential in Graph Weaving]] has [its own exact checks](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/verify_weaving_exponential.py), [full boundary data and toponomes](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/weaving-exponential-results.json), and four figures. Component-size transfer is compared with exhaustive forest enumeration, and rooted evaluations with Laplacian minors. Both supplements and all eight figure translations are documented in the [weaving translation review](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/REVIEW_WEAVING_EN.md). The complete series contains 23 distinct figures in each language.
+> [!note]- Earlier reviews and translations
+> The [review of the original five notes](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/REVIEW_RU.md), [their English translation review](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/REVIEW_EN.md), and [the weaving translation review](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/REVIEW_WEAVING_EN.md) remain available. They document their respective revisions; the instructions above reproduce the current set.
 
 Spanning-tree counts are compared with direct determinants of the assembled graph Laplacians. Radii are checked by independent formulas in rational arithmetic. Forest states and matroid correspondences use exhaustive enumeration of small graphs; the computational scope for larger constructions is specified separately. These calculations supplement proofs rather than replace them.
 

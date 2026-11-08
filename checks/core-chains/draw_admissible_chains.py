@@ -78,7 +78,7 @@ def draw_pair(s,cx,cy,r,start,labels=True,arrows=True):
         if labels:
             if v<6:
                 dx,dy=(pt[0]-cx)/r,(pt[1]-cy)/r
-                s.text(pt[0]+15*dx,pt[1]+15*dy+5,str(v),17,anchor='middle')
+                s.text(pt[0]-22*dx,pt[1]-22*dy+6,str(v),17,anchor='middle')
             else:
                 s.text(pt[0],pt[1]-10,str(v),15,anchor='middle')
     return p

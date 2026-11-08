@@ -331,5 +331,86 @@
       "Всего 14 вершин; изолированные вершины на схемах не показаны.": "14 vertices in total; isolated vertices are omitted from the diagrams."
     },
     "fit_text": true
+  },
+  "Два маршрута по цепям из ядер.svg": {
+    "file": "Two routes through chains of cores.svg",
+    "text": {
+      "Два маршрута по цепям из ядер": "Two routes through chains of cores",
+      "Основная линия: ядра, инвариантность, остовная рекурсия, ограничения, замыкание. Дополнительная: плетение и полный топоном.": "Main track: cores, invariance, spanning-tree recurrence, limits, closure. Further track: weaving and the full toponome.",
+      "Основной маршрут: конструкция и её параметры": "Main route: the construction and its parameters",
+      "Ядра": "Cores",
+      "и швы": "and seams",
+      "Матроидная": "Matroid",
+      "инвариантность": "invariance",
+      "Остовной": "Spanning-tree",
+      "определитель": "determinant",
+      "Границы": "Limits of",
+      "инвариантности": "invariance",
+      "Замыкание": "Closing",
+      "цепи": "a chain",
+      "От условий допустимости к результату и его ограничениям": "From admissibility to the result and its limitations",
+      "Продолжение: вычисление повторяемым шагом": "Further route: computation by repeating a step",
+      "Плетение графов": "Graph weaving",
+      "Бегунок и два остовных состояния": "A runner and two spanning states",
+      "Экспонента и топономы": "The exponential and toponomes",
+      "Размеры компонент и их оценки": "Component sizes and their evaluations",
+      "Плетение можно читать первым; полный топоном требует лесных состояний.": "Weaving can be read first; the full toponome requires forest states."
+    },
+    "fit_text": false
+  },
+  "Один лес при смене границы.svg": {
+    "file": "One forest as the boundary changes.svg",
+    "text": {
+      "Один лес при смене границы": "One forest as the boundary changes",
+      "В лесу квадрата выбрано только ребро ab. После снятия отметок a и b эта компонента остаётся внутренней; выходные вершины c и d разделены.": "Only edge ab is selected in a square forest. Removing the marks at a and b leaves that component internal; output vertices c and d remain separated.",
+      "До снятия отметок": "Before removing marks",
+      "После снятия отметок": "After removing marks",
+      "вес t": "weight t",
+      "Ребро ab остаётся. Исчезают только две граничные отметки.": "Edge ab remains. Only two boundary marks are removed."
+    },
+    "fit_text": false
+  },
+  "Первый шаг топонома квадрата.svg": {
+    "file": "The first square toponome step.svg",
+    "text": {
+      "Первый шаг топонома квадрата": "The first square toponome step",
+      "Начальное ребро ab выбрано. Без новых рёбер старая компонента закрывается. Любые два новых ребра дают дерево на четырёх вершинах, объясняя коэффициент три.": "The initial edge ab is selected. With no new edges, the old component closes. Any two new edges yield a tree on four vertices, explaining the coefficient three.",
+      "Начальное состояние tC₂: ребро ab уже выбрано": "Initial state tC₂: edge ab is already selected",
+      "Нет новых рёбер": "No new edges",
+      "Две продольные связи": "Two longitudinal edges",
+      "Верхняя связь и перекладина": "Upper edge and rung",
+      "Нижняя связь и перекладина": "Lower edge and rung",
+      "Три выбора пары новых рёбер дают вклад 3t³C₄.": "Three choices of two new edges contribute 3t³C₄.",
+      "Все три новых ребра вместе с ab образовали бы цикл.": "All three new edges together with ab would form a cycle."
+    },
+    "fit_text": false
+  },
+  "От цепочки к двойственному графу.svg": {
+    "file": "From a chain to its dual graph.svg",
+    "text": {
+      "От цепочки к двойственному графу": "From a chain to its dual graph",
+      "Два шва пересечены двойственными рёбрами f1f2 и f2f3. Внешнее ребро пересечено связью f1 с внешней гранью. Показана часть двойственного графа.": "Two seams are crossed by dual edges f1f2 and f2f3. An external edge is crossed by a connection from f1 to the outer face. Only part of the dual graph is shown.",
+      "Каждое ребро связывает две соседние грани": "Each edge links its two incident faces",
+      "внешняя грань": "outer face",
+      "Шов между ядрами:": "A seam between cores:",
+      "Ребро внешнего контура:": "An outer boundary edge:",
+      "Показаны 3 из 16 двойственных рёбер.": "3 of the 16 dual edges are shown.",
+      "В полном графе к f∞ ведут 5, 4 и 5 рёбер от трёх ядер.": "In the full graph, the three cores have 5, 4 and 5 edges to f∞."
+    },
+    "fit_text": false
+  },
+  "Боковые грани призм и соответствия вершин.svg": {
+    "file": "Prism side faces and vertex correspondences.svg",
+    "text": {
+      "Боковые грани призм и соответствия вершин": "Prism side faces and vertex correspondences",
+      "В среднем ядре C6 на K2 выделены вход F0 и выход F2 либо F3. Ниже показаны два отождествления F0 внешнего ядра с F2 среднего: без сдвига и со сдвигом на одну вершину.": "The middle core C6 Cartesian K2 has input F0 and output F2 or F3 highlighted. Below, F0 of an outer core is identified with F2 of the middle core, either directly or shifted by one vertex.",
+      "1. Выбрать две боковые грани среднего ядра": "1. Choose two lateral faces of the middle core",
+      "2. Задать соответствие F₀ → F₂": "2. Specify the correspondence F₀ → F₂",
+      "Внешнее ядро": "Outer core",
+      "Среднее ядро": "Middle core",
+      "r = 0: типы рёбер сохраняются; r = 1: основания и продольные рёбра меняются местами.": "r = 0 preserves edge types; r = 1 exchanges base edges and longitudinal edges.",
+      "Стрелки задают отождествление вершин, а не новые рёбра.": "Arrows specify vertex identifications, not new edges."
+    },
+    "fit_text": false
   }
 }
