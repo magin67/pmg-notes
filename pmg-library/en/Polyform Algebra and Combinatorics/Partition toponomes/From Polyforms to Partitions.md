@@ -2,11 +2,12 @@
 title: From Polyforms to Partitions
 date: 2026-10-22
 updated: 2026-11-08
-revision: 2
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: from-polyforms-to-partitions
 lang: en
+source_revision: 8
 description: "The toponome of a chosen polyform representation: component-grade types, spanning-forest coefficients, and equivalent notation as a polynomial in several variables. A path on five vertices."
 order: 1
 aliases:
@@ -67,6 +68,12 @@ This differs from the product power $(1)^2$, whose meaning requires a definition
 
 **Remark.** A grade type differs from the block-size type used in [[Partitions and the Combinatorial Potential of the Second Kind#Set partitions|combinatorial counting]]. For $abc\mid de$, the sizes form the collection $[3,2]$, whereas the form type is $(2,1)$.
 
+| Notation | Meaning |
+| --- | --- |
+| $(abc)$ | A boundary on three vertices, of grade $2$ |
+| $[(abc)(de)]^2$ | The quadratic form on a product of boundaries |
+| $(2,1)$ | The positive integer type of this form |
+
 ## Singleton vertices and type parameters
 
 A singleton block $\{a\}$ gives the boundary $(a)=1$ and a zero part in the full type. For example, on the set $\{a,b,c,d,e,f\}$,
@@ -102,6 +109,29 @@ The sum of the grades of all blocks is $\sum_{i=1}^{m}(\#B_i-1)=n-m$. Thus, $n$ 
 For type $(2,1)$ on five vertices, $k=3$, $r=m=2$, and $\ell=0$. On six vertices, the same positive type has $m=3$ and $\ell=1$. Hence $n$ is part of the input data; a positive type alone does not determine it.
 
 If all blocks are singletons, the positive type is empty. We denote the corresponding basis symbol by $1$. For fixed $n$, it represents the partition into $n$ singleton vertices and the form $e=[1]^2$.
+
+## A short weighted example
+
+There are only four edge sets: the empty set, either edge alone, and both edges. Their types are respectively $1$, $(1)$, and $(2)$.
+
+For a three-vertex path with weight $p$ on $ab$ and $q$ on $bc$,
+
+$$
+M=\bigl(e+p[(ab)]^2\bigr)\bigl(e+q[(bc)]^2\bigr)
+=e+p[(ab)]^2+q[(bc)]^2+pq[(abc)]^2
+$$
+
+Hence
+
+$$
+T=1+(p+q)(1)+pq(2)
+$$
+
+The coefficient $p+q$ combines two distinct one-edge contributions, while $pq$ is the weight of the unique two-edge tree. With positive noninteger weights, these coefficients need not be integers.
+
+![Two one-edge forests contribute to the coefficient p+q](Collecting%20Contributions%20of%20One%20Type.svg)
+
+*Figure 2. All three vertices remain in the picture, including the isolated one. Distinct labelled forests have the same positive type; their weights are added, not their edges.*
 
 ## The toponome of a chosen representation
 
@@ -176,6 +206,38 @@ M_{P_5}=
 \bigl(e+[(de)]^2\bigr)
 $$
 
+### The six two-edge forests
+
+Two selected edges are either adjacent or share no vertex. In the first case, they form a three-vertex component of type $(2)$; in the second, they form two two-vertex components of type $(1^2)$.
+
+![All six two-edge spanning forests of P5, grouped by types (2) and (1²)](Two-edge%20forests%20of%20P5.svg)
+
+*Figure 3. Three forests of type $(2)$ on the left and three of type $(1^2)$ on the right. Solid colored edges belong to the forest; dashed lines show unselected edges of the original path. All five vertices are retained. Both columns have $m=3$ components in total, but the numbers of nontrivial components are $r=1$ and $r=2$, respectively.*
+
+The three adjacent pairs contribute $3(2)$ and the three nonadjacent pairs contribute $3(1^2)$. Thus grade $2$ gives $3(2)+3(1^2)$. The complete expansion in forms appears after the type table.
+
+### The remaining grades
+
+Selecting three edges omits exactly one of the four. Omitting an end edge leaves a four-vertex path and a singleton: two forests of type $(3)$. Omitting either internal edge splits the path into components of two and three vertices: two forests of type $(2,1)$. All four edges give the unique tree of type $(4)$.
+
+| Grade $k$ | Positive type | Total components $m$ | Nontrivial components $r$ | Singleton vertices $\ell$ | Coefficient |
+| --- | --- | --- | --- | --- | --- |
+| $0$ | Empty type $1$ | $5$ | $0$ | $5$ | $1$ |
+| $1$ | $(1)$ | $4$ | $1$ | $3$ | $4$ |
+| $2$ | $(2)$ | $3$ | $1$ | $2$ | $3$ |
+| $2$ | $(1^2)$ | $3$ | $2$ | $1$ | $3$ |
+| $3$ | $(3)$ | $2$ | $1$ | $1$ | $2$ |
+| $3$ | $(2,1)$ | $2$ | $2$ | $0$ | $2$ |
+| $4$ | $(4)$ | $1$ | $1$ | $0$ | $1$ |
+
+We obtain
+
+$$
+\boxed{T_{P_5}=1+4(1)+3(2)+3(1^2)+2(3)+2(2,1)+(4)}
+$$
+
+**Check.** The coefficient sum is $1+4+3+3+2+2+1=16=2^4$, the number of all subsets of the four edges. The counts by grade are $1,4,6,4,1$. Listing the types refines these binomial coefficients: the six two-edge forests are distributed between two types.
+
 ### All grade components of the exponential
 
 Expand the product and group terms by grade:
@@ -214,56 +276,7 @@ $$
 
 Every edge set of the path is a forest. The expansion therefore gives one term for each of the $16$ edge sets, with counts $1,4,6,4,1$ by grade. Singleton vertices are omitted from the form arguments; for example, $[(abc)]^2$ here corresponds to $abc\mid d\mid e$.
 
-The types can now be read directly from these formulas. Only the empty type occurs in $M_0$, while the four terms of $M_1$ have type $(1)$ and contribute $4(1)$. Grades $2$ and $3$, where more than one type occurs, deserve a closer look.
-
-### The six two-edge forests
-
-Two selected edges are either adjacent or share no vertex. In the first case, they form a three-vertex component of type $(2)$; in the second, they form two two-vertex components of type $(1^2)$.
-
-![All six two-edge spanning forests of P5, grouped by types (2) and (1²)](Two-edge%20forests%20of%20P5.svg)
-
-*Figure 2. Three forests of type $(2)$ on the left and three of type $(1^2)$ on the right. Solid colored edges belong to the forest; dashed lines show unselected edges of the original path. All five vertices are retained. Both columns have $m=3$ components in total, but the numbers of nontrivial components are $r=1$ and $r=2$, respectively.*
-
-The first line of $M_2$ contains the three forms of adjacent edge pairs, of type $(2)$. The second contains the three forms of nonadjacent pairs, of type $(1^2)$. Thus, grade $2$ maps to $3(2)+3(1^2)$.
-
-### The remaining grades
-
-Selecting three edges omits exactly one of the four. Omitting an end edge leaves a four-vertex path and a singleton: two forests of type $(3)$. Omitting either internal edge splits the path into components of two and three vertices: two forests of type $(2,1)$. All four edges give the unique tree of type $(4)$.
-
-| Grade $k$ | Positive type | Total components $m$ | Nontrivial components $r$ | Singleton vertices $\ell$ | Coefficient |
-| --- | --- | --- | --- | --- | --- |
-| $0$ | Empty type $1$ | $5$ | $0$ | $5$ | $1$ |
-| $1$ | $(1)$ | $4$ | $1$ | $3$ | $4$ |
-| $2$ | $(2)$ | $3$ | $1$ | $2$ | $3$ |
-| $2$ | $(1^2)$ | $3$ | $2$ | $1$ | $3$ |
-| $3$ | $(3)$ | $2$ | $1$ | $1$ | $2$ |
-| $3$ | $(2,1)$ | $2$ | $2$ | $0$ | $2$ |
-| $4$ | $(4)$ | $1$ | $1$ | $0$ | $1$ |
-
-We obtain
-
-$$
-\boxed{T_{P_5}=1+4(1)+3(2)+3(1^2)+2(3)+2(2,1)+(4)}
-$$
-
-**Check.** The coefficient sum is $1+4+3+3+2+2+1=16=2^4$, the number of all subsets of the four edges. The counts by grade are $1,4,6,4,1$. Listing the types refines these binomial coefficients: the six two-edge forests are distributed between two types.
-
-### A short weighted example
-
-For a three-vertex path with weight $p$ on $ab$ and $q$ on $bc$,
-
-$$
-M=\bigl(e+p[(ab)]^2\bigr)\bigl(e+q[(bc)]^2\bigr)
-=e+p[(ab)]^2+q[(bc)]^2+pq[(abc)]^2
-$$
-
-Hence
-
-$$
-T=1+(p+q)(1)+pq(2)
-$$
-
-The coefficient $p+q$ combines two distinct one-edge contributions, while $pq$ is the weight of the unique two-edge tree. With positive noninteger weights, these coefficients need not be integers.
+These formulas allow every contribution to the type table above to be checked. In particular, the three adjacent edge pairs give type $(2)$, and the three nonadjacent pairs give $(1^2)$.
 
 ## Partitions and polynomials in several variables
 

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="420" viewBox="0 0 1120 420" role="img" aria-labelledby="title"><title id="title">Class Partitions and Color Names</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="420" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Two color assignments, one class partition</text>
+<line x1="115.0" y1="125.0" x2="190.0" y2="125.0" stroke="#203344" stroke-width="3"/>
+<line x1="115.0" y1="230.0" x2="190.0" y2="230.0" stroke="#203344" stroke-width="3"/>
+<circle cx="90" cy="125" r="25" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="90" y="133" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">a</text>
+<circle cx="215" cy="125" r="25" fill="white" stroke="#aa5d12" stroke-width="3"/>
+<text xml:space="preserve" x="215" y="133" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">b</text>
+<circle cx="90" cy="230" r="25" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="90" y="238" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">c</text>
+<circle cx="215" cy="230" r="25" fill="white" stroke="#aa5d12" stroke-width="3"/>
+<text xml:space="preserve" x="215" y="238" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">d</text>
+<line x1="460.0" y1="125.0" x2="535.0" y2="125.0" stroke="#203344" stroke-width="3"/>
+<line x1="460.0" y1="230.0" x2="535.0" y2="230.0" stroke="#203344" stroke-width="3"/>
+<circle cx="435" cy="125" r="25" fill="white" stroke="#aa5d12" stroke-width="3"/>
+<text xml:space="preserve" x="435" y="133" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">a</text>
+<circle cx="560" cy="125" r="25" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="560" y="133" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">b</text>
+<circle cx="435" cy="230" r="25" fill="white" stroke="#aa5d12" stroke-width="3"/>
+<text xml:space="preserve" x="435" y="238" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">c</text>
+<circle cx="560" cy="230" r="25" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="560" y="238" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">d</text>
+<line x1="255" y1="177" x2="395" y2="177" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="325" y="280" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">swap colors</text>
+<path d="M600 175 H730" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="750" y="95" width="335" height="195" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="918" y="140" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Colors forgotten</text>
+<text xml:space="preserve" x="918" y="190" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">ac | bd</text>
+<text xml:space="preserve" x="918" y="240" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">type (2²)</text>
+<text xml:space="preserve" x="560" y="365" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Edges: ab and cd. Sharing a color creates no new edge.</text>
+</svg>

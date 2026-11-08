@@ -1,12 +1,13 @@
 ---
 title: Graph Colorings and Partition Products
 date: 2026-10-22
-updated: 2026-10-22
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: graph-colorings-and-partition-products
 lang: en
+source_revision: 3
 description: "A graph model of the second-kind algebra: color classes, vertex-weighted complete graphs, disjoint union, and chromatic symmetric functions."
 order: 4
 aliases:
@@ -77,6 +78,32 @@ $$
 
 This is an element of the partition algebra. The coefficient of a type is the number of color-class partitions with that collection of weights. The graph with no vertices has one empty partition, so its sum is the unit $1$.
 
+## Two separate vertices
+
+### Unit weights
+
+For two one-part factors of weight $1$,
+
+$$
+(1)*(1)=(1^2)+(2)
+$$
+
+Each factor is represented by one vertex. Their disjoint union has no edge, so the vertices may have different colors or a shared color. These cases give the types $(1^2)$ and $(2)$, respectively.
+
+### Weights two and one
+
+With weights $2$ and $1$,
+
+$$
+(2)*(1)=(2,1)+(3)
+$$
+
+Different colors preserve the two parts $2$ and $1$. A shared color merges the vertices into a class of weight $3$. In both cases the graph has two vertices.
+
+![Two color-class partitions of two separate vertices, first with weights 1 and 1, then with weights 2 and 1](Color%20classes%20of%20two%20vertices.svg)
+
+*Figure 1. The number inside a circle is the vertex weight, and the letter below it is the vertex name. On the left, the vertices have different colors; on the right, they share a color. In the row with weights $2$ and $1$, the shared class gives a part $3$, although it contains two vertices. There are no edges between the vertices. Each panel shows one representative of a color-class partition; the colors may be renamed.*
+
 ## A complete graph represents one type
 
 Let $\lambda=(a_1,\ldots,a_r)$. Construct a complete graph on $r$ vertices $v_1,\ldots,v_r$, assigning weight $a_i$ to $v_i$. Denote this weighted graph by $K_\lambda$.
@@ -121,32 +148,6 @@ $$
 $$
 
 Thus the coefficients of a product of basis partitions can be obtained by enumerating the color-class partitions of a single graph $K_\lambda\sqcup K_\mu$.
-
-## Two separate vertices
-
-### Unit weights
-
-For two one-part factors of weight $1$,
-
-$$
-(1)*(1)=(1^2)+(2)
-$$
-
-Each factor is represented by one vertex. Their disjoint union has no edge, so the vertices may have different colors or a shared color. These cases give the types $(1^2)$ and $(2)$, respectively.
-
-### Weights two and one
-
-With weights $2$ and $1$,
-
-$$
-(2)*(1)=(2,1)+(3)
-$$
-
-Different colors preserve the two parts $2$ and $1$. A shared color merges the vertices into a class of weight $3$. In both cases the graph has two vertices.
-
-![Two color-class partitions of two separate vertices, first with weights 1 and 1, then with weights 2 and 1](Color%20classes%20of%20two%20vertices.svg)
-
-*Figure 1. The number inside a circle is the vertex weight, and the letter below it is the vertex name. On the left, the vertices have different colors; on the right, they share a color. In the row with weights $2$ and $1$, the shared class gives a part $3$, although it contains two vertices. There are no edges between the vertices. Each panel shows one representative of a color-class partition; the colors may be renamed.*
 
 ## Seven possibilities for two edges
 
@@ -202,6 +203,25 @@ A class of three vertices is impossible: it would contain both endpoints of at l
 | $2$ | $(2^2)$ | $2$ |
 
 In every case, the number of vertices is $N=4$, the total weight is $k=4$, and the graph has $2$ connected components. The number $r$ of color classes ranges from $2$ to $4$ and is a different quantity from the number of connected components. The sum of the coefficients is $7$: the number of admissible class partitions, disregarding color names.
+
+## Class partitions and named colors
+
+Fix a palette of $q$ colors. A partition into $r$ nonempty classes requires distinct colors to be assigned to those classes. There are $q(q-1)\cdots(q-r+1)$ assignments when $r\leqslant q$, and none when $r>q$.
+
+For two disjoint edges, this gives:
+
+| Number of classes $r$ | Partitions | Colorings at $q=2$ | Colorings at $q=3$ |
+| --- | ---: | ---: | ---: |
+| $4$ | $1$ | $0$ | $0$ |
+| $3$ | $4$ | $0$ | $4\cdot3\cdot2\cdot1=24$ |
+| $2$ | $2$ | $2\cdot2\cdot1=4$ | $2\cdot3\cdot2=12$ |
+| Total | $7$ | $4$ | $36$ |
+
+A direct check is also available: each edge admits $q(q-1)$ colorings, and the two edges are colored independently. Their number is therefore $q^2(q-1)^2$, giving the same $4$ and $36$.
+
+![Two named-color assignments give the same partition ac|bd](Class%20Partitions%20and%20Color%20Names.svg)
+
+*Figure 3. The vertices and edges do not change. Exchanging blue and orange gives a different coloring with named colors but preserves the partition $ac\mid bd$.*
 
 ## Isolated vertices and powers of the part of weight one
 

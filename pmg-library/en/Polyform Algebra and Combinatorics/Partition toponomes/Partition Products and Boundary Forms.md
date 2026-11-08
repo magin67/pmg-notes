@@ -1,12 +1,13 @@
 ---
 title: Partition Products and Boundary Forms
 date: 2026-10-22
-updated: 2026-10-22
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-products-and-boundary-forms
 lang: en
+source_revision: 3
 description: "Realizing partition multiplication by gluing boundary components at chosen roots: examples, coefficients, and the distinction from ordinary polyform multiplication."
 order: 5
 aliases:
@@ -92,6 +93,46 @@ In every case, both factors have type $(1)$, but the results differ. Thus the ty
 >
 > Their product is therefore the boundary $(pa_1\ldots a_kb_1\ldots b_l)$. A different vertex order may introduce a sign, which disappears in the quadratic form. The union has $(k+1)+(l+1)-1$ vertices, giving the formula for its grade. $\square$
 
+## Simple examples
+
+Choose one marked vertex, a root, in each component in advance. Gluing two roots identifies them without adding an edge. For edges $ab$ and $cd$, fix roots $a$ and $c$: the single gluing substitutes $c\mapsto a$. Other root choices are not enumerated here.
+
+Two one-part types admit two matchings: the empty matching and a single pair. Hence
+
+$$
+(1)*(1)=(1^2)+(2)
+$$
+
+Take edges $ab$ and $cd$, with roots $a$ and $c$. The two terms in the sum of gluings are
+
+$$
+\mathcal E_{(1),(1)}=[(ab)(cd)]^2+[(abd)]^2
+$$
+
+The second term is obtained by the substitution $c\mapsto a$; if the four original vertices are retained, $c$ becomes a singleton block.
+
+For a boundary of grade $2$ and a separate connection, we similarly obtain
+
+$$
+(2)*(1)=(2,1)+(3)
+$$
+
+Choosing root $a$ in the block $abc$ and root $d$ in the block $de$ gives
+
+$$
+\mathcal E_{(2),(1)}=[(abc)(de)]^2+[(abce)]^2
+$$
+
+Here the second term corresponds to the substitution $d\mapsto a$.
+
+![Two possibilities for the products (1)*(1) and (2)*(1): keep the components separate or glue their chosen roots](Simple%20gluings%20of%20boundary%20components.svg)
+
+*Figure 2. Blue edges represent the first factor, and orange edges the second. A double circle marks a root. On the left, there is no gluing; on the right, the roots are identified. The upper row gives types $(1^2)$ and $(2)$, and the lower row gives $(2,1)$ and $(3)$. The freed labels $c$ and $d$, counted as isolated vertices in the common space, are omitted from the right-hand panels.*
+
+![A glued pair of edges on three vertices and its expression on the four original labels](Gluing%20and%20the%20Original%20Vertex%20Set.svg)
+
+*Figure 3. The middle panel shows the graph after identifying $c$ with $a$: it has three vertices. On the right, the same boundary form is expressed on the original set $\{a,b,c,d\}$, with $c$ counted as a singleton block. These are two representations, not the creation of a new vertex during gluing.*
+
 ## Partial gluings at chosen roots
 
 Take two types
@@ -151,40 +192,6 @@ The particular roots and the trees chosen for the figures do not affect the resu
 
 If one type is empty, there is a unique matching and no gluing. The unit form $e$ corresponds to the empty type $1$, which preserves the other factor.
 
-## Simple examples
-
-Two one-part types admit two matchings: the empty matching and a single pair. Hence
-
-$$
-(1)*(1)=(1^2)+(2)
-$$
-
-Take edges $ab$ and $cd$, with roots $a$ and $c$. The two terms in the sum of gluings are
-
-$$
-\mathcal E_{(1),(1)}=[(ab)(cd)]^2+[(abd)]^2
-$$
-
-The second term is obtained by the substitution $c\mapsto a$; if the four original vertices are retained, $c$ becomes a singleton block.
-
-For a boundary of grade $2$ and a separate connection, we similarly obtain
-
-$$
-(2)*(1)=(2,1)+(3)
-$$
-
-Choosing root $a$ in the block $abc$ and root $d$ in the block $de$ gives
-
-$$
-\mathcal E_{(2),(1)}=[(abc)(de)]^2+[(abce)]^2
-$$
-
-Here the second term corresponds to the substitution $d\mapsto a$.
-
-![Two possibilities for the products (1)*(1) and (2)*(1): keep the components separate or glue their chosen roots](Simple%20gluings%20of%20boundary%20components.svg)
-
-*Figure 2. Blue edges represent the first factor, and orange edges the second. A double circle marks a root. On the left, there is no gluing; on the right, the roots are identified. The upper row gives types $(1^2)$ and $(2)$, and the lower row gives $(2,1)$ and $(3)$. The freed labels $c$ and $d$, counted as isolated vertices in the common space, are omitted from the right-hand panels.*
-
 ## Seven gluings for two pairs of connections
 
 For two factors of type $(1^2)$,
@@ -197,7 +204,7 @@ Represent the first factor by edges $p_1a_1,p_2a_2$, and the second by edges $q_
 
 ![Seven gluings of two pairs of edges: one with no gluing, four with one gluing, and two with two gluings](Seven%20gluings%20of%20boundary%20components.svg)
 
-*Figure 3. All partial matchings of two pairs of components are shown. Edge colors retain membership in the original factor, and double circles mark roots. A label $p_i=q_j$ at a shared vertex indicates gluing; the formulas use the name $p_i$. Isolated vertices arising when the results are written on the common set of eight vertices are omitted.*
+*Figure 4. All partial matchings of two pairs of components are shown. Edge colors retain membership in the original factor, and double circles mark roots. A label $p_i=q_j$ at a shared vertex indicates gluing; the formulas use the name $p_i$. Isolated vertices arising when the results are written on the common set of eight vertices are omitted.*
 
 **No gluings.** The empty matching gives one form
 
@@ -273,7 +280,7 @@ The first factor has type $(1^2)$ and the second type $(1)$. The connection $bc$
 
 ![Two blue connections ab and cd, multiplied by the orange connection bc, form the path abcd: one component of the second factor joins two components of the first](An%20edge%20joining%20two%20components.svg)
 
-*Figure 4. The vertex names in all three panels refer to the same set $\{a,b,c,d\}$. The product retains all three connections. In this arrangement, the connection in the second factor intersects both components of the first, so a partial matching of components does not describe it.*
+*Figure 5. The vertex names in all three panels refer to the same set $\{a,b,c,d\}$. The product retains all three connections. In this arrangement, the connection in the second factor intersects both components of the first, so a partial matching of components does not describe it.*
 
 The second-kind algebra gives a different expansion:
 
@@ -287,7 +294,7 @@ On disjoint vertex sets, ordinary multiplication of forms keeps all components s
 
 ## Checks and connections
 
-The general correspondence was proved using the multiplication rule for boundaries sharing one vertex. The simple examples, the seven gluings in Figure 3, and the example in Figure 4 were checked independently by expanding exterior products of differences of basis vertices. For all seven gluings, acyclicity, types, and the number of components on the fixed set of eight vertices were also checked. These calculations verify the examples and figures; the general statement rests on the proof above.
+The general correspondence was proved using the multiplication rule for boundaries sharing one vertex. The simple examples, the seven gluings in Figure 4, and the example in Figure 5 were checked independently by expanding exterior products of differences of basis vertices. For all seven gluings, acyclicity, types, and the number of components on the fixed set of eight vertices were also checked. These calculations verify the examples and figures; the general statement rests on the proof above.
 
 The construction uses definitions and results from published PMG notes:
 

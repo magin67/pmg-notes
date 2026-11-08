@@ -1,12 +1,13 @@
 ---
 title: Toponomes and Structural Identities
 date: 2026-10-22
-updated: 2026-10-22
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-toponomes-and-structural-identities
 lang: en
+source_revision: 3
 description: "Why equal polyforms can have different toponomes of their chosen representations: the tetrahedron identity, grade two of the K4 exponential, and a criterion for representation-independent reduction."
 order: 2
 aliases:
@@ -41,7 +42,7 @@ $$
 
 ![Three partitions of four vertices into pairs and four partitions into a triple and a singleton](Partitions%20in%20the%20tetrahedron%20identity.svg)
 
-*Figure 1. Each diagram shows all four vertices. The three upper partitions have positive type $(1^2)$; the four lower partitions have type $(2)$. Triangles depict three-vertex blocks, not edge sets of a spanning forest. Both cases have grade $k=2$ and total component count $m=2$; their numbers of nontrivial components and singleton vertices differ.*
+*Figure 1. Each diagram shows all four vertices. The three upper partitions have positive type $(1^2)$; the four lower partitions have type $(2)$. Outlines mark partition blocks; no graph edges are drawn inside them. Both cases have grade $k=2$ and total component count $m=2$; their numbers of nontrivial components and singleton vertices differ.*
 
 Denote the displayed expressions by $\mathcal E_L$ and $\mathcal E_R$. The definition of a toponome gives
 
@@ -56,6 +57,10 @@ $$
 $$
 
 Thus, equality of polyforms is not preserved when each form is replaced by its type. The tetrahedron identity remains valid; the reduction rule is incompatible with it.
+
+![One polyform, two toponomes, one numerical evaluation](Two%20Expansions%20and%20One%20Evaluation.svg)
+
+*Figure 2. Two expansions represent one polyform but give different toponomes. Evaluating a part $j$ as $j+1$ sends both toponomes to $12$. Equality of that final evaluation does not imply equality of types.*
 
 ## A formal sum and the polyform it represents
 
@@ -131,6 +136,8 @@ Their difference is $3(1^2)-4(2)$. In $\mathcal E_F$, the coefficient sum $12+3=
 The number of forests of the graph has not changed. The polyform expression has changed, together with the meaning of its coefficient sum. Nor does the coefficient $4$ in $\mathcal E_P$ mean that a fourth tree has appeared on a fixed triple.
 
 ## A criterion for representation-independent reduction
+
+The practical question is whether any two expansions of one polyform give the same result after replacing their terms. Subtract the expansions: their difference represents the zero polyform and must also map to zero. The following criterion expresses precisely this requirement.
 
 Assign to each partition $\pi$ an element $s_\pi$ of a real vector space $U$. Define a linear rule on formal sums by carrying the coefficient $c_\pi$ from $\pi$ to $s_\pi$. The space $U$ may be a space of types, polynomials, or numbers.
 

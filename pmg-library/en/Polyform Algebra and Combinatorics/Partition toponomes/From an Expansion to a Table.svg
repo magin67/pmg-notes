@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="630" viewBox="0 0 1120 630" role="img" aria-labelledby="title"><title id="title">From an Expansion to a Table</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="630" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">What each passage retains</text>
+<rect x="20" y="85" width="240" height="155" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="140" y="125" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Chosen</text>
+<text xml:space="preserve" x="140" y="154" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">expansion</text>
+<rect x="300" y="85" width="240" height="155" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="420" y="125" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Types</text>
+<text xml:space="preserve" x="420" y="154" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">and coefficients</text>
+<rect x="580" y="85" width="240" height="155" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="700" y="125" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Cells</text>
+<text xml:space="preserve" x="700" y="154" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">(k, r)</text>
+<rect x="860" y="85" width="240" height="155" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="980" y="125" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Sums</text>
+<text xml:space="preserve" x="980" y="154" font-size="23" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">over r</text>
+<line x1="268" y1="175" x2="292" y2="175" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="280" y="270" font-size="19" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">labels</text>
+<line x1="548" y1="175" x2="572" y2="175" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="560" y="270" font-size="19" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">parts</text>
+<line x1="828" y1="175" x2="852" y2="175" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="840" y="270" font-size="19" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">r</text>
+<text xml:space="preserve" x="88.5" y="211" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">F</text>
+<text xml:space="preserve" x="103.5" y="216.5" font-size="18" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="113.5" y="211" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">, …, F</text>
+<text xml:space="preserve" x="181.5" y="216.5" font-size="18" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">5</text>
+<text xml:space="preserve" x="420" y="192" font-size="23" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">2(4) +</text>
+<text xml:space="preserve" x="420" y="223" font-size="23" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">2(3,1) + (2²)</text>
+<text xml:space="preserve" x="660.5" y="192" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">a</text>
+<text xml:space="preserve" x="673.5" y="197.28" font-size="17" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">4</text>
+<text xml:space="preserve" x="682.5" y="192" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">,</text>
+<text xml:space="preserve" x="689.5" y="197.28" font-size="17" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="698.5" y="192" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start"> = 2</text>
+<text xml:space="preserve" x="660.5" y="223" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">a</text>
+<text xml:space="preserve" x="673.5" y="228.28" font-size="17" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">4</text>
+<text xml:space="preserve" x="682.5" y="223" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">,</text>
+<text xml:space="preserve" x="689.5" y="228.28" font-size="17" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="698.5" y="223" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="start"> = 3</text>
+<text xml:space="preserve" x="980" y="211" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">2 + 3 = 5</text>
+<text xml:space="preserve" x="327.5" y="316" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">Example: all five four-edge forests of the path P</text>
+<text xml:space="preserve" x="784.5" y="320.84" font-size="15" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">6</text>
+<rect x="220" y="360" width="680" height="145" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="397" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Another encoding of the same types</text>
+<text xml:space="preserve" x="341.0" y="442" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">(3,1) ↔ x</text>
+<text xml:space="preserve" x="445.0" y="447.5" font-size="18" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">3</text>
+<text xml:space="preserve" x="455.0" y="442" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">x</text>
+<text xml:space="preserve" x="469.0" y="447.5" font-size="18" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="650.5" y="442" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">(2²) ↔ x</text>
+<text xml:space="preserve" x="741.5" y="447.5" font-size="18" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">2</text>
+<text xml:space="preserve" x="751.5" y="442" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">²</text>
+<text xml:space="preserve" x="560" y="480" font-size="21" fill="#30765e" style="fill:#30765e" font-weight="400" text-anchor="middle">Reversible: no type information is lost</text>
+<text xml:space="preserve" x="560" y="565" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Retain the original vertex count n separately</text>
+</svg>

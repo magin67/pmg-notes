@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430" role="img" aria-labelledby="title"><title id="title">Сложение вкладов одного типа</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="430" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Разные леса, один тип</text>
+<line x1="83" y1="130" x2="119" y2="130" stroke="#24628a" stroke-width="4"/>
+<text xml:space="preserve" x="101.0" y="110" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">p</text>
+<line x1="155" y1="130" x2="191" y2="130" stroke="#b5bec7" stroke-width="2" stroke-dasharray="7 6"/>
+<text xml:space="preserve" x="173.0" y="110" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">q</text>
+<circle cx="65" cy="130" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="65" y="137" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="137" cy="130" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="137" y="137" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="209" cy="130" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="209" y="137" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="285" y="137" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">вес p</text>
+<line x1="350" y1="130" x2="465" y2="130" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="520" y="139" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">(1)</text>
+<path d="M565 130 H625 V208 H720" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="83" y1="285" x2="119" y2="285" stroke="#b5bec7" stroke-width="2" stroke-dasharray="7 6"/>
+<text xml:space="preserve" x="101.0" y="265" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">p</text>
+<line x1="155" y1="285" x2="191" y2="285" stroke="#24628a" stroke-width="4"/>
+<text xml:space="preserve" x="173.0" y="265" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="400" text-anchor="middle">q</text>
+<circle cx="65" cy="285" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="65" y="292" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="137" cy="285" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="137" y="292" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="209" cy="285" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="209" y="292" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<text xml:space="preserve" x="285" y="292" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">вес q</text>
+<line x1="350" y1="285" x2="465" y2="285" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="520" y="294" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">(1)</text>
+<path d="M565 285 H625 V208 H720" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="740" y="125" width="340" height="170" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="910" y="170" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Сумма вкладов</text>
+<text xml:space="preserve" x="910" y="230" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">(p + q)(1)</text>
+<text xml:space="preserve" x="560" y="390" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Пустой лес даёт 1; оба ребра дают pq(2)</text>
+</svg>

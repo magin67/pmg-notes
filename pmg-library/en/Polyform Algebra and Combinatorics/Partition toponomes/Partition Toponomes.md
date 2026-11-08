@@ -1,9 +1,9 @@
 ---
 title: Partition Toponomes
 date: 2026-10-22
-updated: 2026-11-01
-revision: 4
-source_revision: 5
+updated: 2026-11-08
+revision: 5
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-toponomes-series-navigation
@@ -33,6 +33,41 @@ Secondary thematic entries:
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
 
+## Reading order
+
+1. **[[From Polyforms to Partitions]].** How do we obtain a type and collect contributions of equal types?
+2. **[[Toponomes and Structural Identities]].** Why can equality of polyforms fail after passage to types?
+3. **[[The Second-Kind Algebra on Partitions]].** How do we multiply types and obtain their coefficients?
+4. **[[Graph Colorings and Partition Products]].** How do graph colorings realize matchings of parts?
+5. **[[Partition Products and Boundary Forms]].** How do we realize a matching by gluing while retaining the original vertices?
+6. **[[Coefficient Tables of Toponomes]].** What does a table reveal, and which differences does it hide?
+
+An introduction to reduction can follow [[From Polyforms to Partitions]] → [[Toponomes and Structural Identities]] → [[Coefficient Tables of Toponomes]]; the section on table multiplication relies on the algebra. The algebraic route through [[The Second-Kind Algebra on Partitions]] and [[Graph Colorings and Partition Products]] does not require a PMG metric.
+
+## Prerequisites and notation
+
+Reduction requires [[Partition Forms and the Tetrahedron Identity|partition forms]] and the [[Laplacian Exponential|Laplacian exponential]]. The coefficients of powers connect to the [[Partitions and the Combinatorial Potential of the Second Kind|potential of the second kind]]. General conventions are recorded in the [[Core specification|specification]] and [[PMG terminology|terminology]].
+
+For a positive type $\lambda=(k_1,\ldots,k_r)$, write $k=w(\lambda)$ and $r=\#\lambda$. The full number of components is $m=n-k$, and the number of singleton vertices is $\ell=n-k-r$. Retain the original vertex count $n$ separately. The multiplicity notation $(1^2)$ differs from the product power $(1)^2$; the empty type $1$ corresponds to the unit form $e$. The notation $[x_i]!$ retains its meaning as the product of a collection.
+
+## Which data are retained
+
+![An expansion, types, a table, and column sums](From%20an%20Expansion%20to%20a%20Table.svg)
+
+*Figure 1. Each arrow to the right groups data. Passage to types forgets labels and individual contributions; passage to a cell forgets individual component sizes; summing a column forgets the number of nontrivial components. The vertex count $n$ is retained separately. Encoding a type as a monomial is reversible.*
+
+The main chain uses one fixed initial expansion. Replacing it by a structural identity is a separate operation that may change the toponome. In particular, a graph forest toponome is defined by expanding the factors of its exponential.
+
+## Three different products
+
+| Objects and operation | What happens to the components | Example |
+| --- | --- | --- |
+| Ordinary multiplication of particular forms | Shared vertices determine the result | $[(ab)]^2[(bc)]^2=[(abc)]^2$ |
+| The type product $*$ | All partial matchings are summed | $(1)*(1)=(1^2)+(2)$ |
+| Ordinary multiplication of type monomials | Lists of parts are joined without matchings | $x_1x_1=x_1^2$ |
+
+Thus the same disjoint union of graphs has different descriptions for two constructions. Forests are chosen independently and give ordinary multiplication of type polynomials. Color classes in different graphs may share a color and merge, so their type sums multiply under $*$. In the symmetric-function representation, this latter product also becomes ordinary multiplication, but the variables and their correspondence with types are different.
+
 ## Main results
 
 **The toponome of a chosen representation.** For an expression $\mathcal E=\sum_\pi c_\pi q_\pi$ on a fixed set of $n$ vertices, where $q_\pi$ is a partition form,
@@ -45,7 +80,7 @@ Here $\lambda(\pi)$ is the collection of positive boundary grades of the blocks.
 
 **Dependence on representation.** The identity $E_4[1,1]=E_4[2,0]$ relates equal polyforms, but the displayed expressions give different toponomes, $3(1^2)$ and $4(2)$. Reduction is defined linearly on formal sums of partitions. It descends to polyforms independently of their representation if and only if it sends every structural relation to zero. The criterion and the example of grade two of the $K_4$ exponential are developed in [[Toponomes and Structural Identities]].
 
-**The second-kind algebra.** The product $*$ sums partial matchings of occurrences of parts in two factors. Each part belongs to at most one pair; matched parts add, and unmatched parts remain unchanged. This is a commutative associative algebra with unit $1$, isomorphic to the algebra of symmetric functions in the augmented monomial basis. In particular,
+**The second-kind algebra.** The product $*$ sums partial matchings of occurrences of parts in two factors. Each part belongs to at most one pair; matched parts add, and unmatched parts remain unchanged. This is a commutative associative algebra with unit $1$, also admitting a representation by symmetric functions. In particular,
 
 $$
 (1^2)*(1^2)=(1^4)+4(2,1^2)+2(2^2)
@@ -76,27 +111,10 @@ $$
 
 For nonempty types on $n$ vertices, the admissible indices satisfy $r\leqslant k\leqslant n-r$. Thus, with $k$ indexing columns and $r$ indexing rows, each successive row loses one position at either end. The unit term is treated separately, and zero cells are left blank. [[Coefficient Tables of Toponomes]] displays the triangle for the path $P_6$, proves equality of the normalized path and cycle triangles with an example on eleven vertices, derives the induced product of tables, and gives two nonisomorphic trees on ten vertices with the same table. Their full toponomes differ; the counterexample concerns the data $(n,\mathcal A_G)$, not every possible refinement of the invariant.
 
-## Reading order
-
-1. **[[From Polyforms to Partitions]].** Full and positive types, coefficients, all grade components of the $P_5$ exponential, polynomials in several variables, and retained data.
-2. **[[Toponomes and Structural Identities]].** The tetrahedron identity, two representations of grade two of the $K_4$ exponential, and a criterion for representation-independent reduction.
-3. **[[The Second-Kind Algebra on Partitions]].** Partial matchings, one-part multiplication, recursive computation, powers of $(1)$, and symmetric functions.
-4. **[[Graph Colorings and Partition Products]].** The vertex interpretation, seven color-class partitions of two edges, and the chromatic symmetric function.
-5. **[[Partition Products and Boundary Forms]].** The boundary interpretation, seven gluings of two pairs of connections, the role of chosen roots, and the limits of the model.
-6. **[[Coefficient Tables of Toponomes]].** Two indices, triangular layout, normalized path and cycle triangles, multiplication, retained information, and a counterexample to reconstructing every graph.
-
-An introduction to reduction can follow [[From Polyforms to Partitions]] → [[Toponomes and Structural Identities]] → [[Coefficient Tables of Toponomes]]; the section on table multiplication relies on the algebra. The algebraic route through [[The Second-Kind Algebra on Partitions]] and [[Graph Colorings and Partition Products]] does not require a PMG metric.
-
-## Prerequisites and notation
-
-Reduction requires [[Partition Forms and the Tetrahedron Identity|partition forms]] and the [[Laplacian Exponential|Laplacian exponential]]. The coefficients of powers connect to the [[Partitions and the Combinatorial Potential of the Second Kind|potential of the second kind]]. General conventions are recorded in the [[Core specification|specification]] and [[PMG terminology|terminology]].
-
-For a positive type $\lambda=(k_1,\ldots,k_r)$, write $k=w(\lambda)$ and $r=\#\lambda$. The full number of components is $m=n-k$, and the number of singleton vertices is $\ell=n-k-r$. Retain the original vertex count $n$ separately. The multiplicity notation $(1^2)$ differs from the product power $(1)^2$; the empty type $1$ corresponds to the unit form $e$. The notation $[x_i]!$ retains its meaning as the product of a collection.
-
 ## Scope and further directions
 
-[[Reducibility of Toponomes]] compares two products: under ordinary multiplication, full and two-variable toponomes factor by components with edges, whereas under $*$ the canonical forest toponome with positive conductances is irreducible for every graph with edges. Passing to one variable can create new factors.
+The continuation [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]] treats coefficients as graph parameters. [[Vector and Vertex Normalizations of Toponomes]] compares the original and rooted weights, while [[Reducibility of Toponomes]] explains why factorization depends on the chosen product.
 
-The term “partition toponome” is defined for a specific reduction of a chosen representation. Equal numerical evaluations of distinct types do not imply equal toponomes. Weighted coefficients retain aggregated weight data, so the result cannot be described solely as a collection of topological properties.
+Equal numerical evaluations do not imply equal toponomes. Weighted coefficients retain sums of products of weights; they describe more than the unweighted graph structure.
 
-Component and root weights and the passage to $\det(I+t\mathbf L)$ are developed in [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. The [[ru/Карта библиотеки PMG|PMG library map (in Russian)]] retains further directions: the distinction between a spectrum and a full spectral representation, toponomes of dual polyforms after duality is introduced, multicomponent gluings, and refinements of graph invariants. Reduction of a polyform by another polyform and the spanning-tree operator remain a separate direction.
+The [[ru/Карта библиотеки PMG|PMG library map (in Russian)]] retains research directions: refinements of graph invariants, multicomponent gluings, the distinction between a spectrum and a full spectral representation, and toponomes of the Greenian exponential after duality is introduced. Reduction of a polyform by another polyform and the spanning-tree operator form a separate direction.

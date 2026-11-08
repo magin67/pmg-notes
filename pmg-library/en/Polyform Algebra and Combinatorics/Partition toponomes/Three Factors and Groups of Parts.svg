@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="470" viewBox="0 0 1120 470" role="img" aria-labelledby="title"><title id="title">Three Factors and Groups of Parts</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="470" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">One final group of three parts</text>
+<text xml:space="preserve" x="85" y="163" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">(a*b)*c</text>
+<circle cx="245" cy="155" r="25" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="245" y="163" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">a</text>
+<circle cx="320" cy="155" r="25" fill="white" stroke="#aa5d12" stroke-width="3"/>
+<text xml:space="preserve" x="320" y="163" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">b</text>
+<circle cx="395" cy="155" r="25" fill="white" stroke="#30765e" stroke-width="3"/>
+<text xml:space="preserve" x="395" y="163" font-size="24" fill="#30765e" style="fill:#30765e" font-weight="600" text-anchor="middle">c</text>
+<rect x="210" y="111" width="145" height="88" rx="14" fill="none" stroke="#647481" stroke-width="1.5"/>
+<line x1="440" y1="155" x2="525" y2="155" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="605" cy="155" r="31" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="605" y="163" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">2</text>
+<circle cx="710" cy="155" r="26" fill="white" stroke="#30765e" stroke-width="3"/>
+<text xml:space="preserve" x="710" y="163" font-size="24" fill="#30765e" style="fill:#30765e" font-weight="600" text-anchor="middle">1</text>
+<line x1="750" y1="155" x2="840" y2="155" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="920" cy="155" r="36" fill="white" stroke="#30765e" stroke-width="3"/>
+<text xml:space="preserve" x="920" y="163" font-size="24" fill="#30765e" style="fill:#30765e" font-weight="600" text-anchor="middle">3</text>
+<text xml:space="preserve" x="85" y="343" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">a*(b*c)</text>
+<circle cx="245" cy="335" r="25" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="245" y="343" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">a</text>
+<circle cx="320" cy="335" r="25" fill="white" stroke="#aa5d12" stroke-width="3"/>
+<text xml:space="preserve" x="320" y="343" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">b</text>
+<circle cx="395" cy="335" r="25" fill="white" stroke="#30765e" stroke-width="3"/>
+<text xml:space="preserve" x="395" y="343" font-size="24" fill="#30765e" style="fill:#30765e" font-weight="600" text-anchor="middle">c</text>
+<rect x="285" y="291" width="145" height="88" rx="14" fill="none" stroke="#647481" stroke-width="1.5"/>
+<line x1="440" y1="335" x2="525" y2="335" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="605" cy="335" r="31" fill="white" stroke="#aa5d12" stroke-width="3"/>
+<text xml:space="preserve" x="605" y="343" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">2</text>
+<circle cx="710" cy="335" r="26" fill="white" stroke="#24628a" stroke-width="3"/>
+<text xml:space="preserve" x="710" y="343" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">1</text>
+<line x1="750" y1="335" x2="840" y2="335" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<circle cx="920" cy="335" r="36" fill="white" stroke="#30765e" stroke-width="3"/>
+<text xml:space="preserve" x="920" y="343" font-size="24" fill="#30765e" style="fill:#30765e" font-weight="600" text-anchor="middle">3</text>
+<text xml:space="preserve" x="560" y="435" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a, b, c mark distinct factors; every input part has weight 1</text>
+</svg>

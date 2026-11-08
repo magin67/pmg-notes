@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="470" viewBox="0 0 1120 470" role="img" aria-labelledby="title"><title id="title">Two Expansions and One Evaluation</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="470" fill="white"/>
+<text xml:space="preserve" x="560" y="40" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Equality of forms differs from equality of types</text>
+<rect x="20" y="120" width="240" height="200" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="140" y="173" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">One</text>
+<text xml:space="preserve" x="140" y="215" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">polyform</text>
+<path d="M260 220 H290 V135 H330" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="345" y="80" width="280" height="110" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="485" y="120" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Three pair partitions</text>
+<text xml:space="preserve" x="485" y="165" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">3(1²)</text>
+<line x1="640" y1="135" x2="770" y2="135" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="705" y="115" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">3 × 2²</text>
+<path d="M780 135 H815 V220 H865" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M260 220 H290 V320 H330" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="345" y="265" width="280" height="110" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="485" y="305" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Four triples</text>
+<text xml:space="preserve" x="485" y="350" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">4(2)</text>
+<line x1="640" y1="320" x2="770" y2="320" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="705" y="300" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">4 × 3</text>
+<path d="M780 320 H815 V220 H865" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="885" y="160" width="200" height="120" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="985" y="230" font-size="38" fill="#30765e" style="fill:#30765e" font-weight="600" text-anchor="middle">12</text>
+<text xml:space="preserve" x="560" y="420" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">The types differ; evaluating each part j as j+1 gives the same number</text>
+</svg>

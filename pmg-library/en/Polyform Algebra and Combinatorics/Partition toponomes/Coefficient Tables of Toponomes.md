@@ -1,9 +1,9 @@
 ---
 title: Coefficient Tables of Toponomes
 date: 2026-10-22
-updated: 2026-10-23
-revision: 3
-source_revision: 9
+updated: 2026-11-08
+revision: 4
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: coefficient-tables-of-toponomes
@@ -17,6 +17,8 @@ aliases:
 In a [[From Polyforms to Partitions|partition toponome]], each type has its own coefficient. A further reduction groups types of equal weight with the same number of positive parts. The result is conveniently stored in a table with two indices.
 
 Columns will be indexed by weight $k$, and rows by the number $r$ of nontrivial components. The rows narrow from top to bottom: each successive row loses one position at either end. In this arrangement, we call the table a **coefficient triangle**. The unit term $e$ is treated separately; zero cells in figures and tables are left blank.
+
+For a first reading, follow the $P_6$ example, the explanation of the triangular bounds, and the two-tree counterexample. Path and cycle normalizations and table products are collected in the additional part.
 
 ## From types to two indices
 
@@ -73,6 +75,10 @@ Here $\mathcal F(G)$ is the set of spanning forests, $r(F)$ is the number of the
 
 ## Example: a path on six vertices
 
+![Two forests of type (3,1) and one of type (2²) enter the cell a4,2=3](Different%20Types%20in%20One%20Cell.svg)
+
+*Figure 1. The three interior edge deletions of $P_6$ are shown. Forests are first grouped by type, then two different types by the same pair $(k,r)=(4,2)$. The resulting cell is highlighted in the table.*
+
 Consider the unweighted path $P_6$ with five edges. Every subset of its edges forms a spanning forest when all six vertices are retained.
 
 Four-edge forests are obtained by deleting one edge. Deleting either end edge leaves type $(4)$; deleting either of the next two edges gives $(3,1)$; deleting the middle edge gives $(2^2)$. Thus the weight-$4$ part of the toponome is
@@ -92,10 +98,11 @@ $$
 Arrange the coefficients in columns indexed by weight $k$ and rows indexed by the number $r$ of components, increasing from top to bottom. The result is the triangle
 
 $$
-\begin{array}{ccccc}
-5&4&3&2&1\\
-&6&6&3&\\
-&&1&&
+\begin{array}{c|ccccc}
+r\backslash k&1&2&3&4&5\\\hline
+1&5&4&3&2&1\\
+2&&6&6&3&\\
+3&&&1&&
 \end{array}
 $$
 
@@ -150,6 +157,80 @@ $$
 
 Zero cells are left blank, preserving the column positions of the other coefficients. Entirely zero rows may be omitted.
 
+## What information is retained
+
+For the graph representation, the table is invariant under vertex relabeling. With fixed weights, relabeling must also carry the edge weights. The table determines:
+
+- the total weight of all spanning forests of each grade: $\sum_r a_{k,r}(G)$;
+- their distribution by the number of nontrivial components;
+- when $n$ is known, their distribution by the full number of components $m=n-k$ and the number of singleton vertices $\ell=n-k-r$;
+- for a simple unweighted graph, the number of edges $a_{1,1}(G)$, the numbers of $k$-edge matchings $a_{k,k}(G)$, and the number of spanning trees $a_{n-1,1}(G)$ for $n\ge2$.
+
+The last formulas follow from the definitions: when $r=k$, all positive parts equal $1$; when $k=n-1$ and $r=1$, the single component contains every vertex. In a graph with positive weights, the absence of spanning trees means that the graph is disconnected. If signed weights are allowed, contributions may cancel, so a zero coefficient no longer implies disconnection.
+
+The size $n$ of the original collection must be retained separately. Adding an isolated vertex changes neither the positive types of forests nor the coefficients $a_{k,r}$. Thus graph comparisons use the data $(n,\mathcal A_G)$.
+
+The table does not retain vertex labels, individual forests, or the distribution of coefficients among types with the same $(k,r)$. This last loss of information is additional to the losses incurred when passing from the graph representation to the toponome.
+
+## Does the table distinguish all graphs?
+
+Consider the precise question: do $n$ and all the numbers $a_{k,r}(G)$ determine an unweighted simple graph up to isomorphism?
+
+**In general, the answer is no, even for trees.** The following two edge sets define trees on the same set $A=\{a,b,c,d,e,f,g,h,i,j\}$:
+
+$$
+E(T_1)=\{ab,ac,ad,be,bf,cg,dh,gi,ij\}
+$$
+
+$$
+E(T_2)=\{ab,ac,ad,be,bf,cg,eh,gi,hj\}
+$$
+
+![Two trees on ten vertices with the same coefficient table: the branches at their adjacent degree-three vertices have lengths 4,2 and 1,1 in the first tree, and 3,1 and 3,1 in the second](Trees%20with%20the%20same%20coefficient%20table.svg)
+
+*Figure 2. In both trees, vertices $a$ and $b$ have degree $3$ and are joined by an edge. In $T_1$, the two additional branches at $a$ have lengths $4$ and $2$, and those at $b$ have lengths $1$ and $1$. In $T_2$, the branch lengths at each of these vertices are $3$ and $1$.*
+
+The trees have diameters $6$ and $7$, respectively, so they are nonisomorphic. Their tables nevertheless agree:
+
+| $r\backslash k$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ | $7$ | $8$ | $9$ |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| $1$ | 9 | 10 | 12 | 14 | 14 | 12 | 8 | 4 | 1 |
+| $2$ | | 26 | 44 | 53 | 52 | 38 | 20 | 5 | |
+| $3$ | | | 28 | 50 | 48 | 30 | 8 | | |
+| $4$ | | | | 9 | 12 | 4 | | | |
+
+**Checking the example.** All $2^9=512$ edge subsets were enumerated for each tree. For each subset, connected components were found on the full set of ten vertices; the number of edges gives $k$, and the number of components of size at least two gives $r$. Counting these pairs produces the displayed table. The column sums are $\binom9k$. The displayed coefficients sum to $511$, or $512$ including the unit term. This is a finite computational verification of a particular counterexample.
+
+The full toponomes of these trees differ. In particular,
+
+$$
+c_{T_1}((4^2))=0,
+\qquad
+c_{T_2}((4^2))=1
+$$
+
+In $T_2$, deleting edge $ab$ gives two components of five vertices each. No edge deletion in $T_1$ splits it in this way. Under grouping, both contributions enter the common cell $(8,2)$ along with other types, and the distinction disappears.
+
+### Connection with a known graph polynomial
+
+Martin Trinks [1] studies the *covered components polynomial*, which enumerates spanning subgraphs by their number of edges, full number of components, and number of nontrivial components. For a tree $T$, every such subgraph is a forest, and the full number of components is $n-k$. Thus, in the notation of this note,
+
+$$
+C(T;x,y,z)=\sum_{k,r}a_{k,r}(T)x^{n-k}y^kz^r
+$$
+
+When $n$ is known, this polynomial and the table of a tree contain the same data. A pair of nonisomorphic trees on ten vertices not distinguished by this polynomial already appears in [1, Remark 33 and Figure 2]. For a general graph, the polynomial $C$ also includes cyclic subgraphs; our table is extracted only from its forest terms, which satisfy $m+k=n$.
+
+This correspondence with the literature helps establish the limits of the invariant. It does not turn the coefficient table into an operator spectrum or a full diagonalization of a polyform. Comparison with characteristic polynomials and other graph invariants requires separate treatment.
+
+## Graph realizability
+
+The inverse question asks whether a given table is the table of at least one graph. Nonnegative integer cells are insufficient: they must consistently count forests of one edge system. [[Graph Realizability of Toponomes]] gives necessary conditions, a nonrealizable triangle with admissible column sums, and an exact criterion through a system of edge variables. It also explains Mason's theorem, which restricts column sums.
+
+## Further details: normalizations and products
+
+The construction of the table and its limitations are now established. The following sections address two separate questions: comparing a path and a cycle after column normalization, and two rules for table multiplication. The former requires only forest counting; the latter uses [[The Second-Kind Algebra on Partitions]].
+
 ## Paths and cycles: equal normalized triangles
 
 Consider the path $P_n$ and the cycle $C_n$ on the same number of vertices $n\geqslant3$, with all edge weights equal to $1$. Their coefficient triangles differ by a factor that depends on the column $k$ but not on the row $r$.
@@ -175,6 +256,22 @@ a_{k,1}(P_n)=n-k,
 $$
 
 Thus the theorem gives identical ratios $a_{k,r}/a_{k,1}$. Division is performed column by column. This is a separate normalization of the table; it does not select roots in the components.
+
+![Cutting at an unselected edge turns a cycle into a path while retaining the forest](Cutting%20a%20Cycle%20at%20an%20Unselected%20Edge.svg)
+
+*Figure 3. Blue edges belong to the forest; dashed gray edges are unselected. The orange mark picks one unselected edge to cut. On the left, choose a forest and then one of $n-k$ cuts; on the right, choose one of the $n$ cycle cuts and then a forest of the resulting path.*
+
+### A normalization example on four vertices
+
+The path $P_4$ has one pair of disjoint edges, and the cycle $C_4$ has two. In column $k=2$, the top coefficients are respectively $2$ and $4$. Dividing gives
+
+$$
+\frac{a_{2,2}(P_4)}{a_{2,1}(P_4)}=\frac12,
+\qquad
+\frac{a_{2,2}(C_4)}{a_{2,1}(C_4)}=\frac24=\frac12
+$$
+
+A normalized coefficient can therefore be fractional: it is a ratio of two counts, not a forest count. The general formula below explains why the ratios agree.
 
 ### Explicit formula and row symmetry
 
@@ -203,32 +300,35 @@ The substitution $k\mapsto n-k$ exchanges the two binomial factors in the last f
 The columns of the following triangles correspond to $k=1,\ldots,10$, and the rows to $r=1,\ldots,5$. Blank cells retain their positions. The third triangle is obtained by dividing each column of the first by $11-k$, or equivalently by dividing the entire second triangle by $11$:
 
 $$
-\mathcal A_{P_{11}}=\begin{array}{rrrrrrrrrr}
-10&9&8&7&6&5&4&3&2&1\\
-&36&56&63&60&50&36&21&8&\\
-&&56&105&120&100&60&21&&\\
-&&&35&60&50&20&&&\\
-&&&&6&5&&&&
+\mathcal A_{P_{11}}=\begin{array}{c|rrrrrrrrrr}
+r\backslash k&1&2&3&4&5&6&7&8&9&10\\\hline
+1&10&9&8&7&6&5&4&3&2&1\\
+2&&36&56&63&60&50&36&21&8&\\
+3&&&56&105&120&100&60&21&&\\
+4&&&&35&60&50&20&&&\\
+5&&&&&6&5&&&&
 \end{array}
 $$
 
 $$
-\mathcal A_{C_{11}}=\begin{array}{rrrrrrrrrr}
-11&11&11&11&11&11&11&11&11&11\\
-&44&77&99&110&110&99&77&44&\\
-&&77&165&220&220&165&77&&\\
-&&&55&110&110&55&&&\\
-&&&&11&11&&&&
+\mathcal A_{C_{11}}=\begin{array}{c|rrrrrrrrrr}
+r\backslash k&1&2&3&4&5&6&7&8&9&10\\\hline
+1&11&11&11&11&11&11&11&11&11&11\\
+2&&44&77&99&110&110&99&77&44&\\
+3&&&77&165&220&220&165&77&&\\
+4&&&&55&110&110&55&&&\\
+5&&&&&11&11&&&&
 \end{array}
 $$
 
 $$
-\mathcal N_{11}=\begin{array}{rrrrrrrrrr}
-1&1&1&1&1&1&1&1&1&1\\
-&4&7&9&10&10&9&7&4&\\
-&&7&15&20&20&15&7&&\\
-&&&5&10&10&5&&&\\
-&&&&1&1&&&&
+\mathcal N_{11}=\begin{array}{c|rrrrrrrrrr}
+r\backslash k&1&2&3&4&5&6&7&8&9&10\\\hline
+1&1&1&1&1&1&1&1&1&1&1\\
+2&&4&7&9&10&10&9&7&4&\\
+3&&&7&15&20&20&15&7&&\\
+4&&&&5&10&10&5&&&\\
+5&&&&&1&1&&&&
 \end{array}
 $$
 
@@ -256,6 +356,13 @@ This explains the integer entries for $n=11$. For composite $n$, some edge sets 
 > For each $3\leqslant n\leqslant12$, all edge subsets of the path and cycle were enumerated. For the cycle, the full cyclic edge set was excluded. Components of every remaining subset were found directly on the original vertex set; the table was constructed from its edge count and number of nontrivial components. Every cell was checked against the explicit formulas and the double-counting identity. This includes the three displayed triangles for $n=11$ and the fractional example for $n=4$.
 
 ## Multiplication of tables
+
+| Operation | What is counted | For two one-part cells |
+| --- | --- | --- |
+| $\circ$ | Independent forest choices in disjoint graphs | $u_{1,1}\circ u_{1,1}=u_{2,2}$ |
+| $*$ | All partial matchings of components | $u_{1,1}*u_{1,1}=u_{2,2}+u_{2,1}$ |
+
+Here $u_{k,r}$ denotes a table with a single $1$ in cell $(k,r)$. The extra term in the $*$ row comes from merging two parts. No such merging occurs in a disjoint union of forests.
 
 Grouping by $(k,r)$ is compatible with the product in [[The Second-Kind Algebra on Partitions|the second-kind algebra on partitions]], provided that the tables use the induced product.
 
@@ -317,76 +424,6 @@ $$
 This is ordinary convolution in two indices. It should be distinguished from the product $*$, which sums over matchings. The two rules are compared explicitly in [[Reducibility of Toponomes#Two products of cells|the note on reducibility]]; the expanded square of the toponome of a three-edge path appears in the [[Reducibility of Toponomes#Example: two disjoint three-edge paths|example of two disjoint paths]].
 
 **Reducibility depends on the product.** Under $\circ$, a graph table factors by independent components. Under the induced $*$, the canonical forest table of any graph with positive conductances and at least one edge is irreducible, including when the graph is disconnected. This holds in both normalizations over $\mathbb R$ and $\mathbb C$; a [[Reducibility of Toponomes#Irreducibility of the table under the second-kind product|separate proof]] uses a falling-power representation of the cells.
-
-## What information is retained
-
-For the graph representation, the table is invariant under vertex relabeling. With fixed weights, relabeling must also carry the edge weights. The table determines:
-
-- the total weight of all spanning forests of each grade: $\sum_r a_{k,r}(G)$;
-- their distribution by the number of nontrivial components;
-- when $n$ is known, their distribution by the full number of components $m=n-k$ and the number of singleton vertices $\ell=n-k-r$;
-- for a simple unweighted graph, the number of edges $a_{1,1}(G)$, the numbers of $k$-edge matchings $a_{k,k}(G)$, and the number of spanning trees $a_{n-1,1}(G)$ for $n\ge2$.
-
-The last formulas follow from the definitions: when $r=k$, all positive parts equal $1$; when $k=n-1$ and $r=1$, the single component contains every vertex. In a graph with positive weights, the absence of spanning trees means that the graph is disconnected. If signed weights are allowed, contributions may cancel, so a zero coefficient no longer implies disconnection.
-
-The size $n$ of the original collection must be retained separately. Adding an isolated vertex changes neither the positive types of forests nor the coefficients $a_{k,r}$. Thus graph comparisons use the data $(n,\mathcal A_G)$.
-
-The table does not retain vertex labels, individual forests, or the distribution of coefficients among types with the same $(k,r)$. This last loss of information is additional to the losses incurred when passing from the graph representation to the toponome.
-
-## Does the table distinguish all graphs?
-
-Consider the precise question: do $n$ and all the numbers $a_{k,r}(G)$ determine an unweighted simple graph up to isomorphism?
-
-**In general, the answer is no, even for trees.** The following two edge sets define trees on the same set $A=\{a,b,c,d,e,f,g,h,i,j\}$:
-
-$$
-E(T_1)=\{ab,ac,ad,be,bf,cg,dh,gi,ij\}
-$$
-
-$$
-E(T_2)=\{ab,ac,ad,be,bf,cg,eh,gi,hj\}
-$$
-
-![Two trees on ten vertices with the same coefficient table: the branches at their adjacent degree-three vertices have lengths 4,2 and 1,1 in the first tree, and 3,1 and 3,1 in the second](Trees%20with%20the%20same%20coefficient%20table.svg)
-
-*Figure 1. In both trees, vertices $a$ and $b$ have degree $3$ and are joined by an edge. In $T_1$, the two additional branches at $a$ have lengths $4$ and $2$, and those at $b$ have lengths $1$ and $1$. In $T_2$, the branch lengths at each of these vertices are $3$ and $1$.*
-
-The trees have diameters $6$ and $7$, respectively, so they are nonisomorphic. Their tables nevertheless agree:
-
-| $r\backslash k$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ | $7$ | $8$ | $9$ |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| $1$ | 9 | 10 | 12 | 14 | 14 | 12 | 8 | 4 | 1 |
-| $2$ | | 26 | 44 | 53 | 52 | 38 | 20 | 5 | |
-| $3$ | | | 28 | 50 | 48 | 30 | 8 | | |
-| $4$ | | | | 9 | 12 | 4 | | | |
-
-**Checking the example.** All $2^9=512$ edge subsets were enumerated for each tree. For each subset, connected components were found on the full set of ten vertices; the number of edges gives $k$, and the number of components of size at least two gives $r$. Counting these pairs produces the displayed table. The column sums are $\binom9k$. The displayed coefficients sum to $511$, or $512$ including the unit term. This is a finite computational verification of a particular counterexample.
-
-The full toponomes of these trees differ. In particular,
-
-$$
-c_{T_1}((4^2))=0,
-\qquad
-c_{T_2}((4^2))=1
-$$
-
-In $T_2$, deleting edge $ab$ gives two components of five vertices each. No edge deletion in $T_1$ splits it in this way. Under grouping, both contributions enter the common cell $(8,2)$ along with other types, and the distinction disappears.
-
-### Connection with a known graph polynomial
-
-Martin Trinks [1] studies the *covered components polynomial*, which enumerates spanning subgraphs by their number of edges, full number of components, and number of nontrivial components. For a tree $T$, every such subgraph is a forest, and the full number of components is $n-k$. Thus, in the notation of this note,
-
-$$
-C(T;x,y,z)=\sum_{k,r}a_{k,r}(T)x^{n-k}y^kz^r
-$$
-
-When $n$ is known, this polynomial and the table of a tree contain the same data. A pair of nonisomorphic trees on ten vertices not distinguished by this polynomial already appears in [1, Remark 33 and Figure 2]. For a general graph, the polynomial $C$ also includes cyclic subgraphs; our table is extracted only from its forest terms, which satisfy $m+k=n$.
-
-This correspondence with the literature helps establish the limits of the invariant. It does not turn the coefficient table into an operator spectrum or a full diagonalization of a polyform. Comparison with characteristic polynomials and other graph invariants requires separate treatment.
-
-## Graph realizability
-
-The inverse question asks whether a given table is the table of at least one graph. Nonnegative integer cells are insufficient: they must consistently count forests of one edge system. [[Graph Realizability of Toponomes]] gives necessary conditions, a nonrealizable triangle with admissible column sums, and an exact criterion through a system of edge variables. It also explains Mason's theorem, which restricts column sums.
 
 ## Further directions
 

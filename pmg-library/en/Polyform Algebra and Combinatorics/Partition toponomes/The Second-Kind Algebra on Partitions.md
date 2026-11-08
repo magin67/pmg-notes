@@ -1,9 +1,9 @@
 ---
 title: The Second-Kind Algebra on Partitions
 date: 2026-10-22
-updated: 2026-10-23
-revision: 2
-source_revision: 5
+updated: 2026-11-08
+revision: 3
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: second-kind-algebra-on-partitions
@@ -18,7 +18,7 @@ The toponome in the [[From Polyforms to Partitions|note on polyform reduction]] 
 
 This note introduces **the second-kind algebra on partitions**. Its product enumerates partial matchings between the components of two factors: matched components merge by adding their weights, while unmatched components remain unchanged. The designation “second-kind” refers to the algebra. It reflects the fact that the coefficients in the expansion of $(1)^k$ are [[Partitions and the Combinatorial Potential of the Second Kind|combinatorial potentials of the second kind]]; grouping them by the number of parts gives Stirling numbers of the second kind.
 
-This name is used as a PMG term. Below, we establish a correspondence with the standard algebra of symmetric functions in the augmented monomial basis. Applying the product to polyforms requires a separate correspondence with operations on named components.
+The name is used as a PMG term. Start with matchings and multiplication by one part. The section on symmetric functions gives an additional representation of the same algebra; it is not required for the first calculations.
 
 ## Basis partitions and the unit
 
@@ -55,6 +55,13 @@ $$
 Thus, $(1^2)$ is a single basis type, whereas $(1)^2$ is a product to be expanded in the basis.
 
 No bound on the number of vertices is imposed here. If $\lambda$ is interpreted as the positive type of a form on $n$ vertices, the conditions in the [[From Polyforms to Partitions#Singleton vertices and type parameters|definition of type parameters]] also apply: for $k=w(\lambda)$, we have $k+r\leqslant n$, the full number of components is $m=n-k$, and the number of singleton vertices is $\ell=n-k-r$. In the abstract algebra, $r$ counts only the positive parts displayed; no value of $n$ is specified.
+
+| Symbol | Meaning |
+| --- | --- |
+| $1$ | The empty type, the multiplicative unit |
+| $(1)$ | One part of weight $1$ |
+| $(1^2)$ | Two separate parts of weight $1$ |
+| $(1)^2$ | The product $(1)*(1)$, equal to $(1^2)+(2)$ |
 
 ## The product through partial matchings
 
@@ -141,7 +148,35 @@ $$
 
 Here $\mathcal A_k$ is spanned by the partitions of weight $k$, and $\dim\mathcal A_k=p(k)$ is the number of integer partitions of $k$. If $q$ pairs are matched, the resulting type has $r+s-q$ parts. The number of parts therefore does not define an analogous grading: a single product can contain types with different numbers of parts.
 
+![One grouping of three colors with either parenthesization](Three%20Factors%20and%20Groups%20of%20Parts.svg)
+
+*Figure 2. One final grouping for three factors $(1)$ is shown. Either parenthesization produces it in exactly one way. The general proof uses such groups, each containing at most one part from each factor.*
+
 ## Multiplication by one part
+
+### An arbitrary one-part component
+
+The right factor $(b)$ has one part. It either remains separate or is matched with one of the $r$ parts in the left factor. For any $b\geqslant1$, this gives
+
+$$
+\boxed{
+(a_1,\ldots,a_r)*(b)
+=(a_1,\ldots,a_r,b)
++\sum_{i=1}^r(a_1,\ldots,a_i+b,\ldots,a_r)
+}
+$$
+
+For example,
+
+$$
+(2,1)*(2)=(2^2,1)+(4,1)+(3,2)
+$$
+
+The part $(b)$ is added as a whole. It differs from the product $(1)^b$, which is itself a sum of different types.
+
+![Three possibilities for (2,1)*(2)](Multiplication%20by%20One%20Part.svg)
+
+*Figure 3. The orange part of weight $2$ remains separate, joins the blue part of weight $2$, or joins the blue part of weight $1$. The three resulting types each have coefficient $1$.*
 
 ### The rule for a part of weight one
 
@@ -172,6 +207,8 @@ $$
 The coefficient $2$ in the second equality comes from two possible matches with equal parts. It does not double the weight of the merged component.
 
 ### Passing to a part of weight two
+
+The general rule already gives multiplication by $(2)$ directly. The following calculation is an additional check using two parts of weight one and may be skipped on a first reading.
 
 The first equality gives
 
@@ -208,26 +245,6 @@ $$
 $$
 
 This calculation uses $(2)=(1)^2-(1^2)$ together with the general matching rule, which determines the terms in $\lambda*(1^2)$.
-
-### An arbitrary one-part component
-
-The same choice - keep the new part separate or match it with an existing part - gives, for any $b\geqslant1$,
-
-$$
-\boxed{
-(a_1,\ldots,a_r)*(b)
-=(a_1,\ldots,a_r,b)
-+\sum_{i=1}^r(a_1,\ldots,a_i+b,\ldots,a_r)
-}
-$$
-
-For example,
-
-$$
-(2,1)*(2)=(2^2,1)+(4,1)+(3,2)
-$$
-
-The part $(b)$ is added as a whole. It differs from the product $(1)^b$, which is itself a sum of different types.
 
 ## Computing an arbitrary product
 
@@ -304,7 +321,7 @@ $$
 (1)^4=(4)+4(3,1)+3(2^2)+6(2,1^2)+(1^4)
 $$
 
-Every type of weight $k$ occurs with a positive coefficient. Thus the expansion may be called the **partition spectrum of the power** $(1)^k$, provided that “spectrum” explicitly means the collection of types and their coefficients. This is a combinatorial use of the word; no operator or eigenvalues are introduced here.
+The expansion of the power $(1)^k$ by types contains every type of weight $k$ with a positive coefficient.
 
 Grouping by the number of parts gives
 
@@ -356,6 +373,15 @@ $$
 Only finitely many terms are nonzero. The first term adds a separate part; the derivative selects one occurrence of a part $j$, accounting for its multiplicity, and the factor $x_{j+b}$ replaces the selected part with the merged one.
 
 ### Realization by ordinary multiplication of symmetric functions
+
+The type $(1)$ suffices to compare the two notations. Its monomial encoding is $x_1$, but retaining matchings requires the special product $x_1*x_1=x_1^2+x_2$. In the symmetric notation on two variables, the same type gives $y_1+y_2$, whose ordinary square already contains both cases:
+
+$$
+(y_1+y_2)^2=(y_1^2+y_2^2)+2y_1y_2
+=\widetilde m_{(2)}(y_1,y_2)+\widetilde m_{(1^2)}(y_1,y_2)
+$$
+
+Terms with equal indices merge the parts; terms with distinct indices keep them separate. Two variables suffice for this weight-$2$ example; the general correspondence below uses arbitrarily many variables.
 
 There is another representation in which $*$ becomes ordinary multiplication. Take formal variables $y_1,y_2,\ldots$ and assign to a type the function
 
