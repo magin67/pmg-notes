@@ -2,14 +2,14 @@
 title: One Changing Edge
 date: 2026-10-31
 updated: 2026-11-08
-revision: 2
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-changing-edge
 lang: en
 description: From strengthening a triangle edge to exact variations of the spanning-tree coefficient and resistances. A derivation through one exterior Laplacian exponential factor, forest potentials, and their normalization.
 order: 1
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Changing Edge"
 ---
@@ -138,7 +138,7 @@ Set $p=[a_{kl}]^2$. Repeating a vector in an exterior product gives zero, so $p^
 > [!note]- Proof
 > **Proof.** Commutativity gives $\exp(L+tp)=\exp L\,\exp(tp)$, while $p^2=0$ gives $\exp(tp)=e+tp$. Multiplication in $Mp$ raises the grade by one, yielding the formula for $M'_r$. $\square$
 
-Adding a factor increases the coefficient of a fixed form, including when the edge is already present:
+Multiplication by the factor $e+tp$ changes the coefficient of the fixed form from $c_{kl}$ to $c_{kl}+t$, including when the edge is already present:
 
 $$
 (e+c_{kl}p)(e+tp)=e+(c_{kl}+t)p

@@ -2,14 +2,14 @@
 title: Laplacian, Greenian and Resistance Variations
 date: 2026-11-01
 updated: 2026-11-08
-revision: 3
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: laplacian-greenian-resistance-variations-series-navigation
 order: 0
 description: 'Reading order for eight notes: direct and inverse variations, exterior exponential factors, quadric connectivity, prescribed resistances, and conductance constraints. Main formulas, applicability, and provenance.'
-translated_revision: 4
+translated_revision: 5
 tags:
   - variations
   - resistances
@@ -146,7 +146,7 @@ In [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/
 > \qquad p=[u]^2,\quad r=[v]^2
 > $$
 >
-> The squares of $p^2$ and $r^2$ vanish. Their product $pr$ is generally nonzero and gives the Gram determinant of two directions.
+> We have $p^2=r^2=0$. The product $pr$ is generally nonzero and gives the Gram determinant of two directions.
 >
 > **The joint spanning-tree multiplier**
 > For two changing couplings $u,v$, set $g_M=u\cdot_Mv$, $R_u=u\cdot_Mu$, $R_v=v\cdot_Mv$. Then
