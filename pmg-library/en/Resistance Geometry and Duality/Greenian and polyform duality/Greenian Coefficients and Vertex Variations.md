@@ -1,9 +1,9 @@
 ---
 title: Greenian Coefficients and Vertex Variations
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 6
+updated: 2026-11-08
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-coefficients-vertex-variations
@@ -18,9 +18,44 @@ aliases:
 
 The canonical vector representation of the Greenian has coefficients $\gamma_{ij}=-\mathrm{Gr}_{ij}$. These are the negative inner products of centroid vectors in the original resistance geometry. For variations, it is convenient to pass from them to resistances and positive forest weights of the original graph. Each such transition changes the expression while preserving the form and its entire exponential.
 
-We start with the canonical vector coefficients and recovery of resistances. We then prove the polar representation formulas, derive the transition to original forest weights, and show how these determine the spanning coefficient after removing or attaching a vertex. All graph statements concern connected undirected graphs with positive conductances on their existing edges.
+We start with two vertex-attachment examples. Then we examine coefficients, recovery of resistances, and forest weights, derive the general attachment formula, and treat vertex deletion separately. All graph statements concern connected undirected graphs with positive conductances on existing edges.
 
 The Greenian $\mathrm{Gr}$ and the Laplacian $L$ are grade-one vector forms. Below, the Greenian is written on dual arguments as $Q_1$; the grades $Q_k$ belong to its boundary exponential $D=\exp Q_1$. The centered identification gives $\mathcal C(Q_1)=\mathrm{Gr}$ and $\mathcal C(D)=\exp(\mathrm{Gr})$.
+
+## Start with vertex attachment
+
+Let $\tau(G)$ be the sum of spanning-tree weights of the connected original graph. Add a vertex $p$ with couplings of conductance $t_i\ge0$ to the old vertices. At least one new coupling is assumed. The resistances $R_{ab}$ below belong to the original graph.
+
+### A leaf and two attachment sites
+
+If the only nonzero conductance is $t_a=t$, then
+
+$$
+\tau(G+p)=t\,\tau(G)
+$$
+
+The new vertex becomes a leaf; its only edge belongs to every spanning tree.
+
+If attachment is possible only at two distinct vertices $a,b$, a contribution with two new edges appears. The general formula derived below gives
+
+$$
+\boxed{
+\tau(G+p)=\tau(G)\bigl(t_a+t_b+t_at_bR_{ab}\bigr)
+}
+\tag{1}
+$$
+
+For the unit path $a-b-c-d$, we have $\tau=1$ and $R_{ad}=3$. Attaching a new vertex to both ends by unit couplings closes a cycle on five vertices:
+
+$$
+\tau(C_5)=1+1+3=5
+$$
+
+For the path with conductances $c_{ab}=2$, $c_{bc}=3$, and $c_{cd}=5$, we have $\tau=30$ and $R_{ac}=1/2+1/3=5/6$. With $t_a=1$ and $t_c=2$, we obtain
+
+$$
+\tau(G+p)=30\left(1+2+2\cdot\frac56\right)=140
+$$
 
 ## The basic normalization of duality
 
@@ -34,7 +69,7 @@ In the [[Laplacian and Greenian - Mutual Duality of Exponentials#Definition of p
 
 $$
 \boxed{M_d/Q_k=M_{d-k},\qquad D=\sum_{k=0}^{d}Q_k}
-\tag{1}
+\tag{2}
 $$
 
 Hence $Q_0=e$. For a symmetric nondegenerate Laplacian, the [[The Exterior Exponential and Representations of the Greenian#The dual exponential of a nondegenerate symmetric form|exponential duality theorem]] gives
@@ -118,7 +153,7 @@ We consider symmetric grade-one forms, that is, elements of $\operatorname{Sym}^
 >
 > $$
 > \boxed{S=\sum_{i<j}q_{ij}\{a_i,a_j\}}
-> \tag{2}
+> \tag{3}
 > $$
 
 > [!note]- Proof
@@ -153,11 +188,11 @@ $$
 a_{ij}/a_\ell=\delta_{j\ell}-\delta_{i\ell}
 $$
 
-Deleting a polar form from $[a_{ij}]^2$ gives zero for all pairs except $\{i,j\}$, which gives $-2e$. Thus, for (2),
+Deleting a polar form from $[a_{ij}]^2$ gives zero for all pairs except $\{i,j\}$, which gives $-2e$. Thus, for (3),
 
 $$
 \boxed{[a_{ij}]^2/S=-2q_{ij}e}
-\tag{3}
+\tag{4}
 $$
 
 This also directly proves linear independence of the polar forms: a zero form has zero coefficients for every pair.
@@ -180,7 +215,7 @@ Here $\tau$ in the numerator extracts the coefficient of $T$. This agrees with t
 > $$
 
 > [!note]- Proof
-> **Proof.** It suffices to check the equality on basis forms $[u_i,u_j]$ in a direct basis $u_1,\ldots,u_d$ and its dual basis. By (1), $M_{d-1}=M_d/Q_1$. Multiplying this form by $[u_i,u_j]$ leaves only the term in which precisely $u_i$ and $u_j$ were deleted from the two arguments of the top form. The signs of deletion and the subsequent exterior multiplication cancel across the two arguments. We obtain
+> **Proof.** It suffices to check the equality on basis forms $[u_i,u_j]$ in a direct basis $u_1,\ldots,u_d$ and its dual basis. By (2), $M_{d-1}=M_d/Q_1$. Multiplying this form by $[u_i,u_j]$ leaves only the term in which precisely $u_i$ and $u_j$ were deleted from the two arguments of the top form. The signs of deletion and the subsequent exterior multiplication cancel across the two arguments. We obtain
 >
 > $$
 > M_{d-1}F=(F/Q_1)M_d
@@ -194,7 +229,7 @@ $$
 R_{ij}=P_M([a_{ij}]^2)
 $$
 
-The lemma and (3) yield the polar representation.
+The lemma and (4) yield the polar representation.
 
 > [!info] Resistances in the polar representation
 > **Theorem.** The polar expression for the first dual form is
@@ -203,7 +238,7 @@ The lemma and (3) yield the polar representation.
 > \boxed{
 > Q_1=-\frac12\sum_{i<j}R_{ij}\{a_i,a_j\}
 > }
-> \tag{4}
+> \tag{5}
 > $$
 >
 > Its coefficients are unique and determine every pairwise resistance. In particular, negative polar coefficients are compatible with positivity of the resistance metric: polar basis forms are not themselves positive quadratic forms.
@@ -215,7 +250,7 @@ The lemma and (3) yield the polar representation.
 | Canonical vector | $[a_{ij}]^2$ | $\gamma_{ij}=-\mathrm{Gr}_{ij}$ |
 | Polar | $\{a_i,a_j\}$ | $-R_{ij}/2$ |
 
-For multiplication in the exponential, we use vector factors and boundary rules. The polar expression makes an individual pair's resistance directly accessible through deletion (3).
+For multiplication in the exponential, we use vector factors and boundary rules. The polar expression makes an individual pair's resistance directly accessible through deletion (4).
 
 Multiplying all conductances by $s>0$ divides resistances and $Q_1$ by $s$, and divides $Q_k$ by $s^k$.
 
@@ -251,7 +286,7 @@ Extracting the top coefficient and using the lemma gives
 
 $$
 \boxed{\tau(G+t\,ij)=\tau(G)(1+tR_{ij})}
-\tag{5}
+\tag{6}
 $$
 
 Consequently,
@@ -279,7 +314,7 @@ $$
 [a_A]^2=-\frac12
 \sum_{\substack{a_i\in A\\a_j\in A^c}}\{a_i,a_j\}
 }
-\tag{6}
+\tag{7}
 $$
 
 Each pair crossing the partition is counted once. The formula follows from $\{a_A,a_{A^c}\}=-2[a_A]^2$.
@@ -291,7 +326,7 @@ Q_1=\sum_{A\mid A^c}\widehat\mu_A[a_A]^2,\qquad
 \widehat\mu_A=\frac{\tau(G[A])\tau(G[A^c])}{\tau(G)}
 $$
 
-The partitions are unordered. Substituting (6) and comparing the unique polar coefficients with (4) gives
+The partitions are unordered. Substituting (7) and comparing the unique polar coefficients with (5) gives
 
 $$
 \boxed{
@@ -300,7 +335,7 @@ R_{ij}=
 =\frac1{\tau(G)}
 \sum_{\substack{F\text{ a spanning 2-forest}\\i,j\text{ in different components}}}w(F)
 }
-\tag{7}
+\tag{8}
 $$
 
 Thus a pair's resistance collects the normalized weights of all two-component forests separating it. The polar coefficient is $-R_{ij}/2$; the vector coefficient $\gamma_{ij}$ is obtained from all resistances by double centering. The forest weight of a single cut concerns trees within its blocks; it differs from the total conductance of crossing edges.
@@ -327,7 +362,7 @@ The coefficient of $[a]^2$ changes from $3/16$ to $4/16$, while the polar coeffi
 
 The canonical vector coefficients are $\gamma_{ij}=1/16$ for every pair. Rewriting the cut sum does not change them.
 
-In (7), the forest weights for pair $a,b$ give $(3+3+1+1)/16=1/2$. Two contributions separate a single vertex; two correspond to partitions into pairs. The reduced cut coefficients must no longer be read as original forest weights.
+In (8), the forest weights for pair $a,b$ give $(3+3+1+1)/16=1/2$. Two contributions separate a single vertex; two correspond to partitions into pairs. The reduced cut coefficients must no longer be read as original forest weights.
 
 ## Higher grades and forest weights
 
@@ -337,7 +372,7 @@ $$
 Q_k=\sum_{\pi\in\Pi_{k+1}(\mathcal V)}\widehat\mu_\pi\Phi_\pi,\qquad
 \widehat\mu_\pi=\frac{\mu_\pi}{\tau(G)},\qquad
 \mu_\pi=\prod_{C\in\pi}\tau(G[C])
-\tag{8}
+\tag{9}
 $$
 
 Here $\Phi_\pi$ is the form of the product of dual sums of all but one block. The omitted block does not affect the form. We set $\tau$ equal to $1$ for a one-vertex graph and to $0$ for a disconnected graph.
@@ -347,6 +382,16 @@ Each partition of $\mathcal V$ is counted once. The weight $\mu_\pi$ is uniquely
 At $k=0$, the sole partition has weight $\tau$, so $Q_0=e$. At $k=d$, the sole empty forest has weight $1$, so $Q_d=T^\vee/\tau$. The normalized weights $\widehat\mu_\pi$ are generally not probabilities: their sum need not equal $1$.
 
 ## Vertex deletion
+
+Here a graph vertex and all its incident edges are deleted. Two other operations must be distinguished:
+
+| Operation | Data that remain |
+| --- | --- |
+| Deleting a graph vertex | The induced graph on the remaining vertices, with degrees recomputed |
+| Eliminating an interior vertex by a Schur complement | An effective network with new couplings between retained vertices |
+| Exterior contraction $/$ | Algebraic contraction of a direct form with a dual argument |
+
+Thus a formula for $\tau(G-a_i)$ cannot be applied to the eliminated network without a separate derivation.
 
 For the partition $\{a_i\}\mid(\mathcal V\setminus\{a_i\})$, the forest weight is
 
@@ -361,10 +406,10 @@ $$
 \widehat\mu_{\{a_i\}\mid \mathcal V\setminus\{a_i\}}
 =\frac{\tau(G-a_i)}{\tau(G)}
 }
-\tag{9}
+\tag{10}
 $$
 
-This coefficient is read specifically in representation (8), not as the coefficient of $[a_i]^2$ in any equal sum.
+This coefficient is read specifically in representation (9), not as the coefficient of $[a_i]^2$ in any equal sum.
 
 More generally, for a nonempty proper vertex set $S$, take the partition $\pi_S$ into singletons from $S$ and the remaining block $\mathcal V\setminus S$. Then in grade $|S|$,
 
@@ -390,6 +435,10 @@ Here $G-S$ means deleting vertices together with incident edges and recalculatin
 
 ## Adding a vertex and the contribution of every grade
 
+![The new vertex chooses one coupling into each component](Attaching%20a%20Vertex%20to%20Forest%20Components.svg)
+
+*Figure 1. Deleting the new vertex $p$ from a spanning tree leaves a forest. Reconstruction chooses exactly one attachment site in each component: none may remain isolated, and two edges into one component would create a cycle. Multiply the chosen forest weight by the product of the attachment-conductance sums.*
+
 Attach a new vertex $p$ to the old vertices $a_i$ by conductances $t_i\ge0$. The old conductances remain unchanged. Denote the resulting graph by $G+p$ and set
 
 $$
@@ -407,15 +456,15 @@ If all $t_i=0$, the graph $G+p$ is disconnected and its spanning coefficient is 
 > \tau(G+p)=
 > \sum_{\pi}\mu_\pi\prod_{C\in\pi}t(C)
 > }
-> \tag{10}
+> \tag{11}
 > $$
 >
-> The sum runs over all partitions of the original vertices into nonempty blocks; $\mu_\pi$ is defined in (8).
+> The sum runs over all partitions of the original vertices into nonempty blocks; $\mu_\pi$ is defined in (9).
 
 > [!note]- Proof
 > **Proof.** Removing $p$ from a spanning tree of the new graph leaves a spanning forest of the original graph. Each forest component was joined to $p$ by exactly one edge: no edge would violate connectedness, and two edges would create a cycle.
 >
-> Conversely, choose a spanning forest and attach each component to $p$ by one edge. This gives a spanning tree. The sum of conductances of the ways to attach component $C$ is $t(C)$; choices for different components are independent. Grouping forests by partition gives (10). $\square$
+> Conversely, choose a spanning forest and attach each component to $p$ by one edge. This gives a spanning tree. The sum of conductances of the ways to attach component $C$ is $t(C)$; choices for different components are independent. Grouping forests by partition gives (11). $\square$
 
 Denote the homogeneous part of degree $k+1$ in the new conductances by
 
@@ -433,7 +482,7 @@ $$
 \sum_{\pi\in\Pi_{k+1}(\mathcal V)}
 \widehat\mu_\pi\prod_{C\in\pi}t(C)
 }
-\tag{11}
+\tag{12}
 $$
 
 The forest representation of $Q_k$ gives the part of degree $k+1$. It counts new spanning trees in which vertex $p$ has degree $k+1$.
@@ -445,95 +494,7 @@ The forest representation of $Q_k$ gives the part of degree $k+1$. It counts new
 | $Q_k$ | $k+1$ components | $k+1$ edges |
 | $Q_d=T^\vee/\tau$ | All vertices isolated | A star centered at $p$ |
 
-### Factorization and a determinant check
-
-In the space with the added direct vertex,
-
-$$
-L_p=\sum_i t_i[(a_i p)]^2,\qquad
-M_{G+p}=M\exp L_p
-=M\prod_i\bigl(e+t_i[(a_i p)]^2\bigr)
-$$
-
-The top grade of the new space is $n$. Obtaining it from the old direct grade $M_{d-k}$ requires selecting $k+1$ new edges. This agrees with the table and with the complementary dual grade $Q_k$.
-
-Removing a factor from an arbitrary factorization of $D$ does not by itself define vertex deletion. The graph operation here is defined by changing the Laplacian and passing to a space of dimension one greater.
-
-Kirchhoff's theorem gives an independent matrix expression. Deleting the row and column of the new vertex from the Laplacian of $G+p$ leaves $\mathbf L+\operatorname{diag}(t_1,\ldots,t_n)$, so
-
-$$
-\boxed{\tau(G+p)=\det\bigl(\mathbf L+\operatorname{diag}(\mathbf t)\bigr)}
-\tag{12}
-$$
-
-Thus (10) is a forest expansion of the determinant. When all $t_i$ are equal, the factor $\prod_Ct(C)$ contains the product of component sizes: this is the rooted normalization discussed in [[Forest Coefficients and the Laplacian Polynomial]] and in classical matrix-forest theory [1, 2].
-
-### Calculating directly from the canonical form
-
-For $\sigma=\sum_i t_i>0$, set
-
-$$
-\mathbf K_{\mathbf t}
-=\operatorname{diag}(\mathbf t)
--\frac{\mathbf t\mathbf t^{\mathsf T}}{\sigma}
-$$
-
-This is the Laplacian of additional undirected couplings of conductance $t_it_j/\sigma$ between the old vertices. Eliminating $p$ by a Schur complement leaves the Laplacian $\mathbf L+\mathbf K_{\mathbf t}$.
-
-> [!info] Calculating directly from the canonical form
-> **Corollary.** We have
->
-> $$
-> \boxed{
-> \frac{\tau(G+p)}{\tau(G)}
-> =\sigma\det\bigl(\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}\bigr)
-> }
-> \tag{13}
-> $$
-
-> [!note]- Proof
-> **Proof.** Take the cofactor of the Laplacian of $G+p$ corresponding to an old vertex. The Schur complement with respect to the new vertex's diagonal entry $\sigma$ gives
->
-> $$
-> \tau(G+p)=\sigma\,\tau(\mathbf L+\mathbf K_{\mathbf t})
-> $$
->
-> Here $\tau$ applied to a Laplacian denotes its common cofactor. On the space of zero-sum columns, the ratio of the determinants of $\mathbf L+\mathbf K_{\mathbf t}$ and $\mathbf L$ equals the determinant of $\mathbf I+\mathbf{Gr}\mathbf K_{\mathbf t}$. Both Laplacians have the same constant null vector, and their determinants on this space equal $n$ times their spanning coefficients. Thus the factors $n$ cancel. On constant columns, $\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}$ acts as the identity, giving (13). $\square$
-
-The matrix $\mathbf{Gr}$ is assembled directly from the canonical vector coefficients $\gamma_{ij}$; it can also be recovered from the resistances of the polar expression (4). Thus (13) calculates the variation without choosing a forest expansion. Formulas (10) and (13) express the same result in two ways: the first exposes forest components, while the second uses canonical metric data.
-
 ## Attachment examples
-
-### A leaf and two attachment sites
-
-If the only nonzero conductance is $t_a=t$, then
-
-$$
-\tau(G+p)=t\,\tau(G)
-$$
-
-Only the contribution from $Q_0$ survives: the new vertex becomes a leaf.
-
-If attachment is possible only at two distinct vertices $a,b$, then $Q_0$ and $Q_1$ contribute. By (7) and (10),
-
-$$
-\boxed{
-\tau(G+p)=\tau(G)\bigl(t_a+t_b+t_at_bR_{ab}\bigr)
-}
-\tag{14}
-$$
-
-For the unit path $a-b-c-d$, we have $\tau=1$ and $R_{ad}=3$. Attaching a new vertex to both ends by unit couplings closes a cycle on five vertices:
-
-$$
-\tau(C_5)=1+1+3=5
-$$
-
-For the path with conductances $c_{ab}=2$, $c_{bc}=3$, and $c_{cd}=5$, we have $\tau=30$ and $R_{ac}=1/2+1/3=5/6$. With $t_a=1$ and $t_c=2$, we obtain
-
-$$
-\tau(G+p)=30\left(1+2+2\cdot\frac56\right)=140
-$$
 
 ### A weighted triangle: every grade contributes
 
@@ -575,7 +536,7 @@ B_1=961,\qquad B_2=2072,\qquad B_3=1001,\qquad
 \tau(G+p)=4034
 $$
 
-An independent check using (12) gives
+An independent check using (13) gives
 
 $$
 \det
@@ -589,13 +550,74 @@ $$
 
 The three parts correspond to spanning trees of the new graph in which the degree of $p$ is $1,2,3$, respectively. Dividing them by $4034$ gives the probabilities of these events.
 
+## Further details: the determinant and elimination of the new vertex
+
+The forest formula and examples already provide a direct calculation. The following expressions obtain the same result by matrix operations.
+
+### Factorization and a determinant check
+
+In the space with the added direct vertex,
+
+$$
+L_p=\sum_i t_i[(a_i p)]^2,\qquad
+M_{G+p}=M\exp L_p
+=M\prod_i\bigl(e+t_i[(a_i p)]^2\bigr)
+$$
+
+The top grade of the new space is $n$. Obtaining it from the old direct grade $M_{d-k}$ requires selecting $k+1$ new edges. This agrees with the table and with the complementary dual grade $Q_k$.
+
+Removing a factor from an arbitrary factorization of $D$ does not by itself define vertex deletion. The graph operation here is defined by changing the Laplacian and passing to a space of dimension one greater.
+
+Kirchhoff's theorem gives an independent matrix expression. Deleting the row and column of the new vertex from the Laplacian of $G+p$ leaves $\mathbf L+\operatorname{diag}(t_1,\ldots,t_n)$, so
+
+$$
+\boxed{\tau(G+p)=\det\bigl(\mathbf L+\operatorname{diag}(\mathbf t)\bigr)}
+\tag{13}
+$$
+
+Thus (11) is a forest expansion of the determinant. When all $t_i$ are equal, the factor $\prod_Ct(C)$ contains the product of component sizes: this is the rooted normalization discussed in [[Forest Coefficients and the Laplacian Polynomial]] and in classical matrix-forest theory [1, 2].
+
+### Calculating directly from the canonical form
+
+For $\sigma=\sum_i t_i>0$, set
+
+$$
+\mathbf K_{\mathbf t}
+=\operatorname{diag}(\mathbf t)
+-\frac{\mathbf t\mathbf t^{\mathsf T}}{\sigma}
+$$
+
+This is the Laplacian of additional undirected couplings of conductance $t_it_j/\sigma$ between the old vertices. Eliminating $p$ by a Schur complement leaves the Laplacian $\mathbf L+\mathbf K_{\mathbf t}$.
+
+> [!info] Calculating directly from the canonical form
+> **Corollary.** We have
+>
+> $$
+> \boxed{
+> \frac{\tau(G+p)}{\tau(G)}
+> =\sigma\det\bigl(\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}\bigr)
+> }
+> \tag{14}
+> $$
+
+> [!note]- Proof
+> **Proof.** Take the cofactor of the Laplacian of $G+p$ corresponding to an old vertex. The Schur complement with respect to the new vertex's diagonal entry $\sigma$ gives
+>
+> $$
+> \tau(G+p)=\sigma\,\tau(\mathbf L+\mathbf K_{\mathbf t})
+> $$
+>
+> Here $\tau$ applied to a Laplacian denotes its common cofactor. On the space of zero-sum columns, the ratio of the determinants of $\mathbf L+\mathbf K_{\mathbf t}$ and $\mathbf L$ equals the determinant of $\mathbf I+\mathbf{Gr}\mathbf K_{\mathbf t}$. Both Laplacians have the same constant null vector, and their determinants on this space equal $n$ times their spanning coefficients. Thus the factors $n$ cancel. On constant columns, $\mathbf I_n+\mathbf{Gr}\mathbf K_{\mathbf t}$ acts as the identity, giving (14). $\square$
+
+The matrix $\mathbf{Gr}$ is assembled directly from the canonical vector coefficients $\gamma_{ij}$; it can also be recovered from the resistances of the polar expression (5). Thus (14) calculates the variation without choosing a forest expansion. Formulas (11) and (14) express the same result in two ways: the first exposes forest components, while the second uses canonical metric data.
+
 ## Status of results and scope
 
 The polar basis and uniqueness of its coefficients are proved for an arbitrary symmetric form on a dual space whose only vertex relation is the zero sum. Identifying the coefficients with resistances uses the metric polyform of a connected undirected graph. Vertex variations assume positive original conductances and nonnegative new conductances.
 
 The forest and determinant methods belong to classical Kirchhoff theory and its extensions. The all-minors Laplacian theorem is proved combinatorially in [1]; the matrix theorem on rooted forests and the corresponding principal minors are discussed in [2]. Here the required formulas are proved directly and compared with canonical vector coefficients, resistances in the polar expression, and PMG grades.
 
-Additional independent checks were performed in exact rational arithmetic on six graphs: an edge of conductance $2$, unit and weighted paths $P_4$, a triangle with conductances $2,3,5$, and unit $C_4$ and $K_4$. The polar form calculated through the Green matrix was compared with enumeration of two-component forests. Exterior powers and deletion from $M_d$ were checked in every grade. For 64 nonempty proper sets of deleted vertices, forest weights were compared with spanning coefficients of induced graphs. In 27 vertex-attachment checks, the forest formula (10), determinant (12), enumeration of new spanning trees by the new vertex's degree, and, for $\sigma>0$, formula (13) all agreed. The coupling variation (5) was also checked. These finite checks supplement the general proofs above.
+Additional independent checks were performed in exact rational arithmetic on six graphs: an edge of conductance $2$, unit and weighted paths $P_4$, a triangle with conductances $2,3,5$, and unit $C_4$ and $K_4$. The polar form calculated through the Green matrix was compared with enumeration of two-component forests. Exterior powers and deletion from $M_d$ were checked in every grade. For 64 nonempty proper sets of deleted vertices, forest weights were compared with spanning coefficients of induced graphs. In 27 vertex-attachment checks, the forest formula (11), determinant (13), enumeration of new spanning trees by the new vertex's degree, and, for $\sigma>0$, formula (14) all agreed. The coupling variation (6) was also checked. These finite checks supplement the general proofs above.
 
 The balanced directed extension requires ordered bilinear forms and separate agreement on indices of one-sided resistances. It is not included in the symmetric statements of this note.
 
@@ -605,7 +627,7 @@ The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/du
 
 ## References
 
-1. Chaiken S. *A Combinatorial Proof of the All Minors Matrix Tree Theorem*. SIAM Journal on Algebraic Discrete Methods, 3(3), 1982, 319-329. [DOI: 10.1137/0603033](https://doi.org/10.1137/0603033).
+1. Chaiken S. *A Combinatorial Proof of the All Minors Matrix Tree Theorem*. SIAM Journal on Algebraic Discrete Methods, 3(4), 1982, 319-329. [DOI: 10.1137/0603033](https://doi.org/10.1137/0603033).
 2. Chebotarev P., Shamis E. *Matrix-Forest Theorems*. [arXiv:math/0602575v2](https://arxiv.org/abs/math/0602575v2), 2023 version of a manuscript from 1994–1997. Theorem 5 and Appendix Lemma 3: rooted forests and principal minors.
 
 Series contents and reading routes: [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|Greenian and Polyform Duality]].

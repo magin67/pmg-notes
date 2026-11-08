@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560" role="img" aria-labelledby="title"><title id="title">Разбиение лес и рёбра разреза</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="560" fill="white"/>
+<text xml:space="preserve" x="487.0" y="43" font-size="30" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">K</text>
+<text xml:space="preserve" x="509.0" y="49.6" font-size="21" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">4</text>
+<text xml:space="preserve" x="521.0" y="43" font-size="30" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">: ab | cd</text>
+<rect x="25" y="95" width="330" height="355" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="190" y="137" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Разбиение</text>
+<rect x="50" y="175" width="280" height="80" rx="14" fill="#e7f2fa" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="50" y="320" width="280" height="80" rx="14" fill="#fff1dd" stroke="#ccd7df" stroke-width="1.5"/>
+<circle cx="90" cy="215" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="90" y="222" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="290" cy="215" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="290" y="222" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="90" cy="360" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="90" y="367" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="290" cy="360" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="290" y="367" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<rect x="395" y="95" width="330" height="355" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="137" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Лес внутри блоков</text>
+<rect x="420" y="175" width="280" height="80" rx="14" fill="#e7f2fa" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="420" y="320" width="280" height="80" rx="14" fill="#fff1dd" stroke="#ccd7df" stroke-width="1.5"/>
+<line x1="482.0" y1="215.0" x2="638.0" y2="215.0" stroke="#24628a" stroke-width="3"/>
+<line x1="482.0" y1="360.0" x2="638.0" y2="360.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="460" cy="215" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="460" y="222" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="660" cy="215" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="660" y="222" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="460" cy="360" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="460" y="367" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="660" cy="360" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="660" y="367" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<rect x="765" y="95" width="330" height="355" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="930" y="137" font-size="24" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Рёбра разреза</text>
+<rect x="790" y="175" width="280" height="80" rx="14" fill="#e7f2fa" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="790" y="320" width="280" height="80" rx="14" fill="#fff1dd" stroke="#ccd7df" stroke-width="1.5"/>
+<line x1="830" y1="215" x2="830" y2="360" stroke="#aa5d12" stroke-width="3" stroke-dasharray="7 6"/>
+<line x1="830" y1="215" x2="1030" y2="360" stroke="#aa5d12" stroke-width="3" stroke-dasharray="7 6"/>
+<line x1="1030" y1="215" x2="830" y2="360" stroke="#aa5d12" stroke-width="3" stroke-dasharray="7 6"/>
+<line x1="1030" y1="215" x2="1030" y2="360" stroke="#aa5d12" stroke-width="3" stroke-dasharray="7 6"/>
+<circle cx="830" cy="215" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="830" y="222" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="1030" cy="215" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1030" y="222" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="830" cy="360" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="830" y="367" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="1030" cy="360" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1030" y="367" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="190" y="490" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Два блока вершин</text>
+<text xml:space="preserve" x="560" y="490" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">Вес леса: 1</text>
+<text xml:space="preserve" x="930" y="490" font-size="24" fill="#aa5d12" style="fill:#aa5d12" font-weight="600" text-anchor="middle">Вес разреза: 4</text>
+<text xml:space="preserve" x="265.0" y="540" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">Коэффициент разрезной формы: 1 / τ(K</text>
+<text xml:space="preserve" x="759.0" y="545.5" font-size="18" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">4</text>
+<text xml:space="preserve" x="769.0" y="540" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">) = 1/16</text>
+</svg>

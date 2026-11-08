@@ -1,9 +1,9 @@
 ---
 title: Greenian and Polyform Duality
 date: 2026-10-28
-updated: 2026-11-01
-revision: 2
-translated_revision: 3
+updated: 2026-11-08
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -36,6 +36,16 @@ Secondary thematic entries:
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
 
+## A first pass through the series
+
+Start with the single edge in the first note: it shows why reciprocal coefficients depend on the arguments used for the form. Next read the opening part of the fourth note on exponential factorization. Then return to the second and third notes, which give two representations of one Greenian. The fourth note's detailed inverse-matrix proof can be left for a second pass.
+
+For applications, next choose vertex attachment in the fifth note and the energy example in the seventh. The sixth is a reference collection of examples. The eighth and ninth connect this series with structural identities and toponomes developed earlier.
+
+![Spaces, exponentials, and two numerical evaluations](Map%20of%20Greenian%20Representations.svg)
+
+*Figure 1. The map $\mathcal C$ carries the dual representation $D$ to $N$. The potential of a prescribed form and the spectral specialization of a toponome use different operations.*
+
 ## Contents and reading order
 
 | Order | Note | Main question |
@@ -49,6 +59,13 @@ Secondary thematic entries:
 | 7 | [[The Greenian Metric and Potentials]] | How does the original Laplacian determine potentials in the Greenian metric, and how does a potential differ from a coefficient? |
 | 8 | [[Symmetric Identities of the Greenian]] | What does centering preserve, and which evaluations respect boundary identities? |
 | 9 | [[Toponomes of the Greenian Exponential and Dual Pairs]] | How are signed forest sums reduced, the two normalizations distinguished, and spectral polynomials compared? |
+
+## Routes by task
+
+- **Definition and algebra.** [[Laplacian and Greenian - Mutual Duality of Exponentials]], followed by [[The Canonical Vector Representation of the Greenian]] and [[The Exterior Exponential and Representations of the Greenian]]. Prerequisites: [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]]. General matroid theory is not required.
+- **Coefficients, cuts, and graph changes.** After the canonical expression, proceed to [[Cuts and Forest Grades of the Greenian Exponential]] and [[Greenian Coefficients and Vertex Variations]]. Retain the specific vertex blocks and distinguish original forests from edges crossing a cut.
+- **Examples and metric meaning.** [[Greenian Exponentials of Standard Graphs]], followed by [[The Greenian Metric and Potentials]]. For matrix transformations, see [[Laplacian, Green Matrix, and Effective Resistance Matrix]]; for the centroid interpretation, see [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]].
+- **Symmetric identities and toponomes.** [[Symmetric Identities of the Greenian]], followed by [[Toponomes of the Greenian Exponential and Dual Pairs]]. Prerequisites are collected in [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. For the general role of identities, see the [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] series.
 
 ## Main results
 
@@ -126,13 +143,6 @@ The grade-zero term of every exponential is $e$. Under $\mathcal C$, we have $\m
 
 In the full vector toponome of the Greenian, the coefficient of $x_d$ is $1/(n^2\tau)$. Rooted specialization adds $n$ root choices and gives the coefficient $1/(n\tau)$ of $t^d$. The auxiliary forest expression $\widetilde D=\tau D$ is marked by a tilde and has grade-zero term $\tau e$.
 
-## Routes by task
-
-- **Definition and algebra.** [[Laplacian and Greenian - Mutual Duality of Exponentials]], followed by [[The Canonical Vector Representation of the Greenian]] and [[The Exterior Exponential and Representations of the Greenian]]. Prerequisites: [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]]. General matroid theory is not required.
-- **Coefficients, cuts, and graph changes.** After the canonical expression, proceed to [[Cuts and Forest Grades of the Greenian Exponential]] and [[Greenian Coefficients and Vertex Variations]]. Retain the specific vertex blocks and distinguish original forests from edges crossing a cut.
-- **Examples and metric meaning.** [[Greenian Exponentials of Standard Graphs]], followed by [[The Greenian Metric and Potentials]]. For matrix transformations, see [[Laplacian, Green Matrix, and Effective Resistance Matrix]]; for the centroid interpretation, see [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]].
-- **Symmetric identities and toponomes.** [[Symmetric Identities of the Greenian]], followed by [[Toponomes of the Greenian Exponential and Dual Pairs]]. Prerequisites are collected in [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. For the general role of identities, see the [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] series.
-
 ## Distinctions to retain while reading
 
 Formulas involving both spaces use $a_i$ and $a_i^\vee$; sections devoted solely to the dual side may omit $\vee$ by explicit convention. The zero-sum relation concerns $a_i^\vee$ or $p_i$, not the original independent vertices.
@@ -145,17 +155,18 @@ After transfer to one space, the exterior product of the exponentials is $\exp L
 
 ## Reproducible checks
 
-All programs use the Python standard library and exact rational arithmetic. From the repository root, run:
-
-    python checks/dual/verify_vector.py
-    python checks/dual/verify_exponential.py
-    python checks/dual/verify_variations.py
-    python checks/dual/verify_typical.py
-    python checks/dual/verify_potentials.py
-    python checks/dual/verify_symmetry.py
-    python checks/dual/verify_toponomes.py
-
-The [check descriptions and script dependencies](https://github.com/magin67/pmg-notes/blob/v5/checks/dual/README.en.md) specify the scope of each suite. They compare exterior products, minors, forest enumerations, spanning coefficients, and rooted polynomials. Finite checks supplement the proofs in the notes.
+> [!example]- Commands for exact checks
+> All programs use the Python standard library and exact rational arithmetic. From the repository root, run:
+>
+>     python checks/dual/verify_vector.py
+>     python checks/dual/verify_exponential.py
+>     python checks/dual/verify_variations.py
+>     python checks/dual/verify_typical.py
+>     python checks/dual/verify_potentials.py
+>     python checks/dual/verify_symmetry.py
+>     python checks/dual/verify_toponomes.py
+>
+> The [check descriptions and script dependencies](https://github.com/magin67/pmg-notes/blob/v5/checks/dual/README.en.md) specify the scope of each suite. They compare exterior products, minors, forest enumerations, spanning coefficients, and rooted polynomials. Finite checks supplement the proofs in the notes.
 
 ## Scope of the series and further directions
 

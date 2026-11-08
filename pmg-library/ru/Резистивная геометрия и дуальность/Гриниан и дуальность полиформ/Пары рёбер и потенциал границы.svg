@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="600" viewBox="0 0 1120 600" role="img" aria-labelledby="title"><title id="title">Пары рёбер и потенциал границы</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="600" fill="white"/>
+<text xml:space="preserve" x="560" y="43" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Граница (abc): выбираем две колонки</text>
+<rect x="25" y="95" width="330" height="380" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="190" y="137" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">ab, bc</text>
+<line x1="86" y1="205" x2="134" y2="205" stroke="#24628a" stroke-width="4"/>
+<line x1="166" y1="205" x2="214" y2="205" stroke="#24628a" stroke-width="4"/>
+<line x1="246" y1="205" x2="294" y2="205" stroke="#b5c0c8" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="70" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="70" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="150" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="150" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="230" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="230" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="310" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="310" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="190" y="290" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle"> 2  −1</text>
+<text xml:space="preserve" x="190" y="330" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle"> 1    1</text>
+<text xml:space="preserve" x="190" y="385" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">det = 3</text>
+<text xml:space="preserve" x="190" y="440" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">9pq</text>
+<rect x="395" y="95" width="330" height="380" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="137" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">ab, cd</text>
+<line x1="456" y1="205" x2="504" y2="205" stroke="#24628a" stroke-width="4"/>
+<line x1="536" y1="205" x2="584" y2="205" stroke="#b5c0c8" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="616" y1="205" x2="664" y2="205" stroke="#24628a" stroke-width="4"/>
+<circle cx="440" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="440" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="520" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="520" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="600" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="600" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="680" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="680" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="560" y="290" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle"> 2    0</text>
+<text xml:space="preserve" x="560" y="330" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle"> 1  −1</text>
+<text xml:space="preserve" x="560" y="385" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">det = −2</text>
+<text xml:space="preserve" x="560" y="440" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">4pr</text>
+<rect x="765" y="95" width="330" height="380" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="930" y="137" font-size="26" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">bc, cd</text>
+<line x1="826" y1="205" x2="874" y2="205" stroke="#b5c0c8" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="906" y1="205" x2="954" y2="205" stroke="#24628a" stroke-width="4"/>
+<line x1="986" y1="205" x2="1034" y2="205" stroke="#24628a" stroke-width="4"/>
+<circle cx="810" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="810" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="890" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="890" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="970" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="970" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="1050" cy="205" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1050" y="212" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="930" y="290" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">−1    0</text>
+<text xml:space="preserve" x="930" y="330" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle"> 1  −1</text>
+<text xml:space="preserve" x="930" y="385" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">det = 1</text>
+<text xml:space="preserve" x="930" y="440" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">qr</text>
+<text xml:space="preserve" x="560" y="550" font-size="33" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">9pq + 4pr + qr</text>
+</svg>

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" role="img" aria-labelledby="title"><title id="title">Тождество тетраэдра и формы разрезов</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="700" fill="white"/>
+<text xml:space="preserve" x="560" y="43" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Тождество сохраняется при переходе к разрезам</text>
+<text xml:space="preserve" x="235" y="105" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">3 разбиения: 2 + 2</text>
+<text xml:space="preserve" x="805" y="105" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">4 разбиения: 1 + 3</text>
+<text xml:space="preserve" x="85" y="155" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">ab | cd</text>
+<line x1="61.0" y1="220.0" x2="109.0" y2="220.0" stroke="#24628a" stroke-width="3"/>
+<line x1="61.0" y1="305.0" x2="109.0" y2="305.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="45" cy="220" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="45" y="227" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="125" cy="220" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="125" y="227" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="45" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="45" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="125" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="125" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="45" cy="460" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="45" y="467" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="125" cy="460" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="125" y="467" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="45" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="45" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="125" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="125" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="85" y1="330" x2="85" y2="395" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="85" y="600" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">× 4</text>
+<text xml:space="preserve" x="235" y="155" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">ac | bd</text>
+<line x1="195.0" y1="236.0" x2="195.0" y2="289.0" stroke="#24628a" stroke-width="3"/>
+<line x1="275.0" y1="236.0" x2="275.0" y2="289.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="195" cy="220" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="195" y="227" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="275" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="275" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="195" cy="305" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="195" y="312" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">c</text>
+<circle cx="275" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="275" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="195" cy="460" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="195" y="467" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="275" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="275" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="195" cy="545" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="195" y="552" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">c</text>
+<circle cx="275" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="275" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="235" y1="330" x2="235" y2="395" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="235" y="600" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">× 4</text>
+<text xml:space="preserve" x="385" y="155" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">ad | bc</text>
+<line x1="355.9658351840799" y1="231.65119988308484" x2="414.0341648159201" y2="293.34880011691513" stroke="#24628a" stroke-width="3"/>
+<line x1="414.0341648159201" y1="231.65119988308484" x2="355.9658351840799" y2="293.34880011691513" stroke="#24628a" stroke-width="3"/>
+<circle cx="345" cy="220" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="345" y="227" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="425" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="425" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="345" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="345" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="425" cy="305" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="425" y="312" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">d</text>
+<circle cx="345" cy="460" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="345" y="467" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="425" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="425" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="345" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="345" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="425" cy="545" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="425" y="552" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">d</text>
+<line x1="385" y1="330" x2="385" y2="395" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="385" y="600" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">× 4</text>
+<text xml:space="preserve" x="575" y="155" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a | bcd</text>
+<line x1="604.0341648159201" y1="231.65119988308484" x2="545.9658351840799" y2="293.34880011691513" stroke="#24628a" stroke-width="3"/>
+<line x1="551.0" y1="305.0" x2="599.0" y2="305.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="535" cy="220" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="535" y="227" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="615" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="615" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="535" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="535" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="615" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="615" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="535" cy="460" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="535" y="467" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">a</text>
+<circle cx="615" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="615" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="535" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="535" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="615" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="615" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="575" y1="330" x2="575" y2="395" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="575" y="600" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">× 3</text>
+<text xml:space="preserve" x="725" y="155" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b | acd</text>
+<line x1="685.0" y1="236.0" x2="685.0" y2="289.0" stroke="#24628a" stroke-width="3"/>
+<line x1="701.0" y1="305.0" x2="749.0" y2="305.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="685" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="685" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="765" cy="220" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="765" y="227" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="685" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="685" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="765" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="765" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="685" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="685" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="765" cy="460" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="765" y="467" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">b</text>
+<circle cx="685" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="685" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="765" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="765" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="725" y1="330" x2="725" y2="395" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="725" y="600" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">× 3</text>
+<text xml:space="preserve" x="875" y="155" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c | abd</text>
+<line x1="851.0" y1="220.0" x2="899.0" y2="220.0" stroke="#24628a" stroke-width="3"/>
+<line x1="915.0" y1="236.0" x2="915.0" y2="289.0" stroke="#24628a" stroke-width="3"/>
+<circle cx="835" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="835" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="915" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="915" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="835" cy="305" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="835" y="312" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">c</text>
+<circle cx="915" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="915" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<circle cx="835" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="835" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="915" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="915" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="835" cy="545" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="835" y="552" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">c</text>
+<circle cx="915" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="915" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<line x1="875" y1="330" x2="875" y2="395" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="875" y="600" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">× 3</text>
+<text xml:space="preserve" x="1025" y="155" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d | abc</text>
+<line x1="1001.0" y1="220.0" x2="1049.0" y2="220.0" stroke="#24628a" stroke-width="3"/>
+<line x1="1054.0341648159201" y1="231.65119988308484" x2="995.9658351840799" y2="293.34880011691513" stroke="#24628a" stroke-width="3"/>
+<circle cx="985" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="985" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="1065" cy="220" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1065" y="227" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="985" cy="305" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="985" y="312" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="1065" cy="305" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="1065" y="312" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">d</text>
+<circle cx="985" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="985" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="1065" cy="460" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1065" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="985" cy="545" r="16" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="985" y="552" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="1065" cy="545" r="16" fill="#fff1da" stroke="#aa5d12" stroke-width="2"/>
+<text xml:space="preserve" x="1065" y="552" font-size="21" fill="#aa5d12" style="fill:#aa5d12" font-weight="400" text-anchor="middle">d</text>
+<line x1="1025" y1="330" x2="1025" y2="395" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="1025" y="600" font-size="25" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">× 3</text>
+<text xml:space="preserve" x="480" y="270" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">=</text>
+<text xml:space="preserve" x="480" y="505" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">=</text>
+<text xml:space="preserve" x="560" y="420" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Грейд 2 → грейд 1</text>
+<text xml:space="preserve" x="560" y="660" font-size="31" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">3 × 4 = 4 × 3 = 12</text>
+</svg>

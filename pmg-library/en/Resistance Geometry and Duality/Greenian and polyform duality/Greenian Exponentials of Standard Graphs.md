@@ -1,9 +1,9 @@
 ---
 title: Greenian Exponentials of Standard Graphs
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 6
+updated: 2026-11-08
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-exponentials-of-standard-graphs
@@ -19,6 +19,19 @@ aliases:
 The Greenian exponential is constructed by the same vector-form multiplication rules as the Laplacian exponential. The coefficients change: the original conductances are replaced by $\gamma_{ij}=-\mathrm{Gr}_{ij}$. These values may be positive, negative, or zero; nonzero Greenian couplings need not coincide with edges of the original graph.
 
 Below we calculate the coefficients and exponential grades for several families. On four vertices, every grade is written out in full. For larger examples, exact grouping by partitions specifies each form without listing every forest. The general construction and geometric meaning of the coefficients are presented in [[The Canonical Vector Representation of the Greenian]].
+
+## How to use the examples
+
+| Example | What it illustrates |
+| --- | --- |
+| Complete graph | Every coupling changes by one scale factor; the simplest normalization check |
+| Star and complete graph minus an edge | The Greenian has couplings absent from the original graph |
+| Cycles $C_4,C_5,C_6$ | Positive, zero, and negative coefficients appear in succession |
+| Weighted path | Coupling signs and magnitudes depend on conductances |
+| Nonuniform graph on six vertices | Calculation without a large symmetry group |
+| Petersen graph | Symmetry reduces the number of distinct weights, but not the number of forest terms |
+
+For a first reading, choose the complete graph, cycles, and path. Full grade expansions below are collapsed for readers reproducing the calculations. Figures show couplings and weights, not metric embeddings.
 
 ## Conventions and the general expansion method
 
@@ -113,6 +126,23 @@ $$
 
 The second sum counts each unordered pair of disjoint pairs exactly once.
 
+### The diagonal within a chosen block
+
+For a block $B=\{a,b\}$ with weight $\gamma_{ab}$, the internal Laplacian and its spanning-tree coefficient are
+
+$$
+\mathbf L_B=\begin{pmatrix}\gamma_{ab}&-\gamma_{ab}\\-\gamma_{ab}&\gamma_{ab}\end{pmatrix},\qquad
+t_\gamma(B)=\gamma_{ab}
+$$
+
+For the unit path $a-b-c-d$, this number is $-1/8$. In contrast, the principal submatrix of the full Greenian on these indices is
+
+$$
+\mathbf{Gr}_{B,B}=\frac18\begin{pmatrix}7&1\\1&3\end{pmatrix}
+$$
+
+Its diagonal includes couplings to $c,d$ and cannot count trees within $B$. The diagonal must be recomputed when a block is selected.
+
 ### Checking the top grade
 
 Write
@@ -171,23 +201,24 @@ This uses [[Cayley's Theorem and Joining Prescribed Components|Cayley's formula]
 
 ### All grades of the unit K4
 
-$$
-Q_1=\frac1{16}\sum_{i<j}[a_{ij}]^2
-$$
-
-$$
-Q_2=\frac1{256}
-\left(3\sum_{i<j<\ell}\Psi_{ij\ell}
-+\Psi_{12|34}+\Psi_{13|24}+\Psi_{14|23}\right)
-=\frac1{64}\sum_{i<j<\ell}\Psi_{ij\ell}
-$$
-
-$$
-Q_3=\frac1{256}\Theta=\frac1{16}T^\vee,
-\qquad D=e+Q_1+Q_2+Q_3
-$$
-
-Reducing $Q_2$ uses the tetrahedron identity. The coefficient sums of the two expressions differ, while the forms themselves are equal. The original spanning coefficient is $16$.
+> [!example]- Full calculation
+> $$
+> Q_1=\frac1{16}\sum_{i<j}[a_{ij}]^2
+> $$
+>
+> $$
+> Q_2=\frac1{256}
+> \left(3\sum_{i<j<\ell}\Psi_{ij\ell}
+> +\Psi_{12|34}+\Psi_{13|24}+\Psi_{14|23}\right)
+> =\frac1{64}\sum_{i<j<\ell}\Psi_{ij\ell}
+> $$
+>
+> $$
+> Q_3=\frac1{256}\Theta=\frac1{16}T^\vee,
+> \qquad D=e+Q_1+Q_2+Q_3
+> $$
+>
+> Reducing $Q_2$ uses the tetrahedron identity. The coefficient sums of the two expressions differ, while the forms themselves are equal. The original spanning coefficient is $16$.
 
 ## The star
 
@@ -235,26 +266,27 @@ At $r=n-1$, we have $p+rq=1$, so $\tau_\gamma=p=1/n^2$, in agreement with $\tau=
 
 ### All grades of the star on four vertices
 
-$$
-Q_1=\frac1{16}
-\left([a_{12}]^2+[a_{13}]^2+[a_{14}]^2
-+5[a_{23}]^2+5[a_{24}]^2+5[a_{34}]^2\right)
-$$
-
-$$
-\begin{aligned}
-Q_2=\frac1{256}\bigl(&11\Psi_{123}+11\Psi_{124}+11\Psi_{134}
-+75\Psi_{234}+{}\\
-&+5\Psi_{12|34}+5\Psi_{13|24}+5\Psi_{14|23}\bigr)
-\end{aligned}
-$$
-
-$$
-Q_3=\frac1{16}\Theta=T^\vee,
-\qquad D=e+Q_1+Q_2+Q_3
-$$
-
-The coefficient $11/256$ is obtained as $(1\cdot1+1\cdot5+1\cdot5)/16^2$. The triple of leaves gives $3\cdot5^2/16^2=75/256$.
+> [!example]- Full calculation
+> $$
+> Q_1=\frac1{16}
+> \left([a_{12}]^2+[a_{13}]^2+[a_{14}]^2
+> +5[a_{23}]^2+5[a_{24}]^2+5[a_{34}]^2\right)
+> $$
+>
+> $$
+> \begin{aligned}
+> Q_2=\frac1{256}\bigl(&11\Psi_{123}+11\Psi_{124}+11\Psi_{134}
+> +75\Psi_{234}+{}\\
+> &+5\Psi_{12|34}+5\Psi_{13|24}+5\Psi_{14|23}\bigr)
+> \end{aligned}
+> $$
+>
+> $$
+> Q_3=\frac1{16}\Theta=T^\vee,
+> \qquad D=e+Q_1+Q_2+Q_3
+> $$
+>
+> The coefficient $11/256$ is obtained as $(1\cdot1+1\cdot5+1\cdot5)/16^2$. The triple of leaves gives $3\cdot5^2/16^2=75/256$.
 
 ![Original and Greenian couplings for the star and the complete graph minus one edge](Greenian-star-and-incomplete-graph.svg)
 
@@ -299,24 +331,25 @@ $$
 
 ### All grades of C4
 
-On edges $12,23,34,14$, the coefficient is $1/16$; on diagonals $13,24$, it is $3/16$:
-
-$$
-Q_1=\frac1{16}
-\left([a_{12}]^2+[a_{23}]^2+[a_{34}]^2+[a_{14}]^2
-+3[a_{13}]^2+3[a_{24}]^2\right)
-$$
-
-$$
-Q_2=\frac1{256}
-\left(7\sum_{i<j<\ell}\Psi_{ij\ell}
-+\Psi_{12|34}+9\Psi_{13|24}+\Psi_{14|23}\right)
-$$
-
-$$
-Q_3=\frac1{64}\Theta=\frac14T^\vee,
-\qquad D=e+Q_1+Q_2+Q_3
-$$
+> [!example]- Full calculation
+> On edges $12,23,34,14$, the coefficient is $1/16$; on diagonals $13,24$, it is $3/16$:
+>
+> $$
+> Q_1=\frac1{16}
+> \left([a_{12}]^2+[a_{23}]^2+[a_{34}]^2+[a_{14}]^2
+> +3[a_{13}]^2+3[a_{24}]^2\right)
+> $$
+>
+> $$
+> Q_2=\frac1{256}
+> \left(7\sum_{i<j<\ell}\Psi_{ij\ell}
+> +\Psi_{12|34}+9\Psi_{13|24}+\Psi_{14|23}\right)
+> $$
+>
+> $$
+> Q_3=\frac1{64}\Theta=\frac14T^\vee,
+> \qquad D=e+Q_1+Q_2+Q_3
+> $$
 
 ### The five-cycle: the Greenian coupling system is again a cycle
 
@@ -425,6 +458,10 @@ $$
 The original Laplacian cofactor is $\tau=8$. The absent original edge corresponds to a positive Greenian coupling three times as large as the others. This is a result of this calculation, not a general rule for incomplete graphs.
 
 ## A path with arbitrary positive weights
+
+![Two conductance systems on one path](A%20Path%20and%20Its%20Greenian%20Couplings.svg)
+
+*Figure 3. The top row repeats the unit example from the canonical-representation note; the bottom matches the numerical example $2,3,5$ below. Red dashed couplings denote negative coefficients.*
 
 For the path $a_1-a_2-a_3-a_4$ with conductances $p,q,r>0$, set
 
@@ -537,62 +574,63 @@ $$
 
 ![The original graph from the Kirchhoff matrix article and the signs of its Greenian weights](Greenian-Wikipedia-graph.svg)
 
-*Figure 3. Left: the original graph with unit conductances. Right: the numerators $198\gamma_{ij}$; blue cells indicate positive weights, red cells negative weights. For pendant vertex $6$, the sole original coupling $46$ becomes negative; its other five Greenian couplings are positive. The values are calculated from the displayed matrix.*
+*Figure 4. Left: the original graph with unit conductances. Right: the numerators $198\gamma_{ij}$; blue cells indicate positive weights, red cells negative weights. For pendant vertex $6$, the sole original coupling $46$ becomes negative; its other five Greenian couplings are positive. The values are calculated from the displayed matrix.*
 
 ### All grades
 
-For a block $B$, construct the integer matrix
-
-$$
-(\mathbf K_B)_{ij}=
-\begin{cases}
--m_{ij},&i\ne j\\
-\displaystyle\sum_{\ell\in B\setminus\{i\}}m_{i\ell},&i=j
-\end{cases}
-\qquad(i,j\in B)
-$$
-
-Then, for $\#B\ge2$ and any vertex $b\in B$,
-
-$$
-t_\gamma(B)=
-\frac{\det(\mathbf K_B)_{\widehat b,\widehat b}}{198^{\#B-1}}
-$$
-
-Together with (2), this specifies every coefficient of every grade $Q_0,\ldots,Q_5$. For example,
-
-$$
-t_\gamma(\{1,2,3\})
-=\frac{(-19)\cdot26+(-19)\cdot(-1)+26\cdot(-1)}{198^2}
-=-\frac{167}{13068}
-$$
-
-For a triple with three negative couplings, by contrast,
-
-$$
-t_\gamma(\{1,2,5\})
-=\frac{(-19)(-16)+(-19)(-7)+(-16)(-7)}{198^2}
-=\frac{61}{4356}
-$$
-
-Both coefficients belong to grade two. The sign is determined by the sum of products of weights.
-
-Let $s_k$ be the coefficient sum specifically in expansion (2). This is an auxiliary numerical check, not a replacement for the grade polyform.
-
-| Grade $k$ | Partitions | Coefficient sum $s_k$ |
-|---:|---:|---:|
-| $0$ | $1$ | $1$ |
-| $1$ | $15$ | $46/33$ |
-| $2$ | $65$ | $149/198$ |
-| $3$ | $90$ | $273535/1293732$ |
-| $4$ | $31$ | $326/9801$ |
-| $5$ | $1$ | $1/396$ |
-
-The original Laplacian cofactor is $11$, so
-
-$$
-Q_5=\frac1{396}\Theta=\frac1{11}T^\vee
-$$
+> [!example]- Full calculation
+> For a block $B$, construct the integer matrix
+>
+> $$
+> (\mathbf K_B)_{ij}=
+> \begin{cases}
+> -m_{ij},&i\ne j\\
+> \displaystyle\sum_{\ell\in B\setminus\{i\}}m_{i\ell},&i=j
+> \end{cases}
+> \qquad(i,j\in B)
+> $$
+>
+> Then, for $\#B\ge2$ and any vertex $b\in B$,
+>
+> $$
+> t_\gamma(B)=
+> \frac{\det(\mathbf K_B)_{\widehat b,\widehat b}}{198^{\#B-1}}
+> $$
+>
+> Together with (2), this specifies every coefficient of every grade $Q_0,\ldots,Q_5$. For example,
+>
+> $$
+> t_\gamma(\{1,2,3\})
+> =\frac{(-19)\cdot26+(-19)\cdot(-1)+26\cdot(-1)}{198^2}
+> =-\frac{167}{13068}
+> $$
+>
+> For a triple with three negative couplings, by contrast,
+>
+> $$
+> t_\gamma(\{1,2,5\})
+> =\frac{(-19)(-16)+(-19)(-7)+(-16)(-7)}{198^2}
+> =\frac{61}{4356}
+> $$
+>
+> Both coefficients belong to grade two. The sign is determined by the sum of products of weights.
+>
+> Let $s_k$ be the coefficient sum specifically in expansion (2). This is an auxiliary numerical check, not a replacement for the grade polyform.
+>
+> | Grade $k$ | Partitions | Coefficient sum $s_k$ |
+> |---:|---:|---:|
+> | $0$ | $1$ | $1$ |
+> | $1$ | $15$ | $46/33$ |
+> | $2$ | $65$ | $149/198$ |
+> | $3$ | $90$ | $273535/1293732$ |
+> | $4$ | $31$ | $326/9801$ |
+> | $5$ | $1$ | $1/396$ |
+>
+> The original Laplacian cofactor is $11$, so
+>
+> $$
+> Q_5=\frac1{396}\Theta=\frac1{11}T^\vee
+> $$
 
 ## The Petersen graph
 
@@ -666,73 +704,75 @@ As an additional check, resistances are $3/5$ on original edges and $4/5$ on non
 
 ![The Petersen graph and its two classes of Greenian couplings](Greenian-Petersen-couplings.svg)
 
-*Figure 4. Left: the original Petersen graph. Center: the fifteen negative Greenian couplings of weight $-3/100$. Right: the thirty positive couplings of weight $7/100$. The center and right panels together specify $Q_1$. Vertices have identical positions in all panels; line crossings are not vertices.*
+*Figure 5. Left: the original Petersen graph. Center: the fifteen negative Greenian couplings of weight $-3/100$. Right: the thirty positive couplings of weight $7/100$. The center and right panels together specify $Q_1$. Vertices have identical positions in all panels; line crossings are not vertices.*
 
 ### Grade two by classes of forms
 
-A vertex triple contains $r=0,1$ or $2$ original edges, since the Petersen graph has no triangles. The coefficient of its boundary form is
-
-$$
-t_\gamma(B)=\frac{147-140r+100\binom r2}{10000}
-$$
-
-For two disjoint pairs, the product of weights depends on how many selected pairs are original edges. This gives the full expansion of $Q_2$ into six classes:
-
-| Form type | Original edges $r$ | Number of forms | Coefficient of each form |
-|---|---:|---:|---:|
-| $\Psi_{ij\ell}$ | $0$ within the triple | $30$ | $147/10000$ |
-| $\Psi_{ij\ell}$ | $1$ within the triple | $60$ | $7/10000$ |
-| $\Psi_{ij\ell}$ | $2$ within the triple | $30$ | $-33/10000$ |
-| $\Psi_{ij\mid pq}$ | $0$ among the selected pairs | $285$ | $49/10000$ |
-| $\Psi_{ij\mid pq}$ | $1$ among the selected pairs | $270$ | $-21/10000$ |
-| $\Psi_{ij\mid pq}$ | $2$ among the selected pairs | $75$ | $9/10000$ |
-
-In the lower rows, edges between different blocks are not counted. The triple counts follow as follows: $10\binom32=30$ triples contain two edges; each of the $15$ edges has four vertices adjacent to neither endpoint, giving $60$ triples with one edge; the remaining $30$ triples contain no edges.
-
-There are $3\binom{10}4=630$ partitions into two pairs. Two disjoint original edges can be chosen in $\binom{15}2-10\binom32=75$ ways. There are $15\binom82-2\cdot75=270$ cases with exactly one original edge, leaving $285$ cases with none.
-
-The table lists all $120+630=750$ terms of the grouped second grade. Some coefficients are negative even though the form itself is an exterior power of a positive definite form on the dual space.
+> [!example]- Full calculation
+> A vertex triple contains $r=0,1$ or $2$ original edges, since the Petersen graph has no triangles. The coefficient of its boundary form is
+>
+> $$
+> t_\gamma(B)=\frac{147-140r+100\binom r2}{10000}
+> $$
+>
+> For two disjoint pairs, the product of weights depends on how many selected pairs are original edges. This gives the full expansion of $Q_2$ into six classes:
+>
+> | Form type | Original edges $r$ | Number of forms | Coefficient of each form |
+> |---|---:|---:|---:|
+> | $\Psi_{ij\ell}$ | $0$ within the triple | $30$ | $147/10000$ |
+> | $\Psi_{ij\ell}$ | $1$ within the triple | $60$ | $7/10000$ |
+> | $\Psi_{ij\ell}$ | $2$ within the triple | $30$ | $-33/10000$ |
+> | $\Psi_{ij\mid pq}$ | $0$ among the selected pairs | $285$ | $49/10000$ |
+> | $\Psi_{ij\mid pq}$ | $1$ among the selected pairs | $270$ | $-21/10000$ |
+> | $\Psi_{ij\mid pq}$ | $2$ among the selected pairs | $75$ | $9/10000$ |
+>
+> In the lower rows, edges between different blocks are not counted. The triple counts follow as follows: $10\binom32=30$ triples contain two edges; each of the $15$ edges has four vertices adjacent to neither endpoint, giving $60$ triples with one edge; the remaining $30$ triples contain no edges.
+>
+> There are $3\binom{10}4=630$ partitions into two pairs. Two disjoint original edges can be chosen in $\binom{15}2-10\binom32=75$ ways. There are $15\binom82-2\cdot75=270$ cases with exactly one original edge, leaving $285$ cases with none.
+>
+> The table lists all $120+630=750$ terms of the grouped second grade. Some coefficients are negative even though the form itself is an exterior power of a positive definite form on the dual space.
 
 ### All higher grades through induced subgraphs
 
-For a block $B$ of size $s\ge2$, let $\mathbf L_B$ be the ordinary Laplacian of the induced **original** Petersen graph on $B$, with unit edge weights. By (8), the Laplacian of Greenian couplings within the block is
-
-$$
-\mathbf K_B
-=\frac7{100}(s\mathbf I_s-\mathbf1\mathbf1^{\mathsf T})
--\frac1{10}\mathbf L_B
-$$
-
-Consequently,
-
-$$
-\boxed{
-t_\gamma(B)=\det(\mathbf K_B)_{\widehat b,\widehat b},
-\qquad
-Q_k=\sum_{\#\pi=10-k}
-\left(\prod_{B\in\pi}t_\gamma(B)\right)\Psi_\pi
-}
-\tag{10}
-$$
-
-Here $b$ is any vertex of the block; for a singleton block, $t_\gamma(B)=1$. Formula (10) specifies all grades $Q_0,\ldots,Q_9$ exactly. It requires cofactors on blocks rather than enumeration of trees in the complete graph on ten vertices. Petersen automorphisms map blocks to blocks with equal coefficients.
-
-For verification, the table gives the number of partitions before zero coefficients are excluded, and the coefficient sum $s_k$ specifically for this expression:
-
-| Grade $k$ | Partitions | Coefficient sum $s_k$ |
-|---:|---:|---:|
-| $0$ | $1$ | $1$ |
-| $1$ | $45$ | $33/20$ |
-| $2$ | $750$ | $1281/1000$ |
-| $3$ | $5880$ | $61621/100000$ |
-| $4$ | $22827$ | $815913/4000000$ |
-| $5$ | $42525$ | $97821897/2000000000$ |
-| $6$ | $34105$ | $8701417/1000000000$ |
-| $7$ | $9330$ | $457167/400000000$ |
-| $8$ | $511$ | $207/2000000$ |
-| $9$ | $1$ | $1/200000$ |
-
-The sums do not replace the full forms and cannot recover them. Formula (10) retains the specific blocks and specifies every term.
+> [!example]- Full calculation
+> For a block $B$ of size $s\ge2$, let $\mathbf L_B$ be the ordinary Laplacian of the induced **original** Petersen graph on $B$, with unit edge weights. By (8), the Laplacian of Greenian couplings within the block is
+>
+> $$
+> \mathbf K_B
+> =\frac7{100}(s\mathbf I_s-\mathbf1\mathbf1^{\mathsf T})
+> -\frac1{10}\mathbf L_B
+> $$
+>
+> Consequently,
+>
+> $$
+> \boxed{
+> t_\gamma(B)=\det(\mathbf K_B)_{\widehat b,\widehat b},
+> \qquad
+> Q_k=\sum_{\#\pi=10-k}
+> \left(\prod_{B\in\pi}t_\gamma(B)\right)\Psi_\pi
+> }
+> \tag{10}
+> $$
+>
+> Here $b$ is any vertex of the block; for a singleton block, $t_\gamma(B)=1$. Formula (10) specifies all grades $Q_0,\ldots,Q_9$ exactly. It requires cofactors on blocks rather than enumeration of trees in the complete graph on ten vertices. Petersen automorphisms map blocks to blocks with equal coefficients.
+>
+> For verification, the table gives the number of partitions before zero coefficients are excluded, and the coefficient sum $s_k$ specifically for this expression:
+>
+> | Grade $k$ | Partitions | Coefficient sum $s_k$ |
+> |---:|---:|---:|
+> | $0$ | $1$ | $1$ |
+> | $1$ | $45$ | $33/20$ |
+> | $2$ | $750$ | $1281/1000$ |
+> | $3$ | $5880$ | $61621/100000$ |
+> | $4$ | $22827$ | $815913/4000000$ |
+> | $5$ | $42525$ | $97821897/2000000000$ |
+> | $6$ | $34105$ | $8701417/1000000000$ |
+> | $7$ | $9330$ | $457167/400000000$ |
+> | $8$ | $511$ | $207/2000000$ |
+> | $9$ | $1$ | $1/200000$ |
+>
+> The sums do not replace the full forms and cannot recover them. Formula (10) retains the specific blocks and specifies every term.
 
 ### The top grade and an independent check
 

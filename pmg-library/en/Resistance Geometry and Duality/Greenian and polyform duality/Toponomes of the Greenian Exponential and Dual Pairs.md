@@ -1,9 +1,9 @@
 ---
 title: Toponomes of the Greenian Exponential and Dual Pairs
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 3
+updated: 2026-11-08
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-exponential-toponomes-and-dual-pairs
@@ -21,6 +21,37 @@ A toponome of the Greenian exponential is constructed in the same way as a topon
 Mutually pseudoinverse Laplacian and Greenian matrices give two full toponomes. Under vertex specialization, these become polynomials of reciprocal nonzero spectra. This exact relationship does not mean reversing the coefficient list of the full toponome: different types within one grade are combined only upon specialization.
 
 We use [[The Canonical Vector Representation of the Greenian]], the [[From Polyforms to Partitions|definition of the toponome of a chosen representation]], and [[Symmetric Identities of the Greenian]].
+
+## From the path to the general definition
+
+The variable $x_j$ represents a forest component on $j+1$ vertices. On four vertices, $x_2$ means a tree on a triple, whereas $x_1^2$ means two disjoint edges. Isolated vertices add no factor. First see how the coefficients change from the Laplacian to the Greenian.
+
+### The unit path: two full toponomes
+
+Let the original graph have edges $ab,bc,cd$ of weight $1$. Its spanning coefficient is $\tau=1$. The Greenian vector coefficients are:
+
+| Pair | $ab$ | $ac$ | $ad$ | $bc$ | $bd$ | $cd$ |
+|---|---:|---:|---:|---:|---:|---:|
+| $\gamma_{ij}$ | $-1/8$ | $3/8$ | $5/8$ | $1/8$ | $3/8$ | $-1/8$ |
+
+Enumerating forests gives the pair
+
+$$
+\begin{aligned}
+T_L(\mathbf x)&=1+3x_1+2x_2+x_1^2+x_3\\
+T_{\mathrm{Gr}}(\mathbf x)&=1+\frac54x_1+\frac3{16}x_2
++\frac{15}{64}x_1^2+\frac1{16}x_3
+\end{aligned}
+\tag{1}
+$$
+
+In grade two, the coefficient of $x_2$ collects adjacent edge pairs, while the coefficient of $x_1^2$ collects disjoint edge pairs. For example, the coefficient of $x_1^2$ is
+
+$$
+\gamma_{ab}\gamma_{cd}+\gamma_{ac}\gamma_{bd}+\gamma_{ad}\gamma_{bc}
+=\frac{1+9+5}{64}
+=\frac{15}{64}
+$$
 
 ## The canonical forest representation
 
@@ -61,7 +92,7 @@ $$
 N=\prod_{i<j}\bigl(e+\gamma_{ij}[a_{ij}]^2\bigr)
 =\sum_{F\in\mathcal F_n}w_\gamma(F)q_{\pi(F)}
 }
-\tag{1}
+\tag{2}
 $$
 
 A repeated vector or a cycle makes the exterior product vanish. For a tree, the edge product agrees with the boundary of its vertices up to a sign that disappears in the quadratic form. Thus a forest with $k$ edges enters grade $N_k=\mathrm{Gr}^k/k!$ with the product of its weights, without an additional factor of $k!$.
@@ -69,6 +100,15 @@ A repeated vector or a cycle makes the exterior product vanish. For a tree, the 
 This algebraic expansion holds for any symmetric vector form with real coefficients. Connectedness and positivity of the original graph will be needed for metric and spectral conclusions about the pair $L,\mathrm{Gr}$.
 
 ## The full toponome and the meaning of its coefficients
+
+Write $g_\lambda$ for the coefficient of type $\lambda$ in the Greenian toponome and $\ell_\lambda$ for the corresponding coefficient in the Laplacian toponome:
+
+$$
+T_{\mathrm{Gr}}(\mathbf x)=\sum_\lambda g_\lambda x_\lambda,\qquad
+T_L(\mathbf x)=\sum_\lambda \ell_\lambda x_\lambda
+$$
+
+The index specifies a forest type. For example, $g_{(2)}$ and $g_{(1,1)}$ are the coefficients of $x_2$ and $x_1^2$. Individual coupling weights remain $\gamma_{ij}$ and $c_{ij}$; they differ from the aggregated type coefficients. The notation $g_\lambda$ replaces the earlier coefficient notation with subscript $\mathrm{Gr}$ and argument $\lambda$.
 
 A vertex partition, its numerical type, and the corresponding toponome monomial are different levels of notation. For the fixed set $\{a,b,c,d\}$, the correspondence is:
 
@@ -92,21 +132,21 @@ $$
 The empty index set is denoted by $\varnothing$; its basis symbol in type notation and its corresponding monomial are both $1$. Thus $x_\varnothing=1$. The number $n$ is retained separately: together with the type, it recovers the number of isolated vertices, $n-\sum_\alpha k_\alpha-r$.
 
 > [!info] The full toponome and the meaning of its coefficients
-> **Definition.** The canonical toponome of the Greenian exponential is the polynomial expression for the reduction of forest representation (1):
+> **Definition.** The canonical toponome of the Greenian exponential is the polynomial expression for the reduction of forest representation (2):
 >
 > $$
 > \boxed{
 > T_{\mathrm{Gr}}(\mathbf x)
 > =\sum_{F\in\mathcal F_n}w_\gamma(F)x_{\lambda(F)}
-> =\sum_\lambda c_{\mathrm{Gr}}(\lambda)x_\lambda
+> =\sum_\lambda g_\lambda x_\lambda
 > }
-> \tag{2}
+> \tag{3}
 > $$
 >
 > Its coefficient
 >
 > $$
-> c_{\mathrm{Gr}}(\lambda)
+> g_\lambda
 > =\sum_{\substack{F\in\mathcal F_n\\\lambda(F)=\lambda}}
 > \prod_{ij\in E(F)}\gamma_{ij}
 > $$
@@ -118,7 +158,7 @@ Denote the analogous expression with $c_{ij}$ in place of $\gamma_{ij}$ by $T_L(
 One may also sum over partitions. Let $t_\gamma(B)$ be the total weight of spanning trees on block $B$, with coupling weights $\gamma_{ij}$ within the block; set $t_\gamma(\{a_i\})=1$. Then
 
 $$
-c_{\mathrm{Gr}}(\lambda)
+g_\lambda
 =\sum_{\substack{\pi\text{ a vertex partition}\\\lambda(\pi)=\lambda}}
 \prod_{B\in\pi}t_\gamma(B)
 $$
@@ -129,18 +169,22 @@ The first and top coefficients have direct interpretations:
 
 $$
 \begin{aligned}
-c_{\mathrm{Gr}}(\varnothing)&=1\\
-c_{\mathrm{Gr}}((1))&=\sum_{i<j}\gamma_{ij}
+g_\varnothing&=1\\
+g_{(1)}&=\sum_{i<j}\gamma_{ij}
 =\frac12\operatorname{tr}\mathbf{Gr}
 =\frac{Kf(G)}{2n}\\
-c_{\mathrm{Gr}}((d))&=\tau_\gamma=\frac1{n^2\tau}
+g_{(d)}&=\tau_\gamma=\frac1{n^2\tau}
 \end{aligned}
-\tag{3}
+\tag{4}
 $$
 
 Here $\varnothing$ indexes the empty type and is not a separate monomial; $Kf(G)=\sum_{i<j}R_{ij}$ is the Kirchhoff index. The grade-one equality follows from the zero row sums of $\mathbf{Gr}$ and the formula $R_{ij}=\mathrm{Gr}_{ii}+\mathrm{Gr}_{jj}-2\mathrm{Gr}_{ij}$. The top normalization is proved in [[The Canonical Vector Representation of the Greenian]]. In particular, the product of the top coefficients of the two full toponomes is $1/n^2$.
 
 ## Two normalizations and symmetric identities
+
+![Each grouping retains less information](From%20Greenian%20Forests%20to%20a%20Spectral%20Polynomial.svg)
+
+*Figure 1. Before types are grouped, the root weight multiplies each coefficient separately. In grade two, $x_2$ receives factor 3 and $x_1^2$ factor 4. Spectral reversal concerns the resulting sum $3g_{(2)}+4g_{(1,1)}$, not the two coefficients separately.*
 
 The rooted weight of a type is determined by its component sizes:
 
@@ -149,11 +193,11 @@ h(\lambda)=\prod_{\alpha=1}^r(k_\alpha+1),\qquad
 h(\varnothing)=1
 $$
 
-It counts the choices of one root in each forest component. Vector normalization preserves $c_{\mathrm{Gr}}(\lambda)$, while vertex normalization multiplies it by $h(\lambda)$:
+It counts the choices of one root in each forest component. Vector normalization preserves $g_\lambda$, while vertex normalization multiplies it by $h(\lambda)$:
 
 $$
 T_{\mathrm{Gr}}^{\mathrm{vert}}(\mathbf x)
-=\sum_\lambda h(\lambda)c_{\mathrm{Gr}}(\lambda)x_\lambda
+=\sum_\lambda h(\lambda)g_\lambda x_\lambda
 =T_{\mathrm{Gr}}\bigl(2x_1,3x_2,4x_3,\ldots\bigr)
 $$
 
@@ -189,7 +233,7 @@ The [[Symmetric Identities of the Greenian#Preservation of boundary identities|t
 
 Equality appears in the last row. Multiplying coefficients by rooted weights does not yet identify different types. Retaining $u$ leaves distinct expressions $12t^2u^2$ and $12t^2u$.
 
-Thus the full toponome belongs to the fixed forest representation (1). Structurally transforming the sum of forms before termwise reduction may change the toponome. The canonical choice of vector factors removes this ambiguity from the definition, but does not make an arbitrary reduction by types a linear map on the space of polyforms.
+Thus the full toponome belongs to the fixed forest representation (2). Structurally transforming the sum of forms before termwise reduction may change the toponome. The canonical choice of vector factors removes this ambiguity from the definition, but does not make an arbitrary reduction by types a linear map on the space of polyforms.
 
 The univariate vertex evaluation preserves every structural identity: in the auxiliary Euclidean evaluation with orthonormal original vertices, the form $q_\pi$ receives the value $\prod_{B\in\pi}\#B$. The proof appears in the [[Vector and Vertex Normalizations of Toponomes#Compatibility with structural identities|theorem on independence of vertex evaluation]]. This is an auxiliary evaluation of forms, not their potential in the metric $N$.
 
@@ -200,7 +244,7 @@ The univariate vertex evaluation preserves every structural identity: in the aux
 >
 > $$
 > \boxed{P_{\mathrm{Gr}}(t)=\det(\mathbf I+t\mathbf{Gr})}
-> \tag{4}
+> \tag{5}
 > $$
 >
 > The equality holds for any symmetric matrix with zero row sums when its vector weights are defined as the negatives of its off-diagonal entries.
@@ -221,11 +265,11 @@ The univariate vertex evaluation preserves every structural identity: in the aux
 > \det(\mathbf B_S^{\mathsf T}\mathbf B_S)
 > $$
 >
-> The sum runs over sets of pairs. If a set contains a cycle, its columns are dependent and the determinant is zero. For a forest $F$, the Gram determinant of its columns is $\prod_{B\in\pi(F)}\#B=h(\lambda(F))$: a tree on $s$ vertices has $s$ nonzero maximal incidence minors, each equal to $\pm1$, and disjoint components give independent blocks. The empty forest contributes $1$. This is exactly the substitution $x_j=(j+1)t^j$ in (2). No restriction was imposed on the signs of $\gamma_{ij}$. $\square$
+> The sum runs over sets of pairs. If a set contains a cycle, its columns are dependent and the determinant is zero. For a forest $F$, the Gram determinant of its columns is $\prod_{B\in\pi(F)}\#B=h(\lambda(F))$: a tree on $s$ vertices has $s$ nonzero maximal incidence minors, each equal to $\pm1$, and disjoint components give independent blocks. The empty forest contributes $1$. This is exactly the substitution $x_j=(j+1)t^j$ in (3). No restriction was imposed on the signs of $\gamma_{ij}$. $\square$
 
 This is the matrix-forest theorem; the standard weighted-graph formulation appears in Chebotarev and Shamis [1, Theorem 5]. Their definition of weights allows negative values. The proof above explains why signs of Greenian coefficients do not prevent use of the formula.
 
-For an arbitrary signed vector form, determinant coefficients may have either sign. For the Greenian of a connected graph with positive original conductances, all $p_{\mathrm{Gr},k}$, $0\le k\le d$, are positive: they are elementary symmetric sums of the positive nonzero eigenvalues of $\mathbf{Gr}$. This conclusion concerns the combined rooted sums, not each individual $c_{\mathrm{Gr}}(\lambda)$.
+For an arbitrary signed vector form, determinant coefficients may have either sign. For the Greenian of a connected graph with positive original conductances, all $p_{\mathrm{Gr},k}$, $0\le k\le d$, are positive: they are elementary symmetric sums of the positive nonzero eigenvalues of $\mathbf{Gr}$. This conclusion concerns the combined rooted sums, not each individual $g_\lambda$.
 
 ## The dual pair and reversal of spectral coefficients
 
@@ -247,7 +291,7 @@ $$
 > \qquad
 > p_{\mathrm{Gr},k}=\frac{p_{L,d-k}}{n\tau}
 > }
-> \tag{5}
+> \tag{6}
 > $$
 >
 > At $t=0$, the right-hand side is understood as the polynomial obtained after expansion.
@@ -262,7 +306,7 @@ $$
 > =\frac{t^d}{n\tau}P_L(1/t)
 > $$
 >
-> Comparing coefficients gives (5). $\square$
+> Comparing coefficients gives (6). $\square$
 
 The roots of the polynomials are $-1/\mu_i$ and $-\mu_i$, respectively. They are pairwise reciprocals, including multiplicities. This concerns the nonzero spectrum; the common zero eigenvalue of both matrices contributes a factor of $1$ to the determinants.
 
@@ -279,39 +323,16 @@ For grade two, for example,
 
 $$
 p_{\mathrm{Gr},2}
-=3c_{\mathrm{Gr}}((2))+4c_{\mathrm{Gr}}((1,1))
+=3g_{(2)}+4g_{(1,1)}
 $$
 
-Here $c_{\mathrm{Gr}}((2))$ is the coefficient of $x_2$, while $c_{\mathrm{Gr}}((1,1))$ is the coefficient of $x_1^2$. Formula (5) specifies this weighted sum, not its individual terms. By itself, it does not recover the full Greenian toponome from the Laplacian spectral polynomial.
+Here $g_{(2)}$ is the coefficient of $x_2$, while $g_{(1,1)}$ is the coefficient of $x_1^2$. Formula (6) specifies this weighted sum, not its individual terms. By itself, it does not recover the full Greenian toponome from the Laplacian spectral polynomial.
 
 ## Examples of dual pairs
 
 ### The unit path on four vertices
 
-Let the original graph have edges $ab,bc,cd$ of weight $1$. Its spanning coefficient is $\tau=1$. The Greenian vector coefficients are:
-
-| Pair | $ab$ | $ac$ | $ad$ | $bc$ | $bd$ | $cd$ |
-|---|---:|---:|---:|---:|---:|---:|
-| $\gamma_{ij}$ | $-1/8$ | $3/8$ | $5/8$ | $1/8$ | $3/8$ | $-1/8$ |
-
-Enumerating forests gives the pair
-
-$$
-\begin{aligned}
-T_L(\mathbf x)&=1+3x_1+2x_2+x_1^2+x_3\\
-T_{\mathrm{Gr}}(\mathbf x)&=1+\frac54x_1+\frac3{16}x_2
-+\frac{15}{64}x_1^2+\frac1{16}x_3
-\end{aligned}
-\tag{6}
-$$
-
-In grade two, the coefficient of $x_2$ collects adjacent edge pairs, while the coefficient of $x_1^2$ collects disjoint edge pairs. For example, the coefficient of $x_1^2$ is
-
-$$
-\gamma_{ab}\gamma_{cd}+\gamma_{ac}\gamma_{bd}+\gamma_{ad}\gamma_{bc}
-=\frac{1+9+5}{64}
-=\frac{15}{64}
-$$
+Continue the opening path example. Its full toponomes are listed above; now group their types by grade.
 
 The univariate vector polynomials are
 
@@ -330,6 +351,10 @@ $$
 Indeed, $P_{\mathrm{Gr}}(t)=t^3P_L(1/t)/4$. The vector polynomials are not related by this reversal: $t^3F_L(1/t)=F_L(t)\ne F_{\mathrm{Gr}}(t)$.
 
 ### A weighted path and a negative type coefficient
+
+![A negative type coefficient contributes to a positive rooted sum](A%20Negative%20Coefficient%20and%20the%20Rooted%20Sum.svg)
+
+*Figure 2. The path has conductances $1,1/2,1$. In grade two, $g_{(2)}=-5/16$ and $g_{(1,1)}=55/64$. Root choices give $-15/16+55/16=5/2$. This is an example for one graph, not a claim that this type is negative for every Greenian.*
 
 Retain the path $a-b-c-d$, setting $c_{ab}=c_{cd}=1$ and $c_{bc}=1/2$. Then $\tau=1/2$, and in pair order $ab,ac,ad,bc,bd,cd$,
 
@@ -362,7 +387,7 @@ P_L(t)=1+5t+7t^2+2t^3,\qquad
 P_{\mathrm{Gr}}(t)=1+\frac72t+\frac52t^2+\frac12t^3
 $$
 
-They satisfy (5) with $n\tau=2$. Thus positive definiteness of the Greenian on $\mathbf1^\perp$ is compatible with a negative total coefficient of an individual forest type.
+They satisfy (6) with $n\tau=2$. Thus positive definiteness of the Greenian on $\mathbf1^\perp$ is compatible with a negative total coefficient of an individual forest type.
 
 ### The complete graph
 
@@ -402,9 +427,9 @@ The two expressions use different data:
 | Form argument | Product of component boundaries | Product of block sums |
 | Term weight | $w_\gamma(F)$ | $w_c(F)/\tau$ |
 
-The forest type on the right describes the original partition. It is not automatically the type of the boundary components of the form $\mathcal C(\Phi_{\pi(F)})$ itself. Thus replacing this indexing forest by the monomial of its original type defines a different reduction; it does not coincide with (2) by definition.
+The forest type on the right describes the original partition. It is not automatically the type of the boundary components of the form $\mathcal C(\Phi_{\pi(F)})$ itself. Thus replacing this indexing forest by the monomial of its original type defines a different reduction; it does not coincide with (3) by definition.
 
-After rooted spectral specialization, the comparison becomes exact. Formula (5) and the forest formula for $p_{L,d-k}$ give
+After rooted spectral specialization, the comparison becomes exact. Formula (6) and the forest formula for $p_{L,d-k}$ give
 
 $$
 \boxed{
@@ -443,15 +468,15 @@ The full toponome retains the total weight of each positive type and, if $n$ is 
 
 Potentials of labeled forms likewise cannot be recovered from their type. For example, for the unit path $a-b-c-d$, in the [[The Greenian Metric and Potentials#A path on four vertices|metric $N$]], the normalized potentials of $[a_{ab}]^2$ and $[a_{bc}]^2$ are $5$ and $6$, respectively, although both forms have type $(1)$. Their connection with the original Laplacian requires retaining the selected vertices.
 
-The canonical forest formula, determinant specialization, and spectral reversal (5) are proved. Pairs (6), (7), and the example $K_4$ are calculated exactly; forest sums are compared with independent calculations of determinant coefficients through principal minors. The negative coefficient of $x_2$ in (7) is a calculated example, not a conjecture about every graph. The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/dual/verify_toponomes.py) reproduces these pairs and also checks the cycle $C_5$, a star on five vertices, and a nonuniformly weighted five-vertex graph. Run:
+The canonical forest formula, determinant specialization, and spectral reversal (6) are proved. Pairs (1), (7), and the example $K_4$ are calculated exactly; forest sums are compared with independent calculations of determinant coefficients through principal minors. The negative coefficient of $x_2$ in (7) is a calculated example, not a conjecture about every graph. The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/dual/verify_toponomes.py) reproduces these pairs and also checks the cycle $C_5$, a star on five vertices, and a nonuniformly weighted five-vertex graph. Run:
 
     python checks/dual/verify_toponomes.py
 
-A general transformation from the full $T_L$ to the full $T_{\mathrm{Gr}}$, if possible without recovering the labeled matrix, is not established here. Its existence, required additional data, and limitations form a separate problem. Spectral formula (5) does not solve it. Directed and balanced extensions likewise require a separate definition of the corresponding Greenian and its bilinear exponential.
+A general transformation from the full $T_L$ to the full $T_{\mathrm{Gr}}$, if possible without recovering the labeled matrix, is not established here. Its existence, required additional data, and limitations form a separate problem. Spectral formula (6) does not solve it. Directed and balanced extensions likewise require a separate definition of the corresponding Greenian and its bilinear exponential.
 
 ## Sources and connections
 
-1. Chebotarev P., Shamis E. [Matrix-Forest Theorems](https://arxiv.org/abs/math/0602575v2). Manuscript from 1994–1997, arXiv revision of 2023. Theorem 5 expresses $\det(I+L)$ through the weight of rooted spanning forests; the preliminary definitions allow negative weights. Substituting $t\gamma_{ij}$ gives (4).
+1. Chebotarev P., Shamis E. [Matrix-Forest Theorems](https://arxiv.org/abs/math/0602575v2). Manuscript from 1994–1997, arXiv revision of 2023. Theorem 5 expresses $\det(I+L)$ through the weight of rooted spanning forests; the preliminary definitions allow negative weights. Substituting $t\gamma_{ij}$ gives (5).
 2. [[Forest Coefficients and the Laplacian Polynomial]]: a proof through principal minors, the role of roots, and the connection with the characteristic polynomial.
 3. [[Toponomes and Structural Identities]] and [[Symmetric Identities of the Greenian]]: dependence of the full reduction on representation and admissible component evaluations.
 4. [[Greenian Exponentials of Standard Graphs]]: matrices and forest grades of cycles, stars, complete graphs, paths, and more complex examples.

@@ -1,9 +1,9 @@
 ---
 title: The Canonical Vector Representation of the Greenian
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 7
+updated: 2026-11-08
+revision: 3
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-canonical-vector-representation
@@ -104,6 +104,12 @@ The representation is canonical relative to the given labeled vertex set. No ref
 Polar forms also form a basis, but in this series “the canonical working representation” means the vector representation. This selects the main notation; it does not assert that no other bases exist.
 
 ## Coefficients and centroid geometry
+
+Here all $p_i=a_i-h$ lie in the direct space $W$, and the inner product is that of the original resistance metric. The sign change of a coefficient has a simple geometric meaning.
+
+![The coefficient has the opposite sign to the inner product](Angles%20and%20Signs%20of%20Greenian%20Coefficients.svg)
+
+*Figure 1. In $\gamma_{ij}=-p_i\cdot p_j$, an acute angle gives a negative coefficient, a right angle gives zero, and an obtuse angle gives a positive coefficient. These are pairs of vectors; a negative coefficient does not mean a negative vector norm.*
 
 Let $h=n^{-1}\sum_i a_i$ be the centroid of the direct vertices. The [[The Exterior Exponential and Representations of the Greenian#The centered image and the Greenian|centered identification]]
 
@@ -254,6 +260,16 @@ Two expansions of the same $Q_k$ must be distinguished:
 
 The expansion in the second row is proved in [[Cuts and Forest Grades of the Greenian Exponential]]. It is the full forms that are equal, not individual forests or their weights. The first row is used for vector calculations; the second connects to the original combinatorics and vertex variations.
 
+### Where the factor four comes from on one edge
+
+For an edge of conductance $c$, the centered vectors are $p_a=(a-b)/2$ and $p_b=-p_a$. Thus one form has two expressions:
+
+$$
+\mathrm{Gr}=\frac1c[p_a]^2=\frac1{4c}[(ab)]^2
+$$
+
+The reciprocal coefficient $1/c$ belongs to the form of a centered vertex. Passing to the difference doubles the argument and divides the coefficient by four. The boundary expression therefore has spanning-tree coefficient $1/(4c)=1/(n^2\tau)$ at $n=2$.
+
 ## The spanning-tree sum and normalization of the top form
 
 On the dual side, set
@@ -326,6 +342,10 @@ $$
 The last form is the top grade of the Greenian exponential. This reconciles its spanning coefficient with the basic normalization of duality.
 
 ## Full example: a path on four vertices
+
+![The original path and the signed couplings of its Greenian](A%20Path%20and%20Its%20Greenian%20Couplings.svg)
+
+*Figure 2. The top row is the unit path worked out below. The bottom shows conductances $2,3,5$, treated in the standard-graphs note. The tables specify all six pairs, including pairs without an original edge.*
 
 Let the original path $a-b-c-d$ have unit conductances. Then $\tau=1$, and resistances equal distances along the path:
 

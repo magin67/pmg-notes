@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560" role="img" aria-labelledby="title"><title id="title">Выбор множителей внешней экспоненты</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="560" fill="white"/>
+<text xml:space="preserve" x="560" y="43" font-size="27" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Второй грейд: выбираем два различных множителя</text>
+<text xml:space="preserve" x="352.0" y="102" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">S = f</text>
+<text xml:space="preserve" x="411.0" y="108.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="422.0" y="102" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> + f</text>
+<text xml:space="preserve" x="462.0" y="108.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="473.0" y="102" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> + f</text>
+<text xml:space="preserve" x="513.0" y="108.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">3</text>
+<text xml:space="preserve" x="524.0" y="102" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">,     f</text>
+<text xml:space="preserve" x="580.0" y="108.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="591.0" y="102" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">² = f</text>
+<text xml:space="preserve" x="640.0" y="108.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="651.0" y="102" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">² = f</text>
+<text xml:space="preserve" x="700.0" y="108.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">3</text>
+<text xml:space="preserve" x="711.0" y="102" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">² = 0</text>
+<rect x="25" y="150" width="330" height="285" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="190" y="200" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Два порядка</text>
+<text xml:space="preserve" x="135.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="143.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="154.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="162.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="173.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> + f</text>
+<text xml:space="preserve" x="214.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="225.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="233.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<line x1="190" y1="275" x2="190" y2="335" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="255" y="313" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">÷ 2!</text>
+<text xml:space="preserve" x="169.0" y="388" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="179.0" y="394.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="190.0" y="388" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="200.0" y="394.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">2</text>
+<rect x="395" y="150" width="330" height="285" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="200" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Два порядка</text>
+<text xml:space="preserve" x="505.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="513.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="524.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="532.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">3</text>
+<text xml:space="preserve" x="543.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> + f</text>
+<text xml:space="preserve" x="584.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">3</text>
+<text xml:space="preserve" x="595.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="603.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<line x1="560" y1="275" x2="560" y2="335" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="625" y="313" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">÷ 2!</text>
+<text xml:space="preserve" x="539.0" y="388" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="549.0" y="394.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="560.0" y="388" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="570.0" y="394.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">3</text>
+<rect x="765" y="150" width="330" height="285" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="930" y="200" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Два порядка</text>
+<text xml:space="preserve" x="875.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="883.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="894.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="902.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">3</text>
+<text xml:space="preserve" x="913.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> + f</text>
+<text xml:space="preserve" x="954.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">3</text>
+<text xml:space="preserve" x="965.5" y="250" font-size="29" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">f</text>
+<text xml:space="preserve" x="973.5" y="256.67" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<line x1="930" y1="275" x2="930" y2="335" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="995" y="313" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">÷ 2!</text>
+<text xml:space="preserve" x="909.0" y="388" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="919.0" y="394.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">2</text>
+<text xml:space="preserve" x="930.0" y="388" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="940.0" y="394.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">3</text>
+<text xml:space="preserve" x="405.5" y="505" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">S² / 2! = f</text>
+<text xml:space="preserve" x="530.5" y="511.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="541.5" y="505" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="551.5" y="511.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">2</text>
+<text xml:space="preserve" x="562.5" y="505" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start"> + f</text>
+<text xml:space="preserve" x="606.5" y="511.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">1</text>
+<text xml:space="preserve" x="617.5" y="505" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="627.5" y="511.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">3</text>
+<text xml:space="preserve" x="638.5" y="505" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start"> + f</text>
+<text xml:space="preserve" x="682.5" y="511.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">2</text>
+<text xml:space="preserve" x="693.5" y="505" font-size="30" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">f</text>
+<text xml:space="preserve" x="703.5" y="511.9" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">3</text>
+</svg>

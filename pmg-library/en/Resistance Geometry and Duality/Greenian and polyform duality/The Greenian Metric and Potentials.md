@@ -1,9 +1,9 @@
 ---
 title: The Greenian Metric and Potentials
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 3
+updated: 2026-11-08
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-metric-and-potentials
@@ -19,6 +19,14 @@ aliases:
 The Laplacian exponential defines the resistance metric with the Green matrix. In the Greenian exponential, the matrices exchange roles: its normalized potentials are determined by the original Laplacian. Thus Greenian coefficients may have either sign, while norms of nonzero exterior objects remain positive.
 
 For the vector form of $a_{ij}=a_j-a_i=(a_i a_j)$, the normalized potential is $d_i+d_j+2c_{ij}$, where $d_i$ is the sum of conductances incident to vertex $i$. The coupling $c_{ij}$ does indeed enter this value with a total factor of $4$. Below we explain this factor, connect potentials with cuts, and give a formula for arbitrary grade.
+
+## One path and three problems
+
+Energy is the sum of squared differences multiplied by conductances. First compare three assignments on one graph. Below, $p_a=a-h$ and $p_b=b-h$ are centered vectors.
+
+![[Prescribed-values-and-Greenian-energy.svg]]
+
+In the figure, all three edges of the path $a-b-c-d$ have unit conductance. For the difference $b-a$, the specified assignment is $(-1,1,0,0)$, with energy $4+1=5$. For the sum $p_a+p_b$, the assignment $(1,1,0,0)$ may be used: its energy is $1$, concentrated on the cut $ab\mid cd$. If only $a=-1$ and $b=1$ are fixed, the free vertices take values $c=d=1$, and the minimum is $4=4/R_{ab}$. Here $R_{ab}=1$.
 
 ## The Greenian exponential and the potential of a form
 
@@ -74,6 +82,18 @@ $$
 If $f$ has grade $k$, only $N_{n-1-k}f$ contributes to the numerator. In particular, $P_N(e)=1$. In PMG terminology, the normalized potential is called the norm of the form; for $f=[X]^2$, it is the quadratic norm of the argument $X$.
 
 The coefficient $\gamma_{ij}$ in the Greenian expression must be distinguished from the value $P_N([a_{ij}]^2)$. A coefficient specifies the exponential, whereas a potential is obtained by multiplying the exponential by a given form and extracting the top coefficient. These are different operations.
+
+### Three numbers for one form
+
+For the unit path $a-b-c-d$, set $f=[(ab)]^2$. Then $\sigma=1/16$:
+
+| Quantity | Value | How it is obtained |
+| --- | --- | --- |
+| Coefficient $\gamma_{ab}$ in the canonical Greenian expression | $-1/8$ | The coefficient of $f$ in grade one |
+| Potential $u_N(f)$ | $5/16$ | The top coefficient of the product $Nf$ |
+| Form norm $P_N(f)$ | $5$ | $u_N(f)/\sigma$ |
+
+The first row refers to the chosen expansion. The next two evaluate the prescribed form using the whole exponential.
 
 ## The Laplacian as the metric of the Greenian exponential
 
@@ -265,10 +285,6 @@ The resistance $R_{ij}$ equals dissipation under a unit current between the endp
 
 The minimization is the classical Dirichlet principle for an electrical network [2]. In (9), the factor $4$ comes from the prescribed difference $2$. For difference $1$, the minimum is the effective conductance $1/R_{ij}$. Thus $P_N([a_{ij}]^2)/4$ generally differs from effective conductance: fixing additional vertices may increase dissipation.
 
-![[Prescribed-values-and-Greenian-energy.svg]]
-
-In the figure, all three edges of the path $a-b-c-d$ have unit conductance. For the difference $b-a$, the specified assignment is $(-1,1,0,0)$, with energy $4+1=5$. For the sum $p_a+p_b$, the assignment $(1,1,0,0)$ may be used: its energy is $1$, concentrated on the cut $ab\mid cd$. If only $a=-1$ and $b=1$ are fixed, the free vertices take values $c=d=1$, and the minimum is $4=4/R_{ab}$. Here $R_{ab}=1$.
-
 ## Potentials of higher grades
 
 ### A boundary on three vertices
@@ -320,6 +336,10 @@ For a boundary on vertices, the matrices $U$ and $B_S$ are integer matrices, so 
 Formula (11) calculates the potential of a **specified form** through the original positive conductances. It differs both from the expansion of grade $N_k$ using signed coefficients $\gamma_{ij}$ and from the representation of the complementary dual grade through forests of the original graph.
 
 ### Where the path coefficients come from
+
+![Three edge pairs give coefficients 9 4 and 1](Edge%20Pairs%20and%20the%20Potential%20of%20a%20Boundary.svg)
+
+*Figure 1. For $X=(abc)$, select two columns of $U^{\mathsf T}B$. Their determinants are $3,-2,1$; squaring gives the factors multiplying $pq,pr,qr$. A dashed edge is not selected.*
 
 Consider the path $a-b-c-d$ with conductances $p,q,r$ on successive edges. For $X=(abc)$, take columns $U=((ab),(ac))$. Coordinate pairwise products with the three edges give
 

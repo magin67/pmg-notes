@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="790" viewBox="0 0 1120 790" role="img" aria-labelledby="title"><title id="title">Map of Greenian Representations</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="790" fill="white"/>
+<text xml:space="preserve" x="560" y="45" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">From matrices to forms and evaluations</text>
+<rect x="30" y="95" width="300" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="180" y="135" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">L</text>
+<text xml:space="preserve" x="180" y="178" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">space W</text>
+<rect x="790" y="95" width="300" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="940" y="135" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Gr</text>
+<text xml:space="preserve" x="940" y="178" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">space W</text>
+<line x1="345" y1="150" x2="775" y2="150" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="560" y="111" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Matrices are mutual</text>
+<text xml:space="preserve" x="560" y="136" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">pseudoinverses</text>
+<line x1="180" y1="223" x2="180" y2="285" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="245" y="262" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">exp</text>
+<line x1="940" y1="223" x2="940" y2="285" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="1005" y="262" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">exp</text>
+<rect x="30" y="300" width="300" height="130" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="410" y="300" width="300" height="130" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="790" y="300" width="300" height="130" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="180" y="345" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">M = exp L</text>
+<text xml:space="preserve" x="180" y="393" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">in W</text>
+<text xml:space="preserve" x="492.0" y="345" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">D = exp Q</text>
+<text xml:space="preserve" x="617.0" y="350.94" font-size="19" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="560" y="393" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">in W*</text>
+<text xml:space="preserve" x="940" y="345" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">N = exp Gr</text>
+<text xml:space="preserve" x="940" y="393" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">in W</text>
+<line x1="340" y1="365" x2="400" y2="365" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="370" y="285" font-size="18" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">duality</text>
+<line x1="720" y1="365" x2="780" y2="365" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<text xml:space="preserve" x="750" y="285" font-size="24" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">C</text>
+<text xml:space="preserve" x="560" y="485" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">C maps dual elements to centered vectors</text>
+<path d="M940 445 V520 H290 V570" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M940 445 V520 H830 V570" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="30" y="580" width="520" height="160" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="290" y="620" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Potential of a prescribed form</text>
+<text xml:space="preserve" x="208.5" y="662" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">P</text>
+<text xml:space="preserve" x="225.5" y="667.75" font-size="17" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">N</text>
+<text xml:space="preserve" x="237.5" y="662" font-size="25" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">([u]²) = uᵀLu</text>
+<text xml:space="preserve" x="290" y="704" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Retains the chosen vertices</text>
+<rect x="590" y="580" width="500" height="160" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="840" y="620" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Toponome → rooted evaluation</text>
+<text xml:space="preserve" x="840" y="662" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">det(I + t Gr)</text>
+<text xml:space="preserve" x="840" y="704" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Types are grouped by grade</text>
+</svg>

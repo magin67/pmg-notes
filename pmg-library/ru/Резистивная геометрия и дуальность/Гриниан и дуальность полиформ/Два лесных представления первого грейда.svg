@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" role="img" aria-labelledby="title"><title id="title">Два лесных представления первого грейда</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="680" fill="white"/>
+<text xml:space="preserve" x="560" y="43" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Один первый грейд, два семейства лесов</text>
+<rect x="20" y="95" width="500" height="475" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<rect x="600" y="95" width="500" height="475" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="270" y="137" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Исходный путь: 2 ребра в лесе</text>
+<text xml:space="preserve" x="270" y="172" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Три разбиения</text>
+<line x1="82" y1="240" x2="123" y2="240" stroke="#b5c0c8" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="157" y1="240" x2="198" y2="240" stroke="#24628a" stroke-width="4"/>
+<line x1="232" y1="240" x2="273" y2="240" stroke="#24628a" stroke-width="4"/>
+<circle cx="65" cy="240" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="65" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="140" cy="240" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="140" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="215" cy="240" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="215" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="290" cy="240" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="290" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="410" y="247" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a | bcd</text>
+<line x1="82" y1="350" x2="123" y2="350" stroke="#24628a" stroke-width="4"/>
+<line x1="157" y1="350" x2="198" y2="350" stroke="#b5c0c8" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="232" y1="350" x2="273" y2="350" stroke="#24628a" stroke-width="4"/>
+<circle cx="65" cy="350" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="65" y="357" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="140" cy="350" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="140" y="357" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="215" cy="350" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="215" y="357" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="290" cy="350" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="290" y="357" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="410" y="357" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">ab | cd</text>
+<line x1="82" y1="460" x2="123" y2="460" stroke="#24628a" stroke-width="4"/>
+<line x1="157" y1="460" x2="198" y2="460" stroke="#24628a" stroke-width="4"/>
+<line x1="232" y1="460" x2="273" y2="460" stroke="#b5c0c8" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="65" cy="460" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="65" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="140" cy="460" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="140" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="215" cy="460" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="215" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="290" cy="460" r="17" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="290" y="467" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="410" y="467" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">abc | d</text>
+<text xml:space="preserve" x="850" y="137" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Связи гриниана: 1 ребро в лесе</text>
+<text xml:space="preserve" x="850" y="172" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Шесть пар</text>
+<line x1="690" y1="240" x2="1010" y2="240" stroke="#b33e39" stroke-width="3" stroke-dasharray="7 6"/>
+<line x1="690" y1="240" x2="1010" y2="455" stroke="#24628a" stroke-width="3"/>
+<line x1="690" y1="240" x2="690" y2="455" stroke="#24628a" stroke-width="3"/>
+<line x1="1010" y1="240" x2="1010" y2="455" stroke="#24628a" stroke-width="3"/>
+<line x1="1010" y1="240" x2="690" y2="455" stroke="#24628a" stroke-width="3"/>
+<line x1="1010" y1="455" x2="690" y2="455" stroke="#b33e39" stroke-width="3" stroke-dasharray="7 6"/>
+<circle cx="690" cy="240" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="690" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
+<circle cx="1010" cy="240" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1010" y="247" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
+<circle cx="1010" cy="455" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="1010" y="462" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
+<circle cx="690" cy="455" r="18" fill="white" stroke="#203344" stroke-width="2"/>
+<text xml:space="preserve" x="690" y="462" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
+<text xml:space="preserve" x="560" y="350" font-size="35" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="middle">=</text>
+<text xml:space="preserve" x="270" y="540" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Каждый вес леса равен 1</text>
+<text xml:space="preserve" x="850" y="540" font-size="22" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">γ: (−1, 3, 5, 1, 3, −1) / 8</text>
+<text xml:space="preserve" x="560" y="620" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Слева: формы сумм по блокам; справа: формы разностей</text>
+<text xml:space="preserve" x="560" y="654" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Равны суммы форм после переноса C</text>
+</svg>

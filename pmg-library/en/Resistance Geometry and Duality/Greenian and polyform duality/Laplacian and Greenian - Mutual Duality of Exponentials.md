@@ -1,9 +1,9 @@
 ---
 title: Laplacian and Greenian - Mutual Duality of Exponentials
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 9
+updated: 2026-11-08
+revision: 3
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-definition-metric-recovery
@@ -21,6 +21,39 @@ The Laplacian $L$ and the Greenian $\mathrm{Gr}$ are two grade-one forms related
 Duality describes the relationship between these exponentials. To express it through exterior deletion, the Greenian is transferred to the dual space. Grade $k$ of one exponential then recovers the complementary grade $n-1-k$ of the other by acting on its top component. This relationship is mutual; “dual” is not the proper name of just one of the two polyforms.
 
 The algebraic mechanism uses the standard interior product in exterior algebra and the duality of complementary exterior powers. Below, this machinery is expressed in PMG notation, the uniqueness of the dual representation is proved, and the unit path $a-b-c-d$ is worked out in full. The main working representation of the Greenian is a [[The Canonical Vector Representation of the Greenian|vector sum]] with coefficients $-\mathrm{Gr}_{ij}$; cut forms provide an equivalent expression and a compact check of deletion.
+
+## From one edge to duality
+
+Two vertices suffice to begin. Write $(ab)=b-a$ for the direct boundary and $T$ for its form. On the dual side use $a^\vee,b^\vee$ with zero sum. Denote the exponentials by $M=e+M_1$ and $D=e+Q_1$; the auxiliary forest expression is $\widetilde D=\tau D$. Here $/$ denotes linear contraction, defined after the example.
+
+### A check on a single weighted edge
+
+Let vertices $a,b$ be joined by an edge of conductance $c>0$. Then
+
+$$
+T=[(ab)]^2,\qquad M=e+cT,\qquad M_1=cT,\qquad \tau=c
+$$
+
+On the dual side, $a^\vee+b^\vee=0$ and $T/[a^\vee]^2=e$. Consequently,
+
+$$
+D=e+\frac1c[a^\vee]^2,\qquad
+\widetilde D=ce+[a^\vee]^2
+$$
+
+Checking deletion gives
+
+$$
+(cT)/D=cT+e=M,\qquad T/\widetilde D=M
+$$
+
+Even with a unit in grade zero, the scale is retained: the top dual coefficient is $1/c$. The vector representation on the dual side is
+
+$$
+Q_1=\frac1{4c}[b^\vee-a^\vee]^2=\frac1c[a^\vee]^2
+$$
+
+Here $b^\vee-a^\vee=-2a^\vee$. Thus the factor $4$ is explained by the form argument.
 
 ## Initial objects
 
@@ -100,7 +133,25 @@ $$
 
 These equalities are proved in the [[The Exterior Exponential and Representations of the Greenian#The centered image and the Greenian|theorem on the centered image]]. Distinguishing $Q_1$ from $\mathrm{Gr}$ preserves the meaning of their arguments: the former acts by deletion, while the latter is expressed on direct vectors. Below, “the dual representation of the Greenian” denotes precisely $Q_1$, and $Q_k$ denotes the grades of its exponential.
 
+### Which elements occur in the formulas
+
+| Notation | Space and meaning | Relation |
+| --- | --- | --- |
+| $a_i$ | Independent direct vertices in $V$ | $\varepsilon(a_i)=1$ |
+| $a_i^\vee$ | Classes of coordinate functionals in $W^*$ | $\sum_i a_i^\vee=0$ |
+| $p_i=a_i-h$ | Centered vectors in $W$ | $\sum_i p_i=0$ |
+
+The map $\mathcal C(a_i^\vee)=p_i$ connects the last two rows. It neither asserts $a_i^\vee=a_i$ nor defines a metric inner product. In sections devoted entirely to the dual side, the mark $\vee$ is omitted only after an explicit convention. It is retained when spaces are compared.
+
 ## The interior product and deletion notation
+
+Contraction is linear in the contracted object. A factor in its right argument therefore multiplies the result rather than dividing it. For a direct top form $T$ and a dual form $F$:
+
+$$
+T/(2F)=2(T/F),\qquad \frac{T}{2}=\frac12T
+$$
+
+In the second expression the denominator is a number, so ordinary division is intended. This distinction already matters in the single-edge example.
 
 ### Deletion from an exterior object
 
@@ -396,36 +447,11 @@ The rows for $D$ express the same top grade using different reference forms. The
 
 In all three exponentials $M,D,N$, grade zero is $e$. Their normalization must be distinguished from the explicitly marked forest expression $\widetilde D=\tau D$.
 
-### A check on a single weighted edge
-
-Let vertices $a,b$ be joined by an edge of conductance $c>0$. Then
-
-$$
-T=[(ab)]^2,\qquad M=e+cT,\qquad M_1=cT,\qquad \tau=c
-$$
-
-On the dual side, $a+b=0$ and $T/[a]^2=e$. Consequently,
-
-$$
-D=e+\frac1c[a]^2,\qquad
-\widetilde D=ce+[a]^2
-$$
-
-Checking deletion gives
-
-$$
-(cT)/D=cT+e=M,\qquad T/\widetilde D=M
-$$
-
-Even with a unit in grade zero, the scale is retained: the top dual coefficient is $1/c$. The vector representation on the dual side is
-
-$$
-Q_1=\frac1{4c}[(ab)]^2=\frac1c[a]^2
-$$
-
-Here $(ab)=b-a=-2a$. Thus the factor $4$ is explained by the form argument.
-
 ## Full example: a path on four vertices
+
+![Dual grade k contracts the direct top grade 3](Complementary%20Grades%20on%20Four%20Vertices.svg)
+
+*Figure 1. For the four-vertex path, $d=3$ and $\tau=1$. Each arrow denotes $T/Q_k=M_{3-k}$, a correspondence between polyform grades rather than individual forests.*
 
 Consider the path $a-b-c-d$ with three unit conductances. Here $W$ has dimension $3$, the only spanning tree is the graph itself, and hence $\tau=1$ and $D=\widetilde D$.
 

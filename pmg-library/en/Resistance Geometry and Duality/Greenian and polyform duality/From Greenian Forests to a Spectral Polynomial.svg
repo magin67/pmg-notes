@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title"><title id="title">From Greenian Forests to a Spectral Polynomial</title>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
+<rect width="1120" height="650" fill="white"/>
+<text xml:space="preserve" x="560" y="43" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">From named forests to one coefficient</text>
+<rect x="20" y="110" width="180" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="110" y="154" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Named</text>
+<text xml:space="preserve" x="110" y="188" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">forest</text>
+<line x1="208" y1="168" x2="235" y2="168" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="245" y="110" width="180" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="335" y="154" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Partition</text>
+<text xml:space="preserve" x="335" y="188" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">into blocks</text>
+<line x1="433" y1="168" x2="460" y2="168" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="470" y="110" width="180" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="560" y="154" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Component</text>
+<text xml:space="preserve" x="560" y="188" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">type</text>
+<line x1="658" y1="168" x2="685" y2="168" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="695" y="110" width="180" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="785" y="154" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Full</text>
+<text xml:space="preserve" x="785" y="188" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">toponome</text>
+<line x1="883" y1="168" x2="910" y2="168" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="920" y="110" width="180" height="115" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="1010" y="154" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Rooted</text>
+<text xml:space="preserve" x="1010" y="188" font-size="24" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">polynomial</text>
+<text xml:space="preserve" x="560" y="285" font-size="25" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="middle">Two types are combined in grade two</text>
+<rect x="70" y="325" width="420" height="110" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="223.0" y="369" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">g</text>
+<text xml:space="preserve" x="240.0" y="375.9" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">(2)</text>
+<text xml:space="preserve" x="265.0" y="369" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> × x</text>
+<text xml:space="preserve" x="314.0" y="375.6" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">2</text>
+<text xml:space="preserve" x="280" y="411" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Root weight: 3</text>
+<path d="M280 445 V480 H560 V520" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="630" y="325" width="420" height="110" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="769.5" y="369" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">g</text>
+<text xml:space="preserve" x="786.5" y="375.9" font-size="20" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">(1,1)</text>
+<text xml:space="preserve" x="828.5" y="369" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> × x</text>
+<text xml:space="preserve" x="877.5" y="375.6" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">1</text>
+<text xml:space="preserve" x="889.5" y="369" font-size="30" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">²</text>
+<text xml:space="preserve" x="840" y="411" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Root weight: 4</text>
+<path d="M840 445 V480 H560 V520" fill="none" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="210" y="535" width="700" height="80" rx="14" fill="#f7fafc" stroke="#ccd7df" stroke-width="1.5"/>
+<text xml:space="preserve" x="468.5" y="583" font-size="32" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">3g</text>
+<text xml:space="preserve" x="506.5" y="590.36" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">(2)</text>
+<text xml:space="preserve" x="532.5" y="583" font-size="32" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start"> + 4g</text>
+<text xml:space="preserve" x="607.5" y="590.36" font-size="22" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">(1,1)</text>
+</svg>

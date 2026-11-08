@@ -2,8 +2,8 @@
 title: Cuts and Forest Grades of the Greenian Exponential
 date: 2026-10-28
 updated: 2026-11-08
-revision: 3
-translated_revision: 11
+revision: 4
+translated_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-cuts-forest-grades
@@ -64,6 +64,10 @@ $$
 It is linear in both arguments: a coefficient of the dual form multiplies the deletion result. The notation $[X]^2$ means the formal quadratic form $[X,X]$.
 
 ## Two forest representations
+
+![Grade one of one Greenian through two different forest families](Two%20Forest%20Representations%20of%20Grade%20One.svg)
+
+*Figure 1. For the unit path, $n=4$. Original forests on the left have two edges; Greenian forests on the right have one. Their sums of forms agree after $\mathcal C$, without an individual-forest correspondence. Weights on the right are ordered as $ab,ac,ad,bc,bd,cd$. Forms on the left use sums of centered vectors over blocks.*
 
 In the [[The Canonical Vector Representation of the Greenian#Signed forest grades|vector exponential]], grade $Q_k$ is assembled from forests with $k$ edges on the complete set of pairs. Their coefficients are products of $\gamma_{ij}=-\mathrm{Gr}_{ij}$ and may have either sign. The arguments are component boundaries on the dual side.
 
@@ -341,6 +345,10 @@ The total conductance of crossing edges appears as the normalized potential of t
 
 ### The partition, cut edges, and forest
 
+![Three different objects for the partition ab and cd](Partition%20Forest%20and%20Cut%20Edges.svg)
+
+*Figure 2. In unit $K_4$, the coefficient of this cut form is $1/16$: each two-vertex block has one tree and $\tau(K_4)=16$. The four crossing edges have total conductance $4$, which is a different quantity.*
+
 For $K_4$ and the partition $\{a,b\}\mid\{c,d\}$, distinguish:
 
 | Object | Contents |
@@ -367,6 +375,61 @@ $$
 $$
 
 Thus one cut form may collect several different spanning 2-forests.
+
+## A weighted triangle
+
+Let all three conductances $c_{ab},c_{ac},c_{bc}$ be positive. Here
+
+$$
+T=[(abc)]^2,\qquad
+\tau=c_{ab}c_{ac}+c_{ab}c_{bc}+c_{ac}c_{bc}
+$$
+
+The direct grades are
+
+$$
+M_0=e,\qquad
+M_1=c_{ab}[(ab)]^2+c_{ac}[(ac)]^2+c_{bc}[(bc)]^2,\qquad
+M_2=\tau T
+$$
+
+Each spanning 2-forest consists of one edge and an isolated vertex:
+
+| Forest edge | Partition into components | Contribution to $\widetilde Q_1=\tau Q_1$ |
+|---|---|---|
+| $bc$ | $\{a\}\mid\{b,c\}$ | $c_{bc}[a]^2$ |
+| $ac$ | $\{b\}\mid\{a,c\}$ | $c_{ac}[b]^2$ |
+| $ab$ | $\{c\}\mid\{a,b\}$ | $c_{ab}[c]^2$ |
+
+Therefore
+
+$$
+\boxed{
+\widetilde Q_0=\tau e,\qquad
+\widetilde Q_1=c_{bc}[a]^2+c_{ac}[b]^2+c_{ab}[c]^2,\qquad
+\widetilde Q_2=[ab]^2
+}
+\tag{10}
+$$
+
+On the dual side, $a+b+c=0$. Direct deletion gives
+
+$$
+T/[a]^2=[(bc)]^2,\qquad
+T/[b]^2=[(ac)]^2,\qquad
+T/[c]^2=[(ab)]^2,\qquad
+T/[ab]^2=e
+$$
+
+Thus the action $T/\widetilde Q_k$ for all three grades in (10) recovers the corresponding direct grades. The Greenian exponential in the basic normalization is
+
+$$
+D=
+e+\frac{c_{bc}[a]^2+c_{ac}[b]^2+c_{ab}[c]^2}{\tau}
++\frac{[ab]^2}{\tau}
+$$
+
+The coefficient of $[a]^2$ in $Q_1$ is $c_{bc}/\tau$ and is determined by the edge $bc$ within the opposite part of the partition. It is not the sum of conductances $c_{ab}+c_{ac}$ incident to vertex $a$.
 
 ## Full example: the unit complete graph K4
 
@@ -426,13 +489,13 @@ $$
 &+[a+b]^2+[a+c]^2+[a+d]^2
 \end{aligned}
 }
-\tag{10}
+\tag{11}
 $$
 
 $$
 \widetilde Q_2=[ab]^2+[ac]^2+[ad]^2+[bc]^2+[bd]^2+[cd]^2,\qquad
 \widetilde Q_3=[abc]^2
-\tag{11}
+\tag{12}
 $$
 
 In $\widetilde Q_1$, the three two-element sums represent three different partitions into pairs. In $\widetilde Q_2$, each argument is a product of two dual vertices, not a boundary.
@@ -474,62 +537,9 @@ D=e+\frac{\widetilde Q_1}{16}+\frac{\widetilde Q_2}{16}+\frac{[abc]^2}{16},\qqua
 (16T)/D=M
 $$
 
-## A weighted triangle
-
-Let all three conductances $c_{ab},c_{ac},c_{bc}$ be positive. Here
-
-$$
-T=[(abc)]^2,\qquad
-\tau=c_{ab}c_{ac}+c_{ab}c_{bc}+c_{ac}c_{bc}
-$$
-
-The direct grades are
-
-$$
-M_0=e,\qquad
-M_1=c_{ab}[(ab)]^2+c_{ac}[(ac)]^2+c_{bc}[(bc)]^2,\qquad
-M_2=\tau T
-$$
-
-Each spanning 2-forest consists of one edge and an isolated vertex:
-
-| Forest edge | Partition into components | Contribution to $\widetilde Q_1=\tau Q_1$ |
-|---|---|---|
-| $bc$ | $\{a\}\mid\{b,c\}$ | $c_{bc}[a]^2$ |
-| $ac$ | $\{b\}\mid\{a,c\}$ | $c_{ac}[b]^2$ |
-| $ab$ | $\{c\}\mid\{a,b\}$ | $c_{ab}[c]^2$ |
-
-Therefore
-
-$$
-\boxed{
-\widetilde Q_0=\tau e,\qquad
-\widetilde Q_1=c_{bc}[a]^2+c_{ac}[b]^2+c_{ab}[c]^2,\qquad
-\widetilde Q_2=[ab]^2
-}
-\tag{12}
-$$
-
-On the dual side, $a+b+c=0$. Direct deletion gives
-
-$$
-T/[a]^2=[(bc)]^2,\qquad
-T/[b]^2=[(ac)]^2,\qquad
-T/[c]^2=[(ab)]^2,\qquad
-T/[ab]^2=e
-$$
-
-Thus the action $T/\widetilde Q_k$ for all three grades in (12) recovers the corresponding direct grades. The Greenian exponential in the basic normalization is
-
-$$
-D=
-e+\frac{c_{bc}[a]^2+c_{ac}[b]^2+c_{ab}[c]^2}{\tau}
-+\frac{[ab]^2}{\tau}
-$$
-
-The coefficient of $[a]^2$ in $Q_1$ is $c_{bc}/\tau$ and is determined by the edge $bc$ within the opposite part of the partition. It is not the sum of conductances $c_{ab}+c_{ac}$ incident to vertex $a$.
-
 ## Uniqueness of the form and nonuniqueness of its expansion
+
+A structural identity can change coefficients without changing the polyform. Four vertices give a particularly clear example: three forms of two-pair cuts can be replaced by four singleton-block forms. Coefficients can therefore be compared only after the representation has been fixed.
 
 The forest coefficients (7) are uniquely determined by the original graph and the specified blocks. However, forms of different partitions may be linearly dependent.
 
@@ -552,7 +562,7 @@ $$
 >
 > Since $b+c+d=-a$, the last term equals $-2[a]^2$. The remaining expression is the right-hand side of (13). $\square$
 
-Thus form (10) can be reduced to
+Thus form (11) can be reduced to
 
 $$
 \widetilde Q_1=4\bigl([a]^2+[b]^2+[c]^2+[d]^2\bigr)

@@ -1,9 +1,9 @@
 ---
 title: Symmetric Identities of the Greenian
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 4
+updated: 2026-11-08
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-symmetric-identities
@@ -21,6 +21,8 @@ The vector representation of the Greenian obeys the same structural identities a
 Here “symmetric identities” means identities between full sums over partitions of specified types. An arbitrary Greenian need not be invariant under all vertex permutations; the identities of its arguments hold independently of such invariance.
 
 ## Independent vertices and centered elements
+
+Centering can be pictured as choosing a common origin for arrows to the vertices. The independent vertices need not sum to zero. The arrows from their average $h$, namely $p_i=a_i-h$, do sum to zero. The equality $p_j-p_i=a_j-a_i$ explains why boundary identities survive.
 
 Let $a_1,\ldots,a_n$, with $n\ge2$, be independent vertices of the direct space. Write
 
@@ -173,6 +175,10 @@ For four vertices, the correspondence is:
 | $a\mid bcd$ | $[(bcd)]^2$ | $[p_a]^2$ |
 
 The other partitions follow by permuting vertices. Under (5), the tetrahedron identity (2) becomes the cut identity (4). Grade $2$ is replaced by grade $1$, while the coefficients remain one. No particular Greenian needs to be constructed for this transfer.
+
+![Three pair partitions and four one-plus-three partitions](The%20Tetrahedron%20Identity%20and%20Cut%20Forms.svg)
+
+*Figure 1. Orange marks the block whose centered-vector sum defines the lower cut form. In each column, the direct grade-two identity passes to the centered grade-one identity. A partition weight is the product of its block sizes: $3\cdot4=4\cdot3=12$. The raw counts 3 and 4 do not preserve the identity.*
 
 ## Which evaluations preserve the identities
 
