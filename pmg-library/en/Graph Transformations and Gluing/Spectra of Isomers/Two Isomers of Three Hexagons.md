@@ -1,9 +1,9 @@
 ---
 title: Two Isomers of Three Hexagons
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
-translated_revision: 5
+updated: 2026-11-08
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -151,6 +151,21 @@ P_G(t)&=\sum_{g=0}^{13}p_g(G)t^g
 $$
 
 The last equality is a polynomial identity, including at $\xi=0$. The ordinary polynomial $F_G$, rooted polynomial $P_G$, and characteristic polynomial $\chi_G$ have different meanings. In polyform language, $p_g$ is the coordinate evaluation of grade $L^g/g!$, as in [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality|Diagonal Representation of Polyforms and Duality]]; equality of ordinary coefficients does not imply equality of this evaluation.
+
+## Reading the spectrum
+
+The Laplacian spectrum is the collection of eigenvalues with their multiplicities. An eigenvalue $\lambda$ means that the matrix acts on some nonzero column $\mathbf v$ by multiplication by that number:
+
+$$
+\mathbf L_G\mathbf v=\lambda\mathbf v\quad(\mathbf v\ne0),\qquad
+\chi_G(\xi)=\prod_{i=1}^{n}(\xi-\lambda_i)
+$$
+
+Thus spectra can be compared either through their roots or through their characteristic polynomials. Each connected graph in this pair has one zero eigenvalue; the others are positive.
+
+![Eigenvalues of the two isomers on a shared scale](images/Two%20Laplacian%20Spectra.svg)
+
+**One scale, two sets of eigenvalues.** Each mark represents one of the $14$ values; nearby marks may almost overlap. The shared zero is marked separately. Positive eigenvalues are approximated only for the figure; the polynomials below establish the difference exactly. Their greatest common divisor $\xi$ shows that they have no common nonzero eigenvalues.
 
 ## Exact characteristic polynomials
 

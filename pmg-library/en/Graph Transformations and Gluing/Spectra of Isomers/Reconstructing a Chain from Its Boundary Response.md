@@ -1,9 +1,9 @@
 ---
 title: Reconstructing a Chain from Its Boundary Response
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
-translated_revision: 5
+updated: 2026-11-08
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -42,6 +42,11 @@ The presence of three data values has nothing to do with requiring three neighbo
 There is also a probabilistic interpretation. Partition the graph into a random forest and choose one root in each component; all such **forests with chosen roots** are equally likely. The exact joint distribution of the two indicators “the first contact is a root” and “the second contact is a root” also determines the entire chain. Estimating these probabilities from a sample raises the accuracy question again.
 
 The result provides identification within a known class of constructions from exactly specified data. Three rational numbers may have large denominators; having few coordinates does not make them easy to measure. A practical problem with noise additionally requires a size bound, an error model, and a check of how many constructions are compatible with the observations. The stability estimates below concern the three numbers $\mathbf K_B$, rather than optimal use of the entire time record.
+
+> [!note] A short route through the note
+> [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response#Why normalization retains the chain|recovering the integer state]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response#An example with four cores|the four-core example]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response#Guarantees under error bounds|guarantees with errors]].
+>
+> Ways to obtain and interpret the same data can be read separately: [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response#Obtaining the data from dynamics on the original graph|dynamics]], [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response#An auxiliary electrical realization|an electrical network]], [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response#Probabilistic interpretations|probabilistic models]].
 
 ## The chain model and the boundary location
 
@@ -118,18 +123,18 @@ $$
 
 Dividing an integer vector by its first coordinate usually loses its scale. For our states, the scale is determined by the coordinates being collectively coprime.
 
+The initial state of a single hexagon is
+
+$$
+\mathbf z_0=(320,144,144,56,55)^{\mathsf T}
+\tag{6}
+$$
+
 > [!info] Primitivity of the states
 > **Lemma.** Every reachable state $\mathbf z=(a,b,c,d,e)^{\mathsf T}$ is primitive: the greatest common divisor of its five coordinates is $1$.
 
 > [!note]- Proof of primitivity
-> **Proof.** The initial vector of a single hexagon is
->
-> $$
-> \mathbf z_0=(320,144,144,56,55)^{\mathsf T}
-> \tag{6}
-> $$
->
-> Its coordinates are collectively coprime. The integer matrices $\mathbf N_S,\mathbf N_L,\mathbf N_R$ in [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]] have determinants $1$ and integer inverses. Multiplication by such a matrix preserves the common divisor of the coordinates in both directions. Every reachable state is obtained from (6) by a finite product of these matrices. $\square$
+> **Proof.** The coordinates of the initial state (6) are collectively coprime. The integer matrices $\mathbf N_S,\mathbf N_L,\mathbf N_R$ in [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]] have determinants $1$ and integer inverses. Multiplication by such a matrix preserves the common divisor of the coordinates in both directions. Every reachable state is obtained from (6) by a finite product of these matrices. $\square$
 
 Let $\operatorname{den}(q)$ denote the positive denominator of a reduced rational fraction. From exact $r,s,h$, compute $k$ and then
 

@@ -1,9 +1,9 @@
 ---
 title: Spectral Transfer to a New Boundary
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
-translated_revision: 5
+updated: 2026-11-08
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -381,7 +381,19 @@ $$
 (55,34,34,-2,21)
 $$
 
-Applying it to the two states in (19) gives $2504096$ and $2518737$, respectively, with difference $14641$. The negative entry $-2$ again shows why these coordinates cannot be interpreted as five disjoint forest classes whose counts are simply added.
+> [!example] One numerical step
+> Applied to the initial vector $z_1$ in (19), the common first row gives
+>
+> $$
+> \begin{aligned}
+> P_{G_2}(1)&=55\cdot320+34\cdot144+34\cdot144\\
+> &\quad-2\cdot56+21\cdot55=28435
+> \end{aligned}
+> $$
+>
+> This is the first coordinate of both two-core states. The output choice already affects the boundary coordinates; the first coordinate differs after the next attachment.
+
+Applying the same row to the two states in (19) gives $2504096$ and $2518737$, respectively, with difference $14641$. The negative entry $-2$ again shows why these coordinates cannot be interpreted as five disjoint forest classes whose counts are simply added.
 
 Evaluation at $\xi=-1$ serves here as an exact check. It neither replaces polynomial transfer nor proves recovery of an arbitrary chain from one number.
 

@@ -1,9 +1,9 @@
 ---
 title: Rooted Forests and Decoding the Boundary State
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
-translated_revision: 5
+updated: 2026-11-08
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -194,6 +194,18 @@ The initial marker $S$ in the code $Su$ and the final factor $\mathbf N_S$ in (9
 > **Proof.** Equation (11) is the classical Jacobi identity for the determinant and minors of the symmetric matrix $\mathbf H_G$. Write $Q(\mathbf z)=\mathbf z^{\mathsf T}\mathbf Q\mathbf z$, where the nonzero entries of $\mathbf Q$ are $Q_{15}=Q_{51}=1/2$, $Q_{23}=Q_{32}=-1/2$, and $Q_{44}=1$. Substitution of (4)–(6) gives $\mathbf N_\alpha^{\mathsf T}\mathbf Q\mathbf N_\alpha=\mathbf Q$ and $\det\mathbf N_\alpha=1$. These finite matrix identities are checked exactly and hold for every vector. The initial state satisfies (11). $\square$
 
 The five coordinates are not independent: when $a>0$, one can recover $e=(bc-d^2)/a$. The five-dimensional representation is convenient because the transfer remains linear. Minimality of this linear description is not established here.
+
+### How the inverse step will work
+
+For the full state $\mathbf Z_{SLR}$ in the worked example below, the two numbers are
+
+$$
+(9b-4a,9c-4a)=(3676257,3384873)
+$$
+
+Both signs are positive, so the last operation will be $S$. The inverse matrix $\mathbf N_S^{-1}$ removes it; the same procedure then removes $R$ and $L$ and stops at $\mathbf z_0$. This recovers the operations $LRS$, hence the code $SLR$.
+
+It remains to justify why the signs always select the correct letter. The invariant region serves this purpose: it contains all reachable states, and the three transitions send it into different sectors. Its fractional bounds are auxiliary sufficient estimates for the proof, not additional data about the unknown chain.
 
 ## An invariant region and three sectors
 

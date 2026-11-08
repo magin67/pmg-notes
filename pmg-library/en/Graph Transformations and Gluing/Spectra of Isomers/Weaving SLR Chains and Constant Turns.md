@@ -1,15 +1,15 @@
 ---
 title: Weaving SLR Chains and Constant Turns
 date: '2026-11-02'
-updated: 2026-11-02
-revision: 2
-translated_revision: 6
+updated: 2026-11-08
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: weaving-slr-chains-and-constant-turn
 order: 7
-description: Path runners, plugs and sockets, constant SLR turns without a planarity requirement, and exact spectral recurrences.
+description: Path runners, plugs and sockets, constant SLR turns without a regular planar layout requirement, and exact spectral recurrences.
 ---
 
 Russian version: [[ru/Преобразования и сочленения графов/Спектры изомеров/Плетение SLR-цепочек и постоянный поворот|Плетение SLR-цепочек и постоянный поворот]].
@@ -18,7 +18,7 @@ Results, their status, and reading routes: [[en/Graph Transformations and Gluing
 
 A hexagonal chain can be grown using the same component: a path of five edges. Its endpoints form the plug, and a chosen internal edge is the socket for the next step. Three socket positions correspond to S, L, and R. Repeating one marked runner gives a constant turn; repeating a block of runners gives a periodic SLR code.
 
-There is no planarity requirement. A spatial spiral provides an illustration of a chain with a repeated turn. The definition uses vertices, edges, and the matching of contacts; lengths, angles, and spatial positions of cells are not part of it. Any finite sequence of steps can be continued by adding new vertices. Closing the ends is a separate operation.
+A layout of regular hexagons in one plane is not required. A spatial spiral provides an illustration of a chain with a repeated turn. The definition uses vertices, edges, and the matching of contacts; lengths, angles, and spatial positions of cells are not part of it. Any finite sequence of steps can be continued by adding new vertices. Closing the ends is a separate operation.
 
 > [!note] The result in plain language
 > Three things must be fixed for the repeated component: which contacts attach to the existing graph, where the next component attaches, and which contact is matched to which. The graph and its boundary data then grow by one fixed rule.
@@ -83,6 +83,10 @@ Here “turn” means the relative position of two seams in a core, taking conta
 ![A straight chain, alternating turns, and a spatial spiral with constant letter L](images/A%20Straight%20Chain%20Zigzag%20and%20Spiral.svg)
 
 The lower part of the figure joins six-edge cycles in sequence with a constant L choice. Adjacent cycles share an edge; the viewpoint shows their spatial arrangement. A crossing of projected lines creates no vertex. Geometric coordinates serve only to draw the graph.
+
+![The two seams of an internal core with a constant L choice](images/Constant%20Turn%20Close%20Up.svg)
+
+**A close-up of rule L.** The red seam is the middle core's input and the blue seam is its output. In local numbering these are edges $01$ and $23$, with no common vertices. The next step repeats this matching regardless of the cores' spatial positions. Labels $0,\ldots,5$ refer only to the middle core.
 
 “Constant curvature” can be understood as a visual name for a constant local rule. Numerical Euclidean curvature and torsion of a spatial curve require a separately specified embedding; the SLR code does not determine them. Likewise, a spatial spiral need not be the only realization of a given graph.
 
@@ -338,6 +342,17 @@ $$
 | 3 | 2518737 | 2504096 | 204 |
 | 4 | 223092224 | 220348791 | 1189 |
 
+For example, the first substitution in (15) uses the table rows $N=0,1,2,3$:
+
+$$
+\begin{aligned}
+c_4^S&=91\cdot2518737-216\cdot28435+91\cdot320-3\\
+&=223092224\\
+c_4^L&=96\cdot2504096-706\cdot28435+96\cdot320-3-32\\
+&=220348791
+\end{aligned}
+$$
+
 The common spanning-tree matrix of the runner is $\left(\begin{smallmatrix}5&1\\4&1\end{smallmatrix}\right)$; its characteristic polynomial $q^2-6q+1$ gives $\tau_{N+2}=6\tau_{N+1}-\tau_N$. The derivation through trees and separating forests is given in [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]]. This two-coordinate reduction loses the position of the path's output edge. The five spectral coordinates retain it.
 
 > [!note]- Proof of minimality of the orders
@@ -387,7 +402,7 @@ The [verification program](https://github.com/magin67/pmg-notes/blob/v5/checks/i
 - for these two families at $0\le N\le3$, all five coordinates are independently computed: $8$ polynomial passports;
 - the coefficients (12), vector identities in the proof, recurrences, and minimality certificates are checked symbolically; $8$ reflected marked graphs and $5$ direct determinants for LR blocks, including the starting edge, are checked separately.
 
-The full data, initial polynomials, and integer sequences are in the [results file](https://github.com/magin67/pmg-notes/blob/v5/checks/isomer-spectra/slr-weaving-results.json); the [reproduction commands](https://github.com/magin67/pmg-notes/blob/v5/checks/isomer-spectra/README.md) and figure program are in the same directory. Approximate coordinates are used only for illustrations. Neither the proofs nor the graph checks impose planarity.
+The full data, initial polynomials, and integer sequences are in the [results file](https://github.com/magin67/pmg-notes/blob/v5/checks/isomer-spectra/slr-weaving-results.json); the [reproduction commands](https://github.com/magin67/pmg-notes/blob/v5/checks/isomer-spectra/README.md) and figure program are in the same directory. Approximate coordinates are used only for illustrations. Neither the proofs nor the graph checks use a regular planar layout.
 
 The correspondence between weaving and the SLR code, the formulas for constant families, and transfer over a period are proved for every finite length. Enumeration of short chains independently checks the implementation. Closures and minimal recurrences for arbitrary periods require their own boundary conditions and separate calculations. Recovery from a single polynomial or number remains distinct from the proved recovery of the full marked state in [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]].
 

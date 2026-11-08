@@ -1,9 +1,9 @@
 ---
 title: SLR Codes of Hexagonal Chains
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
-translated_revision: 6
+updated: 2026-11-08
+revision: 2
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -255,6 +255,16 @@ $$
 
 The leftmost $\mathbf U_S$ is the final attachment. The initial symbol $S$ in $w=Su$ is a marker, not an additional initial transition before reading $u$. For $u=\varnothing$, formula (10) gives the two-core graph.
 
+For a four-core example, the three descriptions correspond as follows:
+
+| Description | Word | Meaning |
+|---|---|---|
+| Full code | $SLR$ | The initial marker and two internal turns |
+| Internal word | $u=LR$ | Outputs of the second and third cores |
+| Operation word starting from one core | $LRS$ | Two turns and the terminal attachment |
+
+Matrices act from right to left: $s_{SLR}=\mathbf U_S\mathbf U_R\mathbf U_Ls_1$. Reading letters from left to right therefore agrees with writing matrix factors in reverse order.
+
 > [!example] An orientation error becomes visible with four cores
 > **Computed directly.** For the rooted polynomial $P_G(t)=\det(\mathbf I_n+t\mathbf L_G)$,
 >
@@ -332,7 +342,7 @@ The validity of the code, the two symmetry rules, and completeness of classifica
 
 Changes to one or several seam positions are considered in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains|Spectral Differences of SLR Chains]], using the alphabet, matrix product order, and code symmetries adopted here.
 
-Fixed and periodic words as repetitions of a marked runner are considered in [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns|Weaving SLR Chains and Constant Turns]]: a constant turn is defined without a planarity requirement, and spectral data are computed by powers of the transfer matrix.
+Fixed and periodic words as repetitions of a marked runner are considered in [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns|Weaving SLR Chains and Constant Turns]]: a constant turn is defined without requiring a regular planar layout, and spectral data are computed by powers of the transfer matrix.
 
 Thematic entry points: [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]; [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]].
 

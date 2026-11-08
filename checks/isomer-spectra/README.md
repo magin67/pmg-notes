@@ -12,7 +12,7 @@ python checks/isomer-spectra/draw_english.py
 
 This requires Matplotlib and Pillow. `figure-labels-en.json` contains the English labels, titles, and accessible descriptions. Graph geometry and numerical data are shared with the Russian illustrations. The growth plot is redrawn from `periodic-slr-results.json` with English labels and decimal points; it introduces no new computation of the underlying exact values.
 
-`python checks/isomer-spectra/verify_translation.py` checks formula parity, table numbers, proof-callout structure, language pairs, links, image paths, and unchanged geometry of the 34 translated SVG diagrams. This standard-library check supplements the mathematical checks below; translation parity is not a new proof of the shared results.
+`python checks/isomer-spectra/verify_translation.py` checks formula parity, table numbers, proof-callout structure, language pairs, links, image paths, and unchanged geometry of the 37 translated SVG diagrams. This standard-library check supplements the mathematical checks below; translation parity is not a new proof of the shared results.
 
 The Russian note is `pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров/Два изомера трёх шестиугольников.md`.
 The input consists solely of the explicitly listed cycles, with shared edges counted once.
@@ -370,7 +370,7 @@ python -B checks/isomer-spectra/draw_periodic_slr.py
 Три SVG показывают два соглашения о крайних ядрах, три фазы LLS
 и рост корневых лесов на одно ядро. Для всех пяти нарисованных графов
 инцидентность сверяется с независимым построением. Геометрические
-координаты не входят в определение цепочек; требования планарности нет.
+координаты не входят в определение цепочек; регулярная плоская укладка не требуется.
 
 ## Итоговый навигатор
 
@@ -386,3 +386,30 @@ python -B checks/isomer-spectra/draw_series_overview.py
 Стрелки показывают связи задач и данных. Эквивалентность полного целого
 вектора и трёх точных рациональных данных относится к достижимым состояниям
 принятого класса SLR-цепочек. Скалярные обратные задачи помечены гипотезами.
+
+## Editorial pass, 2026-11-08
+
+The nine notes and navigator in both languages now introduce the reading routes,
+code conventions, numerical examples, and reference data before the longer
+derivations. Existing numbered results and proof boundaries are retained.
+
+Three new diagrams per language show the two Laplacian spectra on one scale,
+the four corners of a mixed difference, and a close-up of the constant-turn rule.
+There are now 38 figures per language. New SVGs use the same numerical data and
+graph geometry in both editions.
+
+```text
+python -B checks/isomer-spectra/verify_editorial_examples.py
+python -B checks/isomer-spectra/draw_editorial_figures.py
+python -B checks/isomer-spectra/draw_english.py
+python -B checks/isomer-spectra/verify_translation.py
+```
+
+The new check requires NumPy, SymPy, and NetworkX. It computes the numerical
+eigenvalues for plotting, checks their residuals and the exact common polynomial
+factor, and independently checks the worked transfer, mixed-difference,
+constant-family, and periodic-recurrence examples against graph Laplacians.
+It also checks the incidence data of every graph in the new diagrams.
+Results are saved in `editorial-examples-results.json`; approximate eigenvalues
+are used only for illustration. The full isomer catalogue is unchanged and is
+not rerun by this editorial check.

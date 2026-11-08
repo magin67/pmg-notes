@@ -1,9 +1,9 @@
 ---
 title: 'Periodic SLR Chains: Recurrences and Spectra'
 date: '2026-11-02'
-updated: 2026-11-02
-revision: 2
-translated_revision: 4
+updated: 2026-11-08
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -27,7 +27,7 @@ This note continues [[en/Graph Transformations and Gluing/Spectra of Isomers/Wea
 
 ## What is repeated
 
-We consider open abstract chains of cycles $C_6$ with unit conductances. Adjacent cores share exactly one edge, counted once. The input and output seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no other identifications and no planarity requirement.
+We consider open abstract chains of cycles $C_6$ with unit conductances. Adjacent cores share exactly one edge, counted once. The input and output seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no other identifications. A regular-hexagon layout is not required.
 
 Let $v=\beta_1\cdots\beta_p$ be a nonempty word over S, L, R. The letter S denotes the opposite output seam, and L and R the side outputs under the conventions of [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]]. The period $v$ need not be the shortest one.
 
@@ -180,6 +180,44 @@ $$
 
 The coefficients $a,b$ are determined by the period. The quantity $\kappa$ and the initial values also depend on the end cores. For the family starting from an edge, replace $\mathbf r,\boldsymbol s_1$ by $\mathbf e_1^{\mathsf T},\boldsymbol s_0$ in (8).
 
+## A worked recurrence for period LR
+
+The rooted polynomial is $P_G(t)=\det(\mathbf I_n+t\mathbf L_G)$. It counts spanning forests with a chosen root in each component, unlike the ordinary forest polynomial. Since $n$ in (1) is even,
+
+$$
+c_m^{(v)}:=P_{G_m^{(v)}}(1)=(-1)^nF_m^{(v)}(-1)=F_m^{(v)}(-1)
+$$
+
+At $\xi=-1$, recurrence (9) has the following integer coefficients:
+
+| Period $v$ | $a_v(-1)$ | $b_v(-1)$ | $\kappa_v(-1)$ |
+|---|---:|---:|---:|
+| LR | 7759 | 51561 | 19602 |
+| SL | 7809 | 87421 | -1022 |
+| LLS | 686236 | 59155926 | -5606172 |
+
+The initial value $c_0=28435$ is common. The other three values needed for the nonhomogeneous recurrence are:
+
+| $m$ | LR | SL | LLS |
+|---|---:|---:|---:|
+| 1 | 220480560 | 221771751 | 19514594869 |
+| 2 | 1709242570740 | 1729329809694 | 13389935419018422 |
+| 3 | 13250645128864264 | 13484949197704165 | 9187501318295042810386 |
+
+For LLS, the family starting from an edge has a different right-hand side: $\widehat\kappa_{LLS}(-1)=-901692$. Replacing the initial conditions without changing this quantity would give an incorrect recurrence.
+
+One recurrence step uses four preceding values and the constant right-hand side. Substitution of the LR table gives
+
+$$
+\begin{aligned}
+c_4^{(LR)}&=7759\,c_3^{(LR)}-51561\,c_2^{(LR)}\\
+&\quad+7759\,c_1^{(LR)}-c_0^{(LR)}+19602\\
+&=102723627009376555443
+\end{aligned}
+$$
+
+Here $m=4$ means $N=2m+2=10$ cores. A fifth preceding value is unnecessary while the inhomogeneous form (9) is retained; the homogeneous form (10) uses five. The exact coefficients in $\xi$ underlying the numerical table follow below.
+
 ## Exact coefficients for LR, SL, and LLS
 
 The matrices of the three periods are
@@ -192,74 +230,75 @@ $$
 
 To shorten the coefficients, set $x=\xi-2$ below. All formulas in this section refer to the family with two end cores (1).
 
-**Period LR.** Introduce two auxiliary polynomials
-
-$$
-\begin{aligned}
-\alpha&=x^4-2x^3-4x^2+4x+4\\
-\beta&=3x^4-4x^3-8x^2+8x+6
-\end{aligned}
-$$
-
-Then
-
-$$
-a_{LR}=\alpha^2-2\beta,\qquad
-b_{LR}=\beta^2-2\alpha^2+2
-\tag{11}
-$$
-
-$$
-\kappa_{LR}=2(x+2)^2x^4(x^2-x-1)^2
-$$
-
-**Period SL.** The coefficients are
-
-$$
-\begin{aligned}
-a_{SL}={}&x^8-4x^7-4x^6+24x^5+{}\\
-&{}+3x^4-40x^3-3x^2+16x
-\end{aligned}
-\tag{12}
-$$
-
-$$
-\begin{aligned}
-b_{SL}={}&x^{10}-4x^9-2x^8+24x^7-72x^5+{}\\
-&{}+2x^4+96x^3+10x^2-32x-2
-\end{aligned}
-$$
-
-$$
-\kappa_{SL}=2(x+2)^2(x^2-2)(2x^3-3x^2-2x+2)
-$$
-
-**Period LLS.** We obtain
-
-$$
-\begin{aligned}
-a_{LLS}={}&x^{12}-6x^{11}+52x^9-44x^8-164x^7+{}\\
-&{}+155x^6+240x^5-172x^4-162x^3+{}\\
-&{}+48x^2+36x+4
-\end{aligned}
-\tag{13}
-$$
-
-$$
-\begin{aligned}
-b_{LLS}={}&x^{16}-6x^{15}+x^{14}+56x^{13}-64x^{12}-{}\\
-&{}-236x^{11}+358x^{10}+556x^9-891x^8-{}\\
-&{}-818x^7+1107x^6+764x^5-628x^4-{}\\
-&{}-372x^3+132x^2+72x+6
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-\kappa_{LLS}={}&-2(x+2)^2x^2(x^2-x-1)^2\,\cdot\\
-&\cdot\,(x^3-2x^2-x+3)(2x^3-3x^2-4x+3)
-\end{aligned}
-$$
+> [!example]- Expanded coefficients of the three periods
+> **Period LR.** Introduce two auxiliary polynomials
+>
+> $$
+> \begin{aligned}
+> \alpha&=x^4-2x^3-4x^2+4x+4\\
+> \beta&=3x^4-4x^3-8x^2+8x+6
+> \end{aligned}
+> $$
+>
+> Then
+>
+> $$
+> a_{LR}=\alpha^2-2\beta,\qquad
+> b_{LR}=\beta^2-2\alpha^2+2
+> \tag{11}
+> $$
+>
+> $$
+> \kappa_{LR}=2(x+2)^2x^4(x^2-x-1)^2
+> $$
+>
+> **Period SL.** The coefficients are
+>
+> $$
+> \begin{aligned}
+> a_{SL}={}&x^8-4x^7-4x^6+24x^5+{}\\
+> &{}+3x^4-40x^3-3x^2+16x
+> \end{aligned}
+> \tag{12}
+> $$
+>
+> $$
+> \begin{aligned}
+> b_{SL}={}&x^{10}-4x^9-2x^8+24x^7-72x^5+{}\\
+> &{}+2x^4+96x^3+10x^2-32x-2
+> \end{aligned}
+> $$
+>
+> $$
+> \kappa_{SL}=2(x+2)^2(x^2-2)(2x^3-3x^2-2x+2)
+> $$
+>
+> **Period LLS.** We obtain
+>
+> $$
+> \begin{aligned}
+> a_{LLS}={}&x^{12}-6x^{11}+52x^9-44x^8-164x^7+{}\\
+> &{}+155x^6+240x^5-172x^4-162x^3+{}\\
+> &{}+48x^2+36x+4
+> \end{aligned}
+> \tag{13}
+> $$
+>
+> $$
+> \begin{aligned}
+> b_{LLS}={}&x^{16}-6x^{15}+x^{14}+56x^{13}-64x^{12}-{}\\
+> &{}-236x^{11}+358x^{10}+556x^9-891x^8-{}\\
+> &{}-818x^7+1107x^6+764x^5-628x^4-{}\\
+> &{}-372x^3+132x^2+72x+6
+> \end{aligned}
+> $$
+>
+> $$
+> \begin{aligned}
+> \kappa_{LLS}={}&-2(x+2)^2x^2(x^2-x-1)^2\,\cdot\\
+> &\cdot\,(x^3-2x^2-x+3)(2x^3-3x^2-4x+3)
+> \end{aligned}
+> $$
 
 These are polynomial identities in $\xi$, not interpolation from a few numerical values. To reproduce the initial conditions (3), the following state of a single core suffices:
 
@@ -293,30 +332,6 @@ $$
 The fully expanded initial polynomials and results of direct Laplacian calculations are published in the [exact data](https://github.com/magin67/pmg-notes/blob/v5/checks/isomer-spectra/periodic-slr-results.json).
 
 ## Rooted forests and the minimal order
-
-The rooted polynomial is $P_G(t)=\det(\mathbf I_n+t\mathbf L_G)$. It counts spanning forests with a chosen root in each component, unlike the ordinary forest polynomial. Since $n$ in (1) is even,
-
-$$
-c_m^{(v)}:=P_{G_m^{(v)}}(1)=(-1)^nF_m^{(v)}(-1)=F_m^{(v)}(-1)
-$$
-
-At $\xi=-1$, recurrence (9) has the following integer coefficients:
-
-| Period $v$ | $a_v(-1)$ | $b_v(-1)$ | $\kappa_v(-1)$ |
-|---|---:|---:|---:|
-| LR | 7759 | 51561 | 19602 |
-| SL | 7809 | 87421 | -1022 |
-| LLS | 686236 | 59155926 | -5606172 |
-
-The initial value $c_0=28435$ is common. The other three values needed for the nonhomogeneous recurrence are:
-
-| $m$ | LR | SL | LLS |
-|---|---:|---:|---:|
-| 1 | 220480560 | 221771751 | 19514594869 |
-| 2 | 1709242570740 | 1729329809694 | 13389935419018422 |
-| 3 | 13250645128864264 | 13484949197704165 | 9187501318295042810386 |
-
-For example, the next value for LR is $c_4=102723627009376555443$. For LLS, the family starting from an edge has a different right-hand side: $\widehat\kappa_{LLS}(-1)=-901692$. Replacing the initial conditions without changing this quantity would give an incorrect recurrence.
 
 > [!info] The minimal homogeneous order
 > **Proposition 4.** For each of the periods LR, SL, and LLS, the minimal order of a homogeneous linear recurrence with coefficients constant in $m$ is five, both over $\mathbb Q(\xi)$ for $F_m(\xi)$ and over $\mathbb Q$ for $c_m$.

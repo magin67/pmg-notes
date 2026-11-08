@@ -110,7 +110,7 @@ def main():
                 attrs = lambda e: {k:v for k,v in e.attrib.items() if k!='font-size'}
                 assert attrs(x) == attrs(y), (entry['target'],'geometry')
         count['figures'] += 1
-    assert count['figures'] == 35 == len(list((EN/'images').glob('*.svg')))
+    assert count['figures'] == 38 == len(list((EN/'images').glob('*.svg')))
     print('PASS: '+json.dumps(count,sort_keys=True))
 
 

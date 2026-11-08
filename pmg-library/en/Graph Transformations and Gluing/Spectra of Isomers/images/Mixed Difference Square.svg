@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="890" viewBox="0 0 1200 890" role="img" aria-labelledby="title desc">
+<title id="title">The mixed-difference square</title><desc id="desc">Independent S/L choices at two positions give four chains. The signs are plus, minus, minus, plus.</desc>
+<rect width="1200" height="890" fill="white" />
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="600.00" y="40.00" font-size="27" fill="#172b43" text-anchor="middle" font-weight="bold">Two positions, four independent choices</text>
+<rect x="30" y="75" width="500" height="310" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="280.00" y="115.00" font-size="29" fill="#15815b" text-anchor="middle" font-weight="bold">+ χ(SSS)</text>
+<polygon points="177.50,187.91 177.50,247.09 126.25,276.68 75.00,247.09 75.00,187.91 126.25,158.32" fill="#fff0d7" />
+<polygon points="177.50,247.09 177.50,187.91 228.75,158.32 280.00,187.91 280.00,247.09 228.75,276.68" fill="#ddf4e9" />
+<polygon points="280.00,247.09 280.00,187.91 331.25,158.32 382.50,187.91 382.50,247.09 331.25,276.68" fill="#e2edff" />
+<polygon points="382.50,247.09 382.50,187.91 433.75,158.32 485.00,187.91 485.00,247.09 433.75,276.68" fill="#fff0d7" />
+<line x1="177.50" y1="187.91" x2="177.50" y2="247.09" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="177.50" y1="187.91" x2="126.25" y2="158.32" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="177.50" y1="187.91" x2="228.75" y2="158.32" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="177.50" y1="247.09" x2="126.25" y2="276.68" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="177.50" y1="247.09" x2="228.75" y2="276.68" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="126.25" y1="276.68" x2="75.00" y2="247.09" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="75.00" y1="247.09" x2="75.00" y2="187.91" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="75.00" y1="187.91" x2="126.25" y2="158.32" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="228.75" y1="158.32" x2="280.00" y2="187.91" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="280.00" y1="187.91" x2="280.00" y2="247.09" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="280.00" y1="187.91" x2="331.25" y2="158.32" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="280.00" y1="247.09" x2="228.75" y2="276.68" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="280.00" y1="247.09" x2="331.25" y2="276.68" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="331.25" y1="158.32" x2="382.50" y2="187.91" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="382.50" y1="187.91" x2="382.50" y2="247.09" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="382.50" y1="187.91" x2="433.75" y2="158.32" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="382.50" y1="247.09" x2="331.25" y2="276.68" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="382.50" y1="247.09" x2="433.75" y2="276.68" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="433.75" y1="158.32" x2="485.00" y2="187.91" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="485.00" y1="187.91" x2="485.00" y2="247.09" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="485.00" y1="247.09" x2="433.75" y2="276.68" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="177.50" y1="187.91" x2="177.50" y2="247.09" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="280.00" y1="187.91" x2="280.00" y2="247.09" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="382.50" y1="187.91" x2="382.50" y2="247.09" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<circle cx="177.50" cy="187.91" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="177.50" cy="247.09" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="126.25" cy="276.68" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="75.00" cy="247.09" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="75.00" cy="187.91" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="126.25" cy="158.32" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="228.75" cy="158.32" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="280.00" cy="187.91" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="280.00" cy="247.09" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="228.75" cy="276.68" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="331.25" cy="158.32" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="382.50" cy="187.91" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="382.50" cy="247.09" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="331.25" cy="276.68" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="433.75" cy="158.32" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="485.00" cy="187.91" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="485.00" cy="247.09" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="433.75" cy="276.68" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="126.25" y="223.50" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">1</text>
+<text x="228.75" y="223.50" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">2</text>
+<text x="331.25" y="223.50" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">3</text>
+<text x="433.75" y="223.50" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">4</text>
+<text x="280.00" y="350.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">P(1) = 223 092 224</text>
+<rect x="670" y="75" width="500" height="310" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="920.00" y="115.00" font-size="29" fill="#bc294b" text-anchor="middle" font-weight="bold">− χ(SSL)</text>
+<polygon points="862.47,228.57 862.47,272.86 824.12,295.00 785.77,272.86 785.77,228.57 824.12,206.43" fill="#fff0d7" />
+<polygon points="862.47,272.86 862.47,228.57 900.82,206.43 939.18,228.57 939.18,272.86 900.82,295.00" fill="#ddf4e9" />
+<polygon points="939.18,272.86 939.18,228.57 977.53,206.43 1015.88,228.57 1015.88,272.86 977.53,295.00" fill="#e2edff" />
+<polygon points="1015.88,228.57 977.53,206.43 977.53,162.14 1015.88,140.00 1054.23,162.14 1054.23,206.43" fill="#fff0d7" />
+<line x1="862.47" y1="228.57" x2="862.47" y2="272.86" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="862.47" y1="228.57" x2="824.12" y2="206.43" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="862.47" y1="228.57" x2="900.82" y2="206.43" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="862.47" y1="272.86" x2="824.12" y2="295.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="862.47" y1="272.86" x2="900.82" y2="295.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="824.12" y1="295.00" x2="785.77" y2="272.86" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="785.77" y1="272.86" x2="785.77" y2="228.57" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="785.77" y1="228.57" x2="824.12" y2="206.43" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="900.82" y1="206.43" x2="939.18" y2="228.57" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="939.18" y1="228.57" x2="939.18" y2="272.86" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="939.18" y1="228.57" x2="977.53" y2="206.43" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="939.18" y1="272.86" x2="900.82" y2="295.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="939.18" y1="272.86" x2="977.53" y2="295.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="977.53" y1="206.43" x2="1015.88" y2="228.57" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="977.53" y1="206.43" x2="977.53" y2="162.14" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1015.88" y1="228.57" x2="1015.88" y2="272.86" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1015.88" y1="228.57" x2="1054.23" y2="206.43" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1015.88" y1="272.86" x2="977.53" y2="295.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="977.53" y1="162.14" x2="1015.88" y2="140.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1015.88" y1="140.00" x2="1054.23" y2="162.14" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="1054.23" y1="162.14" x2="1054.23" y2="206.43" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="862.47" y1="228.57" x2="862.47" y2="272.86" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="939.18" y1="228.57" x2="939.18" y2="272.86" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="977.53" y1="206.43" x2="1015.88" y2="228.57" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<circle cx="862.47" cy="228.57" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="862.47" cy="272.86" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="824.12" cy="295.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="785.77" cy="272.86" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="785.77" cy="228.57" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="824.12" cy="206.43" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="900.82" cy="206.43" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="939.18" cy="228.57" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="939.18" cy="272.86" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="900.82" cy="295.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="977.53" cy="206.43" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="1015.88" cy="228.57" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="1015.88" cy="272.86" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="977.53" cy="295.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="977.53" cy="162.14" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="1015.88" cy="140.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="1054.23" cy="162.14" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="1054.23" cy="206.43" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="824.12" y="256.71" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">1</text>
+<text x="900.82" y="256.71" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">2</text>
+<text x="977.53" y="256.71" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">3</text>
+<text x="1015.88" y="190.29" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">4</text>
+<text x="920.00" y="350.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">P(1) = 221 771 751</text>
+<rect x="30" y="470" width="500" height="310" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="280.00" y="510.00" font-size="29" fill="#bc294b" text-anchor="middle" font-weight="bold">− χ(SLS)</text>
+<polygon points="253.15,643.50 253.15,674.50 226.31,690.00 199.46,674.50 199.46,643.50 226.31,628.00" fill="#fff0d7" />
+<polygon points="253.15,674.50 253.15,643.50 280.00,628.00 306.85,643.50 306.85,674.50 280.00,690.00" fill="#ddf4e9" />
+<polygon points="306.85,643.50 280.00,628.00 280.00,597.00 306.85,581.50 333.69,597.00 333.69,628.00" fill="#e2edff" />
+<polygon points="333.69,597.00 306.85,581.50 306.85,550.50 333.69,535.00 360.54,550.50 360.54,581.50" fill="#fff0d7" />
+<line x1="253.15" y1="643.50" x2="253.15" y2="674.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="253.15" y1="643.50" x2="226.31" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="253.15" y1="643.50" x2="280.00" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="253.15" y1="674.50" x2="226.31" y2="690.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="253.15" y1="674.50" x2="280.00" y2="690.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="226.31" y1="690.00" x2="199.46" y2="674.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="199.46" y1="674.50" x2="199.46" y2="643.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="199.46" y1="643.50" x2="226.31" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="280.00" y1="628.00" x2="306.85" y2="643.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="280.00" y1="628.00" x2="280.00" y2="597.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="306.85" y1="643.50" x2="306.85" y2="674.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="306.85" y1="643.50" x2="333.69" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="306.85" y1="674.50" x2="280.00" y2="690.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="280.00" y1="597.00" x2="306.85" y2="581.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="306.85" y1="581.50" x2="333.69" y2="597.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="306.85" y1="581.50" x2="306.85" y2="550.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="333.69" y1="597.00" x2="333.69" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="333.69" y1="597.00" x2="360.54" y2="581.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="306.85" y1="550.50" x2="333.69" y2="535.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="333.69" y1="535.00" x2="360.54" y2="550.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="360.54" y1="550.50" x2="360.54" y2="581.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="253.15" y1="643.50" x2="253.15" y2="674.50" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="280.00" y1="628.00" x2="306.85" y2="643.50" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="306.85" y1="581.50" x2="333.69" y2="597.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<circle cx="253.15" cy="643.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="253.15" cy="674.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="226.31" cy="690.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="199.46" cy="674.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="199.46" cy="643.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="226.31" cy="628.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="280.00" cy="628.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="306.85" cy="643.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="306.85" cy="674.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="280.00" cy="690.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="280.00" cy="597.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="306.85" cy="581.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="333.69" cy="597.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="333.69" cy="628.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="306.85" cy="550.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="333.69" cy="535.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="360.54" cy="550.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="360.54" cy="581.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="226.31" y="665.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">1</text>
+<text x="280.00" y="665.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">2</text>
+<text x="306.85" y="618.50" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">3</text>
+<text x="333.69" y="572.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">4</text>
+<text x="280.00" y="745.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">P(1) = 221 771 751</text>
+<rect x="670" y="470" width="500" height="310" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
+<text x="920.00" y="510.00" font-size="29" fill="#15815b" text-anchor="middle" font-weight="bold">+ χ(SLL)</text>
+<polygon points="906.58,643.50 906.58,674.50 879.73,690.00 852.88,674.50 852.88,643.50 879.73,628.00" fill="#fff0d7" />
+<polygon points="906.58,674.50 906.58,643.50 933.42,628.00 960.27,643.50 960.27,674.50 933.42,690.00" fill="#ddf4e9" />
+<polygon points="960.27,643.50 933.42,628.00 933.42,597.00 960.27,581.50 987.12,597.00 987.12,628.00" fill="#e2edff" />
+<polygon points="960.27,581.50 933.42,597.00 906.58,581.50 906.58,550.50 933.42,535.00 960.27,550.50" fill="#fff0d7" />
+<line x1="906.58" y1="643.50" x2="906.58" y2="674.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="906.58" y1="643.50" x2="879.73" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="906.58" y1="643.50" x2="933.42" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="906.58" y1="674.50" x2="879.73" y2="690.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="906.58" y1="674.50" x2="933.42" y2="690.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="879.73" y1="690.00" x2="852.88" y2="674.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="852.88" y1="674.50" x2="852.88" y2="643.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="852.88" y1="643.50" x2="879.73" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="933.42" y1="628.00" x2="960.27" y2="643.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="933.42" y1="628.00" x2="933.42" y2="597.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="960.27" y1="643.50" x2="960.27" y2="674.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="960.27" y1="643.50" x2="987.12" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="960.27" y1="674.50" x2="933.42" y2="690.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="933.42" y1="597.00" x2="960.27" y2="581.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="933.42" y1="597.00" x2="906.58" y2="581.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="960.27" y1="581.50" x2="987.12" y2="597.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="960.27" y1="581.50" x2="960.27" y2="550.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="987.12" y1="597.00" x2="987.12" y2="628.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="906.58" y1="581.50" x2="906.58" y2="550.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="906.58" y1="550.50" x2="933.42" y2="535.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="933.42" y1="535.00" x2="960.27" y2="550.50" stroke="#52657a" stroke-width="2.5" stroke-linecap="round" />
+<line x1="906.58" y1="643.50" x2="906.58" y2="674.50" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="933.42" y1="628.00" x2="960.27" y2="643.50" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<line x1="933.42" y1="597.00" x2="960.27" y2="581.50" stroke="#196bb9" stroke-width="4" stroke-linecap="round" />
+<circle cx="906.58" cy="643.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="906.58" cy="674.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="879.73" cy="690.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="852.88" cy="674.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="852.88" cy="643.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="879.73" cy="628.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="933.42" cy="628.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="960.27" cy="643.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="960.27" cy="674.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="933.42" cy="690.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="933.42" cy="597.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="960.27" cy="581.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="987.12" cy="597.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="987.12" cy="628.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="906.58" cy="581.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="906.58" cy="550.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="933.42" cy="535.00" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<circle cx="960.27" cy="550.50" r="3.3" fill="#172b43" stroke="none" stroke-width="2" />
+<text x="879.73" y="665.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">1</text>
+<text x="933.42" y="665.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">2</text>
+<text x="960.27" y="618.50" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">3</text>
+<text x="933.42" y="572.00" font-size="20" fill="#52657a" text-anchor="middle" font-weight="normal">4</text>
+<text x="920.00" y="745.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">P(1) = 220 348 791</text>
+<line x1="550.00" y1="230.00" x2="650.00" y2="230.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="650.00,230.00 638.00,225.00 638.00,235.00" fill="#172b43" />
+<text x="600.00" y="208.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">u₂</text>
+<line x1="550.00" y1="625.00" x2="650.00" y2="625.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="650.00,625.00 638.00,620.00 638.00,630.00" fill="#172b43" />
+<text x="600.00" y="603.00" font-size="18" fill="#52657a" text-anchor="middle" font-weight="normal">u₂</text>
+<line x1="280.00" y1="400.00" x2="280.00" y2="455.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="280.00,455.00 285.00,443.00 275.00,443.00" fill="#172b43" />
+<text x="308.00" y="435.00" font-size="18" fill="#52657a" text-anchor="start" font-weight="normal">u₁</text>
+<line x1="920.00" y1="400.00" x2="920.00" y2="455.00" stroke="#172b43" stroke-width="3" stroke-linecap="round" />
+<polygon points="920.00,455.00 925.00,443.00 915.00,443.00" fill="#172b43" />
+<text x="948.00" y="435.00" font-size="18" fill="#52657a" text-anchor="start" font-weight="normal">u₁</text>
+<text x="600.00" y="827.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">χ(SSS) − χ(SSL) − χ(SLS) + χ(SLL)</text>
+<text x="600.00" y="864.00" font-size="23" fill="#196bb9" text-anchor="middle" font-weight="normal">At ξ = −1: −102 487</text>
+</g></svg>

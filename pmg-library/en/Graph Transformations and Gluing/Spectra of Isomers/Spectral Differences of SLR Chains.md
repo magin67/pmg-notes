@@ -1,9 +1,9 @@
 ---
 title: Spectral Differences of SLR Chains
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
-translated_revision: 5
+updated: 2026-11-08
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -216,6 +216,12 @@ $$
 $$
 
 Empty products are identities. Each summand has its own intermediate context; in general, one cannot add local effects all computed solely in the original chain.
+
+![Four independent choices of S and L at two positions](images/Mixed%20Difference%20Square.svg)
+
+Here $u_1$ and $u_2$ are positions in the internal word $u$ of the full code $Su$; the initial $S$ is fixed.
+
+**Two positions, four possibilities.** Each position independently takes $S$ or $L$. One replacement changes the sign of a term; two replacements restore the plus sign. The selected positions in the figure are adjacent, so the intervening word $b$ in the general formula below is empty.
 
 A different operation is a *mixed difference*: the alternating sum over independent choices of $S/L$ at several positions. For two selected positions separated by a fixed word $b$, it is
 

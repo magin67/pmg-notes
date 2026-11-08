@@ -535,5 +535,44 @@
       "SLL и SLR имеют по четыре ядра и два изгиба. У SLL одна пара LL, у SLR одинаковых соседних поворотов нет. Разность шестых моментов равна 6.": "SLL and SLR each have four cores and two bends. SLL has one LL pair; SLR has no adjacent identical turns. The sixth-moment difference is 6.",
       "Одинаковое число изгибов; разное соседство поворотов": "The same number of bends; different turn adjacencies"
     }
+  },
+  {
+    "source": "Два лапласовских спектра.svg",
+    "target": "Two Laplacian Spectra.svg",
+    "labels": {
+      "А: прямая цепь": "A: straight chain",
+      "Б: смещённый шов": "B: shifted seam",
+      "Два графа - два лапласовских спектра": "Two graphs, two Laplacian spectra",
+      "Общий нуль; 13 положительных значений в каждой строке": "A shared zero; 13 positive values in each row",
+      "По 14 собственных значений на одной шкале. Общий нуль выделен кольцом; положительные значения вычислены приближённо.": "Fourteen eigenvalues per graph on a shared scale. A ring marks the shared zero; positive values are approximated.",
+      "Собственное значение λ": "Eigenvalue λ"
+    }
+  },
+  {
+    "source": "Квадрат смешанной разности.svg",
+    "target": "Mixed Difference Square.svg",
+    "labels": {
+      "Две позиции - четыре независимых выбора": "Two positions, four independent choices",
+      "Квадрат смешанной разности": "The mixed-difference square",
+      "Независимые S/L-выборы в двух позициях дают четыре цепочки. Знаки: плюс, минус, минус, плюс.": "Independent S/L choices at two positions give four chains. The signs are plus, minus, minus, plus.",
+      "При ξ = −1: −102 487": "At ξ = −1: −102 487"
+    }
+  },
+  {
+    "source": "Постоянный поворот крупным планом.svg",
+    "target": "Constant Turn Close Up.svg",
+    "labels": {
+      "Вход": "Input",
+      "Выход L": "Output L",
+      "Новый вход снова обращает": "The new input again reverses",
+      "Постоянный поворот крупным планом": "A close-up of a constant turn",
+      "Правило L видно на трёх соседних ядрах": "Rule L on three adjacent cores",
+      "Пространственное положение меняется; правило соединения остаётся тем же": "Spatial positions may change; the joining rule stays the same",
+      "Следующий шаг": "Next step",
+      "Тот же выход L": "The same output L",
+      "Три соседних ядра и два непересекающихся шва среднего ядра. Вход 01 выделен красным, выход 23 синим.": "Three adjacent cores and the two disjoint seams of the middle core. Input 01 is red; output 23 is blue.",
+      "Цифры у вершин - локальные номера среднего ядра": "Vertex labels are local to the middle core",
+      "порядок активных контактов": "the active contact order"
+    }
   }
 ]

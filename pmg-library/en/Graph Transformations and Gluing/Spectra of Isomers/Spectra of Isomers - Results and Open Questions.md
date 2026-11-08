@@ -1,9 +1,9 @@
 ---
 title: 'Spectra of Isomers: Results and Open Questions'
 date: '2026-11-02'
-updated: 2026-11-02
-revision: 3
-translated_revision: 3
+updated: 2026-11-08
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -28,9 +28,29 @@ Nine substantive notes and this concluding navigator form the current bilingual 
 >
 > Retaining data at two ordered contacts at the end of the chain allows recovery of the entire turn sequence and length. Five exact integers suffice, as do three exactly specified rational numbers of a particular boundary response. Recovery from a single characteristic polynomial or a single number remains conjectural for arbitrary length. With measurement errors, distant differences may become very hard to detect.
 
+## Contents and reading routes
+
+| Note | Main problem |
+|---|---|
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons\|Two Isomers of Three Hexagons]] | An exact pair of graphs, two polynomials, and a compact difference |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary\|Spectral Transfer to a New Boundary]] | Sufficient data for attachment and a change of active pair |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains\|SLR Codes of Hexagonal Chains]] | Orientations, symmetries, and graph classification |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains\|Spectral Differences of SLR Chains]] | Changing one or several seams and the first sensitive coefficients |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State\|Rooted Forests and Decoding the Boundary State]] | Forest meanings of the coordinates, the inverse algorithm, and reachability |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response\|Reconstructing a Chain from Its Boundary Response]] | Three rational data values, interpretations, and stability |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns\|Weaving SLR Chains and Constant Turns]] | A fixed runner and recurrences for constant families |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains\|Spectral Distinguishability of SLR Chains]] | Partial recovery, a finite catalog, and scalar conjectures |
+| [[en/Graph Transformations and Gluing/Spectra of Isomers/Periodic SLR Chains - Recurrences and Spectra\|Periodic SLR Chains: Recurrences and Spectra]] | The period matrix, phase, ends, and rooted-forest asymptotics |
+
+For a first introduction, read [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons|Two Isomers of Three Hexagons]] and the plain-language result section in [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response|Reconstructing a Chain from Its Boundary Response]]. They show which differences arise and which data recover them.
+
+For spectral calculation, follow [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains|Spectral Differences of SLR Chains]]. For repeated constructions, continue through [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns|Weaving SLR Chains and Constant Turns]] to [[en/Graph Transformations and Gluing/Spectra of Isomers/Periodic SLR Chains - Recurrences and Spectra|Periodic SLR Chains: Recurrences and Spectra]].
+
+For the inverse problem, follow [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response|Reconstructing a Chain from Its Boundary Response]]. The passage to unmarked scalar data is studied in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains|Spectral Distinguishability of SLR Chains]].
+
 ## Objects and scope of the statements
 
-The main class consists of finite open chains of cycles $C_6$ with unit conductances. Adjacent cores share exactly one edge, counted once. The input and output seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no other identifications. No planarity, planar layout, or absence of overlaps in a drawing is required: the construction is defined as an abstract graph.
+The main class consists of finite open chains of cycles $C_6$ with unit conductances. Adjacent cores share exactly one edge, counted once. The input and output seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no other identifications. The construction specifies an abstract graph. A nonoverlapping development by regular hexagons is not required; the graph itself admits a planar embedding with deformed faces.
 
 For the number of cores $N\ge2$, the number of vertices $n$, and the internal word $u$, the conventions are
 
@@ -140,29 +160,9 @@ Here $N=pm+2$: the two end cores are counted separately. For runners starting di
 
 Cyclically shifting the period letters preserves the characteristic polynomial of $\mathbf V_v$ but may change the polynomial of the finite graph. Transfer multipliers describe growth in $m$; Laplacian eigenvalues are the roots of $\chi_G(\xi)$ in $\xi$. Exact examples for LR, SL, and LLS illustrate this distinction in [[en/Graph Transformations and Gluing/Spectra of Isomers/Periodic SLR Chains - Recurrences and Spectra|Periodic SLR Chains: Recurrences and Spectra]].
 
-## Contents and reading routes
-
-| Note | Main problem |
-|---|---|
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons\|Two Isomers of Three Hexagons]] | An exact pair of graphs, two polynomials, and a compact difference |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary\|Spectral Transfer to a New Boundary]] | Sufficient data for attachment and a change of active pair |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains\|SLR Codes of Hexagonal Chains]] | Orientations, symmetries, and graph classification |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains\|Spectral Differences of SLR Chains]] | Changing one or several seams and the first sensitive coefficients |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State\|Rooted Forests and Decoding the Boundary State]] | Forest meanings of the coordinates, the inverse algorithm, and reachability |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response\|Reconstructing a Chain from Its Boundary Response]] | Three rational data values, interpretations, and stability |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns\|Weaving SLR Chains and Constant Turns]] | A fixed runner and recurrences for constant families |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains\|Spectral Distinguishability of SLR Chains]] | Partial recovery, a finite catalog, and scalar conjectures |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Periodic SLR Chains - Recurrences and Spectra\|Periodic SLR Chains: Recurrences and Spectra]] | The period matrix, phase, ends, and rooted-forest asymptotics |
-
-For a first introduction, read [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons|Two Isomers of Three Hexagons]] and the plain-language result section in [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response|Reconstructing a Chain from Its Boundary Response]]. They show which differences arise and which data recover them.
-
-For spectral calculation, follow [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains|Spectral Differences of SLR Chains]]. For repeated constructions, continue through [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns|Weaving SLR Chains and Constant Turns]] to [[en/Graph Transformations and Gluing/Spectra of Isomers/Periodic SLR Chains - Recurrences and Spectra|Periodic SLR Chains: Recurrences and Spectra]].
-
-For the inverse problem, follow [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Rooted Forests and Decoding the Boundary State|Rooted Forests and Decoding the Boundary State]] → [[en/Graph Transformations and Gluing/Spectra of Isomers/Reconstructing a Chain from Its Boundary Response|Reconstructing a Chain from Its Boundary Response]]. The passage to unmarked scalar data is studied in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains|Spectral Distinguishability of SLR Chains]].
-
 ## Foundations and provenance of the results
 
-The mathematical foundations are determinants and minors, the Schur complement, matrix-forest identities, Newton's identities, and the classical transfer-matrix method. The series applies them to explicitly specified seams, orientations, and end conditions. A separate proof or a polyform expression does not establish scientific priority.
+The mathematical foundations are determinants and minors, the Schur complement, matrix-forest identities, Newton's identities, and the classical transfer-matrix method. The series applies them to explicitly specified seams, orientations, and end conditions.
 
 | Result | Source or derivation | Role in PMG | Novelty status |
 |---|---|---|---|

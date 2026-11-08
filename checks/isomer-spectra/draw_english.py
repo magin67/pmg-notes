@@ -1,4 +1,4 @@
-"""Reproduce the 35 English SVGs without changing graph or numerical data.
+"""Reproduce the 38 English SVGs without changing graph or numerical data.
 
 Native SVG text is translated from the reviewed Russian figures. Font sizes
 may be reduced to keep translated labels within the original text width.
@@ -94,8 +94,8 @@ def main():
             growth_plot(entry)
         else:
             translate_svg(entry)
-    assert len(LABELS) == 35
-    print('PASS: 35 English SVGs; translated labels and accessible descriptions; shared exact data.')
+    assert len(LABELS) == 38
+    print('PASS: 38 English SVGs; translated labels and accessible descriptions; shared exact data.')
 
 
 if __name__ == '__main__':

@@ -1,9 +1,9 @@
 ---
 title: Spectral Distinguishability of SLR Chains
 date: '2026-11-02'
-updated: '2026-11-02'
-revision: 1
-translated_revision: 5
+updated: 2026-11-08
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -28,7 +28,7 @@ The problem continues [[en/Graph Transformations and Gluing/Spectra of Isomers/S
 
 ## The class of chains and the meaning of distinguishability
 
-All graphs are finite and open, with unit conductances. Every core is a cycle $C_6$. Adjacent cores share exactly one edge, counted once. The input and output seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no other identifications. Neither planarity nor a layout on a planar hexagonal lattice is required.
+All graphs are finite and open, with unit conductances. Every core is a cycle $C_6$. Adjacent cores share exactly one edge, counted once. The input and output seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no other identifications. A layout on a planar hexagonal lattice is not required; the abstract graph admits a planar embedding.
 
 For the number of cores $N\ge2$ and the number of vertices $n$,
 
@@ -132,7 +132,7 @@ The parameters $b,h$ are invariant under all four operations (1), so they are de
 > \tag{7}
 > $$
 
-The dependence of $s_4$ on the number of bends was already established in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains#How the number of bends appears in the coefficients|How the number of bends appears in the coefficients]]. Below we give a general combinatorial derivation of (7), including the contribution of $h$. We use the classical method of counting closed walks through powers of the adjacency matrix [3, §1.3.3]. Specialization to SLR chains and a separate derivation do not establish scientific priority of the formulas.
+The dependence of $s_4$ on the number of bends was already established in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Differences of SLR Chains#How the number of bends appears in the coefficients|How the number of bends appears in the coefficients]]. Below we give a general combinatorial derivation of (7), including the contribution of $h$. We use the classical method of counting closed walks through powers of the adjacency matrix [3, §1.3.3].
 
 > [!note]- Proof of the moment formulas
 > **Proof.** Denote the degree of a vertex by $d_v$, the number of degree-$r$ vertices by $n_r$, and the number of edges with endpoint degrees $r,s$ by $m_{rs}$. All vertices have degree 2 or 3. The endpoints of the $N-1$ seams are distinct, so
@@ -289,6 +289,20 @@ The full polynomials of both pairs, edge lists, and isomorphism checks are recor
 > [!info] A limitation of partial spectral recovery
 > **Theorem. Proved.** For every fixed integer $k\ge1$ and all sufficiently large $N$, there are two nonisomorphic SLR chains with the same number of cores $N$ and the same $p_1,\ldots,p_k$. Equivalently, their first $k$ spectral moments coincide.
 
+The proof compares the number of possible data tuples with the number of graphs. For fixed $k$, the former grows polynomially with size and the latter exponentially. Here $n=4N+2$ and $m=N-2$. The number of tuples of the first $k$ moments is at most
+
+$$
+\prod_{j=1}^{k}(n6^j+1)=O_k(n^k)
+\tag{14}
+$$
+
+The exact number of nonisomorphic chain classes is
+
+$$
+c_N=\frac{3^m+1+3^{\lceil m/2\rceil}+3^{\lfloor m/2\rfloor}}4
+\tag{15}
+$$
+
 > [!note]- Proof by counting possible data
 > **Proof.** For a real column $x$,
 >
@@ -304,19 +318,9 @@ The full polynomials of both pairs, edge lists, and isomorphism checks are recor
 > s_j\in\mathbb Z,\qquad 0\le s_j\le n6^j
 > $$
 >
-> For fixed $N,k$, the number of possible tuples $(s_1,\ldots,s_k)$ is at most
+> For fixed $N,k$, the number of possible tuples $(s_1,\ldots,s_k)$ is at most the expression in (14).
 >
-> $$
-> \prod_{j=1}^{k}(n6^j+1)=O_k(n^k)
-> \tag{14}
-> $$
->
-> Meanwhile, classification (1) and Burnside's lemma give the exact number of classes for $m=N-2$:
->
-> $$
-> c_N=\frac{3^m+1+3^{\lceil m/2\rceil}+3^{\lfloor m/2\rfloor}}4
-> \tag{15}
-> $$
+> Meanwhile, classification (1) and Burnside's lemma give the exact number of classes (15) for $m=N-2$.
 >
 > This grows exponentially in $N$, while (14) grows polynomially for $n=4N+2$. For all sufficiently large $N$, there are more classes than data tuples. Two distinct classes therefore have identical moments; identities (4) give equality of the leading coefficients. $\square$
 
@@ -331,13 +335,13 @@ For each $N$, choose the lexicographically least word in orbit (1), with letter 
 The initial state of a single hexagon is
 
 $$
-\mathbf z_1=(320,144,144,56,55)^{\mathsf T}
+\mathbf z_0=(320,144,144,56,55)^{\mathsf T}
 $$
 
-If $\mathbf V_S,\mathbf V_L,\mathbf V_R$ are the integer transitions in this normalization, then for $u=u_1\cdots u_m$,
+If $\mathbf N_S,\mathbf N_L,\mathbf N_R$ are the integer transitions in this normalization, then for $u=u_1\cdots u_m$,
 
 $$
-\mathbf z(u)=\mathbf V_{u_m}\cdots\mathbf V_{u_1}\mathbf z_1,\qquad
+\mathbf z(u)=\mathbf N_{u_m}\cdots\mathbf N_{u_1}\mathbf z_0,\qquad
 P_{G(Su)}(1)=(55,34,34,-2,21)\mathbf z(u)
 \tag{16}
 $$
