@@ -1,9 +1,9 @@
 ---
 title: "Forest Coefficients and Abel Polynomials"
 date: 2026-10-19
-updated: 2026-10-20
-revision: 2
-source_revision: 3
+updated: 2026-11-08
+revision: 3
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-and-abel-polynomials
@@ -18,17 +18,30 @@ Comparing two representations of the exponential of the complete graph in [[Symm
 
 The connection between Abel polynomials, labelled trees, and rooted forests is classical. Here we trace how it arises from identities of symmetric polyforms (SPFs) and clarify the meaning of the coefficients in the falling-factorial expansion. They count rooted forests together with a partition of their set of components into groups. The same coefficient triangle is recorded in OEIS as [A360177](https://oeis.org/A360177).
 
-## From SPF types to a numerical identity
+## Two vertex sets and their notation
+
+There are two sets: the original $n$ SPF vertices and an auxiliary set of $k$ labels. To distinguish components in the two constructions, this note uses the following notation.
+
+| Symbol | What it counts |
+|---|---|
+| $n$ | Vertices of the original SPF |
+| $k$ | Its grade; then the size of the auxiliary set |
+| $c=n-k$ | All components of the original partition, including singletons |
+| $m$ | Nontrivial blocks of the original type; then blocks of the auxiliary partition and groups of components |
+| $\ell=c-m$ | Singleton vertices of the original partition |
+| $r$ | Components of a rooted forest on the auxiliary $k$ vertices; their number may exceed $m$ |
+
+The notes on types denote the total component count by $m$. Here it is called $c$, reserving $m$ for the second index of the forest coefficient $\operatorname{St}(k,m)$.
 
 Let $k\geqslant1$ and
 
 $$
-\lambda=[k_1,\ldots,k_r]\vdash k,\qquad
+\lambda=[k_1,\ldots,k_m]\vdash k,\qquad
 k_i\geqslant1,\qquad
-\sum_{i=1}^r k_i=k
+\sum_{i=1}^m k_i=k
 $$
 
-This is a partition of the integer $k$ into $r$ positive parts. In the forest representation of an SPF, the parts specify the grades of the boundaries of its nontrivial components: the corresponding vertex blocks have sizes $k_i+1$. Here $r$ counts nontrivial components; on $n$ vertices the full number of components is $m=n-k$, and the number of singletons is $\ell=m-r$. Let $J$ be the set of distinct parts of $\lambda$, and let $\mu_j$ for $j\in J$ be their positive multiplicities.
+This is a partition of the integer $k$ into $m$ positive parts. In the forest representation of an SPF, the parts specify the grades of the boundaries of its nontrivial components: the corresponding vertex blocks have sizes $k_i+1$. Here $m$ counts nontrivial components; on $n$ vertices the full number of components is $c=n-k$, and the number of singletons is $\ell=c-m$. Let $J$ be the set of distinct parts of $\lambda$, and let $\mu_j$ for $j\in J$ be their positive multiplicities.
 
 Separate two factors:
 
@@ -39,26 +52,15 @@ s_2(\lambda)=
 t(\lambda)=[(k_i+1)^{k_i-1}]!
 $$
 
-The number $s_2(\lambda)$ is the [[Partitions and the Combinatorial Potential of the Second Kind#The combinatorial potential of the second kind|combinatorial potential of the second kind]]. It counts partitions of $k$ distinct labels into unordered blocks of sizes $k_1,\ldots,k_r$. The expressions $[k_i!]!$, $[\mu_j!]!$, and $[(k_i+1)^{k_i-1}]!$ use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]; the indices range over $1,\ldots,r$, $J$, and $1,\ldots,r$, respectively.
+The number $s_2(\lambda)$ is the [[Partitions and the Combinatorial Potential of the Second Kind#The combinatorial potential of the second kind|combinatorial potential of the second kind]]. It counts partitions of $k$ distinct labels into unordered blocks of sizes $k_1,\ldots,k_m$. The expressions $[k_i!]!$, $[\mu_j!]!$, and $[(k_i+1)^{k_i-1}]!$ use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]; the indices range over $1,\ldots,m$, $J$, and $1,\ldots,m$, respectively.
 
-For now, these $k$ labels form an auxiliary set. The representation size of $E_n[\lambda,0^{\,n-k-r}]$ counts partitions of the original $n$ vertices into blocks of sizes $k_i+1$ and singleton blocks; its formula is given in the [[Symmetric Polyforms - Types and Normalizations#Representation size and factorial factors|note on types and normalizations]]. Thus $s_2(\lambda)$ is not the representation size of this SPF.
+For now, these $k$ labels form an auxiliary set. The representation size of $E_n[\lambda,0^{\,n-k-m}]$ counts partitions of the original $n$ vertices into blocks of sizes $k_i+1$ and singleton blocks; its formula is given in the [[Symmetric Polyforms - Types and Normalizations#Representation size and factorial factors|note on types and normalizations]]. Thus $s_2(\lambda)$ is not the representation size of this SPF.
 
 The factor $t(\lambda)$ already appeared in the [[Symmetric Polyforms of the Complete Graph#Expansion by forest type|expansion by forest type]]. It counts independent choices of trees on prescribed blocks of sizes $k_i+1$. No roots are chosen in these trees.
 
-The [[Symmetric Polyforms of the Complete Graph#A numerical identity from the two expansions|numerical identity from the two expansions]] establishes that, for $n\geqslant k+1$,
-
-$$
-\sum_{\substack{\lambda\vdash k\\r\leqslant n-k}}
-\frac{(n-k-1)!}{(n-k-r)!}\,
-s_2(\lambda)t(\lambda)
-=n^{k-1}
-$$
-
-The condition $r\leqslant n-k$ means that enough vertices are available for the type. The factorial ratio comes from the [[Fundamental Theorem of Symmetric Polyforms#Statement and scope|fundamental theorem of SPFs]]; its proof need not be repeated here.
-
 ## Forest coefficients
 
-From here on, the original vertex count $n$ is not fixed. The index $m$ in $\operatorname{St}(k,m)$ is the number of blocks in an auxiliary partition of $k$ labels. When compared with an SPF type, it equals $r$ in the preceding section; it does not count all forest components on the original $n$ vertices.
+Throughout this note, the second index $m$ in $\operatorname{St}(k,m)$ counts blocks of the auxiliary partition or, after the added roots are deleted, groups of components. The total component count of the original SPF is denoted by $c$.
 
 > [!info] Forest coefficients
 > **Definition.** For $1\leqslant m\leqslant k$, set
@@ -66,7 +68,7 @@ From here on, the original vertex count $n$ is not fixed. The index $m$ in $\ope
 > $$
 > \boxed{
 > \operatorname{St}(k,m)=
-> \sum_{\substack{\lambda\vdash k\\\lambda\text{ has }m\text{ parts}}}
+> \sum_{\substack{\lambda\vdash k\\\text{number of parts of }\lambda=m}}
 > s_2(\lambda)t(\lambda)
 > }
 > \tag{1}
@@ -75,6 +77,52 @@ From here on, the original vertex count $n$ is not fixed. The index $m$ in $\ope
 We call these numbers **forest coefficients**. This name is used in this note for the coefficients (1). They differ from the spanning-tree coefficient of a graph, $\tau(G)$, and from the Stirling numbers $S(k,m)$.
 
 For the boundary cases, set $\operatorname{St}(0,0)=1$, $\operatorname{St}(k,0)=0$ for $k>0$, and $\operatorname{St}(k,m)=0$ for $m>k$.
+
+## What forest coefficients count
+
+Consider a set $U$ of $k$ labelled vertices. Partition it into $m$ nonempty unordered blocks $B_1,\ldots,B_m$. Add one new vertex $\rho_i$ to each block and choose a tree on $B_i\cup\{\rho_i\}$.
+
+The vertex $\rho_i$ is distinguished in advance as the root. It is attached to its block; neither roots nor blocks have an independent ordering. If $\#B_i=k_i$, the number of trees is $(k_i+1)^{k_i-1}$ by [[Symmetric Polyforms of the Complete Graph#The top grade and Cayley's formula|Cayley's formula]]. No additional factor for choosing a root occurs.
+
+> [!info] What forest coefficients count
+> **Proposition.** The number of such collections of blocks with trees is $\operatorname{St}(k,m)$.
+
+> [!note]- Proof
+> **Proof.** For a fixed list of sizes $\lambda$, there are $s_2(\lambda)$ partitions of $U$ and $t(\lambda)$ independent choices of trees. Summing over all $\lambda$ with $m$ parts gives (1). $\square$
+
+Although the sizes of the augmented trees agree with the sizes of the nontrivial components in the SPF type, this is a separate model on $k$ labelled vertices and $m$ added roots. It does not count all forests of the original $K_n$.
+
+![Adding and Deleting Roots](<Adding and Deleting Roots.svg>)
+
+An example with $k=4$, $m=2$. Roots are added to the blocks $abc$ and $d$. Deleting the added roots leaves three components, $ab$, $c$, and $d$, arranged in two groups. Double circles mark roots.
+
+### Deleting the added roots
+
+> [!info] Deleting the added roots
+> **Definition.** A rooted forest is a forest with one distinguished vertex, called the root, in each component. A singleton component also has a root.
+
+> [!info] A forest with grouped components
+> **Theorem.** The number $\operatorname{St}(k,m)$ counts pairs consisting of:
+>
+> - a rooted forest on a prescribed set of $k$ labelled vertices;
+> - a partition of its set of components into $m$ nonempty unordered groups.
+>
+> The forest itself may have more than $m$ components.
+
+> [!note]- Proof by a bijection
+> **Proof.** In each tree on $B_i\cup\{\rho_i\}$, delete $\rho_i$ and all edges incident to it. The result is a nonempty forest on $B_i$. Each of its components contained exactly one neighbor of $\rho_i$: having none would contradict connectedness of the original tree, while having two would create a cycle.
+>
+> Distinguish this neighbor as the root of the component. Put all components obtained from one $B_i$ into one group. This gives a rooted forest on $U$ with $m$ nonempty groups of components.
+>
+> Conversely, for each group, add one vertex $\rho_i$ and join it to the roots of all components in that group. The result is a connected graph without cycles, hence a tree. The union of the vertex sets of the components in the group recovers the block $B_i$.
+>
+> The constructions are mutually inverse and introduce no ordering of the groups. Thus the number of pairs is (1). $\square$
+
+When $m=1$, all components of any rooted forest are placed in a single group. Hence $\operatorname{St}(k,1)=(k+1)^{k-1}$ counts all rooted forests on $k$ vertices. The bijection identifies them with trees on the same vertices together with one added vertex.
+
+A graph proof of $A_k(q)=q(q+k)^{k-1}$ by deleting ordinary leaves is given in [[Falling Factorials, Rooted Forests, and Stirling Numbers#A code for a rooted forest|the note on rooted-forest codes]]. It also gives a [[Falling Factorials, Rooted Forests, and Stirling Numbers#Why forest coefficients are r-Stirling numbers|bijection with $r$-Stirling numbers]]: $\operatorname{St}(k,m)=\left\{\begin{smallmatrix}2k\\k+m\end{smallmatrix}\right\}_{k+1}$, where the braces use the full sizes of the set and partition.
+
+## Examples of forest coefficients
 
 The first values are:
 
@@ -110,6 +158,21 @@ $$
 \qquad
 \operatorname{St}(k,k)=1
 $$
+
+## From SPF types to a numerical identity
+
+In this sum over types, $m$ is the number of positive parts of the current type and varies with $\lambda$.
+
+The [[Symmetric Polyforms of the Complete Graph#A numerical identity from the two expansions|numerical identity from the two expansions]] establishes that, for $n\geqslant k+1$,
+
+$$
+\sum_{\substack{\lambda\vdash k\\m\leqslant n-k}}
+\frac{(n-k-1)!}{(n-k-m)!}\,
+s_2(\lambda)t(\lambda)
+=n^{k-1}
+$$
+
+The condition $m\leqslant n-k$ means that enough vertices are available for the type. The factorial ratio comes from the [[Fundamental Theorem of Symmetric Polyforms#Statement and scope|fundamental theorem of SPFs]]; its proof need not be repeated here.
 
 ## The expansion of Abel polynomials
 
@@ -180,46 +243,6 @@ $$
 
 The two sets of coefficients refer to different bases of the polynomial space. Their combinatorial meanings also differ.
 
-## What forest coefficients count
-
-Consider a set $U$ of $k$ labelled vertices. Partition it into $m$ nonempty unordered blocks $B_1,\ldots,B_m$. Add one new vertex $\rho_i$ to each block and choose a tree on $B_i\cup\{\rho_i\}$.
-
-The vertex $\rho_i$ is distinguished in advance as the root. It is attached to its block; neither roots nor blocks have an independent ordering. If $\#B_i=k_i$, the number of trees is $(k_i+1)^{k_i-1}$ by [[Symmetric Polyforms of the Complete Graph#The top grade and Cayley's formula|Cayley's formula]]. No additional factor for choosing a root occurs.
-
-> [!info] What forest coefficients count
-> **Proposition.** The number of such collections of blocks with trees is $\operatorname{St}(k,m)$.
-
-> [!note]- Proof
-> **Proof.** For a fixed list of sizes $\lambda$, there are $s_2(\lambda)$ partitions of $U$ and $t(\lambda)$ independent choices of trees. Summing over all $\lambda$ with $m$ parts gives (1). $\square$
-
-Although the sizes of the augmented trees agree with the sizes of the nontrivial components in the SPF type, this is a separate model on $k$ labelled vertices and $m$ added roots. It does not count all forests of the original $K_n$.
-
-### Deleting the added roots
-
-> [!info] Deleting the added roots
-> **Definition.** A rooted forest is a forest with one distinguished vertex, called the root, in each component. A singleton component also has a root.
-
-> [!info] A forest with grouped components
-> **Theorem.** The number $\operatorname{St}(k,m)$ counts pairs consisting of:
->
-> - a rooted forest on a prescribed set of $k$ labelled vertices;
-> - a partition of its set of components into $m$ nonempty unordered groups.
->
-> The forest itself may have more than $m$ components.
-
-> [!note]- Proof by a bijection
-> **Proof.** In each tree on $B_i\cup\{\rho_i\}$, delete $\rho_i$ and all edges incident to it. The result is a nonempty forest on $B_i$. Each of its components contained exactly one neighbor of $\rho_i$: having none would contradict connectedness of the original tree, while having two would create a cycle.
->
-> Distinguish this neighbor as the root of the component. Put all components obtained from one $B_i$ into one group. This gives a rooted forest on $U$ with $m$ nonempty groups of components.
->
-> Conversely, for each group, add one vertex $\rho_i$ and join it to the roots of all components in that group. The result is a connected graph without cycles, hence a tree. The union of the vertex sets of the components in the group recovers the block $B_i$.
->
-> The constructions are mutually inverse and introduce no ordering of the groups. Thus the number of pairs is (1). $\square$
-
-When $m=1$, all components of any rooted forest are placed in a single group. Hence $\operatorname{St}(k,1)=(k+1)^{k-1}$ counts all rooted forests on $k$ vertices. The bijection identifies them with trees on the same vertices together with one added vertex.
-
-A graph proof of $A_k(q)=q(q+k)^{k-1}$ by deleting ordinary leaves is given in [[Falling Factorials, Rooted Forests, and Stirling Numbers#A code for a rooted forest|the note on rooted-forest codes]]. It also gives a [[Falling Factorials, Rooted Forests, and Stirling Numbers#Why forest coefficients are r-Stirling numbers|bijection with $r$-Stirling numbers]]: $\operatorname{St}(k,m)=\left\{\begin{smallmatrix}2k\\k+m\end{smallmatrix}\right\}_{k+1}$, where the braces use the full sizes of the set and partition.
-
 ## Ordinary coefficients and Stirling numbers
 
 In *Graphs and Topology*, Section 8.3, Theorem 8.3.1 [1], Lando proves that the coefficient of $x^r$ in $A_k(x)$ is the number of rooted labelled forests on $k$ vertices with $r$ components. Expanding $x(x+k)^{k-1}$ gives this count explicitly:
@@ -230,6 +253,14 @@ $$
 $$
 
 Here $[x^r]$ denotes extraction of the coefficient of the ordinary power.
+
+For the complete graph with unit conductances, the same polynomial is obtained from the vertex toponome $P_{K_k}(t)=(1+kt)^{k-1}$:
+
+$$
+A_k(x)=x^kP_{K_k}(1/x)
+$$
+
+The exponent of $t$ counts forest edges, while the exponent of $x$ counts components. This correspondence, including the coefficients $[1,6,9]$, is proved in [[Forest Coefficients and the Laplacian Polynomial#Complete graphs and Abel polynomials|the section on the complete graph and Abel polynomials]]. The transition considered here is different: from ordinary powers to falling factorials.
 
 Recall the [[Partitions and the Combinatorial Potential of the Second Kind#From type potentials to Stirling and Bell numbers|definition of a Stirling number of the second kind]]: $S(r,m)$ counts partitions of $r$ elements into $m$ nonempty unordered blocks. In this section, $r$ counts components of a rooted forest on an auxiliary set, and $m$ counts groups of those components.
 
@@ -293,6 +324,10 @@ A_3(2)=2\cdot5^2=50
 $$
 
 In $32$ forests, one root is isolated and the other belongs to a tree containing the three ordinary vertices. In $18$ forests, both roots belong to nontrivial components.
+
+![Fifty Forests with Two Prescribed Roots](<Fifty Forests with Two Prescribed Roots.svg>)
+
+One representative of each case is shown. Left: one prescribed root is isolated, giving $2\cdot16=32$ forests. Right: both roots are occupied, giving $2!\cdot9=18$ forests. The total is $50$.
 
 ## Finite differences and the exact correspondence with OEIS
 

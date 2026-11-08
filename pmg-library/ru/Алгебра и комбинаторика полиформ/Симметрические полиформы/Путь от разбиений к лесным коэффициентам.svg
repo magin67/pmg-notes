@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="432pt" viewBox="0 0 792 432" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:description>Путь от разбиений к лесным коэффициентам</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 432 
+L 792 432 
+L 792 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 82.6848 100.08 
+L 709.3152 100.08 
+Q 717.264 100.08 717.264 92.1312 
+L 717.264 49.0752 
+Q 717.264 41.1264 709.3152 41.1264 
+L 82.6848 41.1264 
+Q 74.736 41.1264 74.736 49.0752 
+L 74.736 92.1312 
+Q 74.736 100.08 82.6848 100.08 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #276b9c; opacity: 0.07; stroke: #276b9c; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 82.6848 100.08 
+L 709.3152 100.08 
+Q 717.264 100.08 717.264 92.1312 
+L 717.264 49.0752 
+Q 717.264 41.1264 709.3152 41.1264 
+L 82.6848 41.1264 
+Q 74.736 41.1264 74.736 49.0752 
+L 74.736 92.1312 
+Q 74.736 100.08 82.6848 100.08 
+L 82.6848 100.08 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #276b9c; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 82.6848 174.2688 
+L 709.3152 174.2688 
+Q 717.264 174.2688 717.264 166.32 
+L 717.264 123.264 
+Q 717.264 115.3152 709.3152 115.3152 
+L 82.6848 115.3152 
+Q 74.736 115.3152 74.736 123.264 
+L 74.736 166.32 
+Q 74.736 174.2688 82.6848 174.2688 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #147b66; opacity: 0.07; stroke: #147b66; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 82.6848 174.2688 
+L 709.3152 174.2688 
+Q 717.264 174.2688 717.264 166.32 
+L 717.264 123.264 
+Q 717.264 115.3152 709.3152 115.3152 
+L 82.6848 115.3152 
+Q 74.736 115.3152 74.736 123.264 
+L 74.736 166.32 
+Q 74.736 174.2688 82.6848 174.2688 
+L 82.6848 174.2688 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #147b66; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 82.6848 248.4576 
+L 709.3152 248.4576 
+Q 717.264 248.4576 717.264 240.5088 
+L 717.264 197.4528 
+Q 717.264 189.504 709.3152 189.504 
+L 82.6848 189.504 
+Q 74.736 189.504 74.736 197.4528 
+L 74.736 240.5088 
+Q 74.736 248.4576 82.6848 248.4576 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #276b9c; opacity: 0.07; stroke: #276b9c; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 82.6848 248.4576 
+L 709.3152 248.4576 
+Q 717.264 248.4576 717.264 240.5088 
+L 717.264 197.4528 
+Q 717.264 189.504 709.3152 189.504 
+L 82.6848 189.504 
+Q 74.736 189.504 74.736 197.4528 
+L 74.736 240.5088 
+Q 74.736 248.4576 82.6848 248.4576 
+L 82.6848 248.4576 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #276b9c; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 82.6848 322.6464 
+L 709.3152 322.6464 
+Q 717.264 322.6464 717.264 314.6976 
+L 717.264 271.6416 
+Q 717.264 263.6928 709.3152 263.6928 
+L 82.6848 263.6928 
+Q 74.736 263.6928 74.736 271.6416 
+L 74.736 314.6976 
+Q 74.736 322.6464 82.6848 322.6464 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #147b66; opacity: 0.07; stroke: #147b66; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 82.6848 322.6464 
+L 709.3152 322.6464 
+Q 717.264 322.6464 717.264 314.6976 
+L 717.264 271.6416 
+Q 717.264 263.6928 709.3152 263.6928 
+L 82.6848 263.6928 
+Q 74.736 263.6928 74.736 271.6416 
+L 74.736 314.6976 
+Q 74.736 322.6464 82.6848 322.6464 
+L 82.6848 322.6464 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #147b66; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 82.6848 396.8352 
+L 709.3152 396.8352 
+Q 717.264 396.8352 717.264 388.8864 
+L 717.264 345.8304 
+Q 717.264 337.8816 709.3152 337.8816 
+L 82.6848 337.8816 
+Q 74.736 337.8816 74.736 345.8304 
+L 74.736 388.8864 
+Q 74.736 396.8352 82.6848 396.8352 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #276b9c; opacity: 0.07; stroke: #276b9c; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 82.6848 396.8352 
+L 709.3152 396.8352 
+Q 717.264 396.8352 717.264 388.8864 
+L 717.264 345.8304 
+Q 717.264 337.8816 709.3152 337.8816 
+L 82.6848 337.8816 
+Q 74.736 337.8816 74.736 345.8304 
+L 74.736 388.8864 
+Q 74.736 396.8352 82.6848 396.8352 
+L 82.6848 396.8352 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #276b9c; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #263d4c; font: 700 17px 'DejaVu Sans'; text-anchor: middle" x="396" y="70.603716" transform="rotate(-0 396 70.603716)">Разбиение вершин</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #263d4c; font: 14px 'DejaVu Sans'; text-anchor: middle" x="396" y="88.827144" transform="rotate(-0 396 88.827144)">Какие вершины входят в каждый блок?</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 396 105.389793 
+Q 396 113.660215 396 119.135552 
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+    <path d="M 401.4 108.335552 
+L 396 119.135552 
+L 390.6 108.335552 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #bc641b; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="fill: #263d4c; font: 700 17px 'DejaVu Sans'; text-anchor: middle" x="396" y="144.382125" transform="rotate(-0 396 144.382125)">Симметрическая сумма</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #263d4c; font: 14px 'DejaVu Sans'; text-anchor: middle" x="396" y="163.015944" transform="rotate(-0 396 163.015944)">Все разбиения одного типа, каждое один раз</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 396 179.578593 
+Q 396 187.849015 396 193.324352 
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+    <path d="M 401.4 182.524352 
+L 396 193.324352 
+L 390.6 182.524352 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #bc641b; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #263d4c; font: 700 17px 'DejaVu Sans'; text-anchor: middle" x="396" y="218.703738" transform="rotate(-0 396 218.703738)">Главная полиформа</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #263d4c; font: 14px 'DejaVu Sans'; text-anchor: middle" x="396" y="237.204744" transform="rotate(-0 396 237.204744)">Один нетривиальный блок в каждом слагаемом</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 396 253.767393 
+Q 396 262.037815 396 267.513152 
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+    <path d="M 401.4 256.713152 
+L 396 267.513152 
+L 390.6 256.713152 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #bc641b; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="fill: #263d4c; font: 700 17px 'DejaVu Sans'; text-anchor: middle" x="396" y="292.929725" transform="rotate(-0 396 292.929725)">Произведения и полный граф</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #263d4c; font: 14px 'DejaVu Sans'; text-anchor: middle" x="396" y="311.274325" transform="rotate(-0 396 311.274325)">Правило умножения и лесное разложение</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 396 327.956193 
+Q 396 336.226615 396 341.701952 
+" clip-path="url(#p5ec31f5645)" style="fill: none; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+    <path d="M 401.4 330.901952 
+L 396 341.701952 
+L 390.6 330.901952 
+z
+" clip-path="url(#p5ec31f5645)" style="fill: #bc641b; stroke: #bc641b; stroke-width: 2.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #263d4c; font: 700 17px 'DejaVu Sans'; text-anchor: middle" x="396" y="367.081338" transform="rotate(-0 396 367.081338)">Лесные коэффициенты</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #263d4c; font: 14px 'DejaVu Sans'; text-anchor: middle" x="396" y="385.582344" transform="rotate(-0 396 385.582344)">Корни, группы компонент и многочлены Абеля</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5ec31f5645">
+   <rect x="31.68" y="17.28" width="728.64" height="397.44"/>
+  </clipPath>
+ </defs>
+</svg>

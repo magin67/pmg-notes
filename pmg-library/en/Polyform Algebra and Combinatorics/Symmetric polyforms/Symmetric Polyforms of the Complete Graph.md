@@ -1,9 +1,9 @@
 ---
 title: "Symmetric Polyforms of the Complete Graph"
 date: 2026-10-19
-updated: 2026-10-20
-revision: 4
-source_revision: 5
+updated: 2026-11-08
+revision: 5
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-of-the-complete-graph
@@ -93,6 +93,92 @@ $$
 $$
 
 It is the sum of the weights of the trees; the number of trees itself remains (2).
+
+## The complete graph on five vertices
+
+Fix the partition $\{a,b,c\}|\{d,e\}$ of type $[2,1]$. One of three trees can be chosen on the triple, while there is only one edge on the pair. Their contribution is
+
+$$
+\begin{aligned}
+&[(ab)(ac)(de)]^2+[(ab)(bc)(de)]^2+[(ac)(bc)(de)]^2=\\
+&=3[(abc)(de)]^2
+\end{aligned}
+$$
+
+The same coefficient $3$ occurs for each of the ten set partitions of type $[2,1]$. The full contribution of this type is therefore $3E_5[2,1]$ and accounts for $30$ forests.
+
+![Three Forests for One Partition](<Three Forests for One Partition.svg>)
+
+Three different forests give the same form $[(abc)(de)]^2$. Five vertices admit ten partitions of this type, so there are $10\cdot3=30$ forests in total.
+
+Let $M_k$ be the sum of contributions of all spanning forests of $K_5$ with $k$ edges. Grouping them by partition type gives
+
+$$
+\begin{aligned}
+M_0&=e\\
+M_1&=E_5[1]\\
+M_2&=3E_5[2]+E_5[1,1]\\
+M_3&=16E_5[3]+3E_5[2,1]\\
+M_4&=125E_5[4]
+\end{aligned}
+$$
+
+Zero parts of the types are omitted here; their multiplicity is uniquely recovered from the vertex count $5$. All types and their forest contributions are listed in the table.
+
+| Grade | Full type | Size of $E_5$ | Coefficient $t(\lambda)$ | Number of forests |
+|---:|---|---:|---:|---:|
+| $0$ | $[0^5]$ | $1$ | $1$ | $1$ |
+| $1$ | $[1,0^3]$ | $10$ | $1$ | $10$ |
+| $2$ | $[2,0^2]$ | $10$ | $3$ | $30$ |
+| $2$ | $[1,1,0]$ | $15$ | $1$ | $15$ |
+| $3$ | $[3,0]$ | $5$ | $16$ | $80$ |
+| $3$ | $[2,1]$ | $10$ | $3$ | $30$ |
+| $4$ | $[4]$ | $1$ | $125$ | $125$ |
+
+In the grade-zero row, the coefficient $1$ corresponds to the unique empty forest. In all other rows, $t(\lambda)$ counts choices of trees within one fixed partition. A block of $b\geqslant2$ vertices has $b^{b-2}$ trees by Cayley's formula, and choices for different blocks are independent. Thus a quadruple gives $4^2=16$, and a triple with a pair gives $3\cdot1=3$. The general expression for this product is given below.
+
+Now apply the [[Fundamental Theorem of Symmetric Polyforms|fundamental theorem]]:
+
+$$
+E_5[1,1]=2E_5[2],\qquad
+E_5[2,1]=3E_5[3]
+$$
+
+We obtain
+
+$$
+M_2=(3+2)E_5[2]=5E_5[2],\qquad
+M_3=(16+3\cdot3)E_5[3]=25E_5[3]
+$$
+
+Hence
+
+$$
+\boxed{
+M_{K_5}=e+E_5[1]+5E_5[2]+25E_5[3]+125E_5[4]
+}
+$$
+
+This agrees with (1), with $E_5[4]=[(abcde)]^2$.
+
+### Forest counts and the sum of coefficients
+
+The table gives the forest counts by grade:
+
+$$
+\bigl(s_0(K_5),s_1(K_5),s_2(K_5),s_3(K_5),s_4(K_5)\bigr)
+=(1,10,45,110,125)
+$$
+
+There are $291$ spanning forests in total, including the empty forest.
+
+At grade two, expanding the symmetric sums in the forest representation $3E_5[2]+E_5[1,1]$ gives a representation of size $10+15=25$ and a coefficient sum of $3\cdot10+15=45$. After transformation to $5E_5[2]$, the size is $10$ and the coefficient sum is $50$.
+
+At grade three, the forest representation has coefficient sum $16\cdot5+3\cdot10=110$. The same polyform written as $25E_5[3]$ has coefficient sum $125$.
+
+There is no contradiction: structural identities preserve the polyform, but not an arbitrary sum of the coefficients in its representation. The coefficient $5$ of $E_5[2]$ therefore cannot be interpreted as the number of trees on a triple: that number is $3$. The additional contribution arose from transforming forms of two disjoint edges.
+
+Numerical metric evaluation is a linear function of the form and is preserved under these transformations. Simply adding the coefficients of all forms in a chosen representation does not define such a function.
 
 ## Expansion by forest type
 
@@ -191,88 +277,6 @@ The notation $s_k(K_n)$ refers to a graph and an edge count, while $s_2(\lambda)
 For $k=0$, we have $s_0(K_n)=1$, corresponding to the forest with no edges. With a common conductance $c$, the corresponding sum of forest weights is $c^k s_k(K_n)$, where $s_k(K_n)$ on the right denotes the number of forests of the graph with unit conductances.
 
 The size of the sum $E_n[\lambda,0^\ell]$ counts set partitions, not individual forests. The coefficient $t(\lambda)$ recovers the number of forests for each partition. After further transformation of the forms by the fundamental theorem, the ordinary sum of coefficients need no longer retain this combinatorial meaning.
-
-## The complete graph on five vertices
-
-For $K_5$ on vertices $\{a,b,c,d,e\}$, formula (3) gives
-
-$$
-\begin{aligned}
-M_0&=e\\
-M_1&=E_5[1]\\
-M_2&=3E_5[2]+E_5[1,1]\\
-M_3&=16E_5[3]+3E_5[2,1]\\
-M_4&=125E_5[4]
-\end{aligned}
-$$
-
-Zero parts of the types are omitted here; their multiplicity is uniquely recovered from the vertex count $5$. All types and their forest contributions are listed in the table.
-
-| Grade | Full type | Size of $E_5$ | Coefficient $t(\lambda)$ | Number of forests |
-|---:|---|---:|---:|---:|
-| $0$ | $[0^5]$ | $1$ | $1$ | $1$ |
-| $1$ | $[1,0^3]$ | $10$ | $1$ | $10$ |
-| $2$ | $[2,0^2]$ | $10$ | $3$ | $30$ |
-| $2$ | $[1,1,0]$ | $15$ | $1$ | $15$ |
-| $3$ | $[3,0]$ | $5$ | $16$ | $80$ |
-| $3$ | $[2,1]$ | $10$ | $3$ | $30$ |
-| $4$ | $[4]$ | $1$ | $125$ | $125$ |
-
-In the grade-zero row, the coefficient $1$ corresponds to the unique empty forest. In all other rows, it is computed by the formula for $t(\lambda)$.
-
-For example, fix the partition $\{a,b,c\}|\{d,e\}$ of type $[2,1]$. One of three trees can be chosen on the triple, while there is only one edge on the pair. Their contribution is
-
-$$
-\begin{aligned}
-&[(ab)(ac)(de)]^2+[(ab)(bc)(de)]^2+[(ac)(bc)(de)]^2=\\
-&=3[(abc)(de)]^2
-\end{aligned}
-$$
-
-The same coefficient $3$ occurs for each of the ten set partitions of type $[2,1]$. The full contribution of this type is therefore $3E_5[2,1]$ and accounts for $30$ forests.
-
-Now apply the [[Fundamental Theorem of Symmetric Polyforms|fundamental theorem]]:
-
-$$
-E_5[1,1]=2E_5[2],\qquad
-E_5[2,1]=3E_5[3]
-$$
-
-We obtain
-
-$$
-M_2=(3+2)E_5[2]=5E_5[2],\qquad
-M_3=(16+3\cdot3)E_5[3]=25E_5[3]
-$$
-
-Hence
-
-$$
-\boxed{
-M_{K_5}=e+E_5[1]+5E_5[2]+25E_5[3]+125E_5[4]
-}
-$$
-
-This agrees with (1), with $E_5[4]=[(abcde)]^2$.
-
-### Forest counts and the sum of coefficients
-
-The table gives the forest counts by grade:
-
-$$
-\bigl(s_0(K_5),s_1(K_5),s_2(K_5),s_3(K_5),s_4(K_5)\bigr)
-=(1,10,45,110,125)
-$$
-
-There are $291$ spanning forests in total, including the empty forest.
-
-At grade two, expanding the symmetric sums in the forest representation $3E_5[2]+E_5[1,1]$ gives a representation of size $10+15=25$ and a coefficient sum of $3\cdot10+15=45$. After transformation to $5E_5[2]$, the size is $10$ and the coefficient sum is $50$.
-
-At grade three, the forest representation has coefficient sum $16\cdot5+3\cdot10=110$. The same polyform written as $25E_5[3]$ has coefficient sum $125$.
-
-There is no contradiction: structural identities preserve the polyform, but not an arbitrary sum of the coefficients in its representation. The coefficient $5$ of $E_5[2]$ therefore cannot be interpreted as the number of trees on a triple: that number is $3$. The additional contribution arose from transforming forms of two disjoint edges.
-
-Numerical metric evaluation is a linear function of the form and is preserved under these transformations. Simply adding the coefficients of all forms in a chosen representation does not define such a function.
 
 ## A numerical identity from the two expansions
 
@@ -375,6 +379,10 @@ $$
 Here $(M_{K_n})_0=e$, and $(M_{K_n})_r=n^{r-1}E_n[r]$ for $r\ge1$. Dividing an individual principal SPF by $M_{\overline G}$ does not in general give the corresponding grade component of $G$: lower grades of the complete graph also contribute.
 
 ### Example: deleting the diagonals of a four-cycle
+
+![From the Complete Graph to the Four-Cycle](<From the Complete Graph to the Four-Cycle.svg>)
+
+The top row shows the deletion of the diagonals from $K_4$. Below are all four spanning trees and all six two-edge forests of the resulting cycle. Missing edges are dashed.
 
 Let $C_4$ have edges $ab,bc,cd,da$. The diagonals $ac,bd$ are deleted from $K_4$. Set
 

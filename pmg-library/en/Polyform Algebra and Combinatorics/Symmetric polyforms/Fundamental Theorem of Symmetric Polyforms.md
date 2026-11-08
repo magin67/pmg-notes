@@ -1,9 +1,9 @@
 ---
 title: "Fundamental Theorem of Symmetric Polyforms"
 date: 2026-10-19
-updated: 2026-10-21
-revision: 5
-source_revision: 9
+updated: 2026-11-08
+revision: 6
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: fundamental-theorem-of-symmetric-polyforms
@@ -19,6 +19,22 @@ At a fixed positive grade, all symmetric sums of partition forms are proportiona
 The theorem is stated below in the normalization $E_n[\lambda]$, where each partition into unordered blocks is counted once. The idea of the main proof is due to Dmitry Malugin; the exposition was prepared by ChatGPT. An independent explanation using classical representation theory is given at the end.
 
 We use the definitions in [[Symmetric Polyforms - Types and Normalizations|Symmetric Polyforms: Types and Normalizations]] and the properties of the [[Basic Objects and Operations of Polyform Algebra#The boundary operator|boundary operator]]. The main proof requires neither a graph nor a metric.
+
+
+
+## An example before the general formula
+
+On five vertices $a,b,c,d,e$, compare two types: a triple with a pair, and a quadruple with a singleton. The first type has $\binom52=10$ partitions, and the second has $5$. Their sums of forms satisfy
+
+$$
+E_5[2,1]=3E_5[3,0]=3E_5[3]
+$$
+
+The coefficient $3$ is obtained in the block-merging lemma as $\binom32$. The number of terms alone does not determine it: there are ten forms on the left and five forms with coefficient $3$ on the right. Both this identity and the formula for every admissible type are proved below.
+
+![Sums of Forms on Five Vertices](<Sums of Forms on Five Vertices.svg>)
+
+Each row depicts one partition and denotes its quadratic form. The equality relates the sums of all rows; it does not pair individual forms row by row.
 
 ## Statement and scope
 
@@ -316,16 +332,18 @@ The number of omitted zeros in these two formulas is determined by $n$, accordin
 
 On the set $\{a,b,c,d,e\}$, the equality $E_5[2,1]=3E_5[3,0]$ expands as follows:
 
-$$
-\begin{aligned}
-&[(ab)(cde)]^2+[(ac)(bde)]^2+\\
-&+[(ad)(bce)]^2+[(ae)(bcd)]^2+\\
-&+[(bc)(ade)]^2+[(bd)(ace)]^2+\\
-&+[(be)(acd)]^2+[(cd)(abe)]^2+\\
-&+[(ce)(abd)]^2+[(de)(abc)]^2=\\
-&=3\bigl([(abcd)]^2+[(abce)]^2+[(abde)]^2+[(acde)]^2+[(bcde)]^2\bigr)
-\end{aligned}
-$$
+> [!example]- Full expansion in vertices
+>
+> $$
+> \begin{aligned}
+> &[(ab)(cde)]^2+[(ac)(bde)]^2+\\
+> &+[(ad)(bce)]^2+[(ae)(bcd)]^2+\\
+> &+[(bc)(ade)]^2+[(bd)(ace)]^2+\\
+> &+[(be)(acd)]^2+[(cd)(abe)]^2+\\
+> &+[(ce)(abd)]^2+[(de)(abc)]^2=\\
+> &=3\bigl([(abcd)]^2+[(abce)]^2+[(abde)]^2+[(acde)]^2+[(bcde)]^2\bigr)
+> \end{aligned}
+> $$
 
 The left-hand side contains ten partitions into a pair and a triple. Each pair uniquely determines its complementary triple; the blocks are distinguished by size, so there is no division by $2$. On the right are five four-vertex boundaries, each with coefficient $3$. The vertex not displayed in a term forms a singleton block.
 
@@ -333,20 +351,22 @@ The left-hand side contains ten partitions into a pair and a triple. Each pair u
 
 On the set $\{a,b,c,d,e,f\}$, the equality $E_6[1,1,1]=2E_6[3,0^2]$ takes the form
 
-$$
-\begin{aligned}
-&[(ab)(cd)(ef)]^2+[(ab)(ce)(df)]^2+[(ab)(cf)(de)]^2+\\
-&+[(ac)(bd)(ef)]^2+[(ac)(be)(df)]^2+[(ac)(bf)(de)]^2+\\
-&+[(ad)(bc)(ef)]^2+[(ad)(be)(cf)]^2+[(ad)(bf)(ce)]^2+\\
-&+[(ae)(bc)(df)]^2+[(ae)(bd)(cf)]^2+[(ae)(bf)(cd)]^2+\\
-&+[(af)(bc)(de)]^2+[(af)(bd)(ce)]^2+[(af)(be)(cd)]^2=\\
-&=2\bigl([(abcd)]^2+[(abce)]^2+[(abcf)]^2+\\
-&\qquad+[(abde)]^2+[(abdf)]^2+[(abef)]^2+\\
-&\qquad+[(acde)]^2+[(acdf)]^2+[(acef)]^2+\\
-&\qquad+[(adef)]^2+[(bcde)]^2+[(bcdf)]^2+\\
-&\qquad+[(bcef)]^2+[(bdef)]^2+[(cdef)]^2\bigr)
-\end{aligned}
-$$
+> [!example]- Full expansion in vertices
+>
+> $$
+> \begin{aligned}
+> &[(ab)(cd)(ef)]^2+[(ab)(ce)(df)]^2+[(ab)(cf)(de)]^2+\\
+> &+[(ac)(bd)(ef)]^2+[(ac)(be)(df)]^2+[(ac)(bf)(de)]^2+\\
+> &+[(ad)(bc)(ef)]^2+[(ad)(be)(cf)]^2+[(ad)(bf)(ce)]^2+\\
+> &+[(ae)(bc)(df)]^2+[(ae)(bd)(cf)]^2+[(ae)(bf)(cd)]^2+\\
+> &+[(af)(bc)(de)]^2+[(af)(bd)(ce)]^2+[(af)(be)(cd)]^2=\\
+> &=2\bigl([(abcd)]^2+[(abce)]^2+[(abcf)]^2+\\
+> &\qquad+[(abde)]^2+[(abdf)]^2+[(abef)]^2+\\
+> &\qquad+[(acde)]^2+[(acdf)]^2+[(acef)]^2+\\
+> &\qquad+[(adef)]^2+[(bcde)]^2+[(bcdf)]^2+\\
+> &\qquad+[(bcef)]^2+[(bdef)]^2+[(cdef)]^2\bigr)
+> \end{aligned}
+> $$
 
 The left-hand side contains all $15$ partitions into three unordered pairs. To enumerate them, first choose the partner of vertex $a$ in five ways, then partition the remaining four vertices into pairs in three ways. Permuting the three pairs does not create a new term.
 
@@ -356,16 +376,18 @@ The right-hand side contains all $15$ four-vertex boundaries with coefficient $2
 
 On the same vertex set, the equality $E_6[2,2]=3E_6[4,0]$ expands to
 
-$$
-\begin{aligned}
-&[(abc)(def)]^2+[(abd)(cef)]^2+\\
-&+[(abe)(cdf)]^2+[(abf)(cde)]^2+\\
-&+[(acd)(bef)]^2+[(ace)(bdf)]^2+\\
-&+[(acf)(bde)]^2+[(ade)(bcf)]^2+\\
-&+[(adf)(bce)]^2+[(aef)(bcd)]^2=\\
-&=3\bigl([(abcde)]^2+[(abcdf)]^2+[(abcef)]^2+[(abdef)]^2+[(acdef)]^2+[(bcdef)]^2\bigr)
-\end{aligned}
-$$
+> [!example]- Full expansion in vertices
+>
+> $$
+> \begin{aligned}
+> &[(abc)(def)]^2+[(abd)(cef)]^2+\\
+> &+[(abe)(cdf)]^2+[(abf)(cde)]^2+\\
+> &+[(acd)(bef)]^2+[(ace)(bdf)]^2+\\
+> &+[(acf)(bde)]^2+[(ade)(bcf)]^2+\\
+> &+[(adf)(bce)]^2+[(aef)(bcd)]^2=\\
+> &=3\bigl([(abcde)]^2+[(abcdf)]^2+[(abcef)]^2+[(abdef)]^2+[(acdef)]^2+[(bcdef)]^2\bigr)
+> \end{aligned}
+> $$
 
 On the left, each partition into two triples is displayed once: $a$ always belongs to the first block. There are therefore $\binom{5}{2}=10$ terms. Enumerating all $\binom{6}{3}=20$ triples without this restriction would count each partition twice.
 
@@ -404,6 +426,10 @@ Let $\mathcal P_{n,k}$ be the [[Basis and Dimension of the Space of Partition Fo
 In particular, $\dim\mathcal P_n^{S_n}=n$. Uniqueness concerns the coefficients $c_k$ in the principal representation (4). An expression through sums of different types may be nonunique; the type still refers to the chosen representation of the polyform.
 
 Every linear metric evaluation preserves identity (1). For a form $[X]^2$, such an evaluation gives the quadratic norm $X^2=X\cdot X$. The coefficient sum of an arbitrary expression does not have this property: for example, the identity $E_4[1,1]=E_4[2,0]$ relates expressions with three and four terms of unit coefficient.
+
+## Additional route
+
+The main result and its proof are now established. For multiplication, continue to [[Products and Powers of Symmetric Polyforms]]. The remaining sections address three additional questions: which numerical substitutions preserve the identities, how many independent symmetric relations exist, and how classical representation theory explains the result.
 
 ## Substituting numbers for components while preserving identities
 

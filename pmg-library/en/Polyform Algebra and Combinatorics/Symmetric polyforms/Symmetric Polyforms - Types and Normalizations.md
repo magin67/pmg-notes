@@ -1,9 +1,9 @@
 ---
 title: "Symmetric Polyforms: Types and Normalizations"
 date: 2026-10-19
-updated: 2026-10-20
-revision: 6
-source_revision: 5
+updated: 2026-11-08
+revision: 7
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-types-and-normalizations
@@ -19,6 +19,18 @@ The sum of all partition forms of one type is invariant under every permutation 
 This note defines symmetry, specifies the types and normalization of the sums $E_n[\lambda]$, and introduces principal symmetric polyforms (principal SPFs), whose terms have one nontrivial component. The main question for the continuation of the series is how to express a symmetric sum of an arbitrary type in terms of the principal polyform of the same grade.
 
 We use the [[Basic Objects and Operations of Polyform Algebra|algebra of forms]] and [[Partition Forms and the Tetrahedron Identity|partition forms]]. The definition of $E_n[\lambda]$ is retained from the note on [[Constructing Structural Identities#From local identities to symmetric sums|constructing structural identities]]. The algebraic part requires no choice of graph or metric.
+
+
+
+## One example before the definitions
+
+Partition six vertices as $abc\mid de\mid f$. The block sizes are $3,2,1$, and their boundary grades are $2,1,0$: subtract one from each size. The full type is therefore $[2,1,0]$, with total grade $k=3$. There are $m=3$ components, of which $r=2$ are nontrivial and $\ell=1$ is a singleton.
+
+The partition form is $[(abc)(de)]^2$: the singleton contributes the multiplicative identity. This is one term of a symmetric sum. To obtain all of $E_6[2,1,0]$, count each partition of the six vertices into blocks of sizes $3,2,1$ exactly once.
+
+![A Partition and Its Block Grades](<A Partition and Its Block Grades.svg>)
+
+Color and outlines distinguish the blocks. The picture specifies their vertex sets; choosing a tree inside a block is unnecessary for defining the type.
 
 ## Vertex permutations and symmetry
 
@@ -84,7 +96,7 @@ Products of boundaries are exterior products by default. The order of vertices w
 
 The parts are arranged in nonincreasing order. The size of a block is its number of vertices, and the corresponding part of the type is one less than that size.
 
-Let the positive parts of the type be $k_1,\ldots,k_r$. Write $k$ for their sum and $\ell$ for the number of singleton blocks. Throughout this series, when describing a type, $m$ is the full number of components, $r$ counts nontrivial components, and $\ell=m-r$. Then
+Let the positive parts of the type be $k_1,\ldots,k_r$. Write $k$ for their sum and $\ell$ for the number of singleton blocks. When describing a type in this note, $m$ is the full number of components, $r$ counts nontrivial components, and $\ell=m-r$. Then
 
 $$
 k=\sum_{i=1}^r k_i=\operatorname{gr}q_\pi,\qquad
@@ -149,103 +161,6 @@ In the first sum, $ab|cd$ and $cd|ab$ are not counted as different partitions. S
 
 The definition sums over partitions, rather than all forests of the given type. A single partition may have several tree realizations. For example, there are three trees on three vertices, each giving the form $[(abc)]^2$. The sum of these three forms is $3E_3[2]$, whereas $E_3[2]$ counts the partition $abc$ only once.
 
-## Representation size and factorial factors
-
-Let $\lambda=[k_1,\ldots,k_r]$ contain positive parts, with $k=\sum_i k_i$ and $\ell=n-k-r\geqslant0$. Let $J$ be the set of distinct values in $\lambda$. For $j\in J$, let $\mu_j$ denote the number of occurrences of $j$ in this list:
-
-$$
-\mu_j=\#\{i:k_i=j\},\qquad \sum_{j\in J}\mu_j=r
-$$
-
-The multiplicity collection is $\boldsymbol\mu=[\mu_j]_{j\in J}$. We use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]: $[u_i]!$ is the product of its elements, and $[u_i!]!$ the product of their factorials. Below, $i$ ranges over $1,\ldots,r$ and $j$ over $J$.
-
-> [!info] Representation size and factorial factors
-> **Definition.** The **size of a polyform representation** is the number of terms in the chosen expression as a sum of forms with coefficients. When the representation is specified, we will simply say **size**. It depends on the expression: equal polyforms may have representations of different sizes.
-
-In the basic normalization, $\#E_n[\lambda,0^\ell]$ denotes the size of representation (1), namely the number of partitions of the given type. Each partition occurs once, with coefficient $1$.
-
-> [!info] The size of a symmetric sum
-> **Theorem.** With normalization (1),
->
-> $$
-> \boxed{
-> \#E_n[\lambda,0^\ell]
-> =s_2([k_1+1,\ldots,k_r+1,1^\ell])
-> =\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
-> }
-> \tag{2}
-> $$
->
-> The potential is applied to block sizes: add $1$ to each positive grade, while zero grades give singleton blocks.
-
-> [!note]- Proof
-> **Proof.** Partitions occurring in $E_n[\lambda,0^\ell]$ have block-size collection $[k_1+1,\ldots,k_r+1,1^\ell]$. By definition, their number is the combinatorial potential of this collection. Apply the [[Partitions and the Combinatorial Potential of the Second Kind#From repeated counts to the general formula|potential formula]]. The shift $k_i\mapsto k_i+1$ preserves the multiplicities of positive parts. All nontrivial blocks have size at least $2$, while the $\ell$ singletons form a separate group of equal sizes. Their permutations supply the divisor $\ell!$, permutations of the other equal blocks supply $[\mu_j!]!$, and internal permutations supply $[(k_i+1)!]!$. This gives (2). $\square$
-
-| Sum | Count from formula (2) | Size |
-|---|---|---:|
-| $E_4[1,1]$ | $4!/((2!)^2\,2!)$ | 3 |
-| $E_4[2,0]$ | $4!/3!$ | 4 |
-| $E_5[1,0^3]$ | $5!/(3!\,2!)$ | 10 |
-| $E_5[2,1]$ | $5!/(3!\,2!)$ | 10 |
-| $E_6[1,1,1]$ | $6!/((2!)^3\,3!)$ | 15 |
-| $E_6[2,1,0]$ | $6!/(3!\,2!)$ | 60 |
-
-### When blocks are distinguishable
-
-It is sometimes convenient to temporarily number the nontrivial blocks, prescribing size $k_i+1$ for block $i$. Each collection of $\mu_j$ blocks of the same size can then be assigned to the corresponding numbers in $\mu_j!$ ways. If singleton blocks remain unordered, the resulting sum equals
-
-$$
-[\mu_j!]!E_n[\lambda,0^\ell]
-$$
-
-If all singleton blocks are also numbered, an additional factor of $\ell!$ appears. These are different conventions for enumerating terms. Before collecting like terms, the size increases by the same factor.
-
-For example, distinguishing the two blocks of size $2$ changes $E_4[1,1]$ into $2E_4[1,1]$. For type $[1,0^3]$, the sole nontrivial block is already distinguished by its size, whereas numbering the three singleton vertices gives a factor of $3!$.
-
-When using the names “compact” and “full” sum, one must specify which blocks are distinguishable. The basic notation $E_n[\lambda]$ always means normalization (1), with no implicit factorial factors.
-
-## Symmetrization: sum and average
-
-Any two partitions of the same type are related by a vertex permutation: match blocks of equal size and choose bijections between their vertices. This set of partitions is called an **orbit** of the action of $S_n$.
-
-For a fixed partition $\pi$ of type $[k_1,\ldots,k_r,0^\ell]$, summing over all permutations gives
-
-$$
-\sum_{\sigma\in S_n}\sigma q_\pi
-=\ell![(k_i+1)!]!
-[\mu_j!]!E_n[\lambda,0^\ell]
-$$
-
-> [!note]- Proof
-> **Proof.** Every partition in the orbit is obtained by the same number of permutations. To find this number, it suffices to consider permutations preserving the original partition: one can permute vertices within blocks, blocks of equal size, and singleton blocks. The number of these permutations is the factor multiplying $E_n$ in the formula. $\square$
-
-Dividing by $n!$ and using (2) yields the average over permutations:
-
-$$
-\boxed{
-\frac1{n!}\sum_{\sigma\in S_n}\sigma q_\pi
-=\frac{E_n[\lambda,0^\ell]}{\#E_n[\lambda,0^\ell]}
-}
-\tag{3}
-$$
-
-Thus $E_n[\lambda]$ is the sum over the partitions in an orbit, with unit coefficients. Averaging a single form over permutations gives the sum over partitions of its type divided by the size of that sum.
-
-> [!info] Symmetrization: sum and average
-> **Corollary.** Every symmetric polyform in the linear span of partition forms on $A$ can be expressed as a linear combination of the sums $E_n[\lambda]$.
-
-> [!note]- Proof
-> **Proof.** Choose any representation $P=\sum_\pi c_\pi q_\pi$. By symmetry,
->
-> $$
-> P=\frac1{n!}\sum_{\sigma\in S_n}\sigma P
-> =\sum_\pi c_\pi\left(\frac1{n!}\sum_{\sigma\in S_n}\sigma q_\pi\right)
-> $$
->
-> By (3), each parenthesized expression is a scalar multiple of the sum of its type. Grouping by type gives the required representation. $\square$
-
-The corollary establishes the existence of such a representation. It does not assert uniqueness: structural identities relate the sums $E_n[\lambda]$ themselves. Checking the symmetry of an arbitrary expression requires taking identities between forms into account, rather than merely comparing the displayed coefficients. The proof does not require choosing a basis of the space of partition forms.
-
 ## Principal symmetric polyforms
 
 > [!info] Principal symmetric polyform (principal SPF)
@@ -256,18 +171,18 @@ The corollary establishes the existence of such a representation. It does not as
 > E_n[k]=E_n[k,0^{\,n-k-1}]
 > =\sum_{\substack{B\subseteq A\\\#B=k+1}}[(B)]^2
 > }
-> \tag{4}
+> \tag{2}
 > $$
 >
 > Each partition in this sum has exactly one nontrivial block; all remaining vertices form singleton blocks.
 
-Choosing the nontrivial block determines the partition completely. Hence the size of the principal polyform in representation (4) is
+Choosing the nontrivial block determines the partition completely. Hence the size of the principal polyform in representation (2) is
 
 $$
 \#E_n[k]=\binom{n}{k+1}
 $$
 
-This is also the special case of (2) with $r=1$, $\mu_k=1$, and $\ell=n-k-1$.
+As the general counting formula will show, this is the special case of (3) with $r=1$, $\mu_k=1$, and $\ell=n-k-1$.
 
 In grade $1$, we sum the forms of all pairs:
 
@@ -293,13 +208,125 @@ $$
 E_n[0^n]=e
 $$
 
-Definition (4) of principal polyforms applies only to positive $k$. Formally substituting $k=0$ into its subset sum would give
+Definition (2) of principal polyforms applies only to positive $k$. Formally substituting $k=0$ into its subset sum would give
 
 $$
 \sum_{\substack{B\subseteq A\\\#B=1}}[(B)]^2=ne
 $$
 
 The difference arises because this sum makes $n$ choices of a distinguished singleton block within the same partition. We therefore denote the unit form by $e$ or $E_n[0^n]$, without extending the formula for choosing a nontrivial block to this case.
+
+## Representation size and factorial factors
+
+On four vertices there are three partitions into two pairs: $ab\mid cd$, $ac\mid bd$, and $ad\mid bc$. Each of the $4!=24$ permutations produces one of them. Eight permutations preserve a given partition: two orders within each pair and two orders of the pairs. Thus the number of partitions is $24/(2!\,2!\,2!)=3$.
+
+![Three Partitions and Twenty-Four Permutations](<Three Partitions and Twenty-Four Permutations.svg>)
+
+Each partition corresponds to eight permutations. The sum over partitions counts it once; the sum over all permutations counts it eight times.
+
+Let $\lambda=[k_1,\ldots,k_r]$ contain positive parts, with $k=\sum_i k_i$ and $\ell=n-k-r\geqslant0$. Let $J$ be the set of distinct values in $\lambda$. For $j\in J$, let $\mu_j$ denote the number of occurrences of $j$ in this list:
+
+$$
+\mu_j=\#\{i:k_i=j\},\qquad \sum_{j\in J}\mu_j=r
+$$
+
+The multiplicity collection is $\boldsymbol\mu=[\mu_j]_{j\in J}$. We use the [[Partitions and the Combinatorial Potential of the Second Kind#The product of a collection|product of a numerical collection]]: $[u_i]!$ is the product of its elements, and $[u_i!]!$ the product of their factorials. Below, $i$ ranges over $1,\ldots,r$ and $j$ over $J$.
+
+> [!info] Representation size and factorial factors
+> **Definition.** The **size of a polyform representation** is the number of terms in the chosen expression as a sum of forms with coefficients. When the representation is specified, we will simply say **size**. It depends on the expression: equal polyforms may have representations of different sizes.
+
+In the basic normalization, $\#E_n[\lambda,0^\ell]$ denotes the size of representation (1), namely the number of partitions of the given type. Each partition occurs once, with coefficient $1$.
+
+> [!info] The size of a symmetric sum
+> **Theorem.** With normalization (1),
+>
+> $$
+> \boxed{
+> \#E_n[\lambda,0^\ell]
+> =s_2([k_1+1,\ldots,k_r+1,1^\ell])
+> =\frac{n!}{\ell!\,[(k_i+1)!]!\,[\mu_j!]!}
+> }
+> \tag{3}
+> $$
+>
+> The potential is applied to block sizes: add $1$ to each positive grade, while zero grades give singleton blocks.
+
+> [!note]- Proof
+> **Proof.** Partitions occurring in $E_n[\lambda,0^\ell]$ have block-size collection $[k_1+1,\ldots,k_r+1,1^\ell]$. By definition, their number is the combinatorial potential of this collection. Apply the [[Partitions and the Combinatorial Potential of the Second Kind#From repeated counts to the general formula|potential formula]]. The shift $k_i\mapsto k_i+1$ preserves the multiplicities of positive parts. All nontrivial blocks have size at least $2$, while the $\ell$ singletons form a separate group of equal sizes. Their permutations supply the divisor $\ell!$, permutations of the other equal blocks supply $[\mu_j!]!$, and internal permutations supply $[(k_i+1)!]!$. This gives (3). $\square$
+
+| Sum | Count from formula (3) | Size |
+|---|---|---:|
+| $E_4[1,1]$ | $4!/((2!)^2\,2!)$ | 3 |
+| $E_4[2,0]$ | $4!/3!$ | 4 |
+| $E_5[1,0^3]$ | $5!/(3!\,2!)$ | 10 |
+| $E_5[2,1]$ | $5!/(3!\,2!)$ | 10 |
+| $E_6[1,1,1]$ | $6!/((2!)^3\,3!)$ | 15 |
+| $E_6[2,1,0]$ | $6!/(3!\,2!)$ | 60 |
+
+### When blocks are distinguishable
+
+It is sometimes convenient to temporarily number the nontrivial blocks, prescribing size $k_i+1$ for block $i$. Each collection of $\mu_j$ blocks of the same size can then be assigned to the corresponding numbers in $\mu_j!$ ways. If singleton blocks remain unordered, the resulting sum equals
+
+$$
+[\mu_j!]!E_n[\lambda,0^\ell]
+$$
+
+If all singleton blocks are also numbered, an additional factor of $\ell!$ appears. These are different conventions for enumerating terms. Before collecting like terms, the size increases by the same factor.
+
+For example, distinguishing the two blocks of size $2$ changes $E_4[1,1]$ into $2E_4[1,1]$. For type $[1,0^3]$, the sole nontrivial block is already distinguished by its size, whereas numbering the three singleton vertices gives a factor of $3!$.
+
+When using the names “compact” and “full” sum, one must specify which blocks are distinguishable. The basic notation $E_n[\lambda]$ always means normalization (1), with no implicit factorial factors.
+
+## Symmetrization: sum and average
+
+For $q=[(ab)(cd)]^2$, the preceding count gives
+
+$$
+\sum_{\sigma\in S_4}\sigma q=8E_4[1,1],\qquad
+\frac1{24}\sum_{\sigma\in S_4}\sigma q=\frac13E_4[1,1]
+$$
+
+Thus the sum over partitions, the sum over permutations, and the average have different coefficients. The general formula below repeats this count for any type.
+
+Any two partitions of the same type are related by a vertex permutation: match blocks of equal size and choose bijections between their vertices. This set of partitions is called an **orbit** of the action of $S_n$.
+
+For a fixed partition $\pi$ of type $[k_1,\ldots,k_r,0^\ell]$, summing over all permutations gives
+
+$$
+\sum_{\sigma\in S_n}\sigma q_\pi
+=\ell![(k_i+1)!]!
+[\mu_j!]!E_n[\lambda,0^\ell]
+$$
+
+> [!note]- Proof
+> **Proof.** Every partition in the orbit is obtained by the same number of permutations. To find this number, it suffices to consider permutations preserving the original partition: one can permute vertices within blocks, blocks of equal size, and singleton blocks. The number of these permutations is the factor multiplying $E_n$ in the formula. $\square$
+
+Dividing by $n!$ and using (3) yields the average over permutations:
+
+$$
+\boxed{
+\frac1{n!}\sum_{\sigma\in S_n}\sigma q_\pi
+=\frac{E_n[\lambda,0^\ell]}{\#E_n[\lambda,0^\ell]}
+}
+\tag{4}
+$$
+
+Thus $E_n[\lambda]$ is the sum over the partitions in an orbit, with unit coefficients. Averaging a single form over permutations gives the sum over partitions of its type divided by the size of that sum.
+
+> [!info] Symmetrization: sum and average
+> **Corollary.** Every symmetric polyform in the linear span of partition forms on $A$ can be expressed as a linear combination of the sums $E_n[\lambda]$.
+
+> [!note]- Proof
+> **Proof.** Choose any representation $P=\sum_\pi c_\pi q_\pi$. By symmetry,
+>
+> $$
+> P=\frac1{n!}\sum_{\sigma\in S_n}\sigma P
+> =\sum_\pi c_\pi\left(\frac1{n!}\sum_{\sigma\in S_n}\sigma q_\pi\right)
+> $$
+>
+> By (4), each parenthesized expression is a scalar multiple of the sum of its type. Grouping by type gives the required representation. $\square$
+
+The corollary establishes the existence of such a representation. It does not assert uniqueness: structural identities relate the sums $E_n[\lambda]$ themselves. Checking the symmetry of an arbitrary expression requires taking identities between forms into account, rather than merely comparing the displayed coefficients. The proof does not require choosing a basis of the space of partition forms.
 
 ## Type, coefficients, and metric evaluation
 

@@ -1,9 +1,9 @@
 ---
 title: "Products and Powers of Symmetric Polyforms"
 date: 2026-10-19
-updated: 2026-10-20
-revision: 4
-source_revision: 5
+updated: 2026-11-08
+revision: 5
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: products-and-powers-of-symmetric-polyforms
@@ -69,6 +69,66 @@ $$
 $$
 
 These rules apply to individual terms. After summing over blocks, the contribution of disjoint blocks can also be expressed through the principal polyform by the fundamental theorem.
+
+![Three Cases of Boundary Multiplication](<Three Cases of Boundary Multiplication.svg>)
+
+The first two products are nonzero. Two shared vertices make the boundary product zero; the highlighted common edge illustrates this case.
+
+## Four vertices: squaring the first grade
+
+On the set $\{a,b,c,d\}$,
+
+$$
+E_4[1]
+=[(ab)]^2+[(ac)]^2+[(ad)]^2+[(bc)]^2+[(bd)]^2+[(cd)]^2
+$$
+
+This is the [[Laplacian - graph, electrical network and quadratic form|Laplacian polyform]] $L=E_4[1]$ of the complete graph $K_4$ with unit conductances: all six of its edges occur in the sum.
+
+Squaring produces $36$ ordered pairs of terms. The six products of an edge form with itself are zero. Of the remaining $30$ pairs:
+
+- $24$ have one common vertex; each of the four triples occurs $6$ times;
+- $6$ consist of disjoint pairs; each of the three partitions of type $[1,1]$ occurs twice.
+
+Therefore,
+
+$$
+\bigl(E_4[1]\bigr)^2
+=6E_4[2]+2E_4[1,1]
+=8E_4[2]
+$$
+
+The last step uses the [[Partition Forms and the Tetrahedron Identity#The tetrahedron identity|tetrahedron identity]]. Written in terms of vertices, the result is
+
+$$
+\begin{aligned}
+&\bigl([(ab)]^2+[(ac)]^2+[(ad)]^2+[(bc)]^2+[(bd)]^2+[(cd)]^2\bigr)^2=\\
+&=8\bigl([(abc)]^2+[(abd)]^2+[(acd)]^2+[(bcd)]^2\bigr)
+\end{aligned}
+$$
+
+In the product $E_4[1]E_4[2]$, disjoint blocks are no longer possible. For each of the four triples, three pairs connect a vertex of that triple to the remaining vertex. All $12$ products give the same top-grade form:
+
+$$
+E_4[1]E_4[2]=12[(abcd)]^2
+$$
+
+Hence
+
+$$
+\bigl(E_4[1]\bigr)^3=96[(abcd)]^2,\qquad
+\bigl(E_4[1]\bigr)^4=0
+$$
+
+The [[Laplacian Exponential|polyform exponential]] of the Laplacian of $K_4$ is therefore
+
+$$
+M_{K_4}=\exp L
+=e+L+\frac{L^2}{2!}+\frac{L^3}{3!}
+=e+E_4[1]+4E_4[2]+16E_4[3]
+$$
+
+Here $E_4[3]=[(abcd)]^2$. The sum is finite because $L^4=0$, and the coefficients $4$ and $16$ are obtained by dividing the coefficients of the powers by $2!$ and $3!$. All powers and the exponential are computed in the algebra of polyforms. This is distinct from the matrix exponential of the Laplacian.
 
 ## The product of two principal polyforms
 
@@ -271,6 +331,14 @@ $$
 
 Here $E_6[1,1]=3E_6[2]$ follows from the fundamental theorem, and the square of the principal polyform is computed using (3).
 
+**Example of polynomial multiplication.** For $n=4$, set $t=E_4[1]$. Since $t^4=0$,
+
+$$
+(e+t+t^2)(e+t^2)=e+t+2t^2+t^3
+$$
+
+Returning to the principal basis, $t^2=8E_4[2]$ and $t^3=96E_4[3]$. Thus the answer is $e+E_4[1]+16E_4[2]+96E_4[3]$. Ordinary multiplication and removal of the fourth power replace a term-by-term calculation of partition forms.
+
 ## Factorial normalizations and grade zero
 
 The binomial coefficient in (1) arises from factorials of the grades. If we use the factorial normalization $k!E_n[k]$ at positive grades, the rule becomes
@@ -320,61 +388,7 @@ In particular, the zeroth power of $E_n[1]/n$ is $e$, not $e/n$. The formal sum 
 
 ## Examples on four, five, and six vertices
 
-### Four vertices: squaring the first grade
-
-On the set $\{a,b,c,d\}$,
-
-$$
-E_4[1]
-=[(ab)]^2+[(ac)]^2+[(ad)]^2+[(bc)]^2+[(bd)]^2+[(cd)]^2
-$$
-
-This is the [[Laplacian - graph, electrical network and quadratic form|Laplacian polyform]] $L=E_4[1]$ of the complete graph $K_4$ with unit conductances: all six of its edges occur in the sum.
-
-Squaring produces $36$ ordered pairs of terms. The six products of an edge form with itself are zero. Of the remaining $30$ pairs:
-
-- $24$ have one common vertex; each of the four triples occurs $6$ times;
-- $6$ consist of disjoint pairs; each of the three partitions of type $[1,1]$ occurs twice.
-
-Therefore,
-
-$$
-\bigl(E_4[1]\bigr)^2
-=6E_4[2]+2E_4[1,1]
-=8E_4[2]
-$$
-
-The last step uses the [[Partition Forms and the Tetrahedron Identity#The tetrahedron identity|tetrahedron identity]]. Written in terms of vertices, the result is
-
-$$
-\begin{aligned}
-&\bigl([(ab)]^2+[(ac)]^2+[(ad)]^2+[(bc)]^2+[(bd)]^2+[(cd)]^2\bigr)^2=\\
-&=8\bigl([(abc)]^2+[(abd)]^2+[(acd)]^2+[(bcd)]^2\bigr)
-\end{aligned}
-$$
-
-In the product $E_4[1]E_4[2]$, disjoint blocks are no longer possible. For each of the four triples, three pairs connect a vertex of that triple to the remaining vertex. All $12$ products give the same top-grade form:
-
-$$
-E_4[1]E_4[2]=12[(abcd)]^2
-$$
-
-Hence
-
-$$
-\bigl(E_4[1]\bigr)^3=96[(abcd)]^2,\qquad
-\bigl(E_4[1]\bigr)^4=0
-$$
-
-The [[Laplacian Exponential|polyform exponential]] of the Laplacian of $K_4$ is therefore
-
-$$
-M_{K_4}=\exp L
-=e+L+\frac{L^2}{2!}+\frac{L^3}{3!}
-=e+E_4[1]+4E_4[2]+16E_4[3]
-$$
-
-Here $E_4[3]=[(abcd)]^2$. The sum is finite because $L^4=0$, and the coefficients $4$ and $16$ are obtained by dividing the coefficients of the powers by $2!$ and $3!$. All powers and the exponential are computed in the algebra of polyforms. This is distinct from the matrix exponential of the Laplacian.
+The [[#Four vertices: squaring the first grade|four-vertex calculation]] is given above. The examples below apply the general rule to different and equal grades.
 
 ### Five vertices: different grades
 
