@@ -1,10 +1,10 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-11-06
-revision: 9
-translated_revision: 9
-source_revision: 8
+updated: 2026-11-08
+revision: 10
+translated_revision: 10
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-exponential
@@ -488,7 +488,7 @@ Similarly, lemma (8) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant 
 >
 > The potential is $3$, and the normalized potential is $3/4$, since $\tau(C_4)=4$. An electrical check uses parallel paths with resistances $1$ and $3$: $R_{12}=1\cdot3/(1+3)=3/4$.
 
-## Connections with geometry and further reading
+## Geometric meaning and references
 
 The forest expansion describes the coefficients of the exponential, while theorem (7) relates extraction of its top-grade coefficient to the induced metric. At grade one, it recovers effective resistances and inner products; at higher grades, it gives mixed Gram determinants and squared volumes.
 

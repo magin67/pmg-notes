@@ -1,10 +1,10 @@
 ---
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
-updated: 2026-11-06
-revision: 11
-translated_revision: 14
-source_revision: 13
+updated: 2026-11-08
+revision: 12
+translated_revision: 15
+source_revision: 15
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics

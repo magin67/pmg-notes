@@ -1,10 +1,10 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-11-06
-revision: 8
-translated_revision: 10
-source_revision: 9
+updated: 2026-11-08
+revision: 9
+translated_revision: 11
+source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric

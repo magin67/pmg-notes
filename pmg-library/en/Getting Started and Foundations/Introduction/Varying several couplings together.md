@@ -1,10 +1,10 @@
 ---
 title: Varying Several Couplings Together
 date: 2026-10-05
-updated: 2026-11-06
-revision: 6
-translated_revision: 7
-source_revision: 6
+updated: 2026-11-08
+revision: 7
+translated_revision: 8
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: joint-edge-variation

@@ -1,10 +1,10 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-11-06
-revision: 10
-translated_revision: 12
-source_revision: 11
+updated: 2026-11-08
+revision: 11
+translated_revision: 13
+source_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry

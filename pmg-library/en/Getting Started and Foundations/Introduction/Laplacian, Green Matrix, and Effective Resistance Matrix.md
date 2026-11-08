@@ -1,9 +1,9 @@
 ---
 title: "Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations"
 date: 2026-10-04
-updated: 2026-11-05
-revision: 5
-source_revision: 5
+updated: 2026-11-08
+revision: 6
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-green-resistance-matrices

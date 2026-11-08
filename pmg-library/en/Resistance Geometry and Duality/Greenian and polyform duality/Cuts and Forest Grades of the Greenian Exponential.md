@@ -1,9 +1,9 @@
 ---
 title: Cuts and Forest Grades of the Greenian Exponential
 date: 2026-10-28
-updated: 2026-10-28
-revision: 2
-translated_revision: 10
+updated: 2026-11-08
+revision: 3
+translated_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-cuts-forest-grades
@@ -586,7 +586,7 @@ Here all factors are dual elements, and parentheses group sums. Passing to the f
 
 The equality of the full sums, $Q_k=Q_1^k/k!$, is proved in the [[The Exterior Exponential and Representations of the Greenian#Application to the metric polyform of a graph|exponential law for dual grades]]. The connection between the cut form and the Greenian is established there as well. This equality does not require individual cut products to correspond to individual forests.
 
-## Status of results and connections with the literature
+## Status and origins of the results
 
 The text proves the deletion identity (3), the forest formula (4), grouping by partitions (8), and the formula for the first dual form (9). The examples of $K_4$ and a weighted triangle were obtained by enumerating forests and checked through deletion. These proofs do not use the general power law for dual grades.
 

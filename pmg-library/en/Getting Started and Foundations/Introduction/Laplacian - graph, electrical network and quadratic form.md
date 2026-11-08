@@ -1,10 +1,10 @@
 ---
 title: "Laplacian: graph, electrical network and quadratic form"
 date: 2026-10-03
-updated: 2026-11-06
-revision: 7
-translated_revision: 11
-source_revision: 10
+updated: 2026-11-08
+revision: 8
+translated_revision: 12
+source_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-graph-network-quadratic-form

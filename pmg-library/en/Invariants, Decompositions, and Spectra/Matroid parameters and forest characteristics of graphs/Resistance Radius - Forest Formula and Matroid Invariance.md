@@ -1,8 +1,8 @@
 ---
 title: "Resistance Radius: Forest Formula and Matroid Invariance"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: resistance-radius-forest-formula-and-matroid-invariance
@@ -446,7 +446,7 @@ The three SVG figures originate from the [drawing script](https://github.com/mag
 
 Results concern connected undirected graphs with positive conductances. No extension to the balanced model is made here. One-point gluing laws, the Whitney twist, and dependence on the chosen boundary are studied in [[Gluing and the Limits of Matroid Invariance]]. General boundary gluings and applications to chains of cores form a separate continuation.
 
-## References and connections
+## References and further reading
 
 1. Richman H., Shokrieh F., Wu C. *Counting two-forests and random cut size via potential theory*. [arXiv:2308.03859](https://arxiv.org/abs/2308.03859), 2023. Theorem C / 5.7, Propositions 3.4 and 5.6: the identity for 2-forest sums and resistances.
 2. Richman H., Shokrieh F., Wu C. *On determinants of resistance matrices*. [arXiv:2606.21902](https://arxiv.org/abs/2606.21902), 2026; [DOI: 10.1016/j.laa.2026.10.003](https://doi.org/10.1016/j.laa.2026.10.003). Section 3.1, formulas (11)-(12): the weighted expression using conductor resistances.

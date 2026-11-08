@@ -2,8 +2,8 @@
 title: Partition Forms and the Tetrahedron Identity
 date: 2026-10-18
 updated: 2026-11-08
-revision: 4
-source_revision: 5
+revision: 5
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-forms-and-tetrahedron-identity
@@ -349,7 +349,7 @@ The left-hand side of (1) contains three forms with unit coefficients, whereas t
 >
 > For the continuation of the structural series, the relevant mechanism is how the equality is obtained: a zero sum of boundaries yields an equality of quadratic forms. Extending such identities to larger vertex sets and obtaining new relations by multiplying forms are treated in [[Constructing Structural Identities]].
 
-## Connection with the literature
+## Related results
 
 In Lemma 2.3 of *Boundary Partitions in Trees and Dimers*, R. Kenyon and D. Wilson give a seven-term relation between partitions of four elements: the sum of the partitions $1|234$, $2|134$, $3|124$, and $4|123$ is equivalent to the sum of $12|34$, $13|24$, and $14|23$ under their combinatorial pairing.
 

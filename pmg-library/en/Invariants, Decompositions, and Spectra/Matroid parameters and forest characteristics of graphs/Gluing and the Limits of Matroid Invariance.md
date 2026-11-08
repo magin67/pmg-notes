@@ -1,8 +1,8 @@
 ---
 title: "Gluing and the Limits of Matroid Invariance"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: gluings-and-limits-of-matroid-invariance
@@ -357,7 +357,7 @@ A weight-preserving matroid correspondence provides a general sufficient criteri
 
 A full classification of gluings along arbitrary seams, boundary polyforms, and isomers of chains of cores is not claimed to be complete here. All results concern undirected graphs with positive conductances; no extension to balanced graphs is made.
 
-## References and connections
+## References and further reading
 
 1. Whitney H. *2-Isomorphic Graphs*. American Journal of Mathematics **55** (1933), 245-254. [DOI: 10.2307/2371127](https://doi.org/10.2307/2371127). The classical source on graph 2-isomorphism; the twist used here is proved directly in the text.
 2. Kenyon R. W., Wilson D. B. *Boundary Partitions in Trees and Dimers*. Transactions of the American Mathematical Society **363** (2011), 1325-1364. [arXiv:math/0608422](https://arxiv.org/abs/math/0608422), [DOI: 10.1090/S0002-9947-2010-04964-5](https://doi.org/10.1090/S0002-9947-2010-04964-5). Groves and boundary partitions; this paper treats circular planar networks. Formulas (6)-(7) above are proved without a planarity assumption.

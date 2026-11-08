@@ -1,8 +1,8 @@
 ---
 title: From Polyforms to Partitions
 date: 2026-10-22
-updated: 2026-10-22
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: from-polyforms-to-partitions
@@ -322,7 +322,7 @@ For a graph $G$, $T_G$ refers to the expansion of the factors of $\exp L$. Relab
 
 [[Partition Forms and the Tetrahedron Identity|Structural identities]] can relate forms of different types. Thus, passage to types is not declared to be a representation-independent linear map on the polyform algebra itself. The compatibility condition is given by the [[Toponomes and Structural Identities#A criterion for representation-independent reduction|criterion for independence from representation]].
 
-## Sources and correspondence with the literature
+## Sources and related results
 
 The term “partition toponome” and its application to a chosen polyform representation are used within PMG. Forms and the initial exponential representation are defined in the published notes:
 

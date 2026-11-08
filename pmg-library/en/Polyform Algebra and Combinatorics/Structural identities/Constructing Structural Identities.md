@@ -2,8 +2,8 @@
 title: Constructing Structural Identities
 date: 2026-10-18
 updated: 2026-11-08
-revision: 3
-source_revision: 5
+revision: 4
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: constructing-structural-identities
@@ -328,7 +328,7 @@ We have established one relation between symmetric sums. General relations for a
 
 Extension to four blocks and polarization of a zero sum have been proved under the stated conditions. The examples show how to construct specific relations and count their coefficients. The next question concerns completeness: which relations suffice to express all partition forms in terms of an independent set, and what is the dimension of their linear span? The answer is proved in [[Basis and Dimension of the Space of Partition Forms]]. The number of constructed identities alone does not establish their independence.
 
-## Connection with the literature
+## Related results
 
 The seven-term pattern in (1), including additional unchanged blocks, has the same partitions and coefficients as Rule 1 in R. Kenyon and D. Wilson's *Boundary Partitions in Trees and Dimers*. Their rule transforms partitions within the framework of a combinatorial pairing. Here the equality is proved directly for the forms $q_\pi$ in the algebra of PMG, without assumptions on graph planarity or a choice of metric.
 

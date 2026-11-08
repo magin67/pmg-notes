@@ -1,10 +1,10 @@
 ---
 title: From Lengths to Areas and Volumes
 date: 2026-10-04
-updated: 2026-11-06
-revision: 6
-translated_revision: 6
-source_revision: 5
+updated: 2026-11-08
+revision: 7
+translated_revision: 7
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: lengths-areas-volumes

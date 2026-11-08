@@ -1,8 +1,8 @@
 ---
 title: "Edge Resistances and Random Spanning Trees"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: edge-resistances-and-random-spanning-trees
@@ -460,7 +460,7 @@ Exact rational checks on 53 connected test graphs with 200 edge instances compar
 
 Finite checks supplement the general proofs. All probabilistic and metric statements use positive conductances and a connected undirected graph. Orientations used in coordinate computations are arbitrary and do not make the graph balanced; no extension to the balanced model is made.
 
-## References and connections
+## References and further reading
 
 1. Lyons R., Peres Y. *Probability on Trees and Networks*. Cambridge University Press, 2016, Cambridge Series in Statistical and Probabilistic Mathematics, vol. 42. [DOI: 10.1017/9781316672815](https://doi.org/10.1017/9781316672815). [Author's page with open editions](https://rdlyons.pages.iu.edu/prbtree/prbtree.html). Chapter 4, Section 4.2, *Kirchhoff’s Effective Resistance Formula*: weighted edge-inclusion probabilities and effective resistance.
 2. [[The Cycle Matroid and Exterior Products of Edges]]: independent edge sets, bases, and the distinction between edge characteristics and all vertex-pair resistances.

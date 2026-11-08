@@ -1,15 +1,15 @@
 ---
 title: The Laplacian Exponential of a Balanced Graph
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graph-laplacian-exponential
 lang: en
 description: 'The finite exterior exponential of a balanced Laplacian: bilinear factors, minors, directed forests, reference-point weights, and connections to double-form theory.'
 order: 3
-source_revision: 5
+source_revision: 6
 aliases:
   - "en/Balanced graphs/The Laplacian Exponential of a Balanced Graph"
 ---
@@ -78,7 +78,7 @@ This is exactly $[X,Y][U,V]=[XU,YV]$.
 
 **Terminology.** In [2, §2], elements of $\Lambda^pW\otimes\Lambda^qW$ are called double exterior vectors; double exterior forms use $W^*$ instead. Precisely, our formal forms can be viewed as double forms on the dual space $W^*$. This correspondence needs no metric. The PMG term “form” retains the definition in [[Basic Objects and Operations of Polyform Algebra]].
 
-### The exterior exponential in the literature
+### The classical exterior exponential
 
 Belkhirat and Labbi [2, §5, Proposition 5.1] explicitly consider the exponential of a bilinear double form with this exterior product, without assuming symmetry. After an auxiliary metric is chosen, the exponential represents the extension of the corresponding linear operator to the exterior algebra. Equation (1) applies this general exterior-exponential construction to a Laplacian in $W\otimes W$.
 

@@ -1,8 +1,8 @@
 ---
 title: "Forest Resistance Scales"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-11-08
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-resistance-scales
@@ -490,7 +490,7 @@ Exact rational computations cover 50 connected test graphs, including all 38 con
 
 Finite checks supplement general proofs. The probability distributions in this note require positive original conductances. The metric and duality are used for connected undirected graphs; no extension to balanced graphs is made.
 
-## References and connections
+## References and further reading
 
 1. Anari N., Liu K., Oveis Gharan S., Vinzant C. *Log-concave polynomials III: Mason’s ultra-log-concavity conjecture for independent sets of matroids*. Proceedings of the American Mathematical Society, 152 (2024), 1969-1981. [DOI: 10.1090/proc/16724](https://doi.org/10.1090/proc/16724). In the [open arXiv:1811.01600v1 version](https://arxiv.org/abs/1811.01600v1), Theorem 4.1, Lemma 2.2, and Proposition 5.1 give the weighted specialization and inequality (8) used here.
 2. [[Forest Coefficients - Grade, Components, and Corank]]: ordinary forest sums, indexing, computation methods, and gluing convolution.
