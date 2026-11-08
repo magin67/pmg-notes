@@ -1,9 +1,9 @@
 ---
 title: Partition Forms and the Tetrahedron Identity
 date: 2026-10-18
-updated: 2026-10-18
-revision: 3
-source_revision: 3
+updated: 2026-11-08
+revision: 4
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-forms-and-tetrahedron-identity
@@ -24,7 +24,7 @@ Juxtaposition of exterior elements denotes their exterior product.
 
 ## From a partition to a form
 
-Let $A=\{a_1,\ldots,a_n\}$ be a set of basis vertices of the formal space $V$. Each vertex satisfies $\partial a_i=1$, and the space of affine vectors is $W=\ker\varepsilon$.
+Let $A=\{a_1,\ldots,a_n\}$ be a set of basis vertices of the formal space $V$. Each vertex satisfies $\partial a_i=1$, and the space of affine vectors is $W=\ker\varepsilon$, where $\varepsilon$ is the sum of coefficients, or affine weight.
 
 A partition
 
@@ -104,6 +104,10 @@ Consider four distinct basis vertices $a,b,c,d$. They admit three partitions int
 > $$
 
 The quantities being added here are forms. Both sides represent the same polyform of the second grade; no lengths or areas have been assigned in (1). The name refers to the geometric interpretation of the four vertices.
+
+![Seven Partitions in the Tetrahedron Identity](<Seven Partitions in the Tetrahedron Identity.svg>)
+
+*Top: three partitions into pairs. Bottom: four partitions into a triple and a singleton. Lines indicate block membership. The identity adds the corresponding forms $q_\pi$, not the partitions themselves; no areas have been assigned.*
 
 ### A lemma on a zero sum
 
@@ -236,13 +240,52 @@ The factor $4$ arises because a triangle has half the area of the parallelogram 
 >
 > This numerical equality of areas is a metric consequence of the tetrahedron identity.
 
-### The circumscribed parallelepiped
+## A numerical example
+
+Choose orthonormal affine vectors $u,v,w$ and points
+
+$$
+b=a+u,\qquad c=a+v,\qquad d=a+w
+$$
+
+In a Euclidean realization, this is the tetrahedron with coordinates $(0,0,0)$, $(1,0,0)$, $(0,1,0)$, and $(0,0,1)$. The exterior elements $uv$, $uw$, and $vw$ form an orthonormal basis of the second exterior power.
+
+Compute all seven norms directly from the following expansions.
+
+| Exterior element $X$ | Expansion | Norm $X^2$ |
+|---|---|---:|
+| $(abc)$ | $uv$ | 1 |
+| $(abd)$ | $uw$ | 1 |
+| $(acd)$ | $vw$ | 1 |
+| $(bcd)$ | $uv-uw+vw$ | 3 |
+| $(ab)(cd)$ | $uw-uv$ | 2 |
+| $(ac)(bd)$ | $vw+uv$ | 2 |
+| $(ad)(bc)$ | $uw-vw$ | 2 |
+
+The sum of the four norms of triangle boundaries and the sum of the three norms of products of opposite edge vectors both equal $6$.
+
+The three faces incident to vertex $a$ each have area $1/2$, and the fourth face has area $\sqrt3/2$. Hence
+
+$$
+S_{abc}^2+S_{abd}^2+S_{acd}^2+S_{bcd}^2
+=
+\frac14+\frac14+\frac14+\frac34=\frac32
+$$
+
+The three areas $S_{ab,cd}$, $S_{ac,bd}$, and $S_{ad,bc}$ all equal $\sqrt2$. Accordingly, (4) becomes the numerical equality $4\cdot(3/2)=2+2+2$.
+
+This calculation uses the coordinates directly. It illustrates the metric consequence; the general structural identity was proved above without choosing a metric.
+
+## The circumscribed parallelepiped
 
 A nondegenerate tetrahedron can be inscribed in a parallelepiped so that its vertices occupy four alternating vertices of the parallelepiped. The edges of the tetrahedron are then diagonals of the parallelepiped's faces.
 
-![[Tetrahedron in a Parallelepiped.png]]
+In the figure, $p=(ad_1)$, $q=(ac_1)$, and $r=(aa_1)$ are the three edge vectors of the parallelepiped.
 
-*The tetrahedron $abcd$ is drawn with thick lines. The points $a_1,b_1,c_1,d_1$ complete its vertices to a parallelepiped. Each pair of opposite edges of the tetrahedron lies in two parallel faces of the parallelepiped.*
+![A Tetrahedron and Three Parallelepiped Areas](<A Tetrahedron and Three Parallelepiped Areas.svg>)
+
+*Left: tetrahedron $abcd$ is inscribed in a parallelepiped; the three pairs of opposite edges have different colors. Right: the faces on $p,q$, $q,r$, and $p,r$ are shown separately, with areas $F_1,F_2,F_3$. These are parallelepiped-face areas, not areas of the tetrahedron faces.*
+
 
 Let $F_1,F_2,F_3$ be the areas of three pairwise nonparallel faces of the parallelepiped.
 
@@ -292,42 +335,6 @@ Let $F_1,F_2,F_3$ be the areas of three pairwise nonparallel faces of the parall
 > $$
 >
 > Substitution into (4) and division by $4$ give (5). $\square$
-
-## A numerical example
-
-Choose orthonormal affine vectors $u,v,w$ and points
-
-$$
-b=a+u,\qquad c=a+v,\qquad d=a+w
-$$
-
-In a Euclidean realization, this is the tetrahedron with coordinates $(0,0,0)$, $(1,0,0)$, $(0,1,0)$, and $(0,0,1)$. The exterior elements $uv$, $uw$, and $vw$ form an orthonormal basis of the second exterior power.
-
-Compute all seven norms directly from the following expansions.
-
-| Exterior element $X$ | Expansion | Norm $X^2$ |
-|---|---|---:|
-| $(abc)$ | $uv$ | 1 |
-| $(abd)$ | $uw$ | 1 |
-| $(acd)$ | $vw$ | 1 |
-| $(bcd)$ | $uv-uw+vw$ | 3 |
-| $(ab)(cd)$ | $uw-uv$ | 2 |
-| $(ac)(bd)$ | $vw+uv$ | 2 |
-| $(ad)(bc)$ | $uw-vw$ | 2 |
-
-The sum of the four norms of triangle boundaries and the sum of the three norms of products of opposite edge vectors both equal $6$.
-
-The three faces incident to vertex $a$ each have area $1/2$, and the fourth face has area $\sqrt3/2$. Hence
-
-$$
-S_{abc}^2+S_{abd}^2+S_{acd}^2+S_{bcd}^2
-=
-\frac14+\frac14+\frac14+\frac34=\frac32
-$$
-
-The three areas $S_{ab,cd}$, $S_{ac,bd}$, and $S_{ad,bc}$ all equal $\sqrt2$. Accordingly, (4) becomes the numerical equality $4\cdot(3/2)=2+2+2$.
-
-This calculation uses the coordinates directly. It illustrates the metric consequence; the general structural identity was proved above without choosing a metric.
 
 ## Coefficients and symmetry
 

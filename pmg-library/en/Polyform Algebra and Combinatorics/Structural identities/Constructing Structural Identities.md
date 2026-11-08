@@ -1,9 +1,9 @@
 ---
 title: Constructing Structural Identities
 date: 2026-10-18
-updated: 2026-10-18
-revision: 2
-source_revision: 4
+updated: 2026-11-08
+revision: 3
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: constructing-structural-identities
@@ -17,6 +17,61 @@ aliases:
 An existing structural identity can yield others: relabel the vertices, add singleton vertices, multiply both sides by the same form, or add the resulting equalities. This note extends the tetrahedron identity from four vertices to four disjoint blocks. Examples on five and six vertices show how these operations change the types of the terms and how coefficients arise when identities are summed.
 
 We use [[Partition Forms and the Tetrahedron Identity|partition forms and the tetrahedron identity]], together with the [[Basic Objects and Operations of Polyform Algebra#Polyforms and the product of forms|product of forms]]. All equalities hold in the formal algebra of PMG. Their proofs require neither a metric nor numerical norms.
+
+## Transferring and multiplying identities
+
+Write $q_\pi$ for the form of partition $\pi$. We first act on concrete blocks, then specify how to record their sizes and grades.
+
+Relabeling basis vertices preserves a structural identity: the linear map sending the old basis vertices to the new ones respects the boundary operator and the product. Adding new singleton vertices also preserves the equality. The original space is then embedded in a larger one, and singleton blocks are added to each partition. The grades of the forms remain unchanged.
+
+By bilinearity of the product, $\sum_\pi c_\pi q_\pi=0$ implies, for any fixed form $F$,
+
+$$
+\sum_\pi c_\pi q_\pi F=0
+$$
+
+Multiplication by a pair form $[(xy)]^2$ has a particularly simple effect.
+
+> [!info] Joining a pair
+> **Lemma.** Let $x,y$ be distinct vertices of the fixed set $S$. If they belong to different blocks of the partition $\pi$, then
+>
+> $$
+> q_\pi[(xy)]^2=q_{\pi'}
+> $$
+>
+> Here $\pi'$ is obtained by merging those two blocks. If $x,y$ belong to the same block, then
+>
+> $$
+> q_\pi[(xy)]^2=0
+> $$
+
+> [!note]- Proof
+> **Proof.** Choose a tree within each block of $\pi$; a singleton block has no edges. By the [[Basic Objects and Operations of Polyform Algebra#Products of simplex boundaries|theorem on edge products]], the product of these edge vectors equals the exterior element of the partition up to sign. Hence the product of the edge forms equals $q_\pi$.
+>
+> If $x,y$ lie in different blocks, the added pair joins two trees into one. The product gives the boundary of the merged block, and the sign disappears upon passing to the quadratic form. No additional numerical factor occurs.
+>
+> If $x,y$ lie in the same block, the vector $(xy)$ is a linear combination of the vectors along the path between them in the chosen tree. The exterior product of linearly dependent vectors is zero, so the product of forms is also zero. $\square$
+
+For example,
+
+$$
+q_{ab|cd}[(ac)]^2=q_{abcd},\qquad
+q_{abc|d}[(ab)]^2=0
+$$
+
+A new vertex is first added as a singleton block. It can then be attached to a chosen block:
+
+$$
+q_{ab|cd|e}[(ae)]^2=q_{abe|cd}
+$$
+
+The chosen trees provide a way to compute the product. The pairs need not be edges of any given graph. Multiplication preserves the equality, but may turn it into $0=0$ or produce an identity dependent on those already known.
+
+![Joining a Pair to a Partition](<Joining a Pair to a Partition.svg>)
+
+*The red pair $ac$ joins different blocks $ab$ and $cd$ in the first case. In the second, its endpoints already belong to block $abc$: the selected edge vectors become dependent, so the product of forms is zero. The drawn trees represent blocks.*
+
+Here and below, **transfer by adding vertices** means adjoining singleton blocks. **Expansion to four blocks** also uses multiplication by pair forms. These operations differ; the support note uses the same narrow meaning of transfer.
 
 ## Types of partition forms
 
@@ -64,54 +119,7 @@ For fixed $n$, zeros may be omitted: the type $[2,1]$ on six vertices means the 
 
 **Remark.** A type describes a partition and a chosen expression for a sum of forms. A structural identity may relate sums of different types, so the type of an expression should not be regarded as a uniquely determined property of the polyform itself. In the [[Core specification#Forms and polyform algebra|core specification]], homogeneity means that all terms have the same grade; their types need not coincide.
 
-## Transferring and multiplying identities
-
-Relabeling basis vertices preserves a structural identity: the linear map sending the old basis vertices to the new ones respects the boundary operator and the product. Adding new singleton vertices also preserves the equality. The original space is then embedded in a larger one, and singleton blocks are added to each partition. The grades of the forms remain unchanged, while their full types acquire zero parts.
-
-By bilinearity of the product, $\sum_\pi c_\pi q_\pi=0$ implies, for any fixed form $F$,
-
-$$
-\sum_\pi c_\pi q_\pi F=0
-$$
-
-Multiplication by a pair form $[(xy)]^2$ has a particularly simple effect.
-
-> [!info] Joining a pair
-> **Lemma.** Let $x,y$ be distinct vertices of the fixed set $S$. If they belong to different blocks of the partition $\pi$, then
->
-> $$
-> q_\pi[(xy)]^2=q_{\pi'}
-> $$
->
-> Here $\pi'$ is obtained by merging those two blocks. If $x,y$ belong to the same block, then
->
-> $$
-> q_\pi[(xy)]^2=0
-> $$
-
-> [!note]- Proof
-> **Proof.** Choose a tree within each block of $\pi$; a singleton block has no edges. By the [[Basic Objects and Operations of Polyform Algebra#Products of simplex boundaries|theorem on edge products]], the product of these edge vectors equals the exterior element of the partition up to sign. Hence the product of the edge forms equals $q_\pi$.
->
-> If $x,y$ lie in different blocks, the added pair joins two trees into one. The product gives the boundary of the merged block, and the sign disappears upon passing to the quadratic form. No additional numerical factor occurs.
->
-> If $x,y$ lie in the same block, the vector $(xy)$ is a linear combination of the vectors along the path between them in the chosen tree. The exterior product of linearly dependent vectors is zero, so the product of forms is also zero. $\square$
-
 In the nonzero case, the number of blocks decreases by one and the grade increases by one. If the joined blocks have type parts $i$ and $j$, the new type replaces them by $i+j+1$.
-
-For example,
-
-$$
-q_{ab|cd}[(ac)]^2=q_{abcd},\qquad
-q_{abc|d}[(ab)]^2=0
-$$
-
-A new vertex is first added as a singleton block. It can then be attached to a chosen block:
-
-$$
-q_{ab|cd|e}[(ae)]^2=q_{abe|cd}
-$$
-
-The chosen trees provide a way to compute the product. The pairs need not be edges of any given graph. Multiplication preserves the equality, but may turn it into $0=0$ or produce an identity dependent on those already known.
 
 ## The tetrahedron identity for four blocks
 
@@ -131,6 +139,10 @@ Let $A,B,C,D$ be nonempty, pairwise disjoint sets of basis vertices, and let $S=
 > $$
 >
 > All seven forms have grade $|S|-2$.
+
+![From Four Vertices to Four Blocks](<From Four Vertices to Four Blocks.svg>)
+
+*Here $A=\{a\}$, $B=\{b\}$, $C=\{c\}$, $D=\{d,e,f\}$. Multiplication by $[(de)]^2[(df)]^2$ joins $e,f$ to the block containing $d$ in every term. The same operation expands all seven partitions.*
 
 > [!note]- Proof
 > **Proof.** Choose $a\in A$, $b\in B$, $c\in C$, and $d\in D$. Take the tetrahedron identity on $a,b,c,d$ and add the remaining vertices of $S$ as singleton blocks.
@@ -280,6 +292,16 @@ $$
 > \boxed{E_5[2,1]=3E_5[3,0]}
 > \tag{6}
 > $$
+
+
+Two representative terms explain the coefficient $3$:
+
+| Partition | Distinguished vertex | Total coefficient in the sum of five identities |
+| --- | --- | ---: |
+| $ab\mid cde$ | $a$ or $b$, with coefficient $1$ each time | $2$ |
+| $a\mid bcde$ | $a$ with coefficient $2$; each of the other four with coefficient $1$ | $6$ |
+
+Thus the initial sum gives $2E_5[2,1]=6E_5[3,0]$; division gives (6).
 
 > [!note]- Counting the coefficients
 > **Proof.** Add the five equalities (3), choosing each vertex in turn as the distinguished one.

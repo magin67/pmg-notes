@@ -1,9 +1,9 @@
 ---
 title: Structural Identities and Graph Gluing
 date: 2026-10-18
-updated: 2026-10-18
-revision: 2
-source_revision: 2
+updated: 2026-11-08
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: structural-identities-and-graph-gluing
@@ -32,19 +32,6 @@ $$
 
 Edges with the same endpoints coming from different pieces are treated as distinct parallel edges in the proof. In the Laplacian, their conductances add according to the core conventions. The graph $G$ is connected because both pieces are connected and $S$ is nonempty.
 
-The construction can also be read in reverse. If $G$ is already represented by two such pieces, replace each vertex $s\in S$ by copies $s^{(1)},s^{(2)}$. Endpoints of edges in $E(G_i)$ are assigned to the copy $s^{(i)}$. This produces two separate graphs, and identifying the copies recovers $G$.
-
-Specifying $S$ alone is insufficient for this operation: both pieces and the assignment of every edge must be given. In particular, edges with both endpoints in $S$ must be assigned to pieces. In this note, the decomposition is prescribed and both pieces are connected. Choosing a decomposition and establishing when one exists are separate questions. Reversibility of this construction does not by itself establish an algebraic duality.
-
-After substituting the shared vertex names, the full polyforms satisfy the familiar rule
-
-$$
-L_G=L_1+L_2,\qquad
-M_G=\exp(L_1+L_2)=M_1M_2
-$$
-
-This exponential and product belong to the polyform algebra. The full polyforms also contain the interior vertices of the pieces. We now construct objects on $S$ alone that suffice to compute the spanning-tree coefficient.
-
 ## Groves and polyforms on shared vertices
 
 > [!info] A grove relative to a selected set
@@ -55,6 +42,49 @@ The forest includes every vertex of $G_i$, including vertices isolated in the fo
 Kenyon and Wilson [1] consider groves in a planar graph with selected vertices on the outer face. Here the same condition on components is used for an arbitrary selected set $S$; planarity is not assumed.
 
 A grove $F_i$ induces a partition $\pi(F_i)$ of $S$: two selected vertices lie in the same block if and only if they belong to the same forest component. Since every component meets $S$, the number of grove components equals the number of blocks $b(\pi)$.
+
+## Two shared vertices
+
+![Gluing Two Paths into a Cycle](<Gluing Two Paths into a Cycle.svg>)
+
+*The pieces initially have separate copies of $a,b$. Identifying them joins the two paths into a cycle. Shared vertices are blue; $x,y$ remain internal vertices of their pieces.*
+
+Let $S=\{a,b\}$. The first piece is the path $a-x-b$ with edge weights $\alpha,\beta$, and the second is the path $a-y-b$ with weights $\gamma,\delta$. The vertices $x,y$ are interior and distinct. Gluing produces the cycle $a-x-b-y-a$.
+
+In the first piece, the grove of type $ab$ contains both edges and has weight $\alpha\beta$. Groves of type $a|b$ contain exactly one edge, with weights $\alpha$ and $\beta$. The empty forest is not a grove because its isolated vertex $x$ does not belong to $S$.
+
+![Groves of a Path with an Internal Vertex](<Groves of a Path with an Internal Vertex.svg>)
+
+*The path $a-x-b$ has three groves relative to $S=\{a,b\}$. The first joins the boundary vertices and has weight $\alpha\beta$; the other two separate them and have weights $\alpha,\beta$. The empty forest is not a grove: its internal vertex $x$ forms a component disjoint from $S$.*
+
+Write $q_{ab}=[(ab)]^2$. Collect the partition forms, weighted by the groves, into polyforms $P_1,P_2$. We obtain
+
+$$
+P_1=(\alpha+\beta)e+\alpha\beta q_{ab},
+\qquad
+P_2=(\gamma+\delta)e+\gamma\delta q_{ab}
+$$
+
+Here $T_S=q_{ab}$ and $q_{ab}q_{ab}=0$. Multiplying the polyforms and extracting the coefficient of $T_S=q_{ab}$ gives
+
+$$
+\tau(G)=
+(\alpha+\beta)\gamma\delta+
+\alpha\beta(\gamma+\delta)
+$$
+
+Expanding yields the sum
+
+$$
+\alpha\gamma\delta+\beta\gamma\delta+
+\alpha\beta\gamma+\alpha\beta\delta
+$$
+
+Each term corresponds to deleting one edge of the cycle. This is also a direct, independent count of its spanning trees. With unit weights, $\tau(G)=4$.
+
+In this example, $B_2=C_2=2$, so there is no reduction in the number of coordinates yet. It illustrates the passage from forests with interior vertices to polyforms on $S$.
+
+## General form of the grove polyform
 
 For each partition $\pi$, set
 
@@ -87,7 +117,7 @@ Singleton blocks contribute unit factors. The partition blocks describe only the
 >
 > Here $\Pi(S)$ is the set of all partitions of $S$.
 
-The polyform $P_i$ belongs to the space $\mathcal P_k$ from the previous note. It describes connections between the selected vertices through groves of the piece. The full metric polyform $M_i$ is defined on all vertices of $G_i$ and includes all its spanning forests. In general, these are different objects.
+The polyform $P_i$ belongs to the space $\mathcal P_k$ from the [[Basis and Dimension of the Space of Partition Forms]]. It describes connections between the selected vertices through groves of the piece. The full metric polyform $M_i$ is defined on all vertices of $G_i$ and includes all its spanning forests. In general, these are different objects.
 
 The grade of $q_\pi$ is $k-b(\pi)$, whereas the grove itself in a piece with $n_i$ vertices has $n_i-b(\pi)$ edges. These numbers agree only when there are no interior vertices.
 
@@ -193,7 +223,7 @@ $$
 
 The coefficients $g_\pi^{(i)}$ are weight sums of groves of a specified type. The coefficients $p_\sigma^{(i)}$ are coordinates of the same polyform in the chosen basis and may be negative. Structural identities relate the forms $q_\pi$; the original coefficients $g_\pi^{(i)}$ need not satisfy the same relations.
 
-Let $\mathbf p_i$ be the column of new coordinates, and let $\mathbf K_k$ be the pairing matrix of noncrossing partitions from the previous note, in the same order:
+Let $\mathbf p_i$ be the column of new coordinates, and let $\mathbf K_k$ be the pairing matrix of noncrossing partitions from the [[Basis and Dimension of the Space of Partition Forms]], in the same order:
 
 $$
 (\mathbf K_k)_{\sigma\rho}=\tau_S(q_\sigma q_\rho)
@@ -212,39 +242,6 @@ Thus, for this algebraic representation, $C_k$ coordinates suffice in place of t
 
 For a different vertex identification, the vertices of one piece must first be relabeled according to the chosen bijection. Having the same number $k$ of vertices is not sufficient to apply (3).
 
-## Two shared vertices
-
-Let $S=\{a,b\}$. The first piece is the path $a-x-b$ with edge weights $\alpha,\beta$, and the second is the path $a-y-b$ with weights $\gamma,\delta$. The vertices $x,y$ are interior and distinct. Gluing produces the cycle $a-x-b-y-a$.
-
-In the first piece, the grove of type $ab$ contains both edges and has weight $\alpha\beta$. Groves of type $a|b$ contain exactly one edge, with weights $\alpha$ and $\beta$. The empty forest is not a grove because its isolated vertex $x$ does not belong to $S$.
-
-Write $q_{ab}=[(ab)]^2$. We obtain
-
-$$
-P_1=(\alpha+\beta)e+\alpha\beta q_{ab},
-\qquad
-P_2=(\gamma+\delta)e+\gamma\delta q_{ab}
-$$
-
-Here $T_S=q_{ab}$ and $q_{ab}q_{ab}=0$. Formula (2) gives
-
-$$
-\tau(G)=
-(\alpha+\beta)\gamma\delta+
-\alpha\beta(\gamma+\delta)
-$$
-
-Expanding yields the sum
-
-$$
-\alpha\gamma\delta+\beta\gamma\delta+
-\alpha\beta\gamma+\alpha\beta\delta
-$$
-
-Each term corresponds to deleting one edge of the cycle. This is also a direct, independent count of its spanning trees. With unit weights, $\tau(G)=4$.
-
-In this example, $B_2=C_2=2$, so there is no reduction in the number of coordinates yet. It illustrates the passage from forests with interior vertices to polyforms on $S$.
-
 ## Four shared vertices and the tetrahedron identity
 
 Take two paths with unit edge weights:
@@ -258,7 +255,7 @@ Their edge sets are disjoint, and all four vertices are shared: $S=\{a,b,c,d\}$.
 
 ![[Gluing Two Paths into K4.svg]]
 
-*Figure 1. Two paths and their union after identifying vertices with the same names. Solid blue edges belong to $G_1$; dashed orange edges belong to $G_2$. The vertices are arranged in the cyclic order $a,b,c,d$. The crossing of diagonals in the figure is not a vertex.*
+*Two paths and their union after identifying vertices with the same names. Solid blue edges belong to $G_1$; dashed orange edges belong to $G_2$. The vertices are arranged in the cyclic order $a,b,c,d$. The crossing of diagonals in the figure is not a vertex.*
 
 Since there are no interior vertices, every spanning forest of either piece is a grove, and $P_i=M_i$. In the notation $q_{ab}$ and $q_{abc}$, the remaining vertices of $S$ are understood to be singleton blocks. Set $T=T_S$.
 
@@ -285,15 +282,15 @@ $$
 
 It transforms the grade-$2$ coordinates as follows. Singleton blocks are written explicitly in the table.
 
-| Form | $P_1$ before transformation | $P_1$ after transformation | $P_2$ |
-|---|---:|---:|---:|
-| $q_{a\mid bcd}$ | 1 | 2 | 0 |
-| $q_{b\mid acd}$ | 0 | 1 | 1 |
-| $q_{c\mid abd}$ | 0 | 1 | 1 |
-| $q_{d\mid abc}$ | 1 | 2 | 0 |
-| $q_{ab\mid cd}$ | 0 | -1 | 1 |
-| $q_{ad\mid bc}$ | 0 | -1 | 0 |
-| $q_{ac\mid bd}$ | 1 | 0 | 0 |
+| Form | $P_1$ before transformation | $P_1$ after transformation | $P_2$ | Role after conversion |
+|---|---:|---:|---:| --- |
+| $q_{a\mid bcd}$ | 1 | 2 | 0 | Basis |
+| $q_{b\mid acd}$ | 0 | 1 | 1 | Basis |
+| $q_{c\mid abd}$ | 0 | 1 | 1 | Basis |
+| $q_{d\mid abc}$ | 1 | 2 | 0 | Basis |
+| $q_{ab\mid cd}$ | 0 | **-1** | 1 | Basis |
+| $q_{ad\mid bc}$ | 0 | **-1** | 0 | Basis |
+| $q_{ac\mid bd}$ | 1 | **0** | 0 | **Eliminated** |
 
 The first six forms constitute a basis of grade $2$. The coefficient of the seventh form has been eliminated by adjusting the others. The polyform $P_2$ is already expressed in this basis. Each path has three two-edge forests, but the transformed grade-$2$ coefficients of $P_1$ sum to $4$: these are coordinates of a form, not a new forest count.
 
@@ -325,6 +322,20 @@ $$
 **Independent check.** There are $\binom63=20$ three-edge subsets in $K_4$. Four are triangles with an isolated fourth vertex; the remaining sixteen are spanning trees. Direct enumeration also gives $16$.
 
 On four shared vertices, the full family contains $B_4=15$ partition forms, while the chosen basis contains $C_4=14$. The change occurs in grade $2$: seven forms are replaced by six. In this example, the table shows the reduction explicitly; preservation of the gluing result follows from the identity of forms, not merely from numerical agreement.
+## Computing from a prescribed decomposition
+
+The construction can also be read in reverse. If $G$ is already represented by two such pieces, replace each vertex $s\in S$ by copies $s^{(1)},s^{(2)}$. Endpoints of edges in $E(G_i)$ are assigned to the copy $s^{(i)}$. This produces two separate graphs, and identifying the copies recovers $G$.
+
+Specifying $S$ alone is insufficient for this operation: both pieces and the assignment of every edge must be given. In particular, edges with both endpoints in $S$ must be assigned to pieces. In this note, the decomposition is prescribed and both pieces are connected. Choosing a decomposition and establishing when one exists are separate questions. Reversibility of this construction does not by itself establish an algebraic duality.
+
+After substituting the shared vertex names, the full polyforms satisfy the familiar rule
+
+$$
+L_G=L_1+L_2,\qquad
+M_G=\exp(L_1+L_2)=M_1M_2
+$$
+
+This exponential and product belong to the polyform algebra. The full polyforms also contain the interior vertices of the pieces. The grove polyforms constructed above retain only the shared vertices and suffice to compute the spanning-tree coefficient.
 
 ## What a structural transformation preserves
 
@@ -343,12 +354,14 @@ The coefficient sums of the two expressions are $3$ and $4$. A linear functional
 
 Consequently, the reduction proved for the spanning-tree pairing cannot automatically be used for ordinary counting of all forests. The original weight sums, their transformed coordinates, and metric evaluations are different data.
 
+Full forest pairing is constructed in the [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|boundary-polynomial series]]. The [[The Four-Point Passport and State Reduction|state-reduction note]] proves its Catalan rank and explains how the forest radical differs from the structural kernel. Thus the limitation here concerns this particular transformation, not the absence of a general forest construction.
+
 ## Status of the results and continuation
 
 - **Proved directly:** the gluing formula (2), including the reverse computation from a prescribed decomposition. The proof establishes a weight-preserving bijection between spanning trees and compatible pairs of groves.
-- **Follows from the previous note:** passage to the noncrossing basis, formula (3), and sufficiency of $C_k$ coordinates. The general basis result relies on the external combinatorial theorems cited in the third note.
+- **Follows from the [[Basis and Dimension of the Space of Partition Forms]]:** passage to the noncrossing basis, formula (3), and sufficiency of $C_k$ coordinates. The general basis result relies on the external combinatorial theorems cited in the [[Basis and Dimension of the Space of Partition Forms]].
 - **Computed directly and checked independently:** the weighted cycle on four vertices and gluing two paths into $K_4$, including the coordinate transformation by the tetrahedron identity.
-- **Requires separate study:** choosing a graph decomposition, comparing decompositions along vertices and edges, a possible connection with the dual polyform, and the full forest pairing.
+- **Requires separate study:** choosing a graph decomposition, comparing decompositions along vertices and edges, a possible connection with the dual polyform.
 
 [[Supports of Structural Identities]] continues the algebraic part of the series: it describes relations by their supports and counts new independent directions relative to transfer by adjoining singleton blocks.
 

@@ -1,9 +1,9 @@
 ---
 title: Supports of Structural Identities
 date: 2026-10-18
-updated: 2026-10-18
-revision: 2
-source_revision: 2
+updated: 2026-11-08
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: supports-of-structural-identities
@@ -67,6 +67,162 @@ For the zero relation, set $U(0)=\varnothing$. This is the support of an element
 
 Different terms may have different supports. In the tetrahedron identity, the partitions into two pairs have support on four vertices, whereas each partition of block sizes $3+1$ has support on three. The support of the entire relation contains all four vertices.
 
+![Supports of Partitions and an Identity](<Supports of Partitions and an Identity.svg>)
+
+*The support is highlighted in green. It contains four vertices for $ab\mid cd\mid e$ and three for $abc\mid d\mid e$. Terms of the tetrahedron identity have different supports, whose union is $\{a,b,c,d\}$.*
+
+## Two operations: transfer and multiplication
+
+Let $R_{abcd}$ be the tetrahedron relation in the free space: the left side minus the right side of the identity, with each form $q_\pi$ replaced by its symbol $b_\pi$. It has grade $2$ and support $\{a,b,c,d\}$. Now add vertices $e,f$.
+
+![Transferring and Multiplying an Identity](<Transferring and Multiplying an Identity.svg>)
+
+*Adjoining singleton blocks $e,f$ preserves grade $2$ and the original support. Multiplying every term of the identity by $[(ef)]^2$ gives a grade-$3$ relation supported on six vertices. Only the first operation is called transfer here.*
+
+The support of a sum may exceed the support of either summand. Transfer $R_{abcd}$ and $R_{abce}$ to $\{a,b,c,d,e\}$. Their sum has grade $2$ but support on five vertices: for example, $b_{ac\mid bd\mid e}$ and $b_{ac\mid be\mid d}$ retain nonzero coefficients. Thus the bound $2r$ concerns the supports of generating relations, not every linear combination of them.
+
+![Support of a Sum of Two Relations](<Support of a Sum of Two Relations.svg>)
+
+*Two four-vertex supports give a five-vertex support for the sum. The relations are nonzero elements of the free space; their corresponding polyforms are zero.*
+
+## Partitions without singleton blocks
+
+Counting relations with a given support requires two combinatorial numbers. In both cases, vertices are labeled and blocks are unordered.
+
+> [!info] Partitions without singleton blocks
+> **Definition.** Let $S_{\geqslant2}(m,k)$ be the number of partitions of $m$ vertices into $k$ blocks of size at least two. Let $N_{\geqslant2}(m,k)$ count those partitions that are noncrossing in a fixed cyclic order.
+
+> [!info] Partitions without singleton blocks
+> **Definition.** For $r\geqslant1$ and $r+1\leqslant m\leqslant2r$, set
+>
+> $$
+> \boxed{
+> p_{m,r}
+> =S_{\geqslant2}(m,m-r)
+> -N_{\geqslant2}(m,m-r)
+> }
+> \tag{1}
+> $$
+
+Outside this range, set $p_{m,r}=0$; in grade $0$, also set $p_{m,0}=0$. The number $p_{m,r}$ counts crossing partitions of grade $r$ without singleton blocks. For $m=r+1$, both terms of the difference equal $1$, so $p_{r+1,r}=0$.
+
+In this note, $p_{m,r}$ is a count of relations grouped by support, not a polyform coordinate $p_\sigma^{(i)}$ from the note on gluing. Its algebraic meaning is established in [[#Decomposing the relation space|the relation-space decomposition section]].
+
+## Examples and the meaning of the coefficients
+
+In the examples, $R_\pi$ is the relation obtained by subtracting from $b_\pi$ its expansion in the symbols of the noncrossing basis. The precise definition and transfer compatibility appear in [[#A relation basis compatible with supports|the relation-basis section]].
+
+### Four vertices: one relation
+
+In grade $2$, the only possible size of a new support is $4$:
+
+$$
+p_{4,2}=3-2=1,\qquad I_{n,2}=\binom n4
+$$
+
+Of the three partitions into pairs, two are noncrossing and one is crossing. In the order $a,b,c,d$, the latter is $ac|bd$, and the relation $R_{ac|bd}$ is the tetrahedron identity.
+
+A distinction is essential here. The number $p_{4,2}=1$ does not mean that there is a dependence involving only the three forms
+
+$$
+q_{ab|cd},\qquad q_{ac|bd},\qquad q_{ad|bc}
+$$
+
+These three forms are independent. To see this, use the tetrahedron identity to replace $q_{ac|bd}$ by its expansion in the [[Basis and Dimension of the Space of Partition Forms#Four vertices: a basis and an explicit check|six-dimensional basis]]. In any zero linear combination of the three pair-partition forms, the coefficient of each of the four partition forms with block sizes $3+1$ then equals the coefficient of $q_{ac|bd}$. It must be zero. Independence of the two remaining basis forms then forces the other coefficients to vanish.
+
+Thus $N_{\geqslant2}(m,k)$ counts the noncrossing subfamily without singleton blocks, but need not equal the rank of all forms without singleton blocks. Expansions of the latter may contain forms with smaller supports.
+
+### Grade 3: transfer and multiplication
+
+On five vertices without singleton blocks, the only possible block sizes are $3+2$; on six vertices in this grade, they are $2+2+2$. Hence
+
+$$
+p_{5,3}=10-5=5,\qquad
+p_{6,3}=15-5=10
+$$
+
+Counting over five- and six-vertex subsets gives
+
+$$
+I_{n,3}=5\binom n5+10\binom n6
+$$
+
+The convention $\binom nm=0$ for $m>n$ also allows this expression to be used when $n<6$.
+
+A concrete relation on five vertices follows from the four-block identity with blocks $a,b,c,de$:
+
+$$
+\begin{aligned}
+q_{ac|bde}+q_{ab|cde}+q_{ade|bc}
+&=q_{a|bcde}+q_{b|acde}+q_{c|abde}+q_{de|abc}
+\end{aligned}
+$$
+
+In the order $a,b,c,d,e$, only $ac|bde$ in this expression is crossing. Moving the other two terms to the right gives precisely its basis expansion. The corresponding relation has support on five vertices and grade $3$.
+
+On six vertices, adjoining a singleton vertex $f$ to every partition gives a relation of the same grade with the original five-vertex support. Each of the six five-vertex subsets carries five independent relations. By the relation-space decomposition theorem proved below, these relations are jointly independent and span a space of dimension $30$.
+
+The full kernel has dimension
+
+$$
+I_{6,3}=5\binom65+10\binom66=30+10=40
+$$
+
+The ten additional classes can be chosen as the $R_\pi$ for the ten crossing partitions of six vertices into three pairs.
+
+Now multiply the tetrahedron identity by $[(ef)]^2$. We obtain
+
+$$
+\begin{aligned}
+&q_{ab|cd|ef}+q_{ac|bd|ef}+q_{ad|bc|ef}=\\
+&\qquad=q_{a|bcd|ef}+q_{b|acd|ef}
++q_{c|abd|ef}+q_{d|abc|ef}
+\end{aligned}
+$$
+
+This relation of grade $3$ has support on six vertices. It does not belong to the space generated by transfers from five vertices: every such transfer contains only symbols with support of size at most five, whereas here the coefficient of $b_{ac|bd|ef}$ is nonzero.
+
+The relation is therefore new relative to transfer, although it is obtained by multiplying a known identity. This is consistent with the [[Basis and Dimension of the Space of Partition Forms#Completeness of the four-block identity|completeness of the four-block identity]], which allows adjoining additional blocks and other operations.
+
+The coefficients $p_{m,r}$ may be called “primitive” only relative to transfer by adjoining singleton blocks: they count new independent directions under that operation. This does not rule out obtaining a relation by multiplication or by enlarging blocks.
+
+### First values and an example on seven vertices
+
+| Grade $r$ | Support size $m$ | All partitions without singleton blocks | Noncrossing among them | $p_{m,r}$ |
+|---:|---:|---:|---:|---:|
+| 2 | 4 | 3 | 2 | 1 |
+| 3 | 5 | 10 | 5 | 5 |
+| 3 | 6 | 15 | 5 | 10 |
+| 4 | 6 | 25 | 9 | 16 |
+| 4 | 7 | 105 | 21 | 84 |
+| 4 | 8 | 105 | 14 | 91 |
+
+For $m=7$, $r=4$, we have $k=3$. The only possible block sizes are $3+2+2$; the form type, specified by component grades, is $[2,1,1]$. Choose the triple, then partition the remaining four vertices into two unordered pairs:
+
+$$
+S_{\geqslant2}(7,3)=\binom73\cdot3=105
+$$
+
+The factor $3$ already accounts for the two pairs being unordered; no additional division by $2!$ is required. Formula (4), derived in the counting section, gives
+
+$$
+N_{\geqslant2}(7,3)
+=\frac15\binom73\binom32=21,
+\qquad p_{7,4}=105-21=84
+$$
+
+On seven vertices, there are also relations transferred from six-vertex sets:
+
+$$
+I_{7,4}=\binom76\cdot16+84=196
+$$
+
+This agrees with the formula from the [[Basis and Dimension of the Space of Partition Forms]], $S(7,3)-N(7,3)=301-105=196$.
+
+**Independent checks.** Direct enumeration of partitions for $m\leqslant8$, checking for crossings and singleton blocks, gave the counts in the table. The forms were also expanded in the exterior basis built from $u_i=a_i-a_1$. Exact rational computations confirmed independence of the three pair-partition forms on four vertices and both explicitly displayed identities of grade $3$.
+
+For $(n,r)=(6,3)$, the kernels on five-vertex subsets were computed directly from form coefficients and then transferred to six vertices. The combined family has rank $30$, and the full kernel has dimension $40$. Adjoining the displayed product of the tetrahedron identity with $[(ef)]^2$ increases the first rank to $31$. These computations check the examples; the general result is proved in “Decomposing the relation space”.
+
 ## Transfer by adjoining singleton blocks
 
 For a nonempty $U\subseteq A$, let $\iota_U^A\pi$ be the partition obtained from a partition $\pi$ of $U$ by adjoining every vertex of $A\setminus U$ as a singleton block. On the free vector spaces, this defines an embedding
@@ -90,16 +246,16 @@ Below, transfer from a smaller set means precisely this operation, possibly with
 
 Fix a cyclic order on $A$. Every subset inherits its order. Adjoining singleton blocks preserves the noncrossing property, since such blocks cannot participate in a crossing.
 
-By the [[Basis and Dimension of the Space of Partition Forms#Completeness of the four-block identity|result of the third note]], each crossing partition $\pi$ determines a relation
+By the [[Basis and Dimension of the Space of Partition Forms#Completeness of the four-block identity|Basis and Dimension of the Space of Partition Forms]], each crossing partition $\pi$ determines a relation
 
 $$
 R_\pi^A
 =b_\pi-\sum_{\sigma\in\mathrm{NC}(A)}
 c_{\sigma\pi}b_\sigma
-\tag{1}
+\tag{2}
 $$
 
-Here $c_{\sigma\pi}$ are the unique coefficients in the expansion of $q_\pi$ in the noncrossing basis, and the sum contains only partitions of the same grade. The relations (1) form a basis of $\mathcal K_{A,r}$: each has exactly one nonzero coordinate among crossing partitions, equal to $1$ at $b_\pi$.
+Here $c_{\sigma\pi}$ are the unique coefficients in the expansion of $q_\pi$ in the noncrossing basis, and the sum contains only partitions of the same grade. The relations (2) form a basis of $\mathcal K_{A,r}$: each has exactly one nonzero coordinate among crossing partitions, equal to $1$ at $b_\pi$.
 
 > [!info] Compatibility with transfer
 > **Lemma.** Let $\pi$ be a crossing partition of $A$, let $U=U(\pi)$, and let $\bar\pi$ be obtained by deleting its singleton blocks. Then
@@ -107,7 +263,7 @@ Here $c_{\sigma\pi}$ are the unique coefficients in the expansion of $q_\pi$ in 
 > $$
 > R_\pi^A=J_U^A R_{\bar\pi}^U,
 > \qquad U(R_\pi^A)=U(\pi)
-> \tag{2}
+> \tag{3}
 > $$
 >
 > In particular, the noncrossing expansion of $q_\pi$ introduces no nontrivial blocks containing vertices outside $U$.
@@ -115,18 +271,13 @@ Here $c_{\sigma\pi}$ are the unique coefficients in the expansion of $q_\pi$ in 
 > [!note]- Proof using uniqueness of the expansion
 > **Proof.** Expand $q_{\bar\pi}$ in the noncrossing basis on $U$. Transfer the equality to $A$ by adjoining singleton blocks outside $U$.
 >
-> The resulting right-hand side consists of noncrossing forms on $A$ and equals $q_\pi$. By uniqueness of the basis expansion, it coincides with the expansion used in (1). This proves the first equality in (2).
+> The resulting right-hand side consists of noncrossing forms on $A$ and equals $q_\pi$. By uniqueness of the basis expansion, it coincides with the expansion used in (2). This proves the first equality in (3).
 >
 > The supports of all its terms are contained in $U$. The coefficient of $b_\pi$ is $1$, and the support of $\pi$ is all of $U$. Thus the support of the relation is exactly $U$. $\square$
 
 The same argument applies to transfer from any intermediate set containing $U(\pi)$. Compatibility therefore follows from the established basis theorem; no additional property of the crossing-resolution algorithm needs to be assumed.
 
-## Partitions without singleton blocks
-
-Counting relations with a given support requires two combinatorial numbers. In both cases, vertices are labeled and blocks are unordered.
-
-> [!info] Partitions without singleton blocks
-> **Definition.** Let $S_{\geqslant2}(m,k)$ be the number of partitions of $m$ vertices into $k$ blocks of size at least two. Let $N_{\geqslant2}(m,k)$ count those partitions that are noncrossing in a fixed cyclic order.
+## Further detail: counting formulas
 
 Recall that $S(m,k)$ is a Stirling number of the second kind, counting all partitions into $k$ nonempty blocks. Inclusion-exclusion gives
 
@@ -153,7 +304,7 @@ $$
 N_{\geqslant2}(m,k)
 =\frac1{m-k+1}\binom mk\binom{m-k-1}{k-1}
 }
-\tag{3}
+\tag{4}
 $$
 
 > [!note]- Derivation using a generating function
@@ -186,23 +337,7 @@ $$
 > \end{aligned}
 > $$
 >
-> The equality $\binom{m+1}{k}/(m+1)=\binom mk/(m-k+1)$ gives (3). Square brackets containing a monomial here denote coefficient extraction from a formal power series, not a PMG form. $\square$
-
-> [!info] Partitions without singleton blocks
-> **Definition.** For $r\geqslant1$ and $r+1\leqslant m\leqslant2r$, set
->
-> $$
-> \boxed{
-> p_{m,r}
-> =S_{\geqslant2}(m,m-r)
-> -N_{\geqslant2}(m,m-r)
-> }
-> \tag{4}
-> $$
-
-Outside this range, set $p_{m,r}=0$; in grade $0$, also set $p_{m,0}=0$. The number $p_{m,r}$ counts crossing partitions of grade $r$ without singleton blocks. For $m=r+1$, both terms of the difference equal $1$, so $p_{r+1,r}=0$.
-
-In this note, $p_{m,r}$ is a count of relations grouped by support, not a polyform coordinate $p_\sigma^{(i)}$ from the note on gluing. The next result establishes its algebraic meaning.
+> The equality $\binom{m+1}{k}/(m+1)=\binom mk/(m-k+1)$ gives (4). Square brackets containing a monomial here denote coefficient extraction from a formal power series, not a PMG form. $\square$
 
 ## Decomposing the relation space
 
@@ -236,9 +371,9 @@ A linear combination of transferred relations may have support larger than $m$. 
 > For a chosen cyclic order, the classes of the relations $R_\pi^A$ with $|U(\pi)|=m$ form a basis of this quotient.
 
 > [!note]- Proof of the space decomposition
-> **Proof.** By Lemma (2), every $R_\pi^A$ with $|U(\pi)|\leqslant m$ is transferred from its own support. It therefore belongs to $\mathcal K_{A,r}^{(\leqslant m)}$.
+> **Proof.** By Lemma (3), every $R_\pi^A$ with $|U(\pi)|\leqslant m$ is transferred from its own support. It therefore belongs to $\mathcal K_{A,r}^{(\leqslant m)}$.
 >
-> Conversely, expand a relation on any $U$ with $|U|\leqslant m$ in the relation basis on that set. By (2), transferring each basis relation gives a basis relation on $A$ with support contained in $U$. Hence
+> Conversely, expand a relation on any $U$ with $|U|\leqslant m$ in the relation basis on that set. By (3), transferring each basis relation gives a basis relation on $A$ with support contained in $U$. Hence
 >
 > $$
 > \mathcal K_{A,r}^{(\leqslant m)}
@@ -289,135 +424,22 @@ There is also a direct combinatorial derivation of (6). Crossing partitions of g
 > [!info] Decomposing the relation space
 > **Corollary.** For fixed grade $r$, all relations are generated by transfers from sets of at most $2r$ vertices. This bound concerns the generating relations. The support of an arbitrary linear combination of them may be larger than $2r$.
 
-## Examples and the meaning of the coefficients
-
-### Four vertices: one relation
-
-In grade $2$, the only possible size of a new support is $4$:
-
-$$
-p_{4,2}=3-2=1,\qquad I_{n,2}=\binom n4
-$$
-
-Of the three partitions into pairs, two are noncrossing and one is crossing. In the order $a,b,c,d$, the latter is $ac|bd$, and the relation $R_{ac|bd}$ is the tetrahedron identity.
-
-A distinction is essential here. The number $p_{4,2}=1$ does not mean that there is a dependence involving only the three forms
-
-$$
-q_{ab|cd},\qquad q_{ac|bd},\qquad q_{ad|bc}
-$$
-
-These three forms are independent. To see this, use the tetrahedron identity to replace $q_{ac|bd}$ by its expansion in the [[Basis and Dimension of the Space of Partition Forms#Four vertices: a basis and an explicit check|six-dimensional basis]]. In any zero linear combination of the three pair-partition forms, the coefficient of each of the four partition forms with block sizes $3+1$ then equals the coefficient of $q_{ac|bd}$. It must be zero. Independence of the two remaining basis forms then forces the other coefficients to vanish.
-
-Thus $N_{\geqslant2}(m,k)$ counts the noncrossing subfamily without singleton blocks, but need not equal the rank of all forms without singleton blocks. Expansions of the latter may contain forms with smaller supports.
-
-### Grade 3: transfer and multiplication
-
-On five vertices without singleton blocks, the only possible block sizes are $3+2$; on six vertices in this grade, they are $2+2+2$. Hence
-
-$$
-p_{5,3}=10-5=5,\qquad
-p_{6,3}=15-5=10
-$$
-
-Formula (6) gives
-
-$$
-I_{n,3}=5\binom n5+10\binom n6
-$$
-
-The convention $\binom nm=0$ for $m>n$ also allows this expression to be used when $n<6$.
-
-A concrete relation on five vertices follows from the four-block identity with blocks $a,b,c,de$:
-
-$$
-\begin{aligned}
-q_{ac|bde}+q_{ab|cde}+q_{ade|bc}
-&=q_{a|bcde}+q_{b|acde}+q_{c|abde}+q_{de|abc}
-\end{aligned}
-$$
-
-In the order $a,b,c,d,e$, only $ac|bde$ in this expression is crossing. Moving the other two terms to the right gives precisely its basis expansion. The corresponding relation has support on five vertices and grade $3$.
-
-On six vertices, adjoining a singleton vertex $f$ to every partition gives a relation of the same grade with the original five-vertex support. Each of the six five-vertex subsets carries five independent relations. By the theorem, these relations are jointly independent and span a space of dimension $30$.
-
-The full kernel has dimension
-
-$$
-I_{6,3}=5\binom65+10\binom66=30+10=40
-$$
-
-The ten additional classes can be chosen as the $R_\pi$ for the ten crossing partitions of six vertices into three pairs.
-
-Now multiply the tetrahedron identity by $[(ef)]^2$. We obtain
-
-$$
-\begin{aligned}
-&q_{ab|cd|ef}+q_{ac|bd|ef}+q_{ad|bc|ef}=\\
-&\qquad=q_{a|bcd|ef}+q_{b|acd|ef}
-+q_{c|abd|ef}+q_{d|abc|ef}
-\end{aligned}
-$$
-
-This relation of grade $3$ has support on six vertices. It does not belong to the space generated by transfers from five vertices: every such transfer contains only symbols with support of size at most five, whereas here the coefficient of $b_{ac|bd|ef}$ is nonzero.
-
-The relation is therefore new relative to transfer, although it is obtained by multiplying a known identity. This is consistent with the [[Basis and Dimension of the Space of Partition Forms#Completeness of the four-block identity|completeness of the four-block identity]], which allows adjoining additional blocks and other operations.
-
-The coefficients $p_{m,r}$ may be called “primitive” only relative to transfer by adjoining singleton blocks: they count new independent directions under that operation. This does not rule out obtaining a relation by multiplication or by enlarging blocks.
-
-### First values and an example on seven vertices
-
-| Grade $r$ | Support size $m$ | All partitions without singleton blocks | Noncrossing among them | $p_{m,r}$ |
-|---:|---:|---:|---:|---:|
-| 2 | 4 | 3 | 2 | 1 |
-| 3 | 5 | 10 | 5 | 5 |
-| 3 | 6 | 15 | 5 | 10 |
-| 4 | 6 | 25 | 9 | 16 |
-| 4 | 7 | 105 | 21 | 84 |
-| 4 | 8 | 105 | 14 | 91 |
-
-For $m=7$, $r=4$, we have $k=3$. The only possible block sizes are $3+2+2$; the form type, specified by component grades, is $[2,1,1]$. Choose the triple, then partition the remaining four vertices into two unordered pairs:
-
-$$
-S_{\geqslant2}(7,3)=\binom73\cdot3=105
-$$
-
-The factor $3$ already accounts for the two pairs being unordered; no additional division by $2!$ is required. By (3),
-
-$$
-N_{\geqslant2}(7,3)
-=\frac15\binom73\binom32=21,
-\qquad p_{7,4}=105-21=84
-$$
-
-On seven vertices, there are also relations transferred from six-vertex sets:
-
-$$
-I_{7,4}=\binom76\cdot16+84=196
-$$
-
-This agrees with the formula from the third note, $S(7,3)-N(7,3)=301-105=196$.
-
-**Independent checks.** Direct enumeration of partitions for $m\leqslant8$, checking for crossings and singleton blocks, gave the counts in the table. The forms were also expanded in the exterior basis built from $u_i=a_i-a_1$. Exact rational computations confirmed independence of the three pair-partition forms on four vertices and both explicitly displayed identities of grade $3$.
-
-For $(n,r)=(6,3)$, the kernels on five-vertex subsets were computed directly from form coefficients and then transferred to six vertices. The combined family has rank $30$, and the full kernel has dimension $40$. Adjoining the displayed product of the tetrahedron identity with $[(ef)]^2$ increases the first rank to $31$. These computations check the examples; the general result is proved above.
-
 ## Application to graph gluing
 
-In the [[Structural Identities and Graph Gluing|previous note]], the grove polyform on the shared vertex set is expressed through partition forms. To pass to the noncrossing basis, it suffices to transform each form $q_\pi$ on its support and then adjoin the remaining vertices as singleton blocks.
+In the [[Structural Identities and Graph Gluing|Structural Identities and Graph Gluing]], the grove polyform on the shared vertex set is expressed through partition forms. To pass to the noncrossing basis, it suffices to transform each form $q_\pi$ on its support and then adjoin the remaining vertices as singleton blocks.
 
 For fixed grade $r$, the supports of these transformations have size at most $2r$. Rules for this grade can therefore be stored on small sets and transferred to a larger shared vertex set. Performing a transformation requires the actual relation coefficients: the numbers $p_{m,r}$ suffice for counting, but not for changing coordinates.
 
-Equality of polyforms preserves the spanning-tree pairing by the proved gluing formula. The original grove weight sums, the transformed coordinates, coefficient sums, and metric evaluations remain distinct objects. Decomposition by supports does not remove the limitations stated in the previous note for ordinary counting of all unrooted forests.
+Equality of polyforms preserves the spanning-tree pairing by the proved gluing formula. The original grove weight sums, the transformed coordinates, coefficient sums, and metric evaluations remain distinct objects. Decomposition by supports does not remove the limitations stated in the [[Structural Identities and Graph Gluing]] for ordinary counting of all unrooted forests.
 
 ## Status of the results and scope
 
-- **Proved using the noncrossing basis theorem:** compatibility of relations with transfer, decomposition of the relation space by supports, and the successive quotient dimensions (5). The external combinatorial foundations of the basis are those given in the third note.
-- **Derived combinatorially:** the counts of partitions without singleton blocks, formula (4), the range of new support sizes, and the binomial decomposition (6). The derivation of (3) uses the standard Lagrange inversion formula.
+- **Proved using the noncrossing basis theorem:** compatibility of relations with transfer, decomposition of the relation space by supports, and the successive quotient dimensions (5). The external combinatorial foundations of the basis are those given in the [[Basis and Dimension of the Space of Partition Forms]].
+- **Derived combinatorially:** the counts of partitions without singleton blocks, formula (1), the range of new support sizes, and the binomial decomposition (6). The derivation of (4) uses the standard Lagrange inversion formula.
 - **Checked directly by computation:** the table entries, the displayed relations, and the ranks in the examples on four, five, and six vertices.
 - **Not asserted:** independence of the chosen space decomposition from the cyclic order, minimality of the number of terms in a relation, or primitivity with respect to all algebraic operations.
 
-Formula (5) is proved through compatibility of the basis with transfer. The proof relies on the noncrossing basis theorem from the third note and hence uses the external results cited there.
+Formula (5) is proved through compatibility of the basis with transfer. The proof relies on the noncrossing basis theorem from the [[Basis and Dimension of the Space of Partition Forms]] and hence uses the external results cited there.
 
 Choosing short representatives of relations that are convenient for computation remains a separate task. The dimension result does not determine the best order of transformations or classify relations by all possible operations used to obtain them.
 
