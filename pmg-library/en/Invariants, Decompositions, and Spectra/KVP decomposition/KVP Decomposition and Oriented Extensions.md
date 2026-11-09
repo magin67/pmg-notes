@@ -1,9 +1,9 @@
 ---
 title: KVP Decomposition and Oriented Extensions
 date: 2026-10-26
-updated: 2026-11-01
-revision: 2
-translated_revision: 4
+updated: 2026-11-09
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -20,7 +20,7 @@ aliases:
 
 This series explains the canonical decomposition of pair characteristics and its use in PMG. Linear subspaces and projectors are defined first, followed by graph, metric, and applied consequences. The decomposition always concerns a chosen table: couplings C, pair coefficients of the Green matrix, or resistances R and r.
 
-The nine reviewed Russian notes form the current series; their English translations are collected here. KVP is the PMG name for a decomposition with known counterparts in Hoeffding-ANOVA theory, representations of the symmetric group, and the Johnson scheme. The established decomposition itself should be distinguished from the study of particular consequences for PMG.
+KVP is the PMG name for a decomposition with known counterparts in Hoeffding-ANOVA theory, representations of the symmetric group, and the Johnson scheme. The established decomposition itself should be distinguished from the study of particular consequences for PMG.
 
 ## Place in the library
 
@@ -32,6 +32,18 @@ Secondary thematic entries:
 - [[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]: circulation and directional imbalance.
 
 [[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+
+## Reading routes and prerequisites
+
+- **First introduction:** [[KVP Decomposition of Pair Characteristics]], then [[KVP on Simple and Weighted Graphs]]. Linear algebra and the notion of a coupling table suffice; the decomposition itself needs no metric.
+- **Oriented data:** after the KVP definition, read [[Oriented Extensions of KVP - Circulation and Imbalance]]. Moving to directional geometry requires [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]] and [[KVP Decomposition of the Green Matrix and Resistances]].
+- **Metric and potentials:** [[The Distance Operator and KVP Decomposition]], [[KVP Decomposition of the Green Matrix and Resistances]], then [[KVP Components and Metric Graph Parameters]] and [[The Second-Order Symmetric Potential and KVP Decomposition]]. Useful background includes [[Laplacian, Green Matrix, and Effective Resistance Matrix]], [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]], and [[Partition Forms and the Tetrahedron Identity]].
+- **Applications:** the KVP definitions, then [[Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]. The electrical part requires [[KVP Decomposition of the Green Matrix and Resistances]] first; the interaction example uses a pair table directly.
+- **Forests and toponomes:** [[Forest Toponomes of KVP Components]] after the KVP definition and the basic constructions of [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. The metric notes are not prerequisites for defining pure toponomes.
+
+![[images/Routes through the KVP series.svg]]
+
+*Numbers refer to the contents table. After the KVP definition, choose graph examples, directed data, metric topics, or forest toponomes. Electrical applications require the resistance transformation first; the interaction example in note 6 is accessible directly after note 1.*
 
 ## Components and classes of tables
 
@@ -100,13 +112,16 @@ Here $\|A\|_0^2=\sum_{i<j}A_{ij}^2$ is the coefficient sum of squares. For a sym
 
 **Constraints and interactions of forest coefficients.** At grade two, scalar mixed KVP-coefficients vanish. For pure P, $A_{2,1^{k-2}}=-kA_{1^k}$ is proved. Higher grades contain mixed terms; three pure toponomes do not determine the full toponome or spanning-tree coefficient. Two positively weighted graphs with spanning-tree coefficients 398 and 394 demonstrate this.
 
-## Reading routes and prerequisites
+## Origins of the main results
 
-- **First introduction:** [[KVP Decomposition of Pair Characteristics]], then [[KVP on Simple and Weighted Graphs]]. Linear algebra and the notion of a coupling table suffice; the decomposition itself needs no metric.
-- **Oriented data:** after the KVP definition, read [[Oriented Extensions of KVP - Circulation and Imbalance]]. Moving to directional geometry requires [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]] and [[KVP Decomposition of the Green Matrix and Resistances]].
-- **Metric and potentials:** [[The Distance Operator and KVP Decomposition]], [[KVP Decomposition of the Green Matrix and Resistances]], then [[KVP Components and Metric Graph Parameters]] and [[The Second-Order Symmetric Potential and KVP Decomposition]]. Useful background includes [[Laplacian, Green Matrix, and Effective Resistance Matrix]], [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]], and [[Partition Forms and the Tetrahedron Identity]].
-- **Applications:** the KVP definitions, then [[Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]. The electrical part requires [[KVP Decomposition of the Green Matrix and Resistances]] first; the interaction example uses a pair table directly.
-- **Forests and toponomes:** [[Forest Toponomes of KVP Components]] after the KVP definition and the basic constructions of [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. The metric notes are not prerequisites for defining pure toponomes.
+| Result | Source or derivation | Role in PMG | Status |
+| --- | --- | --- | --- |
+| KVP and the O-U decomposition | Literature and comparisons in notes 1 and 3 | Components of a chosen pair table | Established constructions in PMG notation |
+| Distance and resistance transformations | Definitions and proofs in notes 4 and 5 | Distinguishing couplings, the Green matrix, and resistances | Proved under the stated assumptions |
+| Metric contributions and the second-order potential | Derivations in notes 7 and 8 from metric formulas and the tetrahedron identity | Center, radius, areas, and the circulation correction | Proved; no separate claim of scientific priority |
+| Balance and mixed forest coefficients | Counting arguments and counterexamples in note 9 | Constraints on pure components and their interactions | Identities proved; the general completeness conjecture remains open |
+
+Precise references to external work and the required definitions appear alongside the corresponding results in the individual notes.
 
 ## Checks, boundaries, and further work
 

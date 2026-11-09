@@ -2,7 +2,7 @@
 
 [Русский](README.md) · English
 
-This directory contains one reproducible script, [verify.py](verify.py), for the [nine notes in the series](../../pmg-library/en/Invariants,%20Decompositions,%20and%20Spectra/KVP%20decomposition/KVP%20Decomposition%20and%20Oriented%20Extensions.md).
+This directory contains the main reproducible script, [verify.py](verify.py), for the [nine notes in the series](../../pmg-library/en/Invariants,%20Decompositions,%20and%20Spectra/KVP%20decomposition/KVP%20Decomposition%20and%20Oriented%20Extensions.md).
 
 Python 3.9 or later is required; no third-party packages are needed. All numerical comparisons are exact, using fractions.Fraction. The script neither accesses the network nor modifies files.
 
@@ -63,3 +63,15 @@ The English notes retain the same numeric tables. An [English-labeled copy of th
 All other input graphs and expected values are specified directly in the script. For the published witnesses, forests are enumerated anew, every coefficient vector is compared, and ranks are recomputed. The balance identity is not used to obtain these vectors.
 
 A successful run confirms the described finite computations. General statements are justified in the notes; the script does not prove the rank conjecture at arbitrary grade. It also does not test electrometry on experimental data or implement incomplete-data or weighted statistical estimation.
+
+## Geometric illustrations
+
+The additional script [verify_illustrations.py](verify_illustrations.py) compares the new figures with independent Laplacian calculations: the weighted three-vertex path, circumcenter and centroid, triangle areas, the resistance tetrahedron of P4, and the exact planar realization of mixed vectors for P5. It uses exact rational arithmetic.
+
+    python checks/kvp/verify_illustrations.py
+
+[generate_figures.py](generate_figures.py) reproduces eight new diagrams in Russian and English, writing SVG files to the corresponding series/images directories. No third-party libraries are needed. To write the figures to a chosen repository copy:
+
+    python checks/kvp/generate_figures.py --root .
+
+The generator overwrites only these 16 SVG files; other figures in the series are preserved.

@@ -1,9 +1,9 @@
 ---
 title: The Second-Order Symmetric Potential and KVP Decomposition
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 3
+updated: 2026-11-09
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: second-order-symmetric-potential-and-kvp
@@ -90,6 +90,23 @@ $$
 
 If the data are unnormalized edge potentials $w_{ij}=u_M([(ij)]^2)=\tau R_{ij}$ rather than resistances, degree-two homogeneity gives $U_2=H_n(w)/\tau$. Substituting w for R without adjusting the normalization is incorrect.
 
+### One triple: area and potential
+
+Take the unit-weight path $a-b-c$. Its resistances are $R_{ab}=R_{bc}=1$, $R_{ac}=2$. A Euclidean realization is $x_a=(0,0)$, $x_b=(1,0)$, $x_c=(1,1)$: successive path steps are orthogonal.
+
+![[images/Triangle area and the second-order potential.svg]]
+
+*The vectors $(ab)$ and $(ac)$ start at a. The triangle has area $1/2$, and the parallelogram on the same vectors has area 1. The squared parallelogram area equals the Gram determinant and the normalized potential of the triple boundary.*
+
+Here $(ab)^2=1$, $(ac)^2=2$, and $(ab)\cdot(ac)=1$, so
+
+$$
+h_{abc}=\det\begin{pmatrix}1&1\\1&2\end{pmatrix}
+=1=4\left(\frac12\right)^2
+$$
+
+The path has a single spanning tree of weight 1, hence $\tau=1$ and $U_2=\nu_2=h_{abc}=1$. For a larger vertex set, $H_n$ adds these determinants over all triples.
+
 ### Why second order
 
 The normalized first-order potential equals the Kirchhoff index:
@@ -128,6 +145,10 @@ $$
 $$
 
 Evaluation of a product of forms is not the product of their numerical evaluations: the terms $-\pi_\alpha^2$ are necessary.
+
+![[images/The path P4 and its resistance tetrahedron.svg]]
+
+*Left: the ordinary diagram of a unit-weight path. Right: a projection of its three-dimensional resistance realization: $x_a=(0,0,0)$, $x_b=(1,0,0)$, $x_c=(1,1,0)$, $x_d=(1,1,1)$. The three successive steps are pairwise orthogonal in space. Colors group opposite tetrahedron pairs: $ab,cd$; $ac,bd$; $ad,bc$. Their inner products are $0,1,1$, so (4) gives $H_4=1+4+3-(0+1+1)=6$. The schematic line on the left is not a resistance embedding.*
 
 [[KVP Decomposition of Pair Characteristics#What the P-component identifies|The description of the P-component]] shows that four-point polar values use only P. For example,
 
@@ -177,6 +198,8 @@ Indeed, each pair of disjoint edges belongs to exactly one four-element subset, 
 Evaluating (7) expresses $(n-3)H_n(R)$ as the sum of Gram determinants over all unordered pairs of disjoint edges on the complete vertex set. These are vertex pairs regardless of whether the original graph contains a coupling between them.
 
 ## The general KVP formula
+
+Only R is decomposed here, so its vertex deviation is denoted by v. This is the vector called w in the metric-parameter note and $v^{(R)}$ in the Green-matrix note.
 
 Recall the required decomposition data:
 

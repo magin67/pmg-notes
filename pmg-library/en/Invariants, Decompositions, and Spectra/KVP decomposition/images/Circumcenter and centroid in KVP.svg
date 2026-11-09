@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+<title id="title">Radius and center displacement</title>
+<desc id="desc">The caption provides the mathematical interpretation and exact data.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="620" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Radius and center displacement</text>
+<rect x="20" y="80" width="620" height="500" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<rect x="665" y="80" width="435" height="500" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<circle cx="300.00" cy="320.00" r="201.25" fill="none" stroke="#28638c" stroke-width="2"/>
+<polygon points="120.00,410.00 480.00,410.00 120.00,230.00" fill="#e2eff9"/>
+<path d="M120.00 410.00 L480.00 410.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M120.00 410.00 L120.00 230.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M480.00 410.00 L120.00 230.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M300.00 320.00 L120.00 410.00" fill="none" stroke="#28638c" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M300.00 320.00 L480.00 410.00" fill="none" stroke="#28638c" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M300.00 320.00 L120.00 230.00" fill="none" stroke="#28638c" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M240.00 350.00 L300.00 320.00" fill="none" stroke="#b45920" stroke-width="4" marker-end="url(#orange)"/>
+<circle cx="120.00" cy="410.00" r="5.00" fill="#20344a" stroke="#20344a" stroke-width="2"/>
+<text x="120.00" y="437.00" font-size="23" fill="#20344a" text-anchor="middle" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">a</text>
+<circle cx="480.00" cy="410.00" r="5.00" fill="#20344a" stroke="#20344a" stroke-width="2"/>
+<text x="480.00" y="437.00" font-size="23" fill="#20344a" text-anchor="middle" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">b</text>
+<circle cx="120.00" cy="230.00" r="5.00" fill="#20344a" stroke="#20344a" stroke-width="2"/>
+<text x="100.00" y="220.00" font-size="23" fill="#20344a" text-anchor="middle" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">c</text>
+<circle cx="240.00" cy="350.00" r="5.00" fill="#b45920" stroke="#b45920" stroke-width="2"/>
+<text x="222.00" y="373.00" font-size="23" fill="#b45920" text-anchor="middle" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">h</text>
+<circle cx="300.00" cy="320.00" r="5.00" fill="#28638c" stroke="#28638c" stroke-width="2"/>
+<text x="315.00" y="308.00" font-size="23" fill="#28638c" text-anchor="middle" font-weight="bold" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">p</text>
+<text x="415.00" y="352.00" font-size="24" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">√ρ</text>
+<text x="330.00" y="547.00" font-size="22" fill="#20344a" text-anchor="middle">Resistances: 4, 1, 5</text>
+<text x="882.00" y="126.00" font-size="23" fill="#20344a" text-anchor="middle" font-weight="bold">Exact coordinates</text>
+<text x="882.00" y="178.00" font-size="24" fill="#20344a" text-anchor="middle">h = (2/3, 1/3)</text>
+<text x="882.00" y="222.00" font-size="24" fill="#20344a" text-anchor="middle">p = (1, 1/2)</text>
+<text x="882.00" y="294.00" font-size="24" fill="#20344a" text-anchor="middle">ρ₀ = 10/9</text>
+<text x="882.00" y="338.00" font-size="24" fill="#20344a" text-anchor="middle">(p − h)² = 5/36</text>
+<text x="882.00" y="405.00" font-size="24" fill="#20344a" text-anchor="middle">ρ = 10/9 + 5/36 = 5/4</text>
+<text x="882.00" y="480.00" font-size="21" fill="#20344a" text-anchor="middle">ρ₀: mean squared</text>
+<text x="882.00" y="512.00" font-size="21" fill="#20344a" text-anchor="middle">distance to h</text>
+</g></svg>

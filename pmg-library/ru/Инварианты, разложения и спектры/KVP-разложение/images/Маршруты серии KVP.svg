@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img" aria-labelledby="title desc">
+<title id="title">Выберите маршрут после определения KVP</title>
+<desc id="desc">Математический смысл и точные данные приведены в подписи к рисунку.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="650" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Выберите маршрут после определения KVP</text>
+<rect x="380" y="80" width="360" height="100" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="120.00" font-size="27" fill="#28638c" text-anchor="middle" font-weight="bold">1</text>
+<text x="560.00" y="153.00" font-size="22" fill="#20344a" text-anchor="middle">Определение и компоненты</text>
+<path d="M560.00 180.00 L560.00 220.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<path d="M145.00 220.00 L970.00 220.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<path d="M145.00 220.00 L145.00 254.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<rect x="20" y="260" width="250" height="105" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="145.00" y="301.00" font-size="27" fill="#28638c" text-anchor="middle" font-weight="bold">2</text>
+<text x="145.00" y="337.00" font-size="19" fill="#20344a" text-anchor="middle">Графовые примеры</text>
+<path d="M420.00 220.00 L420.00 254.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<rect x="295" y="260" width="250" height="105" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="420.00" y="301.00" font-size="27" fill="#28638c" text-anchor="middle" font-weight="bold">3</text>
+<text x="420.00" y="337.00" font-size="19" fill="#20344a" text-anchor="middle">Направленные данные</text>
+<path d="M695.00 220.00 L695.00 254.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<rect x="570" y="260" width="250" height="105" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="695.00" y="301.00" font-size="27" fill="#28638c" text-anchor="middle" font-weight="bold">4 → 5</text>
+<text x="695.00" y="337.00" font-size="19" fill="#20344a" text-anchor="middle">Переходы и резистенсы</text>
+<path d="M970.00 220.00 L970.00 254.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<rect x="845" y="260" width="250" height="105" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="970.00" y="301.00" font-size="27" fill="#28638c" text-anchor="middle" font-weight="bold">9</text>
+<text x="970.00" y="337.00" font-size="19" fill="#20344a" text-anchor="middle">Леса и топономы</text>
+<rect x="295" y="465" width="250" height="100" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="420.00" y="505.00" font-size="27" fill="#28638c" text-anchor="middle" font-weight="bold">6</text>
+<text x="420.00" y="540.00" font-size="19" fill="#20344a" text-anchor="middle">Электрометрия</text>
+<rect x="570" y="465" width="250" height="100" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="695.00" y="505.00" font-size="27" fill="#28638c" text-anchor="middle" font-weight="bold">7 → 8</text>
+<text x="695.00" y="540.00" font-size="19" fill="#20344a" text-anchor="middle">Параметры и потенциалы</text>
+<path d="M695.00 365.00 L695.00 459.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M680.00 400.00 L420.00 400.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<path d="M680.00 365.00 L680.00 400.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<path d="M420.00 400.00 L420.00 459.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="560.00" y="610.00" font-size="20" fill="#20344a" text-anchor="middle">Пример взаимодействий в заметке 6: достаточно маршрута 1 → 6.</text>
+</g></svg>

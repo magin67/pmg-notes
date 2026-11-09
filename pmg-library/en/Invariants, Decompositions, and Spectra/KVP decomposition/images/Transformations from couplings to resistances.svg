@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-labelledby="title desc">
+<title id="title">Two routes from the Laplacian to pair data</title>
+<desc id="desc">The caption provides the mathematical interpretation and exact data.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="690" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Two routes from the Laplacian to pair data</text>
+<rect x="30" y="110" width="220" height="110" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="140.00" y="154.00" font-size="27" fill="#20344a" text-anchor="middle" font-weight="bold">C</text>
+<text x="140.00" y="192.00" font-size="18" fill="#20344a" text-anchor="middle">Couplings; diagonal 0</text>
+<rect x="420" y="110" width="220" height="110" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="530.00" y="154.00" font-size="27" fill="#20344a" text-anchor="middle" font-weight="bold">L = ℒ(C)</text>
+<text x="530.00" y="192.00" font-size="18" fill="#20344a" text-anchor="middle">Laplacian matrix</text>
+<rect x="850" y="110" width="240" height="110" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="970.00" y="154.00" font-size="27" fill="#20344a" text-anchor="middle" font-weight="bold">Gr = L⁺</text>
+<text x="970.00" y="192.00" font-size="18" fill="#20344a" text-anchor="middle">Green matrix</text>
+<rect x="420" y="350" width="220" height="110" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="530.00" y="394.00" font-size="27" fill="#20344a" text-anchor="middle" font-weight="bold">Q = D(L)</text>
+<text x="530.00" y="432.00" font-size="18" fill="#20344a" text-anchor="middle">Diagonal 0</text>
+<rect x="850" y="350" width="240" height="110" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="970.00" y="394.00" font-size="27" fill="#20344a" text-anchor="middle" font-weight="bold">R = D(Gr)</text>
+<text x="970.00" y="432.00" font-size="18" fill="#20344a" text-anchor="middle">Resistances; diagonal 0</text>
+<path d="M255.00 165.00 L414.00 165.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="334.00" y="140.00" font-size="19" fill="#20344a" text-anchor="middle">Linear</text>
+<path d="M646.00 165.00 L844.00 165.00" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<text x="745.00" y="130.00" font-size="18" fill="#b45920" text-anchor="middle">Inversion on H</text>
+<text x="745.00" y="194.00" font-size="18" fill="#b45920" text-anchor="middle">Nonlinear</text>
+<path d="M530.00 225.00 L530.00 344.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="560.00" y="288.00" font-size="24" fill="#20344a" text-anchor="start">D</text>
+<path d="M970.00 225.00 L970.00 344.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="1000.00" y="288.00" font-size="24" fill="#20344a" text-anchor="start">D</text>
+<text x="560.00" y="80.00" font-size="20" fill="#20344a" text-anchor="middle">Connected undirected graph; H = 1⊥</text>
+<rect x="30" y="520" width="1060" height="130" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="559.00" font-size="22" fill="#20344a" text-anchor="middle">Green pair coefficients: γᵢⱼ = −Grᵢⱼ (i ≠ j), γᵢᵢ = 0</text>
+<text x="560.00" y="597.00" font-size="27" fill="#20344a" text-anchor="middle" font-weight="bold">γ  ⟷  Gr = ℒ(γ)</text>
+<text x="560.00" y="629.00" font-size="20" fill="#20344a" text-anchor="middle">This transformation is linear; KVP is applied to γ.</text>
+</g></svg>

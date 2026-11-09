@@ -1,9 +1,9 @@
 ---
 title: Oriented Extensions of KVP - Circulation and Imbalance
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 3
+updated: 2026-11-09
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-oriented-extensions-circulation-imbalance
@@ -121,6 +121,33 @@ C_O=JHJ
 $$
 
 Indeed, $H\mathbf1=u$, $\mathbf1^{\mathsf T}H=-u^{\mathsf T}$, and $\mathbf1^{\mathsf T}H\mathbf1=0$, so $JHJ=H-(u\mathbf1^{\mathsf T}-\mathbf1u^{\mathsf T})/n$.
+
+### One arc without directed cycles: why O is still nonzero
+
+On three vertices, let the only arc be $a\to b$ of weight 1, with $c$ isolated. Then
+
+$$
+C=\begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix},\qquad
+\mu=\frac16,\qquad
+v=\left(\frac16,\frac16,-\frac13\right),\qquad
+u=\left(\frac12,-\frac12,0\right)
+$$
+
+The decomposition is
+
+| Pair | K | V | P | O | U |
+|---|---:|---:|---:|---:|---:|
+| $ab$ | $1/6$ | $1/3$ | $0$ | $1/6$ | $1/3$ |
+| $ac$ | $1/6$ | $-1/6$ | $0$ | $-1/6$ | $1/6$ |
+| $bc$ | $1/6$ | $-1/6$ | $0$ | $1/6$ | $-1/6$ |
+
+![[images/One arc - decomposition into U and O.svg]]
+
+*Decomposition of the skew-symmetric part H of one arc: $H=C_U+C_O$. In these three panels, an arrow labeled $t>0$ means coefficient $+t$ in its direction and $-t$ in reverse. O forms a triangular circulation of weight $1/6$. On pairs $ac$ and $bc$, U and O cancel.*
+
+Here $C_O$ is $1/6$ of the unit circulation $a\to b\to c\to a$, although the original digraph contains no directed cycle. There is no contradiction: O describes the circulation part of a signed skew-symmetric table **on the complete set of pairs**, not a subgraph of the original digraph.
+
+If the same arc is considered on only two vertices, there is no O-sector at all. Adding an isolated vertex changes pair space and its projectors.
 
 ## The full KVPOU decomposition
 
@@ -426,33 +453,6 @@ $$
 $$
 
 Their sum is 4. For each individual component, the sum of squares over $i<j$ equals half the sum over all directions, because the component is symmetric or skew-symmetric. For the original oriented table, both directions must be included.
-
-### One arc without directed cycles: why O is still nonzero
-
-On three vertices, let the only arc be $a\to b$ of weight 1, with $c$ isolated. Then
-
-$$
-C=\begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix},\qquad
-\mu=\frac16,\qquad
-v=\left(\frac16,\frac16,-\frac13\right),\qquad
-u=\left(\frac12,-\frac12,0\right)
-$$
-
-The decomposition is
-
-| Pair | K | V | P | O | U |
-|---|---:|---:|---:|---:|---:|
-| $ab$ | $1/6$ | $1/3$ | $0$ | $1/6$ | $1/3$ |
-| $ac$ | $1/6$ | $-1/6$ | $0$ | $-1/6$ | $1/6$ |
-| $bc$ | $1/6$ | $-1/6$ | $0$ | $1/6$ | $-1/6$ |
-
-![[images/One arc - decomposition into U and O.svg]]
-
-*Decomposition of the skew-symmetric part H of one arc: $H=C_U+C_O$. In these three panels, an arrow labeled $t>0$ means coefficient $+t$ in its direction and $-t$ in reverse. O forms a triangular circulation of weight $1/6$. On pairs $ac$ and $bc$, U and O cancel.*
-
-Here $C_O$ is $1/6$ of the unit circulation $a\to b\to c\to a$, although the original digraph contains no directed cycle. There is no contradiction: O describes the circulation part of a signed skew-symmetric table **on the complete set of pairs**, not a subgraph of the original digraph.
-
-If the same arc is considered on only two vertices, there is no O-sector at all. Adding an isolated vertex changes pair space and its projectors.
 
 ## Connection with the PMG circulation form
 

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="590" viewBox="0 0 1120 590" role="img" aria-labelledby="title desc">
+<title id="title">Односторонняя, сбалансированная и симметричная таблицы</title>
+<desc id="desc">Математический смысл и точные данные приведены в подписи к рисунку.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="590" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Односторонняя, сбалансированная и симметричная таблицы</text>
+<rect x="30" y="130" width="300" height="160" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="180.00" y="169.00" font-size="26" fill="#20344a" text-anchor="middle" font-weight="bold">r</text>
+<text x="180.00" y="210.00" font-size="21" fill="#20344a" text-anchor="middle">Односторонняя</text>
+<text x="180.00" y="258.00" font-size="22" fill="#28638c" text-anchor="middle">K + V + P + O + U</text>
+<rect x="410" y="130" width="300" height="160" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="169.00" font-size="26" fill="#20344a" text-anchor="middle" font-weight="bold">r̃ = ½ D(Gr)</text>
+<text x="560.00" y="210.00" font-size="21" fill="#20344a" text-anchor="middle">Сбалансированная</text>
+<text x="560.00" y="258.00" font-size="22" fill="#28638c" text-anchor="middle">K + V + P + O</text>
+<rect x="790" y="130" width="300" height="160" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="940.00" y="169.00" font-size="26" fill="#20344a" text-anchor="middle" font-weight="bold">R = r + rᵀ</text>
+<text x="940.00" y="210.00" font-size="21" fill="#20344a" text-anchor="middle">Симметричная</text>
+<text x="940.00" y="258.00" font-size="22" fill="#28638c" text-anchor="middle">2K + 2V + 2P</text>
+<path d="M336.00 211.00 L404.00 211.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="370.00" y="115.00" font-size="23" fill="#20344a" text-anchor="middle">−r<tspan baseline-shift="sub" font-size="70%">U</tspan></text>
+<path d="M716.00 211.00 L784.00 211.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="750.00" y="110.00" font-size="17" fill="#20344a" text-anchor="middle">+ трансп.</text>
+<path d="M180.00 296.00 L180.00 370.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<path d="M180.00 370.00 L940.00 370.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<path d="M940.00 370.00 L940.00 297.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="560.00" y="359.00" font-size="23" fill="#20344a" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">r + rᵀ</text>
+<text x="560.00" y="425.00" font-size="20" fill="#20344a" text-anchor="middle">K, V, P, O, U в панелях - компоненты исходной таблицы r.</text>
+<text x="560.00" y="465.00" font-size="22" fill="#20344a" text-anchor="middle">Удаление U сохраняет O; симметризация удаляет O и U.</text>
+<text x="560.00" y="507.00" font-size="25" fill="#b45920" text-anchor="middle" font-weight="bold">(r<tspan baseline-shift="sub" font-size="70%">U</tspan>)ᵢⱼ = (qⱼ − qᵢ)/2</text>
+<text x="560.00" y="550.00" font-size="20" fill="#20344a" text-anchor="middle">Для резистенсов балграфа V определяет U: переход r ↔ r̃ обратим.</text>
+</g></svg>

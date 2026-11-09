@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-labelledby="title desc">
+<title id="title">Чистые компоненты и их совместное действие</title>
+<desc id="desc">Математический смысл и точные данные приведены в подписи к рисунку.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="690" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Чистые компоненты и их совместное действие</text>
+<rect x="20" y="85" width="340" height="400" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="190.00" y="119.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Общая V</text>
+<path d="M85.00 185.00 L295.00 185.00" fill="none" stroke="#b45920" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="190.00" y="173.00" font-size="21" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">−1</text>
+<path d="M85.00 185.00 L85.00 375.00" fill="none" stroke="#b45920" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="58.00" y="280.00" font-size="21" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">−1</text>
+<path d="M295.00 185.00 L295.00 375.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<text x="322.00" y="280.00" font-size="21" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">+1</text>
+<path d="M295.00 375.00 L85.00 375.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<text x="190.00" y="363.00" font-size="21" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">+1</text>
+<circle cx="85.00" cy="185.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="85.00" y="192.00" font-size="23" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="295.00" cy="185.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="295.00" y="192.00" font-size="23" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="295.00" cy="375.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="295.00" y="382.00" font-size="23" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="85.00" cy="375.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="85.00" y="382.00" font-size="23" fill="#20344a" text-anchor="middle">d</text>
+<text x="190.00" y="454.00" font-size="24" fill="#20344a" text-anchor="middle" font-weight="bold">K: 3</text>
+<rect x="390" y="85" width="340" height="400" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="119.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">P₊</text>
+<path d="M455.00 185.00 L665.00 185.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<text x="560.00" y="173.00" font-size="21" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">+1</text>
+<path d="M665.00 375.00 L455.00 375.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<text x="560.00" y="363.00" font-size="21" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">+1</text>
+<path d="M455.00 185.00 L665.00 375.00" fill="none" stroke="#b45920" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="548.00" y="263.00" font-size="21" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">−1</text>
+<path d="M665.00 185.00 L455.00 375.00" fill="none" stroke="#b45920" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="548.00" y="300.00" font-size="21" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">−1</text>
+<circle cx="455.00" cy="185.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="455.00" y="192.00" font-size="23" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="665.00" cy="185.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="665.00" y="192.00" font-size="23" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="665.00" cy="375.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="665.00" y="382.00" font-size="23" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="455.00" cy="375.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="455.00" y="382.00" font-size="23" fill="#20344a" text-anchor="middle">d</text>
+<text x="560.00" y="454.00" font-size="24" fill="#20344a" text-anchor="middle" font-weight="bold">τ(C₊) = 398</text>
+<rect x="760" y="85" width="340" height="400" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="930.00" y="119.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">P₋ = −P₊</text>
+<path d="M825.00 185.00 L1035.00 185.00" fill="none" stroke="#b45920" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="930.00" y="173.00" font-size="21" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">−1</text>
+<path d="M1035.00 375.00 L825.00 375.00" fill="none" stroke="#b45920" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="930.00" y="363.00" font-size="21" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">−1</text>
+<path d="M825.00 185.00 L1035.00 375.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<text x="918.00" y="263.00" font-size="21" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">+1</text>
+<path d="M1035.00 185.00 L825.00 375.00" fill="none" stroke="#28638c" stroke-width="3"/>
+<text x="918.00" y="300.00" font-size="21" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="5" stroke-linejoin="round">+1</text>
+<circle cx="825.00" cy="185.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="825.00" y="192.00" font-size="23" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="1035.00" cy="185.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="1035.00" y="192.00" font-size="23" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="1035.00" cy="375.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="1035.00" y="382.00" font-size="23" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="825.00" cy="375.00" r="20.00" fill="white" stroke="#28638c" stroke-width="2"/>
+<text x="825.00" y="382.00" font-size="23" fill="#20344a" text-anchor="middle">d</text>
+<text x="930.00" y="454.00" font-size="24" fill="#20344a" text-anchor="middle" font-weight="bold">τ(C₋) = 394</text>
+<text x="560.00" y="540.00" font-size="26" fill="#20344a" text-anchor="middle">T(P₊) = T(P₋) = 1 − 4x₂ + 2x₁²</text>
+<text x="560.00" y="589.00" font-size="25" fill="#b45920" text-anchor="middle" font-weight="bold">Смешанный вклад: +2ν²π или −2ν²π</text>
+<text x="560.00" y="642.00" font-size="21" fill="#20344a" text-anchor="middle">Знак P меняется; имена вершин и V остаются фиксированными.</text>
+</g></svg>

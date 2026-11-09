@@ -1,9 +1,9 @@
 ---
 title: KVP Decomposition of the Green Matrix and Resistances
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 4
+updated: 2026-11-09
+revision: 2
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-decomposition-green-matrix-and-resistances
@@ -71,6 +71,12 @@ $$
 $$
 
 Thus the Gram matrix of the centered vectors of a balanced graph is $\mathrm{Gr}^{\mathsf T}$. The diagonal entry $q_i$ still equals the quadratic norm of $x_i$. The argument order is explained in [[The Gram Matrix and Directional Coordinates of a Balanced Graph]].
+
+### Transformation diagram in the symmetric case
+
+![[images/Transformations from couplings to resistances.svg]]
+
+*The upper route connects conductances C to resistances R through L and $\mathrm{Gr}$. The side branch Q is obtained from L without inversion and gives a different table. To apply pair projectors to the Green matrix, the next section introduces $\gamma$: its diagonal is zero and $\mathrm{Gr}=\mathscr L(\gamma)$. Linear transformations obey fixed rules on sectors; nonlinear inversion does not permit the components to be inverted separately.*
 
 ## What decomposition of the Green matrix means
 
@@ -417,6 +423,18 @@ C_{ij}=-L_{ij}\quad(i\ne j)
 $$
 
 Ordinary double centering of $R$ does not recover the lost O-component. The unit directed 3-cycle illustrates this loss.
+
+### Three balanced-graph tables in one diagram
+
+![[images/Three resistance tables of a balanced graph.svg]]
+
+*All three tables have zero diagonals. Symmetrizing r gives $R/2$ and loses O and U. Subtracting only $r_U$ gives the balanced table $\widetilde r$ and preserves O. For balanced-graph resistances, U is tied to V, so the transformation $r\mapsto\widetilde r$ is invertible within this class. This is a special property of resistances, not of arbitrary KVPOU tables.*
+
+The notation in the next notes can be compared as follows. The row-sum deviation vector of R is denoted here by $v^{(R)}$; [[KVP Components and Metric Graph Parameters]] calls it w to distinguish it from the degree deviations of the original couplings. [[The Second-Order Symmetric Potential and KVP Decomposition]] decomposes only R, so it omits the superscript and uses v. In all three contexts the quantity is the same:
+
+$$
+v_i^{(R)}=w_i=v_i=\sum_jR_{ij}-(n-1)\mu_R
+$$
 
 ## Examples: five different effects
 

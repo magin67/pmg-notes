@@ -1,9 +1,9 @@
 ---
 title: KVP Components and Metric Graph Parameters
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 4
+updated: 2026-11-09
+revision: 2
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-components-and-graph-metric-parameters
@@ -79,6 +79,8 @@ $$
 $$
 
 These are parameters of different tables. Their connection passes through nonlinear Laplacian inversion, as shown in [[KVP Decomposition of the Green Matrix and Resistances]].
+
+Here w corresponds to $v^{(R)}$ in the Green-matrix note. The next note, on the second-order potential, denotes the same vector by v; in the present note, v already denotes degree deviations of the conductances C.
 
 ## Which components the Kirchhoff index and centralities see
 
@@ -166,6 +168,20 @@ This rewrites known metric formulas to isolate the role of $R_V$. That component
 > **Proof.** L is positive definite on H. Hence $\mathbf w^{\mathsf T}L\mathbf w=0$ is equivalent to $\mathbf w=0$. This is equivalent to $R_V=0$, and the first formula in (2) then gives $\boldsymbol\alpha=\mathbf1/n$. $\square$
 
 The P-component of R does not appear explicitly in (2), but it contributes to recovering L. Thus when $R_V$ is nonzero, the same vertex vector w can correspond to different center displacements and radii.
+
+### Seeing the center displacement
+
+Averaging $\rho=(p-x_i)^2$ over the vertices cancels the mixed term because $\sum_i(x_i-h)=0$. Hence
+
+$$
+\rho=\underbrace{\frac1n\sum_i(x_i-h)^2}_{\rho_0}+(p-h)^2
+$$
+
+Thus $\rho_0=t/n$ is the mean squared distance to the centroid. Individual distances to h may differ: generally, no circle or sphere centered at h passes through every vertex.
+
+![[images/Circumcenter and centroid in KVP.svg]]
+
+*An exact Euclidean realization of the path $b-a-c$ with conductances $c_{ab}=1/4$, $c_{ac}=1$: $x_a=(0,0)$, $x_b=(2,0)$, $x_c=(0,1)$. Its resistances are $R_{ab}=4$, $R_{ac}=1$, $R_{bc}=5$. The centroid $h=(2/3,1/3)$ differs from the circumcenter $p=(1,1/2)$. The quadratic radius $\rho=5/4$ splits as $10/9+5/36$. The orange vector shows the displacement; the blue dashed segments are equal linear radii $\sqrt\rho$.*
 
 ## Example: identical resistance K and V, different radii
 
@@ -337,6 +353,10 @@ $$
 -15&1&5
 \end{pmatrix}
 $$
+
+![[images/Mixed KVP vectors for the path P5.svg]]
+
+*An exact drawing of the three vectors described by the Gram matrix above. In suitable orthonormal coordinates they are $(30,0)$, $(-4,2)$, and $(-5,-5)$ with the common factor $\sqrt{10}/150$. The orange and purple vectors are translated to the endpoints of the preceding vectors; their sum with the blue vector joins h to p. Their angles are determined by metric inner products and are not right angles.*
 
 The diagonal entries sum to $97/225$, whereas all entries sum to $45/225=1/5=\rho-\rho_0$. Mixed products account for the difference. Incorrectly transferring coefficient orthogonality to the metric would give a different radius.
 

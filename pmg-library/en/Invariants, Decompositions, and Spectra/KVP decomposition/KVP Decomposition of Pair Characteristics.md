@@ -1,9 +1,9 @@
 ---
 title: KVP Decomposition of Pair Characteristics
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 4
+updated: 2026-11-09
+revision: 2
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-decomposition-pair-characteristics
@@ -128,6 +128,38 @@ $$
 
 The P-component therefore changes the distribution of values among pairs while preserving the total characteristic of each element. In particular, two tables on the same set with identical row sums have identical K- and V-components, and their difference lies entirely in the P-sector.
 
+## A path on four vertices
+
+The unit-weight path $a-b-c-d$ has three couplings among six possible pairs. Thus
+
+$$
+\mu_C=\frac12,\qquad
+d=(1,2,2,1),\qquad
+v=\left(-\frac12,\frac12,\frac12,-\frac12\right)
+$$
+
+![[images/KVP decomposition of path P4.svg]]
+
+*The original path and its three components on the same vertex set. K assigns weight $1/2$ to every pair. V contains two corrections: $+1/2$ on $bc$ and $-1/2$ on $ad$. In P, the coefficients on $ab,cd$ are positive and those on $ac,bd$ negative; their sum at each vertex is zero. Zero pairs are omitted. Dashed lines indicate negative coefficients.*
+
+For example, the middle edge and the pair of endpoints give
+
+$$
+c_{bc}=\frac12+\frac12+0=1,\qquad
+c_{ad}=\frac12-\frac12+0=0
+$$
+
+For an end edge and one of the absent diagonal couplings,
+
+$$
+c_{ab}=\frac12+0+\frac12=1,\qquad
+c_{ac}=\frac12+0-\frac12=0
+$$
+
+Components may be nonzero on absent edges. Their positive and negative values cancel upon addition. An individual component therefore cannot be regarded as a separate graph with nonnegative couplings.
+
+The complete calculation table and comparisons with complete graphs, cycles, stars, disconnected graphs, and weighted graphs appear in [[KVP on Simple and Weighted Graphs]].
+
 ## Existence, uniqueness, and projectors
 
 > [!info] Existence, uniqueness, and projectors
@@ -222,38 +254,6 @@ There is also a precise approximation interpretation: $A_K+A_V$ is the unique ta
 | 6 | 15 | 1 | 5 | 9 |
 
 On three elements, K and V exhaust every symmetric pair table. A nonzero P-component first becomes possible at $n=4$. For $n=2$, formulas dividing by $n-2$ do not apply: the only pair belongs entirely to K. For $n=1$, the pair space is zero.
-
-## A path on four vertices
-
-The unit-weight path $a-b-c-d$ has three couplings among six possible pairs. Thus
-
-$$
-\mu_C=\frac12,\qquad
-d=(1,2,2,1),\qquad
-v=\left(-\frac12,\frac12,\frac12,-\frac12\right)
-$$
-
-![[images/KVP decomposition of path P4.svg]]
-
-*The original path and its three components on the same vertex set. K assigns weight $1/2$ to every pair. V contains two corrections: $+1/2$ on $bc$ and $-1/2$ on $ad$. In P, the coefficients on $ab,cd$ are positive and those on $ac,bd$ negative; their sum at each vertex is zero. Zero pairs are omitted. Dashed lines indicate negative coefficients.*
-
-For example, the middle edge and the pair of endpoints give
-
-$$
-c_{bc}=\frac12+\frac12+0=1,\qquad
-c_{ad}=\frac12-\frac12+0=0
-$$
-
-For an end edge and one of the absent diagonal couplings,
-
-$$
-c_{ab}=\frac12+0+\frac12=1,\qquad
-c_{ac}=\frac12+0-\frac12=0
-$$
-
-Components may be nonzero on absent edges. Their positive and negative values cancel upon addition. An individual component therefore cannot be regarded as a separate graph with nonnegative couplings.
-
-The complete calculation table and comparisons with complete graphs, cycles, stars, disconnected graphs, and weighted graphs appear in [[KVP on Simple and Weighted Graphs]].
 
 ## What the P-component identifies
 

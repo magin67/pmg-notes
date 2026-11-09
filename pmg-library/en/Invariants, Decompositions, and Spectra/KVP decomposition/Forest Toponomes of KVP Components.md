@@ -1,9 +1,9 @@
 ---
 title: Forest Toponomes of KVP Components
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 2
+updated: 2026-11-09
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-toponomes-of-kvp-components
@@ -372,6 +372,10 @@ At $(1,1,1)$, this gives $396\pm2$. Pure slices cannot see the sign of the mixed
 > **Corollary 3.** In general, the three pure toponomes of K, V, and P determine neither the full toponome nor the spanning-tree coefficient of the original positively weighted graph. The joint toponome retains information about interactions that the pure slices lose.
 >
 > This example does not establish the distinguishing power of the joint toponome among graphs with identical full ordinary toponomes: here the ordinary toponomes already differ. That remains a separate question.
+
+![[images/Equal pure toponomes and different mixed contributions.svg]]
+
+*The common V-component is shown on the left; K has constant weight 3 in both graphs. The right panels compare $C_{P,+}$ and $C_{P,-}=-C_{P,+}$: solid blue edges have weight $+1$, and dashed orange edges have weight $-1$. Reversing the signs preserves the pure P-toponome but changes the placement of these weights relative to the fixed V-component. The joint toponome retains this difference as $\pm2\nu^2\pi$, and the spanning-tree coefficient as $396\pm2$.*
 
 ## What carries over to balanced graphs
 

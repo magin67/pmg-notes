@@ -1,9 +1,9 @@
 ---
 title: The Distance Operator and KVP Decomposition
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 3
+updated: 2026-11-09
+revision: 2
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: distance-operator-kvp-decomposition
@@ -486,6 +486,12 @@ $$
 Adding $\mathbf1(u^{(Q)})^{\mathsf T}/3$ recovers $L$. This explicitly checks why the double-centering formula cannot be applied unchanged to the unbalanced case.
 
 ## The Laplacian and Green matrix give different pair tables
+
+The diagram collects the transformations for a connected undirected graph. The branches separate at the Laplacian: applying $\mathcal D$ immediately gives Q; applying it after inversion on $H=\mathbf1^\perp$ gives the resistances R.
+
+![[images/Transformations from couplings to resistances.svg]]
+
+*Laplacian construction and the distance operator are linear; inversion on H is nonlinear. C, Q, R, and the auxiliary table $\gamma$ have zero diagonals. The diagonals of L and $\mathrm{Gr}$ enter the formulas. The lower relation $\mathrm{Gr}=\mathscr L(\gamma)$ identifies the pair coefficients to which KVP projectors apply when decomposing the Green matrix. This diagram concerns the symmetric case.*
 
 For a connected undirected graph with nonnegative couplings and positive weights on existing edges, both $L$ and $\mathrm{Gr}=L^+$ are symmetric, centered, and positive semidefinite. The same operator gives
 
