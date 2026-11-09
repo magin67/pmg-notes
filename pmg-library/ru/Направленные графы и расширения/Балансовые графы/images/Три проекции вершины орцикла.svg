@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="500" viewBox="0 0 1120 500" role="img" aria-labelledby="title desc">
+<title id="title">Две направленные проекции и евклидова</title><desc id="desc">Две направленные проекции и евклидова. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="500" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Две направленные проекции и евклидова</text>
+<rect x="20" y="80" width="340" height="370" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="190.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Входящая</text>
+<path d="M75.00 340.00 L305.00 340.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M305.00 340.00 L190.00 140.81" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M190.00 140.81 L75.00 340.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M175.00 166.79 L89.00 315.75" fill="none" stroke="#b45920" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#orange)"/>
+<circle cx="75.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="75.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="305.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="305.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="190.00" cy="140.81" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="190.00" y="147.81" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<text x="190.00" y="405.00" font-size="21" fill="#b45920" text-anchor="middle" font-weight="bold">θ<tspan baseline-shift="sub" font-size="70%">in</tspan> = 0: a</text>
+<rect x="390" y="80" width="340" height="370" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Исходящая</text>
+<path d="M445.00 340.00 L675.00 340.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M675.00 340.00 L560.00 140.81" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M560.00 140.81 L445.00 340.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M575.00 166.79 L661.00 315.75" fill="none" stroke="#178071" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#green)"/>
+<circle cx="445.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="445.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="675.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="675.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="560.00" cy="140.81" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="560.00" y="147.81" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<text x="560.00" y="405.00" font-size="21" fill="#178071" text-anchor="middle" font-weight="bold">θ<tspan baseline-shift="sub" font-size="70%">out</tspan> = 1: b</text>
+<rect x="760" y="80" width="340" height="370" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="930.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Симметричная метрика g</text>
+<path d="M815.00 340.00 L1045.00 340.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M1045.00 340.00 L930.00 140.81" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M930.00 140.81 L815.00 340.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M930.00 170.81 L930.00 340.00" fill="none" stroke="#7e549b" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#purple)"/>
+<circle cx="815.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="815.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="1045.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="1045.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="930.00" cy="140.81" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="930.00" y="147.81" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="930.00" cy="340.00" r="6" fill="#7e549b"/>
+<path d="M930.00 324.00 L946.00 324.00" fill="none" stroke="#7e549b" stroke-width="2"/>
+<path d="M946.00 324.00 L946.00 340.00" fill="none" stroke="#7e549b" stroke-width="2"/>
+<text x="930.00" y="405.00" font-size="21" fill="#7e549b" text-anchor="middle" font-weight="bold">θ<tspan baseline-shift="sub" font-size="70%">g</tspan> = 1/2</text>
+<text x="560.00" y="482.00" font-size="21" fill="#20344a" text-anchor="middle">θ<tspan baseline-shift="sub" font-size="70%">g</tspan> = (θ<tspan baseline-shift="sub" font-size="70%">out</tspan> + θ<tspan baseline-shift="sub" font-size="70%">in</tspan>)/2;   θ<tspan baseline-shift="sub" font-size="70%">in</tspan> − θ<tspan baseline-shift="sub" font-size="70%">out</tspan> = χ<tspan baseline-shift="sub" font-size="70%">abc</tspan> / R<tspan baseline-shift="sub" font-size="70%">ab</tspan> = −1</text>
+</g></svg>

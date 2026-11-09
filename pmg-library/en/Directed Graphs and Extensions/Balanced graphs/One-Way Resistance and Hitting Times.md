@@ -1,15 +1,15 @@
 ---
 title: One-Way Resistance and Hitting Times
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: one-way-resistance-and-hitting-times
 lang: en
 description: One-way resistance defined by a form potential, its matrix properties and relation to pair resistance and circulation, followed by the first-hitting-time interpretation.
 order: 6
-source_revision: 3
+source_revision: 4
 aliases:
   - "en/Balanced graphs/One-Way Resistance and Hitting Times"
 ---
@@ -68,11 +68,11 @@ $$
 The [[Balanced Variations#A matrix check and argument order|determinant formula for the potential]] gives, for affine vectors with coordinate columns $\mathbf u,\mathbf v$,
 
 $$
-P_M([u,v])=u^{\mathrm{out}}\cdot v^{\mathrm{in}}
+\beta(u,v):=P_M([u,v])=u^{\mathrm{out}}\cdot v^{\mathrm{in}}
 =\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u
 $$
 
-The pairing's first argument has the source role ($\mathrm{out}$), and its second the receiver role ($\mathrm{in}$). These roles and their coordinates are defined in [[The Gram Matrix and Directional Coordinates of a Balanced Graph#Sources and receivers|the directional pairing section]]. Argument order matters. Substituting $u=x_j$, $v=x_j-x_i$ gives
+This formula defines the bilinear pairing $\beta$. Call its first argument the source ($\mathrm{out}$) and its second the receiver ($\mathrm{in}$): if $\mathbf L\boldsymbol\varphi=\mathbf u$, the pairing evaluates $\mathbf v^{\mathsf T}\boldsymbol\varphi$. In general $\beta(u,v)\ne\beta(v,u)$. The two space copies and their coordinates will be constructed in [[The Gram Matrix and Directional Coordinates of a Balanced Graph#Sources and receivers|the directional pairing note]]; the stated argument order suffices here. Substituting $u=x_j$, $v=x_j-x_i$ gives
 
 $$
 \boxed{r_{ij}=\mathrm{Gr}_{jj}-\mathrm{Gr}_{ij}}
@@ -220,6 +220,10 @@ $$
 $$
 
 Every undirected graph satisfies $r_{ij}-r_{ji}=q_j-q_i$. These differences cancel around a closed traversal. **One-way resistance can be asymmetric without circulation; circulation is detected by comparing closed sums.**
+
+![[images/One-Way Resistances and Circulation.svg]]
+
+*Left: the unit directed cycle. Right: the unit undirected path. Both have $r_{ab}=1/3$, $r_{ba}=2/3$, and $R_{ab}=1$. The cycle has sums $1$ and $2$ along traversals $abc$ and $acb$; the path has sum $2$ in both directions. Their circulation values are therefore $-1$ and $0$, respectively.*
 
 ## Comparison with another directed definition
 

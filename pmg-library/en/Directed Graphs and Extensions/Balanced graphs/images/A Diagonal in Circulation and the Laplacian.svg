@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="550" viewBox="0 0 1120 550" role="img" aria-labelledby="title desc">
+<title id="title">What happens to the diagonal</title><desc id="desc">What happens to the diagonal. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="550" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">What happens to the diagonal</text>
+<rect x="20" y="75" width="340" height="370" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="190.00" y="107.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">L(abc)</text>
+<path d="M121.00 165.00 Q190.00 165.00 259.00 165.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M290.00 196.00 Q290.00 265.00 290.00 334.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M268.08 343.08 Q190.00 265.00 111.92 186.92" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<circle cx="90.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="90.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="290.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="290.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="290.00" cy="365.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="290.00" y="372.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="90.00" cy="365.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="90.00" y="372.00" font-size="24" fill="#20344a" text-anchor="middle">d</text>
+<rect x="390" y="75" width="340" height="370" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="107.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">L(acd)</text>
+<path d="M481.92 186.92 Q560.00 265.00 638.08 343.08" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M629.00 365.00 Q560.00 365.00 491.00 365.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M460.00 334.00 Q460.00 265.00 460.00 196.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<circle cx="460.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="460.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="660.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="660.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="660.00" cy="365.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="660.00" y="372.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="460.00" cy="365.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="460.00" y="372.00" font-size="24" fill="#20344a" text-anchor="middle">d</text>
+<rect x="760" y="75" width="340" height="370" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="930.00" y="107.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">L(abc) + L(acd)</text>
+<path d="M861.00 165.00 Q930.00 165.00 999.00 165.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M1030.00 196.00 Q1030.00 265.00 1030.00 334.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M999.00 365.00 Q930.00 365.00 861.00 365.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M830.00 334.00 Q830.00 265.00 830.00 196.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M849.59 189.25 Q914.44 280.56 1005.75 345.41" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M1010.41 340.75 Q945.56 249.44 854.25 184.59" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<circle cx="830.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="830.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="1030.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="1030.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="1030.00" cy="365.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="1030.00" y="372.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="830.00" cy="365.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="830.00" y="372.00" font-size="24" fill="#20344a" text-anchor="middle">d</text>
+<text x="560.00" y="485.00" font-size="21" fill="#28638c" text-anchor="middle" font-weight="bold">w(abc) + w(acd) = w(abcd)</text>
+<text x="560.00" y="522.00" font-size="21" fill="#b45920" text-anchor="middle" font-weight="bold">L(abc) + L(acd) = L(abcd) + [(ac)]²</text>
+</g></svg>

@@ -1,15 +1,15 @@
 ---
 title: Balanced Variations
 date: 2026-10-24
-updated: 2026-10-25
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graph-variations
 lang: en
 description: 'Exact balanced variations: rank-one bilinear updates, exchanging recipients, adding a directed cycle, and inserting a vertex into an arc; rooted potentials after a one-arc addition.'
 order: 5
-source_revision: 3
+source_revision: 4
 aliases:
   - "en/Balanced graphs/Balanced Variations"
 ---
@@ -17,6 +17,8 @@ aliases:
 A balanced variation preserves equality of incoming and outgoing weights at every vertex. Changing one directed arc breaks balance; coordinated changes to several arcs can have a particularly simple polyform expression.
 
 Our basic tool is a variation $t[u,v]$ with affine vectors $u,v$. Its square vanishes, so the entire exponential changes by one multiplication by $e+t[u,v]$. Exchanging two recipients and inserting a vertex into an arc provide graph applications. Adding a directed cycle is another important balance-preserving operation. The concluding section separately considers loss of balance through one arc and its relation to directional projections.
+
+**Reading order.** The main part uses only form algebra and determinants. The final section on [[Balanced Variations#One-way variation and loss of balance|a single arc]] is a metric continuation, best read after [[One-Way Resistance and Hitting Times]], [[Resistance Geometry and Circulation]], and [[The Gram Matrix and Directional Coordinates of a Balanced Graph]].
 
 ## Conditions for preserving balance
 
@@ -310,6 +312,8 @@ Equation (3) gives the bilinear form potential an algebraic meaning as the coeff
 
 ## One-way variation and loss of balance
 
+This section uses the directional pairing and pair resistance defined in the metric notes. Here we compare potentials at different roots after balance is lost.
+
 Now consider a change that leaves the class of balanced graphs. Let the original $G$ be connected, let $a\ne b$, and add an arc $a\to b$ of weight $t\ge0$ or increase its existing weight by $t$. Put
 
 $$
@@ -410,7 +414,7 @@ Vertex $c$ shares the maximum rooted potential with $b$, whereas its incoming pr
 
 ## Sources and connections
 
-The balanced variation identities follow here from polyform multiplication. Formula (10) for a single arc is proved using the left kernel of the Laplacian and the maximum principle; the directed 3-cycle example is independently checked through principal minors. In addition, exact rational arithmetic checked 50 variations on 25 balanced graphs with 2-6 vertices: rooted minors were compared with (10), and both projections, their bounds, and their difference through the circulation potential were verified. The matrix check uses the determinant expansion for a rank-one update. Exterior powers and minors of bilinear forms are treated in double-form theory [1, §2.1], without symmetry assumptions. The proof of (9) uses the directed matrix-tree theorem [2] under our Laplacian convention.
+The variation identities follow from polyform multiplication; (10) is proved using the left Laplacian kernel and the maximum principle. Its principal-minor check is independent of the polyform derivation. [Reproducible examples](https://github.com/magin67/pmg-notes/tree/v5/checks/balanced) include single-arc variations on 12 weighted balanced graphs. Reference [1, §2.1] relates exterior powers to minors without symmetry assumptions; the proof of (9) uses the directed matrix-tree theorem [2].
 
 1. M. L. Labbi. [On some algebraic identities and the exterior product of double forms](https://arxiv.org/abs/1112.1346). *Archivum Mathematicum* **49** (2013), 241-271. [DOI: 10.5817/AM2013-4-241](https://doi.org/10.5817/AM2013-4-241). §1.1: double-form multiplication; §2.1: exterior powers and minors.
 2. A. Postnikov, notes by A. Lin. [Lecture 29: Proof of Directed Matrix Tree Theorem based on induction](https://ocw.mit.edu/courses/18-212-algebraic-combinatorics-spring-2019/4b3d3325c633bfb7fdea92ab6d6f6d1e_MIT18_212S19_lec29.pdf). *18.212 Algebraic Combinatorics*, 2019. The directed matrix-tree theorem.

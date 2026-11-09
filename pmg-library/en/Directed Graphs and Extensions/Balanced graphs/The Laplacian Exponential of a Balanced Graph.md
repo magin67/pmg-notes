@@ -1,15 +1,15 @@
 ---
 title: The Laplacian Exponential of a Balanced Graph
 date: 2026-10-24
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graph-laplacian-exponential
 lang: en
-description: 'The finite exterior exponential of a balanced Laplacian: bilinear factors, minors, directed forests, reference-point weights, and connections to double-form theory.'
+description: 'The finite exterior exponential of a balanced Laplacian: bilinear factors, minors, directed forests, reference-element weights, and connections to double-form theory.'
 order: 3
-source_revision: 6
+source_revision: 7
 aliases:
   - "en/Balanced graphs/The Laplacian Exponential of a Balanced Graph"
 ---
@@ -45,42 +45,15 @@ The arguments in a product of $n$ grade-one forms would lie in $\Lambda^nW=0$, s
 
 This exponential uses the polyform product. The matrix exponential $\exp\mathbf L$, computed with ordinary matrix multiplication, is different. For example, $L^2$ has grade $2$, whereas $\mathbf L^2$ remains a matrix of the same size.
 
-## Why these are called double forms
+### A first calculation: two factors
 
-In exterior-algebra terminology, “double” refers to two exterior factors. Our notation corresponds to the tensor
-
-$$
-[X,Y]\ \longleftrightarrow\ X\otimes Y,\qquad
-X,Y\in\Lambda^kW
-$$
-
-Each factor has its own grade. General double-form theory allows different grades, using $\Lambda^pW\otimes\Lambda^qW$. PMG uses the equal-grade subalgebra, called diagonal in the literature [1, §1.1; 2, Definition 2.1]:
+For the unit directed 3-cycle, set $u=a-c$, $v=b-c$, $H_a=[u,u-v]$, and $H_b=[v,v]$. The two squares vanish, while $H_aH_b=[(abc)]^2$. Hence
 
 $$
-\bigoplus_{k=0}^{n-1}\Lambda^kW\otimes\Lambda^kW
+M=(e+H_a)(e+H_b)=e+L+[(abc)]^2
 $$
 
-| PMG notation | Two exterior factors | Bigrade |
-| --- | --- | --- |
-| $[u,v]$ | $u\otimes v$ | $(1,1)$ |
-| $[(abc),(abd)]$ | $(abc)\otimes(abd)$ | $(2,2)$ |
-| $[u]^2=[u,u]$ | $u\otimes u$ | $(1,1)$ |
-
-PMG grade $k$ thus corresponds to bigrade $(k,k)$. A quadratic form is also double, with equal factors. “Double” does not mean grade two, and “diagonal” here means equal grades, without requiring $X=Y$.
-
-Multiplication acts separately in the two factors:
-
-$$
-(X\otimes Y)(U\otimes V)=(XU)\otimes(YV)
-$$
-
-This is exactly $[X,Y][U,V]=[XU,YV]$.
-
-**Terminology.** In [2, §2], elements of $\Lambda^pW\otimes\Lambda^qW$ are called double exterior vectors; double exterior forms use $W^*$ instead. Precisely, our formal forms can be viewed as double forms on the dual space $W^*$. This correspondence needs no metric. The PMG term “form” retains the definition in [[Basic Objects and Operations of Polyform Algebra]].
-
-### The classical exterior exponential
-
-Belkhirat and Labbi [2, §5, Proposition 5.1] explicitly consider the exponential of a bilinear double form with this exterior product, without assuming symmetry. After an auxiliary metric is chosen, the exponential represents the extension of the corresponding linear operator to the exterior algebra. Equation (1) applies this general exterior-exponential construction to a Laplacian in $W\otimes W$.
+This is a finite expansion of two factors. The general formula below works in the same way: choosing one term twice gives zero, while different terms produce higher grades. The detailed calculation and its centroid version remain in [[The Laplacian Exponential of a Balanced Graph#Example: the unit directed 3-cycle|the directed 3-cycle example]].
 
 ## Factorization by bilinear terms
 
@@ -109,7 +82,7 @@ A term of (3) is nonzero exactly when each of its two vector collections is line
 
 ### Grouping by vertices
 
-For any point $h$ of affine weight $1$, set
+For any element $h$ of affine weight $1$, set
 
 $$
 v_i=\sum_j f_{ij}(a_i-a_j)=\sum_j L_{ij}a_j,\qquad
@@ -180,7 +153,7 @@ L=\sum_{i\ne j}E_{ij}(h),\qquad
 E_{ij}(h)=f_{ij}[a_i-h,a_i-a_j]
 $$
 
-This holds for a balanced graph and any unit-weight point $h$. An individual $E_{ij}(h)$ depends on $h$ and is not the Laplacian of the original arc alone. Their full sum nevertheless equals $L$, and
+This holds for a balanced graph and any unit-weight element $h$. An individual $E_{ij}(h)$ depends on $h$ and is not the Laplacian of the original arc alone. Their full sum nevertheless equals $L$, and
 
 $$
 M=\prod_{i\to j\in E(G)}(e+E_{ij}(h))
@@ -207,7 +180,7 @@ The same order is used in both exterior products. Changing it preserves $[A_F(h)
 > \tag{6}
 > $$
 >
-> The formula holds for every unit-weight point $h$. Some choices of $h$ may make individual forest terms zero.
+> The formula holds for every unit-weight element $h$. Some choices of $h$ may make individual forest terms zero.
 
 > [!note]- Proof
 > **Proof.** Expand the arc product. Selecting two arcs from one vertex repeats $a_i-h$ in the left argument, giving zero. Selecting a directed cycle makes its right-argument vectors $a_i-a_j$ sum to zero, also killing the term.
@@ -249,9 +222,9 @@ $$
 
 Connectedness and nonnegative weights imply $\tau>0$. By the directed matrix-tree theorem, it is the sum of weights of spanning trees toward any one fixed vertex. The proof and direction convention appear in [[Balanced Graphs and Spanning-Tree Potentials#The spanning-tree potential of a vertex|the spanning-tree potential note]].
 
-### A tree's contribution for an arbitrary reference point
+### A tree's contribution for an arbitrary reference element
 
-Express the point as an affine combination:
+Express the element as an affine combination:
 
 $$
 h=\sum_{i=1}^n\alpha_i a_i,\qquad \sum_i\alpha_i=1
@@ -320,7 +293,7 @@ Grade one equals $L$. Grade two contains three trees, while the product of all t
 
 ![[images/Spanning Trees of a Directed 3-Cycle.svg]]
 
-*Each root gives one tree: $b\to c\to a$, $c\to a\to b$, or $a\to b\to c$. The cycle arc leaving the chosen root is omitted. The three tree contributions depend on the reference point.*
+*Each root gives one tree: $b\to c\to a$, $c\to a\to b$, or $a\to b\to c$. The cycle arc leaving the chosen root is omitted. The three tree contributions depend on the reference element.*
 
 | Root | Product of arc forms | Contribution for $h=(a+b+c)/3$ | Contribution for $h=c$ |
 | --- | --- | --- | --- |
@@ -384,13 +357,50 @@ $$
 
 Expanding gives the quadratic forms of undirected forests from [[Laplacian Exponential#Grade components and spanning forests|the symmetric Laplacian exponential]]. The directed forest construction agrees with the original PMG construction after opposite arcs are grouped.
 
+## Why these are called double forms
+
+In exterior-algebra terminology, “double” refers to two exterior factors. Our notation corresponds to the tensor
+
+$$
+[X,Y]\ \longleftrightarrow\ X\otimes Y,\qquad
+X,Y\in\Lambda^kW
+$$
+
+Each factor has its own grade. General double-form theory allows different grades, using $\Lambda^pW\otimes\Lambda^qW$. PMG uses the equal-grade subalgebra, called diagonal in the literature [1, §1.1; 2, Definition 2.1]:
+
+$$
+\bigoplus_{k=0}^{n-1}\Lambda^kW\otimes\Lambda^kW
+$$
+
+| PMG notation | Two exterior factors | Bigrade |
+| --- | --- | --- |
+| $[u,v]$ | $u\otimes v$ | $(1,1)$ |
+| $[(abc),(abd)]$ | $(abc)\otimes(abd)$ | $(2,2)$ |
+| $[u]^2=[u,u]$ | $u\otimes u$ | $(1,1)$ |
+
+PMG grade $k$ thus corresponds to bigrade $(k,k)$. A quadratic form is also double, with equal factors. “Double” does not mean grade two, and “diagonal” here means equal grades, without requiring $X=Y$.
+
+Multiplication acts separately in the two factors:
+
+$$
+(X\otimes Y)(U\otimes V)=(XU)\otimes(YV)
+$$
+
+This is exactly $[X,Y][U,V]=[XU,YV]$.
+
+**Terminology.** In [2, §2], elements of $\Lambda^pW\otimes\Lambda^qW$ are called double exterior vectors; double exterior forms use $W^*$ instead. Precisely, our formal forms can be viewed as double forms on the dual space $W^*$. This correspondence needs no metric. The PMG term “form” retains the definition in [[Basic Objects and Operations of Polyform Algebra]].
+
+### The classical exterior exponential
+
+Belkhirat and Labbi [2, §5, Proposition 5.1] explicitly consider the exponential of a bilinear double form with this exterior product, without assuming symmetry. After an auxiliary metric is chosen, the exponential represents the extension of the corresponding linear operator to the exterior algebra. Equation (1) applies this general exterior-exponential construction to a Laplacian in $W\otimes W$.
+
 ## What the construction provides
 
 Balance represents $L$ by forms on boundaries. Bilinearity and the commutative product ensure closure and finite exponential factorization. Minors provide coordinates; directed forests explain the arc expansion combinatorially. None requires an initial symmetric/skew-symmetric split.
 
 Grouping forests by component sizes, reconciling normalizations with the symmetric case, and passing to the Laplacian polynomial are treated in [[Toponomes of Balanced Graphs and Directed Forests]]. Such grouping uses a fixed forest representation and does not define universal multiplication of numerical types.
 
-The exterior exponential and its determinant coefficients are established algebraic constructions [1, 2]. Here they are applied to a balanced graph's boundary space and related to the affine reference point. A self-contained proof in PMG notation is not itself a claim of novelty.
+The exterior exponential and its determinant coefficients are established algebraic constructions [1, 2]. Here they are applied to a balanced graph's boundary space and related to the affine reference element. A self-contained proof in PMG notation is not itself a claim of novelty.
 
 [[The Circulation Form]] studies skew-symmetric boundary forms as independent PMG objects, including forms outside the nonnegative Laplacian class. Their potentials and metric evaluations are connected in [[One-Way Resistance and Hitting Times]] and [[Resistance Geometry and Circulation]], where the directed bilinear pairing is distinguished from its symmetric part.
 
@@ -405,7 +415,7 @@ The numbering below is used throughout. Section and proposition numbers for [2] 
 
 Related library notes:
 
-- [[The Bilinear Laplacian of a Balanced Graph]]: centering, arc and vertex representations, arbitrary reference points, and boundary products.
+- [[The Bilinear Laplacian of a Balanced Graph]]: centering, arc and vertex representations, arbitrary reference elements, and boundary products.
 - [[Balanced Graphs and Spanning-Tree Potentials]]: connectedness, the directed matrix-tree theorem, and equal spanning-tree potentials.
 - [[Basic Objects and Operations of Polyform Algebra]]: forms, grades, and multiplication.
 - [[Laplacian Exponential]]: the symmetric case, forest forms, and the determinant lemma.

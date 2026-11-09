@@ -1,15 +1,15 @@
 ---
 title: The Circulation Form
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: circulation-form
 lang: en
 description: 'Circulation as an independent skew-symmetric PMG form: orientation, triangular decompositions, pure circulation polyforms, and their products.'
 order: 4
-source_revision: 1
+source_revision: 2
 aliases:
   - "en/Balanced graphs/The Circulation Form"
 ---
@@ -50,7 +50,7 @@ $$
 
 ![[images/The Circulation Form of a Directed 3-Cycle.svg]]
 
-*Left and center: opposite unit directed cycles. Their Laplacian difference $L_{acb}-L_{abc}$ equals $w(abc)$. Right: the same points define $u=b-a$ and $v=c-a$, giving $[u,v]-[v,u]$. The figure specifies directions and arguments, without a metric.*
+*Left and center: opposite unit directed cycles. Their Laplacian difference $L_{acb}-L_{abc}$ equals $w(abc)$. Right: the same elements define $u=b-a$ and $v=c-a$, giving $[u,v]-[v,u]$. The figure specifies directions and arguments, without a metric.*
 
 The full Laplacian of the original cycle is therefore
 
@@ -63,7 +63,7 @@ With this normalization, its skew-symmetric part is $-w(abc)/2$. The factor $1/2
 
 ## Definition and geometric properties
 
-Work over $\mathbb R$. Let $V$ be the formal vertex space, $\varepsilon$ its affine-weight functional, and $W=\ker\varepsilon$ the vector space of grade-one boundaries. A point has $\varepsilon(a)=1$, while $\varepsilon(b-a)=0$.
+Work over $\mathbb R$. Let $V$ be the formal vertex space, $\varepsilon$ its affine-weight functional, and $W=\ker\varepsilon$ the vector space of grade-one boundaries. An element has $\varepsilon(a)=1$, while $\varepsilon(b-a)=0$.
 
 > [!info] A skew-symmetric form on two vectors
 > **Definition.** For $u,v\in W$, set
@@ -73,7 +73,7 @@ Work over $\mathbb R$. Let $V$ be the formal vertex space, $\varepsilon$ its aff
 > \tag{3}
 > $$
 >
-> For three affine points, define the **triangular circulation form** by $w(abc)=\omega(b-a,c-a)$.
+> For three affine elements, define the **triangular circulation form** by $w(abc)=\omega(b-a,c-a)$.
 
 The form $\omega$ is bilinear in $u,v$ and satisfies
 
@@ -99,9 +99,9 @@ These are two manifestations of skew-symmetry: exchanging the vectors changes th
 > [!note]- Proof
 > **Proof.** In the expanded expression for $w(abc)$, a cyclic permutation merely permutes the three pairs of terms. Reversing the order changes every pair's sign. $\square$
 
-A common translation also preserves the form: $w(a+t,b+t,c+t)=w(abc)$ for $t\in W$, since point differences are unchanged. Writing vectors from $a$ therefore gives it no distinguished geometric role.
+A common translation also preserves the form: $w(a+t,b+t,c+t)=w(abc)$ for $t\in W$, since element differences are unchanged. Writing vectors from $a$ therefore gives it no distinguished geometric role.
 
-For arbitrary affine points, $w(abc)=0$ exactly when $b-a$ and $c-a$ are linearly dependent. This includes repeated points and affine collinearity. For independent $u,v$, the forms $[u,v]$ and $[v,u]$ are distinct basis tensors, so their difference is nonzero.
+For arbitrary affine elements, $w(abc)=0$ exactly when $b-a$ and $c-a$ are linearly dependent. This includes repeated elements and affine collinearity. For independent $u,v$, the forms $[u,v]$ and $[v,u]$ are distinct basis tensors, so their difference is nonzero.
 
 ### Relation to the triangle boundary
 
@@ -119,7 +119,7 @@ The distinction between ordinary exterior forms and skew-symmetric double forms 
 
 ## Circulation around a closed contour
 
-For the ordered contour $a_1\to\cdots\to a_k\to a_1$ and any affine point $h$, set
+For the ordered contour $a_1\to\cdots\to a_k\to a_1$ and any affine element $h$, set
 
 $$
 w(a_1\ldots a_k)=\sum_{i=1}^k\omega(a_i-h,a_{i+1}-h),\qquad a_{k+1}=a_1
@@ -139,7 +139,7 @@ $$
 >
 > Summing the right sides gives zero because $\sum_i(x_i-x_{i+1})=0$. $\square$
 
-For $k=3$, definition (4) agrees with (1), as seen by taking $h=a_1$. Circulation is invariant under cyclic shifts and reverses sign with the contour. For two points, $w(ab)=0$: the opposite contributions cancel.
+For $k=3$, definition (4) agrees with (1), as seen by taking $h=a_1$. Circulation is invariant under cyclic shifts and reverses sign with the contour. For two elements, $w(ab)=0$: the opposite contributions cancel.
 
 Choosing $h=a_1$ immediately triangulates the contour:
 
@@ -180,6 +180,10 @@ L_{abc}+L_{acd}=L_{abcd}+[(ac)]^2
 $$
 
 Adding the two triangular cycles creates a directed 2-cycle on diagonal $ac$. Its skew-symmetric contribution vanishes, but its quadratic form remains. Positive-cycle decompositions and circulation decompositions therefore address different questions.
+
+![[images/A Diagonal in Circulation and the Laplacian.svg]]
+
+*The two triangle traversals contribute opposite directions along diagonal $ac$. They cancel in circulation: $w(abc)+w(acd)=w(abcd)$. In the Laplacian sum they form the coupling $[(ac)]^2$, which must be subtracted to leave only cycle $abcd$.*
 
 For any balanced graph, summing the circulation parts of its cycles gives the skew-symmetric part of $L$. Although the cycle decomposition may be nonunique, the result is always $(L-L^{\mathsf T})/2$, independent of that choice.
 
@@ -278,6 +282,6 @@ This note introduces circulation as an independent PMG object and proves its bas
 Related library notes:
 
 - [[Basic Objects and Operations of Polyform Algebra]]: formal forms, boundaries, and multiplication.
-- [[The Bilinear Laplacian of a Balanced Graph]]: boundary forms and the affine reference point.
+- [[The Bilinear Laplacian of a Balanced Graph]]: boundary forms and the affine reference element.
 - [[The Laplacian Exponential of a Balanced Graph]]: the exterior exponential, double forms, and determinant coefficients.
 - [[Balanced Graphs and Spanning-Tree Potentials]]: balanced graphs, cycle decompositions, and weight conditions.

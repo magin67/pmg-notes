@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="490" viewBox="0 0 1120 490" role="img" aria-labelledby="title desc">
+<title id="title">Разложение по дугам на общей системе вершин</title><desc id="desc">Разложение по дугам на общей системе вершин. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="490" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Разложение по дугам на общей системе вершин</text>
+<rect x="20" y="80" width="340" height="350" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="190.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Степень d = 2</text>
+<path d="M170.55 189.50 Q110.93 243.19 92.23 321.21" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M111.00 354.20 Q190.00 378.00 269.00 354.20" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M287.77 321.21 Q269.07 243.19 209.45 189.50" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M99.45 325.50 Q159.07 271.81 177.77 193.79" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M269.00 345.80 Q190.00 322.00 111.00 345.80" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M202.23 193.79 Q220.93 271.81 280.55 325.50" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<circle cx="190.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="190.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="80.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="80.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="300.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="300.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<rect x="390" y="80" width="340" height="350" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Первый 1-фактор</text>
+<path d="M544.16 191.65 Q505.00 257.50 465.84 323.35" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M481.00 350.00 Q560.00 350.00 639.00 350.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M654.16 323.35 Q615.00 257.50 575.84 191.65" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<circle cx="560.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="560.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="450.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="450.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="670.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="670.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<rect x="760" y="80" width="340" height="350" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="930.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Второй 1-фактор</text>
+<path d="M835.84 323.35 Q875.00 257.50 914.16 191.65" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M1009.00 350.00 Q930.00 350.00 851.00 350.00" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M945.84 191.65 Q985.00 257.50 1024.16 323.35" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<circle cx="930.00" cy="165.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="930.00" y="172.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="820.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="820.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="1040.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="1040.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<text x="560.00" y="472.00" font-size="22" fill="#20344a" text-anchor="middle">Все дуги имеют вес 1. Каждый фактор содержит все три вершины.</text>
+</g></svg>

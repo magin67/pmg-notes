@@ -1,9 +1,9 @@
 ---
 title: Balanced Graphs
 date: 2026-10-24
-updated: 2026-11-01
-revision: 2
-source_revision: 2
+updated: 2026-11-09
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -38,7 +38,7 @@ Secondary thematic entries:
 | Order | Note | Main content |
 | ---: | --- | --- |
 | 1 | [[Balanced Graphs and Spanning-Tree Potentials]] | Balance and symmetry, cycle decompositions, equal rooted potentials, a directed 3-cycle, and permutation digraphs |
-| 2 | [[The Bilinear Laplacian of a Balanced Graph]] | Canonical centroid representation, admissible coefficients, and boundary products with arbitrary points |
+| 2 | [[The Bilinear Laplacian of a Balanced Graph]] | Canonical centroid representation, admissible coefficients, and boundary products with arbitrary elements |
 | 3 | [[The Laplacian Exponential of a Balanced Graph]] | Finite bilinear-factor products, minors, directed forests, and the spanning-tree coefficient |
 | 4 | [[The Circulation Form]] | An independent skew-symmetric form, triangulations, products, and the distinction from a nonnegative graph Laplacian |
 | 5 | [[Balanced Variations]] | Spanning-tree changes, reassigning arcs, adding cycles, and inserting vertices |
@@ -78,11 +78,19 @@ The first index of $r_{ij}$ is the initial vertex, the second the target. For a 
 
 ## Reading routes
 
-- **Algebra:** notes 1-5, after [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]]. The main questions are what survives without symmetry and how to compute products.
-- **Metrics and geometry:** notes 1-3 followed by 6-9. [[The Null Vector, Isotropic Representation, and the Boundary]] and [[Bi-coordinates and Di-coordinates]] provide the symmetric starting point.
+- **Algebra:** notes 1-4 and the main part of [[Balanced Variations]], stopping before one-way variation. Prerequisites are [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]]. The main questions are what survives without symmetry and how to compute products.
+- **Metrics and geometry:** after notes 1-4, read the determinant formula for a potential in [[Balanced Variations#A matrix check and argument order|the variation note]], then continue with 6-9. After directional coordinates, return to [[Balanced Variations#One-way variation and loss of balance|one-way variation]]. Symmetric prerequisites are [[The Null Vector, Isotropic Representation, and the Boundary]] and [[Bi-coordinates and Di-coordinates]].
 - **Balancing data and flows:** notes 1 and 10; add 6-9 for the resulting metric. Scaling preserves directions and outgoing proportions while changing weights.
 - **Forests and toponomes:** notes 1-3 and 11 alongside [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. Numerical types alone do not determine products on a common vertex set.
 - **Permutation combinatorics:** notes 1 and 12, then [[Cyclic Partitions and the Combinatorial Potential of the First Kind]]. This route does not require the directional metric.
+
+![[images/Routes through Balanced Graphs.svg]]
+
+*The main route runs from balance through algebra to directional metrics. One-way variation uses metric definitions and is read afterward. Balancing, forests, and permutations also have separate entry routes.*
+
+## Checking the examples
+
+[Reproducible calculations and sources for the new figures](https://github.com/magin67/pmg-notes/tree/v5/checks/balanced) check the displayed matrices, trees, forests, coordinates, and projections using exact arithmetic. The accompanying README states the scope; finite examples supplement the proofs in the notes.
 
 ## Conventions and scope
 

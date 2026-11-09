@@ -1,15 +1,15 @@
 ---
 title: Toponomes of Balanced Graphs and Directed Forests
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: balanced-graph-toponomes-and-directed-forests
 order: 11
 description: Directed rooted-forest toponomes, vertex and vector normalizations, the symmetric limit, the Laplacian polynomial, and the limitations of multiplication on types.
-source_revision: 1
+source_revision: 2
 aliases:
   - "en/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests"
 ---
@@ -181,6 +181,10 @@ Alongside forests contained entirely in one directed cycle, mixed forests appear
 | $(1^2)$ | $4$ | $4$ | $8$ |
 | $(3)$ | $8$ | $8$ | $16$ |
 
+![[images/A Mixed Forest of Two Directed Cycles.svg]]
+
+*Arc $a\to b$ comes from $C_+$ and $c\to b$ from $C_-$. Together they form a tree toward root $b$ and singleton $d$, giving type $(2)$. This is one of the four mixed contributions of that type in the table; neither original cycle contains the whole forest.*
+
 Count the empty forest once. Hence
 
 $$
@@ -311,7 +315,7 @@ Constructing richer types that retain roots and form arguments, with compatible 
 
 ## Checks and sources
 
-The 3-cycle, 4-cycle, and opposite-pair tables were checked by direct arc-subset enumeration. Weighted examples separately compared forest sums, principal minors, and diagonal coefficients of the polyform exponential. Independent enumeration of undirected forests checked the symmetric limit. Calculations used exact rational arithmetic.
+Direct arc-subset enumeration and comparison with the determinant check the 4-cycle tables: [exact calculation](https://github.com/magin67/pmg-notes/tree/v5/checks/balanced).
 
 “Toponome” and the two extended normalizations have the PMG meanings defined here. The directed matrix-forest theorem is an established result. The note also draws on the author's PMG research.
 

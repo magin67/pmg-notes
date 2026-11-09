@@ -1,15 +1,15 @@
 ---
 title: Balancing a Directed Graph by Spanning-Tree Potentials
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: directed-graph-balancing-by-spanning-tree-potentials
 order: 10
 description: 'Positive scaling of outgoing couplings by spanning-tree potentials: uniqueness, computation, applications, and comparison with additive balancing.'
-source_revision: 1
+source_revision: 2
 aliases:
   - "en/Balanced graphs/Balancing a Directed Graph by Spanning-Tree Potentials"
 ---
@@ -220,6 +220,10 @@ Vertex $c$ has the largest multiplier, whereas $a$ has the largest balanced weig
 
 Balancing specifies a model for reconciling ratings. Equal input and output alone do not establish a fair ranking; interpretation depends on the original weights' meaning.
 
+![[images/Balancing Outgoing Weights.svg]]
+
+*Each row has its own multiplier: $\sigma_a=15/16$, $\sigma_b=12/16$, $\sigma_c=21/16$. After balancing, incoming and outgoing totals agree at each vertex, giving $45/16$, $36/16$, and $42/16$. The three totals need not equal one another; each source retains its allocation proportions.*
+
 ## Computing the balancing
 
 Computing $n$ determinants is unnecessary. Solve
@@ -319,7 +323,7 @@ Another transformation is resistance symmetrization using $R_{ij}=r_{ij}+r_{ji}$
 
 The main construction is the known diagonal balancing through the Laplacian kernel and directed matrix-tree theorem [1]. Here we give its proof, normalization, projection properties, transformation of tree potentials, and comparison with additive balancing. The applied presentation also draws on the author's PMG research.
 
-The example was checked with exact rational arithmetic. Multipliers were obtained independently from principal minors and the normalized linear system; row sums, column sums, and tree potentials were recomputed after scaling. Repeated balancing, recovery of the original matrix, and (7) were also checked.
+Principal minors, incoming and outgoing totals, repeated balancing, and recovery of the original weights check the example: [exact calculation](https://github.com/magin67/pmg-notes/tree/v5/checks/balanced).
 
 1. Van der Schaft, A. J. [Modeling of Physical Network Systems](https://arxiv.org/abs/1510.04984). Preprint, 2015. [§4.1](https://arxiv.org/html/1510.04984v1#S4.SS1): balancing via spanning trees; §4.3: network consensus applications.
 

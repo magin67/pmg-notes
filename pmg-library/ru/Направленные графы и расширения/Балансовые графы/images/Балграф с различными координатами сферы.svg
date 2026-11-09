@@ -1,24 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="390" viewBox="0 0 860 390" role="img" aria-labelledby="title desc">
-<title id="title">Балграф: единичный орцикл и двусторонняя связь ab</title>
-<desc id="desc">Дуги a в b веса 2, b в a, b в c и c в a веса 1. Входящие и исходящие степени a и b равны 2, c равны 1.</desc>
-<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#24547a"/></marker></defs>
-<rect width="860" height="390" rx="12" fill="#fbfcfe"/>
-<g font-family="Arial, sans-serif" fill="#20344a">
-<text x="36" y="35" font-size="21" font-weight="bold">3-орцикл + двусторонняя связь ab</text>
-<g fill="none" stroke="#24547a" stroke-width="2.8" marker-end="url(#arrow)">
-<path d="M121 101 Q220 45 319 101"/>
-<path d="M317 122 Q220 171 123 122"/>
-<path d="M330 139 L245 277"/>
-<path d="M206 277 L120 139"/>
-</g>
-<g font-size="21" text-anchor="middle" fill="#24547a"><text x="220" y="67">2</text><text x="220" y="166">1</text><text x="307" y="225">1</text><text x="144" y="225">1</text></g>
-<g fill="#edf4fa" stroke="#24547a" stroke-width="2"><circle cx="100" cy="112" r="30"/><circle cx="340" cy="112" r="30"/><circle cx="225" cy="305" r="30"/></g>
-<g text-anchor="middle" font-size="25"><text x="100" y="120">a</text><text x="340" y="120">b</text><text x="225" y="313">c</text></g>
-<path d="M420 64 L420 344" stroke="#dbe3ec"/>
-<text x="462" y="92" font-size="20" font-weight="bold">Баланс каждой вершины</text>
-<g font-size="17"><text x="470" y="138">Вершина</text><text x="596" y="138">Исходит</text><text x="716" y="138">Входит</text></g>
-<path d="M461 151 H810" stroke="#bacbdc"/>
-<g font-size="22" text-anchor="middle"><text x="505" y="190">a</text><text x="632" y="190">2</text><text x="750" y="190">2</text><text x="505" y="233">b</text><text x="632" y="233">2</text><text x="750" y="233">2</text><text x="505" y="276">c</text><text x="632" y="276">1</text><text x="750" y="276">1</text></g>
-<text x="462" y="329" font-size="17">Степени учитывают веса дуг.</text>
-<text x="36" y="367" font-size="15" fill="#53677b">Циркуляция через c уравновешивает разные веса встречных дуг между a и b.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="510" viewBox="0 0 1120 510" role="img" aria-labelledby="title desc">
+<title id="title">3-орцикл и двусторонняя связь ab</title><desc id="desc">3-орцикл и двусторонняя связь ab. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="510" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">3-орцикл и двусторонняя связь ab</text>
+<path d="M156.00 158.75 Q277.50 95.00 399.00 158.75" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="277.50" y="144.25" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">2</text>
+<path d="M399.00 179.00 Q277.50 230.00 156.00 179.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="277.50" y="198.00" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<path d="M413.57 196.29 Q355.00 290.00 296.43 383.71" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="340.58" y="286.99" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<path d="M263.18 383.96 Q202.50 290.00 141.82 196.04" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="216.78" y="286.78" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<circle cx="125.00" cy="170.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="125.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="430.00" cy="170.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="430.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="280.00" cy="410.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="280.00" y="417.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<rect x="580" y="90" width="510" height="360" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="835.00" y="122.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Баланс каждой вершины</text>
+<text x="655.00" y="180.00" font-size="21" fill="#20344a" text-anchor="middle" font-weight="bold">Вершина</text>
+<text x="805.00" y="180.00" font-size="21" fill="#20344a" text-anchor="middle" font-weight="bold">Выход</text>
+<text x="975.00" y="180.00" font-size="21" fill="#20344a" text-anchor="middle" font-weight="bold">Вход</text>
+<text x="655.00" y="245.00" font-size="25" fill="#20344a" text-anchor="middle">a</text>
+<text x="805.00" y="245.00" font-size="25" fill="#20344a" text-anchor="middle">2</text>
+<text x="975.00" y="245.00" font-size="25" fill="#20344a" text-anchor="middle">2</text>
+<text x="655.00" y="310.00" font-size="25" fill="#20344a" text-anchor="middle">b</text>
+<text x="805.00" y="310.00" font-size="25" fill="#20344a" text-anchor="middle">2</text>
+<text x="975.00" y="310.00" font-size="25" fill="#20344a" text-anchor="middle">2</text>
+<text x="655.00" y="375.00" font-size="25" fill="#20344a" text-anchor="middle">c</text>
+<text x="805.00" y="375.00" font-size="25" fill="#20344a" text-anchor="middle">1</text>
+<text x="975.00" y="375.00" font-size="25" fill="#20344a" text-anchor="middle">1</text>
+<text x="560.00" y="486.00" font-size="21" fill="#20344a" text-anchor="middle">Дуги через c компенсируют разные веса встречных дуг между a и b.</text>
 </g></svg>

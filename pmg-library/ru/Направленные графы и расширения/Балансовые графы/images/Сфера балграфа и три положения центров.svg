@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="710" viewBox="0 0 1120 710" role="img" aria-labelledby="title desc">
+<title id="title">Одна окружность и три положения центров</title><desc id="desc">Одна окружность и три положения центров. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="710" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Одна окружность и три положения центров</text>
+<rect x="20" y="80" width="520" height="500" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="280.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Евклидова реализация</text>
+<rect x="580" y="80" width="520" height="500" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="840.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Увеличенный фрагмент</text>
+<circle cx="266.673" cy="317.706" r="176.392" fill="none" stroke="#7e549b" stroke-width="2.5"/>
+<path d="M150.00 450.00 L383.35 450.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M383.35 450.00 L266.67 141.31" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<path d="M266.67 141.31 L150.00 450.00" fill="none" stroke="#9ba8b5" stroke-width="2"/>
+<circle cx="150.00" cy="450.00" r="5" fill="#20344a"/>
+<text x="132.00" y="475.00" font-size="23" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="383.35" cy="450.00" r="5" fill="#20344a"/>
+<text x="401.35" y="475.00" font-size="23" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="266.67" cy="141.31" r="5" fill="#20344a"/>
+<text x="284.67" y="148.31" font-size="23" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="256.95" cy="321.38" r="4" fill="#b45920"/>
+<circle cx="276.40" cy="321.38" r="4" fill="#178071"/>
+<circle cx="266.67" cy="317.71" r="4" fill="#7e549b"/>
+<circle cx="266.673" cy="317.706" r="25" fill="none" stroke="#9ba8b5" stroke-dasharray="5 4"/>
+<path d="M291.67 317.71 L600.00 290.00" fill="none" stroke="#9ba8b5" stroke-width="3" stroke-dasharray="7 5"/>
+<circle cx="742.77" cy="316.75" r="7" fill="#b45920"/>
+<text x="742.77" y="351.75" font-size="21" fill="#b45920" text-anchor="middle" font-weight="bold">p<tspan baseline-shift="sub" font-size="70%">out</tspan></text>
+<circle cx="937.23" cy="316.75" r="7" fill="#178071"/>
+<text x="937.23" y="351.75" font-size="21" fill="#178071" text-anchor="middle" font-weight="bold">p<tspan baseline-shift="sub" font-size="70%">in</tspan></text>
+<circle cx="840.00" cy="280.00" r="7" fill="#7e549b"/>
+<text x="840.00" y="258.00" font-size="21" fill="#7e549b" text-anchor="middle" font-weight="bold">p<tspan baseline-shift="sub" font-size="70%">g</tspan></text>
+<text x="280.00" y="535.00" font-size="21" fill="#7e549b" text-anchor="middle" font-weight="bold">R<tspan baseline-shift="sub" font-size="70%">g</tspan>² = 2/7</text>
+<text x="840.00" y="430.00" font-size="21" fill="#7e549b" text-anchor="middle" font-weight="bold">Только p<tspan baseline-shift="sub" font-size="70%">g</tspan> - центр окружности</text>
+<text x="840.00" y="474.00" font-size="23" fill="#20344a" text-anchor="middle" font-weight="bold">ρ = 41/144 ≠ R<tspan baseline-shift="sub" font-size="70%">g</tspan>²</text>
+<text x="560.00" y="624.00" font-size="22" fill="#20344a" text-anchor="middle">p<tspan baseline-shift="sub" font-size="70%">out</tspan>: (4, 3, 5)/12;    p<tspan baseline-shift="sub" font-size="70%">in</tspan>: (3, 4, 5)/12;    p<tspan baseline-shift="sub" font-size="70%">g</tspan>: (2, 2, 3)/7</text>
+<text x="560.00" y="666.00" font-size="19" fill="#20344a" text-anchor="middle">Внизу указаны вершинные коэффициенты; направление z на рисунке исключено.</text>
+</g></svg>

@@ -1,15 +1,15 @@
 ---
 title: Resistance Geometry and Circulation
 date: 2026-10-24
-updated: 2026-10-25
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: resistance-geometry-and-circulation
 lang: en
 description: Euclidean pair geometry, circulation as nonreciprocal response, and a three-vertex resistance formula combining area and circulation.
 order: 7
-source_revision: 5
+source_revision: 6
 aliases:
   - "en/Balanced graphs/Resistance Geometry and Circulation"
 ---
@@ -59,6 +59,8 @@ This exchanges the source and receiver roles of two vectors. By contrast, evalua
 The split (1) serves interpretation. Exponential calculations can still use bilinear forms directly, without splitting the Laplacian into two types of terms.
 
 ## The Euclidean part of the metric
+
+Write $\mathbf S=(\mathbf L+\mathbf L^{\mathsf T})/2$ for the symmetrized Laplacian, with weights $(f_{ij}+f_{ji})/2$. Symmetrizing the Laplacian and then inverting it differs from first finding $\mathbf{Gr}$ and taking the symmetric part of its pairing.
 
 > [!info] Positivity of the symmetric part
 > **Theorem.** For a connected balanced graph with nonnegative weights, $g$ is positive definite on $W$. Its vertices therefore have an $(n-1)$-dimensional Euclidean realization with
@@ -178,6 +180,18 @@ $$
 $$
 
 Thus the sign of the circulation potential gives the order of the two projections along $a\to b$, while its ratio to $R_{ab}$ gives the difference of their coefficients. Zero circulation for this triple means that these two projections coincide. For example, in the unit cycle $a\to b\to c\to a$, we have $\theta_c^{\mathrm{out}}=1$, $\theta_c^{\mathrm{in}}=0$, and $\chi_{abc}/R_{ab}=-1$.
+
+For comparison, the ordinary orthogonal projection coefficient in the symmetric metric is
+
+$$
+\theta_i^g=\frac{g(w_i,v)}{R_{ab}}=\frac{\theta_i^{\mathrm{out}}+\theta_i^{\mathrm{in}}}{2}
+$$
+
+For $i=c$ in the unit directed 3-cycle it is $1/2$. The directional projections impose two different conditions on $\beta$; their connecting segments need not be Euclidean perpendiculars.
+
+![[images/Three Projections of a Cycle Vertex.svg]]
+
+*The same vertex $c$ projects to $a$ under the incoming condition, to $b$ under the outgoing condition, and to the midpoint of $ab$ in metric $g$. Only the last projection is marked with a right angle.*
 
 ## Electrical interpretation: reciprocity of responses
 

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="500" viewBox="0 0 1120 500" role="img" aria-labelledby="title desc">
+<title id="title">A mixed forest from opposite directed cycles</title><desc id="desc">A mixed forest from opposite directed cycles. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="500" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">A mixed forest from opposite directed cycles</text>
+<rect x="20" y="80" width="340" height="350" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="190.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">C₊: a → b</text>
+<path d="M116.00 170.00 Q190.00 170.00 264.00 170.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M295.00 201.00 Q295.00 260.00 295.00 319.00" fill="none" stroke="#9ba8b5" stroke-width="3" marker-end="url(#gray)"/>
+<path d="M264.00 350.00 Q190.00 350.00 116.00 350.00" fill="none" stroke="#9ba8b5" stroke-width="3" marker-end="url(#gray)"/>
+<path d="M85.00 319.00 Q85.00 260.00 85.00 201.00" fill="none" stroke="#9ba8b5" stroke-width="3" marker-end="url(#gray)"/>
+<circle cx="85.00" cy="170.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="85.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="295.00" cy="170.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="295.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="295.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="295.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="85.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="85.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">d</text>
+<rect x="390" y="80" width="340" height="350" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="560.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">C₋: c → b</text>
+<path d="M634.00 170.00 Q560.00 170.00 486.00 170.00" fill="none" stroke="#9ba8b5" stroke-width="3" marker-end="url(#gray)"/>
+<path d="M665.00 319.00 Q665.00 260.00 665.00 201.00" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<path d="M486.00 350.00 Q560.00 350.00 634.00 350.00" fill="none" stroke="#9ba8b5" stroke-width="3" marker-end="url(#gray)"/>
+<path d="M455.00 201.00 Q455.00 260.00 455.00 319.00" fill="none" stroke="#9ba8b5" stroke-width="3" marker-end="url(#gray)"/>
+<circle cx="455.00" cy="170.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="455.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="665.00" cy="170.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="665.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="665.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="665.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="455.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="455.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">d</text>
+<rect x="760" y="80" width="340" height="350" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="930.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">A forest of type (2)</text>
+<path d="M856.00 170.00 Q930.00 170.00 1004.00 170.00" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<path d="M1035.00 319.00 Q1035.00 260.00 1035.00 201.00" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<circle cx="825.00" cy="170.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="825.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="1035.00" cy="170.00" r="23" fill="#fff1c2" stroke="#20344a" stroke-width="2.3"/>
+<text x="1035.00" y="177.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="1035.00" cy="350.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="1035.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<circle cx="825.00" cy="350.00" r="23" fill="#fff1c2" stroke="#20344a" stroke-width="2.3"/>
+<text x="825.00" y="357.00" font-size="24" fill="#20344a" text-anchor="middle">d</text>
+<text x="560.00" y="475.00" font-size="22" fill="#20344a" text-anchor="middle">One mixed forest: a triple rooted at b and singleton d.</text>
+</g></svg>

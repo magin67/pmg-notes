@@ -1,15 +1,15 @@
 ---
 title: Balanced Graphs and Spanning-Tree Potentials
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graphs-spanning-tree-potentials
 lang: en
 description: Balance, directed-cycle decompositions, equality of rooted spanning-tree potentials, and the bilinear boundary representation of the Laplacian.
 order: 1
-source_revision: 6
+source_revision: 7
 aliases:
   - "en/Balanced graphs/Balanced Graphs and Spanning-Tree Potentials"
 ---
@@ -329,7 +329,7 @@ L=\sum_{i,j}L_{ij}[a_i,a_j]
 $$
 
 > [!info] Bilinear representation on affine vectors
-> **Proposition.** For a balanced graph and any point $h$ of unit affine weight,
+> **Proposition.** For a balanced graph and any element $h$ of unit affine weight,
 >
 > $$
 > \boxed{L=\sum_{i,j}L_{ij}[a_i-h,a_j-h]}
@@ -338,13 +338,15 @@ $$
 > Both arguments of every term belong to the affine-vector space $W=\ker\varepsilon$.
 
 > [!note]- Proof
-> **Proof.** Expand $[a_i-h,a_j-h]$ by bilinearity. In addition to $[a_i,a_j]$, this gives $-[a_i,h]$, $-[h,a_j]$, and $[h,h]$. Summing with coefficients $L_{ij}$ cancels these extra terms because row and column sums vanish. Differences of points have affine weight $0$, hence belong to $W$. $\square$
+> **Proof.** Expand $[a_i-h,a_j-h]$ by bilinearity. In addition to $[a_i,a_j]$, this gives $-[a_i,h]$, $-[h,a_j]$, and $[h,h]$. Summing with coefficients $L_{ij}$ cancels these extra terms because row and column sums vanish. Differences of elements have affine weight $0$, hence belong to $W$. $\square$
 
 Affine vectors are boundaries of grade $1$. The balanced Laplacian therefore lies in the same boundary-form subalgebra used in PMG, although individual forms may now have different arguments. This algebraic consequence of balance does not require symmetry.
 
 Conversely, the coefficient matrix of any $[u,v]$ with $u,v\in W$ has zero row and column sums: its entries are $u_i v_j$, and both coordinate sums vanish. Representability by bilinear forms on affine vectors expresses precisely these two linear conditions. A balanced-graph Laplacian with nonnegative weights must additionally satisfy $L_{ij}\le0$ for $i\ne j$; an arbitrary bilinear sum need not meet this sign condition.
 
 The centroid choice, arc and vertex representations, reduction of the term count using a reference vertex, and multiplication rules are discussed in [[The Bilinear Laplacian of a Balanced Graph]].
+
+**Three distinct conditions.** Balance compares incoming and outgoing totals at one vertex; symmetry compares opposite arcs; regularity compares degrees at different vertices. The last two properties are not part of the definition of balance.
 
 ## Sources and connections
 

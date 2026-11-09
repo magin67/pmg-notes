@@ -1,8 +1,8 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-11-08
-revision: 28
+updated: 2026-11-09
+revision: 29
 translated_revision: 28
 status: draft
 text_prepared_by: ChatGPT
@@ -465,7 +465,7 @@ This section concerns loopless balanced digraphs with nonnegative arc weights. C
 | Outgoing and incoming bi-coordinates | Исходящие и входящие би-координаты | PMG | Expansion coefficients of a specified representative in the $\mathrm{out}$ or $\mathrm{in}$ role basis. Each expansion is unique. Two representatives of one functional may have different coordinates. |
 | Outgoing and incoming di-coordinates | Исходящие и входящие ди-координаты | PMG | Pairings with the opposite-role basis: $\mathbf d_{\mathrm{out}}=\mathbf G^{\mathsf T}\mathbf b_{\mathrm{out}}$, $\mathbf d_{\mathrm{in}}=\mathbf G\mathbf b_{\mathrm{in}}$. [[The Gram Matrix and Directional Coordinates of a Balanced Graph]]. |
 | Directional projections | Направленные проекции | PMG | Projections imposing orthogonality in the first or second argument of $\beta$. On line $ab$, their coefficients of $b$ are $\beta(a_i-a,b-a)/R_{ab}$ and $\beta(b-a,a_i-a)/R_{ab}$. [[Balanced Variations#One-way variation and loss of balance]]. |
-| Metric representatives of the sphere | Метрические представители сферы | PMG | $S_{\mathrm{out}}$ and $S_{\mathrm{in}}$ represent one functional by pairing from different sides. Their bi-coordinates may differ, but $S_{\mathrm{out}}\cdot S_{\mathrm{in}}=\rho$. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
+| Metric representatives of the sphere | Метрические представители сферы | PMG | $s_{\mathrm{out}}$ and $s_{\mathrm{in}}$ represent one functional by pairing from different sides. Their bi-coordinates may differ, but $s_{\mathrm{out}}\cdot s_{\mathrm{in}}=\rho$. [[The Isotropic Space and Sphere of a Balanced Graph]]. |
 | Balanced variation | Балансовая вариация | Qualified | A Laplacian update with zero row and column sums; nonnegative final weights are checked separately. Its elementary form is $t[u,v]$ with $u,v\in W$. [[Balanced Variations]]. |
 | Single-arc variation | Односторонняя вариация дуги | Qualified | A weight change for one arc $a\to b$, $\Delta\mathbf L=t\mathbf e_a(\mathbf e_a-\mathbf e_b)^{\mathsf T}$. For $a\ne b$ and $t\ne0$, it breaks the original balanced graph's balance. |
 

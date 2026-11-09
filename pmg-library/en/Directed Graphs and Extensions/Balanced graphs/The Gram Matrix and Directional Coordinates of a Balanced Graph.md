@@ -1,15 +1,15 @@
 ---
 title: The Gram Matrix and Directional Coordinates of a Balanced Graph
 date: 2026-10-24
-updated: 2026-10-24
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: gram-matrix-and-directional-coordinates-of-balanced-graphs
 order: 8
 description: The canonical vertex Gram matrix, source and receiver roles, and directional bi-coordinates and di-coordinates for a balanced graph.
-source_revision: 2
+source_revision: 3
 aliases:
   - "en/Balanced graphs/The Gram Matrix and Directional Coordinates of a Balanced Graph"
 ---
@@ -167,12 +167,14 @@ No pairing of two sources or two receivers is separately introduced. The existin
 
 ## Bi-coordinates and di-coordinates
 
+Indices in this section range over the vertices. A repeated upper and lower index implies summation.
+
 As in [[Bi-coordinates and Di-coordinates]], bi-coordinates are expansion coefficients. For specified representatives,
 
 $$
-X_{\mathrm{out}}=\sum_i b^i_{\mathrm{out}}(X)a_i^{\mathrm{out}},
+X_{\mathrm{out}}=b^i_{\mathrm{out}}(X)a_i^{\mathrm{out}},
 \qquad
-Y_{\mathrm{in}}=\sum_j b^j_{\mathrm{in}}(Y)a_j^{\mathrm{in}}
+Y_{\mathrm{in}}=b^j_{\mathrm{in}}(Y)a_j^{\mathrm{in}}
 $$
 
 each expansion is unique. Superscripts on $b^i$ index the coefficients.
@@ -253,13 +255,37 @@ The outgoing di-coordinates of $a$ form column $(0,-1/3,-5/12)^{\mathsf T}$; the
 
 The same graph is used to compute the sphere and recover the Laplacian in [[The Isotropic Space and Sphere of a Balanced Graph]].
 
+### Contracting two differences
+
+Take $u=a-c$ and $v=b-c$. Their bi-coordinates and corresponding di-coordinates are
+
+$$
+\mathbf b_{\mathrm{out}}(u)=\begin{pmatrix}1\\0\\-1\end{pmatrix},\qquad
+\mathbf b_{\mathrm{in}}(v)=\begin{pmatrix}0\\1\\-1\end{pmatrix}
+$$
+
+$$
+\mathbf d_{\mathrm{out}}(u)=\frac1{12}\begin{pmatrix}7\\1\\-5\end{pmatrix},\qquad
+\mathbf d_{\mathrm{in}}(v)=\frac1{12}\begin{pmatrix}1\\7\\-5\end{pmatrix}
+$$
+
+Both contractions give the same value:
+
+$$
+\mathbf b_{\mathrm{out}}(u)^{\mathsf T}\mathbf d_{\mathrm{in}}(v)
+=\frac{1+5}{12}=\frac12
+=\mathbf d_{\mathrm{out}}(u)^{\mathsf T}\mathbf b_{\mathrm{in}}(v)
+$$
+
+Exchanging roles instead gives $v_{\mathrm{out}}\cdot u_{\mathrm{in}}=1$. Changing the computation method preserves the pairing; exchanging its arguments can change it.
+
 ## Sources and status
 
 Nonsymmetric bilinear pairings through a generalized inverse Laplacian, and the freedom to add row and column terms, are discussed in [1, §§8,12]. Source [2] studies the directed resistance matrix with entries $q_i+q_j-2\mathrm{Gr}_{ij}$; in our notation it equals $-2\mathbf G^{\mathsf T}$ and differs from $\mathbf r$.
 
 The centroid normalization and its uniqueness, coordinate formulas, and connection to the PMG potential are proved here. Source and receiver terminology specifies argument roles. The note also draws on the author's PMG research.
 
-Exact rational checks compared difference pairings with reduced-Laplacian inverses, verified the centroid condition, and checked the example by direct matrix computation.
+Direct matrix computations check the Gram matrix and contraction example: [exact calculation](https://github.com/magin67/pmg-notes/tree/v5/checks/balanced).
 
 1. Doyle, P. G.; Steiner, J. [Commuting time geometry of ergodic Markov chains](https://arxiv.org/html/1107.2612v2). arXiv:1107.2612, version 2, 2017, §§8,12.
 2. Balaji, R.; Bapat, R. B.; Goel, S. [Resistance matrices of balanced directed graphs](https://arxiv.org/abs/1906.01165). *Linear and Multilinear Algebra*, 70 (2022), 787-808. [DOI](https://doi.org/10.1080/03081087.2020.1748850).

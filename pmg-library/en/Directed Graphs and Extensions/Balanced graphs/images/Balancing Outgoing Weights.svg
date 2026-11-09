@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" role="img" aria-labelledby="title desc">
+<title id="title">Scaling every arc from the same source</title><desc id="desc">Scaling every arc from the same source. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="680" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Scaling every arc from the same source</text>
+<rect x="20" y="80" width="520" height="500" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="280.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">Before balancing</text>
+<path d="M256.76 201.29 Q172.19 259.58 139.15 356.83" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="169.24" y="263.35" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<path d="M294.15 208.17 Q327.19 305.42 411.76 363.71" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="324.24" y="313.65" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">2</text>
+<path d="M148.24 363.71 Q232.81 305.42 265.85 208.17" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<text x="235.76" y="313.65" font-size="20" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">2</text>
+<path d="M156.00 390.70 Q280.00 423.00 404.00 390.70" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<text x="280.00" y="432.70" font-size="20" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<path d="M420.85 356.83 Q387.81 259.58 303.24 201.29" fill="none" stroke="#178071" stroke-width="3" marker-end="url(#green)"/>
+<text x="390.76" y="263.35" font-size="20" fill="#178071" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<path d="M404.00 379.30 Q280.00 347.00 156.00 379.30" fill="none" stroke="#178071" stroke-width="3" marker-end="url(#green)"/>
+<text x="280.00" y="349.30" font-size="20" fill="#178071" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<circle cx="280.00" cy="180.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="280.00" y="187.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="125.00" cy="385.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="125.00" y="392.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="435.00" cy="385.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="435.00" y="392.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<text x="280.00" y="475.00" font-size="21" fill="#20344a" text-anchor="middle">Outgoing: (3, 3, 2)</text>
+<text x="280.00" y="515.00" font-size="21" fill="#20344a" text-anchor="middle">Incoming: (3, 2, 3)</text>
+<rect x="580" y="80" width="520" height="500" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="840.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">After balancing</text>
+<path d="M816.76 201.29 Q732.19 259.58 699.15 356.83" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="729.24" y="263.35" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">15/16</text>
+<path d="M854.15 208.17 Q887.19 305.42 971.76 363.71" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="884.24" y="313.65" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">30/16</text>
+<path d="M708.24 363.71 Q792.81 305.42 825.85 208.17" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<text x="795.76" y="313.65" font-size="20" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">24/16</text>
+<path d="M716.00 390.70 Q840.00 423.00 964.00 390.70" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<text x="840.00" y="432.70" font-size="20" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">12/16</text>
+<path d="M980.85 356.83 Q947.81 259.58 863.24 201.29" fill="none" stroke="#178071" stroke-width="3" marker-end="url(#green)"/>
+<text x="950.76" y="263.35" font-size="20" fill="#178071" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">21/16</text>
+<path d="M964.00 379.30 Q840.00 347.00 716.00 379.30" fill="none" stroke="#178071" stroke-width="3" marker-end="url(#green)"/>
+<text x="840.00" y="349.30" font-size="20" fill="#178071" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">21/16</text>
+<circle cx="840.00" cy="180.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="840.00" y="187.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="685.00" cy="385.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="685.00" y="392.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="995.00" cy="385.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="995.00" y="392.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<text x="840.00" y="475.00" font-size="21" fill="#20344a" text-anchor="middle" font-weight="bold">Outgoing = incoming</text>
+<text x="840.00" y="515.00" font-size="21" fill="#20344a" text-anchor="middle">(45, 36, 42)/16</text>
+<text x="560.00" y="620.00" font-size="21" fill="#20344a" text-anchor="middle" font-weight="bold">σ<tspan baseline-shift="sub" font-size="70%">a</tspan> = 15/16;    σ<tspan baseline-shift="sub" font-size="70%">b</tspan> = 12/16;    σ<tspan baseline-shift="sub" font-size="70%">c</tspan> = 21/16</text>
+<text x="560.00" y="660.00" font-size="20" fill="#20344a" text-anchor="middle">Arc color identifies its source and common multiplier.</text>
+</g></svg>

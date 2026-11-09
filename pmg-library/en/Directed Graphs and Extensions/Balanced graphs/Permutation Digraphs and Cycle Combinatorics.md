@@ -1,15 +1,15 @@
 ---
 title: Permutation Digraphs and Cycle Combinatorics
 date: 2026-10-24
-updated: 2026-10-25
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: permutation-digraphs-and-cycle-combinatorics
 lang: en
 description: Permutation digraphs, cycle-type probabilities and mean cycle counts, marked open paths, and decomposition of regular balanced digraphs into directed 1-factors.
 order: 12
-source_revision: 4
+source_revision: 5
 aliases:
   - "en/Balanced graphs/Permutation Digraphs and Cycle Combinatorics"
 ---
@@ -187,6 +187,10 @@ $$
 The decomposition need not be unique. Its terms share vertices: **it partitions arcs, not connected components**. The product rule for toponomes of disjoint components therefore does not apply directly.
 
 For Secret Santa with two distinct recipients and two donors per participant, every completed assignment can be split into two assignments in which everyone gives and receives once. A closed three-participant component, for example, consists of two opposite directed 3-cycles.
+
+![[images/Two Permutation Digraphs on Shared Vertices.svg]]
+
+*The symmetric triangle has two incoming and two outgoing arcs at every vertex. The blue and orange directed 3-cycles are two permutation digraphs. They share all vertices but no arcs: this is a 1-factor decomposition, not a connected-component decomposition.*
 
 ## Polyforms and the scope of further work
 

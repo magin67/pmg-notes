@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="490" viewBox="0 0 1120 490" role="img" aria-labelledby="title desc">
+<title id="title">Остовные деревья с одним корнем a</title><desc id="desc">Остовные деревья с одним корнем a. See the accompanying caption for the mathematical interpretation.</desc>
+<defs>
+<marker id="ink" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#20344a"/></marker>
+<marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#28638c"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#b45920"/></marker>
+<marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#178071"/></marker>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#9ba8b5"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="#7e549b"/></marker>
+</defs>
+<rect width="1120" height="490" rx="12" fill="white"/>
+<g font-family="Arial, DejaVu Sans, sans-serif">
+<text x="560.00" y="42.00" font-size="25" fill="#20344a" text-anchor="middle" font-weight="bold">Остовные деревья с одним корнем a</text>
+<rect x="20" y="80" width="520" height="355" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="280.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">К корню</text>
+<path d="M140.60 316.83 Q200.00 250.00 259.40 183.17" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="212.71" y="267.29" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<path d="M419.40 316.83 Q360.00 250.00 300.60 183.17" fill="none" stroke="#28638c" stroke-width="3" marker-end="url(#blue)"/>
+<text x="372.71" y="244.71" font-size="20" fill="#28638c" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<circle cx="280.00" cy="160.00" r="23" fill="#fff1c2" stroke="#20344a" stroke-width="2.3"/>
+<text x="280.00" y="167.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="120.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="120.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="440.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="440.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<text x="280.00" y="405.00" font-size="21" fill="#20344a" text-anchor="middle" font-weight="bold">Вес дерева = 1</text>
+<rect x="580" y="80" width="520" height="355" rx="12" fill="#f7f9fc" stroke="#dce4ec"/>
+<text x="840.00" y="112.00" font-size="22" fill="#20344a" text-anchor="middle" font-weight="bold">От корня</text>
+<path d="M819.40 183.17 Q760.00 250.00 700.60 316.83" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<text x="747.29" y="244.71" font-size="20" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">2</text>
+<path d="M711.00 340.00 Q840.00 340.00 969.00 340.00" fill="none" stroke="#b45920" stroke-width="3" marker-end="url(#orange)"/>
+<text x="840.00" y="363.00" font-size="20" fill="#b45920" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="4" stroke-linejoin="round">1</text>
+<circle cx="840.00" cy="160.00" r="23" fill="#fff1c2" stroke="#20344a" stroke-width="2.3"/>
+<text x="840.00" y="167.00" font-size="24" fill="#20344a" text-anchor="middle">a</text>
+<circle cx="680.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="680.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">b</text>
+<circle cx="1000.00" cy="340.00" r="23" fill="white" stroke="#20344a" stroke-width="2.3"/>
+<text x="1000.00" y="347.00" font-size="24" fill="#20344a" text-anchor="middle">c</text>
+<text x="840.00" y="405.00" font-size="21" fill="#20344a" text-anchor="middle" font-weight="bold">Вес дерева = 2</text>
+<text x="560.00" y="470.00" font-size="21" fill="#20344a" text-anchor="middle">Показано по одному дереву из двух взвешенных семейств.</text>
+</g></svg>
