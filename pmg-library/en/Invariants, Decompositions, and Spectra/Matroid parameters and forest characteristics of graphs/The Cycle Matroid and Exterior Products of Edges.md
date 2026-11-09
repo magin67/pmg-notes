@@ -340,7 +340,7 @@ Thus a single original forest with $g$ edges contributes to the direct grade $M_
 
 This is why normalized forest parameters naturally relate to the Greenian: ratios of forest coefficients to $\tau$ already occur in its cut expression. Multiplying every conductance by $s>0$ multiplies $f_{d-k}/\tau$ by $s^{-k}$, just as for the grade $Q_k$ of the Greenian exponential. These coefficients have the dimensions of resistance to the $k$th power.
 
-**Representation caveat.** The last row refers to the specified cut expansion. It is not the coefficient sum of every expression for $Q_k$. In the [[Cuts and Forest Grades of the Greenian Exponential#Uniqueness of the form and nonuniqueness of its expansion|$K_4$ example]], a structural identity changes this sum without changing the form.
+**Representation caveat.** The last row refers to the specified cut expansion. It is not the coefficient sum of every expression for $Q_k$. In the [[Cuts and Forest Grades of the Greenian Exponential#Uniqueness of the form and nonuniqueness of its expansion|example of the complete graph on four vertices]], a structural identity changes this sum without changing the form.
 
 If $T_n=[(a_1\ldots a_n)]^2$, mutual duality reads
 
