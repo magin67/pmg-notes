@@ -1,8 +1,8 @@
 ---
 title: "Gluing and the Limits of Matroid Invariance"
 date: 2026-10-28
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: gluings-and-limits-of-matroid-invariance
@@ -302,7 +302,9 @@ P_M([u,v])=\mathbf u^{\mathsf T}\mathbf{Gr}\mathbf v,
 P_N([u,v])=\mathbf u^{\mathsf T}\mathbf L\mathbf v
 $$
 
-Ordinary forest coefficients have representations on both sides: in the vector forest expansion of $M$ and in the cut expansion of the dual grades of $N$. But preserving the sum of weights does not mean preserving the partition forms themselves or the entire vertex metric. Canonical Greenian forests with signed weights must also be distinguished from the original ordinary forests; this distinction is explained in the [[Forest Coefficients - Grade, Components, and Corank#Forest weights on both sides of duality|comparison of forest representations]].
+Ordinary forest coefficients are read from the edge expansion of $M_g$ and the cut expansion of the dual grade $Q_k$ of $D=\sum_kQ_k$. In the latter, the coefficient sum is $f_{d-k}/\tau$. Centering gives $N_k=\mathcal C(Q_k)$ and $N=\mathcal C(D)$. This does not transfer the same coefficient sum to an arbitrary expansion of $N_k$: for example, the top coefficients in the adopted reference forms are $1/\tau$ for $Q_d$ and $1/(n^2\tau)$ for $N_d$.
+
+Thus preserving forest sums does not mean preserving the partition forms themselves or the entire vertex metric. Canonical Greenian forests with signed weights also differ from the original ordinary forests. The representations and normalizations are compared in [[Forest Coefficients - Grade, Components, and Corank#Forest weights on both sides of duality|the note on forest coefficients]].
 
 The twist example displays both sides at once: the matroid coefficients and $\rho$ agree, whereas $\operatorname{tr}(\mathbf L^2)$ and $\operatorname{tr}\mathbf{Gr}$ differ. Thus Laplacian spectral parameters and reciprocal Greenian spectral parameters do not become matroid invariants by duality. The special combination defining the radius is matroid-invariant because of the separate forest formula (1).
 
@@ -337,9 +339,11 @@ Passing to chains of cores requires specifying:
 - the correspondence of edges and their weights when assemblies are compared;
 - a justification that all cycles are preserved, rather than merely equality of a few numerical characteristics.
 
-For a larger boundary, the two states in (6) do not suffice. A forest partitions the boundary vertices by its components. The full forest polynomial must also account for components that do not meet the boundary. For the spanning layer, *groves* arise naturally: spanning forests in which every component contains a boundary vertex. These objects and their boundary partitions are used in electrical network theory [2]. Their polyform encoding and the general gluing law form a separate continuation.
+For a larger boundary, the two states in (6) do not suffice. A forest partitions the boundary vertices by its components. The full forest polynomial must also account for components that do not meet the boundary. For the spanning layer, *groves* arise naturally: spanning forests in which every component contains a boundary vertex. These objects and their boundary partitions are used in electrical network theory [2]. The full forest passport, its spanning-tree layer, and gluing laws are developed in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]]. Polyform extensions require a specified representation and do not follow from a scalar formula alone.
 
 When an open chain is closed, the entire contact pattern must be checked again. Interchanging the endpoints of the final seam need not be a twist of the form (5): the two proposed parts may already meet at other vertices. In that case the proof using two boundary paths does not apply. A local change in a drawing is not synonymous with a matroid-preserving operation.
+
+Sequential assembly and active-boundary transfer are treated in [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]. Assemblies are compared through spectral data in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers]]. These results apply to the models specified there; they do not classify all arbitrary seams.
 
 ## Status of the results and verification
 
@@ -355,7 +359,7 @@ The three figures originate from the [SVG drawing script](https://github.com/mag
 
 A weight-preserving matroid correspondence provides a general sufficient criterion for preservation of the scalars studied here. The converse is false: equality of several parameters, or even of the entire scalar forest polynomial, does not prove a matroid isomorphism; a counterexample appears in the [[The Normalized Forest Polynomial and Power-Sum Parameters#What can be recovered and what remains undetermined?|section on completeness of the forest family]]. Computation under gluing requires a separate composition law.
 
-A full classification of gluings along arbitrary seams, boundary polyforms, and isomers of chains of cores is not claimed to be complete here. All results concern undirected graphs with positive conductances; no extension to balanced graphs is made.
+A full classification of gluings along arbitrary seams remains open. All results of this note concern undirected graphs with positive conductances; they have not been extended to balanced graphs.
 
 ## References and further reading
 

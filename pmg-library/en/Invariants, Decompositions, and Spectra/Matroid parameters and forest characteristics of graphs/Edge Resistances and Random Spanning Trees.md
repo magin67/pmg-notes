@@ -1,8 +1,8 @@
 ---
 title: "Edge Resistances and Random Spanning Trees"
 date: 2026-10-28
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: edge-resistances-and-random-spanning-trees
@@ -86,6 +86,18 @@ The polynomial $\tau$ has degree $d$ and is linear in each individual variable $
 >
 > The probabilistic equality involving effective resistance is Kirchhoff's classical formula; see [1, Section 4.2]. Below it is derived from the weighted matrix-tree theorem in the notation of the current PMG series.
 
+### A first probability calculation
+
+Let $\ell_1=ab$, $\ell_2=ac$, $\ell_3=bc$ have conductances $c_1=1,c_2=2,c_3=3$. Then
+
+$$
+\tau=c_1c_2+c_1c_3+c_2c_3=11
+$$
+
+![[images/Three Random Trees of a Weighted Triangle.svg]]
+
+**All spanning trees.** Write $T_1=\{ab,ac\}$, $T_2=\{ab,bc\}$, $T_3=\{ac,bc\}$. Their weights are $2,3,6$ and probabilities $2/11,3/11,6/11$. An edge's inclusion probability is the sum of probabilities of drawings in which it is solid. For example, $ab$ belongs to $T_1,T_2$, so $\eta_{\ell_1}=5/11$.
+
 ### Differentiating the spanning-tree polynomial
 
 Trees not containing $\ell$ contribute nothing to the derivative. For the others, differentiation removes the factor $c_\ell$ from the weight. Thus
@@ -99,41 +111,44 @@ Division by $\tau$ gives the first equality in (3). This step is combinatorial: 
 
 ### Differentiating a Laplacian cofactor
 
-Choose a reference vertex $r$ and delete its row and column from $\mathbf L$. This gives the positive definite matrix
+The matrix-tree theorem expresses the same sum as a Laplacian cofactor determinant. Its logarithmic derivative is the resistance $R_\ell$, completing the link between probability and metric.
 
-$$
-\mathbf A=\mathbf L_{\widehat r,\widehat r},\qquad
-\det\mathbf A=\tau
-$$
-
-The last equality is the [[Forest Coefficients and the Laplacian Polynomial|weighted matrix-tree theorem]]. Let $\widehat{\mathbf b}_\ell$ be $\mathbf b_\ell$ with its entry at $r$ removed. Then
-
-$$
-\frac{\partial\mathbf A}{\partial c_\ell}
-=\widehat{\mathbf b}_\ell\widehat{\mathbf b}_\ell^{\mathsf T}
-$$
-
-Differentiating the determinant gives
-
-$$
-\frac{\partial\log\tau}{\partial c_\ell}
-=\operatorname{tr}\left(\mathbf A^{-1}
-\widehat{\mathbf b}_\ell\widehat{\mathbf b}_\ell^{\mathsf T}\right)
-=\widehat{\mathbf b}_\ell^{\mathsf T}\mathbf A^{-1}\widehat{\mathbf b}_\ell
-$$
-
-To verify the passage from the cofactor to the Greenian, extend $\mathbf A^{-1}\widehat{\mathbf b}_\ell$ by a zero entry at $r$ and call the result $\mathbf v$. Then $\mathbf L\mathbf v=\mathbf b_\ell$: all other rows satisfy the equation by construction, and row $r$ follows from the zero row sums and $\mathbf1^{\mathsf T}\mathbf b_\ell=0$.
-
-All solutions differ by a constant column, so $\mathbf v=\mathbf{Gr}\mathbf b_\ell+t\mathbf1$. Consequently,
-
-$$
-\widehat{\mathbf b}_\ell^{\mathsf T}\mathbf A^{-1}\widehat{\mathbf b}_\ell
-=\mathbf b_\ell^{\mathsf T}\mathbf v
-=\mathbf b_\ell^{\mathsf T}\mathbf{Gr}\mathbf b_\ell
-=R_\ell
-$$
-
-This proves the second equality in (3); the last is the definition of $\eta_\ell$. $\square$
+> [!note]- Derivation through a cofactor and the Greenian
+> **Proof.** Choose a reference vertex $r$ and delete its row and column from $\mathbf L$. This gives the positive definite matrix
+>
+> $$
+> \mathbf A=\mathbf L_{\widehat r,\widehat r},\qquad
+> \det\mathbf A=\tau
+> $$
+>
+> The last equality is the [[Forest Coefficients and the Laplacian Polynomial|weighted matrix-tree theorem]]. Let $\widehat{\mathbf b}_\ell$ be $\mathbf b_\ell$ with its entry at $r$ removed. Then
+>
+> $$
+> \frac{\partial\mathbf A}{\partial c_\ell}
+> =\widehat{\mathbf b}_\ell\widehat{\mathbf b}_\ell^{\mathsf T}
+> $$
+>
+> Differentiating the determinant gives
+>
+> $$
+> \frac{\partial\log\tau}{\partial c_\ell}
+> =\operatorname{tr}\left(\mathbf A^{-1}
+> \widehat{\mathbf b}_\ell\widehat{\mathbf b}_\ell^{\mathsf T}\right)
+> =\widehat{\mathbf b}_\ell^{\mathsf T}\mathbf A^{-1}\widehat{\mathbf b}_\ell
+> $$
+>
+> To verify the passage from the cofactor to the Greenian, extend $\mathbf A^{-1}\widehat{\mathbf b}_\ell$ by a zero entry at $r$ and call the result $\mathbf v$. Then $\mathbf L\mathbf v=\mathbf b_\ell$: all other rows satisfy the equation by construction, and row $r$ follows from the zero row sums and $\mathbf1^{\mathsf T}\mathbf b_\ell=0$.
+>
+> All solutions differ by a constant column, so $\mathbf v=\mathbf{Gr}\mathbf b_\ell+t\mathbf1$. Consequently,
+>
+> $$
+> \widehat{\mathbf b}_\ell^{\mathsf T}\mathbf A^{-1}\widehat{\mathbf b}_\ell
+> =\mathbf b_\ell^{\mathsf T}\mathbf v
+> =\mathbf b_\ell^{\mathsf T}\mathbf{Gr}\mathbf b_\ell
+> =R_\ell
+> $$
+>
+> This proves the second equality in (3); the last is the definition of $\eta_\ell$. $\square$
 
 ### Connection with polyforms
 
@@ -331,15 +346,7 @@ $$
 
 ### Triangle with conductances $1,2,3$
 
-Let $\ell_1=ab$, $\ell_2=ac$, $\ell_3=bc$ have conductances $c_1=1,c_2=2,c_3=3$. Then
-
-$$
-\tau=c_1c_2+c_1c_3+c_2c_3=11
-$$
-
-![[images/Three Random Trees of a Weighted Triangle.svg]]
-
-**All spanning trees.** Write $T_1=\{ab,ac\}$, $T_2=\{ab,bc\}$, $T_3=\{ac,bc\}$. Their weights are $2,3,6$ and probabilities $2/11,3/11,6/11$. An edge's inclusion probability is the sum of probabilities of drawings in which it is solid. For example, $ab$ belongs to $T_1,T_2$, so $\eta_{\ell_1}=5/11$.
+Continue [[#A first probability calculation|the triangle example]] by computing all edge probabilities and the parameters $H_q$.
 
 Summing tree probabilities for each edge gives
 

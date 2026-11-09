@@ -1,8 +1,8 @@
 ---
 title: "Resistance Radius: Forest Formula and Matroid Invariance"
 date: 2026-10-28
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: resistance-radius-forest-formula-and-matroid-invariance
@@ -63,6 +63,23 @@ This is the normalization of [[Resistance Radius and Diameter of a Graph]]. The 
 ![[images/Weighted Triangle - Resistance Circumcircle.svg]]
 
 **From graph to geometry.** For a triangle with conductances $c_{ab}=1$, $c_{ac}=2$, $c_{bc}=3$, the resistances are $R_{ab}=5/11$, $R_{ac}=4/11$, $R_{bc}=3/11$. The left panel is the network diagram; the right is its exact Euclidean realization, with side lengths equal to the square roots of these values. All vertices lie on a circle with $\rho=15/121$. The circumcenter $O$ and centroid $h$ are marked separately.
+
+### A first radius calculation
+
+Continue the [[Edge Resistances and Random Spanning Trees#Examples|weighted-triangle example]]. We have
+
+$$
+\tau=11,\qquad f_1=1+2+3=6,\qquad
+\xi_1=\frac6{11},\qquad H_2=\frac{84}{121}
+$$
+
+Substitution into (1) gives
+
+$$
+\rho=\frac2{11}-\frac7{121}=\frac{15}{121}
+$$
+
+The values $R_{ab}=5/11$, $R_{ac}=4/11$, $R_{bc}=3/11$ give $H_2=1(5/11)^2+2(4/11)^2+3(3/11)^2=84/121$. Thus the formula computes the quadratic radius of the displayed circle. An independent coordinate check appears in [[#Triangle with conductances 1, 2, 3]].
 
 ## The radius as Laplacian energy
 
@@ -218,66 +235,75 @@ A short derivation clarifies the weights. After deleting root coordinates, expan
 
 ## Derivation of the main formula
 
-Divide (6) by $\tau$ and substitute (5):
+The derivation proceeds as follows: minors express the rooted forest sums, double counting gives the ordinary 2-forest coefficient, and two rearrangements cancel the dependence on the reference vertex. The remaining terms are the energy $\mathcal E_q=4\rho$ and the edge parameter $H_2$:
 
 $$
-\xi_1=\sum_i r_i+\sum_{\ell=\{i,j\}}c_\ell(g_{ij}^2-r_i r_j)
-\tag{7}
+\xi_1=3\rho+\frac14H_2
 $$
 
-Introduce the energy notation
+This is equivalent to (1).
 
-$$
-\mathcal E_q=\mathbf r^{\mathsf T}\mathbf L\mathbf r
-=\sum_{\ell=\{i,j\}}c_\ell(r_i-r_j)^2=4\rho
-$$
-
-**First transformation.** From $g_{ij}=(r_i+r_j-R_{ij})/2$,
-
-$$
-g_{ij}^2-r_i r_j
-=\frac14(r_i-r_j)^2
--\frac12R_{ij}(r_i+r_j)
-+\frac14R_{ij}^2
-$$
-
-Consequently,
-
-$$
-\xi_1=\sum_i r_i+\frac14\mathcal E_q+\frac14H_2
--\frac12\sum_{\ell=\{i,j\}}c_\ell R_{ij}(r_i+r_j)
-$$
-
-**Second transformation.** Let $d_i=\sum_{\ell\ni i}c_\ell$ be the total conductance at vertex $i$. The diagonal equality $(\mathbf A\mathbf G_q)_{ii}=1$ for $i\ne q$ gives
-
-$$
-\sum_{\ell=\{i,j\}\ni i}c_\ell g_{ij}=d_i r_i-1
-$$
-
-Therefore
-
-$$
-\sum_{\ell=\{i,j\}\ni i}c_\ell R_{ij}
-=d_i r_i+\sum_{\ell=\{i,j\}\ni i}c_\ell r_j
--2(d_i r_i-1)
-=2-(\mathbf L\mathbf r)_i
-$$
-
-Multiply by $r_i$ and sum over $i$. The component $r_q$ is zero, and each edge contributes twice, with factors $r_i,r_j$. This gives
-
-$$
-\sum_{\ell=\{i,j\}}c_\ell R_{ij}(r_i+r_j)
-=2\sum_i r_i-\mathcal E_q
-$$
-
-After substitution into (7), the sums $\sum_i r_i$ cancel:
-
-$$
-\xi_1=\frac34\mathcal E_q+\frac14H_2
-=3\rho+\frac14H_2
-$$
-
-This proves (1). Every step uses positive conductances directly, without extending the unit-weight case by analogy. When $n=2$, the 3-forest sums vanish and the remaining identities still hold.
+> [!note]- Two rearrangements of the forest sum
+> **Proof.** Divide (6) by $\tau$ and substitute (5):
+>
+> $$
+> \xi_1=\sum_i r_i+\sum_{\ell=\{i,j\}}c_\ell(g_{ij}^2-r_i r_j)
+> \tag{7}
+> $$
+>
+> Introduce the energy notation
+>
+> $$
+> \mathcal E_q=\mathbf r^{\mathsf T}\mathbf L\mathbf r
+> =\sum_{\ell=\{i,j\}}c_\ell(r_i-r_j)^2=4\rho
+> $$
+>
+> **First transformation.** From $g_{ij}=(r_i+r_j-R_{ij})/2$,
+>
+> $$
+> g_{ij}^2-r_i r_j
+> =\frac14(r_i-r_j)^2
+> -\frac12R_{ij}(r_i+r_j)
+> +\frac14R_{ij}^2
+> $$
+>
+> Consequently,
+>
+> $$
+> \xi_1=\sum_i r_i+\frac14\mathcal E_q+\frac14H_2
+> -\frac12\sum_{\ell=\{i,j\}}c_\ell R_{ij}(r_i+r_j)
+> $$
+>
+> **Second transformation.** Let $d_i=\sum_{\ell\ni i}c_\ell$ be the total conductance at vertex $i$. The diagonal equality $(\mathbf A\mathbf G_q)_{ii}=1$ for $i\ne q$ gives
+>
+> $$
+> \sum_{\ell=\{i,j\}\ni i}c_\ell g_{ij}=d_i r_i-1
+> $$
+>
+> Therefore
+>
+> $$
+> \sum_{\ell=\{i,j\}\ni i}c_\ell R_{ij}
+> =d_i r_i+\sum_{\ell=\{i,j\}\ni i}c_\ell r_j
+> -2(d_i r_i-1)
+> =2-(\mathbf L\mathbf r)_i
+> $$
+>
+> Multiply by $r_i$ and sum over $i$. The component $r_q$ is zero, and each edge contributes twice, with factors $r_i,r_j$. This gives
+>
+> $$
+> \sum_{\ell=\{i,j\}}c_\ell R_{ij}(r_i+r_j)
+> =2\sum_i r_i-\mathcal E_q
+> $$
+>
+> After substitution into (7), the sums $\sum_i r_i$ cancel:
+>
+> $$
+> \xi_1=\frac34\mathcal E_q+\frac14H_2
+> =3\rho+\frac14H_2
+> $$
+>
+> This proves (1). Every step uses positive conductances directly, without extending the unit-weight case by analogy. When $n=2$, the 3-forest sums vanish and the remaining identities still hold. $\square$
 
 ## Matroid invariance and its limits
 
@@ -309,12 +335,13 @@ $$
 
 Every term of (1) has dimension $C^{-1}$, where $C$ is conductance dimension.
 
-**Gluing corollary.** If connected graphs $G_1,G_2$ have disjoint edge sets and are glued at exactly one vertex, retaining conductances, then
-
-$$
-\boxed{\rho(G_1\vee G_2)=\rho(G_1)+\rho(G_2)}
-\tag{8}
-$$
+> [!info] Additivity of the resistance radius
+> **Gluing corollary.** If connected graphs $G_1,G_2$ have disjoint edge sets and are glued at exactly one vertex, retaining conductances, then
+>
+> $$
+> \boxed{\rho(G_1\vee G_2)=\rho(G_1)+\rho(G_2)}
+> \tag{8}
+> $$
 
 > [!note]- Proof
 > **Proof.** The product of normalized forest polynomials gives $\xi_1(G_1\vee G_2)=\xi_1(G_1)+\xi_1(G_2)$. Preservation of edge probabilities in the pieces gives the same law for $H_2$. Substitute both sums into (1). $\square$
@@ -361,18 +388,7 @@ The last formula can first be obtained from regular-simplex geometry: all $R_{ij
 
 ### Triangle with conductances 1, 2, 3
 
-Continue the [[Edge Resistances and Random Spanning Trees#Examples|weighted-triangle example]]. We have
-
-$$
-\tau=11,\qquad f_1=1+2+3=6,\qquad
-\xi_1=\frac6{11},\qquad H_2=\frac{84}{121}
-$$
-
-Substitution into (1) gives
-
-$$
-\rho=\frac2{11}-\frac7{121}=\frac{15}{121}
-$$
+The value $\rho=15/121$ was obtained in [[#A first radius calculation|the first radius calculation]]. Check it using coordinates of the circumcircle.
 
 For an independent geometric check, take the realization
 

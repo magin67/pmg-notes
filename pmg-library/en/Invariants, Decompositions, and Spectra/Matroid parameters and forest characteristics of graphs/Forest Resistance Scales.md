@@ -1,8 +1,8 @@
 ---
 title: "Forest Resistance Scales"
 date: 2026-10-28
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-09
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-resistance-scales
@@ -171,57 +171,69 @@ $$
 
 ## Ordering of scales and log-concavity
 
-For positive conductances, forest coefficients satisfy
+For a fixed connected graph with positive conductances, the scales decrease as corank increases:
 
-$$
-f_g^2\ge f_{g-1}f_{g+1},\qquad 1\le g\le d-1
-\tag{7}
-$$
-
-This applies the external theory of log-concavity of matroid independent sets. We do not prove the general theorem here, but use the result of Anari, Liu, Oveis Gharan, and Vinzant [1].
-
-> [!info] Ordering of scales and log-concavity
-> **Definition.** A nonnegative sequence $b_0,\ldots,b_N$ without internal zeros is **ultra-log-concave** if $b_g/\binom Ng$ is log-concave: the square of each interior term is at least the product of its neighbors. “Without internal zeros” means that no zero lies between positive terms. Forest coefficients are positive from $f_0$ through $f_d$ and zero above the rank.
-
-A precise reference to the external result requires one more term. A nonnegative polynomial is **completely log-concave** if every sequence of directional derivatives in directions with nonnegative coordinates yields either the zero polynomial or a polynomial whose logarithm is concave on the positive orthant. The sequence may be empty. Here a directional derivative means $D_v=\sum_i v_i\partial/\partial z_i$, with $v_i\ge0$; this is Definition 1.3 of [1].
-
-To justify the weighted specialization, let $N_E=\#E$. By Theorem 4.1 of the arXiv:1811.01600v1 version of [1], the polynomial
-
-$$
-\sum_{I\text{ independent}}
-y^{N_E-\#I}\prod_{\ell\in I}z_\ell
-$$
-
-is completely log-concave. Lemma 2.2 preserves this property under $z_\ell=c_\ell z$. For the resulting bivariate polynomial, Proposition 5.1 gives ultra-log-concavity of the coefficients. In our notation,
-
-$$
-f_g^2\ge
-\frac{(g+1)(N_E-g+1)}{g(N_E-g)}f_{g-1}f_{g+1},
-\qquad 1\le g\le d-1
-\tag{8}
-$$
-
-Here $N_E$ is the edge count, not the vertex count or rank $d$. Zero coefficients above the rank do not enter the stated range. Inequality (7) is a weaker consequence of (8).
-
-> [!info] Ordering of scales and log-concavity
-> **Corollary.** The scales are ordered:
+> [!info] Ordering of forest scales
+> **Corollary.** For $d=n-1\ge1$,
 >
 > $$
 > \boxed{\xi_1\ge\xi_2\ge\cdots\ge\xi_d>0}
-> \tag{9}
+> \tag{7}
 > $$
+>
+> If $d>1$, every adjacent inequality is strict. If $d=1$, there is only one scale.
 
-> [!note]- Proof
-> **Proof.** For $g=d-k$,
+Corank $k$ means $k+1$ forest components. The inequality compares levels within one graph; it does not compare different graphs after edges are added. For example, the scales of unit $K_4$ are $15/16$, $2/5$, and $1/6$.
+
+The result follows from an external theorem of Anari, Liu, Oveis Gharan, and Vinzant [1] on independent sets of matroids. Its weighted application gives log-concavity of forest coefficients:
+
+$$
+f_g^2\ge f_{g-1}f_{g+1},\qquad 1\le g\le d-1
+\tag{8}
+$$
+
+This means that the square of the middle coefficient is at least the product of its neighbors.
+
+> [!note]- From coefficients to scales
+> **Proof.** Set $g=d-k$. Then
 >
 > $$
 > \frac{\xi_{k+1}}{\xi_k}
 > =\frac{f_{g-1}f_{g+1}}{f_g^2}\le1
 > $$
 >
-> This proves (9). The stronger (8), together with positivity, even yields $\xi_{k+1}<\xi_k$ for $1\le k<d$. When $d=1$, there are no adjacent values to compare. $\square$
+> This proves (7). Strictness follows from the stronger inequality (9) below: its factor exceeds $1$, and the coefficients are positive. $\square$
 
-This ordering concerns different coranks of one fixed graph. It does not compare different graphs after edges are added. Nor does (7) follow from real-rootedness of $\Phi_G$: the unit triangle has nonreal roots, as shown in the [[The Normalized Forest Polynomial and Power-Sum Parameters#Unit triangle|triangle example]].
+### The precise external theorem and weighted specialization
+
+Let $N_E=\#E$ be the number of edges, not the vertex count or rank $d$. The cited paper uses a stronger property.
+
+> [!info] Ultra-log-concavity
+> **Definition.** A nonnegative sequence $b_0,\ldots,b_N$ with no internal zeros is ultra-log-concave if $b_g/\binom Ng$ is log-concave. Having no internal zeros means that no zero entry lies between positive entries.
+
+For forest coefficients, every entry from $f_0$ to $f_d$ is positive, and entries above the rank vanish. Theorem 4.1, Lemma 2.2, and Proposition 5.1 of version arXiv:1811.01600v1 [1] give
+
+$$
+f_g^2\ge
+\frac{(g+1)(N_E-g+1)}{g(N_E-g)}f_{g-1}f_{g+1},
+\qquad 1\le g\le d-1
+\tag{9}
+$$
+
+Zero coefficients above the rank do not enter this range. For $d=1$, the range is empty.
+
+> [!note]- Why positive weights are allowed
+> **Justification.** In Definition 1.3 of [1], a polynomial is completely log-concave if every sequence of directional derivatives $D_v=\sum_i v_i\partial/\partial z_i$ with $v_i\ge0$ yields either the zero polynomial or a polynomial whose logarithm is concave on the positive orthant. The empty sequence is allowed.
+>
+> By Theorem 4.1, this property holds for the homogeneous independent-set polynomial
+>
+> $$
+> \sum_{I\text{ independent}}y^{N_E-\#I}\prod_{\ell\in I}z_\ell
+> $$
+>
+> The substitution $z_\ell=c_\ell z$ preserves the property by Lemma 2.2, since $c_\ell>0$. It gives $\sum_g f_g y^{N_E-g}z^g$. Proposition 5.1 gives ultra-log-concavity of the coefficients. Expanding the binomial factors yields (9), and then (8). This uses the external theorem; its general proof is not reproduced here. $\square$
+
+Inequality (8) does not follow from real-rootedness of $\Phi_G$: the unit triangle has nonreal roots, as shown in [[The Normalized Forest Polynomial and Power-Sum Parameters#Unit triangle|the triangle example]].
 
 ## Trees, cycles, and the complete graph
 
@@ -492,7 +504,7 @@ Finite checks supplement general proofs. The probability distributions in this n
 
 ## References and further reading
 
-1. Anari N., Liu K., Oveis Gharan S., Vinzant C. *Log-concave polynomials III: Mason’s ultra-log-concavity conjecture for independent sets of matroids*. Proceedings of the American Mathematical Society, 152 (2024), 1969-1981. [DOI: 10.1090/proc/16724](https://doi.org/10.1090/proc/16724). In the [open arXiv:1811.01600v1 version](https://arxiv.org/abs/1811.01600v1), Theorem 4.1, Lemma 2.2, and Proposition 5.1 give the weighted specialization and inequality (8) used here.
+1. Anari N., Liu K., Oveis Gharan S., Vinzant C. *Log-concave polynomials III: Mason’s ultra-log-concavity conjecture for independent sets of matroids*. Proceedings of the American Mathematical Society, 152 (2024), 1969-1981. [DOI: 10.1090/proc/16724](https://doi.org/10.1090/proc/16724). In the [open arXiv:1811.01600v1 version](https://arxiv.org/abs/1811.01600v1), Theorem 4.1, Lemma 2.2, and Proposition 5.1 give the weighted specialization and inequality (9) used here.
 2. [[Forest Coefficients - Grade, Components, and Corank]]: ordinary forest sums, indexing, computation methods, and gluing convolution.
 3. [[The Normalized Forest Polynomial and Power-Sum Parameters]]: the additive family, distinct scalar reductions, and limits of matroid recovery.
 4. [[Cuts and Forest Grades of the Greenian Exponential]] and [[Toponomes of the Greenian Exponential and Dual Pairs]]: two Greenian forest representations and exact reversal of rooted coefficients.

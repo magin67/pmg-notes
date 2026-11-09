@@ -1,8 +1,8 @@
 ---
 title: "The Normalized Forest Polynomial and Power-Sum Parameters"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: normalized-forest-polynomial-and-power-sum-parameters
@@ -49,15 +49,6 @@ $$
 
 Thus $\alpha_0=1$ and $\alpha_d=1/\tau$. All $\alpha_k$ for $0\le k\le d$ are positive: deleting $k$ edges of any spanning tree gives at least one forest of the required corank. In recurrences, set $\alpha_k=0$ for $k>d$.
 
-The coefficient $\alpha_k$ also has a polyform interpretation. In the fixed cut representation
-
-$$
-Q_k=\frac1\tau\sum_{\substack{F\text{ a forest in }G\\\#E(F)=d-k}}
-w(F)\Phi_{\pi(F)}
-$$
-
-it is the sum of term weights. Here $\pi(F)$ is the component partition and $\Phi_{\pi(F)}$ is the form on the product of dual block sums. Its definition and the proof of the expansion appear in the [[Cuts and Forest Grades of the Greenian Exponential#The forest formula for grades of the Greenian exponential|forest formula for Greenian grades]]. The polynomial $\Phi_G(u)$ and cut form $\Phi_\pi$ are distinguished by their argument and subscript.
-
 Under one-point gluing $G=G_1\vee G_2$, the normalized coefficients satisfy convolution:
 
 $$
@@ -100,6 +91,16 @@ This is an algebraic definition: only finitely many terms $q\le m$ are needed to
 The superscript $\mathrm{for}$ refers to ordinary forest coefficients of the original graph and distinguishes this family from spectral power sums. The letter $p$ is retained for the rooted coefficients used in [[Forest Coefficients and the Laplacian Polynomial]].
 
 The parameters are defined for every integer $m\ge1$, including $m>d$. The finite degree of $\Phi_G$ does not make its logarithm a polynomial.
+
+### The first parameters of a triangle
+
+For the unit triangle, $\Phi(u)=1+u+u^2/3$. Set $x=u+u^2/3$ and use $\log(1+x)=x-x^2/2+x^3/3-\cdots$. Through degree $3$, this gives
+
+$$
+\log\Phi(u)=u-\frac16u^2+0\cdot u^3+O(u^4)
+$$
+
+Here $O(u^4)$ denotes terms of formal degree at least $4$. Comparing with (2) gives $s_1^{\mathrm{for}}=1$, $-s_2^{\mathrm{for}}/2=-1/6$, and $s_3^{\mathrm{for}}/3=0$, hence $s_2^{\mathrm{for}}=1/3$ and $s_3^{\mathrm{for}}=0$. No polynomial roots are needed for this calculation.
 
 ## Newton identities and computation without factorization
 
@@ -206,23 +207,25 @@ The corresponding unordered collection of factorization parameters is $\{\zeta_\
 
 These properties have different grounds and require separate proofs.
 
-**Matroid-invariance proposition.** An isomorphism of cycle matroids preserving the conductance of each corresponding edge preserves $\Phi_G$, all $\alpha_k$, and all $s_m^{\mathrm{for}}$.
+> [!info] Matroid invariance
+> **Matroid-invariance proposition.** An isomorphism of cycle matroids preserving the conductance of each corresponding edge preserves $\Phi_G$, all $\alpha_k$, and all $s_m^{\mathrm{for}}$.
 
 > [!note]- Proof
 > **Proof.** The isomorphism preserves rank $d$, independent sets of each size, and products of their weights. It therefore preserves $f_g$, including $f_d=\tau$. Apply (1) and (2). $\square$
 
-**Additivity proposition.** Let connected graphs $G_1,G_2$ have disjoint edge sets and be glued at exactly one vertex, preserving conductances and making no further identifications. Then for every $m\ge1$,
-
-$$
-\boxed{
-s_m^{\mathrm{for}}(G_1\vee G_2)
-=s_m^{\mathrm{for}}(G_1)+s_m^{\mathrm{for}}(G_2)
-}
-\tag{10}
-$$
+> [!info] Additivity under one-point gluing
+> **Additivity proposition.** Let connected graphs $G_1,G_2$ have disjoint edge sets and be glued at exactly one vertex, preserving conductances and making no further identifications. Then for every $m\ge1$,
+>
+> $$
+> \boxed{
+> s_m^{\mathrm{for}}(G_1\vee G_2)
+> =s_m^{\mathrm{for}}(G_1)+s_m^{\mathrm{for}}(G_2)
+> }
+> \tag{10}
+> $$
 
 > [!note]- Proof
-> **Proof.** Every forest of the glued graph splits uniquely into forests of the pieces. A cycle cannot traverse both pieces when they meet only at one vertex. Consider this decomposition for two triangles:
+> **Proof.** Every forest of the glued graph splits uniquely into forests of the pieces. A cycle cannot traverse both pieces when they meet only at one vertex.
 >
 > Every pair of forests behaves this way: grades and coranks add, and weights multiply. Hence
 >
@@ -242,6 +245,15 @@ For repeated one-point gluing, apply the formula successively. This explains the
 Identifying several vertices or a shared edge subgraph requires a new law for forest states. Matroid invariance alone does not extend (10) to those operations.
 
 ## The forest family and the Laplacian-Greenian spectral pair
+
+The coefficient $\alpha_k$ also has a polyform interpretation. In the fixed cut representation
+
+$$
+Q_k=\frac1\tau\sum_{\substack{F\text{ a forest in }G\\\#E(F)=d-k}}
+w(F)\Phi_{\pi(F)}
+$$
+
+it is the sum of term weights. Here $\pi(F)$ is the component partition and $\Phi_{\pi(F)}$ is the form on the product of dual block sums. Its definition and the proof of the expansion appear in the [[Cuts and Forest Grades of the Greenian Exponential#The forest formula for grades of the Greenian exponential|forest formula for Greenian grades]]. The polynomial $\Phi_G(u)$ and cut form $\Phi_\pi$ are distinguished by their argument and subscript.
 
 Let $\lambda_1,\ldots,\lambda_d>0$ be the nonzero eigenvalues of the Laplacian matrix $\mathbf L$. The Green matrix $\mathbf{Gr}=\mathbf L^+$ has nonzero eigenvalues $\lambda_1^{-1},\ldots,\lambda_d^{-1}$.
 
@@ -436,13 +448,17 @@ Unlike the triangle, a negative parameter appears already at $m=3$. The spectral
 
 For known rank $d$, the power-sum family recovers every ordinary forest coefficient through (6). However, the forest polynomial stores only the total weights of independent sets of each size. It does not store the sets themselves and is not a complete matroid invariant.
 
-> [!info] What can be recovered and what remains undetermined?
+> [!info] Loops and parallel elements
 > **Definition.** A matroid element is a loop if its singleton is dependent. Two distinct nonloop elements are parallel if their pair is a minimal dependent set. Maximal groups of pairwise parallel elements are parallel classes; a single nonloop element also forms a class if it has no parallel elements. In a cycle matroid, nonloop edges with the same endpoints form such a class: each pair is a cycle of length $2$.
 
 This distinguishes matroids without spectral computation. Consider two multigraphs $H_1,H_2$ on $a,b,c$, with all edge conductances equal to one:
 
 - the first has four parallel edges $ab$, one $bc$, and one $ca$;
 - the second has three parallel edges $ab$, three $bc$, and no $ca$.
+
+![[images/Equal Forest Polynomials and Different Matroids.svg]]
+
+**Equal sums, different independent pairs.** All edges have unit conductance and retain their individual identities. The numbers indicate parallel-class sizes. The polynomials agree, but the four mutually parallel elements of the first matroid have no corresponding class in the second.
 
 Parallel edges are separate matroid elements here. Both graphs have $f_1=6$, and their spanning-tree counts are
 
@@ -492,6 +508,8 @@ Additional comparisons use powers of edge resistances for trees and powers of $\
 Finite computations supplement rather than replace the general proofs.
 
 No general positive metric interpretation of higher $s_m^{\mathrm{for}}$ is asserted: the negative examples rule it out without further conditions. Possible interpretations for special graph classes require separate results. All metric and dual comparisons concern connected undirected graphs with positive original conductances; no extension to balanced graphs is made.
+
+The explanatory diagram is reproduced by the [figure generator](https://github.com/magin67/pmg-notes/blob/v5/checks/matroid/draw_editorial_figures.py). The program also checks the displayed forest coefficients by direct enumeration.
 
 ## Sources and connections
 

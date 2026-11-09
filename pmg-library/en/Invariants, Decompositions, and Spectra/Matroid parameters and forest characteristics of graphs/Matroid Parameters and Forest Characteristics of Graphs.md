@@ -1,8 +1,8 @@
 ---
 title: "Matroid Parameters and Forest Characteristics of Graphs"
 date: 2026-10-28
-updated: 2026-11-01
-revision: 4
+updated: 2026-11-09
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -63,38 +63,11 @@ Current notation is fixed in [[Core specification]] and [[PMG terminology]]. The
 
 ## Forest indices and two representations
 
-An ordinary spanning forest contains all vertices, including isolated ones, and has no chosen roots. If $g$ is its number of edges, $m$ its number of components, and $r=n-\kappa(G)$ the rank of the original graph, then
+Ordinary forest coefficients $f_g$ collect the weights of forests with $g$ edges. Every forest contains all vertices, including isolated ones; no roots are selected in its components. For a connected graph, $d=n-1$, $\tau=f_d$, and the normalized coefficients are $\alpha_k=f_{d-k}/\tau$. Corank $k$ is then one less than the component count.
 
-$$
-m=n-g,\qquad k=r-g=m-\kappa(G)
-$$
+The same original forest occurs in the edge expansion of $M=\exp L$ and the cut expansion of $D=\exp Q_1$, with complementary grade and normalization $1/\tau$. Centering gives $N=\mathcal C(D)=\exp(\mathrm{Gr})$. The representations are compared in [[Forest Coefficients - Grade, Components, and Corank#Forest weights on both sides of duality|the note on forest coefficients]].
 
-For a connected graph, $r=d=n-1$ and $m=k+1$. The sum of weights of grade-$g$ forests is
-
-$$
-f_g=\sum_{\substack{F\text{ a forest}\\\#E(F)=g}}\prod_{\ell\in E(F)}c_\ell
-$$
-
-For a connected graph, $\tau=f_d$ and $\alpha_k=f_{d-k}/\tau$. The same original forest occurs in two expansions:
-
-| Representation | Grade of the form | Number of original edges | Sum of term weights |
-| --- | ---: | ---: | --- |
-| Edge expansion of $M=\exp L$ | $g$ | $g$ | $f_g$ |
-| Cut expansion of $D=\exp Q_1$ | $k$ | $d-k$ | $\alpha_k=f_{d-k}/\tau$ |
-
-Here $Q_1$ is the dual representation of the Greenian. The centered identification $\mathcal C(a_i^\vee)=a_i-h$ takes $D$ to $\exp(\mathrm{Gr})$. The table lists sums in specific forest representations, not values of a universal linear functional on polyforms.
-
-The canonical vector expansion of the Greenian itself uses different connections, with coefficients $\gamma_{ij}=-\mathrm{Gr}_{ij}$. They can have either sign and occur at pairs with no original edge. Its ordinary forest polynomial $F_{\mathrm{Gr}}$ generally differs from the normalized original polynomial $\Phi_G$.
-
-Rooted forests give another pair:
-
-$$
-P_L(t)=\det(\mathbf I+t\mathbf L),\qquad
-P_{\mathrm{Gr}}(u)=\det(\mathbf I+u\mathbf{Gr})
-=\frac{u^d}{n\tau}P_L(u^{-1})
-$$
-
-The last equality is understood as a polynomial identity after expanding the right-hand side. Each original forest coefficient is additionally multiplied here by the product of its component sizes, that is, by the number of root choices. Reversal of this sequence differs from the passage $f_g\mapsto f_{d-k}/\tau$.
+Keep three sums distinct: ordinary forests of the original graph, rooted forests weighted by the number of root choices, and canonical forests of Greenian couplings with signed weights. A detailed comparison and examples appear in [[The Normalized Forest Polynomial and Power-Sum Parameters#The forest family and the Laplacian-Greenian spectral pair|the comparison of forest and spectral polynomials]].
 
 ## Parameter families and the gluing law
 
@@ -144,7 +117,13 @@ A verification script is provided for each of the seven notes. The scripts use e
 
 ## Continuation to boundary data and chains of cores
 
-The series develops scalar parameters through gluing laws and the minimal two-point boundary description. The continuation [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]] constructs the full forest passport, including internal components, and develops contraction tests, bilinear pairing, grove extraction, and Catalan reduction. Its separate spectral passport prepares the series “Chains of Cores,” where seam rules and input and output boundaries must be specified before comparing chain isomers.
+Boundary data and graph assembly are developed in the published series:
+
+- [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]]: full forest passports, groves, and separate spectral data.
+- [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]: sequential assembly, active-boundary transfer, and conditions for parameter invariance.
+- [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers]]: comparison of assemblies and their spectral data.
+
+These results apply to the assembly models specified in the notes. A full classification of gluings along arbitrary seams remains an open problem.
 
 Higher forest scales do not yet have a general geometric realization. Formulas for undirected graphs are not automatically extended to balanced graphs.
 

@@ -1,8 +1,8 @@
 ---
 title: "Forest Coefficients: Grade, Components, and Corank"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-grade-components-and-corank
@@ -137,6 +137,17 @@ $$
 
 The exponent of $u$ records the component count minus one. The total number of forests of a unit-weight graph is $F_G(1)=\mathscr F_G(1)$; for arbitrary weights, this is the total forest weight in the chosen conductance unit.
 
+### Example: one triangle, two coefficient orders
+
+The unit triangle has one empty forest, three one-edge forests, and three two-edge trees. Hence
+
+$$
+F_{K_3}(t)=1+3t+3t^2,\qquad
+\mathscr F_{K_3}(u)=3+3u+u^2
+$$
+
+In the first expression, the exponent counts edges; in the second, it counts components minus one. Dividing the reversed polynomial by $\tau=3$ gives $1+u+u^2/3$. This normalized polynomial is used in [[The Normalized Forest Polynomial and Power-Sum Parameters|the construction of power-sum parameters]].
+
 ### Dimensions and scaling
 
 Writing $C$ for the dimension of conductance,
@@ -156,6 +167,137 @@ F_{sG}(t)=F_G(st),\qquad
 $$
 
 Both generating functions can also be treated as purely formal polynomials. The dimensional interpretation explains why the meaning of the variable changes when passing from grade to corank.
+
+## Computation through vertex partitions
+
+Direct enumeration selects sets of $g$ edges, checks for cycles, and sums conductance products. Another method fixes the components of the prospective forest first.
+
+Let $\Pi_m(\mathcal V)$ be the set of unordered partitions of $\mathcal V$ into $m$ nonempty blocks. For a block $B$, let $G[B]$ be the induced graph with the original conductances of its internal edges. Adopt
+
+$$
+\tau(G[B])=1\quad\text{if }\#B=1,\qquad
+\tau(G[B])=0\quad\text{if }G[B]\text{ is disconnected}
+$$
+
+> [!info] Computation through vertex partitions
+> **Theorem.** For $0\le g\le r$,
+>
+> $$
+> \boxed{
+> f_g(G)=\sum_{\pi\in\Pi_{n-g}(\mathcal V)}
+> \prod_{B\in\pi}\tau(G[B])
+> }
+> \tag{4}
+> $$
+
+> [!note]- Proof
+> **Proof.** Fix a partition $\pi$. A forest with these components is obtained by choosing a spanning tree independently inside each block. The total weight of forests with this partition is therefore the product of the block spanning-tree coefficients. Every forest has a unique component partition, so summing over partitions counts it once. $\square$
+
+There is no factor $(n-g)!$ in (4): blocks are unordered. The same grouping in (9) yields the cut representation of the Greenian through products of $\tau(G[B])$, proved in the [[Cuts and Forest Grades of the Greenian Exponential#Combining forests with identical components|formula for a prescribed partition]].
+
+Each $\tau(G[B])$ can be computed as a Laplacian cofactor of the **induced graph**. Its diagonal must be recalculated using only edges inside $B$. It is not simply a principal submatrix of the original $\mathbf L$, whose diagonal still includes couplings to outside vertices.
+
+Formula (4) reduces the problem to determinants and a sum over partitions. There may be many partitions; the passage to determinants alone gives no general fast algorithm for all $f_g$.
+
+## Edge deletion and contraction
+
+Deleting $\ell$ retains all vertices and other edges. Contracting an edge with distinct endpoints identifies those endpoints, deletes the edge itself, and retains all other edge labels and conductances. Parallel edges and loops in intermediate graphs follow the conventions in [[#Which forests are counted?]].
+
+> [!info] Edge deletion and contraction
+> **Theorem.** For a nonloop edge $\ell$,
+>
+> $$
+> \boxed{
+> F_G(t)=F_{G\setminus\ell}(t)+c_\ell t\,F_{G/\ell}(t)
+> }
+> \tag{5}
+> $$
+>
+> Accordingly,
+>
+> $$
+> f_g(G)=f_g(G\setminus\ell)+c_\ell f_{g-1}(G/\ell)
+> \tag{6}
+> $$
+
+> [!note]- Proof
+> **Proof.** Forests not containing $\ell$ are forests of $G\setminus\ell$ with the same weights and edge counts. Contracting $\ell$ gives a bijection between forests of $G$ containing $\ell$ and forests of $G/\ell$. The inverse operation splits the contracted vertex and restores $\ell$; a cycle exists before this operation if and only if it exists afterwards. The edge count decreases by one, and the weight is divided by $c_\ell$. This gives the two terms in (5); coefficient comparison gives (6). $\square$
+
+A loop belongs to no forest, so for a loop $F_G=F_{G\setminus\ell}$. The initial condition for an edgeless graph is $F_G=1$, regardless of the number of isolated vertices.
+
+If $\ell$ is a bridge, no cycle uses it. Independent sets of the remaining edges are the same after deletion and contraction, hence
+
+$$
+F_{G\setminus\ell}=F_{G/\ell},\qquad
+F_G(t)=(1+c_\ell t)F_{G/\ell}(t)
+$$
+
+Connectedness of the original graph is not required in (5)-(6). This matters for recursive computation: deleting a bridge increases the component count.
+
+### Recursion in corank notation
+
+For a nonloop edge, $r(G/\ell)=r(G)-1$. Deletion preserves rank unless the edge is a bridge, in which case rank decreases by one. Substitution of these ranks into (3) and (5) gives
+
+$$
+\mathscr F_G(u)=
+\begin{cases}
+\mathscr F_{G\setminus\ell}(u),&\ell\text{ a loop}\\
+(u+c_\ell)\mathscr F_{G/\ell}(u),&\ell\text{ a bridge}\\
+\mathscr F_{G\setminus\ell}(u)+c_\ell\mathscr F_{G/\ell}(u),
+&\text{otherwise}
+\end{cases}
+\tag{7}
+$$
+
+For a bridge, the extra factor $u$ in the deletion term comes precisely from the rank change. Thus one cannot reverse every polynomial in (5) using the same exponent.
+
+### Deletion and contraction on a triangle
+
+![[images/Deleting and Contracting a Triangle Edge.svg]]
+
+**Two classes of forests.** The selected edge is $\ell=ab$ of the unit triangle. Forests without $\ell$ remain in $G\setminus\ell$. For forests containing $\ell$, contract that edge and take its factor $t$ outside the sum. In $G/\ell$, the two remaining edges are parallel: either one may be selected, but not both, since together they form a cycle of length $2$.
+
+$$
+F_G(t)=(1+2t+t^2)+t(1+2t)=1+3t+3t^2
+$$
+
+The four forests without the selected edge and the three containing it give all seven forests of the triangle. For a nonunit conductance, the extracted factor is $c_\ell t$, as in the general recurrence.
+
+## Connection with the Tutte polynomial
+
+In this section all original conductances equal $1$. Write $\mathsf M(G)$ for the cycle matroid, $r(A)$ for the rank of an edge set $A$, and $r$ for the full rank.
+
+In the modern rank definition, the Tutte polynomial is [2, p. 12]
+
+$$
+T_{\mathsf M(G)}(x,y)
+=\sum_{A\subseteq E}(x-1)^{r-r(A)}(y-1)^{\#A-r(A)}
+$$
+
+The notation $T_{\mathsf M(G)}$ is distinct from the full toponome $T_G(\mathbf x)$. The Tutte polynomial and its recursion are classical; Tutte's original paper [1, pp. 85-90] defines it through spanning-tree activities.
+
+> [!info] Connection with the Tutte polynomial
+> **Theorem.** For a unit-weight graph, including a disconnected one,
+>
+> $$
+> \boxed{
+> \mathscr F_G(u)=T_{\mathsf M(G)}(1+u,1)
+> }
+> \tag{8}
+> $$
+
+> [!note]- Proof
+> **Proof.** At $y=1$, every term with $\#A-r(A)>0$ vanishes. Exactly the independent sets, or forests, remain. For them, $r(A)=\#A$, and the remaining exponent of $u$ is $r-\#A$, the corank. The sum agrees with (3). The zeroth power $(y-1)^0$ is the constant polynomial $1$, so substitution is unambiguous. $\square$
+
+With direct indexing, the same relationship reads
+
+$$
+F_G(t)=t^rT_{\mathsf M(G)}(1+t^{-1},1)
+$$
+
+Again this is understood after polynomial expansion. In particular, $T_{\mathsf M(G)}(2,1)$ counts all forests and $T_{\mathsf M(G)}(1,1)$ counts bases. For a connected graph the latter equals $\tau$.
+
+For arbitrary conductances, the sums (1) retain products of specific edge weights. The ordinary unweighted Tutte polynomial does not contain those weights, so (8) cannot be applied unchanged. The weighted forest functions are already defined in (1) and (3); formulas (4)-(7) suffice to compute them.
 
 ## Forest weights on both sides of duality
 
@@ -196,10 +338,10 @@ The [[Cuts and Forest Grades of the Greenian Exponential#The forest formula for 
 
 $$
 Q_k=\frac1\tau\sum_{\substack{F\text{ a forest}\\\#E(F)=d-k}}w(F)\Phi_{\pi(F)}
-\tag{4}
+\tag{9}
 $$
 
-Hence the sum of term weights in (4) is $f_{d-k}/\tau$. The same original forest contributes to $M_g$ and $Q_{d-g}$: its form and normalization change, while its original edge set remains unchanged.
+Hence the sum of term weights in (9) is $f_{d-k}/\tau$. The same original forest contributes to $M_g$ and $Q_{d-g}$: its form and normalization change, while its original edge set remains unchanged.
 
 | Representation | Form grade | Original forest edges | Sum of term weights |
 | --- | ---: | ---: | --- |
@@ -207,7 +349,7 @@ Hence the sum of term weights in (4) is $f_{d-k}/\tau$. The same original forest
 | Cut expansion of $Q_k$ | $k$ | $d-k$ | $f_{d-k}/\tau$ |
 | Auxiliary forest expression $\widetilde Q_k=\tau Q_k$ | $k$ | $d-k$ | $f_{d-k}$ |
 
-In particular, $\mathscr F_G(u)/\tau$ collects by dual grade the original forest-weight sums in (4). Its coefficient at $u^k$ has dimension $C^{-k}$ and scales by $s^{-k}$ when conductances are scaled, just as $Q_k$ does.
+In particular, $\mathscr F_G(u)/\tau$ collects by dual grade the original forest-weight sums in (9). Its coefficient at $u^k$ has dimension $C^{-k}$ and scales by $s^{-k}$ when conductances are scaled, just as $Q_k$ does.
 
 ### Dependence of the sum on the representation
 
@@ -225,7 +367,7 @@ N=\mathcal C(D)=\exp(\mathrm{Gr}),\qquad
 \gamma_{ij}=-\mathrm{Gr}_{ij}
 $$
 
-The canonical forest polynomial $F_{\mathrm{Gr}}$ is obtained from forests of couplings with weights $\gamma_{ij}$ on the complete set of pairs. These weights can have either sign. Grade $k$ uses $k$ Greenian couplings, whereas (4) uses $d-k$ original edges.
+The canonical forest polynomial $F_{\mathrm{Gr}}$ is obtained from forests of couplings with weights $\gamma_{ij}$ on the complete set of pairs. These weights can have either sign. Grade $k$ uses $k$ Greenian couplings, whereas (9) uses $d-k$ original edges.
 
 Thus $F_{\mathrm{Gr}}(u)$ and $\mathscr F_G(u)/\tau$ refer to different forest representations. They are not equal in general. Their difference will be computed directly for $K_4$.
 
@@ -237,125 +379,6 @@ T_n^\vee=[a_1^\vee\cdots a_{n-1}^\vee]^2
 $$
 
 one has $Q_d=T_n^\vee/\tau$, but $N_d=T_n/(n^2\tau)$. The factor $n^{-2}$ comes from $\mathcal C(T_n^\vee)=T_n/n^2$. See the [[Laplacian and Greenian - Mutual Duality of Exponentials#Representations and normalizations at a glance|normalization summary]] for the derivation.
-
-## Computation through vertex partitions
-
-Direct enumeration selects sets of $g$ edges, checks for cycles, and sums conductance products. Another method fixes the components of the prospective forest first.
-
-Let $\Pi_m(\mathcal V)$ be the set of unordered partitions of $\mathcal V$ into $m$ nonempty blocks. For a block $B$, let $G[B]$ be the induced graph with the original conductances of its internal edges. Adopt
-
-$$
-\tau(G[B])=1\quad\text{if }\#B=1,\qquad
-\tau(G[B])=0\quad\text{if }G[B]\text{ is disconnected}
-$$
-
-> [!info] Computation through vertex partitions
-> **Theorem.** For $0\le g\le r$,
->
-> $$
-> \boxed{
-> f_g(G)=\sum_{\pi\in\Pi_{n-g}(\mathcal V)}
-> \prod_{B\in\pi}\tau(G[B])
-> }
-> \tag{5}
-> $$
-
-> [!note]- Proof
-> **Proof.** Fix a partition $\pi$. A forest with these components is obtained by choosing a spanning tree independently inside each block. The total weight of forests with this partition is therefore the product of the block spanning-tree coefficients. Every forest has a unique component partition, so summing over partitions counts it once. $\square$
-
-There is no factor $(n-g)!$ in (5): blocks are unordered. The same grouping in (4) yields the cut representation of the Greenian through products of $\tau(G[B])$, proved in the [[Cuts and Forest Grades of the Greenian Exponential#Combining forests with identical components|formula for a prescribed partition]].
-
-Each $\tau(G[B])$ can be computed as a Laplacian cofactor of the **induced graph**. Its diagonal must be recalculated using only edges inside $B$. It is not simply a principal submatrix of the original $\mathbf L$, whose diagonal still includes couplings to outside vertices.
-
-Formula (5) reduces the problem to determinants and a sum over partitions. There may be many partitions; the passage to determinants alone gives no general fast algorithm for all $f_g$.
-
-## Edge deletion and contraction
-
-Deleting $\ell$ retains all vertices and other edges. Contracting an edge with distinct endpoints identifies those endpoints, deletes the edge itself, and retains all other edge labels and conductances. Parallel edges and loops in intermediate graphs follow the conventions in [[#Which forests are counted?]].
-
-> [!info] Edge deletion and contraction
-> **Theorem.** For a nonloop edge $\ell$,
->
-> $$
-> \boxed{
-> F_G(t)=F_{G\setminus\ell}(t)+c_\ell t\,F_{G/\ell}(t)
-> }
-> \tag{6}
-> $$
->
-> Accordingly,
->
-> $$
-> f_g(G)=f_g(G\setminus\ell)+c_\ell f_{g-1}(G/\ell)
-> \tag{7}
-> $$
-
-> [!note]- Proof
-> **Proof.** Forests not containing $\ell$ are forests of $G\setminus\ell$ with the same weights and edge counts. Contracting $\ell$ gives a bijection between forests of $G$ containing $\ell$ and forests of $G/\ell$. The inverse operation splits the contracted vertex and restores $\ell$; a cycle exists before this operation if and only if it exists afterwards. The edge count decreases by one, and the weight is divided by $c_\ell$. This gives the two terms in (6); coefficient comparison gives (7). $\square$
-
-A loop belongs to no forest, so for a loop $F_G=F_{G\setminus\ell}$. The initial condition for an edgeless graph is $F_G=1$, regardless of the number of isolated vertices.
-
-If $\ell$ is a bridge, no cycle uses it. Independent sets of the remaining edges are the same after deletion and contraction, hence
-
-$$
-F_{G\setminus\ell}=F_{G/\ell},\qquad
-F_G(t)=(1+c_\ell t)F_{G/\ell}(t)
-$$
-
-Connectedness of the original graph is not required in (6)-(7). This matters for recursive computation: deleting a bridge increases the component count.
-
-### Recursion in corank notation
-
-For a nonloop edge, $r(G/\ell)=r(G)-1$. Deletion preserves rank unless the edge is a bridge, in which case rank decreases by one. Substitution of these ranks into (3) and (6) gives
-
-$$
-\mathscr F_G(u)=
-\begin{cases}
-\mathscr F_{G\setminus\ell}(u),&\ell\text{ a loop}\\
-(u+c_\ell)\mathscr F_{G/\ell}(u),&\ell\text{ a bridge}\\
-\mathscr F_{G\setminus\ell}(u)+c_\ell\mathscr F_{G/\ell}(u),
-&\text{otherwise}
-\end{cases}
-\tag{8}
-$$
-
-For a bridge, the extra factor $u$ in the deletion term comes precisely from the rank change. Thus one cannot reverse every polynomial in (6) using the same exponent.
-
-## Connection with the Tutte polynomial
-
-In this section all original conductances equal $1$. Write $\mathsf M(G)$ for the cycle matroid, $r(A)$ for the rank of an edge set $A$, and $r$ for the full rank.
-
-In the modern rank definition, the Tutte polynomial is [2, p. 12]
-
-$$
-T_{\mathsf M(G)}(x,y)
-=\sum_{A\subseteq E}(x-1)^{r-r(A)}(y-1)^{\#A-r(A)}
-$$
-
-The notation $T_{\mathsf M(G)}$ is distinct from the full toponome $T_G(\mathbf x)$. The Tutte polynomial and its recursion are classical; Tutte's original paper [1, pp. 85-90] defines it through spanning-tree activities.
-
-> [!info] Connection with the Tutte polynomial
-> **Theorem.** For a unit-weight graph, including a disconnected one,
->
-> $$
-> \boxed{
-> \mathscr F_G(u)=T_{\mathsf M(G)}(1+u,1)
-> }
-> \tag{9}
-> $$
-
-> [!note]- Proof
-> **Proof.** At $y=1$, every term with $\#A-r(A)>0$ vanishes. Exactly the independent sets, or forests, remain. For them, $r(A)=\#A$, and the remaining exponent of $u$ is $r-\#A$, the corank. The sum agrees with (3). The zeroth power $(y-1)^0$ is the constant polynomial $1$, so substitution is unambiguous. $\square$
-
-With direct indexing, the same relationship reads
-
-$$
-F_G(t)=t^rT_{\mathsf M(G)}(1+t^{-1},1)
-$$
-
-Again this is understood after polynomial expansion. In particular, $T_{\mathsf M(G)}(2,1)$ counts all forests and $T_{\mathsf M(G)}(1,1)$ counts bases. For a connected graph the latter equals $\tau$.
-
-For arbitrary conductances, the sums (1) retain products of specific edge weights. The ordinary unweighted Tutte polynomial does not contain those weights, so (9) cannot be applied unchanged. The weighted forest functions are already defined in (1) and (3); formulas (5)-(8) suffice to compute them.
 
 ## Why the determinant counts different coefficients
 
@@ -428,7 +451,7 @@ A two-edge forest has component type $3+1$ or $2+2$. In the first case, there ar
 | $3+1$ | $4$ | $3$ | $12$ | $3$ | $36$ |
 | $2+2$ | $3$ | $1$ | $3$ | $4$ | $12$ |
 
-Formula (5) gives $f_2=12+3=15$, whereas rooted counting gives $p_2=36+12=48$. At the other grades, $p_0=1$, $p_1=2\cdot6=12$, and $p_3=4\cdot16=64$. Therefore
+Formula (4) gives $f_2=12+3=15$, whereas rooted counting gives $p_2=36+12=48$. At the other grades, $p_0=1$, $p_1=2\cdot6=12$, and $p_3=4\cdot16=64$. Therefore
 
 $$
 P_L(t)=1+12t+48t^2+64t^3=(1+4t)^3
@@ -505,7 +528,7 @@ F_{G\setminus ab}(t)=(1+c_2t)(1+c_3t),\qquad
 F_{G/ab}(t)=1+(c_2+c_3)t
 $$
 
-The second polynomial has no term $c_2c_3t^2$: two parallel edges together form a cycle. Substitution into (6) recovers the computed $F_G$.
+The second polynomial has no term $c_2c_3t^2$: two parallel edges together form a cycle. Substitution into (5) recovers the computed $F_G$.
 
 For $c_1=1,c_2=2,c_3=3$, a direct numerical check gives
 
@@ -517,7 +540,7 @@ $$
 \mathscr F_G(u)=(6+5u+u^2)+(5+u)=11+6u+u^2
 $$
 
-The deleted edge is not a bridge, so the second line uses the third branch of (8).
+The deleted edge is not a bridge, so the second line uses the third branch of (7).
 
 ## Gluing and coefficient convolution
 
@@ -602,6 +625,8 @@ The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/ma
     python checks/matroid/verify_forest_coefficients.py
 
 Metric duality in this note is used only for connected undirected graphs with positive conductances. Forest functions of rank $r$ are defined for disconnected graphs, but normalization by the global $\tau$ is not applied. Extension to balanced graphs requires separate justification.
+
+The explanatory diagram is reproduced by the [figure generator](https://github.com/magin67/pmg-notes/blob/v5/checks/matroid/draw_editorial_figures.py). The program also checks the displayed forest coefficients by direct enumeration.
 
 ## References
 

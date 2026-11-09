@@ -43,6 +43,21 @@ python checks/matroid/draw_gluing_figures.py
 python checks/matroid/translate_figures_en.py
 ~~~
 
-Drawing programs are independent of the numerical checks. The finished SVGs are stored alongside the notes and need not be regenerated to read the library. To update only the English figures from the saved Russian originals, run just the final command.
+Drawing programs are independent of the numerical checks. The finished SVGs are stored in the Russian and English series images subfolders and need not be regenerated to read the library. To update the original 15 English figures from the saved Russian originals, run the translation command above.
 
 Checks of finite sets of examples supplement the mathematical proofs in the notes; they are not proofs of general statements.
+
+## Editorial figures, 2026-11-09
+
+`draw_editorial_figures.py` produces two more diagrams in each language: deletion
+and contraction of a triangle edge, and two different matroids with the same
+forest polynomial. The series now contains 17 figures per language. The program
+enumerates forests of the displayed graphs, verifies the recurrence and
+coefficients, and writes the SVGs directly to the respective images subfolders.
+
+```bash
+python checks/matroid/draw_editorial_figures.py
+```
+
+Both language versions of these two diagrams are generated together;
+`translate_figures_en.py` continues to handle the original 15 figures.

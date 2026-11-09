@@ -1,8 +1,8 @@
 ---
 title: "The Cycle Matroid and Exterior Products of Edges"
 date: 2026-10-28
-updated: 2026-10-28
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cycle-matroid-and-exterior-products-of-edges
@@ -177,7 +177,7 @@ $$
 
 Thus the component count and corank differ by one only when the original graph is connected. The matroid does not record added isolated vertices: they change neither $E$ nor its independent subsets.
 
-> [!info] The cycle matroid
+> [!info] Matroid isomorphism
 > **Definition.** An isomorphism of cycle matroids is a bijection $\psi:E(G)\to E(H)$ such that $S$ is a forest if and only if $\psi(S)$ is a forest. In the weighted setting, additionally require
 >
 > $$
@@ -203,6 +203,14 @@ Such a bijection preserves bases, cycles, and the ranks of all sets. It need not
 For a family indexed by individual edges, values are preserved under the same correspondence: $P_{\psi(\ell)}(H,c')=P_\ell(G,c)$. This is the meaning of matroid invariance for edge resistances proved below. It supplies no correspondence between all vertex pairs.
 
 The graph class is part of the statement. Ordinary forest coefficients are defined even for disconnected graphs, whereas normalization by $\tau$ and the resistance radius in this series concern connected graphs on $n\ge2$ vertices. Adding isolated vertices preserves the matroid but leaves this metric class. Matroid invariance alone also specifies neither addition nor multiplication under gluing.
+
+### Example: a path and a star
+
+The unit path $P_4$ and star $K_{1,3}$ each have three edges and no cycles. Every edge subset is independent, so any bijection of the three edges is a matroid isomorphism.
+
+![[images/Path and Star Matroid - Edge Correspondence.svg]]
+
+**What the correspondence preserves.** The individual names $\ell_1,\ell_2,\ell_3$ show the edge bijection. Each graph has one empty forest, three one-edge and three two-edge forests, and one spanning tree. The vertices have different arrangements and degrees. Forest polynomials and resistance geometry are compared in detail in [[#One matroid, different vertex geometry]].
 
 ## Trees, cycles, and complete graphs
 
@@ -259,6 +267,24 @@ Here $f_0=1$ and $f_d=\tau$. These are weight sums of ordinary spanning forests 
 The sum $f_g$ refers specifically to the edge-factor expansion. Forms of different forests may be linearly dependent, so summing coefficients in an arbitrary other expression for $M_g$ need not give $f_g$. This distinction is explained in [[Partition Forms and the Tetrahedron Identity]] and [[From Polyforms to Partitions]].
 
 Matroid invariance of $f_g$ does not imply invariance of the distribution of these forests by component sizes. Such a distribution uses additional vertex data.
+
+## What is preserved under one-point gluing?
+
+Let $G=G_1\vee G_2$ under the assumptions in [[#From gluing to the question of invariants]]. A simple cycle cannot pass through both pieces, since it would have to revisit their only shared vertex. Hence $F\subseteq E(G)$ is a forest if and only if both $F\cap E(G_1)$ and $F\cap E(G_2)$ are forests.
+
+This says that $\mathsf M(G)$ is the direct sum of the two matroids: independent sets are chosen independently in the pieces. Changing the vertices used for gluing does not change this condition. This explains why all weighted matroid parameters are preserved when such attachment points change.
+
+The bijection between pairs of forests and multiplication of their weights separately give
+
+$$
+F_{G_1\vee G_2}(t)=F_{G_1}(t)F_{G_2}(t)
+$$
+
+Comparing leading coefficients proves multiplicativity of $\tau$. Additivity of $\rho$ has its own geometric proof in [[Vertex Contraction and Graph Gluing]]; it does not follow from the definition of matroid invariance alone.
+
+With two or more shared vertices, cycles using edges of both pieces may occur. The argument above then no longer applies. For chains of cores, the gluing operation must be specified, the cycle correspondence checked, and shared vertices distinguished from identified shared edges.
+
+The main combinatorial construction is now in place: forests define independence, their weights give coefficients, and one-point gluing multiplies polynomials. For computation, continue to [[Forest Coefficients - Grade, Components, and Corank]]. The remaining sections compare this construction with the Greenian and identify the metric data it preserves.
 
 ## The same original forests in the Greenian exponential
 
@@ -442,8 +468,6 @@ Consider the unit path $P_4$ with edges $ab,bc,cd$ and the unit star $K_{1,3}$ w
 
 Both matroids are free on three elements: every edge subset is independent. Their matroid isomorphism is therefore proved independently of the numerical coincidences below.
 
-![[images/Path and Star Matroid - Edge Correspondence.svg]]
-
 **Edge correspondence.** The labels $\ell_1,\ell_2,\ell_3$ specify a bijection: $ab\mapsto ab$, $bc\mapsto ac$, $cd\mapsto ad$. Every subset remains a forest. The vertex structure changes, so the sums of all pairwise resistances are $10$ and $9$, as computed below. This does not affect edge resistances: they equal $1$ in both unit trees.
 
 | Characteristic | Path $P_4$ | Star $K_{1,3}$ |
@@ -464,22 +488,6 @@ Ordinary forest coefficients count arbitrary subsets of three edges. For the roo
 In a unit tree, effective resistance equals the number of edges in the unique path. The pair sum is $3\cdot1+2\cdot2+1\cdot3=10$ for $P_4$ and $3\cdot1+3\cdot2=9$ for the star. Both radii equal $3/4$ by the independently proved [[Vertex Contraction and Graph Gluing#Resistance radius is additive|tree-radius formula]].
 
 The distinction is therefore not between “combinatorial Laplacian parameters” and “metric Greenian parameters”. Both objects have characteristics preserved by the matroid and characteristics using additional vertex information. In particular, the two different coefficient sums for $Q_1$ and its centered image must not be confused.
-
-## What is preserved under one-point gluing?
-
-Let $G=G_1\vee G_2$ under the assumptions in [[#From gluing to the question of invariants]]. A simple cycle cannot pass through both pieces, since it would have to revisit their only shared vertex. Hence $F\subseteq E(G)$ is a forest if and only if both $F\cap E(G_1)$ and $F\cap E(G_2)$ are forests.
-
-This says that $\mathsf M(G)$ is the direct sum of the two matroids: independent sets are chosen independently in the pieces. Changing the vertices used for gluing does not change this condition. This explains why all weighted matroid parameters are preserved when such attachment points change.
-
-The bijection between pairs of forests and multiplication of their weights separately give
-
-$$
-F_{G_1\vee G_2}(t)=F_{G_1}(t)F_{G_2}(t)
-$$
-
-Comparing leading coefficients proves multiplicativity of $\tau$. Additivity of $\rho$ has its own geometric proof in [[Vertex Contraction and Graph Gluing]]; it does not follow from the definition of matroid invariance alone.
-
-With two or more shared vertices, cycles using edges of both pieces may occur. The argument above then no longer applies. For chains of cores, the gluing operation must be specified, the cycle correspondence checked, and shared vertices distinguished from identified shared edges.
 
 ## Polyform duality and matroid duality
 
