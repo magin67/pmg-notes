@@ -1,9 +1,9 @@
 ---
 title: "Deleting an Edge and a Bridge in Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 1
-source_revision: 1
+updated: 2026-11-09
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-edge-deletion
@@ -16,28 +16,10 @@ This example illustrates the deletion rule in [[Laplacian Exponential#Adding and
 
 [[ru/PythonExamples/Удаление ребра и моста на Python|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 
-## Code and execution
 
-The [program](https://github.com/magin67/polyform_algebra/blob/d4c82cf51b2a049ca00f09d1ae752c9d23648f7a/examples/introductory/note10_edge_deletion.py) and [tests](https://github.com/magin67/polyform_algebra/blob/d4c82cf51b2a049ca00f09d1ae752c9d23648f7a/tests/introductory/test_edge_deletion.py) are pinned to revision `d4c82cf`. Follow [[Installing the Library and Running Examples|the setup guide]]. In a separate examples checkout, use `git fetch origin` and `git checkout d4c82cf51b2a049ca00f09d1ae752c9d23648f7a`.
+This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Installing the Library and Running Examples]]. Run the Python cells in order.
 
-From the repository root, using the selected environment's Python:
-
-```powershell
-python -m examples.introductory.note10_edge_deletion
-python -m pytest tests/introductory/test_edge_deletion.py -q
-```
-
-On Windows you can replace `python` with `.\.venv\Scripts\python.exe`; on Linux/macOS use `.venv/bin/python`. In Colab, after following the source-cloning setup route:
-
-```python
-import subprocess
-import sys
-
-subprocess.run(
-    [sys.executable, "-m", "examples.introductory.note10_edge_deletion"],
-    check=True,
-)
-```
+![[images/Deleting an edge and a bridge.svg]]
 
 ## Deletion rule
 
@@ -118,4 +100,12 @@ Within component $\{1,2\}$, the physical resistance is 1. However, the global po
 
 Six mathematical checks compare factor deletion with a complete rebuild from the remaining graph, check edge restoration, matrices and their cofactors, a current solve for the connected case, and rejection of disconnected normalization. They also check the linear update of unnormalized potentials, $u_{M'}(f)=u_M(f)-c_{ij}u_M(pf)$.
 
-**Status: computed directly.** All 254 tests passed on Python 3.12, including example execution and import checks. The note's code ran locally; a hosted Google Colab session was not separately checked. The library core was unchanged.
+
+
+This is a limitation of global normalization by `Polyform.norm`. The network interface `polyform_algebra.core.resistance` also handles disconnected networks: resistances within components are finite, while cross-component values are represented by `INFINITY` in exact mode. These answers belong to different operations.
+
+## Try changing the input
+
+Reduce the bridge conductance from 2 to 1 instead of deleting it. Check $	au=1$ and $R_{13}=2$.
+
+These numerical checks concern this example and do not replace a general proof.

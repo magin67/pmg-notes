@@ -1,9 +1,9 @@
 ---
 title: "Unit Triangle Geometry in Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 1
-source_revision: 1
+updated: 2026-11-09
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-unit-triangle-geometry
@@ -16,30 +16,14 @@ This example reproduces the resistance triangle of $K_3$ from [[From Lengths to 
 
 [[ru/PythonExamples/Геометрия единичного треугольника на Python|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 
-## Code and execution
 
-The [program](https://github.com/magin67/polyform_algebra/blob/a678839a1eb3aab467a1b043bd1d0b9c7b5716ad/examples/introductory/note05_triangle_geometry.py) and [tests](https://github.com/magin67/polyform_algebra/blob/a678839a1eb3aab467a1b043bd1d0b9c7b5716ad/tests/introductory/test_triangle_geometry.py) were checked at revision `a678839`. Follow [[Installing the Library and Running Examples|the setup guide]]. In an existing separate examples checkout, run `git fetch origin`, then `git checkout a678839a1eb3aab467a1b043bd1d0b9c7b5716ad`: earlier revisions may not contain this module.
+This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Installing the Library and Running Examples]]. Run the Python cells in order.
 
-From the repository root, using the selected environment's interpreter:
+![[images/Vectors of the resistance triangle.svg]]
 
-```powershell
-python -m examples.introductory.note05_triangle_geometry
-python -m pytest tests/introductory/test_triangle_geometry.py -q
-```
+## Constructing the metric
 
-On Windows you can replace `python` with `.\.venv\Scripts\python.exe`; on Linux/macOS use `.venv/bin/python`. In Colab, follow the source-cloning route in the setup guide and run:
-
-```python
-import subprocess
-import sys
-
-subprocess.run(
-    [sys.executable, "-m", "examples.introductory.note05_triangle_geometry"],
-    check=True,
-)
-```
-
-After installing the package, the following standalone fragment can run in a file or a notebook cell:
+First define the vertices and three unit conductances.
 
 ```python
 from math import sqrt
@@ -52,24 +36,6 @@ f13 = quForm([(a, c)])
 f23 = quForm([(b, c)])
 metric = (f12 + f13 + f23).exp()
 u, v, w = b-a, c-a, c-b
-
-# @ creates a scalar polyform; norm evaluates it in the graph metric.
-uv = metric.norm(u @ v)
-gram = np.array([
-    [metric.norm(u @ u), uv],
-    [metric.norm(v @ u), metric.norm(v @ v)],
-])
-# Use the quadratic boundary form directly; no higher-grade @ is required.
-boundary_norm = metric.norm(quForm([(a, b, c)]))
-area_squared = boundary_norm / 4
-area = sqrt(area_squared)
-print("u dot v =", uv)
-print("u dot w =", metric.norm(u @ w))
-print("Gram matrix =", gram)
-print("Gram determinant =", np.linalg.det(gram))
-print("boundary norm =", boundary_norm)
-print("area squared =", area_squared)
-print("area =", area)
 ```
 
 ## Inner products and orientation
@@ -89,6 +55,20 @@ $$
 \det\mathbf G=\frac13
 $$
 Vectors $u,v$ share their starting vertex and form a $60^\circ$ angle. Vectors $u,w$ follow consecutive sides; as free vectors they form a $120^\circ$ angle, so their inner product is negative. Replacing $u$ with $-u$ reverses the sign of $u\cdot v$ while preserving $u^2$.
+
+```python
+# @ creates a scalar polyform; norm evaluates it in the graph metric.
+uv = metric.norm(u @ v)
+gram = np.array([
+    [metric.norm(u @ u), uv],
+    [metric.norm(v @ u), metric.norm(v @ v)],
+])
+print("u dot v =", uv)
+print("u dot w =", metric.norm(u @ w))
+print("Gram matrix =", gram)
+print("Gram determinant =", np.linalg.det(gram))
+
+```
 
 ## Boundary and area
 
@@ -116,6 +96,16 @@ The boundary's linear norm equals the area of the parallelogram on $u,v$. The tr
 
 The grade-two boundary is not evaluated through `X @ X` here: its supported quadratic form can be evaluated without higher-grade polarization.
 
+```python
+# Use the quadratic boundary form directly; no higher-grade @ is required.
+boundary_norm = metric.norm(quForm([(a, b, c)]))
+area_squared = boundary_norm / 4
+area = sqrt(area_squared)
+print("boundary norm =", boundary_norm)
+print("area squared =", area_squared)
+print("area =", area)
+```
+
 ## Why norms cannot simply be multiplied
 
 The product $f_{12}f_{13}$ is the quadratic form of the triangle boundary. Its metric evaluation differs from the product of the evaluations:
@@ -130,4 +120,10 @@ The Gram determinant subtracts $(u\cdot v)^2=1/9$. The full program prints both 
 
 Tests compare the results with the inverse of the grounded Laplacian $\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$ and explicit coordinates of an equilateral triangle of side $\sqrt{2/3}$. Area is checked using an edge-coordinate determinant and the formula $S^2=3\ell^4/16$. All six vertex permutations preserve the quadratic boundary norm and Gram determinant.
 
-**Status: computed directly.** All 238 project tests passed on Python 3.12, including eight checks for this example and general execution and import checks. The note's code fragments were checked locally; a hosted Google Colab session was not separately run. The quadratic algebra core was unchanged.
+
+
+## Try changing the input
+
+Replace $u$ with $-u$. Check the sign change in the mixed inner product and the unchanged area.
+
+These numerical checks concern this example and do not replace a general proof.

@@ -1,9 +1,9 @@
 ---
 title: "Triangle Coupling Variations in Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 4
-source_revision: 4
+updated: 2026-11-09
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-triangle-coupling-variations
@@ -16,11 +16,10 @@ This note reproduces the triangle-strengthening examples from [[Variation of a S
 
 [[ru/PythonExamples/Вариации связей треугольника на Python|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 
-## Code and execution
 
-Tested Python revision: [`76c433d`](https://github.com/magin67/polyform_algebra/commit/76c433de082b348caca5c0afdcb5c372361aa9f2). Complete programs: [one edge](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note06_single_edge.py), [two edges](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/examples/introductory/note07_two_edges.py).
+This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Installing the Library and Running Examples]]. Run the Python cells in order.
 
-See [[Installing the Library and Running Examples]] for installation, complete programs and tests, and Google Colab instructions. Execute the code fragments below in order within one file or Python session.
+![[images/Strengthening triangle couplings.svg]]
 
 ## Initial objects
 
@@ -95,7 +94,7 @@ The forest-weight increment is $\delta\tau(R_{12}R_{13}-g^2)=1$.
 
 ## Strengthening two couplings
 
-Now increase both $c_{12}$ and $c_{13}$ from $1$ to $2$. Use the initial metric $M$ and two factors:
+Now increase both conductances $c_{12},c_{13}$ from $1$ to $2$. Use the initial metric $M$ and two factors:
 
 ```python
 after_two = metric * (Polyform.one() + f12) * (Polyform.one() + f13)
@@ -141,8 +140,14 @@ The inverse action is computed with `numpy.linalg.solve`. The sequential calcula
 
 ## Independent checks and status
 
-The [example tests](https://github.com/magin67/polyform_algebra/blob/76c433de082b348caca5c0afdcb5c372361aa9f2/tests/introductory/test_triangle_variations.py) check the values in the notes, orientation signs, factor order, and complete recomputation of the exponential. In addition, the Laplacian matrix is constructed directly from the conductances: a cofactor gives $\tau$, while solving the current equations with vertex $3$ grounded gives $R_{23}$. This check does not use polyform products.
+The [example tests](https://github.com/magin67/polyform_algebra/blob/v0.9.0/tests/introductory/test_triangle_variations.py) check the values in the notes, orientation signs, factor order, and complete recomputation of the exponential. In addition, the Laplacian matrix is constructed directly from the conductances: a cofactor gives $\tau$, while solving the current equations with vertex $3$ grounded gives $R_{23}$. This check does not use polyform products.
 
-**Status: computed directly** for the two stated changes of $K_3$. At the tested revision, 223 tests passed, including example execution and import checks, both in the checkout and with the installed package outside it. Validation used Python 3.12; it is neither a proof of the general formulas nor a check of every declared Python version.
 
-The examples do not introduce a general variation API or handle arbitrary bridge deletion. The public software interface remains restricted to supported quadratic forms. General formal definitions appear in [[Core specification]], and evaluation conventions in [[PMG terminology]].
+
+Here, coupling changes are expressed through products of edge factors. General formal definitions appear in [[Core specification]], and evaluation conventions in [[PMG terminology]].
+
+## Try changing the input
+
+Strengthen an edge by $\delta=2$ instead of 1. Compare the factor update with a newly computed exponential.
+
+These numerical checks concern this example and do not replace a general proof.

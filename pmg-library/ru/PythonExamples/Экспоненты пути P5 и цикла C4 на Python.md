@@ -1,8 +1,8 @@
 ---
 title: "Экспоненты пути P5 и цикла C4 на Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-path-cycle-exponentials
@@ -15,28 +15,10 @@ order: 5
 
 [[en/PythonExamples/Path P5 and Cycle C4 Exponentials in Python|English]] · [[ru/PythonExamples/PythonExamples|Программные примеры]]
 
-## Код и запуск
 
-[Полная программа](https://github.com/magin67/polyform_algebra/blob/95cea4c37e8b743a4ede2bf01392c8b3babdcfb3/examples/introductory/note10_path_cycle.py) и [тесты](https://github.com/magin67/polyform_algebra/blob/95cea4c37e8b743a4ede2bf01392c8b3babdcfb3/tests/introductory/test_path_cycle_exponentials.py) закреплены на ревизии `95cea4c`. Подготовка окружения описана в [[Установка библиотеки и запуск примеров]]. В существующей отдельной копии примеров выполните `git fetch origin`, затем `git checkout 95cea4c37e8b743a4ede2bf01392c8b3babdcfb3`.
+Пример проверен с `polyform_algebra 0.9.0`. Подготовка окружения: [[Установка библиотеки и запуск примеров]]. Ячейки Python выполняются по порядку.
 
-Из корня репозитория с Python выбранного окружения:
-
-```powershell
-python -m examples.introductory.note10_path_cycle
-python -m pytest tests/introductory/test_path_cycle_exponentials.py -q
-```
-
-В Windows можно использовать `.\.venv\Scripts\python.exe`, в Linux/macOS - `.venv/bin/python`. В Colab после установки с клонированием исходников из общей инструкции:
-
-```python
-import subprocess
-import sys
-
-subprocess.run(
-    [sys.executable, "-m", "examples.introductory.note10_path_cycle"],
-    check=True,
-)
-```
+![[images/Путь и цикл в лесном разложении.svg]]
 
 ## Построение и разложение
 
@@ -133,4 +115,10 @@ $$
 
 Тесты независимо перебирают подмножества рёбер, отбрасывают циклы и строят формы по компонентам связности. Проверяются сами грейд-компоненты, их лесные веса, равенства $M_k=L^k/k!$ и факторизация экспоненты. Отдельно лапласианы строятся как числовые матрицы: миноры проверяют $\tau$, а решения с единичным током проверяют сопротивления всех пар.
 
-**Статус: непосредственно вычислено** для единичных $P_5$ и $C_4$. На Python 3.12 прошли все 246 тестов, включая шесть новых математических проверок и проверки запуска и импорта примера. Код заметки выполнен локально; облачный сеанс Colab отдельно не проверялся. Ядро библиотеки не изменялось.
+
+
+## Попробуйте изменить
+
+Удвойте одну проводимость цикла. Число остовных деревьев останется 4, а их суммарный вес станет 7.
+
+Численные проверки относятся к этому примеру и не заменяют общего доказательства.

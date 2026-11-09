@@ -1,0 +1,16 @@
+# PythonExamples checks
+
+The public notes and notebooks target polyform_algebra 0.9.0. Install that version using the shared setup note. Run from the repository root:
+
+```bash
+python checks/pythonexamples/verify_examples.py
+python checks/pythonexamples/generate_figures.py
+python checks/pythonexamples/build_notebooks.py
+python checks/pythonexamples/execute_notebooks.py
+```
+
+Figure generation requires matplotlib. Notebook generation and execution require nbformat, nbclient, nbconvert, ipykernel, and a Python 3 Jupyter kernel using the selected environment. Install these development tools with pip if necessary.
+
+The notebook generator reads the weighted-chain notes: explanations and computation cells have one source. It adds version setup and an editable graph drawing. The executor starts a fresh kernel for each language, checks for error outputs, saves computed results, and exports HTML previews under this directory. Inspect those previews after regeneration. A local execution is not a hosted Colab test.
+
+The fragment checker executes each note in a separate namespace and checks key results. Package-level introductory tests independently check conductance matrices, currents, spanning-tree weights, areas, variations, and deletion. They complement the notes' own assertions.

@@ -1,9 +1,9 @@
 ---
 title: "Installing the Library and Running Examples"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 5
-source_revision: 5
+updated: 2026-11-09
+revision: 6
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-examples-getting-started
@@ -12,41 +12,40 @@ description: "Installing polyform_algebra, first calculations, and running examp
 order: 1
 ---
 
-This note describes the shared environment for [[en/PythonExamples/PythonExamples|Programming Examples]]. You can perform your own Python calculations or run the complete programs and tests from the repository.
+This note describes the shared environment for [[en/PythonExamples/PythonExamples|Programming Examples]]. The installed package is sufficient for calculations; the weighted-chain notebook combines explanations and executable code.
 
 [[ru/PythonExamples/Установка библиотеки и запуск примеров|Русский]]
 
-## Code version
+## Package version
 
-The examples use revision [`d4c82cf`](https://github.com/magin67/polyform_algebra/commit/d4c82cf51b2a049ca00f09d1ae752c9d23648f7a). Local validation of that revision used Python 3.12. Dependencies are installed through pip without pinning their versions, so fixing the code revision does not fix the entire environment. Newer library versions may differ from the version used by a note.
+The examples were checked with **`polyform_algebra 0.9.0`** on Python 3.12. The installation commands use the package’s `v0.9.0` source archive. Neither Git nor a source checkout is needed to run the fragments. Dependencies are installed automatically without version pins, so the package version does not fix the entire environment.
 
 ## Local installation
 
-Install Python and Git. Run the commands in a terminal from the directory where a separate `polyform-examples` checkout should be created. In Windows PowerShell:
+Create a separate virtual environment. In Windows PowerShell:
 
 ```powershell
-git clone https://github.com/magin67/polyform_algebra.git polyform-examples
-cd polyform-examples
-git checkout d4c82cf51b2a049ca00f09d1ae752c9d23648f7a
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pip install "https://github.com/magin67/polyform_algebra/archive/refs/tags/v0.9.0.zip"
 ```
 
 On Linux/macOS:
 
 ```bash
-git clone https://github.com/magin67/polyform_algebra.git polyform-examples
-cd polyform-examples
-git checkout d4c82cf51b2a049ca00f09d1ae752c9d23648f7a
 python3 -m venv .venv
-.venv/bin/python -m pip install -e ".[dev]"
+.venv/bin/python -m pip install "https://github.com/magin67/polyform_algebra/archive/refs/tags/v0.9.0.zip"
 ```
 
-The virtual environment isolates dependencies. Activation is optional because the commands invoke its Python directly. The editable installation `-e` connects the package to its sources; `[dev]` adds testing tools. For ordinary library use, installation without `[dev]` is sufficient.
+Activation is optional: call the environment’s interpreter directly. Save a note’s sequential fragments in `my_example.py`, then run `.\.venv\Scripts\python.exe my_example.py` on Windows or `.venv/bin/python my_example.py` on Linux/macOS.
 
 ## First calculation
 
-Save the code as `my_example.py` inside the new directory. On Windows run `.\.venv\Scripts\python.exe my_example.py`; on Linux/macOS run `.venv/bin/python my_example.py`. In a notebook, put the same code in a cell:
+```python
+import polyform_algebra
+print(polyform_algebra.get_version())  # 0.9.0
+```
+
+This calculation builds a unit triangle and checks its spanning-tree coefficient and resistance:
 
 ```python
 from math import isclose
@@ -69,85 +68,40 @@ assert isclose(tau, 3.0)
 assert isclose(r12, 2/3)
 ```
 
-Expect `tau = 3` and `R12 ≈ 0.6666666667`; printed formatting may differ. `Point` creates vertices, `quForm` defines a quadratic form, and their sum constructs the Laplacian. `exp()` computes the exponential in the algebra of forms, `potential()` extracts an unnormalized coefficient, and `norm()` gives a normalized metric evaluation. An assertion passes when it raises no error.
+Expect $\tau=3$ and $R_{12}=2/3$. `exp()` computes the exponential in the algebra of forms, `potential()` gives an unnormalized potential, and `norm()` divides it by the spanning-tree coefficient. Printed formatting may differ; `assert` checks the numerical value.
 
-For further experiments, change conductances, for example `laplacian = 2*f12 + f13 + f23`, then recompute `metric`. Expected values must also match the new network. Negative coefficients are valid in the algebra, while an ordinary electrical network requires admissible conductances. This series stays within the implemented quadratic subalgebra.
+## Working in Google Colab
 
-## Complete programs and tests
+[Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb) · [Download notebook](https://raw.githubusercontent.com/magin67/pmg-notes/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb)
 
-From the cloned repository root, in PowerShell:
+Open the notebook and run all cells. Its first cell installs the package version; the diagram, calculation, and checks follow. Save a copy to Google Drive or download the `.ipynb` to edit your own version.
 
-```powershell
-.\.venv\Scripts\python.exe -m examples.introductory.note01_weighted_chain
-.\.venv\Scripts\python.exe -m examples.introductory.note05_triangle_geometry
-.\.venv\Scripts\python.exe -m examples.introductory.note06_single_edge
-.\.venv\Scripts\python.exe -m examples.introductory.note07_two_edges
-.\.venv\Scripts\python.exe -m examples.introductory.note10_path_cycle
-.\.venv\Scripts\python.exe -m examples.introductory.note10_edge_deletion
-.\.venv\Scripts\python.exe -m pytest tests/introductory -q
-```
-
-On Linux/macOS replace the interpreter path with `.venv/bin/python`. Omit `tests/introductory` to run all tests. Programs print their results; pytest checks expected values. See [[Weighted Chain in Python]] and [[Triangle Coupling Variations in Python]] for the mathematical discussion.
-
-## Google Colab
-
-Open [Google Colab](https://colab.research.google.com/), create a Python notebook, and connect a standard CPU runtime. These examples do not need a GPU. Execute cells in order, for example with Shift+Enter.
-
-### Your own calculations
-
-Install the library in the first cell:
+In a new blank notebook, use this installation cell:
 
 ```python
-%pip install "polyform_algebra @ git+https://github.com/magin67/polyform_algebra.git@d4c82cf51b2a049ca00f09d1ae752c9d23648f7a"
+%pip install -q "https://github.com/magin67/polyform_algebra/archive/refs/tags/v0.9.0.zip"
 ```
 
-Paste the code from “First calculation” into the second cell. The `%pip` command installs the package in the current [IPython kernel](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip). It is a notebook command and should not be copied into an ordinary `.py` file.
+Then run the chosen note’s fragments in order. Restart the runtime after changing an already imported package version. Colab runtimes are temporary: repeat installation in a new session. Mounting Google Drive is not required for the calculations.
 
-### Complete series programs and tests
+The notebook was checked by running all cells in a fresh local Python 3.12 kernel. Execution in a hosted Colab session was not separately checked.
 
-For this route, clone the sources instead of using the first installation cell. The installed package alone does not include `examples` and `tests`:
+## Checks and source code
 
-```python
-# Run once in a fresh runtime to obtain the example and test files.
-!git clone https://github.com/magin67/polyform_algebra.git /content/polyform-examples
-%cd /content/polyform-examples
-!git checkout d4c82cf51b2a049ca00f09d1ae752c9d23648f7a
-%pip install -e ".[dev]"
+The notes provide expected values and result checks. Complete programs and tests are available in the [version 0.9.0 sources](https://github.com/magin67/polyform_algebra/tree/v0.9.0/examples/introductory). They help explain the implementation but are not required to run the fragments or notebook.
+
+For development, download and extract the [source archive](https://github.com/magin67/polyform_algebra/archive/refs/tags/v0.9.0.zip), then run from the directory containing `pyproject.toml`:
+
+```bash
+python -m pip install -e ".[dev]"
+python -m pytest tests/introductory -q
 ```
 
-Run the programs and checks in the next cell:
+Here `python` means the selected environment’s interpreter. These steps are for working with the package tests.
 
-```python
-import subprocess
-import sys
+## Troubleshooting
 
-# Use the notebook kernel's interpreter and stop on failure.
-for module in (
-    "examples.introductory.note01_weighted_chain",
-    "examples.introductory.note05_triangle_geometry",
-    "examples.introductory.note06_single_edge",
-    "examples.introductory.note07_two_edges",
-    "examples.introductory.note10_path_cycle",
-    "examples.introductory.note10_edge_deletion",
-):
-    subprocess.run([sys.executable, "-m", module], check=True)
-subprocess.run(
-    [sys.executable, "-m", "pytest", "tests/introductory", "-q"],
-    check=True,
-)
-```
-
-Do not clone an existing directory again: omit the `git clone` line when repeating these steps. If the library was imported before changing its version, restart the Python session and execute the cells again.
-
-### Saving your work
-
-Save the notebook to Google Drive or download the `.ipynb` file. Colab runtimes are temporary: installed packages and files under `/content` can disappear with the runtime. Repeat installation and cell execution in a new runtime. These examples do not require mounting Google Drive. See the [official Colab FAQ](https://research.google.com/colaboratory/faq.html) for these runtime properties.
-
-## Validation and troubleshooting
-
-- `ModuleNotFoundError: polyform_algebra`: ensure installation and execution use the same environment. In Colab, run the installation cell first.
-- `examples.introductory` cannot be found: change to the cloned repository root; installing the package alone is insufficient.
-- `NameError` in a notebook: run earlier cells that create the objects.
-- Unexpected results: check the revision with `git rev-parse HEAD`, initial conductances, and cell execution order.
-
-The first calculation was checked locally. Colab instructions follow the service documentation; execution in a hosted Colab session has not been separately verified. Checking particular examples does not replace a mathematical proof.
+- `ModuleNotFoundError`: check that installation and execution use the same environment.
+- `NameError`: run the preceding cells in this note.
+- Unexpected result: check `polyform_algebra.get_version()`, conductances, and cell order.
+- `ValueError` on normalization after bridge deletion: this expected case is explained in [[Deleting an Edge and a Bridge in Python]].

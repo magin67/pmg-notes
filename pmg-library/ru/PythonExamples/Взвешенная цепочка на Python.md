@@ -1,8 +1,8 @@
 ---
 title: "Взвешенная цепочка на Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-weighted-chain
@@ -15,30 +15,12 @@ order: 2
 
 [[en/PythonExamples/Weighted Chain in Python|English]] · [[ru/PythonExamples/PythonExamples|Программные примеры]]
 
-## Код и запуск
 
-[Полная программа](https://github.com/magin67/polyform_algebra/blob/b5a4ccfd0207ef6250a97417834ff67b4d94482d/examples/introductory/note01_weighted_chain.py) и [тесты](https://github.com/magin67/polyform_algebra/blob/b5a4ccfd0207ef6250a97417834ff67b4d94482d/tests/introductory/test_weighted_chain.py) закреплены на ревизии `b5a4ccf`. Установка описана в [[Установка библиотеки и запуск примеров]]. Для этого примера нужна именно эта ревизия: в прежней `76c433d` файла цепочки ещё нет. В отдельной копии для примеров выполните `git fetch origin` и `git checkout b5a4ccfd0207ef6250a97417834ff67b4d94482d`.
+Пример проверен с `polyform_algebra 0.9.0`. Подготовка окружения: [[Установка библиотеки и запуск примеров]]. Ячейки Python выполняются по порядку.
 
-Из корня репозитория с Python выбранного окружения:
+[Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/weighted-chain.ipynb) · [Скачать блокнот](https://raw.githubusercontent.com/magin67/pmg-notes/v5/pmg-library/ru/PythonExamples/notebooks/weighted-chain.ipynb)
 
-```powershell
-python -m examples.introductory.note01_weighted_chain
-python -m pytest tests/introductory/test_weighted_chain.py -q
-```
-
-В Windows можно заменить `python` на `.\.venv\Scripts\python.exe`, в Linux/macOS - на `.venv/bin/python`. В Colab сначала выполните установку с клонированием исходников из общей инструкции, затем:
-
-```python
-import subprocess
-import sys
-
-subprocess.run(
-    [sys.executable, "-m", "examples.introductory.note01_weighted_chain"],
-    check=True,
-)
-```
-
-Для собственных вычислений достаточно установки пакета и следующего фрагмента; клонирование требуется для готовых программ и тестов.
+![[images/Взвешенная цепочка.svg]]
 
 ## От графа к метрической полиформе
 
@@ -97,7 +79,7 @@ import numpy as np
 matrix, index = laplacian.to_matrix()
 # Reorder rows and columns explicitly as vertices 1, 2, 3.
 order = [index[points[label]] for label in (1, 2, 3)]
-matrix = matrix[np.ix_(order, order)]
+matrix = np.asarray(matrix[np.ix_(order, order)], dtype=float)
 # Ground vertex 3 and inject 2 A at vertex 1.
 current = np.array([2.0, 0.0, -2.0])
 potential = np.append(np.linalg.solve(matrix[:2, :2], current[:2]), 0.0)
@@ -112,10 +94,29 @@ $$
 I_{12}=I_{23}=2,\qquad
 \mathcal Q=1(3-1)^2+2(1-0)^2=6
 $$
-Баланс мощности также даёт $\varphi^{\mathsf T}J=6$ и $I^2R_{13}=4\cdot3/2=6$. При проводимостях в сименсах потенциалы измеряются в вольтах, мощность - в ваттах. Численный решатель NumPy используется только в примере; общий интерфейс решения сети в библиотеку не добавляется.
+Баланс мощности также даёт $\varphi^{\mathsf T}J=6$ и $I^2R_{13}=4\cdot3/2=6$. При проводимостях в сименсах потенциалы измеряются в вольтах, мощность - в ваттах. Матрица получена средствами пакета; NumPy решает уравнения токов. Ниже эта матрица сверяется с независимым эталоном, составленным непосредственно из проводимостей.
 
 ## Проверки
 
 Три математических теста проверяют матрицу и сопротивления, остовной коэффициент и разложение экспоненты, уравнения токов и три способа вычисления мощности. Независимый эталон строит лапласиан явно, без преобразования полиформ: его минор даёт $\tau$, а три решения с единичным током проверяют все пары сопротивлений. Общие проверки примеров дополнительно проверяют запуск модуля и отсутствие вывода при импорте.
 
-**Статус: непосредственно вычислено.** На Python 3.12 прошли все 228 тестов проекта. Облачный запуск в Google Colab отдельно не проверялся. Вычисления используют существующую квадратичную алгебру и не расширяют её модель.
+
+
+```python
+from math import isclose
+
+reference = np.array([[1., -1., 0.], [-1., 3., -2.], [0., -2., 2.]])
+assert np.allclose(matrix, reference)
+assert np.allclose(reference @ potential, current)
+assert np.allclose(potential, [3., 1., 0.])
+assert isclose(float(metric.potential(quForm.one())), 2.)
+assert isclose(float(metric.norm(quForm([(points[1], points[3])]))), 1.5)
+assert isclose(float(potential @ reference @ potential), 6.)
+```
+
+
+## Попробуйте изменить
+
+Измените проводимость второго ребра с 2 на 4. Получите $R_{13}=5/4$ и мощность 5 при прежнем токе 2 А.
+
+Численные проверки относятся к этому примеру и не заменяют общего доказательства.

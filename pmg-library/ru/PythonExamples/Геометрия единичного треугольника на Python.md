@@ -1,8 +1,8 @@
 ---
 title: "Геометрия единичного треугольника на Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 1
+updated: 2026-11-09
+revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-unit-triangle-geometry
@@ -15,30 +15,14 @@ order: 3
 
 [[en/PythonExamples/Unit Triangle Geometry in Python|English]] · [[ru/PythonExamples/PythonExamples|Программные примеры]]
 
-## Код и запуск
 
-[Программа](https://github.com/magin67/polyform_algebra/blob/a678839a1eb3aab467a1b043bd1d0b9c7b5716ad/examples/introductory/note05_triangle_geometry.py) и [тесты](https://github.com/magin67/polyform_algebra/blob/a678839a1eb3aab467a1b043bd1d0b9c7b5716ad/tests/introductory/test_triangle_geometry.py) проверены на ревизии `a678839`. Следуйте [[Установка библиотеки и запуск примеров|общей инструкции установки]]. В существующей отдельной копии примеров выполните `git fetch origin`, затем `git checkout a678839a1eb3aab467a1b043bd1d0b9c7b5716ad`: более ранние ревизии могут не содержать этот модуль.
+Пример проверен с `polyform_algebra 0.9.0`. Подготовка окружения: [[Установка библиотеки и запуск примеров]]. Ячейки Python выполняются по порядку.
 
-Из корня репозитория с интерпретатором выбранного окружения:
+![[images/Векторы резистивного треугольника.svg]]
 
-```powershell
-python -m examples.introductory.note05_triangle_geometry
-python -m pytest tests/introductory/test_triangle_geometry.py -q
-```
+## Построение метрики
 
-В Windows вместо `python` можно использовать `.\.venv\Scripts\python.exe`, в Linux/macOS - `.venv/bin/python`. Для Colab выберите установку с клонированием исходников из общей инструкции и выполните:
-
-```python
-import subprocess
-import sys
-
-subprocess.run(
-    [sys.executable, "-m", "examples.introductory.note05_triangle_geometry"],
-    check=True,
-)
-```
-
-Следующий самостоятельный фрагмент можно выполнить в файле или ячейке после установки пакета:
+Сначала зададим вершины и три единичные проводимости.
 
 ```python
 from math import sqrt
@@ -51,24 +35,6 @@ f13 = quForm([(a, c)])
 f23 = quForm([(b, c)])
 metric = (f12 + f13 + f23).exp()
 u, v, w = b-a, c-a, c-b
-
-# @ creates a scalar polyform; norm evaluates it in the graph metric.
-uv = metric.norm(u @ v)
-gram = np.array([
-    [metric.norm(u @ u), uv],
-    [metric.norm(v @ u), metric.norm(v @ v)],
-])
-# Use the quadratic boundary form directly; no higher-grade @ is required.
-boundary_norm = metric.norm(quForm([(a, b, c)]))
-area_squared = boundary_norm / 4
-area = sqrt(area_squared)
-print("u dot v =", uv)
-print("u dot w =", metric.norm(u @ w))
-print("Gram matrix =", gram)
-print("Gram determinant =", np.linalg.det(gram))
-print("boundary norm =", boundary_norm)
-print("area squared =", area_squared)
-print("area =", area)
 ```
 
 ## Скалярные произведения и ориентация
@@ -88,6 +54,20 @@ $$
 \det\mathbf G=\frac13
 $$
 Векторы $u,v$ выходят из общей вершины, угол между ними равен $60^\circ$. Векторы $u,w$ направлены последовательно вдоль двух сторон; угол между свободными векторами равен $120^\circ$, поэтому скалярное произведение отрицательно. При замене $u$ на $-u$ знак $u\cdot v$ меняется, а норма $u^2$ сохраняется.
+
+```python
+# @ creates a scalar polyform; norm evaluates it in the graph metric.
+uv = metric.norm(u @ v)
+gram = np.array([
+    [metric.norm(u @ u), uv],
+    [metric.norm(v @ u), metric.norm(v @ v)],
+])
+print("u dot v =", uv)
+print("u dot w =", metric.norm(u @ w))
+print("Gram matrix =", gram)
+print("Gram determinant =", np.linalg.det(gram))
+
+```
 
 ## Граница и площадь
 
@@ -115,6 +95,16 @@ $$
 
 Для границы второго грейда здесь не используется `X @ X`: численная оценка поддерживаемой квадратичной формы доступна без поляризации высших грейдов.
 
+```python
+# Use the quadratic boundary form directly; no higher-grade @ is required.
+boundary_norm = metric.norm(quForm([(a, b, c)]))
+area_squared = boundary_norm / 4
+area = sqrt(area_squared)
+print("boundary norm =", boundary_norm)
+print("area squared =", area_squared)
+print("area =", area)
+```
+
 ## Почему нормы нельзя просто перемножить
 
 Произведение $f_{12}f_{13}$ является квадратичной формой границы треугольника. Но метрическая оценка произведения не равна произведению оценок:
@@ -129,4 +119,10 @@ $$
 
 Тесты сравнивают результаты с обратным редуцированным лапласианом $\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$ и с явными координатами равностороннего треугольника со стороной $\sqrt{2/3}$. Площадь проверяется через определитель координат рёбер и формулу $S^2=3\ell^4/16$. Все шесть перестановок вершин сохраняют квадратичную норму границы и определитель Грама.
 
-**Статус: непосредственно вычислено.** На Python 3.12 прошли 238 тестов проекта, включая восемь проверок этого примера и общие проверки запуска и импорта. Кодовые фрагменты заметки проверены локально; сеанс Google Colab отдельно не запускался. Ядро квадратичной алгебры не изменялось.
+
+
+## Попробуйте изменить
+
+Замените $u$ на $-u$. Проверьте смену знака смешанного произведения и сохранение площади.
+
+Численные проверки относятся к этому примеру и не заменяют общего доказательства.

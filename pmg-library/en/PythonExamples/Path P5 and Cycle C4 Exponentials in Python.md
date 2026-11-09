@@ -1,9 +1,9 @@
 ---
 title: "Path P5 and Cycle C4 Exponentials in Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 1
-source_revision: 1
+updated: 2026-11-09
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-path-cycle-exponentials
@@ -16,28 +16,10 @@ This example reproduces the path $P_5$ and four-cycle $C_4$ from [[Laplacian Exp
 
 [[ru/PythonExamples/Экспоненты пути P5 и цикла C4 на Python|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 
-## Code and execution
 
-The [complete program](https://github.com/magin67/polyform_algebra/blob/95cea4c37e8b743a4ede2bf01392c8b3babdcfb3/examples/introductory/note10_path_cycle.py) and [tests](https://github.com/magin67/polyform_algebra/blob/95cea4c37e8b743a4ede2bf01392c8b3babdcfb3/tests/introductory/test_path_cycle_exponentials.py) are pinned to revision `95cea4c`. See [[Installing the Library and Running Examples]] for setup. In an existing separate examples checkout, run `git fetch origin`, then `git checkout 95cea4c37e8b743a4ede2bf01392c8b3babdcfb3`.
+This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Installing the Library and Running Examples]]. Run the Python cells in order.
 
-From the repository root, using the selected environment's Python:
-
-```powershell
-python -m examples.introductory.note10_path_cycle
-python -m pytest tests/introductory/test_path_cycle_exponentials.py -q
-```
-
-On Windows you can use `.\.venv\Scripts\python.exe`; on Linux/macOS use `.venv/bin/python`. In Colab, after following the source-cloning route in the setup guide:
-
-```python
-import subprocess
-import sys
-
-subprocess.run(
-    [sys.executable, "-m", "examples.introductory.note10_path_cycle"],
-    check=True,
-)
-```
+![[images/Path and cycle in the forest expansion.svg]]
 
 ## Construction and grade expansion
 
@@ -134,4 +116,10 @@ For neighboring cycle vertices, paths of resistance 1 and 3 are in parallel, so 
 
 Tests independently enumerate edge subsets, reject cycles, and construct forms from connected components. They check the grade components themselves, their forest weights, the identities $M_k=L^k/k!$, and exponential factorization. Separate numerical Laplacians provide cofactors for $\tau$ and unit-current solutions for every pair resistance.
 
-**Status: computed directly** for unit-conductance $P_5$ and $C_4$. All 246 tests passed on Python 3.12, including six new mathematical checks and example execution and import checks. The note's code was run locally; a hosted Colab session was not separately checked. The library core was unchanged.
+
+
+## Try changing the input
+
+Double one cycle conductance. The number of spanning trees remains 4, but their total weight becomes 7.
+
+These numerical checks concern this example and do not replace a general proof.

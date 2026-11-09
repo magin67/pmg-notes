@@ -1,9 +1,9 @@
 ---
 title: "Programming Examples"
 date: 2026-10-29
-updated: 2026-11-03
-revision: 8
-source_revision: 7
+updated: 2026-11-09
+revision: 9
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -39,12 +39,16 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 
 [[Deleting an Edge and a Bridge in Python]] compares cycle-edge and bridge deletion: resistance changes, preservation of isolated vertices, and unavailable global normalization after disconnection.
 
-## Code and reproducibility
+## How an example is organized
 
-The complete code lives in the [Python library repository](https://github.com/magin67/polyform_algebra). Notes link to a specific tested revision rather than a moving branch. Updating an example requires checking its results again and updating both language versions together.
+Problem and diagram → mathematical objects → calculation with `polyform_algebra` → expected results → independent check. Run each note’s fragments in order. NumPy and direct enumeration are used where they provide a separate way to check the answer.
 
-These calculations use the supported quadratic subalgebra. The presence of more general forms in the [[Core specification|specification]] does not imply that they have already been implemented.
+## Version and ready-to-run notebooks
 
-## Section status
+All examples in this section were checked with `polyform_algebra 0.9.0` on Python 3.12. The shared guide covers installation; version information is updated together with checks of both language editions.
 
-The series lives in the `ru/PythonExamples` and `en/PythonExamples` folders of the PMG library. Russian and English versions are maintained together. The initial numerical examples were checked on Python 3.12. A computation for a particular case does not replace a general proof.
+The weighted-chain notebook includes explanations, formulas, a diagram, and saved results:
+
+[Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb) · [Download notebook](https://raw.githubusercontent.com/magin67/pmg-notes/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb)
+
+The other examples currently provide executable fragments in the notes. A calculation for one case does not prove a general formula. Program capabilities should be distinguished from the general model in the [[Core specification|PMG specification]].

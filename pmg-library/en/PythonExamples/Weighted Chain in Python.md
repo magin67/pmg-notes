@@ -1,9 +1,9 @@
 ---
 title: "Weighted Chain in Python"
 date: 2026-10-29
-updated: 2026-10-29
-revision: 1
-source_revision: 1
+updated: 2026-11-09
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-weighted-chain
@@ -16,30 +16,12 @@ This example reproduces the path $1-2-3$ with conductances $c_{12}=1$, $c_{23}=2
 
 [[ru/PythonExamples/Взвешенная цепочка на Python|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 
-## Code and execution
 
-The [complete program](https://github.com/magin67/polyform_algebra/blob/b5a4ccfd0207ef6250a97417834ff67b4d94482d/examples/introductory/note01_weighted_chain.py) and [tests](https://github.com/magin67/polyform_algebra/blob/b5a4ccfd0207ef6250a97417834ff67b4d94482d/tests/introductory/test_weighted_chain.py) are pinned to revision `b5a4ccf`. See [[Installing the Library and Running Examples]] for setup. This example requires that revision: the earlier `76c433d` does not contain the chain module. In a separate examples checkout, run `git fetch origin` and `git checkout b5a4ccfd0207ef6250a97417834ff67b4d94482d`.
+This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Installing the Library and Running Examples]]. Run the Python cells in order.
 
-From the repository root, using the selected environment's Python:
+[Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb) · [Download notebook](https://raw.githubusercontent.com/magin67/pmg-notes/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb)
 
-```powershell
-python -m examples.introductory.note01_weighted_chain
-python -m pytest tests/introductory/test_weighted_chain.py -q
-```
-
-On Windows replace `python` with `.\.venv\Scripts\python.exe` if needed; on Linux/macOS use `.venv/bin/python`. In Colab, first follow the source-cloning route in the setup guide, then run:
-
-```python
-import subprocess
-import sys
-
-subprocess.run(
-    [sys.executable, "-m", "examples.introductory.note01_weighted_chain"],
-    check=True,
-)
-```
-
-For your own calculations, installing the package and running the next fragment is sufficient; the complete programs and tests require the checkout.
+![[images/Weighted chain.svg]]
 
 ## From graph to metric polyform
 
@@ -98,7 +80,7 @@ import numpy as np
 matrix, index = laplacian.to_matrix()
 # Reorder rows and columns explicitly as vertices 1, 2, 3.
 order = [index[points[label]] for label in (1, 2, 3)]
-matrix = matrix[np.ix_(order, order)]
+matrix = np.asarray(matrix[np.ix_(order, order)], dtype=float)
 # Ground vertex 3 and inject 2 A at vertex 1.
 current = np.array([2.0, 0.0, -2.0])
 potential = np.append(np.linalg.solve(matrix[:2, :2], current[:2]), 0.0)
@@ -113,10 +95,29 @@ $$
 I_{12}=I_{23}=2,\qquad
 \mathcal Q=1(3-1)^2+2(1-0)^2=6
 $$
-Power balance also gives $\varphi^{\mathsf T}J=6$ and $I^2R_{13}=4\cdot3/2=6$. With conductances in siemens, potentials are in volts and power in watts. The NumPy solver is used only in the example; no general network-solving API is added to the library.
+Power balance also gives $\varphi^{\mathsf T}J=6$ and $I^2R_{13}=4\cdot3/2=6$. With conductances in siemens, potentials are in volts and power in watts. The package supplies the matrix; NumPy solves the current equations. Below, this matrix is compared with an independent reference built directly from the conductances.
 
 ## Checks
 
 Three mathematical tests check the matrix and resistances, spanning-tree coefficient and exponential factorization, current equations, and three ways of computing power. The independent reference constructs the Laplacian explicitly without converting polyforms: its cofactor gives $\tau$, while three unit-current solves check all pair resistances. General example checks also verify module execution and silent imports.
 
-**Status: computed directly.** All 228 project tests passed on Python 3.12. Execution in a hosted Google Colab session has not been separately checked. Calculations use the existing quadratic algebra without extending its model.
+
+
+```python
+from math import isclose
+
+reference = np.array([[1., -1., 0.], [-1., 3., -2.], [0., -2., 2.]])
+assert np.allclose(matrix, reference)
+assert np.allclose(reference @ potential, current)
+assert np.allclose(potential, [3., 1., 0.])
+assert isclose(float(metric.potential(quForm.one())), 2.)
+assert isclose(float(metric.norm(quForm([(points[1], points[3])]))), 1.5)
+assert isclose(float(potential @ reference @ potential), 6.)
+```
+
+
+## Try changing the input
+
+Change the second conductance from 2 to 4. Obtain $R_{13}=5/4$ and power 5 for the same current of 2 A.
+
+These numerical checks concern this example and do not replace a general proof.
