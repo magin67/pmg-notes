@@ -1,9 +1,9 @@
 ---
 title: "Eigenspaces, Projectors, and Reconstruction of Polyforms"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 5
+updated: 2026-11-09
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -211,6 +211,25 @@ $$
 Thus $S_{\lambda,k}$ is basis-independent and vanishes for $k>m_\lambda$. The auxiliary metric identification on the exterior power sends it to the orthogonal projector $\Lambda^k\mathbf E_\lambda$ onto $\Lambda^kH_\lambda$. Its rank is $\binom{m_\lambda}{k}$.
 
 The spaces $H_\lambda$ are also orthogonal in the resistance metric, because on each one this metric differs from the coordinate metric by the constant factor $\lambda^{-1}$. However, identifying a **form** with an operator depends on the metric: under resistance contraction, $S_\lambda$ corresponds to $\lambda^{-1}\mathbf E_\lambda$, not $\mathbf E_\lambda$.
+
+## The second grade of C4: counting directions
+
+Before the general formula, return to the cycle modes already chosen: $u,v$ have eigenvalue $2$, and $w$ has eigenvalue $4$. Put $A=[u]^2$, $B=[v]^2$, $C=[w]^2$. Then $L=2A+2B+4C$. To obtain grade two, select two distinct directions:
+
+| Choice of directions | Form term | Coordinate evaluation |
+|---|---|---:|
+| Both from the two-dimensional eigenspace of $2$ | $(2A)(2B)=4AB$ | $4$ |
+| One from that space and one from the eigenspace of $4$ | $(2A)(4C)+(2B)(4C)=8(A+B)C$ | $16$ |
+
+Hence
+
+$$
+M_2=4AB+8(A+B)C=4S_{2,2}+8S_{2,1}S_{4,1},\qquad p_2=4+16=20
+$$
+
+Here $S_{2,1}=A+B$, $S_{2,2}=AB$, $S_{4,1}=C$: the first index denotes the eigenvalue and the second the number of selected directions. The products $AB$, $AC$, $BC$ each have coordinate evaluation $1$. The form $(A+B)C$ already contains two choices, so an additional factor $2$ in front of it would count them twice. In the numerical evaluation these choices contribute $8+8=16$.
+
+The general expression below makes the same selection for eigenspaces of arbitrary dimensions.
 
 ## Symmetric polynomials with multiplicities
 

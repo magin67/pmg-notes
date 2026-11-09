@@ -1,9 +1,9 @@
 ---
 title: "Eigenmodes of Paths and Cycles"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 5
+updated: 2026-11-09
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -102,6 +102,14 @@ $$
 
 *Figure 1. All six coordinate-normalized modes of $P_6$, including the constant mode. Color indicates component sign; numerical labels are rounded to three decimal places. The Laplacian and Greenian eigenvalues are compared on the right. Both matrices vanish on the constant mode, while all other multipliers are reciprocal.*
 
+## Reflecting a mode at the ends of a path
+
+The conditions $f_0=f_1$ and $f_{n+1}=f_n$ have a simple geometric meaning: values are reflected across the midpoint between positions $0,1$ and between positions $n,n+1$. This is why the cosine argument starts half a step earlier. Only function values are extended; no vertices or edges are added to the path.
+
+![[images/A cosine path mode reflected at the endpoints.svg]]
+
+*Figure 2. Two coordinate-normalized modes of $P_6$. Filled dots are values at the six vertices; open dots are auxiliary values at positions $0$ and $7$. The vertical dashed lines lie at positions $1/2$ and $13/2$; the nearest values on either side of each line agree. The curves show the cosine extension and explain the shift, but do not introduce additional graph points.*
+
 ## Periodic modes of a cycle
 
 For a cycle, the difference formula holds for every $r$ with periodic indices: $f_0=f_n$ and $f_{n+1}=f_1$. Its periodic solutions have angles $\vartheta_k=2\pi k/n$ and eigenvalues
@@ -142,7 +150,7 @@ $$
 
 ![[images/Real Modes of the Cycle C6.svg]]
 
-*Figure 2. A real basis for the cycle $C_6$. The top row shows the one-dimensional constant and alternating modes; the next two rows contain cosine-sine pairs for eigenvalues $1$ and $3$. Components are coordinate-normalized and rounded to three decimal places. Vertex labels agree across all diagrams.*
+*Figure 3. A real basis for the cycle $C_6$. The top row shows the one-dimensional constant and alternating modes; the next two rows contain cosine-sine pairs for eigenvalues $1$ and $3$. Components are coordinate-normalized and rounded to three decimal places. Vertex labels agree across all diagrams.*
 
 The odd cycle $C_5$ has only two pairs of nonzero modes:
 
@@ -154,7 +162,7 @@ $$
 
 ![[images/Paired Modes of the Odd Cycle C5.svg]]
 
-*Figure 3. The four nonzero modes of $C_5$, grouped into two pairs. Together with the constant mode $1/\sqrt5$, they form a complete basis. There is no separate alternating direction with eigenvalue $4$. Component labels are rounded to three decimal places.*
+*Figure 4. The four nonzero modes of $C_5$, grouped into two pairs. Together with the constant mode $1/\sqrt5$, they form a complete basis. There is no separate alternating direction with eigenvalue $4$. Component labels are rounded to three decimal places.*
 
 ## Projectors and a common basis for the Laplacian and Greenian
 
@@ -297,7 +305,7 @@ $$
 
 After transfer, $\mathcal C(D(t))=\exp(t\mathrm{Gr})$. In the cyclic expression, the complementary direction set is specified by $a_k\mapsto2-a_k$ and $b\mapsto\epsilon_n-b$. For a path, the selected set of one-dimensional modes is complemented. In both cases direct grade $d-g$ corresponds to dual grade $g$, with the diagonal coefficient divided by $\Delta$, the product of the nonzero eigenvalues.
 
-The parameter $t$ marks the grade: the dual pair here is taken at $t=1$. Multiplying conductances by $s>0$ gives the mutually dual pair $M(s)$ and $D(s^{-1})$; see the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality#The grade parameter and rescaling a dual pair|parameter convention]].
+Here $t$ marks the grade, and the dual pair is taken at $t=1$. Conductance scale $s>0$ gives the pair $M(s)$, $D(s^{-1})$; see the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality#The grade parameter and rescaling a dual pair|parameter convention]].
 
 A path has one spanning tree; removing any of the $n$ edges of a cycle produces a tree. Kirchhoff's theorem therefore gives
 
@@ -384,7 +392,7 @@ For $C_6$, the spectral contributions are
 
 ![[images/Spectral Contributions to Resistances in P6 and C6.svg]]
 
-*Figure 4. Distribution of resistance among path modes and cycle eigenspaces. For the endpoints of $P_6$, the first mode provides the largest share; for the central edge, the three odd modes contribute equally. For $C_6$, the full contributions of paired eigenspaces and the separate mode $4$ are shown. Labels give exact values; segment heights use their numerical values. The vertical scales of the two panels differ.*
+*Figure 5. Distribution of resistance among path modes and cycle eigenspaces. For the endpoints of $P_6$, the first mode provides the largest share; for the central edge, the three odd modes contribute equally. For $C_6$, the full contributions of paired eigenspaces and the separate mode $4$ are shown. Labels give exact values; segment heights use their numerical values. The vertical scales of the two panels differ.*
 
 For $C_5$, the formula gives $R=4/5$ for neighbors and $R=6/5$ for vertices two edges apart. The absence of an alternating mode agrees with the fact that the full resistance comes from two paired eigenspaces.
 

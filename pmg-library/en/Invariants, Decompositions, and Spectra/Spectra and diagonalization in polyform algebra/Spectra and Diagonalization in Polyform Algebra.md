@@ -1,9 +1,9 @@
 ---
 title: "Spectra and Diagonalization in Polyform Algebra"
 date: 2026-10-30
-updated: 2026-11-01
-revision: 4
-translated_revision: 2
+updated: 2026-11-09
+revision: 5
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -106,12 +106,12 @@ Reconstructing the operator itself, the conductances, and individual resistances
 
 The series forms a general spectral section following [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|the Greenian and duality]] and [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]]. It covers the part of “Spectra of Paths and Cycles” developed here; its place among the other research directions is recorded in the [[ru/Карта библиотеки PMG|project map (in Russian)]].
 
-The continuation is now presented in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]]: six notes distinguish the full forest passport, its spanning-tree layer, and separate data for the characteristic polynomial. This prepares the series “Chains of Cores.” The cospectral pair illustrates the limits of reconstruction and does not replace a separate study of chains.
+Published continuations are [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]], [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]], and [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers]]. The first series introduces the full forest passport and separate boundary spectral data; the other two study gluing cores and distinguishing their isomers. Ordinary forest states must be distinguished from characteristic polynomials and their boundary data. The cospectral pair in the present series illustrates limits of reconstruction and does not replace the study of chains.
 
-The research directions “Chains of Cores,” “Spectra of Isomers,” and “Spectra of Bipartite Graphs and Mutual Projections” remain separate. Their applications are not automatically included in these six notes.
+“Spectra of Bipartite Graphs and Mutual Projections” remains a separate research direction in the [[ru/Карта библиотеки PMG|library map (in Russian)]]. Its results are not assumed to have been established in these six notes.
 
 ## Sources and reproducibility
 
 The spectral theorem, spectral projectors, exterior powers, formulas for paths and cycles, Chebyshev polynomials, and orthogonal projections belong to classical theory. Precise references to external work and proofs are given in the relevant notes; the series reconciles these constructions with PMG forms, metrics, and normalizations.
 
-The [series verification folder](https://github.com/magin67/pmg-notes/tree/v5/checks/spectral) contains seven verification scripts and the figure-generation programs. They check independent edge and spectral decompositions, grades and dual contractions, forest coefficients, projectors, resistances, Chebyshev transformations, and projections onto the cone. The six notes contain 18 substantive figures. Finite computational checks confirm examples and do not replace general proofs.
+The [series verification folder](https://github.com/magin67/pmg-notes/tree/v5/checks/spectral) contains seven verification scripts and the figure-generation programs. They check independent edge and spectral decompositions, grades and dual contractions, forest coefficients, projectors, resistances, Chebyshev transformations, and projections onto the cone. The six notes contain 22 substantive figures. Finite computational checks confirm examples and do not replace general proofs.

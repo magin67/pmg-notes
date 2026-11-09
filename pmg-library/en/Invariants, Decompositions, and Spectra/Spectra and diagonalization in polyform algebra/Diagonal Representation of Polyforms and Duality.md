@@ -1,9 +1,9 @@
 ---
 title: "Diagonal Representation of Polyforms and Duality"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 5
+updated: 2026-11-09
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -101,6 +101,18 @@ The first mode distinguishes the endpoints; the second distinguishes the middle 
 *Figure 1. Eigenvector components at the path vertices. Blue means a positive component, orange a negative one, and grey zero; the numbers are exact. The multipliers of the Laplacian and Green matrices are shown on the right. The constant mode is separated from the two directions of the centered space.*
 
 One common basis serves two matrices with different eigenvalues. This already shows why sharing an eigenbasis does not mean having the same spectrum.
+
+## Three meanings of a power
+
+The example $P_3$ distinguishes operations that will appear side by side below. Let $L=[u_1]^2+3[u_2]^2$, and let $\mathbf L$ be its matrix in the coordinate metric.
+
+| Operation | What it acts on | Result for $P_3$ |
+|---|---|---|
+| Matrix power $\mathbf L^2$ | Applies the operator twice to a vector in $H$ | $\mathbf L^2\mathbf u_1=\mathbf u_1$, $\mathbf L^2\mathbf u_2=9\mathbf u_2$ |
+| Exterior product of forms $L^2$ | Multiplies two grade-one forms to give a grade-two form | $L^2=6[u_1u_2]^2$ |
+| Exterior power of the operator $\Lambda^2(\mathbf L\vert_H)$ | Applies $\mathbf L$ to each of the two exterior factors | $u_1u_2\mapsto3u_1u_2$ |
+
+In the last row, eigenvalues **multiply**. The corresponding form is $M_2=L^2/2!=3[u_1u_2]^2$: the factor $2!$ removes the two orders of selecting the directions. Thus a matrix power remains an operator on $H$, whereas a grade of the exterior exponential describes the action on exterior products of that many directions. All identifications in this table use the coordinate metric.
 
 ## Diagonal forms and symmetric polynomials of the grades
 

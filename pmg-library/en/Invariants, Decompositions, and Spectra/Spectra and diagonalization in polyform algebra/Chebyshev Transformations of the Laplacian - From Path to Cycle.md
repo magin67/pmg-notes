@@ -1,9 +1,9 @@
 ---
 title: "Chebyshev Transformations of the Laplacian: From Path to Cycle"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 5
+updated: 2026-11-09
+revision: 2
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -162,6 +162,24 @@ $$
 
 Indices on the left denote eigenvalues; indices on the right denote path modes. A sine-cosine basis for the standard labeling of $C_6$ is obtained after permuting vertices and choosing a basis in each two-dimensional eigenspace.
 
+## A folding example: twelve vertices and six pairs
+
+For $P_6$, the auxiliary cycle has positions $j=0,\ldots,11$. Reflection $j\mapsto-j-1\pmod{12}$ groups them into pairs:
+
+| Positions on the doubled cycle | $\{0,11\}$ | $\{1,10\}$ | $\{2,9\}$ | $\{3,8\}$ | $\{4,7\}$ | $\{5,6\}$ |
+|---|---|---|---|---|---|---|
+| Vertex after folding | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ |
+
+For step $m=1$, position $0$ has neighbors $11$ and $1$. The first belongs to the same pair and the second to the next pair. If function values are constant on each pair, the operator row becomes $2f_1-f_1-f_2=f_1-f_2$: the connection within a pair reduces the diagonal. This gives an endpoint of the path. Interior vertices give the usual rows $2f_i-f_{i-1}-f_{i+1}$.
+
+For step $m=3$, the same position has neighbors $3$ and $9$, mapped to vertices $4$ and $3$. The row becomes $2f_1-f_4-f_3$. Applying the rule to the remaining pairs gives the cycle $1-3-6-4-1$ and the separate edge $2-5$.
+
+![[images/Folding the doubled cycle for P6.svg]]
+
+*Figure 2. Step graphs on twelve positions are shown on the left, and the results of merging reflected pairs on the right. The color and label $j\to i$ at each position identify its final vertex. Gray dashed edges within one pair cancel in the Laplacian. Conductances count transitions from one vertex of a class: two reflected edges between classes give conductance $1$, not $2$.*
+
+In the general notation below, pair representatives are numbered from zero: representative $i$ corresponds to path vertex $i+1$. Only the indexing convention changes.
+
 ## Folding the doubled cycle
 
 For general $m$, use indices $j\in\mathbb Z/(2n)$ and the reflection $j\mapsto-j-1$. It fixes no vertex, so every reflection orbit contains two vertices. Let $\pi_n(j)$ be the unique orbit representative among $0,\ldots,n-1$. Representative $i$ corresponds to vertex $i+1$ of the original path.
@@ -239,7 +257,7 @@ This gives edges of conductance $2$ between mirror vertices. For odd $n$, the ce
 
 ![[images/Graphs in the Chebyshev Orbit of P6.svg]]
 
-*Figure 2. Steps $m=1,\ldots,5$ and the extreme step $m=6$ for $P_6$. Original vertex labels are preserved. At $m=3$ the result is $P_2$ and $C_4$; at $m=4$, two triangles. In both cases the Laplacian has rank $4$ and is singular on the five-dimensional space $H$. More components mean a higher multiplicity of the zero eigenvalue. Labels 2 on the last diagram denote conductances.*
+*Figure 3. Steps $m=1,\ldots,5$ and the extreme step $m=6$ for $P_6$. Original vertex labels are preserved. At $m=3$ the result is $P_2$ and $C_4$; at $m=4$, two triangles. In both cases the Laplacian has rank $4$ and is singular on the five-dimensional space $H$. More components mean a higher multiplicity of the zero eigenvalue. Labels 2 on the last diagram denote conductances.*
 
 ## Transforming diagonal polyforms
 
@@ -284,7 +302,7 @@ $$
 
 The centered identification $\mathcal C:a_i^\vee\mapsto a_i-h$, $h=n^{-1}\sum_i a_i$, sends $A_k^\vee$ to $A_k$ and $D^{(m)}(t)$ to $\exp(t\mathrm{Gr}^{(m)})$. It uses the fixed coordinate metric; resistance pairing changes with $\mathbf{Gr}^{(m)}$.
 
-Here $t$ is the grade parameter of the dual pair at $t=1$. Multiplying conductances by $s>0$ gives the pair $M^{(m)}(s)$, $D^{(m)}(s^{-1})$; see the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality#The grade parameter and rescaling a dual pair|parameter convention]].
+Here $t$ marks the grade, and the dual pair is taken at $t=1$. Conductance scale $s>0$ gives the pair $M^{(m)}(s)$, $D^{(m)}(s^{-1})$; see the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality#The grade parameter and rescaling a dual pair|parameter convention]].
 
 For a set $I\subseteq\{1,\ldots,d\}$ and its complement $I^c$,
 

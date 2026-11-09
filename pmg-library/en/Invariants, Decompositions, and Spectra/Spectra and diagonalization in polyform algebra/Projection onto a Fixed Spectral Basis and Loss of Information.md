@@ -1,9 +1,9 @@
 ---
 title: "Projection onto a Fixed Spectral Basis and Loss of Information"
 date: 2026-10-30
-updated: 2026-10-30
-revision: 1
-translated_revision: 4
+updated: 2026-11-09
+revision: 2
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -55,6 +55,18 @@ $$
 $$
 
 Here $\|\cdot\|_F$ is a linear matrix norm. This is an auxiliary coordinate geometry on the space of operators. It differs from the PMG resistance metric defined by $\mathbf{Gr}=\mathbf L^+$ on $H$; the conventions for these identifications are given in [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]].
+
+## Three projection problems
+
+Before calculating, distinguish three operations. Block projection requires a reference Laplacian $\mathbf L_0$ whose eigenbasis is chosen as $\mathbf U$; its repeated eigenspaces define the blocks.
+
+| Operation | What it retains or changes | What is known about the result |
+|---|---|---|
+| Diagonal projection $\Pi_U$ | Retains the diagonal of $\mathbf S$ and removes all mixed coefficients | The nearest operator diagonal in the chosen basis; graph signs must be checked |
+| Block projection $\Pi_{\mathrm{blk}}$ | Retains the matrix within each eigenspace of $\mathbf L_0$ and removes connections between them | Independent of the basis within a block; graph signs must still be checked |
+| Projection onto the spectral cone | Chooses the nearest admissible diagonal, changing its values if necessary | Gives a graph Laplacian in the chosen basis; connectedness is checked separately |
+
+Here “nearest” always refers to Frobenius distance. We first derive diagonal projection and its correction to a point of the cone. We then compare them with retaining an entire block in the same example. Block projection is formally defined in [[#Multiplicities and projection onto eigenspaces]].
 
 ## Diagonal projection and the exact error
 
@@ -189,6 +201,12 @@ The trace of the unconstrained projection equals the original trace $18$, wherea
 
 *Figure 1. The original cycle with an additional conductance of $5$, its unconstrained diagonal projection, and the nearest graph in the cone. The dashed orange links in the middle diagram have negative coefficients. These links are absent from the nearest admissible graph. The vertex labels are the same in all three diagrams.*
 
+The first two modes belong to the same eigenvalue of the reference cycle. Thus the mixed coefficients $-4$ lie within one block. Block projection retains them and returns the original graph in this example; diagonal projection removes them, and projection onto the cone also changes the diagonal.
+
+![[images/Three projections in one basis.svg]]
+
+*Figure 2. The three operations compared for the same matrix $\mathbf S$. The outline marks the two-dimensional eigenspace of the reference cycle. Colored cells show which entries are retained, removed, or changed. Block projection has zero error here because there are already no mixed coefficients between different blocks; this is a feature of this example.*
+
 ## Different graphs with the same projection
 
 Replace the two mixed coefficients $-4$ by a parameter $r$:
@@ -236,7 +254,7 @@ The graph at $r=-4$ has no edge $\{2,4\}$, whereas all six edges are present at 
 
 ![[images/Different Graphs with One Spectral Projection.svg]]
 
-*Figure 2. Two members of the family $\mathbf S_r$ have the same diagonal projection but different conductances, spanning-tree coefficients, and resistances. The right panel shows how two resistances vary over the full admissible parameter interval. The marked points identify the graphs in the table.*
+*Figure 3. Two members of the family $\mathbf S_r$ have the same diagonal projection but different conductances, spanning-tree coefficients, and resistances. The right panel shows how two resistances vary over the full admissible parameter interval. The marked points identify the graphs in the table.*
 
 In this family, equal projections accompany different spectra. A different loss of data is illustrated by the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Eigenspaces, Projectors, and Reconstruction of Polyforms#Cospectral graphs with different forest polynomials|cospectral pair on four vertices]]: there the spectrum is the same, but its assignment to eigenspaces differs. Having the same spectrum and having the same projection onto a prescribed basis are different conditions.
 
@@ -292,6 +310,10 @@ $$
 Projection of the already formed second grade removes the final mixed term but retains the coefficient $40-r^2$. Constructing $\widehat M_2$ from the projected first grade replaces this coefficient by $40$. The top grade is already one-dimensional, so $\Pi_U^{(3)}(M_3)=M_3$, whereas $\widehat M_3=160[u_1u_2u_3]^2$.
 
 Consequently, projection is not a homomorphism of the polyform algebra: it does not commute with multiplication or the exterior exponential. To discuss projection of an arbitrary polyform, its action on each grade must be defined separately; diagonalizing the first grade alone is insufficient.
+
+![[images/Projection of a grade and grade of a projection.svg]]
+
+*Figure 4. Two orders of operations for the coefficient of $[u_1u_2]^2$. The upper route builds grade two before removing its mixed terms; the lower route removes $r$ in grade one before building grade two. At $r=-4$ the results are $24$ and $40$. This compares unconstrained diagonal projection; correction to the nearest graph in the cone is not included.*
 
 ## What is preserved in the scalar coefficients
 
@@ -410,7 +432,7 @@ The full matrix $\mathbf S$ in a fixed basis stores the original operator. Its d
 
 A centered symmetric operator has $d(d+1)/2$ independent coordinates; diagonal projection retains $d$ of them. The discarded $d(d-1)/2$ mixed coordinates affect eigendirections, forest coefficients, conductances, and resistances. Equal diagonal projections therefore imply neither equal spectra nor graph isomorphism. Comparisons require consistent vertex labels and a consistent choice of basis.
 
-Diagonal and block projections, projection onto a convex cone, Hadamard's inequality, and inversion formulas are classical matrix constructions. Here they are expressed in the language of polyforms, explicitly distinguishing projection of grades, the exterior exponential, and duality. Boundary polynomials and gluing, followed by spectra of chains of cores, remain separate continuations: ordinary forest states cannot be identified with characteristic boundary data without proof.
+Diagonal and block projections, projection onto a convex cone, Hadamard’s inequality, and inversion formulas are classical matrix constructions. Here they are expressed in the language of polyforms, distinguishing projection of grades, the exterior exponential, and duality. Published applications to graph gluing and comparison are given in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]], [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]], and [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers]]. Ordinary forest states are not identified with characteristic boundary data without proof.
 
 Exact computations independently compare edge matrices, projections, principal minors, exterior exponentials, and forest enumeration. The checks cover all 64 simple labeled graphs on four vertices in the chosen basis, 21 rational points of the family, and full polyform calculations for five admissible graphs and the unconstrained projection. Optimality of the projection onto the cone is proved using a half-space; computations verify its coordinates and every sign condition. The figures are constructed from these formulas.
 

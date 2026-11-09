@@ -2,13 +2,13 @@
 
 [Русский](README.md)
 
-These programs reproduce the mathematical checks and all 18 figures in the six-note series **Spectra and Diagonalization in Polyform Algebra**.
+These programs reproduce the mathematical checks and all 22 figures in the six-note series **Spectra and Diagonalization in Polyform Algebra**.
 
 Python 3.10 or later is required. Run commands from the repository root. Do not use -O: verification relies on assert. Verification scripts print JSON and do not write files.
 
-All seven draw_*.py programs accept --lang en for English figures and --lang ru for Russian figures (the default). Mathematical data and checks are shared; figure_labels_en.json supplies English labels, titles, and descriptions. Translation is applied before rendering, so mathematical labels are laid out normally rather than edited in the resulting SVG.
+All eight draw_*.py programs accept --lang en for English figures and --lang ru for Russian figures (the default). Mathematical data and checks are shared; figure_labels_en.json supplies English labels, titles, and descriptions for the original seven programs; draw_editorial.py contains its paired Russian and English labels. Translation is applied before rendering, so mathematical labels are laid out normally rather than edited in the resulting SVG.
 
-SVGs are saved beside the notes in the selected language. The optional --preview-dir PATH saves PNGs for visual inspection. Figure generation requires Matplotlib and runs the corresponding mathematical checks first. Approximate coordinates are used for curves and layout; mathematical parameters and labels are checked as described below.
+SVGs are saved in the images folder of the series in the selected language. The optional --preview-dir PATH saves PNGs for visual inspection. Figure generation requires Matplotlib and runs the corresponding mathematical checks first. Approximate coordinates are used for curves and layout; mathematical parameters and labels are checked as described below.
 
 ## Diagonal representation and duality on P3
 
@@ -96,3 +96,12 @@ For the C4 basis with rotated modes, exact checks cover spectral and edge expres
 The checks include 21 rational points of the family with common diagonal (10,4,4). For five admissible graphs and the unconstrained projection, all grades are compared through exterior powers, matrix minors, and independent edge expansions. Checks cover ordinary and rooted forest coefficients, both dual contractions, the centered identification, top-grade normalizations, metric evaluations, the Greenian, resistances, and the Kirchhoff index. Projection of each already formed grade is compared with the corresponding grade of the exponential of the projection.
 
 Enumeration of all 64 simple labeled graphs on four vertices checks trace preservation, idempotence, orthogonal error decomposition, inequalities for rooted coefficients, and the exact error expression through the second coefficient. For the 38 connected graphs, additional checks cover positivity of the diagonal evaluations and the inequality for the diagonal of the inverse matrix. The single-edge example on three vertices checks the possible rank increase after projection. These finite checks verify examples; the general statements are justified in the note.
+
+## Additional explanatory figures from the editorial pass
+
+    python checks/spectral/draw_editorial.py --lang ru
+    python checks/spectral/draw_editorial.py --lang en
+
+The script creates four figures per language: reflection of path modes at the endpoints, folding a step graph on the doubled cycle, comparison of three projections, and the difference between projection of a completed grade and the grade of a projection. SVGs are saved in the images folder of the corresponding series. The --preview-dir PATH option also saves PNGs for visual inspection. NumPy and Matplotlib are required.
+
+Before saving, the script checks equality of reflected modal values and normalization, and the conductances and edges of both folded graphs. The step-3 matrix is independently compared with a polynomial in the path matrix. Projection data and grade coefficients are checked by the existing verify_projection.py; the new figure also checks the numerical minor evaluation. The series contains 22 figures in each language.
