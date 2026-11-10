@@ -1,9 +1,9 @@
 ---
 title: "Forest Coefficients and Abel Polynomials"
 date: 2026-10-19
-updated: 2026-11-08
-revision: 3
-source_revision: 5
+updated: 2026-11-10
+revision: 4
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-and-abel-polynomials
@@ -242,6 +242,8 @@ A_4(x)&=125x+91x_{\underline2}+18x_{\underline3}+x_{\underline4}\\
 $$
 
 The two sets of coefficients refer to different bases of the polynomial space. Their combinatorial meanings also differ.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Symmetric Polyform Identities#Forest coefficients and Abel polynomials|Python example]].
 
 ## Ordinary coefficients and Stirling numbers
 

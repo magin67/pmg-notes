@@ -1,9 +1,9 @@
 ---
 title: Symmetric Polyforms
 date: 2026-10-20
-updated: 2026-11-08
-revision: 4
-source_revision: 6
+updated: 2026-11-10
+revision: 5
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-series-navigation
@@ -61,6 +61,10 @@ The [[Fundamental Theorem of Symmetric Polyforms#Statement and scope|general for
 ## Consequences and applications
 
 The [[Products and Powers of Symmetric Polyforms#A single generator|SPF algebra]] is described by polynomials with the rule $t^n=0$. For the complete graph, this yields a [[Symmetric Polyforms of the Complete Graph#The Laplacian and exponential of the complete graph|short exponential expansion]], whose top grade gives Cayley's formula. Comparison with the forest expansion leads to [[Forest Coefficients and Abel Polynomials#The expansion of Abel polynomials|Abel polynomials]]. The general count of ways to join prescribed components is given in a [[Cayley's Theorem and Joining Prescribed Components|separate combinatorial note]].
+
+## Programming companion
+
+[[en/PythonExamples/Example - Checking Symmetric Polyform Identities|Checking symmetric polyform identities]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/symmetric-polyforms.ipynb).
 
 ## Status and scope of the series
 

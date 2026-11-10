@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 13
+revision: 14
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -49,6 +49,10 @@ folder_order: 70
 ## Структурные тождества
 
 [[ru/PythonExamples/Пример - Проверка структурных тождеств|Структурные тождества на Python]]. Пять точных проверок по заметкам серии. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/structural-identities.ipynb).
+
+## Симметрические полиформы
+
+[[ru/PythonExamples/Пример - Проверка тождеств симметрических полиформ|Проверка тождеств симметрических полиформ]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/symmetric-polyforms.ipynb).
 
 ## Как устроен пример
 

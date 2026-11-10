@@ -1,9 +1,9 @@
 ---
 title: "Products and Powers of Symmetric Polyforms"
 date: 2026-10-19
-updated: 2026-11-08
-revision: 5
-source_revision: 6
+updated: 2026-11-10
+revision: 6
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: products-and-powers-of-symmetric-polyforms
@@ -435,6 +435,8 @@ $$
 The square is nonzero, but $\bigl(E_6[2]\bigr)^3=0$, since grade $6$ exceeds the dimension of the affine vector space, which is $5$.
 
 **Independent computational check.** For every $2\leqslant n\leqslant8$ and all $1\leqslant p,q\leqslant n-1$, the product was computed directly from the definition: pairs of subsets were enumerated, their boundaries were expanded in the exterior basis of vertices, and the quadratic form of the product was then expanded. All coefficients were compared with (1), including the vanishing cases. This checked $140$ ordered pairs of grades. Separately, repeated multiplication of the coefficient expressions for forms verified the powers of every $E_n[k]$ up to and including the first zero power. The computations used exact integer arithmetic and confirmed every equality in the stated range. This check supplements the general proof.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Symmetric Polyform Identities#Products and powers|Python example]].
 
 ## Metric evaluation and further applications
 

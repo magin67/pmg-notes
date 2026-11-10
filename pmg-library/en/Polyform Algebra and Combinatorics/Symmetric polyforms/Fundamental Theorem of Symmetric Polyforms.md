@@ -1,9 +1,9 @@
 ---
 title: "Fundamental Theorem of Symmetric Polyforms"
 date: 2026-10-19
-updated: 2026-11-08
-revision: 6
-source_revision: 10
+updated: 2026-11-10
+revision: 7
+source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: fundamental-theorem-of-symmetric-polyforms
@@ -35,6 +35,8 @@ The coefficient $3$ is obtained in the block-merging lemma as $\binom32$. The nu
 ![Sums of Forms on Five Vertices](<images/Sums of Forms on Five Vertices.svg>)
 
 Each row depicts one partition and denotes its quadratic form. The equality relates the sums of all rows; it does not pair individual forms row by row.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Symmetric Polyform Identities#The identity on five vertices|Python example]].
 
 ## Statement and scope
 

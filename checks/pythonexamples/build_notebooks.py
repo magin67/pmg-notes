@@ -36,6 +36,7 @@ def page_link(lang,target):
 PINNED_COMMITS = {
     'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
     'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
+    'symmetric-polyforms': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
 }
 
 COMPANIONS = (
@@ -47,6 +48,8 @@ COMPANIONS = (
     ('en', 'Example - Metric Parameters of Graphs', 'metric-parameters'),
     ('ru', 'Пример - Проверка структурных тождеств', 'structural-identities'),
     ('en', 'Example - Checking Structural Identities', 'structural-identities'),
+    ('ru', 'Пример - Проверка тождеств симметрических полиформ', 'symmetric-polyforms'),
+    ('en', 'Example - Checking Symmetric Polyform Identities', 'symmetric-polyforms'),
 )
 
 def revision_setup(commit):

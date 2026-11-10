@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 13
-translated_revision: 13
+revision: 14
+translated_revision: 14
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -50,6 +50,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Structural Identities
 
 [[en/PythonExamples/Example - Checking Structural Identities|Structural Identities in Python]]. Five exact checks from the notes in this series. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/structural-identities.ipynb).
+
+## Symmetric Polyforms
+
+[[en/PythonExamples/Example - Checking Symmetric Polyform Identities|Checking symmetric polyform identities]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/symmetric-polyforms.ipynb).
 
 ## How an example is organized
 

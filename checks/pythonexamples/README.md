@@ -12,7 +12,7 @@ python checks/pythonexamples/execute_notebooks.py
 
 Figure generation requires matplotlib. Notebook generation and execution require nbformat, nbclient, nbconvert, ipykernel, and a Python 3 Jupyter kernel using the selected environment. Install these development tools with pip if necessary.
 
-The notebook generator reads the weighted-chain, Spaces, Metric Parameters, and Structural Identities example notes. The explanations and computation cells come from those notes. The generator adds package setup to the notebooks and an editable graph drawing to the weighted-chain notebook. The executor starts a fresh kernel for each language, checks for error outputs, saves computed results, and exports HTML previews under this directory. Inspect those previews after regeneration. A local execution is not a hosted Colab test.
+The notebook generator reads the weighted-chain, Spaces, Metric Parameters, Structural Identities, and Symmetric Polyforms example notes. The explanations and computation cells come from those notes. The generator adds package setup to the notebooks and an editable graph drawing to the weighted-chain notebook. The executor starts a fresh kernel for each language, checks for error outputs, saves computed results, and exports HTML previews under this directory. Inspect those previews after regeneration. A local execution is not a hosted Colab test.
 
 The fragment checker executes each note in a separate namespace and checks key results. Package-level introductory tests independently check conductance matrices, currents, spanning-tree weights, areas, variations, and deletion. They complement the notes' own assertions.
 
@@ -23,3 +23,5 @@ The Spaces examples check exact potentials, nonorthogonal coordinates, the midpo
 The Metric Parameters notebooks pin an exact package commit. Their installer checks the distribution's recorded source URL, since the v0.9.0 tag and the development revision report the same version. The calculations check both sphere centers, degree potential, subset volume, centralities, compactness, vertex removal, and norms in the original graph metric.
 
 The Structural Identities notebooks check both sides of each identity, report a nonzero coefficient after a deliberate perturbation, and check exact rank, supports, and the spanning coefficient after rewriting a grove polyform.
+
+The Symmetric Polyforms notebooks compare both sides coefficient by coefficient, beginning with the five-vertex identity. They check type counts, principal-form coefficients, products, the complete-graph and cycle exponentials, and the falling-factorial expansion of Abel polynomials.

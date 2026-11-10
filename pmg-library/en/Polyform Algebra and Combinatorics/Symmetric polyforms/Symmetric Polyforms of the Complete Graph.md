@@ -1,9 +1,9 @@
 ---
 title: "Symmetric Polyforms of the Complete Graph"
 date: 2026-10-19
-updated: 2026-11-08
-revision: 5
-source_revision: 6
+updated: 2026-11-10
+revision: 6
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-of-the-complete-graph
@@ -179,6 +179,8 @@ At grade three, the forest representation has coefficient sum $16\cdot5+3\cdot10
 There is no contradiction: structural identities preserve the polyform, but not an arbitrary sum of the coefficients in its representation. The coefficient $5$ of $E_5[2]$ therefore cannot be interpreted as the number of trees on a triple: that number is $3$. The additional contribution arose from transforming forms of two disjoint edges.
 
 Numerical metric evaluation is a linear function of the form and is preserved under these transformations. Simply adding the coefficients of all forms in a chosen representation does not define such a function.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Symmetric Polyform Identities#Two expansions of the complete-graph exponential|Python example]].
 
 ## Expansion by forest type
 
@@ -447,6 +449,8 @@ $$
 The four terms in $E_4[2]$ correspond to pairs of adjacent edges, and the remaining two forms to pairs of opposite edges. These are all six two-edge forests, as in the [[Laplacian Exponential#The spanning-tree form and top-grade coefficient|direct expansion of the four-cycle exponential]].
 
 **Independent computational check.** Every coefficient of the resulting polyform was compared with the direct product of the four edge factors of $C_4$. Both expressions were expanded in the tensor basis of the exterior arguments over the integers; equality was checked at every grade.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Symmetric Polyform Identities#Deleting the diagonals|Python example]].
 
 ## Verification and scope of the results
 

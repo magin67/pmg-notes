@@ -1,9 +1,9 @@
 ---
 title: "Symmetric Polyforms: Types and Normalizations"
 date: 2026-10-19
-updated: 2026-11-08
-revision: 7
-source_revision: 6
+updated: 2026-11-10
+revision: 8
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: symmetric-polyforms-types-and-normalizations
@@ -353,6 +353,8 @@ $$
 $$
 
 Here $[X]^2$ is a form, whereas $X^2$ is its numerical quadratic norm in the PMG convention. The detailed definition appears in the [[Laplacian Exponential#The potential of a form|note on the Laplacian exponential]]. Symmetry of a sum under vertex permutations does not require all its terms to have the same evaluation in a chosen metric.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Symmetric Polyform Identities#Types and normalizations|Python example]].
 
 ## Toward the fundamental identity
 
