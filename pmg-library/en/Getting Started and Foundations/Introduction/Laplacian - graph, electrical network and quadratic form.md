@@ -1,9 +1,9 @@
 ---
 title: "Laplacian: graph, electrical network and quadratic form"
 date: 2026-10-03
-updated: 2026-11-08
-revision: 8
-translated_revision: 12
+updated: 2026-11-10
+revision: 9
+translated_revision: 13
 source_revision: 12
 status: draft
 text_prepared_by: ChatGPT
@@ -392,6 +392,8 @@ For a nonzero test current, the potentials cannot be constant. Hence, in a conne
 > $$
 > I^2R_{13}=2^2\cdot\frac32=6\text{ W}
 > $$
+
+Check the potentials, currents, and power of this network in the [[en/PythonExamples/Example - Weighted Chain#Matrix, currents, and power|weighted-chain Python example]].
 
 ## Correspondence between representations
 

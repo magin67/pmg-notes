@@ -1,9 +1,9 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-11-08
-revision: 11
-translated_revision: 13
+updated: 2026-11-10
+revision: 12
+translated_revision: 14
 source_revision: 13
 status: draft
 text_prepared_by: ChatGPT
@@ -267,6 +267,8 @@ The left panel shows the couplings and their strengths; the right panel shows th
 > These coordinates are not centered. After subtracting the centroid $(1/3,1/(3\sqrt2))$, the centered vectors $p_i$ have the Gram matrix $\mathrm{Gr}$ displayed above.
 
 The path diagram and its resistance simplex have different geometric meanings. The diagram shows which connections are present; the simplex represents the resistances of the entire network as squared Euclidean distances.
+
+The [[en/PythonExamples/Example - Weighted Chain#Matrix transformations|Python example]] computes the Green matrix and resistances of this path.
 
 ## Two metrics on the vertices
 

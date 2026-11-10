@@ -2,8 +2,8 @@
 title: "Example: Unit Triangle Geometry"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 3
-translated_revision: 3
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-unit-triangle-geometry
@@ -117,6 +117,54 @@ P_M(f_{ab}f_{ac})=\frac13
 \ne P_M(f_{ab})P_M(f_{ac})=\frac49
 $$
 The Gram determinant subtracts $(u\cdot v)^2=1/9$. The full program prints both results as `product_form_norm` and `product_of_norms`.
+
+## Two boundaries and the volume of a tetrahedron
+
+Take the complete graph $K_4$ on vertices $a,b,c,d$ with unit conductances. Its resistance simplex is a regular tetrahedron. The boundaries $(abc)$ and $(abd)$ share the edge $(ab)$. For $u=(ab)$, $v=(ac)$, and $w=(ad)$, each squared norm is $1/2$ and the inner product of two different vectors is $1/4$. The cross Gram determinant gives
+
+$$
+(abc)\cdot(abd)=
+\det\begin{pmatrix}1/2&1/4\\1/4&1/4\end{pmatrix}
+=\frac1{16}.
+$$
+
+The code uses coefficients of formal vertices in the order $a,b,c,d$. For example, $u=b-a$ has coordinates $(-1,1,0,0)$. The package computes inner products in the resistance metric of the graph.
+
+As a check, use polarization. The difference $(abc)-(abd)$ equals $(ab)(dc)$, so subtract its squared norm from the sum of the two squared norms and divide by two.
+
+```python
+from fractions import Fraction
+from itertools import combinations
+from polyform_algebra.core import (
+    blade_inner_product, coordinates, network, simplex_volume_squared,
+)
+
+vertices = ("a", "b", "c", "d")
+tetrahedron = network(vertices, [(i, j, 1) for i, j in combinations(vertices, 2)])
+u = coordinates(tetrahedron.context, (-1, 1, 0, 0))
+v = coordinates(tetrahedron.context, (-1, 0, 1, 0))
+w = coordinates(tetrahedron.context, (-1, 0, 0, 1))
+
+mixed = blade_inner_product(tetrahedron, (u, v), (u, w)).value
+reversed_mixed = blade_inner_product(tetrahedron, (v, u), (u, w)).value
+difference = coordinates(tetrahedron.context, (0, 0, 1, -1))
+polarized = (
+    blade_inner_product(tetrahedron, (u, v), (u, v)).value
+    + blade_inner_product(tetrahedron, (u, w), (u, w)).value
+    - blade_inner_product(tetrahedron, (u, difference), (u, difference)).value
+) / 2
+volume_squared = simplex_volume_squared(tetrahedron, vertices).value
+print("(abc) · (abd) =", mixed)
+print("(acb) · (abd) =", reversed_mixed)
+print("V² =", volume_squared)
+
+assert mixed == Fraction(1, 16)
+assert reversed_mixed == -mixed
+assert polarized == mixed
+assert volume_squared == Fraction(1, 576)
+```
+
+Swapping $b,c$ reverses the first boundary and changes the sign of the inner product. The Gram matrix of the three vectors has determinant $1/16$. Thus the squared volume is $(1/16)/(3!)^2=1/576$, and the volume is $1/24$.
 
 ## Independent checks
 

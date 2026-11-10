@@ -2,8 +2,8 @@
 title: "Example: Weighted Chain"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 3
-translated_revision: 3
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-weighted-chain
@@ -98,6 +98,55 @@ I_{ab}=I_{bc}=2,\qquad
 \mathcal Q=1(3-1)^2+2(1-0)^2=6
 $$
 Power balance also gives $\varphi^{\mathsf T}J=6$ and $I^2R_{ac}=4\cdot3/2=6$. With conductances in siemens, potentials are in volts and power in watts. The package supplies the matrix; NumPy solves the current equations. Below, this matrix is compared with an independent reference built directly from the conductances.
+
+## Matrix transformations
+
+Compute the Green matrix $\mathbf{Gr}$ and the full resistance matrix $\mathbf R$ for the same path. All matrices use the vertex order $a,b,c$. Then reconstruct the network from $\mathbf R$ and compare its Laplacian with the original. Integer conductances let us perform the transformations in exact rational arithmetic.
+
+$$
+\mathbf L \longrightarrow \mathbf{Gr} \longrightarrow \mathbf R
+\longrightarrow \mathbf L
+$$
+
+```python
+from fractions import Fraction
+from polyform_algebra.core import (
+    green, laplacian as network_laplacian, network,
+    network_from_resistance, resistance,
+)
+
+vertices = ("a", "b", "c")
+chain = network(vertices, (("a", "b", 1), ("b", "c", 2)))
+laplacian_matrix = network_laplacian(chain).value
+green_matrix = green(chain).value
+resistance_matrix = resistance(chain).value
+recovered = network_from_resistance(resistance_matrix.values, vertices).value
+recovered_laplacian = network_laplacian(recovered).value
+
+for label, result in (
+    ("L", laplacian_matrix),
+    ("Gr", green_matrix),
+    ("R", resistance_matrix),
+    ("L from R", recovered_laplacian),
+):
+    print(f"{label} ({', '.join(vertices)})")
+    for row in result.values:
+        print("  ".join(str(value) for value in row))
+
+print("Recovered edges:", [(a, b, str(weight)) for a, b, weight in recovered.edges])
+assert resistance_matrix.values == (
+    (0, 1, Fraction(3, 2)),
+    (1, 0, Fraction(1, 2)),
+    (Fraction(3, 2), Fraction(1, 2), 0),
+)
+assert recovered.edges == chain.edges
+assert recovered_laplacian.values == laplacian_matrix.values
+assert green(recovered).value.values == green_matrix.values
+```
+
+The resistance matrix recovers edges $ab$ and $bc$ with conductances $1$ and $2$. The pair $ac$ still has no edge, although $R_{ac}=3/2$.
+
+For the derivation, see [[Laplacian, Green Matrix, and Effective Resistance Matrix|transformations between the matrices]].
 
 ## Checks
 

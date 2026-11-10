@@ -1,9 +1,9 @@
 ---
 title: Varying Several Couplings Together
 date: 2026-10-05
-updated: 2026-11-08
-revision: 7
-translated_revision: 8
+updated: 2026-11-10
+revision: 8
+translated_revision: 9
 source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
@@ -222,6 +222,8 @@ The middle matrix is positive definite because $G\succeq0$. Hence the correction
 >
 > If the initial and final graphs are connected, a valid order is to perform all strengthening and additions first, followed by weakening and deletions. The first stage retains the original connected graph. During the second stage, every intermediate graph contains all couplings of the final graph, with conductances at least as large as their final values.
 
+
+The [[en/PythonExamples/Example - Triangle Coupling Variations#Strengthening two couplings|triangle variation Python example]] reproduces the two changes and computes the mixed coefficient.
 
 ## Mixed coefficients and volumes
 

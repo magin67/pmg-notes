@@ -2,8 +2,8 @@
 title: PMG Introductory Series
 date: 2026-10-08
 updated: 2026-11-10
-revision: 12
-translated_revision: 13
+revision: 13
+translated_revision: 14
 source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
@@ -97,4 +97,10 @@ The next stage is developed in [[en/Resistance Geometry and Duality/Spaces/Space
 
 ## Programming companions
 
-[[en/PythonExamples/PythonExamples|Programming Examples]] connect the series formulas with tested Python code. The first companion, [[Example - Triangle Coupling Variations]], covers one and two changed couplings.
+The [[en/PythonExamples/PythonExamples|Programming Examples]] section collects all the material.
+
+- Laplacian, currents, and matrix transformations (notes 1, 2, 4). [[en/PythonExamples/Example - Weighted Chain|Weighted Chain]]
+- Inner products, areas, and volume (3, 5, 9). [[en/PythonExamples/Example - Unit Triangle Geometry|Unit Triangle Geometry]]
+- One and two changed couplings (6, 7). [[en/PythonExamples/Example - Triangle Coupling Variations|Triangle Coupling Variations]]
+- Products of forms and exponential grades (8, 10). [[en/PythonExamples/Example - Path P5 and Cycle C4 Exponentials|Path P5 and Cycle C4 Exponentials]]
+- Connectivity and normalization after deletion (6, 10). [[en/PythonExamples/Example - Deleting an Edge and a Bridge|Deleting an Edge and a Bridge]]

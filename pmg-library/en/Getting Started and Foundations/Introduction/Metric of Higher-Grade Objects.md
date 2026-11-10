@@ -1,9 +1,9 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-11-08
-revision: 9
-translated_revision: 11
+updated: 2026-11-10
+revision: 10
+translated_revision: 12
 source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
@@ -152,6 +152,8 @@ For nondegenerate triangles in the same plane, the sign is positive when $c,d$ l
 > Both boundaries are nonzero and orthogonal. The triangles each have area $1/2$.
 
 Reversing the orientation of one boundary changes the sign of the mixed inner product but preserves its norm. Reversing both orientations also preserves the mixed inner product.
+
+The [[en/PythonExamples/Example - Unit Triangle Geometry#Two boundaries and the volume of a tetrahedron|tetrahedron Python example]] computes the mixed inner product and checks the sign change under orientation reversal.
 
 ## Areas and volumes of simplices
 

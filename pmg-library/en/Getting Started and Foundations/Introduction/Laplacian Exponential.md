@@ -1,9 +1,9 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-11-08
-revision: 10
-translated_revision: 10
+updated: 2026-11-10
+revision: 11
+translated_revision: 11
 source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
@@ -160,6 +160,8 @@ graph LR
 > $$
 >
 > Every edge subset of a path is a forest, so $(s_0,s_1,s_2,s_3,s_4)=(1,4,6,4,1)$. All six forests in $M_2$ have three components. For example, $(123)$ describes a tree on three vertices and two isolated vertices, while $(12)(34)$ describes two edges and the isolated vertex $5$.
+
+The [[en/PythonExamples/Example - Path P5 and Cycle C4 Exponentials#Path P5: the full symbolic output|symbolic path and cycle Python example]] displays every grade.
 
 ## The spanning-tree form and top-grade coefficient
 
@@ -430,6 +432,8 @@ The top-grade component is the quadratic form of the product of the boundaries o
 > The top grade is $4-2=2$. The top-grade component contains one form whose argument is the product of two component boundaries.
 
 The number of components is $c=n-\deg M$, rather than the number of terms in the top-grade component. With no edges, $L=0$, $M=e$, and $L^0=e$ is the only nonzero power. For a disconnected graph, the coefficient of the fixed form $T_n$ is zero; the normalization described above is not applied to it.
+
+The [[en/PythonExamples/Example - Deleting an Edge and a Bridge#Deleting a bridge|Python example]] shows what happens after deleting a bridge disconnects the graph.
 
 ## Algebraic variation and edge addition
 

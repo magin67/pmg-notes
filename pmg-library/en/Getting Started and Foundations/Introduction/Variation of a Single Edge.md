@@ -1,9 +1,9 @@
 ---
 title: Variation of a Single Edge
 date: 2026-10-04
-updated: 2026-11-08
-revision: 7
-translated_revision: 7
+updated: 2026-11-10
+revision: 8
+translated_revision: 8
 source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
@@ -178,6 +178,8 @@ For $\delta>0$, the second identity expresses the addition of conductance $\delt
 >
 > The three spanning trees have weights $2,2,1$, whose sum is $5$.
 
+The [[en/PythonExamples/Example - Triangle Coupling Variations#Strengthening one coupling|triangle variation Python example]] computes the effect of strengthening an edge, including the change in forest weight.
+
 ## Derivatives with respect to conductance
 
 Dividing (5) by $\delta$ and taking the limit as $\delta\to0$ gives
@@ -217,6 +219,8 @@ $$
 If the edge is not a bridge, there is a spanning tree of positive weight that does not contain it. Therefore $c_{kl}R_{kl}<1$, and formulas (4)-(6) remain applicable through complete deletion.
 
 When a bridge is deleted, the denominator vanishes and $\tau'=0$. Resistances between different components cease to be finite: injecting current into one component and withdrawing it from another admits no steady-state solution, even though the total external current is balanced. The pseudoinverse of the disconnected Laplacian exists, but formula (4) does not compute it, and the usual resistance formula using that pseudoinverse does not give an effective resistance between components.
+
+The [[en/PythonExamples/Example - Deleting an Edge and a Bridge#Deleting a bridge|edge deletion Python example]] compares deleting a cycle edge and a bridge.
 
 ## Weights of separating spanning forests
 

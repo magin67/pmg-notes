@@ -2,8 +2,8 @@
 title: "Example: Deleting an Edge and a Bridge"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 3
-translated_revision: 3
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-edge-deletion
@@ -14,7 +14,7 @@ aliases:
   - "en/PythonExamples/Deleting an Edge and a Bridge in Python"
 ---
 
-This example illustrates the deletion rule in [[Laplacian Exponential#Adding and deleting an edge|Laplacian Exponential]]. It deletes edge $ab$ of the unit cycle $C_4$, then considers deleting the bridge $bc$ of conductance 2 in a path with conductances 1 and 2. The second graph becomes disconnected.
+This example illustrates the deletion rule in [[Laplacian Exponential#Adding and deleting an edge|Laplacian Exponential]]. It deletes edge $ab$ of the unit cycle $C_4$, then considers deleting the bridge $bc$ of conductance 2 in the path $a-b-c$ with conductances $c_{ab}=1$ and $c_{bc}=2$. The second graph becomes disconnected.
 
 [[ru/PythonExamples/Пример - Удаление ребра и моста|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 

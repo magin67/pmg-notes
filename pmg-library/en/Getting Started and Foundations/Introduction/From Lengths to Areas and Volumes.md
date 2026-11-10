@@ -1,9 +1,9 @@
 ---
 title: From Lengths to Areas and Volumes
 date: 2026-10-04
-updated: 2026-11-08
-revision: 7
-translated_revision: 7
+updated: 2026-11-10
+revision: 8
+translated_revision: 8
 source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
@@ -51,6 +51,8 @@ S_\triangle^2=\frac14\det G(u,v)
 $$
 
 ![A triangle occupies half the parallelogram](images/triangle-area-en.svg)
+
+The [[en/PythonExamples/Example - Unit Triangle Geometry#Boundary and area|triangle geometry Python example]] reproduces the area calculation using the Gram matrix.
 
 ## The area of a triangle from its side lengths
 
@@ -295,6 +297,8 @@ $$
 > | Resistance vectors $a_{01},\ldots,a_{0,n-1}$ | $L_0^{-1}$ | $1/\tau$ |
 >
 > Thus increasing $\tau$ increases the first volume and decreases the second. The volume of the resistance simplex also differs from that of its parallelotope by a factor of $1/(n-1)!$.
+
+The [[en/PythonExamples/Example - Unit Triangle Geometry#Two boundaries and the volume of a tetrahedron|tetrahedron Python example]] computes the volume for $K_4$.
 
 ## Edge-inclusion probabilities in a spanning tree
 

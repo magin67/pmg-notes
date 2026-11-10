@@ -1,9 +1,9 @@
 ---
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
-updated: 2026-11-08
-revision: 12
-translated_revision: 15
+updated: 2026-11-10
+revision: 13
+translated_revision: 16
 source_revision: 15
 status: draft
 text_prepared_by: ChatGPT
@@ -496,6 +496,8 @@ graph LR
 > $$
 > L^3=24[(abcd)]^2,\qquad L^4=0
 > $$
+
+The [[en/PythonExamples/Example - Path P5 and Cycle C4 Exponentials#Multiplication: merging, separate components, and vanishing|symbolic Python example]] shows boundaries merging, products of separate components, and a vanishing cycle product.
 
 ## Further reading
 

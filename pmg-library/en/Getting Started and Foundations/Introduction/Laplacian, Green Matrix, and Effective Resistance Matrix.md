@@ -1,8 +1,8 @@
 ---
 title: "Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations"
 date: 2026-10-04
-updated: 2026-11-08
-revision: 6
+updated: 2026-11-10
+revision: 7
 source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
@@ -249,6 +249,8 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > $$
 >
 > The third row gives $-y_1+y_3=-1$ and the second gives $-y_1+y_2=-2$. Thus $y_3=y_1-1$ and $y_2=y_1-2$; the zero-sum condition gives $3y_1-3=0$. Hence $y=(1,-1,0)$, so $c_{12}=1$ and $c_{13}=0$. The other columns and $c_{23}=2$ follow in the same way. This recovers both the coupling strengths and the absence of an edge between vertices $1$ and $3$.
+
+The [[en/PythonExamples/Example - Weighted Chain#Matrix transformations|Python example]] computes the three matrices and recovers the conductances from the resistance matrix.
 
 ## Further reading
 

@@ -1,9 +1,9 @@
 ---
 title: Inner Product of Graph Vectors
 date: 2026-10-03
-updated: 2026-11-08
-revision: 8
-translated_revision: 11
+updated: 2026-11-10
+revision: 9
+translated_revision: 12
 source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
@@ -238,6 +238,8 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 > $$
 >
 > Both measurements agree with (3), including the sign.
+
+The [[en/PythonExamples/Example - Unit Triangle Geometry#Inner products and orientation|triangle geometry Python example]] checks edge orientations and the signs of inner products.
 
 ## Further reading
 
