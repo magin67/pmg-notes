@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 10
-translated_revision: 10
+revision: 11
+translated_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -38,6 +38,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 [[Example - Path P5 and Cycle C4 Exponentials]] covers exponential grades, forest weights, spanning-tree coefficients, and resistances of the path and cycle.
 
 [[Example - Deleting an Edge and a Bridge]] compares cycle-edge and bridge deletion: resistance changes, preservation of isolated vertices, and unavailable global normalization after disconnection.
+
+## Spaces
+
+[[en/PythonExamples/Example - Subspaces and Graph Transformations|Subspaces and Graph Transformations]] - potentials, bi- and di-coordinates, Dirichlet extension, contraction, and elimination. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/spaces.ipynb).
 
 ## How an example is organized
 

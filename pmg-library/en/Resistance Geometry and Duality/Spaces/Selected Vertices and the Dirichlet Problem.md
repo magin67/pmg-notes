@@ -1,9 +1,9 @@
 ---
 title: Selected Vertices and the Dirichlet Problem
 date: 2026-10-14
-updated: 2026-11-07
-revision: 8
-translated_revision: 8
+updated: 2026-11-10
+revision: 9
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -371,6 +371,8 @@ $$
 In our example, $\mathbf A=\begin{pmatrix}3&-1\\-1&4\end{pmatrix}$, its determinant is $11$, and its inverse agrees with the previously calculated $\mathbf{Fm}$.
 
 For a single set of prescribed values, it is enough to solve a linear system; the inverse need not be computed explicitly. Nor is a full expansion of the metric polyform required. Formula (6) establishes the algebraic and geometric meaning of the coefficients, but does not by itself promise a faster numerical algorithm.
+
+The [[en/PythonExamples/Example - Subspaces and Graph Transformations#The Dirichlet problem on a weighted path|Python example]] reproduces this calculation.
 
 ## Nonnegativity and limitations
 

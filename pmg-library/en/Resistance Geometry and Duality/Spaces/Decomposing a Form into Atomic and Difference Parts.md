@@ -1,9 +1,9 @@
 ---
 title: Decomposing a Form into Atomic and Difference Parts
 date: 2026-11-08
-updated: 2026-11-08
-revision: 1
-translated_revision: 1
+updated: 2026-11-10
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -153,6 +153,8 @@ The atomic sum gives the second moment about the chosen origin. The difference s
 > Take elements at $0$ and $2$, each with weight $1/2$. Their center is at $1$. The atomic sum is $\frac12\cdot0^2+\frac12\cdot2^2=2$, and the difference sum is $\frac14(2-0)^2=1$. The square of the center's coordinate is $2-1=1$.
 
 The name “inertial part” explains the metric meaning of the difference part under these assumptions. We retain the algebraic names in the general lemma: when $s_q=0$, the center $q/s_q$ is undefined, but (1) still holds.
+
+The [[en/PythonExamples/Example - Subspaces and Graph Transformations#The form of a midpoint|Python example]] reproduces this calculation.
 
 ## Decomposition of the polar form
 

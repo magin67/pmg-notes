@@ -1,9 +1,9 @@
 ---
 title: Bi-coordinates and Di-coordinates
 date: 2026-10-13
-updated: 2026-11-08
-revision: 11
-translated_revision: 11
+updated: 2026-11-10
+revision: 12
+translated_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -191,6 +191,8 @@ The same object is therefore written as $v=-h_1+h_2=0h^1+1h^2$.
 ![Coordinates](<images/Coordinates.svg>)
 
 *The basis vectors $h_1,h_2$ are not orthogonal. The expansion coefficients of $v$ are $(-1,1)$, while its inner products with the basis vectors are $(0,1)$. The reciprocal basis connects these two descriptions.*
+
+The [[en/PythonExamples/Example - Subspaces and Graph Transformations#Bi-coordinates and di-coordinates|Python example]] reproduces this calculation.
 
 ## Applicability conditions
 

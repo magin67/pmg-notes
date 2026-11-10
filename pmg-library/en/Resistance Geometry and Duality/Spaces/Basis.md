@@ -1,9 +1,9 @@
 ---
 title: Basis
 date: 2026-10-12
-updated: 2026-11-07
-revision: 5
-translated_revision: 5
+updated: 2026-11-10
+revision: 6
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -367,6 +367,8 @@ For the form $[u  v]^2$ of grade $2$, only the unit $e$ in $M$ contributes to th
 
 > [!note] A subspace and a subgraph
 > Simply deleting the vertex $b$ and all its incident edges leaves two disconnected vertices $a,c$. Such a graph does not reproduce the metric of the selected line. For that line, the original evaluation remains $(c-a)^2=2$. Constructing couplings on $a,c$ alone that reproduce this evaluation will be considered in the note on vertex elimination.
+
+The [[en/PythonExamples/Example - Subspaces and Graph Transformations#The metric on a selected subspace|Python example]] reproduces this calculation.
 
 ## Applicability and the next construction
 

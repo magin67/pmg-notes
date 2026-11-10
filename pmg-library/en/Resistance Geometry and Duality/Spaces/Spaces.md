@@ -1,9 +1,9 @@
 ---
 title: Spaces
 date: 2026-10-14
-updated: 2026-11-08
-revision: 8
-translated_revision: 8
+updated: 2026-11-10
+revision: 9
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: spaces-subspaces-series-navigation
@@ -75,6 +75,10 @@ Definitions and notation are collected in the [[Core specification|core specific
 **Isotropic geometry:** after [[Basis|spaces and the choice of a basis]], read about [[The Null Vector, Isotropic Representation, and the Boundary|the null vector and the boundary]], then [[Nonlocal Elements, Spheres, and Their Centers|nonlocal elements and spheres]] and [[Bi-coordinates and Di-coordinates|coordinates]]. The comparison between linear projection and selection of the center is in the section on [[Decomposing a Form into Atomic and Difference Parts#Coordinates in the isotropic extension|isotropic coordinates]].
 
 All nine notes are available in Russian and English, with matching reading orders.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Subspaces and Graph Transformations|Subspaces and Graph Transformations]] - potentials, bi- and di-coordinates, Dirichlet extension, contraction, and elimination. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/spaces.ipynb).
 
 ## Continuations and sources
 

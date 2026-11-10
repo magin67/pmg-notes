@@ -1,9 +1,9 @@
 ---
 title: Vertex Elimination and Induced Couplings
 date: 2026-10-14
-updated: 2026-11-06
-revision: 6
-translated_revision: 6
+updated: 2026-11-10
+revision: 7
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -159,6 +159,8 @@ $$
 *Figure 2. Two elimination steps. Each step uses the current coupling strengths. Vertices $a,b$ are retained throughout the calculation.*
 
 In the reverse order, the first step gives a coupling $xb$ of coefficient $3/4$, and the second gives a coupling $ab$ of coefficient $2(3/4)/(2+3/4)=6/11$. We will establish general independence of the order through the Dirichlet problem.
+
+The [[en/PythonExamples/Example - Subspaces and Graph Transformations#Eliminating the center of a star|Python example]] reproduces this calculation.
 
 ## Response at the selected vertices
 

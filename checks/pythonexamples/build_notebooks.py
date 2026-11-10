@@ -33,7 +33,15 @@ def page_link(lang,target):
  url='https://magin67.github.io/pmg-notes/'+urllib.parse.quote(slug,safe='/,')
  if anchor:url+='#'+urllib.parse.quote(re.sub(r'[^\w\s-]','',anchor.lower()).replace(' ','-'))
  return '['+(label or stem)+']('+url+')'
-for lang,title in [('ru','Пример - Взвешенная цепочка'),('en','Example - Weighted Chain')]:
+COMPANIONS = (
+    ('ru', 'Пример - Взвешенная цепочка', 'weighted-chain'),
+    ('en', 'Example - Weighted Chain', 'weighted-chain'),
+    ('ru', 'Пример - Подпространства и преобразования графов', 'spaces'),
+    ('en', 'Example - Subspaces and Graph Transformations', 'spaces'),
+)
+
+for lang, title, slug in COMPANIONS:
+ has_plot = slug == 'weighted-chain'
  note=(READY/'pmg-library'/lang/'PythonExamples'/(title+'.md')).read_text(encoding='utf-8').split('---',2)[2].strip()
  note=re.sub(r'^\[\[(?:ru|en)/PythonExamples/.*?\n','',note,flags=re.M)
  note=re.sub(r'^\[(?:Открыть в Colab|Open in Colab).*?\n','',note,flags=re.M)
@@ -47,9 +55,8 @@ for lang,title in [('ru','Пример - Взвешенная цепочка'),(
   if part.startswith('```python'):cells.append(nbformat.v4.new_code_cell(part[len('```python\n'):-3].strip()))
   elif part=='<!-- figure -->':cells.append(nbformat.v4.new_code_cell(PLOT))
   elif part.strip():cells.append(nbformat.v4.new_markdown_cell(part.strip()))
- assert any('plt.show()' in c.source for c in cells),note
- cells[2]=nbformat.v4.new_code_cell('''from importlib.metadata import version, PackageNotFoundError
-import importlib.util
+ assert any('plt.show()' in c.source for c in cells) == has_plot, note
+ setup = '''from importlib.metadata import version, PackageNotFoundError
 import subprocess
 import sys
 
@@ -61,9 +68,14 @@ except PackageNotFoundError:
 if installed != "0.9.0":
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-q",
                           "'''+INSTALL+'''"])
+'''
+ if has_plot:
+  setup += '''import importlib.util
+
 if importlib.util.find_spec("matplotlib") is None:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "matplotlib"])
-''')
+'''
+ cells[2] = nbformat.v4.new_code_cell(setup)
  nb=nbformat.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'},'colab':{'name':title+'.ipynb','provenance':[]},'pmg':{'package_version':'0.9.0','source_note':f'pmg-library/{lang}/PythonExamples/{title}.md'}})
- out=READY/'pmg-library'/lang/'PythonExamples/notebooks/weighted-chain.ipynb';out.parent.mkdir(exist_ok=True);nbformat.validate(nb);nbformat.write(nb,out)
+ out=READY/'pmg-library'/lang/'PythonExamples/notebooks'/f'{slug}.ipynb';out.parent.mkdir(exist_ok=True);nbformat.validate(nb);nbformat.write(nb,out)
  print(lang,len(cells),'cells')

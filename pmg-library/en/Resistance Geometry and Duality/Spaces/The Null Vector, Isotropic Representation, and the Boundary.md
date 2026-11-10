@@ -1,9 +1,9 @@
 ---
 title: The Null Vector, Isotropic Representation, and the Boundary
 date: 2026-10-12
-updated: 2026-11-07
-revision: 9
-translated_revision: 9
+updated: 2026-11-10
+revision: 10
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -421,6 +421,8 @@ For example, $\partial(z  a)=-z$, while $\partial(z  a  c)=-z (c-a)$.
 
 > [!note] Multiplication and the boundary
 > Exterior multiplication by $z$ raises the grade by one. The boundary operator lowers it by one. They are related by an identity but are not the same operation. The operator $\partial$ itself does not require a null vector: the affine-weight functional is sufficient to define it. The condition $z^2=0$ belongs to the chosen metric realization.
+
+The [[en/PythonExamples/Example - Subspaces and Graph Transformations#Boundary and affine weight|Python example]] checks the boundary operator for the prescribed affine weights.
 
 ## Metric evaluations of exterior structures and forms
 

@@ -1,9 +1,9 @@
 ---
 title: Couplings Within One Part of a Bipartite Graph
 date: 2026-10-14
-updated: 2026-11-07
-revision: 7
-translated_revision: 8
+updated: 2026-11-10
+revision: 8
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -378,6 +378,8 @@ After eliminating the documents, the coupling strength of $ab$ is $1\cdot2/3=2/3
 | Spanning-tree coefficient $\tau$ | $2/3$ | $1/2$ |
 
 By the [[Vertex Contraction and Graph Gluing#Resistance radius is additive|definition of resistance radius]], $\rho$ is the squared radius of the circumsphere. For two vertices with effective resistance $r$, it equals $r/4$. The spanning-tree coefficient of a graph consisting of a single coupling is its coupling strength.
+
+The [[en/PythonExamples/Example - Subspaces and Graph Transformations#Both parts of a bipartite graph|Python example]] reproduces this calculation.
 
 ## Why the resistance radii of the parts do not add up
 
