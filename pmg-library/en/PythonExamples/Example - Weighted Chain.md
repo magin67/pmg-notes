@@ -1,20 +1,22 @@
 ---
-title: "Weighted Chain in Python"
+title: "Example: Weighted Chain"
 date: 2026-10-29
-updated: 2026-11-09
-revision: 2
-translated_revision: 2
+updated: 2026-11-10
+revision: 3
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-weighted-chain
 lang: en
 description: "Laplacian, resistances, currents, and power of a path with conductances 1 and 2."
 order: 2
+aliases:
+  - "en/PythonExamples/Weighted Chain in Python"
 ---
 
-This example reproduces the path $1-2-3$ with conductances $c_{12}=1$, $c_{23}=2$ from [[Laplacian - graph, electrical network and quadratic form]] and [[Effective Resistance and Graph Geometry#Example: a three-vertex path|Effective Resistance and Graph Geometry]]. Resistances are evaluated through the metric polyform; current equations provide an independent check.
+This example reproduces the path $a-b-c$ with conductances $c_{ab}=1$, $c_{bc}=2$ from [[Laplacian - graph, electrical network and quadratic form]] and [[Effective Resistance and Graph Geometry#Example: a three-vertex path|Effective Resistance and Graph Geometry]]. Resistances are evaluated through the metric polyform; current equations provide an independent check.
 
-[[ru/PythonExamples/Взвешенная цепочка на Python|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
+[[ru/PythonExamples/Пример - Взвешенная цепочка|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 
 
 This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Installing the Library and Running Examples]]. Run the Python cells in order.
@@ -25,7 +27,7 @@ This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Ins
 
 ## From graph to metric polyform
 
-An edge weight is a conductance. Edge resistances are its reciprocal: $1$ and $1/2$. There is no direct edge $13$.
+An edge weight is a conductance. Edge resistances are its reciprocal: $1$ and $1/2$. There is no direct edge $ac$.
 
 ```python
 import networkx as nx
@@ -33,12 +35,12 @@ from polyform_algebra import Polyform, quForm
 
 # Edge weights are conductances.
 graph = nx.Graph()
-graph.add_weighted_edges_from([(1, 2, 1), (2, 3, 2)])
+graph.add_weighted_edges_from([("a", "b", 1), ("b", "c", 2)])
 laplacian, points = Polyform.from_networkx(graph, return_points="dict")
 metric = laplacian.exp()
 
 print("tau =", metric.potential(quForm.one()))
-for i, j in [(1, 2), (2, 3), (1, 3)]:
+for i, j in [("a", "b"), ("b", "c"), ("a", "c")]:
     form = quForm([(points[i], points[j])])
     print(f"R{i}{j} =", metric.norm(form))
 ```
@@ -46,23 +48,23 @@ for i, j in [(1, 2), (2, 3), (1, 3)]:
 The form $f_{ij}=[a_j-a_i]^2$ is the quadratic form of an edge. Nilpotence of edge forms gives
 
 $$
-L=f_{12}+2f_{23},\qquad
-M=\exp L=(e+f_{12})(e+2f_{23})
+L=f_{ab}+2f_{bc},\qquad
+M=\exp L=(e+f_{ab})(e+2f_{bc})
 $$
 This is the exponential in the algebra of forms, not the matrix exponential. The value `potential(quForm.one())` gives the spanning-tree coefficient, while `norm(form)` gives the normalized metric evaluation.
 
 | Quantity | Result | Explanation |
 |---|---:|---|
 | $\tau$ | $2$ | The unique spanning tree has weight $1\cdot2$ |
-| $R_{12}$ | $1$ | Resistance of the first edge |
-| $R_{23}$ | $1/2$ | Resistance of the second edge |
-| $R_{13}$ | $3/2$ | Sum of series resistances |
+| $R_{ab}$ | $1$ | Resistance of the first edge |
+| $R_{bc}$ | $1/2$ | Resistance of the second edge |
+| $R_{ac}$ | $3/2$ | Sum of series resistances |
 
-The existence of $R_{13}$ does not imply an edge $13$. In the resistance embedding this is a squared distance; the distance itself is $\sqrt{3/2}$.
+The existence of $R_{ac}$ does not imply an edge $ac$. In the resistance embedding this is a squared distance; the distance itself is $\sqrt{3/2}$.
 
 ## Matrix, currents, and power
 
-The `to_matrix()` method returns a matrix and a point-to-index mapping. In vertex order $1,2,3$:
+The `to_matrix()` method returns a matrix and a point-to-index mapping. In vertex order $a,b,c$:
 
 $$
 \mathbf L=
@@ -72,16 +74,16 @@ $$
 0&-2&2
 \end{pmatrix}
 $$
-Reproduce the first note's experiment: inject 2 A at vertex 1, remove 2 A at vertex 3, and choose $\varphi_3=0$.
+Reproduce the first note's experiment: inject 2 A at vertex a, remove 2 A at vertex c, and choose $\varphi_c=0$.
 
 ```python
 import numpy as np
 
 matrix, index = laplacian.to_matrix()
-# Reorder rows and columns explicitly as vertices 1, 2, 3.
-order = [index[points[label]] for label in (1, 2, 3)]
+# Reorder rows and columns explicitly as vertices a, b, c.
+order = [index[points[label]] for label in ("a", "b", "c")]
 matrix = np.asarray(matrix[np.ix_(order, order)], dtype=float)
-# Ground vertex 3 and inject 2 A at vertex 1.
+# Ground vertex c and inject 2 A at vertex a.
 current = np.array([2.0, 0.0, -2.0])
 potential = np.append(np.linalg.solve(matrix[:2, :2], current[:2]), 0.0)
 print("potentials =", potential)
@@ -92,10 +94,10 @@ The result is
 
 $$
 \varphi=(3,1,0)^{\mathsf T},\qquad
-I_{12}=I_{23}=2,\qquad
+I_{ab}=I_{bc}=2,\qquad
 \mathcal Q=1(3-1)^2+2(1-0)^2=6
 $$
-Power balance also gives $\varphi^{\mathsf T}J=6$ and $I^2R_{13}=4\cdot3/2=6$. With conductances in siemens, potentials are in volts and power in watts. The package supplies the matrix; NumPy solves the current equations. Below, this matrix is compared with an independent reference built directly from the conductances.
+Power balance also gives $\varphi^{\mathsf T}J=6$ and $I^2R_{ac}=4\cdot3/2=6$. With conductances in siemens, potentials are in volts and power in watts. The package supplies the matrix; NumPy solves the current equations. Below, this matrix is compared with an independent reference built directly from the conductances.
 
 ## Checks
 
@@ -111,13 +113,13 @@ assert np.allclose(matrix, reference)
 assert np.allclose(reference @ potential, current)
 assert np.allclose(potential, [3., 1., 0.])
 assert isclose(float(metric.potential(quForm.one())), 2.)
-assert isclose(float(metric.norm(quForm([(points[1], points[3])]))), 1.5)
+assert isclose(float(metric.norm(quForm([(points["a"], points["c"])]))), 1.5)
 assert isclose(float(potential @ reference @ potential), 6.)
 ```
 
 
 ## Try changing the input
 
-Change the second conductance from 2 to 4. Obtain $R_{13}=5/4$ and power 5 for the same current of 2 A.
+Change the second conductance from 2 to 4. Obtain $R_{ac}=5/4$ and power 5 for the same current of 2 A.
 
 These numerical checks concern this example and do not replace a general proof.

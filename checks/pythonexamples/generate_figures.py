@@ -8,6 +8,7 @@ plt.rcParams.update({'font.family':'DejaVu Sans','font.size':13,'svg.fonttype':'
 BLUE='#176b9b';ORANGE='#b65422';GRAY='#44536a'
 NAMES={'chain':('Взвешенная цепочка','Weighted chain'),'triangle':('Векторы резистивного треугольника','Vectors of the resistance triangle'),'variation':('Усиление связей треугольника','Strengthening triangle couplings'),'forests':('Путь и цикл в лесном разложении','Path and cycle in the forest expansion'),'deletion':('Удаление ребра и моста','Deleting an edge and a bridge')}
 def node(ax,x,y,label):
+ if isinstance(label,int):label="abcde"[label-1]
  ax.plot(x,y,'o',ms=19,color='white',markeredgecolor=GRAY,markeredgewidth=2,zorder=5)
  ax.text(x,y,str(label),ha='center',va='center',fontsize=11,zorder=6)
 def edge(ax,a,b,label=None,dashed=False):

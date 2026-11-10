@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[2]
 import polyform_algebra
 assert polyform_algebra.get_version()=='0.9.0'
 results=[]
-for p in sorted((ROOT/'pmg-library').rglob('*.md')):
+for p in sorted((ROOT/'pmg-library').glob('*/PythonExamples/*.md')):
  blocks=re.findall(r'```python\n(.*?)```',p.read_text(encoding='utf-8'),re.S)
  ns={};stream=io.StringIO();count=0
  with contextlib.redirect_stdout(stream):
@@ -18,7 +18,7 @@ for p in sorted((ROOT/'pmg-library').rglob('*.md')):
   if 'tau_one' in ns:assert ns['tau_one']==5 and ns['tau_two']==8
  if 'updated' in ns:
   assert ns['updated'].potential(ns['quForm'].one())==0
-  assert ns['updated'].potential(ns['f13'])==1
+  assert ns['updated'].potential(ns['f_ac'])==1
  if 'part' in ns:
   assert ns['metric'].potential(ns['quForm'].one())==4
   assert math.isclose(float(ns['metric'].norm(ns['form'])),3/4)

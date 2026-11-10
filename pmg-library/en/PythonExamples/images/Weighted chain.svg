@@ -31,12 +31,12 @@ z
    <g id="line2d_1">
     <path d="M 48.82 141.103563 
 L 215.3 141.103563 
-" clip-path="url(#pc46766c113)" style="fill: none; stroke: #176b9b; stroke-width: 2.6; stroke-linecap: square"/>
+" clip-path="url(#pbd9d62ec36)" style="fill: none; stroke: #176b9b; stroke-width: 2.6; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 215.3 141.103563 
 L 381.78 141.103563 
-" clip-path="url(#pc46766c113)" style="fill: none; stroke: #176b9b; stroke-width: 2.6; stroke-linecap: square"/>
+" clip-path="url(#pbd9d62ec36)" style="fill: none; stroke: #176b9b; stroke-width: 2.6; stroke-linecap: square"/>
    </g>
    <g id="text_1">
     <g id="patch_2">
@@ -100,7 +100,7 @@ z
    </g>
    <g id="line2d_3">
     <defs>
-     <path id="m47dc5af440" d="M 0 9.5 
+     <path id="me6ce871659" d="M 0 9.5 
 C 2.519429 9.5 4.936009 8.49902 6.717514 6.717514 
 C 8.49902 4.936009 9.5 2.519429 9.5 0 
 C 9.5 -2.519429 8.49902 -4.936009 6.717514 -6.717514 
@@ -112,33 +112,33 @@ C -4.936009 8.49902 -2.519429 9.5 0 9.5
 z
 " style="stroke: #44536a; stroke-width: 2"/>
     </defs>
-    <g clip-path="url(#pc46766c113)">
-     <use xlink:href="#m47dc5af440" x="48.82" y="141.103563" style="fill: #ffffff; stroke: #44536a; stroke-width: 2"/>
+    <g clip-path="url(#pbd9d62ec36)">
+     <use xlink:href="#me6ce871659" x="48.82" y="141.103563" style="fill: #ffffff; stroke: #44536a; stroke-width: 2"/>
     </g>
    </g>
    <g id="line2d_4">
-    <g clip-path="url(#pc46766c113)">
-     <use xlink:href="#m47dc5af440" x="215.3" y="141.103563" style="fill: #ffffff; stroke: #44536a; stroke-width: 2"/>
+    <g clip-path="url(#pbd9d62ec36)">
+     <use xlink:href="#me6ce871659" x="215.3" y="141.103563" style="fill: #ffffff; stroke: #44536a; stroke-width: 2"/>
     </g>
    </g>
    <g id="line2d_5">
-    <g clip-path="url(#pc46766c113)">
-     <use xlink:href="#m47dc5af440" x="381.78" y="141.103563" style="fill: #ffffff; stroke: #44536a; stroke-width: 2"/>
+    <g clip-path="url(#pbd9d62ec36)">
+     <use xlink:href="#me6ce871659" x="381.78" y="141.103563" style="fill: #ffffff; stroke: #44536a; stroke-width: 2"/>
     </g>
    </g>
    <g id="text_9">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="48.82" y="144.138875" transform="rotate(-0 48.82 144.138875)">1</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="48.82" y="144.138875" transform="rotate(-0 48.82 144.138875)">a</text>
    </g>
    <g id="text_10">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="215.3" y="144.138875" transform="rotate(-0 215.3 144.138875)">2</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="215.3" y="144.138875" transform="rotate(-0 215.3 144.138875)">b</text>
    </g>
    <g id="text_11">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="381.78" y="144.138875" transform="rotate(-0 381.78 144.138875)">3</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="381.78" y="144.138875" transform="rotate(-0 381.78 144.138875)">c</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pc46766c113">
+  <clipPath id="pbd9d62ec36">
    <rect x="7.2" y="37.053563" width="416.2" height="166.48"/>
   </clipPath>
  </defs>

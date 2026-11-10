@@ -7,7 +7,7 @@ PLOT='''import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots(figsize=(8, 2.8))
 ax.plot([0, 1, 2], [0, 0, 0], color="#176b9b", linewidth=3)
-for x, label, voltage in [(0, "1", 3), (1, "2", 1), (2, "3", 0)]:
+for x, label, voltage in [(0, "a", 3), (1, "b", 1), (2, "c", 0)]:
     ax.plot(x, 0, "o", markersize=22, color="white", markeredgecolor="#44536a", markeredgewidth=2)
     ax.text(x, 0, label, ha="center", va="center")
     ax.text(x, -.3, f"φ = {voltage} V", ha="center")
@@ -33,7 +33,7 @@ def page_link(lang,target):
  url='https://magin67.github.io/pmg-notes/'+urllib.parse.quote(slug,safe='/,')
  if anchor:url+='#'+urllib.parse.quote(re.sub(r'[^\w\s-]','',anchor.lower()).replace(' ','-'))
  return '['+(label or stem)+']('+url+')'
-for lang,title in [('ru','Взвешенная цепочка на Python'),('en','Weighted Chain in Python')]:
+for lang,title in [('ru','Пример - Взвешенная цепочка'),('en','Example - Weighted Chain')]:
  note=(READY/'pmg-library'/lang/'PythonExamples'/(title+'.md')).read_text(encoding='utf-8').split('---',2)[2].strip()
  note=re.sub(r'^\[\[(?:ru|en)/PythonExamples/.*?\n','',note,flags=re.M)
  note=re.sub(r'^\[(?:Открыть в Colab|Open in Colab).*?\n','',note,flags=re.M)

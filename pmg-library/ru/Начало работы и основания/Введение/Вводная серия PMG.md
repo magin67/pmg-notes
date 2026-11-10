@@ -1,8 +1,8 @@
 ---
 title: Вводная серия PMG
 date: 2026-10-08
-updated: 2026-11-07
-revision: 12
+updated: 2026-11-10
+revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
@@ -94,4 +94,4 @@ aliases:
 
 ## Программное сопровождение
 
-[[ru/PythonExamples/PythonExamples|Программные примеры]] связывают формулы серии с проверенным Python-кодом. Первое сопровождение - [[Вариации связей треугольника на Python]] для одной и двух изменяемых связей.
+[[ru/PythonExamples/PythonExamples|Программные примеры]] связывают формулы серии с проверенным Python-кодом. Первое сопровождение - [[Пример - Вариации связей треугольника]] для одной и двух изменяемых связей.

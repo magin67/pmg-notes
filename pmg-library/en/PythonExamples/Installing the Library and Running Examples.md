@@ -1,9 +1,9 @@
 ---
 title: "Installing the Library and Running Examples"
 date: 2026-10-29
-updated: 2026-11-09
-revision: 6
-translated_revision: 6
+updated: 2026-11-10
+revision: 7
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-examples-getting-started
@@ -52,23 +52,23 @@ from math import isclose
 from polyform_algebra import Point, quForm
 
 # Construct a unit triangle and its metric polyform.
-a, b, c = Point.create_list(["1", "2", "3"])
-f12 = quForm([(a, b)])
-f13 = quForm([(a, c)])
-f23 = quForm([(b, c)])
-laplacian = f12 + f13 + f23
+a, b, c = Point.create_list("abc")
+f_ab = quForm([(a, b)])
+f_ac = quForm([(a, c)])
+f_bc = quForm([(b, c)])
+laplacian = f_ab + f_ac + f_bc
 metric = laplacian.exp()
 
 # Check the spanning-tree coefficient and effective resistance.
 tau = metric.potential(quForm.one())
-r12 = metric.norm(f12)
+r_ab = metric.norm(f_ab)
 print("tau =", tau)
-print("R12 =", r12)
+print("R_ab =", r_ab)
 assert isclose(tau, 3.0)
-assert isclose(r12, 2/3)
+assert isclose(r_ab, 2/3)
 ```
 
-Expect $\tau=3$ and $R_{12}=2/3$. `exp()` computes the exponential in the algebra of forms, `potential()` gives an unnormalized potential, and `norm()` divides it by the spanning-tree coefficient. Printed formatting may differ; `assert` checks the numerical value.
+Expect $\tau=3$ and $R_{ab}=2/3$. `exp()` computes the exponential in the algebra of forms, `potential()` gives an unnormalized potential, and `norm()` divides it by the spanning-tree coefficient. Printed formatting may differ; `assert` checks the numerical value.
 
 ## Working in Google Colab
 
@@ -104,4 +104,4 @@ Here `python` means the selected environment’s interpreter. These steps are fo
 - `ModuleNotFoundError`: check that installation and execution use the same environment.
 - `NameError`: run the preceding cells in this note.
 - Unexpected result: check `polyform_algebra.get_version()`, conductances, and cell order.
-- `ValueError` on normalization after bridge deletion: this expected case is explained in [[Deleting an Edge and a Bridge in Python]].
+- `ValueError` on normalization after bridge deletion: this expected case is explained in [[Example - Deleting an Edge and a Bridge]].

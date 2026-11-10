@@ -1,20 +1,22 @@
 ---
-title: "Unit Triangle Geometry in Python"
+title: "Example: Unit Triangle Geometry"
 date: 2026-10-29
-updated: 2026-11-09
-revision: 2
-translated_revision: 2
+updated: 2026-11-10
+revision: 3
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-unit-triangle-geometry
 lang: en
 description: "Inner products, quadratic boundary norm, and area of the resistance triangle of K3."
 order: 3
+aliases:
+  - "en/PythonExamples/Unit Triangle Geometry in Python"
 ---
 
 This example reproduces the resistance triangle of $K_3$ from [[From Lengths to Areas and Volumes]] and [[Metric of Higher-Grade Objects]]. All three conductances equal one. This does not mean unit geometric sides: pair resistances are $2/3$, and the resistance triangle has side length $\sqrt{2/3}$.
 
-[[ru/PythonExamples/Геометрия единичного треугольника на Python|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
+[[ru/PythonExamples/Пример - Геометрия единичного треугольника|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
 
 
 This example was checked with `polyform_algebra 0.9.0`. Environment setup: [[Installing the Library and Running Examples]]. Run the Python cells in order.
@@ -30,11 +32,11 @@ from math import sqrt
 import numpy as np
 from polyform_algebra import Point, quForm
 
-a, b, c = Point.create_list(["1", "2", "3"])
-f12 = quForm([(a, b)])
-f13 = quForm([(a, c)])
-f23 = quForm([(b, c)])
-metric = (f12 + f13 + f23).exp()
+a, b, c = Point.create_list("abc")
+f_ab = quForm([(a, b)])
+f_ac = quForm([(a, c)])
+f_bc = quForm([(b, c)])
+metric = (f_ab + f_ac + f_bc).exp()
 u, v, w = b-a, c-a, c-b
 ```
 
@@ -108,11 +110,11 @@ print("area =", area)
 
 ## Why norms cannot simply be multiplied
 
-The product $f_{12}f_{13}$ is the quadratic form of the triangle boundary. Its metric evaluation differs from the product of the evaluations:
+The product $f_{ab}f_{ac}$ is the quadratic form of the triangle boundary. Its metric evaluation differs from the product of the evaluations:
 
 $$
-P_M(f_{12}f_{13})=\frac13
-\ne P_M(f_{12})P_M(f_{13})=\frac49
+P_M(f_{ab}f_{ac})=\frac13
+\ne P_M(f_{ab})P_M(f_{ac})=\frac49
 $$
 The Gram determinant subtracts $(u\cdot v)^2=1/9$. The full program prints both results as `product_form_norm` and `product_of_norms`.
 

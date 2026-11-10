@@ -1,10 +1,10 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-11-07
-revision: 11
-translated_revision: 12
-source_revision: 10
+updated: 2026-11-10
+revision: 12
+translated_revision: 13
+source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: introductory-series-navigation
@@ -97,4 +97,4 @@ The next stage is developed in [[en/Resistance Geometry and Duality/Spaces/Space
 
 ## Programming companions
 
-[[en/PythonExamples/PythonExamples|Programming Examples]] connect the series formulas with tested Python code. The first companion, [[Triangle Coupling Variations in Python]], covers one and two changed couplings.
+[[en/PythonExamples/PythonExamples|Programming Examples]] connect the series formulas with tested Python code. The first companion, [[Example - Triangle Coupling Variations]], covers one and two changed couplings.
