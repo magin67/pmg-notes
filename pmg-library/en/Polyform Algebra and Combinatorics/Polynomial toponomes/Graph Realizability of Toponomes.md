@@ -1,9 +1,9 @@
 ---
 title: Graph Realizability of Toponomes
 date: 2026-10-23
-updated: 2026-11-08
-revision: 2
-source_revision: 2
+updated: 2026-11-11
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: graph-realizability-of-toponomes
@@ -363,6 +363,8 @@ This criterion does not extend to vector normalization, the coefficient triangle
 ![A triangle with conductances 1/3 realizes P(t)=(1+t)²](images/A%20Weighted%20Realization%20of%20a%20Square.svg)
 
 *Figure 3. This is vertex normalization: three one-edge forests give $p_1=3\cdot(1/3)\cdot2=2$, and three trees give $p_2=3\cdot(1/9)\cdot3=1$. Edge labels are conductances. Requiring unit conductances makes this polynomial unrealizable.*
+
+See [[en/PythonExamples/Example - Polynomial Toponomes#Checking graph realizability|the notebook calculation]].
 
 ## Status of the results and independent checks
 

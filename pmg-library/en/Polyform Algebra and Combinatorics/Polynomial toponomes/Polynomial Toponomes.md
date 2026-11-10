@@ -1,9 +1,9 @@
 ---
 title: Polynomial Toponomes
 date: 2026-10-23
-updated: 2026-11-08
-revision: 4
-source_revision: 13
+updated: 2026-11-11
+revision: 5
+source_revision: 14
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polynomial-toponomes-series-navigation
@@ -48,6 +48,10 @@ The full toponome retains the type of each group of forests. Passing to $t,u$ re
 ![Two normalizations and three levels of forest grouping](images/Six%20Representations%20of%20a%20Toponome.svg)
 
 *Figure 1. The top row retains forest weights; the bottom row counts root choices. The vertical passage is invertible while types remain distinct. Rightward arrows group coefficients and may lose information, so no universal vertical passage remains after grouping. The original vertex count $n$ is retained separately.*
+
+## Programming companion
+
+[[en/PythonExamples/Example - Polynomial Toponomes|Polynomial Toponomes]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/polynomial-toponomes.ipynb).
 
 ## Main results
 

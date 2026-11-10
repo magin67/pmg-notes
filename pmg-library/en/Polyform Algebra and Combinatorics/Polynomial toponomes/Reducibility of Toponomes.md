@@ -1,9 +1,9 @@
 ---
 title: Reducibility of Toponomes
 date: 2026-10-23
-updated: 2026-11-08
-revision: 2
-source_revision: 5
+updated: 2026-11-11
+revision: 3
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: reducibility-of-toponomes
@@ -490,6 +490,8 @@ $$
 The first polynomial represents $\circ$ and is reducible. The second represents $*$ and is irreducible; its leading coefficient in $t$, $u(u-1)$, is divisible by $u$ but not by $u^2$. Thus the same table has different reducibility status under the two multiplication rules.
 
 An edgeless graph has the unit table. Isolated vertices change neither the table nor the result. The statement concerns the full table with its unit term; additional triangle-row normalizations are outside its scope.
+
+See [[en/PythonExamples/Example - Polynomial Toponomes#Products and factorization|the notebook calculation]].
 
 ## Status and independent checks
 

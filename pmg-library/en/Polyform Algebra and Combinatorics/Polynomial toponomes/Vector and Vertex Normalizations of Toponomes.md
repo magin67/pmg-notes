@@ -1,9 +1,9 @@
 ---
 title: Vector and Vertex Normalizations of Toponomes
 date: 2026-10-23
-updated: 2026-11-08
-revision: 2
-source_revision: 7
+updated: 2026-11-11
+revision: 3
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: vector-and-vertex-normalizations-of-toponomes
@@ -327,6 +327,8 @@ $$
 For any tree on $n$ vertices with unit conductances, the vector polynomial is $(1+t)^{n-1}$, since every edge subset is acyclic. Thus this one-variable polynomial no longer distinguishes tree branching patterns. Vertex coefficients additionally record the sizes of the components produced by edge deletion.
 
 For a path and a cycle on the same number of vertices, dividing each column of the vector triangles by its top entry produces identical triangles. The general proof and an eleven-vertex example appear in the [[Coefficient Tables of Toponomes#Paths and cycles: equal normalized triangles|note on coefficient tables]]. This additional division of cells should be distinguished from choosing vector or root weights for forests.
+
+See [[en/PythonExamples/Example - Polynomial Toponomes#Two normalizations of a path|the notebook calculation]].
 
 ## Compatibility with structural identities
 

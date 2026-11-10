@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 16
-translated_revision: 16
+revision: 17
+translated_revision: 17
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -62,6 +62,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Partition Toponomes
 
 [[en/PythonExamples/Example - Partition Toponomes|Partition Toponomes]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/partition-toponomes.ipynb).
+
+## Polynomial Toponomes
+
+[[en/PythonExamples/Example - Polynomial Toponomes|Polynomial Toponomes]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/polynomial-toponomes.ipynb).
 
 ## How an example is organized
 

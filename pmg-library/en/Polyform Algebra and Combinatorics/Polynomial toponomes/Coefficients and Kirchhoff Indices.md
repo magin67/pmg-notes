@@ -1,9 +1,9 @@
 ---
 title: Coefficients and Kirchhoff Indices
 date: 2026-10-23
-updated: 2026-11-08
-revision: 2
-source_revision: 3
+updated: 2026-11-11
+revision: 3
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: coefficients-and-kirchhoff-indices
@@ -197,6 +197,8 @@ R_{bc}=\frac4{11},\qquad
 R_{ca}=\frac3{11},\qquad
 R_{ab}+R_{bc}+R_{ca}=\frac{12}{11}
 $$
+
+See [[en/PythonExamples/Example - Polynomial Toponomes#Forest coefficients and the Kirchhoff index|the notebook calculation]].
 
 ## Further details: spectra and geometry
 

@@ -1,9 +1,9 @@
 ---
 title: Forest Coefficients and the Laplacian Polynomial
 date: 2026-10-23
-updated: 2026-11-08
-revision: 2
-source_revision: 9
+updated: 2026-11-11
+revision: 3
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-and-the-laplacian-polynomial
@@ -329,6 +329,8 @@ P_G(t)=1+12t+33t^2
 $$
 
 Here $\tau=11$ is the sum of the weights of three spanning trees, not their number. This distinction applies to all coefficients of a weighted graph.
+
+See [[en/PythonExamples/Example - Polynomial Toponomes#Prescribed roots and the Laplacian polynomial|the notebook calculation]].
 
 ## The first coefficients
 
