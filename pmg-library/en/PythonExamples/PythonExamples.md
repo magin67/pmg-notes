@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 15
-translated_revision: 15
+revision: 16
+translated_revision: 16
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -58,6 +58,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Combinatorial Potentials
 
 [[en/PythonExamples/Example - Combinatorial Potentials|Combinatorial Potentials]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/combinatorial-potentials.ipynb).
+
+## Partition Toponomes
+
+[[en/PythonExamples/Example - Partition Toponomes|Partition Toponomes]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/partition-toponomes.ipynb).
 
 ## How an example is organized
 

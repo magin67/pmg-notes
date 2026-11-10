@@ -1,13 +1,13 @@
 ---
 title: From Polyforms to Partitions
 date: 2026-10-22
-updated: 2026-11-08
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: from-polyforms-to-partitions
 lang: en
-source_revision: 8
+source_revision: 9
 description: "The toponome of a chosen polyform representation: component-grade types, spanning-forest coefficients, and equivalent notation as a polynomial in several variables. A path on five vertices."
 order: 1
 aliases:
@@ -277,6 +277,8 @@ $$
 Every edge set of the path is a forest. The expansion therefore gives one term for each of the $16$ edge sets, with counts $1,4,6,4,1$ by grade. Singleton vertices are omitted from the form arguments; for example, $[(abc)]^2$ here corresponds to $abc\mid d\mid e$.
 
 These formulas allow every contribution to the type table above to be checked. In particular, the three adjacent edge pairs give type $(2)$, and the three nonadjacent pairs give $(1^2)$.
+
+See [[en/PythonExamples/Example - Partition Toponomes#The forest toponome of a weighted path|the notebook calculation]].
 
 ## Partitions and polynomials in several variables
 

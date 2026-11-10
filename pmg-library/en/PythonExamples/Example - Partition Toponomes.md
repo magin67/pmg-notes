@@ -1,0 +1,242 @@
+---
+title: "Example: Partition Toponomes"
+date: 2026-11-11
+updated: 2026-11-11
+revision: 1
+translated_revision: 1
+status: draft
+text_prepared_by: ChatGPT
+translation_key: python-partition-toponomes
+lang: en
+description: "Six exact checks for forest toponomes, products of types, colorings, and tables."
+order: 12
+---
+
+Six examples check forest toponomes, dependence on the chosen representation, and the relation between the type product, colorings, and gluing. The series notes give the general proofs.
+
+[[ru/PythonExamples/Пример - Топономы разбиений|Русский]] · [[en/PythonExamples/PythonExamples|Programming Examples]]
+
+Run the fragments from top to bottom. The notebook installs the pinned package revision. [polyform-algebra 4d2ef44](https://github.com/magin67/polyform_algebra/commit/4d2ef44d35a57c73fb5e6ecf6feccf88c237bbbc).
+
+[Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/partition-toponomes.ipynb) · [Download notebook](https://raw.githubusercontent.com/magin67/pmg-notes/v5/pmg-library/en/PythonExamples/notebooks/partition-toponomes.ipynb)
+
+## The forest toponome of a weighted path
+
+On the path $a-b-c$, use conductances $p=3/2$ and $q=2/3$. Compare the four terms of the chosen representation with the Laplacian exponential, then group the terms by positive type. Singletons are omitted from the type. For the unit-conductance path $P_5$, check the full toponome and the coefficient sums by grade.
+
+[[en/Polyform Algebra and Combinatorics/Partition toponomes/From Polyforms to Partitions#A short weighted example|Related section of the note]].
+
+```python
+from fractions import Fraction
+from itertools import combinations
+from math import comb, factorial, prod
+
+from polyform_algebra.core import (
+    Context, Network, equivalent, form_exp, form_product, grade_part,
+    laplacian_form, network, partition_form, resistance,
+)
+from polyform_algebra.toponomes import (
+    coefficient_table, color_class_toponome, forest_toponome,
+    partition_product, partition_toponome,
+)
+
+
+def q(context, blocks=()):
+    return partition_form(context, blocks).value
+
+
+def weighted_forms(context, terms):
+    return sum((weight * q(context, blocks) for blocks, weight in terms),
+               start=0 * q(context))
+
+
+def reduce_terms(terms):
+    return partition_toponome((tuple(map(len, blocks)), weight) for blocks, weight in terms)
+
+
+def path(labels):
+    edges = tuple((a, b, 1) for a, b in zip(labels, labels[1:]))
+    return network(labels, edges)
+
+
+p, q_weight = Fraction(3, 2), Fraction(2, 3)
+weighted_path = network(tuple("abc"), (("a", "b", p), ("b", "c", q_weight)))
+terms = [
+    ((), 1), ((("a", "b"),), p), ((("b", "c"),), q_weight),
+    ((("a", "b", "c"),), p * q_weight),
+]
+exponential = form_exp(laplacian_form(weighted_path).value).value
+assert equivalent(exponential, weighted_forms(weighted_path.context, terms)).value
+assert forest_toponome(weighted_path) == reduce_terms(terms) == {
+    (): 1, (1,): Fraction(13, 6), (2,): 1,
+}
+print("Weighted P₃: 1 + (13/6)(1) + (2)")
+
+P5 = forest_toponome(path(tuple("abcde")))
+assert P5 == {(): 1, (1,): 4, (2,): 3, (1, 1): 3, (3,): 2, (2, 1): 2, (4,): 1}
+assert [sum(count for kind, count in P5.items() if sum(kind) == k) for k in range(5)] == [
+    comb(4, k) for k in range(5)
+]
+print("T(P₅) = 1 + 4(1) + 3(2) + 3(1²) + 2(3) + 2(2,1) + (4)")
+```
+
+## Equal forms and different toponomes
+
+Build both sides of the tetrahedron identity on $a,b,c,d$. The polyforms are equal, while the toponomes of the chosen representations are $3(1^2)$ and $4(2)$. Evaluating each part $j$ as $j+1$ gives $12$ in both cases. Then check two representations of grade two of the $K_4$ exponential and compare their toponomes.
+
+[[en/Polyform Algebra and Combinatorics/Partition toponomes/Toponomes and Structural Identities#One identity and two toponomes|Related section of the note]].
+
+```python
+four = tuple("abcd")
+K4 = network(four, tuple((a, b, 1) for a, b in combinations(four, 2)))
+context = K4.context
+left_terms = [(tuple(map(tuple, blocks)), 1)
+              for blocks in (("ab", "cd"), ("ac", "bd"), ("ad", "bc"))]
+right_terms = [((triple,), 1) for triple in combinations(four, 3)]
+left = weighted_forms(context, left_terms)
+right = weighted_forms(context, right_terms)
+assert equivalent(left, right).value
+left_type, right_type = reduce_terms(left_terms), reduce_terms(right_terms)
+assert left_type == {(1, 1): 3} and right_type == {(2,): 4}
+assert left_type != right_type
+
+
+def vertex_evaluation(toponome):
+    return sum(weight * prod(grade + 1 for grade in kind) for kind, weight in toponome.items())
+
+
+assert vertex_evaluation(left_type) == vertex_evaluation(right_type) == 12
+print("E₄[1,1] = E₄[2,0] | 3(1²) ≠ 4(2) | evaluation: 12 = 12")
+
+forest_grade_two = {kind: weight for kind, weight in forest_toponome(K4).items() if sum(kind) == 2}
+principal_grade_two = reduce_terms([(blocks, 4) for blocks, _ in right_terms])
+grade_two = grade_part(form_exp(laplacian_form(K4).value).value, 2).value
+assert equivalent(grade_two, 3 * right + left).value
+assert equivalent(grade_two, 4 * right).value
+assert forest_grade_two == {(2,): 12, (1, 1): 3}
+assert principal_grade_two == {(2,): 16}
+print("M₂(K₄): 12(2) + 3(1²) ≠ 16(2)")
+```
+
+## The product through partial matchings
+
+The product $(1^2)*(1^2)$ has one empty matching, four single matchings, and two double matchings. Also check multiplication by one part and two groupings of the fourth power of $(1)$. Compare each coefficient of that power with the second-kind potential of its type.
+
+[[en/Polyform Algebra and Combinatorics/Partition toponomes/The Second-Kind Algebra on Partitions#The product through partial matchings|Related section of the note]].
+
+```python
+from polyform_algebra.combinatorics import second_kind_potential
+
+unit, one, pair = {(): 1}, {(1,): 1}, {(1, 1): 1}
+seven = {(1, 1, 1, 1): 1, (2, 1, 1): 4, (2, 2): 2}
+assert partition_product(unit, pair) == pair
+assert partition_product(pair, pair) == seven
+assert partition_product({(2, 1): 1}, {(2,): 1}) == {
+    (2, 2, 1): 1, (4, 1): 1, (3, 2): 1,
+}
+square_one = partition_product(one, one)
+fourth = partition_product(square_one, square_one)
+assert fourth == partition_product(partition_product(square_one, one), one)
+assert len(fourth) == 5 and sum(fourth.values()) == 15
+assert all(weight == second_kind_potential(kind) for kind, weight in fourth.items())
+print("(1²) * (1²) = (1⁴) + 4(2,1²) + 2(2²)")
+print("(1)^4: 5 types, 15 set partitions")
+```
+
+## Color classes of two disjoint edges
+
+For the graph with edges $ab$ and $cd$, enumerate color-class partitions and keep the ones that separate the endpoints of every edge. Color names are ignored. The seven partitions give the same coefficients as partial matching. Then check the equality with vertex weights.
+
+[[en/Polyform Algebra and Combinatorics/Partition toponomes/Graph Colorings and Partition Products#Seven possibilities for two edges|Related section of the note]].
+
+```python
+from collections import Counter
+from sympy.utilities.iterables import multiset_partitions
+
+two_edges = network(four, (("a", "b", 1), ("c", "d", 1)))
+classes = []
+for blocks in multiset_partitions(four):
+    if all(not ({a, b} <= set(block)) for a, b, _ in two_edges.edges for block in blocks):
+        classes.append(blocks)
+enumerated = Counter(tuple(sorted(map(len, blocks), reverse=True)) for blocks in classes)
+assert color_class_toponome(two_edges) == enumerated == seven
+assert len(classes) == 7
+weighted_classes = color_class_toponome(two_edges, {"a": 2, "b": 1, "c": 3, "d": 2})
+assert weighted_classes == partition_product({(2, 1): 1}, {(3, 2): 1})
+print("Two disjoint edges: 7 proper color-class partitions")
+```
+
+## Gluing at chosen roots
+
+Start with edges $ab$, $cd$, $ef$, and $gh$. For each of the seven matchings, replace the chosen roots of the right-hand pair with roots of the left-hand pair. Compare the product of forms with the partition form of the resulting graph's components. The replaced labels remain in the common context as singletons.
+
+[[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Products and Boundary Forms#Seven gluings for two pairs of connections|Related section of the note]].
+
+```python
+from itertools import product
+
+vertices = tuple("abcdefgh")
+gluing_context = Context(vertices)
+left_blocks = (("a", "b"), ("c", "d"))
+right_blocks = (("e", "f"), ("g", "h"))
+matchings = (
+    [()]
+    + [(pair_of_indices,) for pair_of_indices in product(range(2), repeat=2)]
+    + [((0, 0), (1, 1)), ((0, 1), (1, 0))]
+)
+glued_terms = []
+for matching in matchings:
+    substitution = {right_blocks[j][0]: left_blocks[i][0] for i, j in matching}
+    substituted = tuple((substitution.get(root, root), end) for root, end in right_blocks)
+    glued = Network(gluing_context, tuple((a, b, 1) for a, b in left_blocks + substituted))
+    blocks = glued.components
+    multiplied = form_product(q(gluing_context, left_blocks), q(gluing_context, substituted)).value
+    assert equivalent(multiplied, q(gluing_context, blocks)).value
+    assert len(blocks) == 4
+    glued_terms.append((blocks, 1))
+assert reduce_terms(glued_terms) == seven
+print("7 root gluings: all form comparisons hold; multiplicities 1, 4, 2")
+```
+
+## Coefficient tables
+
+On $P_6$, two terms of type $(3,1)$ and one of type $(2^2)$ give the cell $a_{4,2}=3$. Check the proportional columns of the path and cycle on three to seven vertices, then compare the two trees from the note. Their tables agree, while the coefficient of $(4^2)$ and their diameters differ. Finally compare the table of the partial-matching product with the forest table of two disjoint edges.
+
+[[en/Polyform Algebra and Combinatorics/Partition toponomes/Coefficient Tables of Toponomes#Example: a path on six vertices|Related section of the note]].
+
+```python
+labels = tuple("abcdef")
+P6 = forest_toponome(path(labels))
+table = coefficient_table(P6)
+assert P6[(4,)] == P6[(3, 1)] == 2 and P6[(2, 2)] == 1
+assert (table[(4, 1)], table[(4, 2)]) == (2, 3)
+assert [sum(v for (k, r), v in table.items() if k == grade) for grade in range(6)] == [
+    comb(5, k) for k in range(6)
+]
+print("P₆: a[4,1] = 2, a[4,2] = 3")
+
+for n in range(3, 8):
+    labels = tuple("abcdefg"[:n])
+    line = path(labels)
+    cycle = network(labels, line.edges + ((labels[-1], labels[0], 1),))
+    P, C = (coefficient_table(forest_toponome(graph)) for graph in (line, cycle))
+    assert P.keys() == C.keys()
+    assert all((n - k) * C[k, r] == n * value for (k, r), value in P.items())
+    if n == 4:
+        assert Fraction(P[2, 2], P[2, 1]) == Fraction(C[2, 2], C[2, 1]) == Fraction(1, 2)
+print("P₄ and C₄: normalized a[2,2] = 1/2")
+
+labels = tuple("abcdefghij")
+edge_sets = ("ab ac ad be bf cg dh gi ij", "ab ac ad be bf cg eh gi hj")
+trees = [network(labels, tuple((a, b, 1) for a, b in edges.split())) for edges in edge_sets]
+first_tree, second_tree = map(forest_toponome, trees)
+assert coefficient_table(first_tree) == coefficient_table(second_tree)
+assert first_tree.get((4, 4), 0) == 0 and second_tree[(4, 4)] == 1
+diameters = tuple(max(map(max, resistance(tree).value.values)) for tree in trees)
+assert diameters == (6, 7)  # Unit-tree resistance equals the number of edges on the path.
+print("Two trees: equal tables, diameters 6 and 7")
+
+assert coefficient_table(seven) == {(4, 4 - h): comb(2, h)**2 * factorial(h) for h in range(3)}
+assert coefficient_table(forest_toponome(two_edges)) == {(0, 0): 1, (1, 1): 2, (2, 2): 1}
+print("Matching product and independent forest choices give different tables")
+```

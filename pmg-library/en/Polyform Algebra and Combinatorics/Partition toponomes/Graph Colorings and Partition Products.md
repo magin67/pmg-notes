@@ -1,13 +1,13 @@
 ---
 title: Graph Colorings and Partition Products
 date: 2026-10-22
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: graph-colorings-and-partition-products
 lang: en
-source_revision: 3
+source_revision: 4
 description: "A graph model of the second-kind algebra: color classes, vertex-weighted complete graphs, disjoint union, and chromatic symmetric functions."
 order: 4
 aliases:
@@ -203,6 +203,8 @@ A class of three vertices is impossible: it would contain both endpoints of at l
 | $2$ | $(2^2)$ | $2$ |
 
 In every case, the number of vertices is $N=4$, the total weight is $k=4$, and the graph has $2$ connected components. The number $r$ of color classes ranges from $2$ to $4$ and is a different quantity from the number of connected components. The sum of the coefficients is $7$: the number of admissible class partitions, disregarding color names.
+
+See [[en/PythonExamples/Example - Partition Toponomes#Color classes of two disjoint edges|the notebook calculation]].
 
 ## Class partitions and named colors
 

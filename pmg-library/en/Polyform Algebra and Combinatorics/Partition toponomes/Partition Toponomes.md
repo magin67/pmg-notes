@@ -1,9 +1,9 @@
 ---
 title: Partition Toponomes
 date: 2026-10-22
-updated: 2026-11-08
-revision: 5
-source_revision: 8
+updated: 2026-11-11
+revision: 6
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-toponomes-series-navigation
@@ -67,6 +67,10 @@ The main chain uses one fixed initial expansion. Replacing it by a structural id
 | Ordinary multiplication of type monomials | Lists of parts are joined without matchings | $x_1x_1=x_1^2$ |
 
 Thus the same disjoint union of graphs has different descriptions for two constructions. Forests are chosen independently and give ordinary multiplication of type polynomials. Color classes in different graphs may share a color and merge, so their type sums multiply under $*$. In the symmetric-function representation, this latter product also becomes ordinary multiplication, but the variables and their correspondence with types are different.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Partition Toponomes|Partition Toponomes]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/partition-toponomes.ipynb).
 
 ## Main results
 

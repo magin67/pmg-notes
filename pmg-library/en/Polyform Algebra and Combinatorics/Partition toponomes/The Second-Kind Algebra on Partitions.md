@@ -1,9 +1,9 @@
 ---
 title: The Second-Kind Algebra on Partitions
 date: 2026-10-22
-updated: 2026-11-08
-revision: 3
-source_revision: 6
+updated: 2026-11-11
+revision: 4
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: second-kind-algebra-on-partitions
@@ -123,6 +123,8 @@ $$
 $$
 
 This number depends on the numbers of parts in the factors. Its distribution among the resulting types also depends on the values of the parts.
+
+See [[en/PythonExamples/Example - Partition Toponomes#The product through partial matchings|the notebook calculation]].
 
 ## Why this defines an algebra
 

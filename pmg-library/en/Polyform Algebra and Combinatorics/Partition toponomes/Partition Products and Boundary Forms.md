@@ -1,13 +1,13 @@
 ---
 title: Partition Products and Boundary Forms
 date: 2026-10-22
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-products-and-boundary-forms
 lang: en
-source_revision: 3
+source_revision: 4
 description: "Realizing partition multiplication by gluing boundary components at chosen roots: examples, coefficients, and the distinction from ordinary polyform multiplication."
 order: 5
 aliases:
@@ -243,6 +243,8 @@ All seven terms have grade $4$. The number of vertices incident to edges depends
 | $2$ | $(2^2)$ | $6$ | $2$ | $2$ | $4$ |
 
 In the general construction with no original singleton blocks, write $k=w(\lambda)+w(\mu)$ for the total grade. Then $n=k+r+s$. A matching of $h$ pairs leaves $r+s-h$ nontrivial components and $h$ singleton vertices, so $m=r+s=n-k$. Any original singleton blocks remain unchanged and increase $n$, $m$, and $\ell$ by the same number.
+
+See [[en/PythonExamples/Example - Partition Toponomes#Gluing at chosen roots|the notebook calculation]].
 
 ## Coefficients and sums of forms
 

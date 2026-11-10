@@ -1,13 +1,13 @@
 ---
 title: Toponomes and Structural Identities
 date: 2026-10-22
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partition-toponomes-and-structural-identities
 lang: en
-source_revision: 3
+source_revision: 4
 description: "Why equal polyforms can have different toponomes of their chosen representations: the tetrahedron identity, grade two of the K4 exponential, and a criterion for representation-independent reduction."
 order: 2
 aliases:
@@ -134,6 +134,8 @@ $$
 Their difference is $3(1^2)-4(2)$. In $\mathcal E_F$, the coefficient sum $12+3=15$ counts two-edge spanning forests. In $\mathcal E_P$, it is $16$ and no longer has this meaning: the coefficients were obtained by applying a structural identity.
 
 The number of forests of the graph has not changed. The polyform expression has changed, together with the meaning of its coefficient sum. Nor does the coefficient $4$ in $\mathcal E_P$ mean that a fourth tree has appeared on a fixed triple.
+
+See [[en/PythonExamples/Example - Partition Toponomes#Equal forms and different toponomes|the notebook calculation]].
 
 ## A criterion for representation-independent reduction
 

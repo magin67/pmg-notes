@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 15
+revision: 16
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -57,6 +57,10 @@ folder_order: 70
 ## Комбинаторные потенциалы
 
 [[ru/PythonExamples/Пример - Комбинаторные потенциалы|Комбинаторные потенциалы]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/combinatorial-potentials.ipynb).
+
+## Топономы разбиений
+
+[[ru/PythonExamples/Пример - Топономы разбиений|Топономы разбиений]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/partition-toponomes.ipynb).
 
 ## Как устроен пример
 

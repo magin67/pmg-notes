@@ -1,9 +1,9 @@
 ---
 title: Coefficient Tables of Toponomes
 date: 2026-10-22
-updated: 2026-11-08
-revision: 4
-source_revision: 10
+updated: 2026-11-11
+revision: 5
+source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: coefficient-tables-of-toponomes
@@ -424,6 +424,8 @@ $$
 This is ordinary convolution in two indices. It should be distinguished from the product $*$, which sums over matchings. The two rules are compared explicitly in [[Reducibility of Toponomes#Two products of cells|the note on reducibility]]; the expanded square of the toponome of a three-edge path appears in the [[Reducibility of Toponomes#Example: two disjoint three-edge paths|example of two disjoint paths]].
 
 **Reducibility depends on the product.** Under $\circ$, a graph table factors by independent components. Under the induced $*$, the canonical forest table of any graph with positive conductances and at least one edge is irreducible, including when the graph is disconnected. This holds in both normalizations over $\mathbb R$ and $\mathbb C$; a [[Reducibility of Toponomes#Irreducibility of the table under the second-kind product|separate proof]] uses a falling-power representation of the cells.
+
+See [[en/PythonExamples/Example - Partition Toponomes#Coefficient tables|the notebook calculation]].
 
 ## Further directions
 
