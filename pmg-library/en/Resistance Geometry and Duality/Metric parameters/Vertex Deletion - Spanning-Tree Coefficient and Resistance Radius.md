@@ -1,9 +1,9 @@
 ---
 title: "Vertex Deletion: Spanning-Tree Coefficient and Resistance Radius"
 date: 2026-10-18
-updated: 2026-11-08
-revision: 3
-translated_revision: 3
+updated: 2026-11-10
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -208,6 +208,8 @@ $$
 $$
 
 Here $0=\lambda_1<\lambda_2\le\ldots\le\lambda_m$ are its Laplacian eigenvalues. The spanning-tree count involves the product of the entire nonzero spectrum, whereas $\lambda_2$ singles out its smallest element. Both remaining graphs in the table have five vertices; the lower spanning-tree count comes with higher algebraic connectivity. The $\lambda_2$ values provide an additional comparison, rather than a definition of universal criticality.
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Two ways to remove a vertex|Python example]] reproduces this calculation.
 
 ## Vertex properties through polyforms
 

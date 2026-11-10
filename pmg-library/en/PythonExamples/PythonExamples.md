@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 11
-translated_revision: 11
+revision: 12
+translated_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -43,19 +43,23 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 
 [[en/PythonExamples/Example - Subspaces and Graph Transformations|Subspaces and Graph Transformations]] - potentials, bi- and di-coordinates, Dirichlet extension, contraction, and elimination. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/spaces.ipynb).
 
+## Metric Parameters of Graphs
+
+[[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters in Python]]. Eight calculations from the notes in this series. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/metric-parameters.ipynb).
+
 ## How an example is organized
 
 Problem and diagram → mathematical objects → calculation with `polyform_algebra` → expected results → independent check. Run each note’s fragments in order. NumPy and direct enumeration are used where they provide a separate way to check the answer.
 
 ## Version and ready-to-run notebooks
 
-All examples in this section were checked with `polyform_algebra 0.9.0` on Python 3.12. The shared guide covers installation; version information is updated together with checks of both language editions.
+The introductory and Spaces examples use the `v0.9.0` tag. The [[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters of Graphs]] notebooks install the package commit pinned in the example.
 
 The weighted-chain notebook includes explanations, formulas, a diagram, and saved results:
 
 [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb) · [Download notebook](https://raw.githubusercontent.com/magin67/pmg-notes/v5/pmg-library/en/PythonExamples/notebooks/weighted-chain.ipynb)
 
-The other examples currently provide executable fragments in the notes. A calculation for one case does not prove a general formula. Program capabilities should be distinguished from the general model in the [[Core specification|PMG specification]].
+A calculation for one case does not prove a general formula. Program capabilities should be distinguished from the general model in the [[Core specification|PMG specification]].
 
 
 ## Symbolic calculations

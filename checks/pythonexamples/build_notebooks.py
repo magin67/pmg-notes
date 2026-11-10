@@ -33,12 +33,41 @@ def page_link(lang,target):
  url='https://magin67.github.io/pmg-notes/'+urllib.parse.quote(slug,safe='/,')
  if anchor:url+='#'+urllib.parse.quote(re.sub(r'[^\w\s-]','',anchor.lower()).replace(' ','-'))
  return '['+(label or stem)+']('+url+')'
+METRIC_COMMIT = '14f137c0b4bf965392f47f877165f2f3b8168073'
+
 COMPANIONS = (
     ('ru', 'Пример - Взвешенная цепочка', 'weighted-chain'),
     ('en', 'Example - Weighted Chain', 'weighted-chain'),
     ('ru', 'Пример - Подпространства и преобразования графов', 'spaces'),
     ('en', 'Example - Subspaces and Graph Transformations', 'spaces'),
+    ('ru', 'Пример - Метрические параметры графов', 'metric-parameters'),
+    ('en', 'Example - Metric Parameters of Graphs', 'metric-parameters'),
 )
+
+def revision_setup(commit):
+    return f'''from importlib.metadata import PackageNotFoundError, distribution
+import json
+import subprocess
+import sys
+
+source = "https://github.com/magin67/polyform_algebra/archive/{commit}.zip"
+try:
+    installed = distribution("polyform_algebra")
+    installed_url = json.loads(installed.read_text("direct_url.json") or "{{}}").get("url")
+except PackageNotFoundError:
+    installed = None
+    installed_url = None
+
+# A tag and a development revision can report the same version string.
+if installed_url != source:
+    if "polyform_algebra" in sys.modules:
+        raise RuntimeError("Restart the kernel before installing the pinned package revision.")
+    command = [sys.executable, "-m", "pip", "install", "-q"]
+    if installed is not None and installed.version == "0.9.0":
+        command += ["--force-reinstall", "--no-deps"]
+    subprocess.check_call(command + [source])
+'''
+
 
 for lang, title, slug in COMPANIONS:
  has_plot = slug == 'weighted-chain'
@@ -75,7 +104,15 @@ if installed != "0.9.0":
 if importlib.util.find_spec("matplotlib") is None:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "matplotlib"])
 '''
+ if slug == 'metric-parameters':
+  setup = revision_setup(METRIC_COMMIT)
+  preparation = ('Выполните все ячейки сверху вниз. Ревизия пакета: ' if lang == 'ru'
+                 else 'Run all cells from top to bottom. Package revision: ')
+  heading = '## Подготовка' if lang == 'ru' else '## Setup'
+  cells[1].source = f'{heading}\n\n{preparation}**{METRIC_COMMIT[:7]}**.'
  cells[2] = nbformat.v4.new_code_cell(setup)
  nb=nbformat.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'},'colab':{'name':title+'.ipynb','provenance':[]},'pmg':{'package_version':'0.9.0','source_note':f'pmg-library/{lang}/PythonExamples/{title}.md'}})
+ if slug == 'metric-parameters':
+  nb.metadata.pmg.package_commit = METRIC_COMMIT
  out=READY/'pmg-library'/lang/'PythonExamples/notebooks'/f'{slug}.ipynb';out.parent.mkdir(exist_ok=True);nbformat.validate(nb);nbformat.write(nb,out)
  print(lang,len(cells),'cells')

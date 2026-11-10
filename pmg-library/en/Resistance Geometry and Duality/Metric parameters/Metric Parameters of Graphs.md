@@ -1,9 +1,9 @@
 ---
 title: Metric Parameters of Graphs
 date: 2026-10-18
-updated: 2026-11-08
-revision: 6
-translated_revision: 9
+updated: 2026-11-10
+revision: 7
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: metric-parameters-series-navigation
@@ -101,6 +101,10 @@ General definitions and notation are given in the [[Core specification|core spec
 The computation of the [[Resistance Radius and Diameter of a Graph#Computing the center and radius using polyforms|radius]] and [[Centroid, Spanning-Tree, and Eigenvector Centralities#The next-to-top-grade component and vertex parameters|vertex parameters]] uses normalized potentials of grade-one forms, obtained through the next-to-top-grade component of the Laplacian exponential. The [[Resistance Radius of a Set - Gram Matrix and Volume#Subset volume through grade components of the exponential|volume of a subset]] requires the component whose grade complements that of its boundary form to the top grade.
 
 [[Density, Compactness, and Tree Invariance#Representation through polyforms|Dimensionless metric parameters]] are built from these evaluations. In the [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius#Vertex properties through polyforms|study of vertex removal]], marking the vertex's incident edges in the exponential gives its spanning-tree degree distribution. Elimination that preserves the metric is expressed by projection, whereas deletion from the network changes the Laplacian and its exponential. Polyforms describe characteristics of vertices and the whole graph as well as characteristics of edges.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters in Python]]. Eight calculations from the notes in this series. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/metric-parameters.ipynb).
 
 ## Status and scope of the series
 

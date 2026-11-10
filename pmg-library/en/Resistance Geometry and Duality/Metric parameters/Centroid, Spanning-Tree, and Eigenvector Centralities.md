@@ -1,9 +1,9 @@
 ---
 title: "Centroid, Spanning-Tree, and Eigenvector Centralities"
 date: 2026-10-16
-updated: 2026-11-08
-revision: 6
-translated_revision: 7
+updated: 2026-11-10
+revision: 7
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -396,6 +396,8 @@ For the above five-vertex graphs with unit conductances:
 | $K_{1,4}$ | $16/5$ | $16$ | $1$ | $9/25$ |
 
 The path and the star have the same resistance radius but different total resistances to the centroid. Their values agree with (3). For an independent check of the radius, use the star realization already given and realize the path by $0,e_1,e_1+e_2,e_1+e_2+e_3,e_1+e_2+e_3+e_4$. In both cases, the circumcenter is $(e_1+e_2+e_3+e_4)/2$, and every vertex has resistance $1$ to it.
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Three centralities|Python example]] reproduces this calculation.
 
 ## Comparison on the Krackhardt kite graph
 

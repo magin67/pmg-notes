@@ -1,9 +1,9 @@
 ---
 title: "Resistance Radius of a Set: Gram Matrix and Volume"
 date: 2026-10-16
-updated: 2026-11-08
-revision: 5
-translated_revision: 7
+updated: 2026-11-10
+revision: 6
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -382,6 +382,8 @@ $$
 $$
 
 Thus $g_A=3/4=36\cdot(3/4)\cdot(1/36)$. The center's bi-coordinates are $(-1/2,1/2,1/2,1/2)$: the center lies outside the simplex, but all formulas remain valid.
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Radius and volume of a subset|Python example]] reproduces this calculation.
 
 ## The radius of a subset and projection of the center
 

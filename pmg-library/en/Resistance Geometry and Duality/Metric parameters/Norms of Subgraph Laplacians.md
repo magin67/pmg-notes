@@ -1,9 +1,9 @@
 ---
 title: Norms of Subgraph Laplacians
 date: 2026-11-04
-updated: 2026-11-08
-revision: 2
-translated_revision: 2
+updated: 2026-11-10
+revision: 3
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: norms-of-subgraph-laplacians
@@ -164,6 +164,8 @@ Selected vertices and their internal edges are blue. The three panels represent 
 Exactly the two original triples maximize the norm. They are biconnected blocks, not connected components: the whole graph is connected. These groups overlap at $h$ and do not partition the vertices.
 
 The more general result is the local Foster formula: over the vertices and edges of an entire biconnected block, the sum of $c_{ij}R_{ij}$ equals its number of vertices minus one [2, Theorem 2.8]. The reason is that every spanning tree restricts to a tree on the block. Bridges satisfy the same law as two-vertex blocks. Attaining the upper bound does not itself mean that the selected group is one maximal block: a connected union of several entire blocks can attain it as well.
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Norm of the internal Laplacian|Python example]] reproduces this calculation.
 
 ## Partitions and sensitivity of the spanning-tree coefficient
 

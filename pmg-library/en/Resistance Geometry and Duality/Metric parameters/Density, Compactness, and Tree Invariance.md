@@ -1,9 +1,9 @@
 ---
 title: Density, Compactness, and Tree Invariance
 date: 2026-10-17
-updated: 2026-11-08
-revision: 6
-translated_revision: 6
+updated: 2026-11-10
+revision: 7
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -319,6 +319,8 @@ For $n\ge4$, the values differ. As $n$ grows, both compactness measures tend to 
 | Efficiency $E$ | No | Accounts for shortest-path lengths |
 
 Here “No” means that the general property fails, not that every pair of nonisomorphic trees must have different values. The term “tree invariance” describes a parameter's behavior. “Spanning-tree” retains its meaning of a construction through spanning trees, for example when averaging degrees. Without an additional definition, “forest” is not used to label the radius measures: in the adopted model, a disconnected forest has no common finite resistance metric on all its vertices.
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Two compactness measures|Python example]] reproduces this calculation.
 
 ## Comparing graphs of the same order
 

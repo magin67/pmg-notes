@@ -1,9 +1,9 @@
 ---
 title: Sphere Centers and Graph Heterogeneity
 date: 2026-11-03
-updated: 2026-11-08
-revision: 2
-translated_revision: 5
+updated: 2026-11-10
+revision: 3
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -327,6 +327,8 @@ $$
 Directly, $\mathbf Q(2,2,-1)^{\mathsf T}/3=16\mathbf1$, so $\sigma=8$. Here $\bar d=6$ and $\Delta_L=2$. In resistance geometry, $\Delta_R=2/225$.
 
 Barycentric coordinates of a point within a simplex are nonnegative, but circumcenter coordinates may have either sign. A negative $\beta^3$ means that $O_L$ lies on the opposite side of the hyperplane of face $12$ from vertex $3$. This is ordinary circumsphere geometry, not a failure of connectedness or metric positivity. For the star, it is the resistance center that lies outside: $\alpha^1=-1/2$.
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Centers of the two spheres|Python example]] reproduces this calculation.
 
 ## Coincident centers and structural symmetry
 

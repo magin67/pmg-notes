@@ -1,9 +1,9 @@
 ---
 title: Resistance Radius and Diameter of a Graph
 date: 2026-10-15
-updated: 2026-11-08
-revision: 6
-translated_revision: 6
+updated: 2026-11-10
+revision: 7
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -323,6 +323,8 @@ c_{\mathrm{diam}}(K_n)=\frac{n^2c}{4(n-1)},\qquad
 $$
 
 For $n>2$, inequality (2) is strict even for the complete graph. For $K_5$ with unit conductances, $\rho=4/25$ and $D_{\mathrm{res}}=16/25$.
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Radius and diameter of a path and a star|Python example]] reproduces this calculation.
 
 ## Computing the center and radius using polyforms
 

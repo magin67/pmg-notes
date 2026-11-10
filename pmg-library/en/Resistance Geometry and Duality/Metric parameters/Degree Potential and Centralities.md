@@ -1,9 +1,9 @@
 ---
 title: Degree Potential and Centralities
 date: 2026-11-03
-updated: 2026-11-08
-revision: 2
-translated_revision: 3
+updated: 2026-11-10
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -90,6 +90,8 @@ The middle vertex supplies current $2/3$, while each endpoint receives $1/3$. Th
 ![The path calculation displays degrees, deviations from mean degree, and potentials separately](<images/Degree Potential on a Path.svg>)
 
 *The path calculation displays degrees, deviations from mean degree, and potentials separately. Arrows point from the source to the sinks; prescribed currents and potentials both sum to zero.*
+
+The [[en/PythonExamples/Example - Metric Parameters of Graphs#Degree potential on a path|Python example]] reproduces this calculation.
 
 ## Why cycles change the result
 
