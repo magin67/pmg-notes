@@ -1,9 +1,9 @@
 ---
 title: Nonlocal Elements, Spheres, and Their Centers
 date: 2026-10-15
-updated: 2026-11-08
-revision: 5
-translated_revision: 6
+updated: 2026-11-10
+revision: 6
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -525,6 +525,8 @@ $$
 $$
 
 The additional term is nonzero but orthogonal to every grade-$2$ boundary in $\Lambda^2(z^\perp)$.
+
+`IsotropicExtension` reproduces the norms and centers in exact rational arithmetic. From the linked revision of the package repository, run `python -m examples.isotropic_centers`. [Runnable example](https://github.com/magin67/polyform_algebra/blob/2029d3711c82b8b30b621a334700b09c21f1d09f/examples/isotropic_centers.py).
 
 ## Status of the results and continuation
 
