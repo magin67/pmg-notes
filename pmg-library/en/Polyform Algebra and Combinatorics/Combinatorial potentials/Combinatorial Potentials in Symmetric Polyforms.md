@@ -1,9 +1,9 @@
 ---
 title: Combinatorial Potentials in Symmetric Polyforms
 date: 2026-10-20
-updated: 2026-11-08
-revision: 2
-source_revision: 4
+updated: 2026-11-11
+revision: 3
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: combinatorial-potentials-in-symmetric-polyforms
@@ -208,6 +208,8 @@ For $\boldsymbol k=[2,1]$, $t(\boldsymbol k)=[3,1]!=3$. For $[1,1]$, both blocks
 In the formula for $t$, the exponents in the explicitly defined collection $[(k_i+1)^{k_i-1}]$ are ordinary numerical powers. This differs from the shorthand for multiplicities in a type, such as $[1^r]$.
 
 The count $F_n$ applies to the complete graph, where all edges within each block are available. In a general graph, some trees may be absent. The number of its spanning forests with fixed vertex blocks depends on the spanning-tree counts of the induced subgraphs; block sizes alone are insufficient.
+
+See [[en/PythonExamples/Example - Combinatorial Potentials#From partitions to forests on five vertices|the notebook calculation]].
 
 ## The size of a symmetric sum
 

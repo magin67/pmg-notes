@@ -1,15 +1,15 @@
 ---
 title: Cyclic Partitions and the Combinatorial Potential of the First Kind
 date: 2026-10-24
-updated: 2026-11-08
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cyclic-partitions-and-first-kind-combinatorial-potential
 lang: en
 description: Cyclic orders within partition blocks, the first-kind combinatorial potential, Stirling numbers, and the exclusion of fixed points.
 order: 5
-source_revision: 3
+source_revision: 4
 aliases:
   - "en/Combinatorial potentials/Cyclic Partitions and the Combinatorial Potential of the First Kind"
 ---
@@ -73,6 +73,8 @@ For four elements:
 | Total | | 15 | | 24 |
 
 For example, $s_1([3,3,2])=280\cdot2\cdot2=1120$: each of $280$ partitions into two triples and a pair admits four combinations of cyclic orders.
+
+See [[en/PythonExamples/Example - Combinatorial Potentials#Cycles and the first-kind potential|the notebook calculation]].
 
 ## Summing types and Stirling numbers
 

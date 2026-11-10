@@ -1,8 +1,8 @@
 ---
 title: "Программные примеры"
 date: 2026-10-29
-updated: 2026-11-10
-revision: 14
+updated: 2026-11-11
+revision: 15
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -53,6 +53,10 @@ folder_order: 70
 ## Симметрические полиформы
 
 [[ru/PythonExamples/Пример - Проверка тождеств симметрических полиформ|Проверка тождеств симметрических полиформ]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/symmetric-polyforms.ipynb).
+
+## Комбинаторные потенциалы
+
+[[ru/PythonExamples/Пример - Комбинаторные потенциалы|Комбинаторные потенциалы]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/combinatorial-potentials.ipynb).
 
 ## Как устроен пример
 

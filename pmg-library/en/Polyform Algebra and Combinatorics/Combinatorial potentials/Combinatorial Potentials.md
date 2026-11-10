@@ -1,9 +1,9 @@
 ---
 title: Combinatorial Potentials
 date: 2026-10-20
-updated: 2026-11-08
-revision: 5
-source_revision: 7
+updated: 2026-11-11
+revision: 6
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: combinatorial-potentials-series-navigation
@@ -71,6 +71,10 @@ Notation and links are consistent with the [[en/Polyform Algebra and Combinatori
 | $N_n(\lambda_k),\ H_n(\lambda_k)$ | The type and $n$ labelled vertices; graphs and orders of adding their arcs, respectively |
 
 The symbols $c_r(w,m)$ and $c(n,m)$ refer to different families: the former extends numbers of the **second** kind, while the latter counts cycles and belongs to the **first** kind. In rooted-forest counts, $q$ is the number of prescribed roots and $m$ counts those used; the parameter $r$ in $r$-Stirling numbers counts markers. Each note states the local roles of its letters.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Combinatorial Potentials|Combinatorial Potentials]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/combinatorial-potentials.ipynb).
 
 ## Main results
 

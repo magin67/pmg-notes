@@ -1,9 +1,9 @@
 ---
 title: Cayley's Theorem and Joining Prescribed Components
 date: 2026-10-20
-updated: 2026-11-08
-revision: 2
-source_revision: 4
+updated: 2026-11-11
+revision: 3
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cayleys-formula-and-connecting-given-components
@@ -195,6 +195,8 @@ For the blocks $A,B,C$ in Figure 2:
 | **Total** | **20** | **12** | **8** |
 
 Contraction preserves the total completion count but hides the distinction between two endpoints within a block. The type of the new edges must therefore be determined **on the original vertices**, before contraction. Two adjacent edges on five vertices have full type $[2,0,0]$; two disjoint edges have type $[1,1,0]$.
+
+See [[en/PythonExamples/Example - Combinatorial Potentials#Joining prescribed components|the notebook calculation]].
 
 ## Prüfer code type and the number of leaves
 

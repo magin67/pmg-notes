@@ -1,9 +1,9 @@
 ---
 title: The Potential of Path-and-Cycle States
 date: 2026-10-25
-updated: 2026-11-08
-revision: 2
-source_revision: 2
+updated: 2026-11-11
+revision: 3
+source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: path-and-cycle-state-potential
@@ -155,6 +155,8 @@ Formulas (1)-(2) remain valid in the loopless model for types with $c_1=0$. Prob
 ![Potential Graphs and Histories](<images/Potential Graphs and Histories.svg>)
 
 For a path of two arcs, $u=2$. On vertices $a,b,c$, there are $N_3=6$ directed paths, one for each vertex order. Each allows two arc-addition orders, so $H_3=12$. The right panel shows the two histories of just one graph, $a	o b	o c$.
+
+See [[en/PythonExamples/Example - Combinatorial Potentials#Paths, cycles, and construction histories|the notebook calculation]].
 
 ## The connection to Laguerre configurations
 

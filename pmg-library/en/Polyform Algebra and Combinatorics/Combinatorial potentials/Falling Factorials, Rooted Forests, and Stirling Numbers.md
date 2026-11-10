@@ -1,9 +1,9 @@
 ---
 title: "Falling Factorials, Rooted Forests, and Stirling Numbers"
 date: 2026-10-20
-updated: 2026-11-08
-revision: 3
-source_revision: 3
+updated: 2026-11-11
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: falling-factorials-rooted-forests-and-stirling-numbers
@@ -217,6 +217,8 @@ $$
 $$
 
 A root's number of occurrences equals its degree in the graph. The first sum therefore groups forests by component sizes; the second groups them by the degree of the root that does not end the code. The individual counts $64,27$ and $75,15,1$ need not match: they partition the same set of forests into different classes.
+
+See [[en/PythonExamples/Example - Combinatorial Potentials#Forest coefficients and Stirling numbers|the notebook calculation]].
 
 ## Supplementary route: differences and polynomial expansions
 

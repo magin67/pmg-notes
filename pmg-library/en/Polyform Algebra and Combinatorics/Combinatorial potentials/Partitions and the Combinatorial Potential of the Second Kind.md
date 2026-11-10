@@ -1,9 +1,9 @@
 ---
 title: Partitions and the Combinatorial Potential of the Second Kind
 date: 2026-10-20
-updated: 2026-11-08
-revision: 3
-source_revision: 4
+updated: 2026-11-11
+revision: 4
+source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: partitions-and-second-kind-combinatorial-potential
@@ -37,6 +37,8 @@ s_2([2,1])=3
 $$
 
 The number $3$ does not depend on the names of the elements. It characterises the partition type itself.
+
+See [[en/PythonExamples/Example - Combinatorial Potentials#Partitions and the second-kind potential|the notebook calculation]].
 
 ## The combinatorial potential of the second kind
 

@@ -1,9 +1,9 @@
 ---
 title: "Programming Examples"
 date: 2026-10-29
-updated: 2026-11-10
-revision: 14
-translated_revision: 14
+updated: 2026-11-11
+revision: 15
+translated_revision: 15
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -54,6 +54,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Symmetric Polyforms
 
 [[en/PythonExamples/Example - Checking Symmetric Polyform Identities|Checking symmetric polyform identities]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/symmetric-polyforms.ipynb).
+
+## Combinatorial Potentials
+
+[[en/PythonExamples/Example - Combinatorial Potentials|Combinatorial Potentials]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/combinatorial-potentials.ipynb).
 
 ## How an example is organized
 

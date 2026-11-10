@@ -36,6 +36,7 @@ def page_link(lang,target):
 PINNED_COMMITS = {
     'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
     'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
+    'combinatorial-potentials': '990f4462b17a1afaad25666220ffc1fbc2cd4d26',
     'symmetric-polyforms': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
 }
 
@@ -50,6 +51,8 @@ COMPANIONS = (
     ('en', 'Example - Checking Structural Identities', 'structural-identities'),
     ('ru', 'Пример - Проверка тождеств симметрических полиформ', 'symmetric-polyforms'),
     ('en', 'Example - Checking Symmetric Polyform Identities', 'symmetric-polyforms'),
+    ('ru', 'Пример - Комбинаторные потенциалы', 'combinatorial-potentials'),
+    ('en', 'Example - Combinatorial Potentials', 'combinatorial-potentials'),
 )
 
 def revision_setup(commit):
