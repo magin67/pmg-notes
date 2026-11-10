@@ -33,7 +33,10 @@ def page_link(lang,target):
  url='https://magin67.github.io/pmg-notes/'+urllib.parse.quote(slug,safe='/,')
  if anchor:url+='#'+urllib.parse.quote(re.sub(r'[^\w\s-]','',anchor.lower()).replace(' ','-'))
  return '['+(label or stem)+']('+url+')'
-METRIC_COMMIT = '14f137c0b4bf965392f47f877165f2f3b8168073'
+PINNED_COMMITS = {
+    'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
+    'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
+}
 
 COMPANIONS = (
     ('ru', 'Пример - Взвешенная цепочка', 'weighted-chain'),
@@ -42,6 +45,8 @@ COMPANIONS = (
     ('en', 'Example - Subspaces and Graph Transformations', 'spaces'),
     ('ru', 'Пример - Метрические параметры графов', 'metric-parameters'),
     ('en', 'Example - Metric Parameters of Graphs', 'metric-parameters'),
+    ('ru', 'Пример - Проверка структурных тождеств', 'structural-identities'),
+    ('en', 'Example - Checking Structural Identities', 'structural-identities'),
 )
 
 def revision_setup(commit):
@@ -71,6 +76,7 @@ if installed_url != source:
 
 for lang, title, slug in COMPANIONS:
  has_plot = slug == 'weighted-chain'
+ revision = PINNED_COMMITS.get(slug)
  note=(READY/'pmg-library'/lang/'PythonExamples'/(title+'.md')).read_text(encoding='utf-8').split('---',2)[2].strip()
  note=re.sub(r'^\[\[(?:ru|en)/PythonExamples/.*?\n','',note,flags=re.M)
  note=re.sub(r'^\[(?:Открыть в Colab|Open in Colab).*?\n','',note,flags=re.M)
@@ -104,15 +110,15 @@ if installed != "0.9.0":
 if importlib.util.find_spec("matplotlib") is None:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "matplotlib"])
 '''
- if slug == 'metric-parameters':
-  setup = revision_setup(METRIC_COMMIT)
+ if revision is not None:
+  setup = revision_setup(revision)
   preparation = ('Выполните все ячейки сверху вниз. Ревизия пакета: ' if lang == 'ru'
                  else 'Run all cells from top to bottom. Package revision: ')
   heading = '## Подготовка' if lang == 'ru' else '## Setup'
-  cells[1].source = f'{heading}\n\n{preparation}**{METRIC_COMMIT[:7]}**.'
+  cells[1].source = f'{heading}\n\n{preparation}**{revision[:7]}**.'
  cells[2] = nbformat.v4.new_code_cell(setup)
  nb=nbformat.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'},'colab':{'name':title+'.ipynb','provenance':[]},'pmg':{'package_version':'0.9.0','source_note':f'pmg-library/{lang}/PythonExamples/{title}.md'}})
- if slug == 'metric-parameters':
-  nb.metadata.pmg.package_commit = METRIC_COMMIT
+ if revision is not None:
+  nb.metadata.pmg.package_commit = revision
  out=READY/'pmg-library'/lang/'PythonExamples/notebooks'/f'{slug}.ipynb';out.parent.mkdir(exist_ok=True);nbformat.validate(nb);nbformat.write(nb,out)
  print(lang,len(cells),'cells')

@@ -1,8 +1,8 @@
 ---
 title: Basis and Dimension of the Space of Partition Forms
 date: 2026-10-18
-updated: 2026-11-08
-revision: 3
+updated: 2026-11-10
+revision: 4
 source_revision: 5
 status: draft
 text_prepared_by: ChatGPT
@@ -92,6 +92,8 @@ q_{a|bcd},\ q_{b|acd},\ q_{c|abd},\ q_{d|abc},\ q_{ab|cd},\ q_{ad|bc}
 $$
 
 One of the seven forms is now expressed through the other six. This proves that the selected family spans the space. Its independence is checked by the pairing matrix in “A four-vertex check”: its determinant is $8$. Thus this grade really has dimension $6$, with one independent relation.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Structural Identities#Rank and kernel on four vertices|Python example]].
 
 ## Narayana and Catalan numbers
 

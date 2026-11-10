@@ -1,8 +1,8 @@
 ---
 title: Structural Identities and Graph Gluing
 date: 2026-10-18
-updated: 2026-11-08
-revision: 3
+updated: 2026-11-10
+revision: 4
 source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -322,6 +322,8 @@ $$
 **Independent check.** There are $\binom63=20$ three-edge subsets in $K_4$. Four are triangles with an isolated fourth vertex; the remaining sixteen are spanning trees. Direct enumeration also gives $16$.
 
 On four shared vertices, the full family contains $B_4=15$ partition forms, while the chosen basis contains $C_4=14$. The change occurs in grade $2$: seven forms are replaced by six. In this example, the table shows the reduction explicitly; preservation of the gluing result follows from the identity of forms, not merely from numerical agreement.
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Structural Identities#Change of basis in graph gluing|Python example]].
+
 ## Computing from a prescribed decomposition
 
 The construction can also be read in reverse. If $G$ is already represented by two such pieces, replace each vertex $s\in S$ by copies $s^{(1)},s^{(2)}$. Endpoints of edges in $E(G_i)$ are assigned to the copy $s^{(i)}$. This produces two separate graphs, and identifying the copies recovers $G$.

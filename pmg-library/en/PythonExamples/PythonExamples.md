@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-10
-revision: 12
-translated_revision: 12
+revision: 13
+translated_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -47,13 +47,17 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 
 [[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters in Python]]. Eight calculations from the notes in this series. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/metric-parameters.ipynb).
 
+## Structural Identities
+
+[[en/PythonExamples/Example - Checking Structural Identities|Structural Identities in Python]]. Five exact checks from the notes in this series. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/structural-identities.ipynb).
+
 ## How an example is organized
 
 Problem and diagram → mathematical objects → calculation with `polyform_algebra` → expected results → independent check. Run each note’s fragments in order. NumPy and direct enumeration are used where they provide a separate way to check the answer.
 
 ## Version and ready-to-run notebooks
 
-The introductory and Spaces examples use the `v0.9.0` tag. The [[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters of Graphs]] notebooks install the package commit pinned in the example.
+The introductory and Spaces examples use the `v0.9.0` tag. Later notebooks install the package commits pinned in their examples.
 
 The weighted-chain notebook includes explanations, formulas, a diagram, and saved results:
 

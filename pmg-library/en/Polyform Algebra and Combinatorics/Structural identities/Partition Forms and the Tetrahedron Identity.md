@@ -1,8 +1,8 @@
 ---
 title: Partition Forms and the Tetrahedron Identity
 date: 2026-10-18
-updated: 2026-11-08
-revision: 5
+updated: 2026-11-10
+revision: 6
 source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
@@ -181,6 +181,8 @@ The quantities being added here are forms. Both sides represent the same polyfor
 > Apply lemma (2) to $X_a,X_b,X_c,X_d$. The orientation signs disappear upon passing to quadratic forms, giving (1). $\square$
 
 The proof remains valid when arbitrary affine points of unit weight are substituted for the basis vertices, including degenerate configurations. The initial definition of a partition form used independent basis vertices; the identity just proved admits these substitutions.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Structural Identities#The tetrahedron identity|Python example]].
 
 ## From forms to numbers
 

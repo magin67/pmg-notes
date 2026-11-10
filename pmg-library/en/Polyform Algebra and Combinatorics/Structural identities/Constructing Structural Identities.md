@@ -1,8 +1,8 @@
 ---
 title: Constructing Structural Identities
 date: 2026-10-18
-updated: 2026-11-08
-revision: 4
+updated: 2026-11-10
+revision: 5
 source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
@@ -263,6 +263,8 @@ $$
 All terms have grade $4$. The formula expresses a form of type $[2,2]$ in terms of forms of types $[3,1]$ and $[4,0]$. It can be obtained directly from the tetrahedron identity by adding singleton vertices $e,f$ and multiplying by $[(de)]^2[(df)]^2$.
 
 **Independent verification of the examples.** Formulas (3)-(5) were also checked by directly expanding the boundaries in the basis of affine vectors $b-a,c-a,\ldots$. If $X=\sum_I x_Iu_I$ in a basis of the corresponding exterior power, then $[X]^2=\sum_{I,J}x_Ix_J[u_I,u_J]$. Exact integer comparison of the coefficients of $[u_I,u_J]$ gives zero difference between the two sides in all three cases. This check uses the definitions of boundaries and forms; the general proofs of extension and polarization are given above.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Structural Identities#Transfer and multiplication|Python example]].
 
 ## From local identities to symmetric sums
 

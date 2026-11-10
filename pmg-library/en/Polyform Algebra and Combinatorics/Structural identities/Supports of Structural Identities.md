@@ -1,8 +1,8 @@
 ---
 title: Supports of Structural Identities
 date: 2026-10-18
-updated: 2026-11-08
-revision: 3
+updated: 2026-11-10
+revision: 4
 source_revision: 3
 status: draft
 text_prepared_by: ChatGPT
@@ -222,6 +222,8 @@ This agrees with the formula from the [[Basis and Dimension of the Space of Part
 **Independent checks.** Direct enumeration of partitions for $m\leqslant8$, checking for crossings and singleton blocks, gave the counts in the table. The forms were also expanded in the exterior basis built from $u_i=a_i-a_1$. Exact rational computations confirmed independence of the three pair-partition forms on four vertices and both explicitly displayed identities of grade $3$.
 
 For $(n,r)=(6,3)$, the kernels on five-vertex subsets were computed directly from form coefficients and then transferred to six vertices. The combined family has rank $30$, and the full kernel has dimension $40$. Adjoining the displayed product of the tetrahedron identity with $[(ef)]^2$ increases the first rank to $31$. These computations check the examples; the general result is proved in “Decomposing the relation space”.
+
+Repeat the exact check in the [[en/PythonExamples/Example - Checking Structural Identities#Supports on five vertices|Python example]].
 
 ## Transfer by adjoining singleton blocks
 
