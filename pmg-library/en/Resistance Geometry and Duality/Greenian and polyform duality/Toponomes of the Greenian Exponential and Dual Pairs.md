@@ -1,9 +1,9 @@
 ---
 title: Toponomes of the Greenian Exponential and Dual Pairs
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 4
+updated: 2026-11-11
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-exponential-toponomes-and-dual-pairs
@@ -412,6 +412,8 @@ T_{\mathrm{Gr}}(\mathbf x)&=1+\frac38x_1+\frac3{64}x_2
 $$
 
 The rooted polynomials are $P_L(t)=(1+4t)^3$ and $P_{\mathrm{Gr}}(t)=(1+t/4)^3$. The spanning coefficients $16$ and $1/256$ have product $1/16=1/n^2$.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#Toponomes of a dual pair|the notebook calculation]].
 
 ## Greenian forests and original forests in the cut expression
 

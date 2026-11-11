@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 19
+revision: 20
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -73,6 +73,10 @@ folder_order: 70
 ## KVP-разложение
 
 [[ru/PythonExamples/Пример - KVP-разложение|KVP-разложение]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/kvp-decomposition.ipynb).
+
+## Гриниан и дуальность полиформ
+
+[[ru/PythonExamples/Пример - Гриниан и дуальность полиформ|Гриниан и дуальность полиформ]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/greenian-duality.ipynb).
 
 ## Как устроен пример
 

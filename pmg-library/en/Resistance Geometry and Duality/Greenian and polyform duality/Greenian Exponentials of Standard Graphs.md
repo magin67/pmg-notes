@@ -1,9 +1,9 @@
 ---
 title: Greenian Exponentials of Standard Graphs
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 7
+updated: 2026-11-11
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-exponentials-of-standard-graphs
@@ -796,6 +796,8 @@ Q_9=\frac1{200000}\Theta=\frac1{2000}T^\vee
 $$
 
 The signed sum of all Greenian tree contributions is positive, although every original edge has negative Greenian weight.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#A complete graph and a star|the notebook calculation]].
 
 ## Meaning of the examples and the transition to toponomes
 

@@ -1,9 +1,9 @@
 ---
 title: The Greenian Metric and Potentials
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 4
+updated: 2026-11-11
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-metric-and-potentials
@@ -439,6 +439,8 @@ u_N(T)=1,\qquad
 $$
 
 This agrees with the Greenian's own top grade $N_{n-1}=T/(n^2\tau(G))$. The coefficient of the top form and its normalized potential are reciprocals. For a tree with unit conductances, they are $1/n^2$ and $n^2$, respectively; no change to the adopted normalization is needed.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#Potentials of differences, cuts, and boundaries|the notebook calculation]].
 
 ## Status of results and verification
 

@@ -1,9 +1,9 @@
 ---
 title: Symmetric Identities of the Greenian
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 5
+updated: 2026-11-11
+revision: 4
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: greenian-symmetric-identities
@@ -133,6 +133,8 @@ $$
 $$
 
 In coordinates with zero centroid, $p_a,p_b,p_c,p_d$ may simply be denoted by $a,b,c,d$. Then (4) is written through vertex sums, but these letters no longer denote an independent basis of the direct space.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#A cut identity|the notebook calculation]].
 
 ## Complementary grades and the dual image of an identity
 

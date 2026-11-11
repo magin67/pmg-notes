@@ -1,9 +1,9 @@
 ---
 title: Greenian and Polyform Duality
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 4
+updated: 2026-11-11
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -66,6 +66,10 @@ For applications, next choose vertex attachment in the fifth note and the energy
 - **Coefficients, cuts, and graph changes.** After the canonical expression, proceed to [[Cuts and Forest Grades of the Greenian Exponential]] and [[Greenian Coefficients and Vertex Variations]]. Retain the specific vertex blocks and distinguish original forests from edges crossing a cut.
 - **Examples and metric meaning.** [[Greenian Exponentials of Standard Graphs]], followed by [[The Greenian Metric and Potentials]]. For matrix transformations, see [[Laplacian, Green Matrix, and Effective Resistance Matrix]]; for the centroid interpretation, see [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]].
 - **Symmetric identities and toponomes.** [[Symmetric Identities of the Greenian]], followed by [[Toponomes of the Greenian Exponential and Dual Pairs]]. Prerequisites are collected in [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. For the general role of identities, see the [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] series.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Greenian and Polyform Duality|Greenian and Polyform Duality]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/greenian-duality.ipynb).
 
 ## Main results
 

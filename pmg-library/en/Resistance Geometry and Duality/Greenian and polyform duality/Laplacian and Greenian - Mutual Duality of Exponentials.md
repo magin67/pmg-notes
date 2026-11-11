@@ -1,9 +1,9 @@
 ---
 title: Laplacian and Greenian - Mutual Duality of Exponentials
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 10
+updated: 2026-11-11
+revision: 4
+translated_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-definition-metric-recovery
@@ -627,6 +627,8 @@ D=(e+[a]^2)(e+[a+b]^2)(e+[d]^2)
 $$
 
 The coefficients $1/2!$ and $1/3!$ were obtained by counting factor orders, and correspondence with the direct grades was checked by deletion from $T$. The general exponential formula for an arbitrary connected graph was not assumed in this calculation.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#Mutual duality on a weighted path|the notebook calculation]].
 
 ## What the dual representation retains
 

@@ -1,9 +1,9 @@
 ---
 title: Greenian Coefficients and Vertex Variations
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 7
+updated: 2026-11-11
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-coefficients-vertex-variations
@@ -549,6 +549,8 @@ $$
 $$
 
 The three parts correspond to spanning trees of the new graph in which the degree of $p$ is $1,2,3$, respectively. Dividing them by $4034$ gives the probabilities of these events.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#Attaching a vertex|the notebook calculation]].
 
 ## Further details: the determinant and elimination of the new vertex
 

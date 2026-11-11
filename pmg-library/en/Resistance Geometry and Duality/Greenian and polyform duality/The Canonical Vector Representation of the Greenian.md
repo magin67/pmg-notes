@@ -1,9 +1,9 @@
 ---
 title: The Canonical Vector Representation of the Greenian
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 8
+updated: 2026-11-11
+revision: 4
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-canonical-vector-representation
@@ -436,6 +436,8 @@ Q_1=[a]^2+[a+b]^2+[d]^2
 $$
 
 provides an independent check: its powers give the same $Q_2,Q_3$. The vector calculation shows how ordinary boundary merging and cancellation of signed weights produce the result.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#Canonical vector coefficients|the notebook calculation]].
 
 ## Checks on an edge and a complete graph
 

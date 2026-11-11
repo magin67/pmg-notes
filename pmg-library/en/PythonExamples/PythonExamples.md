@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 19
-translated_revision: 19
+revision: 20
+translated_revision: 20
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -74,6 +74,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## KVP Decomposition
 
 [[en/PythonExamples/Example - KVP Decomposition|KVP Decomposition]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/kvp-decomposition.ipynb).
+
+## Greenian and Polyform Duality
+
+[[en/PythonExamples/Example - Greenian and Polyform Duality|Greenian and Polyform Duality]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/greenian-duality.ipynb).
 
 ## How an example is organized
 

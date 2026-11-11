@@ -1,6 +1,6 @@
 # PythonExamples checks
 
-Install polyform_algebra using the shared setup note. For the fragment checker, use the exact revision pinned in the KVP Decomposition notebook. Each notebook sets up its own package revision. Run from the repository root:
+Install polyform_algebra using the shared setup note. For the fragment checker, use the exact revision pinned in the Greenian and Polyform Duality notebook. Each notebook sets up its own package revision. Run from the repository root:
 
 ```bash
 python checks/pythonexamples/verify_examples.py
@@ -12,7 +12,7 @@ python checks/pythonexamples/execute_notebooks.py
 
 Figure generation requires matplotlib. Notebook generation and execution require nbformat, nbclient, nbconvert, ipykernel, and a Python 3 Jupyter kernel using the selected environment. Install these development tools with pip if necessary.
 
-The notebook generator reads the weighted-chain, Spaces, Metric Parameters, Structural Identities, Symmetric Polyforms, Combinatorial Potentials, Partition Toponomes, Polynomial Toponomes, Balanced Graphs, and KVP Decomposition example notes. The explanations and computation cells come from those notes. The generator adds package setup to the notebooks and an editable graph drawing to the weighted-chain notebook. The executor starts a fresh kernel for each language, checks for error outputs, saves computed results, and exports HTML previews under this directory. Inspect those previews after regeneration. A local execution is not a hosted Colab test.
+The notebook generator reads the weighted-chain, Spaces, Metric Parameters, Structural Identities, Symmetric Polyforms, Combinatorial Potentials, Partition Toponomes, Polynomial Toponomes, Balanced Graphs, KVP Decomposition, and Greenian and Polyform Duality example notes. The explanations and computation cells come from those notes. The generator adds package setup to the notebooks and an editable graph drawing to the weighted-chain notebook. The executor starts a fresh kernel for each language, checks for error outputs, saves computed results, and exports HTML previews under this directory. Inspect those previews after regeneration. A local execution is not a hosted Colab test.
 
 The fragment checker executes each note in a separate namespace and checks key results. Package-level introductory tests independently check conductance matrices, currents, spanning-tree weights, areas, variations, and deletion. They complement the notes' own assertions.
 
@@ -35,3 +35,5 @@ The Polynomial Toponomes notebooks compare exact forest and matrix coefficients,
 The Balanced Graphs notebooks verify exact outgoing Laplacians, directional geometry, and rooted forests.
 
 The KVP Decomposition notebooks verify pair projections, metric quantities, and signed forest toponomes.
+
+The Greenian and Polyform Duality notebooks verify complementary grades, cuts, potentials, and dual toponomes.

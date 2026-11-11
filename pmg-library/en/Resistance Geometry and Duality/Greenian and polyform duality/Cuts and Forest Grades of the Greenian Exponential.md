@@ -1,9 +1,9 @@
 ---
 title: Cuts and Forest Grades of the Greenian Exponential
 date: 2026-10-28
-updated: 2026-11-08
-revision: 4
-translated_revision: 12
+updated: 2026-11-11
+revision: 5
+translated_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-polyform-cuts-forest-grades
@@ -302,6 +302,8 @@ Q_k=\frac1\tau\sum_{\pi\in\Pi_{k+1}(\mathcal V)}
 $$
 
 Each unordered partition is counted once. There is no multiplication or division by $(k+1)!$ in (8).
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#The cut expansion over original forests|the notebook calculation]].
 
 ## Representing the Greenian through cuts
 

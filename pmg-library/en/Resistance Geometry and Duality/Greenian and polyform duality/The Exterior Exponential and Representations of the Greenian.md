@@ -1,9 +1,9 @@
 ---
 title: The Exterior Exponential and Representations of the Greenian
 date: 2026-10-28
-updated: 2026-11-08
-revision: 3
-translated_revision: 9
+updated: 2026-11-11
+revision: 4
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cut-exponential-green-polyform
@@ -227,6 +227,8 @@ $$
 $$
 
 The diagonal terms contribute $6[uv]^2$, and the product of the mixed terms contributes $-[uv]^2$. The sign comes from $vu=-uv$ in one argument of the form. In dimension two there are no grades above two.
+
+See [[en/PythonExamples/Example - Greenian and Polyform Duality#Minors of every grade|the notebook calculation]].
 
 ## Rank and top grade
 
