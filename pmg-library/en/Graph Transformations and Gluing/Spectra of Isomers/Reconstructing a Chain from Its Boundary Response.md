@@ -1,9 +1,9 @@
 ---
 title: Reconstructing a Chain from Its Boundary Response
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -107,6 +107,8 @@ $$
 Under the spectral convention $\mathbf M_G(\xi)=\xi\mathbf I-\mathbf L_G$, we have $\mathbf M_G(-1)=-\mathbf H$. Thus the spectral Schur complement at $\xi=-1$ is $-\boldsymbol\Lambda_B^{(1)}$, while the corresponding resolvent block is $-\mathbf K_B$. Since $n$ is even, $P_G(1)=\chi_G(-1)$; the general rule is $P_G(1)=(-1)^n\chi_G(-1)$. The matrix $\mathbf H^{-1}$ also differs from the Greenian $\mathbf{Gr}=\mathbf L_G^+$.
 
 ## Why normalization retains the chain
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Recovery from the boundary response|the notebook calculation]].
 
 Denote the three entries specifying the symmetric response matrix by
 

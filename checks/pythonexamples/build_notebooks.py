@@ -36,6 +36,7 @@ def page_link(lang,target):
 PINNED_COMMITS = {
     'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
     'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
+    'isomer-spectra': '5adcacdf23303333a8b03ffc0835da52df4bdb3c',
     'boundary-data-core-chains': 'a7fa4b54aaa29f5c42213bf2e97f74f922da3ead',
     'matroid-forest-characteristics': '148770970a5d0005c8e16b8eb63969d2afe3ca22',
     'greenian-duality': 'e7a9647f448ca0ca743f89c067601e418ef604ed',
@@ -74,6 +75,8 @@ COMPANIONS = (
     ('en', 'Example - Matroid Parameters and Forest Characteristics of Graphs', 'matroid-forest-characteristics'),
     ('ru', 'Пример - Граничные данные и цепочки ядер', 'boundary-data-core-chains'),
     ('en', 'Example - Boundary Data and Chains of Cores', 'boundary-data-core-chains'),
+    ('ru', 'Пример - Спектры изомеров', 'isomer-spectra'),
+    ('en', 'Example - Spectra of Isomers', 'isomer-spectra'),
 )
 
 def revision_setup(commit):

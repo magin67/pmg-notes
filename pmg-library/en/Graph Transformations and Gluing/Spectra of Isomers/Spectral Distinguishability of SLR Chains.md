@@ -1,9 +1,9 @@
 ---
 title: Spectral Distinguishability of SLR Chains
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -241,6 +241,8 @@ The dependence of $s_4$ on the number of bends was already established in [[en/G
 **Two bends, different adjacencies.** In SLL, one endpoint of the middle seam has three degree-3 neighbors; SLR has no such endpoint. This local difference gives $\Delta h=1$, $\Delta s_6=6$, and $\Delta p_6=-1$. Blue marks seams; red marks degree-3 vertices and additional connections between them. The filled red vertex has three degree-3 neighbors.
 
 ## Coinciding leading coefficients
+
+See [[en/PythonExamples/Example - Spectra of Isomers#First differing grades|the notebook calculation]].
 
 > [!example] Two turns in the same or opposite directions
 > **Computed directly.** For the two graphs with four cores,

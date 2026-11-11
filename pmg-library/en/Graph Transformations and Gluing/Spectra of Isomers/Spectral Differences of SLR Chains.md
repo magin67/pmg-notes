@@ -1,9 +1,9 @@
 ---
 title: Spectral Differences of SLR Chains
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -22,6 +22,8 @@ In [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three
 > Transfer computation of determinants, expansion of a difference of products, and the Cayley-Hamilton theorem are classical methods. Transfer determinant formulas appear, for example, in Molinari [1]. Neither their use nor their expression in PMG coordinates establishes scientific priority. Below we derive the specific difference identities from the published hexagon matrices. All statements concern the specified open-chain model.
 
 ## Two concrete differences first
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Two exact spectral differences|the notebook calculation]].
 
 We retain the conditions of [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains#The chains being encoded|The chains being encoded]]: cores $C_6$, unit conductances, shared edges counted once, and vertex-disjoint input and output seams in every internal core. There are no nonadjacent contacts or closure. The number of cores is $N$, and the number of vertices $n=4N+2$. The code $w=Su$ begins with a conventional marker, and its turn word $u$ has length $N-2$.
 

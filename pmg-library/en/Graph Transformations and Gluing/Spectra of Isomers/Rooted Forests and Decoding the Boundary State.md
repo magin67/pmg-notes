@@ -1,9 +1,9 @@
 ---
 title: Rooted Forests and Decoding the Boundary State
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -302,6 +302,8 @@ $$
 **The thresholds are $b/a=c/a=4/9$.** Colors show the three possible sectors of the last transition within the projection $\mathcal K$; the points represent the initial state and several of its descendants. Shading a sector does not mean that every point in it is reachable. The initial state also lies in sector $(+,+)$, so it must be checked before selecting a letter.
 
 ## The inverse algorithm and the decoding theorem
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Decoding a rooted state|the notebook calculation]].
 
 > [!info] Injectivity of the full state
 > **Theorem.** The map $u\mapsto\mathbf z(u)$ is injective on all finite oriented words over $\{S,L,R\}$, including the empty word. A reachable state determines the word and its length. Consequently, the full marked state $\mathbf Z_{Su}$ uniquely determines the code $Su$ and the number of cores $N$.

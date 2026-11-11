@@ -1,9 +1,9 @@
 ---
 title: Two Isomers of Three Hexagons
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -168,6 +168,8 @@ Thus spectra can be compared either through their roots or through their charact
 **One scale, two sets of eigenvalues.** Each mark represents one of the $14$ values; nearby marks may almost overlap. The shared zero is marked separately. Positive eigenvalues are approximated only for the figure; the polynomials below establish the difference exactly. Their greatest common divisor $\xi$ shows that they have no common nonzero eigenvalues.
 
 ## Exact characteristic polynomials
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Two three-hexagon isomers|the notebook calculation]].
 
 > [!example] Direct calculation from the Laplacians
 > **Computed directly.** For the graphs in (1), we obtain

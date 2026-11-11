@@ -1,9 +1,9 @@
 ---
 title: 'Periodic SLR Chains: Recurrences and Spectra'
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 3
-translated_revision: 5
+updated: 2026-11-11
+revision: 4
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -181,6 +181,8 @@ $$
 The coefficients $a,b$ are determined by the period. The quantity $\kappa$ and the initial values also depend on the end cores. For the family starting from an edge, replace $\mathbf r,\boldsymbol s_1$ by $\mathbf e_1^{\mathsf T},\boldsymbol s_0$ in (8).
 
 ## A worked recurrence for period LR
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Transfer for a periodic word|the notebook calculation]].
 
 The rooted polynomial is $P_G(t)=\det(\mathbf I_n+t\mathbf L_G)$. It counts spanning forests with a chosen root in each component, unlike the ordinary forest polynomial. Since $n$ in (1) is even,
 

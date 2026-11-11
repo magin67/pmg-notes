@@ -1,9 +1,9 @@
 ---
 title: 'Spectra of Isomers: Results and Open Questions'
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 4
-translated_revision: 4
+updated: 2026-11-11
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -189,6 +189,10 @@ Precise references and comparisons of assumptions appear alongside the results i
 **Closures and infinite chains.** A ring requires retaining the initial boundary and explicitly specifying the final contact matching. An infinite model requires a definition of the operator, boundary conditions, and the meaning of the limit. Growth of rooted forest counts in finite graphs does not replace a theory of spectral bands of an infinite chain.
 
 These directions continue the research. Completing the current collection records the results presented and their limits, without presuming solutions to these problems.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Spectra of Isomers#Two three-hexagon isomers|Spectra of Isomers]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/isomer-spectra.ipynb).
 
 ## Reproducibility and the place of the series in the library
 

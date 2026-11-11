@@ -1,9 +1,9 @@
 ---
 title: Spectral Transfer to a New Boundary
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -200,6 +200,8 @@ $$
 These substitutions use formal entries of the block $\mathbf X$, not conductances of a new physical graph. Formulas (3), (5), (8), and (9) completely determine the transfer matrix for any specified core satisfying the theorem's conditions.
 
 ## Three outputs of a unit hexagon
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Transfer to a new boundary|the notebook calculation]].
 
 Take $K=C(0,1,2,3,4,5)$. Identify the input $(0,1)$ with the old pair $(a,b)$ **in the same order**: $0\mapsto a$, $1\mapsto b$. Count the shared edge $01$ of conductance $1$ once. Choose output $(j,j+1)$, where $j=2,3,4$, and denote the corresponding transfer by $\mathbf T_j$.
 

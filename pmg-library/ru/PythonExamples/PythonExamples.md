@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 22
+revision: 23
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -85,6 +85,10 @@ folder_order: 70
 ## Граничные данные и цепочки ядер
 
 [[ru/PythonExamples/Пример - Граничные данные и цепочки ядер|Граничные данные и цепочки ядер]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/boundary-data-core-chains.ipynb).
+
+## Спектры изомеров
+
+[[ru/PythonExamples/Пример - Спектры изомеров|Спектры изомеров]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/isomer-spectra.ipynb).
 
 ## Как устроен пример
 

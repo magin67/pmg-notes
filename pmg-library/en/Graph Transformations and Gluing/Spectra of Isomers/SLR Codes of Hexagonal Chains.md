@@ -1,9 +1,9 @@
 ---
 title: SLR Codes of Hexagonal Chains
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 2
-translated_revision: 7
+updated: 2026-11-11
+revision: 3
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -99,6 +99,8 @@ Abstract admissibility differs from realization by regular hexagons in a common 
 This does not prevent a plane embedding of the abstract graph with deformed faces: each new core can be attached in the outer face. Requiring regular cells of a fixed hexagonal lattice is an additional geometric condition.
 
 ## Reflection and reversal of the chain
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Symmetries of an SLR code|the notebook calculation]].
 
 Introduce the letter substitution
 

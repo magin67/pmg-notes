@@ -1,9 +1,9 @@
 ---
 title: Weaving SLR Chains and Constant Turns
 date: '2026-11-02'
-updated: 2026-11-08
-revision: 3
-translated_revision: 7
+updated: 2026-11-11
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -162,6 +162,8 @@ $$
 The power means composition of attachment and relabeling operations. An ordinary power $M_K(t)^N$ on a fixed vertex set would give $\exp(NtL_K)$, changing conductances. New vertices are created by the growth operator itself.
 
 ## Five coordinates and a power of one matrix
+
+See [[en/PythonExamples/Example - Spectra of Isomers#Constant straight turns|the notebook calculation]].
 
 Set $\mathbf H_G(\xi)=\xi\mathbf I_n-\mathbf L_G$. For the current ordered socket $(a,b)$, use the state
 
