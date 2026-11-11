@@ -1,8 +1,8 @@
 ---
 title: "Gluing and the Limits of Matroid Invariance"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: gluings-and-limits-of-matroid-invariance
@@ -180,6 +180,8 @@ Their vertex characteristics, however, differ:
 The first row follows from the two pendant edges in series and, in the second graph, resistance $1$ between opposite vertices of $C_4$. For the trace of the squared Laplacian, the identity $\operatorname{tr}(\mathbf L^2)=\sum_i\deg(i)^2+2|E|$ for a simple unit-weight graph suffices. The different traces prove that the Laplacian spectra differ. The values of $\mathrm{Kf}$ are obtained by summing pairwise resistances and are independently checked using $\mathbf L^+$.
 
 The 2-forest counts come from direct enumeration. Their sum is $f_4=14$ in both cases, but the distributions by component size differ. Thus matroid invariance of the total forest sum does not extend to the full partition toponome. Summing over all choices of one root per component would multiply each forest weight by the product of its component sizes and give a different sum.
+
+See [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs#The Whitney twist|the notebook calculation]].
 
 ## Why changing the chosen pair is a different operation
 

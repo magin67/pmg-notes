@@ -1,8 +1,8 @@
 ---
 title: "Edge Resistances and Random Spanning Trees"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: edge-resistances-and-random-spanning-trees
@@ -373,6 +373,8 @@ For $H_2$, all nine intersections can be displayed:
 ![[images/Tree Intersections and Parameter H2.svg]]
 
 **Weighted averaging of intersections.** Every cell uses the same vertex layout: $a$ above, $b$ left, $c$ right. For example, $T_1\cap T_2=\{ab\}$ contributes conductor resistance $1$, while $T_1\cap T_3=\{ac\}$ contributes $1/2$. In the diagonal cell $T_1\cap T_1=T_1$, the sum is $1+1/2=3/2$. Each value is multiplied by its ordered-pair probability $\Pr(T_i)\Pr(T_j)$; all nine contributions sum to $84/121$. Cells are not equally likely. For $H_3$, one similarly uses 27 ordered triples.
+
+See [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs#Edge probabilities in a weighted triangle|the notebook calculation]].
 
 ## Computation by deletion and contraction
 

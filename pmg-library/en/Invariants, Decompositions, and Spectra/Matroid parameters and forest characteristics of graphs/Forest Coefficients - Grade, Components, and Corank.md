@@ -1,8 +1,8 @@
 ---
 title: "Forest Coefficients: Grade, Components, and Corank"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-grade-components-and-corank
@@ -484,6 +484,8 @@ P_{\mathrm{Gr}}(u)=\left(1+\frac u4\right)^3
 $$
 
 It satisfies (10) with $n\tau=64$. Thus the three sums on the Greenian side have different coefficients and consistent normalizations.
+
+See [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs#Ordinary and rooted forests of K4|the notebook calculation]].
 
 ## A weighted tree and triangle
 

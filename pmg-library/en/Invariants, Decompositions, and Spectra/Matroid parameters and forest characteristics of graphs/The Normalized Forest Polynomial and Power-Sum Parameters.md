@@ -1,8 +1,8 @@
 ---
 title: "The Normalized Forest Polynomial and Power-Sum Parameters"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: normalized-forest-polynomial-and-power-sum-parameters
@@ -443,6 +443,8 @@ s_3^{\mathrm{for}}=-\frac{177}{4096}
 $$
 
 Unlike the triangle, a negative parameter appears already at $m=3$. The spectral values are $\operatorname{tr}(\mathbf{Gr}^m)=3/4^m$ and remain positive.
+
+See [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs#Normalized polynomial and Newton sums|the notebook calculation]].
 
 ## What can be recovered and what remains undetermined?
 

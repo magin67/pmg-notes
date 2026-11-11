@@ -1,8 +1,8 @@
 ---
 title: "Resistance Radius: Forest Formula and Matroid Invariance"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: resistance-radius-forest-formula-and-matroid-invariance
@@ -419,6 +419,8 @@ Thus $(O-A)^2=(55+5)/22^2=15/121$, with $O\ne h$. This realization is used in th
 ![[images/Forest Contribution and Edge Correction to the Radius.svg]]
 
 **Two contributions and the result.** The full bar has length $\xi_1/3$. The red hatched part has length $H_2/12$ and is subtracted; the remaining green part equals $\rho$. Every row uses the same scale. This depicts the exact difference, not a decomposition of the sphere into geometric pieces.
+
+See [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs#Radius of the resistance sphere|the notebook calculation]].
 
 ## Original sources and conversion of weights
 

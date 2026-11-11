@@ -1,8 +1,8 @@
 ---
 title: "The Cycle Matroid and Exterior Products of Edges"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cycle-matroid-and-exterior-products-of-edges
@@ -121,6 +121,8 @@ $$
 **Forest and cycle.** On the left, $ab,bc$ are selected; on the right, $ca$ is added. Around a closed traversal the edge vectors sum to zero, so their exterior product also vanishes. The gray dashed edge on the left belongs to the original triangle but is not selected. Arrows indicate the chosen orientation, not a directed graph.
 
 For a tree, the product of its edge vectors equals the simplex boundary on its vertices up to sign. For a forest, it is the product of the component boundaries; an isolated vertex contributes $1$.
+
+See [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs#The cycle matroid of a triangle|the notebook calculation]].
 
 ## What is a matroid?
 

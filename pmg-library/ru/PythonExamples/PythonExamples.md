@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 20
+revision: 21
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -77,6 +77,10 @@ folder_order: 70
 ## Гриниан и дуальность полиформ
 
 [[ru/PythonExamples/Пример - Гриниан и дуальность полиформ|Гриниан и дуальность полиформ]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/greenian-duality.ipynb).
+
+## Матроидные параметры и лесные характеристики графов
+
+[[ru/PythonExamples/Пример - Матроидные параметры и лесные характеристики графов|Матроидные параметры и лесные характеристики графов]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/matroid-forest-characteristics.ipynb).
 
 ## Как устроен пример
 

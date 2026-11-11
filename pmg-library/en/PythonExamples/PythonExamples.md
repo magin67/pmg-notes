@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 20
-translated_revision: 20
+revision: 21
+translated_revision: 21
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -78,6 +78,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Greenian and Polyform Duality
 
 [[en/PythonExamples/Example - Greenian and Polyform Duality|Greenian and Polyform Duality]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/greenian-duality.ipynb).
+
+## Matroid Parameters and Forest Characteristics of Graphs
+
+[[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/matroid-forest-characteristics.ipynb).
 
 ## How an example is organized
 

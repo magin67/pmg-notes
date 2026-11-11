@@ -1,8 +1,8 @@
 ---
 title: "Forest Resistance Scales"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-resistance-scales
@@ -294,6 +294,8 @@ $$
 \mathbb E_1\frac1{A(F)}
 =\frac{12/3+3/4}{15}=\frac{19}{60}
 $$
+
+See [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs#Forest resistance scales|the notebook calculation]].
 
 ## One-point gluing
 

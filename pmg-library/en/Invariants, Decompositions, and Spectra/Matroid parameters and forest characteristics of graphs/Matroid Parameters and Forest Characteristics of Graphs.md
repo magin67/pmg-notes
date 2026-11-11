@@ -1,8 +1,8 @@
 ---
 title: "Matroid Parameters and Forest Characteristics of Graphs"
 date: 2026-10-28
-updated: 2026-11-09
-revision: 5
+updated: 2026-11-11
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -108,6 +108,10 @@ Forest power-sum parameters can be negative and are not spectral sums by definit
 Equality of forest polynomials does not recover the matroid either: the polynomial records total weights by cardinality, not the independent sets themselves. A counterexample with different parallel classes appears in the [[The Normalized Forest Polynomial and Power-Sum Parameters#What can be recovered and what remains undetermined?|section on the limits of recovery]]. The full partition toponome, in turn, contains additional component-size data and is generally not matroid-invariant.
 
 For two-point gluing, one must distinguish a twist of an already chosen boundary, which preserves the matroid, from a choice of a different boundary pair, which can change it. Identifying edges of a shared seam also requires a separate law. Examples and exact conditions are collected in [[Gluing and the Limits of Matroid Invariance]].
+
+## Programming companion
+
+[[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/matroid-forest-characteristics.ipynb).
 
 ## Status and reproducible checks
 
