@@ -1,9 +1,9 @@
 ---
 title: The Distance Operator and KVP Decomposition
 date: 2026-10-26
-updated: 2026-11-09
-revision: 2
-translated_revision: 4
+updated: 2026-11-11
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: distance-operator-kvp-decomposition
@@ -484,6 +484,8 @@ $$
 $$
 
 Adding $\mathbf1(u^{(Q)})^{\mathsf T}/3$ recovers $L$. This explicitly checks why the double-centering formula cannot be applied unchanged to the unbalanced case.
+
+See [[en/PythonExamples/Example - KVP Decomposition#The distance operator|the notebook calculation]].
 
 ## The Laplacian and Green matrix give different pair tables
 

@@ -1,8 +1,8 @@
 ---
 title: KVP на простых и взвешенных графах
 date: 2026-10-25
-updated: 2026-10-26
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-simple-weighted-graph-examples
@@ -318,6 +318,8 @@ C_P&:\quad \left(-\frac12,0,\frac12,\frac12,0,-\frac12\right)
 $$
 
 P теперь ненулевая, хотя множество рёбер совпадает с единичной звездой. Утверждение $C_P=0$ для рассмотренной выше звезды использовало равенство весов всех лучей.
+
+См. [[ru/PythonExamples/Пример - KVP-разложение#Звезда, цикл и взвешенный граф|расчёт в блокноте]].
 
 ## Что показывают примеры
 

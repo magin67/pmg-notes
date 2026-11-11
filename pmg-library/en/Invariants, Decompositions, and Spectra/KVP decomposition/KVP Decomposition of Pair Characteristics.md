@@ -1,9 +1,9 @@
 ---
 title: KVP Decomposition of Pair Characteristics
 date: 2026-10-26
-updated: 2026-11-09
-revision: 2
-translated_revision: 5
+updated: 2026-11-11
+revision: 3
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-decomposition-pair-characteristics
@@ -159,6 +159,8 @@ $$
 Components may be nonzero on absent edges. Their positive and negative values cancel upon addition. An individual component therefore cannot be regarded as a separate graph with nonnegative couplings.
 
 The complete calculation table and comparisons with complete graphs, cycles, stars, disconnected graphs, and weighted graphs appear in [[KVP on Simple and Weighted Graphs]].
+
+See [[en/PythonExamples/Example - KVP Decomposition#Decomposing the path|the notebook calculation]].
 
 ## Existence, uniqueness, and projectors
 

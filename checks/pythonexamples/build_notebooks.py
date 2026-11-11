@@ -36,6 +36,7 @@ def page_link(lang,target):
 PINNED_COMMITS = {
     'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
     'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
+    'kvp-decomposition': 'efb5bdb8bb68b7fe975141ef21b1a9cbcdfec5f2',
     'balanced-graphs': '94f2e3bd98d999eb3af6b62b9bbfa764bccb36ee',
     'polynomial-toponomes': '3ae0e82e30c547e7980f1890bf1f62f5308b4a75',
     'partition-toponomes': '4d2ef44d35a57c73fb5e6ecf6feccf88c237bbbc',
@@ -62,6 +63,8 @@ COMPANIONS = (
     ('en', 'Example - Polynomial Toponomes', 'polynomial-toponomes'),
     ('ru', 'Пример - Балансовые графы', 'balanced-graphs'),
     ('en', 'Example - Balanced Graphs', 'balanced-graphs'),
+    ('ru', 'Пример - KVP-разложение', 'kvp-decomposition'),
+    ('en', 'Example - KVP Decomposition', 'kvp-decomposition'),
 )
 
 def revision_setup(commit):

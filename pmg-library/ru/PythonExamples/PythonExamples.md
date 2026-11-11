@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 18
+revision: 19
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -69,6 +69,10 @@ folder_order: 70
 ## Балансовые графы
 
 [[ru/PythonExamples/Пример - Балансовые графы|Балансовые графы]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/balanced-graphs.ipynb).
+
+## KVP-разложение
+
+[[ru/PythonExamples/Пример - KVP-разложение|KVP-разложение]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/kvp-decomposition.ipynb).
 
 ## Как устроен пример
 

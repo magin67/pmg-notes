@@ -1,9 +1,9 @@
 ---
 title: The Second-Order Symmetric Potential and KVP Decomposition
 date: 2026-10-26
-updated: 2026-11-09
-revision: 2
-translated_revision: 4
+updated: 2026-11-11
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: second-order-symmetric-potential-and-kvp
@@ -401,6 +401,8 @@ $$
 Each edge is counted twice. This gives $12,8,6,6,12$ directly from conductances, independently of KVP and the area formula.
 
 On four vertices, $U_2$ thus depends only on the K-component of **conductances C**, whereas $\nu_2=U_2/\tau$ is expressed through all three components of **resistances R**. There is no contradiction: both the table and the normalization have changed. On three vertices it is simpler still: $E_3[2]=T_3$, so $U_2=1$ and $\nu_2=1/\tau$.
+
+See [[en/PythonExamples/Example - KVP Decomposition#The second-order symmetric potential|the notebook calculation]].
 
 ## What changes for balanced graphs
 

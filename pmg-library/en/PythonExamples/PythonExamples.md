@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 18
-translated_revision: 18
+revision: 19
+translated_revision: 19
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -70,6 +70,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Balanced Graphs
 
 [[en/PythonExamples/Example - Balanced Graphs|Balanced Graphs]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/balanced-graphs.ipynb).
+
+## KVP Decomposition
+
+[[en/PythonExamples/Example - KVP Decomposition|KVP Decomposition]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/kvp-decomposition.ipynb).
 
 ## How an example is organized
 

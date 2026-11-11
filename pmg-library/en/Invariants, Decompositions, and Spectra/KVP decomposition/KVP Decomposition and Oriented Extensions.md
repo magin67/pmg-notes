@@ -1,9 +1,9 @@
 ---
 title: KVP Decomposition and Oriented Extensions
 date: 2026-10-26
-updated: 2026-11-09
-revision: 3
-translated_revision: 5
+updated: 2026-11-11
+revision: 4
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -88,6 +88,10 @@ Balance compares incoming and outgoing sums at each vertex. It does not imply re
 | 7 | [[KVP Components and Metric Graph Parameters]] | The Kirchhoff index, centralities, radius, mixed metric contributions, spanning-tree sensitivities, and Foster contractions |
 | 8 | [[The Second-Order Symmetric Potential and KVP Decomposition]] | The potential's quadratic form, the SPF tetrahedron identity, bounds, examples, and the balanced-graph circulation correction |
 | 9 | [[Forest Toponomes of KVP Components]] | Polyform factorization, pure and mixed forest coefficients, balance identities for P, ranks, and open questions |
+
+## Programming companion
+
+[[en/PythonExamples/Example - KVP Decomposition|KVP Decomposition]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/kvp-decomposition.ipynb).
 
 ## Main results
 

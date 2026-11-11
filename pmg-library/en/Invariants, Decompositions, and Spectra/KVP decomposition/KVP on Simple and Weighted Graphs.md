@@ -1,9 +1,9 @@
 ---
 title: KVP on Simple and Weighted Graphs
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 2
+updated: 2026-11-11
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-simple-weighted-graph-examples
@@ -319,6 +319,8 @@ C_P&:\quad \left(-\frac12,0,\frac12,\frac12,0,-\frac12\right)
 $$
 
 P is now nonzero, although the edge set is the same as for the unit-weight star. The earlier conclusion $C_P=0$ used equality of all spoke weights.
+
+See [[en/PythonExamples/Example - KVP Decomposition#A star, a cycle, and a weighted graph|the notebook calculation]].
 
 ## What the examples show
 

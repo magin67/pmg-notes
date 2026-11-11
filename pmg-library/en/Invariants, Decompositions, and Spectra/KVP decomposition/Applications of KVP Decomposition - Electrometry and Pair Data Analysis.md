@@ -1,9 +1,9 @@
 ---
 title: Applications of KVP Decomposition - Electrometry and Pair Data Analysis
 date: 2026-10-26
-updated: 2026-10-26
-revision: 1
-translated_revision: 2
+updated: 2026-11-11
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-applications-electrometry-and-pairwise-data
@@ -285,6 +285,8 @@ P has now changed. The full table of four-electrode responses with fixed pair or
 The contact changes did not affect these measurements; the chosen internal conductance change did. This is a directly computed result for four specified networks. It does not establish that every internal change will be detected or that its location can be uniquely recovered.
 
 To detect a deviation from a known background, a natural object is $\Delta P=\Pi_P(R-R^0)$ with the terminals fixed. Sensitivity must still be checked: part of a real change may lie in $K\oplus V$ and disappear from four-electrode data. Terminal and boundary geometry enters the choice of $R^0$; P does not remove it automatically.
+
+See [[en/PythonExamples/Example - KVP Decomposition#Contacts and a conductance change|the notebook calculation]].
 
 ## An interaction network: vertex activity and an individual pair
 

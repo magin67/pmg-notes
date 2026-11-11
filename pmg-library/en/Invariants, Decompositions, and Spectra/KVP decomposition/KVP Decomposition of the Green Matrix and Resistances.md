@@ -1,9 +1,9 @@
 ---
 title: KVP Decomposition of the Green Matrix and Resistances
 date: 2026-10-26
-updated: 2026-11-09
-revision: 2
-translated_revision: 5
+updated: 2026-11-11
+revision: 3
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-decomposition-green-matrix-and-resistances
@@ -219,6 +219,8 @@ $$
 $$
 
 The K- and V-contributions cancel. Such cancellation generally fails for vectors sharing a vertex. The connection of (6) with four-electrode measurements, completeness of such data for P, and an exact model of contact corrections are discussed in [[Applications of KVP Decomposition - Electrometry and Pair Data Analysis]].
+
+See [[en/PythonExamples/Example - KVP Decomposition#From the Green matrix to resistances|the notebook calculation]].
 
 ## Why coupling components cannot be inverted independently
 

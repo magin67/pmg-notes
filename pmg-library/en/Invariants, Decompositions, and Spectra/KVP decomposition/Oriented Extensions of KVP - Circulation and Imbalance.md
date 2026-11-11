@@ -1,9 +1,9 @@
 ---
 title: Oriented Extensions of KVP - Circulation and Imbalance
 date: 2026-10-26
-updated: 2026-11-09
-revision: 2
-translated_revision: 4
+updated: 2026-11-11
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-oriented-extensions-circulation-imbalance
@@ -453,6 +453,8 @@ $$
 $$
 
 Their sum is 4. For each individual component, the sum of squares over $i<j$ equals half the sum over all directions, because the component is symmetric or skew-symmetric. For the original oriented table, both directions must be included.
+
+See [[en/PythonExamples/Example - KVP Decomposition#One arc and five components|the notebook calculation]].
 
 ## Connection with the PMG circulation form
 

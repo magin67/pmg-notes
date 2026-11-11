@@ -1,9 +1,9 @@
 ---
 title: Forest Toponomes of KVP Components
 date: 2026-10-26
-updated: 2026-11-09
-revision: 2
-translated_revision: 3
+updated: 2026-11-11
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-toponomes-of-kvp-components
@@ -275,6 +275,8 @@ For comparison, grade two of the full path splits as follows:
 | $A_{11}$ | $12/5$ | $-2/5$ | $1$ | $3$ |
 
 Both totals count the corresponding two-edge forests of the original path, enumerated in [[From Polyforms to Partitions#The six two-edge forests|the path example]]. Pure contributions do not count subsets of those forests: the components introduce other vertex pairs and signed weights.
+
+See [[en/PythonExamples/Example - KVP Decomposition#The forest toponome of the P component|the notebook calculation]].
 
 ## The joint KVP toponome and mixed contributions
 

@@ -1,9 +1,9 @@
 ---
 title: KVP Components and Metric Graph Parameters
 date: 2026-10-26
-updated: 2026-11-09
-revision: 2
-translated_revision: 5
+updated: 2026-11-11
+revision: 3
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: kvp-components-and-graph-metric-parameters
@@ -255,6 +255,8 @@ Other parameters nevertheless differ:
 | Spanning-tree coefficient $\tau$ | $4/15$ | $16/51$ |
 
 Thus the K- and V-components of resistance do not determine the radius or sphere center. The example also distinguishes centroid and spanning-tree centralities: $\mathbf q$ is the same, whereas $\delta_i=2(1-\alpha_i)$ changes.
+
+See [[en/PythonExamples/Example - KVP Decomposition#Equal K and V with different radii|the notebook calculation]].
 
 ## Decomposing the radius at a fixed graph metric
 
