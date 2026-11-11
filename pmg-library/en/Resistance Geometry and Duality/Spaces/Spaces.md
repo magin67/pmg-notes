@@ -1,9 +1,9 @@
 ---
 title: Spaces
 date: 2026-10-14
-updated: 2026-11-10
-revision: 9
-translated_revision: 9
+updated: 2026-11-11
+revision: 10
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: spaces-subspaces-series-navigation
@@ -34,7 +34,7 @@ Secondary thematic entries:
 
 - [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]: the Dirichlet problem, vertex elimination, and contraction.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ All nine notes are available in Russian and English, with matching reading order
 
 ## Continuations and sources
 
-Spectral relations between the parts of a bipartite graph, gluing at several vertices, a fuller treatment of Lorentzian geometry, and possible physical interpretations are reserved for separate notes. General polyform reduction and the spanning-tree operator also belong to a separate continuation. These questions and their dependencies are tracked in the [[ru/Карта библиотеки PMG|library map (in Russian)]].
+Spectral relations between the parts of a bipartite graph, gluing at several vertices, a fuller treatment of Lorentzian geometry, and possible physical interpretations are reserved for separate notes. General polyform reduction and the spanning-tree operator also belong to a separate continuation. These questions and their dependencies are tracked in the [[en/Navigation/Library Map|library map]].
 
 Sources and the status of results are given in each note. Established constructions are compared with their presentation in PMG after the objects involved have been defined.
 

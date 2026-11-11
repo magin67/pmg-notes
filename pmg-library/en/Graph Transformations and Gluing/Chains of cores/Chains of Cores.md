@@ -2,8 +2,8 @@
 title: "Chains of Cores"
 date: 2026-10-31
 updated: 2026-11-11
-revision: 6
-translated_revision: 11
+revision: 7
+translated_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -33,7 +33,7 @@ Secondary thematic entries:
 
 - [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: matroid invariance and spectral distinguishability of isomers.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading route
 

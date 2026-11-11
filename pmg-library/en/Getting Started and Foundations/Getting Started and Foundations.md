@@ -1,8 +1,8 @@
 ---
 title: Getting Started and Foundations
 date: 2026-11-01
-updated: 2026-11-03
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -17,7 +17,7 @@ aliases:
 
 Begin with the introductory series. Use the specification and terminology as references while reading.
 
-[[ru/Начало работы и основания/Начало работы и основания|Русский]] · [[en/Thematic Index|Thematic Index]]
+[[ru/Начало работы и основания/Начало работы и основания|Русский]] · [[en/Navigation/Thematic Index|Thematic Index]]
 
 ## Foundations of the library
 
@@ -29,7 +29,7 @@ Begin with the introductory series. Use the specification and terminology as ref
 ## Choosing a route
 
 1. Read the introductory series in its navigator's order. For a particular problem, use the shorter routes given there.
-2. Choose a question in the [[en/Thematic Index|thematic index]]. Each section identifies supporting series and suggested transitions; detailed prerequisites appear in the series navigators.
+2. Choose a question in the [[en/Navigation/Thematic Index|thematic index]]. Each section identifies supporting series and suggested transitions; detailed prerequisites appear in the series navigators.
 3. For a computational introduction, open [[en/PythonExamples/PythonExamples|Programming Examples]]. The examples connect notation in the notes to code and expected results.
 
 After the introduction, the geometric route leads to [[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]], the algebraic route to [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]], and coupling changes to [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]. For comparing characteristics, choose [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]; for directed couplings, choose [[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]].
@@ -40,4 +40,4 @@ After the introduction, the geometric route leads to [[en/Resistance Geometry an
 - **Requires prior reading:** definitions and results explicitly named in a route.
 - **Continues the research:** a further problem that may not yet have a published series.
 
-[[en/Cross-cutting Tags|Tags]] help find connections; they do not specify reading order. “Boundary data” concerns marked graph vertices and does not replace the algebraic boundary operator.
+[[en/Navigation/Thematic Index#Search by tags|Tags]] help find connections; they do not specify reading order. “Boundary data” concerns marked graph vertices and does not replace the algebraic boundary operator.

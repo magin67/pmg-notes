@@ -1,8 +1,8 @@
 ---
 title: Polyform Algebra and Combinatorics
 date: 2026-11-01
-updated: 2026-11-03
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -16,7 +16,7 @@ aliases:
 
 What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
 
-[[ru/Алгебра и комбинаторика полиформ/Алгебра и комбинаторика полиформ|Русский]] · [[en/Thematic Index|Thematic Index]]
+[[ru/Алгебра и комбинаторика полиформ/Алгебра и комбинаторика полиформ|Русский]] · [[en/Navigation/Thematic Index|Thematic Index]]
 
 ## Series in this section
 
@@ -47,4 +47,4 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 Polyform reduction and the spanning-tree operator. The scope of future exposition will be determined after reviewing the source material.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]].

@@ -1,8 +1,8 @@
 ---
 title: Directed Graphs and Extensions
 date: 2026-11-01
-updated: 2026-11-07
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -16,7 +16,7 @@ aliases:
 
 What changes when couplings become directed and constructions become nonsymmetric?
 
-[[ru/Направленные графы и расширения/Направленные графы и расширения|Русский]] · [[en/Thematic Index|Thematic Index]]
+[[ru/Направленные графы и расширения/Направленные графы и расширения|Русский]] · [[en/Navigation/Thematic Index|Thematic Index]]
 
 ## Series in this section
 
@@ -43,4 +43,4 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 Regular balanced graphs, further directed toponomes, and connections of circulation with other constructions. These directions remain in the research map; completion of the current series does not complete them.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]].

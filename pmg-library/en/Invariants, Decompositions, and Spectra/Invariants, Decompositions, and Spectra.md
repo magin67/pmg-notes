@@ -1,8 +1,8 @@
 ---
 title: Invariants, Decompositions, and Spectra
 date: 2026-11-01
-updated: 2026-11-03
-revision: 9
+updated: 2026-11-11
+revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -16,7 +16,7 @@ aliases:
 
 Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?
 
-[[ru/Инварианты, разложения и спектры/Инварианты, разложения и спектры|Русский]] · [[en/Thematic Index|Thematic Index]]
+[[ru/Инварианты, разложения и спектры/Инварианты, разложения и спектры|Русский]] · [[en/Navigation/Thematic Index|Thematic Index]]
 
 ## Series in this section
 
@@ -51,4 +51,4 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 The current bilingual collection “Spectra of Isomers” is complete. [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]] records the proven reconstruction from marked boundary data, scalar conjectures, and further questions about stability, general periods, closure, and infinite chains. Spectra of bipartite graphs and mutual projections form a separate future direction.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]].

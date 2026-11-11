@@ -2,7 +2,7 @@
 title: "Matroid Parameters and Forest Characteristics of Graphs"
 date: 2026-10-28
 updated: 2026-11-11
-revision: 6
+revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -23,7 +23,7 @@ When the same graph parts are glued together, some characteristics are preserved
 
 In PMG, the starting connection is algebraic: edges correspond to vectors, forests to nonzero exterior products, and cycles make those products vanish. Forest sums occur in the Laplacian exponential and, after passing to the complementary grade, in the cut representation of the Greenian exponential. Matroid parameters are therefore considered on both sides of the duality.
 
-The series consists of seven notes; its place in the library is described in the [[ru/Карта библиотеки PMG|project map (in Russian)]]. It prepares the study of boundary data and chains of cores; a prior course in general matroid theory is not required.
+The series consists of seven notes; its place in the library is described in the [[en/Navigation/Library Map|project map]]. It prepares the study of boundary data and chains of cores; a prior course in general matroid theory is not required.
 
 ## Place in the library
 
@@ -33,7 +33,7 @@ Secondary thematic entries:
 
 - [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]: one-point gluing and Whitney twists.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Contents and reading order
 

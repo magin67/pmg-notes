@@ -3,9 +3,9 @@ title: "PMG — Library"
 description: "Resistance geometry and polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 37
-translated_revision: 29
-updated: 2026-11-03
+revision: 38
+translated_revision: 58
+updated: 2026-11-11
 ---
 
 [Русский](../ru/index.md) · [Choose a language](../index.md)
@@ -22,7 +22,7 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Thematic sections
 
-The 18 completed bilingual series contain 127 substantive notes in each language. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
+The 18 completed bilingual series contain 131 substantive notes in each language. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
 - **[[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
@@ -30,17 +30,13 @@ The 18 completed bilingual series contain 127 substantive notes in each language
 - **[[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]**. How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?
 - **[[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]**. What changes when couplings become directed and constructions become nonsymmetric?
 
-[[en/Thematic Index|All series and their primary homes]] · [[en/Cross-cutting Tags|Cross-cutting Tags]].
-
-The series [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]] is available in both languages: four substantive notes, a navigator, and 12 figures in each language. The library contains 127 substantive notes in each language.
-
 ## Programming examples
 
 [[en/PythonExamples/PythonExamples|Programming Examples]] connect the mathematical notes to executable `polyform_algebra` code, expected results, and checks.
 
-## Development plan
+## Navigation
 
-The [[ru/Карта библиотеки PMG|library map, in Russian]] records research directions, preparation status, and open questions. [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]] completes the current bilingual series of nine substantive notes on spectral differences, boundary transfer, decoding, response, and periodic chains. The navigator separates proofs, finite computations, and conjectures. All notes, the navigator, and labels for 35 figures are available in English.
+[[en/Navigation/Navigation|Navigation]] brings together the [[en/Navigation/Thematic Index|thematic index with search by tags]] and the [[en/Navigation/Library Map|library map]].
 
 ## Status of results
 

@@ -1,8 +1,8 @@
 ---
 title: Structural Identities
 date: 2026-10-18
-updated: 2026-11-10
-revision: 4
+updated: 2026-11-11
+revision: 5
 source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -31,7 +31,7 @@ Secondary thematic entries:
 
 - [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]: pairing forms and reducing boundary data.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Prerequisites
 

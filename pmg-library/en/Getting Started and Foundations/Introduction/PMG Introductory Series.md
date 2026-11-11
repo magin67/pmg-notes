@@ -1,9 +1,9 @@
 ---
 title: PMG Introductory Series
 date: 2026-10-08
-updated: 2026-11-10
-revision: 13
-translated_revision: 14
+updated: 2026-11-11
+revision: 14
+translated_revision: 15
 source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
@@ -28,7 +28,7 @@ The first seven notes present results from linear algebra, electrical network th
 
 Primary section: [[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]].
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading order
 

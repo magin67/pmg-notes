@@ -1,8 +1,8 @@
 ---
 title: Symmetric Polyforms
 date: 2026-10-20
-updated: 2026-11-10
-revision: 5
+updated: 2026-11-11
+revision: 6
 source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
@@ -24,7 +24,7 @@ What happens to a sum of forms when all vertices are relabelled? This series stu
 
 Primary section: [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]].
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Prerequisites
 

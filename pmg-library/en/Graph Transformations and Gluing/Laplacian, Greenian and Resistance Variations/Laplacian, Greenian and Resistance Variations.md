@@ -2,14 +2,14 @@
 title: Laplacian, Greenian and Resistance Variations
 date: 2026-11-01
 updated: 2026-11-11
-revision: 5
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: laplacian-greenian-resistance-variations-series-navigation
 order: 0
 description: 'Reading order for eight notes: direct and inverse variations, exterior exponential factors, quadric connectivity, prescribed resistances, and conductance constraints. Main formulas, applicability, and provenance.'
-translated_revision: 6
+translated_revision: 7
 tags:
   - variations
   - resistances
@@ -33,7 +33,7 @@ Secondary thematic entries:
 
 - [[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]: changes in the resistance metric and quadric connectivity.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Contents and reading order
 

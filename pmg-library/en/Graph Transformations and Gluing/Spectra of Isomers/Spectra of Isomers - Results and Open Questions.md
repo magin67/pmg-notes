@@ -2,8 +2,8 @@
 title: 'Spectra of Isomers: Results and Open Questions'
 date: '2026-11-02'
 updated: 2026-11-11
-revision: 5
-translated_revision: 5
+revision: 6
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -204,4 +204,4 @@ This navigator brings together published proofs and computational results; it ad
 
 The primary section is [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]: the series sits alongside “Chains of Cores” and boundary polynomials. An additional entry point is [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]], through spectral invariants and configuration recovery.
 
-Required foundations: [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]] specifies admissibility and matroid invariance; [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data|From the Forest Passport to Spectral Boundary Data]] separates a fixed-pair passport from transfer; [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]] distinguishes spectra, projectors, and operators; [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Forest Coefficients and the Laplacian Polynomial|Forest Coefficients and the Laplacian Polynomial]] reconciles forest normalizations. General entry point: [[en/Thematic Index|Thematic Index]].
+Required foundations: [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]] specifies admissibility and matroid invariance; [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data|From the Forest Passport to Spectral Boundary Data]] separates a fixed-pair passport from transfer; [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]] distinguishes spectra, projectors, and operators; [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Forest Coefficients and the Laplacian Polynomial|Forest Coefficients and the Laplacian Polynomial]] reconciles forest normalizations. General entry point: [[en/Navigation/Thematic Index|Thematic Index]].

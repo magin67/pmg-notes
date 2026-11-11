@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 26
-translated_revision: 26
+revision: 27
+translated_revision: 27
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -19,7 +19,7 @@ This section connects the mathematical PMG notes with executable examples from `
 
 ## Library navigation
 
-[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] · [[en/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Getting started
 

@@ -1,8 +1,8 @@
 ---
 title: Graph Transformations and Gluing
 date: 2026-11-01
-updated: 2026-11-07
-revision: 13
+updated: 2026-11-11
+revision: 14
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -16,7 +16,7 @@ aliases:
 
 How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?
 
-[[ru/Преобразования и сочленения графов/Преобразования и сочленения графов|Русский]] · [[en/Thematic Index|Thematic Index]]
+[[ru/Преобразования и сочленения графов/Преобразования и сочленения графов|Русский]] · [[en/Navigation/Thematic Index|Thematic Index]]
 
 ## Series in this section
 
@@ -49,4 +49,4 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 Composite cores and further assembly methods. Chains of Cores and Spectra of Isomers form a shared route from assembly to invariants and reconstruction. The isomer-series navigator records the remaining spectral questions. Infinite lattices and limits of finite graphs are provisionally placed here, with a connection to spectra; their final placement depends on scope.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]].

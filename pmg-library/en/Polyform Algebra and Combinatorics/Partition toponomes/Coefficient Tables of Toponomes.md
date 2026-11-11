@@ -2,7 +2,7 @@
 title: Coefficient Tables of Toponomes
 date: 2026-10-22
 updated: 2026-11-11
-revision: 5
+revision: 6
 source_revision: 11
 status: draft
 text_prepared_by: ChatGPT
@@ -433,7 +433,7 @@ The [[Reducibility of Toponomes#The two-variable toponome and the coefficient tr
 
 The table lies between the record of all types and coarser sums of coefficients. It can be stored as an array or encoded as a polynomial; changing the notation does not recover the lost types.
 
-The [[ru/Карта библиотеки PMG|PMG library map (in Russian)]] records future work on graph classes distinguished by such tables and on richer data: retaining individual types, adding component weights, and considering rooted variants. The distinguishing power of each specific construction must be checked separately. The counterexample above concerns the table $a_{k,r}$ and does not refute possible statements about more detailed invariants.
+The [[en/Navigation/Library Map|library map]] records future work on graph classes distinguished by such tables and on richer data: retaining individual types, adding component weights, and considering rooted variants. The distinguishing power of each specific construction must be checked separately. The counterexample above concerns the table $a_{k,r}$ and does not refute possible statements about more detailed invariants.
 
 ## Source
 

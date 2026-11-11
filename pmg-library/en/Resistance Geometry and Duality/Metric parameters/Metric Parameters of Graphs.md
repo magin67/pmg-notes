@@ -1,9 +1,9 @@
 ---
 title: Metric Parameters of Graphs
 date: 2026-10-18
-updated: 2026-11-10
-revision: 7
-translated_revision: 10
+updated: 2026-11-11
+revision: 8
+translated_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 translation_key: metric-parameters-series-navigation
@@ -33,7 +33,7 @@ Secondary thematic entries:
 
 - [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: tree invariance and the distinguishing power of parameters.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Prerequisites
 

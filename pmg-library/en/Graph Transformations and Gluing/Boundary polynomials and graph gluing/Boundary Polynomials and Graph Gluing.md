@@ -2,8 +2,8 @@
 title: "Boundary Polynomials and Graph Gluing"
 date: 2026-10-30
 updated: 2026-11-11
-revision: 5
-translated_revision: 6
+revision: 6
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -35,7 +35,7 @@ Secondary thematic entries:
 - [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]: boundary partitions and coordinate reduction.
 - [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: spectral boundary data.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Contents and reading order
 
@@ -139,7 +139,7 @@ Useful supporting texts:
 
 The six Russian notes underwent a [joint review (in Russian)](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/REVIEW_RU.md). Their English versions were checked against that edition, including formulas, references, and figure labels. The series contains 23 distinct figures in each language; [six verification programs and SVG reproduction instructions](https://github.com/magin67/pmg-notes/blob/v5/checks/boundary/README_EN.md) are available. Exact arithmetic compares the formulas with direct enumeration of forests, determinants, cofactors, and ranks. These checks supplement the proofs.
 
-In [[ru/Карта библиотеки PMG|the library roadmap (Russian)]], the series follows [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|the general spectral series]] and precedes “Chains of Cores.” It also continues [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]].
+In [[en/Navigation/Library Map|the library roadmap]], the series follows [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|the general spectral series]] and precedes “Chains of Cores.” It also continues [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]].
 
 The continuation is already published: [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]] defines the chain constructions, while [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] proves closure of the five spectral coordinates when the active pair moves. [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] gives an encoding and classification of open hexagonal chains. Seam rules, shared edges, and closure are specified before calculation. Distinguishability by a single spectral polynomial or a single number remains a research question: see [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Distinguishability of SLR Chains|Spectral Distinguishability of SLR Chains]].
 

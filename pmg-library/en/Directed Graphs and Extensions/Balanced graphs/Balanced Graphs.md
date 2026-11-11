@@ -2,7 +2,7 @@
 title: Balanced Graphs
 date: 2026-10-24
 updated: 2026-11-11
-revision: 4
+revision: 5
 source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
@@ -31,7 +31,7 @@ Secondary thematic entries:
 
 - [[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]: directional coordinates, resistances, and the sphere.
 
-[[en/Cross-cutting Tags|Cross-cutting Tags]] · [[en/Thematic Index|Thematic Index]].
+[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
 
 ## Contents and reading order
 
