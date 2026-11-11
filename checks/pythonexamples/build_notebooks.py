@@ -36,6 +36,7 @@ def page_link(lang,target):
 PINNED_COMMITS = {
     'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
     'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
+    'boundary-data-core-chains': 'a7fa4b54aaa29f5c42213bf2e97f74f922da3ead',
     'matroid-forest-characteristics': '148770970a5d0005c8e16b8eb63969d2afe3ca22',
     'greenian-duality': 'e7a9647f448ca0ca743f89c067601e418ef604ed',
     'kvp-decomposition': 'efb5bdb8bb68b7fe975141ef21b1a9cbcdfec5f2',
@@ -71,6 +72,8 @@ COMPANIONS = (
     ('en', 'Example - Greenian and Polyform Duality', 'greenian-duality'),
     ('ru', 'Пример - Матроидные параметры и лесные характеристики графов', 'matroid-forest-characteristics'),
     ('en', 'Example - Matroid Parameters and Forest Characteristics of Graphs', 'matroid-forest-characteristics'),
+    ('ru', 'Пример - Граничные данные и цепочки ядер', 'boundary-data-core-chains'),
+    ('en', 'Example - Boundary Data and Chains of Cores', 'boundary-data-core-chains'),
 )
 
 def revision_setup(commit):

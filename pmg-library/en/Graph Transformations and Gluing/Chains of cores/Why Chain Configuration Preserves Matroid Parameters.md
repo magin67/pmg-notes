@@ -1,9 +1,9 @@
 ---
 title: "Why Chain Configuration Preserves Matroid Parameters"
 date: 2026-10-31
-updated: 2026-11-08
-revision: 3
-translated_revision: 8
+updated: 2026-11-11
+revision: 4
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -204,6 +204,8 @@ $$
 The last equality is understood as a polynomial identity. The spectrum is related to $P_G$, not to the ordinary forest polynomial $F_G$. The following example exhibits an actual difference.
 
 ## Two chains of three hexagons
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Matroid and configuration|the notebook calculation]].
 
 Write $C(v_0,\ldots,v_5)$ for the cycle joining consecutive vertices and including the closing edge $v_5v_0$. Take
 

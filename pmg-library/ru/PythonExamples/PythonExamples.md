@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 21
+revision: 22
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -81,6 +81,10 @@ folder_order: 70
 ## Матроидные параметры и лесные характеристики графов
 
 [[ru/PythonExamples/Пример - Матроидные параметры и лесные характеристики графов|Матроидные параметры и лесные характеристики графов]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/matroid-forest-characteristics.ipynb).
+
+## Граничные данные и цепочки ядер
+
+[[ru/PythonExamples/Пример - Граничные данные и цепочки ядер|Граничные данные и цепочки ядер]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/boundary-data-core-chains.ipynb).
 
 ## Как устроен пример
 

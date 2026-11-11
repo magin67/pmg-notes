@@ -1,9 +1,9 @@
 ---
 title: "Chains of Cores"
 date: 2026-10-31
-updated: 2026-11-08
-revision: 5
-translated_revision: 10
+updated: 2026-11-11
+revision: 6
+translated_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -127,6 +127,10 @@ External foundations:
 4. H. Richman, F. Shokrieh, C. Wu. *Counting two-forests and random cut size via potential theory*. [Theorem C / 5.7](https://arxiv.org/html/2308.03859v1).
 5. NIST DLMF. [§18.9(i)](https://dlmf.nist.gov/18.9.i), [18.5.1](https://dlmf.nist.gov/18.5.E1), [18.9.21](https://dlmf.nist.gov/18.9.E21): recurrences, trigonometric representation, and the Chebyshev derivative.
 6. A. Azimi, M. Farrokhi D. G. *Explicit formulas for matrices associated to ladder, circular ladder, and Möbius ladder graphs*. [§§4–5; Theorem 4.2, Corollaries 4.6–4.7 and 5.3–5.4](https://arxiv.org/html/2306.10497v1).
+
+## Programming companion
+
+[[en/PythonExamples/Example - Boundary Data and Chains of Cores#Spanning trees of a square ladder|Boundary Data and Chains of Cores]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/boundary-data-core-chains.ipynb).
 
 ## Reproducibility and continuation
 

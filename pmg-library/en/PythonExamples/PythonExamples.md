@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 21
-translated_revision: 21
+revision: 22
+translated_revision: 22
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -82,6 +82,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Matroid Parameters and Forest Characteristics of Graphs
 
 [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/matroid-forest-characteristics.ipynb).
+
+## Boundary Data and Chains of Cores
+
+[[en/PythonExamples/Example - Boundary Data and Chains of Cores|Boundary Data and Chains of Cores]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/boundary-data-core-chains.ipynb).
 
 ## How an example is organized
 

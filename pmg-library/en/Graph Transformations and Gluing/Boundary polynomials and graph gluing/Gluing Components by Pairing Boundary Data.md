@@ -1,9 +1,9 @@
 ---
 title: "Gluing Components by Pairing Boundary Data"
 date: 2026-10-30
-updated: 2026-11-08
-revision: 2
-translated_revision: 9
+updated: 2026-11-11
+revision: 3
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -126,6 +126,8 @@ It is symmetric and depends only on the boundary and the ordering of partitions.
 This is the same as [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Vertex Contraction as a Boundary Test#When the image of a forest remains a forest|the contraction criterion]]. Here, however, both sides are forests of graph parts. The internal-component counts cancel in the cycle test while their contributions remain in the state polynomials.
 
 ## The bilinear law for the full forest polynomial
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Pairing forest passports|the notebook calculation]].
 
 **An established law in polynomial form.** The combination of tables over compatible partitions appears in [the proof of Lemma 4.21 of Mannens–Nederlof](https://arxiv.org/html/2307.01046#S4.SS3). Formulas (2)–(3) below use the same rule with weights and powers of $t$.
 

@@ -1,9 +1,9 @@
 ---
 title: "Boundary Forest States: What to Retain from a Component"
 date: 2026-10-30
-updated: 2026-11-08
-revision: 2
-translated_revision: 8
+updated: 2026-11-11
+revision: 3
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -114,6 +114,8 @@ An unrealizable state has polynomial zero. We omit the superscripts when $G,B$ a
 The boundary vertex names and the number $n$ are retained alongside this vector. The latter matters: adding an isolated internal vertex leaves the polynomials (1) unchanged but changes the number of components of every forest. “Full” means that all states and all spanning forests are included; it asserts neither reconstruction of the graph itself nor minimality of the number of coordinates.
 
 ## The five polynomials of the path P5
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Forest passport of a path|the notebook calculation]].
 
 The path has four edges, and every subset is acyclic. There are $2^4=16$ forests in total. In the state order listed above, we obtain
 

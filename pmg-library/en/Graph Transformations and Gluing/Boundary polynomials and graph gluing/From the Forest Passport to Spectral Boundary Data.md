@@ -1,9 +1,9 @@
 ---
 title: "From the Forest Passport to Spectral Boundary Data"
 date: 2026-10-30
-updated: 2026-11-08
-revision: 4
-translated_revision: 7
+updated: 2026-11-11
+revision: 5
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -148,6 +148,8 @@ Boundary data thus depend on the position of the marked pair relative to the eig
 Even for the same path $a-u-b$, changing the boundary changes the passport: $(a,b)$ gives $E=\xi-2$, whereas $(a,u)$ gives $E=\xi-1$, with the same $A=\xi(\xi-1)(\xi-3)$.
 
 ## Gluing along two shared vertices
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Spectral pairing|the notebook calculation]].
 
 First fix a construction with no shared edges. Components $G_1,G_2$ have the common boundary $\mathcal B=(a,b)$ and disjoint internal sets $J_1,J_2$. Only boundary vertices with the same name are identified. Each edge instance belongs to exactly one component; two distinct edges $ab$, if present, remain parallel edges.
 

@@ -1,9 +1,9 @@
 ---
 title: "Limits of Invariance: Branching, Disconnected Seams, and Other Cores"
 date: 2026-10-31
-updated: 2026-11-08
-revision: 3
-translated_revision: 7
+updated: 2026-11-11
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -273,6 +273,8 @@ Here $j$ denotes the selected output edge, not the vertex count. Multiplying eac
 Cubes and prisms are themselves planar graphs. Differences in the tables should not be attributed to the spatial dimension of their usual drawings. The relevant data are the core graph, its boundary data, and the specific identifications.
 
 ## An equal spanning-tree count does not determine the radius
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Limits of the tree count|the notebook calculation]].
 
 Consider two explicitly specified graphs on vertices $0,\ldots,5$. In graph A, $C(0,1,2,3)$ and $C(0,4,5)$ are glued at vertex $0$. In graph B, take $K_{2,3}$ with parts $\{0,1\}$ and $\{2,3,4\}$ and add the pendant edge $05$. Their complete edge sets are
 

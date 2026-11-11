@@ -1,9 +1,9 @@
 ---
 title: "Cores, Seams, and Admissible Chains"
 date: 2026-10-31
-updated: 2026-11-08
-revision: 3
-translated_revision: 10
+updated: 2026-11-11
+revision: 4
+translated_revision: 11
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -223,6 +223,8 @@ The first polynomial counts forests connecting $c$ and $d$: the edge $cd$ can be
 Formula (6) concerns the full ordinary forest passport. Transferring reduced coordinates requires compatibility with their quotient construction. The characteristic polynomial $\chi_G(\xi)=\det(\xi I-\mathbf L_G)$ requires separate data from [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data|From the Forest Passport to Spectral Boundary Data]]; sufficiency of a passport for a fixed pair does not by itself define a spectral automaton when the pair changes.
 
 ## Two assemblies of three hexagons
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Two admissible chains|the notebook calculation]].
 
 Specify the two assemblies pictured above and check their parameters.
 

@@ -1,9 +1,9 @@
 ---
 title: "Spanning-Tree Polynomials of Chains: Determinant and Recurrence"
 date: 2026-10-31
-updated: 2026-11-08
-revision: 3
-translated_revision: 8
+updated: 2026-11-11
+revision: 4
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -372,6 +372,8 @@ The role of Chebyshev polynomials in transformations of the **Laplacian** is dis
 Definitions and the relation between the two forest normalizations appear in [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Forest Coefficients - Grade, Components, and Corank|Forest Coefficients - Grade, Components, and Corank]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Forest Coefficients and the Laplacian Polynomial|Forest Coefficients and the Laplacian Polynomial]]. The alternating coefficients of $\mathcal T_N$ and $D_N$ do not replace $f_g$ or $p_g$. The spectrum of $\mathbf A_N$ in (12) concerns only the auxiliary path. Equality of spanning-tree counts proves neither equality of forest polynomials nor equality of radii; in [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|Why Chain Configuration Preserves Matroid Parameters]], those consequences follow from the stronger fact of cycle matroid isomorphism.
 
 ## Explicit assemblies and independent checks
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Determinant and continuant|the notebook calculation]].
 
 Use the following exact numbering rule for the table below. The first core has cyclic order $0,\ldots,m_1-1$. To attach the second, take the first $s_1$ vertices of the first. At each later step, identify the input of the new core, in the same order, with the $s_{j-1}$ vertices of the preceding core immediately following its input seam. The new core's cyclic list starts with these shared vertices and is completed by $m_j-s_{j-1}$ new labels in increasing order.
 

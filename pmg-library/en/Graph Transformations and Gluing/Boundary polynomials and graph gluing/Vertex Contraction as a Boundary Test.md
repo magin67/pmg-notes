@@ -1,9 +1,9 @@
 ---
 title: "Vertex Contraction as a Boundary Test"
 date: 2026-10-30
-updated: 2026-11-08
-revision: 2
-translated_revision: 8
+updated: 2026-11-11
+revision: 3
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -188,6 +188,8 @@ $$
 The factor comes from the different top degrees $d$ and $d-r$ when the variable is inverted. The response $\widehat U$ itself is divisible by $u^r$, since forests passing the test have at most $d-r$ edges. This identity agrees with [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/The Normalized Forest Polynomial and Power-Sum Parameters|the normalized forest polynomial]] and does not alter (2) in the edge-count variable.
 
 ## Example: three contractions of P5
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Three contractions|the notebook calculation]].
 
 Retain the path $a-b-c-d-e$ with unit conductances and boundary $B=\{a,c,e\}$. Its five state polynomials were computed in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Forest States - What to Retain from a Component#The five polynomials of the path P5|the main example of the full passport]].
 

@@ -1,9 +1,9 @@
 ---
 title: "Boundary Polynomials and Graph Gluing"
 date: 2026-10-30
-updated: 2026-11-08
-revision: 4
-translated_revision: 5
+updated: 2026-11-11
+revision: 5
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -130,6 +130,10 @@ Useful supporting texts:
 > over $\mathbb Q$ or $\mathbb R$ has a general proof in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/The Four-Point Passport and State Reduction#The general Catalan rank|The general Catalan rank]]. The values $2,5,14,42$ for boundary sizes $2,3,4,5$ are computational illustrations. Neither agreement with the dimension of the partition-form space nor these finite checks alone proves the theorem or identifies the two spaces.
 >
 > The path, star, crossing matching, and electrically indistinguishable components serve as concrete calculations and counterexamples to reconstruction from incomplete data. No priority is claimed for these examples.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Boundary Data and Chains of Cores#Forest passport of a path|Boundary Data and Chains of Cores]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/boundary-data-core-chains.ipynb).
 
 ## Checks and continuation
 

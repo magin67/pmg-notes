@@ -1,9 +1,9 @@
 ---
 title: "Closing a Chain: Rings and the Möbius Effect"
 date: 2026-10-31
-updated: 2026-11-08
-revision: 3
-translated_revision: 6
+updated: 2026-11-11
+revision: 4
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -24,6 +24,8 @@ The invariance conditions for an open chain are given in [[en/Graph Transformati
 > Circular and Möbius ladders are classical graph families. The spanning-tree count of a circular ladder is given by [Azimi–Farrokhi, Theorem 4.2](https://arxiv.org/html/2306.10497v1#S4); resistance characteristics of circular and Möbius ladders are treated in §§4–5 of the same work. Below we give spectral proofs and convert the results to the PMG normalization. Formulas for elongated strips follow by replacing paths with conductances, and the prism formula by decomposition into transverse modes. Computational examples are identified separately; no priority is claimed for these constructions or deductions.
 
 ## The final seam of a square strip
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Two strip closures|the notebook calculation]].
 
 All original edges have unit conductance. Shared edges remain unit edges after identification. Write $N$ for the number of cores and $n$ for the vertex count of the final graph. We use the convention
 

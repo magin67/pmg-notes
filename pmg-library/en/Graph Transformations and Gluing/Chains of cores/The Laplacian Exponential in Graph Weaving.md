@@ -1,9 +1,9 @@
 ---
 title: "The Laplacian Exponential in Graph Weaving"
 date: 2026-11-02
-updated: 2026-11-08
-revision: 2
-translated_revision: 4
+updated: 2026-11-11
+revision: 3
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -249,6 +249,8 @@ Under the rooted evaluation, a component with $s$ vertices has $s$ choices of ro
 This limitation concerns the specified class of ordinary scalar recurrences. It does not exclude the operator formulas (7)-(9), index shifts, coefficients depending on $N$, or finite recurrences after specializing variables.
 
 ## The ordinary forest polynomial and a second-order recurrence
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Transfer of ladder forest states|the notebook calculation]].
 
 Set $z_s=1$. Component sizes can then be forgotten: two polynomials $f_N^{\mathrm c}(t)$ and $f_N^{\mathrm d}(t)$ remain, for forests with joined and separated contacts. They also account for closed components and differ from the spanning states $(\tau,\sigma)$ in [[en/Graph Transformations and Gluing/Chains of cores/Weaving Graphs - Plug Socket and Recurrence|Weaving Graphs: Plug, Socket, and Recurrence]]. The ordinary forest polynomial is $F_N=f_N^{\mathrm c}+f_N^{\mathrm d}$.
 

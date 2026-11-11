@@ -1,9 +1,9 @@
 ---
 title: "The Spanning-Tree Layer and Boundary Resistance Geometry"
 date: 2026-10-30
-updated: 2026-11-08
-revision: 2
-translated_revision: 8
+updated: 2026-11-11
+revision: 3
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -311,6 +311,8 @@ This normalization agrees with [[en/Graph Transformations and Gluing/Boundary po
 Connectivity of each part is essential in (7)–(8). A disconnected part may have no common resistance Gram matrix even if the gluing is connected. Combinatorial formula (2) still applies. Schur formula (6) is also possible if each internal block is invertible, but passing to invertible $\mathbf H_i$ requires additional conditions.
 
 ## Two paths with a shared three-point boundary
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Spanning trees and boundary response|the notebook calculation]].
 
 Glue two unit-weight copies of $P_5$:
 

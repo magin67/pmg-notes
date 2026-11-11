@@ -1,9 +1,9 @@
 ---
 title: "The Four-Point Passport and State Reduction"
 date: 2026-10-30
-updated: 2026-11-08
-revision: 2
-translated_revision: 7
+updated: 2026-11-11
+revision: 3
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -152,6 +152,8 @@ The reduced law (7), derived below, gives the same answer. Simply deleting $f_{a
 **Changing coordinates retains the contribution; deletion loses it.** The crossing of $ac$ and $bd$ in the left diagram is not a vertex. After adding $ab$, the graph is redrawn as an ordinary path. Negative reduced coordinates compensate for excess contributions; they do not represent negative edge weights.
 
 ## The reduced matrix and rank fourteen
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Rank of the four-point matrix|the notebook calculation]].
 
 List $\mathrm{NC}_4$ in the order
 

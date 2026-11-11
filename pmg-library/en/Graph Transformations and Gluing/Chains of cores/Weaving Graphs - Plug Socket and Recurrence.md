@@ -1,9 +1,9 @@
 ---
 title: "Weaving Graphs: Plug, Socket, and Recurrence"
 date: 2026-11-02
-updated: 2026-11-08
-revision: 2
-translated_revision: 5
+updated: 2026-11-11
+revision: 3
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -33,6 +33,8 @@ We begin with an ordinary ladder. We then define weaving and prove a two-coordin
 For a visual introduction, the first sections suffice: one edge, a square runner, and two spanning states. Then continue to [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|chain admissibility]] or follow the computational route in [[en/Graph Transformations and Gluing/Chains of cores/The Laplacian Exponential in Graph Weaving|the note on the exponential and toponomes]].
 
 ## Starting with a square ladder
+
+See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Spanning trees of a square ladder|the notebook calculation]].
 
 Let the initial graph $G_0$ consist of one unit edge $ab$. Its socket is the pair $(a,b)$. The runner $K$ is a path of three unit edges:
 
