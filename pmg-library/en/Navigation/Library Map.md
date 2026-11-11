@@ -1,206 +1,173 @@
 ---
 title: Library Map
 date: 2026-11-11
-updated: 2026-11-11
-revision: 1
+updated: 2026-11-12
+revision: 2
+translated_revision: 88
 status: published
 text_prepared_by: ChatGPT
 lang: en
 translation_key: pmg-library-map
 order: 0
-description: "Research directions, published series, connections, and open questions."
+description: "Published PMG directions, their connections, and open questions."
 ---
 
-This map brings together the published series, research directions, and planned continuations of PMG. It summarizes the current research plan and links to the notes that develop each topic. The detailed editorial chronology is recorded in the Russian map.
+The map shows which PMG directions are developed in the library, how they connect, and which questions remain open. Direction codes stay stable when the series change.
 
 [[ru/Навигация/Карта библиотеки|Русский]] · [[en/Navigation/Navigation|Navigation]]
 
-## How to use the map
+## Library contents
 
-The [[en/Navigation/Thematic Index|Thematic Index]] groups series by their main question and provides search by tags. Series navigators specify prerequisites and reading routes.
+The library contains 18 bilingual series with 131 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
-Research codes retain the Cyrillic letters used in the Russian map so that each direction has the same identifier in both languages. A direction can span several series, and a series can cover several directions. The codes support cross-references and discussion.
+Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification of PMG]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG Terminology]]. Series navigators give reading order and prerequisites.
 
-Preparation states describe the material available to readers.
+## Research directions
 
-- **Public foundation** means that the introductory series or reference documents cover the basic construction.
-- **Published and checked** means that the relevant texts and their presentation have been reviewed.
-- **Complete in its current scope** means that the agreed set of notes is available in both languages, with navigators and the checks specified for that series.
-- **To review** means that sources, definitions, prerequisites, or the proposed scope require examination.
-- **Planned** means that a continuation has been agreed, with its position or date still open.
-- **To investigate** means that the construction, conditions, or applications require further research.
+One direction can span several series, and a series can cover several directions. Links in the tables lead to published treatments. Future topics identify the available foundation and the remaining question. Proofs, computational results, and conjectures have their own status in the notes. The Cyrillic direction codes match those in the Russian map.
 
-Each mathematical claim has its own status in the note where it appears. The library distinguishes proofs, direct calculations, checks on examples, and working conjectures. A completed series can contain open questions.
+### Foundations
 
-## Published series
-
-The library contains 18 bilingual series with 131 substantive notes in each language. Navigators, reference documents, the introductory bibliography, and programming examples are counted separately.
-
-| Series | Directions | Notes per language |
-| --- | --- | ---: |
-| [[en/Getting Started and Foundations/Introduction/PMG Introductory Series\|PMG Introductory Series]] | О01-О05 | 10 |
-| [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities\|Structural Identities]] | А02 | 5 |
-| [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms\|Symmetric Polyforms]] | А01 | 5 |
-| [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials\|Combinatorial Potentials]] | А07 | 6 |
-| [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes\|Partition Toponomes]] | А03 | 6 |
-| [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes\|Polynomial Toponomes]] | А03 | 5 |
-| [[en/Resistance Geometry and Duality/Spaces/Spaces\|Spaces]] | Г01-Г02 | 9 |
-| [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs\|Metric Parameters of Graphs]] | Г03-Г04, С06 | 8 |
-| [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality\|Greenian and Polyform Duality]] | Д01-Д03 | 9 |
-| [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] | А04, Д04 | 4 |
-| [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs\|Matroid Parameters and Forest Characteristics of Graphs]] | С02 | 7 |
-| [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions\|KVP Decomposition and Oriented Extensions]] | А05 | 9 |
-| [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra\|Spectra and Diagonalization in Polyform Algebra]] | С03, С07 | 6 |
-| [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations\|Laplacian, Greenian and Resistance Variations]] | О03, О05, Д02 | 8 |
-| [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing\|Boundary Polynomials and Graph Gluing]] | С08 | 6 |
-| [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | С01 | 7 |
-| [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions\|Spectra of Isomers]] | С04 | 9 |
-| [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | А06 | 12 |
-
-The [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG Terminology]] record the current definitions and conventions. The [[en/PythonExamples/PythonExamples|Programming Examples]] provide executable calculations and notebooks.
-
-## Foundations
-
-| Code | Direction | Scope and preparation state |
+| Code | Direction and scope | Material |
 | --- | --- | --- |
-| О01 | Basic polyform algebra | Points, affine vectors, simplices, boundaries, grades, forms, products, merging, and annihilation. The public foundation is available. A separate treatment of the algebra and its notation is planned. |
-| О02 | Laplacian and metric polyform | Coupling forms, the Laplacian exponential, forest expansion, the top-grade component, and the spanning-tree coefficient. Public foundation. |
-| О03 | Potentials, norms, and variations | Top-coefficient extraction, metric evaluation, direct and inverse variations, independent resistances, quadric connectivity, and conductance constraints. Public foundation and a completed eight-note variation series. |
-| О04 | Resistance geometry and electrometry | Resistances, inner products, areas, volumes, electrical interpretation, and the original motivation for PMG. The foundation is available. Specialized applications require review. |
-| О05 | Matrix representations and transformations | Laplacian, Green matrix, resistance matrix, distance operator, centering, and finite variation equations. The symmetric constructions are published. Other extensions require separate review. |
+| О01 | **Basic polyform algebra.** Objects, vectors, boundaries, grades, forms, and products. A separate treatment of the algebra and its notation is planned. | [[en/Getting Started and Foundations/Introduction/Basic Objects and Operations of Polyform Algebra\|Basic Objects and Operations of Polyform Algebra]] |
+| О02 | **Laplacian and metric polyform.** Coupling forms, the exponential, forest expansion, and the spanning-tree coefficient. | [[en/Getting Started and Foundations/Introduction/Laplacian Exponential\|Laplacian Exponential]] |
+| О03 | **Potentials, norms, and variations.** Metric evaluations, finite direct and inverse variations, independent resistances, and conductance constraints. | [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations\|Laplacian, Greenian and Resistance Variations]] |
+| О04 | **Resistance geometry and electrometry.** Resistances, inner products, areas, volumes, and electrical interpretation. Applied validation has a separate continuation. | [[en/Getting Started and Foundations/Introduction/Effective Resistance and Graph Geometry\|Effective Resistance and Graph Geometry]] |
+| О05 | **Matrix representations and transformations.** Laplacian, Green matrix, resistance matrix, centering, and the distance operator. | [[en/Getting Started and Foundations/Introduction/Laplacian, Green Matrix, and Effective Resistance Matrix\|Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations]] |
 
-## Algebraic directions
+### Algebra and combinatorics
 
-| Code | Direction | Scope and preparation state |
+| Code | Direction and scope | Material |
 | --- | --- | --- |
-| А01 | Symmetric polyforms | Fundamental theorem, normalizations, products, powers, complete-graph exponential, forest coefficients, and Abel polynomials. Five bilingual notes. |
-| А02 | Structural identities | Partition forms, noncrossing bases, Narayana and Catalan dimensions, the four-block identity, spanning-tree pairing, and support decomposition of relations. Five bilingual notes. |
-| А03 | Partition reduction and polynomial toponomes | Toponomes of a chosen representation, the algebra of the second kind, coefficient tables, vector and vertex normalizations, forest coefficients, the Laplacian polynomial, Kirchhoff indices, factorization, and graph realizability. Two completed series of six and five notes. |
-| А04 | Metric distributions and path intersections | The operator $D_L$, edge influence, the tree model, and higher grades. Covered jointly with Д04 by the four-note metric distribution series. |
-| А05 | KVP and oriented extensions | Pair-data decompositions, projectors, KVPO/KVPOU, distance transformation, the Green matrix, resistances, metric parameters, potentials, and applications. Nine bilingual notes and exact checks. |
-| А06 | Balanced graphs and directed-cycle polyforms | Balance, spanning-tree potentials, the bilinear Laplacian and exponential, circulation, directed geometry, the Gram matrix, spheres, in/out coordinates, balancing, directed forests, and permutation digraphs. Twelve bilingual notes. |
-| А07 | Combinatorial potentials | Ordinary and cyclic partitions, potentials of the first and second kinds, path-cycle states, symmetric-polyform representations, forest counts, Cayley-Moon formulas, finite differences, and Stirling numbers. Six bilingual notes. |
-| А08 | Permutations, invariants, and Galois theory | The action of $S_n$ on partition forms and structural relations, permutation cycles, and polynomial resolvents with a specified field and scalar realization. A research direction building on А01, А02, and А07. Its scope as a separate series is open. |
+| А01 | **Symmetric polyforms.** Fundamental theorem, normalizations, products, powers, complete graphs, and forest coefficients. | [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms\|Symmetric Polyforms]] |
+| А02 | **Structural identities.** Partition forms, noncrossing bases, dimensions, completeness of relations, and spanning-tree pairing. | [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities\|Structural Identities]] |
+| А03 | **Partitions and toponomes.** Algebra of the second kind, coefficient tables, forest polynomials, and graph realizability. Developed in two series. | [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes\|Partition Toponomes]]<br>[[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes\|Polynomial Toponomes]] |
+| А04 | **Metric distribution and path intersections.** The operator $D_L$, edge influence, the tree case, and higher grades. A joint series with Д04. | [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] |
+| А05 | **KVP and oriented extensions.** Pair-data projectors, KVPOU, the Green matrix, resistances, potentials, and applications. | [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions\|KVP Decomposition and Oriented Extensions]] |
+| А06 | **Balanced graphs.** Balance, the bilinear exponential, circulation, directed geometry, spheres, forests, and permutation digraphs. | [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] |
+| А07 | **Combinatorial potentials.** Ordinary and cyclic partitions, both kinds of potential, path-cycle states, and forest counting. | [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials\|Combinatorial Potentials]] |
+| А08 | **Permutations, invariants, and Galois theory.** A research direction. The starting result on permutation invariance is developed in А01. | [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Fundamental Theorem of Symmetric Polyforms\|Fundamental Theorem of Symmetric Polyforms]] |
 
-## Geometry and subspaces
+### Geometry and subspaces
 
-| Code | Direction | Scope and preparation state |
+| Code | Direction and scope | Material |
 | --- | --- | --- |
-| Г01 | Basis subspaces and coordinates | Spaces and forms, projections, bi- and di-coordinates, contraction and gluing, the Dirichlet problem, vertex elimination, and induced couplings in a bipartite class. Nine bilingual notes in Spaces. |
-| Г02 | The null vector and isotropic model | Affine weight, local and nonlocal elements, spheres and their centers, exterior products, and the boundary operator. The basic construction is published in Spaces. Sphere normals and constant-curvature geometry have separate continuations. |
-| Г03 | Circumcenter and resistance radius | Center coordinates, radius, diameter, Gram matrix, volume, centroid decomposition, subsets, and graph changes. Published in Metric Parameters of Graphs. Multipoint forest and spanning-tree gluing laws appear in С08. |
-| Г04 | Connectivity center | The Laplacian sphere center $(\beta,\sigma)$ and its relation to the resistance center, electrical and diffusion interpretations, degree potential, and vertex ranking. Covered by Sphere Centers and Graph Heterogeneity and Degree Potential and Centralities. The notes specify the conditions for weak-cut sensitivity and coincident centrality rankings. |
-| Г05 | Interval forms | Intervals as quadratic forms, directed boundaries, intersections, and unbounded regions. Sources and the relation to reduction constructions require review. |
+| Г01 | **Subspaces and coordinates.** Bi- and di-coordinates, projections, contraction, gluing, the Dirichlet problem, vertex elimination, and bipartite graphs. | [[en/Resistance Geometry and Duality/Spaces/Spaces\|Spaces]] |
+| Г02 | **Null vector and isotropic model.** Affine weight, local and nonlocal elements, spheres, their centers, and the boundary. Geometric extensions are listed below. | [[en/Resistance Geometry and Duality/Spaces/The Null Vector, Isotropic Representation, and the Boundary\|The Null Vector, Isotropic Representation, and the Boundary]]<br>[[en/Resistance Geometry and Duality/Spaces/Nonlocal Elements, Spheres, and Their Centers\|Nonlocal Elements, Spheres, and Their Centers]] |
+| Г03 | **Circumcenter and resistance radius.** Center coordinates, radius, volume, subsets, and graph changes. | [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs\|Metric Parameters of Graphs]] |
+| Г04 | **Connectivity center.** Laplacian sphere center, comparison of the two centers, degree potential, and conditions for coincident centralities. | [[en/Resistance Geometry and Duality/Metric parameters/Sphere Centers and Graph Heterogeneity\|Sphere Centers and Graph Heterogeneity]]<br>[[en/Resistance Geometry and Duality/Metric parameters/Degree Potential and Centralities\|Degree Potential and Centralities]] |
+| Г05 | **Interval forms.** A research continuation. Definitions of intervals, boundaries, and intersections require comparison with metric distributions. | [[#Deferred questions and continuations\|Continuations]] |
 
-The terminology follows the current specification. In particular, the boundary of a Dirichlet problem and the boundary operator of the algebra have their own definitions. Comparisons with external coordinate terminology require checking those definitions.
+### Cuts, duality, and distributions
 
-## Cuts, duality, and distributions
-
-| Code | Direction | Scope and preparation state |
+| Code | Direction and scope | Material |
 | --- | --- | --- |
-| Д01 | Cuts and cut forms | Vertex partitions, crossing edges, indexing forests, block-sum forms, and the cut representation of the Greenian. The algebraic construction and forest coefficients are published. A general theory of cuts has a separate scope. |
-| Д02 | Greenian and polyform duality | Vector forms, boundary exponentials, mutual duality, signed coefficients, cut representations, normalizations, vertex variations, and form potentials. Nine bilingual notes, a navigator, and exact checks. |
-| Д03 | Greenian toponomes and dual pairs | Grouping the canonical vector forest expansion by component types, comparison with Laplacian toponomes, and rooted spectral evaluations. The basic construction and spectral relation are proved. A general transformation of full toponomes remains open. |
-| Д04 | Metric distributions and edge influence | Relative sensitivity, distribution of a form's value, and metric variations. Four bilingual notes jointly with А04 cover edge influence, trees, graphs with cycles, and higher grades. |
+| Д01 | **Cuts and cut forms.** The cut representation of the Greenian, indexing forests, and block-sum forms. General cut theory has a separate scope. | [[en/Resistance Geometry and Duality/Greenian and polyform duality/Cuts and Forest Grades of the Greenian Exponential\|Cuts and Forest Grades of the Greenian Exponential]] |
+| Д02 | **Greenian and polyform duality.** Mutual duality of exponentials, signed coefficients, normalizations, vertex variations, and potentials. | [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality\|Greenian and Polyform Duality]] |
+| Д03 | **Greenian toponomes and dual pairs.** The canonical forest expansion and rooted spectral relation are developed. A general transformation of full toponomes remains open. | [[en/Resistance Geometry and Duality/Greenian and polyform duality/Toponomes of the Greenian Exponential and Dual Pairs\|Toponomes of the Greenian Exponential and Dual Pairs]] |
+| Д04 | **Metric distributions and edge influence.** Relative sensitivity, finite influence, distributions on edge sets, and edge marginals. A joint series with А04. | [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] |
 
-For a cut, the vertex partition, its crossing-edge set, and spanning two-component forests with those vertex sets carry different information. Each distribution specifies its input object, coefficients, their sum, and the metric evaluation. Comparisons of constructions must check these data and their normalizations.
+### Graph structure, invariants, and spectra
 
-## Graph structure, invariants, and spectra
-
-| Code | Direction | Scope and preparation state |
+| Code | Direction and scope | Material |
 | --- | --- | --- |
-| С01 | Chains of cores | Admissible chains and seams, active-boundary transfer, matroid invariance, spanning-tree recurrences, limits of applicability, ordinary closure, twisted closure, and graph weaving. Seven bilingual notes. Open hexagonal-chain classification is developed in С04. Other cores and composite cores remain research topics. |
-| С02 | Matroid parameters and forest characteristics | Cycle matroids, forest coefficients and duality, power-sum parameters, scales, edge characteristics, the resistance radius, and gluing laws. Seven bilingual notes and exact checks. |
-| С03 | Spectra of paths and cycles | Explicit modes and projectors, common eigenbases, polynomial transformations, and the Chebyshev relation between paths and cycles. The principal treatment is included in С07. |
-| С04 | Spectra of isomers | Spectral transfer, SLR classification, decoding the full marked boundary state, reconstruction from three exact rational data, stability, partial spectral reconstruction, and periodic LR, SL, and LLS chains. Nine bilingual notes. General scalar distinguishability remains a conjecture. |
-| С05 | Bipartite spectra and mutual projections | Relations between the spectra of the original graph and the induced graphs, subspace angles, and the shared spanning-tree parameter. A deferred continuation of Г01 requiring review of its scope and normalizations. |
-| С06 | Metric graph characteristics and centralities | Centroid, spanning-tree, and spectral centralities, degree potential, two simplex centers, density, compactness, tree invariance, and two forms of vertex removal. Covered by the eight-note metric series together with Г03 and Г04. |
-| С07 | Spectra and diagonalization in polyform algebra | Space, metric, operators, eigenspaces, projectors, diagonal grades, duality, operator reconstruction, cones, projections, paths, and cycles. Six bilingual notes. |
-| С08 | Boundary polynomials and graph gluing | Full boundary forest states, contraction tests, pairing, coordinate reduction, the spanning-tree layer, and a separate passage to spectral boundary data. Six bilingual notes with exact checks and source attribution. |
-| С09 | Infinite lattices and limits of finite graphs | One-dimensional core chains, triangular, square, and hexagonal planar lattices, and three-dimensional models. Laplacians, Greenians, resistances, spectra, spanning-tree characteristics, finite fragments, and limits require comparison with classical theory. The possible PMG contribution and publication scope are open. |
+| С01 | **Chains of cores.** Admissible seams, boundary transfer, matroid invariance, spanning-tree recurrences, closures, and weaving. | [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] |
+| С02 | **Matroid parameters and forest characteristics.** Cycle matroid, forest coefficients, power-sum parameters, edge characteristics, radius, and gluing laws. | [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs\|Matroid Parameters and Forest Characteristics of Graphs]] |
+| С03 | **Spectra of paths and cycles.** Eigenmodes, projectors, and the Chebyshev relation between paths and cycles are developed in С07. | [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Eigenmodes of Paths and Cycles\|Eigenmodes of Paths and Cycles]]<br>[[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Chebyshev Transformations of the Laplacian - From Path to Cycle\|Chebyshev Transformations of the Laplacian: From Path to Cycle]] |
+| С04 | **Spectra of isomers.** SLR classification, spectral transfer, decoding, boundary response, and periodic chains. General scalar distinguishability is open. | [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions\|Spectra of Isomers: Results and Open Questions]] |
+| С05 | **Bipartite spectra and mutual projections.** A spectral continuation of Г01. The underlying projections, induced couplings, and shared spanning-tree parameter are developed. | [[en/Resistance Geometry and Duality/Spaces/Couplings Within One Part of a Bipartite Graph\|Couplings Within One Part of a Bipartite Graph]] |
+| С06 | **Metric characteristics and centralities.** Graph and vertex parameters, degree potential, density, compactness, and two forms of vertex removal. A joint series with Г03-Г04. | [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs\|Metric Parameters of Graphs]] |
+| С07 | **Spectra and diagonalization.** Operators, eigenspaces, diagonal grades, duality, reconstruction, cones, and projections. | [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra\|Spectra and Diagonalization in Polyform Algebra]] |
+| С08 | **Boundary polynomials and graph gluing.** Full forest states, contraction tests, pairing, coordinate reduction, and the passage to spectral data. | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing\|Boundary Polynomials and Graph Gluing]] |
+| С09 | **Infinite lattices and limits.** A research direction. Models, limiting objects, and the possible PMG contribution require separate justification. | [[#Deferred questions and continuations\|Continuations]] |
 
 ## Connections between directions
 
-The following relationships help locate prerequisites and continuations. Individual series navigators give the reading routes.
-
-| Directions | Connection |
-| --- | --- |
-| О03, О05, Д02, Г01 | Variations connect exterior-exponential factors to exact matrix updates, independent resistances, and mutually inverse differential-response matrices on the complete set of vertex pairs. Partial resistance data with conductance constraints lead to a separate realizability problem. |
-| А01, А02, А03 | Structural identities support symmetric forms and reduction to partitions. Particular results specify which identities they require. |
-| А07, А01 | The second-kind potential counts partitions of a prescribed type. The combinatorial series explains forest coefficients through coding and a bijection with $r$-Stirling numbers. Cayley-Moon and Abel counting arguments also have independent combinatorial proofs. |
-| А03, А04 | Partition and toponome reduction use type data. Metric distribution $D_L$ uses sensitivity in a fixed edge representation. A correspondence between these operations requires a separate construction. |
-| А05, А06 | Balanced graphs, directed cycles, and circulation connect to KVP components. Their component interactions and duality are research continuations. |
-| А03, А06 | The balanced series constructs directed forest toponomes and determinant vertex reduction. Multiplication of general reduced types, directed matroid inequalities, and realizability remain open. |
-| Г01, Г02 | Affine-vector spaces, metric restriction, and the Dirichlet problem use the published core. The isotropic model supplies the geometry of local points and element centers where required. |
-| Г02, Д01, Д02 | The Green matrix, exterior exponential, and inner product define the Greenian and mutual duality. Cut representations are derived within the duality series. |
-| А03, Д02, Д03 | Canonical signed forest expansions admit grouping by component type. Rooted spectral polynomials have a proved dual relation. The full correspondence of types remains open. |
-| А04, Д04, О03, О05 | In grade $k$, $D_L$ is a distribution on $k$-edge sets. Summing contributions over sets containing an edge gives its relative sensitivity. For $k>1$, these marginals generally lose information about the full distribution. |
-| А04, Д01, Д04, Г05 | Historical spanning-tree averaging, complementary-grade forest distributions, and oriented interval intersections require comparison of their inputs and normalization with $D_L$. |
-| Г03, С01, С02 | The matroid formula for the resistance radius, one-point gluing, and Whitney flips support invariance results for admissible chains. Boundary choices and chain closures require their stated conditions. |
-| Г03, С06, О02, О03, Д01 | Potentials and Laplacian-exponential grades express radius, volume, vertex parameters, and spanning-tree ratios. С02 develops forest and matroid relations, С08 boundary laws, and С01 chain applications. |
-| Г03, Г04, С06, Д02, А05 | Laplacian and Green Gram matrices define two simplex geometries. Degree potential relates the Laplacian center to vertex heterogeneity. The stated centrality coincidences on unit trees have explicit hypotheses. |
-| А03, С03, С07, С04 | Diagonal grades, projectors, Chebyshev transformations, cones, and projection losses provide spectral foundations. Reconstruction from spectra has the limitations described in С07 and С04. |
-| А02, С02, С07, С08, С01 | Boundary forest passports extend spanning-tree pairing through groves and support active-boundary transfer and closure. Ordinary forest states and spectral-pencil minors use distinct definitions. |
-| С01, С04, С07, С08, С09 | Finite chains and periodic recurrences motivate lattice models. Higher-dimensional extensions require a cell, intercell couplings, boundary conditions, and a justified limiting process. |
-| Г01, С05 | Mutual projections of bipartite classes relate to induced graphs and the shared spanning-tree parameter. Spectral objects, angles, and normalizations need further review. |
+- **А01-А03, А07.** Combinatorial potentials supply coefficients of symmetric sums and forest expansions. Structural identities describe relations among partition forms, and toponomes group a chosen representation by type.
+- **О03, О05, Г01, Д02.** Exact matrix updates connect coupling variations with changes in the Greenian and resistances. Partial resistance data and conductance constraints lead to a separate realizability problem.
+- **А03-А06, Д03-Д04.** Toponomes, KVP, and metric distribution describe different data of a graph. In grade $k$, $D_L$ is defined on $k$-edge sets, and its edge marginals give relative sensitivity. For $k>1$, these marginals generally lose information.
+- **Г01-Г04, Д02, С06.** The Laplacian and Green matrix define two simplex geometries. Coordinates, projections, sphere centers, and degree potential connect them to graph and vertex characteristics.
+- **А02, С01-С02, С08.** Spanning-tree pairing and matroid laws lead to full boundary forest passports. These support active-boundary transfer and closure of admissible chains.
+- **А03, Д03, С03-С05, С07-С09.** The spectral foundation connects rooted polynomials, eigenprojectors, and duality. Applications to isomers, bipartite graphs, and infinite models have their own distinguishability and limiting conditions.
 
 ## Deferred questions and continuations
 
-The current phase concerns the clarity and presentation of published material. Research continuations retain the preparation states listed below. A completed treatment can establish a starting point for a broader question.
+These questions extend beyond the agreed scope of the published series. “Planned” denotes an agreed continuation. “To write up and check” covers presentation of a general result and verification of its conditions. “To review” concerns the formulation or source material. “To investigate” calls for developing a construction and its properties. Deferred topics have an open schedule and placement.
 
-| Question | Direction and remaining work | Preparation state |
-| --- | --- | --- |
-| Permutation-invariant KVP operators and quadratic forms | А05. Formulate scalar action on K, V, and P for pair tables, handle small $n$, and examine mixing between repeated components in arbitrary symmetric matrices. | Pair-table result to write up. Matrix extension to review. |
-| Centroid representations and factorization of K and V | А05, О01. Derive expressions using centered vertices and products of quadratic-form exponentials, with their dependencies and normalizations. | Formulas to write up and check. |
-| Coupling concentration and quadratic Laplacian moments | А05, С03, С05. Relate effective edge count, degree moments, component coefficient norms, and the Laplacian Frobenius norm. Check the metric meaning of each norm. | Identities to write up. Applied interpretation to review. |
-| Resistance sensitivity along KVP directions | А05, Д02, С06. Derive Green-matrix and resistance derivatives along K, V, and P within the admissible conductance region, and compare them with the dual form. | Formulas to write up and review. |
-| Covariance interpretations and graph comparison | А05. Specify a probability model, centering, normalization, correspondence between vertex sets, scale, and stability. | To investigate. |
-| Higher potentials and exterior powers | А05, А01, А02. Study higher-order invariants, induced metrics, and mixed terms, including polyforms whose higher grades are independently specified. | To investigate. |
-| P-toponome ranks and completeness of mixed data | А05, А03. Obtain reproducible exact ranks for grades five and higher and examine the general rank conjecture and the distinguishing power of joint KVP data. | General conjecture and distinguishability to investigate. |
-| O and U in exponentials, toponomes, and duality | А05, А06, А03, Д02-Д03. Develop mixed coefficients involving O and suitable models for U in general digraphs. | Component extension to investigate. |
-| KVP electrometry on real data | А05. Test noise, incomplete measurements, realistic electrodes, recovery of P, and the limits of the contact model against baseline processing. | Experimental effectiveness to investigate. |
-| Component evaluations and spectral representations | А03, С07. Extend the published symmetric spectral foundation to independent higher grades, full-toponome transformations, and nonsymmetric balanced-graph spectra. | Basic treatments published. Extensions to investigate. |
-| Multicomponent gluing | А03. Describe interactions where one component meets several components of another factor, including vertex data, coefficients, cycles, and associativity. | To investigate. |
-| Historical transformations and interval forms | А04, Д01, Д04, Г05. Compare spanning-tree averaging, complementary-grade distributions, and oriented intersections with metric distributions. | Deferred. Series placement open. |
-| Distinguishing graphs by toponomes and coefficient tables | А03, С04. Identify sufficient data for reconstruction within specified graph classes and examine richer data beyond grade and component-count tables. | To investigate. |
-| Greenian toponomes and dual pairs | Д03. Extend the published canonical forest construction and rooted spectral relation to a general transformation of full toponomes. | Basic construction published and checked. General transformation open. |
-| Polyform algebra and its notation | О01. Explain form multiplication, quadratic dependence, polarization, and the relation to double forms. Review proposed shorthand against existing simplex notation. | Planned. |
-| A Fourier transform on polyforms | О01 with О02, О03, Д02. Define the function space, independent variables, exponential kernel, top-coefficient extraction, inversion, basis dependence, and action on mixed forms. Compare finite nilpotent-variable transforms and Hodge duality. | To investigate. |
-| Partitions and combinatorial coefficients | А07, А01, А02, А03, А06. Ordinary and cyclic potentials and mixed path-cycle counting are available. General algebraic operations on labeled states have a separate continuation. | Basic treatment and first-kind potential published in both languages. |
-| Permutations, invariants, and Galois theory | А08. Study the $S_n$ action on partition forms and structural relations, beginning with four vertices. A Galois correspondence would require a specified field, polynomial, and scalar realization. | To investigate. |
-| Graph symmetry and symmetric parts of its exponential | А01, А02. Study full permutation symmetry, graph automorphisms, symmetric grades, and averaging operators beyond the complete-graph examples. | To investigate. |
-| Spectral relations between bipartite classes | Г01, С05. Specify spectral objects, normalization, projection angles, and their relation to the shared spanning-tree parameter $J(G)$. | To review. |
-| Balanced graphs and directed-cycle polyforms | А06, А03. The introductory construction, symmetric limit, and two forest normalizations are available. General reduction algebra, directed matroid inequalities, and KVP links have separate continuations. | Introductory series published in both languages. |
-| Regular balanced graphs and component probabilities | А06, А07. Fix a model for loopless labeled digraphs of in/out degree $d\ge2$ and study counts, connected components, type distributions, and expected component sizes. | To investigate beyond the introductory series. |
-| Partition algebra with labeled components | А07, О01. Define products of open paths and closed cycles, the unit, associativity, coefficients, and potential behavior. Compare existing path-cycle constructions. | Research deferred. |
-| Resistance symmetrization of a balanced graph | А06, Г02. Reconstruct a symmetric Laplacian from $R_{ij}=r_{ij}+r_{ji}$, determine nonnegative-coupling conditions, and examine preserved metric parameters. | To investigate. |
-| Refined directed-forest types | А06, А03. Determine the additional component data needed for toponome multiplication. | To investigate. |
-| Circulation polyforms and electrodynamics | А06. Define a correspondence with electromagnetic fields and identify physical examples of pure-circulation polyforms. | To investigate. |
-| Circulation, discrete connections, and holonomy | А06. Seek a precise interpretation of circulation norm through transport around a closed contour. | To investigate. Publication placement open. |
-| Isotropic model and Minkowski space | Г02. Establish the mathematical correspondence and the additional assumptions required for a physical interpretation. | Planned. |
-| Sphere normals and constant-curvature geometry | Г02. Examine how choices of normal and section affect the geometric model. | To review. |
-| Metric polyform of the isotropic extension | Г02, Д02. Express metric evaluations involving point representatives and the null vector through a polyform. | To review. |
-| Multipoint gluing and chains of cores | С08, С01, С04. The current boundary and chain constructions are available. Scalar spectral distinguishability, other cores, composite cores, and further closure problems retain their individual scope. | Boundary and chain series complete in their current scope. Continuations retained. |
-| Infinite lattices and finite-graph limits | С09. Compare classical results, define valid limiting constructions, and identify the possible contribution of PMG in one, two, and three dimensions. | Scope and contribution to investigate. |
-| Splitting a graph at vertices | А02. Define shared vertices, splitting into copies, edge assignment, choices, and nonuniqueness. | Planned. |
-| Splitting a graph along edges | А02. Compare with vertex splitting and determine whether a separate treatment is needed. | To review. |
-| Matroid parameters and forest characteristics | С02, С08, С01. Matroid determination and gluing laws are treated separately in the published scalar, boundary, and chain constructions. | С02 and its current boundary continuation complete in both languages. |
-| Resistance radius after deleting a vertex and its edges | Г03, С06. Seek a compact expression in terms of a small set of original-graph vertex characteristics. The new-metric calculation and metric-preserving elimination are already described. | To review. Compact formula open. |
+### Algebra, partitions, and spectra
 
-The corresponding series navigators link to the results underlying these questions. The [[ru/Навигация/Карта библиотеки#Отложенные вопросы и продолжения|detailed Russian register]] records the originating notes, external comparisons, and the history of each continuation.
+**Multicomponent gluing (А03).** Describe interactions in which one component of a factor joins several components of the other. Specify vertex data, coefficients, nonzero-product conditions, cycles, and associativity. To investigate. [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Products and Boundary Forms|Partition Products and Boundary Forms]]
 
-## Editorial work and next steps
+**Distinguishing graphs by toponomes (А03, С03, С04).** Tables indexed by grade and component count already have a counterexample to completeness on trees. Identify classes where these data suffice and study refinements retaining types, component weights, or roots. To investigate. [[en/Polyform Algebra and Combinatorics/Partition toponomes/Coefficient Tables of Toponomes|Coefficient Tables of Toponomes]]
 
-The current priority is the clarity of the published library. The editorial pass considers motivation, the order of definitions, intermediate steps, examples, notation, illustrations, and each note's prerequisites. Changes are coordinated between Russian and English and checked for formulas, links, images, and rendering.
+**General transformation of Greenian toponomes (Д03, А03).** Extend the published relation between canonical forest expansions and rooted spectral polynomials to full toponomes without a labeled matrix. Determine the required type data. To investigate. [[en/Resistance Geometry and Duality/Greenian and polyform duality/Toponomes of the Greenian Exponential and Dual Pairs|Toponomes of the Greenian Exponential and Dual Pairs]]
 
-The [[en/Navigation/Thematic Index|Thematic Index]] gives the current contents of all series. Detailed editorial decisions and the history of reviews are recorded in the [[ru/Навигация/Карта библиотеки#Редакционный проход|Russian editorial register]]. Research directions and open questions retain their stated mathematical status throughout this work.
+**Polyform algebra and its notation (О01).** Prepare a separate treatment of form products, quadratic dependence, and polarization. Compare double forms and check proposed shorthand against simplex and metric-evaluation notation. Planned. [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification of PMG]] · [Belkhirat and Labbi](https://arxiv.org/abs/1402.4072)
 
-## Updating the map
+**A Fourier transform on polyforms (О01-О03, Д02).** Specify a function space, independent variables, an exponential kernel, and top-coefficient extraction. Check inversion, signs, normalization, basis dependence, and mixed forms. Compare nilpotent-variable transforms, Berezin integration, and the double Hodge operator. To investigate. [[en/Getting Started and Foundations/Introduction/Laplacian Exponential|Laplacian Exponential]] · [Frydryszak](https://arxiv.org/abs/0810.3016) · [Belkhirat and Labbi](https://arxiv.org/abs/1402.4072)
 
-Keep direction codes stable when rearranging tables or changing publication order. Add new directions explicitly, and retain a link to the result when a deferred question has been addressed. Review the continuation register before selecting new research work.
+**Permutations, invariants, and Galois theory (А08, А01, А02, А07).** Study the $S_n$ action on partition forms and structural relations, starting with four vertices. Specify a field, polynomial, and scalar realization for comparison with resolvents. The starting result on invariant forms is proved in А01. To investigate. [[en/Polyform Algebra and Combinatorics/Structural identities/Partition Forms and the Tetrahedron Identity|Partition Forms and the Tetrahedron Identity]] · [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Fundamental Theorem of Symmetric Polyforms|Fundamental Theorem of Symmetric Polyforms]] · [Quartic resolvent](https://jrsijsling.eu/notes/GaloisTheory.pdf#page=104)
 
-When either language version changes, synchronize the directions, accepted decisions, series counts, and open questions. Reading routes and detailed prerequisites are maintained in series navigators. Increment the revision and update the date when the research plan changes.
+**Symmetric parts of a graph exponential (А01, А02).** Determine the role of automorphisms and permutation averaging beyond the complete graph. Establish when an entire grade is symmetric and which components a specified averaging operator selects. Initial examples include a cycle, wheel, cube, and the Petersen graph. To investigate. [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms of the Complete Graph|Symmetric Polyforms of the Complete Graph]]
 
-## Revision history
+**Extensions of spectral theory (А03, С07, А06).** Study polyforms with independently specified higher grades and nonsymmetric spectral theory for balanced graphs. С07 develops the symmetric foundation and diagonal grades of one operator. To investigate. [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]]
 
-- 11 November 2026. Created the English map of current directions, published series, connections, and continuations alongside the Navigation section. The [[ru/Навигация/Карта библиотеки#История изменений|Russian revision history]] records the preceding editorial development.
+### KVP and pair data
+
+**Invariant operators and quadratic forms (А05).** Present the general scalar-action result for permutation-invariant operators on K, V, and P in pair-table space. Check small $n$ and the extension to arbitrary symmetric matrices, where repeated components can mix. To write up and check. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition of Pair Characteristics|KVP Decomposition of Pair Characteristics]]
+
+**Centroid factorizations of K and V (А05, О01).** Derive polyform expressions using centered vertices and factorizations of exponentials. Check normalizations and account for linear dependence among centered vectors. To write up and check. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/Forest Toponomes of KVP Components|Forest Toponomes of KVP Components]]
+
+**Coupling concentration and quadratic moments (А05, С03, С05).** Develop relations between effective edge count, K/V/P contributions, degree moments, and the Laplacian Frobenius norm. Review applied interpretations and transitions between coefficient, matrix, and metric products. To write up and check. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP on Simple and Weighted Graphs|KVP on Simple and Weighted Graphs]]
+
+**Resistance sensitivity along KVP directions (А05, Д02, С06).** Derive Green-matrix and resistance derivatives along K, V, and P within the admissible conductance region. Compare energy formulas and the normalized dual form. To write up and check. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Components and Metric Graph Parameters|KVP Components and Metric Graph Parameters]]
+
+**Covariance interpretations and graph comparison (А05).** Specify a probability model on the centered space and examine normalization to correlations. For different vertex sets, define correspondence, scale, and comparison stability. To investigate. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/Applications of KVP Decomposition - Electrometry and Pair Data Analysis|Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]
+
+**Higher potentials and exterior powers (А05, А01, А02).** Study induced metrics, higher-order invariants, and mixed terms. Identify consequences of symmetry and the additional structural identities required. To investigate. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/The Second-Order Symmetric Potential and KVP Decomposition|The Second-Order Symmetric Potential and KVP Decomposition]]
+
+**P-toponome ranks and mixed data (А05, А03).** Investigate the general rank conjecture, beginning with exact witnesses for grades five and higher. Determine which distinctions joint KVP toponomes detect. Exact witnesses already attain the upper bound for grades two through four. To investigate. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/Forest Toponomes of KVP Components|Forest Toponomes of KVP Components]]
+
+**The O and U components (А05, А06, А03, Д02-Д03).** Study mixed coefficients involving O, directed types, and duality. For U, specify a general-digraph model and applicability conditions. The balanced-graph exponential is already constructed. To investigate. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/Oriented Extensions of KVP - Circulation and Imbalance|Oriented Extensions of KVP - Circulation and Imbalance]]
+
+**Experimental electrometry (А05).** Test recovery of P on reproducible data with noise, incomplete measurements, and realistic electrodes. Compare raw data and standard processing, and establish the contact model’s limits. Effectiveness on real data has yet to be established. To investigate. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/Applications of KVP Decomposition - Electrometry and Pair Data Analysis|Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]
+
+### Geometry and metric distributions
+
+**Distribution transformations and interval forms (А04, Д01, Д04, Г05).** Compare historical spanning-tree averaging, complementary-grade forest distributions, and oriented interval intersections with $D_L$. Check inputs, normalizations, and information loss. Deferred. [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]]
+
+**Spectral relations between bipartite classes (Г01, С05).** Specify spectral objects for the original and induced graphs, normalizations, and subspace angles. Examine their relation to mutual projections and the shared spanning-tree parameter $J(G)$. To review. [[en/Resistance Geometry and Duality/Spaces/Couplings Within One Part of a Bipartite Graph|Couplings Within One Part of a Bipartite Graph]]
+
+**Isotropic model and Minkowski space (Г02).** Establish the precise mathematical correspondence and the additional assumptions needed for a physical interpretation. Planned. [[en/Resistance Geometry and Duality/Spaces/The Null Vector, Isotropic Representation, and the Boundary|The Null Vector, Isotropic Representation, and the Boundary]]
+
+**Sphere normals and constant curvature (Г02).** Examine how the choice of normal and section changes the geometric model. To review. [[en/Resistance Geometry and Duality/Spaces/The Null Vector, Isotropic Representation, and the Boundary|The Null Vector, Isotropic Representation, and the Boundary]]
+
+**Metric polyform of the isotropic extension (Г02, О02, О03).** Define the extension polyform and the domain of its potentials for forms involving point representatives and the null vector. Check the existence of a representation for evaluations defined by the extended metric. To review. [[en/Resistance Geometry and Duality/Spaces/The Null Vector, Isotropic Representation, and the Boundary|The Null Vector, Isotropic Representation, and the Boundary]]
+
+**Radius after deleting a vertex from the network (Г03, С06).** Seek a compact expression for $\rho(G-i)$ using a small set of original-graph vertex characteristics. Calculation in the new metric is defined. Metric-preserving elimination already has a formula. To review. [[en/Resistance Geometry and Duality/Metric parameters/Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius|Vertex Deletion: Spanning-Tree Coefficient and Resistance Radius]]
+
+### Directed graphs and circulation
+
+**Regular balanced graphs and component probabilities (А06, А07).** Fix a model of loopless labeled digraphs with in/out degree $d\ge2$. Determine total and connected counts, type distributions, and expected component counts under the specified sampling rule. To investigate. [[en/Directed Graphs and Extensions/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Mathar, Table 2](https://oeis.org/A005642/a005642.pdf)
+
+**Algebra of labeled paths and cycles (А07, О01).** Define a general product, unit, associativity, coefficients, and potential behavior. Compare path-cycle constructions with partial permutations and Laguerre digraphs. Mixed-state potential formulas are already proved. Deferred. [[en/Directed Graphs and Extensions/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Deb](https://arxiv.org/abs/2304.14487) · [Generalized Laguerre, rook, and Lah polynomials](https://arxiv.org/abs/2312.11081) · [Chow, path-cycle symmetric function](https://timothychow.net/pathcycle.pdf)
+
+**Resistance symmetrization of a balanced graph (А06, Г02).** Reconstruct a symmetric Laplacian from $R_{ij}=r_{ij}+r_{ji}$ and establish conditions for nonnegative couplings and preserved metric parameters. Specify initial resistances and normalization for a general digraph. To investigate. [[en/Directed Graphs and Extensions/Balanced graphs/Resistance Geometry and Circulation|Resistance Geometry and Circulation]]
+
+**Directed-forest types (А03, А06).** Determine root and direction data sufficient for toponome products and study the full toponome under arc reversal. Investigate directed matroid inequalities and data realizability. Transpose invariance of the Laplacian polynomial is already proved. To investigate. [[en/Directed Graphs and Extensions/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests|Toponomes of Balanced Graphs and Directed Forests]]
+
+**Circulation polyforms and electrodynamics (А06).** Establish a correspondence with electromagnetic fields and identify physical examples of pure-circulation polyforms. To investigate. [[en/Directed Graphs and Extensions/Balanced graphs/The Circulation Form|The Circulation Form]]
+
+**Discrete connections and holonomy (А06, Г02).** For $\alpha_{ij}=r_{ij}-r_{ji}$, define transport along vertex pairs and the meaning of closed sums. Study the gauge change $\alpha_{ij}\mapsto\alpha_{ij}+s_i-s_j$ and a discrete Stokes formula. Geometric and physical interpretations of transport require justification. To investigate. [[en/Directed Graphs and Extensions/Balanced graphs/One-Way Resistance and Hitting Times|One-Way Resistance and Hitting Times]]
+
+### Gluing, chains, and limits
+
+**Spectral distinguishability and new cores (С01, С04, С08).** Study reconstruction from one polynomial or scalar, minimality of general boundary data, other cores, and composite cores made from hexagonal rings. Examine spectral classification of closed chains separately. Forest transfer and closure, SLR classification of open chains, and decoding the full marked state are developed. To investigate. [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]
+
+**Infinite lattices and finite-graph limits (С09, С01, С04, С05, С07, С08).** Compare one-, two-, and three-dimensional models with classical theory. Specify finite fragments and boundary conditions, and justify limiting Laplacians, Greenians, resistances, and spanning-tree characteristics. Examine extension of the exterior exponential and identify a possible PMG contribution. To investigate. [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]
+
+**Splitting a graph at vertices (А02, С08).** Define parts with shared vertices, splitting into copies, and assignment of edges to those copies. Study choices and nonuniqueness. Planned. [[en/Polyform Algebra and Combinatorics/Structural identities/Basis and Dimension of the Space of Partition Forms|Basis and Dimension of the Space of Partition Forms]]
+
+**Splitting a graph along edges (А02, С08).** Compare with vertex splitting and determine its place in the general continuation. To review. [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities and Graph Gluing|Structural Identities and Graph Gluing]]
+
