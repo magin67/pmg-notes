@@ -1,15 +1,15 @@
 ---
 title: The Laplacian Exponential of a Balanced Graph
 date: 2026-10-24
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graph-laplacian-exponential
 lang: en
 description: 'The finite exterior exponential of a balanced Laplacian: bilinear factors, minors, directed forests, reference-element weights, and connections to double-form theory.'
 order: 3
-source_revision: 7
+source_revision: 8
 aliases:
   - "en/Balanced graphs/The Laplacian Exponential of a Balanced Graph"
 ---
@@ -332,6 +332,8 @@ $$
 $$
 
 This follows by multiplying forms. Independently, trees toward $c$ have arc sets $a\to b$, $b\to c$; $a\to c$, $b\to c$; and $b\to a$, $a\to c$, with weights $p^2,pq,q^2$. Setting $p=1,q=0$ recovers the unit cycle; $p=q=1$ gives the symmetric triangle with $\tau=3$.
+
+See [[en/PythonExamples/Example - Balanced Graphs#Grade two of the cycle exponential|the notebook calculation]].
 
 ## Returning to undirected graphs
 

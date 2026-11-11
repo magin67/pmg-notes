@@ -1,9 +1,9 @@
 ---
 title: Balanced Graphs
 date: 2026-10-24
-updated: 2026-11-09
-revision: 3
-source_revision: 3
+updated: 2026-11-11
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -87,6 +87,10 @@ The first index of $r_{ij}$ is the initial vertex, the second the target. For a 
 ![[images/Routes through Balanced Graphs.svg]]
 
 *The main route runs from balance through algebra to directional metrics. One-way variation uses metric definitions and is read afterward. Balancing, forests, and permutations also have separate entry routes.*
+
+## Programming companion
+
+[[en/PythonExamples/Example - Balanced Graphs|Balanced Graphs]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/balanced-graphs.ipynb).
 
 ## Checking the examples
 

@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 17
-translated_revision: 17
+revision: 18
+translated_revision: 18
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -66,6 +66,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Polynomial Toponomes
 
 [[en/PythonExamples/Example - Polynomial Toponomes|Polynomial Toponomes]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/polynomial-toponomes.ipynb).
+
+## Balanced Graphs
+
+[[en/PythonExamples/Example - Balanced Graphs|Balanced Graphs]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/balanced-graphs.ipynb).
 
 ## How an example is organized
 

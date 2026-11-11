@@ -1,15 +1,15 @@
 ---
 title: The Gram Matrix and Directional Coordinates of a Balanced Graph
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: gram-matrix-and-directional-coordinates-of-balanced-graphs
 order: 8
 description: The canonical vertex Gram matrix, source and receiver roles, and directional bi-coordinates and di-coordinates for a balanced graph.
-source_revision: 3
+source_revision: 4
 aliases:
   - "en/Balanced graphs/The Gram Matrix and Directional Coordinates of a Balanced Graph"
 ---
@@ -278,6 +278,8 @@ $$
 $$
 
 Exchanging roles instead gives $v_{\mathrm{out}}\cdot u_{\mathrm{in}}=1$. Changing the computation method preserves the pairing; exchanging its arguments can change it.
+
+See [[en/PythonExamples/Example - Balanced Graphs#Directional pairings|the notebook calculation]].
 
 ## Sources and status
 

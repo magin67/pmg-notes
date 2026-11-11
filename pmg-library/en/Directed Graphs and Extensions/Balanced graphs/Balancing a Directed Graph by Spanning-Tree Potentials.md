@@ -1,15 +1,15 @@
 ---
 title: Balancing a Directed Graph by Spanning-Tree Potentials
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: directed-graph-balancing-by-spanning-tree-potentials
 order: 10
 description: 'Positive scaling of outgoing couplings by spanning-tree potentials: uniqueness, computation, applications, and comparison with additive balancing.'
-source_revision: 2
+source_revision: 3
 aliases:
   - "en/Balanced graphs/Balancing a Directed Graph by Spanning-Tree Potentials"
 ---
@@ -223,6 +223,8 @@ Balancing specifies a model for reconciling ratings. Equal input and output alon
 ![[images/Balancing Outgoing Weights.svg]]
 
 *Each row has its own multiplier: $\sigma_a=15/16$, $\sigma_b=12/16$, $\sigma_c=21/16$. After balancing, incoming and outgoing totals agree at each vertex, giving $45/16$, $36/16$, and $42/16$. The three totals need not equal one another; each source retains its allocation proportions.*
+
+See [[en/PythonExamples/Example - Balanced Graphs#Balancing three participants|the notebook calculation]].
 
 ## Computing the balancing
 

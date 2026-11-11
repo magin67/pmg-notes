@@ -1,15 +1,15 @@
 ---
 title: The Isotropic Space and Sphere of a Balanced Graph
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: isotropic-space-and-sphere-of-balanced-graphs
 order: 9
 description: The bordered isotropic Gram matrix, recovery of the Laplacian, two directional sphere representatives, one resistance radius, and spanning-tree degree formulas.
-source_revision: 4
+source_revision: 5
 aliases:
   - "en/Balanced graphs/The Isotropic Space and Sphere of a Balanced Graph"
 ---
@@ -322,6 +322,8 @@ For comparison, the symmetric pair-resistance geometry has circumcenter coordina
 ![[images/The Balanced Sphere and Three Center Positions.svg]]
 
 *The Euclidean realization shows the circumcircle centered at $p_g$ and the positions of local representatives $p_{\mathrm{out}},p_{\mathrm{in}}$. The enlarged view separates the three nearby points. Only $p_g$ is the center of the drawn circle. Its squared radius is $2/7$; the inverse directional Gram matrix defines $\rho=41/144$.*
+
+See [[en/PythonExamples/Example - Balanced Graphs#Two coordinate systems of the sphere|the notebook calculation]].
 
 ## Scope and status
 

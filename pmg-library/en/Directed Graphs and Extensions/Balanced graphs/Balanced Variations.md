@@ -1,15 +1,15 @@
 ---
 title: Balanced Variations
 date: 2026-10-24
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graph-variations
 lang: en
 description: 'Exact balanced variations: rank-one bilinear updates, exchanging recipients, adding a directed cycle, and inserting a vertex into an arc; rooted potentials after a one-arc addition.'
 order: 5
-source_revision: 4
+source_revision: 5
 aliases:
   - "en/Balanced graphs/Balanced Variations"
 ---
@@ -222,6 +222,8 @@ $$
 For $t>0$, there are exactly three trees toward $a$: $b\to c\to a$ of weight $1$; arcs $b\to a$, $c\to a$ with product $t$; and $c\to b\to a$ of weight $t^2$. Their sum independently verifies (7). At $t=0$, only the first remains. At $t=1$, the graph is a symmetric triangle with coefficient $3$.
 
 Thus the number of added cycles differs from the number of elementary bilinear factors. Even one cycle can produce several powers of the parameter.
+
+See [[en/PythonExamples/Example - Balanced Graphs#Adding the reverse directed cycle|the notebook calculation]].
 
 ## Inserting a vertex into a directed arc
 

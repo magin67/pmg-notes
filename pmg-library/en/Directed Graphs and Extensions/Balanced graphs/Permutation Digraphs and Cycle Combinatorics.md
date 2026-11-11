@@ -1,15 +1,15 @@
 ---
 title: Permutation Digraphs and Cycle Combinatorics
 date: 2026-10-24
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: permutation-digraphs-and-cycle-combinatorics
 lang: en
 description: Permutation digraphs, cycle-type probabilities and mean cycle counts, marked open paths, and decomposition of regular balanced digraphs into directed 1-factors.
 order: 12
-source_revision: 5
+source_revision: 6
 aliases:
   - "en/Balanced graphs/Permutation Digraphs and Cycle Combinatorics"
 ---
@@ -71,6 +71,8 @@ The type probability is $s_1(\mathbf k)/D_n$. Uniformity refers to concrete perm
 | $[2,2]$ | $4!/(2\cdot2\cdot2!)=3$ | $1/3$ |
 
 For unrestricted permutations, including fixed points, grouping by cycle count gives unsigned Stirling numbers of the first kind. Excluding loops gives their [[Cyclic Partitions and the Combinatorial Potential of the First Kind#Excluding fixed points|associated variants]], counting only cycles of length at least $2$.
+
+See [[en/PythonExamples/Example - Balanced Graphs#Permutations without loops|the notebook calculation]].
 
 ## Mean number of cycles of a specified length
 

@@ -1,15 +1,15 @@
 ---
 title: The Bilinear Laplacian of a Balanced Graph
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graph-bilinear-laplacian
 lang: en
 description: The canonical centered Laplacian, arc and vertex representations, and multiplication of boundaries involving arbitrary affine elements.
 order: 2
-source_revision: 4
+source_revision: 5
 aliases:
   - "en/Balanced graphs/The Bilinear Laplacian of a Balanced Graph"
 ---
@@ -291,6 +291,8 @@ L_{\mathrm{sym}}=[v-u]^2+[v]^2+[u]^2
 $$
 
 Here $\{u,v\}=[u,v]+[v,u]$. The three quadratic forms retain the correspondence with undirected couplings, while the expanded expression uses the chosen basis. Both describe one Laplacian.
+
+See [[en/PythonExamples/Example - Balanced Graphs#Centered representations of the Laplacian|the notebook calculation]].
 
 ## Boundaries involving an arbitrary element
 

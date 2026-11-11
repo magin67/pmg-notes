@@ -1,15 +1,15 @@
 ---
 title: Resistance Geometry and Circulation
 date: 2026-10-24
-updated: 2026-11-09
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: resistance-geometry-and-circulation
 lang: en
 description: Euclidean pair geometry, circulation as nonreciprocal response, and a three-vertex resistance formula combining area and circulation.
 order: 7
-source_revision: 6
+source_revision: 7
 aliases:
   - "en/Balanced graphs/Resistance Geometry and Circulation"
 ---
@@ -315,6 +315,8 @@ This independently agrees with $M=e+L+[(abc)]^2$ and $\tau(M)=1$: the top coeffi
 > $$
 >
 > Detailed higher-grade geometry remains a separate subject. Already the three-vertex case shows why it cannot automatically be identified with the exterior extension of the symmetric metric $g$ alone.
+
+See [[en/PythonExamples/Example - Balanced Graphs#Three-vertex resistance|the notebook calculation]].
 
 ## Sources and connections
 

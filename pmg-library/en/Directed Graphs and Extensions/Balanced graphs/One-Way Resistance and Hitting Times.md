@@ -1,15 +1,15 @@
 ---
 title: One-Way Resistance and Hitting Times
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: one-way-resistance-and-hitting-times
 lang: en
 description: One-way resistance defined by a form potential, its matrix properties and relation to pair resistance and circulation, followed by the first-hitting-time interpretation.
 order: 6
-source_revision: 4
+source_revision: 5
 aliases:
   - "en/Balanced graphs/One-Way Resistance and Hitting Times"
 ---
@@ -313,6 +313,8 @@ $$
 The first quantity is the mean time to reach $j$ from $i$ and then return. The second compares sequential target traversals $i\to j\to k\to i$ and $i\to k\to j\to i$. Each stage ends on first reaching its next target; intermediate visits to other vertices are allowed. Cyclic sums and nonreversibility are studied in [2, §12].
 
 For the path example, $r_{ab}=1/3$ and $r_{ba}=2/3$ correspond to $H_{ab}=1$ and $H_{ba}=2$. The unequal times interpret the resistance asymmetry already computed algebraically.
+
+See [[en/PythonExamples/Example - Balanced Graphs#One-way resistances and hitting times|the notebook calculation]].
 
 ## Sources and connections
 

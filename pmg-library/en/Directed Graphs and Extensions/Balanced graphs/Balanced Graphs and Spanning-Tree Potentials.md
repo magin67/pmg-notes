@@ -1,15 +1,15 @@
 ---
 title: Balanced Graphs and Spanning-Tree Potentials
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: balanced-graphs-spanning-tree-potentials
 lang: en
 description: Balance, directed-cycle decompositions, equality of rooted spanning-tree potentials, and the bilinear boundary representation of the Laplacian.
 order: 1
-source_revision: 7
+source_revision: 8
 aliases:
   - "en/Balanced graphs/Balanced Graphs and Spanning-Tree Potentials"
 ---
@@ -317,6 +317,8 @@ $$
 $$
 
 The three trees toward a fixed root correspond to its three undirected spanning trees. The single formula $p^2+pq+q^2$ covers both directed and symmetric cases.
+
+See [[en/PythonExamples/Example - Balanced Graphs#Tree potentials of a triangle|the notebook calculation]].
 
 ## Balance and forms on boundaries
 

@@ -1,15 +1,15 @@
 ---
 title: The Circulation Form
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: circulation-form
 lang: en
 description: 'Circulation as an independent skew-symmetric PMG form: orientation, triangular decompositions, pure circulation polyforms, and their products.'
 order: 4
-source_revision: 2
+source_revision: 3
 aliases:
   - "en/Balanced graphs/The Circulation Form"
 ---
@@ -60,6 +60,8 @@ $$
 $$
 
 With this normalization, its skew-symmetric part is $-w(abc)/2$. The factor $1/2$ and sign belong to the Laplacian decomposition, not to the definition of circulation.
+
+See [[en/PythonExamples/Example - Balanced Graphs#The circulation form|the notebook calculation]].
 
 ## Definition and geometric properties
 

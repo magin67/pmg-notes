@@ -1,15 +1,15 @@
 ---
 title: Toponomes of Balanced Graphs and Directed Forests
 date: 2026-10-24
-updated: 2026-11-09
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: balanced-graph-toponomes-and-directed-forests
 order: 11
 description: Directed rooted-forest toponomes, vertex and vector normalizations, the symmetric limit, the Laplacian polynomial, and the limitations of multiplication on types.
-source_revision: 2
+source_revision: 3
 aliases:
   - "en/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests"
 ---
@@ -163,6 +163,8 @@ $$
 $$
 
 Type $(1^2)$ records two two-vertex components. It does not assert that the corresponding bilinear exponential term is the quadratic form $[(ab)(cd)]^2$.
+
+See [[en/PythonExamples/Example - Balanced Graphs#The toponome of a directed cycle|the notebook calculation]].
 
 ## Two opposite directed 4-cycles
 

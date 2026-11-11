@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 17
+revision: 18
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -65,6 +65,10 @@ folder_order: 70
 ## Полиномиальные топономы
 
 [[ru/PythonExamples/Пример - Полиномиальные топономы|Полиномиальные топономы]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/polynomial-toponomes.ipynb).
+
+## Балансовые графы
+
+[[ru/PythonExamples/Пример - Балансовые графы|Балансовые графы]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/balanced-graphs.ipynb).
 
 ## Как устроен пример
 

@@ -2,8 +2,8 @@
 title: "Installing the Library and Running Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 13
-translated_revision: 13
+revision: 14
+translated_revision: 14
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-examples-getting-started
@@ -20,7 +20,7 @@ This note describes the shared environment for [[en/PythonExamples/PythonExample
 
 The examples were checked with **`polyform_algebra 0.9.0`** on Python 3.12. The installation commands use the package’s `v0.9.0` source archive. Neither Git nor a source checkout is needed to run the fragments. Dependencies are installed automatically without version pins, so the package version does not fix the entire environment.
 
-For the [[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters]], [[en/PythonExamples/Example - Checking Structural Identities|Structural Identities]], [[en/PythonExamples/Example - Checking Symmetric Polyform Identities|Symmetric Polyforms]], [[en/PythonExamples/Example - Combinatorial Potentials|Combinatorial Potentials]], [[en/PythonExamples/Example - Partition Toponomes|Partition Toponomes]], and [[en/PythonExamples/Example - Polynomial Toponomes|Polynomial Toponomes]] notebooks, use the commit specified in the corresponding example. The first code cell installs it in Colab.
+For the [[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters]], [[en/PythonExamples/Example - Checking Structural Identities|Structural Identities]], [[en/PythonExamples/Example - Checking Symmetric Polyform Identities|Symmetric Polyforms]], [[en/PythonExamples/Example - Combinatorial Potentials|Combinatorial Potentials]], [[en/PythonExamples/Example - Partition Toponomes|Partition Toponomes]], [[en/PythonExamples/Example - Polynomial Toponomes|Polynomial Toponomes]], and [[en/PythonExamples/Example - Balanced Graphs|Balanced Graphs]] notebooks, use the commit specified in the corresponding example. The first code cell installs it in Colab.
 
 ## Local installation
 
