@@ -1,15 +1,15 @@
 ---
 title: An Algorithm for Variations with Conductance Constraints
 date: 2026-10-31
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-constrained-algorithm
 lang: en
 description: Finding nonnegative conductances for prescribed P, Z, and V, proving impossibility of an exact solution, and determining a best approximation or an unattainable limit.
 order: 8
-translated_revision: 5
+translated_revision: 6
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/An Algorithm for Variations with Conductance Constraints"
 ---
@@ -402,6 +402,8 @@ If none does, the candidate lies at most $\varepsilon$ above the global infimum.
 If the graph at the lower bounds is disconnected, this sufficient condition does not apply, but a minimum may still exist. The path with $0<x\le2$ above is such an example. Upper bounds alone, without connectedness control, do not make $\mathcal A$ closed.
 
 ## Returning to the prism and verification
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Exact constraint certificates|the notebook calculation]].
 
 In [[Variations with Conductance Constraints#The prism example|the prism example]], the target is $R_{12}=8k/15$ with $R_{13}=R_{23}=8/15$. Its known exact solution region tests the statuses of the general algorithm:
 

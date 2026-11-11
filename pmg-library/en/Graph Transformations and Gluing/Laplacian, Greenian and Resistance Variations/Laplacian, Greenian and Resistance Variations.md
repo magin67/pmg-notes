@@ -1,15 +1,15 @@
 ---
 title: Laplacian, Greenian and Resistance Variations
 date: 2026-11-01
-updated: 2026-11-08
-revision: 4
+updated: 2026-11-11
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: laplacian-greenian-resistance-variations-series-navigation
 order: 0
 description: 'Reading order for eight notes: direct and inverse variations, exterior exponential factors, quadric connectivity, prescribed resistances, and conductance constraints. Main formulas, applicability, and provenance.'
-translated_revision: 5
+translated_revision: 6
 tags:
   - variations
   - resistances
@@ -285,6 +285,10 @@ Changing a coefficient at a fixed vector is not a change of the vector itself. R
 > | Quadric connectivity and inverse sensitivity matrices | Direct proof in [[One Resistance and Quadric Connectivity]] | Differential relation between full pair coordinates | PMG term; no priority claimed for the identity |
 > | Boundary constraints and the prism region | Kron reduction and calculation in [[Variations with Conductance Constraints]] | The $P,Z,V$ formulation and an exact example of a solution region | Reduction is established; no priority claimed for the calculation |
 > | Search and rigorous certificates | Gauss-Newton, backtracking, and quantifier elimination; sources and application in [[An Algorithm for Variations with Conductance Constraints]] | Distinguishing numerical search, existence, minimum, and infimum | Application of established algorithmic tools |
+
+## Programming companion
+
+[[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Strengthening one edge|Laplacian, Greenian and Resistance Variations]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/network-variations.ipynb).
 
 ## Reproducible checks
 

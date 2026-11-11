@@ -1,15 +1,15 @@
 ---
 title: Variations with Conductance Constraints
 date: 2026-10-31
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-constrained-couplings
 lang: en
 description: 'The prism and the problem with sets P, Z, and V: prescribed resistances, preserved zero couplings, nonnegative conductances, and boundaries of solution existence.'
 order: 7
-translated_revision: 7
+translated_revision: 8
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Variations with Conductance Constraints"
 ---
@@ -21,6 +21,8 @@ In [[Joint Variation of Resistances]], the entire new resistance matrix was pres
 We now prescribe resistances only between vertices of a set $P$. Some couplings must remain zero; the others may change only on a specified set $V$, while remaining nonnegative. Resistances outside $P$ result from the solution and are not fixed in advance. Relaxing the resistance conditions in this way creates freedom to satisfy conductance constraints.
 
 ## The prism example
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#A feasible change of the prism|the notebook calculation]].
 
 In this example, $P$ is a vertex set, whereas $V$ and $Z$ are sets of vertex pairs. Colored edges may vary and grey edges are fixed; absent forbidden pairs are listed separately.
 

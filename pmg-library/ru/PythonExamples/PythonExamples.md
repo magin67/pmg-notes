@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 23
+revision: 24
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -89,6 +89,10 @@ folder_order: 70
 ## Спектры изомеров
 
 [[ru/PythonExamples/Пример - Спектры изомеров|Спектры изомеров]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/isomer-spectra.ipynb).
+
+## Вариации лапласиана, гриниана и резистенсов
+
+[[ru/PythonExamples/Пример - Вариации лапласиана, гриниана и резистенсов|Вариации лапласиана, гриниана и резистенсов]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/network-variations.ipynb).
 
 ## Как устроен пример
 

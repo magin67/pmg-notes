@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 23
-translated_revision: 23
+revision: 24
+translated_revision: 24
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -90,6 +90,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Spectra of Isomers
 
 [[en/PythonExamples/Example - Spectra of Isomers|Spectra of Isomers]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/isomer-spectra.ipynb).
+
+## Laplacian, Greenian and Resistance Variations
+
+[[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/network-variations.ipynb).
 
 ## How an example is organized
 

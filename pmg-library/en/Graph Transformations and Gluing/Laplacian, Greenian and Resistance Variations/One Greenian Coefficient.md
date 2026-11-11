@@ -1,15 +1,15 @@
 ---
 title: One Greenian Coefficient
 date: 2026-10-31
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-greenian-coefficient
 lang: en
 description: 'Changing one vector coefficient of the Greenian: a path example, exact variations of the spanning-tree coefficient and conductances, an exponential-factor derivation, and admissible parameters.'
 order: 3
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Greenian Coefficient"
 ---
@@ -19,6 +19,8 @@ aliases:
 In [[One Changing Edge|the variation of one edge]], a conductance change was prescribed and the spanning-tree coefficient and resistances were calculated. We now prescribe a change in one Greenian coefficient at a fixed vector form. We seek two answers: how the spanning-tree coefficient changes and what the graph conductances become.
 
 ## Example - one Greenian coefficient of a path
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#One Greenian coefficient|the notebook calculation]].
 
 Take the path $1-2-3-4$ with unit conductances. It has one spanning tree, so $\tau=1$. In [[The Canonical Vector Representation of the Greenian#Full example: a path on four vertices|the canonical Greenian expansion of this path]], the coefficient of $[a_{12}]^2$ is $\gamma_{12}=-1/8$.
 

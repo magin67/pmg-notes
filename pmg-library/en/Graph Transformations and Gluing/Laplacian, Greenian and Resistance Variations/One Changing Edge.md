@@ -1,15 +1,15 @@
 ---
 title: One Changing Edge
 date: 2026-10-31
-updated: 2026-11-08
-revision: 3
+updated: 2026-11-11
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-changing-edge
 lang: en
 description: From strengthening a triangle edge to exact variations of the spanning-tree coefficient and resistances. A derivation through one exterior Laplacian exponential factor, forest potentials, and their normalization.
 order: 1
-translated_revision: 7
+translated_revision: 8
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Changing Edge"
 ---
@@ -19,6 +19,8 @@ aliases:
 We change the conductance of one edge. How does the spanning-tree coefficient change? How do resistances between vertices change, including those between the endpoints of other edges? We begin with a direct calculation, then derive general formulas from one added factor of the Laplacian exponential.
 
 ## Example - strengthening one edge of a triangle
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Strengthening one edge|the notebook calculation]].
 
 For a graph consisting of one edge of conductance $c>0$, the answer is simple: $\tau=c$, $R_{12}=1/c$. After changing the conductance by $t$, where $c+t>0$, we have $\tau'=c+t$, $R'_{12}=1/(c+t)$.
 

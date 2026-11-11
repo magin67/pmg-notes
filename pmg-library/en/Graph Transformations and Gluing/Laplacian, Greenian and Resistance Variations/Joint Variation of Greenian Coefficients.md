@@ -1,15 +1,15 @@
 ---
 title: Joint Variation of Greenian Coefficients
 date: 2026-10-31
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-joint-greenian-coefficients
 lang: en
 description: 'Two Greenian coefficients: a triangle example, exact spanning-tree and conductance changes, and interaction. A factor derivation and generalization through the direction Gram matrix in the Greenian exponential metric.'
 order: 4
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Joint Variation of Greenian Coefficients"
 ---
@@ -19,6 +19,8 @@ aliases:
 In [[One Greenian Coefficient|the variation of one Greenian coefficient]], the response was determined by the norm of the selected direction and one denominator. With two changes, the inner product of the directions enters. It couples the changes: a conductance preserved in each separate experiment may change under their joint action.
 
 ## Example - two Greenian coefficients of a triangle
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Two Greenian coefficients|the notebook calculation]].
 
 A unit triangle has $c_{12}=c_{13}=c_{23}=1$, $\tau=3$. Its canonical Greenian coefficients are $\gamma_{12}=\gamma_{13}=\gamma_{23}=1/9$.
 

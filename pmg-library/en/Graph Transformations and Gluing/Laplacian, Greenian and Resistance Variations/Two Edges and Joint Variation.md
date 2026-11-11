@@ -1,15 +1,15 @@
 ---
 title: Two Edges and Joint Variation
 date: 2026-10-31
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-two-edges-and-joint-variation
 lang: en
 description: Two changing triangle edges, explicit finite variations, and interaction. A derivation through Laplacian exponential factors, forest-potential normalization, and Gram determinants, extended to several couplings.
 order: 2
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Two Edges and Joint Variation"
 ---
@@ -19,6 +19,8 @@ aliases:
 In [[One Changing Edge|the variation of one edge]], the spanning-tree coefficient and unnormalized potentials change linearly with the conductance increment. Changing two edges introduces a mixed term. We begin with a triangle, then give explicit formulas for two arbitrary pairs and derive them from the product of Laplacian exponential factors.
 
 ## Example - strengthening two edges of a triangle
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Changing two conductances together|the notebook calculation]].
 
 A unit triangle has $c_{12}=c_{13}=c_{23}=1$, $\tau=3$, and all its resistances equal $2/3$. Increase conductances $12$ and $13$ to $2$, keeping $c_{23}=1$.
 

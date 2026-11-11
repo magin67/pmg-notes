@@ -1,15 +1,15 @@
 ---
 title: One Resistance and Quadric Connectivity
 date: 2026-10-31
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-resistance-and-quadric-connectivity
 lang: en
 description: 'Changing one resistance while preserving the others: an example, finite spanning-tree and conductance variations, and two Greenian factors. Quadric connectivity and its inverse relation to squared inner products on all pairs.'
 order: 5
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Resistance and Quadric Connectivity"
 ---
@@ -23,6 +23,8 @@ The differential limit introduces quadric connectivity. Its matrix is the invers
 The first part restores conductances after a finite change. The second begins with [[#Quadric connectivity|quadric connectivity]] and treats small changes and inverse sensitivity matrices.
 
 ## Example - only one side resistance changes
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#One resistance and quadric connectivity|the notebook calculation]].
 
 A unit triangle has all conductances equal to $1$, all resistances equal to $2/3$, and spanning-tree coefficient $\tau=3$. Prescribe
 

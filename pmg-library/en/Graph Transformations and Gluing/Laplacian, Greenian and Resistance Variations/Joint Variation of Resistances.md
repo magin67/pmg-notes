@@ -1,15 +1,15 @@
 ---
 title: Joint Variation of Resistances
 date: 2026-10-31
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-joint-resistances
 lang: en
 description: 'Two changing resistances and the general case on a vertex set: the spanning-tree coefficient, conductances, Greenian factors, and direct solution of the matrix equation.'
 order: 6
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Joint Variation of Resistances"
 ---
@@ -21,6 +21,8 @@ In [[One Resistance and Quadric Connectivity]], one resistance changed while all
 We begin with two resistances of a triangle, then obtain a formula for changes between vertices of a prescribed set $S$. Every resistance with no assigned increment is preserved. The calculation reduces to a linear system of size $|S|$.
 
 ## An example with two resistances
+
+See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Two resistances|the notebook calculation]].
 
 A unit triangle has $c_{12}=c_{13}=c_{23}=1$, all resistances equal to $2/3$, and spanning-tree coefficient $\tau=3$. Prescribe
 

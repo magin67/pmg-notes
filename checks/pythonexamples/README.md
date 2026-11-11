@@ -1,6 +1,6 @@
 # PythonExamples checks
 
-Install polyform_algebra using the shared setup note. For the fragment checker, use the exact revision pinned in the Spectra of Isomers notebook. Each notebook sets up its own package revision. Run from the repository root:
+Install polyform_algebra using the shared setup note. For the fragment checker, use the exact revision pinned in the Laplacian, Greenian and Resistance Variations notebook. Each notebook sets up its own package revision. Run from the repository root:
 
 ```bash
 python checks/pythonexamples/verify_examples.py
@@ -12,7 +12,7 @@ python checks/pythonexamples/execute_notebooks.py
 
 Figure generation requires matplotlib. Notebook generation and execution require nbformat, nbclient, nbconvert, ipykernel, and a Python 3 Jupyter kernel using the selected environment. Install these development tools with pip if necessary.
 
-The notebook generator reads the weighted-chain, Spaces, Metric Parameters, Structural Identities, Symmetric Polyforms, Combinatorial Potentials, Partition Toponomes, Polynomial Toponomes, Balanced Graphs, KVP Decomposition, Greenian and Polyform Duality, Matroid Parameters and Forest Characteristics of Graphs, Boundary Data and Chains of Cores, and Spectra of Isomers example notes. The explanations and computation cells come from those notes. The generator adds package setup to the notebooks and an editable graph drawing to the weighted-chain notebook. The executor starts a fresh kernel for each language, checks for error outputs, saves computed results, and exports HTML previews under this directory. Inspect those previews after regeneration. A local execution is not a hosted Colab test.
+The notebook generator reads the weighted-chain, Spaces, Metric Parameters, Structural Identities, Symmetric Polyforms, Combinatorial Potentials, Partition Toponomes, Polynomial Toponomes, Balanced Graphs, KVP Decomposition, Greenian and Polyform Duality, Matroid Parameters and Forest Characteristics of Graphs, Boundary Data and Chains of Cores, Spectra of Isomers, and Laplacian, Greenian and Resistance Variations example notes. The explanations and computation cells come from those notes. The generator adds package setup to the notebooks and an editable graph drawing to the weighted-chain notebook. The executor starts a fresh kernel for each language, checks for error outputs, saves computed results, and exports HTML previews under this directory. Inspect those previews after regeneration. A local execution is not a hosted Colab test.
 
 The fragment checker executes each note in a separate namespace and checks key results. Package-level introductory tests independently check conductance matrices, currents, spanning-tree weights, areas, variations, and deletion. They complement the notes' own assertions.
 
@@ -43,3 +43,5 @@ The Matroid Parameters and Forest Characteristics of Graphs notebooks verify cyc
 The Boundary Data and Chains of Cores notebooks check forest and spectral passports, state pairing, ladder transfer, cycle-chain continuants, and strip closures.
 
 The Spectra of Isomers notebooks check exact characteristic differences, spectral transfer, SLR decoding, moments, and periodic recurrences.
+
+The Variations notebooks check finite edge, Greenian and resistance changes, and exact constraint certificates.
