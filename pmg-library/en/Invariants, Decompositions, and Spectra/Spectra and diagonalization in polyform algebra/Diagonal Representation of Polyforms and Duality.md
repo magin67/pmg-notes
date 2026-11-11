@@ -1,9 +1,9 @@
 ---
 title: "Diagonal Representation of Polyforms and Duality"
 date: 2026-10-30
-updated: 2026-11-09
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -341,6 +341,8 @@ $$
 The symbol $/$ denotes contraction: the coefficient of the contracting form multiplies the result rather than being inverted. Incorrectly substituting $s^gQ_g$ would produce $s^{d+g}$. This convention for the formal parameter and physical scale is used throughout the series.
 
 ## All grades and duality for the path P3
+
+See [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra#Diagonalizing the path P3|the notebook calculation]].
 
 For brevity put $A=[u_1]^2$, $B=[u_2]^2$, $A^\vee=[u^1]^2$, and $B^\vee=[u^2]^2$. In this section $A,B$ denote forms, not matrices. For the path, $\lambda_1=1$, $\lambda_2=3$, $\Delta=3$, and $\tau=1$. Thus
 

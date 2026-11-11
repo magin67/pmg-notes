@@ -1,9 +1,9 @@
 ---
 title: "Spectra and Diagonalization in Polyform Algebra"
 date: 2026-10-30
-updated: 2026-11-09
-revision: 5
-translated_revision: 6
+updated: 2026-11-11
+revision: 6
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -109,6 +109,10 @@ The series forms a general spectral section following [[en/Resistance Geometry a
 Published continuations are [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]], [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]], and [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers]]. The first series introduces the full forest passport and separate boundary spectral data; the other two study gluing cores and distinguishing their isomers. Ordinary forest states must be distinguished from characteristic polynomials and their boundary data. The cospectral pair in the present series illustrates limits of reconstruction and does not replace the study of chains.
 
 “Spectra of Bipartite Graphs and Mutual Projections” remains a separate research direction in the [[ru/Карта библиотеки PMG|library map (in Russian)]]. Its results are not assumed to have been established in these six notes.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra#Diagonalizing the path P3|Spectra and Diagonalization in Polyform Algebra]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/spectral-diagonalization.ipynb).
 
 ## Sources and reproducibility
 

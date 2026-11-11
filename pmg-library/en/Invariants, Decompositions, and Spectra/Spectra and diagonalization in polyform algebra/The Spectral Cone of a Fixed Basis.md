@@ -1,9 +1,9 @@
 ---
 title: "The Spectral Cone of a Fixed Basis"
 date: 2026-10-30
-updated: 2026-11-09
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -73,6 +73,8 @@ Separate eigenvalue nonnegativity constraints may therefore be added, but are re
 The coordinate inner product and basis remain fixed. For a connected graph, the PMG resistance inner product is determined by $\mathbf{Gr}=\mathbf L^+$ and depends on $\boldsymbol\mu$; these identifications are distinguished in [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]].
 
 ## A complete example: the eigenbasis of P3
+
+See [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra#The cone in the fixed P3 basis|the notebook calculation]].
 
 Take the modes from [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality|Diagonal Representation of Polyforms and Duality]]:
 

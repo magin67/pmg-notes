@@ -1,9 +1,9 @@
 ---
 title: "Projection onto a Fixed Spectral Basis and Loss of Information"
 date: 2026-10-30
-updated: 2026-11-09
-revision: 2
-translated_revision: 5
+updated: 2026-11-11
+revision: 3
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -208,6 +208,8 @@ The first two modes belong to the same eigenvalue of the reference cycle. Thus t
 *Figure 2. The three operations compared for the same matrix $\mathbf S$. The outline marks the two-dimensional eigenspace of the reference cycle. Colored cells show which entries are retained, removed, or changed. Block projection has zero error here because there are already no mixed coefficients between different blocks; this is a feature of this example.*
 
 ## Different graphs with the same projection
+
+See [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra#Different graphs with the same projection|the notebook calculation]].
 
 Replace the two mixed coefficients $-4$ by a parameter $r$:
 

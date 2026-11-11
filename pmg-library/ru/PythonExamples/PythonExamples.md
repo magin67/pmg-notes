@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 24
+revision: 25
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -93,6 +93,10 @@ folder_order: 70
 ## Вариации лапласиана, гриниана и резистенсов
 
 [[ru/PythonExamples/Пример - Вариации лапласиана, гриниана и резистенсов|Вариации лапласиана, гриниана и резистенсов]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/network-variations.ipynb).
+
+## Спектры и диагонализация в алгебре полиформ
+
+[[ru/PythonExamples/Пример - Спектры и диагонализация в алгебре полиформ|Спектры и диагонализация в алгебре полиформ]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/spectral-diagonalization.ipynb).
 
 ## Как устроен пример
 

@@ -1,9 +1,9 @@
 ---
 title: "Eigenmodes of Paths and Cycles"
 date: 2026-10-30
-updated: 2026-11-09
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -342,6 +342,8 @@ $$
 The coefficients of $\det(I+t\mathbf{Gr})$ are obtained by reversing these sequences and dividing by $6$, $36$, and $25$, respectively. They are numerical evaluations of dual grades after the transfer $\mathcal C$. Ordinary forest coefficients $f_g$ have a different meaning: for example, the ordinary forest polynomial of $P_6$ is $(1+t)^5$. The determinant interpretation of the rooted polynomial is developed in [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Forest Coefficients and the Laplacian Polynomial|Forest Coefficients and the Laplacian Polynomial]].
 
 ## Which modes contribute to an effective resistance
+
+See [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra#Eigenmodes of P6 and C6|the notebook calculation]].
 
 For the difference $a_{rs}=a_s-a_r$, the quadratic resistance evaluation is $a_{rs}^2=R_{rs}$. The path's spectral formula is
 

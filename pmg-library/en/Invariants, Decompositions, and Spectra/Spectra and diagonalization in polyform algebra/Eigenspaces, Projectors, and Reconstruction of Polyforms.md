@@ -1,9 +1,9 @@
 ---
 title: "Eigenspaces, Projectors, and Reconstruction of Polyforms"
 date: 2026-10-30
-updated: 2026-11-09
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -213,6 +213,8 @@ Thus $S_{\lambda,k}$ is basis-independent and vanishes for $k>m_\lambda$. The au
 The spaces $H_\lambda$ are also orthogonal in the resistance metric, because on each one this metric differs from the coordinate metric by the constant factor $\lambda^{-1}$. However, identifying a **form** with an operator depends on the metric: under resistance contraction, $S_\lambda$ corresponds to $\lambda^{-1}\mathbf E_\lambda$, not $\mathbf E_\lambda$.
 
 ## The second grade of C4: counting directions
+
+See [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra#A repeated eigenvalue of C4|the notebook calculation]].
 
 Before the general formula, return to the cycle modes already chosen: $u,v$ have eigenvalue $2$, and $w$ has eigenvalue $4$. Put $A=[u]^2$, $B=[v]^2$, $C=[w]^2$. Then $L=2A+2B+4C$. To obtain grade two, select two distinct directions:
 

@@ -1,9 +1,9 @@
 ---
 title: "Chebyshev Transformations of the Laplacian: From Path to Cycle"
 date: 2026-10-30
-updated: 2026-11-09
-revision: 2
-translated_revision: 6
+updated: 2026-11-11
+revision: 3
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -121,6 +121,8 @@ $$
 The last equalities follow from periodicity and evenness of cosine on each basis vector. It therefore suffices to consider $0\le m\le n$. The values $\mu_k^{(m)}$ are nonnegative; we will prove the graph sign conditions through an explicit adjacency rule.
 
 ## Angle doubling turns a path into a cycle
+
+See [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra#Chebyshev transformation from P6 to C6|the notebook calculation]].
 
 > [!info] Angle doubling turns a path into a cycle
 > **Theorem.** For $n\ge3$, the matrix

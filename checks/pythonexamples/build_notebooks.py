@@ -36,6 +36,7 @@ def page_link(lang,target):
 PINNED_COMMITS = {
     'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
     'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
+    'spectral-diagonalization': 'ba4e62a1c1bc7b1d7957fc33fdd3d6ae45b9cfcf',
     'network-variations': '63d342437b0d5973f38befc5183d7f4ea9ecf6f0',
     'isomer-spectra': '5adcacdf23303333a8b03ffc0835da52df4bdb3c',
     'boundary-data-core-chains': 'a7fa4b54aaa29f5c42213bf2e97f74f922da3ead',
@@ -80,6 +81,8 @@ COMPANIONS = (
     ('en', 'Example - Spectra of Isomers', 'isomer-spectra'),
     ('ru', 'Пример - Вариации лапласиана, гриниана и резистенсов', 'network-variations'),
     ('en', 'Example - Laplacian, Greenian and Resistance Variations', 'network-variations'),
+    ('ru', 'Пример - Спектры и диагонализация в алгебре полиформ', 'spectral-diagonalization'),
+    ('en', 'Example - Spectra and Diagonalization in Polyform Algebra', 'spectral-diagonalization'),
 )
 
 def revision_setup(commit):
