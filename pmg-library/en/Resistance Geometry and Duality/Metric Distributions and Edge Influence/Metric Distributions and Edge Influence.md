@@ -1,12 +1,12 @@
 ---
 title: Metric Distributions and Edge Influence
 date: 2026-11-03
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 7
+translated_revision: 8
 translation_key: metric-distributions-navigation
 order: 0
 tags:
@@ -63,6 +63,10 @@ In grade $k$, the distribution is indexed by sets of $k$ edges; its coefficients
 The input form is fixed in each comparison. All independent probes use the same initial metric. Accumulating changes defines a different procedure. Finite increments generally do not add; in higher grades, this failure already occurs on a tree.
 
 Historically, the subject arose from path intersections and polyform transformations. This series studies one metric distribution; its definition is not identified with spanning-tree averaging or with a distribution over forests of complementary grade.
+
+## Programming companion
+
+[[en/PythonExamples/Example - Metric Distributions and Edge Influence#Adding a coupling to a path|Metric Distributions and Edge Influence]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/metric-distributions.ipynb).
 
 ## Results and origins
 

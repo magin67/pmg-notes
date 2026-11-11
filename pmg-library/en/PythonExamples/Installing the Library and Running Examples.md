@@ -2,8 +2,8 @@
 title: "Installing the Library and Running Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 21
-translated_revision: 21
+revision: 22
+translated_revision: 22
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-examples-getting-started
@@ -20,7 +20,7 @@ This note describes the shared environment for [[en/PythonExamples/PythonExample
 
 The examples were checked with **`polyform_algebra 0.9.0`** on Python 3.12. The installation commands use the package’s `v0.9.0` source archive. Neither Git nor a source checkout is needed to run the fragments. Dependencies are installed automatically without version pins, so the package version does not fix the entire environment.
 
-For the [[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters]], [[en/PythonExamples/Example - Checking Structural Identities|Structural Identities]], [[en/PythonExamples/Example - Checking Symmetric Polyform Identities|Symmetric Polyforms]], [[en/PythonExamples/Example - Combinatorial Potentials|Combinatorial Potentials]], [[en/PythonExamples/Example - Partition Toponomes|Partition Toponomes]], [[en/PythonExamples/Example - Polynomial Toponomes|Polynomial Toponomes]], [[en/PythonExamples/Example - Balanced Graphs|Balanced Graphs]], [[en/PythonExamples/Example - KVP Decomposition|KVP Decomposition]], [[en/PythonExamples/Example - Greenian and Polyform Duality|Greenian and Polyform Duality]], [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]], [[en/PythonExamples/Example - Boundary Data and Chains of Cores|Boundary Data and Chains of Cores]], [[en/PythonExamples/Example - Spectra of Isomers|Spectra of Isomers]], [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]], and [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]] notebooks, use the commit specified in the corresponding example. The first code cell installs it in Colab.
+For the [[en/PythonExamples/Example - Metric Parameters of Graphs|Metric Parameters]], [[en/PythonExamples/Example - Checking Structural Identities|Structural Identities]], [[en/PythonExamples/Example - Checking Symmetric Polyform Identities|Symmetric Polyforms]], [[en/PythonExamples/Example - Combinatorial Potentials|Combinatorial Potentials]], [[en/PythonExamples/Example - Partition Toponomes|Partition Toponomes]], [[en/PythonExamples/Example - Polynomial Toponomes|Polynomial Toponomes]], [[en/PythonExamples/Example - Balanced Graphs|Balanced Graphs]], [[en/PythonExamples/Example - KVP Decomposition|KVP Decomposition]], [[en/PythonExamples/Example - Greenian and Polyform Duality|Greenian and Polyform Duality]], [[en/PythonExamples/Example - Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]], [[en/PythonExamples/Example - Boundary Data and Chains of Cores|Boundary Data and Chains of Cores]], [[en/PythonExamples/Example - Spectra of Isomers|Spectra of Isomers]], [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]], [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]], and [[en/PythonExamples/Example - Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]] notebooks, use the commit specified in the corresponding example. The first code cell installs it in Colab.
 
 ## Local installation
 

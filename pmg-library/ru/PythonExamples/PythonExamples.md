@@ -2,7 +2,7 @@
 title: "Программные примеры"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 25
+revision: 26
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -97,6 +97,10 @@ folder_order: 70
 ## Спектры и диагонализация в алгебре полиформ
 
 [[ru/PythonExamples/Пример - Спектры и диагонализация в алгебре полиформ|Спектры и диагонализация в алгебре полиформ]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/spectral-diagonalization.ipynb).
+
+## Метрические распределения и влияние связей
+
+[[ru/PythonExamples/Пример - Метрические распределения и влияние связей|Метрические распределения и влияние связей]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/metric-distributions.ipynb).
 
 ## Как устроен пример
 

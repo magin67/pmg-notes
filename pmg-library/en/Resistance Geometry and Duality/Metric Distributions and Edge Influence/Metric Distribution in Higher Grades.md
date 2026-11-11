@@ -1,12 +1,12 @@
 ---
 title: Metric Distribution in Higher Grades
 date: 2026-11-03
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 4
+translated_revision: 5
 translation_key: metric-distributions-higher-grades
 order: 4
 description: "The norm of a triangle boundary, distribution over edge pairs, and recovery of individual-edge influence; extending D to every grade."
@@ -375,6 +375,8 @@ In the last row, the spanning-tree coefficient is $\tau=2\cdot3+2\cdot5+3\cdot5=
 A pair contribution **is not a mixed second derivative** and does not measure a finite probe changing two couplings at once. For the triangle graph with conductances $x,y,z$, we have $N([(abc)]^2)=1/(xy+xz+yz)$. At $x=y=z=1$, the pair contribution is $1/9$, whereas $\partial^2N/\partial x\partial y=5/27$. Doubling both $x,y$ gives norm $1/8$; adding the two independently measured increments to the initial norm would incorrectly give $1/15$. Joint finite changes require the formulas in [[Two Edges and Joint Variation]] or recomputation of the metric.
 
 ## Computation and checks
+
+See [[en/PythonExamples/Example - Metric Distributions and Edge Influence#Pair contributions in grade two|the notebook calculation]].
 
 For a triangle, two Laplacian solutions suffice to obtain $s_\ell,t_\ell$. One can then compute all pair determinants (2), or directly compute edge influences by (4). For a decomposable object $X=v_1\cdots v_k$, the calculation requires $k$ right-hand sides with one matrix and minors of order $k$. Computing $D_{L,k}$ does not require enumerating spanning trees; the full list can contain up to $\binom{|E|}{k}$ coefficients.
 

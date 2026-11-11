@@ -1,12 +1,12 @@
 ---
 title: Path Intersection as an Influence Field on a Tree
 date: 2026-11-03
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 5
+translated_revision: 6
 translation_key: metric-distributions-tree-path-influence
 order: 2
 description: "The common segment of two paths as the exact support of existing-edge influence on their inner product: directions, resistances, and finite changes."
@@ -127,6 +127,8 @@ Add an edge $cz$ from the path $a-b-c-d-e$ to a new vertex $z$. All conductances
 *Orange edges contribute $1$ each; all other edges contribute zero. Drawing angles show the tree structure, not angles in resistance geometry.*
 
 ## Unequal conductances
+
+See [[en/PythonExamples/Example - Metric Distributions and Edge Influence#Path overlap in a weighted tree|the notebook calculation]].
 
 Keep $v=(ad)$ and $u=(be)$, and assign conductances
 

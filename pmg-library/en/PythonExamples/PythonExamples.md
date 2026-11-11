@@ -2,8 +2,8 @@
 title: "Programming Examples"
 date: 2026-10-29
 updated: 2026-11-11
-revision: 25
-translated_revision: 25
+revision: 26
+translated_revision: 26
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -98,6 +98,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Spectra and Diagonalization in Polyform Algebra
 
 [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/spectral-diagonalization.ipynb).
+
+## Metric Distributions and Edge Influence
+
+[[en/PythonExamples/Example - Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/metric-distributions.ipynb).
 
 ## How an example is organized
 

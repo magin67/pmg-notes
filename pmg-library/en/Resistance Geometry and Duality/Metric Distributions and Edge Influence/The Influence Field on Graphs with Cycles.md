@@ -1,12 +1,12 @@
 ---
 title: The Influence Field on Graphs with Cycles
 date: 2026-11-03
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 5
+translated_revision: 6
 translation_key: metric-distributions-cycle-influence
 order: 3
 description: "Distributions of norms and inner products on a triangle and a square: electrical flows, signs, finite probes, and a cross-edge with zero influence."
@@ -93,6 +93,8 @@ $$
 Although the current through $ac$ has increased, its contribution to the norm has decreased from $4/9$ to $8/25$: the edge resistance has decreased as well. A distribution coefficient should not be identified with current magnitude. Strengthening one edge has also changed the coefficients of the other edges.
 
 ## Square with a zero inner product and a nonzero field
+
+See [[en/PythonExamples/Example - Metric Distributions and Edge Influence#A signed field and a balanced cross-edge|the notebook calculation]].
 
 Let $a,b,c,d$ occur consecutively around a unit square. For $v=(ac)$, current splits equally between routes $a-b-c$ and $a-d-c$. Hence
 

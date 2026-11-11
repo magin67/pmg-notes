@@ -1,12 +1,12 @@
 ---
 title: Edge Influence and Metric Distribution
 date: 2026-11-03
-updated: 2026-11-08
-revision: 2
+updated: 2026-11-11
+revision: 3
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 5
+translated_revision: 6
 translation_key: metric-distributions-edge-influence
 order: 1
 description: "From adding a coupling and the finite change in a form's value to a sensitivity field and the metric distribution operator D_L."
@@ -18,6 +18,8 @@ description: "From adding a coupling and the finite change in a form's value to 
 Adding a coupling changes the graph metric and hence the values of measured forms. Fix a form of grade one, change one conductance, and subtract the original value from the new one. Repeating this probe for different couplings, always from the same initial graph, gives their influence field on the form. From this field we derive a metric distribution: sensitivity coefficients of existing edges whose sum equals the original value of the form.
 
 ## Adding a coupling to a path
+
+See [[en/PythonExamples/Example - Metric Distributions and Edge Influence#Adding a coupling to a path|the notebook calculation]].
 
 Take the path $a-b-c$ with conductances $c_{ab}=c_{bc}=1$. We measure the form $f=[(ac)]^2$. Its value is the effective resistance between $a$ and $c$:
 
