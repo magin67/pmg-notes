@@ -2,7 +2,8 @@
 title: Reconstructing Couplings with a Prescribed Neighbor Structure
 date: 2026-11-13
 updated: 2026-11-13
-revision: 1
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-reconstruction-with-neighbor-constraints
@@ -310,6 +311,10 @@ The accompanying calculation uses `scipy.optimize.least_squares` with method `tr
 - [Reconstruction results](<data/Reconstruction results.json>) contain parameters, residuals, singular values, verification results, and computational library versions.
 
 These files concern the synthetic example. The real measurements examined in [[Properties of Resistances in a Continuous Medium]] are not used in this calculation.
+
+## Programming example
+
+A calculation with `polyform_algebra` is provided in [[en/PythonExamples/Example - Electrometry#Reconstructing four layers|the Electrometry example]]. It is part of the series notebook with input data and checks.
 
 ## Sources
 

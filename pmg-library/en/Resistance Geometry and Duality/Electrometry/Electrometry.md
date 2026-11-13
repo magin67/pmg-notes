@@ -2,7 +2,8 @@
 title: Electrometry
 date: 2026-11-13
 updated: 2026-11-13
-revision: 1
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-series-navigation
@@ -40,6 +41,10 @@ For a first reading, follow the table order. The main connection to PMG variatio
 **How PMG variation formulas connect to fields.** A squared potential drop on an edge corresponds to a squared potential gradient within the medium. Inverting the complete effective-resistance table determines an equivalent network on the electrodes. Choosing an internal realization of that network requires additional information.
 
 **How assumptions enter the calculation.** The neighbor structure specifies allowed couplings; layers and known regions reduce the number of parameters; regularization expresses preferences among admissible models. In the model $4\times4\times4$ network, a layered description reduces 144 unknown couplings to four parameters. The example shows both successful reconstruction from exact data and sensitivity to noise.
+
+## Programming example
+
+[[en/PythonExamples/Example - Electrometry|Example: Electrometry]] combines four calculations with `polyform_algebra`: the rank of four-electrode measurements, real-grid geometry, an internal coupling variation, and reconstruction of four layers. The notebook includes input data, figures, and checks. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/electrometry.ipynb).
 
 ## Origin and status of results
 

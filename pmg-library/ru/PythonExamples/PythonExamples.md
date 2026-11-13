@@ -1,8 +1,8 @@
 ---
 title: "Программные примеры"
 date: 2026-10-29
-updated: 2026-11-11
-revision: 27
+updated: 2026-11-13
+revision: 28
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -101,6 +101,10 @@ folder_order: 70
 ## Метрические распределения и влияние связей
 
 [[ru/PythonExamples/Пример - Метрические распределения и влияние связей|Метрические распределения и влияние связей]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/metric-distributions.ipynb).
+
+## Электрометрия
+
+[[ru/PythonExamples/Пример - Электрометрия|Электрометрия]]. [Открыть в Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/ru/PythonExamples/notebooks/electrometry.ipynb).
 
 ## Как устроен пример
 

@@ -1,9 +1,9 @@
 ---
 title: "Programming Examples"
 date: 2026-10-29
-updated: 2026-11-11
-revision: 27
-translated_revision: 27
+updated: 2026-11-13
+revision: 28
+translated_revision: 28
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -102,6 +102,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Metric Distributions and Edge Influence
 
 [[en/PythonExamples/Example - Metric Distributions and Edge Influence|Metric Distributions and Edge Influence]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/metric-distributions.ipynb).
+
+## Electrometry
+
+[[en/PythonExamples/Example - Electrometry|Electrometry]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/electrometry.ipynb).
 
 ## How an example is organized
 

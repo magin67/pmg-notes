@@ -2,7 +2,8 @@
 title: Properties of Resistances in a Continuous Medium
 date: 2026-11-13
 updated: 2026-11-13
-revision: 1
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-continuous-medium-and-measurement-information
@@ -199,6 +200,10 @@ Possible approaches include reference electrodes, combinations of separations an
 A complete experimental data set can test a proposed scheme: hide some values, reconstruct using only the retained measurements, and compare with the hidden values. This checks reproduction of the data. Without an independent error estimate, it does not establish accuracy in recovering the true state of the medium.
 
 The homogeneous model explains why a large pairwise table may have a simple description. Heterogeneity and errors complicate it. The relation between changes in pairwise characteristics and changes in the medium is derived in [[Resistance Variations in Graphs and Continuous Media]]. [[Reconstructing Couplings with a Prescribed Neighbor Structure]] uses this sensitivity to assess parameter identifiability and discuss measurement selection. A specific minimum set for real ground remains an open problem.
+
+## Programming example
+
+A calculation with `polyform_algebra` is provided in [[en/PythonExamples/Example - Electrometry#Geometry from real pairwise data|the Electrometry example]]. It is part of the series notebook with input data and checks.
 
 ## Sources and connections
 

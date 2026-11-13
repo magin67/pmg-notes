@@ -2,7 +2,8 @@
 title: What Electrometry Measures
 date: 2026-11-13
 updated: 2026-11-13
-revision: 1
+revision: 2
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-measurements-and-pairwise-data
@@ -332,6 +333,10 @@ Remote electrodes allow additional conditions on distant contributions to be use
 The resulting table can now be studied: which values are linked by geometry, and can the measurement set be reduced? These questions are addressed in [[Properties of Resistances in a Continuous Medium]].
 
 Recovering internal conductivity requires another transition. Its basis is developed in [[Resistance Variations in Graphs and Continuous Media]], while admissible changes and an algorithm are discussed in [[Reconstructing Couplings with a Prescribed Neighbor Structure]].
+
+## Programming example
+
+A calculation with `polyform_algebra` is provided in [[en/PythonExamples/Example - Electrometry#What four electrodes determine|the Electrometry example]]. It is part of the series notebook with input data and checks.
 
 ## Sources and connections
 
