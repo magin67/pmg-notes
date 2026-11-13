@@ -1,10 +1,10 @@
 ---
 title: Basic Objects and Operations of Polyform Algebra
 date: 2026-10-06
-updated: 2026-11-10
-revision: 13
-translated_revision: 16
-source_revision: 15
+updated: 2026-11-13
+revision: 14
+translated_revision: 17
+source_revision: 17
 status: draft
 text_prepared_by: ChatGPT
 translation_key: polyform-algebra-basics
@@ -69,7 +69,7 @@ $$
 h=\frac1n\sum_i a_i,\qquad p_i=a_i-h\in W
 $$
 
-Then $\sum_i p_i=0$, although the original $a_i$ remain linearly independent. In the resistance metric, their inner products are $p_i\cdot p_j=\mathrm{Gr}_{ij}$. The zero-sum relation concerns $p_i$, not the formal vertices $a_i$. Differences are preserved: $p_j-p_i=a_j-a_i$.
+Then $\sum_i p_i=0$, although the original $a_i$ remain linearly independent. For a connected graph, their inner products in the resistance metric are $p_i\cdot p_j=\mathrm{Gr}_{ij}$. The zero-sum relation concerns $p_i$, not the formal vertices $a_i$. Differences are preserved: $p_j-p_i=a_j-a_i$.
 
 ## The exterior product and grade
 
@@ -342,7 +342,7 @@ $$
 q_v^2=[v\wedge v]^2=0
 $$
 
-For a nonzero element $v\in V$, the form $q_v$ itself is nonzero. The identity states that its product with itself is zero.
+For a nonzero object $v\in V$, the form $q_v$ itself is nonzero. The identity states that its product with itself is zero.
 
 More generally,
 
@@ -351,7 +351,7 @@ $$
 \tag{6}
 $$
 
-The product (6) vanishes if and only if the elements $v_1,\ldots,v_r$ are linearly dependent. In particular, the product of the forms of the edges of a cycle is zero.
+The product (6) vanishes if and only if the objects $v_1,\ldots,v_r\in V$ are linearly dependent. In particular, the product of the forms of the edges of a cycle is zero.
 
 The linear span of forms $[X,Y]$ with $X,Y\in\Lambda^kW$, over all $k=0,\ldots,n-1$, forms the subalgebra of forms on boundaries. It contains $e$, is closed under multiplication, and has grades from $0$ to $n-1$. Hence every polyform $P$ in this subalgebra with $P_0=0$ satisfies $P^n=0$: each term in a product of $n$ factors would have grade at least $n$.
 
