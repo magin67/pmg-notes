@@ -34,7 +34,7 @@ Secondary thematic entries:
 - [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]: symmetric identities and toponomes of dual representations.
 - [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: spectral dual pairs.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## A first pass through the series
 
@@ -178,4 +178,4 @@ For the full toponome, a question remains: what additional data allow the Greeni
 
 A directed extension requires bilinear forms, argument order, and directions to be aligned with the [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]] series. Symmetric formulas do not transfer automatically. A separate topic is the polyform of the isotropic Gram matrix, its top and next-to-top components, and its connection with sphere geometry.
 
-The general theory of cuts goes beyond the cut representation used here. These directions remain recorded in the [[en/Navigation/Library Map#Deferred questions and continuations|project map]]. The English series follows the checked [[ru/Резистивная геометрия и дуальность/Гриниан и дуальность полиформ/Гриниан и дуальность полиформ|Russian edition]]. Current definitions and notation are collected in [[Core specification|Core Specification]] and [[PMG terminology|Terminology]].
+The general theory of cuts goes beyond the cut representation used here. These directions remain recorded in the [[en/Getting Started and Foundations/Navigation/Library Map#Deferred questions and continuations|project map]]. The English series follows the checked [[ru/Резистивная геометрия и дуальность/Гриниан и дуальность полиформ/Гриниан и дуальность полиформ|Russian edition]]. Current definitions and notation are collected in [[Core specification|Core Specification]] and [[PMG terminology|Terminology]].

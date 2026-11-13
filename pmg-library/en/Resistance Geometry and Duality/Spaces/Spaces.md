@@ -34,7 +34,7 @@ Secondary thematic entries:
 
 - [[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]: the Dirichlet problem, vertex elimination, and contraction.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ All nine notes are available in Russian and English, with matching reading order
 
 ## Continuations and sources
 
-Spectral relations between the parts of a bipartite graph, gluing at several vertices, a fuller treatment of Lorentzian geometry, and possible physical interpretations are reserved for separate notes. General polyform reduction and the spanning-tree operator also belong to a separate continuation. These questions and their dependencies are tracked in the [[en/Navigation/Library Map|library map]].
+Spectral relations between the parts of a bipartite graph, gluing at several vertices, a fuller treatment of Lorentzian geometry, and possible physical interpretations are reserved for separate notes. General polyform reduction and the spanning-tree operator also belong to a separate continuation. These questions and their dependencies are tracked in the [[en/Getting Started and Foundations/Navigation/Library Map|library map]].
 
 Sources and the status of results are given in each note. Established constructions are compared with their presentation in PMG after the objects involved have been defined.
 

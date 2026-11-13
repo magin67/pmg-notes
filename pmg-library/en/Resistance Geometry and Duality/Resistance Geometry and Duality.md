@@ -16,7 +16,7 @@ aliases:
 
 How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
 
-[[ru/Резистивная геометрия и дуальность/Резистивная геометрия и дуальность|Русский]] · [[en/Navigation/Thematic Index|Thematic Index]]
+[[ru/Резистивная геометрия и дуальность/Резистивная геометрия и дуальность|Русский]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]]
 
 ## Series in this section
 
@@ -53,4 +53,4 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 The connectivity center and interval forms. Spectra of bipartite graphs and mutual projections connect to this section, with their primary home in invariants and spectra.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]].

@@ -32,7 +32,7 @@ Secondary thematic entries:
 
 - [[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]: the distinction between coordinate and resistance metrics.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Contents and reading order
 
@@ -104,11 +104,11 @@ Reconstructing the operator itself, the conductances, and individual resistances
 
 ## Place of the series and continuations
 
-The series forms a general spectral section following [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|the Greenian and duality]] and [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]]. It covers the part of “Spectra of Paths and Cycles” developed here; its place among the other research directions is recorded in the [[en/Navigation/Library Map|project map]].
+The series forms a general spectral section following [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|the Greenian and duality]] and [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|matroid parameters and forest characteristics]]. It covers the part of “Spectra of Paths and Cycles” developed here; its place among the other research directions is recorded in the [[en/Getting Started and Foundations/Navigation/Library Map|project map]].
 
 Published continuations are [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing|Boundary Polynomials and Graph Gluing]], [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]], and [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers]]. The first series introduces the full forest passport and separate boundary spectral data; the other two study gluing cores and distinguishing their isomers. Ordinary forest states must be distinguished from characteristic polynomials and their boundary data. The cospectral pair in the present series illustrates limits of reconstruction and does not replace the study of chains.
 
-“Spectra of Bipartite Graphs and Mutual Projections” remains a separate research direction in the [[en/Navigation/Library Map|library map]]. Its results are not assumed to have been established in these six notes.
+“Spectra of Bipartite Graphs and Mutual Projections” remains a separate research direction in the [[en/Getting Started and Foundations/Navigation/Library Map|library map]]. Its results are not assumed to have been established in these six notes.
 
 ## Programming companion
 

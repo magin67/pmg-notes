@@ -24,7 +24,7 @@ What happens to a sum of forms when all vertices are relabelled? This series stu
 
 Primary section: [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]].
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Prerequisites
 

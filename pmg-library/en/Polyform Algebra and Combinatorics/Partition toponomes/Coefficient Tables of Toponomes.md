@@ -433,7 +433,7 @@ The [[Reducibility of Toponomes#The two-variable toponome and the coefficient tr
 
 The table lies between the record of all types and coarser sums of coefficients. It can be stored as an array or encoded as a polynomial; changing the notation does not recover the lost types.
 
-The [[en/Navigation/Library Map|library map]] records future work on graph classes distinguished by such tables and on richer data: retaining individual types, adding component weights, and considering rooted variants. The distinguishing power of each specific construction must be checked separately. The counterexample above concerns the table $a_{k,r}$ and does not refute possible statements about more detailed invariants.
+The [[en/Getting Started and Foundations/Navigation/Library Map|library map]] records future work on graph classes distinguished by such tables and on richer data: retaining individual types, adding component weights, and considering rooted variants. The distinguishing power of each specific construction must be checked separately. The counterexample above concerns the table $a_{k,r}$ and does not refute possible statements about more detailed invariants.
 
 ## Source
 

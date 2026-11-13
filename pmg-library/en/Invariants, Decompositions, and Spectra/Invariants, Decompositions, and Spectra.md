@@ -16,7 +16,7 @@ aliases:
 
 Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?
 
-[[ru/Инварианты, разложения и спектры/Инварианты, разложения и спектры|Русский]] · [[en/Navigation/Thematic Index|Thematic Index]]
+[[ru/Инварианты, разложения и спектры/Инварианты, разложения и спектры|Русский]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]]
 
 ## Series in this section
 
@@ -51,4 +51,4 @@ These are secondary thematic entry points; each series navigator identifies its 
 
 The current bilingual collection “Spectra of Isomers” is complete. [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions|Spectra of Isomers: Results and Open Questions]] records the proven reconstruction from marked boundary data, scalar conjectures, and further questions about stability, general periods, closure, and infinite chains. Spectra of bipartite graphs and mutual projections form a separate future direction.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]].

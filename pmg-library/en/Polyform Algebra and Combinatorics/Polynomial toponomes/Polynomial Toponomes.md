@@ -29,7 +29,7 @@ Secondary thematic entries:
 
 - [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: the rooted polynomial and spectral coefficients.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading order and series status
 
@@ -70,4 +70,4 @@ The series concerns undirected graphs with positive conductances. Requirements o
 
 The directed continuation is available in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]]. The note [[Toponomes of Balanced Graphs and Directed Forests]] relates directed rooted forests, two normalizations, and the determinant, and treats the symmetric limit. Conditions for a directed Laplacian are checked there separately; this series' assertions about a positive real nonzero spectrum concern undirected graphs.
 
-Basic root properties are treated here as polynomial characteristics. Full diagonalization of a polyform, eigenvectors, and spectral subspaces remain a separate continuation. Toponomes of the dual polyform follow introduction of the dual construction itself; the [[en/Navigation/Library Map|library map]] records the status of these topics.
+Basic root properties are treated here as polynomial characteristics. Full diagonalization of a polyform, eigenvectors, and spectral subspaces remain a separate continuation. Toponomes of the dual polyform follow introduction of the dual construction itself; the [[en/Getting Started and Foundations/Navigation/Library Map|library map]] records the status of these topics.

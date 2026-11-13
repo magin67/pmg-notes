@@ -31,7 +31,7 @@ Secondary thematic entries:
 
 - [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]: distinguishing graphs by coefficient tables.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading order
 
@@ -121,4 +121,4 @@ The continuation [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Po
 
 Equal numerical evaluations do not imply equal toponomes. Weighted coefficients retain sums of products of weights; they describe more than the unweighted graph structure.
 
-The [[en/Navigation/Library Map|library map]] retains research directions: refinements of graph invariants, multicomponent gluings, the distinction between a spectrum and a full spectral representation, and toponomes of the Greenian exponential after duality is introduced. Reduction of a polyform by another polyform and the spanning-tree operator form a separate direction.
+The [[en/Getting Started and Foundations/Navigation/Library Map|library map]] retains research directions: refinements of graph invariants, multicomponent gluings, the distinction between a spectrum and a full spectral representation, and toponomes of the Greenian exponential after duality is introduced. Reduction of a polyform by another polyform and the spanning-tree operator form a separate direction.

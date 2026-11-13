@@ -31,7 +31,7 @@ Secondary thematic entries:
 
 - [[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]: directional coordinates, resistances, and the sphere.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Contents and reading order
 

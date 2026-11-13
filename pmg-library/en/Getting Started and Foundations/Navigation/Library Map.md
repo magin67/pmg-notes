@@ -2,7 +2,7 @@
 title: Library Map
 date: 2026-11-11
 updated: 2026-11-13
-revision: 4
+revision: 5
 translated_revision: 89
 status: published
 text_prepared_by: ChatGPT
@@ -10,15 +10,17 @@ lang: en
 translation_key: pmg-library-map
 order: 0
 description: "Published PMG directions, their connections, and open questions."
+aliases:
+  - "en/Navigation/Library Map"
 ---
 
 The map shows which PMG directions are developed in the library, how they connect, and which questions remain open. Direction codes stay stable when the series change.
 
-[[ru/Навигация/Карта библиотеки|Русский]] · [[en/Navigation/Navigation|Navigation]]
+[[ru/Начало работы и основания/Навигация/Карта библиотеки|Русский]] · [[en/Getting Started and Foundations/Navigation/Navigation|Navigation]]
 
 ## Library contents
 
-The library contains 19 bilingual series with 135 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
+The library contains 19 bilingual series with 135 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
 Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. Series navigators give reading order and prerequisites.
 

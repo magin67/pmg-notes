@@ -26,9 +26,9 @@ The first seven notes present results from linear algebra, electrical network th
 
 ## Place in the library
 
-Primary section: [[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]].
+Primary section: [[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started]].
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading order
 

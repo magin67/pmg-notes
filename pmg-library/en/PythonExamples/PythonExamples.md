@@ -19,7 +19,7 @@ This section connects the mathematical PMG notes with executable examples from `
 
 ## Library navigation
 
-[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Getting started
 

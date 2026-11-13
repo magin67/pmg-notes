@@ -20,7 +20,9 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 [[en/Ask ChatGPT about PMG|Ask ChatGPT about the Library]] — a ready-to-use prompt and example questions about the library.
 
-[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] brings together the introductory series, specification, terminology, and general reading routes.
+[[en/Getting Started and Foundations/Navigation/Navigation|Navigation]] brings together the [[en/Getting Started and Foundations/Navigation/Thematic Index|thematic index with search by tags]] and the [[en/Getting Started and Foundations/Navigation/Library Map|library map]].
+
+[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started]] brings together the introductory series, specification, terminology, and general reading routes.
 
 ## Thematic sections
 
@@ -35,10 +37,6 @@ The 19 completed bilingual series contain 135 substantive notes in each language
 ## Programming examples
 
 [[en/PythonExamples/PythonExamples|Programming Examples]] connect the mathematical notes to executable `polyform_algebra` code, expected results, and checks.
-
-## Navigation
-
-[[en/Navigation/Navigation|Navigation]] brings together the [[en/Navigation/Thematic Index|thematic index with search by tags]] and the [[en/Navigation/Library Map|library map]].
 
 ## Status of results
 

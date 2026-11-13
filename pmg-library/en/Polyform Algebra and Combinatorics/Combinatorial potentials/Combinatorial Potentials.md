@@ -28,7 +28,7 @@ Secondary thematic entries:
 
 - [[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]: cyclic partitions and permutation digraphs.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading order
 

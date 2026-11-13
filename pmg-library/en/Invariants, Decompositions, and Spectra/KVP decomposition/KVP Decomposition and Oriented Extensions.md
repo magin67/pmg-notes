@@ -31,7 +31,7 @@ Secondary thematic entries:
 - [[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]: components of the Green matrix, resistances, and metric parameters.
 - [[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]: circulation and directional imbalance.
 
-[[en/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Navigation/Thematic Index|Thematic Index]].
+[[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading routes and prerequisites
 
@@ -133,6 +133,6 @@ The [common verification script and running instructions](https://github.com/mag
 
 Coefficient orthogonality must not be transferred to the PMG metric inner product. Linear decomposition does not automatically make inversion, radius, the spanning-tree coefficient, or the exponential additive. The polyform and matrix exponentials use different products; the forest toponome refers to a fixed representation.
 
-The general conjecture on P-toponome ranks remains open; exact witnesses establish equality with the proved upper bound for grades 2-4. Further work on directed toponomes concerns types and interactions of O and U: the balanced-graph exponential has already been constructed. General invariant operators, centroid factorizations, coupling concentration, resistance sensitivities, higher potentials, and experimental electrometry are recorded in the [[en/Navigation/Library Map#Deferred questions and continuations|map of further topics]].
+The general conjecture on P-toponome ranks remains open; exact witnesses establish equality with the proved upper bound for grades 2-4. Further work on directed toponomes concerns types and interactions of O and U: the balanced-graph exponential has already been constructed. General invariant operators, centroid factorizations, coupling concentration, resistance sensitivities, higher potentials, and experimental electrometry are recorded in the [[en/Getting Started and Foundations/Navigation/Library Map#Deferred questions and continuations|map of further topics]].
 
 The main notation is recorded in [[Core specification]] and [[PMG terminology]]. The series and its navigator are available in Russian and English; corresponding notes share a translation key.

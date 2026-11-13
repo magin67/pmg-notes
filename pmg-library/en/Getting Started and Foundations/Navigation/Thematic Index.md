@@ -2,7 +2,7 @@
 title: Thematic Index
 date: 2026-11-01
 updated: 2026-11-13
-revision: 17
+revision: 18
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -10,6 +10,7 @@ translation_key: pmg-thematic-index
 order: 0
 description: "Library sections, series, their primary homes, and search by tags."
 aliases:
+  - "en/Navigation/Thematic Index"
   - "en/Topics/Topics"
   - "en/Thematic Index"
   - "en/Cross-cutting Tags"
@@ -18,11 +19,11 @@ aliases:
 
 This index groups series by their main question. Each series has one primary home; secondary entries show connections with other topics. Prerequisites and future directions are identified separately in the reading routes.
 
-[[ru/Навигация/Тематический указатель|Русский]]
+[[ru/Начало работы и основания/Навигация/Тематический указатель|Русский]]
 
 ## Getting started
 
-[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]]: the introductory series, specification, terminology, and general routes. [[en/PythonExamples/PythonExamples|Programming Examples]] provide a separate computational entry point.
+[[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started]]: the introductory series, specification, terminology, and general routes. [[en/PythonExamples/PythonExamples|Programming Examples]] provide a separate computational entry point.
 
 ## Thematic sections
 
@@ -38,7 +39,7 @@ The 19 bilingual series contain 135 substantive notes in each language. Navigato
 
 | Series | Section | Notes |
 | --- | --- | ---: |
-| [[en/Getting Started and Foundations/Introduction/PMG Introductory Series\|Introductory Series]] | [[en/Getting Started and Foundations/Getting Started and Foundations\|Getting Started and Foundations]] | 10 |
+| [[en/Getting Started and Foundations/Introduction/PMG Introductory Series\|Introductory Series]] | [[en/Getting Started and Foundations/Getting Started and Foundations\|Getting Started]] | 10 |
 | [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities\|Structural Identities]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 5 |
 | [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms\|Symmetric Polyforms]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 5 |
 | [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials\|Combinatorial Potentials]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 6 |
@@ -79,4 +80,4 @@ Series navigators give reading order and prerequisites. The “reconstruction”
 
 ## Development plan
 
-[[en/Navigation/Library Map|Library Map]] records research directions, their status, connections, and open questions.
+[[en/Getting Started and Foundations/Navigation/Library Map|Library Map]] records research directions, their status, connections, and open questions.
