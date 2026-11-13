@@ -1,0 +1,100 @@
+{
+  "grid": [
+    4,
+    4,
+    4
+  ],
+  "vertices": 64,
+  "edges": 144,
+  "electrodes": 16,
+  "observations": 120,
+  "seed": 1304,
+  "noise_sd_relative_to_background": 0.001,
+  "noise_rms_percent": 0.10067482739883662,
+  "bounds": [
+    0.5,
+    1.5
+  ],
+  "truth": [
+    1.0,
+    1.15,
+    0.85,
+    1.1
+  ],
+  "relative_jacobian_singular_values": [
+    8.936209355798903,
+    0.45042622607172594,
+    0.022028059566294726,
+    0.0009833049040805658
+  ],
+  "condition_four": 9087.933273509563,
+  "condition_three": 445.56125549776436,
+  "known_bottom_reference": [
+    1.0,
+    1.0,
+    1.0,
+    1.1
+  ],
+  "free_rank_at_absolute_threshold_1e-10": 120,
+  "free_smallest_singular_value": 8.457318036740482e-09,
+  "layer_jacobian_max_absolute_error": 7.713352179194999e-11,
+  "edge_jacobian_max_absolute_error": 3.4301762575099023e-11,
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "fits": {
+    "exact_four": {
+      "label": "Exact data, 4 parameters",
+      "theta": [
+        1.0000000000000009,
+        1.1499999999999855,
+        0.850000000000124,
+        1.0999999999996313
+      ],
+      "rms_percent": 2.2462032556703088e-14,
+      "evaluations": 31,
+      "lambda": 0.0,
+      "bottom_fixed": false
+    },
+    "noisy_four": {
+      "label": "Noise, 4 parameters",
+      "theta": [
+        1.0003359242202,
+        1.1462023759781723,
+        0.797782275128324,
+        1.4999999999999991
+      ],
+      "rms_percent": 0.09827976174361501,
+      "evaluations": 35,
+      "lambda": 0.0,
+      "bottom_fixed": false
+    },
+    "known_bottom": {
+      "label": "Noise, known bottom layer",
+      "theta": [
+        1.0016438070009293,
+        1.1277791881835753,
+        0.9255698268060041,
+        1.1
+      ],
+      "rms_percent": 0.09844719569117642,
+      "evaluations": 11,
+      "lambda": 0.0,
+      "bottom_fixed": true
+    },
+    "prior_four": {
+      "label": "Noise, penalty toward background",
+      "theta": [
+        1.0007644219470284,
+        1.1401990825422599,
+        0.8363673623344092,
+        1.3615482713630889
+      ],
+      "rms_percent": 0.09832035568509438,
+      "evaluations": 31,
+      "lambda": 1.0,
+      "bottom_fixed": false
+    }
+  }
+}
