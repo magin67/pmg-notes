@@ -1,14 +1,14 @@
 ---
 title: PMG Terminology
 date: 2026-10-09
-updated: 2026-11-09
-revision: 29
-translated_revision: 28
+updated: 2026-11-13
+revision: 30
+translated_revision: 30
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
 lang: en
-description: "Terminology of the PMG core and published series: polyforms, metrics, forest and spectral data, boundary passports, chains of cores, variations, and metric distributions; Russian equivalents and usage conditions."
+description: "Terminology of the PMG core and published series: polyforms, metrics, forest and spectral data, boundary passports, chains of cores, variations, metric distributions, and electrometry; Russian equivalents and usage conditions."
 order: 2
 aliases:
   - "en/Foundations/PMG terminology"
@@ -252,6 +252,27 @@ Reversal of dual grade order means taking complementary sets of eigendirections,
 > The notations $X$, $[X]^2$, and $X^2$ are distinct: they denote an exterior structure, a formal quadratic form, and a numerical norm, respectively. The exterior product of an object with itself is written explicitly as $X\wedge X$.
 
 In a symmetric metric, the norm of a simplex boundary is the squared volume of a parallelotope, while its linear norm is the volume itself. The squared volume of the $k$-dimensional simplex is the norm of its boundary divided by $(k!)^2$. The metric on boundaries does not automatically define the norm of a formal element or simplex outside $\Lambda^kW$.
+
+## Electrometry and medium parameters
+
+The [[en/Resistance Geometry and Duality/Electrometry/Electrometry|Electrometry]] series distinguishes the measured combination $T$, network effective resistance $R$, and pairwise potential coefficient $Z$. The notation $R_{ij}$ retains the definition of effective resistance given above. All three quantities have the dimensions of resistance, but they are not interchangeable.
+
+| English term | Russian equivalent | Status | Meaning and convention |
+|---|---|---|---|
+| Transfer resistance | Передаточное сопротивление | Standard | $T_{ab,mn}=(\varphi_m-\varphi_n)/I$ for current $I$ entering through $a$ and leaving through $b$. In a linear reciprocal network, it equals the resistance inner product $(ab)\cdot(mn)$; its sign depends on electrode order. |
+| Pairwise potential coefficient | Парный коэффициент потенциала | Qualified | $Z_{ij}$ is the potential at $j$ due to a unit source at $i$, with current return and zero potential at infinity, when this model is defined. The law $Z_{ij}=\rho/(2\pi d_{ij})$ applies to point electrodes on the flat surface of a homogeneous isotropic half-space. |
+| Conductivity | Проводимость среды | Standard | In an isotropic model, the scalar field $\sigma(x)$ relating current density to the electric field. Distinct from edge conductance $c_e$; conversion to conductance includes discretization geometry. |
+| Resistivity | Удельное сопротивление среды | Standard | In a scalar isotropic model, $\rho(x)=1/\sigma(x)$. Measured in ohm-meters; $R$, $T$, and $Z$ are measured in ohms. |
+| Effective Laplacian on the electrodes | Эффективный лапласиан на электродах | Qualified | The notation $\mathbf L_\partial$ for the electrical response matrix $\boldsymbol\Lambda_B$ after eliminating internal vertices. This is the construction defined under [[#Groves and electrical data\|electrical data]]. Distinct from the reduced Laplacian formed by deleting one row and column. |
+| Sensitivity matrix for medium parameters | Матрица чувствительности к параметрам среды | Standard | The Jacobian $\mathbf A=D_\theta F$ of selected measurements with respect to model parameters. For variable couplings and $R$ measurements, $\mathbf A=-\mathbf S\mathbf H$, where $\mathbf H=D_\theta c$ and $S_{qe}$ is the squared potential drop on edge $e$ under unit current through pair $q$. |
+| First-order distinguishability | Различимость в первом порядке | Standard | Different admissible small parameter changes have different linear responses. For $p$ free parameters, this is equivalent to $\operatorname{rank}\mathbf A=p$; stability also depends on singular-value magnitudes after accounting for parameter scales and data errors. |
+| Geometric modes of pairwise data | Геометрические моды парных данных | Qualified | Eigenmodes of $\mathbf G_d=-\tfrac12\mathbf J\mathbf D\mathbf J$, where $D_{ij}=1/Z_{ij}^2$ for $i\ne j$ and $D_{ii}=0$. For exact data from noncollinear electrodes on a plane in a homogeneous half-space, two positive modes remain. $\mathbf G_d$ is not the medium's Green matrix; its modes differ from the singular modes of the Jacobian. |
+
+The self-potential of an ideal point source is singular. A conventional zero diagonal in $\mathbf Z$ neither means zero self-potential nor makes it an effective-resistance matrix. Reciprocation and squaring in $1/Z_{ij}^2$ are entrywise operations.
+
+In this series, $\rho$ denotes resistivity and $\sigma(x)$ conductivity. These local symbols do not replace the resistance radius $\rho(G)$ or the spanning-tree coefficient $\sigma=\tau(N)$ elsewhere. The pairwise coefficient $Z_{ij}$ also differs from the forbidden-pair set $Z$ in the $P,Z,V$ constraint problem.
+
+Measured quantities are defined in [[What Electrometry Measures]]. Geometric modes are discussed in [[Properties of Resistances in a Continuous Medium]]. Sensitivity and reconstruction conditions are developed in [[Resistance Variations in Graphs and Continuous Media]] and [[Reconstructing Couplings with a Prescribed Neighbor Structure]]. Conventions for applying graph formulas are collected in the [[Core specification#Electrometry and reconstruction of the medium|specification]].
 
 ## Metric polyforms, forests, and the spanning-tree coefficient
 
@@ -564,6 +585,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 30 | 2026-11-13 | Added electrometry terms: T, R, and Z, conductivity and resistivity, the effective electrode Laplacian, sensitivity, and distinguishability. Distinguished geometric modes from sensitivity modes and clarified local notation. Aligned with Russian revision 30. |
 | 28 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |
 | 27 | 2026-11-08 | Aligned sphere-element notation with the revised note on nonlocal elements: $s=s_0+s^2z/2$, norm $s^2$, and graph resistance radius $\rho(G)$. Aligned with Russian revision 27. |
 | 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |

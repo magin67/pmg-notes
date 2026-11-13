@@ -1,8 +1,8 @@
 ---
 title: Thematic Index
 date: 2026-11-01
-updated: 2026-11-11
-revision: 16
+updated: 2026-11-13
+revision: 17
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -34,7 +34,7 @@ This index groups series by their main question. Each series has one primary hom
 
 ## Primary home of each series
 
-The 18 bilingual series contain 131 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately.
+The 19 bilingual series contain 135 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately.
 
 | Series | Section | Notes |
 | --- | --- | ---: |
@@ -48,6 +48,7 @@ The 18 bilingual series contain 131 substantive notes in each language. Navigato
 | [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs\|Metric Parameters of Graphs]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 8 |
 | [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality\|Greenian and Polyform Duality]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 9 |
 | [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 4 |
+| [[en/Resistance Geometry and Duality/Electrometry/Electrometry\|Electrometry]] | [[en/Resistance Geometry and Duality/Resistance Geometry and Duality\|Resistance Geometry and Duality]] | 4 |
 | [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs\|Matroid Parameters and Forest Characteristics of Graphs]] | [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra\|Invariants, Decompositions, and Spectra]] | 7 |
 | [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions\|KVP Decomposition and Oriented Extensions]] | [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra\|Invariants, Decompositions, and Spectra]] | 9 |
 | [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra\|Spectra and Diagonalization in Polyform Algebra]] | [[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra\|Invariants, Decompositions, and Spectra]] | 6 |

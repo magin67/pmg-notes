@@ -1,14 +1,14 @@
 ---
 title: Core Specification of PMG
 date: 2026-10-09
-updated: 2026-11-08
-revision: 27
-translated_revision: 27
+updated: 2026-11-13
+revision: 28
+translated_revision: 28
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
 lang: en
-description: "Definitions and conventions of the PMG core: polyform algebra, Laplacian and Greenian, metrics, forest and spectral parameters, boundary passports, chains of cores, constrained variations, and metric distributions; applicability conditions."
+description: "Definitions and conventions of the PMG core: polyform algebra, Laplacian and Greenian, metrics, forest and spectral parameters, boundary passports, chains of cores, constrained variations, metric distributions, and electrometry; applicability conditions."
 order: 1
 aliases:
   - "en/Foundations/Core specification"
@@ -1014,6 +1014,7 @@ A full treatment of the following thematic extensions requires separate definiti
 - full boundary forest passports, their spanning-tree layer, and separate spectral boundary data;
 - chains and trees of cores, active-boundary transfer, construction spanning-tree polynomials, and closures;
 - direct and inverse variations, independent resistances, quadric connectivity, and conductance constraints;
+- electrometry: measured quantities, medium sensitivity, and reconstruction under prescribed constraints;
 - metric distributions and edge influence, defined in [[#Metric distribution and edge influence]];
 - interval forms, which require a separate treatment;
 - problems with values prescribed on a selected vertex set, including the Dirichlet problem.
@@ -1025,6 +1026,41 @@ Partition forms and their structural identities are defined in [[Partition Forms
 Published definitions of structural decompositions are collected in [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|the KVP series]], and the two forest normalizations and Laplacian polynomial in [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|the polynomial toponome series]]. Matroid parameters and gluing laws are developed in [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|the matroid series]]. The conventions needed here are recorded below; these extensions are not developed in full.
 
 An algebraic boundary is an image of $\partial$ and belongs to the corresponding exterior power $\Lambda^kW$. A marked graph boundary is a selected set of vertices for a Dirichlet, contraction, or gluing problem. These two meanings of “boundary” are distinct; conventions for a marked boundary are recorded below.
+
+### Electrometry and reconstruction of the medium
+
+The [[en/Resistance Geometry and Duality/Electrometry/Electrometry|Electrometry]] series applies resistance geometry to surface measurements. Three distinct quantities are used: the transfer resistance $T$ of a four-electrode experiment, network effective resistance $R$, and pairwise potential coefficient $Z$ with current return at infinity. Inverse proportionality to distance applies to $Z$ in a homogeneous isotropic half-space with a flat surface. Definitions, measurement orientation, and limitations of the point-source model: [[What Electrometry Measures]].
+
+Forward variation relates a conductance or conductivity change to an energy change at fixed currents. Let $u_q$ denote potentials in the initial network or medium under unit current through pair $q$. For a connected network with positive conductances and for the corresponding continuum model:
+
+$$
+dR_q=-\sum_{e=(i,j)}dc_e\,(u_q(i)-u_q(j))^2,
+\qquad
+dR_q=-\int_\Omega d\sigma(x)\,|\nabla u_q(x)|^2\,dx
+$$
+
+Here the second formula concerns a connected bounded body with a sufficiently regular boundary, bounded positive scalar conductivity bounded away from zero, and disjoint finite perfectly conducting electrodes without contact resistance; the remaining surface is insulated. Geometry is fixed. For $dT$, the square becomes a product of fields from two current experiments. Conversion from $\sigma$ to $c_e$ includes geometric factors. Derivations, the variant for $Z$, and conditions for a point approximation: [[Resistance Variations in Graphs and Continuous Media]].
+
+The complete effective-resistance table between electrodes determines the response matrix $\mathbf L_\partial=\boldsymbol\Lambda_B$ on those electrodes. Its inverse variation is
+
+$$
+d\mathbf L_\partial
+=\tfrac12\mathbf L_\partial(d\mathbf R_\partial)\mathbf L_\partial
+$$
+
+This determines changes in effective couplings after eliminating the interior. Choosing the original medium's internal couplings requires additional information. The formula uses the full consistent matrix $\mathbf R_\partial$; neither $\mathbf Z$ nor combinations on four distinct electrodes alone can replace these data. The response-matrix interpretation agrees with [[#The spanning-tree layer and electrical response]].
+
+If admissible couplings are parameterized by $c=c(\theta)$ and $F$ contains the measured effective resistances, then
+
+$$
+\mathbf A=D_\theta F=-\mathbf S\mathbf H,
+\qquad \mathbf H=D_\theta c,
+\qquad S_{qe}=(u_q(i)-u_q(j))^2
+$$
+
+Here $e=(i,j)$ ranges over allowed variable couplings and $q$ over available measurements; $\mathbf S$ is generally rectangular. In general, it has no inverse quadric-connectivity matrix. Forbidden couplings are excluded from the parameterization and known couplings are fixed.
+
+For $p$ free parameters, $\operatorname{rank}\mathbf A=p$ is equivalent to first-order distinguishability. For a smooth model at an interior point of the admissible set, it is sufficient for local nonlinear uniqueness. Stability is assessed through the singular values of $\mathbf W^{1/2}\mathbf A$ after choosing parameter scales; $\mathbf W$ accounts for data errors. Regularization expresses a preference among models and does not by itself prove uniqueness of the medium from measurements. A spectral representation of transformed pairwise data does not replace this sensitivity check either. Conditions, algorithm, and model verification: [[Reconstructing Couplings with a Prescribed Neighbor Structure]].
 
 ### The Greenian and mutual duality in the symmetric case
 
@@ -1489,6 +1525,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 28 | 2026-11-13 | Clarified application of graph formulas in electrometry: T, R, and Z, field variations, effective electrode response, admissible internal changes, and local distinguishability. Core formulas are unchanged; aligned with Russian revision 28. |
 | 27 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |
 | 26 | 2026-11-08 | Clarified the notation for a sphere element, its center, and its norm: $s=s_0+s^2z/2$. Reserved $\rho(G)$ for a graph's resistance radius. Aligned with Russian revision 26. |
 | 25 | 2026-11-06 | Aligned structures and grades, objects, weight-one elements, zero-norm points, and weight-zero vectors. Distinguished vertices, the null vector, sphere elements, and centers; synchronized the introductory and Spaces series. Aligned with Russian revision 25. |
