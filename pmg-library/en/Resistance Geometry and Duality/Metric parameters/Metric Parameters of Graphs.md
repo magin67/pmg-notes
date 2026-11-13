@@ -41,7 +41,7 @@ The graph part requires [[Effective Resistance and Graph Geometry|effective resi
 
 The geometric background is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]. Particularly relevant are [[Nonlocal Elements, Spheres, and Their Centers|the distinction between a sphere element and its center]], [[Decomposing a Form into Atomic and Difference Parts|projections]] and [[Bi-coordinates and Di-coordinates|coordinates]], and, for comparing the two types of vertex removal, [[Vertex Elimination and Induced Couplings|elimination that preserves the metric]].
 
-General definitions and notation are given in the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]].
+General definitions and notation are given in the [[Core specification|Core Specification]] and [[PMG terminology|Terminology]].
 
 ## Notes in the series
 

@@ -1,5 +1,5 @@
 ---
-title: Вводная серия PMG
+title: Вводная серия
 date: 2026-10-08
 updated: 2026-11-11
 revision: 15

@@ -547,7 +547,7 @@ The [[Decomposing a Form into Atomic and Difference Parts#Coordinates in the iso
 
 ## Sources and status of the results
 
-The algebraic definitions of vertices, vectors, boundaries, and forms follow the [[Core specification|core specification]]. The extension, isotropic correction, criterion for the exterior description of an affine subspace, and identity (6) are proved in the text. Numerical examples are calculated directly; the determinant for $z  a  c$ is calculated independently of (6).
+The algebraic definitions of vertices, vectors, boundaries, and forms follow the [[Core specification|Core Specification]]. The extension, isotropic correction, criterion for the exterior description of an affine subspace, and identity (6) are proved in the text. Numerical examples are calculated directly; the determinant for $z  a  c$ is calculated independently of (6).
 
 The previous revision included exact rational checks in the four-dimensional model: local points, the midpoint correction, distances, and determinant evaluations. The bilinear version of (6) was checked on all 70 pairs of exterior basis elements of the same grade. During the notation revision, the example formulas and projection coordinates in the related note were checked again. These calculations verify signs and do not replace the general proof. No working conjectures are included.
 

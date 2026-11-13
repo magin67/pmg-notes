@@ -1,5 +1,5 @@
 ---
-title: Further Reading for the PMG Introductory Series
+title: Further Reading for the Introductory Series
 date: 2026-10-07
 updated: 2026-10-08
 revision: 2

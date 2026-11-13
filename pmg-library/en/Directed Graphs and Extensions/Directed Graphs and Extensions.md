@@ -24,7 +24,7 @@ What changes when couplings become directed and constructions become nonsymmetri
 
 ## Reading route
 
-The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]], especially the algebra of forms and the Laplacian exponential.
+The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|Introductory Series]], especially the algebra of forms and the Laplacian exponential.
 
 1. Start with balance and the bilinear Laplacian in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]], then proceed to the exponential and circulation.
 2. For directional geometry, first use [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]], then read about resistances, coordinates, and the sphere in the balanced series.

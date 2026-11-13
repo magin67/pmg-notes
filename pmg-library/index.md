@@ -11,7 +11,7 @@ description: Публичная библиотека заметок PMG · Publi
 - **[Русский](ru/index.md)** — описание проекта, порядок чтения и тематические направления.
 - **[English](en/index.md)** — project overview, reading guide, and research topics.
 
-[[ru/Спросить ChatGPT о PMG|Спросить ChatGPT о PMG]] · [[en/Ask ChatGPT about PMG|Ask ChatGPT about PMG]]
+[[ru/Спросить ChatGPT о PMG|Спросить ChatGPT о библиотеке]] · [[en/Ask ChatGPT about PMG|Ask ChatGPT about the Library]]
 
 Библиотека постепенно пополняется. Переводы заметок публикуются по мере готовности; состав русской и английской подборок может различаться.
 

@@ -488,7 +488,7 @@ These definitions do not require nonnegative bi-coordinates. [[Selected Vertices
 
 ## Sources and status of the results
 
-The definitions of objects, elements, points, vectors, forms, and potentials agree with the [[Core specification|core specification]]. This note is based on the author's PMG research; definitions and proofs are given here. The distinction between the PMG meaning of “frame” and its external usage is explained with reference to [2].
+The definitions of objects, elements, points, vectors, forms, and potentials agree with the [[Core specification|Core Specification]]. This note is based on the author's PMG research; definitions and proofs are given here. The distinction between the PMG meaning of “frame” and its external usage is explained with reference to [2].
 
 The quadratic and polar form decompositions (1), (2) are proved by bilinearity. The Laplacian of a frame names the difference part defined here; negative couplings explicitly use an algebraic extension of the main graph model. The metric interpretation through a center and moment of inertia is compared with the known identities in [1]. Orthogonal projection is a standard linear-algebra construction; its relation to di-coordinates and its expression through potentials are derived here. Formulas (5), (6) are also proved in the text.
 

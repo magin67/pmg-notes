@@ -70,7 +70,7 @@ Its corresponding matrix cone is $\{\mathbf L(\boldsymbol\mu):\boldsymbol\mu\in\
 
 Separate eigenvalue nonnegativity constraints may therefore be added, but are redundant. The converse fails: for example, the square of a path Laplacian is positive semidefinite with zero row sums, yet its entries between vertices at distance two are positive.
 
-The coordinate inner product and basis remain fixed. For a connected graph, the PMG resistance inner product is determined by $\mathbf{Gr}=\mathbf L^+$ and depends on $\boldsymbol\mu$; these identifications are distinguished in [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]].
+The coordinate inner product and basis remain fixed. For a connected graph, the PMG resistance inner product is determined by $\mathbf{Gr}=\mathbf L^+$ and depends on $\boldsymbol\mu$; these identifications are distinguished in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]].
 
 ## A complete example: the eigenbasis of P3
 
@@ -345,7 +345,7 @@ The $P_3$ formulas were checked exactly: spectral and edge-built matrices, condu
 
 - [C. R. Johnson, P. Paparella. Perron Spectratopes and the Real Nonnegative Inverse Eigenvalue Problem](https://arxiv.org/abs/1508.07400): Definition 3.1 and Proposition 3.4 - the Perron spectracone and its polyhedrality. The Laplacian cone is related to it by the linear map proved above.
 - [A. E. Brouwer, W. H. Haemers. Spectra of Graphs, authors' text](https://aeb.win.tue.nl/2WF02/spectra.pdf): §2.1, Proposition 2.1.1 - simultaneous diagonalization. [Book page and corrections](https://homepages.cwi.nl/~aeb/math/ipm/).
-- [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality|Diagonal Representation of Polyforms and Duality]], and [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Canonical Vector Representation of the Greenian|The Canonical Vector Representation of the Greenian]]: spaces, metric evaluations, exponentials, and signs of Greenian coefficients.
+- [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality|Diagonal Representation of Polyforms and Duality]], and [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Canonical Vector Representation of the Greenian|The Canonical Vector Representation of the Greenian]]: spaces, metric evaluations, exponentials, and signs of Greenian coefficients.
 - [Checks and figure reproduction](https://github.com/magin67/pmg-notes/tree/v5/checks/spectral): computations for the spectral cone of the $P_3$ basis.
 
 Navigator: [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]].

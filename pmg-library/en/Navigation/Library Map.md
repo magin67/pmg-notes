@@ -2,7 +2,7 @@
 title: Library Map
 date: 2026-11-11
 updated: 2026-11-13
-revision: 3
+revision: 4
 translated_revision: 89
 status: published
 text_prepared_by: ChatGPT
@@ -20,7 +20,7 @@ The map shows which PMG directions are developed in the library, how they connec
 
 The library contains 19 bilingual series with 135 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
-Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification of PMG]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG Terminology]]. Series navigators give reading order and prerequisites.
+Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. Series navigators give reading order and prerequisites.
 
 ## Research directions
 
@@ -105,7 +105,7 @@ These questions extend beyond the agreed scope of the published series. “Plann
 
 **General transformation of Greenian toponomes (Д03, А03).** Extend the published relation between canonical forest expansions and rooted spectral polynomials to full toponomes without a labeled matrix. Determine the required type data. To investigate. [[en/Resistance Geometry and Duality/Greenian and polyform duality/Toponomes of the Greenian Exponential and Dual Pairs|Toponomes of the Greenian Exponential and Dual Pairs]]
 
-**Polyform algebra and its notation (О01).** Prepare a separate treatment of form products, quadratic dependence, and polarization. Compare double forms and check proposed shorthand against simplex and metric-evaluation notation. Planned. [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification of PMG]] · [Belkhirat and Labbi](https://arxiv.org/abs/1402.4072)
+**Polyform algebra and its notation (О01).** Prepare a separate treatment of form products, quadratic dependence, and polarization. Compare double forms and check proposed shorthand against simplex and metric-evaluation notation. Planned. [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] · [Belkhirat and Labbi](https://arxiv.org/abs/1402.4072)
 
 **A Fourier transform on polyforms (О01-О03, Д02).** Specify a function space, independent variables, an exponential kernel, and top-coefficient extraction. Check inversion, signs, normalization, basis dependence, and mixed forms. Compare nilpotent-variable transforms, Berezin integration, and the double Hodge operator. To investigate. [[en/Getting Started and Foundations/Introduction/Laplacian Exponential|Laplacian Exponential]] · [Frydryszak](https://arxiv.org/abs/0810.3016) · [Belkhirat and Labbi](https://arxiv.org/abs/1402.4072)
 

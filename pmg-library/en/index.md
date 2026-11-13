@@ -18,7 +18,7 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Getting started and foundations
 
-[[en/Ask ChatGPT about PMG|Ask ChatGPT about PMG]] — a ready-to-use prompt and example questions about the library.
+[[en/Ask ChatGPT about PMG|Ask ChatGPT about the Library]] — a ready-to-use prompt and example questions about the library.
 
 [[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] brings together the introductory series, specification, terminology, and general reading routes.
 

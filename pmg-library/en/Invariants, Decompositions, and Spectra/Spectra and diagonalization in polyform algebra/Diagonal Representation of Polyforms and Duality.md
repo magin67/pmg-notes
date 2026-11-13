@@ -38,7 +38,7 @@ v\cdot w=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf w,\qquad
 \mathbf{Gr}=\mathbf L^+
 $$
 
-Here $\mathbf{Gr}$ inverts $\mathbf L$ on $H$ and vanishes on constant columns. These definitions agree with the [[en/Getting Started and Foundations/Foundations/Core specification#The resistance metric|core specification]].
+Here $\mathbf{Gr}$ inverts $\mathbf L$ on $H$ and vanishes on constant columns. These definitions agree with the [[en/Getting Started and Foundations/Foundations/Core specification#The resistance metric|Core Specification]].
 
 The formal form $[v,w]$ is not itself an operator. Given the auxiliary inner product, it corresponds to the operator $z\mapsto v\langle w,z\rangle_0$. Under precisely this identification, the form
 
@@ -434,7 +434,7 @@ All inversion formulas here concern the connected symmetric case. For a disconne
 
 Diagonalization of a symmetric operator, exterior powers, and the relationship between elementary symmetric polynomials and the determinant are classical results. Here they are reconciled with PMG formal forms, mutual duality of exponentials, and the established normalization of $T_n$. Factorization and complementary coefficient reversal are proved in the text; the figures and numerical identities for $P_3$ come from exact computation. A computational example does not replace a general proof.
 
-- [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG terminology]] - spaces, forms, normalized potentials, and current notation.
+- [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]] - spaces, forms, normalized potentials, and current notation.
 - [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Exterior Exponential and Representations of the Greenian|The Exterior Exponential and Representations of the Greenian]] - factorization, minors, and mutual duality of exponentials in an arbitrary basis.
 - [[en/Resistance Geometry and Duality/Greenian and polyform duality/Laplacian and Greenian - Mutual Duality of Exponentials|Laplacian and Greenian - Mutual Duality of Exponentials]] - complementary grades defined through exterior contraction.
 - [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Forest Coefficients and the Laplacian Polynomial|Forest Coefficients and the Laplacian Polynomial]] and [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Greenian Metric and Potentials|The Greenian Metric and Potentials]] - scalar polynomials and the two metric evaluations.

@@ -31,7 +31,7 @@ H=\mathbf1^\perp\subset\mathbb R^n,\qquad
 \langle\mathbf v,\mathbf w\rangle_0=\mathbf v^{\mathsf T}\mathbf w
 $$
 
-A column $\mathbf v\in H$ corresponds to $v=\sum_i v_i a_i\in W$. Eigenvectors are normalized using the auxiliary inner product $\langle\ ,\ \rangle_0$. The PMG resistance inner product is $v\cdot w=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf w$, where $\mathbf{Gr}=\mathbf L^+$. It does not replace coordinate normalization. Spaces and metrics are defined in [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]].
+A column $\mathbf v\in H$ corresponds to $v=\sum_i v_i a_i\in W$. Eigenvectors are normalized using the auxiliary inner product $\langle\ ,\ \rangle_0$. The PMG resistance inner product is $v\cdot w=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf w$, where $\mathbf{Gr}=\mathbf L^+$. It does not replace coordinate normalization. Spaces and metrics are defined in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]].
 
 Let $\Sigma$ be the set of distinct positive eigenvalues of $\mathbf L$. For $\lambda\in\Sigma$, put
 
@@ -548,7 +548,7 @@ Spectral projectors, interpolation representations of functions of a symmetric o
 The $C_4$ example was checked exactly in rational arithmetic: projectors were compared in two bases and through polynomials in the edge-built Laplacian; every grade was compared with an independent edge expansion; the Green matrix was computed by inversion on the centered space. Exterior contraction, the centered transfer, forest coefficients, and effective resistances were checked. The figures use these computed data.
 
 - [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality|Diagonal Representation of Polyforms and Duality]] - eigendirection factorization, elementary symmetric polynomials, and graph normalizations.
-- [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG terminology]] - forms, metrics, and current notation.
+- [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]] - forms, metrics, and current notation.
 - [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Exterior Exponential and Representations of the Greenian|The Exterior Exponential and Representations of the Greenian]] - the general exponential law of grades and dual contraction.
 - [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Greenian Metric and Potentials|The Greenian Metric and Potentials]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Coefficients and Kirchhoff Indices|Coefficients and Kirchhoff Indices]] - the two metric evaluations and total resistance characteristics.
 - [Jonathan Kelner. Lecture 2, MIT 18.409, notes by Mergen Nachin](https://ocw.mit.edu/courses/18-409-topics-in-theoretical-computer-science-an-algorithmists-toolkit-fall-2009/7c5d4c779c64e9ed3a5783a80b7eb0a5_MIT18_409F09_scribe2.pdf) - Laplacian spectral theory and graph eigenmodes.

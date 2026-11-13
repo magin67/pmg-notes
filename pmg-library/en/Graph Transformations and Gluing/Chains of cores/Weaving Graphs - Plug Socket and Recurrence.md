@@ -163,7 +163,7 @@ $$
 \tag{5}
 $$
 
-The norm here is quadratic, as in [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG Terminology]]. In coordinates, $\gamma=\mathbf p^{\mathsf T}\mathbf{Gr}_K\mathbf q$, where $\mathbf{Gr}_K=\mathbf L_K^+$; this is an inner product, not the product of two resistances. It can be found from pairwise resistances alone:
+The norm here is quadratic, as in [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. In coordinates, $\gamma=\mathbf p^{\mathsf T}\mathbf{Gr}_K\mathbf q$, where $\mathbf{Gr}_K=\mathbf L_K^+$; this is an inner product, not the product of two resistances. It can be found from pairwise resistances alone:
 
 $$
 \gamma=\frac{R_{p_0q_1}+R_{p_1q_0}-R_{p_0q_0}-R_{p_1q_1}}2

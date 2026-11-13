@@ -123,7 +123,7 @@ This is the precise sense in which contraction gives a passage to a subspace. Th
 
 ### Derivation using potentials
 
-Recall that $\tau(G)$ is the spanning-tree coefficient, and $u_M(f)$ is the coefficient of the original spanning-tree form in the product $Mf$. The metric identity in the [[Core specification#Potential and the metric identity|core specification]] identifies the normalized potential with the numerical metric evaluation of the form.
+Recall that $\tau(G)$ is the spanning-tree coefficient, and $u_M(f)$ is the coefficient of the original spanning-tree form in the product $Mf$. The metric identity in the [[Core specification#Potential and the metric identity|Core Specification]] identifies the normalized potential with the numerical metric evaluation of the form.
 
 > [!info] Derivation using potentials
 > **Lemma.** For the contraction of a pair $a,b$,

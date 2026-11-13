@@ -30,7 +30,7 @@ How are spaces, the resistance metric, geometric characteristics, and dual repre
 
 ## Reading route
 
-The prerequisites are the Laplacian, Green matrix, resistances, and algebra of forms from [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]].
+The prerequisites are the Laplacian, Green matrix, resistances, and algebra of forms from [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|Introductory Series]].
 
 1. [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]] introduces spaces, coordinates, and operations on selected vertices.
 2. [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]] connects this geometry with the radius, centralities, and other characteristics.

@@ -21,15 +21,34 @@ export const DefaultFrame: PageFrame = {
     right,
     footer,
   }: PageFrameProps) {
+    const russian =
+      componentData.fileData.frontmatter?.lang === "ru" ||
+      componentData.fileData.slug?.startsWith("ru/")
     return (
       <>
-        <div class="left sidebar">
+        <div class="left sidebar" id="pmg-navigation">
           {left.map((BodyComponent) => (
             <BodyComponent {...componentData} />
           ))}
         </div>
         <div class="center">
           <div class="page-header">
+            {left.length > 0 && (
+              <button
+                type="button"
+                class="pmg-navigation-toggle"
+                aria-controls="pmg-navigation"
+                aria-expanded="true"
+                hidden
+              >
+                <span class="pmg-navigation-hide">
+                  {russian ? "Скрыть навигацию" : "Hide navigation"}
+                </span>
+                <span class="pmg-navigation-show">
+                  {russian ? "Показать навигацию" : "Show navigation"}
+                </span>
+              </button>
+            )}
             <Header {...componentData}>
               {header.map((HeaderComponent) => (
                 <HeaderComponent {...componentData} />

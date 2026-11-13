@@ -491,7 +491,7 @@ There are two distinct extensions of the graph description here.
 
 First, even with the resistance metric fixed, it is possible to consider all elements $s=s_0+s^2z/2$, rather than only local vertices. Their norms matter for describing spheres, orthogonality conditions with points, and inner products of the elements themselves. Passing to centers preserves the metric on boundaries but discards each element's norm $s^2$. Thus freedom to choose the norms of basis vertices does not mean that the norms of all geometric objects lack content.
 
-Second, a positive definite displacement metric can itself be specified independently of a graph. Not every Euclidean simplex is the resistance simplex of a graph with positive coupling strengths: the recovered Laplacian matrix must have nonpositive off-diagonal entries, as stated in the [[Core specification#The distance operator|core specification]]. Positivity of couplings is an additional condition of the graph model, rather than a condition for defining an arbitrary Euclidean simplex.
+Second, a positive definite displacement metric can itself be specified independently of a graph. Not every Euclidean simplex is the resistance simplex of a graph with positive coupling strengths: the recovered Laplacian matrix must have nonpositive off-diagonal entries, as stated in the [[Core specification#The distance operator|Core Specification]]. Positivity of couplings is an additional condition of the graph model, rather than a condition for defining an arbitrary Euclidean simplex.
 
 The geometric description therefore covers a broader class of metrics and objects. This is not simply a claim about a greater dimension: for a graph on $n$ vertices, the minimal extension with $z$ has dimension $n+1$.
 

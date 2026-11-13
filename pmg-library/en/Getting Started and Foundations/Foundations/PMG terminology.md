@@ -1,5 +1,5 @@
 ---
-title: PMG Terminology
+title: Terminology
 date: 2026-10-09
 updated: 2026-11-13
 revision: 30
@@ -14,9 +14,9 @@ aliases:
   - "en/Foundations/PMG terminology"
 ---
 
-This glossary records the terminology of the [[Core specification|core specification]], the [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|introductory series]], and the published thematic series. Each entry gives the English term, its Russian equivalent, and a brief definition. Applicability conditions and fundamental identities of the core are specified in the core specification; definitions of extensions, proofs, and examples appear in the linked notes.
+This glossary records the terminology of the [[Core specification|Core Specification]], the [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|introductory series]], and the published thematic series. Each entry gives the English term, its Russian equivalent, and a brief definition. Applicability conditions and fundamental identities of the core are specified in the core specification; definitions of extensions, proofs, and examples appear in the linked notes.
 
-Russian version: [[ru/Начало работы и основания/Основания/Терминология PMG|Терминология PMG]].
+Russian version: [[ru/Начало работы и основания/Основания/Терминология PMG|Терминология]].
 
 ## Scope and terminology status
 

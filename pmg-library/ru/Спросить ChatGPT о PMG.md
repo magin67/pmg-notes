@@ -1,5 +1,5 @@
 ---
-title: Спросить ChatGPT о PMG
+title: Спросить ChatGPT о библиотеке
 description: Готовый запрос для вопросов о библиотеке PMG в ChatGPT.
 lang: ru
 translation_key: ask-chatgpt-about-pmg

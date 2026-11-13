@@ -68,7 +68,7 @@ The [[Products and Powers of Symmetric Polyforms#A single generator|SPF algebra]
 
 ## Status and scope of the series
 
-The identities of forms are proved before a metric is chosen; computations on small examples supplement the proofs. Representation size, coefficient sum, and metric evaluation are distinct. Notation follows the [[Core specification|core specification]] and [[PMG terminology|terminology]].
+The identities of forms are proved before a metric is chosen; computations on small examples supplement the proofs. Representation size, coefficient sum, and metric evaluation are distinct. Notation follows the [[Core specification|Core Specification]] and [[PMG terminology|terminology]].
 
 The main proof works with partition forms. [[Fundamental Theorem of Symmetric Polyforms#Correspondence with classical representation theory|Representation theory]] explains the extension to all forms on boundaries and belongs to the additional route. Cayley's formula, Abel polynomials, and their connection with Stirling numbers are classical results; the notes identify their sources and the passage to PMG notation.
 

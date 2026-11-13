@@ -28,7 +28,7 @@ What objects does polyform algebra construct, which identities do they satisfy, 
 
 ## Reading route
 
-The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]], especially operations on forms and the Laplacian exponential.
+The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|Introductory Series]], especially operations on forms and the Laplacian exponential.
 
 1. Begin with [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities|Structural Identities]]: partition forms and their relations.
 2. Continue with [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms|Symmetric Polyforms]] and [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials|Combinatorial Potentials]]: symmetric sums and counts of their representations. The combinatorial definitions can be read alongside the fundamental theorem.

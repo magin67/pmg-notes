@@ -392,7 +392,7 @@ In a bipartite graph, we can retain one part and eliminate the other. There are 
 
 Vertex elimination, the Schur complement, Kron reduction, and preservation of effective resistances are classical results [1]. This note derives them for the adopted graph model and represents them through projection of arguments, decomposition of the Laplacian, and factorization of the metric polyform. This presentation makes no claim of novelty for the classical operation itself.
 
-The text uses the current definitions in the [[Core specification|core specification]] and [[PMG terminology|terminology]], together with the names for bi-coordinates and graph quantities agreed on in this series.
+The text uses the current definitions in the [[Core specification|Core Specification]] and [[PMG terminology|terminology]], together with the names for bi-coordinates and graph quantities agreed on in this series.
 
 The path and star calculations are given in the text. In addition, eight settings were checked using exact rational arithmetic, including cases with one selected vertex and with all vertices selected. Projections computed from the original Gram matrix were compared with induced couplings and the response matrix. Direct exterior multiplication verified the factorization of the exponential and normalized potentials on bases of every exterior grade of the retained subspace. Elimination order and disconnected cases were checked separately. These checks verify formulas and examples; the general statements rest on the proofs given above. The note contains no hypotheses.
 

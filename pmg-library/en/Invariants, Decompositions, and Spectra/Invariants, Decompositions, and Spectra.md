@@ -26,7 +26,7 @@ Which features of a graph do its characteristics and decompositions retain? What
 
 ## Reading route
 
-The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]]. Dual forest parameters also require definitions from [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|Greenian and Polyform Duality]]. The section has three independent entry points:
+The prerequisite is [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|Introductory Series]]. Dual forest parameters also require definitions from [[en/Resistance Geometry and Duality/Greenian and polyform duality/Greenian and Polyform Duality|Greenian and Polyform Duality]]. The section has three independent entry points:
 
 - [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Matroid Parameters and Forest Characteristics of Graphs|Matroid Parameters and Forest Characteristics of Graphs]] - which parameters depend only on the cycle matroid.
 - [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]] - how to decompose a chosen table of pair characteristics; the initial route requires linear algebra, without the whole matroid series.

@@ -38,13 +38,13 @@ Secondary thematic entries:
 
 ## Prerequisites
 
-The foundation is the [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]]. The following topics are particularly useful here:
+The foundation is the [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|Introductory Series]]. The following topics are particularly useful here:
 
 - objects, elements, affine vectors, exterior products, boundaries, and forms - [[Basic Objects and Operations of Polyform Algebra]];
 - resistance geometry, inner products, and norms of exterior structures - [[Effective Resistance and Graph Geometry]], [[Inner Product of Graph Vectors]], and [[Metric of Higher-Grade Objects]];
 - the metric polyform and computation of the metric through normalized potentials - [[Laplacian Exponential]].
 
-Definitions and notation are collected in the [[Core specification|core specification]], and names and terminological distinctions in [[PMG terminology|PMG terminology]]. The results on coupling variations from the introductory series are not required for the main route.
+Definitions and notation are collected in the [[Core specification|Core Specification]], and names and terminological distinctions in [[PMG terminology|Terminology]]. The results on coupling variations from the introductory series are not required for the main route.
 
 ## Notes in the series
 

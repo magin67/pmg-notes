@@ -38,7 +38,7 @@ The 19 bilingual series contain 135 substantive notes in each language. Navigato
 
 | Series | Section | Notes |
 | --- | --- | ---: |
-| [[en/Getting Started and Foundations/Introduction/PMG Introductory Series\|PMG Introductory Series]] | [[en/Getting Started and Foundations/Getting Started and Foundations\|Getting Started and Foundations]] | 10 |
+| [[en/Getting Started and Foundations/Introduction/PMG Introductory Series\|Introductory Series]] | [[en/Getting Started and Foundations/Getting Started and Foundations\|Getting Started and Foundations]] | 10 |
 | [[en/Polyform Algebra and Combinatorics/Structural identities/Structural Identities\|Structural Identities]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 5 |
 | [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Symmetric Polyforms\|Symmetric Polyforms]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 5 |
 | [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials\|Combinatorial Potentials]] | [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics\|Polyform Algebra and Combinatorics]] | 6 |

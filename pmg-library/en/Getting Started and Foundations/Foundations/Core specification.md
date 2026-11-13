@@ -1,5 +1,5 @@
 ---
-title: Core Specification of PMG
+title: Core Specification
 date: 2026-10-09
 updated: 2026-11-13
 revision: 28
@@ -16,7 +16,7 @@ aliases:
 
 This specification records the definitions, notation, and fundamental identities of the Polyform Metric Geometry (PMG) core presented in the [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|introductory series]]. It provides a reference for conventions and the conditions under which formulas apply. Proofs, examples, and references appear in the corresponding notes of the series.
 
-Russian version: [[ru/Начало работы и основания/Основания/Спецификация ядра PMG|Спецификация ядра PMG]].
+Russian version: [[ru/Начало работы и основания/Основания/Спецификация ядра PMG|Спецификация ядра]].
 
 ## Purpose and scope
 

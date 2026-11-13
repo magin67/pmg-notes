@@ -18,7 +18,7 @@ A partition of a vertex set can be assigned a product of the forms of its block 
 
 The identity itself is an equality of forms and requires no choice of metric. Once an inner product is specified, it yields a numerical equality of norms and, in Euclidean geometry, an equality of sums of squared areas.
 
-We use the definitions from [[Basic Objects and Operations of Polyform Algebra]]. The geometric part requires the [[Metric of Higher-Grade Objects|metric on exterior powers]]. The notation follows the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]].
+We use the definitions from [[Basic Objects and Operations of Polyform Algebra]]. The geometric part requires the [[Metric of Higher-Grade Objects|metric on exterior powers]]. The notation follows the [[Core specification|Core Specification]] and [[PMG terminology|Terminology]].
 
 Juxtaposition of exterior elements denotes their exterior product.
 

@@ -19,7 +19,7 @@ Suppose that several vertices of a graph have been selected. Consider their rela
 
 Selecting vertices does not yet change the graph. All the original couplings still contribute to the metric. Constructing another graph on the selected vertices alone will be a separate problem.
 
-This is the first note in the series “Spaces”. It uses the definitions in [[Basic Objects and Operations of Polyform Algebra]] and the metric identity in [[Laplacian Exponential]]. The conventions are collected in the [[Core specification|core specification]]. The notation needed here is explained as it appears.
+This is the first note in the series “Spaces”. It uses the definitions in [[Basic Objects and Operations of Polyform Algebra]] and the metric identity in [[Laplacian Exponential]]. The conventions are collected in the [[Core specification|Core Specification]]. The notation needed here is explained as it appears.
 
 ## Selected vertices and graph geometry
 
@@ -382,7 +382,7 @@ Throughout this note, elements belong to $\mathcal A$, while the metric is appli
 
 ## Foundations and status
 
-The definitions of elements, vectors, boundaries, and forms follow the [[Core specification|core specification]]. The subspace membership criterion, the change-of-basis rule for the exterior structure, and closure of the algebra of forms are derived in this note. The metric identity is taken from the introductory series; the path example is checked by direct multiplication of forms.
+The definitions of elements, vectors, boundaries, and forms follow the [[Core specification|Core Specification]]. The subspace membership criterion, the change-of-basis rule for the exterior structure, and closure of the algebra of forms are derived in this note. The metric identity is taken from the introductory series; the path example is checked by direct multiplication of forms.
 
 For a review of the underlying constructions:
 

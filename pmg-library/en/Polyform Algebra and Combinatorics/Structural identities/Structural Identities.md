@@ -37,7 +37,7 @@ Secondary thematic entries:
 
 The algebraic background is developed in [[Basic Objects and Operations of Polyform Algebra]]: boundaries, grades, forms, and their product. [[Metric of Higher-Grade Objects]] is useful for the geometric example, and [[Laplacian Exponential]] for the graph application.
 
-Notation follows the [[Core specification|core specification]] and [[PMG terminology|PMG terminology]]. A block and a component of a partition mean the same thing. The size of a block is its number of vertices; the grade of the corresponding boundary is one less.
+Notation follows the [[Core specification|Core Specification]] and [[PMG terminology|Terminology]]. A block and a component of a partition mean the same thing. The size of a block is its number of vertices; the grade of the corresponding boundary is one less.
 
 ## Reading order
 

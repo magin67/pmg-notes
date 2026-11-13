@@ -33,7 +33,7 @@ This section connects the mathematical PMG notes with executable examples from `
 
 [[Example - Triangle Coupling Variations]] reproduces the strengthening of one and two couplings of a unit triangle from [[Variation of a Single Edge]] and [[Varying several couplings together]]. Edge factors update the metric polyform; formulas and direct matrix calculations check the results.
 
-Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]], particularly [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]].
+Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|Introductory Series]], particularly [[Basic Objects and Operations of Polyform Algebra]] and [[Laplacian Exponential]].
 
 [[Example - Path P5 and Cycle C4 Exponentials]] covers exponential grades, forest weights, spanning-tree coefficients, and resistances of the path and cycle.
 

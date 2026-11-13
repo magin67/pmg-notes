@@ -37,7 +37,7 @@ $$
 z\cdot y=\mathbf z^{\mathsf T}\mathbf{Gr}\mathbf y
 $$
 
-Both matrices vanish on the constant mode $\mathbf1/\sqrt n$ and are mutual inverses on $H$. Auxiliary coordinate normalization and the resistance metric serve different purposes; their definitions are fixed in [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]].
+Both matrices vanish on the constant mode $\mathbf1/\sqrt n$ and are mutual inverses on $H$. Auxiliary coordinate normalization and the resistance metric serve different purposes; their definitions are fixed in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]].
 
 ## Why a path gives a cosine basis
 
@@ -428,7 +428,7 @@ The spectra and eigenbases of paths and cycles are classical results. The text d
 
 For $P_6$, $C_6$, and $C_5$, eigenvalues, projectors, Green matrices, polynomial coefficients, and resistance contributions were checked exactly using rational numbers and radicals. Trigonometric components for the figures were computed numerically and compared with exact projectors. Additional numerical basis checks cover a finite set of sizes; they control computations rather than replacing general proofs. Rounding figure labels does not change the exact formulas used in the text.
 
-- [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG terminology]] - spaces, metrics, and current notation.
+- [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]] - spaces, metrics, and current notation.
 - [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Greenian Metric and Potentials|The Greenian Metric and Potentials]] - resistance and energy evaluations in polyform language.
 - [K. K. K. R. Perera, Y. Mizoguchi. Bipartition of graphs based on the normalized cut and spectral methods](https://arxiv.org/html/1210.7253v2#S4.SS1), § 4.1, Propositions 4.4(2) and 4.8(2) - eigenvalues and eigenvectors of the ordinary cycle and path Laplacians, respectively; formulas for the normalized Laplacian are not used here.
 - [Jonathan Kelner. Lecture 2, MIT 18.409, notes by Mergen Nachin](https://ocw.mit.edu/courses/18-409-topics-in-theoretical-computer-science-an-algorithmists-toolkit-fall-2009/7c5d4c779c64e9ed3a5783a80b7eb0a5_MIT18_409F09_scribe2.pdf) - Laplacian spectral theory and modes of standard graphs.

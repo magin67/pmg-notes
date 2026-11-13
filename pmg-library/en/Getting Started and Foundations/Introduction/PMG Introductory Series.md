@@ -1,5 +1,5 @@
 ---
-title: PMG Introductory Series
+title: Introductory Series
 date: 2026-10-08
 updated: 2026-11-11
 revision: 14
@@ -93,7 +93,7 @@ Full bibliographic details, recommended sections, and access information are col
 
 ## Next steps
 
-The next stage is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|core specification]] and [[PMG terminology]].
+The next stage is developed in [[en/Resistance Geometry and Duality/Spaces/Spaces|Spaces]]: the choice of a basis, isotropic representation, projections, vertex contraction, and vertex elimination. Shared definitions and notation are collected in the [[Core specification|Core Specification]] and [[PMG terminology]].
 
 ## Programming companions
 

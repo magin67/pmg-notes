@@ -55,7 +55,14 @@ function sortExplorer(a: ExplorerNode, b: ExplorerNode): number {
 
 // Register overrides before the YAML loader instantiates plugins and layouts.
 componentRegistry.setOptionOverrides("@quartz-community/folder-page", { sort: sortPages })
-componentRegistry.setOptionOverrides("@quartz-community/explorer", { sortFn: sortExplorer })
+componentRegistry.setOptionOverrides("@quartz-community/explorer", {
+  sortFn: sortExplorer,
+  mapFn: (node: ExplorerNode) => {
+    if (node.isFolder && node.displayName) {
+      node.displayName = node.displayName.replace(/^\p{Ll}/u, (letter) => letter.toUpperCase())
+    }
+  },
+})
 
 const config = await loadQuartzConfig()
 

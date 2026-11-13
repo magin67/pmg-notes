@@ -117,7 +117,7 @@ $$
 
 For fixed $n$, zeros may be omitted: the type $[2,1]$ on six vertices means the full type $[2,1,0]$. Without specifying the underlying vertex set, this abbreviation does not determine the number of singleton vertices.
 
-**Remark.** A type describes a partition and a chosen expression for a sum of forms. A structural identity may relate sums of different types, so the type of an expression should not be regarded as a uniquely determined property of the polyform itself. In the [[Core specification#Forms and polyform algebra|core specification]], homogeneity means that all terms have the same grade; their types need not coincide.
+**Remark.** A type describes a partition and a chosen expression for a sum of forms. A structural identity may relate sums of different types, so the type of an expression should not be regarded as a uniquely determined property of the polyform itself. In the [[Core specification#Forms and polyform algebra|Core Specification]], homogeneity means that all terms have the same grade; their types need not coincide.
 
 In the nonzero case, the number of blocks decreases by one and the grade increases by one. If the joined blocks have type parts $i$ and $j$, the new type replaces them by $i+j+1$.
 

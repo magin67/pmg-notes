@@ -54,7 +54,7 @@ $$
 \|\mathbf A\|_F^2=\sum_{i,j}A_{ij}^2
 $$
 
-Here $\|\cdot\|_F$ is a linear matrix norm. This is an auxiliary coordinate geometry on the space of operators. It differs from the PMG resistance metric defined by $\mathbf{Gr}=\mathbf L^+$ on $H$; the conventions for these identifications are given in [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]].
+Here $\|\cdot\|_F$ is a linear matrix norm. This is an auxiliary coordinate geometry on the space of operators. It differs from the PMG resistance metric defined by $\mathbf{Gr}=\mathbf L^+$ on $H$; the conventions for these identifications are given in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]].
 
 ## Three projection problems
 
@@ -441,7 +441,7 @@ Exact computations independently compare edge matrices, projections, principal m
 - [R. Bhatia. Pinching, Trimming, Truncating, and Averaging of Matrices](https://doi.org/10.1080/00029890.2000.12005245). The American Mathematical Monthly, 107(7), 602–608, 2000: classical operations that remove matrix blocks and their relation to norms.
 - [S. Boyd, L. Vandenberghe. Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf), §8.1.1: Euclidean projection onto a convex set, a half-space, and a cone. [The authors' book page](https://web.stanford.edu/~boyd/cvxbook/).
 - [N. J. Higham. What Is the Determinant of a Matrix?](https://nhigham.com/2021/06/22/what-is-the-determinant-of-a-matrix/), Theorem 1: Hadamard's inequality; [What Is the Schur Complement of a Matrix?](https://nhigham.com/2023/06/01/what-is-the-schur-complement-of-a-matrix/): the Schur complement and block inversion.
-- [[en/Getting Started and Foundations/Foundations/Core specification|Core specification]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality|Diagonal Representation of Polyforms and Duality]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Eigenspaces, Projectors, and Reconstruction of Polyforms|Eigenspaces, Projectors, and Reconstruction of Polyforms]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/The Spectral Cone of a Fixed Basis|The Spectral Cone of a Fixed Basis]]: spaces, forms, projectors, normalizations, and graph sign conditions.
+- [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Diagonal Representation of Polyforms and Duality|Diagonal Representation of Polyforms and Duality]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Eigenspaces, Projectors, and Reconstruction of Polyforms|Eigenspaces, Projectors, and Reconstruction of Polyforms]], [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/The Spectral Cone of a Fixed Basis|The Spectral Cone of a Fixed Basis]]: spaces, forms, projectors, normalizations, and graph sign conditions.
 - [Checks and figure reproduction](https://github.com/magin67/pmg-notes/tree/v5/checks/spectral): exact calculations for projections and the family $\mathbf S_r$.
 
 Series navigator: [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]].

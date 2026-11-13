@@ -1,5 +1,5 @@
 ---
-title: Ask ChatGPT about PMG
+title: Ask ChatGPT about the Library
 description: A ready-to-use prompt for asking ChatGPT about the PMG library.
 lang: en
 translation_key: ask-chatgpt-about-pmg

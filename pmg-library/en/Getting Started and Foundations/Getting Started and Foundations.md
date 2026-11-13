@@ -21,9 +21,9 @@ Begin with the introductory series. Use the specification and terminology as ref
 
 ## Foundations of the library
 
-- **[[en/Getting Started and Foundations/Introduction/PMG Introductory Series|PMG Introductory Series]]**: ten notes, from the Laplacian and electrical networks to polyform algebra and the exterior exponential.
-- [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification of PMG]]: definitions, notation, fundamental identities, and applicability conditions.
-- [[en/Getting Started and Foundations/Foundations/PMG terminology|PMG Terminology]]: accepted terms, Russian equivalents, and distinctions between related concepts.
+- **[[en/Getting Started and Foundations/Introduction/PMG Introductory Series|Introductory Series]]**: ten notes, from the Laplacian and electrical networks to polyform algebra and the exterior exponential.
+- [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]]: definitions, notation, fundamental identities, and applicability conditions.
+- [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]: accepted terms, Russian equivalents, and distinctions between related concepts.
 - [[Further Reading for the PMG Introductory Series]]: external sources for deeper study.
 
 ## Choosing a route
