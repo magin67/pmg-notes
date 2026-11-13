@@ -3,8 +3,8 @@ title: "PMG — Library"
 description: "Resistance geometry and polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 39
-translated_revision: 59
+revision: 40
+translated_revision: 60
 updated: 2026-11-13
 ---
 
@@ -17,6 +17,8 @@ The library brings together established results, explanations of basic concepts,
 The approach is based on polyform algebra. One of the questions that led to its development was how changing one or more couplings affects the properties of an entire system. Products of forms and the Laplacian exponential in this algebra describe the joint effects of couplings and the resulting metric and combinatorial characteristics.
 
 ## Getting started and foundations
+
+[[en/Ask ChatGPT about PMG|Ask ChatGPT about PMG]] — a ready-to-use prompt and example questions about the library.
 
 [[en/Getting Started and Foundations/Getting Started and Foundations|Getting Started and Foundations]] brings together the introductory series, specification, terminology, and general reading routes.
 
