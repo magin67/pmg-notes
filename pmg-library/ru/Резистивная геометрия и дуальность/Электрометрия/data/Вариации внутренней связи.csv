@@ -1,0 +1,7 @@
+pair,R_at_t_1,dR_dt_at_t_1,c_effective_at_t_1,dc_effective_dt_at_t_1
+ab,2,0,3/8,-1/16
+ac,3,-1,1/8,1/16
+ad,3,-1,1/8,1/16
+bc,3,-1,1/8,1/16
+bd,3,-1,1/8,1/16
+cd,2,0,3/8,-1/16
