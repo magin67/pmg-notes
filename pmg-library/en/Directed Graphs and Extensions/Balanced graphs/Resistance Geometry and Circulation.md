@@ -1,15 +1,15 @@
 ---
 title: Resistance Geometry and Circulation
 date: 2026-10-24
-updated: 2026-11-11
-revision: 4
+updated: 2026-11-13
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: resistance-geometry-and-circulation
 lang: en
 description: Euclidean pair geometry, circulation as nonreciprocal response, and a three-vertex resistance formula combining area and circulation.
 order: 7
-source_revision: 7
+source_revision: 8
 aliases:
   - "en/Balanced graphs/Resistance Geometry and Circulation"
 ---
@@ -299,7 +299,7 @@ $$
 This independently agrees with $M=e+L+[(abc)]^2$ and $\tau(M)=1$: the top coefficient of $M[(abc)]^2$ is $1$. An undirected triangle with the same pair resistances has $\chi_{abc}=0$, giving $R_{abc}=3/4$.
 
 > [!info] Three-vertex resistance
-> **Corollary.** With circulation present, the potential of $[(abc)]^2$ is not just the Euclidean boundary norm induced by $g$. It evaluates the full bilinear response. It can be measured as the determinant of the two-experiment response matrix in (4): two independent current excitations and two measurements give a matrix with determinant $R_{abc}$. Reversing every arc changes the sign of $\chi$, while preserving $\chi^2/4$.
+> **Corollary.** With circulation present, the potential of $[(abc)]^2$ is not just the Euclidean boundary norm induced by $g$. It evaluates the full bilinear response. To measure $R_{abc}$, perform two experiments (4) with unit-current excitations $u=b-a$ and $v=c-a$. In each experiment, measure both potential differences $\varphi_b-\varphi_a$ and $\varphi_c-\varphi_a$. The determinant of the resulting response matrix equals $R_{abc}$. Reversing every arc changes the sign of $\chi$, while preserving $\chi^2/4$.
 >
 > Decomposable objects of arbitrary grade obey the analogous determinant rule:
 >
