@@ -1,15 +1,15 @@
 ---
 title: One Changing Edge
 date: 2026-10-31
-updated: 2026-11-11
-revision: 4
+updated: 2026-11-15
+revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-changing-edge
 lang: en
 description: From strengthening a triangle edge to exact variations of the spanning-tree coefficient and resistances. A derivation through one exterior Laplacian exponential factor, forest potentials, and their normalization.
 order: 1
-translated_revision: 8
+translated_revision: 9
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Changing Edge"
 ---
@@ -301,6 +301,58 @@ m_{kl}(f)=-c_{kl}\frac{\partial R_{ij}}{\partial c_{kl}}
 $$
 
 The derivative measures response to an absolute change in $c_{kl}$; the coefficient $m_{kl}(f)$ measures response to a relative change of that conductance.
+
+## Symmetric variation from directed spanning-tree potentials
+
+Compare two changes of the same connected undirected graph. The first changes only the arc $p\to q$ by $t$; the second changes the undirected coupling $pq$ by the same amount. Write $u'_i$ for the rooted spanning-tree potentials of the first graph and use a prime for the metric of the second. Negative $t$ decreases an existing weight; final conductances are nonnegative and the symmetric graph remains connected. Assume $t\ne0$ below.
+
+With outgoing arcs in the rows of the Laplacian, $u'_i$ is the principal minor obtained by deleting row and column $i$, hence the weight of trees directed towards root $i$. The theorem in [[Balanced Variations#One-way variation and loss of balance|Balanced Variations]] specializes in the symmetric case to
+
+$$
+u'_i=\tau\left(1+\frac t2(R_{pq}+R_{pi}-R_{qi})\right),\qquad
+u'_p=\tau,\quad u'_q=\tau(1+tR_{pq})
+$$
+
+Its minor-based proof also applies to the admissible negative $t$ above. With $(mn)=n-m$,
+
+$$
+u'_m-u'_n=-t\tau g_{pq,mn}
+$$
+
+> [!info] Recovering the symmetric correction
+> **Corollary.** One vector of rooted spanning-tree potentials after the directed change determines every inner-product correction under the symmetric change of the same coupling:
+>
+> $$
+> \boxed{g'_{ij,kl}-g_{ij,kl}
+> =-\frac{(u'_i-u'_j)(u'_k-u'_l)}{t\,u'_pu'_q}}
+> $$
+>
+> In particular,
+>
+> $$
+> \boxed{R'_{mn}-R_{mn}=-\frac{(u'_m-u'_n)^2}{t\,u'_pu'_q}}
+> $$
+
+> [!note]- Proof and the Green matrix
+> **Proof.** Polarizing the finite resistance variation gives
+>
+> $$
+> g'_{ij,kl}-g_{ij,kl}
+> =-\frac{t}{1+tR_{pq}}g_{pq,ij}g_{pq,kl}
+> $$
+>
+> Substitute the differences $u'_i-u'_j$ and $u'_pu'_q=\tau^2(1+tR_{pq})$. For $\widetilde{\mathbf u}=\mathbf u'-\mathbf1(\mathbf1^{\mathsf T}\mathbf u')/n$, the same rank-one correction to the centered Green matrix is
+>
+> $$
+> \boxed{\mathbf{Gr}'-\mathbf{Gr}
+> =-\frac{\widetilde{\mathbf u}\widetilde{\mathbf u}^{\mathsf T}}{t\,u'_pu'_q}}
+> $$
+>
+> Indeed, for $\mathbf b=\mathbf e_p-\mathbf e_q$, one has $\widetilde{\mathbf u}=-t\tau\mathbf{Gr}\mathbf b$; substitution recovers Sherman-Morrison. $\square$
+
+These are exact finite formulas. At $t=0$ the correction vanishes; expressions dividing by $t$ are interpreted by continuous extension only. The spanning-tree potentials $u'_i$ are not electrical voltages; their differences encode the original electrical response. The symmetric $\mathbf{Gr}'$ must not be replaced by the pseudoinverse of the directed Laplacian.
+
+For boundary norms of any grade, the relation extends through the Gram determinant; see [[Metric Distribution in Higher Grades#Finite variation of a boundary norm|finite variation of a boundary norm]]. An independent computation of minors and the symmetric metric is given in the [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Directed potentials and the symmetric correction|programming example]].
 
 ## Edge removal and the boundary of applicability
 

@@ -1,9 +1,9 @@
 ---
 title: What Electrometry Measures
 date: 2026-11-13
-updated: 2026-11-13
-revision: 2
-translated_revision: 3
+updated: 2026-11-15
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-measurements-and-pairwise-data
@@ -176,6 +176,40 @@ This ambiguity also occurs in physical resistor networks. Connect each terminal 
 > The theorem concerns recovery of an arbitrary pairwise table from these measurements alone. A model of the medium or known values of other characteristics can reduce the ambiguity. Locating electrodes within the survey area does not itself prevent recovery when additional information is available.
 >
 > The requirement of four distinct electrodes matters: formally $T_{ab,ab}=R_{ab}$, but this measurement is outside the set considered here.
+
+## Sensitivity identities in the graph model
+
+For four distinct vertices, put $x=T_{ab,cd}$, $y=T_{ac,db}$, and $z=T_{ad,bc}$. These orientations give $x+y+z=0$. In a graph they determine sensitivities to absolute conductance changes:
+
+$$
+S_1=-\frac{\partial R_{cd}}{\partial c_{ab}}=x^2,\qquad
+S_2=-\frac{\partial R_{db}}{\partial c_{ac}}=y^2,\qquad
+S_3=-\frac{\partial R_{bc}}{\partial c_{ad}}=z^2
+$$
+
+All derivatives refer to one original graph; for an absent edge, take the right derivative. The basis is the [[One Changing Edge#Sensitivity and resistance preservation|resistance sensitivity formula]].
+
+> [!info] A polynomial relation among three sensitivities
+> **Corollary.**
+>
+> $$
+> \boxed{S_1^2+S_2^2+S_3^2=2(S_1S_2+S_2S_3+S_3S_1)}
+> $$
+
+> [!note]- Proof
+> **Proof.** Since $z=-(x+y)$, one has $S_3-S_1-S_2=2xy$. Squaring gives $(S_3-S_1-S_2)^2=4S_1S_2$; expanding proves the claim. $\square$
+
+[[Edge Influence and Metric Distribution]] uses relative conductance changes: $m_{ab}=c_{ab}S_1$. With unequal conductances, the $m$ coefficients cannot replace $S$; for existing edges, first divide by the respective $c$. For finite independent probes starting from one original graph, use
+
+$$
+S_{pq,mn}=-\frac{1+tR_{pq}}t\bigl(R'_{mn}-R_{mn}\bigr),\qquad t\ne0
+$$
+
+Each probe uses its own changed edge, admissible increment, and original resistance. In a continuous medium, changing the local conductivity of a volume is generally not a single graph-edge change; see [[Resistance Variations in Graphs and Continuous Media]].
+
+Five vertices give $3\binom54=15$ such inner products. The theorem above gives rank $5$, hence a ten-dimensional space of linear relations. Coordinatewise squaring preserves the dimension of the family in general position: where every coordinate is nonzero, its differential is an invertible diagonal matrix. Signs are lost, however, and compatibility conditions on the squares become nonlinear. The identities on individual quadruples are not asserted to be a complete set of those conditions. This count concerns four-point data of grade one, not structural identities of higher-grade forms.
+
+The exact identity, finite-probe normalization, and ranks are checked in the [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Sensitivity identity and the rank of four-point data|programming example]].
 
 ## A pairwise characteristic of a continuous medium
 

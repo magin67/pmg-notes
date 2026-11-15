@@ -1,12 +1,12 @@
 ---
 title: Metric Distribution in Higher Grades
 date: 2026-11-03
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-15
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 lang: en
-translated_revision: 5
+translated_revision: 6
 translation_key: metric-distributions-higher-grades
 order: 4
 description: "The norm of a triangle boundary, distribution over edge pairs, and recovery of individual-edge influence; extending D to every grade."
@@ -355,6 +355,92 @@ The sum formula rests on the classical Cauchy-Binet formula; see R. Stanley, [To
 > Subtracting $N_L(f)$ recovers (1), and differentiation at $t=0$ gives $A_\ell=-c_\ell\partial N_L(f)/\partial c_\ell$. $\square$
 
 On a tree the general result is especially simple. If $X=\sum_Jx_JB_J$ and $Y=\sum_Jy_JB_J$ in the exterior edge basis, then $m_J=x_Jy_J/w_J$. Common edges of two paths are replaced by common sets of $k$ edges in the expansions of exterior objects. This is an algebraic overlap of terms, with their signs and conductances taken into account.
+
+## Finite variation of a boundary norm
+
+Let $X=(a_0\ldots a_k)=v_1\cdots v_k$, where $v_i=(a_0a_i)$, the vertices are distinct, and $1\le k\le n-1$. Write $R_X=X^2$, $w=(pq)$, $R_{pq}=w^2$, and let $\mathbf H$ be the original Gram matrix of the $v_i$. All norms on the right below use the original metric. Change coupling $pq$ by $t$, keeping final conductances nonnegative and the graph connected.
+
+Put $s_i=v_i\cdot w$. The rank-one metric correction in [[One Changing Edge]] gives
+
+$$
+\mathbf H'=\mathbf H-\frac{t}{1+tR_{pq}}ss^{\mathsf T}
+$$
+
+> [!info] Norm variation in every order
+> **Corollary.** Under these assumptions,
+>
+> $$
+> \boxed{R'_X-R_X=-\frac{t}{1+tR_{pq}}\,\|C_wX\|^2}
+> $$
+>
+> The contraction is explicitly defined by
+>
+> $$
+> C_wX=\sum_{i=1}^k(-1)^{i-1}s_i
+> v_1\cdots\widehat v_i\cdots v_k
+> $$
+>
+> A hat omits a factor. Contraction lowers the grade by one; at $k=1$, the norm of a scalar is its square.
+
+> [!note]- Proof through the Gram determinant
+> **Proof.** The rank-one determinant formula yields
+>
+> $$
+> \det\mathbf H'-\det\mathbf H
+> =-\frac{t}{1+tR_{pq}}s^{\mathsf T}\operatorname{adj}(\mathbf H)s
+> $$
+>
+> Inner products of exterior objects with one omitted factor are the corresponding Gram minors. The signs $(-1)^{i-1}$ turn them into cofactors, giving $\|C_wX\|^2=s^{\mathsf T}\operatorname{adj}(\mathbf H)s$. This is also the identity $R_{pq}N_L([X]^2)-N_L([X]^2[w]^2)=\|C_wX\|^2$ used above. $\square$
+
+For the potentials $u'_i$ after the one-sided change $p\to q$ in the [[One Changing Edge#Symmetric variation from directed spanning-tree potentials|directed representation of the correction]], put $h_i=u'_{a_i}-u'_{a_0}=t\tau s_i$. For $t\ne0$ the equivalent expression is
+
+$$
+\boxed{R'_X-R_X=-\frac{h^{\mathsf T}\operatorname{adj}(\mathbf H)h}{t\,u'_pu'_q}}
+$$
+
+For a triangle and a tetrahedron, respectively,
+
+$$
+\Delta R_{abc}=-\frac{\bigl(h_b(ac)-h_c(ab)\bigr)^2}{t\,u'_pu'_q}
+$$
+
+$$
+\Delta R_{abcd}=-\frac{\bigl(h_b(acd)-h_c(abd)+h_d(abc)\bigr)^2}{t\,u'_pu'_q}
+$$
+
+Here $h_b=u'_b-u'_a$, and likewise for $c,d$. At $t=0$ the change is zero without division. These formulas describe one-edge influence; they do not replace the distribution over sets of $k$ edges.
+
+## A coupling between two vertices of the simplex
+
+> [!info] One relative factor in every order
+> **Corollary.** If $p,q\in\{a_0,\ldots,a_k\}$, then
+>
+> $$
+> \boxed{R'_X=\frac{R_X}{1+tR_{pq}}}
+> $$
+>
+> Edge $pq$ need not exist initially: if absent, it can be added with $t\ge0$.
+
+> [!note]- Proof through the normalized potential
+> **Proof.** The vector $w$ lies in the span of $v_1,\ldots,v_k$, so $Xw=0$. For $f=[X]^2$, $q=[w]^2$, this gives $fq=0$. The established formula $N_{L+tq}(f)=(N_L(f)+tN_L(fq))/(1+tR_{pq})$ proves the claim. In the matrix proof, the same condition is $s^{\mathsf T}\mathbf H^{-1}s=R_{pq}$. $\square$
+
+Let $\tau'$ denote the spanning-tree coefficient of the symmetrically changed graph. Then
+
+$$
+\tau'R'_X=\tau R_X,\qquad
+\frac{R'_X}{R'_{pq}}=\frac{R_X}{R_{pq}},\qquad
+\frac1{R'_X}=\frac1{R_X}+\frac{R_{pq}}{R_X}t
+$$
+
+The unnormalized potential of the form is preserved: only the spanning-tree denominator changes. In terms of directed potentials, the same factor is
+
+$$
+\frac{R'_X}{R_X}=\frac{\tau^2}{u'_pu'_q}
+$$
+
+The more general geometric condition is that $w$ belong to the direction space of a simple exterior object $X$. Outside that space, use the general formula of the preceding section. These statements are consequences of the existing variation formula, not independent assumptions about higher grades.
+
+A triangle, a tetrahedron, a grade-four boundary, and an external coupling are checked in the [[en/PythonExamples/Example - Metric Distributions and Edge Influence#Simplex norms and an internal coupling|programming example]].
 
 ## The sum, the output form, and limits of interpretation
 

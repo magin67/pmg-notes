@@ -1,18 +1,18 @@
 ---
 title: "Example: Metric Distributions and Edge Influence"
 date: 2026-11-11
-updated: 2026-11-11
-revision: 1
-translated_revision: 1
+updated: 2026-11-15
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-metric-distributions
 lang: en
-description: "Four exact calculations. Check the effect of a new coupling, path overlap in a weighted tree, a signed field on a cycle, and the distinction between edge marginals and pair coefficients in grade two."
+description: "Five exact calculations. Check the effect of a new coupling, path overlap in a weighted tree, a signed field on a cycle, and the distinction between edge marginals and pair coefficients in grade two."
 order: 22
 ---
 
-Four exact calculations. Check the effect of a new coupling, path overlap in a weighted tree, a signed field on a cycle, and the distinction between edge marginals and pair coefficients in grade two.
+Five exact calculations. Check the effect of a new coupling, path overlap in a weighted tree, a signed field on a cycle, and the distinction between edge marginals and pair coefficients in grade two.
 
 [[ru/PythonExamples/Пример - Метрические распределения и влияние связей|Русский]]
 
@@ -196,4 +196,85 @@ assert values == [1, Q(1, 2), Q(1, 2), Q(1, 4)]
 assert values[1] + values[2] - values[0] == 0
 print("Grade two: same edge marginals; pair coefficients 1/4 and 1/8")
 print("Joint doubling on a path: 1/4; adding the separate increments would give 0")
+```
+
+## Simplex norms and an internal coupling
+
+Strengthen an internal edge of unit complete graphs on three, four, and five vertices. On a weighted graph, compare the package exterior metric, forest potential, Gram determinant, and directed minors. Also check an external coupling for which the simple relative factor fails. Norms are quadratic here, not ordinary areas or volumes. See [[Metric Distribution in Higher Grades#A coupling between two vertices of the simplex]].
+
+```python
+from itertools import combinations
+from sympy import Matrix, eye
+from polyform_algebra.core import green, laplacian
+
+
+def simplex_value(graph, vertices):
+    pairs = tuple((vertices[0], v) for v in vertices[1:])
+    blade = pair_blade(graph, pairs)
+    return metric_distribution(graph, grade=len(pairs)).evaluate(blade)
+
+
+def simplex_forest_value(graph, vertices):
+    ids = tuple(graph.context.labels.index(v) for v in vertices)
+    form = square(Boundary(graph.context, ids)).value
+    exponential = form_exp(laplacian_form(graph).value).value
+    return potential(exponential, form).value / spanning_tree_weight(graph).value
+
+
+for vertices, old, new in (("abc", Q(1,3), Q(1,5)),
+                           ("abcd", Q(1,16), Q(1,24)),
+                           ("abcde", Q(1,125), Q(1,175))):
+    graph = unit_graph(vertices, combinations(vertices, 2))
+    altered = vary_conductances(graph, {("a", "b"): 1})
+    assert simplex_value(graph, vertices) == simplex_forest_value(graph, vertices) == old
+    assert simplex_value(altered, vertices) == simplex_forest_value(altered, vertices) == new
+    assert new/old == 1/(1+Q(2,len(vertices)))
+    print("Internal edge ab:", vertices, "norm", old, "to", new)
+
+weighted = network(tuple("abcdef"), [
+    ("a", "b", 1), ("b", "c", 2), ("c", "d", 3),
+    ("d", "e", 2), ("e", "f", 1), ("f", "a", 2),
+    ("a", "d", 1), ("b", "e", 3),
+])
+labels = weighted.context.labels
+G = Matrix(green(weighted).value.values)
+L = Matrix(laplacian(weighted).value.values)
+E = eye(len(labels))
+tau = spanning_tree_weight(weighted).value
+for p, q, t in (("a","b",Q(2,3)), ("a","b",Q(-1,2)),
+                ("a","b",Q(-1)), ("a","c",Q(3,2)), ("d","e",Q(1))):
+    i, j = labels.index(p), labels.index(q)
+    w = E[:,j] - E[:,i]
+    r = (w.T*G*w)[0]
+    directed_L = L - t*E[:,i]*w.T
+    u = Matrix([directed_L.minor_submatrix(v,v).det() for v in range(len(labels))])
+    altered = vary_conductances(weighted, {(p,q):t})
+    G_new = Matrix(green(altered).value.values)
+    for vertices in ("abc", "abcd", "abcde", "abcdef"):
+        pairs = tuple((vertices[0],v) for v in vertices[1:])
+        V = Matrix.hstack(*(E[:,labels.index(v)]-E[:,labels.index(vertices[0])]
+                            for v in vertices[1:]))
+        H, H_new = V.T*G*V, V.T*G_new*V
+        h = Matrix([u[labels.index(v)]-u[labels.index(vertices[0])] for v in vertices[1:]])
+        old, new = simplex_value(weighted,vertices), simplex_value(altered,vertices)
+        assert old == H.det() == simplex_forest_value(weighted,vertices)
+        assert new == H_new.det() == simplex_forest_value(altered,vertices)
+        assert H_new == H-h*h.T/(t*u[i]*u[j])
+        numerator = (h.T*H.adjugate()*h)[0]
+        assert new-old == -numerator/(t*u[i]*u[j])
+        # Explicit lower-grade exterior object, independently of adjugate(H).
+        contracted = sum(((-1)**k*h[k]*pair_blade(weighted,pairs[:k]+pairs[k+1:])
+                          for k in range(len(pairs))),
+                         zeros(len(list(combinations(range(len(labels)-1),len(pairs)-1))),1))
+        assert metric_distribution(weighted,grade=len(pairs)-1).evaluate(contracted) == numerator
+        if p in vertices and q in vertices:
+            assert new == old/(1+t*r)
+            assert new/old == tau*tau/(u[i]*u[j])
+            assert spanning_tree_weight(altered).value*new == tau*old
+            assert new/(r/(1+t*r)) == old/r
+        elif vertices == "abc" and (p,q) == ("d","e"):
+            assert new != old/(1+t*r)
+            print("External edge de:", vertices, "norm", old, "to", new,
+                  "; internal-edge shortcut would give", old/(1+t*r))
+print("Weighted graph: grades 2-5, strengthening, weakening, removal and addition verified")
 ```

@@ -1,18 +1,18 @@
 ---
 title: "Example: Laplacian, Greenian and Resistance Variations"
 date: 2026-11-11
-updated: 2026-11-11
-revision: 1
-translated_revision: 1
+updated: 2026-11-15
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-network-variations
 lang: en
-description: "Eight exact calculations. Check direct conductance changes, network recovery from Greenian and resistance variations, and the feasibility of prescribed resistances with fixed conductances in a prism."
+description: "Ten exact calculations. Check direct conductance changes, network recovery from Greenian and resistance variations, and the feasibility of prescribed resistances with fixed conductances in a prism."
 order: 20
 ---
 
-Eight exact calculations. Check direct conductance changes, network recovery from Greenian and resistance variations, and the feasibility of prescribed resistances with fixed conductances in a prism.
+Ten exact calculations. Check direct conductance changes, network recovery from Greenian and resistance variations, and the feasibility of prescribed resistances with fixed conductances in a prism.
 
 [[ru/PythonExamples/Пример - Вариации лапласиана, гриниана и резистенсов|Русский]]
 
@@ -274,4 +274,91 @@ target_graph = network_from_resistance(target_matrix, boundary).value
 assert edge_weights(target_graph).get(("a", "b"), 0) == 0
 assert edge_weights(prism)[("a", "b")] == 1
 print("Polynomial constraints: two exact witnesses; k = 2 violates the fixed edge bound")
+```
+
+## Directed potentials and the symmetric correction
+
+Compute directed spanning-tree potentials from principal minors and compare with an independent recalculation of the symmetric network. Check strengthening, weakening, removal of a non-bridge edge, and addition of an absent edge. See [[One Changing Edge#Symmetric variation from directed spanning-tree potentials]].
+
+```python
+from sympy import ones
+
+weighted = network(tuple("abcdef"), [
+    ("a", "b", 1), ("b", "c", 2), ("c", "d", 3),
+    ("d", "e", 2), ("e", "f", 1), ("f", "a", 2),
+    ("a", "d", 1), ("b", "e", 3),
+])
+labels = weighted.context.labels
+L = Matrix(laplacian(weighted).value.values)
+G = green_matrix(weighted)
+tau = tree_weight(weighted)
+E = eye(len(labels))
+probes = (("a", "b", Q(2, 3)), ("a", "b", Q(-1, 2)),
+          ("a", "b", Q(-1)), ("a", "c", Q(3, 2)))
+for p, q, t in probes:
+    i, j = labels.index(p), labels.index(q)
+    b = E[:, i] - E[:, j]
+    directed_L = L + t * E[:, i] * b.T
+    # Independent directed matrix-tree computation, not the response formula.
+    u = Matrix([directed_L.minor_submatrix(v, v).det() for v in range(len(labels))])
+    r = (b.T * G * b)[0]
+    assert u == tau * (ones(len(labels), 1) + t * (
+        (G*b)[i] * ones(len(labels), 1) - G*b))
+    assert u[i] == tau and u[j] == tau * (1 + t*r)
+    centered_u = u - ones(len(labels), 1) * sum(u) / len(labels)
+    symmetric = vary_conductances(weighted, {(p, q): t})
+    correction = -centered_u * centered_u.T / (t*u[i]*u[j])
+    assert green_matrix(symmetric) - G == correction
+    for m, n in combinations(range(len(labels)), 2):
+        v = E[:, n] - E[:, m]
+        transfer = ((E[:, j] - E[:, i]).T * G * v)[0]
+        assert u[m] - u[n] == -t*tau*transfer
+        assert (v.T * correction * v)[0] == -(u[m]-u[n])**2/(t*u[i]*u[j])
+    print("Directed/symmetric:", p+q, "increment", t, "tree ratio", 1+t*r)
+```
+
+## Sensitivity identity and the rank of four-point data
+
+Check the polynomial relation among absolute sensitivities and its normalization through finite probes. Relative coefficients without normalization fail the identity. Compute ranks directly from the four-point combination matrix. See [[What Electrometry Measures#Sensitivity identities in the graph model]].
+
+```python
+orientations = (("a", "b", "c", "d"), ("a", "c", "d", "b"),
+                ("a", "d", "b", "c"))
+products, sensitivities, relative = [], [], []
+for p, q, m, n in orientations:
+    i, j, k, l = (labels.index(v) for v in (p, q, m, n))
+    b, v = E[:, j] - E[:, i], E[:, l] - E[:, k]
+    x = (b.T*G*v)[0]
+    products.append(x)
+    sensitivities.append(x*x)
+    relative.append(edge_weights(weighted).get(tuple(sorted((p, q))), 0)*x*x)
+    t = Q(2, 3)
+    altered = vary_conductances(weighted, {(p, q): t})
+    delta = (v.T*(green_matrix(altered)-G)*v)[0]
+    assert -(1+t*(b.T*G*b)[0])*delta/t == x*x
+
+
+def sensitivity_relation(values):
+    a, b, c = values
+    return a*a+b*b+c*c-2*(a*b+b*c+c*a)
+
+
+assert sum(products) == 0
+assert sensitivity_relation(sensitivities) == 0
+assert sensitivity_relation(relative) != 0
+for size in (4, 5, 6):
+    pairs = list(combinations(range(size), 2))
+    rows = []
+    for a, b, c, d in combinations(range(size), 4):
+        for i, j, k, l in ((a,b,c,d), (a,c,d,b), (a,d,b,c)):
+            row = [0]*len(pairs)
+            for x, y, sign in ((i,l,1), (j,k,1), (i,k,-1), (j,l,-1)):
+                row[pairs.index(tuple(sorted((x, y))))] += sign
+            rows.append(row)
+    rank = Matrix(rows).rank()
+    assert rank == size*(size-3)//2
+    if size == 5:
+        assert len(rows) == 15 and len(rows)-rank == 10
+    print("Four-point data:", size, "vertices, rank", rank)
+print("Sensitivities:", sensitivities, "; polynomial identity verified")
 ```
