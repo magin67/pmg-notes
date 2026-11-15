@@ -2,14 +2,14 @@
 title: Electrometry
 date: 2026-11-13
 updated: 2026-11-15
-revision: 3
-translated_revision: 2
+revision: 4
+translated_revision: 3
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-series-navigation
 lang: en
 order: 0
-description: "Four notes connecting field measurements with resistance geometry: measured quantities, the geometry of pairwise data, sensitivity of the medium, and reconstruction under prescribed constraints."
+description: "Five notes connecting electrometry with resistance geometry: measured quantities, data geometry, sensitivity, constrained reconstruction, and controlled shunting."
 tags:
   - resistances
   - variations
@@ -19,7 +19,7 @@ tags:
 
 Electrometry investigates a conducting medium through currents and voltages at its surface. For PMG, it connects the resistance geometry of a graph to actual measurements: what an inner product means, how an internal coupling affects electrode response, and what is required for the inverse step.
 
-Four notes lead from the measurement configuration to a reconstruction algorithm. The series contains exact results, analysis of real pairwise data, and computational examples. There is no complete, validated method of soil reconstruction yet; the scope of each result is stated in its note.
+Five notes lead from the measurement configuration to a reconstruction algorithm and additional experiments with known external couplings. The series contains exact results, analysis of real pairwise data, and computational examples. There is no complete, validated method of soil reconstruction yet; the scope of each result is stated in its note.
 
 ## Contents and reading order
 
@@ -29,10 +29,9 @@ Four notes lead from the measurement configuration to a reconstruction algorithm
 | 2 | [[Properties of Resistances in a Continuous Medium]] | How does measurement-patch geometry appear in pairwise values, and can fewer measurements suffice? |
 | 3 | [[Resistance Variations in Graphs and Continuous Media]] | How do squared inner products relate to electric fields and quadric connectivity? |
 | 4 | [[Reconstructing Couplings with a Prescribed Neighbor Structure]] | Which assumptions permit reconstruction of internal couplings, and how can stability be checked? |
+| 5 | [[Controlled Shunting and Resistance Reconstruction]] | How does a known external shunt determine an original resistance, and which limitations remain? |
 
-For a first reading, follow the table order. The main connection to PMG variation formulas is developed in [[Resistance Variations in Graphs and Continuous Media]]. The formulation and example of a computational algorithm are collected in [[Reconstructing Couplings with a Prescribed Neighbor Structure]].
-
-A fifth note, [[ru/Резистивная геометрия и дуальность/Электрометрия/Управляемое шунтирование и восстановление сопротивлений|Controlled Shunting and Resistance Reconstruction (Russian)]], extends the series with controlled external shunts, resistance reconstruction from response changes, contacts, and noise. Its English translation is not yet available.
+For a first reading, follow the table order. The fifth note can be read directly after the first: it shows how controlled changes to external electrode connections provide additional information. The main connection to PMG variation formulas is developed in [[Resistance Variations in Graphs and Continuous Media]]. The formulation and example of a computational algorithm are collected in [[Reconstructing Couplings with a Prescribed Neighbor Structure]].
 
 ## What the series establishes
 
@@ -44,9 +43,13 @@ A fifth note, [[ru/Резистивная геометрия и дуальнос
 
 **How assumptions enter the calculation.** The neighbor structure specifies allowed couplings; layers and known regions reduce the number of parameters; regularization expresses preferences among admissible models. In the model $4\times4\times4$ network, a layered description reduces 144 unknown couplings to four parameters. The example shows both successful reconstruction from exact data and sensitivity to noise.
 
+**How controlled shunts supplement measurements.** Attenuation of a nonzero response when the current pair is shunted determines its original resistance. An arbitrary pair requires two conductances and a nonzero response to the shunt. The note examines interactions among multiple shunts, persistent ambiguity in a symmetric configuration, and contact effects. The complete electrode matrix still does not uniquely determine the internal medium.
+
 ## Programming example
 
 [[en/PythonExamples/Example - Electrometry|Example: Electrometry]] combines four calculations with `polyform_algebra`: the rank of four-electrode measurements, real-grid geometry, an internal coupling variation, and reconstruction of four layers. The notebook includes input data, figures, and checks. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/electrometry.ipynb).
+
+[[Controlled Shunting and Resistance Reconstruction]] includes a separate script with `polyform_algebra`: exact shunting checks, a series-contact model, and 10,000 trials with noise. It supplements the four calculations in the shared notebook.
 
 ## Origin and status of results
 
@@ -57,6 +60,7 @@ A fifth note, [[ru/Резистивная геометрия и дуальнос
 | Two geometric modes | Distance-matrix theory; references and verification in [[Properties of Resistances in a Continuous Medium]] | Explains a simple representation of a homogeneous table | Application of an established construction |
 | Variations of fields and effective couplings | Inverse-operator differentiation and Kron reduction; derivations in [[Resistance Variations in Graphs and Continuous Media]] | Relates medium sensitivity to quadric connectivity | Established constructions in PMG notation |
 | Reconstruction on a prescribed grid | Jacobian and regularized least squares; [[Reconstructing Couplings with a Prescribed Neighbor Structure]] | Incorporates admissible coupling changes | Application of established methods; model verification |
+| Controlled shunting | Established measurement technique (Kapitanov, RU2664633C2) and finite coupling variations; [[Controlled Shunting and Resistance Reconstruction]] | Recovers a resistance from a change in an inner product; accounts for joint shunt effects | Application of established results and explicit derivations; no priority claimed |
 
 ## Open questions
 
@@ -64,6 +68,7 @@ A fifth note, [[ru/Резистивная геометрия и дуальнос
 - Which spectral features are robust to those errors and related to heterogeneity?
 - Which medium parameters can be distinguished on the chosen patch, and to what accuracy?
 - How can a smaller measurement set preserve the required information about the data or medium parameters?
+- Which external shunt placements and conductances allow stable distinction of the selected parameters, accounting for contacts and measurement errors?
 
 These questions are related but require different validation criteria. Exact reproduction of a measured table alone does not confirm the reconstructed internal structure.
 
@@ -71,6 +76,7 @@ These questions are related but require different validation criteria. Exact rep
 
 - [[Effective Resistance and Graph Geometry]] and [[Inner Product of Graph Vectors]]: resistances and the four-resistance formula.
 - [[Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]: undetermined vertex additions.
+- [[One Changing Edge]] and [[Two Edges and Joint Variation]]: exact response formulas for one and multiple external shunts.
 - [[Selected Vertices and the Dirichlet Problem]] and [[One Resistance and Quadric Connectivity]]: electrical response on selected vertices and inverse variations.
 - [[Variations with Conductance Constraints]] and [[An Algorithm for Variations with Conductance Constraints]]: the general reconstruction problem with forbidden and fixed couplings.
 

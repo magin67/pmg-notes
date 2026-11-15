@@ -3,8 +3,8 @@ title: "PMG — Library"
 description: "Resistance geometry and polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 41
-translated_revision: 61
+revision: 42
+translated_revision: 62
 updated: 2026-11-15
 ---
 
@@ -26,7 +26,7 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Thematic sections
 
-The 19 series contain 136 substantive notes in Russian and 135 in English. The core materials are bilingual; the new note on controlled shunting is currently available in Russian. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
+The 19 bilingual series contain 136 substantive notes in each language. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
 - **[[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?

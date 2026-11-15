@@ -1,9 +1,9 @@
 ---
 title: Resistance Variations in Graphs and Continuous Media
 date: 2026-11-13
-updated: 2026-11-13
-revision: 2
-translated_revision: 3
+updated: 2026-11-15
+revision: 3
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-variations-in-graphs-and-continuous-media
@@ -362,6 +362,8 @@ $$
 The matrix $\mathbf K$ depends on the background medium, electrode geometry, and chosen parameters. Together with measurement errors, it determines whether parameter changes can be distinguished. Quadric connectivity transforms the full electrical response into effective couplings but does not replace analysis of $\mathbf K$.
 
 Choosing a sufficient measurement set can therefore have a specific goal: preserve sensitivity to admissible changes in the medium. The spectral representation of the pairwise table and sensitivity to parameters answer different questions. [[Reconstructing Couplings with a Prescribed Neighbor Structure]] specifies admissible changes on a spatial grid, builds an algorithm, and examines its stability. The number of modes of the transformed table alone does not determine the number of distinguishable heterogeneities.
+
+Another use of a finite variation is developed in [[Controlled Shunting and Resistance Reconstruction]]: a known coupling is added between accessible electrodes while the internal medium remains unchanged. Some original resistances can be recovered from the response change. This is a controlled external experiment; reconstructing the internal medium still requires the additional assumptions discussed above.
 
 ## Programming example
 

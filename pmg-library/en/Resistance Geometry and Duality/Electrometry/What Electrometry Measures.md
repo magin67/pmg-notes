@@ -2,8 +2,8 @@
 title: What Electrometry Measures
 date: 2026-11-13
 updated: 2026-11-15
-revision: 3
-translated_revision: 4
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 translation_key: electrometry-measurements-and-pairwise-data
@@ -176,6 +176,8 @@ This ambiguity also occurs in physical resistor networks. Connect each terminal 
 > The theorem concerns recovery of an arbitrary pairwise table from these measurements alone. A model of the medium or known values of other characteristics can reduce the ambiguity. Locating electrodes within the survey area does not itself prevent recovery when additional information is available.
 >
 > The requirement of four distinct electrodes matters: formally $T_{ab,ab}=R_{ab}$, but this measurement is outside the set considered here.
+
+A known change in external connections provides a different data set. In [[Controlled Shunting and Resistance Reconstruction]], a shunt is connected between experiments: attenuation of a nonzero response determines the resistance of the current pair, including its contacts. This does not contradict the theorem: it describes measurements of one unchanged network, whereas the shunting experiments compare networks with a known added coupling.
 
 ## Sensitivity identities in the graph model
 

@@ -1,9 +1,9 @@
 ---
 title: "Example: Electrometry"
 date: 2026-11-13
-updated: 2026-11-13
-revision: 1
-translated_revision: 1
+updated: 2026-11-15
+revision: 2
+translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
 translation_key: python-electrometry
@@ -466,6 +466,12 @@ assert all(0.09 < fits[key][1] < 0.11 for key in ("noisy", "known", "prior"))
 Residuals are relative to the corresponding input data, with each pair divided by $R_{0,ij}$. Exact data recover the prescribed parameters to numerical accuracy. Without additional information, the noisy estimate of the bottom layer reaches the upper bound of $1.5$. All three noisy cases have nearly equal residuals but noticeably different parameters. Fixing the bottom layer and adding a penalty alter the admissible solutions; none of these experiments establishes general uniqueness of the inverse problem.
 
 ![[images/electrometry-layers.svg]]
+
+## Additional experiment - controlled shunting
+
+[[en/Resistance Geometry and Duality/Electrometry/Controlled Shunting and Resistance Reconstruction|Controlled Shunting and Resistance Reconstruction]] includes a separate [verification script](<../Resistance Geometry and Duality/Electrometry/data/Verify shunting.py>) with the same pinned revision of `polyform_algebra`. It runs as an ordinary Python program and supplements the four notebook calculations.
+
+The script checks the exact single-shunt formula and interactions among multiple shunts by directly inverting the modified Laplacian. In a network with two internal nodes, it reconstructs resistances of 3 and 2 ohms; adding series contacts to the current pair gives 3.5 ohms. Separate checks cover the invisibility of symmetric shunting of a star and the dependence of error on shunt conductance. The generated figures and results table are stored alongside the theoretical note.
 
 ## Checks and open questions
 
