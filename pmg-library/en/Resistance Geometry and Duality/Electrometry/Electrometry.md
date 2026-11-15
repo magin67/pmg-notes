@@ -1,8 +1,8 @@
 ---
 title: Electrometry
 date: 2026-11-13
-updated: 2026-11-13
-revision: 2
+updated: 2026-11-15
+revision: 3
 translated_revision: 2
 status: draft
 text_prepared_by: ChatGPT
@@ -31,6 +31,8 @@ Four notes lead from the measurement configuration to a reconstruction algorithm
 | 4 | [[Reconstructing Couplings with a Prescribed Neighbor Structure]] | Which assumptions permit reconstruction of internal couplings, and how can stability be checked? |
 
 For a first reading, follow the table order. The main connection to PMG variation formulas is developed in [[Resistance Variations in Graphs and Continuous Media]]. The formulation and example of a computational algorithm are collected in [[Reconstructing Couplings with a Prescribed Neighbor Structure]].
+
+A fifth note, [[ru/Резистивная геометрия и дуальность/Электрометрия/Управляемое шунтирование и восстановление сопротивлений|Controlled Shunting and Resistance Reconstruction (Russian)]], extends the series with controlled external shunts, resistance reconstruction from response changes, contacts, and noise. Its English translation is not yet available.
 
 ## What the series establishes
 

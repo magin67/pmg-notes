@@ -1,9 +1,9 @@
 ---
 title: Library Map
 date: 2026-11-11
-updated: 2026-11-13
-revision: 5
-translated_revision: 89
+updated: 2026-11-15
+revision: 6
+translated_revision: 92
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -20,7 +20,7 @@ The map shows which PMG directions are developed in the library, how they connec
 
 ## Library contents
 
-The library contains 19 bilingual series with 135 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
+The library contains 19 series with 136 substantive notes in Russian and 135 in English. The core series materials are bilingual; the fifth electrometry note is currently available in Russian. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
 Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. Series navigators give reading order and prerequisites.
 
@@ -35,7 +35,7 @@ One direction can span several series, and a series can cover several directions
 | О01 | **Basic polyform algebra.** Objects, vectors, boundaries, grades, forms, and products. A separate treatment of the algebra and its notation is planned. | [[en/Getting Started and Foundations/Introduction/Basic Objects and Operations of Polyform Algebra\|Basic Objects and Operations of Polyform Algebra]] |
 | О02 | **Laplacian and metric polyform.** Coupling forms, the exponential, forest expansion, and the spanning-tree coefficient. | [[en/Getting Started and Foundations/Introduction/Laplacian Exponential\|Laplacian Exponential]] |
 | О03 | **Potentials, norms, and variations.** Metric evaluations, finite direct and inverse variations, independent resistances, and conductance constraints. | [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations\|Laplacian, Greenian and Resistance Variations]] |
-| О04 | **Resistance geometry and electrometry.** Resistances, measured combinations, remote electrodes, pairwise-data geometry, and medium sensitivity. Four notes and a navigator are prepared in both languages, including inverse calculation under prescribed constraints. | [[en/Resistance Geometry and Duality/Electrometry/Electrometry\|Electrometry]]<br>[[en/Getting Started and Foundations/Introduction/Effective Resistance and Graph Geometry\|Effective Resistance and Graph Geometry]] |
+| О04 | **Resistance geometry and electrometry.** Resistances, measured combinations, remote electrodes, pairwise-data geometry, and medium sensitivity. Four notes and a navigator are available in both languages, including inverse calculation under prescribed constraints. A fifth note on controlled shunting is available in Russian. | [[en/Resistance Geometry and Duality/Electrometry/Electrometry\|Electrometry]]<br>[[en/Getting Started and Foundations/Introduction/Effective Resistance and Graph Geometry\|Effective Resistance and Graph Geometry]] |
 | О05 | **Matrix representations and transformations.** Laplacian, Green matrix, resistance matrix, centering, and the distance operator. | [[en/Getting Started and Foundations/Introduction/Laplacian, Green Matrix, and Effective Resistance Matrix\|Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations]] |
 
 ### Algebra and combinatorics
@@ -93,7 +93,7 @@ One direction can span several series, and a series can cover several directions
 - **А02, С01-С02, С08.** Spanning-tree pairing and matroid laws lead to full boundary forest passports. These support active-boundary transfer and closure of admissible chains.
 - **А03, Д03, С03-С05, С07-С09.** The spectral foundation connects rooted polynomials, eigenprojectors, and duality. Applications to isomers, bipartite graphs, and infinite models have their own distinguishability and limiting conditions.
 
-- **О03-О05, Г01, А05, С07.** Electrometry connects four-point measurements and their KVP ambiguity with pairwise-data geometry, elimination of internal vertices, and medium sensitivity. A spectral description of the data and distinguishability of internal parameters require different checks. [[en/Resistance Geometry and Duality/Electrometry/Electrometry|Electrometry]]
+- **О03-О05, Г01, А05, С07.** Electrometry connects four-point measurements and their KVP ambiguity with pairwise-data geometry, elimination of internal vertices, and medium sensitivity. Controlled shunting connects finite variations with reconstruction of resistances from response changes. A spectral description of the data and distinguishability of internal parameters require different checks. [[en/Resistance Geometry and Duality/Electrometry/Electrometry|Electrometry]]
 
 ## Deferred questions and continuations
 
@@ -136,6 +136,8 @@ These questions extend beyond the agreed scope of the published series. “Plann
 **The O and U components (А05, А06, А03, Д02-Д03).** Study mixed coefficients involving O, directed types, and duality. For U, specify a general-digraph model and applicability conditions. The balanced-graph exponential is already constructed. To investigate. [[en/Invariants, Decompositions, and Spectra/KVP decomposition/Oriented Extensions of KVP - Circulation and Imbalance|Oriented Extensions of KVP - Circulation and Imbalance]]
 
 **Experimental electrometry (О04, А05, О03, С07).** Measured quantities, compensation of distant contributions, the connection between graph and continuum sensitivity, and constrained reconstruction are developed. Real-grid geometry has been analyzed and the inverse algorithm tested on models. Open questions include error estimation, including remote-electrode effects, identification of robust heterogeneity features, sufficient measurement sets, and validation of soil reconstruction. Recovery of P with noise, incomplete data, and realistic contacts also remains a separate task. The prepared series is not a validated field method. To investigate. [[en/Resistance Geometry and Duality/Electrometry/Electrometry|Electrometry]] · [[en/Invariants, Decompositions, and Spectra/KVP decomposition/Applications of KVP Decomposition - Electrometry and Pair Data Analysis|Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]
+
+**Controlled shunting (О04, О03).** Resistance reconstruction using one or two shunt conductances is derived for a linear reciprocal network. Simultaneous shunts, model contacts, and noise are examined. Choosing a small set of configurations and conductances for stable reconstruction of specified parameters remains open. [[ru/Резистивная геометрия и дуальность/Электрометрия/Управляемое шунтирование и восстановление сопротивлений|Controlled Shunting and Resistance Reconstruction (Russian)]]
 
 ### Geometry and metric distributions
 
