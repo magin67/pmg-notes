@@ -1,8 +1,8 @@
 ---
 title: "The Cycle Matroid and Exterior Products of Edges"
 date: 2026-10-28
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cycle-matroid-and-exterior-products-of-edges
@@ -452,7 +452,7 @@ Let $\ell=\{i,j\}$ be an **existing edge**. Write $R_\ell=R_{ij}$ for the effect
 >
 > Differentiation with respect to $\delta$ at zero proves the claim. $\square$
 
-The spanning-tree polynomial is determined by matroid bases. Its derivative with respect to the variable of a matched edge, and hence $R_\ell$, is therefore preserved by a conductance-preserving isomorphism. If a spanning tree is sampled with probability proportional to its weight, then
+The spanning-tree polynomial is determined by matroid bases. Its logarithmic derivative $R_\ell$ with respect to the conductance of a matched edge is therefore preserved by a conductance-preserving isomorphism. If a spanning tree is sampled with probability proportional to its weight, then
 
 $$
 \eta_\ell=c_\ell R_\ell
@@ -460,7 +460,7 @@ $$
 =\mathbb P(\ell\in T)
 $$
 
-The middle equality follows directly by differentiating the tree-weight sum. One quantity has three representations: a derivative of the spanning-tree polynomial, a Greenian evaluation, and an edge-inclusion probability.
+The middle equality follows directly by differentiating the tree-weight sum. Multiplying the effective resistance $R_\ell$ of an edge by its conductance $c_\ell$ gives the probability that the edge belongs to the random spanning tree. For example, if the graph consists of a single edge of conductance $2$, its resistance is $1/2$ and its inclusion probability is $2\cdot(1/2)=1$.
 
 For an arbitrary vertex pair, a matroid isomorphism supplies no corresponding pair: it matches edges. Thus the conclusion does not automatically extend to the entire matrix $\mathbf R$ or its vertex sums.
 

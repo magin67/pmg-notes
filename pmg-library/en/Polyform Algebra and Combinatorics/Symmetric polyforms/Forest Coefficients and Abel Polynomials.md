@@ -1,9 +1,9 @@
 ---
 title: "Forest Coefficients and Abel Polynomials"
 date: 2026-10-19
-updated: 2026-11-10
-revision: 4
-source_revision: 6
+updated: 2026-11-18
+revision: 5
+source_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 translation_key: forest-coefficients-and-abel-polynomials
@@ -118,9 +118,19 @@ An example with $k=4$, $m=2$. Roots are added to the blocks $abc$ and $d$. Delet
 >
 > The constructions are mutually inverse and introduce no ordering of the groups. Thus the number of pairs is (1). $\square$
 
-When $m=1$, all components of any rooted forest are placed in a single group. Hence $\operatorname{St}(k,1)=(k+1)^{k-1}$ counts all rooted forests on $k$ vertices. The bijection identifies them with trees on the same vertices together with one added vertex.
+**Example on three vertices.** There are $9$ rooted trees, $6$ rooted forests with two components, and one forest with three singleton components. Therefore
 
-A graph proof of $A_k(q)=q(q+k)^{k-1}$ by deleting ordinary leaves is given in [[Falling Factorials, Rooted Forests, and Stirling Numbers#A code for a rooted forest|the note on rooted-forest codes]]. It also gives a [[Falling Factorials, Rooted Forests, and Stirling Numbers#Why forest coefficients are r-Stirling numbers|bijection with $r$-Stirling numbers]]: $\operatorname{St}(k,m)=\left\{\begin{smallmatrix}2k\\k+m\end{smallmatrix}\right\}_{k+1}$, where the braces use the full sizes of the set and partition.
+$$
+\begin{aligned}
+\operatorname{St}(3,1)&=9+6+1=16\\
+\operatorname{St}(3,2)&=6\cdot1+1\cdot3=9\\
+\operatorname{St}(3,3)&=1
+\end{aligned}
+$$
+
+Each of the six forests with two components has just one such grouping, with one component per group. The forest of three isolated vertices $a,b,c$ has three groupings: $a\mid bc$, $b\mid ac$, and $c\mid ab$. The bar separates the groups. This one forest therefore contributes three to $\operatorname{St}(3,2)$.
+
+When $m=1$, all components of any rooted forest are placed in a single group. Hence $\operatorname{St}(k,1)=(k+1)^{k-1}$ counts all rooted forests on $k$ vertices. The bijection identifies them with trees on the same vertices together with one added vertex.
 
 ## Examples of forest coefficients
 
@@ -287,18 +297,6 @@ $$
 
 The equality extends to all $x$ as a polynomial identity. Substitution into the ordinary power expansion of $A_k(x)$ and uniqueness of coefficients in the falling-factorial basis give (3) again.
 
-**Example on three vertices.** There are $9$ rooted trees, $6$ rooted forests with two components, and one forest with three singleton components. Therefore
-
-$$
-\begin{aligned}
-\operatorname{St}(3,1)&=9+6+1=16\\
-\operatorname{St}(3,2)&=6\cdot1+1\cdot3=9\\
-\operatorname{St}(3,3)&=1
-\end{aligned}
-$$
-
-In the second line, a forest with two components has only one grouping into two groups. Three singleton components can be partitioned into two groups in three ways.
-
 ## Forests with prescribed roots
 
 Expansion (2) also solves another counting problem. Take $k$ ordinary labelled vertices and $q\geqslant1$ additional labelled root vertices. Count spanning forests of the complete graph $K_{k+q}$ in which each component contains exactly one prescribed root. A root may be isolated.
@@ -330,6 +328,8 @@ In $32$ forests, one root is isolated and the other belongs to a tree containing
 ![Fifty Forests with Two Prescribed Roots](<images/Fifty Forests with Two Prescribed Roots.svg>)
 
 One representative of each case is shown. Left: one prescribed root is isolated, giving $2\cdot16=32$ forests. Right: both roots are occupied, giving $2!\cdot9=18$ forests. The total is $50$.
+
+A graph proof of $A_k(q)=q(q+k)^{k-1}$ by deleting ordinary leaves is given in [[Falling Factorials, Rooted Forests, and Stirling Numbers#A code for a rooted forest|the note on rooted-forest codes]]. It also gives a [[Falling Factorials, Rooted Forests, and Stirling Numbers#Why forest coefficients are r-Stirling numbers|bijection with $r$-Stirling numbers]]: $\operatorname{St}(k,m)=\left\{\begin{smallmatrix}2k\\k+m\end{smallmatrix}\right\}_{k+1}$, where the braces use the full sizes of the set and partition.
 
 ## Finite differences and the exact correspondence with OEIS
 

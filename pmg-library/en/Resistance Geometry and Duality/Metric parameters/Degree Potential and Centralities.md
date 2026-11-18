@@ -1,9 +1,9 @@
 ---
 title: Degree Potential and Centralities
 date: 2026-11-03
-updated: 2026-11-10
-revision: 3
-translated_revision: 4
+updated: 2026-11-18
+revision: 4
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -220,46 +220,48 @@ $$
 
 A larger spanning-tree score corresponds to a **smaller** $\alpha^i$. In (2), preference is instead assigned to a **larger** $\beta^i$, hence a larger potential $\varphi_i$. These are different rules justified by different interpretations. Geometric duality of the two centers does not itself establish a common direction of “greater vertex importance”.
 
-## Adding an edge does not guarantee a better rank
+<span id="adding-an-edge-does-not-guarantee-a-better-rank"></span>
+
+## A vertex that gains an edge can fall behind one it outranked
 
 Adding an edge changes both the degree distribution $b$ and the operator $\mathbf{Gr}$. An increase in degree therefore need not increase the potential. Preserving the relative advantage of a vertex that acquires an edge is a rank-monotonicity requirement; it is discussed for generalized degree in [1, §3].
 
-Consider the unit-conductance graph on vertices $1,\ldots,6$ with edges
+Consider the unit-conductance graph on vertices $a,b,c,d,e,f$ with edges
 
 $$
-12,\ 13,\ 14,\ 15,\ 24,\ 26,\ 34,\ 36
+ab,\ ac,\ ad,\ ae,\ bd,\ bf,\ cd,\ cf
 $$
 
-Add the unit-conductance edge $25$.
+Add the unit-conductance edge $be$.
 
 | Coordinate | Before addition | After addition |
 |---|---:|---:|
-| $\beta^1$ | $43/144$ | $112/366$ |
-| $\beta^2$ | $49/144$ | $97/366$ |
+| $\beta^a$ | $43/144$ | $112/366$ |
+| $\beta^b$ | $49/144$ | $97/366$ |
 
-Before addition, $\beta^2>\beta^1$; afterward, $\beta^2<\beta^1$. Vertex $2$ acquires an edge but falls below vertex $1$, which is not incident to the new edge. Its own coordinate decreases as well. Every strictly increasing normalization preserves this rank reversal, although changes in the normalized numerical scores may differ.
+Before the edge $be$ was added, vertex $b$ had a higher potential than $a$. After the addition, $\beta^b$ decreased and $a$ now outranks $b$. Any strictly increasing normalization preserves this order.
 
-This is an exact counterexample, not a conclusion from rounded numbers. It limits interpretation as a “vertex's gain from a new edge”, but does not contradict the definition as a potential of degree redistribution.
+In the full ranking, $b$ was tied with $c$ for second place before the addition and held second place alone afterward.
 
 ## Comparison on the Krackhardt kite graph
 
-Use the same numbering and unit conductances as in the [[Centroid, Spanning-Tree, and Eigenvector Centralities#Comparison on the Krackhardt kite graph|centrality comparison on the Krackhardt kite graph]]. For reproducibility, repeat the edge list:
+All edges have unit conductance. Vertices $a,\ldots,j$ correspond in order to the labels $0,\ldots,9$ in the [[Centroid, Spanning-Tree, and Eigenvector Centralities#Comparison on the Krackhardt kite graph|centrality comparison on the Krackhardt kite graph]]. The edge set is
 
 $$
-E=\{01,02,03,05,13,14,16,23,25,34,35,36,46,56,57,67,78,89\}
+E=\{ab,ac,ad,af,bd,be,bg,cd,cf,de,df,dg,eg,fg,fh,gh,hi,ij\}
 $$
 
 Spanning-tree centrality is $C_i^{\mathrm{tree}}=\delta_i/[2(n-1)]$, where $\delta_i$ is the expected degree of vertex $i$ in a random spanning tree; a tree's probability is proportional to the product of its edge conductances. With unit conductances, the trees are equally likely. The eigenvector $v$ is normalized to sum to $1$.
 
 | Vertex | Coordinate $\beta^i$ | Eigenvector, % | Spanning-tree, % |
 |---|---:|---:|---:|
-| $0,1$ | $89/80$ | $12.545$ | $9.422$ |
-| $2,4$ | $79/80$ | $10.181$ | $7.620$ |
-| $3$ | $97/80$ | $17.133$ | $12.838$ |
-| $5,6$ | $15/16$ | $14.165$ | $12.125$ |
-| $7$ | $-21/80$ | $6.976$ | $12.162$ |
-| $8$ | $-189/80$ | $1.712$ | $11.111$ |
-| $9$ | $-293/80$ | $0.398$ | $5.556$ |
+| $a,b$ | $89/80$ | $12.545$ | $9.422$ |
+| $c,e$ | $79/80$ | $10.181$ | $7.620$ |
+| $d$ | $97/80$ | $17.133$ | $12.838$ |
+| $f,g$ | $15/16$ | $14.165$ | $12.125$ |
+| $h$ | $-21/80$ | $6.976$ | $12.162$ |
+| $i$ | $-189/80$ | $1.712$ | $11.111$ |
+| $j$ | $-293/80$ | $0.398$ | $5.556$ |
 
 Grouped rows give the value for each vertex. The ten coordinates $\beta^i$ sum to $1$; these coordinates are **not percentages**. Negative values and values exceeding one are valid affine center coordinates.
 
@@ -267,17 +269,17 @@ The leading ranks are:
 
 | Measure | Highest positions |
 |---|---|
-| Eigenvector centrality | $3>5=6>0=1$ |
-| Spanning-tree centrality | $3>7>5=6$ |
-| Degree potential | $3>0=1>2=4>5=6$ |
+| Eigenvector centrality | $d>f=g>a=b$ |
+| Spanning-tree centrality | $d>h>f=g$ |
+| Degree potential | $d>a=b>c=e>f=g$ |
 
-The mean degree is $18/5$. The degrees along the chain $7-8-9$ are below the mean, so these vertices act as sinks in (1); the potential decreases toward the end of the chain. The spanning-tree score answers a different question: the two bridge edges at vertex $8$ belong to every spanning tree, giving $\delta_8=2$. Its spanning-tree share therefore remains substantial, even though degree potential and eigenvector centrality rank it low.
+The mean degree is $18/5$. The degrees along the chain $h-i-j$ are below the mean, so these vertices act as sinks in (1); the potential decreases toward the end of the chain. The spanning-tree score answers a different question: the two bridge edges at vertex $i$ belong to every spanning tree, giving $\delta_i=2$. Its spanning-tree share therefore remains substantial, even though degree potential and eigenvector centrality rank it low.
 
 ## What the measure captures
 
 Degree potential favors vertices with a larger accumulated excess over the mean during degree equalization. It combines the initial imbalance with the structure of redistribution paths. In the spectral representation, nonzero Laplacian modes receive factors $1/\lambda_k$, but only modes present in $b$ contribute.
 
-This does not imply a universal measure of vertex importance. Regular graphs produce a constant ranking; adding an edge can worsen a rank; closeness is reproduced on unit-conductance trees but not on all graphs. Positive normalization does not change these limitations. Applicability depends on whether degree equalization matches the meaning of the particular task.
+This does not imply a universal measure of vertex importance. Regular graphs produce a constant ranking; a vertex that gains an edge can fall behind another vertex; closeness is reproduced on unit-conductance trees but not on all graphs. Positive normalization does not change these limitations. Applicability depends on whether degree equalization matches the meaning of the particular task.
 
 ## Relation to generalized degree
 
