@@ -7,13 +7,13 @@
 <line x1="233.0" y1="230.0" x2="312.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
 <line x1="358.0" y1="230.0" x2="437.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
 <circle cx="85" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="85" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
+<text xml:space="preserve" x="85" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
 <circle cx="210" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="210" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2</text>
+<text xml:space="preserve" x="210" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
 <circle cx="335" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="335" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">3</text>
+<text xml:space="preserve" x="335" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
 <circle cx="460" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="460" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">4</text>
+<text xml:space="preserve" x="460" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
 <text xml:space="preserve" x="147" y="201" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
 <text xml:space="preserve" x="272" y="201" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
 <text xml:space="preserve" x="397" y="201" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
@@ -22,13 +22,13 @@
 <line x1="813.0" y1="230.0" x2="892.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
 <line x1="938.0" y1="230.0" x2="1017.0" y2="230.0" stroke="#24628a" stroke-width="3"/>
 <circle cx="665" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="665" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
+<text xml:space="preserve" x="665" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
 <circle cx="790" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="790" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2</text>
+<text xml:space="preserve" x="790" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
 <circle cx="915" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="915" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">3</text>
+<text xml:space="preserve" x="915" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
 <circle cx="1040" cy="230" r="20" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="1040" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">4</text>
+<text xml:space="preserve" x="1040" y="237" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">d</text>
 <text xml:space="preserve" x="727" y="201" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2/5</text>
 <text xml:space="preserve" x="852" y="201" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">7/10</text>
 <text xml:space="preserve" x="977" y="201" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
@@ -37,7 +37,7 @@
 <text xml:space="preserve" x="850" y="430" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">τ′ = 1/2</text>
 <line x1="482" y1="230" x2="620" y2="230" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>
 <text xml:space="preserve" x="501.5" y="150" font-size="26" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">Δγ</text>
-<text xml:space="preserve" x="534.5" y="155.72" font-size="18" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">12</text>
+<text xml:space="preserve" x="534.5" y="155.72" font-size="18" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start">ab</text>
 <text xml:space="preserve" x="554.5" y="150" font-size="26" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="start"> = 1/5</text>
 <text xml:space="preserve" x="560" y="505" font-size="24" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">Edge labels show resulting conductances</text>
 </svg>

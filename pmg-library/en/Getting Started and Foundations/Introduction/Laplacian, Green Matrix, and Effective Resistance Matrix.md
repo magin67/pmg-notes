@@ -1,9 +1,9 @@
 ---
 title: "Laplacian, Green Matrix, and Effective Resistance Matrix: Mutual Transformations"
 date: 2026-10-04
-updated: 2026-11-10
-revision: 7
-source_revision: 6
+updated: 2026-11-18
+revision: 8
+source_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-green-resistance-matrices
@@ -182,7 +182,7 @@ Zero conductances correspond to absent edges. Thus the complete set of pairwise 
 
 ## Example: a three-vertex path
 
-Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resistances were computed in the [[Effective Resistance and Graph Geometry#Example: a three-vertex path|three-vertex path example]]: $R_{12}=1$, $R_{23}=1/2$, $R_{13}=3/2$.
+Consider the path $a-b-c$ with conductances $c_{ab}=1$ and $c_{bc}=2$. Its resistances were computed in the [[Effective Resistance and Graph Geometry#Example: a three-vertex path|three-vertex path example]]: $R_{ab}=1$, $R_{bc}=1/2$, $R_{ac}=3/2$.
 
 > [!example] The network matrices
 >
@@ -218,18 +218,18 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > For this matrix $R$, the means are
 >
 > $$
-> \bar R_1=\frac56,\qquad \bar R_2=\frac12,\qquad
-> \bar R_3=\frac23,\qquad \bar R=\frac23
+> \bar R_a=\frac56,\qquad \bar R_b=\frac12,\qquad
+> \bar R_c=\frac23,\qquad \bar R=\frac23
 > $$
 >
 > For example, formula (4) gives
 >
 > $$
-> \mathrm{Gr}_{11}=\frac12\left(\frac56+\frac56-\frac23\right)=\frac12
+> \mathrm{Gr}_{aa}=\frac12\left(\frac56+\frac56-\frac23\right)=\frac12
 > $$
 >
 > $$
-> \mathrm{Gr}_{12}=\frac12\left(\frac56+\frac12-1-\frac23\right)=-\frac16
+> \mathrm{Gr}_{ab}=\frac12\left(\frac56+\frac12-1-\frac23\right)=-\frac16
 > $$
 >
 > The full double-centering calculation gives
@@ -242,13 +242,13 @@ Consider the path $1-2-3$ with conductances $c_{12}=1$ and $c_{23}=2$. Its resis
 > \end{pmatrix}=-2\mathrm{Gr}
 > $$
 >
-> Now recover the first column of $L$, denoted by $y=(y_1,y_2,y_3)$. The identities $\mathrm{Gr}L=J$ and $\mathbf1^{\mathsf T}L=0$ give
+> Now recover the first column of $L$, denoted by $y=(y_a,y_b,y_c)$. The identities $\mathrm{Gr}L=J$ and $\mathbf1^{\mathsf T}L=0$ give
 >
 > $$
-> \mathrm{Gr}y=\begin{pmatrix}2/3\\-1/3\\-1/3\end{pmatrix},\qquad y_1+y_2+y_3=0
+> \mathrm{Gr}y=\begin{pmatrix}2/3\\-1/3\\-1/3\end{pmatrix},\qquad y_a+y_b+y_c=0
 > $$
 >
-> The third row gives $-y_1+y_3=-1$ and the second gives $-y_1+y_2=-2$. Thus $y_3=y_1-1$ and $y_2=y_1-2$; the zero-sum condition gives $3y_1-3=0$. Hence $y=(1,-1,0)$, so $c_{12}=1$ and $c_{13}=0$. The other columns and $c_{23}=2$ follow in the same way. This recovers both the coupling strengths and the absence of an edge between vertices $1$ and $3$.
+> The third row gives $-y_a+y_c=-1$ and the second gives $-y_a+y_b=-2$. Thus $y_c=y_a-1$ and $y_b=y_a-2$; the zero-sum condition gives $3y_a-3=0$. Hence $y=(1,-1,0)$, so $c_{ab}=1$ and $c_{ac}=0$. The other columns and $c_{bc}=2$ follow in the same way. This recovers both the coupling strengths and the absence of an edge between vertices $a$ and $c$.
 
 The [[en/PythonExamples/Example - Weighted Chain#Matrix transformations|Python example]] computes the three matrices and recovers the conductances from the resistance matrix.
 

@@ -1,15 +1,15 @@
 ---
 title: Two Edges and Joint Variation
 date: 2026-10-31
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-two-edges-and-joint-variation
 lang: en
 description: Two changing triangle edges, explicit finite variations, and interaction. A derivation through Laplacian exponential factors, forest-potential normalization, and Gram determinants, extended to several couplings.
 order: 2
-translated_revision: 7
+translated_revision: 8
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Two Edges and Joint Variation"
 ---
@@ -22,47 +22,47 @@ In [[One Changing Edge|the variation of one edge]], the spanning-tree coefficien
 
 See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Changing two conductances together|the notebook calculation]].
 
-A unit triangle has $c_{12}=c_{13}=c_{23}=1$, $\tau=3$, and all its resistances equal $2/3$. Increase conductances $12$ and $13$ to $2$, keeping $c_{23}=1$.
+A unit triangle has $c_{ab}=c_{ac}=c_{bc}=1$, $\tau=3$, and all its resistances equal $2/3$. Increase conductances $ab$ and $ac$ to $2$, keeping $c_{bc}=1$.
 
-![A unit triangle and the result of increasing conductances 12 and 13 to 2](<images/Two Changing Edges of a Triangle.svg>)
+![A unit triangle and the result of increasing conductances ab and ac to 2](<images/Two Changing Edges of a Triangle.svg>)
 
 *Numbers beside edges denote conductances. The two varied edges are distinguished by different colors and greater thickness.*
 
-The three spanning trees now have weights $4,2,2$, so $\tau'=8$. Between $1$ and $2$, the parallel paths have resistances $1/2$ and $3/2$; between $2$ and $3$, both paths have resistance $1$. Thus
+The three spanning trees now have weights $4,2,2$, so $\tau'=8$. Between $a$ and $b$, the parallel paths have resistances $1/2$ and $3/2$; between $b$ and $c$, both paths have resistance $1$. Thus
 
 $$
-R'_{12}=R'_{13}=\frac{(1/2)(3/2)}{1/2+3/2}=\frac38,
-\qquad R'_{23}=\frac{1\cdot1}{1+1}=\frac12
+R'_{ab}=R'_{ac}=\frac{(1/2)(3/2)}{1/2+3/2}=\frac38,
+\qquad R'_{bc}=\frac{1\cdot1}{1+1}=\frac12
 $$
 
 Compare the joint change with two separate experiments, each starting from the original graph:
 
-| Quantity | Original graph | Only $c_{12}=2$ | Only $c_{13}=2$ | Both conductances equal $2$ |
+| Quantity | Original graph | Only $c_{ab}=2$ | Only $c_{ac}=2$ | Both conductances equal $2$ |
 |---|---:|---:|---:|---:|
 | $\tau$ | $3$ | $5$ | $5$ | $8$ |
-| $R_{12}$ | $2/3$ | $2/5$ | $3/5$ | $3/8$ |
-| $R_{13}$ | $2/3$ | $3/5$ | $2/5$ | $3/8$ |
-| $R_{23}$ | $2/3$ | $3/5$ | $3/5$ | $1/2$ |
+| $R_{ab}$ | $2/3$ | $2/5$ | $3/5$ | $3/8$ |
+| $R_{ac}$ | $2/3$ | $3/5$ | $2/5$ | $3/8$ |
+| $R_{bc}$ | $2/3$ | $3/5$ | $3/5$ | $1/2$ |
 
-Adding the separate increments would give spanning-tree coefficient $3+2+2=7$ instead of $8$. For $R_{12}$, it would give $2/3-4/15-1/15=1/3$ instead of $3/8$. The joint result requires accounting for the interaction between changes.
+Adding the separate increments would give spanning-tree coefficient $3+2+2=7$ instead of $8$. For $R_{ab}$, it would give $2/3-4/15-1/15=1/3$ instead of $3/8$. The joint result requires accounting for the interaction between changes.
 
 > [!example] Explicit formulas for the triangle
-> Set $c'_{12}=1+s$, $c'_{13}=1+t$, $c'_{23}=1$, where $s,t\ge-1$. Direct tree enumeration and parallel-path calculations give
+> Set $c'_{ab}=1+s$, $c'_{ac}=1+t$, $c'_{bc}=1$, where $s,t\ge-1$. Direct tree enumeration and parallel-path calculations give
 >
 > $$
 > \tau'=3+2s+2t+st
 > $$
 >
 > $$
-> R'_{12}=\frac{2+t}{3+2s+2t+st},\qquad
-> R'_{13}=\frac{2+s}{3+2s+2t+st}
+> R'_{ab}=\frac{2+t}{3+2s+2t+st},\qquad
+> R'_{ac}=\frac{2+s}{3+2s+2t+st}
 > $$
 >
 > $$
-> R'_{23}=\frac{2+s+t}{3+2s+2t+st}
+> R'_{bc}=\frac{2+s+t}{3+2s+2t+st}
 > $$
 >
-> The resistance formulas require a nonzero denominator. In this domain, it vanishes only at $s=t=-1$: vertex $1$ becomes isolated. Either edge removal on its own preserves connectedness.
+> The resistance formulas require a nonzero denominator. In this domain, it vanishes only at $s=t=-1$: vertex $a$ becomes isolated. Either edge removal on its own preserves connectedness.
 
 ## Explicit formulas for two edges
 
@@ -117,13 +117,13 @@ $$
 
 Setting $t=0$ gives the formulas for [[One Changing Edge|one changing edge]]. Reversing $u$ changes the signs of $g$ and $x$; reversing $v$ changes the signs of $g$ and $y$. The entire answer, including the product $gxy$, is therefore independent of orientation.
 
-For the triangle with $u=a_{12}$, $v=a_{13}$, we have $R_u=R_v=2/3$, $g=1/3$. Hence
+For the triangle with $u=(ab)$, $v=(ac)$, we have $R_u=R_v=2/3$, $g=1/3$. Hence
 
 $$
 \Phi(s,t)=1+\frac23s+\frac23t+\frac13st
 $$
 
-When measuring $R_{12}$, the quantities are $x=2/3$, $y=1/3$. Substituting $s=t=1$ into (3) gives $\Delta R_{12}=-7/24$, that is, $R'_{12}=2/3-7/24=3/8$.
+When measuring $R_{ab}$, the quantities are $x=2/3$, $y=1/3$. Substituting $s=t=1$ into (3) gives $\Delta R_{ab}=-7/24$, that is, $R'_{ab}=2/3-7/24=3/8$.
 
 ## Two factors and the mixed term
 
@@ -243,7 +243,7 @@ The determinant equals $R_{ij}(R_uR_v-g^2)-R_vx^2-R_uy^2+2gxy$. It vanishes when
 >
 > Expand the determinant and collect terms containing $R_{ij}$: their sum is $R_{ij}\Phi(s,t)$. This yields (6). If connectedness is preserved, use $R'_{ij}=m'_{ij}/\tau'$ and subtract $R_{ij}$. $\square$
 
-For the triangle, $m'_{12}=2+t$, $m'_{13}=2+s$, $m'_{23}=2+s+t$: these numerators have no mixed terms. The common denominator $3+2s+2t+st$ does contain them, however. Thus vanishing of one mixed forest coefficient does not yet imply independence of resistance responses.
+For the triangle, $m'_{ab}=2+t$, $m'_{ac}=2+s$, $m'_{bc}=2+s+t$: these numerators have no mixed terms. The common denominator $3+2s+2t+st$ does contain them, however. Thus vanishing of one mixed forest coefficient does not yet imply independence of resistance responses.
 
 ## Sequential changes and interaction
 
@@ -290,7 +290,7 @@ $$
 >
 > Bringing the terms to a common denominator and expanding the square gives (3). $\square$
 
-In the numerical example, strengthening $12$ gives $\tau_1=5$, $R_{13}^{(1)}=3/5$. The second step therefore gives $\tau'=5(1+3/5)=8$. Substituting the original $R_{13}=2/3$ instead of the updated value would incorrectly give $25/3$.
+In the numerical example, strengthening $ab$ gives $\tau_1=5$, $R_{ac}^{(1)}=3/5$. The second step therefore gives $\tau'=5(1+3/5)=8$. Substituting the original $R_{ac}=2/3$ instead of the updated value would incorrectly give $25/3$.
 
 For the spanning-tree coefficient, the following expression is particularly informative:
 
@@ -317,7 +317,7 @@ Here $g^2$ describes how changing one selected pair affects the resistance of th
 > **Proof.** Substitute $g=0$ into (1) and (3). The numerator of (3) groups as $s x^2(1+tR_v)+t y^2(1+sR_u)$. $\square$
 
 > [!note] Connectedness of intermediate graphs
-> The final graph does not depend on the order of changes, but an intermediate graph may be disconnected. For example, in the path $1-2-3$, removing $12$ and adding $13$ yields a connected final graph. Starting with removal makes the stepwise resistance formula inapplicable.
+> The final graph does not depend on the order of changes, but an intermediate graph may be disconnected. For example, in the path $a-b-c$, removing $ab$ and adding $ac$ yields a connected final graph. Starting with removal makes the stepwise resistance formula inapplicable.
 >
 > When both the original and final graphs are connected, the order “all additions and strengthenings first, then weakenings and removals” is safe: the first stage retains the original connected network, and every intermediate graph in the second stage contains the final connected network.
 
@@ -389,7 +389,7 @@ The general calculation thus follows the two-factor pattern: first compute unnor
 
 ## Dependent directions and a compact matrix form
 
-If the vectors indexed by $S$ are linearly dependent, then $\det\mathbf G_S=0$. For distinct graph pairs, this occurs when the selected edges contain a cycle. For example, $a_{12}+a_{23}=a_{13}$, so varying all three edges of a triangle produces no term $t_1t_2t_3$ in the spanning-tree coefficient. Lower-degree terms remain.
+If the vectors indexed by $S$ are linearly dependent, then $\det\mathbf G_S=0$. For distinct graph pairs, this occurs when the selected edges contain a cycle. For example, $(ab)+(bc)=(ac)$, so varying all three edges of a triangle produces no term $t_1t_2t_3$ in the spanning-tree coefficient. Lower-degree terms remain.
 
 The Gram matrix $\mathbf G$ itself need not be inverted. Set $\mathbf z=(w\cdot u_\alpha)_{\alpha=1}^m$.
 

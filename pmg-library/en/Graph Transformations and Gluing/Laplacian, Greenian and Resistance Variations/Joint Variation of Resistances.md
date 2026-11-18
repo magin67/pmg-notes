@@ -1,15 +1,15 @@
 ---
 title: Joint Variation of Resistances
 date: 2026-10-31
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-joint-resistances
 lang: en
 description: 'Two changing resistances and the general case on a vertex set: the spanning-tree coefficient, conductances, Greenian factors, and direct solution of the matrix equation.'
 order: 6
-translated_revision: 7
+translated_revision: 8
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Joint Variation of Resistances"
 ---
@@ -24,15 +24,15 @@ We begin with two resistances of a triangle, then obtain a formula for changes b
 
 See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Two resistances|the notebook calculation]].
 
-A unit triangle has $c_{12}=c_{13}=c_{23}=1$, all resistances equal to $2/3$, and spanning-tree coefficient $\tau=3$. Prescribe
+A unit triangle has $c_{ab}=c_{ac}=c_{bc}=1$, all resistances equal to $2/3$, and spanning-tree coefficient $\tau=3$. Prescribe
 
 $$
-R'_{12}=R'_{13}=1,\qquad R'_{23}=\frac23
+R'_{ab}=R'_{ac}=1,\qquad R'_{bc}=\frac23
 $$
 
 Thus two resistances increase by $1/3$, while the third remains fixed.
 
-![A unit triangle and the new conductances when resistances 12 and 13 increase to one while resistance 23 is preserved](<images/Two Resistances of a Triangle.svg>)
+![A unit triangle and the new conductances when resistances ab and ac increase to one while resistance bc is preserved](<images/Two Resistances of a Triangle.svg>)
 
 *Numbers beside edges denote conductances. Two couplings weaken and the third strengthens, although its corresponding resistance remains fixed.*
 
@@ -40,7 +40,7 @@ Thus two resistances increase by $1/3$, while the third remains fixed.
 > The new conductances and spanning-tree coefficient are
 >
 > $$
-> c'_{12}=c'_{13}=\frac35,\qquad c'_{23}=\frac65,
+> c'_{ab}=c'_{ac}=\frac35,\qquad c'_{bc}=\frac65,
 > \qquad \boxed{\tau'=\frac95}
 > $$
 >
@@ -51,13 +51,13 @@ Thus two resistances increase by $1/3$, while the third remains fixed.
 > $$
 >
 > $$
-> R'_{12}=R'_{13}=\frac{3/5+6/5}{9/5}=1,\qquad
-> R'_{23}=\frac{3/5+3/5}{9/5}=\frac23
+> R'_{ab}=R'_{ac}=\frac{3/5+6/5}{9/5}=1,\qquad
+> R'_{bc}=\frac{3/5+3/5}{9/5}=\frac23
 > $$
 
 ### Two arbitrary increments
 
-Set $R'_{12}=2/3+\alpha$, $R'_{13}=2/3+\beta$, keeping $R'_{23}=2/3$. Introduce the common denominator
+Set $R'_{ab}=2/3+\alpha$, $R'_{ac}=2/3+\beta$, keeping $R'_{bc}=2/3$. Introduce the common denominator
 
 $$
 \Phi(\alpha,\beta)=1+\alpha+\beta-\frac34(\alpha-\beta)^2
@@ -70,9 +70,9 @@ $$
 > $$
 > \boxed{\begin{gathered}
 > \tau'=\frac3\Phi,\\
-> c'_{12}=\frac{1-3\alpha/2+3\beta/2}{\Phi},\\
-> c'_{13}=\frac{1+3\alpha/2-3\beta/2}{\Phi},\\
-> c'_{23}=\frac{1+3\alpha/2+3\beta/2}{\Phi}
+> c'_{ab}=\frac{1-3\alpha/2+3\beta/2}{\Phi},\\
+> c'_{ac}=\frac{1+3\alpha/2-3\beta/2}{\Phi},\\
+> c'_{bc}=\frac{1+3\alpha/2+3\beta/2}{\Phi}
 > \end{gathered}}
 > \tag{2}
 > $$
@@ -168,7 +168,7 @@ $$
 These are finite formulas. Sign and metric constraints are given after the derivation; invertibility of $\mathbf A$ alone does not ensure nonnegative conductances.
 
 > [!note]- Substitution for two resistances of a triangle
-> **Proof.** In the example, $S=\{1,2,3\}$, $\mathbf E=\mathbf I_3$, $\mathbf H=\mathbf B=\mathbf L$, and
+> **Proof.** In the example, $S=\{a,b,c\}$, $\mathbf E=\mathbf I_3$, $\mathbf H=\mathbf B=\mathbf L$, and
 >
 > $$
 > \mathbf F=\begin{pmatrix}
@@ -194,7 +194,7 @@ These are finite formulas. Sign and metric constraints are given after the deriv
 
 First form $\mathbf F,\mathbf H,\mathbf B$, then check admissibility and solve one linear system for $\mathbf K$. Compute the new conductances and verify the resistances. This fully prescribed table does not require iterative search.
 
-For example, in the unit triangle take $S=\{1,2\}$ and $\Delta R_{12}=1/3$. Then
+For example, in the unit triangle take $S=\{a,b\}$ and $\Delta R_{ab}=1/3$. Then
 
 $$
 \mathbf F=\frac13\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
@@ -207,7 +207,7 @@ $$
 \mathbf K=\frac1{45}\begin{pmatrix}2&7\\7&2\end{pmatrix}
 $$
 
-For pair $12$, the columns $\mathbf b_1=(2,-1)^{\mathsf T}$, $\mathbf b_2=(-1,2)^{\mathsf T}$ give $\Delta c_{12}=-3/5$, hence $c'_{12}=2/5$. This recovers the verified example with one changed resistance coordinate.
+For pair $ab$, the columns $\mathbf b_1=(2,-1)^{\mathsf T}$, $\mathbf b_2=(-1,2)^{\mathsf T}$ give $\Delta c_{ab}=-3/5$, hence $c'_{ab}=2/5$. This recovers the verified example with one changed resistance coordinate.
 
 ## Derivation through Greenian factors
 
@@ -421,13 +421,13 @@ $$
 
 Let $W$ denote $S$ together with all its neighbors in the original graph. For nonnegative original conductances, the nonzero rows of $\mathbf B$ correspond precisely to vertices in $W$. Thus only pairs with **both endpoints in $W$** can change.
 
-This does not mean that a changing coupling must have an endpoint in $S$. For example, on the path $1-2-3-4$ with $S=\{2,3\}$, the recovered matrix may acquire a nonzero coefficient for pair $14$. This describes the location of the update; nonnegativity of the resulting conductances is checked separately. Originally zero couplings within $W$ are not automatically preserved.
+This does not mean that a changing coupling must have an endpoint in $S$. For example, on the path $a-b-c-d$ with $S=\{b,c\}$, the recovered matrix may acquire a nonzero coefficient for pair $ad$. This describes the location of the update; nonnegativity of the resulting conductances is checked separately. Originally zero couplings within $W$ are not automatically preserved.
 
 To preserve $c_{ij}=0$ on a selected pair, one must check $\mathbf b_i^{\mathsf T}\mathbf K\mathbf b_j=0$. When $\mathbf R'$ is fully prescribed, the solution is already unique: its conductances cannot be adjusted further while preserving the entire resistance matrix. A fixed-edge-set problem needs other free data, for example permission to change some of the remaining resistances.
 
 ![Where a Coupling Can Change](<images/Where a Coupling Can Change.svg>)
 
-*Changing the resistance of pair $23$ can affect pair $14$, although both endpoints lie outside $S$. The diagram shows the algebraic support of the update; conductance signs must be checked separately.*
+*Changing the resistance of pair $bc$ can affect pair $ad$, although both endpoints lie outside $S$. The diagram shows the algebraic support of the update; conductance signs must be checked separately.*
 
 ## Differentials and sequential changes
 

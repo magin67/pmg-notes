@@ -1,15 +1,15 @@
 ---
 title: Laplacian, Greenian and Resistance Variations
 date: 2026-11-01
-updated: 2026-11-11
-revision: 6
+updated: 2026-11-18
+revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
 translation_key: laplacian-greenian-resistance-variations-series-navigation
 order: 0
 description: 'Reading order for eight notes: direct and inverse variations, exterior exponential factors, quadric connectivity, prescribed resistances, and conductance constraints. Main formulas, applicability, and provenance.'
-translated_revision: 7
+translated_revision: 8
 tags:
   - variations
   - resistances
@@ -244,7 +244,7 @@ In [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/
 >
 > In [[Variations with Conductance Constraints]], vertices $P$ specify controlled resistances, pairs $Z$ mandatory zero couplings, and pairs $V$ permitted variable conductances. Sets $Z$ and $V$ are disjoint; the other conductances are fixed. Resistances outside the controlled pairs may change. The freedom needed to meet the constraints therefore comes from the problem formulation itself; locality of a full resistance variation is not guaranteed here.
 >
-> For a unit triangular prism with fixed edges of the $P$ face and six variable couplings, the target is $R_{12}=8k/15$, $R_{13}=R_{23}=8/15$. The exact region of finite nonnegative solutions is
+> For a unit triangular prism with the edges of face $P=\{a,b,c\}$ fixed and six variable couplings, the target is $R_{ab}=8k/15$, $R_{ac}=R_{bc}=8/15$. The exact region of finite nonnegative solutions is
 >
 > $$
 > \frac14\le k<\frac{31-\sqrt{481}}8

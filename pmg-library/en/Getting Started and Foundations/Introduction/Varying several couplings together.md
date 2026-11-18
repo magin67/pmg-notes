@@ -1,10 +1,10 @@
 ---
 title: Varying Several Couplings Together
 date: 2026-10-05
-updated: 2026-11-10
-revision: 8
-translated_revision: 9
-source_revision: 8
+updated: 2026-11-18
+revision: 9
+translated_revision: 10
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: joint-edge-variation
@@ -51,13 +51,13 @@ It is the squared area of the parallelogram on the two resistance vectors. This 
 
 ### Example: two couplings of a triangle
 
-For unit-conductance $K_3$, we have $\tau=3$, $R_e=R_f=2/3$, and $g_{ef}=1/3$ for $e=12$, $f=13$, oriented away from vertex $1$. Increase both conductances by one. Formula (1) gives
+For unit-conductance $K_3$, we have $\tau=3$, $R_e=R_f=2/3$, and $g_{ef}=1/3$ for $e=ab$, $f=ac$, oriented away from vertex $a$. Increase both conductances by one. Formula (1) gives
 
 $$
 \frac{\tau'}\tau=1+\frac23+\frac23+\left(\frac49-\frac19\right)=\frac83,\qquad \tau'=8
 $$
 
-Sequentially, strengthening $12$ gives $\tau_e=5$ and $R_f^{(e)}=3/5$, then $\tau'=5(1+3/5)=8$. Directly summing the weights of the three spanning trees gives the same value, $4+2+2=8$.
+Sequentially, strengthening $ab$ gives $\tau_e=5$ and $R_f^{(e)}=3/5$, then $\tau'=5(1+3/5)=8$. Directly summing the weights of the three spanning trees gives the same value, $4+2+2=8$.
 
 ## Problem setup
 
@@ -181,14 +181,14 @@ $$
 
 ## Example: strengthening two couplings of a triangle
 
-Return to the strengthening of pairs $12$ and $13$ in unit-conductance $K_3$. We now apply the general matrix formula to the resistance of the third pair. Here $\Delta=I_2$ and
+Return to the strengthening of pairs $ab$ and $ac$ in unit-conductance $K_3$. We now apply the general matrix formula to the resistance of the third pair. Here $\Delta=I_2$ and
 
 $$
 G=\begin{pmatrix}\frac23&\frac13\\\frac13&\frac23\end{pmatrix}
 $$
 
-> [!example] Resistance between vertices $2$ and $3$
-> For the measured vector $a_{23}$,
+> [!example] Resistance between vertices $b$ and $c$
+> For the measured vector $(bc)$,
 >
 > $$
 > q=\begin{pmatrix}-\frac13\\\frac13\end{pmatrix},\qquad
@@ -198,11 +198,11 @@ $$
 > By (6),
 >
 > $$
-> R'_{23}=\frac23-q^{\mathsf T}(I_2+G)^{-1}q
+> R'_{bc}=\frac23-q^{\mathsf T}(I_2+G)^{-1}q
 > =\frac23-\frac16=\frac12
 > $$
 >
-> An independent electrical check: the direct edge $23$ has resistance $1$, and the path through vertex $1$ has resistance $1/2+1/2=1$. Their parallel connection gives $R'_{23}=1/2$.
+> An independent electrical check: the direct edge $bc$ has resistance $1$, and the path through vertex $a$ has resistance $1/2+1/2=1$. Their parallel connection gives $R'_{bc}=1/2$.
 
 ### Strengthening and intermediate graphs
 
@@ -218,7 +218,7 @@ The middle matrix is positive definite because $G\succeq0$. Hence the correction
 > [!note] Connectivity of intermediate graphs
 > The order of changes does not affect the final graph. However, applying the Green matrix and resistance formulas one step at a time requires every intermediate graph to be connected.
 >
-> For example, in the path $1-2-3$, one can delete edge $12$ and add edge $13$. The final graph is connected, but deleting $12$ first disconnects the network. The simultaneous formulas (5)-(6) apply, while sequential inversion in this order is impossible.
+> For example, in the path $a-b-c$, one can delete edge $ab$ and add edge $ac$. The final graph is connected, but deleting $ab$ first disconnects the network. The simultaneous formulas (5)-(6) apply, while sequential inversion in this order is impossible.
 >
 > If the initial and final graphs are connected, a valid order is to perform all strengthening and additions first, followed by weakening and deletions. The first stage retains the original connected graph. During the second stage, every intermediate graph contains all couplings of the final graph, with conductances at least as large as their final values.
 

@@ -1,15 +1,15 @@
 ---
 title: One Resistance and Quadric Connectivity
 date: 2026-10-31
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-resistance-and-quadric-connectivity
 lang: en
 description: 'Changing one resistance while preserving the others: an example, finite spanning-tree and conductance variations, and two Greenian factors. Quadric connectivity and its inverse relation to squared inner products on all pairs.'
 order: 5
-translated_revision: 7
+translated_revision: 8
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Resistance and Quadric Connectivity"
 ---
@@ -29,20 +29,20 @@ See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#
 A unit triangle has all conductances equal to $1$, all resistances equal to $2/3$, and spanning-tree coefficient $\tau=3$. Prescribe
 
 $$
-R'_{12}=1,\qquad R'_{13}=R'_{23}=\frac23
+R'_{ab}=1,\qquad R'_{ac}=R'_{bc}=\frac23
 $$
 
-Thus only $R_{12}$ increases, by $\delta=1/3$.
+Thus only $R_{ab}$ increases, by $\delta=1/3$.
 
-![A unit triangle and the recovered conductances when only resistance 12 increases from two thirds to one](<images/One Resistance of a Triangle.svg>)
+![A unit triangle and the recovered conductances when only resistance ab increases from two thirds to one](<images/One Resistance of a Triangle.svg>)
 
-*Numbers beside edges denote conductances. Weakening coupling $12$ is accompanied by strengthening the other two couplings so that resistances $R_{13}$ and $R_{23}$ remain fixed.*
+*Numbers beside edges denote conductances. Weakening coupling $ab$ is accompanied by strengthening the other two couplings so that resistances $R_{ac}$ and $R_{bc}$ remain fixed.*
 
 > [!example] The answer for the triangle
 > The new conductances and spanning-tree coefficient are
 >
 > $$
-> c'_{12}=\frac25,\qquad c'_{13}=c'_{23}=\frac65,
+> c'_{ab}=\frac25,\qquad c'_{ac}=c'_{bc}=\frac65,
 > \qquad \boxed{\tau'=\frac{12}5}
 > $$
 >
@@ -53,11 +53,11 @@ Thus only $R_{12}$ increases, by $\delta=1/3$.
 > $$
 >
 > $$
-> R'_{12}=\frac{c'_{13}+c'_{23}}{\tau'}=1,\qquad
-> R'_{13}=R'_{23}=\frac{c'_{12}+c'_{23}}{\tau'}=\frac23
+> R'_{ab}=\frac{c'_{ac}+c'_{bc}}{\tau'}=1,\qquad
+> R'_{ac}=R'_{bc}=\frac{c'_{ab}+c'_{bc}}{\tau'}=\frac23
 > $$
 
-Changing conductance $c_{12}$ alone would also decrease or increase the other resistances. Here two additional conductance updates ensure that they are preserved.
+Changing conductance $c_{ab}$ alone would also decrease or increase the other resistances. Here two additional conductance updates ensure that they are preserved.
 
 ## Explicit finite formulas
 
@@ -110,7 +110,7 @@ $$
 
 ### Substitution for the triangle
 
-For the selected pair $12$ of a unit triangle,
+For the selected pair $ab$ of a unit triangle,
 
 $$
 A=B=2,\qquad C=-1,\qquad
@@ -126,8 +126,8 @@ $$
 $$
 
 $$
-c'_{12}=\frac{1-3\delta/2}{\Phi(\delta)},\qquad
-c'_{13}=c'_{23}=\frac{1+3\delta/2}{\Phi(\delta)}
+c'_{ab}=\frac{1-3\delta/2}{\Phi(\delta)},\qquad
+c'_{ac}=c'_{bc}=\frac{1+3\delta/2}{\Phi(\delta)}
 $$
 
 Substituting $\delta=1/3$ gives $\Phi=5/4$ and the numbers in the example. All conductances are nonnegative exactly when
@@ -136,7 +136,7 @@ $$
 -\frac23<\delta\le\frac23
 $$
 
-At the right endpoint, $c'_{12}=0$, $c'_{13}=c'_{23}=3/2$: the graph becomes a path, and $R'_{12}=4/3$ equals the sum of the two preserved resistances. Positive definiteness of the Greenian alone allows the wider interval $-2/3<\delta<2$.
+At the right endpoint, $c'_{ab}=0$, $c'_{ac}=c'_{bc}=3/2$: the graph becomes a path, and $R'_{ab}=4/3$ equals the sum of the two preserved resistances. Positive definiteness of the Greenian alone allows the wider interval $-2/3<\delta<2$.
 
 ## Which Greenian coefficients change
 
@@ -181,8 +181,8 @@ $$
 In the triangle example, for $\delta=1/3$ we obtain
 
 $$
-\Delta\gamma_{12}=\frac5{54},\qquad
-\Delta\gamma_{13}=\Delta\gamma_{23}=-\frac1{54}
+\Delta\gamma_{ab}=\frac5{54},\qquad
+\Delta\gamma_{ac}=\Delta\gamma_{bc}=-\frac1{54}
 $$
 
 The new coefficients are therefore $11/54,5/54,5/54$. The general formula can be applied to all these changes. However, update (4) itself admits a shorter representation using two vectors.
@@ -295,14 +295,14 @@ At $\Phi=0$, the factor product remains defined, but inversion on the whole zero
 
 ## Quadric connectivity
 
-Return to the unit triangle and denote a small increment of $R_{12}$ by $\delta$. With $R_{13},R_{23}$ preserved, the first responses are
+Return to the unit triangle and denote a small increment of $R_{ab}$ by $\delta$. With $R_{ac},R_{bc}$ preserved, the first responses are
 
 $$
-\begin{pmatrix}\Delta c_{12}\\\Delta c_{13}\\\Delta c_{23}\end{pmatrix}
+\begin{pmatrix}\Delta c_{ab}\\\Delta c_{ac}\\\Delta c_{bc}\end{pmatrix}
 =\delta\begin{pmatrix}-5/2\\1/2\\1/2\end{pmatrix}+O(\delta^2)
 $$
 
-One sensitivity column answers: how do all conductances respond to changing one resistance? At the finite increment $\delta=1/3$, linearization would give $c'_{12}=1/6$, whereas the exact formula gives $2/5$. A derivative therefore cannot replace the finite response.
+One sensitivity column answers: how do all conductances respond to changing one resistance? At the finite increment $\delta=1/3$, linearization would give $c'_{ab}=1/6$, whereas the exact formula gives $2/5$. A derivative therefore cannot replace the finite response.
 
 To first order, formula (3) gives
 
@@ -458,18 +458,18 @@ There are more edge vectors than the dimension of the space, and their Gram matr
 
 ### Matrices for the unit triangle
 
-In pair order $12,13,23$,
+In pair order $ab,ac,bc$,
 
 $$
 \mathbf S=\frac19\begin{pmatrix}4&1&1\\1&4&1\\1&1&4\end{pmatrix},\qquad
 \mathbf{Lq}=\frac12\begin{pmatrix}5&-1&-1\\-1&5&-1\\-1&-1&5\end{pmatrix}
 $$
 
-Their product is the identity. The quadric-connectivity column for changing $R_{12}$ gives
+Their product is the identity. The quadric-connectivity column for changing $R_{ab}$ gives
 
 $$
-\frac{dc_{12}}{dR_{12}}=-\frac52,\qquad
-\frac{dc_{13}}{dR_{12}}=\frac{dc_{23}}{dR_{12}}=\frac12
+\frac{dc_{ab}}{dR_{ab}}=-\frac52,\qquad
+\frac{dc_{ac}}{dR_{ab}}=\frac{dc_{bc}}{dR_{ab}}=\frac12
 $$
 
 This is the differential limit of the finite formulas already obtained for the triangle.
@@ -478,18 +478,18 @@ This is the differential limit of the finite formulas already obtained for the t
 
 ![All Pairs and Existing Edges](<images/All Pairs and Existing Edges.svg>)
 
-*The path has two edges but three pairwise resistance coordinates in the full variation space. Pair $13$ belongs to the full sensitivity matrix even though $c_{13}=0$. Preserving the path structure imposes $R_{13}=R_{12}+R_{23}$.*
+*The path has two edges but three pairwise resistance coordinates in the full variation space. Pair $ac$ belongs to the full sensitivity matrix even though $c_{ac}=0$. Preserving the path structure imposes $R_{ac}=R_{ab}+R_{bc}$.*
 
 In general, rows and columns corresponding to zero couplings cannot be deleted from both matrices while preserving (11). Differentiating with respect to one resistance while holding all others fixed may require previously absent conductances to appear.
 
-For example, for the unit path $1-2-3$ and its existing edge set $E=\{12,23\}$,
+For example, for the unit path $a-b-c$ and its existing edge set $E=\{ab,bc\}$,
 
 $$
 \mathbf S_{EE}=\begin{pmatrix}1&0\\0&1\end{pmatrix},\qquad
 \mathbf{Lq}_{EE}=\begin{pmatrix}3/2&1/2\\1/2&3/2\end{pmatrix}
 $$
 
-These submatrices are not mutual inverses. Identity (11) also requires pair $13$.
+These submatrices are not mutual inverses. Identity (11) also requires pair $ac$.
 
 If conductances on the complement $Z=\mathcal P\setminus E$ are fixed, then $d\boldsymbol c_Z=0$ and $d\boldsymbol R_E=-\mathbf S_{EE}d\boldsymbol c_E$. Resistances on $Z$ are free to change. The corresponding inverse matrix is
 

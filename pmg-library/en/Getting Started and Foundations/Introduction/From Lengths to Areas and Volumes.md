@@ -1,10 +1,10 @@
 ---
 title: From Lengths to Areas and Volumes
 date: 2026-10-04
-updated: 2026-11-10
-revision: 8
-translated_revision: 8
-source_revision: 7
+updated: 2026-11-18
+revision: 9
+translated_revision: 9
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: lengths-areas-volumes
@@ -56,24 +56,24 @@ The [[en/PythonExamples/Example - Unit Triangle Geometry#Boundary and area|trian
 
 ## The area of a triangle from its side lengths
 
-For a triangle with vertices $a_1,a_2,a_3$, set $u=a_{12}$, $v=a_{13}$ and denote the side lengths by $\ell_{12},\ell_{13},\ell_{23}$. Then
+For a triangle with vertices $a,b,c$, set $u=(ab)$, $v=(ac)$ and denote the side lengths by $\ell_{ab},\ell_{ac},\ell_{bc}$. Then
 
 $$
-u\cdot v=\frac{\ell_{12}^2+\ell_{13}^2-\ell_{23}^2}{2}
+u\cdot v=\frac{\ell_{ab}^2+\ell_{ac}^2-\ell_{bc}^2}{2}
 $$
 
 Formula (2) gives
 
 $$
-4S_\triangle^2=\ell_{12}^2\ell_{13}^2
--\frac14(\ell_{12}^2+\ell_{13}^2-\ell_{23}^2)^2
+4S_\triangle^2=\ell_{ab}^2\ell_{ac}^2
+-\frac14(\ell_{ab}^2+\ell_{ac}^2-\ell_{bc}^2)^2
 $$
 
 This identity is equivalent to Heron's formula:
 
 $$
-S_\triangle^2=p(p-\ell_{12})(p-\ell_{13})(p-\ell_{23}),\qquad
-p=\frac{\ell_{12}+\ell_{13}+\ell_{23}}2
+S_\triangle^2=p(p-\ell_{ab})(p-\ell_{ac})(p-\ell_{bc}),\qquad
+p=\frac{\ell_{ab}+\ell_{ac}+\ell_{bc}}2
 $$
 
 For three distinct graph vertices $i,j,k$, we have $\ell_{ij}^2=R_{ij}$. Hence
@@ -91,7 +91,7 @@ $$
 $$
 
 > [!example] The resistance triangle of $K_3$
-> In the complete graph on three vertices with unit conductances, $R_{12}=R_{13}=R_{23}=2/3$. For $u=a_{12}$ and $v=a_{13}$, we obtain
+> In the complete graph on three vertices with unit conductances, $R_{ab}=R_{ac}=R_{bc}=2/3$. For $u=(ab)$ and $v=(ac)$, we obtain
 >
 > $$
 > G(u,v)=\begin{pmatrix}\frac23&\frac13\\\frac13&\frac23\end{pmatrix},\qquad
@@ -211,7 +211,7 @@ A cycle is a closed path with no repeated vertices except its coinciding start a
 >
 > where the sum runs over all spanning trees. When all coupling strengths are one, $\tau$ is the number of spanning trees.
 
-Choose vertex $0$, relabeling the vertices as $0,1,\ldots,n-1$. Delete its row and column from $L$. Denote the resulting matrix by $L_0$, the reduced Laplacian. The matrix-tree theorem states:
+Label the vertices $v_0,v_1,\ldots,v_{n-1}$ and choose $v_0$ as the reference vertex. Delete its row and column from $L$. Denote the resulting matrix by $L_0$, the reduced Laplacian. The matrix-tree theorem states:
 
 $$
 \det L_0=\tau
@@ -219,9 +219,9 @@ $$
 $$
 
 > [!note]- Derivation by the Cauchy-Binet formula
-> **Proof.** Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $i$ to $j$ is $\mathbf e_j-\mathbf e_i$ and contains the coefficients of the vertex difference: $-1$ in position $i$, $+1$ in position $j$, and zero elsewhere. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
+> **Proof.** Choose an orientation for each edge. Let $B$ be the incidence matrix: the column of an edge oriented from $v_i$ to $v_j$ is $\mathbf e_j-\mathbf e_i$ and contains the coefficients of the vertex difference: $-1$ in position $i$, $+1$ in position $j$, and zero elsewhere. Denote the diagonal matrix of edge conductances by $W=\operatorname{diag}(c_e)$. Then $L=BWB^{\mathsf T}$.
 >
-> Delete the row of vertex $0$ from $B$ to obtain $B_0$. Then
+> Delete the row of vertex $v_0$ from $B$ to obtain $B_0$. Then
 >
 > $$
 > L_0=B_0WB_0^{\mathsf T}=AA^{\mathsf T},\qquad A=B_0W^{1/2}
@@ -233,18 +233,18 @@ $$
 > \det L_0=\sum_{|F|=n-1}(\det B_{0,F})^2\prod_{e\in F}c_e
 > $$
 >
-> If $F$ contains a cycle, the columns are linearly dependent and the determinant is zero. An acyclic set of $n-1$ edges on $n$ vertices is a spanning tree. For a tree, $\det B_{0,F}=\pm1$: this follows by successively expanding along rows corresponding to leaves other than vertex $0$, where a leaf is a vertex incident to exactly one edge. Exactly the weights of spanning trees remain in the sum, proving (6). $\square$
+> If $F$ contains a cycle, the columns are linearly dependent and the determinant is zero. An acyclic set of $n-1$ edges on $n$ vertices is a spanning tree. For a tree, $\det B_{0,F}=\pm1$: this follows by successively expanding along rows corresponding to leaves other than vertex $v_0$, where a leaf is a vertex incident to exactly one edge. Exactly the weights of spanning trees remain in the sum, proving (6). $\square$
 
 ## The volume of the full resistance simplex
 
-Consider the vertex-pair vectors $a_{0i}$ for $i=1,\ldots,n-1$, and denote their Gram matrix by $G_R$. Its entries are
+Consider the vertex-pair vectors $a_{0i}=v_i-v_0$ for $i=1,\ldots,n-1$, and denote their Gram matrix by $G_R$. Its entries are
 
 $$
 (G_R)_{ij}=a_{0i}\cdot a_{0j}=\frac12(R_{0i}+R_{0j}-R_{ij})
 $$
 
 > [!info] The Gram matrix relative to one vertex
-> **Lemma.** The Gram matrix of resistance vectors based at vertex $0$ is
+> **Lemma.** The Gram matrix of resistance vectors based at vertex $v_0$ is
 >
 > $$
 > G_R=L_0^{-1}
@@ -252,13 +252,13 @@ $$
 > $$
 
 > [!note]- Proof using potentials
-> **Proof.** Inject a unit current at vertex $j$ and withdraw it at vertex $0$. Choose the reference potential $\varphi_0=0$. The equations for the remaining vertices are
+> **Proof.** Inject a unit current at vertex $v_j$ and withdraw it at vertex $v_0$. Choose the reference potential $\varphi_0=0$. The equations for the remaining vertices are
 >
 > $$
 > L_0\widehat\varphi=\widehat{\mathbf e}_j
 > $$
 >
-> Here $\widehat\varphi$ contains the potentials at vertices $1,\ldots,n-1$, and $\widehat{\mathbf e}_j$ is the corresponding standard basis column vector. Hence $\varphi_i=(L_0^{-1})_{ij}$.
+> Here $\widehat\varphi$ contains the potentials at vertices $v_1,\ldots,v_{n-1}$, and $\widehat{\mathbf e}_j$ is the corresponding standard basis column vector. Hence $\varphi_i=(L_0^{-1})_{ij}$.
 >
 > By the [[Inner Product of Graph Vectors#Electrical interpretation|electrical interpretation of the inner product]],
 >
@@ -277,14 +277,14 @@ V_R^2=\frac1{((n-1)!)^2\tau}
 $$
 
 > [!example] The spanning-tree coefficient and area for $K_3$
-> The triangle graph with unit conductances has three spanning trees, so $\tau=3$. Choosing vertex $1$ as the reference vertex gives
+> The triangle graph with unit conductances has three spanning trees, so $\tau=3$. Choosing $v_0=a$ as the reference vertex gives
 >
 > $$
 > L_0=\begin{pmatrix}2&-1\\-1&2\end{pmatrix},\qquad
 > L_0^{-1}=\begin{pmatrix}\frac23&\frac13\\\frac13&\frac23\end{pmatrix}
 > $$
 >
-> The inverse matrix equals the previously computed Gram matrix $G(a_{12},a_{13})$. Formula (8) gives $S_\triangle^2=1/((2!)^2\cdot3)=1/12$, in agreement with the direct area calculation.
+> The inverse matrix equals the previously computed Gram matrix $G(u,v)$ for $u=(ab)$ and $v=(ac)$. Formula (8) gives $S_\triangle^2=1/((2!)^2\cdot3)=1/12$, in agreement with the direct area calculation.
 
 > [!note]- Two mutually inverse Gram matrices
 > There is also a volume whose square equals $\tau$ itself. Take the matrix $A=B_0W^{1/2}$ from the proof of the matrix-tree theorem: its rows contain edge coordinates multiplied by square roots of coupling strengths. Their Gram matrix is $AA^{\mathsf T}=L_0$. The Gram formula therefore gives $\tau$ as the squared volume spanned by these rows.
@@ -304,7 +304,7 @@ The [[en/PythonExamples/Example - Unit Triangle Geometry#Two boundaries and the 
 
 This is an additional interpretation of the same determinants: they compute joint edge-inclusion probabilities. This section can be deferred when proceeding to polyform algebra.
 
-For an edge $e$ oriented from $i$ to $j$, set $t_e=a_{ij}$, $R_e=R_{ij}$, and $g(e,f)=t_e\cdot t_f$. Choose a random spanning tree $T$ according to the distribution
+For an edge $e$ oriented from $v_i$ to $v_j$, set $t_e=a_{ij}$, $R_e=R_{ij}$, and $g(e,f)=t_e\cdot t_f$. Choose a random spanning tree $T$ according to the distribution
 
 $$
 \Pr(T)=\frac1\tau\prod_{e\in T}c_e

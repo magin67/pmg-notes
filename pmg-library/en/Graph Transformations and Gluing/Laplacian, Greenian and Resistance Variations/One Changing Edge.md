@@ -1,15 +1,15 @@
 ---
 title: One Changing Edge
 date: 2026-10-31
-updated: 2026-11-15
-revision: 5
+updated: 2026-11-18
+revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-changing-edge
 lang: en
 description: From strengthening a triangle edge to exact variations of the spanning-tree coefficient and resistances. A derivation through one exterior Laplacian exponential factor, forest potentials, and their normalization.
 order: 1
-translated_revision: 9
+translated_revision: 10
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Changing Edge"
 ---
@@ -22,43 +22,43 @@ We change the conductance of one edge. How does the spanning-tree coefficient ch
 
 See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Strengthening one edge|the notebook calculation]].
 
-For a graph consisting of one edge of conductance $c>0$, the answer is simple: $\tau=c$, $R_{12}=1/c$. After changing the conductance by $t$, where $c+t>0$, we have $\tau'=c+t$, $R'_{12}=1/(c+t)$.
+For a graph consisting of one edge of conductance $c>0$, the answer is simple: $\tau=c$, $R_{ab}=1/c$. After changing the conductance by $t$, where $c+t>0$, we have $\tau'=c+t$, $R'_{ab}=1/(c+t)$.
 
-A triangle provides an alternative path. Take $c_{12}=c_{13}=c_{23}=1$ and increase only $c_{12}$ to $2$. Keep all vertices and the other two conductances fixed.
+A triangle provides an alternative path. Take $c_{ab}=c_{ac}=c_{bc}=1$ and increase only $c_{ab}$ to $2$. Keep all vertices and the other two conductances fixed.
 
-![The original unit triangle and the triangle after increasing the conductance of edge 12 to 2](<images/Strengthening One Edge of a Triangle.svg>)
+![The original unit triangle and the triangle after increasing the conductance of edge ab to 2](<images/Strengthening One Edge of a Triangle.svg>)
 
-*Numbers beside edges denote conductances. The strengthened edge is distinguished by color and thickness; vertex labels are unchanged.*
+*Numbers beside edges denote conductances. The vertex labels match across the two diagrams. Color and thickness mark the strengthened edge.*
 
 The original triangle has three spanning trees of weight $1$, so $\tau=3$. After the change, their weights are $2,2,1$, and $\tau'=5$.
 
-Vertices $1$ and $2$ are joined by parallel paths with resistances $1/2$ and $2$. Between $1$ and $3$, the parallel paths have resistances $1$ and $3/2$. Hence
+Vertices $a$ and $b$ are joined by parallel paths with resistances $1/2$ and $2$. Between $a$ and $c$, the parallel paths have resistances $1$ and $3/2$. Hence
 
 $$
-R'_{12}=\frac{(1/2)\cdot2}{1/2+2}=\frac25,
+R'_{ab}=\frac{(1/2)\cdot2}{1/2+2}=\frac25,
 \qquad
-R'_{13}=R'_{23}=\frac{1\cdot(3/2)}{1+3/2}=\frac35
+R'_{ac}=R'_{bc}=\frac{1\cdot(3/2)}{1+3/2}=\frac35
 $$
 
 | Quantity | Before | After | Increment |
 |---|---:|---:|---:|
-| $c_{12}$ | $1$ | $2$ | $1$ |
+| $c_{ab}$ | $1$ | $2$ | $1$ |
 | $\tau$ | $3$ | $5$ | $2$ |
-| $R_{12}$ | $2/3$ | $2/5$ | $-4/15$ |
-| $R_{13},R_{23}$ | $2/3$ | $3/5$ | $-1/15$ |
+| $R_{ab}$ | $2/3$ | $2/5$ | $-4/15$ |
+| $R_{ac},R_{bc}$ | $2/3$ | $3/5$ | $-1/15$ |
 
-One conductance changed, but all three resistances decreased. In particular, $R'_{12}=2/5$ differs from the resistance $1/c'_{12}=1/2$ of the strengthened edge itself: effective resistance accounts for the entire network.
+One conductance changed, but all three resistances decreased. In particular, $R'_{ab}=2/5$ differs from the resistance $1/c'_{ab}=1/2$ of the strengthened edge itself: effective resistance accounts for the entire network.
 
 > [!example] The same triangle under an arbitrary change
-> If $c'_{12}=1+t$, $t\ge-1$, direct calculation gives
+> If $c'_{ab}=1+t$, $t\ge-1$, direct calculation gives
 >
 > $$
 > \tau'=3+2t,\qquad
-> R'_{12}=\frac2{3+2t},\qquad
-> R'_{13}=R'_{23}=\frac{2+t}{3+2t}
+> R'_{ab}=\frac2{3+2t},\qquad
+> R'_{ac}=R'_{bc}=\frac{2+t}{3+2t}
 > $$
 >
-> At $t=-1$, edge $12$ is removed: the remaining path $1-3-2$ has $\tau'=1$, $R'_{12}=2$, and $R'_{13}=R'_{23}=1$.
+> At $t=-1$, edge $ab$ is removed: the remaining path $a-c-b$ has $\tau'=1$, $R'_{ab}=2$, and $R'_{ac}=R'_{bc}=1$.
 
 ## Data needed for a general graph
 
@@ -97,12 +97,12 @@ A prime denotes the new value, and $\Delta$ the difference between the new and o
 
 Formula (1) remains valid if connectedness is lost. Formula (2) requires $1+tR_{kl}>0$; for nonnegative final conductances, this is precisely the condition that connectedness be preserved. These results are known from [[Variation of a Single Edge|the matrix treatment of a single variation]]. Here we obtain them through products of forms, explicitly accounting for the changing normalization.
 
-For the triangle in the example, $R_{12}=2/3$, $g_{12,12}=2/3$, $g_{13,12}=1/3$. At $t=1$, the formulas give
+For the triangle in the example, $R_{ab}=2/3$, $g_{ab,ab}=2/3$, $g_{ac,ab}=1/3$. At $t=1$, the formulas give
 
 $$
 \Delta\tau=1\cdot3\cdot\frac23=2,\qquad
-\Delta R_{12}=-\frac{4/9}{5/3}=-\frac4{15},\qquad
-\Delta R_{13}=-\frac{1/9}{5/3}=-\frac1{15}
+\Delta R_{ab}=-\frac{4/9}{5/3}=-\frac4{15},\qquad
+\Delta R_{ac}=-\frac{1/9}{5/3}=-\frac1{15}
 $$
 
 ## Variation as adding a factor
@@ -265,7 +265,7 @@ Now assume that connectedness is preserved. The new resistance requires division
 >
 > Subtracting $R_{ij}$ gives (2). $\square$
 
-The polyform $M'$, each of its grades, and each fixed potential depend linearly on $t$. Resistance depends on it through a fractional-linear function: both the numerator $m'_{ij}$ and the denominator $\tau'$ change. For example, in the triangle, $m'_{12}=2$, $m'_{13}=m'_{23}=2+t$, and the common denominator is $3+2t$.
+The polyform $M'$, each of its grades, and each fixed potential depend linearly on $t$. Resistance depends on it through a fractional-linear function: both the numerator $m'_{ij}$ and the denominator $\tau'$ change. For example, in the triangle, $m'_{ab}=2$, $m'_{ac}=m'_{bc}=2+t$, and the common denominator is $3+2t$.
 
 ## Sensitivity and resistance preservation
 

@@ -1,15 +1,15 @@
 ---
 title: Variations with Conductance Constraints
 date: 2026-10-31
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-constrained-couplings
 lang: en
 description: 'The prism and the problem with sets P, Z, and V: prescribed resistances, preserved zero couplings, nonnegative conductances, and boundaries of solution existence.'
 order: 7
-translated_revision: 8
+translated_revision: 9
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Variations with Conductance Constraints"
 ---
@@ -26,39 +26,39 @@ See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#
 
 In this example, $P$ is a vertex set, whereas $V$ and $Z$ are sets of vertex pairs. Colored edges may vary and grey edges are fixed; absent forbidden pairs are listed separately.
 
-Consider a triangular prism with faces $123$ and $456$ and connecting edges $14,25,36$. Initially, all nine conductances equal $1$.
+Consider a triangular prism with faces $abc$ and $def$ and connecting edges $ad,be,cf$. Initially, all nine conductances equal $1$.
 
-Choose $P=\{1,2,3\}$. Keep the three conductances of this face equal to one. The following may change:
+Choose $P=\{a,b,c\}$. Keep the three conductances of this face equal to one. The following may change:
 
 $$
-V=\{45,46,56,14,25,36\}
+V=\{de,df,ef,ad,be,cf\}
 $$
 
 All absent couplings must remain zero:
 
 $$
-Z=\{15,16,24,26,34,35\}
+Z=\{ae,af,bd,bf,cd,ce\}
 $$
 
 The original resistances on $P$ are
 
 $$
-R_{12}=R_{13}=R_{23}=\frac8{15}
+R_{ab}=R_{ac}=R_{bc}=\frac8{15}
 $$
 
-Increase only $R_{12}$ to $3/5$, that is, by a factor of $9/8$, keeping $R_{13}=R_{23}=8/15$.
+Increase only $R_{ab}$ to $3/5$, that is, by a factor of $9/8$, keeping $R_{ac}=R_{bc}=8/15$.
 
-![Two states of the prism graph with fixed outer face 123 and variable couplings to inner face 456](<images/Prism with Conductance Constraints.svg>)
+![Two states of the prism graph with fixed outer face abc and variable couplings to inner face def](<images/Prism with Conductance Constraints.svg>)
 
-*The prism is drawn in the plane: the outer triangle $123$ corresponds to $P$. Its gray edges are fixed; colored edges belong to $V$. Numbers denote conductances. The dashed edge on the right is the permitted coupling $45$ whose conductance has become zero; pairs in $Z$ are not drawn.*
+*The prism is drawn in the plane: the outer triangle $abc$ corresponds to $P$. Its gray edges are fixed; colored edges belong to $V$. Numbers denote conductances. The dashed edge on the right is the permitted coupling $de$ whose conductance has become zero; pairs in $Z$ are not drawn.*
 
 > [!example] An exact solution with nonnegative conductances
 > One solution is
 >
 > $$
 > \boxed{\begin{gathered}
-> c'_{14}=c'_{25}=c'_{36}=7,\\
-> c'_{45}=0,\qquad c'_{46}=c'_{56}=\frac7{20}
+> c'_{ad}=c'_{be}=c'_{cf}=7,\\
+> c'_{de}=0,\qquad c'_{df}=c'_{ef}=\frac7{20}
 > \end{gathered}}
 > \tag{1}
 > $$
@@ -66,31 +66,31 @@ Increase only $R_{12}$ to $3/5$, that is, by a factor of $9/8$, keeping $R_{13}=
 > It gives
 >
 > $$
-> R'_{12}=\frac35,\qquad R'_{13}=R'_{23}=\frac8{15}
+> R'_{ab}=\frac35,\qquad R'_{ac}=R'_{bc}=\frac8{15}
 > $$
 >
-> Couplings on $Z$ remain zero, conductances on face $P$ remain one, and the graph is connected. Setting $45$ to zero is permitted: this pair belongs to $V$.
+> Couplings on $Z$ remain zero, conductances on face $P$ remain one, and the graph is connected. Setting $de$ to zero is permitted: this pair belongs to $V$.
 
-To check this, eliminate the internal vertices $4,5,6$ while preserving resistances on $P$. Initially, the resulting triangle has conductances $5/4$. For (1), its conductances are
+To check this, eliminate the internal vertices $d,e,f$ while preserving resistances on $P$. Initially, the resulting triangle has conductances $5/4$. For (1), its conductances are
 
 $$
-q'_{12}=\frac{70}{69},\qquad q'_{13}=q'_{23}=\frac{30}{23}
+q'_{ab}=\frac{70}{69},\qquad q'_{ac}=q'_{bc}=\frac{30}{23}
 $$
 
 The spanning-tree coefficient of this triangle is $100/23$. Thus
 
 $$
-R'_{12}=\frac{60/23}{100/23}=\frac35,\qquad
-R'_{13}=R'_{23}=\frac{70/69+30/23}{100/23}=\frac8{15}
+R'_{ab}=\frac{60/23}{100/23}=\frac35,\qquad
+R'_{ac}=R'_{bc}=\frac{70/69+30/23}{100/23}=\frac8{15}
 $$
 
 Conductances $q'_{ij}$ belong to the graph after internal-vertex elimination, not to the original couplings $c'_{ij}=1$ on face $P$. The elimination formula and general derivation are given below.
 
-If instead $R_{12}$ is required to double while the same two other resistances are preserved, there is no solution with nonnegative conductances. Free couplings therefore do not make every resistance change admissible.
+If instead $R_{ab}$ is required to double while the same two other resistances are preserved, there is no solution with nonnegative conductances. Free couplings therefore do not make every resistance change admissible.
 
 ![The Prism and Its Boundary Triangle](<images/The Prism and Its Boundary Triangle.svg>)
 
-*Eliminating vertices $4,5,6$ produces another graph on $P$. Its conductance $q_{12}$ is the fixed $c_{12}=1$ plus an induced contribution; this is not a change of the original edge $12$.*
+*Eliminating vertices $d,e,f$ produces another graph on $P$. Its conductance $q_{ab}$ is the fixed $c_{ab}=1$ plus an induced contribution; this is not a change of the original edge $ab$.*
 
 ## Formulating the problem with P, Z, and V
 
@@ -186,8 +186,8 @@ This also follows by splitting the network into the fixed couplings within $P$ a
 Return to the prism and prescribe
 
 $$
-R^*_{12}=k\frac8{15},\qquad
-R^*_{13}=R^*_{23}=\frac8{15},\qquad k>0
+R^*_{ab}=k\frac8{15},\qquad
+R^*_{ac}=R^*_{bc}=\frac8{15},\qquad k>0
 $$
 
 ### The target triangle on P
@@ -195,39 +195,39 @@ $$
 For $0<k<4$, inversion of the target resistance table gives
 
 $$
-q^*_{12}=\frac{15(2-k)}{4k(4-k)},\qquad
-q^*_{13}=q^*_{23}=\frac{15}{4(4-k)}
+q^*_{ab}=\frac{15(2-k)}{4k(4-k)},\qquad
+q^*_{ac}=q^*_{bc}=\frac{15}{4(4-k)}
 \tag{7}
 $$
 
 > [!note]- Deriving the target-triangle conductances
-> **Proof.** For a triangle with resistances $r_{12},r_{13},r_{23}$, set
+> **Proof.** For a triangle with resistances $r_{ab},r_{ac},r_{bc}$, set
 >
 > $$
 > \begin{aligned}
-> D={}&2(r_{12}r_{13}+r_{12}r_{23}+r_{13}r_{23})\\
-> &-r_{12}^2-r_{13}^2-r_{23}^2
+> D={}&2(r_{ab}r_{ac}+r_{ab}r_{bc}+r_{ac}r_{bc})\\
+> &-r_{ab}^2-r_{ac}^2-r_{bc}^2
 > \end{aligned}
 > $$
 >
-> Solving the three equalities $r_{ij}=(q_{ik}+q_{jk})/\tau$ gives $q_{ij}=2(r_{ik}+r_{jk}-r_{ij})/D$. For $r_{12}=kr$, $r_{13}=r_{23}=r$, we have $D=r^2k(4-k)$. Substitution of $r=8/15$ gives (7). Positive definiteness of the target Greenian is equivalent to $0<k<4$. $\square$
+> Solving the three equalities $r_{ij}=(q_{ik}+q_{jk})/\tau$ gives $q_{ij}=2(r_{ik}+r_{jk}-r_{ij})/D$. For $r_{ab}=kr$, $r_{ac}=r_{bc}=r$, we have $D=r^2k(4-k)$. Substitution of $r=8/15$ gives (7). Positive definiteness of the target Greenian is equivalent to $0<k<4$. $\square$
 
-Doubling, $k=2$, requires $q^*_{12}=0$. But the fixed coupling $c_{12}=1$ already contributes $1$, and the internal network can add only a nonnegative contribution. Condition (6) fails. The target triangle itself is admissible at $k=2$; the impossibility comes from the prism constraints.
+Doubling, $k=2$, requires $q^*_{ab}=0$. But the fixed coupling $c_{ab}=1$ already contributes $1$, and the internal network can add only a nonnegative contribution. Condition (6) fails. The target triangle itself is admissible at $k=2$; the impossibility comes from the prism constraints.
 
 The internal network must supplement the unit couplings to reach (7). Denote the required induced conductances by
 
 $$
 \begin{aligned}
-a&=q^*_{12}-1=\frac{4k^2-31k+30}{4k(4-k)},\\
-b&=q^*_{13}-1=q^*_{23}-1=\frac{4k-1}{4(4-k)}
+\alpha&=q^*_{ab}-1=\frac{4k^2-31k+30}{4k(4-k)},\\
+\beta&=q^*_{ac}-1=q^*_{bc}-1=\frac{4k-1}{4(4-k)}
 \end{aligned}
 \tag{8}
 $$
 
-Conditions $a,b\ge0$ give a candidate solution region. Attainability of one endpoint needs a separate check.
+Conditions $\alpha,\beta\ge0$ give a candidate solution region. Attainability of one endpoint needs a separate check.
 
 > [!info] The exact solution region for the prism
-> **Theorem.** With fixed unit couplings $12,13,23$ and the specified set $V$, a finite connected solution with nonnegative conductances exists exactly when
+> **Theorem.** With fixed unit couplings $ab,ac,bc$ and the specified set $V$, a finite connected solution with nonnegative conductances exists exactly when
 >
 > $$
 > \boxed{\begin{gathered}
@@ -247,13 +247,13 @@ Conditions $a,b\ge0$ give a candidate solution region. Attainability of one endp
 
 The following construction gives an explicit recipe within the feasible interval. On a first reading, proceed to [[#Why the upper endpoint is unattainable|the unattainable upper endpoint]], then return to the conductance calculation.
 
-Let $a>0$, $b\ge0$ be given by (8). Choose all three connecting conductances equal to $g$ and set
+Let $\alpha>0$, $\beta\ge0$ be given by (8). Choose all three connecting conductances equal to $g$ and set
 
 $$
 \begin{aligned}
-c_{14}=c_{25}=c_{36}&=g,\\
-c_{46}=c_{56}&=\frac{gb}{g-3b},\\
-c_{45}&=\frac{g\,[ag-b(2a+b)]}{(g-2a-b)(g-3b)}
+c_{ad}=c_{be}=c_{cf}&=g,\\
+c_{df}=c_{ef}&=\frac{g\beta}{g-3\beta},\\
+c_{de}&=\frac{g\,[\alpha g-\beta(2\alpha+\beta)]}{(g-2\alpha-\beta)(g-3\beta)}
 \end{aligned}
 \tag{10}
 $$
@@ -261,47 +261,47 @@ $$
 It suffices to choose
 
 $$
-g>\max\left\{2a+b,\ 3b,\ \frac{b(2a+b)}a\right\}
+g>\max\left\{2\alpha+\beta,\ 3\beta,\ \frac{\beta(2\alpha+\beta)}{\alpha}\right\}
 \tag{11}
 $$
 
-Then for $b>0$, all six conductances are positive. At $b=0$, we get $c_{46}=c_{56}=0$ and $c_{45}=ga/(g-2a)>0$, while connectedness is preserved through the fixed face and the three connecting edges.
+Then for $\beta>0$, all six conductances are positive. At $\beta=0$, we get $c_{df}=c_{ef}=0$ and $c_{de}=g\alpha/(g-2\alpha)>0$, while connectedness is preserved through the fixed face and the three connecting edges.
 
 > [!note]- Proof of the construction and numerical example
-> **Proof.** Let $\mathbf H$ be the Laplacian of triangle $456$ in order $4,5,6$. With equal connecting conductances, its contribution to the response on $P$ is
+> **Proof.** Let $\mathbf H$ be the Laplacian of triangle $def$ in order $d,e,f$. With equal connecting conductances, its contribution to the response on $P$ is
 >
 > $$
 > \mathbf C=g\mathbf I_3-g^2(g\mathbf I_3+\mathbf H)^{-1}
 > $$
 >
-> The required triangle with conductances $a,b,b$ has eigenvalues $2a+b$ and $3b$ in directions $(1,-1,0)$ and $(1,1,-2)$. If an eigenvalue of $\mathbf H$ is $h$, the corresponding eigenvalue of $\mathbf C$ is $gh/(g+h)$. Thus the required values of $\mathbf H$ are
+> The required triangle with conductances $\alpha,\beta,\beta$ has eigenvalues $2\alpha+\beta$ and $3\beta$ in directions $(1,-1,0)$ and $(1,1,-2)$. If an eigenvalue of $\mathbf H$ is $h$, the corresponding eigenvalue of $\mathbf C$ is $gh/(g+h)$. Thus the required values of $\mathbf H$ are
 >
 > $$
-> \mu=\frac{g(2a+b)}{g-2a-b},\qquad
-> 3\nu=\frac{3gb}{g-3b}
+> \mu=\frac{g(2\alpha+\beta)}{g-2\alpha-\beta},\qquad
+> 3\nu=\frac{3g\beta}{g-3\beta}
 > $$
 >
-> For conductances $c_{45}=(\mu-\nu)/2$, $c_{46}=c_{56}=\nu$, this gives (10). Condition (11) ensures the required signs.
+> For conductances $c_{de}=(\mu-\nu)/2$, $c_{df}=c_{ef}=\nu$, this gives (10). Condition (11) ensures the required signs.
 >
-> At $k=1$, we have $a=b=1/4$; choosing $g=1$ recovers all original conductances $1$. At $k=9/8$, we have $a=1/69$, $b=7/23$. Choosing $g=7$ gives $\mu=\nu=7/20$ and precisely (1). Here the last inequality in (11) is replaced by equality: conductance $45$ is zero. Any $g>7$ in (10) gives the same resistances with strictly positive conductances. $\square$
+> At $k=1$, we have $\alpha=\beta=1/4$; choosing $g=1$ recovers all original conductances $1$. At $k=9/8$, we have $\alpha=1/69$, $\beta=7/23$. Choosing $g=7$ gives $\mu=\nu=7/20$ and precisely (1). Here the last inequality in (11) is replaced by equality: conductance $de$ is zero. Any $g>7$ in (10) gives the same resistances with strictly positive conductances. $\square$
 
 ### Why the upper endpoint is unattainable
 
-At the upper endpoint, the induced contribution between $1$ and $2$ must be zero, while those between $1,3$ and $2,3$ must be positive. In the prism’s finite internal network, the latter two connections also provide a path between $1$ and $2$. Its induced contribution is positive, so the required zero is impossible. The boundary can be approached but not attained with finite conductances.
+At the upper endpoint, the induced contribution between $a$ and $b$ must be zero, while those between $a,c$ and $b,c$ must be positive. In the prism’s finite internal network, the latter two connections also provide a path between $a$ and $b$. Its induced contribution is positive, so the required zero is impossible. The boundary can be approached but not attained with finite conductances.
 
 > [!note]- Proof that the solution region is exact
-> **Proof.** From (8) and $0<k<4$: $b\ge0$ requires $k\ge1/4$, and $a\ge0$ requires $k\le k_{\max}$. For $1/4\le k<k_{\max}$, construction (10)-(11) gives a solution. At $k=1/4$, we have $a=6$, $b=0$; for example, take $g=24$, $c_{45}=12$, $c_{46}=c_{56}=0$.
+> **Proof.** From (8) and $0<k<4$: $\beta\ge0$ requires $k\ge1/4$, and $\alpha\ge0$ requires $k\le k_{\max}$. For $1/4\le k<k_{\max}$, construction (10)-(11) gives a solution. At $k=1/4$, we have $\alpha=6$, $\beta=0$; for example, take $g=24$, $c_{de}=12$, $c_{df}=c_{ef}=0$.
 >
-> It remains to exclude $k=k_{\max}$, where $a=0$, $b>0$. Suppose such a solution exists. Write $g_1=c_{14}$, $g_2=c_{25}$, $g_3=c_{36}$, and $x=c_{45}$, $y=c_{46}$, $z=c_{56}$. The two positive induced contributions $13$ and $23$ require $g_1,g_2,g_3>0$. Set $\mathbf M=\operatorname{diag}(g_1,g_2,g_3)+\mathbf H$. For the induced conductance $12$, the Schur complement formula gives
+> It remains to exclude $k=k_{\max}$, where $\alpha=0$, $\beta>0$. Suppose such a solution exists. Write $g_1=c_{ad}$, $g_2=c_{be}$, $g_3=c_{cf}$, and $x=c_{de}$, $y=c_{df}$, $z=c_{ef}$. The two positive induced contributions $ac$ and $bc$ require $g_1,g_2,g_3>0$. Set $\mathbf M=\operatorname{diag}(g_1,g_2,g_3)+\mathbf H$. For the induced conductance $ab$, the Schur complement formula gives
 >
 > $$
-> a=\frac{g_1g_2}{\det\mathbf M}
+> \alpha=\frac{g_1g_2}{\det\mathbf M}
 > \bigl[x(g_3+y+z)+yz\bigr]
 > $$
 >
-> With nonnegative conductances, equality $a=0$ forces $x=0$ and $yz=0$. But with $x=0$, positive contributions $13$ and $23$ require $y>0$ and $z>0$, respectively. This is a contradiction.
+> With nonnegative conductances, equality $\alpha=0$ forces $x=0$ and $yz=0$. But with $x=0$, positive contributions $ac$ and $bc$ require $y>0$ and $z>0$, respectively. This is a contradiction.
 >
-> If all six conductances are strictly positive, all three induced conductances are positive. Thus $b=0$ at the left endpoint is also impossible. Within the open interval, (11) ensures strict positivity. $\square$
+> If all six conductances are strictly positive, all three induced conductances are positive. Thus $\beta=0$ at the left endpoint is also impossible. Within the open interval, (11) ensures strict positivity. $\square$
 
 Admissibility of the target resistance table, necessary sign bounds, and realization in the specified structure are therefore distinct. For this prism, the conditions are fully resolved; for a general graph, check (6) alone is insufficient.
 
@@ -369,7 +369,7 @@ Rows are indexed by all vertex pairs in $P$, and columns by permitted pairs $V$.
 
 To preserve resistances, an admissible direction must lie in the kernel of $\mathbf S_{P,V}$. For a prescribed first-order increment, solve linear system (14). If a current conductance is zero, a direction admissible for a positive step must also satisfy $dc_e\ge0$. These are first-order conditions; finite changes are checked using (3), (5), or (13).
 
-For the original unit prism, in row order $12,13,23$ and column order $45,46,56,14,25,36$,
+For the original unit prism, in row order $ab,ac,bc$ and column order $de,df,ef,ad,be,cf$,
 
 $$
 \mathbf S_{P,V}=\frac1{225}
@@ -386,7 +386,7 @@ The first three columns form a nonsingular matrix. Hence, in a sufficiently smal
 
 If the full resistance matrix is prescribed first and the Laplacian is recovered, couplings on $Z$ may appear. Setting them to zero afterwards is itself a conductance variation and generally changes resistances on $P$. Preserving those resistances requires jointly changing permitted couplings and checking the full equality (5) or (13).
 
-The new formulation does not retain [[Joint Variation of Resistances#Which couplings can change|the locality obtained when all other resistances are preserved]]: there, every resistance increment outside the prescribed block was zero. Here they are free. For example, on the path $1-2-3-4-5-6$ with $P=\{1,2\}$, conductance $56$ can change while $R_{12}$ is preserved, even though both its endpoints lie outside $P$ and its neighbors.
+The new formulation does not retain [[Joint Variation of Resistances#Which couplings can change|the locality obtained when all other resistances are preserved]]: there, every resistance increment outside the prescribed block was zero. Here they are free. For example, on the path $a-b-c-d-e-f$ with $P=\{a,b\}$, conductance $ef$ can change while $R_{ab}$ is preserved, even though both its endpoints lie outside $P$ and its neighbors.
 
 ## When no exact solution exists
 

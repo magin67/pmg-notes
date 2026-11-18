@@ -1,15 +1,15 @@
 ---
 title: One Greenian Coefficient
 date: 2026-10-31
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-one-greenian-coefficient
 lang: en
 description: 'Changing one vector coefficient of the Greenian: a path example, exact variations of the spanning-tree coefficient and conductances, an exponential-factor derivation, and admissible parameters.'
 order: 3
-translated_revision: 7
+translated_revision: 8
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/One Greenian Coefficient"
 ---
@@ -22,34 +22,34 @@ In [[One Changing Edge|the variation of one edge]], a conductance change was pre
 
 See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#One Greenian coefficient|the notebook calculation]].
 
-Take the path $1-2-3-4$ with unit conductances. It has one spanning tree, so $\tau=1$. In [[The Canonical Vector Representation of the Greenian#Full example: a path on four vertices|the canonical Greenian expansion of this path]], the coefficient of $[a_{12}]^2$ is $\gamma_{12}=-1/8$.
+Take the path $a-b-c-d$ with unit conductances. It has one spanning tree, so $\tau=1$. In [[The Canonical Vector Representation of the Greenian#Full example: a path on four vertices|the canonical Greenian expansion of this path]], the coefficient of $[(ab)]^2$ is $\gamma_{ab}=-1/8$.
 
 Increase this coefficient by $t=1/5$, keeping the other coefficients and the vectors themselves fixed:
 
 $$
-\mathrm{Gr}'=\mathrm{Gr}+\frac15[a_{12}]^2,
-\qquad \gamma'_{12}=-\frac18+\frac15=\frac3{40}
+\mathrm{Gr}'=\mathrm{Gr}+\frac15[(ab)]^2,
+\qquad \gamma'_{ab}=-\frac18+\frac15=\frac3{40}
 $$
 
-This changes a Greenian coefficient. It does not yet prescribe the new conductance $c_{12}$: that conductance must be recovered together with the other couplings.
+This changes a Greenian coefficient. It does not yet prescribe the new conductance $c_{ab}$: that conductance must be recovered together with the other couplings.
 
-![The unit path and the graph after increasing the Greenian coefficient of pair form 12 by one fifth](<images/One Greenian Coefficient of a Path.svg>)
+![The unit path and the graph after increasing the Greenian coefficient of pair form ab by one fifth](<images/One Greenian Coefficient of a Path.svg>)
 
-*Numbers beside edges denote conductances. The change introduces coupling $13$, decreases two path conductances, and preserves coupling $34$.*
+*Numbers beside edges denote conductances. The change introduces coupling $ac$, decreases two path conductances, and preserves coupling $cd$.*
 
 > [!example] The answer for the path
 > The new conductances and spanning-tree coefficient are
 >
 > $$
-> c'_{12}=\frac25,\qquad c'_{23}=\frac7{10},\qquad
-> c'_{13}=\frac15,\qquad c'_{34}=1
+> c'_{ab}=\frac25,\qquad c'_{bc}=\frac7{10},\qquad
+> c'_{ac}=\frac15,\qquad c'_{cd}=1
 > $$
 >
 > $$
-> c'_{14}=c'_{24}=0,\qquad \boxed{\tau'=\frac12}
+> c'_{ad}=c'_{bd}=0,\qquad \boxed{\tau'=\frac12}
 > $$
 
-In the new graph, edge $34$ belongs to every spanning tree, and two edges are chosen from triangle $123$. Direct counting confirms the answer:
+In the new graph, edge $cd$ belongs to every spanning tree, and two edges are chosen from triangle $abc$. Direct counting confirms the answer:
 
 $$
 \tau'=1\left(\frac25\frac7{10}+\frac25\frac15+\frac7{10}\frac15\right)
@@ -141,11 +141,11 @@ $$
 
 ## Substitution for the path
 
-For the unit path $1-2-3-4$ and pair $12$,
+For the unit path $a-b-c-d$ and pair $ab$,
 
 $$
-q_{12}=1+2+2=5,\qquad
-\begin{pmatrix}L_{11}-L_{12}\\L_{21}-L_{22}\\L_{31}-L_{32}\\L_{41}-L_{42}\end{pmatrix}
+q_{ab}=1+2+2=5,\qquad
+\begin{pmatrix}L_{aa}-L_{ab}\\L_{ba}-L_{bb}\\L_{ca}-L_{cb}\\L_{da}-L_{db}\end{pmatrix}
 =\begin{pmatrix}2\\-3\\1\\0\end{pmatrix}
 $$
 
@@ -153,23 +153,23 @@ Thus (1)-(2) give, for arbitrary $t\ne-1/5$,
 
 $$
 \tau'=\frac1{1+5t},\qquad
-c'_{12}=1-\frac{6t}{1+5t}=\frac{1-t}{1+5t}
+c'_{ab}=1-\frac{6t}{1+5t}=\frac{1-t}{1+5t}
 $$
 
 $$
-c'_{23}=1-\frac{3t}{1+5t}=\frac{1+2t}{1+5t},\qquad
-c'_{13}=\frac{2t}{1+5t}
+c'_{bc}=1-\frac{3t}{1+5t}=\frac{1+2t}{1+5t},\qquad
+c'_{ac}=\frac{2t}{1+5t}
 $$
 
-Coupling $34$ is preserved, while $14$ and $24$ remain zero. At $t=1/5$, we recover the values in the example.
+Coupling $cd$ is preserved, while $ad$ and $bd$ remain zero. At $t=1/5$, we recover the values in the example.
 
-Within $t>-1/5$, all conductances are nonnegative exactly when $0\le t\le1$. At the right endpoint $t=1$, coupling $12$ disappears, but the graph remains connected: $c'_{13}=1/3$, $c'_{23}=1/2$, $c'_{34}=1$. For $t>1$, conductance $12$ becomes negative; for $-1/5<t<0$, the new coupling $13$ is negative.
+Within $t>-1/5$, all conductances are nonnegative exactly when $0\le t\le1$. At the right endpoint $t=1$, coupling $ab$ disappears, but the graph remains connected: $c'_{ac}=1/3$, $c'_{bc}=1/2$, $c'_{cd}=1$. For $t>1$, conductance $ab$ becomes negative; for $-1/5<t<0$, the new coupling $ac$ is negative.
 
-Positive definiteness of the new Greenian therefore permits a wider range than nonnegativity of all conductances. If the previously absent coupling $13$ is also forbidden, this example allows only $t=0$.
+Positive definiteness of the new Greenian therefore permits a wider range than nonnegativity of all conductances. If the previously absent coupling $ac$ is also forbidden, this example allows only $t=0$.
 
 ![Admissible Greenian Parameter](<images/Admissible Greenian Parameter.svg>)
 
-*Nonsingularity, metric positivity, and nonnegative conductances impose different conditions. This diagram shows the positive region; preserving the absent edge $13$ reduces the graph region to $t=0$.*
+*Nonsingularity, metric positivity, and nonnegative conductances impose different conditions. This diagram shows the positive region; preserving the absent edge $ac$ reduces the graph region to $t=0$.*
 
 ## One factor of the Greenian exponential
 
@@ -385,13 +385,13 @@ Resistance changes under one coefficient update are given before the general for
 > The rank-one determinant formula gives $\det_H\mathbf{Gr}'=\det_H\mathbf{Gr}(1+tq)$, where $H=\mathbf1^\perp$. From $\det_H\mathbf L=n\tau$ and mutual invertibility on $H$, we recover (1). $\square$
 
 > [!example] Checking the factor of four on one edge
-> For a single edge of conductance $c>0$, we have $\gamma_{12}=1/(4c)$ and $q_{12}=4c$. After adding $t[a_{12}]^2$,
+> For a single edge of conductance $c>0$, we have $\gamma_{ab}=1/(4c)$ and $q_{ab}=4c$. After adding $t[(ab)]^2$,
 >
 > $$
 > c'=\tau'=\frac{c}{1+4ct}
 > $$
 >
-> This agrees with directly inverting $\gamma'_{12}=1/(4c)+t$. The entire admissible domain here is $t>-1/(4c)$.
+> This agrees with directly inverting $\gamma'_{ab}=1/(4c)+t$. The entire admissible domain here is $t>-1/(4c)$.
 
 The matrix formula (6) is the Sherman-Morrison identity applied to the Greenian on the zero-sum space; sources for the classical inversion formulas are collected in [[Further Reading for the PMG Introductory Series]]. The polyform derivation uses factor (4), the top-grade normalization of duality, and the second-grade potential determinant.
 

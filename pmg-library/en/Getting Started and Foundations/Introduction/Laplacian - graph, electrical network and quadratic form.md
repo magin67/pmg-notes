@@ -1,10 +1,10 @@
 ---
 title: "Laplacian: graph, electrical network and quadratic form"
 date: 2026-10-03
-updated: 2026-11-10
-revision: 9
-translated_revision: 13
-source_revision: 12
+updated: 2026-11-18
+revision: 10
+translated_revision: 14
+source_revision: 14
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-graph-network-quadratic-form
@@ -24,18 +24,18 @@ We consider finite undirected graphs without loops, with nonnegative coupling st
 ## Couplings and conductances
 
 > [!info] Definition. Graph
-> A graph consists of vertices and edges joining them. The vertices are labeled $1,\ldots,n$, where $n\ge2$. The coupling strengths $c_{ij}$ satisfy
+> A graph consists of vertices and edges joining them. Write $a_1,\ldots,a_n$ for the vertices, where $n\ge2$. In three-vertex examples, use $a,b,c$ in matrix row and column order. The coupling strengths $c_{ij}$ satisfy
 >
 > $$
 > c_{ij}=c_{ji}\ge0,
 > \qquad c_{ii}=0
 > $$
 >
-> An edge between distinct vertices $i,j$ exists when $c_{ij}>0$; the value $c_{ij}=0$ means that no edge is present. The matrix $C=(c_{ij})$ is called the **adjacency matrix**.
+> An edge between distinct vertices $a_i,a_j$ exists when $c_{ij}>0$; the value $c_{ij}=0$ means that no edge is present. The matrix $C=(c_{ij})$ is called the **adjacency matrix**.
 
 The coupling strength is the weight of an edge. In the electrical interpretation, this weight is called its **conductance**. Other notes in the library also use this name for the same quantity $c_{ij}$.
 
-Consider a path on three vertices with coupling strengths $c_{12}=1$ and $c_{23}=2$.
+Consider the path $a-b-c$ with coupling strengths $c_{ab}=1$ and $c_{bc}=2$.
 
 ![A path with coupling strengths inside rectangles](<images/Path with coupling strengths.svg>)
 
@@ -52,7 +52,7 @@ Circles represent vertices and rectangles represent couplings. The labels inside
 > \end{pmatrix}
 > $$
 >
-> There is no direct edge between vertices $1$ and $3$. The lengths of the segments in the diagram specify neither coupling strengths nor distances in the graph metric.
+> There is no direct edge between vertices $a$ and $c$. The lengths of the segments in the diagram specify neither coupling strengths nor distances in the graph metric.
 
 ## The Laplacian matrix
 
@@ -74,7 +74,7 @@ Circles represent vertices and rectangles represent couplings. The labels inside
 Throughout this note, $L$ denotes the Laplacian matrix.
 
 > [!example] Laplacian of the path
-> For coupling strengths $c_{12}=1$, $c_{23}=2$, the vertex degrees are $d_1=1$, $d_2=3$, $d_3=2$. Hence
+> For coupling strengths $c_{ab}=1$, $c_{bc}=2$, the vertex degrees are $d_a=1$, $d_b=3$, $d_c=2$. Hence
 >
 > $$
 > L=\begin{pmatrix}
@@ -115,7 +115,7 @@ In other words, for each vertex, subtract each neighboring value from its own va
 > Consider the middle vertex. It has two neighbors, with coupling strengths $1$ and $2$:
 >
 > $$
-> (Lx)_2=1\cdot(21-20)+2\cdot(21-24)=1-6=-5
+> (Lx)_b=1\cdot(21-20)+2\cdot(21-24)=1-6=-5
 > $$
 >
 > The difference from the first neighbor contributes $1$, and the difference from the second contributes $-6$. The column $Lx$ contains the sum of these contributions at each vertex.
@@ -174,13 +174,13 @@ $$
 $$
 
 > [!example] Current equations for the path
-> For the electrical example, take the path edge conductances to be $1$ siemens and $2$ siemens. Inject a current of $2$ amperes at vertex $1$ and withdraw the same current at vertex $3$. Then $J=(2,0,-2)^{\mathsf T}$, and equations (2) become
+> For the electrical example, take the path edge conductances to be $1$ siemens and $2$ siemens. Inject a current of $2$ amperes at vertex $a$ and withdraw the same current at vertex $c$. Then $J=(2,0,-2)^{\mathsf T}$, and equations (2) become
 >
 > $$
 > \begin{aligned}
-> \varphi_1-\varphi_2&=2\\
-> (\varphi_2-\varphi_1)+2(\varphi_2-\varphi_3)&=0\\
-> 2(\varphi_3-\varphi_2)&=-2
+> \varphi_a-\varphi_b&=2\\
+> (\varphi_b-\varphi_a)+2(\varphi_b-\varphi_c)&=0\\
+> 2(\varphi_c-\varphi_b)&=-2
 > \end{aligned}
 > $$
 >
@@ -253,13 +253,13 @@ For the geometric description of a graph, its vertices are represented by formal
 >
 > A more general vector has the form $u=\sum_i u_i a_i$, where the $u_i$ are numerical coefficients and $\sum_i u_i=0$. If three or more basis vertices have nonzero coefficients in this expression, the expression involves several vertices; with local vertices it is called **multipoint**.
 
-For example, $a_1+a_2-2a_3$ is one vector expressed using three basis vertices: its coefficients sum to $1+1-2=0$. It decomposes into two vertex-pair vectors:
+For example, $a+b-2c$ is one vector expressed using three basis vertices: its coefficients sum to $1+1-2=0$. It decomposes into two vertex-pair vectors:
 
 $$
-a_1+a_2-2a_3=(a_1-a_3)+(a_2-a_3)
+a+b-2c=(a-c)+(b-c)
 $$
 
-By contrast, $x_j-x_i$ is a difference of **numbers** assigned to the vertices. In the temperature example, $x_2-x_1=21-20=1$, while $a_{12}=a_2-a_1$ remains a vertex-pair vector. Changing the temperatures changes the numerical difference but does not change $a_{12}$. The number of vertices involved refers to the chosen basis; the general case is discussed in the [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|definition of affine vectors]].
+By contrast, $x_j-x_i$ is a difference of **numbers** assigned to the vertices. In the temperature example, $x_b-x_a=21-20=1$, while $(ab)=b-a$ remains a vertex-pair vector. Changing the temperatures changes the numerical difference but does not change $(ab)$. The number of vertices involved refers to the chosen basis; the general case is discussed in the [[Basic Objects and Operations of Polyform Algebra#Points and affine vectors|definition of affine vectors]].
 
 The Laplacian polyform is a linear combination of quadratic forms of vertex-pair vectors. Its [[Basic Objects and Operations of Polyform Algebra#The polyform representation of the Laplacian|definition and relation to the scalar-valued quadratic form]] are discussed in polyform algebra. In this note, $\mathcal Q$ denotes the function of numerical vertex values.
 
@@ -307,11 +307,11 @@ $$
 Both conditions choose a reference potential without changing the network or the external currents. The power in (5) is also preserved by a common potential shift, since $\sum_iJ_i=0$.
 
 > [!example] Potentials and power of the path
-> With $\varphi_3=0$, the first two network equations are
+> With $\varphi_c=0$, the first two network equations are
 >
 > $$
 > \begin{pmatrix}1&-1\\-1&3\end{pmatrix}
-> \begin{pmatrix}\varphi_1\\\varphi_2\end{pmatrix}
+> \begin{pmatrix}\varphi_a\\\varphi_b\end{pmatrix}
 > =\begin{pmatrix}2\\0\end{pmatrix}
 > $$
 >
@@ -337,7 +337,7 @@ Both conditions choose a reference potential without changing the network or the
 > $$
 
 > [!note] Disconnected graph
-> For example, adding an isolated vertex $4$ to the path $1$-$2$-$3$ gives two components: the path and the isolated vertex.
+> For example, adding an isolated vertex $d$ to the path $a$-$b$-$c$ gives two components: the path and the isolated vertex.
 >
 > Each connected component admits its own independent additive constant for the potentials. A solution exists if and only if the external currents sum to zero within each component separately. Injecting current into one component and withdrawing it from another is impossible without an additional connection between them.
 
@@ -381,16 +381,16 @@ $$
 For a nonzero test current, the potentials cannot be constant. Hence, in a connected graph, $\mathcal Q(\varphi)>0$ and $R_{ij}>0$. Reversing the test current changes the sign of the potential difference and preserves the resistance: $R_{ji}=R_{ij}$. For coincident vertices, set $R_{ii}=0$.
 
 > [!example] Resistance between the endpoints of the path
-> A current of $2$ amperes produces a potential difference of $3$ volts between vertices $1$ and $3$. Therefore,
+> A current of $2$ amperes produces a potential difference of $3$ volts between vertices $a$ and $c$. Therefore,
 >
 > $$
-> R_{13}=\frac32\text{ ohms}
+> R_{ac}=\frac32\text{ ohms}
 > $$
 >
 > This agrees with the sum of the resistances of the two edges in series: $1+1/2=3/2$ ohms. The power computed from the effective resistance is
 >
 > $$
-> I^2R_{13}=2^2\cdot\frac32=6\text{ W}
+> I^2R_{ac}=2^2\cdot\frac32=6\text{ W}
 > $$
 
 Check the potentials, currents, and power of this network in the [[en/PythonExamples/Example - Weighted Chain#Matrix, currents, and power|weighted-chain Python example]].
@@ -403,7 +403,7 @@ Check the potentials, currents, and power of this network in the [[en/PythonExam
 | Laplacian matrix $L$ | The operator $x\mapsto Lx$, summing differences from neighbors multiplied by the coupling strengths |
 | Scalar-valued quadratic form $\mathcal Q$ | The sum of squared differences across edges, multiplied by the coupling strengths |
 
-With fixed vertex labels, these representations determine one another. Coupling strengths are recovered from the off-diagonal Laplacian entries as $c_{ij}=-L_{ij}$. In the expanded quadratic form, the coefficient of $x_i x_j$ for $i<j$ is $-2c_{ij}$. Reconstruction requires the entire quadratic function, rather than its value at a single choice of numbers $x_i$.
+With a fixed vertex order, these representations determine one another. Coupling strengths are recovered from the off-diagonal Laplacian entries as $c_{ij}=-L_{ij}$. In the expanded quadratic form, the coefficient of $x_i x_j$ for $i<j$ is $-2c_{ij}$. Reconstruction requires the entire quadratic function, rather than its value at a single choice of numbers $x_i$.
 
 In the electrical interpretation, vertex values become potentials, the equation $L\varphi=J$ determines them from the external currents, and $\mathcal Q(\varphi)$ is the dissipated power. The definitions of the graph, Laplacian, and function $\mathcal Q$ do not require this interpretation.
 

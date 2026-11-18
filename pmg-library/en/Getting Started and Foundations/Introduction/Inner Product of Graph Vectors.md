@@ -1,10 +1,10 @@
 ---
 title: Inner Product of Graph Vectors
 date: 2026-10-03
-updated: 2026-11-10
-revision: 9
-translated_revision: 12
-source_revision: 11
+updated: 2026-11-18
+revision: 10
+translated_revision: 13
+source_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: inner-product-vectors
@@ -19,7 +19,7 @@ In [[Effective Resistance and Graph Geometry]], resistances determined the squar
 
 We consider a finite connected undirected graph without loops and with positive coupling strengths on its edges. Its Laplacian is denoted by $L$ and its Green matrix by $\mathrm{Gr}=L^+$. The vertex-pair vector $a_{ij}=a_j-a_i$ has coefficient $-1$ at $a_i$, coefficient $1$ at $a_j$, and zero coefficients at the remaining vertices.
 
-To record these coefficients, let $\mathbf e_i$ denote a list of $n$ numbers with a one in position $i$ and zeros elsewhere. The coefficient list of $a_{ij}$ is then $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$. For three vertices, for example, $\mathbf e_{13}=(-1,0,1)$. In matrix products we write these lists as columns; $\mathsf T$ transposes a column into a row.
+To record these coefficients, let $\mathbf e_i$ denote a list of $n$ numbers with a one in position $i$ and zeros elsewhere. The coefficient list of $a_{ij}$ is then $\mathbf e_{ij}=\mathbf e_j-\mathbf e_i$. For example, with the vertices ordered as $a,b,c$, $\mathbf e_{ac}=(-1,0,1)$. In matrix products we write these lists as columns; $\mathsf T$ transposes a column into a row.
 
 ## Inner product through the Green matrix
 
@@ -188,29 +188,29 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 > Between any pair of vertices, an edge of resistance $1$ is in parallel with a two-edge path of total resistance $2$. Hence
 >
 > $$
-> R_{12}=R_{23}=R_{13}=\frac{1\cdot2}{1+2}=\frac23
+> R_{ab}=R_{bc}=R_{ac}=\frac{1\cdot2}{1+2}=\frac23
 > $$
 >
 > By (2),
 >
 > $$
-> a_{12}\cdot a_{13}=\frac12(R_{13}+R_{21}-R_{11}-R_{23})=\frac13
+> (ab)\cdot (ac)=\frac12(R_{ac}+R_{ba}-R_{aa}-R_{bc})=\frac13
 > $$
 >
 > For the consecutively oriented vectors,
 >
 > $$
-> a_{12}\cdot a_{23}=\frac12(R_{13}+R_{22}-R_{12}-R_{23})=-\frac13
+> (ab)\cdot (bc)=\frac12(R_{ac}+R_{bb}-R_{ab}-R_{bc})=-\frac13
 > $$
 >
-> All three vectors have squared length $2/3$. Hence
+> Write $u=(ab)$, $v=(ac)$, and $w=(bc)$. All three vectors have squared length $2/3$. Hence
 >
 > $$
-> \cos\angle(a_{12},a_{13})=\frac{1/3}{2/3}=\frac12,\qquad
-> \cos\angle(a_{12},a_{23})=\frac{-1/3}{2/3}=-\frac12
+> \cos\angle(u,v)=\frac{1/3}{2/3}=\frac12,\qquad
+> \cos\angle(u,w)=\frac{-1/3}{2/3}=-\frac12
 > $$
 >
-> The first angle is $60^\circ$ and the second is $120^\circ$. To compare vector directions, translate the vectors to a common origin. The angle between the consecutively directed vectors $a_{12}$ and $a_{23}$ therefore differs from the interior angle at vertex $a_2$.
+> The first angle is $60^\circ$ and the second is $120^\circ$. To compare vector directions, translate the vectors to a common origin. The angle between the consecutively directed vectors $(ab)$ and $(bc)$ therefore differs from the interior angle at vertex $b$.
 
 ![Angles between triangle vectors](images/vector-angles-en.svg)
 
@@ -225,16 +225,16 @@ Consider the complete graph $K_3$ with unit conductances on all edges.
 > \end{pmatrix}
 > $$
 >
-> Inject a unit current at vertex $3$ and withdraw it at vertex $1$. The column $\varphi=(-1/3,0,1/3)^{\mathsf T}$ satisfies $L\varphi=(-1,0,1)^{\mathsf T}$ and $\sum_i\varphi_i=0$. Therefore,
+> Inject a unit current at vertex $c$ and withdraw it at vertex $a$. The column $\varphi=(-1/3,0,1/3)^{\mathsf T}$ satisfies $L\varphi=(-1,0,1)^{\mathsf T}$ and $\sum_i\varphi_i=0$. Therefore,
 >
 > $$
-> \varphi_2-\varphi_1=\frac13=a_{12}\cdot a_{13}
+> \varphi_b-\varphi_a=\frac13=(ab)\cdot (ac)
 > $$
 >
-> For injection at $3$ and withdrawal at $2$, the centered potentials are $\psi=(0,-1/3,1/3)^{\mathsf T}$, giving
+> For injection at $c$ and withdrawal at $b$, the centered potentials are $\psi=(0,-1/3,1/3)^{\mathsf T}$, giving
 >
 > $$
-> \psi_2-\psi_1=-\frac13=a_{12}\cdot a_{23}
+> \psi_b-\psi_a=-\frac13=(ab)\cdot (bc)
 > $$
 >
 > Both measurements agree with (3), including the sign.

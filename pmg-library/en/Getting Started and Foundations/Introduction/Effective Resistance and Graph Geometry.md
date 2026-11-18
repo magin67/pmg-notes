@@ -1,10 +1,10 @@
 ---
 title: Effective Resistance and Graph Geometry
 date: 2026-10-03
-updated: 2026-11-10
-revision: 12
-translated_revision: 14
-source_revision: 13
+updated: 2026-11-18
+revision: 13
+translated_revision: 15
+source_revision: 15
 status: draft
 text_prepared_by: ChatGPT
 translation_key: effective-resistance-graph-geometry
@@ -211,17 +211,17 @@ Its geometry is uniquely determined up to a Euclidean isometry: a translation an
 
 ## Example: a three-vertex path
 
-Consider a path with coupling strengths $c_{12}=1$ and $c_{23}=2$.
+Consider the path $a-b-c$ with coupling strengths $c_{ab}=1$ and $c_{bc}=2$.
 
 ![A path and its resistance simplex](images/Path%20and%20resistance%20triangle.svg)
 
-The left panel shows the couplings and their strengths; the right panel shows the resistance simplex of the same graph. Labels on the right give **lengths** $\sqrt{R_{ij}}$. The dashed side joins vertices $1$ and $3$, which have no direct edge in the original graph.
+The left panel shows the couplings and their strengths; the right panel shows the resistance simplex of the same graph. Labels on the right give **lengths** $\sqrt{R_{ij}}$. The dashed side joins vertices $a$ and $c$, which have no direct edge in the original graph.
 
 > [!example] Resistances and the Green matrix
-> The individual edge resistances are $1/c_{12}=1$ and $1/c_{23}=1/2$. When current is passed between the endpoints of the path, the two edges are in series, so $R_{13}=3/2$. When current is passed between adjacent vertices, the remaining edge carries no current. Thus,
+> The individual edge resistances are $1/c_{ab}=1$ and $1/c_{bc}=1/2$. When current is passed between the endpoints of the path, the two edges are in series, so $R_{ac}=3/2$. When current is passed between adjacent vertices, the remaining edge carries no current. Thus,
 >
 > $$
-> R_{12}=1,\qquad R_{23}=\frac12,\qquad R_{13}=\frac32
+> R_{ab}=1,\qquad R_{bc}=\frac12,\qquad R_{ac}=\frac32
 > $$
 >
 > The Laplacian and Green matrix are
@@ -242,26 +242,26 @@ The left panel shows the couplings and their strengths; the right panel shows th
 > Direct multiplication gives $\mathrm{Gr}\mathbf1=0$ and $L\mathrm{Gr}=I-\mathbf1\mathbf1^{\mathsf T}/3$. Formula (1) independently reproduces the electrical calculation:
 >
 > $$
-> R_{12}=\frac12+\frac16+\frac13=1,\qquad
-> R_{23}=\frac16+\frac13=\frac12
+> R_{ab}=\frac12+\frac16+\frac13=1,\qquad
+> R_{bc}=\frac16+\frac13=\frac12
 > $$
 >
 > $$
-> R_{13}=\frac12+\frac13+\frac23=\frac32
+> R_{ac}=\frac12+\frac13+\frac23=\frac32
 > $$
 
 > [!example] Coordinates and a right angle
 > Choose the following coordinates for the vertices:
 >
 > $$
-> a_2=(0,0),\qquad a_1=(1,0),\qquad
-> a_3=\left(0,\frac1{\sqrt2}\right)
+> b=(0,0),\qquad a=(1,0),\qquad
+> c=\left(0,\frac1{\sqrt2}\right)
 > $$
 >
-> The squared distances are $1$, $1/2$, and $3/2$. The points form a right triangle with the right angle at $a_2$, since
+> The squared distances are $1$, $1/2$, and $3/2$. The points form a right triangle with the right angle at $b$, since
 >
 > $$
-> \|a_{13}\|^2=\|a_{12}\|^2+\|a_{23}\|^2
+> \|(ac)\|^2=\|(ab)\|^2+\|(bc)\|^2
 > $$
 >
 > These coordinates are not centered. After subtracting the centroid $(1/3,1/(3\sqrt2))$, the centered vectors $p_i$ have the Gram matrix $\mathrm{Gr}$ displayed above.

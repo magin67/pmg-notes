@@ -3,7 +3,7 @@
 <style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
 <rect width="1120" height="710" fill="white"/>
 <text xml:space="preserve" x="371.5" y="45" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">Путь: R</text>
-<text xml:space="preserve" x="479.5" y="51.38" font-size="20" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">13</text>
+<text xml:space="preserve" x="479.5" y="51.38" font-size="20" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">ac</text>
 <text xml:space="preserve" x="501.5" y="45" font-size="29" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">(x) = 1 + 1/x,  x &gt; 0</text>
 <rect x="150" y="130" width="310" height="360" fill="#edf6fb"/>
 <line x1="150" y1="510" x2="1010" y2="510" stroke="#24628a" stroke-width="3" marker-end="url(#arrow)"/>

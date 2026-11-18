@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350" role="img" aria-labelledby="title desc">
   <title id="title">Two changing edges of a triangle</title>
-  <desc id="desc">Left: all conductances equal one and the spanning-tree coefficient is 3. Right: conductances 12 and 13 increase to 2, conductance 23 is preserved, and the spanning-tree coefficient is 8.</desc>
+  <desc id="desc">Left: all conductances equal one and the spanning-tree coefficient is 3. Right: conductances ab and ac increase to 2, conductance bc is preserved, and the spanning-tree coefficient is 8.</desc>
   <rect width="900" height="350" rx="18" fill="#f6f8fb"/>
   <g font-family="Arial, sans-serif" text-anchor="middle" fill="#243348">
     <text x="220" y="36" font-size="23">Original graph</text>
@@ -27,8 +27,8 @@
       <circle cx="570" cy="245" r="21"/><circle cx="790" cy="245" r="21"/><circle cx="680" cy="90" r="21"/>
     </g>
     <g font-size="23" dominant-baseline="central">
-      <text x="110" y="245">1</text><text x="330" y="245">2</text><text x="220" y="90">3</text>
-      <text x="570" y="245">1</text><text x="790" y="245">2</text><text x="680" y="90">3</text>
+      <text x="110" y="245">a</text><text x="330" y="245">b</text><text x="220" y="90">c</text>
+      <text x="570" y="245">a</text><text x="790" y="245">b</text><text x="680" y="90">c</text>
     </g>
     <g font-size="23">
       <text x="220" y="317">τ = 3</text><text x="680" y="317">τ′ = 8</text>

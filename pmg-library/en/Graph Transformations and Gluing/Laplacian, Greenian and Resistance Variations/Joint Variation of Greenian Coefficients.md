@@ -1,15 +1,15 @@
 ---
 title: Joint Variation of Greenian Coefficients
 date: 2026-10-31
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-joint-greenian-coefficients
 lang: en
 description: 'Two Greenian coefficients: a triangle example, exact spanning-tree and conductance changes, and interaction. A factor derivation and generalization through the direction Gram matrix in the Greenian exponential metric.'
 order: 4
-translated_revision: 7
+translated_revision: 8
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/Joint Variation of Greenian Coefficients"
 ---
@@ -22,15 +22,15 @@ In [[One Greenian Coefficient|the variation of one Greenian coefficient]], the r
 
 See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Two Greenian coefficients|the notebook calculation]].
 
-A unit triangle has $c_{12}=c_{13}=c_{23}=1$, $\tau=3$. Its canonical Greenian coefficients are $\gamma_{12}=\gamma_{13}=\gamma_{23}=1/9$.
+A unit triangle has $c_{ab}=c_{ac}=c_{bc}=1$, $\tau=3$. Its canonical Greenian coefficients are $\gamma_{ab}=\gamma_{ac}=\gamma_{bc}=1/9$.
 
-Increase $\gamma_{12}$ and $\gamma_{13}$ by $1/3$, keeping $\gamma_{23}$ and the vectors themselves fixed:
+Increase $\gamma_{ab}$ and $\gamma_{ac}$ by $1/3$, keeping $\gamma_{bc}$ and the vectors themselves fixed:
 
 $$
-\mathrm{Gr}'=\mathrm{Gr}+\frac13[a_{12}]^2+\frac13[a_{13}]^2
+\mathrm{Gr}'=\mathrm{Gr}+\frac13[(ab)]^2+\frac13[(ac)]^2
 $$
 
-![A unit triangle and the conductances after jointly increasing the Greenian coefficients of pairs 12 and 13 by one third](<images/Two Greenian Coefficients of a Triangle.svg>)
+![A unit triangle and the conductances after jointly increasing the Greenian coefficients of pairs ab and ac by one third](<images/Two Greenian Coefficients of a Triangle.svg>)
 
 *Numbers beside edges denote conductances of the recovered graph. Changing two Greenian coefficients affects all three couplings.*
 
@@ -38,7 +38,7 @@ $$
 > We obtain
 >
 > $$
-> c'_{12}=c'_{13}=\frac14,\qquad c'_{23}=\frac58,
+> c'_{ab}=c'_{ac}=\frac14,\qquad c'_{bc}=\frac58,
 > \qquad \boxed{\tau'=\frac38}
 > $$
 >
@@ -50,14 +50,14 @@ $$
 
 Compare this result with separate increases by $1/3$, each starting from the original graph:
 
-| Quantity | Original graph | Only $\gamma_{12}$ | Only $\gamma_{13}$ | Both changes |
+| Quantity | Original graph | Only $\gamma_{ab}$ | Only $\gamma_{ac}$ | Both changes |
 |---|---:|---:|---:|---:|
-| $c_{12}$ | $1$ | $0$ | $1$ | $1/4$ |
-| $c_{13}$ | $1$ | $1$ | $0$ | $1/4$ |
-| $c_{23}$ | $1$ | $1$ | $1$ | $5/8$ |
+| $c_{ab}$ | $1$ | $0$ | $1$ | $1/4$ |
+| $c_{ac}$ | $1$ | $1$ | $0$ | $1/4$ |
+| $c_{bc}$ | $1$ | $1$ | $1$ | $5/8$ |
 | $\tau$ | $3$ | $1$ | $1$ | $3/8$ |
 
-Each separate change preserves $c_{23}$. Together, they decrease this conductance by $3/8$. Adding separate responses is therefore insufficient even for a coupling unchanged in either experiment.
+Each separate change preserves $c_{bc}$. Together, they decrease this conductance by $3/8$. Adding separate responses is therefore insufficient even for a coupling unchanged in either experiment.
 
 ## Data for two changing coefficients
 
@@ -155,7 +155,7 @@ A nonzero denominator ensures algebraic invertibility. To obtain a graph with no
 
 ### Substitution for the triangle
 
-For $u=a_{12}$, $v=a_{13}$ in the unit triangle,
+For $u=(ab)$, $v=(ac)$ in the unit triangle,
 
 $$
 q_u=q_v=6,\qquad g=3,\qquad
@@ -171,16 +171,16 @@ $$
 $$
 
 $$
-c'_{12}=\frac{1-3s+6t}{\Phi(s,t)},\qquad
-c'_{13}=\frac{1+6s-3t}{\Phi(s,t)}
+c'_{ab}=\frac{1-3s+6t}{\Phi(s,t)},\qquad
+c'_{ac}=\frac{1+6s-3t}{\Phi(s,t)}
 $$
 
 $$
-c'_{23}=\frac{1+6s+6t}{\Phi(s,t)}
+c'_{bc}=\frac{1+6s+6t}{\Phi(s,t)}
 =1-\frac{27st}{\Phi(s,t)}
 $$
 
-At $s=t=1/3$, we have $\Phi=8$ and obtain the numbers in the example. The change in $c_{23}$ contains only a joint contribution: it vanishes if $s=0$ or $t=0$.
+At $s=t=1/3$, we have $\Phi=8$ and obtain the numbers in the example. The change in $c_{bc}$ contains only a joint contribution: it vanishes if $s=0$ or $t=0$.
 
 ## Two factors of the Greenian exponential
 
@@ -475,7 +475,7 @@ Thus the compact matrix formula computes the same normalized potential as expans
 
 If the vectors indexed by $S$ are linearly dependent, their exterior product and $\det\mathbf G_S$ vanish. For distinct graph pairs, this happens when the selected edges contain a cycle. The Gram matrix itself need not be invertible for (6)-(8).
 
-For example, $a_{12}+a_{23}=a_{13}$. Changing all three Greenian coefficients of a unit triangle by the same amount $t$ gives
+For example, $(ab)+(bc)=(ac)$. Changing all three Greenian coefficients of a unit triangle by the same amount $t$ gives
 
 $$
 \Phi(t,t,t)=(1+9t)^2,\qquad

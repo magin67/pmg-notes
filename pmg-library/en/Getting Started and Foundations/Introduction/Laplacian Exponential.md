@@ -1,10 +1,10 @@
 ---
 title: Laplacian Exponential
 date: 2026-10-06
-updated: 2026-11-10
-revision: 11
-translated_revision: 11
-source_revision: 10
+updated: 2026-11-18
+revision: 12
+translated_revision: 12
+source_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 translation_key: laplacian-exponential
@@ -59,18 +59,18 @@ The factor $e+c_{ij}[a_{ij}]^2$ is called the edge factor. In the expansion of (
 
 ### Example: a weighted triangle
 
-Let $c_{12}=\alpha$, $c_{23}=\beta$, and $c_{13}=\gamma$. Here and below, abbreviate the boundaries as $(12)=(a_1a_2)$ and $(123)=(a_1a_2a_3)$.
+Label the vertices of the triangle $a,b,c$ and write $c_{ab}=\alpha$, $c_{bc}=\beta$, $c_{ac}=\gamma$ for the edge conductances. For example, $(ab)=b-a$ and $(abc)$ denotes the boundary of the triangle.
 
 $$
-M=(e+\alpha[(12)]^2)(e+\beta[(23)]^2)(e+\gamma[(13)]^2)
+M=(e+\alpha[(ab)]^2)(e+\beta[(bc)]^2)(e+\gamma[(ac)]^2)
 $$
 
-Selecting one coupling gives its form weighted by its conductance. Any two couplings form a tree on three vertices, so their product gives $[(123)]^2$. Selecting all three gives zero because the cycle vectors are dependent. Thus
+Selecting one coupling gives its form weighted by its conductance. Any two couplings form a tree on three vertices, so their product gives $[(abc)]^2$. Selecting all three gives zero because the cycle vectors are dependent. Thus
 
 $$
 \begin{aligned}
-M={}&e+\alpha[(12)]^2+\beta[(23)]^2+\gamma[(13)]^2+\\
-&+(\alpha\beta+\alpha\gamma+\beta\gamma)[(123)]^2
+M={}&e+\alpha[(ab)]^2+\beta[(bc)]^2+\gamma[(ac)]^2+\\
+&+(\alpha\beta+\alpha\gamma+\beta\gamma)[(abc)]^2
 \end{aligned}
 $$
 
@@ -120,46 +120,46 @@ With unit conductances, this is the number of forests with $k$ edges. The quanti
 
 ## Example: a path on five vertices
 
-Continue with a graph that also has forests with several nontrivial components.
+The path $a-b-c-d-e$ has forests with several nontrivial components. In $(de)$, the letter $e$ labels the last vertex of the path. As a factor or term on its own, $e=[1,1]$ denotes the algebra identity.
 
 ```mermaid
 graph LR
-    a1((1)) --- a2((2))
-    a2 --- a3((3))
-    a3 --- a4((4))
-    a4 --- a5((5))
+    v1((a)) --- v2((b))
+    v2 --- v3((c))
+    v3 --- v4((d))
+    v4 --- v5((e))
 ```
 
 > [!example] Grades of the exponential for the path $P_5$
 > With unit conductances,
 >
 > $$
-> M=(e+[(12)]^2)(e+[(23)]^2)(e+[(34)]^2)(e+[(45)]^2)
+> M=(e+[(ab)]^2)(e+[(bc)]^2)(e+[(cd)]^2)(e+[(de)]^2)
 > $$
 >
 > The components in (3) are
 >
 > $$
 > M_0=e,\qquad
-> M_1=[(12)]^2+[(23)]^2+[(34)]^2+[(45)]^2
+> M_1=[(ab)]^2+[(bc)]^2+[(cd)]^2+[(de)]^2
 > $$
 >
 > $$
 > \begin{aligned}
-> M_2={}&[(123)]^2+[(234)]^2+[(345)]^2+\\
-> &+[(12)(34)]^2+[(12)(45)]^2+[(23)(45)]^2
+> M_2={}&[(abc)]^2+[(bcd)]^2+[(cde)]^2+\\
+> &+[(ab)(cd)]^2+[(ab)(de)]^2+[(bc)(de)]^2
 > \end{aligned}
 > $$
 >
 > $$
-> M_3=[(1234)]^2+[(2345)]^2+[(123)(45)]^2+[(12)(345)]^2
+> M_3=[(abcd)]^2+[(bcde)]^2+[(abc)(de)]^2+[(ab)(cde)]^2
 > $$
 >
 > $$
-> M_4=[(12345)]^2
+> M_4=[(abcde)]^2
 > $$
 >
-> Every edge subset of a path is a forest, so $(s_0,s_1,s_2,s_3,s_4)=(1,4,6,4,1)$. All six forests in $M_2$ have three components. For example, $(123)$ describes a tree on three vertices and two isolated vertices, while $(12)(34)$ describes two edges and the isolated vertex $5$.
+> Every edge subset of a path is a forest, so $(s_0,s_1,s_2,s_3,s_4)=(1,4,6,4,1)$. All six forests in $M_2$ have three components. For example, $(abc)$ describes a tree on three vertices and two isolated vertices, while $(ab)(cd)$ describes two edges and the isolated vertex $e$.
 
 The [[en/PythonExamples/Example - Path P5 and Cycle C4 Exponentials#Path P5: the full symbolic output|symbolic path and cycle Python example]] displays every grade.
 
@@ -187,28 +187,28 @@ The number $\tau(G)$ is called the spanning-tree coefficient; with unit conducta
 For a connected graph, $\tau(G)>0$. Hence $L^{n-1}\ne0$, $L^n=0$, and the highest nonzero grade of the exponential is $n-1$. By the matrix-tree theorem, the same $\tau(G)$ equals the determinant of any reduced Laplacian matrix.
 
 > [!example] The four-cycle $C_4$
-> For unit-conductance edges $12,23,34,41$,
+> For unit-conductance edges $ab,bc,cd,da$,
 >
 > $$
-> M=(e+[(12)]^2)(e+[(23)]^2)(e+[(34)]^2)(e+[(41)]^2)
+> M=(e+[(ab)]^2)(e+[(bc)]^2)(e+[(cd)]^2)(e+[(da)]^2)
 > $$
 >
 > The components of grades zero and one are $M_0=e$ and $M_1=L$. At grade two,
 >
 > $$
 > \begin{aligned}
-> M_2={}&[(123)]^2+[(234)]^2+[(134)]^2+[(124)]^2+\\
-> &+[(12)(34)]^2+[(23)(41)]^2
+> M_2={}&[(abc)]^2+[(bcd)]^2+[(acd)]^2+[(abd)]^2+\\
+> &+[(ab)(cd)]^2+[(bc)(da)]^2
 > \end{aligned}
 > $$
 >
 > Any three edges form a spanning tree, so
 >
 > $$
-> M_3=4[(1234)]^2,\qquad \tau(C_4)=4,\qquad M_4=0
+> M_3=4[(abcd)]^2,\qquad \tau(C_4)=4,\qquad M_4=0
 > $$
 >
-> The vanishing fourth grade corresponds to the dependence $(12)+(23)+(34)+(41)=0$.
+> The vanishing fourth grade corresponds to the dependence $(ab)+(bc)+(cd)+(da)=0$.
 
 | Graph | Forest weight sums $s_k$ | Top grade | Spanning-tree coefficient |
 |---|---|---:|---:|
@@ -423,10 +423,10 @@ $$
 The top-grade component is the quadratic form of the product of the boundaries of all components, multiplied by the product of their spanning-tree coefficients. An isolated vertex contributes boundary $1$ and coefficient $1$.
 
 > [!example] Two disconnected edges
-> For unit-conductance edges $12$ and $34$,
+> For unit-conductance edges $ab$ and $cd$,
 >
 > $$
-> M=e+[(12)]^2+[(34)]^2+[(12)(34)]^2
+> M=e+[(ab)]^2+[(cd)]^2+[(ab)(cd)]^2
 > $$
 >
 > The top grade is $4-2=2$. The top-grade component contains one form whose argument is the product of two component boundaries.
@@ -452,7 +452,7 @@ $$
 
 For $v=a_{ij}$, this changes the conductance of the pair $ij$ by $t$, provided the new conductances are admissible. For an arbitrary $v=\sum_i v_i a_i$ with $\sum_i v_i=0$, it is an algebraic variation with matrix perturbation $t\mathbf v\mathbf v^{\mathsf T}$.
 
-For example, if $v=a_1+a_2-2a_3$ and $t>0$, the off-diagonal entry of the perturbation in position $12$ is positive. In the Laplacian representation, this decreases $c_{12}$ by $t$, rather than adding a single conductor. Admissibility of all new conductances must be checked separately; identity (9) does not depend on it.
+For example, if $v=a+b-2c$ and $t>0$, the off-diagonal entry of the perturbation in position $ab$ is positive. In the Laplacian representation, this decreases $c_{ab}$ by $t$, rather than adding a single conductor. Admissibility of all new conductances must be checked separately; identity (9) does not depend on it.
 
 For $p=[a_{ij}]^2$ and $M'=M(e+tp)$, linearity of top-grade coefficient extraction also gives
 
@@ -473,24 +473,24 @@ Similarly, lemma (8) allows arbitrary vectors $u_i,v_i$ in $W$. Its determinant 
 ## Computing potentials and norms
 
 > [!example] The endpoints of the path $P_5$
-> Here $M$ is the exponential of the unit-conductance path $P_5$. After multiplication by $[(15)]^2$, each of the four terms of $M_3$ gives $T_5$: the added edge joins the two components of the corresponding forest. Therefore,
+> Here $M$ is the exponential of the unit-conductance path $P_5$. After multiplication by $[(ae)]^2$, each of the four terms of $M_3$ gives $T_5$: the added edge joins the two components of the corresponding forest. Therefore,
 >
 > $$
-> u_M([(15)]^2)=4,\qquad
-> (15)^2=\frac41=4
+> u_M([(ae)]^2)=4,\qquad
+> (ae)^2=\frac41=4
 > $$
 >
 > The normalization uses $\tau(P_5)=1$. Independently, the resistance between the endpoints is the sum of four unit resistances.
 
 > [!example] Adjacent vertices of the cycle $C_4$
-> Here $M$ is the exponential of the unit-conductance cycle $C_4$. Of the six terms of $M_2$, three give zero when multiplied by $[(12)]^2$. The nonzero contributions correspond to the edge sets $\{23,34\}$, $\{34,41\}$, $\{23,41\}$. Each becomes a spanning tree after adding $12$. Hence
+> Here $M$ is the exponential of the unit-conductance cycle $C_4$. Of the six terms of $M_2$, three give zero when multiplied by $[(ab)]^2$. The nonzero contributions correspond to the edge sets $\{bc,cd\}$, $\{cd,da\}$, $\{bc,da\}$. Each becomes a spanning tree after adding $ab$. Hence
 >
 > $$
-> u_M([(12)]^2)=3,\qquad
-> (12)^2=\frac34
+> u_M([(ab)]^2)=3,\qquad
+> (ab)^2=\frac34
 > $$
 >
-> The potential is $3$, and the normalized potential is $3/4$, since $\tau(C_4)=4$. An electrical check uses parallel paths with resistances $1$ and $3$: $R_{12}=1\cdot3/(1+3)=3/4$.
+> The potential is $3$, and the normalized potential is $3/4$, since $\tau(C_4)=4$. An electrical check uses parallel paths with resistances $1$ and $3$: $R_{ab}=1\cdot3/(1+3)=3/4$.
 
 ## Geometric meaning and references
 

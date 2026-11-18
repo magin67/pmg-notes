@@ -2,8 +2,8 @@
 <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#24628a"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#203344}path,line{stroke-linecap:round;stroke-linejoin:round}</style>
 <rect width="1120" height="610" fill="white"/>
-<text xml:space="preserve" x="341.5" y="45" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">Path 1–2–3–4: increment γ</text>
-<text xml:space="preserve" x="698.5" y="51.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">12</text>
+<text xml:space="preserve" x="341.5" y="45" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">Path a–b–c–d: increment γ</text>
+<text xml:space="preserve" x="698.5" y="51.16" font-size="20" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start">ab</text>
 <text xml:space="preserve" x="720.5" y="45" font-size="28" fill="#203344" style="fill:#203344" font-weight="600" text-anchor="start"> by t</text>
 <text xml:space="preserve" x="560" y="92" font-size="28" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">Φ = 1 + 5t</text>
 <text xml:space="preserve" x="28" y="157" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">Positive Gr</text>
@@ -23,7 +23,7 @@
 <line x1="835" y1="303" x2="835" y2="317" stroke="#647481" stroke-width="2"/>
 <text xml:space="preserve" x="835" y="344" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
 <text xml:space="preserve" x="28" y="397" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">Also require c</text>
-<text xml:space="preserve" x="170.0" y="402.06" font-size="16" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">13</text>
+<text xml:space="preserve" x="170.0" y="402.06" font-size="16" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ac</text>
 <text xml:space="preserve" x="188.0" y="397" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = 0</text>
 <line x1="140" y1="430" x2="1040" y2="430" stroke="#a7b3bb" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="163.0" y1="423" x2="163.0" y2="437" stroke="#647481" stroke-width="2"/>
@@ -38,6 +38,6 @@
 <circle cx="275" cy="310" r="7" fill="#24628a"/>
 <circle cx="835" cy="310" r="7" fill="#24628a"/>
 <circle cx="275" cy="430" r="8" fill="#b56414"/>
-<text xml:space="preserve" x="560" y="520" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">At t = 1 edge 12 disappears, but the graph remains connected</text>
+<text xml:space="preserve" x="560" y="520" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">At t = 1 edge ab disappears, but the graph remains connected</text>
 <text xml:space="preserve" x="560" y="570" font-size="24" fill="#b56414" style="fill:#b56414" font-weight="600" text-anchor="middle">A nonzero Φ alone does not guarantee an admissible graph</text>
 </svg>

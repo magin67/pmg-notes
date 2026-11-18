@@ -8,16 +8,16 @@
 <line x1="580" y1="210" x2="870" y2="210" stroke="#24628a" stroke-width="3"/>
 <text xml:space="preserve" x="725.0" y="188" font-size="23" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">x</text>
 <circle cx="230" cy="210" r="18" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="230" y="217" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">1</text>
+<text xml:space="preserve" x="230" y="217" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">a</text>
 <circle cx="560" cy="210" r="18" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="560" y="217" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">2</text>
+<text xml:space="preserve" x="560" y="217" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">b</text>
 <circle cx="890" cy="210" r="18" fill="white" stroke="#203344" stroke-width="2"/>
-<text xml:space="preserve" x="890" y="217" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">3</text>
+<text xml:space="preserve" x="890" y="217" font-size="21" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="middle">c</text>
 <text xml:space="preserve" x="472.0" y="310" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">c</text>
-<text xml:space="preserve" x="486.0" y="315.94" font-size="19" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">13</text>
+<text xml:space="preserve" x="486.0" y="315.94" font-size="19" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start">ac</text>
 <text xml:space="preserve" x="508.0" y="310" font-size="27" fill="#203344" style="fill:#203344" font-weight="400" text-anchor="start"> = 0;   x &gt; 0</text>
-<text xml:space="preserve" x="399.5078125" y="380" font-size="29" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">P = {1, 3};   R</text>
-<text xml:space="preserve" x="576.4921875" y="386.38" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">13</text>
+<text xml:space="preserve" x="399.5078125" y="380" font-size="29" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">P = {a, c};   R</text>
+<text xml:space="preserve" x="576.4921875" y="386.38" font-size="20" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start">ac</text>
 <text xml:space="preserve" x="598.4921875" y="380" font-size="29" fill="#24628a" style="fill:#24628a" font-weight="600" text-anchor="start"> = 1 + 1/x</text>
-<text xml:space="preserve" x="560" y="454" font-size="25" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">Связь 12 фиксирована; связь 23 разрешено менять</text>
+<text xml:space="preserve" x="560" y="454" font-size="25" fill="#647481" style="fill:#647481" font-weight="400" text-anchor="middle">Связь ab фиксирована; связь bc разрешено менять</text>
 </svg>

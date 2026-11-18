@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="475" viewBox="0 0 1000 475" role="img" aria-labelledby="title desc">
 <title id="title">A prism with conductance constraints</title>
-<desc id="desc">Outer vertices 1, 2, 3 form the fixed unit face P. The inner triangle 4, 5, 6 and the three connecting edges may change. Left: all conductances equal 1. Right: conductances 14, 25, 36 are 7, coupling 45 is zero, and conductances 46 and 56 are 7/20. Resistance 12 is now 3/5; resistances 13 and 23 remain 8/15.</desc>
+<desc id="desc">Outer vertices a, b, c form the fixed unit face P. The inner triangle d, e, f and the three connecting edges may change. Left: all conductances equal 1. Right: conductances ad, be, cf are 7, coupling de is zero, and conductances df and ef are 7/20. Resistance ab is now 3/5; resistances ac and bc remain 8/15.</desc>
 <rect width="1000" height="475" rx="18" fill="#f6f8fb"/>
 <path d="M500 20 V455" stroke="#dce2eb" stroke-width="1"/>
 <g transform="translate(0,0)" font-family="Arial, sans-serif" text-anchor="middle">
@@ -23,13 +23,13 @@
 <text x="185" y="266" font-size="22" font-weight="bold" fill="#20628f">1</text>
 <text x="316" y="266" font-size="22" font-weight="bold" fill="#20628f">1</text>
 <text x="250" y="303" font-size="22" font-weight="bold" fill="#20628f">1</text>
-<circle cx="250" cy="70" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="250" y="77" font-size="22" fill="#243348">1</text>
-<circle cx="60" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="60" y="377" font-size="22" fill="#243348">2</text>
-<circle cx="440" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="440" y="377" font-size="22" fill="#243348">3</text>
-<circle cx="250" cy="220" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="250" y="227" font-size="22" fill="#243348">4</text>
-<circle cx="170" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="170" y="327" font-size="22" fill="#243348">5</text>
-<circle cx="330" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="330" y="327" font-size="22" fill="#243348">6</text>
-<text x="250" y="450" font-size="20" fill="#243348">R12 = R13 = R23 = 8/15</text></g>
+<circle cx="250" cy="70" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="250" y="77" font-size="22" fill="#243348">a</text>
+<circle cx="60" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="60" y="377" font-size="22" fill="#243348">b</text>
+<circle cx="440" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="440" y="377" font-size="22" fill="#243348">c</text>
+<circle cx="250" cy="220" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="250" y="227" font-size="22" fill="#243348">d</text>
+<circle cx="170" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="170" y="327" font-size="22" fill="#243348">e</text>
+<circle cx="330" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="330" y="327" font-size="22" fill="#243348">f</text>
+<text x="250" y="450" font-size="20" fill="#243348">R<tspan baseline-shift="sub" font-size="72%">ab</tspan> = R<tspan baseline-shift="sub" font-size="72%">ac</tspan> = R<tspan baseline-shift="sub" font-size="72%">bc</tspan> = 8/15</text></g>
 <g transform="translate(500,0)" font-family="Arial, sans-serif" text-anchor="middle">
 <text x="250" y="31" font-size="24" fill="#243348">Admissible change</text>
 <path d="M250 70 L60 370" stroke="#657184" stroke-width="3.5" fill="none"/>
@@ -50,11 +50,11 @@
 <text x="185" y="266" font-size="22" font-weight="bold" fill="#788393">0</text>
 <text x="316" y="266" font-size="22" font-weight="bold" fill="#20628f">7/20</text>
 <text x="250" y="303" font-size="22" font-weight="bold" fill="#20628f">7/20</text>
-<circle cx="250" cy="70" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="250" y="77" font-size="22" fill="#243348">1</text>
-<circle cx="60" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="60" y="377" font-size="22" fill="#243348">2</text>
-<circle cx="440" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="440" y="377" font-size="22" fill="#243348">3</text>
-<circle cx="250" cy="220" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="250" y="227" font-size="22" fill="#243348">4</text>
-<circle cx="170" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="170" y="327" font-size="22" fill="#243348">5</text>
-<circle cx="330" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="330" y="327" font-size="22" fill="#243348">6</text>
-<text x="250" y="450" font-size="20" fill="#243348">R12 = 3/5;  R13 = R23 = 8/15</text></g>
+<circle cx="250" cy="70" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="250" y="77" font-size="22" fill="#243348">a</text>
+<circle cx="60" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="60" y="377" font-size="22" fill="#243348">b</text>
+<circle cx="440" cy="370" r="17" fill="#e9eff8" stroke="#34445a" stroke-width="2"/><text x="440" y="377" font-size="22" fill="#243348">c</text>
+<circle cx="250" cy="220" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="250" y="227" font-size="22" fill="#243348">d</text>
+<circle cx="170" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="170" y="327" font-size="22" fill="#243348">e</text>
+<circle cx="330" cy="320" r="17" fill="white" stroke="#34445a" stroke-width="2"/><text x="330" y="327" font-size="22" fill="#243348">f</text>
+<text x="250" y="450" font-size="20" fill="#243348">R<tspan baseline-shift="sub" font-size="72%">ab</tspan> = 3/5;  R<tspan baseline-shift="sub" font-size="72%">ac</tspan> = R<tspan baseline-shift="sub" font-size="72%">bc</tspan> = 8/15</text></g>
 </svg>

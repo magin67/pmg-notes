@@ -1,15 +1,15 @@
 ---
 title: An Algorithm for Variations with Conductance Constraints
 date: 2026-10-31
-updated: 2026-11-11
-revision: 3
+updated: 2026-11-18
+revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: variations-constrained-algorithm
 lang: en
 description: Finding nonnegative conductances for prescribed P, Z, and V, proving impossibility of an exact solution, and determining a best approximation or an unattainable limit.
 order: 8
-translated_revision: 6
+translated_revision: 7
 aliases:
   - "en/Laplacian, Greenian and Resistance Variations/An Algorithm for Variations with Conductance Constraints"
 ---
@@ -22,10 +22,10 @@ We first examine an example where one formula reveals every outcome. Then we der
 
 ## Three outcomes on a simple path
 
-Take the path $1-2-3$. Conductance $12$ is fixed at $1$, conductance $23$ equals $x\ge0$, and coupling $13$ is forbidden:
+Take the path $a-b-c$. Edge $ab$ has fixed conductance $1$, edge $bc$ has conductance $x\ge0$, and coupling $ac$ is forbidden:
 
 $$
-P=\{1,3\},\qquad Z=\{13\},\qquad V=\{23\}
+P=\{a,c\},\qquad Z=\{ac\},\qquad V=\{bc\}
 $$
 
 ![A path with fixed conductance 1 and variable conductance x](<images/Constrained Search on a Path.svg>)
@@ -33,11 +33,11 @@ $$
 Connectedness requires $x>0$. The two edges are in series, so
 
 $$
-R_{13}(x)=1+\frac1x
+R_{ac}(x)=1+\frac1x
 \tag{1}
 $$
 
-**An exact solution.** For a prescribed $R^*_{13}=r>1$,
+**An exact solution.** For a prescribed $R^*_{ac}=r>1$,
 
 $$
 x=\frac1{r-1}
@@ -48,7 +48,7 @@ For example, $r=2$ gives $x=1$.
 **An unattainable limit.** If $r=1$, there is no finite solution. With unit weight, the error is
 
 $$
-\Psi(x)=\frac12\bigl(R_{13}(x)-1\bigr)^2=\frac1{2x^2}
+\Psi(x)=\frac12\bigl(R_{ac}(x)-1\bigr)^2=\frac1{2x^2}
 $$
 
 It tends to zero as $x\to\infty$, but no finite conductance gives zero error. Nor is there a best finite approximation: every value found can be improved.
@@ -56,7 +56,7 @@ It tends to zero as $x\to\infty$, but no finite conductance gives zero error. No
 **An attained best approximation.** If the problem additionally imposes $x\le2$, the minimum is attained:
 
 $$
-x=2,\qquad R_{13}=\frac32,\qquad \min\Psi=\frac18
+x=2,\qquad R_{ac}=\frac32,\qquad \min\Psi=\frac18
 $$
 
 This is a problem with an upper bound. Such a bound cannot be introduced merely for computational convenience and the result declared a solution of the original unbounded problem.
@@ -280,7 +280,7 @@ The substitution $x_e=\exp\theta_e$ is inconvenient here: it excludes zero condu
 
 ### One numerical step on the path
 
-For the path $1-2-3$, choose target $r=3/2$, initial $x=1$, weight $w=1$, and damping $\mu=1$. Then $R=2$, residual $f=1/2$, and sensitivity $S=1/x^2=1$. Problem (9) becomes
+For the path $a-b-c$, choose target $r=3/2$, initial $x=1$, weight $w=1$, and damping $\mu=1$. Then $R=2$, residual $f=1/2$, and sensitivity $S=1/x^2=1$. Problem (9) becomes
 
 $$
 \min_{d\ge-1}\ \frac12\left(\frac12-d\right)^2+\frac12d^2,
@@ -327,7 +327,7 @@ Here $\operatorname{adj}$ is the adjugate matrix formed from cofactors. Both exp
 >
 > Thus $R_q=r^*_q$ is equivalent to the corresponding equality in (12). The remaining conditions describe precisely the feasible region. $\square$
 
-For the path in the opening example, $\tau=x$, $F_{13}=x+1$. At $r=2$, equation (12) is $1-x=0$; at $r=1$, it becomes $1=0$. This provides an exact impossibility proof independent of the behavior of iterations.
+For the path in the opening example, $\tau=x$, $F_{ac}=x+1$. At $r=2$, equation (12) is $1-x=0$; at $r=1$, it becomes $1=0$. This provides an exact impossibility proof independent of the behavior of iterations.
 
 ### Solving the polynomial problem
 
@@ -405,9 +405,9 @@ If the graph at the lower bounds is disconnected, this sufficient condition does
 
 See [[en/PythonExamples/Example - Laplacian, Greenian and Resistance Variations#Exact constraint certificates|the notebook calculation]].
 
-In [[Variations with Conductance Constraints#The prism example|the prism example]], the target is $R_{12}=8k/15$ with $R_{13}=R_{23}=8/15$. Its known exact solution region tests the statuses of the general algorithm:
+In [[Variations with Conductance Constraints#The prism example|the prism example]], the target is $R_{ab}=8k/15$ with $R_{ac}=R_{bc}=8/15$. Its known exact solution region tests the statuses of the general algorithm:
 
-- at $k=9/8$, there is a solution $c_{45}=0$, $c_{46}=c_{56}=7/20$, $c_{14}=c_{25}=c_{36}=7$;
+- at $k=9/8$, there is a solution $c_{de}=0$, $c_{df}=c_{ef}=7/20$, $c_{ad}=c_{be}=c_{cf}=7$;
 - at $k=2$, condition (4) fails, so no exact solution exists;
 - at $k=(31-\sqrt{481})/8$, no exact finite solution exists, but the error infimum is zero.
 
@@ -416,11 +416,11 @@ The numerical procedure (9)-(10) is also checked for the feasible target $k=21/2
 Existence of an exact solution for this target is independently confirmed by [[Variations with Conductance Constraints#Constructing the conductances|the rational conductance family for the prism]]. For example,
 
 $$
-c_{45}=\frac6{35},\qquad c_{46}=c_{56}=\frac{16}{35},\qquad
-c_{14}=c_{25}=c_{36}=2
+c_{de}=\frac6{35},\qquad c_{df}=c_{ef}=\frac{16}{35},\qquad
+c_{ad}=c_{be}=c_{cf}=2
 $$
 
-gives exactly $R_{12}=14/25$, $R_{13}=R_{23}=8/15$. The numerical method finds a different conductance tuple: the solution is not unique. Success in this calculation is not used as proof of general convergence.
+gives exactly $R_{ab}=14/25$, $R_{ac}=R_{bc}=8/15$. The numerical method finds a different conductance tuple: the solution is not unique. Success in this calculation is not used as proof of general convergence.
 
 The [verification script](https://github.com/magin67/pmg-notes/blob/v5/checks/variations/verify_constrained_algorithm.py) compares the adjugate matrix, independent enumeration of trees and 2-forests, resistances, and sensitivities in exact rational arithmetic. It uses one edge, a triangle, a four-vertex path, a cycle, and the prism. The three outcomes of the opening example and the polynomial error representation are checked separately.
 

@@ -1,10 +1,10 @@
 ---
 title: Variation of a Single Edge
 date: 2026-10-04
-updated: 2026-11-10
-revision: 8
-translated_revision: 8
-source_revision: 7
+updated: 2026-11-18
+revision: 9
+translated_revision: 9
+source_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: single-edge-variation
@@ -158,22 +158,22 @@ For $\delta>0$, the second identity expresses the addition of conductance $\delt
 ## Example: strengthening an edge of a triangle
 
 > [!example] Resistances and the spanning-tree coefficient
-> In $K_3$ with unit conductances, $\tau=3$ and $R_{12}=R_{13}=R_{23}=2/3$. Increase $c_{12}$ from $1$ to $2$, so $\delta=1$.
+> In $K_3$ with unit conductances, $\tau=3$ and $R_{ab}=R_{ac}=R_{bc}=2/3$. Increase $c_{ab}$ from $1$ to $2$, so $\delta=1$.
 >
-> Formulas (6) and (5), with $a_{13}\cdot a_{12}=1/3$, give
->
-> $$
-> R'_{12}=\frac{2/3}{1+2/3}=\frac25,\qquad
-> R'_{13}=\frac23-\frac{1/9}{1+2/3}=\frac35
-> $$
->
-> By symmetry, $R'_{23}=3/5$. Formula (2) gives $\tau'=3(1+2/3)=5$.
->
-> An independent check of the resistances uses parallel paths. Between $1$ and $2$, the branch resistances are $1/2$ and $2$; between $1$ and $3$, they are $1$ and $3/2$:
+> Formulas (6) and (5), with $(ac)\cdot (ab)=1/3$, give
 >
 > $$
-> R'_{12}=\frac{(1/2)\cdot2}{1/2+2}=\frac25,\qquad
-> R'_{13}=\frac{1\cdot(3/2)}{1+3/2}=\frac35
+> R'_{ab}=\frac{2/3}{1+2/3}=\frac25,\qquad
+> R'_{ac}=\frac23-\frac{1/9}{1+2/3}=\frac35
+> $$
+>
+> By symmetry, $R'_{bc}=3/5$. Formula (2) gives $\tau'=3(1+2/3)=5$.
+>
+> An independent check of the resistances uses parallel paths. Between $a$ and $b$, the branch resistances are $1/2$ and $2$; between $a$ and $c$, they are $1$ and $3/2$:
+>
+> $$
+> R'_{ab}=\frac{(1/2)\cdot2}{1/2+2}=\frac25,\qquad
+> R'_{ac}=\frac{1\cdot(3/2)}{1+3/2}=\frac35
 > $$
 >
 > The three spanning trees have weights $2,2,1$, whose sum is $5$.
@@ -201,7 +201,7 @@ $$
 =c_{kl}R_{kl}
 $$
 
-In the triangle example above, strengthening edge $12$ increases its inclusion probability from $2/3$ to $c'_{12}R'_{12}=2\cdot(2/5)=4/5$.
+In the triangle example above, strengthening edge $ab$ increases its inclusion probability from $2/3$ to $c'_{ab}R'_{ab}=2\cdot(2/5)=4/5$.
 
 When the edge is deleted completely, $\delta=-c_{kl}$, formula (2) becomes
 
@@ -281,13 +281,13 @@ For the varied pair itself, $i=k$, $j=l$, the determinant in (9) is zero, so $m'
 ### Example: the change in forest weight
 
 > [!example] Forest weight
-> Before the change, $m_{13}=\tau R_{13}=2$. After the change, $m'_{13}=\tau'R'_{13}=3$. Formula (9) gives
+> Before the change, $m_{ac}=\tau R_{ac}=2$. After the change, $m'_{ac}=\tau'R'_{ac}=3$. Formula (9) gives
 >
 > $$
-> \Delta m_{13}=1\cdot3\left(\frac23\cdot\frac23-\frac19\right)=1
+> \Delta m_{ac}=1\cdot3\left(\frac23\cdot\frac23-\frac19\right)=1
 > $$
 >
-> Direct enumeration: the spanning 2-forests separating vertices $1$ and $3$ consist of the single edge $12$ or $23$. Their total weight changes from $1+1=2$ to $2+1=3$.
+> Direct enumeration: the spanning 2-forests separating vertices $a$ and $c$ consist of the single edge $ab$ or $bc$. Their total weight changes from $1+1=2$ to $2+1=3$.
 
 ## Further reading
 
