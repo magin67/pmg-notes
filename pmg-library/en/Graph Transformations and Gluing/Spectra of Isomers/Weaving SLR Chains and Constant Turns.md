@@ -1,9 +1,9 @@
 ---
 title: Weaving SLR Chains and Constant Turns
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 4
-translated_revision: 8
+updated: 2026-11-18
+revision: 5
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -32,16 +32,16 @@ The runner is defined in [[en/Graph Transformations and Gluing/Chains of cores/W
 All conductances are one. The starting graph $G_0$ is an edge with ordered socket $(a,b)$. The runner $K$ has six vertices and five edges:
 
 $$
-K=P_6:\quad 1-2-3-4-5-0
+K=P_6:\quad v_1-v_2-v_3-v_4-v_5-v_0
 $$
 
-Its plug is $\mathcal P=(1,0)$. At each attachment, identify $1\mapsto a$ and $0\mapsto b$. The other four vertices are new. The old edge $ab$ and the five path edges form a cycle $C(0,1,2,3,4,5)$. The runner contains no copy of the edge $01$, so each seam is counted once.
+Its plug is $\mathcal P=(v_1,v_0)$. At each attachment, identify $v_1\mapsto a$ and $v_0\mapsto b$. The other four vertices are new. The old edge $ab$ and the five path edges form a cycle $C(v_0,v_1,v_2,v_3,v_4,v_5)$. The runner contains no copy of the edge $v_0v_1$, so each seam is counted once.
 
-| Letter $\alpha$ | Ordered socket $\mathcal Q_\alpha$ | Position relative to the input edge $01$ |
+| Letter $\alpha$ | Ordered socket $\mathcal Q_\alpha$ | Position relative to the input edge $v_0v_1$ |
 |---|---|---|
-| L | $(2,3)$ | One side output |
-| S | $(3,4)$ | The opposite edge |
-| R | $(4,5)$ | The other side output |
+| L | $(v_2,v_3)$ | One side output |
+| S | $(v_3,v_4)$ | The opposite edge |
+| R | $(v_4,v_5)$ | The other side output |
 
 All three outputs are vertex-disjoint from the plug. Thus repetition of the runner introduces no common vertices between nonadjacent cores, and the two seams within an intermediate core remain disjoint. This is exactly the class of open chains in [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|Cores, Seams, and Admissible Chains]].
 
@@ -66,7 +66,7 @@ The dashed edge in the figure already belongs to the assembled graph. The blue e
 > The letter $\alpha_1$ selects the output of the first core; all such marked single cycles are isomorphic. The letter $\alpha_N$ selects the terminal boundary and does not change the graph already constructed. The initial S in (1) is a marker, not an additional step.
 
 > [!note]- Proof of the correspondence
-> **Proof.** Every step adds four vertices and five edges, giving the count. In the new cycle the input is at $01$, with $0$ identified with the second old contact and $1$ with the first. This is the SLR transfer rule. For every intermediate core, the output choice is exactly its letter. The first core has no input from another core, and the last has no used output. Any ordered pair of adjacent vertices of the first $C_6$ can be mapped to any other by a cycle automorphism. The internal letters therefore have the form (1). $\square$
+> **Proof.** Every step adds four vertices and five edges, giving the count. In the new cycle the input is at $v_0v_1$, with $v_0$ identified with the second old contact and $v_1$ with the first. This is the SLR transfer rule. For every intermediate core, the output choice is exactly its letter. The first core has no input from another core, and the last has no used output. Any ordered pair of adjacent vertices of the first $C_6$ can be mapped to any other by a cycle automorphism. The internal letters therefore have the form (1). $\square$
 
 ## Constant turns and spatial chains
 
@@ -86,7 +86,7 @@ The lower part of the figure joins six-edge cycles in sequence with a constant L
 
 ![The two seams of an internal core with a constant L choice](images/Constant%20Turn%20Close%20Up.svg)
 
-**A close-up of rule L.** The red seam is the middle core's input and the blue seam is its output. In local numbering these are edges $01$ and $23$, with no common vertices. The next step repeats this matching regardless of the cores' spatial positions. Labels $0,\ldots,5$ refer only to the middle core.
+**A close-up of rule L.** The red seam is the middle core's input and the blue seam is its output. In the local labeling these are edges $v_0v_1$ and $v_2v_3$, with no common vertices. The next step repeats this matching regardless of the cores' spatial positions. Labels $v_0,\ldots,v_5$ refer only to the middle core.
 
 “Constant curvature” can be understood as a visual name for a constant local rule. Numerical Euclidean curvature and torsion of a spatial curve require a separately specified embedding; the SLR code does not determine them. Likewise, a spatial spiral need not be the only realization of a given graph.
 
@@ -96,7 +96,7 @@ Closure requires an additional identification of the initial and terminal bounda
 
 ## Why the contact matching changes the family
 
-The socket position alone does not determine the SLR turn. If $0\mapsto a$ and $1\mapsto b$ are used at every step instead of $1\mapsto a$ and $0\mapsto b$, the local cycle order relative to the continuation changes. For a fixed side output, this produces alternating L and R, up to a global reflection.
+The socket position alone does not determine the SLR turn. If $v_0\mapsto a$ and $v_1\mapsto b$ are used at every step instead of $v_1\mapsto a$ and $v_0\mapsto b$, the local cycle order relative to the continuation changes. For a fixed side output, this produces alternating L and R, up to a global reflection.
 
 ![Two fixed contact matchings produce constant and alternating turns](images/Contact%20Matching%20and%20the%20SLR%20Turn.svg)
 
@@ -115,7 +115,7 @@ $$
 \mathbf J(A,B,C,D,E)^{\mathsf T}=(A,C,B,D,E)^{\mathsf T}
 $$
 
-Let $\mathbf T_j$ be the matrix in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] for input $0\mapsto a$, $1\mapsto b$ and output $(j,j+1)$. The correct SLR matrices are then
+Let $\mathbf T_j$ be the matrix in [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectral Transfer to a New Boundary|Spectral Transfer to a New Boundary]] for input $v_0\mapsto a$, $v_1\mapsto b$ and output $(v_j,v_{j+1})$. The correct SLR matrices are then
 
 $$
 \mathbf U_L=\mathbf T_2\mathbf J,\qquad

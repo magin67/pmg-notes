@@ -3,6 +3,7 @@
 Run from any directory: python checks/spectral/draw_editorial.py --lang ru
 The diagrams use the same coordinate metric as the spectral notes.
 """
+from figure_language import vertex_label
 import argparse
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -118,7 +119,7 @@ fig.suptitle(tr("Свёртка: каждая отражённая пара ст
 fig.text(.5,.932, tr("Одинаковые цвета обозначают одну пару; подпись: позиция j → новая вершина",
                      "Matching colors identify a pair; label: position j → new vertex"),
          ha="center", fontsize=12, color=INK)
-fig.text(.5,.887, "0,11 → 1     1,10 → 2     2,9 → 3     3,8 → 4     4,7 → 5     5,6 → 6",
+fig.text(.5,.887, "0,11 → a₁     1,10 → a₂     2,9 → a₃     3,8 → a₄     4,7 → a₅     5,6 → a₆",
          ha="center", fontsize=12, color=INK)
 for row,m in enumerate((1,3)):
     bottom=.49 if row==0 else .10
@@ -135,7 +136,7 @@ for row,m in enumerate((1,3)):
     for j,(x,y) in enumerate(coords):
         label=representative(j)+1
         ax.scatter(x,y,s=155,color=PALETTE[label-1],zorder=3,edgecolors="white")
-        ax.text(1.27*x,1.27*y,f"{j} → {label}",ha="center",va="center",
+        ax.text(1.27*x,1.27*y,f"{j} → {vertex_label(label)}",ha="center",va="center",
                 fontsize=11,color=INK)
     ax.set(xlim=(-1.62,1.62),ylim=(-1.35,1.35),aspect="equal")
     ax.axis("off")
@@ -155,7 +156,7 @@ for row,m in enumerate((1,3)):
     for i,j in edges:bx.plot(*np.array([pos[i],pos[j]]).T,color=BLUE,lw=2.5,zorder=1)
     for i,(x,y) in pos.items():
         bx.scatter(x,y,s=330,color=PALETTE[i],edgecolors="white",zorder=3)
-        bx.text(x,y,str(i+1),ha="center",va="center",color="white",fontsize=12,zorder=4)
+        bx.text(x,y,vertex_label(i+1),ha="center",va="center",color="white",fontsize=12,zorder=4)
     bx.set_aspect("equal");bx.axis("off")
     bx.set_title(r"$P_6$" if m==1 else r"$C_4\ \sqcup\ P_2$",fontsize=17,color=INK,pad=10)
     arrow(fig,(.49,bottom+.17),(.58,bottom+.17),BLUE)

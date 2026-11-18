@@ -1,9 +1,9 @@
 ---
 title: Rooted Forests and Decoding the Boundary State
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -27,7 +27,7 @@ For open hexagonal chains, specialization at $\xi=-1$ is sufficient. With the si
 
 We retain the model of [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|Cores, Seams, and Admissible Chains]]: cores $C_6$ form an open path, joined along edges; the two seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no additional identifications or closure. All conductances are one, and each shared edge is counted once. The number of cores is $N$, and the number of vertices is $n=4N+2$.
 
-For $N\ge2$, the full code has the form $w=Su$, where $u$ contains $N-2$ turn letters. The initial $S$ is a marker, not an operation on the state. For the active pair $(x,y)$, the new core is numbered so that $(0,1)=(y,x)$; the outputs $L,S,R$ are respectively $(2,3),(3,4),(4,5)$. This convention is essential for all the matrices below.
+For $N\ge2$, the full code has the form $w=Su$, where $u$ contains $N-2$ turn letters. The initial $S$ is a marker, not an operation on the state. For the active pair $(x,y)$, label the new core so that $(v_0,v_1)=(y,x)$; the outputs $L,S,R$ are respectively $(v_2,v_3),(v_3,v_4),(v_4,v_5)$. This convention is essential for all the matrices below.
 
 The rooted polynomial and the characteristic polynomial satisfy
 

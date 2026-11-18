@@ -1,9 +1,9 @@
 ---
 title: "The Spectral Cone of a Fixed Basis"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -83,7 +83,7 @@ $$
 \mathbf u_2=\frac1{\sqrt6}(1,-2,1)^{\mathsf T}
 $$
 
-Put $a=\mu_1$ and $b=\mu_2$. These are scalar parameters, not the formal vertices $a_i$. Direct substitution gives
+Put $a=\mu_1$ and $b=\mu_2$. These are eigenvalues. Label the path vertices $p,q,s$ in matrix row order. Direct substitution gives
 
 $$
 \mathbf L(a,b)=
@@ -97,27 +97,27 @@ $$
 Hence
 
 $$
-w_{12}=w_{23}=\frac b3,\qquad
-w_{13}=\frac{3a-b}{6},\qquad
+w_{pq}=w_{qs}=\frac b3,\qquad
+w_{ps}=\frac{3a-b}{6},\qquad
 \boxed{\mathcal K_U=\{(a,b):a\ge0,\ 0\le b\le3a\}}
 $$
 
-Let $E$ be the graph consisting of the unit edge $\{1,3\}$ and isolated vertex $2$. Its spectral point is $(2,0)$; the unit path $P_3$ has point $(1,3)$. Every cone point has a unique decomposition along these two rays:
+Let $E$ be the graph consisting of the unit edge $\{p,s\}$ and isolated vertex $q$. Its spectral point is $(2,0)$; the unit path $P_3$ has point $(1,3)$. Every cone point has a unique decomposition along these two rays:
 
 $$
 (a,b)=\frac b3(1,3)+\frac{3a-b}{6}(2,0)
 $$
 
-The decomposition coefficients are conductances directly: the first is assigned to both path edges, and the second to $\{1,3\}$. Thus both boundary rays are extreme.
+The decomposition coefficients are conductances directly: the first is assigned to both path edges, and the second to $\{p,s\}$. Thus both boundary rays are extreme.
 
 On the ray $b=3a>0$, the graph is a connected path. On $b=0$, $a>0$, it has one edge and one isolated vertex. Inside the angle $0<b<3a$, all three conductances are positive and the graph is a weighted triangle.
 
 A simple unweighted graph requires $w_{ij}\in\{0,1\}$. There are exactly four such graphs in this basis:
 
-| Point $(a,b)$ | $w_{12}=w_{23}$ | $w_{13}$ | Graph |
+| Point $(a,b)$ | $w_{pq}=w_{qs}$ | $w_{ps}$ | Graph |
 |---|---:|---:|---|
 | $(0,0)$ | $0$ | $0$ | Three isolated vertices |
-| $(2,0)$ | $0$ | $1$ | $E$: edge $\{1,3\}$ and vertex $2$ |
+| $(2,0)$ | $0$ | $1$ | $E$: edge $\{p,s\}$ and vertex $q$ |
 | $(1,3)$ | $1$ | $0$ | Path $P_3$ |
 | $(3,3)$ | $1$ | $1$ | Complete graph $K_3$ |
 
@@ -257,7 +257,7 @@ $$
 **Example.** The point $(a,b)=(4,1)$ lies inside the cone and gives conductances
 
 $$
-w_{12}=w_{23}=\frac13,\qquad w_{13}=\frac{11}{6}
+w_{pq}=w_{qs}=\frac13,\qquad w_{ps}=\frac{11}{6}
 $$
 
 Its Greenian has matrix
@@ -271,9 +271,9 @@ $$
 \end{pmatrix}
 $$
 
-The eigenvalues $1/4$ and $1$ are positive and row sums vanish, but $\mathrm{Gr}_{13}=1/24>0$. Interpreting this matrix as a Laplacian would therefore require negative conductance $-1/24$ between vertices $1$ and $3$.
+The eigenvalues $1/4$ and $1$ are positive and row sums vanish, but $\mathrm{Gr}_{ps}=1/24>0$. Interpreting this matrix as a Laplacian would therefore require negative conductance $-1/24$ between vertices $p$ and $s$.
 
-The Greenian still correctly defines the original resistance metric: for example, $R_{13}=2/a=1/2$. The signs in its edge representation are discussed in [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Canonical Vector Representation of the Greenian|The Canonical Vector Representation of the Greenian]]. Here they appear as the reciprocal eigenvalue tuple leaving the Laplacian cone.
+The Greenian still correctly defines the original resistance metric: for example, $R_{ps}=2/a=1/2$. The signs in its edge representation are discussed in [[en/Resistance Geometry and Duality/Greenian and polyform duality/The Canonical Vector Representation of the Greenian|The Canonical Vector Representation of the Greenian]]. Here they appear as the reciprocal eigenvalue tuple leaving the Laplacian cone.
 
 ![[images/Inverting Spectral Coordinates in the P3 Basis.svg]]
 

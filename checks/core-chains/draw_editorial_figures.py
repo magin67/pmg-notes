@@ -6,7 +6,7 @@ needed for drawing; the existing translator handles any optional font fitting.
 from pathlib import Path
 from math import cos,sin,pi,sqrt
 import json
-from draw_admissible_chains import SVG,INK,MUTED,BLUE,RED,PURPLE,FILLS
+from draw_admissible_chains import SVG,INK,MUTED,BLUE,RED,PURPLE,FILLS, vertex_label
 
 GREEN='#138570'
 HERE=Path(__file__).resolve().parent
@@ -115,8 +115,8 @@ def prisms():
         for i,p in ps.items():
             s.circle(p,5,'white',INK,2)
             dx=(p[0]-cx)/140;dy=-16 if i<6 else 25
-            s.text(p[0]+14*dx,p[1]+dy,str(i),19,anchor='middle')
-        s.text(cx,454,'F₀ = (0, 1, 7, 6);  '+('F₂ = (2, 3, 9, 8)' if j==2 else 'F₃ = (3, 4, 10, 9)'),20,anchor='middle')
+            s.text(p[0]+14*dx,p[1]+dy,vertex_label(i),19,anchor='middle')
+        s.text(cx,454,'F₀ = (v₀, v₁, v₇, v₆);  '+('F₂ = (v₂, v₃, v₉, v₈)' if j==2 else 'F₃ = (v₃, v₄, v₁₀, v₉)'),20,anchor='middle')
     s.text(30,535,('2. Задать соответствие F₀ → F₂','2. Specify the correspondence F₀ → F₂'),26,weight='bold')
     for x,r in [(25,0),(615,1)]:
         s.panel(x,562,540,320)
@@ -128,7 +128,7 @@ def prisms():
             s.arrow((x+153,yy),(x+386,target),PURPLE,2.5)
         for side,values in [(135,left),(405,right)]:
             for k,v in enumerate(values):
-                p=(x+side,670+52*k);s.circle(p,16,'white',INK,2);s.text(p[0],p[1]+6,str(v),20,anchor='middle')
+                p=(x+side,670+52*k);s.circle(p,16,'white',INK,2);s.text(p[0],p[1]+6,vertex_label(v),20,anchor='middle')
     s.text(590,922,('r = 0: типы рёбер сохраняются; r = 1: основания и продольные рёбра меняются местами.','r = 0 preserves edge types; r = 1 exchanges base edges and longitudinal edges.'),21,anchor='middle')
     s.text(590,958,('Стрелки задают отождествление вершин, а не новые рёбра.','Arrows specify vertex identifications, not new edges.'),20,anchor='middle',color=MUTED)
     s.save_pair('Боковые грани призм и соответствия вершин','Prism side faces and vertex correspondences')

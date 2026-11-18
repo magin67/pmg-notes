@@ -1,9 +1,9 @@
 ---
 title: Spectral Transfer to a New Boundary
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -203,7 +203,7 @@ These substitutions use formal entries of the block $\mathbf X$, not conductance
 
 See [[en/PythonExamples/Example - Spectra of Isomers#Transfer to a new boundary|the notebook calculation]].
 
-Take $K=C(0,1,2,3,4,5)$. Identify the input $(0,1)$ with the old pair $(a,b)$ **in the same order**: $0\mapsto a$, $1\mapsto b$. Count the shared edge $01$ of conductance $1$ once. Choose output $(j,j+1)$, where $j=2,3,4$, and denote the corresponding transfer by $\mathbf T_j$.
+Take $K=C(v_0,v_1,v_2,v_3,v_4,v_5)$. Identify the input $(v_0,v_1)$ with the old pair $(a,b)$ **in the same order**: $v_0\mapsto a$, $v_1\mapsto b$. Count the shared edge $v_0v_1$ of conductance $1$ once. Choose output $(v_j,v_{j+1})$, where $j=2,3,4$, and denote the corresponding transfer by $\mathbf T_j$.
 
 ![Three output edges with a fixed order of the input pair](images/Three%20Output%20Seams%20of%20a%20Hexagon.svg)
 
@@ -224,7 +224,7 @@ v&w-1&1&0&0&0\\
 \tag{10}
 $$
 
-The old shared edge is already included in $\mathbf S_G$. Its entry is therefore $v$, not $v+1$. The input diagonals decrease by $1$: each endpoint gains one new edge of the path $1-2-3-4-5-0$.
+The old shared edge is already included in $\mathbf S_G$. Its entry is therefore $v$, not $v+1$. The input diagonals decrease by $1$: each endpoint gains one new edge of the path $v_1-v_2-v_3-v_4-v_5-v_0$.
 
 We give all transitions as compact recurrences. Set
 
@@ -248,7 +248,7 @@ $$
 
 It depends on the core attachment, not on the choice of the new marking. All three cases also satisfy $D'=D-E'$.
 
-> [!info] Output $(2,3)$
+> [!info] Output $(v_2,v_3)$
 > **Proposition.** The remaining coordinates of transfer $\mathbf T_2$ are
 >
 > $$
@@ -261,7 +261,7 @@ It depends on the core attachment, not on the choice of the new marking. All thr
 > \tag{13}
 > $$
 
-> [!info] Output $(3,4)$
+> [!info] Output $(v_3,v_4)$
 > **Proposition.** The remaining coordinates of transfer $\mathbf T_3$ are
 >
 > $$
@@ -274,7 +274,7 @@ It depends on the core attachment, not on the choice of the new marking. All thr
 > $$
 
 > [!note]- Derivation of the hexagon recurrences
-> **Proof.** For outputs $(2,3)$ and $(3,4)$, apply the five operations $\Phi_i$ to matrix (10), expand the determinants in $u,v,w$, and use (8). In both cases the first row is $(k,-k-\ell,-k-\ell,2,k+2\ell+m)$. The other rows give (13), (14). All coefficients can be obtained by the five substitutions in (9), without rational elimination. The verification program independently compares each determinant expansion with the stated recurrences. $\square$
+> **Proof.** For outputs $(v_2,v_3)$ and $(v_3,v_4)$, apply the five operations $\Phi_i$ to matrix (10), expand the determinants in $u,v,w$, and use (8). In both cases the first row is $(k,-k-\ell,-k-\ell,2,k+2\ell+m)$. The other rows give (13), (14). All coefficients can be obtained by the five substitutions in (9), without rational elimination. The verification program independently compares each determinant expansion with the stated recurrences. $\square$
 
 Let $\mathbf J$ interchange the second and third passport coordinates:
 
@@ -282,7 +282,7 @@ $$
 \mathbf J(A,B,C,D,E)^{\mathsf T}=(A,C,B,D,E)^{\mathsf T}
 $$
 
-The cycle reflection interchanging $0,1$ takes output $(2,3)$ to $(5,4)$, and $(3,4)$ to $(4,3)$. Hence
+The cycle reflection interchanging $v_0,v_1$ takes output $(v_2,v_3)$ to $(v_5,v_4)$, and $(v_3,v_4)$ to $(v_4,v_3)$. Hence
 
 $$
 \mathbf T_4=\mathbf J\mathbf T_2\mathbf J,
@@ -292,11 +292,11 @@ $$
 
 Thus (12)-(15) specify all three polynomial matrices. Their expanded coefficients are retained in the [exact data](https://github.com/magin67/pmg-notes/blob/v5/checks/isomer-spectra/boundary-transfer-results.json).
 
-Under the alternative convention identifying local input $(0,1)$ with old pair $(b,a)$, the transition becomes $\mathbf T_j\mathbf J$. Reversing only the output pair gives $\mathbf J\mathbf T_j$. These are different operations; conjugation $\mathbf J\mathbf T_j\mathbf J$ changes both orders. Transfer formulas cannot be compared without specifying these conventions.
+Under the alternative convention identifying local input $(v_0,v_1)$ with old pair $(b,a)$, the transition becomes $\mathbf T_j\mathbf J$. Reversing only the output pair gives $\mathbf J\mathbf T_j$. These are different operations; conjugation $\mathbf J\mathbf T_j\mathbf J$ changes both orders. Transfer formulas cannot be compared without specifying these conventions.
 
 ## One graph, two passports, different continuations
 
-The initial state of a single $C_6$ on edge $(0,1)$ is
+The initial state of a single $C_6$ on edge $(v_0,v_1)$ is
 
 $$
 \begin{aligned}

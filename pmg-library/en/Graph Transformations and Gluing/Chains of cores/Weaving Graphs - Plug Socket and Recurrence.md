@@ -1,9 +1,9 @@
 ---
 title: "Weaving Graphs: Plug, Socket, and Recurrence"
 date: 2026-11-02
-updated: 2026-11-11
-revision: 3
-translated_revision: 6
+updated: 2026-11-18
+revision: 4
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -311,14 +311,14 @@ Here $\tau_k$ are spanning-tree coefficients: conductances enter as weights. Rem
 
 ### A runner with two independent cycles
 
-Take $K=K_4\setminus\{01\}$, with plug $(0,1)$ and socket $(2,3)$. Its edges $02,03,12,13,23$ are unit edges. Here
+Take $K=K_4\setminus\{v_0v_1\}$, with plug $(v_0,v_1)$ and socket $(v_2,v_3)$. Its edges $v_0v_2,v_0v_3,v_1v_2,v_1v_3,v_2v_3$ are unit edges. Here
 
 $$
 \kappa=8,\qquad \alpha=1,\qquad\beta=\frac12,\qquad\gamma=0,\qquad
 \mathbf T_K=\begin{pmatrix}8&8\\4&4\end{pmatrix}
 $$
 
-The initial edge restores the missing edge $01$, so the first graph is $K_4$ and has $16$ spanning trees. Subsequently,
+The initial edge restores the missing edge $v_0v_1$, so the first graph is $K_4$ and has $16$ spanning trees. Subsequently,
 
 $$
 \tau_{k+2}=12\tau_{k+1},\qquad
@@ -329,7 +329,7 @@ A zero value of $\gamma$ means that there is no potential difference between the
 
 ### Adding the input edge a second time
 
-If we use the whole square $C(0,1,2,3)$ instead of $P_4$, with plug $(0,1)$ and socket $(3,2)$, the disjoint-edge rule adds a second edge between the input contacts. The matrix is then
+If we use the whole square $C(v_0,v_1,v_2,v_3)$ instead of $P_4$, with plug $(v_0,v_1)$ and socket $(v_3,v_2)$, the disjoint-edge rule adds a second edge between the input contacts. The matrix is then
 
 $$
 \mathbf T_K=\begin{pmatrix}3&4\\2&3\end{pmatrix},\qquad

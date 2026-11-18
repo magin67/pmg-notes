@@ -1,9 +1,9 @@
 ---
 title: "Eigenspaces, Projectors, and Reconstruction of Polyforms"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -45,7 +45,7 @@ The sum is orthogonal with respect to $\langle\ ,\ \rangle_0$, and $\sum_\lambda
 
 ## Replacing one eigenbasis by another
 
-Number the vertices of $C_4$ along the cycle $1-2-3-4-1$. Its Laplacian is
+Write the vertices of $C_4$ in cyclic order $p-q-s-t-p$. Its Laplacian is
 
 $$
 \mathbf L=
@@ -420,14 +420,14 @@ For $C_4$,
 
 | Vertex pair | Contribution of $H_2$ | Contribution of $H_4$ | Effective resistance |
 |---|---:|---:|---:|
-| Adjacent, for example $1,2$ | $1/2$ | $1/4$ | $3/4$ |
-| Opposite, for example $1,3$ | $1$ | $0$ | $1$ |
+| Adjacent, for example $p,q$ | $1/2$ | $1/4$ | $3/4$ |
+| Opposite, for example $p,s$ | $1$ | $0$ | $1$ |
 
 ![[images/Spectral Contributions to Resistances in C4.svg]]
 
-*Figure 3. Left: resistances of an adjacent and an opposite pair decomposed by eigenspaces. Right: the contribution of $H_2$ to $R_{12}$ decomposed into individual modes in two bases: $1/4+1/4$ and $0+1/2$. The total eigenspace contribution is preserved although its distribution among modes changes. Colors on the left denote eigenspaces; on the right they denote the two modes of the selected basis.*
+*Figure 3. Left: resistances of an adjacent and an opposite pair decomposed by eigenspaces. Right: the contribution of $H_2$ to $R_{pq}$ decomposed into individual modes in two bases: $1/4+1/4$ and $0+1/2$. The total eigenspace contribution is preserved although its distribution among modes changes. Colors on the left denote eigenspaces; on the right they denote the two modes of the selected basis.*
 
-In the original basis, both modes $\mathbf u,\mathbf v$ contribute $1/4$ to $R_{12}$. In the rotated basis, the components of $\widetilde{\mathbf u}$ at vertices $1$ and $2$ coincide, so its contribution vanishes; the entire $H_2$ contribution, $1/2$, comes from $\widetilde{\mathbf v}$. The contribution of $H_4$ remains $1/4$.
+In the original basis, both modes $\mathbf u,\mathbf v$ contribute $1/4$ to $R_{pq}$. In the rotated basis, the components of $\widetilde{\mathbf u}$ at vertices $p$ and $q$ coincide, so its contribution vanishes; the entire $H_2$ contribution, $1/2$, comes from $\widetilde{\mathbf v}$. The contribution of $H_4$ remains $1/4$.
 
 For the sum over all pairs, only the projector ranks are needed:
 
@@ -440,7 +440,7 @@ For $C_4$, $\operatorname{Kf}=4(2/2+1/4)=5$, agreeing with $4\cdot(3/4)+2\cdot1$
 
 ## Cospectral graphs with different forest polynomials
 
-Consider two connected weighted graphs on vertices $1,2,3,4$. Graph $G_1$ contains all six edges: edge $12$ has conductance $3$ and the others have conductance $1$. Graph $G_2$ contains only the four edges between the parts $\{1,2\}$ and $\{3,4\}$, each of conductance $2$. The different edge counts already prove that the graphs are nonisomorphic.
+Consider two connected weighted graphs on vertices $p,q,s,t$. Graph $G_1$ contains all six edges: edge $pq$ has conductance $3$ and the others have conductance $1$. Graph $G_2$ contains only the four edges between the parts $\{p,q\}$ and $\{s,t\}$, each of conductance $2$. The different edge counts already prove that the graphs are nonisomorphic.
 
 Put $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/4$ and
 
@@ -521,11 +521,11 @@ R_{ij}(G_r)=\frac{\|\mathbf E_4^{(r)}\mathbf b_{ij}\|_0^2}{4}
 +\frac{\|\mathbf E_8^{(r)}\mathbf b_{ij}\|_0^2}{8}
 $$
 
-In $G_1$, the difference $\mathbf b_{12}$ lies entirely in the direction $\mathbf z_1$, so $R_{12}=2/8=1/4$. In $G_2$, it is orthogonal to $\mathbf z_2$ and belongs to the eigenspace for $4$, so $R_{12}=2/4=1/2$.
+In $G_1$, the difference $\mathbf b_{pq}$ lies entirely in the direction $\mathbf z_1$, so $R_{pq}=2/8=1/4$. In $G_2$, it is orthogonal to $\mathbf z_2$ and belongs to the eigenspace for $4$, so $R_{pq}=2/4=1/2$.
 
 ![[images/The Same Spectrum and Different Resistances.svg]]
 
-*Figure 5. Contributions of the eigenspaces for $4$ and $8$ to two pairwise effective resistances. For pair $12$, the eigenspace containing the entire vertex difference changes; for pair $13$, both contributions are nonzero. The values of $R_{13}$ are $7/16$ and $3/8$. The total Kirchhoff index remains $5/2$.*
+*Figure 5. Contributions of the eigenspaces for $4$ and $8$ to two pairwise effective resistances. For pair $pq$, the eigenspace containing the entire vertex difference changes; for pair $ps$, both contributions are nonzero. The values of $R_{ps}$ are $7/16$ and $3/8$. The total Kirchhoff index remains $5/2$.*
 
 The spectrum retains eigenvalues and multiplicities; the full diagonal representation also retains their association with eigenspaces. The example concerns weighted graphs and does not rely on the existence of cospectral unweighted graphs.
 

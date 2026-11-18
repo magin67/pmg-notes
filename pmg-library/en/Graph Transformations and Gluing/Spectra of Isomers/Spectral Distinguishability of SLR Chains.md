@@ -1,9 +1,9 @@
 ---
 title: Spectral Distinguishability of SLR Chains
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -36,7 +36,7 @@ $$
 n=4N+2,\qquad |E(G)|=5N+1,\qquad w=Su,\qquad |u|=N-2
 $$
 
-The first letter of the full code $w$ is a marker. It is not part of the internal turn word $u$. Under the conventions of [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]], S denotes the opposite output seam, and L and R the two side outputs. When a new cycle is attached to an ordered seam $(a,b)$, its vertices $0,1$ are identified with $b,a$; the outputs are $(2,3)$, $(3,4)$, and $(4,5)$ for L, S, and R, respectively.
+The first letter of the full code $w$ is a marker. It is not part of the internal turn word $u$. Under the conventions of [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]], S denotes the opposite output seam, and L and R the two side outputs. When a new cycle is attached to an ordered seam $(a,b)$, its vertices $v_0,v_1$ are identified with $b,a$; the outputs are $(v_2,v_3)$, $(v_3,v_4)$, and $(v_4,v_5)$ for L, S, and R, respectively.
 
 Let $\bar u$ exchange L and R while preserving S, and let $u^{\leftarrow}$ reverse letter order. By the classification proved in that note, an unmarked graph is specified by the orbit
 

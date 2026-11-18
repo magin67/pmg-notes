@@ -1,9 +1,9 @@
 ---
 title: "Spectra and Diagonalization in Polyform Algebra"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 7
-translated_revision: 8
+updated: 2026-11-18
+revision: 8
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -98,7 +98,7 @@ P_G(t)=\det(I+t\mathbf L)=\sum_{g=0}^d p_g t^g,\qquad
 \operatorname{Kf}(G)=n\frac{p_{d-1}}{p_d}
 $$
 
-Reconstructing the operator itself, the conductances, and individual resistances also requires projectors in vertex coordinates. In the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Eigenspaces, Projectors, and Reconstruction of Polyforms#Cospectral graphs with different forest polynomials|four-vertex example]], the spectrum $0,4,4,8$ and all $p_g$ coincide, but the ordinary forest coefficients $f_2$ are $25$ and $24$, and the resistances $R_{12}$ are $1/4$ and $1/2$.
+Reconstructing the operator itself, the conductances, and individual resistances also requires projectors in vertex coordinates. In the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Eigenspaces, Projectors, and Reconstruction of Polyforms#Cospectral graphs with different forest polynomials|four-vertex example]], the spectrum $0,4,4,8$ and all $p_g$ coincide, but the ordinary forest coefficients $f_2$ are $25$ and $24$, and the resistances $R_{pq}$ are $1/4$ and $1/2$.
 
 **Graph realizability and projection.** Positive eigenvalues and zero row sums are insufficient: the reconstructed matrix must satisfy $L_{ij}\le0$ for $i\ne j$. These inequalities define the [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/The Spectral Cone of a Fixed Basis|graph spectral cone]]. Unconstrained diagonal projection may leave this cone. Moreover, projection of the Greenian generally differs from the pseudoinverse of the projected Laplacian; both operations are examined in [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Projection onto a Fixed Spectral Basis and Loss of Information|Projection onto a Fixed Spectral Basis and Loss of Information]].
 

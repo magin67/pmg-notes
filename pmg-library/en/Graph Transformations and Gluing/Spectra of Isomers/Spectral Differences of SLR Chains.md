@@ -1,9 +1,9 @@
 ---
 title: Spectral Differences of SLR Chains
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -56,7 +56,7 @@ Formula (1) does not yet imply that every difference between longer chains is di
 
 For an ordered active pair, use the spectral passport $s=(A,B,C,D,E)^{\mathsf T}$: $A=\det(\xi\mathbf I-\mathbf L)$; $B,C$ are the principal minors deleting the first and second endpoints; $D$ is the corresponding off-diagonal adjugate entry; and $E$ is the minor deleting both endpoints. Deleting rows and columns does not recalculate the remaining vertex degrees. Full definitions are given in [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/From the Forest Passport to Spectral Boundary Data|From the Forest Passport to Spectral Boundary Data]].
 
-The matrix $\mathbf J$ interchanges $B,C$ and leaves the other coordinates unchanged. In the adopted SLR convention, the new core's input $(0,1)$ coincides with the old pair $(b,a)$, so
+The matrix $\mathbf J$ interchanges $B,C$ and leaves the other coordinates unchanged. In the adopted SLR convention, the new core's input $(v_0,v_1)$ coincides with the old pair $(b,a)$, so
 
 $$
 \mathbf U_L=\mathbf T_2\mathbf J,\qquad
@@ -150,7 +150,7 @@ Here $\mathbf P,\mathbf Q$ denote auxiliary rectangular matrices, not the rooted
 > $$
 
 > [!note]- Checking the factorization and rank
-> **Proof.** Subtract the recurrences for outputs $(3,4)$ and $(2,3)$, then interchange the input coordinates $B,C$. The result is product (6). The minor of $\mathbf P$ on rows $C,D$ equals $1$, and the minor of $\mathbf Q$ on columns $A,C$ also equals $1$. Thus $\mathbf P$ is injective from a two-dimensional space, $\mathbf Q$ is surjective onto it, and the product has rank $2$ with no exceptional parameter values. Formulas (7), (8) follow by multiplication. $\square$
+> **Proof.** Subtract the recurrences for outputs $(v_3,v_4)$ and $(v_2,v_3)$, then interchange the input coordinates $B,C$. The result is product (6). The minor of $\mathbf P$ on rows $C,D$ equals $1$, and the minor of $\mathbf Q$ on columns $A,C$ also equals $1$. Thus $\mathbf P$ is injective from a two-dimensional space, $\mathbf Q$ is surjective onto it, and the product has rank $2$ with no exceptional parameter values. Formulas (7), (8) follow by multiplication. $\square$
 
 ![Left passport and right continuation in the local difference formula](images/Two%20Combinations%20in%20a%20Seam%20Difference.svg)
 

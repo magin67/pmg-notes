@@ -1,9 +1,9 @@
 ---
 title: "Eigenmodes of Paths and Cycles"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -22,7 +22,7 @@ A path has two endpoints, whereas a cycle requires mode values to agree after a 
 
 ## Graphs, coordinates, and metrics
 
-Every edge has unit conductance. The path $P_n$, $n\ge2$, has vertices $1,\ldots,n$ and edges between consecutive labels. The cycle $C_n$, $n\ge3$, also contains the edge joining $n$ and $1$. We use the ordinary Laplacian $\mathbf L$, whose diagonal entries are vertex degrees and whose edge entries are $-1$.
+Every edge has unit conductance. The path $P_n$, $n\ge2$, has vertices $a_1,\ldots,a_n$ and edges between consecutive labels. The cycle $C_n$, $n\ge3$, also contains the edge joining $a_n$ and $a_1$. We use the ordinary Laplacian $\mathbf L$, whose diagonal entries are vertex degrees and whose edge entries are $-1$.
 
 Eigenvectors are normalized using the coordinate inner product
 
@@ -265,12 +265,12 @@ M(t)=\prod_{k=1}^m
 }
 $$
 
-The last factor is $e$ for odd $n$. To obtain grade $g$, choose $a_k\in\{0,1,2\}$ directions from each pair and, when the alternating mode is present, $b\in\{0,1\}$. This gives
+The last factor is $e$ for odd $n$. To obtain grade $g$, choose $r_k\in\{0,1,2\}$ directions from each pair and, when the alternating mode is present, $b\in\{0,1\}$. This gives
 
 $$
 M_g=
-\sum_{\substack{a_1+\cdots+a_m+b=g\\0\le a_k\le2,\ 0\le b\le\epsilon_n}}
-\left(\prod_{k=1}^m\mu_k^{a_k}\frac{S_k^{a_k}}{a_k!}\right)(4B)^b
+\sum_{\substack{r_1+\cdots+r_m+b=g\\0\le r_k\le2,\ 0\le b\le\epsilon_n}}
+\left(\prod_{k=1}^m\mu_k^{r_k}\frac{S_k^{r_k}}{r_k!}\right)(4B)^b
 $$
 
 For $b=0$, the last factor is $e$. This is the grouped elementary symmetric polynomial in the weighted forms of individual modes. Its expression through $S_k$ is independent of rotations within each pair.
@@ -281,7 +281,7 @@ $$
 M_2=\frac12S_1^2+\frac92S_2^2+3S_1S_2+4S_1B+12S_2B
 $$
 
-Under coordinate evaluation, $S_1$ and $S_2$ each give $2$, while $S_1^2/2$, $S_2^2/2$, and $B$ each give $1$. Thus the second-grade coefficient is $1+9+12+8+24=54$. No additional binomial factors are attached to the forms: the choice of directions is already accounted for within $S_k^{a_k}/a_k!$.
+Under coordinate evaluation, $S_1$ and $S_2$ each give $2$, while $S_1^2/2$, $S_2^2/2$, and $B$ each give $1$. Thus the second-grade coefficient is $1+9+12+8+24=54$. No additional binomial factors are attached to the forms: the choice of directions is already accounted for within $S_k^{r_k}/r_k!$.
 
 ## Dual grades and scalar polynomials
 
@@ -376,21 +376,21 @@ $$
 
 For $r=s$, both sides vanish. The spectral and electrical formulas were obtained independently; equating them gives the corresponding trigonometric identities.
 
-On $P_6$, only modes $k=1,3,5$ contribute to the endpoint pair $1,6$:
+On $P_6$, only modes $k=1,3,5$ contribute to the endpoint pair $a_1,a_6$:
 
 $$
-R_{16}^{P_6}=\frac{7+4\sqrt3}{3}+\frac13+\frac{7-4\sqrt3}{3}=5
+R_{a_1 a_6}^{P_6}=\frac{7+4\sqrt3}{3}+\frac13+\frac{7-4\sqrt3}{3}=5
 $$
 
-For the central edge $3,4$, the same three modes contribute equally, each giving $1/3$, and $R_{34}^{P_6}=1$. Thus dominance of a mode depends on the selected vertex pair.
+For the central edge $a_3,a_4$, the same three modes contribute equally, each giving $1/3$, and $R_{a_3 a_4}^{P_6}=1$. Thus dominance of a mode depends on the selected vertex pair.
 
 For $C_6$, the spectral contributions are
 
 | Pair | Eigenspace $\mu_1=1$ | Eigenspace $\mu_2=3$ | Mode $4$ | $R_{rs}$ |
 |---|---:|---:|---:|---:|
-| $1,2$ | $1/3$ | $1/3$ | $1/6$ | $5/6$ |
-| $1,3$ | $1$ | $1/3$ | $0$ | $4/3$ |
-| $1,4$ | $4/3$ | $0$ | $1/6$ | $3/2$ |
+| $a_1,a_2$ | $1/3$ | $1/3$ | $1/6$ | $5/6$ |
+| $a_1,a_3$ | $1$ | $1/3$ | $0$ | $4/3$ |
+| $a_1,a_4$ | $4/3$ | $0$ | $1/6$ | $3/2$ |
 
 ![[images/Spectral Contributions to Resistances in P6 and C6.svg]]
 

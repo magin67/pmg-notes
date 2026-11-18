@@ -1,5 +1,5 @@
 """Reproduce four boundary-transfer diagrams with the standard-library SVG helper."""
-from draw_three_hexagons import SVG, ring, reflect, INK, MUTED, RED, BLUE, GREEN, FILLS
+from draw_three_hexagons import SVG, ring, reflect, INK, MUTED, RED, BLUE, GREEN, FILLS, vertex_label
 
 
 def vertex(s, pt, label, color=INK, offset=(0, -15)):
@@ -55,7 +55,7 @@ def exits():
         s.panel(x,15,350,395)
         cx,cy,r = x+175,212,100
         p=ring(cx,cy,r)
-        s.text(cx,57,f'Выход ({j}, {j+1})',25,anchor='middle',weight='bold')
+        s.text(cx,57,f'Выход ({vertex_label(j)}, {vertex_label(j+1)})',25,anchor='middle',weight='bold')
         s.polygon(list(p.values()),FILLS[1])
         for i in range(6):
             s.line(p[i],p[(i+1)%6],RED if i==0 else BLUE if i==j else MUTED,
@@ -67,7 +67,7 @@ def exits():
             s.arrow(aa,bb)
         for i,pt in p.items():
             s.circle(pt,6,'white',INK)
-            s.text(cx+(pt[0]-cx)*1.22,cy+(pt[1]-cy)*1.22+7,str(i),22,anchor='middle')
+            s.text(cx+(pt[0]-cx)*1.22,cy+(pt[1]-cy)*1.22+7,vertex_label(i),22,anchor='middle')
         s.text(cx,380,f'T{str(j).translate(str.maketrans("234","₂₃₄"))}',29,BLUE,'middle','bold')
     s.save('Три выходных шва шестиугольника.svg')
 
@@ -89,11 +89,11 @@ def two_hexagons(s,cx,cy,r,j):
     for i,pt in p.items():
         s.circle(pt,5,'white',BLUE if i in [j,j+1] else INK)
         if i == 0:
-            s.text(pt[0]-11,pt[1]+26,'0',19,anchor='middle')
+            s.text(pt[0]-11,pt[1]+26,vertex_label(i),19,anchor='middle')
         elif i == 1:
-            s.text(pt[0]+8,pt[1]-10,'1',19,anchor='middle')
+            s.text(pt[0]+8,pt[1]-10,vertex_label(i),19,anchor='middle')
         elif i<6:
-            s.text(cx+(pt[0]-cx)*1.27,cy+(pt[1]-cy)*1.27+6,str(i),19,anchor='middle')
+            s.text(cx+(pt[0]-cx)*1.27,cy+(pt[1]-cy)*1.27+6,vertex_label(i),19,anchor='middle')
 
 
 def memory():
@@ -103,7 +103,7 @@ def memory():
                                     (270,3,'А','2 518 737','(12694, 12694, 4884, 4828)')]:
         s.panel(20,y,1140,230)
         two_hexagons(s,138,y+112,54,j)
-        s.text(425,y+44,f'Выход ({j}, {j+1})',24,BLUE,'middle','bold')
+        s.text(425,y+44,f'Выход ({vertex_label(j)}, {vertex_label(j+1)})',24,BLUE,'middle','bold')
         s.text(425,y+91,'P(1) = 28 435',26,anchor='middle',weight='bold')
         s.text(425,y+135,'Остальные координаты z:',19,MUTED,'middle')
         s.text(425,y+172,coords,19,anchor='middle')

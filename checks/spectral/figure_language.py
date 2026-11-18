@@ -11,6 +11,10 @@ _ENGLISH = json.loads(
     Path(__file__).with_name("figure_labels_en.json").read_text(encoding="utf-8")
 )
 
+def vertex_label(index):
+    return "a" + str(index).translate(str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉"))
+
+
 def output_directory(lang):
     """Return the publication folder for the selected language."""
     folder = (

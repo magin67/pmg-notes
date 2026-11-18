@@ -1,9 +1,9 @@
 ---
 title: "Centroid, Spanning-Tree, and Eigenvector Centralities"
 date: 2026-10-16
-updated: 2026-11-10
-revision: 7
-translated_revision: 8
+updated: 2026-11-18
+revision: 8
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -338,14 +338,14 @@ All three centralities equal $1/n$, and $O=h$. Here $S_{\mathrm{cent}}=(n-1)/n$,
 
 ### A five-vertex path
 
-Let a path with unit conductances visit the vertices $1,2,3,4,5$ in order. Its unique spanning tree is the graph itself, so
+Let a path with unit conductances visit the vertices $v_1,v_2,v_3,v_4,v_5$ in order. Its unique spanning tree is the graph itself, so
 
 $$
 \boldsymbol\delta=(1,2,2,2,1)^{\mathsf T},\qquad
 \boldsymbol\alpha=(1/2,0,0,0,1/2)^{\mathsf T}
 $$
 
-The resistances are $R_{ij}=|i-j|$. The row sums of the resistance matrix are $(10,7,6,7,10)^{\mathsf T}$, and $S_{\mathrm{cent}}=4$. Hence
+The resistance between $v_i$ and $v_j$ is $R_{ij}=|i-j|$. The row sums of the resistance matrix are $(10,7,6,7,10)^{\mathsf T}$, and $S_{\mathrm{cent}}=4$. Hence
 
 $$
 \mathbf r=(6/5,3/5,2/5,3/5,6/5)^{\mathsf T}
@@ -401,39 +401,43 @@ The [[en/PythonExamples/Example - Metric Parameters of Graphs#Three centralities
 
 ## Comparison on the Krackhardt kite graph
 
-The Krackhardt kite graph was introduced to compare different centralities. We use its standard ten-vertex implementation from NetworkX, with vertices numbered $0,\ldots,9$ [5]. All conductances are one.
+The Krackhardt kite graph was introduced to compare different centralities. We use its standard ten-vertex implementation from NetworkX, with $v_i$ denoting the vertex at index $i$ [5]. All conductances are one.
 
-For reproducibility, the 18 edges are listed below; $ij$ denotes the unordered pair of vertices $i,j$:
+For reference, the 18 edges are
 
 $$
-E=\{01,02,03,05,13,14,16,23,25,34,35,36,46,56,57,67,78,89\}
+\begin{aligned}
+E=\{&v_0v_1,v_0v_2,v_0v_3,v_0v_5,v_1v_3,v_1v_4,\\
+    &v_1v_6,v_2v_3,v_2v_5,v_3v_4,v_3v_5,v_3v_6,\\
+    &v_4v_6,v_5v_6,v_5v_7,v_6v_7,v_7v_8,v_8v_9\}
+\end{aligned}
 $$
 
-Vertices $0,\ldots,6$ form the dense part. Vertex $7$ is adjacent to $5,6$ and leads into the chain $7-8-9$. Vertex $3$ has the largest degree, namely $6$.
+Vertices $v_0,\ldots,v_6$ form the dense part. Vertex $v_7$ is adjacent to $v_5,v_6$ and leads into the chain $v_7-v_8-v_9$. Vertex $v_3$ has the largest degree, namely $6$.
 
 ![[images/Vertex Centralities - Krackhardt Kite Graph.svg]]
 
-*Three centralities of the same graph. Vertex positions are identical; circle area is proportional to the normalized score, with the same area scale in all panels. The layout shows the connections and is not a Euclidean realization of the resistance simplex. Labels 8 and 9 are placed outside the circles so that small scores remain legible.*
+*Three centralities of the same graph. Vertex positions are identical; circle area is proportional to the normalized score, with the same area scale in all panels. The layout shows the connections and is not a Euclidean realization of the resistance simplex. Labels $v_8$ and $v_9$ are placed outside the circles so that small scores remain legible.*
 
 Computed values are given as percentages. In grouped rows, the value is for each vertex, not for the pair as a whole.
 
 | Vertex | Eigenvector, % | Spanning-tree, % | Centroid, % |
 | --- | ---: | ---: | ---: |
-| $0,1$ | $12.545$ | $9.422$ | $10.741$ |
-| $2,4$ | $10.181$ | $7.620$ | $8.609$ |
-| $3$ | **$17.133$** | **$12.838$** | $14.806$ |
-| $5,6$ | $14.165$ | $12.125$ | **$15.150$** |
-| $7$ | $6.976$ | $12.162$ | $10.419$ |
-| $8$ | $1.712$ | $11.111$ | $3.751$ |
-| $9$ | $0.398$ | $5.556$ | $2.024$ |
+| $v_0,v_1$ | $12.545$ | $9.422$ | $10.741$ |
+| $v_2,v_4$ | $10.181$ | $7.620$ | $8.609$ |
+| $v_3$ | **$17.133$** | **$12.838$** | $14.806$ |
+| $v_5,v_6$ | $14.165$ | $12.125$ | **$15.150$** |
+| $v_7$ | $6.976$ | $12.162$ | $10.419$ |
+| $v_8$ | $1.712$ | $11.111$ | $3.751$ |
+| $v_9$ | $0.398$ | $5.556$ | $2.024$ |
 
-Before rounding, scores over the ten vertices sum to $100\%$ in each column. Equality within the pairs $0,1$, $2,4$, and $5,6$ follows from graph symmetry.
+Before rounding, scores over the ten vertices sum to $100\%$ in each column. Equality within the pairs $v_0,v_1$, $v_2,v_4$, and $v_5,v_6$ follows from graph symmetry.
 
-**Eigenvector score.** Vertex $3$, with six neighbors in the dense part, has the largest value. Scores decrease rapidly along the chain: vertex $8$ receives only about $1.7\%$, and vertex $9$ about $0.4\%$.
+**Eigenvector score.** Vertex $v_3$, with six neighbors in the dense part, has the largest value. Scores decrease rapidly along the chain: vertex $v_8$ receives only about $1.7\%$, and vertex $v_9$ about $0.4\%$.
 
-**Centroid score.** The maximum is attained at $5,6$. Their resistance to the centroid is $687/2960$, whereas vertex $3$ has resistance $19/80=703/2960$. Thus $5,6$ are slightly closer to the centroid and have a smaller sum of resistances to all vertices.
+**Centroid score.** The maximum is attained at $v_5,v_6$. Their resistance to the centroid is $687/2960$, whereas vertex $v_3$ has resistance $19/80=703/2960$. Thus $v_5,v_6$ are slightly closer to the centroid and have a smaller sum of resistances to all vertices.
 
-**Spanning-tree score.** The maximum remains at $3$, but vertices $7,8$ receive substantially larger shares than under eigenvector ranking. Both edges incident to vertex $8$ are bridges and occur in every spanning tree, so $\delta_8=2$ and $C_8^{\mathrm{tree}}=2/18=1/9$. Vertex $7$ has expected spanning-tree degree $81/37$, slightly greater than the value $323/148$ at each of $5,6$.
+**Spanning-tree score.** The maximum remains at $v_3$, but vertices $v_7,v_8$ receive substantially larger shares than under eigenvector ranking. Both edges incident to vertex $v_8$ are bridges and occur in every spanning tree, so $\delta_8=2$ and $C_8^{\mathrm{tree}}=2/18=1/9$. Vertex $v_7$ has expected spanning-tree degree $81/37$, slightly greater than the value $323/148$ at each of $v_5,v_6$.
 
 The graph's spanning-tree coefficient is $\tau=2368$. The expected spanning-tree degrees from (4) were independently checked by enumerating all 2368 trees. The total metric parameters are
 
@@ -444,7 +448,7 @@ $$
 
 ## Spanning-tree degree and disconnection after vertex deletion
 
-The high score of vertex $8$ has a specific cause: its two mandatory edges. The number of components after deletion is related to expected spanning-tree degree but does not determine it completely.
+The high score of vertex $v_8$ has a specific cause: its two mandatory edges. The number of components after deletion is related to expected spanning-tree degree but does not determine it completely.
 
 > [!info] Spanning-tree degree and disconnection after vertex deletion
 > **Lemma.** Suppose deleting vertex $i$ together with its incident edges leaves $q_i$ components. Then
@@ -456,9 +460,9 @@ The high score of vertex $8$ has a specific cause: its two mandatory edges. The 
 > [!note]- Component count and degree in a spanning tree
 > **Proof.** For every spanning tree $T$, deleting $i$ produces exactly $\deg_T(i)$ components. The graph $T-i$ is a spanning subgraph of $G-i$, so it cannot have fewer components than $G-i$. Therefore $\deg_T(i)\ge q_i$ for every $T$. Taking expectations proves the claim. $\square$
 
-At vertex $8$ of the Krackhardt kite graph, $q_8=\delta_8=2$. However, the common vertex of two triangles with unit conductances glued at one point also has $q_i=2$, but $\delta_i=8/3$: each triangle contributes an average of $4/3$ incident edges. The same number of components after deletion is compatible with different expected spanning-tree degrees.
+At vertex $v_8$ of the Krackhardt kite graph, $q_8=\delta_8=2$. However, the common vertex of two triangles with unit conductances glued at one point also has $q_i=2$, but $\delta_i=8/3$: each triangle contributes an average of $4/3$ incident edges. The same number of components after deletion is compatible with different expected spanning-tree degrees.
 
-In the Krackhardt kite graph, vertices $7,8$ are articulation points, whereas vertex $3$, which leads in spanning-tree centrality, is not. Consequently, ranking by $C^{\mathrm{tree}}$ does not coincide with ranking by the ability of a vertex's deletion to disconnect the graph.
+In the Krackhardt kite graph, vertices $v_7,v_8$ are articulation points, whereas vertex $v_3$, which leads in spanning-tree centrality, is not. Consequently, ranking by $C^{\mathrm{tree}}$ does not coincide with ranking by the ability of a vertex's deletion to disconnect the graph.
 
 ## Removing a point while preserving the metric
 
@@ -480,7 +484,7 @@ Geometric removal of one vertex admits an exact formula. Let $\rho_{\widehat i}$
 
 The proof using distance to the opposite face is given in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius#The radius ratio under preservation of the metric|the section on geometric removal]]. Here the formula connects expected spanning-tree degree with the change in radius.
 
-In particular, when $\delta_i=2$, geometric removal of the vertex preserves the radius. This is exactly what happens at vertex $8$ of the Krackhardt kite graph: $\alpha^8=0$ and $\rho_{\widehat8}=\rho$. At the same time, deleting node $8$ with its edges makes the graph disconnected.
+In particular, when $\delta_i=2$, geometric removal of the vertex preserves the radius. This is exactly what happens at vertex $v_8$ of the Krackhardt kite graph: $\alpha^8=0$ and $\rho_{\widehat8}=\rho$. At the same time, deleting node $v_8$ with its edges makes the graph disconnected.
 
 Formula (6) also explains why spanning-tree centrality and influence on the radius do not give the same ranking. The radius difference depends on the square of $1-\delta_i/2$ and on $d_i$, rather than monotonically on $\delta_i$ alone.
 

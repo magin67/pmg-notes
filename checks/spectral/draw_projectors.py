@@ -51,7 +51,7 @@ def mode_graph(ax,raw,norm,title):
     for i,((x,y),v) in enumerate(zip(coords,raw)):
         color=BLUE if v>0 else ORANGE if v<0 else GREY
         ax.scatter(x,y,s=490,color=color,edgecolor="white",linewidth=1.4,zorder=2)
-        ax.text(x,y,str(i+1),ha="center",va="center",color="white",fontsize=11,zorder=3)
+        ax.text(x,y,'pqst'[i],ha="center",va="center",color="white",fontsize=11,zorder=3)
         label="0" if not v else ("+" if v>0 else "−")+("1/√2" if norm==2 else "1/2")
         ax.text(x,y+(0.48 if y>0 else -0.48),label,ha="center",va="center",fontsize=12,color=INK)
     ax.set(xlim=(-1.65,1.65),ylim=(-1.82,1.85),aspect="equal")
@@ -67,7 +67,7 @@ ax=fig.add_subplot(gs[:,2])
 matrix=[[float(F(v)) for v in row] for row in data["E2"]]
 cmap=LinearSegmentedColormap.from_list("signed",["#f4d9cb","#ffffff","#bdd9ec"])
 ax.imshow(matrix,cmap=cmap,vmin=-.5,vmax=.5)
-ax.set_xticks(range(4),labels=range(1,5)); ax.set_yticks(range(4),labels=range(1,5))
+ax.set_xticks(range(4),labels=list('pqst')); ax.set_yticks(range(4),labels=list('pqst'))
 ax.tick_params(length=0)
 for i,row in enumerate(data["E2"]):
     for j,v in enumerate(row):
@@ -125,7 +125,7 @@ for i,row in enumerate(res):
     ax.text(row[0]/2,y,data["resistance_contributions"][i][0],ha="center",va="center",color="white",fontsize=15)
     if row[1]: ax.text(row[0]+row[1]/2,y,"1/4",ha="center",va="center",color="white",fontsize=14)
     ax.text(sum(row)+.035,y,"3/4" if i==0 else "1",va="center",color=INK,fontsize=16,weight="bold")
-ax.set_yticks([1,0],labels=["Пара 1,2","Пара 1,3"])
+ax.set_yticks([1,0],labels=["Пара p,q","Пара p,s"])
 ax.set(xlim=(0,1.18),ylim=(-.55,1.55),xlabel="Вклад в резистенс")
 ax.set_title("Вклады подпространств",fontsize=16,pad=19,color=INK)
 ax.spines['left'].set_visible(False); ax.tick_params(axis="y",length=0)
@@ -139,7 +139,7 @@ for i,row in enumerate(modal):
     bx.text(row[0]+row[1]/2,y,"1/4" if i==0 else "1/2",ha="center",va="center",color=INK,fontsize=15)
     bx.text(.525,y,"= 1/2",va="center",color=INK,fontsize=15,weight="bold")
 bx.set_yticks([1,0],labels=[r"$u,\ v$",r"$\widetilde u,\ \widetilde v$"])
-bx.set(xlim=(0,.69),ylim=(-.55,1.55),xlabel="Вклад отдельных мод H₂ в R₁₂")
+bx.set(xlim=(0,.69),ylim=(-.55,1.55),xlabel="Вклад отдельных мод H₂ в R(p,q)")
 bx.set_title("Два базиса одного H₂",fontsize=16,pad=19,color=INK)
 bx.spines['left'].set_visible(False); bx.tick_params(axis="y",length=0)
 bx.text(0,-1.13,"Тёмный: первая мода. Светлый: вторая.",fontsize=10,color=GREY)
@@ -147,4 +147,4 @@ fig.text(.05,.94,"Резистенсы C₄: вклады подпростран
 fig.text(.05,.855,"Отдельные моды меняют вклады при повороте базиса. Их сумма сохраняется.",fontsize=12,color=INK)
 fig.text(.05,.045,"У противоположных вершин вклад H₄ равен нулю: компоненты моды w совпадают.",fontsize=12,color=INK)
 save(fig,"Спектральные вклады в резистенсы цикла C4",
-     "Резистенс соседних вершин 3/4=1/2+1/4, противоположных 1=1+0 по подпространствам H2 и H4. Вклад H2 в R12 разбивается на 1/4+1/4 в исходном базисе и 0+1/2 после поворота.")
+     "Резистенс соседних вершин 3/4=1/2+1/4, противоположных 1=1+0 по подпространствам H2 и H4. Вклад H2 в R(p,q) разбивается на 1/4+1/4 в исходном базисе и 0+1/2 после поворота.")

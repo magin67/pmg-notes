@@ -1,9 +1,9 @@
 ---
 title: "Spanning-Tree Polynomials of Chains: Determinant and Recurrence"
 date: 2026-10-31
-updated: 2026-11-11
-revision: 4
-translated_revision: 9
+updated: 2026-11-18
+revision: 5
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -375,7 +375,7 @@ Definitions and the relation between the two forest normalizations appear in [[e
 
 See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Determinant and continuant|the notebook calculation]].
 
-Use the following exact numbering rule for the table below. The first core has cyclic order $0,\ldots,m_1-1$. To attach the second, take the first $s_1$ vertices of the first. At each later step, identify the input of the new core, in the same order, with the $s_{j-1}$ vertices of the preceding core immediately following its input seam. The new core's cyclic list starts with these shared vertices and is completed by $m_j-s_{j-1}$ new labels in increasing order.
+Use the following exact numbering rule for the table below. The first core has cyclic order $v_0,\ldots,v_{m_1-1}$. To attach the second, take the first $s_1$ vertices of the first. At each later step, identify the input of the new core, in the same order, with the $s_{j-1}$ vertices of the preceding core immediately following its input seam. The new core's cyclic list starts with these shared vertices and is completed by $m_j-s_{j-1}$ new labels in increasing order.
 
 Thus the input and output of an internal core occupy disjoint segments of its cyclic list. The final edge set is the union of the cyclic edges of all lists, counting coincidences once. This specifies cores, seams, vertex correspondences, and the graph independently of a drawing. Complete lists and edge sets are saved in the [exact results file](https://github.com/magin67/pmg-notes/blob/v5/checks/core-chains/spanning-polynomials-results.json).
 

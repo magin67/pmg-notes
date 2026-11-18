@@ -7,7 +7,7 @@
 <rect x="780" y="20" width="360" height="550" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
 <text x="42.00" y="61.00" font-size="25" fill="#172b43" text-anchor="start" font-weight="bold">Path P₄</text>
 <text x="422.00" y="61.00" font-size="25" fill="#172b43" text-anchor="start" font-weight="bold">Path P₆</text>
-<text x="802.00" y="61.00" font-size="20.263" fill="#172b43" text-anchor="start" font-weight="bold">K₄ without edge 01</text>
+<text x="802.00" y="61.00" font-size="20.263" fill="#172b43" text-anchor="start" font-weight="bold">K₄ without edge v₀v₁</text>
 <line x1="80.00" y1="160.00" x2="290.00" y2="160.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
 <line x1="290.00" y1="160.00" x2="290.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
 <line x1="290.00" y1="285.00" x2="80.00" y2="285.00" stroke="#52657a" stroke-width="4" stroke-linecap="round" />
@@ -50,19 +50,19 @@
 <circle cx="825.00" cy="225.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
 <circle cx="825.00" cy="225.00" r="10" fill="white" stroke="#bc294b" stroke-width="3" />
 <circle cx="825.00" cy="225.00" r="4" fill="#bc294b" stroke="none" stroke-width="2" />
-<text x="811.00" y="232.00" font-size="19" fill="#172b43" text-anchor="end" font-weight="normal">0</text>
+<text x="811.00" y="232.00" font-size="19" fill="#172b43" text-anchor="end" font-weight="normal">v₀</text>
 <circle cx="1095.00" cy="225.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
 <circle cx="1095.00" cy="225.00" r="10" fill="white" stroke="#bc294b" stroke-width="3" />
 <circle cx="1095.00" cy="225.00" r="4" fill="#bc294b" stroke="none" stroke-width="2" />
-<text x="1109.00" y="232.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="normal">1</text>
+<text x="1109.00" y="232.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="normal">v₁</text>
 <circle cx="960.00" cy="135.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
 <circle cx="960.00" cy="135.00" r="10" fill="white" stroke="#196bb9" stroke-width="3" />
 <circle cx="960.00" cy="135.00" r="4" fill="#196bb9" stroke="none" stroke-width="2" />
-<text x="975.00" y="123.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="normal">2</text>
+<text x="975.00" y="123.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="normal">v₂</text>
 <circle cx="960.00" cy="315.00" r="5" fill="#172b43" stroke="none" stroke-width="2" />
 <circle cx="960.00" cy="315.00" r="10" fill="white" stroke="#196bb9" stroke-width="3" />
 <circle cx="960.00" cy="315.00" r="4" fill="#196bb9" stroke="none" stroke-width="2" />
-<text x="975.00" y="339.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="normal">3</text>
+<text x="975.00" y="339.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="normal">v₃</text>
 <text x="42.00" y="385.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="normal">κ = 1</text>
 <text x="42.00" y="432.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="normal">α = 3,  β = 1,  γ = 1</text>
 <text x="42.00" y="479.00" font-size="22" fill="#172b43" text-anchor="start" font-weight="bold">τₖ₊₂ = 4τₖ₊₁ − τₖ</text>

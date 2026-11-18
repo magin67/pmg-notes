@@ -1,9 +1,9 @@
 ---
 title: Sphere Centers and Graph Heterogeneity
 date: 2026-11-03
-updated: 2026-11-10
-revision: 3
-translated_revision: 6
+updated: 2026-11-18
+revision: 4
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -67,7 +67,7 @@ In the figure, one network with conductances $7,1,1$ defines two different trian
 
 ![[images/Centers of Two Simplices - Triangle 7 1 1.svg]]
 
-*One network and its two simplex geometries. $O$ denotes the circumcenter and $h$ the centroid. The geometric panels use independent scales. The resistance center lies inside the triangle; the Laplacian center lies beyond side $12$.*
+*One network and its two simplex geometries. $O$ denotes the circumcenter and $h$ the centroid. The geometric panels use independent scales. The resistance center lies inside the triangle; the Laplacian center lies beyond side $ab$.*
 
 ## The Laplacian circumcenter
 
@@ -292,7 +292,7 @@ Slow components receive greater weight, but only if they occur in the initial di
 
 ## Exact examples and negative coordinates
 
-The vertices of $P_4$ are ordered $1-2-3-4$; in $K_{1,3}$, vertex $1$ is the hub. These graphs and $C_4$ have unit conductances. Triangle weights are listed in the order $(c_{12},c_{13},c_{23})$.
+The vertices of $P_4$ are ordered $a-b-c-d$; in $K_{1,3}$, vertex $a$ is the hub. These graphs and $C_4$ have unit conductances. Triangle weights are listed in the order $(c_{ab},c_{ac},c_{bc})$.
 
 | Graph | $\beta$ | $\sigma$ | $\alpha$ | $\rho$ |
 |---|---|---|---|---|
@@ -326,7 +326,7 @@ $$
 
 Directly, $\mathbf Q(2,2,-1)^{\mathsf T}/3=16\mathbf1$, so $\sigma=8$. Here $\bar d=6$ and $\Delta_L=2$. In resistance geometry, $\Delta_R=2/225$.
 
-Barycentric coordinates of a point within a simplex are nonnegative, but circumcenter coordinates may have either sign. A negative $\beta^3$ means that $O_L$ lies on the opposite side of the hyperplane of face $12$ from vertex $3$. This is ordinary circumsphere geometry, not a failure of connectedness or metric positivity. For the star, it is the resistance center that lies outside: $\alpha^1=-1/2$.
+Barycentric coordinates of a point within a simplex are nonnegative, but circumcenter coordinates may have either sign. A negative $\beta^c$ means that $O_L$ lies on the opposite side of the hyperplane of face $ab$ from vertex $c$. This is ordinary circumsphere geometry, not a failure of connectedness or metric positivity. For the star, it is the resistance center that lies outside: $\alpha^a=-1/2$.
 
 The [[en/PythonExamples/Example - Metric Parameters of Graphs#Centers of the two spheres|Python example]] reproduces this calculation.
 
@@ -427,21 +427,21 @@ $$
 
 If the cut weakens while $B_A$ stays away from zero, the displacement grows without bound. However, $b$ itself depends on conductances, and the required imbalance may be absent.
 
-For example, for the path $1-2-3$ with conductances $1,\varepsilon$, exact calculation gives
+For example, for the path $a-b-c$ with conductances $1,\varepsilon$, exact calculation gives
 
 $$
-\beta^2-\beta^3=\frac{2-\varepsilon}{6\varepsilon},\qquad
+\beta^b-\beta^c=\frac{2-\varepsilon}{6\varepsilon},\qquad
 \Delta_L=\frac1{36}
 \left((1-2\varepsilon)^2+\frac{(2-\varepsilon)^2}{\varepsilon}\right)
 $$
 
 As $\varepsilon\to0+$, $\Delta_L\sim1/(9\varepsilon)$. Here the weak edge must carry nonzero total current between the parts.
 
-For a contrasting example, take the cycle $1-2-3-4-1$ and set
+For a contrasting example, take the cycle $a-b-c-d-a$ and set
 
 $$
-c_{12}=c_{34}=1-\varepsilon,\qquad
-c_{23}=c_{41}=\varepsilon,\qquad 0<\varepsilon<1
+c_{ab}=c_{cd}=1-\varepsilon,\qquad
+c_{bc}=c_{da}=\varepsilon,\qquad 0<\varepsilon<1
 $$
 
 All degrees equal $1$, so for every $\varepsilon$,
@@ -450,12 +450,12 @@ $$
 \beta=\frac14\mathbf1,\qquad \sigma=1,\qquad \Delta_L=0
 $$
 
-Yet the conductance of the cut $\{1,2\}\mid\{3,4\}$ is $2\varepsilon$ and tends to zero. The vector $(1,1,-1,-1)^{\mathsf T}$ has eigenvalue $2\varepsilon$, but $b=0$ does not excite this slow component. Throughout this family, internal conductances change together with cross-cut conductances, preserving the degrees.
+Yet the conductance of the cut $\{a,b\}\mid\{c,d\}$ is $2\varepsilon$ and tends to zero. The vector $(1,1,-1,-1)^{\mathsf T}$ has eigenvalue $2\varepsilon$, but $b=0$ does not excite this slow component. Throughout this family, internal conductances change together with cross-cut conductances, preserving the degrees.
 
 A weak bridge can remain invisible even when the internal conductances of the parts stay fixed.
 
 > [!example] Weakening a bridge between fixed parts
-> In the path $1-2-3-4$, assign conductances $1,\varepsilon,1$, where $\varepsilon>0$. For $A=\{1,2\}$, we have $B_A=0$. Independently solving the equidistance system gives
+> In the path $a-b-c-d$, assign conductances $1,\varepsilon,1$, where $\varepsilon>0$. For $A=\{a,b\}$, we have $B_A=0$. Independently solving the equidistance system gives
 >
 > $$
 > \beta=\left(\frac14-\frac\varepsilon8,\,

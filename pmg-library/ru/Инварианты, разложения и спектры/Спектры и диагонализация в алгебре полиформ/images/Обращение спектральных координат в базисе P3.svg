@@ -3,12 +3,12 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="892.8pt" height="568.8pt" viewBox="0 0 892.8 568.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <title>Обращение спектральных координат в базисе P3</title>
-<desc>Слева связная часть конуса a&gt;0, 0&lt;b≤3a; справа её образ α&gt;0, β≥α/3. Зелёные сектора a/3≤b≤3a и α/3≤β≤3α соответствуют графовым лапласианам и графовым гринианам одновременно. Оранжевый сектор b&lt;a/3 переходит в β&gt;3α, где гриниан не удовлетворяет знаковым условиям. Пример (4,1) переходит в (1/4,1) и даёт Gr13=1/24&gt;0.</desc>
+<desc>Слева связная часть конуса a&gt;0, 0&lt;b≤3a; справа её образ α&gt;0, β≥α/3. Зелёные сектора a/3≤b≤3a и α/3≤β≤3α соответствуют графовым лапласианам и графовым гринианам одновременно. Оранжевый сектор b&lt;a/3 переходит в β&gt;3α, где гриниан не удовлетворяет знаковым условиям. Пример (4,1) переходит в (1/4,1) и даёт Gr(p,s)=1/24&gt;0.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Слева связная часть конуса a&gt;0, 0&lt;b≤3a; справа её образ α&gt;0, β≥α/3. Зелёные сектора a/3≤b≤3a и α/3≤β≤3α соответствуют графовым лапласианам и графовым гринианам одновременно. Оранжевый сектор b&lt;a/3 переходит в β&gt;3α, где гриниан не удовлетворяет знаковым условиям. Пример (4,1) переходит в (1/4,1) и даёт Gr13=1/24&gt;0.</dc:description>
+    <dc:description>Слева связная часть конуса a&gt;0, 0&lt;b≤3a; справа её образ α&gt;0, β≥α/3. Зелёные сектора a/3≤b≤3a и α/3≤β≤3α соответствуют графовым лапласианам и графовым гринианам одновременно. Оранжевый сектор b&lt;a/3 переходит в β&gt;3α, где гриниан не удовлетворяет знаковым условиям. Пример (4,1) переходит в (1/4,1) и даёт Gr(p,s)=1/24&gt;0.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -745,14 +745,14 @@ Q 582.133818 233.701829 579.079075 232.966045
      <tspan x="59.725586" y="-0.375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #19354a">w</tspan>
      <tspan x="101.214258" y="-0.375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #19354a">w</tspan>
      <tspan x="186.049609" y="-0.375" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'; fill: #19354a">w</tspan>
-     <tspan x="71.175781" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">1</tspan>
-     <tspan x="77.41084" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">2</tspan>
-     <tspan x="112.664453" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">2</tspan>
-     <tspan x="118.899512" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">3</tspan>
-     <tspan x="197.499805" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">1</tspan>
-     <tspan x="203.734863" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">3</tspan>
-     <tspan x="296.530664" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">1</tspan>
-     <tspan x="302.765723" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">3</tspan>
+     <tspan x="71.175781" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">p</tspan>
+     <tspan x="77.41084" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">q</tspan>
+     <tspan x="112.664453" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">q</tspan>
+     <tspan x="118.899512" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">s</tspan>
+     <tspan x="197.499805" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">p</tspan>
+     <tspan x="203.734863" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">s</tspan>
+     <tspan x="296.530664" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">p</tspan>
+     <tspan x="302.765723" y="1.724993" style="font-size: 9.8px; font-family: 'DejaVu Sans'; fill: #19354a">s</tspan>
     </text>
    </g>
   </g>

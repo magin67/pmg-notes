@@ -7,7 +7,7 @@ import json,re,xml.etree.ElementTree as ET
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from draw_three_hexagons import SVG,OUT,INK,MUTED,RED,BLUE,GREEN
+from draw_three_hexagons import SVG,OUT,INK,MUTED,RED,BLUE,GREEN, vertex_label
 from draw_slr_code import draw_chain,geometry
 
 HERE=Path(__file__).resolve().parent
@@ -62,7 +62,7 @@ def square():
     s.save('Квадрат смешанной разности.svg');register('Квадрат смешанной разности.svg','Mixed Difference Square.svg')
 
 def closeup():
-    s=SVG(1200,690,tr('Постоянный поворот крупным планом','A close-up of a constant turn'),tr('Три соседних ядра и два непересекающихся шва среднего ядра. Вход 01 выделен красным, выход 23 синим.','Three adjacent cores and the two disjoint seams of the middle core. Input 01 is red; output 23 is blue.'))
+    s=SVG(1200,690,tr('Постоянный поворот крупным планом','A close-up of a constant turn'),tr('Три соседних ядра и два непересекающихся шва среднего ядра. Вход v₀v₁ выделен красным, выход v₂v₃ синим.','Three adjacent cores and the two disjoint seams of the middle core. Input v₀v₁ is red; output v₂v₃ is blue.'))
     s.text(600,42,tr('Правило L видно на трёх соседних ядрах','Rule L on three adjacent cores'),28,anchor='middle',weight='bold')
     s.panel(25,72,720,545);s.panel(775,72,400,545)
     p,centers=draw_chain(s,'L',(70,115,620,410))
@@ -76,12 +76,12 @@ def closeup():
     cx,cy=centers[1]
     # Local vertex labels are placed slightly inside the middle face.
     for local,v in enumerate(middle):
-        x,y=p[v];s.text(cx+.77*(x-cx),cy+.77*(y-cy)+6,str(local),21,INK,'middle','bold')
+        x,y=p[v];s.text(cx+.77*(x-cx),cy+.77*(y-cy)+6,vertex_label(local),21,INK,'middle','bold')
     s.text(385,583,tr('Цифры у вершин - локальные номера среднего ядра','Vertex labels are local to the middle core'),19,MUTED,'middle')
     s.text(975,132,tr('Вход','Input'),25,RED,'middle','bold')
-    s.text(975,177,'(0, 1) = (b, a)',26,RED,'middle')
+    s.text(975,177,'(v₀, v₁) = (b, a)',26,RED,'middle')
     s.text(975,252,tr('Выход L','Output L'),25,BLUE,'middle','bold')
-    s.text(975,297,'(2, 3)',28,BLUE,'middle')
+    s.text(975,297,'(v₂, v₃)',28,BLUE,'middle')
     s.text(975,380,tr('Следующий шаг','Next step'),24,anchor='middle',weight='bold')
     s.text(975,421,tr('Новый вход снова обращает','The new input again reverses'),20,MUTED,'middle')
     s.text(975,450,tr('порядок активных контактов','the active contact order'),20,MUTED,'middle')

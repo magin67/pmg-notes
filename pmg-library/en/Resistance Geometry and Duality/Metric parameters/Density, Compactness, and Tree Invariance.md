@@ -1,9 +1,9 @@
 ---
 title: Density, Compactness, and Tree Invariance
 date: 2026-10-17
-updated: 2026-11-10
-revision: 7
-translated_revision: 7
+updated: 2026-11-18
+revision: 8
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -155,7 +155,7 @@ The arboricity $a(G)$ is the minimum number of forests into which the edge set c
 >
 > - **A tree with at least one edge:** one color suffices, so $a(G)=1$.
 > - **A cycle:** one color is impossible. Color one edge blue and the remaining edges red; this gives a single edge and a path. Thus $a(G)=2$.
-> - **The complete graph $K_4$:** its six edges split into two paths with vertex sequences $1,2,3,4$ and $3,1,4,2$. Both paths are acyclic, together contain all the edges, and share no edges. A single forest is impossible because $K_4$ contains cycles; hence $a(K_4)=2$.
+> - **The complete graph $K_4$:** its six edges split into two paths with vertex sequences $a,b,c,d$ and $c,a,d,b$. Both paths are acyclic, together contain all the edges, and share no edges. A single forest is impossible because $K_4$ contains cycles; hence $a(K_4)=2$.
 >
 > Arboricity measures how many acyclic layers are needed to accommodate all the edges. It equals $1$ for every nontrivial tree, so it does not distinguish branching patterns.
 

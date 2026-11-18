@@ -3,12 +3,12 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="900pt" height="561.6pt" viewBox="0 0 900 561.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <title>Спектральные вклады в резистенсы P6 и C6</title>
-<desc>P6: R16=(7+4√3)/3+1/3+(7−4√3)/3=5, R34=1/3+1/3+1/3=1. C6: R12=1/3+1/3+1/6=5/6; R13=1+1/3=4/3; R14=4/3+1/6=3/2. Высоты частей соответствуют точным значениям; шкалы панелей различаются.</desc>
+<desc>P6: R(a₁,a₆)=(7+4√3)/3+1/3+(7−4√3)/3=5, R(a₃,a₄)=1/3+1/3+1/3=1. C6: R(a₁,a₂)=1/3+1/3+1/6=5/6; R(a₁,a₃)=1+1/3=4/3; R(a₁,a₄)=4/3+1/6=3/2. Высоты частей соответствуют точным значениям; шкалы панелей различаются.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>P6: R16=(7+4√3)/3+1/3+(7−4√3)/3=5, R34=1/3+1/3+1/3=1. C6: R12=1/3+1/3+1/6=5/6; R13=1+1/3=4/3; R14=4/3+1/6=3/2. Высоты частей соответствуют точным значениям; шкалы панелей различаются.</dc:description>
+    <dc:description>P6: R(a₁,a₆)=(7+4√3)/3+1/3+(7−4√3)/3=5, R(a₃,a₄)=1/3+1/3+1/3=1. C6: R(a₁,a₂)=1/3+1/3+1/6=5/6; R(a₁,a₃)=1+1/3=4/3; R(a₁,a₄)=4/3+1/6=3/2. Высоты частей соответствуют точным значениям; шкалы панелей различаются.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -43,13 +43,13 @@ z
     <g id="xtick_1">
      <g id="line2d_1"/>
      <g id="text_1">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="146.85157" y="439.317188" transform="rotate(-0 146.85157 439.317188)">Пара 1,6</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="146.85157" y="439.317188" transform="rotate(-0 146.85157 439.317188)">Пара a₁,a₆</text>
      </g>
     </g>
     <g id="xtick_2">
      <g id="line2d_2"/>
      <g id="text_2">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="291.127153" y="439.317188" transform="rotate(-0 291.127153 439.317188)">Пара 3,4</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="291.127153" y="439.317188" transform="rotate(-0 291.127153 439.317188)">Пара a₃,a₄</text>
      </g>
     </g>
    </g>
@@ -358,19 +358,19 @@ z
     <g id="xtick_3">
      <g id="line2d_15"/>
      <g id="text_22">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="556.969458" y="439.317188" transform="rotate(-0 556.969458 439.317188)">Пара 1,2</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="556.969458" y="439.317188" transform="rotate(-0 556.969458 439.317188)">Пара a₁,a₂</text>
      </g>
     </g>
     <g id="xtick_4">
      <g id="line2d_16"/>
      <g id="text_23">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="679.138298" y="439.317188" transform="rotate(-0 679.138298 439.317188)">Пара 1,3</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="679.138298" y="439.317188" transform="rotate(-0 679.138298 439.317188)">Пара a₁,a₃</text>
      </g>
     </g>
     <g id="xtick_5">
      <g id="line2d_17"/>
      <g id="text_24">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="801.307138" y="439.317188" transform="rotate(-0 801.307138 439.317188)">Пара 1,4</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="801.307138" y="439.317188" transform="rotate(-0 801.307138 439.317188)">Пара a₁,a₄</text>
      </g>
     </g>
    </g>

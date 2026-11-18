@@ -1,9 +1,9 @@
 ---
 title: Graph Realizability of Toponomes
 date: 2026-10-23
-updated: 2026-11-11
-revision: 3
-source_revision: 3
+updated: 2026-11-18
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: graph-realizability-of-toponomes
@@ -305,14 +305,14 @@ If $n$ is unknown, the highest column must first have the form $\gamma u^q$. It 
 
 ### The system on three vertices
 
-On vertices $1,2,3$, there are three possible edges. The empty forest contributes $1$, each edge contributes a term of degree one in $t$, and each pair of edges is a tree on three vertices. All three edges together form a cycle and are excluded. Hence
+On vertices $a,b,c$, there are three possible edges. The empty forest contributes $1$, each edge contributes a term of degree one in $t$, and each pair of edges is a tree on three vertices. All three edges together form a cycle and are excluded. Hence
 
 $$
-\mathcal U_3(t,u;\mathbf x)=1+(x_{12}+x_{13}+x_{23})tu
-+(x_{12}x_{13}+x_{12}x_{23}+x_{13}x_{23})t^2u
+\mathcal U_3(t,u;\mathbf x)=1+(x_{ab}+x_{ac}+x_{bc})tu
++(x_{ab}x_{ac}+x_{ab}x_{bc}+x_{ac}x_{bc})t^2u
 $$
 
-To obtain $A(t,u)=1+2tu+t^2u$, the variables must sum to $2$ and their pairwise products to $1$, with $x_{ij}\in\{0,1\}$. The solution $x_{12}=x_{23}=1$, $x_{13}=0$ gives a path. Vertex permutations give other labeled solutions to the same existence problem.
+To obtain $A(t,u)=1+2tu+t^2u$, the variables must sum to $2$ and their pairwise products to $1$, with $x_{ij}\in\{0,1\}$. The solution $x_{ab}=x_{bc}=1$, $x_{ac}=0$ gives a path. Vertex permutations give other labeled solutions to the same existence problem.
 
 ![Three possible-edge variables and a path solution](images/Edge%20Variables%20on%20Three%20Vertices.svg)
 

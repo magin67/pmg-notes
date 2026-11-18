@@ -1,9 +1,9 @@
 ---
 title: "The Spanning-Tree Layer and Boundary Resistance Geometry"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 3
-translated_revision: 9
+updated: 2026-11-18
+revision: 4
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -353,11 +353,11 @@ $$
 
 In a circular planar graph, all boundary vertices lie on the outer face in a specified cyclic order. For such a graph, the Kenyon–Wilson theorem [1, Theorem 1.1] expresses normalized grove weights $g_\pi/\delta_B$ for noncrossing partitions through the response matrix. Crossing states are impossible and have zero weight. Together with $\delta_B$, this recovers absolute grove weights as well. The boundary-placement condition matters for $k\ge4$.
 
-A simple example of the limitation is a star with an internal center and four unit edges to $B=\{1,2,3,4\}$. It has $\delta_B=4$ and $g_{12|34}=0$: connecting both pairs would require the same center. Its effective graph is the complete $K_4$ on the boundary with conductances $1/4$. That graph has $\delta_B=1$ and $g_{12|34}=1/16$. The electrical responses coincide, but the normalized weights of this state differ: $0$ and $1/16$.
+A simple example of the limitation is a star with an internal center and four unit edges to $B=\{a,b,c,d\}$. It has $\delta_B=4$ and $g_{ab|cd}=0$: connecting both pairs would require the same center. Its effective graph is the complete $K_4$ on the boundary with conductances $1/4$. That graph has $\delta_B=1$ and $g_{ab|cd}=1/16$. The electrical responses coincide, but the normalized weights of this state differ: $0$ and $1/16$.
 
 ![[images/The same response for a star and a complete graph.svg]]
 
-**The same response, different groves.** All four marked vertices form the boundary. In the star, paths $1-2$ and $3-4$ pass through the same internal center and cannot form two separate components. In $K_4$, the two highlighted edges form a grove $12|34$ of weight $(1/4)^2$. The crossing of the diagonals on the right is not a vertex.
+**The same response, different groves.** All four marked vertices form the boundary. In the star, paths $a-b$ and $c-d$ pass through the same internal center and cannot form two separate components. In $K_4$, the two highlighted edges form a grove $ab|cd$ of weight $(1/4)^2$. The crossing of the diagonals on the right is not a vertex.
 
 The graph $K_4$ is planar, but all four vertices cannot lie on a single outer face without edge crossings. Thus the example does not contradict the theorem for circular planar networks. Nor does it contradict (7): for arbitrary graphs, $(\tau,\mathbf G_B)$ suffices for spanning-tree gluing, but this does not promise recovery of every original grove coordinate.
 

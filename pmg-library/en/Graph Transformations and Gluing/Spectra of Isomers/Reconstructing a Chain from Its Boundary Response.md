@@ -1,9 +1,9 @@
 ---
 title: Reconstructing a Chain from Its Boundary Response
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -52,7 +52,7 @@ The result provides identification within a known class of constructions from ex
 
 We use the abstract open chains of [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains|Cores, Seams, and Admissible Chains]] and [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]]. The cores $C_6$ form a path, joined along edges. The two seams of an intermediate core have no common vertices; nonadjacent cores do not intersect. There are no additional identifications or closure. All conductances are one, and each shared edge is counted once. For $N$ cores, the number of vertices is $n=4N+2$.
 
-For $N\ge2$, the full code is written as $w=Su$, where $u$ contains $N-2$ letters. The initial $S$ is a marker. For an ordered active pair $(x,y)$, the new core is numbered cyclically so that $(0,1)=(y,x)$; the outputs $L,S,R$ are numbered $(2,3),(3,4),(4,5)$. On the last core, the boundary $B=(x,y)$ is the free edge opposite the input seam, with its endpoints ordered by rule $S$. A single $C_6$ is treated separately: its boundary is a chosen ordered edge.
+For $N\ge2$, the full code is written as $w=Su$, where $u$ contains $N-2$ letters. The initial $S$ is a marker. For an ordered active pair $(x,y)$, label the new core in cyclic order so that $(v_0,v_1)=(y,x)$; the outputs $L,S,R$ are $(v_2,v_3),(v_3,v_4),(v_4,v_5)$. On the last core, the boundary $B=(x,y)$ is the free edge opposite the input seam, with its endpoints ordered by rule $S$. A single $C_6$ is treated separately: its boundary is a chosen ordered edge.
 
 This is specifically a **marked ordered boundary**. Exchanging the contacts corresponds to reflecting the code; moving them to the other end requires reversing the chain. If an unmarked graph class is required, apply the four word symmetries described in [[en/Graph Transformations and Gluing/Spectra of Isomers/SLR Codes of Hexagonal Chains|SLR Codes of Hexagonal Chains]] after decoding.
 

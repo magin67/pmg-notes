@@ -57,7 +57,7 @@ def graph(ax, edges, title):
         ax.plot([p[0], q[0]], [p[1], q[1]], color=BLUE, lw=3, zorder=1)
     for v, (x, y) in coords.items():
         ax.scatter(x, y, s=360, color=BLUE if v in used else GREY, zorder=2)
-        ax.text(x, y, str(v), color="white", ha="center", va="center", fontsize=11, zorder=3)
+        ax.text(x, y, 'pqs'[v-1], color="white", ha="center", va="center", fontsize=11, zorder=3)
     ax.set(xlim=(-1.35, 1.35), ylim=(-.85, 1.12), aspect="equal")
     ax.axis("off")
     ax.set_title(title, fontsize=12, color=INK, pad=0)
@@ -65,7 +65,7 @@ def graph(ax, edges, title):
 
 fig = plt.figure(figsize=(12.4, 8.1), facecolor="white")
 fig.text(.055, .94, "Фиксированные моды пути — целый конус графов", fontsize=20, weight="bold", color=INK)
-fig.text(.055, .875, r"$w_{12}=w_{23}=b/3,\qquad w_{13}=(3a-b)/6$", fontsize=19, color=INK)
+fig.text(.055, .875, r"$w_{pq}=w_{qs}=b/3,\qquad w_{ps}=(3a-b)/6$", fontsize=19, color=INK)
 ax = fig.add_axes([.075, .19, .55, .62])
 limit = 4.4
 axes_style(ax, limit, r"$a=\mu_1$", r"$b=\mu_2$")
@@ -87,7 +87,7 @@ graph(fig.add_axes([.71, .16, .22, .17]), [(1, 3)], "E: несвязная гр�
 fig.text(.07, .075, r"$(a,b)=\frac{b}{3}(1,3)+\frac{3a-b}{6}(2,0)$", fontsize=19, color=INK)
 fig.text(.07, .026, "Коэффициенты разложения по крайним лучам — проводимости рёбер.", fontsize=12, color=INK)
 save(fig, "Конус базиса P3 и его графы",
-     "Конус a≥0, 0≤b≤3a. Крайние лучи: единичный путь P3 с координатами (1,3) и ребро 1–3 с изолированной вершиной 2, точка (2,0). Четыре отмеченные точки соответствуют всем простым графам в фиксированном базисе. Полный граф K3 находится в точке (3,3).")
+     "Конус a≥0, 0≤b≤3a. Крайние лучи: единичный путь P3 с координатами (1,3) и ребро p–s с изолированной вершиной q, точка (2,0). Четыре отмеченные точки соответствуют всем простым графам в фиксированном базисе. Полный граф K3 находится в точке (3,3).")
 
 fig = plt.figure(figsize=(12.4, 7.9), facecolor="white")
 fig.text(.055, .94, "Обращение собственных чисел меняет допустимую область", fontsize=19, weight="bold", color=INK)
@@ -115,7 +115,7 @@ for ax, point, offset, label in [(left, (4, 1), (-70, -30), "(4, 1)"),
 fig.legend(handles=[Patch(facecolor=GREEN_FILL, label="Обе матрицы — графовые лапласианы"),
                     Patch(facecolor=ORANGE_FILL, label="Исходный граф допустим; у гриниана нарушены знаки")],
            loc="lower left", bbox_to_anchor=(.07, .10), frameon=False, fontsize=12)
-fig.text(.075, .066, r"$(4,1):\quad w_{12}=w_{23}=1/3,\quad w_{13}=11/6,\quad \mathrm{Gr}_{13}=+1/24$", fontsize=14, color=INK)
+fig.text(.075, .066, r"$(4,1):\quad w_{pq}=w_{qs}=1/3,\quad w_{ps}=11/6,\quad \mathrm{Gr}_{ps}=+1/24$", fontsize=14, color=INK)
 fig.text(.075, .022, "Масштабы панелей различаются. Координатные оси не входят в область обращения.", fontsize=11, color=INK)
 save(fig, "Обращение спектральных координат в базисе P3",
      "Слева связная часть конуса a>0, 0<b≤3a; справа её образ α>0, β≥α/3. Зелёные сектора a/3≤b≤3a и α/3≤β≤3α соответствуют графовым лапласианам и графовым гринианам одновременно. Оранжевый сектор b<a/3 переходит в β>3α, где гриниан не удовлетворяет знаковым условиям. Пример (4,1) переходит в (1/4,1) и даёт Gr13=1/24>0.")

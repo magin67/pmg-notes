@@ -1,9 +1,9 @@
 ---
 title: Greenian Exponentials of Standard Graphs
 date: 2026-10-28
-updated: 2026-11-11
-revision: 4
-translated_revision: 8
+updated: 2026-11-18
+revision: 5
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 translation_key: dual-exponentials-of-standard-graphs
@@ -89,7 +89,7 @@ $$
 \Psi_\pi=[(B_1)\cdots(B_m)]^2
 $$
 
-Singleton blocks are omitted from short indices: on four vertices, $\Psi_{123}=[(a_1a_2a_3)]^2$ and $\Psi_{12|34}=[a_{12}a_{34}]^2$. Numbers in these indices designate specific vertices, not a numerical type.
+Singleton blocks are omitted from short indices: on vertices $a,b,c,d$, $\Psi_{abc}=[(abc)]^2$ and $\Psi_{ab|cd}=[(ab)(cd)]^2$. Each letter in the subscript names a vertex. The bar separates the blocks.
 
 > [!info] Summing over partitions
 > **Corollary of the forest expansion.** For $0\le k\le n-1$,
@@ -209,7 +209,7 @@ This uses [[Cayley's Theorem and Joining Prescribed Components|Cayley's formula]
 > $$
 > Q_2=\frac1{256}
 > \left(3\sum_{i<j<\ell}\Psi_{ij\ell}
-> +\Psi_{12|34}+\Psi_{13|24}+\Psi_{14|23}\right)
+> +\Psi_{ab|cd}+\Psi_{ac|bd}+\Psi_{ad|bc}\right)
 > =\frac1{64}\sum_{i<j<\ell}\Psi_{ij\ell}
 > $$
 >
@@ -254,8 +254,8 @@ $$
 t_\gamma(B)=
 \begin{cases}
 1,&\#B=1\\
-s^{s-2}q^{s-1},&1\notin B,\quad s=\#B\ge2\\
-p(p+rq)^{r-1},&1\in B,\quad r=\#B-1\ge1
+s^{s-2}q^{s-1},&a_1\notin B,\quad s=\#B\ge2\\
+p(p+rq)^{r-1},&a_1\in B,\quad r=\#B-1\ge1
 \end{cases}
 $$
 
@@ -269,15 +269,15 @@ At $r=n-1$, we have $p+rq=1$, so $\tau_\gamma=p=1/n^2$, in agreement with $\tau=
 > [!example]- Full calculation
 > $$
 > Q_1=\frac1{16}
-> \left([a_{12}]^2+[a_{13}]^2+[a_{14}]^2
-> +5[a_{23}]^2+5[a_{24}]^2+5[a_{34}]^2\right)
+> \left([(ab)]^2+[(ac)]^2+[(ad)]^2
+> +5[(bc)]^2+5[(bd)]^2+5[(cd)]^2\right)
 > $$
 >
 > $$
 > \begin{aligned}
-> Q_2=\frac1{256}\bigl(&11\Psi_{123}+11\Psi_{124}+11\Psi_{134}
-> +75\Psi_{234}+{}\\
-> &+5\Psi_{12|34}+5\Psi_{13|24}+5\Psi_{14|23}\bigr)
+> Q_2=\frac1{256}\bigl(&11\Psi_{abc}+11\Psi_{abd}+11\Psi_{acd}
+> +75\Psi_{bcd}+{}\\
+> &+5\Psi_{ab|cd}+5\Psi_{ac|bd}+5\Psi_{ad|bc}\bigr)
 > \end{aligned}
 > $$
 >
@@ -290,7 +290,7 @@ At $r=n-1$, we have $p+rq=1$, so $\tau_\gamma=p=1/n^2$, in agreement with $\tau=
 
 ![Original and Greenian couplings for the star and the complete graph minus one edge](images/Greenian-star-and-incomplete-graph.svg)
 
-*Figure 1. Each row shows the original graph on the left and Greenian coefficients on the right. The star acquires couplings between leaves. For $K_4$ without edge $12$, the absent original coupling corresponds to the largest Greenian weight. All Greenian weights here are positive. The vertex layout is schematic and does not depict resistance geometry.*
+*Figure 1. Each row shows the original graph on the left and Greenian coefficients on the right. The star acquires couplings between leaves. For $K_4$ without edge $ab$, the absent original coupling corresponds to the largest Greenian weight. All Greenian weights here are positive. The vertex layout is schematic and does not depict resistance geometry.*
 
 ## Cycles
 
@@ -332,18 +332,18 @@ $$
 ### All grades of C4
 
 > [!example]- Full calculation
-> On edges $12,23,34,14$, the coefficient is $1/16$; on diagonals $13,24$, it is $3/16$:
+> On edges $ab,bc,cd,ad$, the coefficient is $1/16$; on diagonals $ac,bd$, it is $3/16$:
 >
 > $$
 > Q_1=\frac1{16}
-> \left([a_{12}]^2+[a_{23}]^2+[a_{34}]^2+[a_{14}]^2
-> +3[a_{13}]^2+3[a_{24}]^2\right)
+> \left([(ab)]^2+[(bc)]^2+[(cd)]^2+[(ad)]^2
+> +3[(ac)]^2+3[(bd)]^2\right)
 > $$
 >
 > $$
 > Q_2=\frac1{256}
 > \left(7\sum_{i<j<\ell}\Psi_{ij\ell}
-> +\Psi_{12|34}+9\Psi_{13|24}+\Psi_{14|23}\right)
+> +\Psi_{ab|cd}+9\Psi_{ac|bd}+\Psi_{ad|bc}\right)
 > $$
 >
 > $$
@@ -359,7 +359,7 @@ $$
 \gamma(1)=0,\qquad \gamma(2)=\frac15
 $$
 
-The nonzero Greenian couplings form a cycle with vertex order $1,3,5,2,4,1$. Denote its edge set by $E'$. Then
+The nonzero Greenian couplings form a cycle with vertex order $a,c,e,b,d,a$. Denote its edge set by $E'$. Then
 
 $$
 D_{C_5}=\prod_{ij\in E'}\left(e+\frac15[a_{ij}]^2\right)
@@ -401,10 +401,10 @@ D_{C_6}
 \prod_{s_{ij}=3}\left(e+\frac{19}{72}[a_{ij}]^2\right)
 $$
 
-For example, the consecutive triple $123$ gives
+For example, the consecutive triple $abc$ gives
 
 $$
-t_\gamma(\{1,2,3\})
+t_\gamma(\{a,b,c\})
 =\frac{25-65-65}{72^2}
 =-\frac{35}{1728}
 $$
@@ -421,7 +421,7 @@ $$
 
 ## The complete graph minus one edge
 
-Remove edge $12$ from the unit $K_4$. Let $\mathbf b$ be the coordinate column of the difference between vertices $1,2$. Then
+Remove edge $ab$ from the unit $K_4$. Let $\mathbf b$ be the coordinate column of the difference between vertices $a,b$. Then
 
 $$
 \mathbf L=4\mathbf J-\mathbf b\mathbf b^{\mathsf T},
@@ -434,19 +434,19 @@ $$
 \mathbf{Gr}=\frac14\mathbf J+\frac18\mathbf b\mathbf b^{\mathsf T}
 $$
 
-We obtain $\gamma_{12}=3/16$; the other five coefficients equal $1/16$:
+We obtain $\gamma_{ab}=3/16$; the other five coefficients equal $1/16$:
 
 $$
 Q_1=\frac1{16}
-\left(3[a_{12}]^2+[a_{13}]^2+[a_{14}]^2
-+[a_{23}]^2+[a_{24}]^2+[a_{34}]^2\right)
+\left(3[(ab)]^2+[(ac)]^2+[(ad)]^2
++[(bc)]^2+[(bd)]^2+[(cd)]^2\right)
 $$
 
 $$
 \begin{aligned}
-Q_2=\frac1{256}\bigl(&7\Psi_{123}+7\Psi_{124}
-+3\Psi_{134}+3\Psi_{234}+{}\\
-&+3\Psi_{12|34}+\Psi_{13|24}+\Psi_{14|23}\bigr)
+Q_2=\frac1{256}\bigl(&7\Psi_{abc}+7\Psi_{abd}
++3\Psi_{acd}+3\Psi_{bcd}+{}\\
+&+3\Psi_{ab|cd}+\Psi_{ac|bd}+\Psi_{ad|bc}\bigr)
 \end{aligned}
 $$
 
@@ -463,7 +463,7 @@ The original Laplacian cofactor is $\tau=8$. The absent original edge correspond
 
 *Figure 3. The top row repeats the unit example from the canonical-representation note; the bottom matches the numerical example $2,3,5$ below. Red dashed couplings denote negative coefficients.*
 
-For the path $a_1-a_2-a_3-a_4$ with conductances $p,q,r>0$, set
+For the path $a-b-c-d$ with conductances $p,q,r>0$, set
 
 $$
 u=\frac1p,\qquad v=\frac1q,\qquad w=\frac1r
@@ -473,12 +473,12 @@ Pair resistances are sums of these resistances along the path. Substitution into
 
 | Pair | Greenian coefficient |
 |---|---|
-| $12$ | $(3u-4v-w)/16$ |
-| $13$ | $(3u+4v-w)/16$ |
-| $14$ | $(3u+4v+3w)/16$ |
-| $23$ | $(-u+4v-w)/16$ |
-| $24$ | $(-u+4v+3w)/16$ |
-| $34$ | $(-u-4v+3w)/16$ |
+| $ab$ | $(3u-4v-w)/16$ |
+| $ac$ | $(3u+4v-w)/16$ |
+| $ad$ | $(3u+4v+3w)/16$ |
+| $bc$ | $(-u+4v-w)/16$ |
+| $bd$ | $(-u+4v+3w)/16$ |
+| $cd$ | $(-u-4v+3w)/16$ |
 
 The table specifies $Q_1=\sum_{i<j}\gamma_{ij}[a_{ij}]^2$ and the six exponential factors. For any $u,v,w>0$, the other grades are
 
@@ -492,9 +492,9 @@ Q_2={}&\sum_{i<j<\ell}
 (\gamma_{ij}\gamma_{i\ell}
 +\gamma_{ij}\gamma_{j\ell}
 +\gamma_{i\ell}\gamma_{j\ell})\Psi_{ij\ell}+{}\\
-&+\gamma_{12}\gamma_{34}\Psi_{12|34}
-+\gamma_{13}\gamma_{24}\Psi_{13|24}
-+\gamma_{14}\gamma_{23}\Psi_{14|23}
+&+\gamma_{ab}\gamma_{cd}\Psi_{ab|cd}
++\gamma_{ac}\gamma_{bd}\Psi_{ac|bd}
++\gamma_{ad}\gamma_{bc}\Psi_{ad|bc}
 \end{aligned}
 $$
 
@@ -503,22 +503,22 @@ Q_3=\frac{uvw}{16}\Theta=uvw\,T^\vee,
 \qquad D=e+Q_1+Q_2+Q_3
 $$
 
-Signs may change as the positive original conductances vary continuously. For example, the sign of $\gamma_{12}$ is determined by the sign of $3u-4v-w$.
+Signs may change as the positive original conductances vary continuously. For example, the sign of $\gamma_{ab}$ is determined by the sign of $3u-4v-w$.
 
 ### An exact numerical example
 
 For $(p,q,r)=(2,3,5)$,
 
 $$
-(\gamma_{12},\gamma_{13},\gamma_{14},\gamma_{23},\gamma_{24},\gamma_{34})
+(\gamma_{ab},\gamma_{ac},\gamma_{ad},\gamma_{bc},\gamma_{bd},\gamma_{cd})
 =\frac1{480}(-1,79,103,19,43,-37)
 $$
 
 $$
 \begin{aligned}
-Q_2=\frac1{230400}\bigl(&1403\Psi_{123}+4283\Psi_{124}
-+1403\Psi_{134}-1477\Psi_{234}+{}\\
-&+37\Psi_{12|34}+3397\Psi_{13|24}+1957\Psi_{14|23}\bigr)
+Q_2=\frac1{230400}\bigl(&1403\Psi_{abc}+4283\Psi_{abd}
++1403\Psi_{acd}-1477\Psi_{bcd}+{}\\
+&+37\Psi_{ab|cd}+3397\Psi_{ac|bd}+1957\Psi_{ad|bc}\bigr)
 \end{aligned}
 $$
 
@@ -533,10 +533,10 @@ Here $3397=79\cdot43$ and $1957=103\cdot19$ are products of weights of disjoint 
 The “Example” section of article [1] gives the matrix of a graph with six vertices and seven unit edges:
 
 $$
-E=\{12,15,23,25,34,45,46\}
+E=\{ab,ae,bc,be,cd,de,df\}
 $$
 
-It consists of the triangle $125$ and the four-cycle $2345$ sharing edge $25$, together with the pendant edge $46$. The edge list fixes the example independently of the vertex layout.
+It consists of the triangle $abe$ and the four-cycle $bcde$ sharing edge $be$, together with the pendant edge $df$. The edge list fixes the example independently of the vertex layout.
 
 $$
 \mathbf L=
@@ -554,16 +554,16 @@ $$
 
 Direct inversion gives the following numerators $198\gamma_{ij}$. The diagonal is unused.
 
-| $i\backslash j$ | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ |
+| $i\backslash j$ | $a$ | $b$ | $c$ | $d$ | $e$ | $f$ |
 |---|---:|---:|---:|---:|---:|---:|
-| $1$ | - | $-19$ | $26$ | $38$ | $-16$ | $71$ |
-| $2$ | $-19$ | - | $-1$ | $29$ | $-7$ | $62$ |
-| $3$ | $26$ | $-1$ | - | $2$ | $20$ | $35$ |
-| $4$ | $38$ | $29$ | $2$ | - | $14$ | $-25$ |
-| $5$ | $-16$ | $-7$ | $20$ | $14$ | - | $47$ |
-| $6$ | $71$ | $62$ | $35$ | $-25$ | $47$ | - |
+| $a$ | - | $-19$ | $26$ | $38$ | $-16$ | $71$ |
+| $b$ | $-19$ | - | $-1$ | $29$ | $-7$ | $62$ |
+| $c$ | $26$ | $-1$ | - | $2$ | $20$ | $35$ |
+| $d$ | $38$ | $29$ | $2$ | - | $14$ | $-25$ |
+| $e$ | $-16$ | $-7$ | $20$ | $14$ | - | $47$ |
+| $f$ | $71$ | $62$ | $35$ | $-25$ | $47$ | - |
 
-Ten Greenian couplings are positive and five are negative. The negative ones are $12,15,23,25,46$. Original edges $34,45$ give positive coefficients, as do all eight absent original couplings.
+Ten Greenian couplings are positive and five are negative. The negative ones are $ab,ae,bc,be,df$. Original edges $cd,de$ give positive coefficients, as do all eight absent original couplings.
 
 Denote the table numerators by $m_{ij}$. Then
 
@@ -574,7 +574,7 @@ $$
 
 ![The original graph from the Kirchhoff matrix article and the signs of its Greenian weights](images/Greenian-Wikipedia-graph.svg)
 
-*Figure 4. Left: the original graph with unit conductances. Right: the numerators $198\gamma_{ij}$; blue cells indicate positive weights, red cells negative weights. For pendant vertex $6$, the sole original coupling $46$ becomes negative; its other five Greenian couplings are positive. The values are calculated from the displayed matrix.*
+*Figure 4. Left: the original graph with unit conductances. Right: the numerators $198\gamma_{ij}$; blue cells indicate positive weights, red cells negative weights. For pendant vertex $f$, the sole original coupling $df$ becomes negative; its other five Greenian couplings are positive. The values are calculated from the displayed matrix.*
 
 ### All grades
 
@@ -600,7 +600,7 @@ $$
 > Together with (2), this specifies every coefficient of every grade $Q_0,\ldots,Q_5$. For example,
 >
 > $$
-> t_\gamma(\{1,2,3\})
+> t_\gamma(\{a,b,c\})
 > =\frac{(-19)\cdot26+(-19)\cdot(-1)+26\cdot(-1)}{198^2}
 > =-\frac{167}{13068}
 > $$
@@ -608,7 +608,7 @@ $$
 > For a triple with three negative couplings, by contrast,
 >
 > $$
-> t_\gamma(\{1,2,5\})
+> t_\gamma(\{a,b,e\})
 > =\frac{(-19)(-16)+(-19)(-7)+(-16)(-7)}{198^2}
 > =\frac{61}{4356}
 > $$
@@ -634,16 +634,16 @@ $$
 
 ## The Petersen graph
 
-Use the standard representation of the Petersen graph: an outer five-cycle on vertices $1,\ldots,5$, an inner five-pointed star on $6,\ldots,10$, and five connecting pairs [2]:
+Use the standard representation of the Petersen graph: an outer five-cycle on vertices $a,\ldots,e$, an inner five-pointed star on $f,\ldots,j$, and five connecting pairs [2]:
 
 $$
 \begin{aligned}
-E=\{&12,23,34,45,15,\ 16,27,38,49,5\,10,\ {}\\
-&6\,8,8\,10,7\,10,7\,9,6\,9\}
+E=\{&ab,bc,cd,de,ae,\ af,bg,ch,di,ej,\ {}\\
+&fh,hj,gj,gi,fi\}
 \end{aligned}
 $$
 
-In expressions such as $5\,10$, the space separates two vertex numbers. There are $10$ vertices and $15$ edges. Each vertex has three neighbors; adjacent vertices have no common neighbors, and nonadjacent vertices have exactly one.
+There are $10$ vertices and $15$ edges. Each vertex has three neighbors; adjacent vertices have no common neighbors, and nonadjacent vertices have exactly one.
 
 ### Two Greenian weights
 

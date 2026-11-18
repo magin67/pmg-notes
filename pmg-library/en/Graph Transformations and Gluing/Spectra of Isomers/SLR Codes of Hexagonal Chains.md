@@ -1,9 +1,9 @@
 ---
 title: SLR Codes of Hexagonal Chains
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 3
-translated_revision: 8
+updated: 2026-11-18
+revision: 4
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -43,21 +43,21 @@ For $N=1$, there is a single graph $C_6$, treated separately. From now on, $N\ge
 Choose a traversal direction and an ordered attachment edge on the first core. Orient the traversals of subsequent cores so that each shared edge is traversed in opposite directions. In the figures, all cycles are then traversed clockwise.
 
 > [!info] The letter of an internal core
-> **Definition.** Let the active pair of the old fragment be $(a,b)$. Number the new core as $C(0,1,2,3,4,5)$ and attach it by
+> **Definition.** Let the active pair of the old fragment be $(a,b)$. Write the new core as $C(v_0,v_1,v_2,v_3,v_4,v_5)$ and attach it by
 >
 > $$
-> 0\mapsto b,\qquad 1\mapsto a
+> v_0\mapsto b,\qquad v_1\mapsto a
 > \tag{2}
 > $$
 >
 > Choose its output pair in cycle traversal order:
 >
 > $$
-> L:(2,3),\qquad S:(3,4),\qquad R:(4,5)
+> L:(v_2,v_3),\qquad S:(v_3,v_4),\qquad R:(v_4,v_5)
 > \tag{3}
 > $$
 >
-> These are all edges vertex-disjoint from the input $01$. In a development by regular hexagons, successive center-to-center directions turn by $+\pi/3$, $0$, and $-\pi/3$, respectively.
+> These are all edges vertex-disjoint from the input $v_0v_1$. In a development by regular hexagons, successive center-to-center directions turn by $+\pi/3$, $0$, and $-\pi/3$, respectively.
 
 ![Reversed input endpoint order and the three output seams](images/SLR%20Letters%20and%20Seam%20Endpoint%20Order.svg)
 
@@ -92,7 +92,7 @@ The construction from a code requires no coordinates. Start with $C_6$ and a cho
 > [!note]- Validity and completeness of the construction
 > **Proof.** The output of a new core is disjoint from its input. Both output vertices are therefore created at the current step and belong to no earlier core. Identifying the next cycle only along this output creates no nonadjacent contact. This proves admissibility by induction.
 >
-> Conversely, choose an initial end and a traversal direction of the first cycle of a given chain. The shared seam uniquely extends the consistent traversal to the neighboring core. Relabel its input as $01$; its admissible output occupies exactly one position in (3). This recovers all letters. Renaming the four new vertices does not change the graph. $\square$
+> Conversely, choose an initial end and a traversal direction of the first cycle of a given chain. The shared seam uniquely extends the consistent traversal to the neighboring core. Relabel its input as $v_0v_1$; its admissible output occupies exactly one position in (3). This recovers all letters. Renaming the four new vertices does not change the graph. $\square$
 
 Abstract admissibility differs from realization by regular hexagons in a common plane. For example, $SLLLL$ has six cores: in a regular development, the final core touches the first, but this additional identification **is not part** of the code. The abstract graph still has $26$ vertices and $31$ edges. Merging vertices that coincide in the drawing would change the problem.
 
@@ -129,7 +129,7 @@ For $u=\alpha_2\cdots\alpha_{N-1}$, write $u^{\leftarrow}=\alpha_{N-1}\cdots\alp
 > $$
 
 > [!note]- Why reversal changes both the order and the letters
-> **Proof.** Reflection reverses the traversal direction of each cycle. Restoring the adopted input numbering changes local indices by $i\mapsto1-i\pmod6$. Output $(2,3)$ becomes $(5,4)$, that is, output $R$ with reversed order; the opposite output remains opposite. Reflection therefore replaces every $L$ by $R$ and conversely.
+> **Proof.** Reflection reverses the traversal direction of each cycle. Restoring the adopted input numbering changes local indices by $i\mapsto1-i\pmod6$. Output $(v_2,v_3)$ becomes $(v_5,v_4)$, that is, output $R$ with reversed order; the opposite output remains opposite. Reflection therefore replaces every $L$ by $R$ and conversely.
 >
 > When the chain is read from its other end, input and output exchange roles in every internal core. If the old output starts at $j$, the new cycle numbering starts there; the old input then occupies position $6-j$. Thus $2\leftrightarrow4$, while $3$ is preserved. The cores are also read in reverse order. This gives the second formula in (5). The initial marker $S$ is written anew and is not part of the reversed turn word.
 >
@@ -231,7 +231,7 @@ $$
 =(A,C,B,D,E)^{\mathsf T}
 $$
 
-The published matrices $\mathbf T_2,\mathbf T_3,\mathbf T_4$ use the identification $(0,1)=(a,b)$. Under convention (2), the old passport is first permuted, so the letter matrices are
+The published matrices $\mathbf T_2,\mathbf T_3,\mathbf T_4$ use the identification $(v_0,v_1)=(a,b)$. Under convention (2), the old passport is first permuted, so the letter matrices are
 
 $$
 \boxed{
@@ -313,7 +313,7 @@ This is equality of polynomials, not the assertion $s_{\iota(w)}=s_w$ or $s_{\io
 
 ![One graph with different spectral passports at its two ends](images/Two%20Ends%20of%20One%20SLR%20Chain.svg)
 
-**One graph, different marked boundaries.** The codes $SLS$ and $SSR=\iota(SLS)$ describe the same four-core graph. In the figure's construction, its right terminal pair is $(15,16)$ and its left pair $(3,4)$. Direct minors on these pairs differ.
+**One graph, different marked boundaries.** The codes $SLS$ and $SSR=\iota(SLS)$ describe the same four-core graph. In the figure's construction, its right terminal pair is $(v_{15},v_{16})$ and its left pair $(v_3,v_4)$. Direct minors on these pairs differ.
 
 For an exact numerical check, set $\mathbf R=\operatorname{diag}(1,-1,-1,-1,1)$ and $z_w=\mathbf R s_w(-1)$. Since $n=4N+2$ is even, the first coordinate is $P_G(1)=(-1)^n\chi_G(-1)$.
 

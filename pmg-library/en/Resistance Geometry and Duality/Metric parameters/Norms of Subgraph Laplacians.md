@@ -1,9 +1,9 @@
 ---
 title: Norms of Subgraph Laplacians
 date: 2026-11-04
-updated: 2026-11-10
-revision: 3
-translated_revision: 3
+updated: 2026-11-18
+revision: 4
+translated_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: norms-of-subgraph-laplacians
@@ -209,7 +209,7 @@ Weakening all internal conductances by a small fraction $\varepsilon$ decreases 
 
 ### Why this is not criticality under vertex deletion
 
-In the unit-conductance path on seven consecutively numbered vertices, the groups $\{1,2,3\}$ and $\{3,4,5\}$ have the same maximum norm $2$. Deleting the first leaves a connected path; deleting the second leaves two separate edges. The spanning-tree coefficients of the remaining graphs are $1$ and $0$, respectively.
+In the unit-conductance path with successive vertices $a,b,c,d,e,f,g$, the groups $\{a,b,c\}$ and $\{c,d,e\}$ have the same maximum norm $2$. Deleting the first leaves a connected path; deleting the second leaves two separate edges. The spanning-tree coefficients of the remaining graphs are $1$ and $0$, respectively.
 
 Even a single vertex has zero internal norm, yet it may be an articulation point. Thus (6), which concerns changes to internal conductances, cannot be transferred to deletion of the group together with all incident couplings. These operations are also distinguished in [[Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius]].
 

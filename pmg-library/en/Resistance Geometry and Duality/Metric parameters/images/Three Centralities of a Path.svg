@@ -341,49 +341,49 @@ z
 " clip-path="url(#p94e7ca6602)" style="fill: #e9f2f8; stroke: #236c9e; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_20">
-    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="337.038806" y="89.415844" transform="rotate(-0 337.038806 89.415844)">1</text>
+    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="337.038806" y="89.415844" transform="rotate(-0 337.038806 89.415844)">v₁</text>
    </g>
    <g id="text_21">
-    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="424.8" y="89.415844" transform="rotate(-0 424.8 89.415844)">2</text>
+    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="424.8" y="89.415844" transform="rotate(-0 424.8 89.415844)">v₂</text>
    </g>
    <g id="text_22">
-    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="512.561194" y="89.415844" transform="rotate(-0 512.561194 89.415844)">3</text>
+    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="512.561194" y="89.415844" transform="rotate(-0 512.561194 89.415844)">v₃</text>
    </g>
    <g id="text_23">
-    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="600.322388" y="89.415844" transform="rotate(-0 600.322388 89.415844)">4</text>
+    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="600.322388" y="89.415844" transform="rotate(-0 600.322388 89.415844)">v₄</text>
    </g>
    <g id="text_24">
-    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="688.083582" y="89.415844" transform="rotate(-0 688.083582 89.415844)">5</text>
+    <text style="fill: #158174; font: 13px 'DejaVu Sans'; text-anchor: middle" x="688.083582" y="89.415844" transform="rotate(-0 688.083582 89.415844)">v₅</text>
    </g>
    <g id="text_25">
-    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="337.038806" y="185.953158" transform="rotate(-0 337.038806 185.953158)">1</text>
+    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="337.038806" y="185.953158" transform="rotate(-0 337.038806 185.953158)">v₁</text>
    </g>
    <g id="text_26">
-    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="424.8" y="185.953158" transform="rotate(-0 424.8 185.953158)">2</text>
+    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="424.8" y="185.953158" transform="rotate(-0 424.8 185.953158)">v₂</text>
    </g>
    <g id="text_27">
-    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="512.561194" y="185.953158" transform="rotate(-0 512.561194 185.953158)">3</text>
+    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="512.561194" y="185.953158" transform="rotate(-0 512.561194 185.953158)">v₃</text>
    </g>
    <g id="text_28">
-    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="600.322388" y="185.953158" transform="rotate(-0 600.322388 185.953158)">4</text>
+    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="600.322388" y="185.953158" transform="rotate(-0 600.322388 185.953158)">v₄</text>
    </g>
    <g id="text_29">
-    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="688.083582" y="185.953158" transform="rotate(-0 688.083582 185.953158)">5</text>
+    <text style="fill: #c06721; font: 13px 'DejaVu Sans'; text-anchor: middle" x="688.083582" y="185.953158" transform="rotate(-0 688.083582 185.953158)">v₅</text>
    </g>
    <g id="text_30">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="337.038806" y="282.490471" transform="rotate(-0 337.038806 282.490471)">1</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="337.038806" y="282.490471" transform="rotate(-0 337.038806 282.490471)">v₁</text>
    </g>
    <g id="text_31">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="424.8" y="282.490471" transform="rotate(-0 424.8 282.490471)">2</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="424.8" y="282.490471" transform="rotate(-0 424.8 282.490471)">v₂</text>
    </g>
    <g id="text_32">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="512.561194" y="282.490471" transform="rotate(-0 512.561194 282.490471)">3</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="512.561194" y="282.490471" transform="rotate(-0 512.561194 282.490471)">v₃</text>
    </g>
    <g id="text_33">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="600.322388" y="282.490471" transform="rotate(-0 600.322388 282.490471)">4</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="600.322388" y="282.490471" transform="rotate(-0 600.322388 282.490471)">v₄</text>
    </g>
    <g id="text_34">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="688.083582" y="282.490471" transform="rotate(-0 688.083582 282.490471)">5</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="688.083582" y="282.490471" transform="rotate(-0 688.083582 282.490471)">v₅</text>
    </g>
   </g>
  </g>

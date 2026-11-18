@@ -27,7 +27,7 @@
     "Исходный граф допустим; у гриниана нарушены знаки": "The original graph is admissible; its Greenian violates the sign conditions",
     "Один спектр, разные собственные направления": "One spectrum, different eigendirections",
     "Два взвешенных графа: спектр $0,\\,4,\\,4,\\,8$; показана мода с $\\lambda=8$": "Two weighted graphs: spectrum $0,\\,4,\\,4,\\,8$; the mode with $\\lambda=8$ is shown",
-    "$G_1$: полный граф, $c_{12}=3$, остальные $c=1$": "$G_1$: complete graph, $c_{12}=3$, other $c=1$",
+    "$G_1$: полный граф, $c_{pq}=3$, остальные $c=1$": "$G_1$: complete graph, $c_{pq}=3$, other $c=1$",
     "$G_2$: $K_{2,2}$, все четыре $c=2$": "$G_2$: $K_{2,2}$, all four $c=2$",
     "Для обоих графов: $\\mathbf{L}=4\\mathbf{J}+4\\mathbf{E}_8$,  $\\mathbf{E}_4=\\mathbf{J}-\\mathbf{E}_8$": "For both graphs: $\\mathbf{L}=4\\mathbf{J}+4\\mathbf{E}_8$,  $\\mathbf{E}_4=\\mathbf{J}-\\mathbf{E}_8$",
     "Числа у рёбер — проводимости; у вершин — компоненты нормированной моды. Пересечения рёбер не являются вершинами.": "Edge labels are conductances; vertex labels are normalized mode components. Edge crossings are not vertices.",
@@ -62,15 +62,17 @@
     "В каждой паре лапласиан умножает на μₖ, а гриниан на 1/μₖ.": "In each pair, the Laplacian multiplies by μₖ, and the Greenian by 1/μₖ.",
     "Показаны ненулевые моды. Постоянная мода имеет компоненты 1/√5.": "The nonzero modes are shown. The constant mode has components 1/√5.",
     "Чередующаяся последовательность не замыкается после пяти шагов: отдельной моды 4 нет.": "An alternating sequence does not close after five steps: there is no separate mode 4.",
-    "Пара 1,6": "Pair 1,6",
-    "Пара 3,4": "Pair 3,4",
+    "Пара a₁,a₆": "Pair a₁,a₆",
+    "Пара a₃,a₄": "Pair a₃,a₄",
     "Вклад в резистенс": "Resistance contribution",
     "мода k = 1": "mode k = 1",
     "мода k = 3": "mode k = 3",
     "мода k = 5": "mode k = 5",
-    "Пара 1,2": "Pair 1,2",
-    "Пара 1,3": "Pair 1,3",
-    "Пара 1,4": "Pair 1,4",
+    "Пара p,q": "Pair p,q",
+    "Пара p,s": "Pair p,s",
+    "Пара a₁,a₂": "Pair a₁,a₂",
+    "Пара a₁,a₃": "Pair a₁,a₃",
+    "Пара a₁,a₄": "Pair a₁,a₄",
     "Цикл C₆": "Cycle C₆",
     "пара μ₁ = 1": "pair μ₁ = 1",
     "пара μ₂ = 3": "pair μ₂ = 3",
@@ -109,7 +111,7 @@
     "Одинаковый цвет связывает дополнительные грейды. Соответствующие ячейки\nзанимают противоположные позиции в двух сетках.": "The same color links complementary grades. Corresponding cells\noccupy opposite positions in the two grids.",
     "Вклады подпространств": "Eigenspace contributions",
     "Тёмный: первая мода. Светлый: вторая.": "Dark: first mode. Light: second mode.",
-    "Вклад отдельных мод H₂ в R₁₂": "Individual H₂ mode contributions to R₁₂",
+    "Вклад отдельных мод H₂ в R(p,q)": "Individual H₂ mode contributions to R(p,q)",
     "Два базиса одного H₂": "Two bases of the same H₂",
     "Резистенсы C₄: вклады подпространств и мод": "Resistances in C₄: eigenspace and mode contributions",
     "Отдельные моды меняют вклады при повороте базиса. Их сумма сохраняется.": "Individual mode contributions change under basis rotation. Their sum is preserved.",
@@ -122,7 +124,7 @@
   "figures": {
     "Чебышёвский переход от пути P6 к циклу": {
       "name": "Chebyshev Transition from P6 to a Cycle",
-      "description": "The transformation 4L−L² retains edges 1–2 and 5–6 and adds 1–3, 2–4, 3–5, 4–6. The new cycle follows 1,2,4,6,5,3. In the original path basis, the spectrum changes from 0,2−√3,1,2,3,2+√3 to 0,1,3,4,3,1; the Greenian eigenvalues are 0,1,1/3,1/4,1/3,1."
+      "description": "The transformation 4L−L² retains edges a₁–a₂ and a₅–a₆ and adds a₁–a₃, a₂–a₄, a₃–a₅, a₄–a₆. The new cycle follows a₁,a₂,a₄,a₆,a₅,a₃. In the original path basis, the spectrum changes from 0,2−√3,1,2,3,2+√3 to 0,1,3,4,3,1; the Greenian eigenvalues are 0,1,1/3,1/4,1/3,1."
     },
     "Графы чебышёвской орбиты пути P6": {
       "name": "Graphs in the Chebyshev Orbit of P6",
@@ -130,7 +132,7 @@
     },
     "Конус базиса P3 и его графы": {
       "name": "The Cone of the P3 Basis and Its Graphs",
-      "description": "The cone a≥0, 0≤b≤3a. Extreme rays: the unit path P3 with coordinates (1,3), and edge 1–3 with isolated vertex 2 at (2,0). The four marked points represent all simple graphs in the fixed basis. The complete graph K3 is at (3,3)."
+      "description": "The cone a≥0, 0≤b≤3a. Extreme rays: the unit path P3 with coordinates (1,3), and edge p–s with isolated vertex q at (2,0). The four marked points represent all simple graphs in the fixed basis. The complete graph K3 is at (3,3)."
     },
     "Обращение спектральных координат в базисе P3": {
       "name": "Inverting Spectral Coordinates in the P3 Basis",
@@ -138,11 +140,11 @@
     },
     "Изоспектральные графы и собственные направления": {
       "name": "Cospectral Graphs and Eigendirections",
-      "description": "Two nonisomorphic weighted graphs with spectrum 0,4,4,8. G1 is K4 with conductance 3 on edge 12 and 1 on every other edge; G2 is K2,2 with parts {1,2},{3,4} and all conductances 2. The eigenvalue-8 modes are z1=(1,-1,0,0)/sqrt(2) and z2=(1,1,-1,-1)/2. Blue denotes a positive component, orange a negative component, and gray zero. The E8 projectors differ, although their ranks and the Laplacian spectra agree."
+      "description": "Two nonisomorphic weighted graphs with spectrum 0,4,4,8. G1 is K4 with conductance 3 on edge pq and 1 on every other edge; G2 is K2,2 with parts {p,q},{s,t} and all conductances 2. The eigenvalue-8 modes are z1=(1,-1,0,0)/sqrt(2) and z2=(1,1,-1,-1)/2. Blue denotes a positive component, orange a negative component, and gray zero. The E8 projectors differ, although their ranks and the Laplacian spectra agree."
     },
     "Одинаковый спектр и разные резистенсы": {
       "name": "The Same Spectrum and Different Resistances",
-      "description": "For G1, resistance R12=1/4 comes entirely from mode 8; for G2, R12=1/2 comes entirely from eigenspace 4. For pair 13, the contributions of eigenspaces 4 and 8 are 3/8 and 1/16 in G1, and 1/4 and 1/8 in G2: totals 7/16 and 3/8. Both Kirchhoff indices are 5/2. All values use exact rational arithmetic."
+      "description": "For G1, resistance R(p,q)=1/4 comes entirely from mode 8; for G2, R(p,q)=1/2 comes entirely from eigenspace 4. For pair ps, the contributions of eigenspaces 4 and 8 are 3/8 and 1/16 in G1, and 1/4 and 1/8 in G2: totals 7/16 and 3/8. Both Kirchhoff indices are 5/2. All values use exact rational arithmetic."
     },
     "Собственные моды пути P3": {
       "name": "Eigenmodes of the Path P3",
@@ -170,15 +172,15 @@
     },
     "Спектральные вклады в резистенсы P6 и C6": {
       "name": "Spectral Contributions to Resistances in P6 and C6",
-      "description": "P6: R16=(7+4√3)/3+1/3+(7−4√3)/3=5, R34=1/3+1/3+1/3=1. C6: R12=1/3+1/3+1/6=5/6; R13=1+1/3=4/3; R14=4/3+1/6=3/2. Segment heights represent the exact values; the panels use different scales."
+      "description": "P6: R(a₁,a₆)=(7+4√3)/3+1/3+(7−4√3)/3=5, R(a₃,a₄)=1/3+1/3+1/3=1. C6: R(a₁,a₂)=1/3+1/3+1/6=5/6; R(a₁,a₃)=1+1/3=4/3; R(a₁,a₄)=4/3+1/6=3/2. Segment heights represent the exact values; the panels use different scales."
     },
     "Диагональная проекция и ближайший граф на четырёх вершинах": {
       "name": "Diagonal Projection and the Nearest Graph on Four Vertices",
-      "description": "The original cycle 1–2–3–4–1 has unit conductances and an added edge 1–3 of conductance 5. Its matrix on H is [[10,−4,0],[−4,4,0],[0,0,4]]. In the diagonal projection, links 1–2 and 3–4 have coefficient −1/5. Projection onto the graph cone has diagonal (554,244,248)/57, conductances w14=w23=124/57, w13=184/57, w24=91/57, and w12=w34=0. Squared errors relative to the original operator are 32 and 1840/57."
+      "description": "The original cycle p–q–s–t–p has unit conductances and an added edge p–s of conductance 5. Its matrix on H is [[10,−4,0],[−4,4,0],[0,0,4]]. In the diagonal projection, links p–q and s–t have coefficient −1/5. Projection onto the graph cone has diagonal (554,244,248)/57, conductances w(p,t)=w(q,s)=124/57, w(p,s)=184/57, w(q,t)=91/57, and w(p,q)=w(s,t)=0. Squared errors relative to the original operator are 32 and 1840/57."
     },
     "Разные графы с одной спектральной проекцией": {
       "name": "Different Graphs with One Spectral Projection",
-      "description": "The graphs at r=−4 and r=−2 share diagonal (10,4,4) and the same nearest point in the spectral cone. The first has spanning-tree coefficient 24, Kirchhoff index 10/3, R13=1/6, R24=1; the second has 36, 23/9, R13=1/5, R24=26/45. The right panel shows the verified functions R13=(2/5)(26+4r)/(40−r²) and R24=(2/5)(44−4r)/(40−r²) on [−4,−2/3]."
+      "description": "The graphs at r=−4 and r=−2 share diagonal (10,4,4) and the same nearest point in the spectral cone. The first has spanning-tree coefficient 24, Kirchhoff index 10/3, R(p,s)=1/6, R(q,t)=1; the second has 36, 23/9, R(p,s)=1/5, R(q,t)=26/45. The right panel shows the verified functions R(p,s)=(2/5)(26+4r)/(40−r²) and R(q,t)=(2/5)(44−4r)/(40−r²) on [−4,−2/3]."
     },
     "Два базиса и общий проектор цикла C4": {
       "name": "Two Bases and a Common Projector of C4",
@@ -190,7 +192,7 @@
     },
     "Спектральные вклады в резистенсы цикла C4": {
       "name": "Spectral Contributions to Resistances in C4",
-      "description": "Adjacent-vertex resistance 3/4=1/2+1/4 and opposite-vertex resistance 1=1+0, decomposed over H2 and H4. The H2 contribution to R12 splits as 1/4+1/4 in the original basis and 0+1/2 after rotation."
+      "description": "Adjacent-vertex resistance 3/4=1/2+1/4 and opposite-vertex resistance 1=1+0, decomposed over H2 and H4. The H2 contribution to R(p,q) splits as 1/4+1/4 in the original basis and 0+1/2 after rotation."
     }
   }
 }

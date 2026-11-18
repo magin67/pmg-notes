@@ -1,9 +1,9 @@
 ---
 title: "Limits of Invariance: Branching, Disconnected Seams, and Other Cores"
 date: 2026-10-31
-updated: 2026-11-11
-revision: 4
-translated_revision: 8
+updated: 2026-11-18
+revision: 5
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -93,7 +93,7 @@ If all gluings are at one vertex, a more general positive result holds: arbitrar
 
 ## Replacing the path by a star
 
-Take four copies of $C_6$ with single-edge seams. For the path, each next cycle is glued by its edge $01$ to edge $34$ of the preceding cycle. For the star, the three outer cycles are glued by their edges $01$ to edges $01,23,45$ of the central cycle. Local vertex labels in each core follow cyclic order; endpoint correspondences preserve the indicated order. New vertices of outer cores are distinct.
+Take four copies of $C_6$ with single-edge seams. For the path, each next cycle is glued by its edge $v_0v_1$ to edge $v_3v_4$ of the preceding cycle. For the star, the three outer cycles are glued by their edges $v_0v_1$ to edges $v_0v_1,v_2v_3,v_4v_5$ of the central cycle. Local vertex labels in each core follow cyclic order; endpoint correspondences preserve the indicated order. New vertices of outer cores are distinct.
 
 ![Four hexagons with equal seams: a path and a star](images/A%20Path%20and%20a%20Star%20of%20Four%20Cycles.svg)
 
@@ -125,15 +125,15 @@ The tabulated radii are also computed directly and independently. Different span
 
 For a connected path, $k=1$, and each core adds one independent cycle. For a seam consisting of two separate edges, $k=2$, and two independent cycles are added. Three such cycle cores have rank $1+2+2=5$, so the model with one bounded face per core does not apply.
 
-Consider three copies of $C_{12}$. Number the middle core's vertices $0,\ldots,11$ cyclically. Specify its input by the ordered list $U=(0,1,4,5)$: the induced seam consists of $01$ and $45$. Each outer core has the same local seam $U$.
+Consider three copies of $C_{12}$. Label the middle core’s vertices $v_0,\ldots,v_{11}$ in cyclic order. Specify its input by the ordered list $U=(v_0,v_1,v_4,v_5)$: the induced seam consists of $v_0v_1$ and $v_4v_5$. Each outer core has the same local seam $U$.
 
 The first outer core is glued to $U$ of the middle core. The second is glued by one of two correspondences:
 
 $$
 \begin{array}{c|rrrr}
-\text{outer-core vertex}&0&1&4&5\\\hline
-\text{A: middle-core vertex}&2&3&6&7\\
-\text{B: middle-core vertex}&6&7&10&11
+\text{outer-core vertex}&v_0&v_1&v_4&v_5\\\hline
+\text{A: middle-core vertex}&v_2&v_3&v_6&v_7\\
+\text{B: middle-core vertex}&v_6&v_7&v_{10}&v_{11}
 \end{array}
 \tag{3}
 $$
@@ -142,7 +142,7 @@ The remaining vertices of the outer cores are new and distinct. In both cases th
 
 ![Two placements of equal disconnected seams on the middle dodecagon](images/Two%20Disconnected%20Seams%20in%20a%20Cycle.svg)
 
-**The middle core of two assemblies.** Red marks input $01\cup45$ and blue marks the output. Vertex-list labels supplement the colors. The four shared vertices do not form $P_4$: the actual intersection contains exactly two nonadjacent edges.
+**The middle core of two assemblies.** Red marks input $v_0v_1\cup v_4v_5$ and blue marks the output. Vertex-list labels supplement the colors. The four shared vertices do not form $P_4$: the actual intersection contains exactly two nonadjacent edges.
 
 > [!example] Seam size and type are preserved, but parameters change
 > Both graphs have $n=28$, $|E|=32$, and $\beta=5$. Direct calculation gives different values:
@@ -154,7 +154,7 @@ The remaining vertices of the outer cores are new and distinct. In both cases th
 
 This is a counterexample to extending the connected-seam theorem to arbitrary disconnected intersections, even with identical cores and the same type of each seam. The number of shared vertices alone is insufficient.
 
-The actual intersection must be checked against every edge. For example, identifying vertices $0,1,2,3$ of two cycles in the same order makes $01,12,23$ shared. Selecting only $01$ and $23$ in a drawing does not make the seam disconnected.
+The actual intersection must be checked against every edge. For example, identifying vertices $v_0,v_1,v_2,v_3$ of two cycles in the same order makes $v_0v_1,v_1v_2,v_2v_3$ shared. Selecting only $v_0v_1$ and $v_2v_3$ in a drawing does not make the seam disconnected.
 
 ## Core symmetry and symmetry of a seam pair
 
@@ -165,14 +165,14 @@ Transitivity on individual edges or faces does not imply transitivity on their o
 
 ### Tetrahedra: two distinct restrictions
 
-A tetrahedral core means the graph $K_4$ on local vertices $0,1,2,3$. Take three copies. Glue the first outer core by its edge $(0,1)$ to $(0,1)$ of the middle core. Glue the second by its $(0,1)$ either to $(2,3)$ or to $(0,2)$ of the middle core. Correspondences preserve the indicated pair order; all remaining vertices are new.
+A tetrahedral core means the graph $K_4$ on local vertices $v_0,v_1,v_2,v_3$. Take three copies. Glue the first outer core by its edge $(v_0,v_1)$ to $(v_0,v_1)$ of the middle core. Glue the second by its $(v_0,v_1)$ either to $(v_2,v_3)$ or to $(v_0,v_2)$ of the middle core. Correspondences preserve the indicated pair order; all remaining vertices are new.
 
 | Seams of the middle core | $n$ | Edge count | $\tau$ | $\rho$ |
 |---|---:|---:|---:|---:|
-| $01$ and $23$ | $8$ | $16$ | $2304$ | $91/288$ |
-| $01$ and $02$ | $8$ | $16$ | $2240$ | $1831/5600$ |
+| $v_0v_1$ and $v_2v_3$ | $8$ | $16$ | $2304$ | $91/288$ |
+| $v_0v_1$ and $v_0v_2$ | $8$ | $16$ | $2240$ | $1831/5600$ |
 
-In the second row, the seams intersect. Moreover, both outer cores share vertex $0$: the prescribed attachment sequence no longer describes all actual contacts. This comparison is therefore not a counterexample with the seam-disjointness condition retained.
+In the second row, the seams intersect. Moreover, both outer cores share vertex $v_0$: the prescribed attachment sequence no longer describes all actual contacts. This comparison is therefore not a counterexample with the seam-disjointness condition retained.
 
 > [!info] Chains of complete four-vertex cores
 > **Proposition 1.** For a fixed number of cores, open chains of $K_4$ with vertex-disjoint edge seams in every internal core and no additional contacts are mutually isomorphic. Changing configuration here does not produce a nontrivial family of nonisomorphic graphs.
@@ -182,7 +182,7 @@ In the second row, the seams intersect. Moreover, both outer cores share vertex 
 
 ### Cubes: disjoint seams are no longer sufficient
 
-Represent the cube as $C_4\square K_2$: base cycles $0123$ and $4567$ are joined by $04,15,26,37$. In each of three assemblies, the first seam of the middle cube is $01$, and the second is $23$, $67$, or $26$. Each outer core is glued by its edge $(0,1)$ to the corresponding ordered pair of the middle core; there are no other identifications.
+Represent the cube as $C_4\square K_2$: base cycles $v_0v_1v_2v_3$ and $v_4v_5v_6v_7$ are joined by $v_0v_4,v_1v_5,v_2v_6,v_3v_7$. In each of three assemblies, the first seam of the middle cube is $v_0v_1$, and the second is $v_2v_3$, $v_6v_7$, or $v_2v_6$. Each outer core is glued by its edge $(v_0,v_1)$ to the corresponding ordered pair of the middle core; there are no other identifications.
 
 ![Three inequivalent pairs of disjoint cube edges](images/Pairs%20of%20Edge%20Seams%20of%20a%20Cube.svg)
 
@@ -190,18 +190,18 @@ Represent the cube as $C_4\square K_2$: base cycles $0123$ and $4567$ are joined
 
 | Second seam | Subgraph induced by the seam endpoints | $\tau$ | $\rho$, rounded |
 |---|---|---:|---:|
-| $23$ | $C_4$ | $38395904$ | $0.658097293$ |
-| $67$ | $2K_2$ | $38600704$ | $0.656434277$ |
-| $26$ | $P_4$ | $38651904$ | $0.655146384$ |
+| $v_2v_3$ | $C_4$ | $38395904$ | $0.658097293$ |
+| $v_6v_7$ | $2K_2$ | $38600704$ | $0.656434277$ |
+| $v_2v_6$ | $P_4$ | $38651904$ | $0.655146384$ |
 
 All three graphs have $n=20$ and $|E|=34$. Adjacent cores share exactly one edge, and nonadjacent cores are disjoint. Values are computed in exact rational arithmetic; full fractions are retained in the verification data. Different spanning-tree counts prove that replacing cycle cores by cubes can destroy invariance even with disjoint edge seams.
 
 ## Prisms: face placement and vertex correspondence
 
-Now let the core be $C_6\square K_2$. Label the first layer $0,\ldots,5$ and the second $6,\ldots,11$; longitudinal edges are $j(j+6)$. A lateral face has cyclic order
+Now let the core be $C_6\square K_2$. Label the first layer $v_0,\ldots,v_5$ and the second $v_6,\ldots,v_{11}$; longitudinal edges are $v_jv_{j+6}$. A lateral face has cyclic order
 
 $$
-F_j=(j,\ j+1,\ (j+1)+6,\ j+6)
+F_j=(v_j,\ v_{j+1},\ v_{(j+1)+6},\ v_{j+6})
 $$
 
 First-layer indices are taken modulo $6$, then $6$ is added for the second layer. The seam is an entire four-cycle $F_j$, not a path on four vertices.
@@ -230,7 +230,7 @@ All cases have $n=28$ and $|E|=46$. Either the output face position or its verte
 
 ### Why aligned layers detect a spectral difference
 
-For $r=0$, the assembled graph is $H\square K_2$, where $H$ is an open chain of three hexagons with edge seams. The position of $F_j$ gives input edge $01$ and output edge $j(j+1)$ in each layer. For $j=2$ and $3$, the base graphs have the same cycle matroid and $\tau(H)=204$, but different Laplacian polynomials, as shown by the [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters#Two chains of three hexagons|two hexagonal chains]].
+For $r=0$, the assembled graph is $H\square K_2$, where $H$ is an open chain of three hexagons with edge seams. The position of $F_j$ gives input edge $v_0v_1$ and output edge $v_jv_{j+1}$ in each layer. For $j=2$ and $3$, the base graphs have the same cycle matroid and $\tau(H)=204$, but different Laplacian polynomials, as shown by the [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters#Two chains of three hexagons|two hexagonal chains]].
 
 > [!info] Spanning-tree count of a doubled graph
 > **Lemma 2.** For a connected graph $H$ with unit conductances,
@@ -276,11 +276,11 @@ Cubes and prisms are themselves planar graphs. Differences in the tables should 
 
 See [[en/PythonExamples/Example - Boundary Data and Chains of Cores#Limits of the tree count|the notebook calculation]].
 
-Consider two explicitly specified graphs on vertices $0,\ldots,5$. In graph A, $C(0,1,2,3)$ and $C(0,4,5)$ are glued at vertex $0$. In graph B, take $K_{2,3}$ with parts $\{0,1\}$ and $\{2,3,4\}$ and add the pendant edge $05$. Their complete edge sets are
+Consider two explicitly specified graphs on vertices $v_0,\ldots,v_5$. In graph A, $C(v_0,v_1,v_2,v_3)$ and $C(v_0,v_4,v_5)$ are glued at vertex $v_0$. In graph B, take $K_{2,3}$ with parts $\{v_0,v_1\}$ and $\{v_2,v_3,v_4\}$ and add the pendant edge $v_0v_5$. Their complete edge sets are
 
 $$
-E_{\text{A}}=\{01,12,23,03,04,45,05\},\qquad
-E_{\text{B}}=\{02,03,04,12,13,14,05\}
+E_{\text{A}}=\{v_0v_1,v_1v_2,v_2v_3,v_0v_3,v_0v_4,v_4v_5,v_0v_5\},\qquad
+E_{\text{B}}=\{v_0v_2,v_0v_3,v_0v_4,v_1v_2,v_1v_3,v_1v_4,v_0v_5\}
 \tag{6}
 $$
 
@@ -309,14 +309,14 @@ Here $ij$ denotes the undirected edge $\{i,j\}$.
 > =2^3\left(3-\frac32\right)=12
 > $$
 >
-> Hence $\tau_{\text{B}}=12$. For the radius, use the independent [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Resistance Radius - Forest Formula and Matroid Invariance#The radius as Laplacian energy|Laplacian energy formula]]. With reference vertex $q=0$, inverting the grounded Laplacians gives the columns $\mathbf d=(R_{10},\ldots,R_{50})$:
+> Hence $\tau_{\text{B}}=12$. For the radius, use the independent [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Resistance Radius - Forest Formula and Matroid Invariance#The radius as Laplacian energy|Laplacian energy formula]]. With reference vertex $q=v_0$, inverting the grounded Laplacians gives the columns $\mathbf d=(R_{v_1 v_0},\ldots,R_{v_5 v_0})$:
 >
 > $$
 > \mathbf d_{\text{A}}=(3/4,1,3/4,2/3,2/3)^{\mathsf T},\qquad
 > \mathbf d_{\text{B}}=(2/3,2/3,2/3,2/3,1)^{\mathsf T}
 > $$
 >
-> Add $R_{00}=0$ and sum squared differences over the edges (6). This yields
+> Add $R_{v_0 v_0}=0$ and sum squared differences over the edges (6). This yields
 >
 > $$
 > \rho_{\text{A}}=\frac14\left(\frac54+\frac89\right)=\frac{77}{144},\qquad

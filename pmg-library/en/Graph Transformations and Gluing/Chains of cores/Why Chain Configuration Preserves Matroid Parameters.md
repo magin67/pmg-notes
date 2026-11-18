@@ -1,9 +1,9 @@
 ---
 title: "Why Chain Configuration Preserves Matroid Parameters"
 date: 2026-10-31
-updated: 2026-11-11
-revision: 4
-translated_revision: 9
+updated: 2026-11-18
+revision: 5
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -211,20 +211,20 @@ Write $C(v_0,\ldots,v_5)$ for the cycle joining consecutive vertices and includi
 
 $$
 \begin{aligned}
-K_1&=C(0,1,9,8,7,6)\\
-K_2&=C(0,1,2,3,4,5)\\
-K_3^{\text{A}}&=C(3,4,13,12,11,10)\\
-K_3^{\text{B}}&=C(2,3,13,12,11,10)
+K_1&=C(v_0,v_1,v_9,v_8,v_7,v_6)\\
+K_2&=C(v_0,v_1,v_2,v_3,v_4,v_5)\\
+K_3^{\text{A}}&=C(v_3,v_4,v_{13},v_{12},v_{11},v_{10})\\
+K_3^{\text{B}}&=C(v_2,v_3,v_{13},v_{12},v_{11},v_{10})
 \end{aligned}
 \tag{9}
 $$
 
-Equal labels specify identified vertices. The middle core has input ordered pair $(0,1)$ and output $(3,4)$ in configuration A or $(2,3)$ in configuration B. The final edge set is the ordinary union of the three sets, with duplicate copies of shared edges removed. Both have $N=3$, $n=14$, and $|E|=16$; nonadjacent cores are disjoint, and the middle core's seams share no vertices.
+Equal labels specify identified vertices. The middle core has input ordered pair $(v_0,v_1)$ and output $(v_3,v_4)$ in configuration A or $(v_2,v_3)$ in configuration B. The final edge set is the ordinary union of the three sets, with duplicate copies of shared edges removed. Both have $N=3$, $n=14$, and $|E|=16$; nonadjacent cores are disjoint, and the middle core's seams share no vertices.
 
 ![Two chains and the subgraphs induced by their degree-three vertices](images/Nonisomorphism%20of%20Two%20Hexagonal%20Chains.svg)
 
 > [!note]- Proof that the two chains are nonisomorphic
-> **Proof.** In configuration A, the vertices of degree $3$ are $0,1,3,4$. They induce the edges $01$ and $34$. In configuration B, the degree-$3$ vertices are $0,1,2,3$, inducing $01,12,23$. An isomorphism preserves degrees and induced subgraphs, but two disjoint edges are not isomorphic to a three-edge path. Hence $G_{\text{A}}\not\cong G_{\text{B}}$. $\square$
+> **Proof.** In configuration A, the vertices of degree $3$ are $v_0,v_1,v_3,v_4$. They induce the edges $v_0v_1$ and $v_3v_4$. In configuration B, the degree-$3$ vertices are $v_0,v_1,v_2,v_3$, inducing $v_0v_1,v_1v_2,v_2v_3$. An isomorphism preserves degrees and induced subgraphs, but two disjoint edges are not isomorphic to a three-edge path. Hence $G_{\text{A}}\not\cong G_{\text{B}}$. $\square$
 
 Both graphs have the dual multigraph shown above. Deleting the outer-face row and column from its Laplacian gives
 

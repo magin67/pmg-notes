@@ -3,12 +3,12 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="842.4pt" height="446.4pt" viewBox="0 0 842.4 446.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <title>Спектральные вклады в резистенсы цикла C4</title>
-<desc>Резистенс соседних вершин 3/4=1/2+1/4, противоположных 1=1+0 по подпространствам H2 и H4. Вклад H2 в R12 разбивается на 1/4+1/4 в исходном базисе и 0+1/2 после поворота.</desc>
+<desc>Резистенс соседних вершин 3/4=1/2+1/4, противоположных 1=1+0 по подпространствам H2 и H4. Вклад H2 в R(p,q) разбивается на 1/4+1/4 в исходном базисе и 0+1/2 после поворота.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Резистенс соседних вершин 3/4=1/2+1/4, противоположных 1=1+0 по подпространствам H2 и H4. Вклад H2 в R12 разбивается на 1/4+1/4 в исходном базисе и 0+1/2 после поворота.</dc:description>
+    <dc:description>Резистенс соседних вершин 3/4=1/2+1/4, противоположных 1=1+0 по подпространствам H2 и H4. Вклад H2 в R(p,q) разбивается на 1/4+1/4 в исходном базисе и 0+1/2 после поворота.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -145,13 +145,13 @@ L 0 3.5
     <g id="ytick_1">
      <g id="line2d_7"/>
      <g id="text_8">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="180.992879" transform="rotate(-0 63.892 180.992879)">Пара 1,2</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="180.992879" transform="rotate(-0 63.892 180.992879)">Пара p,q</text>
      </g>
     </g>
     <g id="ytick_2">
      <g id="line2d_8"/>
      <g id="text_9">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="274.524308" transform="rotate(-0 63.892 274.524308)">Пара 1,3</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="274.524308" transform="rotate(-0 63.892 274.524308)">Пара p,s</text>
      </g>
     </g>
    </g>
@@ -316,7 +316,7 @@ z
      </g>
     </g>
     <g id="text_25">
-     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="662.159831" y="353.525188" transform="rotate(-0 662.159831 353.525188)">Вклад отдельных мод H₂ в R₁₂</text>
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="662.159831" y="353.525188" transform="rotate(-0 662.159831 353.525188)">Вклад отдельных мод H₂ в R(p,q)</text>
     </g>
    </g>
    <g id="matplotlib.axis_4">

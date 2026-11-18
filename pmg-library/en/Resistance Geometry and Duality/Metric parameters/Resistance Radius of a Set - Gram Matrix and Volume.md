@@ -1,9 +1,9 @@
 ---
 title: "Resistance Radius of a Set: Gram Matrix and Volume"
 date: 2026-10-16
-updated: 2026-11-10
-revision: 6
-translated_revision: 8
+updated: 2026-11-18
+revision: 7
+translated_revision: 9
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -192,7 +192,7 @@ $$
 \tau(G)=\sum_{T\text{ is a spanning tree}}\prod_{e\in T}c_e
 $$
 
-The [[From Lengths to Areas and Volumes#The volume of the full resistance simplex|note on volumes]] proves that $\mathbf G_u=\mathbf L_0^{-1}$, where $\mathbf L_0$ is obtained from the Laplacian by deleting the row and column of the reference vertex $0$. By the matrix-tree theorem, $\det\mathbf L_0=\tau(G)$. Consequently,
+The [[From Lengths to Areas and Volumes#The volume of the full resistance simplex|note on volumes]] proves that $\mathbf G_u=\mathbf L_0^{-1}$, where $\mathbf L_0$ is obtained from the Laplacian by deleting the row and column of the reference vertex $a_0$. By the matrix-tree theorem, $\det\mathbf L_0=\tau(G)$. Consequently,
 
 $$
 \det\mathbf G_u=\frac1{\tau(G)},
@@ -367,7 +367,7 @@ $$
 
 The reduced Laplacian is $4I_3-\mathbf1\mathbf1^{\mathsf T}$ and has determinant $16$. Therefore $\tau=16$ and $\rho/\tau=3/256$, as required by (3).
 
-**An example without the symmetry of a regular simplex.** Take the tetrahedron with Euclidean vertices $0,e_1,e_2,e_3$, where the $e_i$ are orthonormal. This is the resistance simplex of the star $K_{1,3}$ with unit conductances. Its center is $O_A=(e_1+e_2+e_3)/2$, so $\rho_A=3/4$ and $V=1/6$. Direct computation gives
+**An example without the symmetry of a regular simplex.** Take the tetrahedron with Euclidean vertices $a_0=0$, $a_1=e_1$, $a_2=e_2$, $a_3=e_3$, where the $e_i$ are orthonormal. This is the resistance simplex of the star $K_{1,3}$ with unit conductances. Its center is $O_A=(e_1+e_2+e_3)/2$, so $\rho_A=3/4$ and $V=1/6$. Direct computation gives
 
 $$
 \mathbf G=-\frac12

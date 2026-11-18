@@ -1,6 +1,6 @@
 """Four reproducible SLR illustrations; only the Python standard library is used."""
 from math import cos, sin, pi, sqrt
-from draw_three_hexagons import SVG, INK, MUTED, RED, BLUE, GREEN, FILLS
+from draw_three_hexagons import SVG, INK, MUTED, RED, BLUE, GREEN, FILLS, vertex_label
 
 EXIT={'L':2,'S':3,'R':4}
 
@@ -44,28 +44,28 @@ def draw_chain(s,u,rect,ends=False):
             s.line(p[pair[0]],p[pair[1]],color,7)
             for i in pair:
                 s.circle(p[i],7,'white',color,3)
-                s.text(p[i][0]+(-23 if color==RED else 24),p[i][1]+7,str(i),22,color,'middle')
+                s.text(p[i][0]+(-23 if color==RED else 24),p[i][1]+7,vertex_label(i),22,color,'middle')
     return p,centers
 
 
 def local_letters():
     s=SVG(1200,490,'Буквы SLR и порядок концов шва',
-        'Все циклы обходятся по часовой стрелке. Новое ядро получает 0=b, 1=a. Выход 23 даёт левый поворот L, 34 — прямое продолжение S, 45 — правый поворот R.')
+        'Все циклы обходятся по часовой стрелке. Новое ядро получает v₀=b, v₁=a. Выход v₂v₃ даёт левый поворот L, v₃v₄ — прямое продолжение S, v₄v₅ — правый поворот R.')
     for x,letter,j in [(20,'L',2),(420,'S',3),(820,'R',4)]:
         s.panel(x,20,360,450);cx,cy=x+190,242;r=95
         p={i:(cx+r*cos(7*pi/6-i*pi/3),cy-r*sin(7*pi/6-i*pi/3)) for i in range(6)}
-        s.text(x+180,61,f'{letter} · выход ({j}, {j+1})',25,anchor='middle',weight='bold')
+        s.text(x+180,61,f'{letter} · выход ({vertex_label(j)}, {vertex_label(j+1)})',25,anchor='middle',weight='bold')
         s.polygon(list(p.values()),FILLS[1])
         for i in range(6):s.line(p[i],p[(i+1)%6],RED if i==0 else BLUE if i==j else MUTED,5 if i in [0,j] else 3)
         for i,pt in p.items():
             s.circle(pt,5,'white',INK)
             dx,dy=pt[0]-cx,pt[1]-cy
-            label='0 = b' if i==0 else '1 = a' if i==1 else str(i)
+            label='v₀ = b' if i==0 else 'v₁ = a' if i==1 else vertex_label(i)
             s.text(cx+1.34*dx,cy+1.24*dy+6,label,20,RED if i in [0,1] else INK,'middle')
         s.arrow((cx-51,cy),(cx-5,cy))
         mid=((p[j][0]+p[j+1][0])/2,(p[j][1]+p[j+1][1])/2)
         s.arrow((cx,cy),(cx+.68*(mid[0]-cx),cy+.68*(mid[1]-cy)))
-        s.text(x+180,389,'0 → b, 1 → a',24,RED,'middle')
+        s.text(x+180,389,'v₀ → b, v₁ → a',24,RED,'middle')
         s.text(x+180,434,{'L':'поворот влево','S':'прямое продолжение','R':'поворот вправо'}[letter],21,BLUE,'middle')
     s.save('Буквы SLR и порядок концов шва.svg')
 
@@ -98,13 +98,13 @@ def four_classes():
 
 def boundary_ends():
     s=SVG(1200,680,'Два конца одной SLR-цепи',
-        'Один граф SLS, прочитанный с другого конца как SSR. Конечные пары 3,4 и 15,16 имеют разные нормированные спектральные паспорта, хотя первая координата P(1)=221771751 одинакова.')
+        'Один граф SLS, прочитанный с другого конца как SSR. Конечные пары v₃,v₄ и v₁₅,v₁₆ имеют разные нормированные спектральные паспорта, хотя первая координата P(1)=221771751 одинакова.')
     s.text(600,40,'Один граф · два выбора конечной границы',27,anchor='middle',weight='bold')
     draw_chain(s,'LS',(260,80,680,260),ends=True)
     s.text(600,388,'Общее значение P(1) = 221 771 751',27,anchor='middle',weight='bold')
-    for x,title,color,rows in [(20,'SSR · левая пара (3, 4)',RED,
+    for x,title,color,rows in [(20,'SSR · левая пара (v₃, v₄)',RED,
         ['−B = 98 976 277;  −C = 98 943 538','−D = 38 051 101;  E = 37 629 575']),
-        (620,'SLS · правая пара (15, 16)',GREEN,
+        (620,'SLS · правая пара (v₁₅, v₁₆)',GREEN,
         ['−B = 98 986 375;  −C = 98 986 738','−D = 38 074 862;  E = 37 645 206'])]:
         s.panel(x,423,560,177)
         s.text(x+280,464,title,23,color,'middle','bold')

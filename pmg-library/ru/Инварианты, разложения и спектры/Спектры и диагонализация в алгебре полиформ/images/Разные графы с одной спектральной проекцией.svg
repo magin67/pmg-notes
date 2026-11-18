@@ -3,12 +3,12 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="590.4pt" viewBox="0 0 936 590.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <title>Разные графы с одной спектральной проекцией</title>
-<desc>Графы при r=−4 и r=−2 имеют общую диагональ (10,4,4) и одну ближайшую точку спектрального конуса. Первый имеет остовной коэффициент 24, индекс Кирхгофа 10/3 и R13=1/6, R24=1; второй — 36, 23/9 и R13=1/5, R24=26/45. Справа показаны проверенные функции R13=(2/5)(26+4r)/(40−r²) и R24=(2/5)(44−4r)/(40−r²) на отрезке [−4,−2/3].</desc>
+<desc>Графы при r=−4 и r=−2 имеют общую диагональ (10,4,4) и одну ближайшую точку спектрального конуса. Первый имеет остовной коэффициент 24, индекс Кирхгофа 10/3 и R(p,s)=1/6, R(q,t)=1; второй — 36, 23/9 и R(p,s)=1/5, R(q,t)=26/45. Справа показаны проверенные функции R(p,s)=(2/5)(26+4r)/(40−r²) и R(q,t)=(2/5)(44−4r)/(40−r²) на отрезке [−4,−2/3].</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Графы при r=−4 и r=−2 имеют общую диагональ (10,4,4) и одну ближайшую точку спектрального конуса. Первый имеет остовной коэффициент 24, индекс Кирхгофа 10/3 и R13=1/6, R24=1; второй — 36, 23/9 и R13=1/5, R24=26/45. Справа показаны проверенные функции R13=(2/5)(26+4r)/(40−r²) и R24=(2/5)(44−4r)/(40−r²) на отрезке [−4,−2/3].</dc:description>
+    <dc:description>Графы при r=−4 и r=−2 имеют общую диагональ (10,4,4) и одну ближайшую точку спектрального конуса. Первый имеет остовной коэффициент 24, индекс Кирхгофа 10/3 и R(p,s)=1/6, R(q,t)=1; второй — 36, 23/9 и R(p,s)=1/5, R(q,t)=26/45. Справа показаны проверенные функции R(p,s)=(2/5)(26+4r)/(40−r²) и R(q,t)=(2/5)(44−4r)/(40−r²) на отрезке [−4,−2/3].</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -156,16 +156,16 @@ z
     </g>
    </g>
    <g id="text_7">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="153.028519" transform="rotate(-0 111.507097 153.028519)">1</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="153.028519" transform="rotate(-0 111.507097 153.028519)">p</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="153.028519" transform="rotate(-0 206.732903 153.028519)">2</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="153.028519" transform="rotate(-0 206.732903 153.028519)">q</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="248.254325" transform="rotate(-0 206.732903 248.254325)">3</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="248.254325" transform="rotate(-0 206.732903 248.254325)">s</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="248.254325" transform="rotate(-0 111.507097 248.254325)">4</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="248.254325" transform="rotate(-0 111.507097 248.254325)">t</text>
    </g>
   </g>
   <g id="axes_2">
@@ -297,16 +297,16 @@ z
     </g>
    </g>
    <g id="text_18">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="371.476519" transform="rotate(-0 111.507097 371.476519)">1</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="371.476519" transform="rotate(-0 111.507097 371.476519)">p</text>
    </g>
    <g id="text_19">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="371.476519" transform="rotate(-0 206.732903 371.476519)">2</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="371.476519" transform="rotate(-0 206.732903 371.476519)">q</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="466.702325" transform="rotate(-0 206.732903 466.702325)">3</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="206.732903" y="466.702325" transform="rotate(-0 206.732903 466.702325)">s</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="466.702325" transform="rotate(-0 111.507097 466.702325)">4</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="111.507097" y="466.702325" transform="rotate(-0 111.507097 466.702325)">t</text>
    </g>
   </g>
   <g id="axes_3">
@@ -617,8 +617,8 @@ L 852.08 160.033812
      <g transform="translate(863.28 164.933812)">
       <text>
        <tspan x="0" y="-0.796875" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'">R</tspan>
-       <tspan x="9.727539" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">1</tspan>
-       <tspan x="15.962598" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">3</tspan>
+       <tspan x="9.727539" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">p</tspan>
+       <tspan x="15.962598" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">s</tspan>
       </text>
      </g>
     </g>
@@ -633,8 +633,8 @@ L 852.08 181.034906
      <g transform="translate(863.28 185.934906)">
       <text>
        <tspan x="0" y="-0.796875" style="font-style: oblique; font-size: 14px; font-family: 'DejaVu Sans'">R</tspan>
-       <tspan x="9.727539" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">2</tspan>
-       <tspan x="15.962598" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">4</tspan>
+       <tspan x="9.727539" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">q</tspan>
+       <tspan x="15.962598" y="1.303118" style="font-size: 9.8px; font-family: 'DejaVu Sans'">t</tspan>
       </text>
      </g>
     </g>

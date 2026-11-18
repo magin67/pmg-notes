@@ -2,7 +2,7 @@
 from pathlib import Path
 import json
 
-from draw_admissible_chains import SVG, INK, MUTED, RED, BLUE, PURPLE, FILLS, ring, reflect
+from draw_admissible_chains import SVG, INK, MUTED, RED, BLUE, PURPLE, FILLS, ring, reflect, vertex_label
 from verify_admissible_chains import edge
 
 
@@ -46,7 +46,7 @@ def numbered_graph(s,ps,es,first=(),second=(),radius=5):
         s.line(ps[a],ps[b],color,5 if color in (RED,BLUE) else 2.5)
     for v,p in ps.items():
         s.circle(p,radius,'white',INK,1.8)
-        s.text(p[0]+10,p[1]-10,str(v),20)
+        s.text(p[0]+10,p[1]-10,vertex_label(v),20)
 
 
 def main():
@@ -65,7 +65,7 @@ def main():
     s.save('Путь и звезда из четырёх циклов.svg')
 
     s=SVG(1180,530,'Два расположения несвязных швов',
-          'Среднее ядро C12. Вход 01 и 45 одинаков. Выход в А равен 23 и 67, в Б равен 67 и 10-11. Вход и выход не пересекаются по вершинам.')
+          'Среднее ядро C12. Вход v₀v₁ и v₄v₅ одинаков. Выход в А равен v₂v₃ и v₆v₇, в Б равен v₆v₇ и v₁₀–v₁₁. Вход и выход не пересекаются по вершинам.')
     s.text(590,42,'Одинаковые несвязные швы, разное взаимное расположение',26,anchor='middle',weight='bold')
     for x,label,out in [(20,'А',[2,3,6,7]),(610,'Б',[6,7,10,11])]:
         s.panel(x,70,550,405);cx=x+275;cy=276
@@ -77,18 +77,18 @@ def main():
             s.line(ps[e[0]],ps[e[1]],color,6 if color in (RED,BLUE) else 2.5)
         for i,p in ps.items():
             s.circle(p,4)
-            s.text(cx+(p[0]-cx)*1.20,cy+(p[1]-cy)*1.20+7,str(i),20,anchor='middle')
-        s.text(cx,457,'Выход: ('+', '.join(map(str,out))+')',21,BLUE,anchor='middle')
-    s.text(590,510,'Вход в обеих конфигурациях: (0, 1, 4, 5)',22,RED,anchor='middle')
+            s.text(cx+(p[0]-cx)*1.20,cy+(p[1]-cy)*1.20+7,vertex_label(i),20,anchor='middle')
+        s.text(cx,457,'Выход: ('+', '.join(map(vertex_label,out))+')',21,BLUE,anchor='middle')
+    s.text(590,510,'Вход в обеих конфигурациях: (v₀, v₁, v₄, v₅)',22,RED,anchor='middle')
     s.save('Два несвязных шва в цикле.svg')
 
     s=SVG(1260,650,'Три пары непересекающихся рёбер куба',
-          'Первый шов 01. Второй равен 23, 67 или 26. Индуцированные подграфы на концах швов имеют вид C4, 2K2 и P4, поэтому пары неэквивалентны.')
+          'Первый шов v₀v₁. Второй равен v₂v₃, v₆v₇ или v₂v₆. Индуцированные подграфы на концах швов имеют вид C4, 2K2 и P4, поэтому пары неэквивалентны.')
     s.text(630,43,'Куб: отдельные рёбра эквивалентны, пары швов различаются',26,anchor='middle',weight='bold')
     local={0:(65,210),1:(215,210),2:(215,340),3:(65,340),4:(120,140),5:(270,140),6:(270,270),7:(120,270)}
     for col,(name,out,label) in enumerate([('same_face',[2,3],'C₄'),('opposite',[6,7],'2K₂'),('skew',[2,6],'P₄')]):
         x=20+420*col;s.panel(x,75,400,530)
-        s.text(x+200,111,'Швы 01 и '+''.join(map(str,out)),24,anchor='middle',weight='bold')
+        s.text(x+200,111,'Швы v₀v₁ и '+''.join(map(vertex_label,out)),24,anchor='middle',weight='bold')
         ps={v:(x+p[0],p[1]) for v,p in local.items()}
         rec=records['cube_'+name]
         numbered_graph(s,ps,rec['templates'][0]['edges'],[edge(0,1)],[edge(*out)])
@@ -99,14 +99,14 @@ def main():
         small={v:(x+p[0],p[1]) for v,p in small.items()}
         for a,b in rec['middle_boundary_induced_edges']:s.line(small[a],small[b],PURPLE,3)
         for v,p in small.items():
-            s.circle(p,16,'white',PURPLE,2);s.text(p[0],p[1]+6,str(v),18,PURPLE,anchor='middle')
+            s.circle(p,16,'white',PURPLE,2);s.text(p[0],p[1]+6,vertex_label(v),18,PURPLE,anchor='middle')
         s.text(x+200,553,label,25,PURPLE,anchor='middle',weight='bold')
         s.text(x+200,588,'τ = '+str(rec['tau']),23,anchor='middle')
     s.text(630,634,'Каждая сборка содержит три куба: 20 вершин и 34 ребра',22,anchor='middle')
     s.save('Пары рёберных швов куба.svg')
 
     s=SVG(1240,565,'Одинаковое остовное число и разные резистивные радиусы',
-          'Граф А: C4 и C3 с общей вершиной 0. Граф Б: K2,3 с висячим ребром 05. Оба имеют шесть вершин, семь рёбер и 12 деревьев. Радиусы 77/144 и 7/12 различны.')
+          'Граф А: C4 и C3 с общей вершиной v₀. Граф Б: K2,3 с висячим ребром v₀v₅. Оба имеют шесть вершин, семь рёбер и 12 деревьев. Радиусы 77/144 и 7/12 различны.')
     s.text(620,43,'Одного остовного числа недостаточно для определения радиуса',26,anchor='middle',weight='bold')
     for x,key,title,local in [
         (20,'equal_tau_A','А. Два цикла в общей вершине',{0:(270,265),1:(100,265),2:(100,135),3:(270,135),4:(430,200),5:(430,340)}),

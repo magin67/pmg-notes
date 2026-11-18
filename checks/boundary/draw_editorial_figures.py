@@ -28,7 +28,7 @@ class SVG:
 
     def text(self,x,y,value,size=20,color=INK,anchor='start',bold=False):
         value=escape(value)
-        for label,base,sub in [('fπ','f','π'),('gπ','g','π'),('δB','δ','B'),('g₁₂|₃₄','g','12|34')]:
+        for label,base,sub in [('fπ','f','π'),('gπ','g','π'),('δB','δ','B'),('g(ab|cd)','g','ab|cd')]:
             value=value.replace(label,f'{base}<tspan baseline-shift="sub" font-size="75%">{sub}</tspan>')
         self.parts.append(f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}" text-anchor="{anchor}" font-weight="{"bold" if bold else "normal"}">{value}</text>')
 
@@ -89,9 +89,9 @@ def overview(lang):
 def star(lang):
     en=lang=='en'
     pick=lambda a,b:b if en else a
-    s=SVG(720,pick('Один отклик не восстанавливает каждую рощу','One response does not recover every grove'),pick('Четырёхлучевая единичная звезда и полный граф на границе с проводимостями одна четверть имеют один электрический отклик, но разные веса рощи 12|34.','A four-leaf unit star and the complete boundary graph with conductances one quarter have the same response but different weights of the grove 12|34.'))
+    s=SVG(720,pick('Один отклик не восстанавливает каждую рощу','One response does not recover every grove'),pick('Четырёхлучевая единичная звезда и полный граф на границе с проводимостями одна четверть имеют один электрический отклик, но разные веса рощи ab|cd.','A four-leaf unit star and the complete boundary graph with conductances one quarter have the same response but different weights of the grove ab|cd.'))
     s.text(40,45,pick('Один отклик не восстанавливает каждую рощу','One response does not recover every grove'),28,bold=True)
-    s.text(40,80,pick('Золотые окружности: граница B = {1, 2, 3, 4}. Пересечение линий не создаёт вершину.','Gold circles: boundary B = {1, 2, 3, 4}. Crossing lines do not create a vertex.'),18,MUTED)
+    s.text(40,80,pick('Золотые окружности: граница B = {a, b, c, d}. Пересечение линий не создаёт вершину.','Gold circles: boundary B = {a, b, c, d}. Crossing lines do not create a vertex.'),18,MUTED)
     for x in (40,580): s.box(x,105,480,405,'#f7f9fb')
     s.text(280,140,pick('Звезда: каждое ребро имеет вес 1','Star: every edge has weight 1'),20,anchor='middle',bold=True)
     s.text(820,140,pick('Эффективный K₄: каждое ребро 1/4','Effective K₄: every edge has weight 1/4'),20,anchor='middle',bold=True)
@@ -103,15 +103,15 @@ def star(lang):
         for j in range(i+1,4):
             s.line(*right[i],*right[j],BLUE if (i,j)==(0,1) else GREEN if (i,j)==(2,3) else '#becbd6',6 if (i,j) in ((0,1),(2,3)) else 2)
     for coords in (left,right):
-        for i,(x,y) in enumerate(coords): s.node(x,y,str(i+1))
+        for i,(x,y) in enumerate(coords): s.node(x,y,'abcd'[i])
     s.text(280,465,pick('Две пары требуют общего центра h','Both pairs would need the center h'),19,anchor='middle')
-    s.text(820,465,pick('Выбранные рёбра 12 и 34 не связаны','Selected edges 12 and 34 are disjoint'),19,anchor='middle')
-    s.text(280,495,'g₁₂|₃₄ = 0,  δB = 4',23,anchor='middle',bold=True)
-    s.text(820,495,'g₁₂|₃₄ = (1/4)² = 1/16,  δB = 1',23,anchor='middle',bold=True)
+    s.text(820,465,pick('Выбранные рёбра ab и cd не связаны','Selected edges ab and cd are disjoint'),19,anchor='middle')
+    s.text(280,495,'g(ab|cd) = 0,  δB = 4',23,anchor='middle',bold=True)
+    s.text(820,495,'g(ab|cd) = (1/4)² = 1/16,  δB = 1',23,anchor='middle',bold=True)
     s.box(40,536,1020,142,'#fff7e6')
     s.text(550,571,pick('Одинаковый электрический отклик: Λ = I₄ − (1/4) 11ᵀ','The same electrical response: Λ = I₄ − (1/4) 11ᵀ'),24,anchor='middle',bold=True)
-    s.text(280,612,pick('Нормированный вес: g₁₂|₃₄ / δB = 0','Normalized weight: g₁₂|₃₄ / δB = 0'),20,anchor='middle')
-    s.text(820,612,pick('Нормированный вес: g₁₂|₃₄ / δB = 1/16','Normalized weight: g₁₂|₃₄ / δB = 1/16'),20,anchor='middle')
+    s.text(280,612,pick('Нормированный вес: g(ab|cd) / δB = 0','Normalized weight: g(ab|cd) / δB = 0'),20,anchor='middle')
+    s.text(820,612,pick('Нормированный вес: g(ab|cd) / δB = 1/16','Normalized weight: g(ab|cd) / δB = 1/16'),20,anchor='middle')
     s.text(550,650,pick('K₄ планарен, но не допускает все четыре вершины на одной внешней грани.','K₄ is planar, but cannot place all four vertices on a single outer face.'),20,anchor='middle')
     return s
 

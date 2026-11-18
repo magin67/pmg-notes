@@ -1,9 +1,9 @@
 ---
 title: Two Isomers of Three Hexagons
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -41,17 +41,17 @@ Write $N$ for the number of cores and $n$ for the number of vertices of the resu
 >
 > $$
 > \begin{aligned}
-> K_1&=C(0,1,9,8,7,6),\\
-> K_2&=C(0,1,2,3,4,5),\\
-> K_3^{\mathrm A}&=C(3,4,13,12,11,10),\\
-> K_3^{\text{B}}&=C(2,3,13,12,11,10)
+> K_1&=C(v_0,v_1,v_9,v_8,v_7,v_6),\\
+> K_2&=C(v_0,v_1,v_2,v_3,v_4,v_5),\\
+> K_3^{\mathrm A}&=C(v_3,v_4,v_{13},v_{12},v_{11},v_{10}),\\
+> K_3^{\text{B}}&=C(v_2,v_3,v_{13},v_{12},v_{11},v_{10})
 > \end{aligned}
 > \tag{1}
 > $$
 >
 > Graph A is the union of $K_1,K_2,K_3^{\mathrm A}$, and graph B the union of $K_1,K_2,K_3^{\text{B}}$. Edges are combined as sets: each shared edge is counted once. There are no other identifications.
 
-The input seam of the middle core is $01$. Its output seam is $34$ in A and $23$ in B. Each seam has two vertices and one edge; the input and output are disjoint. Both assemblies are therefore admissible in the sense of [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains#Admissible open chains of cycles|Admissible open chains of cycles]], and
+The input seam of the middle core is $v_0v_1$. Its output seam is $v_3v_4$ in A and $v_2v_3$ in B. Each seam has two vertices and one edge; the input and output are disjoint. Both assemblies are therefore admissible in the sense of [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains#Admissible open chains of cycles|Admissible open chains of cycles]], and
 
 $$
 n=3\cdot6-2\cdot2=14,\qquad |E|=3\cdot6-2=16
@@ -59,7 +59,7 @@ $$
 
 ![Seam positions and induced subgraphs on degree-three vertices](images/Seams%20and%20Degree-Three%20Vertices.svg)
 
-**One core scheme, two graphs.** The seam $01$ is red; the other seam is blue. The highlighted vertices have degree $3$. Their induced subgraph consists of two separate edges in A and a three-edge path in B. The layouts depict abstract graphs and are not resistance embeddings.
+**One core scheme, two graphs.** The seam $v_0v_1$ is red; the other seam is blue. The highlighted vertices have degree $3$. Their induced subgraph consists of two separate edges in A and a three-edge path in B. The layouts depict abstract graphs and are not resistance embeddings.
 
 > [!info] Nonisomorphism and equal parameters
 > **Proposition.** Graphs A and B are nonisomorphic but have isomorphic cycle matroids. In particular, their ordinary forest polynomials agree, and
@@ -73,7 +73,7 @@ $$
 > Here $\rho$ is the resistance radius in the PMG normalization: the square of the Euclidean circumradius of the resistance simplex. The matroid statement and its conditions are proved in [[en/Graph Transformations and Gluing/Chains of cores/Why Chain Configuration Preserves Matroid Parameters|Why Chain Configuration Preserves Matroid Parameters]].
 
 > [!note]- Nonisomorphism and numerical checks
-> **Proof.** An isomorphism preserves degrees and the number of edges between vertices of degree $3$. The figure gives $2$ and $3$, so no isomorphism exists. The spanning-tree count is independently obtained as the determinant of any reduced Laplacian. With reference vertex $13$, set $\mathbf A=\mathbf L_{\widehat{13},\widehat{13}}$ and $\mathbf d=\operatorname{diag}(\mathbf A^{-1})$. The formula in [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Resistance Radius - Forest Formula and Matroid Invariance#The radius as Laplacian energy|The radius as Laplacian energy]] gives
+> **Proof.** An isomorphism preserves degrees and the number of edges between vertices of degree $3$. The figure gives $2$ and $3$, so no isomorphism exists. The spanning-tree count is independently obtained as the determinant of any reduced Laplacian. With reference vertex $v_{13}$, set $\mathbf A=\mathbf L_{\widehat{v_{13}},\widehat{v_{13}}}$ and $\mathbf d=\operatorname{diag}(\mathbf A^{-1})$. The formula in [[en/Invariants, Decompositions, and Spectra/Matroid parameters and forest characteristics of graphs/Resistance Radius - Forest Formula and Matroid Invariance#The radius as Laplacian energy|The radius as Laplacian energy]] gives
 >
 > $$
 > \tau=\det\mathbf A=204,\qquad
@@ -85,13 +85,13 @@ $$
 
 ## Laplacians and three different polynomials
 
-With vertices ordered as $0,1,\ldots,13$, the common part of the edge lists is
+With vertices ordered as $v_0,v_1,\ldots,v_{13}$, the common part of the edge lists is
 
 $$
 \begin{aligned}
-E_* = \{&(0,1),(0,5),(0,6),(1,2),(1,9),\\
-&(2,3),(3,4),(4,5),(6,7),(7,8),(8,9),\\
-&(10,11),(11,12),(12,13)\}
+E_* = \{&(v_0,v_1),(v_0,v_5),(v_0,v_6),(v_1,v_2),(v_1,v_9),\\
+&(v_2,v_3),(v_3,v_4),(v_4,v_5),(v_6,v_7),(v_7,v_8),(v_8,v_9),\\
+&(v_{10},v_{11}),(v_{11},v_{12}),(v_{12},v_{13})\}
 \end{aligned}
 $$
 
@@ -99,8 +99,8 @@ The complete lists are
 
 $$
 \begin{aligned}
-E_{\mathrm A}&=E_*\cup\{(3,10),(4,13)\},\\
-E_{\text{B}}&=E_*\cup\{(2,10),(3,13)\}
+E_{\mathrm A}&=E_*\cup\{(v_3,v_{10}),(v_4,v_{13})\},\\
+E_{\text{B}}&=E_*\cup\{(v_2,v_{10}),(v_3,v_{13})\}
 \end{aligned}
 $$
 
@@ -358,7 +358,7 @@ The term $y-1=\xi-3$ accounts for the seam vertex's degree $3$. The one in $w$ r
 
 **Two identical eliminated blocks, two seam positions.** Each end block contributes a factor $k$ to the determinant. On the six remaining vertices, seam endpoints have diagonal entries $d$ and the other vertices $y$; seam entries are $w$, and other edge entries $1$. These are spectral matrices depending on $\xi$, not Laplacians of new unit-weight graphs.
 
-In the order $0,\ldots,5$, the remaining matrices are
+In the order $v_0,\ldots,v_5$, the remaining matrices are
 
 $$
 \mathbf H_{\mathrm A}=

@@ -1,7 +1,7 @@
 """Generate editable SVG figures for the configuration-invariance note."""
 from math import hypot
 
-from draw_admissible_chains import SVG, INK, MUTED, BLUE, PURPLE, FILLS, draw_pair
+from draw_admissible_chains import SVG, INK, MUTED, BLUE, PURPLE, FILLS, draw_pair, vertex_label
 from verify_admissible_chains import hex_pair, validate
 
 
@@ -41,8 +41,8 @@ def main():
     s.save('Общий двойственный мультиграф цепочек.svg')
 
     s = SVG(1240,750,'Неизоморфность двух цепочек по вершинам степени три',
-            'У каждой цепочки четыре вершины степени 3. В конфигурации А они индуцируют два раздельных ребра 01 и 34; '
-            'в конфигурации Б - путь 0-1-2-3 из трёх рёбер. Это препятствует изоморфизму графов.')
+            'У каждой цепочки четыре вершины степени 3. В конфигурации А они индуцируют два раздельных ребра v₀v₁ и v₃v₄; '
+            'в конфигурации Б - путь v₀-v₁-v₂-v₃ из трёх рёбер. Это препятствует изоморфизму графов.')
     for x,start,name in [(20,3,'А. Противоположные швы'),(630,2,'Б. Швы через одно ребро')]:
         s.panel(x,20,590,675)
         s.text(x+24,62,name,24,weight='bold')
@@ -61,7 +61,7 @@ def main():
             s.line(small[a],small[b],PURPLE,4)
         for v,p in small.items():
             s.circle(p,18,'white',PURPLE,2)
-            s.text(p[0],p[1]+7,str(v),21,PURPLE,anchor='middle')
+            s.text(p[0],p[1]+7,vertex_label(v),21,PURPLE,anchor='middle')
         s.text(x+295,660,'2 раздельных ребра' if start == 3 else 'Путь из 3 рёбер',23,anchor='middle',weight='bold')
     s.text(620,732,'Изоморфизм сохраняет степени вершин и рёбра индуцированного подграфа',22,anchor='middle')
     s.save('Неизоморфность двух шестиугольных цепочек.svg')

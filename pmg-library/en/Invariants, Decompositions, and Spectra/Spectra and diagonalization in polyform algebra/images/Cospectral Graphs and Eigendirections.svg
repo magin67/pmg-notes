@@ -3,12 +3,12 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="878.4pt" height="532.8pt" viewBox="0 0 878.4 532.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <title>Cospectral Graphs and Eigendirections</title>
-<desc>Two nonisomorphic weighted graphs with spectrum 0,4,4,8. G1 is K4 with conductance 3 on edge 12 and 1 on every other edge; G2 is K2,2 with parts {1,2},{3,4} and all conductances 2. The eigenvalue-8 modes are z1=(1,-1,0,0)/sqrt(2) and z2=(1,1,-1,-1)/2. Blue denotes a positive component, orange a negative component, and gray zero. The E8 projectors differ, although their ranks and the Laplacian spectra agree.</desc>
+<desc>Two nonisomorphic weighted graphs with spectrum 0,4,4,8. G1 is K4 with conductance 3 on edge pq and 1 on every other edge; G2 is K2,2 with parts {p,q},{s,t} and all conductances 2. The eigenvalue-8 modes are z1=(1,-1,0,0)/sqrt(2) and z2=(1,1,-1,-1)/2. Blue denotes a positive component, orange a negative component, and gray zero. The E8 projectors differ, although their ranks and the Laplacian spectra agree.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Two nonisomorphic weighted graphs with spectrum 0,4,4,8. G1 is K4 with conductance 3 on edge 12 and 1 on every other edge; G2 is K2,2 with parts {1,2},{3,4} and all conductances 2. The eigenvalue-8 modes are z1=(1,-1,0,0)/sqrt(2) and z2=(1,1,-1,-1)/2. Blue denotes a positive component, orange a negative component, and gray zero. The E8 projectors differ, although their ranks and the Laplacian spectra agree.</dc:description>
+    <dc:description>Two nonisomorphic weighted graphs with spectrum 0,4,4,8. G1 is K4 with conductance 3 on edge pq and 1 on every other edge; G2 is K2,2 with parts {p,q},{s,t} and all conductances 2. The eigenvalue-8 modes are z1=(1,-1,0,0)/sqrt(2) and z2=(1,1,-1,-1)/2. Blue denotes a positive component, orange a negative component, and gray zero. The E8 projectors differ, although their ranks and the Laplacian spectra agree.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -229,16 +229,16 @@ z
     </g>
    </g>
    <g id="text_11">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="158.055273" y="166.42846" transform="rotate(-0 158.055273 166.42846)">1</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="158.055273" y="166.42846" transform="rotate(-0 158.055273 166.42846)">p</text>
    </g>
    <g id="text_12">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="316.280727" y="166.42846" transform="rotate(-0 316.280727 166.42846)">2</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="316.280727" y="166.42846" transform="rotate(-0 316.280727 166.42846)">q</text>
    </g>
    <g id="text_13">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="316.280727" y="324.653915" transform="rotate(-0 316.280727 324.653915)">3</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="316.280727" y="324.653915" transform="rotate(-0 316.280727 324.653915)">s</text>
    </g>
    <g id="text_14">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="158.055273" y="324.653915" transform="rotate(-0 158.055273 324.653915)">4</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="158.055273" y="324.653915" transform="rotate(-0 158.055273 324.653915)">t</text>
    </g>
   </g>
   <g id="axes_2">
@@ -371,16 +371,16 @@ z
     </g>
    </g>
    <g id="text_23">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="570.903273" y="166.42846" transform="rotate(-0 570.903273 166.42846)">1</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="570.903273" y="166.42846" transform="rotate(-0 570.903273 166.42846)">p</text>
    </g>
    <g id="text_24">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="729.128727" y="166.42846" transform="rotate(-0 729.128727 166.42846)">2</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="729.128727" y="166.42846" transform="rotate(-0 729.128727 166.42846)">q</text>
    </g>
    <g id="text_25">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="729.128727" y="324.653915" transform="rotate(-0 729.128727 324.653915)">3</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="729.128727" y="324.653915" transform="rotate(-0 729.128727 324.653915)">s</text>
    </g>
    <g id="text_26">
-    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="570.903273" y="324.653915" transform="rotate(-0 570.903273 324.653915)">4</text>
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="570.903273" y="324.653915" transform="rotate(-0 570.903273 324.653915)">t</text>
    </g>
   </g>
   <g id="text_27">
@@ -466,8 +466,8 @@ z
      <tspan x="135.903955" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #19354a">c</tspan>
      <tspan x="226.245068" y="-0.125" style="font-style: oblique; font-size: 13px; font-family: 'DejaVu Sans'; fill: #19354a">c</tspan>
      <tspan x="10.07373" y="1.824994" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #19354a">1</tspan>
-     <tspan x="143.051416" y="1.824994" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #19354a">1</tspan>
-     <tspan x="148.841113" y="1.824994" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #19354a">2</tspan>
+     <tspan x="143.051416" y="1.824994" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #19354a">p</tspan>
+     <tspan x="148.841113" y="1.824994" style="font-size: 9.1px; font-family: 'DejaVu Sans'; fill: #19354a">q</tspan>
      <tspan x="16.218896" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19354a">:</tspan>
      <tspan x="20.598779" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19354a"> </tspan>
      <tspan x="24.731104" y="-0.125" style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19354a">c</tspan>

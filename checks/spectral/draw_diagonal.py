@@ -66,7 +66,7 @@ for row,(i,q,s,labels,lam,inv) in enumerate(modes):
     for j,(v,label) in enumerate(zip(q,labels)):
         col = BLUE if v>0 else ORANGE if v<0 else GREY
         ax.scatter(j*1.5,y,s=560,color=col,edgecolor="white",linewidth=1.6,zorder=2)
-        ax.text(j*1.5,y,str(j+1),ha="center",va="center",color="white",fontsize=12,zorder=3)
+        ax.text(j*1.5,y,'pqs'[j],ha="center",va="center",color="white",fontsize=12,zorder=3)
         ax.text(j*1.5,y-.39,label,ha="center",color=INK,fontsize=14)
     ax.text(5,y,lam,ha="center",va="center",color=BLUE,fontsize=21)
     ax.text(6.6,y,inv,ha="center",va="center",color=ORANGE,fontsize=21)

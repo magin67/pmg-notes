@@ -110,7 +110,7 @@ z
     </g>
    </g>
    <g id="text_1">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="123.405625" transform="rotate(-0 249.46475 123.405625)">0 → 1</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="123.405625" transform="rotate(-0 249.46475 123.405625)">0 → a₁</text>
    </g>
    <g id="PathCollection_2">
     <defs>
@@ -131,7 +131,7 @@ z
     </g>
    </g>
    <g id="text_2">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="152.550375" transform="rotate(-0 299.944938 152.550375)">1 → 2</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="152.550375" transform="rotate(-0 299.944938 152.550375)">1 → a₂</text>
    </g>
    <g id="PathCollection_3">
     <defs>
@@ -152,7 +152,7 @@ z
     </g>
    </g>
    <g id="text_3">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="203.030563" transform="rotate(-0 329.089688 203.030563)">2 → 3</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="203.030563" transform="rotate(-0 329.089688 203.030563)">2 → a₃</text>
    </g>
    <g id="PathCollection_4">
     <defs>
@@ -173,7 +173,7 @@ z
     </g>
    </g>
    <g id="text_4">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="261.320062" transform="rotate(-0 329.089688 261.320062)">3 → 4</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="261.320062" transform="rotate(-0 329.089688 261.320062)">3 → a₄</text>
    </g>
    <g id="PathCollection_5">
     <defs>
@@ -194,7 +194,7 @@ z
     </g>
    </g>
    <g id="text_5">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="311.80025" transform="rotate(-0 299.944938 311.80025)">4 → 5</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="311.80025" transform="rotate(-0 299.944938 311.80025)">4 → a₅</text>
    </g>
    <g id="PathCollection_6">
     <defs>
@@ -215,7 +215,7 @@ z
     </g>
    </g>
    <g id="text_6">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="340.945" transform="rotate(-0 249.46475 340.945)">5 → 6</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="340.945" transform="rotate(-0 249.46475 340.945)">5 → a₆</text>
    </g>
    <g id="PathCollection_7">
     <g clip-path="url(#p149be76b49)">
@@ -223,7 +223,7 @@ z
     </g>
    </g>
    <g id="text_7">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="340.945" transform="rotate(-0 191.17525 340.945)">6 → 6</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="340.945" transform="rotate(-0 191.17525 340.945)">6 → a₆</text>
    </g>
    <g id="PathCollection_8">
     <g clip-path="url(#p149be76b49)">
@@ -231,7 +231,7 @@ z
     </g>
    </g>
    <g id="text_8">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="311.80025" transform="rotate(-0 140.695062 311.80025)">7 → 5</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="311.80025" transform="rotate(-0 140.695062 311.80025)">7 → a₅</text>
    </g>
    <g id="PathCollection_9">
     <g clip-path="url(#p149be76b49)">
@@ -239,7 +239,7 @@ z
     </g>
    </g>
    <g id="text_9">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="261.320062" transform="rotate(-0 111.550312 261.320062)">8 → 4</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="261.320062" transform="rotate(-0 111.550312 261.320062)">8 → a₄</text>
    </g>
    <g id="PathCollection_10">
     <g clip-path="url(#p149be76b49)">
@@ -247,7 +247,7 @@ z
     </g>
    </g>
    <g id="text_10">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="203.030563" transform="rotate(-0 111.550312 203.030563)">9 → 3</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="203.030563" transform="rotate(-0 111.550312 203.030563)">9 → a₃</text>
    </g>
    <g id="PathCollection_11">
     <g clip-path="url(#p149be76b49)">
@@ -255,7 +255,7 @@ z
     </g>
    </g>
    <g id="text_11">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="152.550375" transform="rotate(-0 140.695062 152.550375)">10 → 2</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="152.550375" transform="rotate(-0 140.695062 152.550375)">10 → a₂</text>
    </g>
    <g id="PathCollection_12">
     <g clip-path="url(#p149be76b49)">
@@ -263,7 +263,7 @@ z
     </g>
    </g>
    <g id="text_12">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="123.405625" transform="rotate(-0 191.17525 123.405625)">11 → 1</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="123.405625" transform="rotate(-0 191.17525 123.405625)">11 → a₁</text>
    </g>
    <g id="text_13">
     <text style="fill: #19354a; font: 15px 'DejaVu Sans'; text-anchor: middle" x="220.32" y="100.44" transform="rotate(-0 220.32 100.44)">m = 1</text>
@@ -413,22 +413,22 @@ z
     </g>
    </g>
    <g id="text_15">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="547.664516" y="232.45125" transform="rotate(-0 547.664516 232.45125)">1</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="547.664516" y="232.45125" transform="rotate(-0 547.664516 232.45125)">a₁</text>
    </g>
    <g id="text_16">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="596.43871" y="232.45125" transform="rotate(-0 596.43871 232.45125)">2</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="596.43871" y="232.45125" transform="rotate(-0 596.43871 232.45125)">a₂</text>
    </g>
    <g id="text_17">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="645.212903" y="232.45125" transform="rotate(-0 645.212903 232.45125)">3</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="645.212903" y="232.45125" transform="rotate(-0 645.212903 232.45125)">a₃</text>
    </g>
    <g id="text_18">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="693.987097" y="232.45125" transform="rotate(-0 693.987097 232.45125)">4</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="693.987097" y="232.45125" transform="rotate(-0 693.987097 232.45125)">a₄</text>
    </g>
    <g id="text_19">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="742.76129" y="232.45125" transform="rotate(-0 742.76129 232.45125)">5</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="742.76129" y="232.45125" transform="rotate(-0 742.76129 232.45125)">a₅</text>
    </g>
    <g id="text_20">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="791.535484" y="232.45125" transform="rotate(-0 791.535484 232.45125)">6</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="791.535484" y="232.45125" transform="rotate(-0 791.535484 232.45125)">a₆</text>
    </g>
   </g>
   <g id="axes_3">
@@ -498,7 +498,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_21">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="390.165625" transform="rotate(-0 249.46475 390.165625)">0 → 1</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="390.165625" transform="rotate(-0 249.46475 390.165625)">0 → a₁</text>
    </g>
    <g id="PathCollection_20">
     <g clip-path="url(#p20b2d2df9a)">
@@ -506,7 +506,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_22">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="419.310375" transform="rotate(-0 299.944938 419.310375)">1 → 2</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="419.310375" transform="rotate(-0 299.944938 419.310375)">1 → a₂</text>
    </g>
    <g id="PathCollection_21">
     <g clip-path="url(#p20b2d2df9a)">
@@ -514,7 +514,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_23">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="469.790563" transform="rotate(-0 329.089688 469.790563)">2 → 3</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="469.790563" transform="rotate(-0 329.089688 469.790563)">2 → a₃</text>
    </g>
    <g id="PathCollection_22">
     <g clip-path="url(#p20b2d2df9a)">
@@ -522,7 +522,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_24">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="528.080062" transform="rotate(-0 329.089688 528.080062)">3 → 4</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="329.089688" y="528.080062" transform="rotate(-0 329.089688 528.080062)">3 → a₄</text>
    </g>
    <g id="PathCollection_23">
     <g clip-path="url(#p20b2d2df9a)">
@@ -530,7 +530,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_25">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="578.56025" transform="rotate(-0 299.944938 578.56025)">4 → 5</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="299.944938" y="578.56025" transform="rotate(-0 299.944938 578.56025)">4 → a₅</text>
    </g>
    <g id="PathCollection_24">
     <g clip-path="url(#p20b2d2df9a)">
@@ -538,7 +538,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_26">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="607.705" transform="rotate(-0 249.46475 607.705)">5 → 6</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="249.46475" y="607.705" transform="rotate(-0 249.46475 607.705)">5 → a₆</text>
    </g>
    <g id="PathCollection_25">
     <g clip-path="url(#p20b2d2df9a)">
@@ -546,7 +546,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_27">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="607.705" transform="rotate(-0 191.17525 607.705)">6 → 6</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="607.705" transform="rotate(-0 191.17525 607.705)">6 → a₆</text>
    </g>
    <g id="PathCollection_26">
     <g clip-path="url(#p20b2d2df9a)">
@@ -554,7 +554,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_28">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="578.56025" transform="rotate(-0 140.695062 578.56025)">7 → 5</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="578.56025" transform="rotate(-0 140.695062 578.56025)">7 → a₅</text>
    </g>
    <g id="PathCollection_27">
     <g clip-path="url(#p20b2d2df9a)">
@@ -562,7 +562,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_29">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="528.080062" transform="rotate(-0 111.550312 528.080062)">8 → 4</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="528.080062" transform="rotate(-0 111.550312 528.080062)">8 → a₄</text>
    </g>
    <g id="PathCollection_28">
     <g clip-path="url(#p20b2d2df9a)">
@@ -570,7 +570,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_30">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="469.790563" transform="rotate(-0 111.550312 469.790563)">9 → 3</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="111.550312" y="469.790563" transform="rotate(-0 111.550312 469.790563)">9 → a₃</text>
    </g>
    <g id="PathCollection_29">
     <g clip-path="url(#p20b2d2df9a)">
@@ -578,7 +578,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_31">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="419.310375" transform="rotate(-0 140.695062 419.310375)">10 → 2</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="140.695062" y="419.310375" transform="rotate(-0 140.695062 419.310375)">10 → a₂</text>
    </g>
    <g id="PathCollection_30">
     <g clip-path="url(#p20b2d2df9a)">
@@ -586,7 +586,7 @@ L 305.965423 472.951378
     </g>
    </g>
    <g id="text_32">
-    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="390.165625" transform="rotate(-0 191.17525 390.165625)">11 → 1</text>
+    <text style="fill: #19354a; font: 11px 'DejaVu Sans'; text-anchor: middle" x="191.17525" y="390.165625" transform="rotate(-0 191.17525 390.165625)">11 → a₁</text>
    </g>
    <g id="text_33">
     <text style="fill: #19354a; font: 15px 'DejaVu Sans'; text-anchor: middle" x="220.32" y="367.2" transform="rotate(-0 220.32 367.2)">m = 3</text>
@@ -659,22 +659,22 @@ L 669.6 561.63913
     </g>
    </g>
    <g id="text_35">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="557.843478" y="433.47212" transform="rotate(-0 557.843478 433.47212)">1</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="557.843478" y="433.47212" transform="rotate(-0 557.843478 433.47212)">a₁</text>
    </g>
    <g id="text_36">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="669.6" y="433.47212" transform="rotate(-0 669.6 433.47212)">3</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="669.6" y="433.47212" transform="rotate(-0 669.6 433.47212)">a₃</text>
    </g>
    <g id="text_37">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="669.6" y="564.95038" transform="rotate(-0 669.6 564.95038)">6</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="669.6" y="564.95038" transform="rotate(-0 669.6 564.95038)">a₆</text>
    </g>
    <g id="text_38">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="557.843478" y="564.95038" transform="rotate(-0 557.843478 564.95038)">4</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="557.843478" y="564.95038" transform="rotate(-0 557.843478 564.95038)">a₄</text>
    </g>
    <g id="text_39">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="781.356522" y="433.47212" transform="rotate(-0 781.356522 433.47212)">2</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="781.356522" y="433.47212" transform="rotate(-0 781.356522 433.47212)">a₂</text>
    </g>
    <g id="text_40">
-    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="781.356522" y="564.95038" transform="rotate(-0 781.356522 564.95038)">5</text>
+    <text style="fill: #ffffff; font: 12px 'DejaVu Sans'; text-anchor: middle" x="781.356522" y="564.95038" transform="rotate(-0 781.356522 564.95038)">a₅</text>
    </g>
   </g>
   <g id="patch_2">
@@ -704,7 +704,7 @@ z
    <text style="fill: #19354a; font: 12px 'DejaVu Sans'; text-anchor: middle" x="432" y="46.512" transform="rotate(-0 432 46.512)">Matching colors identify a pair; label: position j → new vertex</text>
   </g>
   <g id="text_43">
-   <text style="fill: #19354a; font: 12px 'DejaVu Sans'; text-anchor: middle" x="432" y="77.292" transform="rotate(-0 432 77.292)">0,11 → 1     1,10 → 2     2,9 → 3     3,8 → 4     4,7 → 5     5,6 → 6</text>
+   <text style="fill: #19354a; font: 12px 'DejaVu Sans'; text-anchor: middle" x="432" y="77.292" transform="rotate(-0 432 77.292)">0,11 → a₁     1,10 → a₂     2,9 → a₃     3,8 → a₄     4,7 → a₅     5,6 → a₆</text>
   </g>
   <g id="text_44">
    <text style="fill: #19354a; font: 12px 'DejaVu Sans'; text-anchor: middle" x="432" y="656.64" transform="rotate(-0 432 656.64)">Count transitions from one vertex of each pair. Every resulting edge has conductance 1.</text>

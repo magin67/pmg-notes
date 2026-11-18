@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="620" viewBox="0 0 1240 620" role="img" aria-labelledby="title desc">
-<title id="title">Two assemblies of three hexagons</title><desc id="desc">Two graphs with seams 01 and 34 or 01 and 23; the same core scheme P3, 14 vertices, and 16 edges.</desc>
+<title id="title">Two assemblies of three hexagons</title><desc id="desc">Two graphs with seams v₀v₁ and v₃v₄ or v₀v₁ and v₂v₃; the same core scheme P3, 14 vertices, and 16 edges.</desc>
 <rect width="1240" height="620" fill="white" />
 <g font-family="DejaVu Sans, Arial, sans-serif">
 <rect x="20" y="20" width="590" height="580" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
@@ -33,43 +33,43 @@
 <line x1="269.50" y1="237.56" x2="254.80" y2="263.03" stroke="#196bb9" stroke-width="3" stroke-linecap="round" />
 <polygon points="254.80,263.03 265.13,255.13 256.47,250.13" fill="#196bb9" />
 <circle cx="350.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="339.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="339.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="385.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="363.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="363.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="350.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="339.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="339.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="280.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="291.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="291.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="245.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="267.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="267.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="280.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="291.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="291.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="455.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="455.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<text x="455.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₉</text>
 <circle cx="490.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="490.00" y="330.62" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<text x="490.00" y="330.62" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₈</text>
 <circle cx="455.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="455.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<text x="455.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₇</text>
 <circle cx="385.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="385.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<text x="385.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₆</text>
 <circle cx="175.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="175.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">13</text>
+<text x="175.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₃</text>
 <circle cx="140.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="140.00" y="209.38" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">12</text>
+<text x="140.00" y="209.38" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₂</text>
 <circle cx="175.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="175.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<text x="175.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₁</text>
 <circle cx="245.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="245.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
-<text x="315.00" y="465.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Input: (0, 1)     Output: (3, 4)</text>
+<text x="245.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₀</text>
+<text x="315.00" y="465.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Input: (v₀, v₁)     Output: (v₃, v₄)</text>
 <text x="315.00" y="495.00" font-size="17" fill="#52657a" text-anchor="middle" font-weight="normal">Equal labels are identified</text>
 <line x1="210.00" y1="548.00" x2="315.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round" />
 <line x1="315.00" y1="548.00" x2="420.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round" />
 <circle cx="210.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2" />
-<text x="210.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="210.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">K₁</text>
 <circle cx="315.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2" />
-<text x="315.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="315.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">K₂</text>
 <circle cx="420.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2" />
-<text x="420.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="420.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">K₃</text>
 <text x="315.00" y="585.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">Core scheme: P₃;  s₁ = s₂ = 2</text>
 <rect x="630" y="20" width="590" height="580" rx="16" fill="#f7f9fc" stroke="#dce4ed" />
 <text x="654.00" y="60.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">B. One edge between seams</text>
@@ -102,42 +102,42 @@
 <line x1="939.00" y1="219.38" x2="909.60" y2="219.38" stroke="#196bb9" stroke-width="3" stroke-linecap="round" />
 <polygon points="909.60,219.38 921.60,224.38 921.60,214.38" fill="#196bb9" />
 <circle cx="960.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="949.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="949.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="995.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="973.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="973.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="960.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="949.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="949.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="890.00" cy="219.38" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="901.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="901.00" y="244.43" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="855.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="877.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="877.00" y="286.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="890.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="901.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="901.00" y="327.57" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="1065.00" cy="280.00" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="1065.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<text x="1065.00" y="270.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₉</text>
 <circle cx="1100.00" cy="340.62" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="1100.00" y="330.62" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<text x="1100.00" y="330.62" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₈</text>
 <circle cx="1065.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="1065.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<text x="1065.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₇</text>
 <circle cx="995.00" cy="401.24" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="995.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<text x="995.00" y="391.24" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₆</text>
 <circle cx="855.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="855.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">13</text>
+<text x="855.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₃</text>
 <circle cx="890.00" cy="98.13" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="890.00" y="88.13" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">12</text>
+<text x="890.00" y="88.13" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₂</text>
 <circle cx="960.00" cy="98.13" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="960.00" y="88.13" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<text x="960.00" y="88.13" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₁</text>
 <circle cx="995.00" cy="158.76" r="4" fill="#172b43" stroke="none" stroke-width="2" />
-<text x="995.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
-<text x="925.00" y="465.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Input: (0, 1)     Output: (2, 3)</text>
+<text x="995.00" y="148.76" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₀</text>
+<text x="925.00" y="465.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Input: (v₀, v₁)     Output: (v₂, v₃)</text>
 <text x="925.00" y="495.00" font-size="17" fill="#52657a" text-anchor="middle" font-weight="normal">Equal labels are identified</text>
 <line x1="820.00" y1="548.00" x2="925.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round" />
 <line x1="925.00" y1="548.00" x2="1030.00" y2="548.00" stroke="#52657a" stroke-width="2" stroke-linecap="round" />
 <circle cx="820.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2" />
-<text x="820.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="820.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">K₁</text>
 <circle cx="925.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2" />
-<text x="925.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="925.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">K₂</text>
 <circle cx="1030.00" cy="548.00" r="17" fill="white" stroke="#52657a" stroke-width="2" />
-<text x="1030.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="1030.00" y="554.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">K₃</text>
 <text x="925.00" y="585.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">Core scheme: P₃;  s₁ = s₂ = 2</text>
 </g></svg>

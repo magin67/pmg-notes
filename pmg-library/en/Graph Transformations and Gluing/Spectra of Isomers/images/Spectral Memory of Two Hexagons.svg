@@ -19,22 +19,22 @@
 <line x1="165.00" y1="178.77" x2="192.00" y2="132.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round" />
 <line x1="165.00" y1="85.23" x2="111.00" y2="85.23" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
 <circle cx="165.00" cy="178.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="154.00" y="204.77" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="154.00" y="204.77" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="192.00" cy="132.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="200.00" y="122.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="200.00" y="122.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="165.00" cy="85.23" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
-<text x="172.29" y="78.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="172.29" y="78.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="111.00" cy="85.23" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
-<text x="103.71" y="78.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="103.71" y="78.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="84.00" cy="132.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="69.42" y="138.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="69.42" y="138.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="111.00" cy="178.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="103.71" y="197.39" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="103.71" y="197.39" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="246.00" cy="132.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
 <circle cx="273.00" cy="178.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
 <circle cx="246.00" cy="225.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
 <circle cx="192.00" cy="225.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="425.00" y="64.00" font-size="23.667" fill="#196bb9" text-anchor="middle" font-weight="bold">Output (2, 3)</text>
+<text x="425.00" y="64.00" font-size="23.667" fill="#196bb9" text-anchor="middle" font-weight="bold">Output (v₂, v₃)</text>
 <text x="425.00" y="111.00" font-size="26" fill="#172b43" text-anchor="middle" font-weight="bold">P(1) = 28 435</text>
 <text x="425.00" y="155.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">Other coordinates of z:</text>
 <text x="425.00" y="192.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">(12331, 12694, 4763, 4707)</text>
@@ -62,22 +62,22 @@
 <line x1="165.00" y1="428.77" x2="192.00" y2="382.00" stroke="#bc294b" stroke-width="5" stroke-linecap="round" />
 <line x1="111.00" y1="335.23" x2="84.00" y2="382.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round" />
 <circle cx="165.00" cy="428.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="154.00" y="454.77" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="154.00" y="454.77" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="192.00" cy="382.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="200.00" y="372.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="200.00" y="372.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="165.00" cy="335.23" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="172.29" y="328.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="172.29" y="328.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="111.00" cy="335.23" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
-<text x="103.71" y="328.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="103.71" y="328.61" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="84.00" cy="382.00" r="5" fill="white" stroke="#196bb9" stroke-width="2" />
-<text x="69.42" y="388.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="69.42" y="388.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="111.00" cy="428.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="103.71" y="447.39" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="103.71" y="447.39" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="246.00" cy="382.00" r="5" fill="white" stroke="#172b43" stroke-width="2" />
 <circle cx="273.00" cy="428.77" r="5" fill="white" stroke="#172b43" stroke-width="2" />
 <circle cx="246.00" cy="475.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
 <circle cx="192.00" cy="475.53" r="5" fill="white" stroke="#172b43" stroke-width="2" />
-<text x="425.00" y="314.00" font-size="23.667" fill="#196bb9" text-anchor="middle" font-weight="bold">Output (3, 4)</text>
+<text x="425.00" y="314.00" font-size="23.667" fill="#196bb9" text-anchor="middle" font-weight="bold">Output (v₃, v₄)</text>
 <text x="425.00" y="361.00" font-size="26" fill="#172b43" text-anchor="middle" font-weight="bold">P(1) = 28 435</text>
 <text x="425.00" y="405.00" font-size="19" fill="#52657a" text-anchor="middle" font-weight="normal">Other coordinates of z:</text>
 <text x="425.00" y="442.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">(12694, 12694, 4884, 4828)</text>

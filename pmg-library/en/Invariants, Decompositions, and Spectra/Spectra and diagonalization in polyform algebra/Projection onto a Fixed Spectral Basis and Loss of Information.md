@@ -1,9 +1,9 @@
 ---
 title: "Projection onto a Fixed Spectral Basis and Loss of Information"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 3
-translated_revision: 6
+updated: 2026-11-18
+revision: 4
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -132,7 +132,7 @@ The first term measures the discarded mixing of modes; the second measures the a
 
 ## Example: a cycle, rotated modes, and negative conductances
 
-Consider the unit cycle $1-2-3-4-1$ with the following eigenbasis on $H$:
+Consider the unit cycle $p-q-s-t-p$ with the following eigenbasis on $H$:
 
 $$
 \mathbf u_1=\frac1{\sqrt{10}}(2,1,-2,-1)^{\mathsf T},\qquad
@@ -142,7 +142,7 @@ $$
 
 The first two modes belong to the eigenspace with eigenvalue $2$; the third has eigenvalue $4$. The vertex labels and this particular basis remain fixed below.
 
-Add an edge $\{1,3\}$ of conductance $5$ to the cycle. For the resulting graph,
+Add an edge $\{p,s\}$ of conductance $5$ to the cycle. For the resulting graph,
 
 $$
 \mathbf S=
@@ -156,19 +156,19 @@ For an arbitrary diagonal $(a,b,c)$ in this basis, the candidate conductances ar
 
 $$
 \begin{aligned}
-w_{12}=w_{34}&=\frac c4-\frac{a-b}{5}\\
-w_{14}=w_{23}&=\frac c4+\frac{a-b}{5}\\
-w_{13}&=\frac{4a+b}{10}-\frac c4\\
-w_{24}&=\frac{a+4b}{10}-\frac c4
+w_{pq}=w_{st}&=\frac c4-\frac{a-b}{5}\\
+w_{pt}=w_{qs}&=\frac c4+\frac{a-b}{5}\\
+w_{ps}&=\frac{4a+b}{10}-\frac c4\\
+w_{qt}&=\frac{a+4b}{10}-\frac c4
 \end{aligned}
 $$
 
 At $(a,b,c)=(10,4,4)$, this gives
 
 $$
-w_{12}=w_{34}=-\frac15,\qquad
-w_{14}=w_{23}=\frac{11}{5},\qquad
-w_{13}=\frac{17}{5},\qquad w_{24}=\frac85
+w_{pq}=w_{st}=-\frac15,\qquad
+w_{pt}=w_{qs}=\frac{11}{5},\qquad
+w_{ps}=\frac{17}{5},\qquad w_{qt}=\frac85
 $$
 
 The negative values indicate a violation of the graph condition. They are not admissible conductances of an ordinary electrical network.
@@ -183,9 +183,9 @@ $$
 Substitution into the remaining conditions yields nonnegative conductances:
 
 $$
-w^*_{12}=w^*_{34}=0,\qquad
-w^*_{14}=w^*_{23}=\frac{124}{57},\qquad
-w^*_{13}=\frac{184}{57},\qquad w^*_{24}=\frac{91}{57}
+w^*_{pq}=w^*_{st}=0,\qquad
+w^*_{pt}=w^*_{qs}=\frac{124}{57},\qquad
+w^*_{ps}=\frac{184}{57},\qquad w^*_{qt}=\frac{91}{57}
 $$
 
 This proves optimality: the entire cone lies in the indicated half-space, and the nearest point in that half-space already belongs to the cone. The resulting graph is connected. For this graph,
@@ -221,10 +221,10 @@ In vertex coordinates, this gives
 
 $$
 \begin{aligned}
-w_{12}=w_{34}&=-\frac{2+3r}{10}\\
-w_{14}=w_{23}&=\frac{22+3r}{10}\\
-w_{13}&=\frac{17-2r}{5},\qquad
-w_{24}=\frac{8+2r}{5}
+w_{pq}=w_{st}&=-\frac{2+3r}{10}\\
+w_{pt}=w_{qs}&=\frac{22+3r}{10}\\
+w_{ps}&=\frac{17-2r}{5},\qquad
+w_{qt}=\frac{8+2r}{5}
 \end{aligned}
 $$
 
@@ -249,10 +249,10 @@ For example:
 | Rooted coefficient $p_2$ | $80$ | $92$ |
 | Ordinary forest coefficient $f_2$ | $26$ | $716/25$ |
 | Kirchhoff index | $10/3$ | $23/9$ |
-| Resistance $R_{13}$ | $1/6$ | $1/5$ |
-| Resistance $R_{24}$ | $1$ | $26/45$ |
+| Resistance $R_{ps}$ | $1/6$ | $1/5$ |
+| Resistance $R_{qt}$ | $1$ | $26/45$ |
 
-The graph at $r=-4$ has no edge $\{2,4\}$, whereas all six edges are present at $r=-2$. These are different weighted graphs, already distinguished by $\tau$. Their common projection determines neither the forest polynomials nor the individual resistances; the latter may change in opposite directions.
+The graph at $r=-4$ has no edge $\{q,t\}$, whereas all six edges are present at $r=-2$. These are different weighted graphs, already distinguished by $\tau$. Their common projection determines neither the forest polynomials nor the individual resistances; the latter may change in opposite directions.
 
 ![[images/Different Graphs with One Spectral Projection.svg]]
 
@@ -426,7 +426,7 @@ $$
 
 In our example, the entire block $\begin{pmatrix}10&r\\r&4\end{pmatrix}$ lies within the two-dimensional eigenspace of $C_4$ with eigenvalue $2$. Therefore $\Pi_{\mathrm{blk}}(\mathbf L_r)=\mathbf L_r$. The whole error $2r^2$ arises from the additional removal of mixed coefficients within this eigenspace. In general, the result of block projection also requires verification of the graph sign conditions.
 
-A disconnected original graph requires a separate qualification. Its positive semidefinite matrix can have strictly positive diagonal evaluations in every chosen direction of $H$, so diagonal projection can increase rank. For example, in the basis of the path $P_3$, a unit edge $\{1,2\}$ with isolated vertex $3$ has evaluations $(1/2,3/2)$ and projects to a path with both conductances equal to $1/2$. Connectivity of the projection does not prove connectivity of the original graph; the inversion formulas for a positive definite $\mathbf S$ above do not apply to a disconnected original graph.
+A disconnected original graph requires a separate qualification. Its positive semidefinite matrix can have strictly positive diagonal evaluations in every chosen direction of $H$, so diagonal projection can increase rank. For example, in the basis of the path $P_3$, a unit edge $\{p,q\}$ with isolated vertex $s$ has evaluations $(1/2,3/2)$ and projects to a path with both conductances equal to $1/2$. Connectivity of the projection does not prove connectivity of the original graph; the inversion formulas for a positive definite $\mathbf S$ above do not apply to a disconnected original graph.
 
 ## Limits of spectral comparison and sources
 

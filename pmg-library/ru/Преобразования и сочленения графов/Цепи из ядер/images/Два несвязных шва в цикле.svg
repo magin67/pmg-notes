@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="530" viewBox="0 0 1180 530" role="img" aria-labelledby="title desc">
-<title id="title">Два расположения несвязных швов</title><desc id="desc">Среднее ядро C12. Вход 01 и 45 одинаков. Выход в А равен 23 и 67, в Б равен 67 и 10-11. Вход и выход не пересекаются по вершинам.</desc>
+<title id="title">Два расположения несвязных швов</title><desc id="desc">Среднее ядро C12. Вход v₀v₁ и v₄v₅ одинаков. Выход в А равен v₂v₃ и v₆v₇, в Б равен v₆v₇ и v₁₀–v₁₁. Вход и выход не пересекаются по вершинам.</desc>
 <rect width="1180" height="530" fill="white"/>
 <g font-family="DejaVu Sans, Arial, sans-serif">
 <text x="590.00" y="42.00" font-size="26" fill="#172b43" text-anchor="middle" font-weight="bold">Одинаковые несвязные швы, разное взаимное расположение</text>
@@ -18,30 +18,30 @@
 <line x1="232.50" y1="384.25" x2="295.00" y2="401.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round"/>
 <line x1="357.50" y1="384.25" x2="295.00" y2="401.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="357.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="370.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="370.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="403.25" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="424.90" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="424.90" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="420.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="445.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="445.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="403.25" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="424.90" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="424.90" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="357.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="370.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="370.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="295.00" cy="151.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="295.00" y="133.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="295.00" y="133.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="232.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="220.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<text x="220.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₆</text>
 <circle cx="186.75" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="165.10" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<text x="165.10" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₇</text>
 <circle cx="170.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="145.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<text x="145.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₈</text>
 <circle cx="186.75" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="165.10" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<text x="165.10" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₉</text>
 <circle cx="232.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="220.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<text x="220.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₀</text>
 <circle cx="295.00" cy="401.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="295.00" y="433.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
-<text x="295.00" y="457.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Выход: (2, 3, 6, 7)</text>
+<text x="295.00" y="433.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₁</text>
+<text x="295.00" y="457.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Выход: (v₂, v₃, v₆, v₇)</text>
 <rect x="610" y="70" width="550" height="405" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
 <text x="885.00" y="106.00" font-size="25" fill="#172b43" text-anchor="middle" font-weight="bold">Конфигурация Б</text>
 <line x1="947.50" y1="384.25" x2="993.25" y2="338.50" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
@@ -57,29 +57,29 @@
 <line x1="822.50" y1="384.25" x2="885.00" y2="401.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
 <line x1="947.50" y1="384.25" x2="885.00" y2="401.00" stroke="#52657a" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="947.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="960.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="960.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="993.25" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1014.90" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="1014.90" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="1010.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1035.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="1035.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="993.25" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1014.90" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="1014.90" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="947.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="960.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="960.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="885.00" cy="151.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="885.00" y="133.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="885.00" y="133.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="822.50" cy="167.75" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="810.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<text x="810.00" y="153.10" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₆</text>
 <circle cx="776.75" cy="213.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="755.10" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<text x="755.10" y="208.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₇</text>
 <circle cx="760.00" cy="276.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="735.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<text x="735.00" y="283.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₈</text>
 <circle cx="776.75" cy="338.50" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="755.10" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<text x="755.10" y="358.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₉</text>
 <circle cx="822.50" cy="384.25" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="810.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<text x="810.00" y="412.90" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₀</text>
 <circle cx="885.00" cy="401.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="885.00" y="433.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
-<text x="885.00" y="457.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Выход: (6, 7, 10, 11)</text>
-<text x="590.00" y="510.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="normal">Вход в обеих конфигурациях: (0, 1, 4, 5)</text>
+<text x="885.00" y="433.00" font-size="20" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₁</text>
+<text x="885.00" y="457.00" font-size="21" fill="#196bb9" text-anchor="middle" font-weight="normal">Выход: (v₆, v₇, v₁₀, v₁₁)</text>
+<text x="590.00" y="510.00" font-size="22" fill="#bc294b" text-anchor="middle" font-weight="normal">Вход в обеих конфигурациях: (v₀, v₁, v₄, v₅)</text>
 </g></svg>

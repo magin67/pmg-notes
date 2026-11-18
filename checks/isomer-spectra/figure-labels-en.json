@@ -4,13 +4,13 @@
     "target": "SLR Letters and Seam Endpoint Order.svg",
     "labels": {
       "Буквы SLR и порядок концов шва": "SLR letters and seam endpoint order",
-      "Все циклы обходятся по часовой стрелке. Новое ядро получает 0=b, 1=a. Выход 23 даёт левый поворот L, 34 — прямое продолжение S, 45 — правый поворот R.": "All cycles are traversed clockwise. The new core receives 0=b, 1=a. Output 23 gives a left turn L, 34 a straight continuation S, and 45 a right turn R.",
-      "L · выход (2, 3)": "L · output (2, 3)",
       "поворот влево": "turn left",
-      "S · выход (3, 4)": "S · output (3, 4)",
       "прямое продолжение": "continue straight",
-      "R · выход (4, 5)": "R · output (4, 5)",
-      "поворот вправо": "turn right"
+      "поворот вправо": "turn right",
+      "Все циклы обходятся по часовой стрелке. Новое ядро получает v₀=b, v₁=a. Выход v₂v₃ даёт левый поворот L, v₃v₄ — прямое продолжение S, v₄v₅ — правый поворот R.": "All cycles are traversed clockwise. The new core receives v₀=b, v₁=a. Output v₂v₃ gives a left turn L, v₃v₄ a straight continuation S, and v₄v₅ a right turn R.",
+      "L · выход (v₂, v₃)": "L · output (v₂, v₃)",
+      "S · выход (v₃, v₄)": "S · output (v₃, v₄)",
+      "R · выход (v₄, v₅)": "R · output (v₄, v₅)"
     }
   },
   {
@@ -57,12 +57,12 @@
     "target": "Two Ends of One SLR Chain.svg",
     "labels": {
       "Два конца одной SLR-цепи": "Two ends of one SLR chain",
-      "Один граф SLS, прочитанный с другого конца как SSR. Конечные пары 3,4 и 15,16 имеют разные нормированные спектральные паспорта, хотя первая координата P(1)=221771751 одинакова.": "One graph SLS, read from the other end as SSR. Terminal pairs 3,4 and 15,16 have different normalized spectral passports, although the first coordinate P(1)=221771751 is the same.",
       "Один граф · два выбора конечной границы": "One graph · two terminal boundaries",
       "Общее значение P(1) = 221 771 751": "Common value P(1) = 221 771 751",
-      "SSR · левая пара (3, 4)": "SSR · left pair (3, 4)",
-      "SLS · правая пара (15, 16)": "SLS · right pair (15, 16)",
-      "Все координаты взяты при ξ = −1; перестановки B и C недостаточно": "All coordinates are evaluated at ξ = −1; swapping B and C is insufficient"
+      "Все координаты взяты при ξ = −1; перестановки B и C недостаточно": "All coordinates are evaluated at ξ = −1; swapping B and C is insufficient",
+      "Один граф SLS, прочитанный с другого конца как SSR. Конечные пары v₃,v₄ и v₁₅,v₁₆ имеют разные нормированные спектральные паспорта, хотя первая координата P(1)=221771751 одинакова.": "One graph SLS, read from the other end as SSR. Terminal pairs v₃,v₄ and v₁₅,v₁₆ have different normalized spectral passports, although the first coordinate P(1)=221771751 is the same.",
+      "SSR · левая пара (v₃, v₄)": "SSR · left pair (v₃, v₄)",
+      "SLS · правая пара (v₁₅, v₁₆)": "SLS · right pair (v₁₅, v₁₆)"
     }
   },
   {
@@ -427,13 +427,13 @@
     "labels": {
       "Спектральная память двух шестиугольников": "Spectral memory of two hexagons",
       "Два одинаковых графа из двух шестиугольников имеют P(1)=28435, но разные отмеченные выходы. Добавление третьего шестиугольника даёт изомер Б со значением 2504096 или А со значением 2518737.": "Two identical two-hexagon graphs have P(1)=28435 but different marked outputs. Adding a third hexagon gives isomer B with value 2504096 or A with value 2518737.",
-      "Выход (2, 3)": "Output (2, 3)",
       "Остальные координаты z:": "Other coordinates of z:",
       "по выходу": "at output",
       "Три ядра · изомер Б": "Three cores · isomer B",
       "Та же завершающая строка": "The same terminal row",
-      "Выход (3, 4)": "Output (3, 4)",
-      "Три ядра · изомер А": "Three cores · isomer A"
+      "Три ядра · изомер А": "Three cores · isomer A",
+      "Выход (v₂, v₃)": "Output (v₂, v₃)",
+      "Выход (v₃, v₄)": "Output (v₃, v₄)"
     }
   },
   {
@@ -441,13 +441,13 @@
     "target": "Three SLR Runners.svg",
     "labels": {
       "Три SLR-бегунка": "Three SLR runners",
-      "Один путь из пяти рёбер, вилка (1,0), три различных упорядоченных выхода. Входное ребро пунктиром уже принадлежит старому графу.": "One path of five edges, plug (1,0), and three distinct ordered outputs. The dashed input edge already belongs to the old graph.",
-      "L: розетка (2, 3)": "L: socket (2, 3)",
-      "Вилка (1, 0):  1 → a,  0 → b": "Plug (1, 0):  1 → a,  0 → b",
-      "S: розетка (3, 4)": "S: socket (3, 4)",
-      "R: розетка (4, 5)": "R: socket (4, 5)",
       "Пять рёбер добавляются. Старое ребро ab замыкает новый C6.": "Five edges are added. The old edge ab closes the new C6.",
-      "Четыре новые вершины на каждом шаге; порядок контактов входит в правило.": "Four new vertices at each step; contact order is part of the rule."
+      "Четыре новые вершины на каждом шаге; порядок контактов входит в правило.": "Four new vertices at each step; contact order is part of the rule.",
+      "Один путь из пяти рёбер, вилка (v₁,v₀), три различных упорядоченных выхода. Входное ребро пунктиром уже принадлежит старому графу.": "One path of five edges, plug (v₁,v₀), and three distinct ordered outputs. The dashed input edge already belongs to the old graph.",
+      "L: розетка (v₂, v₃)": "L: socket (v₂, v₃)",
+      "Вилка (v₁, v₀):  v₁ → a,  v₀ → b": "Plug (v₁, v₀):  v₁ → a,  v₀ → b",
+      "S: розетка (v₃, v₄)": "S: socket (v₃, v₄)",
+      "R: розетка (v₄, v₅)": "R: socket (v₄, v₅)"
     }
   },
   {
@@ -456,9 +456,9 @@
     "labels": {
       "Три выходных шва шестиугольника": "Three output seams of a hexagon",
       "Красный вход упорядочен от 0 к 1. Синие выходы упорядочены от 2 к 3, от 3 к 4 и от 4 к 5. Стрелки обозначают порядок пары, а не ориентацию графа.": "The red input is ordered from 0 to 1. The blue outputs are ordered from 2 to 3, 3 to 4, and 4 to 5. Arrows indicate pair order, not graph orientation.",
-      "Выход (2, 3)": "Output (2, 3)",
-      "Выход (3, 4)": "Output (3, 4)",
-      "Выход (4, 5)": "Output (4, 5)"
+      "Выход (v₂, v₃)": "Output (v₂, v₃)",
+      "Выход (v₃, v₄)": "Output (v₃, v₄)",
+      "Выход (v₄, v₅)": "Output (v₄, v₅)"
     }
   },
   {
@@ -519,12 +519,12 @@
     "target": "Seams and Degree-Three Vertices.svg",
     "labels": {
       "Два изомера трёх шестиугольников": "Two isomers of three hexagons",
-      "В А швы среднего ядра 01 и 34, в Б — 01 и 23. На вершинах степени три получаются два отдельных ребра и путь.": "In A, the middle core has seams 01 and 34; in B, 01 and 23. The degree-three vertices induce two separate edges and a path, respectively.",
       "А · противоположные швы": "A · opposite seams",
       "Подграф на вершинах степени 3": "Subgraph induced by degree-3 vertices",
       "2 ребра": "2 edges",
       "Б · смещённый шов": "B · shifted seam",
-      "3 ребра": "3 edges"
+      "3 ребра": "3 edges",
+      "В А швы среднего ядра v₀v₁ и v₃v₄, в Б — v₀v₁ и v₂v₃. На вершинах степени три получаются два отдельных ребра и путь.": "In A, the middle core has seams v₀v₁ and v₃v₄; in B, v₀v₁ and v₂v₃. The degree-three vertices induce two separate edges and a path, respectively."
     }
   },
   {
@@ -570,9 +570,9 @@
       "Пространственное положение меняется; правило соединения остаётся тем же": "Spatial positions may change; the joining rule stays the same",
       "Следующий шаг": "Next step",
       "Тот же выход L": "The same output L",
-      "Три соседних ядра и два непересекающихся шва среднего ядра. Вход 01 выделен красным, выход 23 синим.": "Three adjacent cores and the two disjoint seams of the middle core. Input 01 is red; output 23 is blue.",
       "Цифры у вершин - локальные номера среднего ядра": "Vertex labels are local to the middle core",
-      "порядок активных контактов": "the active contact order"
+      "порядок активных контактов": "the active contact order",
+      "Три соседних ядра и два непересекающихся шва среднего ядра. Вход v₀v₁ выделен красным, выход v₂v₃ синим.": "Three adjacent cores and the two disjoint seams of the middle core. Input v₀v₁ is red; output v₂v₃ is blue."
     }
   }
 ]

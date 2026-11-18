@@ -9,6 +9,10 @@ RED, BLUE, GREEN = '#bc294b', '#196bb9', '#15815b'
 FILLS = ['#fff0d7', '#ddf4e9', '#e2edff']
 
 
+def vertex_label(index):
+    return 'v' + str(index).translate(str.maketrans('0123456789', '₀₁₂₃₄₅₆₇₈₉'))
+
+
 class SVG:
     def __init__(self, w, h, title, desc):
         self.parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">',
@@ -83,12 +87,12 @@ def draw_pair(s, cx, cy, r, start):
         s.circle(pt, 7 if v in seam else 4.5, 'white' if v in seam else INK, INK)
         center = centers[1] if v < 6 else centers[0 if v < 10 else 2]
         dx, dy = (pt[0]-center[0])/r, (pt[1]-center[1])/r
-        s.text(pt[0]+19*dx, pt[1]+19*dy+6, str(v), 18, anchor='middle')
+        s.text(pt[0]+19*dx, pt[1]+19*dy+6, vertex_label(v), 18, anchor='middle')
 
 
 def seams():
     s = SVG(1160, 650, 'Два изомера трёх шестиугольников',
-            'В А швы среднего ядра 01 и 34, в Б — 01 и 23. На вершинах степени три получаются два отдельных ребра и путь.')
+            'В А швы среднего ядра v₀v₁ и v₃v₄, в Б — v₀v₁ и v₂v₃. На вершинах степени три получаются два отдельных ребра и путь.')
     for x, label, start in [(20, 'А · противоположные швы', 3), (600, 'Б · смещённый шов', 2)]:
         s.panel(x, 18, 540, 614)
         s.text(x+25, 55, label, 25, weight='bold')
@@ -102,7 +106,7 @@ def seams():
             s.line((xs[1], 507), (xs[2], 507), EDGE, 4)
         for xx, v in zip(xs, ids):
             s.circle((xx, 507), 7, 'white', INK)
-            s.text(xx, 541, str(v), 20, anchor='middle')
+            s.text(xx, 541, vertex_label(v), 20, anchor='middle')
         s.text(x+270, 594, '2 ребра' if start == 3 else '3 ребра', 24, anchor='middle', weight='bold')
     s.save('Швы и вершины степени три.svg')
 
@@ -149,7 +153,7 @@ def reduced_ring(s, cx, cy, start, label):
         s.circle(pt, 17, 'white', INK)
         s.text(pt[0], pt[1]+7, 'd' if i in seam else 'y', 23, anchor='middle')
         # Vertex indices are placed toward the face, away from edge labels.
-        s.text(cx+(pt[0]-cx)*.68, cy+(pt[1]-cy)*.68+5, str(i), 16, MUTED, 'middle')
+        s.text(cx+(pt[0]-cx)*.68, cy+(pt[1]-cy)*.68+5, vertex_label(i), 16, MUTED, 'middle')
     s.text(cx, cy+163, label, 24, anchor='middle', weight='bold')
 
 

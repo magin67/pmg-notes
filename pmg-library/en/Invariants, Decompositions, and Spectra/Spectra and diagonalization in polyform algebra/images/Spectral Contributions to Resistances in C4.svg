@@ -3,12 +3,12 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="842.4pt" height="446.4pt" viewBox="0 0 842.4 446.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <title>Spectral Contributions to Resistances in C4</title>
-<desc>Adjacent-vertex resistance 3/4=1/2+1/4 and opposite-vertex resistance 1=1+0, decomposed over H2 and H4. The H2 contribution to R12 splits as 1/4+1/4 in the original basis and 0+1/2 after rotation.</desc>
+<desc>Adjacent-vertex resistance 3/4=1/2+1/4 and opposite-vertex resistance 1=1+0, decomposed over H2 and H4. The H2 contribution to R(p,q) splits as 1/4+1/4 in the original basis and 0+1/2 after rotation.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Adjacent-vertex resistance 3/4=1/2+1/4 and opposite-vertex resistance 1=1+0, decomposed over H2 and H4. The H2 contribution to R12 splits as 1/4+1/4 in the original basis and 0+1/2 after rotation.</dc:description>
+    <dc:description>Adjacent-vertex resistance 3/4=1/2+1/4 and opposite-vertex resistance 1=1+0, decomposed over H2 and H4. The H2 contribution to R(p,q) splits as 1/4+1/4 in the original basis and 0+1/2 after rotation.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -145,13 +145,13 @@ L 0 3.5
     <g id="ytick_1">
      <g id="line2d_7"/>
      <g id="text_8">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="180.993348" transform="rotate(-0 63.892 180.993348)">Pair 1,2</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="180.993348" transform="rotate(-0 63.892 180.993348)">Pair p,q</text>
      </g>
     </g>
     <g id="ytick_2">
      <g id="line2d_8"/>
      <g id="text_9">
-      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="274.524777" transform="rotate(-0 63.892 274.524777)">Pair 1,3</text>
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end" x="63.892" y="274.524777" transform="rotate(-0 63.892 274.524777)">Pair p,s</text>
      </g>
     </g>
    </g>
@@ -316,7 +316,7 @@ z
      </g>
     </g>
     <g id="text_25">
-     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="662.159831" y="353.526125" transform="rotate(-0 662.159831 353.526125)">Individual H₂ mode contributions to R₁₂</text>
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle" x="662.159831" y="353.526125" transform="rotate(-0 662.159831 353.526125)">Individual H₂ mode contributions to R(p,q)</text>
     </g>
    </g>
    <g id="matplotlib.axis_4">

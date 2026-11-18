@@ -83,7 +83,7 @@ def centralities(lang):
  for k,(name,v,color) in enumerate(rows):
   y=2.7-1.1*k;txt(ax,-.9,y,name,14,ha='right')
   for i in range(4):edge(ax,(i,y),(i+1,y),color=GRAY)
-  for i,val in enumerate(v):node(ax,(i,y),str(i+1),color,fill=LIGHT,r=.15);txt(ax,i,y-.4,f'{100*val:.1f}%',13)
+  for i,val in enumerate(v):node(ax,(i,y),'v'+'₁₂₃₄₅'[i],color,fill=LIGHT,r=.15);txt(ax,i,y-.4,f'{100*val:.1f}%',13)
  limits(ax,(-2.5,4.5),(-.1,3.25));title(ax,tr(lang,'Путь P₅: одинаковый граф, разные оценки','Path P₅: one graph, different scores'));f.tight_layout()
  return f
 
@@ -132,11 +132,11 @@ def weak(lang):
   xs=np.linspace(-1.25,1.25,n);ps=[(x,.25) for x in xs]
   weakidx=1
   for i in range(n-1):edge(ax,ps[i],ps[i+1],r'$\varepsilon$' if i==weakidx else '1',color=RED if i==weakidx else BLUE,dy=.2)
-  for i,pos in enumerate(ps):node(ax,pos,str(i+1),fill=LIGHT,r=.12)
+  for i,pos in enumerate(ps):node(ax,pos,'abcd'[i],fill=LIGHT,r=.12)
   if n==3:
-   arrow(ax,(-1.1,-.02),(-.15,-.02));arrow(ax,(.15,-.02),(1.1,-.02));txt(ax,0,-.4,r'$B_{\{1,2\}}=(2-\varepsilon)/3$',13);txt(ax,0,-.82,r'$\Delta_L\sim1/(9\varepsilon)$',15)
+   arrow(ax,(-1.1,-.02),(-.15,-.02));arrow(ax,(.15,-.02),(1.1,-.02));txt(ax,0,-.4,r'$B_{\{a,b\}}=(2-\varepsilon)/3$',13);txt(ax,0,-.82,r'$\Delta_L\sim1/(9\varepsilon)$',15)
   else:
-   arrow(ax,(-.55,-.02),(-1.1,-.02));arrow(ax,(.55,-.02),(1.1,-.02));txt(ax,0,-.4,r'$B_{\{1,2\}}=0$',13);txt(ax,0,-.82,r'$\Delta_L=\varepsilon^2/8$',15)
+   arrow(ax,(-.55,-.02),(-1.1,-.02));arrow(ax,(.55,-.02),(1.1,-.02));txt(ax,0,-.4,r'$B_{\{a,b\}}=0$',13);txt(ax,0,-.82,r'$\Delta_L=\varepsilon^2/8$',15)
   limits(ax,(-1.5,1.5),(-1.2,.95))
  title(aa[0],tr(lang,'Есть ток через слабое ребро','Current crosses the weak edge'));title(aa[1],tr(lang,'Через мост ток равен нулю','Zero current across the bridge'))
  f.text(.5,.05,r'$0<\varepsilon<1/2,\quad\varepsilon\to0^+$',ha='center',fontsize=13,color=INK);f.subplots_adjust(top=.79,bottom=.13,wspace=.25);return f

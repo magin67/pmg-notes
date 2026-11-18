@@ -176,7 +176,7 @@ def draw_figure(filename):
         axes[0].text(*(mid+off),str(w),ha="center",va="center",
                      bbox={"facecolor":"white","edgecolor":"none","pad":2})
     axes[0].scatter(net[:,0],net[:,1],s=340,facecolor="white",edgecolor=ink,lw=1.8,zorder=4)
-    for i,p in enumerate(net): axes[0].text(*p,str(i+1),ha="center",va="center",zorder=5)
+    for i,p in enumerate(net): axes[0].text(*p,"abc"[i],ha="center",va="center",zorder=5)
     axes[0].set_xlim(-1.6,1.6);axes[0].set_ylim(-.8,2.4)
     axes[0].set_title("Исходная сеть",pad=18)
     axes[0].text(.5,-.10,"Проводимости: 7, 1, 1",transform=axes[0].transAxes,ha="center")
@@ -196,7 +196,7 @@ def draw_figure(filename):
         for i,p in enumerate(pts):
             off=np.array([-.07*radius if i==0 else .07*radius if i==1 else 0,
                           -.10*radius if i<2 else .12*radius])
-            ax.text(*(p+off),str(i+1),ha="center",va="center")
+            ax.text(*(p+off),"abc"[i],ha="center",va="center")
         ax.scatter(*centroid,s=42,color=amber,zorder=5)
         ax.scatter(*centre,s=48,color=blue,marker="D",zorder=6)
         ax.text(centre[0]+.12*radius,centre[1],"O",color=blue,va="center")

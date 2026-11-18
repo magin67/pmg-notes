@@ -1,9 +1,9 @@
 ---
 title: "Chebyshev Transformations of the Laplacian: From Path to Cycle"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -134,18 +134,18 @@ See [[en/PythonExamples/Example - Spectra and Diagonalization in Polyform Algebr
 > is the Laplacian of a simple cycle with edges
 >
 > $$
-> \{1,2\},\quad \{n-1,n\},\quad \{i,i+2\}\ (1\le i\le n-2)
+> \{a_1,a_2\},\quad \{a_{n-1},a_n\},\quad \{a_i,a_{i+2}\}\ (1\le i\le n-2)
 > $$
 
 > [!note]- Proof
-> **Proof.** For adjacent path vertices $i,j$, $(\mathbf L^2)_{ij}=-(\deg i+\deg j)$. Thus $4\mathbf L-\mathbf L^2$ retains the two end edges with coefficient $-1$, while all other adjacent-pair coefficients vanish. At distance $2$, the entry of $\mathbf L^2$ is $1$, giving a new edge with coefficient $-1$. All remaining off-diagonal entries vanish.
+> **Proof.** For adjacent path vertices $a_i,a_j$, $(\mathbf L^2)_{ij}=-(\deg a_i+\deg a_j)$. Thus $4\mathbf L-\mathbf L^2$ retains the two end edges with coefficient $-1$, while all other adjacent-pair coefficients vanish. At distance $2$, the entry of $\mathbf L^2$ is $1$, giving a new edge with coefficient $-1$. All remaining off-diagonal entries vanish.
 >
-> Row sums are zero, and each vertex of the resulting graph has degree $2$. The graph is connected: starting at $1$, visit even vertices in increasing order and then odd vertices in decreasing order, returning to $1$. It is a cycle, and its Laplacian diagonal entries are $2$. $\square$
+> Row sums are zero, and each vertex of the resulting graph has degree $2$. The graph is connected: starting at $a_1$, visit vertices with even indices in increasing order, then those with odd indices in decreasing order, returning to $a_1$. It is a cycle, and its Laplacian diagonal entries are $2$. $\square$
 
 For $n=6$, the traversal is
 
 $$
-1\longrightarrow2\longrightarrow4\longrightarrow6\longrightarrow5\longrightarrow3\longrightarrow1
+a_1\longrightarrowa_2\longrightarrowa_4\longrightarrowa_6\longrightarrowa_5\longrightarrowa_3\longrightarrowa_1
 $$
 
 If the columns of the permutation matrix $\mathbf P$ list the vertices in this order, then $\mathbf P^{\mathsf T}\mathbf L^{(2)}\mathbf P=\mathbf L_{C_6}$ for standard cyclic labeling. Thus the statement concerns the matrix itself, not merely its spectrum.
@@ -170,21 +170,21 @@ For $P_6$, the auxiliary cycle has positions $j=0,\ldots,11$. Reflection $j\maps
 
 | Positions on the doubled cycle | $\{0,11\}$ | $\{1,10\}$ | $\{2,9\}$ | $\{3,8\}$ | $\{4,7\}$ | $\{5,6\}$ |
 |---|---|---|---|---|---|---|
-| Vertex after folding | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ |
+| Vertex after folding | $a_1$ | $a_2$ | $a_3$ | $a_4$ | $a_5$ | $a_6$ |
 
 For step $m=1$, position $0$ has neighbors $11$ and $1$. The first belongs to the same pair and the second to the next pair. If function values are constant on each pair, the operator row becomes $2f_1-f_1-f_2=f_1-f_2$: the connection within a pair reduces the diagonal. This gives an endpoint of the path. Interior vertices give the usual rows $2f_i-f_{i-1}-f_{i+1}$.
 
-For step $m=3$, the same position has neighbors $3$ and $9$, mapped to vertices $4$ and $3$. The row becomes $2f_1-f_4-f_3$. Applying the rule to the remaining pairs gives the cycle $1-3-6-4-1$ and the separate edge $2-5$.
+For step $m=3$, the same position has neighbors $3$ and $9$, mapped to vertices $a_4$ and $a_3$. The row becomes $2f_1-f_4-f_3$. Applying the rule to the remaining pairs gives the cycle $a_1-a_3-a_6-a_4-a_1$ and the separate edge $a_2-a_5$.
 
 ![[images/Folding the doubled cycle for P6.svg]]
 
-*Figure 2. Step graphs on twelve positions are shown on the left, and the results of merging reflected pairs on the right. The color and label $j\to i$ at each position identify its final vertex. Gray dashed edges within one pair cancel in the Laplacian. Conductances count transitions from one vertex of a class: two reflected edges between classes give conductance $1$, not $2$.*
+*Figure 2. Step graphs on twelve positions are shown on the left, and the results of merging reflected pairs on the right. The color and label $j\to a_i$ at each position identify its final vertex. Gray dashed edges within one pair cancel in the Laplacian. Conductances count transitions from one vertex of a class: two reflected edges between classes give conductance $1$, not $2$.*
 
-In the general notation below, pair representatives are numbered from zero: representative $i$ corresponds to path vertex $i+1$. Only the indexing convention changes.
+In the general notation below, pair representatives are numbered from zero: representative $i$ corresponds to path vertex $a_{i+1}$. Only the indexing convention changes.
 
 ## Folding the doubled cycle
 
-For general $m$, use indices $j\in\mathbb Z/(2n)$ and the reflection $j\mapsto-j-1$. It fixes no vertex, so every reflection orbit contains two vertices. Let $\pi_n(j)$ be the unique orbit representative among $0,\ldots,n-1$. Representative $i$ corresponds to vertex $i+1$ of the original path.
+For general $m$, use indices $j\in\mathbb Z/(2n)$ and the reflection $j\mapsto-j-1$. It fixes no vertex, so every reflection orbit contains two vertices. Let $\pi_n(j)$ be the unique orbit representative among $0,\ldots,n-1$. Representative $i$ corresponds to vertex $a_{i+1}$ of the original path.
 
 On the doubled cycle, introduce the step operator
 
@@ -323,13 +323,13 @@ M_5^{(1)}=T_6,\qquad M_5^{(2)}=6T_6,\qquad
 N_5^{(1)}=\frac{T_6}{36},\qquad N_5^{(2)}=\frac{T_6}{216}
 $$
 
-The effective resistance between fixed vertices also changes. For the pair $1,6$, it was $5$ on the path; after transformation it is
+The effective resistance between fixed vertices also changes. For the pair $a_1,a_6$, it was $5$ on the path; after transformation it is
 
 $$
-R_{16}^{(2)}=\frac{2+\sqrt3}{3}+\frac16+\frac{2-\sqrt3}{3}=\frac32
+R_{a_1 a_6}^{(2)}=\frac{2+\sqrt3}{3}+\frac16+\frac{2-\sqrt3}{3}=\frac32
 $$
 
-The three summands correspond to the original path modes $k=1,3,5$. In the new cycle, vertices $1$ and $6$ are opposite, independently giving resistance $3/2$.
+The three summands correspond to the original path modes $k=1,3,5$. In the new cycle, vertices $a_1$ and $a_6$ are opposite, independently giving resistance $3/2$.
 
 If $\Gamma_m$ is disconnected, some $\mu_k^{(m)}$ vanish. The matrix pseudoinverse remains defined:
 

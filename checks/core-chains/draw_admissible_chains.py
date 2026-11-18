@@ -11,6 +11,10 @@ RED, BLUE, PURPLE = '#bc294b', '#196bb9', '#8953af'
 FILLS = ['#fff0d7','#ddf4e9','#e2edff']
 
 
+def vertex_label(index, letter="v"):
+    return letter + str(index).translate(str.maketrans('0123456789', '₀₁₂₃₄₅₆₇₈₉'))
+
+
 class SVG:
     def __init__(self,w,h,title,desc):
         self.parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">',
@@ -78,26 +82,26 @@ def draw_pair(s,cx,cy,r,start,labels=True,arrows=True):
         if labels:
             if v<6:
                 dx,dy=(pt[0]-cx)/r,(pt[1]-cy)/r
-                s.text(pt[0]-22*dx,pt[1]-22*dy+6,str(v),17,anchor='middle')
+                s.text(pt[0]-22*dx,pt[1]-22*dy+6,vertex_label(v),17,anchor='middle')
             else:
-                s.text(pt[0],pt[1]-10,str(v),15,anchor='middle')
+                s.text(pt[0],pt[1]-10,vertex_label(v),15,anchor='middle')
     return p
 
 
 def figures():
-    s=SVG(1240,620,'Две сборки трёх шестиугольников','Два графа со швами 01 и 34 либо 01 и 23; одинаковая схема ядер P3, 14 вершин и 16 рёбер.')
+    s=SVG(1240,620,'Две сборки трёх шестиугольников','Два графа со швами v₀v₁ и v₃v₄ либо v₀v₁ и v₂v₃; одинаковая схема ядер P3, 14 вершин и 16 рёбер.')
     for x,start,name in [(20,3,'А. Противоположные швы'),(630,2,'Б. Швы через одно ребро')]:
         s.panel(x,20,590,580)
         s.text(x+24,60,name,24,weight='bold')
         draw_pair(s,x+295,280,70,start)
-        s.text(x+295,465,f'Вход: (0, 1)     Выход: ({start}, {start+1})',19,anchor='middle')
-        s.text(x+295,495,'Одинаковые номера отождествлены',17,MUTED,anchor='middle')
+        s.text(x+295,465,f'Вход: (v₀, v₁)     Выход: ({vertex_label(start)}, {vertex_label(start+1)})',19,anchor='middle')
+        s.text(x+295,495,'Совпадающие метки обозначают одну вершину',17,MUTED,anchor='middle')
         yy=548
         for a,b in [(x+190,x+295),(x+295,x+400)]:
             s.line((a,yy),(b,yy),MUTED,2)
         for i,xx in enumerate([x+190,x+295,x+400],1):
             s.circle((xx,yy),17,'white',MUTED)
-            s.text(xx,yy+6,str(i),18,anchor='middle')
+            s.text(xx,yy+6,vertex_label(i, 'K'),18,anchor='middle')
         s.text(x+295,585,'Схема ядер: P₃;  s₁ = s₂ = 2',18,anchor='middle')
     s.save('Две сборки трёх шестиугольников.svg')
 
@@ -161,16 +165,16 @@ def figures():
     for a,b in cycle(list(range(6))):s.line(p[a],p[b])
     s.line(p[0],p[1],RED,6);s.line(p[1],p[2],BLUE,6)
     s.circle(p[1],15,'#ffe2e9',RED)
-    for v,pt in p.items():s.circle(pt,4);s.text(pt[0]+(26 if v==1 else 15 if pt[0]>925 else -15),pt[1]+5,str(v),18,anchor='middle')
-    s.text(925,392,'Показано среднее ядро: швы 01 и 12.',19,anchor='middle')
-    s.text(925,425,'Вершина 1 принадлежит всем трём ядрам.',19,anchor='middle')
+    for v,pt in p.items():s.circle(pt,4);s.text(pt[0]+(26 if v==1 else 15 if pt[0]>925 else -15),pt[1]+5,vertex_label(v),18,anchor='middle')
+    s.text(925,392,'Показано среднее ядро: швы v₀v₁ и v₁v₂.',19,anchor='middle')
+    s.text(925,425,'Вершина v₁ принадлежит всем трём ядрам.',19,anchor='middle')
     s.text(44,530,'В. Дополнительный контакт',24,weight='bold')
     p=draw_pair(s,315,710,65,3,labels=False,arrows=False)
     a,b=p[7],p[12]
     top=min(a[1],b[1])-55
     s.parts.append(f'<path d="M {a[0]:.2f},{a[1]:.2f} C {a[0]:.2f},{top:.2f} {b[0]:.2f},{top:.2f} {b[0]:.2f},{b[1]:.2f}" fill="none" stroke="{PURPLE}" stroke-width="3" stroke-dasharray="7 6"/>')
-    for pt,t in [(a,'7'),(b,'12')]:s.circle(pt,9,'white',PURPLE,3);s.text(pt[0]+(20 if t=='7' else -22),pt[1]+6,t,18,PURPLE,anchor='middle')
-    s.text(315,865,'Дополнительно отождествить 7 и 12.',19,anchor='middle')
+    for pt,t in [(a,'7'),(b,'12')]:s.circle(pt,9,'white',PURPLE,3);s.text(pt[0]+(20 if t=='7' else -22),pt[1]+6,vertex_label(t),18,PURPLE,anchor='middle')
+    s.text(315,865,'Дополнительно отождествить v₇ и v₁₂.',19,anchor='middle')
     s.text(315,902,'Тогда крайние ядра имеют общую вершину.',19,anchor='middle')
     s.text(654,530,'Г. Несвязный шов',24,weight='bold')
     for cx,ids in [(800,list(range(8))),(1050,[0,1,8,9,4,5,10,11])]:
@@ -181,9 +185,9 @@ def figures():
         for u,v in [(0,1),(4,5)]:s.line(pos[u],pos[v],RED,6)
         for v,pt in pos.items():
             s.circle(pt,4)
-            if v in [0,1,4,5]:s.text(pt[0]+(16 if pt[0]>cx else -16),pt[1]+5,str(v),18,anchor='middle')
-    s.text(925,843,'Одинаковые номера отождествляются.',19,anchor='middle')
-    s.text(925,878,'Пересечение: два отдельных ребра 01 и 45.',19,anchor='middle')
+            if v in [0,1,4,5]:s.text(pt[0]+(16 if pt[0]>cx else -16),pt[1]+5,vertex_label(v),18,anchor='middle')
+    s.text(925,843,'Совпадающие метки обозначают одну вершину.',19,anchor='middle')
+    s.text(925,878,'Пересечение: два отдельных ребра v₀v₁ и v₄v₅.',19,anchor='middle')
     s.text(925,913,'Четыре общие вершины не образуют P₄.',19,anchor='middle')
     s.save('Допустимая цепочка и нарушения условий.svg')
     print('Generated 3 SVG figures.')

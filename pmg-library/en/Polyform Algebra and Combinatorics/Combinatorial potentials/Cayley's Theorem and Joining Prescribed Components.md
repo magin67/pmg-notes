@@ -1,9 +1,9 @@
 ---
 title: Cayley's Theorem and Joining Prescribed Components
 date: 2026-10-20
-updated: 2026-11-11
-revision: 3
-source_revision: 5
+updated: 2026-11-18
+revision: 4
+source_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 translation_key: cayleys-formula-and-connecting-given-components
@@ -118,11 +118,11 @@ For example, take the tree with edges $ab,bc,bd,de$ and label order $a<b<c<d<e$.
 The code records the neighbours of deleted leaves. Each step shows the remaining tree and the recorded label; the last edge contributes no code entry.
 
 > [!note]- Proof of the weighted formula by the Prüfer code
-> **Proof.** A tree on labels $1,\ldots,m$ corresponds to a Prüfer code of $m-2$ labels. Construct the code by repeatedly deleting the least-labelled leaf and recording its neighbour until two vertices remain.
+> **Proof.** A tree on the ordered labels $v_1<\cdots<v_m$ corresponds to a Prüfer code of $m-2$ labels. Construct the code by repeatedly deleting the least-labelled leaf and recording its neighbour until two vertices remain.
 >
 > Reconstruction is also unique: join the first label of the remaining code to the least undeleted label absent from that code. Then remove the chosen leaf and the first code entry. Finally join the two remaining vertices. Thus all sequences of $m-2$ labels are in bijection with the trees.
 >
-> Vertex $i$ occurs in the code $d_i(S)-1$ times. For code $(a_1,\ldots,a_{m-2})$, the tree weight is therefore
+> Vertex $v_i$ occurs in the code $d_i(S)-1$ times. For code $(v_{a_1},\ldots,v_{a_{m-2}})$, the tree weight is therefore
 >
 > $$
 > [x_i^{d_i(S)}]!

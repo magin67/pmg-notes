@@ -90,7 +90,7 @@ z
     <g style="fill: #243c50" transform="translate(194.68 200.562667)">
      <text>
       <tspan style="font: oblique 13px 'DejaVu Sans'" x="0 82.357031" y="-0.140625">Bε</tspan>
-      <tspan style="font: 9.1px 'DejaVu Sans'" x="8.918457 14.708154 20.497852 25.163379 30.953076" y="1.9921875">{1,2}</tspan>
+      <tspan style="font: 9.1px 'DejaVu Sans'" x="8.918457 14.708154 20.497852 25.163379 30.953076" y="1.9921875">{a,b}</tspan>
       <tspan style="font: 13px 'DejaVu Sans'" x="39.630957 53.05625 58.128027 68.931738 89.383887 94.455664 98.835547" y="-0.140625">=(2−)/3</tspan>
      </text>
     </g>
@@ -148,13 +148,13 @@ z
 " clip-path="url(#p0ca0050f6e)" style="fill: #e9f2f8; stroke: #236c9e; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_6">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="128.373333" y="138.699187" transform="rotate(-0 128.373333 138.699187)">1</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="128.373333" y="138.699187" transform="rotate(-0 128.373333 138.699187)">a</text>
    </g>
    <g id="text_7">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="248.24" y="138.699187" transform="rotate(-0 248.24 138.699187)">2</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="248.24" y="138.699187" transform="rotate(-0 248.24 138.699187)">b</text>
    </g>
    <g id="text_8">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="368.106667" y="138.699187" transform="rotate(-0 368.106667 138.699187)">3</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="368.106667" y="138.699187" transform="rotate(-0 368.106667 138.699187)">c</text>
    </g>
   </g>
   <g id="axes_2">
@@ -236,7 +236,7 @@ z
     <g style="fill: #243c50" transform="translate(577.16 200.497667)">
      <text>
       <tspan style="font: oblique 13px 'DejaVu Sans'" x="0" y="-0.34375">B</tspan>
-      <tspan style="font: 9.1px 'DejaVu Sans'" x="8.918457 14.708154 20.497852 25.163379 30.953076" y="1.7890625">{1,2}</tspan>
+      <tspan style="font: 9.1px 'DejaVu Sans'" x="8.918457 14.708154 20.497852 25.163379 30.953076" y="1.7890625">{a,b}</tspan>
       <tspan style="font: 13px 'DejaVu Sans'" x="39.630957 53.05625" y="-0.34375">=0</tspan>
      </text>
     </g>
@@ -308,16 +308,16 @@ z
 " clip-path="url(#p48548c83aa)" style="fill: #e9f2f8; stroke: #236c9e; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_15">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="487.973333" y="138.699187" transform="rotate(-0 487.973333 138.699187)">1</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="487.973333" y="138.699187" transform="rotate(-0 487.973333 138.699187)">a</text>
    </g>
    <g id="text_16">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="567.884444" y="138.699187" transform="rotate(-0 567.884444 138.699187)">2</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="567.884444" y="138.699187" transform="rotate(-0 567.884444 138.699187)">b</text>
    </g>
    <g id="text_17">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="647.795556" y="138.699187" transform="rotate(-0 647.795556 138.699187)">3</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="647.795556" y="138.699187" transform="rotate(-0 647.795556 138.699187)">c</text>
    </g>
    <g id="text_18">
-    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="727.706667" y="138.699187" transform="rotate(-0 727.706667 138.699187)">4</text>
+    <text style="fill: #236c9e; font: 13px 'DejaVu Sans'; text-anchor: middle" x="727.706667" y="138.699187" transform="rotate(-0 727.706667 138.699187)">d</text>
    </g>
   </g>
   <g id="text_19">

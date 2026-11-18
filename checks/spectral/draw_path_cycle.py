@@ -4,7 +4,7 @@ Exact and numerical checks run before drawing. SVGs are written beside the
 Russian note; optional PNG previews are saved to --preview-dir.
 """
 import argparse
-from figure_language import prepare_figure, output_directory
+from figure_language import prepare_figure, output_directory, vertex_label
 from pathlib import Path
 from xml.sax.saxutils import escape
 import numpy as np
@@ -72,7 +72,7 @@ for k in range(6):
     ax.text(-.80, y, "$u_"+str(k)+"$", ha="center", va="center", fontsize=17, color=INK)
     for r, value in enumerate(U[:, k]):
         ax.scatter(r, y, s=440, color=sign_color(value), edgecolor="white", linewidth=1.2, zorder=2)
-        ax.text(r, y, str(r+1), color="white", ha="center", va="center", fontsize=10, zorder=3)
+        ax.text(r, y, vertex_label(r+1), color="white", ha="center", va="center", fontsize=10, zorder=3)
         ax.text(r, y-.33, component(value), color=INK, ha="center", va="center", fontsize=11)
     for x, value in [(6.65, left[k]), (8.65, right[k])]:
         ax.text(x, y-.06, "$"+value+"$", color=INK, ha="center", va="center", fontsize=17)
@@ -96,7 +96,7 @@ def cycle_panel(ax, values, title):
         ax.plot(xy[[i, j], 0], xy[[i, j], 1], color=BORDER, lw=2.5, zorder=1)
     for i, ((x, y), value) in enumerate(zip(xy, values)):
         ax.scatter(x, y, s=460, color=sign_color(value), edgecolor="white", linewidth=1.3, zorder=2)
-        ax.text(x, y, str(i+1), ha="center", va="center", fontsize=11, color="white", zorder=3)
+        ax.text(x, y, vertex_label(i+1), ha="center", va="center", fontsize=11, color="white", zorder=3)
         ax.text(1.70*x, 1.40*y, component(value), color=INK, fontsize=11,
                 ha="center", va="center")
     ax.set(xlim=(-1.98, 1.98), ylim=(-1.56, 1.56), aspect="equal")
@@ -158,7 +158,7 @@ for x, (row, labels) in enumerate(zip(path_rows, path_text)):
                     color="white", fontsize=14)
         bottom += height
     ax.text(x, bottom+.13, "$R="+str(int(round(bottom)))+"$", ha="center", fontsize=15, color=INK)
-ax.set_xticks([0, 1], labels=["Пара 1,6", "Пара 3,4"])
+ax.set_xticks([0, 1], labels=["Пара a₁,a₆", "Пара a₃,a₄"])
 ax.set(xlim=(-.55, 1.55), ylim=(0, 5.7), ylabel="Вклад в резистенс")
 ax.set_title("Путь P₆", fontsize=18, color=INK, pad=15)
 ax.legend(loc="upper left", bbox_to_anchor=(-.08, -.13), frameon=False, fontsize=10)
@@ -173,7 +173,7 @@ for x, row in enumerate(cycle_rows):
             bx.text(x, bottom+height/2, "$"+sp.latex(value)+"$", ha="center", va="center", color="white", fontsize=15)
         bottom += height
     bx.text(x, bottom+.055, "$R="+sp.latex(sum(row))+"$", ha="center", fontsize=15, color=INK)
-bx.set_xticks([0, 1, 2], labels=["Пара 1,2", "Пара 1,3", "Пара 1,4"])
+bx.set_xticks([0, 1, 2], labels=["Пара a₁,a₂", "Пара a₁,a₃", "Пара a₁,a₄"])
 bx.set(xlim=(-.55, 2.55), ylim=(0, 1.8), ylabel="Вклад в резистенс")
 bx.set_title("Цикл C₆", fontsize=18, color=INK, pad=15)
 bx.legend(loc="upper left", bbox_to_anchor=(-.04, -.13), frameon=False, fontsize=10)
@@ -185,4 +185,4 @@ fig.text(.055, .944, "Какие моды соединяют выбранные 
 fig.text(.055, .872, "Высота каждого столбца равна сопротивлению. Цветные части показывают спектральные вклады.", fontsize=12, color=INK)
 fig.text(.055, .035, "У P₆ моды k = 2 и 4 дают нулевые вклады в обе выбранные пары. Вертикальные шкалы различаются.", fontsize=11, color=INK)
 save(fig, "Спектральные вклады в резистенсы P6 и C6",
-     "P6: R16=(7+4√3)/3+1/3+(7−4√3)/3=5, R34=1/3+1/3+1/3=1. C6: R12=1/3+1/3+1/6=5/6; R13=1+1/3=4/3; R14=4/3+1/6=3/2. Высоты частей соответствуют точным значениям; шкалы панелей различаются.")
+     "P6: R(a₁,a₆)=(7+4√3)/3+1/3+(7−4√3)/3=5, R(a₃,a₄)=1/3+1/3+1/3=1. C6: R(a₁,a₂)=1/3+1/3+1/6=5/6; R(a₁,a₃)=1+1/3=4/3; R(a₁,a₄)=4/3+1/6=3/2. Высоты частей соответствуют точным значениям; шкалы панелей различаются.")

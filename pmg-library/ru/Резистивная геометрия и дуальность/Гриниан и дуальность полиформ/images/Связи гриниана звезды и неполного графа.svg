@@ -9,18 +9,18 @@
 <text xml:space="preserve" x="387.5" y="123.96" font-size="13" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start">1</text>
 <text xml:space="preserve" x="394.5" y="120.0" font-size="18" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start">,</text>
 <text xml:space="preserve" x="399.5" y="123.96" font-size="13" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start">3</text>
-<text xml:space="preserve" x="406.5" y="120.0" font-size="18" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start"> · вершина 1 в центре</text>
+<text xml:space="preserve" x="406.5" y="120.0" font-size="18" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start"> · вершина a в центре</text>
 <line x1="220.00" y1="245.00" x2="95.00" y2="155.00" stroke="#6a7684" stroke-width="2.30"/>
 <line x1="220.00" y1="245.00" x2="345.00" y2="155.00" stroke="#6a7684" stroke-width="2.30"/>
 <line x1="220.00" y1="245.00" x2="220.00" y2="375.00" stroke="#6a7684" stroke-width="2.30"/>
 <circle cx="220.00" cy="245.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="220.00" y="250.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">1</text>
+<text xml:space="preserve" x="220.00" y="250.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">a</text>
 <circle cx="95.00" cy="155.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="95.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">2</text>
+<text xml:space="preserve" x="95.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">b</text>
 <circle cx="345.00" cy="155.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="345.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
+<text xml:space="preserve" x="345.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">c</text>
 <circle cx="220.00" cy="375.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="220.00" y="380.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
+<text xml:space="preserve" x="220.00" y="380.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">d</text>
 <line x1="670.00" y1="245.00" x2="545.00" y2="155.00" stroke="#176c9e" stroke-width="1.98"/>
 <line x1="670.00" y1="245.00" x2="795.00" y2="155.00" stroke="#176c9e" stroke-width="1.98"/>
 <line x1="670.00" y1="245.00" x2="670.00" y2="375.00" stroke="#176c9e" stroke-width="1.98"/>
@@ -40,30 +40,30 @@
 <rect x="748.0" y="264" width="36" height="22" fill="#fff" stroke="#fff"/>
 <text xml:space="preserve" x="766.00" y="281.00" font-size="15" text-anchor="middle" fill="#176c9e" font-weight="normal">5/16</text>
 <circle cx="670.00" cy="245.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="670.00" y="250.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">1</text>
+<text xml:space="preserve" x="670.00" y="250.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">a</text>
 <circle cx="545.00" cy="155.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="545.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">2</text>
+<text xml:space="preserve" x="545.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">b</text>
 <circle cx="795.00" cy="155.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="795.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
+<text xml:space="preserve" x="795.00" y="160.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">c</text>
 <circle cx="670.00" cy="375.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="670.00" y="380.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
+<text xml:space="preserve" x="670.00" y="380.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">d</text>
 <text xml:space="preserve" x="450.00" y="420.00" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">Между листьями возникают связи веса 5/16</text>
 <text xml:space="preserve" x="384.0" y="485.0" font-size="18" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start">K</text>
 <text xml:space="preserve" x="396.0" y="488.96" font-size="13" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start">4</text>
-<text xml:space="preserve" x="403.0" y="485.0" font-size="18" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start"> без ребра 12</text>
+<text xml:space="preserve" x="403.0" y="485.0" font-size="18" fill="#263443" style="fill:#263443" font-weight="400" text-anchor="start"> без ребра ab</text>
 <line x1="110.00" y1="540.00" x2="330.00" y2="740.00" stroke="#6a7684" stroke-width="2.30"/>
 <line x1="110.00" y1="540.00" x2="110.00" y2="740.00" stroke="#6a7684" stroke-width="2.30"/>
 <line x1="330.00" y1="540.00" x2="330.00" y2="740.00" stroke="#6a7684" stroke-width="2.30"/>
 <line x1="330.00" y1="540.00" x2="110.00" y2="740.00" stroke="#6a7684" stroke-width="2.30"/>
 <line x1="330.00" y1="740.00" x2="110.00" y2="740.00" stroke="#6a7684" stroke-width="2.30"/>
 <circle cx="110.00" cy="540.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="110.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">1</text>
+<text xml:space="preserve" x="110.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">a</text>
 <circle cx="330.00" cy="540.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="330.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">2</text>
+<text xml:space="preserve" x="330.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">b</text>
 <circle cx="330.00" cy="740.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="330.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
+<text xml:space="preserve" x="330.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">c</text>
 <circle cx="110.00" cy="740.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="110.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
+<text xml:space="preserve" x="110.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">d</text>
 <line x1="560.00" y1="540.00" x2="780.00" y2="540.00" stroke="#176c9e" stroke-width="3.90"/>
 <line x1="560.00" y1="540.00" x2="780.00" y2="740.00" stroke="#176c9e" stroke-width="2.30"/>
 <line x1="560.00" y1="540.00" x2="560.00" y2="740.00" stroke="#176c9e" stroke-width="2.30"/>
@@ -83,12 +83,12 @@
 <rect x="652.0" y="735.0" width="36" height="22" fill="#fff" stroke="#fff"/>
 <text xml:space="preserve" x="670.00" y="752.00" font-size="15" text-anchor="middle" fill="#176c9e" font-weight="normal">1/16</text>
 <circle cx="560.00" cy="540.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="560.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">1</text>
+<text xml:space="preserve" x="560.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">a</text>
 <circle cx="780.00" cy="540.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="780.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">2</text>
+<text xml:space="preserve" x="780.00" y="545.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">b</text>
 <circle cx="780.00" cy="740.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="780.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">3</text>
+<text xml:space="preserve" x="780.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">c</text>
 <circle cx="560.00" cy="740.00" r="16" fill="#fff" stroke="#263443" stroke-width="1.8"/>
-<text xml:space="preserve" x="560.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">4</text>
-<text xml:space="preserve" x="450.00" y="805.00" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">Отсутствующей исходной связи 12 соответствует вес гриниана 3/16</text>
+<text xml:space="preserve" x="560.00" y="745.00" font-size="15" text-anchor="middle" fill="#263443" font-weight="normal">d</text>
+<text xml:space="preserve" x="450.00" y="805.00" font-size="17" text-anchor="middle" fill="#176c9e" font-weight="normal">Отсутствующей исходной связи ab соответствует вес гриниана 3/16</text>
 </g></svg>

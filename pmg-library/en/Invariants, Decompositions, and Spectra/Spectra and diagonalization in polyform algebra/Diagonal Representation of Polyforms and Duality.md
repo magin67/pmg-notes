@@ -1,9 +1,9 @@
 ---
 title: "Diagonal Representation of Polyforms and Duality"
 date: 2026-10-30
-updated: 2026-11-11
-revision: 3
-translated_revision: 7
+updated: 2026-11-18
+revision: 4
+translated_revision: 8
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -76,7 +76,7 @@ Thus the basis-independent expressions are $\mathbf L=\sum_{\lambda>0}\lambda\ma
 
 ## Eigenmodes of the three-vertex path
 
-For the path $1-2-3$ with unit conductances,
+For the path $p-q-s$ with unit conductances,
 
 $$
 \mathbf L=\begin{pmatrix}1&-1&0\\-1&2&-1\\0&-1&1\end{pmatrix},\qquad
@@ -88,9 +88,9 @@ The nonzero modes and their corresponding vectors in $W$ are
 $$
 \begin{aligned}
 \mathbf u_1&=\frac1{\sqrt2}(1,0,-1)^{\mathsf T},&
-u_1&=\frac{a_1-a_3}{\sqrt2},&\lambda_1&=1\\
+u_1&=\frac{p-s}{\sqrt2},&\lambda_1&=1\\
 \mathbf u_2&=\frac1{\sqrt6}(1,-2,1)^{\mathsf T},&
-u_2&=\frac{a_1-2a_2+a_3}{\sqrt6},&\lambda_2&=3
+u_2&=\frac{p-2q+s}{\sqrt6},&\lambda_2&=3
 \end{aligned}
 $$
 
@@ -408,7 +408,7 @@ R_{ij}=\sum_{\alpha=1}^d
 \frac{(u_{\alpha i}-u_{\alpha j})^2}{\lambda_\alpha}
 $$
 
-For the path, $R_{12}=R_{23}=1$ and $R_{13}=2$. Eigenvalues alone suffice for the sum over all pairs:
+For the path, $R_{pq}=R_{qs}=1$ and $R_{ps}=2$. Eigenvalues alone suffice for the sum over all pairs:
 
 $$
 \operatorname{Kf}(G)=\sum_{i<j}R_{ij}

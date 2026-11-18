@@ -3,7 +3,7 @@
 <rect width="1160" height="540" fill="white"/>
 <g font-family="DejaVu Sans, Arial, sans-serif">
 <rect x="20" y="20" width="550" height="420" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
-<text x="42.00" y="65.00" font-size="28" fill="#16816c" text-anchor="start" font-weight="bold">1 → a,  0 → b</text>
+<text x="42.00" y="65.00" font-size="28" fill="#16816c" text-anchor="start" font-weight="bold">v₁ → a,  v₀ → b</text>
 <text x="42.00" y="105.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="bold">Постоянный поворот: SLL</text>
 <line x1="284.90" y1="280.00" x2="305.10" y2="315.00" stroke="white" stroke-width="8" stroke-linecap="round"/>
 <line x1="284.90" y1="280.00" x2="305.10" y2="315.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round"/>
@@ -75,7 +75,7 @@
 <text x="264.69" y="181.00" font-size="16" fill="#172b43" text-anchor="middle" font-weight="bold">4</text>
 <text x="295.00" y="400.00" font-size="25" fill="#16816c" text-anchor="middle" font-weight="bold">P(1) = 220348791</text>
 <rect x="590" y="20" width="550" height="420" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
-<text x="612.00" y="65.00" font-size="28" fill="#8953af" text-anchor="start" font-weight="bold">0 → a,  1 → b</text>
+<text x="612.00" y="65.00" font-size="28" fill="#8953af" text-anchor="start" font-weight="bold">v₀ → a,  v₁ → b</text>
 <text x="612.00" y="105.00" font-size="19" fill="#172b43" text-anchor="start" font-weight="bold">Чередование, с точностью до отражения: SLR</text>
 <line x1="824.59" y1="280.00" x2="844.79" y2="315.00" stroke="white" stroke-width="8" stroke-linecap="round"/>
 <line x1="824.59" y1="280.00" x2="844.79" y2="315.00" stroke="#196bb9" stroke-width="4" stroke-linecap="round"/>

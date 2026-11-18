@@ -1,9 +1,9 @@
 ---
 title: "Cores, Seams, and Admissible Chains"
 date: 2026-10-31
-updated: 2026-11-11
-revision: 4
-translated_revision: 11
+updated: 2026-11-18
+revision: 5
+translated_revision: 12
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -62,7 +62,7 @@ For $s\ge2$, the two directions of a path isomorphism are given by $a_j\mapsto b
 > [!info] A shared edge retains unit conductance
 > **Shared-edge rule.** Two copies of a seam edge become one edge of conductance $1$. Conductances are not added. Retaining two unit copies would describe a different model: two parallel conductors, electrically equivalent to conductance $2$.
 
-The actual intersection of the core images must be checked. If consecutive vertices $0,1,2,3$ of two cycles are identified in the same order, all three edges $01,12,23$ become shared. Marking only $01$ and $23$ in a drawing does not make this intersection a disconnected seam.
+The actual intersection of the core images must be checked. If consecutive vertices $v_0,v_1,v_2,v_3$ of two cycles are identified in the same order, all three edges $v_0v_1,v_1v_2,v_2v_3$ become shared. Marking only $v_0v_1$ and $v_2v_3$ in a drawing does not make this intersection a disconnected seam.
 
 ## Admissible open chains of cycles
 
@@ -108,11 +108,11 @@ These conditions concern the abstract graph. Crossing lines in a drawing without
 
 ### First example: three hexagons
 
-Let $N=3$, $m_1=m_2=m_3=6$, and $s_1=s_2=2$. Number the vertices of the middle core $K_2$ as $0,1,\ldots,5$ around the cycle. The input seam is the edge $01$. Choose the output seam as $34$ in configuration A and $23$ in configuration B.
+Let $N=3$, $m_1=m_2=m_3=6$, and $s_1=s_2=2$. Label the vertices of the middle core $K_2$ as $v_0,v_1,\ldots,v_5$ around the cycle. The input seam is the edge $v_0v_1$. Choose the output seam as $v_3v_4$ in configuration A and $v_2v_3$ in configuration B.
 
 ![Two assemblies of three hexagons with marked seams and the core scheme](images/Two%20Assemblies%20of%20Three%20Hexagons.svg)
 
-**One scheme, two configurations.** In both cases the core scheme is the path $1-2-3$. The red input and blue output of the middle core each have two vertices and are disjoint. Arrows specify the order of seam endpoints; equal numbers denote the same vertex. The geometric drawings represent abstract graphs, not their resistance embeddings.
+**One scheme, two configurations.** In both cases the core scheme is the path $K_1-K_2-K_3$. The red input and blue output of the middle core each have two vertices and are disjoint. Arrows specify the order of seam endpoints; matching labels denote the same vertex. The geometric drawings represent abstract graphs, not their resistance embeddings.
 
 Each assembly has $n=3\cdot6-2\cdot2=14$ vertices and $|E|=3\cdot6-2=16$ edges. The graphs differ, although their spanning-tree count and resistance radius agree: $\tau=204$, $\rho=43595/41616$. Exact edge lists, the nonisomorphism proof, and an independent calculation appear below in [[en/Graph Transformations and Gluing/Chains of cores/Cores, Seams, and Admissible Chains#Two assemblies of three hexagons|Two assemblies of three hexagons]].
 
@@ -232,17 +232,17 @@ To specify the graphs independently of the drawing, let $C(v_0,\ldots,v_5)$ deno
 
 $$
 \begin{aligned}
-K_1&=C(0,1,9,8,7,6),\qquad K_2=C(0,1,2,3,4,5),\\
-K_3^{\text{A}}&=C(3,4,13,12,11,10),\qquad
-K_3^{\text{B}}=C(2,3,13,12,11,10)
+K_1&=C(v_0,v_1,v_9,v_8,v_7,v_6),\qquad K_2=C(v_0,v_1,v_2,v_3,v_4,v_5),\\
+K_3^{\text{A}}&=C(v_3,v_4,v_{13},v_{12},v_{11},v_{10}),\qquad
+K_3^{\text{B}}=C(v_2,v_3,v_{13},v_{12},v_{11},v_{10})
 \end{aligned}
 \tag{7}
 $$
 
-The first seam identifies the ordered pairs $(0,1)$ of the two cores. The second identifies $(3,4)$ or $(2,3)$ of the middle core with the first pair of the third cycle. The final edge set is the union of the edges of the three listed cycles, with every shared edge included once. There are no other identifications.
+The first seam identifies the ordered pairs $(v_0,v_1)$ of the two cores. The second identifies $(v_3,v_4)$ or $(v_2,v_3)$ of the middle core with the first pair of the third cycle. The final edge set is the union of the edges of the three listed cycles, with every shared edge included once. There are no other identifications.
 
 > [!note]- Proof that the two assemblies are nonisomorphic
-> **Proof.** Formula (2) gives $n=18-4=14$ and $|E|=18-2=16$. Each graph has four vertices of degree $3$. Their induced subgraph has two edges in A and three in B: the latter includes the additional edge $12$. Since an isomorphism preserves degrees and adjacency, the graphs are nonisomorphic. $\square$
+> **Proof.** Formula (2) gives $n=18-4=14$ and $|E|=18-2=16$. Each graph has four vertices of degree $3$. Their induced subgraph has two edges in A and three in B: the latter includes the additional edge $v_1v_2$. Since an isomorphism preserves degrees and adjacency, the graphs are nonisomorphic. $\square$
 
 > [!example] Equal spanning-tree counts and radii
 > **Computed directly.** Both graphs have

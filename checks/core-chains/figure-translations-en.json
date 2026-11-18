@@ -16,26 +16,26 @@
     "file": "Two Disconnected Seams in a Cycle.svg",
     "text": {
       "Два расположения несвязных швов": "Two placements of disconnected seams",
-      "Среднее ядро C12. Вход 01 и 45 одинаков. Выход в А равен 23 и 67, в Б равен 67 и 10-11. Вход и выход не пересекаются по вершинам.": "Middle core C12. Input 01 and 45 is fixed. The output is 23 and 67 in A, and 67 and 10-11 in B. Input and output are vertex-disjoint.",
       "Одинаковые несвязные швы, разное взаимное расположение": "Equal disconnected seams, different relative positions",
       "Конфигурация А": "Configuration A",
-      "Выход: (2, 3, 6, 7)": "Output: (2, 3, 6, 7)",
       "Конфигурация Б": "Configuration B",
-      "Выход: (6, 7, 10, 11)": "Output: (6, 7, 10, 11)",
-      "Вход в обеих конфигурациях: (0, 1, 4, 5)": "Input in both configurations: (0, 1, 4, 5)"
+      "Среднее ядро C12. Вход v₀v₁ и v₄v₅ одинаков. Выход в А равен v₂v₃ и v₆v₇, в Б равен v₆v₇ и v₁₀–v₁₁. Вход и выход не пересекаются по вершинам.": "Middle core C12. Input v₀v₁ and v₄v₅ is fixed. The output is v₂v₃ and v₆v₇ in A, and v₆v₇ and v₁₀–v₁₁ in B. Input and output are vertex-disjoint.",
+      "Выход: (v₂, v₃, v₆, v₇)": "Output: (v₂, v₃, v₆, v₇)",
+      "Выход: (v₆, v₇, v₁₀, v₁₁)": "Output: (v₆, v₇, v₁₀, v₁₁)",
+      "Вход в обеих конфигурациях: (v₀, v₁, v₄, v₅)": "Input in both configurations: (v₀, v₁, v₄, v₅)"
     }
   },
   "Две сборки трёх шестиугольников.svg": {
     "file": "Two Assemblies of Three Hexagons.svg",
     "text": {
       "Две сборки трёх шестиугольников": "Two assemblies of three hexagons",
-      "Два графа со швами 01 и 34 либо 01 и 23; одинаковая схема ядер P3, 14 вершин и 16 рёбер.": "Two graphs with seams 01 and 34 or 01 and 23; the same core scheme P3, 14 vertices, and 16 edges.",
       "А. Противоположные швы": "A. Opposite seams",
-      "Вход: (0, 1)     Выход: (3, 4)": "Input: (0, 1)     Output: (3, 4)",
-      "Одинаковые номера отождествлены": "Equal labels are identified",
       "Схема ядер: P₃;  s₁ = s₂ = 2": "Core scheme: P₃;  s₁ = s₂ = 2",
       "Б. Швы через одно ребро": "B. One edge between seams",
-      "Вход: (0, 1)     Выход: (2, 3)": "Input: (0, 1)     Output: (2, 3)"
+      "Два графа со швами v₀v₁ и v₃v₄ либо v₀v₁ и v₂v₃; одинаковая схема ядер P3, 14 вершин и 16 рёбер.": "Two graphs with seams v₀v₁ and v₃v₄ or v₀v₁ and v₂v₃; the same core scheme P3, 14 vertices, and 16 edges.",
+      "Вход: (v₀, v₁)     Выход: (v₃, v₄)": "Input: (v₀, v₁)     Output: (v₃, v₄)",
+      "Совпадающие метки обозначают одну вершину": "Equal labels are identified",
+      "Вход: (v₀, v₁)     Выход: (v₂, v₃)": "Input: (v₀, v₁)     Output: (v₂, v₃)"
     }
   },
   "Допустимая цепочка и нарушения условий.svg": {
@@ -47,29 +47,29 @@
       "Швы не пересекаются по вершинам.": "Seams are vertex-disjoint.",
       "Несоседние ядра не имеют контактов.": "Nonadjacent cores do not meet.",
       "Б. Два шва имеют общую вершину": "B. Two seams share a vertex",
-      "Показано среднее ядро: швы 01 и 12.": "Middle core shown: seams 01 and 12.",
-      "Вершина 1 принадлежит всем трём ядрам.": "Vertex 1 belongs to all three cores.",
       "В. Дополнительный контакт": "C. Additional contact",
-      "Дополнительно отождествить 7 и 12.": "Also identify vertices 7 and 12.",
       "Тогда крайние ядра имеют общую вершину.": "Then the end cores share a vertex.",
       "Г. Несвязный шов": "D. Disconnected seam",
-      "Одинаковые номера отождествляются.": "Equal labels are identified.",
-      "Пересечение: два отдельных ребра 01 и 45.": "Intersection: two separate edges 01 and 45.",
-      "Четыре общие вершины не образуют P₄.": "Four shared vertices do not form P₄."
+      "Четыре общие вершины не образуют P₄.": "Four shared vertices do not form P₄.",
+      "Показано среднее ядро: швы v₀v₁ и v₁v₂.": "Middle core shown: seams v₀v₁ and v₁v₂.",
+      "Вершина v₁ принадлежит всем трём ядрам.": "Vertex v₁ belongs to all three cores.",
+      "Дополнительно отождествить v₇ и v₁₂.": "Also identify vertices v₇ and v₁₂.",
+      "Совпадающие метки обозначают одну вершину.": "Equal labels are identified.",
+      "Пересечение: два отдельных ребра v₀v₁ и v₄v₅.": "Intersection: two separate edges v₀v₁ and v₄v₅."
     }
   },
   "Неизоморфность двух шестиугольных цепочек.svg": {
     "file": "Nonisomorphism of Two Hexagonal Chains.svg",
     "text": {
       "Неизоморфность двух цепочек по вершинам степени три": "Nonisomorphism of two chains from their degree-three vertices",
-      "У каждой цепочки четыре вершины степени 3. В конфигурации А они индуцируют два раздельных ребра 01 и 34; в конфигурации Б - путь 0-1-2-3 из трёх рёбер. Это препятствует изоморфизму графов.": "Each chain has four vertices of degree 3. In A they induce two disjoint edges 01 and 34; in B they induce the three-edge path 0-1-2-3. This rules out graph isomorphism.",
       "А. Противоположные швы": "A. Opposite seams",
       "Выделены четыре вершины степени 3": "Four degree-3 vertices highlighted",
       "Индуцированный подграф": "Induced subgraph",
       "2 раздельных ребра": "2 disjoint edges",
       "Б. Швы через одно ребро": "B. One edge between seams",
       "Путь из 3 рёбер": "A 3-edge path",
-      "Изоморфизм сохраняет степени вершин и рёбра индуцированного подграфа": "Isomorphisms preserve vertex degrees and edges of induced subgraphs"
+      "Изоморфизм сохраняет степени вершин и рёбра индуцированного подграфа": "Isomorphisms preserve vertex degrees and edges of induced subgraphs",
+      "У каждой цепочки четыре вершины степени 3. В конфигурации А они индуцируют два раздельных ребра v₀v₁ и v₃v₄; в конфигурации Б - путь v₀-v₁-v₂-v₃ из трёх рёбер. Это препятствует изоморфизму графов.": "Each chain has four vertices of degree 3. In A they induce two disjoint edges v₀v₁ and v₃v₄; in B they induce the three-edge path v₀-v₁-v₂-v₃. This rules out graph isomorphism."
     }
   },
   "Общий двойственный мультиграф цепочек.svg": {
@@ -92,11 +92,11 @@
     "file": "Equal Spanning-Tree Counts and Different Radii.svg",
     "text": {
       "Одинаковое остовное число и разные резистивные радиусы": "Equal spanning-tree counts and different resistance radii",
-      "Граф А: C4 и C3 с общей вершиной 0. Граф Б: K2,3 с висячим ребром 05. Оба имеют шесть вершин, семь рёбер и 12 деревьев. Радиусы 77/144 и 7/12 различны.": "Graph A: C4 and C3 sharing vertex 0. Graph B: K2,3 with pendant edge 05. Both have six vertices, seven edges, and 12 trees. Their radii, 77/144 and 7/12, differ.",
       "Одного остовного числа недостаточно для определения радиуса": "The spanning-tree count alone does not determine the radius",
       "А. Два цикла в общей вершине": "A. Two cycles sharing a vertex",
       "Б. K₂,₃ и висячее ребро": "B. K₂,₃ with a pendant edge",
-      "В обоих графах: n = 6, |E| = 7; висячая вершина есть только в Б": "Both graphs: n = 6, |E| = 7; only B has a pendant vertex"
+      "В обоих графах: n = 6, |E| = 7; висячая вершина есть только в Б": "Both graphs: n = 6, |E| = 7; only B has a pendant vertex",
+      "Граф А: C4 и C3 с общей вершиной v₀. Граф Б: K2,3 с висячим ребром v₀v₅. Оба имеют шесть вершин, семь рёбер и 12 деревьев. Радиусы 77/144 и 7/12 различны.": "Graph A: C4 and C3 sharing vertex v₀. Graph B: K2,3 with pendant edge v₀v₅. Both have six vertices, seven edges, and 12 trees. Their radii, 77/144 and 7/12, differ."
     }
   },
   "Паросочетания и остовной полином.svg": {
@@ -113,13 +113,13 @@
     "file": "Pairs of Edge Seams of a Cube.svg",
     "text": {
       "Три пары непересекающихся рёбер куба": "Three pairs of disjoint cube edges",
-      "Первый шов 01. Второй равен 23, 67 или 26. Индуцированные подграфы на концах швов имеют вид C4, 2K2 и P4, поэтому пары неэквивалентны.": "The first seam is 01; the second is 23, 67, or 26. The endpoint-induced subgraphs are C4, 2K2, and P4, so the pairs are inequivalent.",
       "Куб: отдельные рёбра эквивалентны, пары швов различаются": "Cube: individual edges are equivalent, seam pairs differ",
-      "Швы 01 и 23": "Seams 01 and 23",
       "Подграф на концах швов": "Seam-endpoint subgraph",
-      "Швы 01 и 67": "Seams 01 and 67",
-      "Швы 01 и 26": "Seams 01 and 26",
-      "Каждая сборка содержит три куба: 20 вершин и 34 ребра": "Each assembly has three cubes: 20 vertices and 34 edges"
+      "Каждая сборка содержит три куба: 20 вершин и 34 ребра": "Each assembly has three cubes: 20 vertices and 34 edges",
+      "Первый шов v₀v₁. Второй равен v₂v₃, v₆v₇ или v₂v₆. Индуцированные подграфы на концах швов имеют вид C4, 2K2 и P4, поэтому пары неэквивалентны.": "The first seam is v₀v₁; the second is v₂v₃, v₆v₇, or v₂v₆. The endpoint-induced subgraphs are C4, 2K2, and P4, so the pairs are inequivalent.",
+      "Швы v₀v₁ и v₂v₃": "Seams v₀v₁ and v₂v₃",
+      "Швы v₀v₁ и v₆v₇": "Seams v₀v₁ and v₆v₇",
+      "Швы v₀v₁ и v₂v₆": "Seams v₀v₁ and v₂v₆"
     }
   },
   "Порядок швов и остовное число.svg": {
@@ -244,7 +244,7 @@
       "Два пути с собственным остовным числом 1 и граф K4 без входного ребра с собственным остовным числом 8. У всех отмечены входные и выходные контакты.": "Two paths with spanning-tree count 1, and K4 with its input edge removed and spanning-tree count 8. Input and output contacts are marked on each.",
       "Путь P₄": "Path P₄",
       "Путь P₆": "Path P₆",
-      "K₄ без ребра 01": "K₄ without edge 01"
+      "K₄ без ребра v₀v₁": "K₄ without edge v₀v₁"
     },
     "fit_text": true
   },

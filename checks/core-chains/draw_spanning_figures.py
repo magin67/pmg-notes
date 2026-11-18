@@ -2,7 +2,7 @@
 from pathlib import Path
 import json
 
-from draw_admissible_chains import SVG, INK, MUTED, BLUE, PURPLE
+from draw_admissible_chains import SVG, INK, MUTED, BLUE, PURPLE, vertex_label
 from verify_spanning_polynomials import matchings
 
 
@@ -23,7 +23,7 @@ def main():
         covered={v for i in es for v in (i,i+1)}
         for i,x in enumerate(xs):
             s.circle((x,y),21,'#e2edff' if i in covered else 'white',BLUE if i in covered else MUTED,2)
-            s.text(x,y+7,str(i+1),21,anchor='middle')
+            s.text(x,y+7,vertex_label(i+1, 'K'),21,anchor='middle')
         s.text(700,y+9,terms[es],29,INK,weight='bold')
     s.text(540,619,'ℓᵢ = sᵢ − 1: число общих рёбер, а не число вершин шва',22,anchor='middle')
     s.save('Паросочетания и остовной полином.svg')
@@ -43,7 +43,7 @@ def main():
             s.text((xs[i]+xs[i+1])/2,y-18,'s = '+str(size),23,PURPLE if size==1 else INK,anchor='middle')
         for i,x in enumerate(xs):
             s.circle((x,y),25,'#fff0d7',INK,2)
-            s.text(x,y+8,str(i+1),24,anchor='middle')
+            s.text(x,y+8,vertex_label(i+1, 'K'),24,anchor='middle')
         tau=values['order_'+''.join(map(str,order))+'_r0']
         s.text(930,y+9,'τ = '+str(tau),29,PURPLE if row==1 else INK,anchor='middle',weight='bold')
     s.text(540,475,'Пунктир: шов из одной вершины; общее ребро отсутствует',22,anchor='middle')

@@ -59,19 +59,19 @@
 <line x1="1040.00" y1="227.00" x2="982.50" y2="127.41" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
 <circle cx="1040.00" cy="227.00" r="15" fill="#ffe2e9" stroke="#bc294b" stroke-width="2"/>
 <circle cx="982.50" cy="326.59" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="997.50" y="331.59" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="997.50" y="331.59" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="1040.00" cy="227.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1066.00" y="232.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="1066.00" y="232.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="982.50" cy="127.41" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="997.50" y="132.41" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="997.50" y="132.41" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="867.50" cy="127.41" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="852.50" y="132.41" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="852.50" y="132.41" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="810.00" cy="227.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="795.00" y="232.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="795.00" y="232.00" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="867.50" cy="326.59" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="852.50" y="331.59" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
-<text x="925.00" y="392.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Показано среднее ядро: швы 01 и 12.</text>
-<text x="925.00" y="425.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Вершина 1 принадлежит всем трём ядрам.</text>
+<text x="852.50" y="331.59" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
+<text x="925.00" y="392.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Показано среднее ядро: швы v₀v₁ и v₁v₂.</text>
+<text x="925.00" y="425.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Вершина v₁ принадлежит всем трём ядрам.</text>
 <text x="44.00" y="530.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">В. Дополнительный контакт</text>
 <polygon points="347.50,766.29 380.00,710.00 445.00,710.00 477.50,766.29 445.00,822.58 380.00,822.58" fill="#fff0d7"/>
 <text x="412.50" y="773.29" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">K1</text>
@@ -113,10 +113,10 @@
 <circle cx="250.00" cy="597.42" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <path d="M 445.00,822.58 C 445.00,598.71 152.50,598.71 152.50,653.71" fill="none" stroke="#8953af" stroke-width="3" stroke-dasharray="7 6"/>
 <circle cx="445.00" cy="822.58" r="9" fill="white" stroke="#8953af" stroke-width="3"/>
-<text x="465.00" y="828.58" font-size="18" fill="#8953af" text-anchor="middle" font-weight="normal">7</text>
+<text x="465.00" y="828.58" font-size="18" fill="#8953af" text-anchor="middle" font-weight="normal">v₇</text>
 <circle cx="152.50" cy="653.71" r="9" fill="white" stroke="#8953af" stroke-width="3"/>
-<text x="130.50" y="659.71" font-size="18" fill="#8953af" text-anchor="middle" font-weight="normal">12</text>
-<text x="315.00" y="865.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Дополнительно отождествить 7 и 12.</text>
+<text x="130.50" y="659.71" font-size="18" fill="#8953af" text-anchor="middle" font-weight="normal">v₁₂</text>
+<text x="315.00" y="865.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Дополнительно отождествить v₇ и v₁₂.</text>
 <text x="315.00" y="902.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Тогда крайние ядра имеют общую вершину.</text>
 <text x="654.00" y="530.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">Г. Несвязный шов</text>
 <polygon points="845.00,782.94 886.93,728.29 877.94,660.00 823.29,618.07 755.00,627.06 713.07,681.71 722.06,750.00 776.71,791.93" fill="#fff0d7"/>
@@ -131,15 +131,15 @@
 <line x1="845.00" y1="782.94" x2="886.93" y2="728.29" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
 <line x1="755.00" y1="627.06" x2="713.07" y2="681.71" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
 <circle cx="845.00" cy="782.94" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="861.00" y="787.94" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="861.00" y="787.94" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="886.93" cy="728.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="902.93" y="733.29" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="902.93" y="733.29" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="877.94" cy="660.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <circle cx="823.29" cy="618.07" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <circle cx="755.00" cy="627.06" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="739.00" y="632.06" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="739.00" y="632.06" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="713.07" cy="681.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="697.07" y="686.71" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="697.07" y="686.71" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="722.06" cy="750.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <circle cx="776.71" cy="791.93" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <polygon points="1095.00,782.94 1136.93,728.29 1127.94,660.00 1073.29,618.07 1005.00,627.06 963.07,681.71 972.06,750.00 1026.71,791.93" fill="#e2edff"/>
@@ -154,18 +154,18 @@
 <line x1="1095.00" y1="782.94" x2="1136.93" y2="728.29" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
 <line x1="1005.00" y1="627.06" x2="963.07" y2="681.71" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
 <circle cx="1095.00" cy="782.94" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1111.00" y="787.94" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="1111.00" y="787.94" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="1136.93" cy="728.29" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1152.93" y="733.29" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="1152.93" y="733.29" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="1127.94" cy="660.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <circle cx="1073.29" cy="618.07" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <circle cx="1005.00" cy="627.06" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="989.00" y="632.06" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="989.00" y="632.06" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="963.07" cy="681.71" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="947.07" y="686.71" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="947.07" y="686.71" font-size="18" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="972.06" cy="750.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
 <circle cx="1026.71" cy="791.93" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="925.00" y="843.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Одинаковые номера отождествляются.</text>
-<text x="925.00" y="878.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Пересечение: два отдельных ребра 01 и 45.</text>
+<text x="925.00" y="843.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Совпадающие метки обозначают одну вершину.</text>
+<text x="925.00" y="878.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Пересечение: два отдельных ребра v₀v₁ и v₄v₅.</text>
 <text x="925.00" y="913.00" font-size="19" fill="#172b43" text-anchor="middle" font-weight="normal">Четыре общие вершины не образуют P₄.</text>
 </g></svg>

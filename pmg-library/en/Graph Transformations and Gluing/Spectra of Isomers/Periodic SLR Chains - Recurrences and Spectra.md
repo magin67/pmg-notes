@@ -1,9 +1,9 @@
 ---
 title: 'Periodic SLR Chains: Recurrences and Spectra'
 date: '2026-11-02'
-updated: 2026-11-11
-revision: 4
-translated_revision: 6
+updated: 2026-11-18
+revision: 5
+translated_revision: 7
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -57,7 +57,7 @@ $$
 
 Here $A=\det\mathbf H_G$; $B$ and $C$ are principal minors with vertex $a$ and $b$ deleted, respectively; $D=(\operatorname{adj}\mathbf H_G)_{ab}$; and $E$ is the principal minor with the pair deleted. A minor retains the vertex degrees of the original graph. It is not the Laplacian of an induced subgraph.
 
-The matrices $\mathbf U_S,\mathbf U_L,\mathbf U_R$ are defined and derived in [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns#Five coordinates and a power of one matrix|Five coordinates and a power of one matrix]]. Unlike the transition with the earlier input orientation, here $\mathbf U_\beta=\mathbf T_{j(\beta)}\mathbf J$: the input $(0,1)$ of the new core is identified with $(b,a)$. The outputs L, S, R are $(2,3)$, $(3,4)$, $(4,5)$.
+The matrices $\mathbf U_S,\mathbf U_L,\mathbf U_R$ are defined and derived in [[en/Graph Transformations and Gluing/Spectra of Isomers/Weaving SLR Chains and Constant Turns#Five coordinates and a power of one matrix|Five coordinates and a power of one matrix]]. Unlike the transition with the earlier input orientation, here $\mathbf U_\beta=\mathbf T_{j(\beta)}\mathbf J$: the input $(v_0,v_1)$ of the new core is identified with $(b,a)$. The outputs L, S, R are $(v_2,v_3)$, $(v_3,v_4)$, $(v_4,v_5)$.
 
 For a period,
 

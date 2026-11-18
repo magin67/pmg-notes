@@ -47,7 +47,7 @@ class SVG:
   for x,y,value,color in texts:
    self.rect(x-7*len(value)/2-4,y-17,7*len(value)+8,22,'#fff')
    self.text(x,y,value,15,color)
-  for i,(x,y) in enumerate(points):self.circle(x,y,i+1,r)
+  for i,(x,y) in enumerate(points):self.circle(x,y,chr(ord('a')+i),r)
  def save(self,name):
   DEST.mkdir(parents=True,exist_ok=True)
   (DEST/name).write_text('\n'.join(self.items+['</g></svg>']))
@@ -65,16 +65,16 @@ def simple():
  s.text(220,80,'Исходный граф · веса 1',19);s.text(670,80,'Гриниан · точные веса',19)
  star=[(0,0),(-125,-90),(125,-90),(0,130)]
  E=[(0,i,1) for i in range(1,4)]
- s.text(450,120,'Звезда K₁,₃ · вершина 1 в центре',18)
+ s.text(450,120,'Звезда K₁,₃ · вершина a в центре',18)
  s.graph(shift(star,220,245),E)
  s.graph(shift(star,670,245),data(4,E),True,True,label_positions={(0,1):(610,212),(0,2):(730,212),(0,3):(670,309),(1,2):(670,142),(1,3):(574,281),(2,3):(766,281)})
  s.text(450,420,'Между листьями возникают связи веса 5/16',17,BLUE)
  sq=[(-110,-100),(110,-100),(110,100),(-110,100)]
  E=[(i,j,1) for i,j in combinations(range(4),2) if (i,j)!=(0,1)]
- s.text(450,485,'K₄ без ребра 12',18)
+ s.text(450,485,'K₄ без ребра ab',18)
  s.graph(shift(sq,220,640),E)
  s.graph(shift(sq,670,640),data(4,E),True,True)
- s.text(450,805,'Отсутствующей исходной связи 12 соответствует вес гриниана 3/16',17,BLUE)
+ s.text(450,805,'Отсутствующей исходной связи ab соответствует вес гриниана 3/16',17,BLUE)
  s.save('Связи гриниана звезды и неполного графа.svg')
 
 def cycles():
@@ -103,8 +103,8 @@ def wikipedia():
  pairs=data(6,E); weights={(i,j):int(c*198) for i,j,c in pairs}
  x0,y0,step=535,150,55
  for i in range(6):
-  s.text(x0+i*step+step/2,y0-15,i+1,16)
-  s.text(x0-20,y0+i*step+step/2+6,i+1,16)
+  s.text(x0+i*step+step/2,y0-15,chr(ord('a')+i),16)
+  s.text(x0-20,y0+i*step+step/2+6,chr(ord('a')+i),16)
   for j in range(6):
    if i==j: fill='#f0f2f5';value='·';col=GREY
    else:

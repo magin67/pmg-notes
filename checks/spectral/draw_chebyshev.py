@@ -4,7 +4,7 @@ Requires SymPy and Matplotlib. SVGs go beside the Russian note; optional PNGs
 are saved to --preview-dir. Mathematical data are checked before rendering.
 """
 import argparse
-from figure_language import prepare_figure, output_directory
+from figure_language import prepare_figure, output_directory, vertex_label
 from pathlib import Path
 from math import cos, sin, pi
 from xml.sax.saxutils import escape
@@ -61,7 +61,7 @@ def graph(ax, entry, coords, highlight=False):
     for vertex, (x, y) in coords.items():
         ax.scatter(x, y, s=440, color=INK if highlight else part_color[vertex],
                    edgecolor="white", linewidth=1.2, zorder=2)
-        ax.text(x, y, str(vertex), color="white", fontsize=11, ha="center", va="center", zorder=3)
+        ax.text(x, y, vertex_label(vertex), color="white", fontsize=11, ha="center", va="center", zorder=3)
     ax.axis("off")
 
 
@@ -103,7 +103,7 @@ fig.text(.055, .88, r"$\mathbf{L}^{(2)}=4\mathbf{L}_{P_6}-\mathbf{L}_{P_6}^{\,2}
 fig.text(.055, .060, "Одинаковый цвет строк выделяет объединённое собственное подпространство.", fontsize=12, color=INK)
 fig.text(.055, .024, "Базис пути сохраняется; меняются собственные числа и резистивная метрика.", fontsize=11, color=INK)
 save(fig, "Чебышёвский переход от пути P6 к циклу",
-     "Переход 4L−L² сохраняет рёбра 1–2 и 5–6 и добавляет 1–3, 2–4, 3–5, 4–6. Обход нового цикла: 1,2,4,6,5,3. В исходном базисе пути спектр меняется с 0,2−√3,1,2,3,2+√3 на 0,1,3,4,3,1; числа гриниана: 0,1,1/3,1/4,1/3,1.")
+     "Переход 4L−L² сохраняет рёбра a₁–a₂ и a₅–a₆ и добавляет a₁–a₃, a₂–a₄, a₃–a₅, a₄–a₆. Обход нового цикла: a₁,a₂,a₄,a₆,a₅,a₃. В исходном базисе пути спектр меняется с 0,2−√3,1,2,3,2+√3 на 0,1,3,4,3,1; числа гриниана: 0,1,1/3,1/4,1/3,1.")
 
 fig, axes = plt.subplots(2, 3, figsize=(13.6, 8.6), facecolor="white")
 fig.subplots_adjust(left=.035, right=.965, top=.78, bottom=.18, wspace=.18, hspace=.54)

@@ -8,7 +8,7 @@ import networkx as nx
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'checks/core-chains'))
-from draw_admissible_chains import SVG as BaseSVG, INK, MUTED, BLUE, PURPLE, RED
+from draw_admissible_chains import SVG as BaseSVG, INK, MUTED, BLUE, PURPLE, RED, vertex_label
 import verify_slr_code as slr
 
 OUT = ROOT/'pmg-library/ru/Преобразования и сочленения графов/Спектры изомеров/images'
@@ -71,11 +71,11 @@ def draw_graph(s, graph, cores, positions, box, label=True, depths=None):
 
 
 def runners():
-    s = SVG(1160,480,'Три SLR-бегунка','Один путь из пяти рёбер, вилка (1,0), три различных упорядоченных выхода. Входное ребро пунктиром уже принадлежит старому графу.')
+    s = SVG(1160,480,'Три SLR-бегунка','Один путь из пяти рёбер, вилка (v₁,v₀), три различных упорядоченных выхода. Входное ребро пунктиром уже принадлежит старому графу.')
     for panel,c in enumerate('LSR'):
         x=20+385*panel
         s.panel(x,20,365,350)
-        s.text(x+22,58,{'L':'L: розетка (2, 3)','S':'S: розетка (3, 4)','R':'R: розетка (4, 5)'}[c],23,COLORS[c],weight='bold')
+        s.text(x+22,58,{'L':'L: розетка (v₂, v₃)','S':'S: розетка (v₃, v₄)','R':'R: розетка (v₄, v₅)'}[c],23,COLORS[c],weight='bold')
         p = fit({i: HEX[i,:2] for i in range(6)},(x+82,103,205,175))
         for a,b in zip([1,2,3,4,5],[2,3,4,5,0]):s.line(p[a],p[b],BLUE,4)
         s.line(p[0],p[1],MUTED,3,'7 6')
@@ -88,8 +88,8 @@ def runners():
             s.circle(p[i],8,'white',BLUE if i in [0,1] else INK,2)
             delta=np.array(p[i])-center
             delta=delta/np.linalg.norm(delta)*24
-            s.text(p[i][0]+delta[0],p[i][1]+delta[1]+7,str(i),21,anchor='middle')
-        s.text(x+182,333,'Вилка (1, 0):  1 → a,  0 → b',19,anchor='middle')
+            s.text(p[i][0]+delta[0],p[i][1]+delta[1]+7,vertex_label(i),21,anchor='middle')
+        s.text(x+182,333,'Вилка (v₁, v₀):  v₁ → a,  v₀ → b',19,anchor='middle')
     s.text(40,414,'Пять рёбер добавляются. Старое ребро ab замыкает новый C6.',23,weight='bold')
     s.text(40,451,'Четыре новые вершины на каждом шаге; порядок контактов входит в правило.',21,MUTED)
     s.save('Три SLR-бегунка.svg')
@@ -133,8 +133,8 @@ def families():
 
 def matching():
     s=SVG(1160,540,'Соответствие контактов и SLR-поворот','Фиксированный боковой выход при разных соответствиях вилки и розетки даёт SLL и SLR. Остовное число одинаково, корневые определители различны.')
-    for x,u,title,sub,col in [(20,'LL','1 → a,  0 → b','Постоянный поворот: SLL',GREEN),
-                              (590,'LR','0 → a,  1 → b','Чередование, с точностью до отражения: SLR',PURPLE)]:
+    for x,u,title,sub,col in [(20,'LL','v₁ → a,  v₀ → b','Постоянный поворот: SLL',GREEN),
+                              (590,'LR','v₀ → a,  v₁ → b','Чередование, с точностью до отражения: SLR',PURPLE)]:
         s.panel(x,20,550,420)
         s.text(x+22,65,title,28,col,weight='bold')
         s.text(x+22,105,sub,19,weight='bold')

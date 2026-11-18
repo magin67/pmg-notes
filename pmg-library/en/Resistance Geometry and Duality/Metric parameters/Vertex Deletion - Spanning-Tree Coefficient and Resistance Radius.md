@@ -1,9 +1,9 @@
 ---
 title: "Vertex Deletion: Spanning-Tree Coefficient and Resistance Radius"
 date: 2026-10-18
-updated: 2026-11-10
-revision: 4
-translated_revision: 4
+updated: 2026-11-18
+revision: 5
+translated_revision: 5
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -182,24 +182,24 @@ Consider the following graph with unit conductances on six vertices:
 
 ```mermaid
 graph TD
-    v1(("1")) --- v2(("2"))
-    v1 --- v3(("3"))
-    v1 --- v4(("4"))
+    v1((a)) --- v2((b))
+    v1 --- v3((c))
+    v1 --- v4((d))
     v2 --- v3
     v2 --- v4
-    v3 --- v5(("5"))
-    v4 --- v6(("6"))
+    v3 --- v5((e))
+    v4 --- v6((f))
     v5 --- v6
 ```
 
-The diagram specifies only the edge topology. The edge set is $\{12,13,14,23,24,35,46,56\}$, where $jk$ denotes an unordered pair. Direct counting gives $\tau(G)=32$.
+The diagram specifies only the edge topology. The edge set is $\{ab,ac,ad,bc,bd,ce,df,ef\}$, where $jk$ denotes an unordered pair. Direct counting gives $\tau(G)=32$.
 
 | Removed vertex | $\tau(H_i)$ | $s_i$ | Remaining graph | $\lambda_2(H_i)$ |
 | --- | ---: | ---: | --- | ---: |
-| $1$ | $5$ | $5/32$ | Cycle $2-3-5-6-4-2$ | $1.3820$ |
-| $5$ | $8$ | $1/4$ | $K_4$ on $1,2,3,4$ without edge $34$, with leaf $6$ attached to vertex $4$ | $0.8299$ |
+| $a$ | $5$ | $5/32$ | Cycle $b-c-e-f-d-b$ | $1.3820$ |
+| $e$ | $8$ | $1/4$ | $K_4$ on $a,b,c,d$ without edge $cd$, with leaf $f$ attached to vertex $d$ | $0.8299$ |
 
-By the spanning-tree ratio, vertex $1$ is more critical. Yet after it is deleted, the graph remains connected upon deletion of any one further vertex. After vertex $5$ is deleted, deleting vertex $4$ disconnects the graph. Thus rankings by spanning-tree loss and by resilience to the next deletion differ even within the same original graph.
+By the spanning-tree ratio, vertex $a$ is more critical. Yet after it is deleted, the graph remains connected upon deletion of any one further vertex. After vertex $e$ is deleted, deleting vertex $d$ disconnects the graph. Thus rankings by spanning-tree loss and by resilience to the next deletion differ even within the same original graph.
 
 The spectral connection explains another distinction: for a connected graph $H$ on $m$ vertices [3],
 

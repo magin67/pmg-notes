@@ -103,13 +103,13 @@ z
     </g>
    </g>
    <g id="text_6">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="78.93" y="243.587313" transform="rotate(-0 78.93 243.587313)">1</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="78.93" y="243.587313" transform="rotate(-0 78.93 243.587313)">a</text>
    </g>
    <g id="text_7">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="235.71" y="243.587313" transform="rotate(-0 235.71 243.587313)">2</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="235.71" y="243.587313" transform="rotate(-0 235.71 243.587313)">b</text>
    </g>
    <g id="text_8">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="157.32" y="118.163312" transform="rotate(-0 157.32 118.163312)">3</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="157.32" y="118.163312" transform="rotate(-0 157.32 118.163312)">c</text>
    </g>
   </g>
   <g id="axes_2">
@@ -140,13 +140,13 @@ L 501.768 177.84
 " clip-path="url(#p5436db173d)" style="fill: none; stroke: #c87517; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="text_9">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="447.470881" y="276.413125" transform="rotate(-0 447.470881 276.413125)">1</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="447.470881" y="276.413125" transform="rotate(-0 447.470881 276.413125)">a</text>
    </g>
    <g id="text_10">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="556.065119" y="276.413125" transform="rotate(-0 556.065119 276.413125)">2</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="556.065119" y="276.413125" transform="rotate(-0 556.065119 276.413125)">b</text>
    </g>
    <g id="text_11">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="501.768" y="71.129312" transform="rotate(-0 501.768 71.129312)">3</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="501.768" y="71.129312" transform="rotate(-0 501.768 71.129312)">c</text>
    </g>
    <g id="text_12">
     <text style="fill: #2166ac; font: 11px 'DejaVu Sans'; text-anchor: start" x="513.5265" y="180.875312" transform="rotate(-0 513.5265 180.875312)">O</text>
@@ -246,13 +246,13 @@ L 846.216 177.84
 " clip-path="url(#p58a583ef9e)" style="fill: none; stroke: #c87517; stroke-width: 2; stroke-linecap: square"/>
    </g>
    <g id="text_16">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="744.480886" y="166.177188" transform="rotate(-0 744.480886 166.177188)">1</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="744.480886" y="166.177188" transform="rotate(-0 744.480886 166.177188)">a</text>
    </g>
    <g id="text_17">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="947.951114" y="166.177188" transform="rotate(-0 947.951114 166.177188)">2</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="947.951114" y="166.177188" transform="rotate(-0 947.951114 166.177188)">b</text>
    </g>
    <g id="text_18">
-    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="846.216" y="71.129313" transform="rotate(-0 846.216 71.129313)">3</text>
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="846.216" y="71.129313" transform="rotate(-0 846.216 71.129313)">c</text>
    </g>
    <g id="text_19">
     <text style="fill: #2166ac; font: 11px 'DejaVu Sans'; text-anchor: start" x="857.9745" y="180.875313" transform="rotate(-0 857.9745 180.875313)">O</text>

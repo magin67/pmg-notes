@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="750" viewBox="0 0 1240 750" role="img" aria-labelledby="title desc">
-<title id="title">Неизоморфность двух цепочек по вершинам степени три</title><desc id="desc">У каждой цепочки четыре вершины степени 3. В конфигурации А они индуцируют два раздельных ребра 01 и 34; в конфигурации Б - путь 0-1-2-3 из трёх рёбер. Это препятствует изоморфизму графов.</desc>
+<title id="title">Неизоморфность двух цепочек по вершинам степени три</title><desc id="desc">У каждой цепочки четыре вершины степени 3. В конфигурации А они индуцируют два раздельных ребра v₀v₁ и v₃v₄; в конфигурации Б - путь v₀-v₁-v₂-v₃ из трёх рёбер. Это препятствует изоморфизму графов.</desc>
 <rect width="1240" height="750" fill="white"/>
 <g font-family="DejaVu Sans, Arial, sans-serif">
 <rect x="20" y="20" width="590" height="675" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
@@ -29,33 +29,33 @@
 <line x1="348.00" y1="327.16" x2="381.00" y2="270.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
 <line x1="282.00" y1="212.84" x2="249.00" y2="270.00" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
 <circle cx="348.00" cy="327.16" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="337.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="337.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="381.00" cy="270.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="359.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="359.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="348.00" cy="212.84" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="337.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="337.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="282.00" cy="212.84" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="293.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="293.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="249.00" cy="270.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="271.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="271.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="282.00" cy="327.16" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="293.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="293.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="447.00" cy="270.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="447.00" y="260.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<text x="447.00" y="260.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₉</text>
 <circle cx="480.00" cy="327.16" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="480.00" y="317.16" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<text x="480.00" y="317.16" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₈</text>
 <circle cx="447.00" cy="384.32" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="447.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<text x="447.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₇</text>
 <circle cx="381.00" cy="384.32" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="381.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<text x="381.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₆</text>
 <circle cx="183.00" cy="270.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="183.00" y="260.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">13</text>
+<text x="183.00" y="260.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₃</text>
 <circle cx="150.00" cy="212.84" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="150.00" y="202.84" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">12</text>
+<text x="150.00" y="202.84" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₂</text>
 <circle cx="183.00" cy="155.68" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="183.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<text x="183.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₁</text>
 <circle cx="249.00" cy="155.68" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="249.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<text x="249.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₀</text>
 <circle cx="348.00" cy="327.16" r="7" fill="#8953af" stroke="white" stroke-width="1.5"/>
 <circle cx="381.00" cy="270.00" r="7" fill="#8953af" stroke="white" stroke-width="1.5"/>
 <circle cx="282.00" cy="212.84" r="7" fill="#8953af" stroke="white" stroke-width="1.5"/>
@@ -67,13 +67,13 @@
 <line x1="150.00" y1="600.00" x2="260.00" y2="600.00" stroke="#8953af" stroke-width="4" stroke-linecap="round"/>
 <line x1="370.00" y1="600.00" x2="480.00" y2="600.00" stroke="#8953af" stroke-width="4" stroke-linecap="round"/>
 <circle cx="150.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="150.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">0</text>
+<text x="150.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="260.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="260.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">1</text>
+<text x="260.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="370.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="370.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">3</text>
+<text x="370.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="480.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="480.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">4</text>
+<text x="480.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₄</text>
 <text x="315.00" y="660.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">2 раздельных ребра</text>
 <rect x="630" y="20" width="590" height="675" rx="16" fill="#f7f9fc" stroke="#dce4ed"/>
 <text x="654.00" y="62.00" font-size="24" fill="#172b43" text-anchor="start" font-weight="bold">Б. Швы через одно ребро</text>
@@ -102,33 +102,33 @@
 <line x1="958.00" y1="327.16" x2="991.00" y2="270.00" stroke="#bc294b" stroke-width="6" stroke-linecap="round"/>
 <line x1="958.00" y1="212.84" x2="892.00" y2="212.84" stroke="#196bb9" stroke-width="6" stroke-linecap="round"/>
 <circle cx="958.00" cy="327.16" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="947.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">0</text>
+<text x="947.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="991.00" cy="270.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="969.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">1</text>
+<text x="969.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="958.00" cy="212.84" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="947.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">2</text>
+<text x="947.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="892.00" cy="212.84" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="903.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">3</text>
+<text x="903.00" y="237.89" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₃</text>
 <circle cx="859.00" cy="270.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="881.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">4</text>
+<text x="881.00" y="276.00" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₄</text>
 <circle cx="892.00" cy="327.16" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="903.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">5</text>
+<text x="903.00" y="314.11" font-size="17" fill="#172b43" text-anchor="middle" font-weight="normal">v₅</text>
 <circle cx="1057.00" cy="270.00" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1057.00" y="260.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">9</text>
+<text x="1057.00" y="260.00" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₉</text>
 <circle cx="1090.00" cy="327.16" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1090.00" y="317.16" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">8</text>
+<text x="1090.00" y="317.16" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₈</text>
 <circle cx="1057.00" cy="384.32" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="1057.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">7</text>
+<text x="1057.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₇</text>
 <circle cx="991.00" cy="384.32" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="991.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">6</text>
+<text x="991.00" y="374.32" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₆</text>
 <circle cx="859.00" cy="155.68" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="859.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">13</text>
+<text x="859.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₃</text>
 <circle cx="892.00" cy="98.53" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="892.00" y="88.53" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">12</text>
+<text x="892.00" y="88.53" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₂</text>
 <circle cx="958.00" cy="98.53" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="958.00" y="88.53" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">11</text>
+<text x="958.00" y="88.53" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₁</text>
 <circle cx="991.00" cy="155.68" r="4" fill="#172b43" stroke="none" stroke-width="2"/>
-<text x="991.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">10</text>
+<text x="991.00" y="145.68" font-size="15" fill="#172b43" text-anchor="middle" font-weight="normal">v₁₀</text>
 <circle cx="958.00" cy="327.16" r="7" fill="#8953af" stroke="white" stroke-width="1.5"/>
 <circle cx="991.00" cy="270.00" r="7" fill="#8953af" stroke="white" stroke-width="1.5"/>
 <circle cx="958.00" cy="212.84" r="7" fill="#8953af" stroke="white" stroke-width="1.5"/>
@@ -141,13 +141,13 @@
 <line x1="870.00" y1="600.00" x2="980.00" y2="600.00" stroke="#8953af" stroke-width="4" stroke-linecap="round"/>
 <line x1="980.00" y1="600.00" x2="1090.00" y2="600.00" stroke="#8953af" stroke-width="4" stroke-linecap="round"/>
 <circle cx="760.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="760.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">0</text>
+<text x="760.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₀</text>
 <circle cx="870.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="870.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">1</text>
+<text x="870.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₁</text>
 <circle cx="980.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="980.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">2</text>
+<text x="980.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₂</text>
 <circle cx="1090.00" cy="600.00" r="18" fill="white" stroke="#8953af" stroke-width="2"/>
-<text x="1090.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">3</text>
+<text x="1090.00" y="607.00" font-size="21" fill="#8953af" text-anchor="middle" font-weight="normal">v₃</text>
 <text x="925.00" y="660.00" font-size="23" fill="#172b43" text-anchor="middle" font-weight="bold">Путь из 3 рёбер</text>
 <text x="620.00" y="732.00" font-size="22" fill="#172b43" text-anchor="middle" font-weight="normal">Изоморфизм сохраняет степени вершин и рёбра индуцированного подграфа</text>
 </g></svg>

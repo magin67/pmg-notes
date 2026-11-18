@@ -1,9 +1,9 @@
 ---
 title: "The Laplacian Exponential in Graph Weaving"
 date: 2026-11-02
-updated: 2026-11-11
-revision: 3
-translated_revision: 5
+updated: 2026-11-18
+revision: 4
+translated_revision: 6
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -404,7 +404,7 @@ Accordingly, $A_+(t)=(-t)^nA(-1/t)$, the coordinates $B_+,C_+,D_+$ acquire the f
 
 ## Distinguishing isomers before rooted evaluation
 
-Use exactly graphs A and B from [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons|Two Isomers of Three Hexagons]]. The notation $C(v_0,\ldots,v_5)$ includes the closing edge. The common cores are $C(0,1,9,8,7,6)$ and $C(0,1,2,3,4,5)$; the third core is $C(3,4,13,12,11,10)$ in A and $C(2,3,13,12,11,10)$ in B. Edges are united as sets. Both graphs have $n=14$ vertices and $16$ edges.
+Use exactly graphs A and B from [[en/Graph Transformations and Gluing/Spectra of Isomers/Two Isomers of Three Hexagons|Two Isomers of Three Hexagons]]. The notation $C(v_0,\ldots,v_5)$ includes the closing edge. The common cores are $C(v_0,v_1,v_9,v_8,v_7,v_6)$ and $C(v_0,v_1,v_2,v_3,v_4,v_5)$; the third core is $C(v_3,v_4,v_{13},v_{12},v_{11},v_{10})$ in A and $C(v_2,v_3,v_{13},v_{12},v_{11},v_{10})$ in B. Edges are united as sets. Both graphs have $n=14$ vertices and $16$ edges.
 
 Exact enumeration shows that their full toponomes agree in grades $0,1,2$ and first differ in grade $3$.
 

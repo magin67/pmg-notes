@@ -3,12 +3,12 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="892.8pt" height="583.2pt" viewBox="0 0 892.8 583.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <title>Конус базиса P3 и его графы</title>
-<desc>Конус a≥0, 0≤b≤3a. Крайние лучи: единичный путь P3 с координатами (1,3) и ребро 1–3 с изолированной вершиной 2, точка (2,0). Четыре отмеченные точки соответствуют всем простым графам в фиксированном базисе. Полный граф K3 находится в точке (3,3).</desc>
+<desc>Конус a≥0, 0≤b≤3a. Крайние лучи: единичный путь P3 с координатами (1,3) и ребро p–s с изолированной вершиной q, точка (2,0). Четыре отмеченные точки соответствуют всем простым графам в фиксированном базисе. Полный граф K3 находится в точке (3,3).</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Конус a≥0, 0≤b≤3a. Крайние лучи: единичный путь P3 с координатами (1,3) и ребро 1–3 с изолированной вершиной 2, точка (2,0). Четыре отмеченные точки соответствуют всем простым графам в фиксированном базисе. Полный граф K3 находится в точке (3,3).</dc:description>
+    <dc:description>Конус a≥0, 0≤b≤3a. Крайние лучи: единичный путь P3 с координатами (1,3) и ребро p–s с изолированной вершиной q, точка (2,0). Четыре отмеченные точки соответствуют всем простым графам в фиксированном базисе. Полный граф K3 находится в точке (3,3).</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -484,13 +484,13 @@ z
     </g>
    </g>
    <g id="text_28">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="681.769096" y="212.691006" transform="rotate(-0 681.769096 212.691006)">1</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="681.769096" y="212.691006" transform="rotate(-0 681.769096 212.691006)">p</text>
    </g>
    <g id="text_29">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="732.096" y="147.266031" transform="rotate(-0 732.096 147.266031)">2</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="732.096" y="147.266031" transform="rotate(-0 732.096 147.266031)">q</text>
    </g>
    <g id="text_30">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="782.422904" y="212.691006" transform="rotate(-0 782.422904 212.691006)">3</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="782.422904" y="212.691006" transform="rotate(-0 782.422904 212.691006)">s</text>
    </g>
    <g id="text_31">
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #19354a" x="732.096" y="125.421187" transform="rotate(-0 732.096 125.421187)">P₃: связная граница</text>
@@ -528,13 +528,13 @@ L 782.422904 341.053584
     </g>
    </g>
    <g id="text_32">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="681.769096" y="343.911006" transform="rotate(-0 681.769096 343.911006)">1</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="681.769096" y="343.911006" transform="rotate(-0 681.769096 343.911006)">p</text>
    </g>
    <g id="text_33">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="732.096" y="278.486031" transform="rotate(-0 732.096 278.486031)">2</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="732.096" y="278.486031" transform="rotate(-0 732.096 278.486031)">q</text>
    </g>
    <g id="text_34">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="782.422904" y="343.911006" transform="rotate(-0 782.422904 343.911006)">3</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="782.422904" y="343.911006" transform="rotate(-0 782.422904 343.911006)">s</text>
    </g>
    <g id="text_35">
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #19354a" x="732.096" y="256.641187" transform="rotate(-0 732.096 256.641187)">K₃: внутренняя точка</text>
@@ -575,13 +575,13 @@ z
     </g>
    </g>
    <g id="text_36">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="681.769096" y="475.131006" transform="rotate(-0 681.769096 475.131006)">1</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="681.769096" y="475.131006" transform="rotate(-0 681.769096 475.131006)">p</text>
    </g>
    <g id="text_37">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="732.096" y="409.706031" transform="rotate(-0 732.096 409.706031)">2</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="732.096" y="409.706031" transform="rotate(-0 732.096 409.706031)">q</text>
    </g>
    <g id="text_38">
-    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="782.422904" y="475.131006" transform="rotate(-0 782.422904 475.131006)">3</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="782.422904" y="475.131006" transform="rotate(-0 782.422904 475.131006)">s</text>
    </g>
    <g id="text_39">
     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #19354a" x="732.096" y="387.861187" transform="rotate(-0 732.096 387.861187)">E: несвязная граница</text>
@@ -600,12 +600,12 @@ z
      <tspan x="189.920215" y="-0.5625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #19354a">w</tspan>
      <tspan x="265.727246" y="-0.5625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #19354a">a</tspan>
      <tspan x="300.693555" y="-0.5625" style="font-style: oblique; font-size: 19px; font-family: 'DejaVu Sans'; fill: #19354a">b</tspan>
-     <tspan x="15.539551" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">1</tspan>
-     <tspan x="24.001416" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">2</tspan>
-     <tspan x="71.845605" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">2</tspan>
-     <tspan x="80.307471" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">3</tspan>
-     <tspan x="205.459766" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">1</tspan>
-     <tspan x="213.921631" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">3</tspan>
+     <tspan x="15.539551" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">p</tspan>
+     <tspan x="24.001416" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">q</tspan>
+     <tspan x="71.845605" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">q</tspan>
+     <tspan x="80.307471" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">s</tspan>
+     <tspan x="205.459766" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">p</tspan>
+     <tspan x="213.921631" y="2.287491" style="font-size: 13.3px; font-family: 'DejaVu Sans'; fill: #19354a">s</tspan>
      <tspan x="36.684473" y="-0.5625" style="font-size: 19px; font-family: 'DejaVu Sans'; fill: #19354a">=</tspan>
      <tspan x="92.990527" y="-0.5625" style="font-size: 19px; font-family: 'DejaVu Sans'; fill: #19354a">=</tspan>
      <tspan x="124.672656" y="-0.5625" style="font-size: 19px; font-family: 'DejaVu Sans'; fill: #19354a">/</tspan>
