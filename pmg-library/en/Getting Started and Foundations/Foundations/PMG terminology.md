@@ -1,9 +1,9 @@
 ---
 title: Terminology
 date: 2026-10-09
-updated: 2026-11-13
-revision: 30
-translated_revision: 30
+updated: 2026-11-18
+revision: 31
+translated_revision: 31
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -183,6 +183,7 @@ For a graph toponome, the expansion of the factors of the Laplacian exponential 
 | Laplacian; Laplacian polyform | Лапласиан; полиформа лапласиана | PMG | The grade-one form with the Laplacian matrix as its coefficients. For an undirected graph, $L=\sum_{i<j}c_{ij}[a_{ij}]^2$; a balanced graph admits a nonsymmetric bilinear representation on boundaries. |
 | Reduced Laplacian | Редуцированный лапласиан | Standard | The matrix obtained by deleting the row and column of the same vertex from $\mathbf L$. |
 | Green matrix | Матрица Грина | Qualified | $\mathbf{Gr}=\mathbf L^+$. For a connected balanced graph, it inverts the Laplacian on the zero-sum subspace and vanishes on constant columns. With source-receiver pairing, the Gram matrix of centered vectors is $\mathbf{Gr}^{\mathsf T}$; in the symmetric case this equals $\mathbf{Gr}$. |
+| Degree potential | Потенциал степеней | PMG | In a connected undirected graph with nonnegative conductances, the unique solution of $\mathbf L\varphi=d-\bar d\mathbf1$ with $\mathbf1^{\mathsf T}\varphi=0$. Here $d$ is the column of weighted degrees and $\bar d$ is their mean. [[Degree Potential and Centralities]]. |
 | Resistance matrix | Резистивная матрица | Qualified | The symmetric matrix $\mathbf R=(R_{ij})$ of pair resistances. For a balanced graph, $R_{ij}=r_{ij}+r_{ji}$; distinguish it from the one-way resistance matrix $\mathbf r$. |
 | Distance operator | Дистанционный оператор | Qualified | The linear operator $\mathcal D(A)_{ij}=A_{ii}+A_{jj}-2A_{ij}$ on symmetric matrices. Applied to a symmetric Gram matrix, it gives squared distances. A nonsymmetric Gram matrix uses $A_{ij}+A_{ji}$ instead of $2A_{ij}$. |
 | Centering matrix; centering projector | Центрирующий проектор | Standard | The matrix $\mathbf J=I-\mathbf1\mathbf1^{\mathsf T}/n$. |
@@ -260,6 +261,7 @@ The [[en/Resistance Geometry and Duality/Electrometry/Electrometry|Electrometry]
 | English term | Russian equivalent | Status | Meaning and convention |
 |---|---|---|---|
 | Transfer resistance | Передаточное сопротивление | Standard | $T_{ab,mn}=(\varphi_m-\varphi_n)/I$ for current $I$ entering through $a$ and leaving through $b$. In a linear reciprocal network, it equals the resistance inner product $(ab)\cdot(mn)$; its sign depends on electrode order. |
+| Controlled shunting | Управляемое шунтирование | Qualified | A measurement technique in which an external resistor of known conductance is connected between selected electrodes. The transfer resistance is measured before and after connection. Conditions for recovering the effective resistance of the shunted pair are given in [[Controlled Shunting and Resistance Reconstruction]]. |
 | Pairwise potential coefficient | Парный коэффициент потенциала | Qualified | $Z_{ij}$ is the potential at $j$ due to a unit source at $i$, with current return and zero potential at infinity, when this model is defined. The law $Z_{ij}=\rho/(2\pi d_{ij})$ applies to point electrodes on the flat surface of a homogeneous isotropic half-space. |
 | Conductivity | Проводимость среды | Standard | In an isotropic model, the scalar field $\sigma(x)$ relating current density to the electric field. Distinct from edge conductance $c_e$; conversion to conductance includes discretization geometry. |
 | Resistivity | Удельное сопротивление среды | Standard | In a scalar isotropic model, $\rho(x)=1/\sigma(x)$. Measured in ohm-meters; $R$, $T$, and $Z$ are measured in ohms. |
@@ -408,6 +410,11 @@ Definitions and scope of invariance: the [[Core specification#Chains of cores|sp
 | Spanning-tree polynomial of a construction | Остовной полином конструкции | Qualified | The polynomial $\mathcal T_N=\det\mathbf M_N$ in core and seam sizes, equal to $\tau(G)$ on admissible integer data. It is neither an ordinary or rooted forest polynomial of a fixed graph nor the form $T_n$. |
 | Continuant | Континуант | Standard | The determinant of a tridiagonal matrix. For chains of cycles it gives $\tau_j=m_j\tau_{j-1}-\ell_{j-1}^2\tau_{j-2}$; $\tau_0=1$ is a formal initial condition. |
 | Ordinary and twisted closures | Обычное и скрученное замыкания | Qualified | Two specified correspondences at the final seam of the same open strip. Möbius-effect formulas concern the stated model; changing seams inside the strip is not merely changing the final correspondence. |
+| Runner | Бегунок | PMG | A connected graph with a plug, a socket, and a specified contact correspondence. Each weaving step attaches a fresh copy of the runner. |
+| Plug | Вилка | PMG | The ordered list $\mathcal P$ of distinct input vertices of a runner. They are identified with the vertices of the current socket according to the specified correspondence. |
+| Socket | Розетка | PMG | An ordered list of contact vertices for the next attachment. The initial graph has its own socket. After each step, the image of the attached runner’s output list $\mathcal Q$ becomes the new socket. |
+
+The runner attachment rule and a two-contact example are given in [[Weaving Graphs - Plug Socket and Recurrence]].
 
 ## Potentials, norms, and variations
 
@@ -585,6 +592,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 31 | 2026-11-18 | Added degree potential, controlled shunting, and three graph-weaving terms. Aligned with Russian revision 31. |
 | 30 | 2026-11-13 | Added electrometry terms: T, R, and Z, conductivity and resistivity, the effective electrode Laplacian, sensitivity, and distinguishability. Distinguished geometric modes from sensitivity modes and clarified local notation. Aligned with Russian revision 30. |
 | 28 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |
 | 27 | 2026-11-08 | Aligned sphere-element notation with the revised note on nonlocal elements: $s=s_0+s^2z/2$, norm $s^2$, and graph resistance radius $\rho(G)$. Aligned with Russian revision 27. |

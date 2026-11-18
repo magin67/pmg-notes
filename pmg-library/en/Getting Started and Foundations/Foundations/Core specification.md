@@ -1,9 +1,9 @@
 ---
 title: Core Specification
 date: 2026-10-09
-updated: 2026-11-13
-revision: 28
-translated_revision: 28
+updated: 2026-11-18
+revision: 29
+translated_revision: 29
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -1050,6 +1050,10 @@ $$
 
 This determines changes in effective couplings after eliminating the interior. Choosing the original medium's internal couplings requires additional information. The formula uses the full consistent matrix $\mathbf R_\partial$; neither $\mathbf Z$ nor combinations on four distinct electrodes alone can replace these data. The response-matrix interpretation agrees with [[#The spanning-tree layer and electrical response]].
 
+**Controlled shunting.** Consider a connected linear reciprocal network in steady state with nonnegative conductances. Keep the network geometry, internal conductances, and contacts fixed between measurements. Measure voltage without drawing current and divide it by the total source current in each measurement. Let $T_0$ be the transfer resistance without a shunt and $T(t)$ its value after connecting an external conductance $t>0$. When the shunt connects the current electrodes $a,b$, the response is $T(t)=T_0/(1+tR_{ab})$. If $T_0\ne0$, the baseline measurement and one shunted measurement determine $R_{ab}$.
+
+For a shunt across an arbitrary pair $p,q$, its original effective resistance $R_{pq}$ can be recovered from the baseline and two measurements at distinct positive shunt conductances. The shunt must change the measured response. Equivalently, $T_{pq,ab}T_{pq,mn}\ne0$, where $a,b$ are the current electrodes and $m,n$ are the voltage electrodes. These measurements give information about the electrode response. The formulas and the limits on recovering internal conductances are given in [[Controlled Shunting and Resistance Reconstruction]].
+
 If admissible couplings are parameterized by $c=c(\theta)$ and $F$ contains the measured effective resistances, then
 
 $$
@@ -1525,6 +1529,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 29 | 2026-11-18 | Recorded the conditions for recovering the effective resistance of a pair by controlled shunting. Aligned with Russian revision 29. |
 | 28 | 2026-11-13 | Clarified application of graph formulas in electrometry: T, R, and Z, field variations, effective electrode response, admissible internal changes, and local distinguishability. Core formulas are unchanged; aligned with Russian revision 28. |
 | 27 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |
 | 26 | 2026-11-08 | Clarified the notation for a sphere element, its center, and its norm: $s=s_0+s^2z/2$. Reserved $\rho(G)$ for a graph's resistance radius. Aligned with Russian revision 26. |
