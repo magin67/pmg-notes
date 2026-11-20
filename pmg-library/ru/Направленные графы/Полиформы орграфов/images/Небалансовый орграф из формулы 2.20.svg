@@ -2,12 +2,12 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="648pt" height="338.4pt" viewBox="0 0 648 338.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>Небалансовый орграф из формулы (2.20)</title>
+ <title>Небалансовый орграф на трёх вершинах</title>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title>Небалансовый орграф из формулы (2.20)</dc:title>
+    <dc:title>Небалансовый орграф на трёх вершинах</dc:title>
     <dc:description>Дуги b → a и a → c имеют вес 2, остальные четыре дуги имеют вес 1. У b исходящий вес 3 и входящий 2, у c исходящий 2 и входящий 3.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
@@ -283,7 +283,7 @@ L 620.784 162.7704
    </g>
   </g>
   <g id="text_23">
-   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183249" x="29.16" y="30.456" transform="rotate(-0 29.16 30.456)">Небалансовый орграф из формулы (2.20)</text>
+   <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183249" x="29.16" y="30.456" transform="rotate(-0 29.16 30.456)">Небалансовый орграф на трёх вершинах</text>
   </g>
   <g id="text_24">
    <text style="font-size: 11.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #455f72" x="29.808" y="54.144" transform="rotate(-0 29.808 54.144)">Число у стрелки — вес дуги.</text>
