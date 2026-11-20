@@ -1,8 +1,8 @@
 ---
 title: Library Map
 date: 2026-11-11
-updated: 2026-11-18
-revision: 8
+updated: 2026-11-20
+revision: 9
 translated_revision: 94
 status: published
 text_prepared_by: ChatGPT
@@ -20,7 +20,7 @@ The map shows which PMG directions are developed in the library, how they connec
 
 ## Library contents
 
-The library contains 19 bilingual series with 136 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
+The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 137 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
 Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. Series navigators give reading order and prerequisites.
 

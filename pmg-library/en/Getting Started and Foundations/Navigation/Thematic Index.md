@@ -1,8 +1,8 @@
 ---
 title: Thematic Index
 date: 2026-11-01
-updated: 2026-11-18
-revision: 19
+updated: 2026-11-20
+revision: 20
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -35,7 +35,7 @@ This index groups series by their main question. Each series has one primary hom
 
 ## Primary home of each series
 
-The 19 bilingual series contain 136 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately.
+The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 137 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately.
 
 | Series | Section | Notes |
 | --- | --- | ---: |
@@ -58,6 +58,7 @@ The 19 bilingual series contain 136 substantive notes in each language. Navigato
 | [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 7 |
 | [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions\|Spectra of Isomers]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 9 |
 | [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | [[en/Directed Graphs and Extensions/Directed Graphs and Extensions\|Directed Graphs and Extensions]] | 12 |
+| [[ru/Направленные графы и расширения/Полиформы орграфов/Полиформы орграфов\|Digraph Polyforms (Russian)]] | [[en/Directed Graphs and Extensions/Directed Graphs and Extensions\|Directed Graphs and Extensions]] | 1 (RU) |
 
 ## Search by tags
 
