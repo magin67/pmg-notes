@@ -26,7 +26,7 @@ Primary section: [[en/Polyform Algebra and Combinatorics/Polyform Algebra and Co
 
 Secondary thematic entries:
 
-- [[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]: cyclic partitions and permutation digraphs.
+- [[en/Directed Graphs/Directed Graphs|Directed Graphs]]: cyclic partitions and permutation digraphs.
 
 [[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 

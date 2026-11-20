@@ -26,7 +26,7 @@ The main graph model is a finite connected undirected graph without loops, with 
 
 Connectedness is required for the resistance metric on the entire space of affine vectors and for normalization by the spanning-tree coefficient. The algebra of forms, the Laplacian exponential, and the forest expansion also apply to disconnected graphs. That case is specified separately.
 
-**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series, and the balanced extension in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]]; links follow the relevant sections. For thematic extensions, links lead to the corresponding published series. Working conjectures are not part of the core.
+**Status of the statements.** Definitions and conventions specify the language used. Claims about its properties are proved in the introductory series, and the balanced extension in [[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]]; links follow the relevant sections. For thematic extensions, links lead to the corresponding published series. Working conjectures are not part of the core.
 
 ## The underlying space, points, and vectors
 
@@ -841,7 +841,7 @@ Sources for the definition and identities: [[Metric Distribution in Higher Grade
 
 ## The balanced extension
 
-This section extends the graph model to finite loopless balanced digraphs with nonnegative arc weights. The algebra of forms and its product are unchanged: symmetry of the arguments was never assumed. Graph and metric statements in the other sections use the symmetric model unless an extension is explicitly stated. Proofs and examples are collected in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]].
+This section extends the graph model to finite loopless balanced digraphs with nonnegative arc weights. The algebra of forms and its product are unchanged: symmetry of the arguments was never assumed. Graph and metric statements in the other sections use the symmetric model unless an extension is explicitly stated. Proofs and examples are collected in [[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]].
 
 ### The Laplacian, balance, and rooted potentials
 
@@ -1523,7 +1523,7 @@ The table $\mathcal A_{\mathcal E}=(a_{k,r})$ groups coefficients of types with 
 
 ## Sources and revision history
 
-The balanced extension is based on the published [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]] series. Links after its subsections lead to definitions and proofs, including applicability conditions.
+The balanced extension is based on the published [[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]] series. Links after its subsections lead to definitions and proofs, including applicability conditions.
 
 The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Introductory Series|introductory series]] provide the supporting material. External references and their correspondence to individual notes are listed in [[Further Reading for the PMG Introductory Series|further reading]]. This specification records the conventions of the published corpus; subsequent substantive changes require corresponding updates to related definitions and terminology.
 

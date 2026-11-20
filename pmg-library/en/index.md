@@ -32,7 +32,7 @@ The library has 19 bilingual series and a Russian-language series on digraph pol
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
 - **[[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]**. Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?
 - **[[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]**. How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?
-- **[[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]**. What changes when couplings become directed and constructions become nonsymmetric?
+- **[[en/Directed Graphs/Directed Graphs|Directed Graphs]]**. What changes when couplings become directed and constructions become nonsymmetric?
 
 ## Programming examples
 

@@ -31,7 +31,7 @@ This index groups series by their main question. Each series has one primary hom
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?
 - **[[en/Invariants, Decompositions, and Spectra/Invariants, Decompositions, and Spectra|Invariants, Decompositions, and Spectra]]**. Which features of a graph do its characteristics and decompositions retain? What can be reconstructed from them?
 - **[[en/Graph Transformations and Gluing/Graph Transformations and Gluing|Graph Transformations and Gluing]]**. How do characteristics change when couplings vary, vertices are eliminated, or a graph is assembled from parts?
-- **[[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]**. What changes when couplings become directed and constructions become nonsymmetric?
+- **[[en/Directed Graphs/Directed Graphs|Directed Graphs]]**. What changes when couplings become directed and constructions become nonsymmetric?
 
 ## Primary home of each series
 
@@ -57,8 +57,8 @@ The library has 19 bilingual series and a Russian-language series on digraph pol
 | [[en/Graph Transformations and Gluing/Boundary polynomials and graph gluing/Boundary Polynomials and Graph Gluing\|Boundary Polynomials and Graph Gluing]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 6 |
 | [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 7 |
 | [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions\|Spectra of Isomers]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 9 |
-| [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | [[en/Directed Graphs and Extensions/Directed Graphs and Extensions\|Directed Graphs and Extensions]] | 12 |
-| [[ru/Направленные графы и расширения/Полиформы орграфов/Полиформы орграфов\|Digraph Polyforms (Russian)]] | [[en/Directed Graphs and Extensions/Directed Graphs and Extensions\|Directed Graphs and Extensions]] | 1 (RU) |
+| [[en/Directed Graphs/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | [[en/Directed Graphs/Directed Graphs\|Directed Graphs]] | 12 |
+| [[ru/Направленные графы/Полиформы орграфов/Полиформы орграфов\|Digraph Polyforms (Russian)]] | [[en/Directed Graphs/Directed Graphs\|Directed Graphs]] | 1 (RU) |
 
 ## Search by tags
 

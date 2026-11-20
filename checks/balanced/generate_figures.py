@@ -14,7 +14,7 @@ FIGS={
  'factors':('Два графа перестановок на общих вершинах','Two Permutation Digraphs on Shared Vertices'),
  'repair':('Балграф с различными координатами сферы','A Balanced Graph with Different Sphere Coordinates')
 }
-DIRS={'ru':'pmg-library/ru/Направленные графы и расширения/Балансовые графы','en':'pmg-library/en/Directed Graphs and Extensions/Balanced graphs'}
+DIRS={'ru':'pmg-library/ru/Направленные графы/Балансовые графы','en':'pmg-library/en/Directed Graphs/Balanced graphs'}
 C={'ink':'#20344a','blue':'#28638c','orange':'#b45920','green':'#178071','gray':'#9ba8b5','purple':'#7e549b'}
 def tr(lang,ru,en):return ru if lang=='ru' else en
 class SVG:

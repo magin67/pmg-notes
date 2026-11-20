@@ -24,7 +24,7 @@ Run the fragments from top to bottom. The notebook installs the pinned package r
 
 Combine opposite directed cycles with weights $p=2$ and $q=1$. Check balance and compare each principal cofactor with $p^2+pq+q^2$.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs and Spanning-Tree Potentials#A triangle with both cycle directions|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/Balanced Graphs and Spanning-Tree Potentials#A triangle with both cycle directions|Related section of the note]].
 
 ```python
 from itertools import combinations, permutations
@@ -54,7 +54,7 @@ print("Tree potentials for p = 2, q = 1:", triangle.tree_potentials())
 
 Represent bilinear terms by outer products of coefficient columns. Using $c$ or the centroid as reference gives the same outgoing Laplacian.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/The Bilinear Laplacian of a Balanced Graph#One directed 3-cycle in different representations|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/The Bilinear Laplacian of a Balanced Graph#One directed 3-cycle in different representations|Related section of the note]].
 
 ```python
 vertices = [eye(3)[:, i] for i in range(3)]
@@ -73,7 +73,7 @@ print("Both centered coefficient matrices equal L")
 
 For each reference, sum products of the left and right determinants for pairs of arc terms. Compare grade two with the minor in the basis $a-c,b-c$.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/The Laplacian Exponential of a Balanced Graph#Example: the unit directed 3-cycle|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/The Laplacian Exponential of a Balanced Graph#Example: the unit directed 3-cycle|Related section of the note]].
 
 ```python
 def exterior_minor_sum(terms, grade):
@@ -97,7 +97,7 @@ print("The grade-two coefficient of the unit cycle is 1")
 
 Compare the difference of the reverse and forward Laplacians with the skew form on $b-a,c-a$.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/The Circulation Form#How circulation appears in a directed 3-cycle|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/The Circulation Form#How circulation appears in a directed 3-cycle|Related section of the note]].
 
 ```python
 ab, ac = vertices[1] - vertices[0], vertices[2] - vertices[0]
@@ -115,7 +115,7 @@ print("Circulation sign and symmetric part verified")
 
 Add the reverse cycle with weight $t$. Compute a symbolic cofactor and compare it with tree potentials at several exact weights.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/Balanced Variations#Adding a directed cycle|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/Balanced Variations#Adding a directed cycle|Related section of the note]].
 
 ```python
 t = symbols("t")
@@ -131,7 +131,7 @@ print("Adding the reverse cycle: tau(t) = 1 + t + t²")
 
 Add a bidirectional coupling $ab$ to the unit cycle. Compute one-way resistances and solve the hitting-time systems with a fixed target.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/One-Way Resistance and Hitting Times#Markov interpretation|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/One-Way Resistance and Hitting Times#Markov interpretation|Related section of the note]].
 
 ```python
 extra = DirectedNetwork(labels, forward + (("a", "b", 1), ("b", "a", 1)))
@@ -152,7 +152,7 @@ print("One-way resistances a→b and b→a:", r[0, 1], r[1, 0])
 
 Build the bilinear metric on two differences. Compare its determinant with that of the symmetric part plus the circulation contribution.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/Resistance Geometry and Circulation#Three-vertex resistance|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/Resistance Geometry and Circulation#Three-vertex resistance|Related section of the note]].
 
 ```python
 Gr = extra.centered_greenian()
@@ -169,7 +169,7 @@ print("Triangle potential and squared circulation:", beta.det(), chi**2)
 
 Compute the local vertex Gram matrix and check two directional pairings. Evaluate a pairing of differences through incoming and outgoing di-coordinates.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/The Gram Matrix and Directional Coordinates of a Balanced Graph#An example with unequal directional pairings|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/The Gram Matrix and Directional Coordinates of a Balanced Graph#An example with unequal directional pairings|Related section of the note]].
 
 ```python
 G = extra.vertex_gram()
@@ -185,7 +185,7 @@ print("Directional pairings a→b and b→a:", G[0, 1], G[1, 0])
 
 Invert the Gram matrix extended by the null vector. Compare the incoming and outgoing center coordinates and the common quadratic radius.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/The Isotropic Space and Sphere of a Balanced Graph#Example: two coordinate systems and one radius|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/The Isotropic Space and Sphere of a Balanced Graph#Example: two coordinate systems and one radius|Related section of the note]].
 
 ```python
 one = ones(3, 1)
@@ -206,7 +206,7 @@ print("Sphere: incoming", tuple(b_in), "outgoing", tuple(b_out), "rho =", rho)
 
 Use the three tree potentials to scale the rows. Check balance and equality of the new potentials.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/Balancing a Directed Graph by Spanning-Tree Potentials#A three-participant example|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/Balancing a Directed Graph by Spanning-Tree Potentials#A three-participant example|Related section of the note]].
 
 ```python
 ratings = DirectedNetwork(labels, (("a", "b", 1), ("a", "c", 2), ("b", "a", 2),
@@ -224,7 +224,7 @@ print("Balancing multipliers:", factors)
 
 Enumerate the rooted forests of the directed four-cycle by type. Divide by component sizes for vector normalization and compare the vertex polynomial with the determinant.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests#Unit directed 3- and 4-cycles|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests#Unit directed 3- and 4-cycles|Related section of the note]].
 
 ```python
 four = tuple("abcd")
@@ -243,7 +243,7 @@ print("Directed C₄ vertex polynomial:", polynomial)
 
 Enumerate permutations of four letters with no fixed points and compare their counts by type with the first-kind potential.
 
-[[en/Directed Graphs and Extensions/Balanced graphs/Permutation Digraphs and Cycle Combinatorics#Graph type and its probability|Related section of the note]].
+[[en/Directed Graphs/Balanced graphs/Permutation Digraphs and Cycle Combinatorics#Graph type and its probability|Related section of the note]].
 
 ```python
 from collections import Counter

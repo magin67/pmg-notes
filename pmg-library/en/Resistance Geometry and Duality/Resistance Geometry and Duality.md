@@ -47,7 +47,7 @@ These are secondary thematic entry points; each series navigator identifies its 
 - [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions|KVP Decomposition and Oriented Extensions]]: components of the Green matrix, resistances, and metric parameters.
 - [[en/Invariants, Decompositions, and Spectra/Spectra and diagonalization in polyform algebra/Spectra and Diagonalization in Polyform Algebra|Spectra and Diagonalization in Polyform Algebra]]: the distinction between coordinate and resistance metrics.
 - [[en/Graph Transformations and Gluing/Laplacian, Greenian and Resistance Variations/Laplacian, Greenian and Resistance Variations|Laplacian, Greenian and Resistance Variations]]: changes in the resistance metric and quadric connectivity.
-- [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]]: directional coordinates, resistances, and the sphere.
+- [[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]]: directional coordinates, resistances, and the sphere.
 
 ## Future directions
 

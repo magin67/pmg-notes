@@ -29,14 +29,14 @@ Primary section: [[en/Invariants, Decompositions, and Spectra/Invariants, Decomp
 Secondary thematic entries:
 
 - [[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]: components of the Green matrix, resistances, and metric parameters.
-- [[en/Directed Graphs and Extensions/Directed Graphs and Extensions|Directed Graphs and Extensions]]: circulation and directional imbalance.
+- [[en/Directed Graphs/Directed Graphs|Directed Graphs]]: circulation and directional imbalance.
 
 [[en/Getting Started and Foundations/Navigation/Thematic Index#Search by tags|Search by tags]] · [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]].
 
 ## Reading routes and prerequisites
 
 - **First introduction:** [[KVP Decomposition of Pair Characteristics]], then [[KVP on Simple and Weighted Graphs]]. Linear algebra and the notion of a coupling table suffice; the decomposition itself needs no metric.
-- **Oriented data:** after the KVP definition, read [[Oriented Extensions of KVP - Circulation and Imbalance]]. Moving to directional geometry requires [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]] and [[KVP Decomposition of the Green Matrix and Resistances]].
+- **Oriented data:** after the KVP definition, read [[Oriented Extensions of KVP - Circulation and Imbalance]]. Moving to directional geometry requires [[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]] and [[KVP Decomposition of the Green Matrix and Resistances]].
 - **Metric and potentials:** [[The Distance Operator and KVP Decomposition]], [[KVP Decomposition of the Green Matrix and Resistances]], then [[KVP Components and Metric Graph Parameters]] and [[The Second-Order Symmetric Potential and KVP Decomposition]]. Useful background includes [[Laplacian, Green Matrix, and Effective Resistance Matrix]], [[en/Resistance Geometry and Duality/Metric parameters/Metric Parameters of Graphs|Metric Parameters of Graphs]], and [[Partition Forms and the Tetrahedron Identity]].
 - **Applications:** the KVP definitions, then [[Applications of KVP Decomposition - Electrometry and Pair Data Analysis]]. The electrical part requires [[KVP Decomposition of the Green Matrix and Resistances]] first; the interaction example uses a pair table directly.
 - **Forests and toponomes:** [[Forest Toponomes of KVP Components]] after the KVP definition and the basic constructions of [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes|Partition Toponomes]] and [[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes|Polynomial Toponomes]]. The metric notes are not prerequisites for defining pure toponomes.

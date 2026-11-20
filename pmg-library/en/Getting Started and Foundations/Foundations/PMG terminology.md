@@ -470,7 +470,7 @@ Definitions and formulas are recorded in the [[Core specification#Finite increme
 
 ## Balanced graphs and directional metrics
 
-This section concerns loopless balanced digraphs with nonnegative arc weights. Connectedness is assumed when potentials are normalized and a metric is used. Conventions are collected in the [[Core specification#The balanced extension|balanced extension of the specification]]; proofs are in [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs|Balanced Graphs]].
+This section concerns loopless balanced digraphs with nonnegative arc weights. Connectedness is assumed when potentials are normalized and a metric is used. Conventions are collected in the [[Core specification#The balanced extension|balanced extension of the specification]]; proofs are in [[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]].
 
 | English term | Russian equivalent | Status | Meaning and convention |
 | --- | --- | --- | --- |

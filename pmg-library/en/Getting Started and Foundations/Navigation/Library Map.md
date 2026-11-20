@@ -2,7 +2,7 @@
 title: Library Map
 date: 2026-11-11
 updated: 2026-11-20
-revision: 9
+revision: 10
 translated_revision: 94
 status: published
 text_prepared_by: ChatGPT
@@ -47,7 +47,7 @@ One direction can span several series, and a series can cover several directions
 | А03 | **Partitions and toponomes.** Algebra of the second kind, coefficient tables, forest polynomials, and graph realizability. Developed in two series. | [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes\|Partition Toponomes]]<br>[[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes\|Polynomial Toponomes]] |
 | А04 | **Metric distribution and path intersections.** The operator $D_L$, edge influence, the tree case, and higher grades. A joint series with Д04. | [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] |
 | А05 | **KVP and oriented extensions.** Pair-data projectors, KVPOU, the Green matrix, resistances, potentials, and applications. | [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions\|KVP Decomposition and Oriented Extensions]] |
-| А06 | **Balanced graphs.** Balance, the bilinear exponential, circulation, directed geometry, spheres, forests, and permutation digraphs. | [[en/Directed Graphs and Extensions/Balanced graphs/Balanced Graphs\|Balanced Graphs]] |
+| А06 | **Balanced graphs.** Balance, the bilinear exponential, circulation, directed geometry, spheres, forests, and permutation digraphs. | [[en/Directed Graphs/Balanced graphs/Balanced Graphs\|Balanced Graphs]] |
 | А07 | **Combinatorial potentials.** Ordinary and cyclic partitions, both kinds of potential, path-cycle states, and forest counting. | [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials\|Combinatorial Potentials]] |
 | А08 | **Permutations, invariants, and Galois theory.** A research direction. The starting result on permutation invariance is developed in А01. | [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Fundamental Theorem of Symmetric Polyforms\|Fundamental Theorem of Symmetric Polyforms]] |
 
@@ -151,13 +151,13 @@ These questions extend beyond the agreed scope of the published series. “Plann
 
 ### Directed graphs and circulation
 
-**Regular balanced graphs and component probabilities (А06, А07).** Fix a model of loopless labeled digraphs with in/out degree $d\ge2$. Determine total and connected counts, type distributions, and expected component counts under the specified sampling rule. To investigate. [[en/Directed Graphs and Extensions/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Mathar, Table 2](https://oeis.org/A005642/a005642.pdf)
+**Regular balanced graphs and component probabilities (А06, А07).** Fix a model of loopless labeled digraphs with in/out degree $d\ge2$. Determine total and connected counts, type distributions, and expected component counts under the specified sampling rule. To investigate. [[en/Directed Graphs/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Mathar, Table 2](https://oeis.org/A005642/a005642.pdf)
 
-**Algebra of labeled paths and cycles (А07, О01).** Define a general product, unit, associativity, coefficients, and potential behavior. Compare path-cycle constructions with partial permutations and Laguerre digraphs. Mixed-state potential formulas are already proved. Deferred. [[en/Directed Graphs and Extensions/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Deb](https://arxiv.org/abs/2304.14487) · [Generalized Laguerre, rook, and Lah polynomials](https://arxiv.org/abs/2312.11081) · [Chow, path-cycle symmetric function](https://timothychow.net/pathcycle.pdf)
+**Algebra of labeled paths and cycles (А07, О01).** Define a general product, unit, associativity, coefficients, and potential behavior. Compare path-cycle constructions with partial permutations and Laguerre digraphs. Mixed-state potential formulas are already proved. Deferred. [[en/Directed Graphs/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Deb](https://arxiv.org/abs/2304.14487) · [Generalized Laguerre, rook, and Lah polynomials](https://arxiv.org/abs/2312.11081) · [Chow, path-cycle symmetric function](https://timothychow.net/pathcycle.pdf)
 
-**Resistance symmetrization of a balanced graph (А06, Г02).** For a connected balanced graph, double centering the table $R_{ij}=r_{ij}+r_{ji}$ gives the symmetric part of the Green matrix. When is the pseudoinverse of that symmetric part a Laplacian with nonnegative conductances? Which metric parameters does the resulting network preserve? For a general digraph, the initial resistances and their normalization must first be specified. [[en/Directed Graphs and Extensions/Balanced graphs/Resistance Geometry and Circulation|Resistance Geometry and Circulation]] · [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]]
+**Resistance symmetrization of a balanced graph (А06, Г02).** For a connected balanced graph, double centering the table $R_{ij}=r_{ij}+r_{ji}$ gives the symmetric part of the Green matrix. When is the pseudoinverse of that symmetric part a Laplacian with nonnegative conductances? Which metric parameters does the resulting network preserve? For a general digraph, the initial resistances and their normalization must first be specified. [[en/Directed Graphs/Balanced graphs/Resistance Geometry and Circulation|Resistance Geometry and Circulation]] · [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]]
 
-**Directed-forest types (А03, А06).** Determine root and direction data sufficient for toponome products and study the full toponome under arc reversal. Investigate directed matroid inequalities and data realizability. Transpose invariance of the Laplacian polynomial is already proved. To investigate. [[en/Directed Graphs and Extensions/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests|Toponomes of Balanced Graphs and Directed Forests]]
+**Directed-forest types (А03, А06).** Determine root and direction data sufficient for toponome products and study the full toponome under arc reversal. Investigate directed matroid inequalities and data realizability. Transpose invariance of the Laplacian polynomial is already proved. To investigate. [[en/Directed Graphs/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests|Toponomes of Balanced Graphs and Directed Forests]]
 
 ### Gluing, chains, and limits
 
@@ -175,9 +175,9 @@ Each topic below needs a precise question before it can be developed. The refere
 
 **Permutations, invariants, and Galois theory (А08, А01, А02, А07).** Study the $S_n$ action on partition forms and structural relations, starting with four vertices. Specify a field, polynomial, and scalar realization for comparison with resolvents. The starting result on invariant forms is proved in А01. [[en/Polyform Algebra and Combinatorics/Structural identities/Partition Forms and the Tetrahedron Identity|Partition Forms and the Tetrahedron Identity]] · [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Fundamental Theorem of Symmetric Polyforms|Fundamental Theorem of Symmetric Polyforms]] · [Quartic resolvent](https://jrsijsling.eu/notes/GaloisTheory.pdf#page=104)
 
-**Circulation polyforms and electrodynamics (А06).** Establish a correspondence with electromagnetic fields and identify physical examples of pure-circulation polyforms. [[en/Directed Graphs and Extensions/Balanced graphs/The Circulation Form|The Circulation Form]]
+**Circulation polyforms and electrodynamics (А06).** Establish a correspondence with electromagnetic fields and identify physical examples of pure-circulation polyforms. [[en/Directed Graphs/Balanced graphs/The Circulation Form|The Circulation Form]]
 
-**Discrete connections and holonomy (А06, Г02).** For $\alpha_{ij}=r_{ij}-r_{ji}$, define transport along vertex pairs and the meaning of closed sums. Study the gauge change $\alpha_{ij}\mapsto\alpha_{ij}+s_i-s_j$ and a discrete Stokes formula. Geometric and physical interpretations of transport require justification. [[en/Directed Graphs and Extensions/Balanced graphs/One-Way Resistance and Hitting Times|One-Way Resistance and Hitting Times]]
+**Discrete connections and holonomy (А06, Г02).** For $\alpha_{ij}=r_{ij}-r_{ji}$, define transport along vertex pairs and the meaning of closed sums. Study the gauge change $\alpha_{ij}\mapsto\alpha_{ij}+s_i-s_j$ and a discrete Stokes formula. Geometric and physical interpretations of transport require justification. [[en/Directed Graphs/Balanced graphs/One-Way Resistance and Hitting Times|One-Way Resistance and Hitting Times]]
 
 **Infinite lattices and finite-graph limits (С09, С01, С04, С05, С07, С08).** Compare one-, two-, and three-dimensional models with classical theory. Specify finite fragments and boundary conditions, and justify limiting Laplacians, Greenians, resistances, and spanning-tree characteristics. Examine extension of the exterior exponential and identify a possible PMG contribution. [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores|Chains of Cores]]
 
