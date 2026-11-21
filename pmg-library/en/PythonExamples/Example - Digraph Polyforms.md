@@ -24,7 +24,7 @@ Run the cells from top to bottom. The notebook installs the exact revision of th
 
 Specify six arcs. The pair $(b,a)$ denotes an arc from $b$ to $a$ and changes row $b$ of the Laplacian. At $b$ the outgoing weight is 3 and the incoming weight is 2.
 
-![Six arcs on a, b and c; b to a and a to c have weight two](../Directed%20Graphs/Digraph%20Polyforms/images/weighted-unbalanced-digraph.svg)
+![Six arcs on a, b and c; b to a and a to c have weight two](../../en/Directed%20Graphs/Digraph%20Polyforms/images/weighted-unbalanced-digraph.svg)
 
 Write $M=\exp L$ grade by grade in vertex order $a,b,c$. Grade two has rows and columns in the order $a\wedge b,a\wedge c,b\wedge c$. In this basis the boundary $(abc)$ has coordinates $(1,-1,1)$.
 
@@ -176,7 +176,7 @@ for left, right, expected in [(u, v, Rational(1, 4)), (v, u, Rational(1, 8))]:
 
 Measure the triangle $(abc)$ and then the tetrahedron $(abcd)$ in a directed four-cycle. Insert an external vertex $e$ between $d$ and $a$ and measure the tetrahedron again. The vertex list selects the boundary. The centroid still uses the entire digraph.
 
-![Tetrahedron abcd in two directed cycles, with e inserted on the return path](../Directed%20Graphs/Digraph%20Polyforms/images/tetrahedron-in-directed-cycles-en.svg)
+![Tetrahedron abcd in two directed cycles, with e inserted on the return path](../../en/Directed%20Graphs/Digraph%20Polyforms/images/tetrahedron-in-directed-cycles-en.svg)
 
 For each boundary the package computes the contribution from each start. Independently check the full norm with the Gram matrix assembled directly from the resistance table. The last calculation reverses the triangle orientation while keeping its start fixed.
 
