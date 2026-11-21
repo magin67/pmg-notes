@@ -3,7 +3,7 @@ title: "PMG — Library"
 description: "Resistance geometry and polyform algebra."
 lang: en
 translation_key: pmg-home
-revision: 46
+revision: 47
 translated_revision: 62
 updated: 2026-11-21
 ---
@@ -26,7 +26,7 @@ The approach is based on polyform algebra. One of the questions that led to its 
 
 ## Thematic sections
 
-The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 140 substantive notes in Russian and 136 in English. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
+The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 141 substantive notes in Russian and 136 in English. Each series has one primary home, chosen by its main question. Section pages provide descriptions, prerequisites, reading routes, and connections.
 
 - **[[en/Polyform Algebra and Combinatorics/Polyform Algebra and Combinatorics|Polyform Algebra and Combinatorics]]**. What objects does polyform algebra construct, which identities do they satisfy, and what do their coefficients count?
 - **[[en/Resistance Geometry and Duality/Resistance Geometry and Duality|Resistance Geometry and Duality]]**. How are spaces, the resistance metric, geometric characteristics, and dual representations organized?

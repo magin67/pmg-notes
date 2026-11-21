@@ -2,7 +2,7 @@
 title: Directed Graphs
 date: 2026-11-01
 updated: 2026-11-21
-revision: 9
+revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -23,7 +23,7 @@ What changes when couplings become directed and constructions become nonsymmetri
 ## Series in this section
 
 - **[[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]]** (12 notes). Balance, the bilinear Laplacian, circulation, one-way resistances, balancing, and directed forests.
-- **[[ru/Направленные графы/Полиформы орграфов/Полиформы орграфов|Digraph Polyforms (Russian)]]**. A weighted, unbalanced digraph illustrates the forest expansion and how to extract the spanning-tree potential of a chosen root. Note 3 compares the arc form with the one-way resistance form on a directed three-cycle. Note 4 normalizes by the sum of the spanning-tree potentials and proves additivity for opposite directions.
+- **[[ru/Направленные графы/Полиформы орграфов/Полиформы орграфов|Digraph Polyforms (Russian)]]**. A weighted, unbalanced digraph illustrates the forest expansion and how to extract the spanning-tree potential of a chosen root. Note 3 compares the arc form with the one-way resistance form on a directed three-cycle. Note 4 normalizes by the sum of the spanning-tree potentials and proves additivity for opposite directions. Note 5 recovers the arc weights from the one-way resistance matrix and the relative spanning-tree potentials.
 
 ## Reading route
 
