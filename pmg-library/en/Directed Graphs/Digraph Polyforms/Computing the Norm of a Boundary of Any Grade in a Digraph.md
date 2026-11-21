@@ -88,7 +88,7 @@ The Gram matrix uses the **full directed scalar product**, including its antisym
 
 Fix vertices $a,b,c,d$ and measure the grade-three boundary $(abcd)$. Begin with the unit cycle $a\to b\to c\to d\to a$. Then insert $e$ between $d$ and $a$, keeping all arc weights equal to 1. The tetrahedron has the same four vertices in both graphs.
 
-![Unit directed cycles on four and five vertices, highlighting the path from d to a](./images/tetrahedron-in-directed-cycles.svg)
+![Unit directed cycles on four and five vertices, highlighting the path from d to a](./images/tetrahedron-in-directed-cycles-en.svg)
 
 *Fig. 1. In the four-cycle, one arc leads from $d$ to the next selected vertex $a$. In the five-cycle the path goes through $e$, which also enters the graph centroid.*
 

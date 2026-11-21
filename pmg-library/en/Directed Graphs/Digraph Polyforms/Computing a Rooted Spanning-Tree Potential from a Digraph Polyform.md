@@ -36,7 +36,7 @@ The vertex's own form $[b]^2$ extracts its potential. In the product with $M=e+L
 
 ## Why only trees toward the chosen root remain
 
-![Nine spanning trees, three for each root](./images/rooted-trees.svg)
+![Nine spanning trees, three for each root](./images/rooted-trees-en.svg)
 
 *Fig. 1. In each row the filled vertex is the root. Arrows point toward it. Each arrow carries its weight and the number below each tree is the product of its two arc weights.*
 
@@ -98,7 +98,7 @@ What happens when we add $t$ to the weight of $a\to b$? No arc leaves $a$ in a t
 > [!note]- Constructing a tree from paths
 > **Proof.** A tree directed toward $a_r$ supplies a path from every vertex. Conversely, when all vertices can reach $a_r$, select at each nonroot the first arc of a shortest path to $a_r$, counting arcs. Each step reduces the distance by one. No cycle is possible and every selected path reaches $a_r$. This spanning tree has positive weight, and all other tree weights are nonnegative. $\square$
 
-![A directed path with rooted potentials 0, 0 and 1](./images/directed-chain.svg)
+![A directed path with rooted potentials 0, 0 and 1](./images/directed-chain-en.svg)
 
 *Fig. 2. Both unit arcs point along the path toward $c$. Together they form its only spanning tree.*
 

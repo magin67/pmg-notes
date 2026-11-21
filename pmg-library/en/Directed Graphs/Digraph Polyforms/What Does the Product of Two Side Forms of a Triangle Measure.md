@@ -95,7 +95,7 @@ $$
 
 Measure the same $(abc)$ in the unit cycle $a\to b\to c\to d\to a$. Although there is no direct arc between $a$ and $c$, both $\Phi_{ac}$ and $\Phi_{ca}$ exist. The fourth vertex enters the centroid, so $x_a+x_b+x_c=-x_d$.
 
-![Starting-vertex contributions in unit directed three- and four-cycles](./images/triangle-in-directed-cycles.svg)
+![Starting-vertex contributions in unit directed three- and four-cycles](./images/triangle-in-directed-cycles-en.svg)
 
 *Fig. 1. The arrows are unit arcs. Fractions by the vertices give the contributions from the indicated starts. Both graphs measure the same triangle. The dashed side in the four-cycle joins $a$ and $c$.*
 
