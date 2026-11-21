@@ -1,9 +1,9 @@
 ---
 title: The Potential of Path-and-Cycle States
 date: 2026-10-25
-updated: 2026-11-11
-revision: 3
-source_revision: 3
+updated: 2026-11-21
+revision: 4
+source_revision: 4
 status: draft
 text_prepared_by: ChatGPT
 translation_key: path-and-cycle-state-potential
@@ -82,6 +82,8 @@ Equivalently, this counts graphs with no isolated vertices, distinctly labelled 
 > The resulting structure uniquely specifies the typed partition and the orders within its blocks, so nothing is omitted or counted twice. $\square$
 
 Thus the **cycle factor** arises only from closed components. A path has an initial vertex, so its linear orders are not divided by its length.
+
+The factor $f$ also counts forests. With unit arc weights, it counts the spanning forests with one tree in each component of the original digraph. Choose one arc to cut in each cycle and keep every path intact. [[en/Directed Graphs/Digraph Polyforms/How Arcs Form the Polyform of a Digraph#A cycle and an open path in Secret Santa|The three forests for a directed cycle and a single arc]]
 
 The multiplicities $c_j$ and $p_j$ must be treated separately. Interchanging two cycles of the same size changes nothing, as does interchanging two paths of the same size. Exchanging the labels assigned to a cycle block and a path block changes the object. The denominator therefore contains $c_j!p_j!$, not $(c_j+p_j)!$. In the original notation, $[m_j!]!$ means the product of factorials from both groups of multiplicities without adding them together.
 

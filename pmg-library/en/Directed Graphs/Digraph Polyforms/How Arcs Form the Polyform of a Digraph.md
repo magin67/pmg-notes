@@ -2,8 +2,8 @@
 title: How Arcs Form the Polyform of a Digraph
 date: 2026-11-21
 updated: 2026-11-21
-revision: 1
-translated_revision: 6
+revision: 2
+translated_revision: 7
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -102,6 +102,18 @@ Both weights are 1. From either $a$ or $b$, following the arrows leads to $c$. H
 > Conversely, in a forest directed toward its roots the left arguments are distinct basis vertices. In a linear combination of the edge differences, a leaf coordinate occurs only in the term for its incident edge. If the combination vanishes, that coefficient vanishes. Repeated leaf removal eliminates all coefficients. Both exterior products are therefore nonzero, and the arc set specifies exactly one choice of factors. $\square$
 
 This expansion also holds for unbalanced digraphs and for digraphs without a spanning tree. A spanning tree is needed for a nonzero term of grade $n-1$. Balance enters when all rooted potentials of a connected graph are required to agree. [[en/Directed Graphs/Balanced graphs/The Laplacian Exponential of a Balanced Graph#The spanning-tree form and common coefficient|The spanning-tree form and common coefficient]]
+
+## A cycle and an open path in Secret Santa
+
+Partway through a Secret Santa draw, each participant has chosen at most one recipient and has been chosen at most once. The assignments form the digraph of a partial permutation, also called a Laguerre digraph. Consider the state of type $[3,\underline 1]$. Here $3$ denotes the directed 3-cycle and $\underline 1$ the open path of one arc. All arc weights are 1.
+
+$$
+a\to b\to c\to a \qquad x\to y
+$$
+
+To obtain a forest in the highest nonzero grade $M_3$, keep $x\to y$ and remove one arc from the triangle. Removing $c\to a$, for example, leaves a path rooted at $c$. There are three forests, with roots $a,b,c$ respectively in the first component and the same root $y$ in the second.
+
+The same factor of three appears in the combinatorial potential. Give the four arcs distinct labels and leave the vertices unlabelled. Any of the four labels can go on the single arc. The three remaining labels have two cyclic orders, since the three choices of where to start reading a cycle differ only by rotation. Thus $u([3,\underline 1])=4\cdot2=4!/3=8$. Marking the arc to cut gives three choices for each of the eight states, hence $8\cdot3=24$ in all. More generally, if $c_j$ counts the directed cycles of length $j$, then $\prod_j j^{c_j}$ counts the ways to cut one arc from each cycle while keeping every open path. This is the cycle factor in the denominator of the formula for $u$. [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/The Potential of Path-and-Cycle States#The potential formula and its proof|The potential formula for path-and-cycle states]]
 
 ## The result for six arcs
 
