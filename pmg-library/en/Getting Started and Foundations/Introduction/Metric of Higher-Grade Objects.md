@@ -1,10 +1,10 @@
 ---
 title: Metric of Higher-Grade Objects
 date: 2026-10-06
-updated: 2026-11-10
-revision: 10
-translated_revision: 12
-source_revision: 11
+updated: 2026-11-21
+revision: 11
+translated_revision: 13
+source_revision: 13
 status: draft
 text_prepared_by: ChatGPT
 translation_key: higher-grade-object-metric
@@ -154,6 +154,33 @@ For nondegenerate triangles in the same plane, the sign is positive when $c,d$ l
 Reversing the orientation of one boundary changes the sign of the mixed inner product but preserves its norm. Reversing both orientations also preserves the mixed inner product.
 
 The [[en/PythonExamples/Example - Unit Triangle Geometry#Two boundaries and the volume of a tetrahedron|tetrahedron Python example]] computes the mixed inner product and checks the sign change under orientation reversal.
+
+## A common factor and the Plücker relations
+
+Any two boundaries of the same grade have an inner product. One mixed Gram determinant (1) suffices for decomposable boundaries, and bilinearity gives the value for linear combinations. The common side in example (3) also allows the **polar form** to be expressed in terms of squares of decomposable boundaries.
+
+Let $X,Y$ be nonzero decomposable boundaries of grade 2. For a bivector $Z$, the Plücker relations can be written as $Z\wedge Z=0$. They characterize the bivectors that can be written as $p\wedge q$. Both $X$ and $Y$ satisfy these relations individually. Polarization raises the question of whether their sum $X+Y$ also satisfies them.
+
+> [!info] When squares of decomposable boundaries suffice
+> If $X=u\wedge v$ and $Y=u\wedge w$, then $X+Y=u\wedge(v+w)$. Thus all three squares in the polarization identity
+>
+> $$
+> \{X,Y\}=[X+Y]^2-[X]^2-[Y]^2
+> $$
+>
+> have decomposable arguments. If there is no common vector factor, the identity still holds, but $X+Y$ cannot be written as a single exterior product. In this case the form $\{X,Y\}$ itself cannot be expressed as a linear combination of squares of decomposable boundaries.
+
+> [!note]- Why a common factor is necessary
+> In the absence of a common factor, the planes of the two bivectors intersect only at zero. The four vectors in their factorizations are therefore linearly independent and $X\wedge Y\ne0$. For the sum we get $(X+Y)\wedge(X+Y)=2X\wedge Y\ne0$. To check the claim about forms, apply the linear map $[U,V]\mapsto U\wedge V$. It sends each square $[Z]^2$ of a decomposable boundary to zero, while $\{X,Y\}=[X,Y]+[Y,X]$ maps to $2X\wedge Y\ne0$. $\square$
+
+> [!example] Two boundaries without a common side
+> Take $X=(abc)$ and $Y=(def)$ on the unit path $a-d-b-e-c-f$. The four vectors $(ab),(bc),(de),(ef)$ are linearly independent. The signed lengths of the pairwise path intersections suffice to compute the number $X\cdot Y$. For example, the paths $a\to b$ and $d\to e$ traverse the edge $d\to b$ in the same direction. Formula (1) gives
+>
+> $$
+> X\cdot Y=
+> \det\begin{pmatrix}(ab)\cdot(de)&(ab)\cdot(ef)\\(bc)\cdot(de)&(bc)\cdot(ef)\end{pmatrix}
+> =\det\begin{pmatrix}1&0\\1&1\end{pmatrix}=1
+> $$
 
 ## Areas and volumes of simplices
 
