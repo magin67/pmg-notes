@@ -2,7 +2,7 @@
 title: Library Map
 date: 2026-11-11
 updated: 2026-11-21
-revision: 16
+revision: 17
 translated_revision: 94
 status: published
 text_prepared_by: ChatGPT
@@ -20,7 +20,7 @@ The map shows which PMG directions are developed in the library, how they connec
 
 ## Library contents
 
-The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 143 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
+The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 144 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
 Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. Series navigators give reading order and prerequisites.
 
@@ -150,6 +150,8 @@ These questions extend beyond the agreed scope of the published series. “Plann
 **Radius after deleting a vertex from the network (Г03, С06).** Seek a compact expression for $\rho(G-i)$ using a small set of original-graph vertex characteristics. Calculation in the new metric is defined. Metric-preserving elimination already has a formula. To review. [[en/Resistance Geometry and Duality/Metric parameters/Vertex Deletion - Spanning-Tree Coefficient and Resistance Radius|Vertex Deletion: Spanning-Tree Coefficient and Resistance Radius]]
 
 ### Directed graphs and circulation
+
+**Orientation of higher-grade boundaries.** Once the starting vertex is fixed, permuting the remaining vertices preserves the product of measurement forms. Which forms could split the full norm into two contributions that distinguish orientations and are invariant under changes of starting vertex? [[ru/Направленные графы/Полиформы орграфов/Как вычислить норму границы произвольного порядка в орграфе#Начало и ориентация границы|Decomposition by starting vertex (Russian)]]
 
 **Regular balanced graphs and component probabilities (А06, А07).** Fix a model of loopless labeled digraphs with in/out degree $d\ge2$. Determine total and connected counts, type distributions, and expected component counts under the specified sampling rule. To investigate. [[en/Directed Graphs/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Mathar, Table 2](https://oeis.org/A005642/a005642.pdf)
 
