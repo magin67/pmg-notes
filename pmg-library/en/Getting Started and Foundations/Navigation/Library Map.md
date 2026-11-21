@@ -2,8 +2,8 @@
 title: Library Map
 date: 2026-11-11
 updated: 2026-11-21
-revision: 17
-translated_revision: 94
+revision: 18
+translated_revision: 104
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -20,7 +20,7 @@ The map shows which PMG directions are developed in the library, how they connec
 
 ## Library contents
 
-The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 144 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
+The library has 20 bilingual series, with 144 substantive notes in each language. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
 Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. Series navigators give reading order and prerequisites.
 
@@ -47,7 +47,7 @@ One direction can span several series, and a series can cover several directions
 | А03 | **Partitions and toponomes.** Algebra of the second kind, coefficient tables, forest polynomials, and graph realizability. Developed in two series. | [[en/Polyform Algebra and Combinatorics/Partition toponomes/Partition Toponomes\|Partition Toponomes]]<br>[[en/Polyform Algebra and Combinatorics/Polynomial toponomes/Polynomial Toponomes\|Polynomial Toponomes]] |
 | А04 | **Metric distribution and path intersections.** The operator $D_L$, edge influence, the tree case, and higher grades. A joint series with Д04. | [[en/Resistance Geometry and Duality/Metric Distributions and Edge Influence/Metric Distributions and Edge Influence\|Metric Distributions and Edge Influence]] |
 | А05 | **KVP and oriented extensions.** Pair-data projectors, KVPOU, the Green matrix, resistances, potentials, and applications. | [[en/Invariants, Decompositions, and Spectra/KVP decomposition/KVP Decomposition and Oriented Extensions\|KVP Decomposition and Oriented Extensions]] |
-| А06 | **Balanced graphs.** Balance, the bilinear exponential, circulation, directed geometry, spheres, forests, and permutation digraphs. | [[en/Directed Graphs/Balanced graphs/Balanced Graphs\|Balanced Graphs]] |
+| А06 | **Balanced and general digraphs.** Balance, the bilinear exponential, circulation, directed geometry, spheres, forests, and permutation digraphs. Polyforms of general digraphs, rooted potentials and boundary measurements. | [[en/Directed Graphs/Balanced graphs/Balanced Graphs\|Balanced Graphs]] · [[en/Directed Graphs/Digraph Polyforms/Digraph Polyforms\|Digraph Polyforms]] |
 | А07 | **Combinatorial potentials.** Ordinary and cyclic partitions, both kinds of potential, path-cycle states, and forest counting. | [[en/Polyform Algebra and Combinatorics/Combinatorial potentials/Combinatorial Potentials\|Combinatorial Potentials]] |
 | А08 | **Permutations, invariants, and Galois theory.** A research direction. The starting result on permutation invariance is developed in А01. | [[en/Polyform Algebra and Combinatorics/Symmetric polyforms/Fundamental Theorem of Symmetric Polyforms\|Fundamental Theorem of Symmetric Polyforms]] |
 
@@ -85,6 +85,8 @@ One direction can span several series, and a series can cover several directions
 | С09 | **Infinite lattices and limits.** A research direction. Models, limiting objects, and the possible PMG contribution require separate justification. | [[#Research ideas\|Research ideas]] |
 
 ## Connections between directions
+
+**From directed forests to boundary norms (А06).** Forests determine the rooted potentials. When their sum is positive, the one-way resistance table determines the directed scalar product and all boundary Gram determinants. Recovering the arc weights also requires the relative rooted potentials. [[en/Directed Graphs/Digraph Polyforms/Can the One-Way Resistance Matrix Recover a Digraph|Reconstruction]] · [[en/Directed Graphs/Digraph Polyforms/Computing the Norm of a Boundary of Any Grade in a Digraph|Boundary norms]]
 
 - **А01-А03, А07.** Combinatorial potentials supply coefficients of symmetric sums and forest expansions. Structural identities describe relations among partition forms, and toponomes group a chosen representation by type.
 - **О03, О05, Г01, Д02.** Exact matrix updates connect coupling variations with changes in the Greenian and resistances. Partial resistance data and conductance constraints lead to a separate realizability problem.
@@ -151,13 +153,13 @@ These questions extend beyond the agreed scope of the published series. “Plann
 
 ### Directed graphs and circulation
 
-**Orientation of higher-grade boundaries.** Once the starting vertex is fixed, permuting the remaining vertices preserves the product of measurement forms. Which forms could split the full norm into two contributions that distinguish orientations and are invariant under changes of starting vertex? [[ru/Направленные графы/Полиформы орграфов/Как вычислить норму границы произвольного порядка в орграфе#Начало и ориентация границы|Decomposition by starting vertex (Russian)]]
+**Orientation of higher-grade boundaries.** Once the starting vertex is fixed, permuting the remaining vertices preserves the product of measurement forms. Which forms could split the full norm into two contributions that distinguish orientations and are invariant under changes of starting vertex? [[en/Directed Graphs/Digraph Polyforms/Computing the Norm of a Boundary of Any Grade in a Digraph#Starting vertex and orientation|Decomposition by starting vertex]]
 
 **Regular balanced graphs and component probabilities (А06, А07).** Fix a model of loopless labeled digraphs with in/out degree $d\ge2$. Determine total and connected counts, type distributions, and expected component counts under the specified sampling rule. To investigate. [[en/Directed Graphs/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Mathar, Table 2](https://oeis.org/A005642/a005642.pdf)
 
 **Algebra of labeled paths and cycles (А07, О01).** Define a general product, unit, associativity, coefficients, and potential behavior. Compare path-cycle constructions with partial permutations and Laguerre digraphs. Mixed-state potential formulas are already proved. Deferred. [[en/Directed Graphs/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Deb](https://arxiv.org/abs/2304.14487) · [Generalized Laguerre, rook, and Lah polynomials](https://arxiv.org/abs/2312.11081) · [Chow, path-cycle symmetric function](https://timothychow.net/pathcycle.pdf)
 
-**Resistance symmetrization of a balanced graph (А06, Г02).** For a connected balanced graph, double centering the table $R_{ij}=r_{ij}+r_{ji}$ gives the symmetric part of the Green matrix. When is the pseudoinverse of that symmetric part a Laplacian with nonnegative conductances? Which metric parameters does the resulting network preserve? For digraphs with positive total spanning-tree potential, [[ru/Направленные графы/Полиформы орграфов/Как нормировать односторонний резистенс в небалансовом орграфе|note 4 of Digraph Polyforms (Russian)]] defines the one-way resistances. [[en/Directed Graphs/Balanced graphs/Resistance Geometry and Circulation|Resistance Geometry and Circulation]] · [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]]
+**Resistance symmetrization of a balanced graph (А06, Г02).** For a connected balanced graph, double centering the table $R_{ij}=r_{ij}+r_{ji}$ gives the symmetric part of the Green matrix. When is the pseudoinverse of that symmetric part a Laplacian with nonnegative conductances? Which metric parameters does the resulting network preserve? For digraphs with positive total spanning-tree potential, [[en/Directed Graphs/Digraph Polyforms/How to Normalize One-Way Resistance in an Unbalanced Digraph|normalization by total rooted potential]] defines the one-way resistances. [[en/Directed Graphs/Balanced graphs/Resistance Geometry and Circulation|Resistance Geometry and Circulation]] · [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]]
 
 **Directed-forest types (А03, А06).** Determine root and direction data sufficient for toponome products and study the full toponome under arc reversal. Investigate directed matroid inequalities and data realizability. Transpose invariance of the Laplacian polynomial is already proved. To investigate. [[en/Directed Graphs/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests|Toponomes of Balanced Graphs and Directed Forests]]
 

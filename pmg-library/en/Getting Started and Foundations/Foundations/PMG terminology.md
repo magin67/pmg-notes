@@ -1,9 +1,9 @@
 ---
 title: Terminology
 date: 2026-10-09
-updated: 2026-11-18
-revision: 31
-translated_revision: 31
+updated: 2026-11-21
+revision: 32
+translated_revision: 32
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-terminology
@@ -481,7 +481,7 @@ This section concerns loopless balanced digraphs with nonnegative arc weights. C
 | Rooted spanning-tree potential | Остовной потенциал вершины | Qualified | $\tau_i=\det\mathbf L_{\widehat i,\widehat i}$, the sum of weights of arborescences toward root $i$. Its column satisfies $\mathbf L^{\mathsf T}\boldsymbol\tau=0$. Distinct from electrical potential $\varphi_i$. |
 | Common spanning-tree coefficient | Общий остовной коэффициент балграфа | Qualified | The common value $\tau_i=\tau>0$ in a connected balanced graph. One fixed root is counted; the sum over all roots is $n\tau$. [[Balanced Graphs and Spanning-Tree Potentials]]. |
 | Canonical centered representation | Каноническое центрированное представление | PMG | $L=\sum_{i,j}L_{ij}[a_i-h,a_j-h]$ with centroid $h$. The coefficient matrix is normalized by zero row and column sums. It is not a canonical cycle decomposition. [[The Bilinear Laplacian of a Balanced Graph]]. |
-| Directional pairing; bilinear pairing | Направленное сопряжение; направленное скалярное произведение | Qualified | $\beta(u,v)=P_M([u,v])=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u$. The first argument is a source, $\mathrm{out}$; the second a receiver, $\mathrm{in}$. In general it is not a symmetric inner product. |
+| Directed scalar product; directional pairing | Направленное сопряжение; направленное скалярное произведение | Qualified | $\beta(u,v)=P_M([u,v])=\mathbf v^{\mathsf T}\mathbf{Gr}\mathbf u$. The first argument is a source, $\mathrm{out}$; the second a receiver, $\mathrm{in}$. In general it is not a symmetric inner product. |
 | Symmetric part of the metric | Симметричная часть метрики | Qualified | $g(u,v)=(\beta(u,v)+\beta(v,u))/2$. Positive definite on $W$, it gives Euclidean distances with squares $R_{ij}$. It does not determine the entire bilinear metric. |
 | Circulation form | Форма циркуляции | PMG | $\omega(u,v)=[u,v]-[v,u]$ for affine vectors. A skew-symmetric formal form of PMG grade one. It can be considered without a graph. [[The Circulation Form]]. |
 | Triangular circulation form | Треугольная форма циркуляции | PMG | $w(abc)=\omega(b-a,c-a)$. In the adopted orientation, $w(abc)=L_{acb}-L_{abc}$ for unit directed cycles. It is their difference, not a full cycle Laplacian. |
@@ -498,6 +498,21 @@ This section concerns loopless balanced digraphs with nonnegative arc weights. C
 | Single-arc variation | Односторонняя вариация дуги | Qualified | A weight change for one arc $a\to b$, $\Delta\mathbf L=t\mathbf e_a(\mathbf e_a-\mathbf e_b)^{\mathsf T}$. For $a\ne b$ and $t\ne0$, it breaks the original balanced graph's balance. |
 
 Indices $i\to j$ in $r_{ij}$ specify the direction of a pair, whereas $\mathrm{out}/\mathrm{in}$ specify argument roles in the pairing; these are different conventions. The normalized potential $P_M(F)=\tau(MF)/\tau(M)$ is the common algebraic basis of resistance and circulation quantities. Rooted potentials $\tau_i$ and electrical potentials $\varphi_i$ are defined separately.
+
+## Measurement forms of digraphs
+
+An arc specifies a change to the graph. An ordered pair for measurement can be chosen from any two vertices.
+
+| English term | Русский термин | Definition or condition |
+| --- | --- | --- |
+| Arc form | Форма дуги | $H_{i\to j}=[a_i,a_i-a_j]$. Changing the weight of one arc by $t$ adds $tH_{i\to j}$ to the Laplacian. |
+| Centroid measurement form of an ordered pair | Центроидная измерительная форма пары | $\Phi_{ij}=[a_j-h,a_j-a_i]$, where $h$ uses all graph vertices. |
+| Root coefficient of a form | Корневой коэффициент формы | $u_s(F)$ is the top-grade coefficient of $MF[a_s]^2$. In particular $u_s(e)=\tau_s$. |
+| Normalization by total spanning-tree potential | Нормировка по сумме остовных потенциалов | $P_M^\Sigma(F)=\sum_su_s(F)/S$ with $S=\sum_s\tau_s>0$. One-way resistance equals $P_M^\Sigma(\Phi_{ij})$. |
+| Directed scalar product; directional pairing | Направленное скалярное произведение (НСП) | The bilinear evaluation $\beta(u,v)=P_M^\Sigma([u,v])$ takes the source vector first and the receiver second. Its diagonal can be negative in an unbalanced digraph. |
+| Starting-vertex contribution | Вклад начальной вершины | $P_M^\Sigma(F_i)$, where $F_i$ is the product of consecutive pair forms starting at $a_i$. Summing over starts gives the boundary norm. |
+
+[[en/Getting Started and Foundations/Foundations/Core specification#Polyforms of general digraphs|Polyforms of general digraphs]].
 
 ## KVP and KVPOU structural decompositions
 
@@ -592,6 +607,7 @@ Within a derivation, distinguish the graph $G$, a Gram matrix $\mathbf G$, and t
 
 | Revision | Date | Content |
 |---|---|---|
+| 32 | 2026-11-21 | Added digraph measurement forms, root normalization and starting-vertex contributions. |
 | 31 | 2026-11-18 | Added degree potential, controlled shunting, and three graph-weaving terms. Aligned with Russian revision 31. |
 | 30 | 2026-11-13 | Added electrometry terms: T, R, and Z, conductivity and resistivity, the effective electrode Laplacian, sensitivity, and distinguishability. Distinguished geometric modes from sensitivity modes and clarified local notation. Aligned with Russian revision 30. |
 | 28 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |

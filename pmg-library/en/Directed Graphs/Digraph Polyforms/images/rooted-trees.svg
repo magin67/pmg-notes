@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="730" height="495" viewBox="0 0 730 495" role="img" aria-labelledby="diagram-title diagram-description">
+  <title id="diagram-title">Spanning trees directed toward each of the three roots</title>
+  <desc id="diagram-description">Each root has three trees. From left to right their weights are 2, 2, 1 for a, then 1, 1, 2 for b and 1, 2, 4 for c. The filled vertex is the root.</desc>
+  <rect width="730" height="495" fill="white" />
+  <text x="16" y="65" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="18" text-anchor="start" font-weight="600">Root a</text>
+  <text x="16" y="98" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="25">τ<tspan dy="5" font-size="15" font-style="italic">a</tspan>
+    <tspan dy="-5" font-size="25"> = 5</tspan>
+  </text>
+  <line x1="176.58726917591133" y1="92.83383026941351" x2="209.35455137348112" y2="44.610282884310806" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="214.41,37.17 205.24,43.02 212.35,47.85" fill="#19354c" />
+  <text x="181" y="66" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">2</text>
+  <line x1="267.41273082408867" y1="92.83383026941351" x2="234.64544862651888" y2="44.610282884310806" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="229.59,37.17 231.65,47.85 238.76,43.02" fill="#19354c" />
+  <text x="263" y="66" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <circle cx="222" cy="26" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="222" y="32" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="169" cy="104" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="169" y="110" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="275" cy="104" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="275" y="110" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="222" y="145" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 2</text>
+  <line x1="457.5" y1="104.0" x2="387.5" y2="104.0" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="378.50,104.00 388.50,108.30 388.50,99.70" fill="#19354c" />
+  <text x="418" y="100" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <line x1="372.58726917591133" y1="92.83383026941351" x2="405.3545513734811" y2="44.610282884310806" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="410.41,37.17 401.24,43.02 408.35,47.85" fill="#19354c" />
+  <text x="377" y="66" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">2</text>
+  <circle cx="418" cy="26" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="418" y="32" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="365" cy="104" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="365" y="110" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="471" cy="104" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="471" y="110" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="418" y="145" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 2</text>
+  <line x1="574.5" y1="104.0" x2="644.5" y2="104.0" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="653.50,104.00 643.50,99.70 643.50,108.30" fill="#19354c" />
+  <text x="614" y="100" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <line x1="659.4127308240887" y1="92.83383026941351" x2="626.6454486265188" y2="44.610282884310806" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="621.59,37.17 623.65,47.85 630.76,43.02" fill="#19354c" />
+  <text x="655" y="66" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <circle cx="614" cy="26" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="614" y="32" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="561" cy="104" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="561" y="110" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="667" cy="104" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="667" y="110" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="614" y="145" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 1</text>
+  <rect x="0" y="165" width="730" height="165" fill="#f1f6f9" />
+  <line x1="10" y1="165" x2="720" y2="165" stroke="#cfdae1" stroke-width="1" />
+  <text x="16" y="230" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="18" text-anchor="start" font-weight="600">Root b</text>
+  <text x="16" y="263" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="25">τ<tspan dy="5" font-size="15" font-style="italic">b</tspan>
+    <tspan dy="-5" font-size="25"> = 4</tspan>
+  </text>
+  <line x1="214.41273082408867" y1="202.1661697305865" x2="181.64544862651888" y2="250.3897171156892" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="176.59,257.83 185.76,251.98 178.65,247.15" fill="#19354c" />
+  <text x="181" y="231" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <line x1="261.5" y1="269.0" x2="191.5" y2="269.0" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="182.50,269.00 192.50,273.30 192.50,264.70" fill="#19354c" />
+  <text x="222" y="265" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <circle cx="222" cy="191" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="222" y="197" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="169" cy="269" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="169" y="275" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="275" cy="269" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="275" y="275" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="222" y="310" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 1</text>
+  <line x1="463.41273082408867" y1="257.8338302694135" x2="430.6454486265189" y2="209.6102828843108" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="425.59,202.17 427.65,212.85 434.76,208.02" fill="#19354c" />
+  <text x="459" y="231" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <line x1="410.41273082408867" y1="202.1661697305865" x2="377.6454486265189" y2="250.3897171156892" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="372.59,257.83 381.76,251.98 374.65,247.15" fill="#19354c" />
+  <text x="377" y="231" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <circle cx="418" cy="191" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="418" y="197" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="365" cy="269" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="365" y="275" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="471" cy="269" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="471" y="275" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="418" y="310" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 1</text>
+  <line x1="621.5872691759113" y1="202.1661697305865" x2="654.3545513734812" y2="250.3897171156892" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="659.41,257.83 657.35,247.15 650.24,251.98" fill="#19354c" />
+  <text x="655" y="231" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">2</text>
+  <line x1="653.5" y1="269.0" x2="583.5" y2="269.0" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="574.50,269.00 584.50,273.30 584.50,264.70" fill="#19354c" />
+  <text x="614" y="265" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <circle cx="614" cy="191" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="614" y="197" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="561" cy="269" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="561" y="275" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="667" cy="269" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="667" y="275" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="614" y="310" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 2</text>
+  <line x1="10" y1="330" x2="720" y2="330" stroke="#cfdae1" stroke-width="1" />
+  <text x="16" y="395" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="18" text-anchor="start" font-weight="600">Root c</text>
+  <text x="16" y="428" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="25">τ<tspan dy="5" font-size="15" font-style="italic">c</tspan>
+    <tspan dy="-5" font-size="25"> = 7</tspan>
+  </text>
+  <line x1="214.41273082408867" y1="367.1661697305865" x2="181.64544862651888" y2="415.3897171156892" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="176.59,422.83 185.76,416.98 178.65,412.15" fill="#19354c" />
+  <text x="181" y="396" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <line x1="182.5" y1="434.0" x2="252.5" y2="434.0" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="261.50,434.00 251.50,429.70 251.50,438.30" fill="#19354c" />
+  <text x="222" y="430" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <circle cx="222" cy="356" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="222" y="362" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="169" cy="434" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="169" y="440" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="275" cy="434" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="275" y="440" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="222" y="475" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 1</text>
+  <line x1="425.58726917591133" y1="367.1661697305865" x2="458.3545513734811" y2="415.3897171156892" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="463.41,422.83 461.35,412.15 454.24,416.98" fill="#19354c" />
+  <text x="459" y="396" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">2</text>
+  <line x1="378.5" y1="434.0" x2="448.5" y2="434.0" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="457.50,434.00 447.50,429.70 447.50,438.30" fill="#19354c" />
+  <text x="418" y="430" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">1</text>
+  <circle cx="418" cy="356" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="418" y="362" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="365" cy="434" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="365" y="440" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="471" cy="434" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="471" y="440" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="418" y="475" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 2</text>
+  <line x1="568.5872691759113" y1="422.8338302694135" x2="601.3545513734812" y2="374.6102828843108" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="606.41,367.17 597.24,373.02 604.35,377.85" fill="#19354c" />
+  <text x="573" y="396" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">2</text>
+  <line x1="621.5872691759113" y1="367.1661697305865" x2="654.3545513734812" y2="415.3897171156892" stroke="#19354c" stroke-width="2.5" />
+  <polygon points="659.41,422.83 657.35,412.15 650.24,416.98" fill="#19354c" />
+  <text x="655" y="396" fill="#19354c" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">2</text>
+  <circle cx="614" cy="356" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="614" y="362" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">a</text>
+  <circle cx="561" cy="434" r="12" fill="white" stroke="#19354c" stroke-width="1.7" />
+  <text x="561" y="440" fill="#19354c" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">b</text>
+  <circle cx="667" cy="434" r="12" fill="#19354c" stroke="#19354c" stroke-width="1.7" />
+  <text x="667" y="440" fill="white" font-family="Georgia, DejaVu Serif, serif" font-size="20" text-anchor="middle" font-style="italic">c</text>
+  <text x="614" y="475" fill="#426078" font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">Weight 4</text>
+</svg>

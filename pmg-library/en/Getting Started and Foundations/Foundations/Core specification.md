@@ -1,9 +1,9 @@
 ---
 title: Core Specification
 date: 2026-10-09
-updated: 2026-11-18
-revision: 29
-translated_revision: 29
+updated: 2026-11-21
+revision: 30
+translated_revision: 30
 status: draft
 text_prepared_by: ChatGPT
 translation_key: pmg-core-specification
@@ -974,6 +974,31 @@ This algebraic definition retains PMG's quadratic normalization. Only in the sym
 
 The rooted potential $\tau_i$, form potential $u_M(F)$, and electrical potential $\varphi_i$ are different quantities. Their relation after adding one arc and the distinction between two Dirichlet problems are stated in [[Balanced Variations#One-way variation and loss of balance|one-way variation]] and the [[Selected Vertices and the Dirichlet Problem#Two Dirichlet problems in a balanced graph|balanced-graph extension]]. An electrical model of a nonsymmetric Laplacian requires nonreciprocal elements or controlled sources; it is not a network of ordinary resistors.
 
+## Polyforms of general digraphs
+
+For a finite loopless digraph on $n\ge2$ vertices take arc weights $f_{ij}\ge0$. Row $i$ of the outgoing Laplacian has $L_{ij}=-f_{ij}$ for $j\ne i$ and $L_{ii}=\sum_j f_{ij}$. A unit arc contributes $H_{i\to j}=[a_i,a_i-a_j]$. Expanding $M=\exp L$ selects forests whose arcs point toward their roots. Write $u_s(F)$ for the coefficient of $[a_1\wedge\cdots\wedge a_n]^2$ in $MF[a_s]^2$. At $F=e$ it equals the principal minor $\tau_s$, the total weight of spanning trees rooted at $s$. This number is positive precisely when every vertex can reach $s$ along positive-weight arcs.
+
+Let $h$ be the centroid of all vertices, $x_j=a_j-h$ and $S=\sum_s\tau_s$. For $S>0$ the series uses the normalization
+
+$$
+P_M^\Sigma(F)=\frac{\sum_s u_s(F)}{S},\qquad
+\Phi_{ij}=[x_j,a_j-a_i],\qquad r_{ij}=P_M^\Sigma(\Phi_{ij})
+$$
+
+The sum includes roots with $\tau_s=0$. The identity $\Phi_{ij}+\Phi_{ji}=[a_j-a_i]^2$ gives additivity for opposite directions. At $S=0$ the arc forms, forest expansion and measurement forms still exist. Numerical evaluation under this convention requires $S>0$.
+
+For zero-sum vectors $u,v$ the directed scalar product is $\beta(u,v)=P_M^\Sigma([u,v])=-\mathbf v^{\mathsf T}\mathbf r\,\mathbf u$. Its symmetric part can have a negative diagonal value. Write $\mathbf J=\mathbf I-\mathbf1\mathbf1^{\mathsf T}/n$ and $\pi_s=\tau_s/S$. The resistance table determines the centered matrix $\mathbf K=(-\mathbf J\mathbf r)^+=\mathbf J\mathbf L$. Given the shares $\pi_s$, the original Laplacian is $\mathbf K-\mathbf1\pi^{\mathsf T}\mathbf K$.
+
+For a simple boundary $A=(a_0\ldots a_k)$ put $u_p=a_p-a_0$, $1\le p\le k$. Visit each selected vertex exactly once. The product $F_i$ of measurement forms of consecutive pairs depends only on the starting vertex $a_i$. Omit the closing pair. The decomposition $\sum_i F_i=[A]^2$ holds before a metric is chosen. For $S>0$ it gives
+
+$$
+P_M^\Sigma([A]^2)=\sum_iP_M^\Sigma(F_i)=\det(\beta(u_p,u_q))_{p,q=1}^k
+$$
+
+For $k\ge2$ reversing orientation at a fixed start preserves $F_i$. A geometric interpretation as a squared volume needs additional assumptions.
+
+[[en/Directed Graphs/Digraph Polyforms/Computing a Rooted Spanning-Tree Potential from a Digraph Polyform|Root minors]] · [[en/Directed Graphs/Digraph Polyforms/How to Normalize One-Way Resistance in an Unbalanced Digraph|Normalization]] · [[en/Directed Graphs/Digraph Polyforms/Can the One-Way Resistance Matrix Recover a Digraph|Reconstruction]] · [[en/Directed Graphs/Digraph Polyforms/Computing the Norm of a Boundary of Any Grade in a Digraph|Boundary norms]].
+
 ## Limitations and extensions
 
 ### Disconnected graphs
@@ -1005,7 +1030,7 @@ Algebraic polynomial identities may remain valid for real coupling strengths of 
 A full treatment of the following thematic extensions requires separate definitions and applicability conditions; this specification records only the explicitly stated conventions:
 
 - the isotropic extension, the distinguished null vector, and bi-coordinates and di-coordinates;
-- KVP/KVPOU structural decompositions of specified pair tables; a general metric model for unbalanced digraphs requires separate justification;
+- KVP/KVPOU structural decompositions of specified pair tables; applying root-normalized formulas to those decompositions requires separate justification;
 - the Greenian, mutual duality of exterior exponentials, and cut representations;
 - structural identities of partition forms, symmetric polyforms, and their combinatorial coefficients;
 - partition toponomes, the second-kind algebra, and vector and vertex normalizations of polynomial toponomes;
@@ -1529,6 +1554,7 @@ The ten notes of the [[en/Getting Started and Foundations/Introduction/PMG Intro
 
 | Revision | Date | Content |
 |---|---|---|
+| 30 | 2026-11-21 | Added conditions for normalization, reconstruction and boundary evaluation in general digraphs. |
 | 29 | 2026-11-18 | Recorded the conditions for recovering the effective resistance of a pair by controlled shunting. Aligned with Russian revision 29. |
 | 28 | 2026-11-13 | Clarified application of graph formulas in electrometry: T, R, and Z, field variations, effective electrode response, admissible internal changes, and local distinguishability. Core formulas are unchanged; aligned with Russian revision 28. |
 | 27 | 2026-11-08 | Separated coordinates and metric tensors from frames, form decompositions, and polyform calculations of projections. Routed links to the appropriate note; aligned with the Russian revision. |
