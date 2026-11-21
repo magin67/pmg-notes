@@ -34,17 +34,24 @@ def page_link(lang,target):
  url='https://magin67.github.io/pmg-notes/'+urllib.parse.quote(slug,safe='/,')
  if anchor:url+='#'+urllib.parse.quote(re.sub(r'[^\w\s-]','',anchor.lower()).replace(' ','-'))
  return '['+(label or stem)+']('+url+')'
-def companion_markdown(text, directory, lang):
-    """Embed the note's local SVG diagrams so they travel with the notebook."""
-    text = re.sub(r"\[\[([^]]+)\]\]", lambda m: page_link(lang, m[1]), text)
-    cell = nbformat.v4.new_markdown_cell(text)
+def companion_markdown(text, lang):
+    """Embed vault-relative SVG links as notebook attachments before converting note links."""
+    attachments = {}
+
     def attach(match):
-        image = directory / urllib.parse.unquote(match[2])
+        image = ROOT / 'pmg-library' / match[1]
         key = urllib.parse.quote(image.name)
-        cell.setdefault('attachments', {})[key] = {'image/svg+xml': base64.b64encode(image.read_bytes()).decode('ascii')}
-        return f'![{match[1]}](attachment:{key})'
-    cell.source = re.sub(r'!\[([^\]]*)\]\(((?:\.\.?/)[^)]*\.svg)\)', attach, text)
+        data = base64.b64encode(image.read_bytes()).decode('ascii')
+        attachments[key] = {'image/svg+xml': data}
+        return f'![{match[2]}](attachment:{key})'
+
+    text = re.sub(r'!\[\[((?:ru|en)/[^|\]]+\.svg)\|([^\]]+)\]\]', attach, text)
+    text = re.sub(r'\[\[([^]]+)\]\]', lambda m: page_link(lang, m[1]), text)
+    cell = nbformat.v4.new_markdown_cell(text)
+    if attachments:
+        cell.attachments = attachments
     return cell
+
 
 PINNED_COMMITS = {
     'digraph-polyforms': 'f84dc6abefcc6adaea313f97395eeb0587b337ea',
@@ -142,7 +149,7 @@ for lang, title, slug in COMPANIONS:
  for part in re.split(r'(```python\n.*?```|<!-- figure -->)',note,flags=re.S):
   if part.startswith('```python'):cells.append(nbformat.v4.new_code_cell(part[len('```python\n'):-3].strip()))
   elif part=='<!-- figure -->':cells.append(nbformat.v4.new_code_cell(PLOT))
-  elif part.strip():cells.append(companion_markdown(part.strip(), READY/'pmg-library'/lang/'PythonExamples', lang))
+  elif part.strip():cells.append(companion_markdown(part.strip(), lang))
  assert any('plt.show()' in c.source for c in cells) == has_plot, note
  setup = '''from importlib.metadata import version, PackageNotFoundError
 import subprocess
