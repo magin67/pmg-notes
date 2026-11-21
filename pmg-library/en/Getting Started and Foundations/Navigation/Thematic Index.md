@@ -2,7 +2,7 @@
 title: Thematic Index
 date: 2026-11-01
 updated: 2026-11-21
-revision: 24
+revision: 25
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -35,7 +35,7 @@ This index groups series by their main question. Each series has one primary hom
 
 ## Primary home of each series
 
-The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 141 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately.
+The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 142 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately.
 
 | Series | Section | Notes |
 | --- | --- | ---: |
@@ -58,7 +58,7 @@ The library has 19 bilingual series and a Russian-language series on digraph pol
 | [[en/Graph Transformations and Gluing/Chains of cores/Chains of Cores\|Chains of Cores]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 7 |
 | [[en/Graph Transformations and Gluing/Spectra of Isomers/Spectra of Isomers - Results and Open Questions\|Spectra of Isomers]] | [[en/Graph Transformations and Gluing/Graph Transformations and Gluing\|Graph Transformations and Gluing]] | 9 |
 | [[en/Directed Graphs/Balanced graphs/Balanced Graphs\|Balanced Graphs]] | [[en/Directed Graphs/Directed Graphs\|Directed Graphs]] | 12 |
-| [[ru/Направленные графы/Полиформы орграфов/Полиформы орграфов\|Digraph Polyforms (Russian)]] | [[en/Directed Graphs/Directed Graphs\|Directed Graphs]] | 5 (RU) |
+| [[ru/Направленные графы/Полиформы орграфов/Полиформы орграфов\|Digraph Polyforms (Russian)]] | [[en/Directed Graphs/Directed Graphs\|Directed Graphs]] | 6 (RU) |
 
 ## Search by tags
 
