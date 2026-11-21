@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
+  <title id="title">Tetrahedron abcd in unit directed four- and five-cycles</title>
+  <desc id="desc">The measured vertices a, b, c and d occupy the same positions. One arc leads from d to a on the left. On the right two arcs lead through the additional vertex e.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="7" markerHeight="6" orient="auto"><path d="M0 0 10 4 0 8 2 4Z" fill="#263f50"/></marker>
+    <marker id="return" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="7" markerHeight="6" orient="auto"><path d="M0 0 10 4 0 8 2 4Z" fill="#885b23"/></marker>
+  </defs>
+  <rect width="720" height="220" rx="10" fill="#fbfaf6"/>
+  <g font-family="sans-serif" font-size="16" text-anchor="middle" fill="#285858">
+    <text x="171" y="28">Directed 4-cycle</text>
+    <text x="534" y="28">Directed 5-cycle</text>
+  </g>
+  <g fill="none" stroke="#263f50" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M98 67H245"/><path d="M267 89V145"/><path d="M245 167H98"/>
+    <path d="M484 67H631"/><path d="M653 89V145"/><path d="M631 167H484"/>
+  </g>
+  <g fill="none" stroke="#885b23" stroke-width="2.8" marker-end="url(#return)">
+    <path d="M76 145V89"/>
+    <path d="M444 154 415 131"/><path d="M415 103 444 80"/>
+  </g>
+  <g fill="#f0f6f3" stroke="#285858" stroke-width="2">
+    <circle cx="76" cy="67" r="17"/><circle cx="267" cy="67" r="17"/><circle cx="267" cy="167" r="17"/><circle cx="76" cy="167" r="17"/>
+    <circle cx="462" cy="67" r="17"/><circle cx="653" cy="67" r="17"/><circle cx="653" cy="167" r="17"/><circle cx="462" cy="167" r="17"/>
+    <circle cx="398" cy="117" r="15" fill="#fff6e9" stroke="#885b23"/>
+  </g>
+  <g font-family="Georgia,serif" font-style="italic" font-size="23" text-anchor="middle" fill="#213844">
+    <text x="76" y="74">a</text><text x="267" y="74">b</text><text x="267" y="174">c</text><text x="76" y="174">d</text>
+    <text x="462" y="74">a</text><text x="653" y="74">b</text><text x="653" y="174">c</text><text x="462" y="174">d</text>
+    <text x="398" y="124" fill="#724918">e</text>
+  </g>
+</svg>

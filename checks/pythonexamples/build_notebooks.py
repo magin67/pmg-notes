@@ -35,17 +35,17 @@ def page_link(lang,target):
  if anchor:url+='#'+urllib.parse.quote(re.sub(r'[^\w\s-]','',anchor.lower()).replace(' ','-'))
  return '['+(label or stem)+']('+url+')'
 def companion_markdown(text, lang):
-    """Embed vault-relative SVG links as notebook attachments before converting note links."""
+    """Embed the companion note's local SVGs in the generated notebook."""
     attachments = {}
 
     def attach(match):
-        image = ROOT / 'pmg-library' / match[1]
+        image = READY / 'pmg-library' / lang / 'PythonExamples' / urllib.parse.unquote(match[2])
         key = urllib.parse.quote(image.name)
         data = base64.b64encode(image.read_bytes()).decode('ascii')
         attachments[key] = {'image/svg+xml': data}
-        return f'![{match[2]}](attachment:{key})'
+        return f'![{match[1]}](attachment:{key})'
 
-    text = re.sub(r'!\[\[((?:ru|en)/[^|\]]+\.svg)\|([^\]]+)\]\]', attach, text)
+    text = re.sub(r'!\[([^\]]*)\]\((\./images/[^)]+\.svg)\)', attach, text)
     text = re.sub(r'\[\[([^]]+)\]\]', lambda m: page_link(lang, m[1]), text)
     cell = nbformat.v4.new_markdown_cell(text)
     if attachments:
