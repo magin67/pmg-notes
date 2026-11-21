@@ -2,7 +2,7 @@
 title: Library Map
 date: 2026-11-11
 updated: 2026-11-21
-revision: 12
+revision: 13
 translated_revision: 94
 status: published
 text_prepared_by: ChatGPT
@@ -20,7 +20,7 @@ The map shows which PMG directions are developed in the library, how they connec
 
 ## Library contents
 
-The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 139 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
+The library has 19 bilingual series and a Russian-language series on digraph polyforms, with 140 substantive notes in Russian and 136 in English. Navigators, references, bibliographies, and programming examples are counted separately. The [[en/Getting Started and Foundations/Navigation/Thematic Index|Thematic Index]] provides the complete series list and search by tags.
 
 Definitions and conventions are recorded in [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]] and [[en/Getting Started and Foundations/Foundations/PMG terminology|Terminology]]. Series navigators give reading order and prerequisites.
 
@@ -155,7 +155,7 @@ These questions extend beyond the agreed scope of the published series. “Plann
 
 **Algebra of labeled paths and cycles (А07, О01).** Define a general product, unit, associativity, coefficients, and potential behavior. Compare path-cycle constructions with partial permutations and Laguerre digraphs. Mixed-state potential formulas are already proved. Deferred. [[en/Directed Graphs/Balanced graphs/Permutation Digraphs and Cycle Combinatorics|Permutation Digraphs and Cycle Combinatorics]] · [Deb](https://arxiv.org/abs/2304.14487) · [Generalized Laguerre, rook, and Lah polynomials](https://arxiv.org/abs/2312.11081) · [Chow, path-cycle symmetric function](https://timothychow.net/pathcycle.pdf)
 
-**Resistance symmetrization of a balanced graph (А06, Г02).** For a connected balanced graph, double centering the table $R_{ij}=r_{ij}+r_{ji}$ gives the symmetric part of the Green matrix. When is the pseudoinverse of that symmetric part a Laplacian with nonnegative conductances? Which metric parameters does the resulting network preserve? For a general digraph, the initial resistances and their normalization must first be specified. [[en/Directed Graphs/Balanced graphs/Resistance Geometry and Circulation|Resistance Geometry and Circulation]] · [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]]
+**Resistance symmetrization of a balanced graph (А06, Г02).** For a connected balanced graph, double centering the table $R_{ij}=r_{ij}+r_{ji}$ gives the symmetric part of the Green matrix. When is the pseudoinverse of that symmetric part a Laplacian with nonnegative conductances? Which metric parameters does the resulting network preserve? For digraphs with positive total spanning-tree potential, [[ru/Направленные графы/Полиформы орграфов/Как нормировать односторонний резистенс в небалансовом орграфе|note 4 of Digraph Polyforms (Russian)]] defines the one-way resistances. [[en/Directed Graphs/Balanced graphs/Resistance Geometry and Circulation|Resistance Geometry and Circulation]] · [[en/Getting Started and Foundations/Foundations/Core specification|Core Specification]]
 
 **Directed-forest types (А03, А06).** Determine root and direction data sufficient for toponome products and study the full toponome under arc reversal. Investigate directed matroid inequalities and data realizability. Transpose invariance of the Laplacian polynomial is already proved. To investigate. [[en/Directed Graphs/Balanced graphs/Toponomes of Balanced Graphs and Directed Forests|Toponomes of Balanced Graphs and Directed Forests]]
 
