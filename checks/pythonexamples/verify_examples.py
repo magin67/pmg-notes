@@ -10,13 +10,13 @@ for p in sorted((ROOT/'pmg-library').glob('*/PythonExamples/*.md')):
  ns={};stream=io.StringIO();count=0
  with contextlib.redirect_stdout(stream):
   for code in blocks:
-   if code.lstrip().startswith('%'):continue
+   if code.lstrip().startswith('%') or re.search(r'^\s*%pip\s+install\b',code,re.M):continue
    exec(compile(code,str(p),'exec'),ns);count+=1
  title=p.stem
  if 'triangle' in title.lower() or 'треугольника' in title:
   if 'area_squared' in ns:assert math.isclose(float(ns['area_squared']),1/12)
   if 'tau_one' in ns:assert ns['tau_one']==5 and ns['tau_two']==8
- if 'updated' in ns:
+ if title in ('Example - Deleting an Edge and a Bridge', 'Пример - Удаление ребра и моста'):
   assert ns['updated'].potential(ns['quForm'].one())==0
   assert ns['updated'].potential(ns['f_ac'])==1
  if 'part' in ns:

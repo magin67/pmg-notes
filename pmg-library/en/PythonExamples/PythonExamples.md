@@ -1,9 +1,9 @@
 ---
 title: "Programming Examples"
 date: 2026-10-29
-updated: 2026-11-13
-revision: 28
-translated_revision: 28
+updated: 2026-11-21
+revision: 29
+translated_revision: 29
 status: draft
 text_prepared_by: ChatGPT
 translation_key: programming-examples
@@ -70,6 +70,10 @@ Prerequisites: [[en/Getting Started and Foundations/Introduction/PMG Introductor
 ## Balanced Graphs
 
 [[en/PythonExamples/Example - Balanced Graphs|Balanced Graphs]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/balanced-graphs.ipynb).
+
+## Digraph Polyforms
+
+[[en/PythonExamples/Example - Digraph Polyforms|Digraph Polyforms]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/digraph-polyforms.ipynb).
 
 ## KVP Decomposition
 

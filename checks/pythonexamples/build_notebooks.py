@@ -1,4 +1,5 @@
 from pathlib import Path
+import base64
 import re,nbformat,urllib.parse
 ROOT=Path(__file__).resolve().parents[2]
 READY=ROOT
@@ -33,7 +34,20 @@ def page_link(lang,target):
  url='https://magin67.github.io/pmg-notes/'+urllib.parse.quote(slug,safe='/,')
  if anchor:url+='#'+urllib.parse.quote(re.sub(r'[^\w\s-]','',anchor.lower()).replace(' ','-'))
  return '['+(label or stem)+']('+url+')'
+def companion_markdown(text, directory, lang):
+    """Embed the note's local SVG diagrams so they travel with the notebook."""
+    text = re.sub(r"\[\[([^]]+)\]\]", lambda m: page_link(lang, m[1]), text)
+    cell = nbformat.v4.new_markdown_cell(text)
+    def attach(match):
+        image = directory / urllib.parse.unquote(match[2])
+        key = urllib.parse.quote(image.name)
+        cell.setdefault('attachments', {})[key] = {'image/svg+xml': base64.b64encode(image.read_bytes()).decode('ascii')}
+        return f'![{match[1]}](attachment:{key})'
+    cell.source = re.sub(r'!\[([^\]]*)\]\(((?:\.\.?/)[^)]*\.svg)\)', attach, text)
+    return cell
+
 PINNED_COMMITS = {
+    'digraph-polyforms': 'f84dc6abefcc6adaea313f97395eeb0587b337ea',
     'metric-parameters': '14f137c0b4bf965392f47f877165f2f3b8168073',
     'structural-identities': '73ac82d5c16afbfd47285436e1b6f37d5a68f8af',
     'metric-distributions': 'ebd699c4d68d711f8adda77494d272789dafb306',
@@ -68,6 +82,8 @@ COMPANIONS = (
     ('en', 'Example - Partition Toponomes', 'partition-toponomes'),
     ('ru', 'Пример - Полиномиальные топономы', 'polynomial-toponomes'),
     ('en', 'Example - Polynomial Toponomes', 'polynomial-toponomes'),
+    ('ru', 'Пример - Полиформы орграфов', 'digraph-polyforms'),
+    ('en', 'Example - Digraph Polyforms', 'digraph-polyforms'),
     ('ru', 'Пример - Балансовые графы', 'balanced-graphs'),
     ('en', 'Example - Balanced Graphs', 'balanced-graphs'),
     ('ru', 'Пример - KVP-разложение', 'kvp-decomposition'),
@@ -119,16 +135,14 @@ for lang, title, slug in COMPANIONS:
  note=(READY/'pmg-library'/lang/'PythonExamples'/(title+'.md')).read_text(encoding='utf-8').split('---',2)[2].strip()
  note=re.sub(r'^\[\[(?:ru|en)/PythonExamples/.*?\n','',note,flags=re.M)
  note=re.sub(r'^\[(?:Открыть в Colab|Open in Colab).*?\n','',note,flags=re.M)
- note=re.sub(r'\[\[([^]]+)\]\]',lambda m:page_link(lang,m[1]),note)
- # The source note and notebook share all calculation cells and explanatory text.
- note=re.sub(r'!\[images/[^\n]+\n','\n<!-- figure -->\n',note)
- # Wiki replacement strips the image target; replace its remaining text reliably.
- note=re.sub(r'^!images/[^\n]+\n','\n<!-- figure -->\n',note,flags=re.M)
+ # Only an embedded series drawing becomes a plot. Convert wiki links in
+ # Markdown cells after splitting off code; nested Python lists use [[...]] too.
+ note=re.sub(r'^!\[\[images/[^\n]+\]\]$', '<!-- figure -->', note, flags=re.M)
  cells=[nbformat.v4.new_markdown_cell('# '+title),nbformat.v4.new_markdown_cell('## Подготовка\n\nВыполните все ячейки сверху вниз. Проверенная версия пакета: **0.9.0**.' if lang=='ru' else '## Setup\n\nRun all cells from top to bottom. Tested package version: **0.9.0**.'),nbformat.v4.new_code_cell(f'%pip install -q "{INSTALL}" matplotlib'),nbformat.v4.new_code_cell('import polyform_algebra\nassert polyform_algebra.get_version() == "0.9.0"\nprint("polyform_algebra", polyform_algebra.get_version())')]
  for part in re.split(r'(```python\n.*?```|<!-- figure -->)',note,flags=re.S):
   if part.startswith('```python'):cells.append(nbformat.v4.new_code_cell(part[len('```python\n'):-3].strip()))
   elif part=='<!-- figure -->':cells.append(nbformat.v4.new_code_cell(PLOT))
-  elif part.strip():cells.append(nbformat.v4.new_markdown_cell(part.strip()))
+  elif part.strip():cells.append(companion_markdown(part.strip(), READY/'pmg-library'/lang/'PythonExamples', lang))
  assert any('plt.show()' in c.source for c in cells) == has_plot, note
  setup = '''from importlib.metadata import version, PackageNotFoundError
 import subprocess

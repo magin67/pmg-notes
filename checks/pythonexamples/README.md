@@ -1,6 +1,6 @@
 # PythonExamples checks
 
-Install polyform_algebra using the shared setup note. For the fragment checker, use the exact revision pinned in the Metric Distributions and Edge Influence notebook. Each notebook sets up its own package revision. Run from the repository root:
+Install polyform_algebra using the shared setup note. For the fragment checker, use the exact revision pinned in the Digraph Polyforms notebook. Each notebook sets up its own package revision. Run from the repository root:
 
 ```bash
 python checks/pythonexamples/verify_examples.py
@@ -32,7 +32,7 @@ The Partition Toponomes notebooks check forest coefficients, representation depe
 
 The Polynomial Toponomes notebooks compare exact forest and matrix coefficients, prescribed-root minors, Kirchhoff indices, products, and graph realizability.
 
-The Balanced Graphs notebooks verify exact outgoing Laplacians, directional geometry, and rooted forests.
+The Balanced Graphs notebooks verify exact outgoing Laplacians, directional geometry, and rooted forests. The Digraph Polyforms notebooks verify the grades of an unbalanced Laplacian exponential, the root coefficients of an arc change and a measurement, the domain of normalization, reconstruction from one-way resistances and relative potentials, and the contributions to a simplex boundary from each start. Their two diagrams are embedded SVG attachments.
 
 The KVP Decomposition notebooks verify pair projections, metric quantities, and signed forest toponomes.
 

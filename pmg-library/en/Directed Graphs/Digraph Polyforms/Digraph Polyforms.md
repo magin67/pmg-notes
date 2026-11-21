@@ -2,8 +2,8 @@
 title: Digraph Polyforms
 date: 2026-11-21
 updated: 2026-11-21
-revision: 1
-translated_revision: 10
+revision: 2
+translated_revision: 11
 status: published
 text_prepared_by: ChatGPT
 lang: en
@@ -52,5 +52,9 @@ Three conventions run through the series. Vertex $i$ in $i\to j$ specifies a Lap
 For notation and the connected balanced case, see the [[en/Getting Started and Foundations/Foundations/Core specification#Polyforms of general digraphs|Polyforms of general digraphs]] and [[en/Directed Graphs/Balanced graphs/Balanced Graphs|Balanced Graphs]].
 
 [[en/Directed Graphs/Directed Graphs|Directed Graphs]]
+
+## Programming example
+
+[[en/PythonExamples/Example - Digraph Polyforms|Five calculations with DirectedNetwork]]. [Open in Colab](https://colab.research.google.com/github/magin67/pmg-notes/blob/v5/pmg-library/en/PythonExamples/notebooks/digraph-polyforms.ipynb).
 
 [[ru/Направленные графы/Полиформы орграфов/Полиформы орграфов|Русский]]

@@ -1,6 +1,7 @@
 """Execute every public PythonExamples notebook in a fresh kernel."""
 from pathlib import Path
 import os
+import re
 import nbformat
 from nbclient import NotebookClient
 from nbconvert import HTMLExporter
@@ -16,7 +17,12 @@ for path in (ROOT / 'pmg-library').glob('*/PythonExamples/notebooks/*.ipynb'):
     nbformat.validate(notebook)
     outputs = [item for cell in notebook.cells for item in cell.get('outputs', [])]
     assert all(item.output_type != 'error' for item in outputs)
-    if path.stem == 'symbolic-polyforms':
+    if path.stem == 'digraph-polyforms':
+        note = (ROOT / notebook.metadata.pmg.source_note).read_text(encoding='utf-8')
+        fragments = re.findall(r'```python\n(.*?)```', note, re.S)
+        assert [c.source for c in notebook.cells[4:] if c.cell_type == 'code'] == [s.strip() for s in fragments]
+        assert sum(bool(c.get('attachments')) for c in notebook.cells) == 2
+    elif path.stem == 'symbolic-polyforms':
         assert sum('text/latex' in item.get('data', {}) for item in outputs) == 16
     elif path.stem == 'weighted-chain':
         assert sum('image/png' in item.get('data', {}) for item in outputs) == 1
