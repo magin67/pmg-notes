@@ -1,10 +1,10 @@
 ---
 title: Variation of a Single Edge
 date: 2026-10-04
-updated: 2026-11-18
-revision: 9
-translated_revision: 9
-source_revision: 9
+updated: 2026-11-23
+revision: 10
+translated_revision: 10
+source_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 translation_key: single-edge-variation
@@ -249,6 +249,38 @@ A resistance can be written as a ratio of two weight sums: the denominator is th
 > This deletion produces a separating spanning 2-forest. Conversely, adding the edge $ij$ to any such forest produces a spanning tree. This is a bijection that preserves the product of the conductances of the remaining edges. Thus the new spanning-tree coefficient is $\tau+t m_{ij}$.
 >
 > By (2), the same coefficient is $\tau(1+tR_{ij})$. Comparing coefficients of $t$ proves (8). $\square$
+
+## The path between two vertices in a random spanning tree
+
+Choose a spanning tree $T$ with probability $w(T)/\tau$, where $w(H)=\prod_{f\in H}c_f$. For distinct vertices $a,b$, let $P_T(a,b)$ be their unique path in the tree. There are exactly $|P_T(a,b)|$ ways to obtain a forest separating $a,b$ by deleting one edge of $T$, one for each edge of this path.
+
+> [!info] Resistance from cuts along the path
+> **Corollary.** For a separating 2-forest $F$, let $\delta_G(F)$ be the set of edges of the **original graph** joining its two components, and let $C(F)=\sum_{f\in\delta_G(F)}c_f$ be their total conductance. Then
+>
+> $$
+> R_{ab}=\mathbb E_T\!\left[\sum_{e\in P_T(a,b)}\frac{1}{C(T-e)}\right]
+> $$
+
+> [!note]- Proof by double counting
+> **Proof.** Fix a separating forest $F$. Every pair $(T,e)$ with $T-e=F$ and $e\in P_T(a,b)$ arises by adding one edge $e\in\delta_G(F)$ to $F$. The added edge joins the two components and hence lies on the path from $a$ to $b$. The resulting tree has weight $w(F)c_e$. In the sum over trees, all occurrences of this forest contribute
+>
+> $$
+> \sum_{e\in\delta_G(F)}\frac{w(F)c_e}{\tau\,C(F)}=\frac{w(F)}{\tau}
+> $$
+>
+> Summing over $F$ and applying (8) gives $m_{ab}/\tau=R_{ab}$. $\square$
+
+With unit conductances, $C(F)=|\delta_G(F)|$ is the multiplicity of the forest, the number of ways to complete it to a tree. If the graph itself is a tree, only the deleted edge crosses each cut, and the formula gives the usual sum of resistances $\sum_{e\in P_T(a,b)}1/c_e$.
+
+### The three trees of the unit triangle
+
+In $K_3$ the trees are equally likely. In two of them the path from $a$ to $b$ is the single edge $ab$, and in the third it passes through $c$. Each arrow in the figure is labeled with the edge being deleted. Two arrows lead to each of the two distinct forests in the bottom row.
+
+![Three trees of a triangle and four deletions yielding two separating forests](<images/Paths and Separating Forests of a Triangle.svg>)
+
+The mean path length is $(1+1+2)/3=4/3$. Each cut has conductance $2$, so each direct path contributes $1/2$ and the path through $c$ contributes $1$. Their mean gives $R_{ab}=2/3$, in agreement with counting the forests directly in (8).
+
+For several marked vertices the forest weight determines areas and volumes. See [[Resistance Radius of a Set - Gram Matrix and Volume#Separating forests and vertex identification|Separating forests and vertex identification]].
 
 ## Variation of forest weight and area
 

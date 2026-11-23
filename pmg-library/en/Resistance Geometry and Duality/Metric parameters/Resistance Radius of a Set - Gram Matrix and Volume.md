@@ -1,9 +1,9 @@
 ---
 title: "Resistance Radius of a Set: Gram Matrix and Volume"
 date: 2026-10-16
-updated: 2026-11-18
-revision: 7
-translated_revision: 9
+updated: 2026-11-23
+revision: 8
+translated_revision: 10
 status: draft
 text_prepared_by: ChatGPT
 lang: en
@@ -266,6 +266,53 @@ $$
 Each of the two terms gives the spanning-tree form after multiplication, since $(ac)=(ab)+(bc)$. Thus $X_A^2=2$, $\rho_A=1/2$, and $g_A=1$. For the full triangle formed by the path's vertices, the boundary has norm $1$, so at the same radius $g_{\{a,b,c\}}=1/2$. This checks the distinction between the full set and a subset without inverting a Gram matrix.
 
 **The boundary and the simplex are distinct.** The potential formula applies to $X_A=(a_0\ldots a_l)$, an exterior product of affine vectors. The exterior object $a_0 \cdots  a_l$ itself is not a boundary. Its negative norm $\det\mathbf G$ in the isotropic extension cannot be obtained by applying the original graph's metric identity directly. The parameter $g_A$ was computed above using the geometric identity $g_A=\rho_A X_A^2$, already proved.
+
+## Separating forests and vertex identification
+
+Let $A=\{a_0,\ldots,a_k\}$ consist of $k+1$ distinct vertices of the original connected undirected graph $G$, where $1\le k\le N-1$. Here $k$ denotes the grade of the boundary $X_A$. Let $\mathcal F_A$ be the spanning forests with $k+1$ components, each containing exactly one vertex of $A$. An isolated vertex counts as a component. Identify all vertices of $A$ with a single vertex $s$, discard loops, and keep each parallel edge with its own label, original endpoints, and conductance. Denote the resulting graph by $G/A$.
+
+> [!info] Forest formula for the boundary norm
+> **Theorem.** For positive edge conductances and forest weights $w(F)=\prod_{e\in F}c_e$,
+>
+> $$
+> X_A^2=(k!\,\mathrm{vol}(A))^2
+> =\frac{\sum_{F\in\mathcal F_A}w(F)}{\tau(G)}
+> =\frac{\tau(G/A)}{\tau(G)}
+> $$
+>
+> Each forest is counted once. Its unique marked vertex already specifies the root of each component.
+
+The forest sum is the case of the all-minors matrix-tree theorem in which the deleted row and column sets coincide. [S. Chaiken, 1982](https://doi.org/10.1137/0603033)
+
+> [!note]- Proof and explicit bijection
+> **Proof.** Ground $a_0$ by deleting its row and column from $\mathbf L$. The resulting matrix $K$ has determinant $\tau(G)$. In the basis of differences $v-a_0$, the Gram matrix of all differences is $K^{-1}$, as shown above for the full set. Thus $\mathbf G_u=(K^{-1})_{I,I}$ for $I=A\setminus\{a_0\}$. Jacobi's identity for complementary principal minors gives
+>
+> $$
+> X_A^2=\det\mathbf G_u
+> =\frac{\det K_{J,J}}{\det K},\qquad J=V(G)\setminus A
+> $$
+>
+> The matrix $K_{J,J}$ is the reduced Laplacian of $G/A$ grounded at $s$. Each vertex of $J$ retains its total incident conductance, and all couplings within $J$ are preserved. By the matrix-tree theorem the numerator is $\tau(G/A)$. When $J=\varnothing$, the empty determinant is one.
+>
+> A forest $F\in\mathcal F_A$ has exactly $N-k-1$ edges. Identifying its roots joins its components at $s$. The result is connected with $N-k$ vertices and $N-k-1$ edges, hence a spanning tree. Conversely, delete $s$ from a tree of $G/A$. Each remaining branch was attached to $s$ by exactly one edge. Its label specifies the original vertex of $A$ to which the branch must be reattached. Vertices of $A$ that receive no branch remain isolated. This gives one tree component per root. The two operations preserve the labeled edge set, are inverse to each other, and preserve the product of conductances. $\square$
+
+For a pair this gives the [[Variation of a Single Edge#The path between two vertices in a random spanning tree|resistance formula using separating 2-forests]]. For three vertices the total weight of separating 3-forests divided by $\tau(G)$ is $4S^2$. For four vertices the corresponding 4-forest ratio is $36V^2$. Here $S$ and $V$ denote ordinary triangle area and tetrahedron volume in the original resistance metric.
+
+Comparing with the preceding section gives the forest expansion $\tau(M_{N-1-k}[X_A]^2)=\sum_{F\in\mathcal F_A}w(F)$. When $A=V(G)$, only the forest of isolated vertices remains, with weight $1$.
+
+### Three vertices of the unit four-cycle
+
+Take the cycle $a-b-c-d-a$ and mark $A=\{a,b,c\}$. The cycle has four spanning trees, one for each choice of deleted edge. A separating 3-forest retains just one edge. The possibilities are $ad$ and $cd$, since either $ab$ or $bc$ would join two roots. After identification, $ad$ and $cd$ become two parallel edges from $s$ to $d$. Each edge alone is a spanning tree.
+
+![Two separating 3-forests of a four-cycle and their corresponding trees after identification](<images/Three Roots of a Four-Cycle.svg>)
+
+Thus $X_A^2=2/4=1/2$. To check the area from resistances, use the two arcs of the cycle in parallel. This gives $R_{ab}=R_{bc}=3/4$ and $R_{ac}=1$. For the differences $b-a,c-a$ we obtain
+
+$$
+\mathbf G_u=\begin{pmatrix}3/4&1/2\\1/2&1\end{pmatrix},
+\qquad \det\mathbf G_u=\frac12,
+\qquad S^2=\frac18
+$$
 
 ## Examples and normalization checks
 

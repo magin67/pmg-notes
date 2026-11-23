@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" viewBox="0 0 620 364" width="620" height="364" role="img" aria-labelledby="title desc">
+  <title id="title">Paths and separating forests in the unit triangle</title>
+  <desc id="desc">Four path-edge deletions from three trees lead to two forests. Each forest appears twice.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#53666f"/></marker>
+  </defs>
+  <rect width="620" height="364" rx="12" fill="#fafbfa"/>
+  <g font-family="Arial, sans-serif" fill="#183744" text-anchor="middle" stroke-linecap="round">
+    <text x="310" y="31" font-size="20" font-weight="600">Spanning trees of the triangle</text>
+    <text x="310" y="54" font-size="16" >The thick edges trace the path from a to b</text>
+    <line x1="50" y1="135" x2="134" y2="135" stroke="#135977" stroke-width="5"/>
+    <line x1="50" y1="135" x2="92" y2="85" stroke="#53666f" stroke-width="2.7"/>
+    <circle cx="50" cy="135" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="50" y="140" font-size="16" fill="#183744" font-weight="600">a</text>
+    <circle cx="134" cy="135" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="134" y="140" font-size="16" fill="#183744" font-weight="600">b</text>
+    <circle cx="92" cy="85" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="92" y="90" font-size="16" fill="#183744" font-weight="600">c</text>
+    <line x1="268" y1="135" x2="310" y2="85" stroke="#135977" stroke-width="5"/>
+    <line x1="352" y1="135" x2="310" y2="85" stroke="#135977" stroke-width="5"/>
+    <circle cx="268" cy="135" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="268" y="140" font-size="16" fill="#183744" font-weight="600">a</text>
+    <circle cx="352" cy="135" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="352" y="140" font-size="16" fill="#183744" font-weight="600">b</text>
+    <circle cx="310" cy="85" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="310" y="90" font-size="16" fill="#183744" font-weight="600">c</text>
+    <line x1="486" y1="135" x2="570" y2="135" stroke="#135977" stroke-width="5"/>
+    <line x1="570" y1="135" x2="528" y2="85" stroke="#53666f" stroke-width="2.7"/>
+    <circle cx="486" cy="135" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="486" y="140" font-size="16" fill="#183744" font-weight="600">a</text>
+    <circle cx="570" cy="135" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="570" y="140" font-size="16" fill="#183744" font-weight="600">b</text>
+    <circle cx="528" cy="85" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="528" y="90" font-size="16" fill="#183744" font-weight="600">c</text>
+    <line x1="103" y1="160" x2="185" y2="227" fill="none" stroke="#53666f" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <line x1="293" y1="160" x2="210" y2="227" fill="none" stroke="#53666f" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <line x1="327" y1="160" x2="410" y2="227" fill="none" stroke="#53666f" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <line x1="517" y1="160" x2="435" y2="227" fill="none" stroke="#53666f" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="124" y="205" font-size="16" >−ab</text>
+    <text x="264" y="205" font-size="16" >−bc</text>
+    <text x="358" y="205" font-size="16" >−ac</text>
+    <text x="494" y="205" font-size="16" >−ab</text>
+    <line x1="152" y1="301" x2="194" y2="251" stroke="#53666f" stroke-width="2.7"/>
+    <circle cx="152" cy="301" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="152" y="306" font-size="16" fill="#183744" font-weight="600">a</text>
+    <circle cx="236" cy="301" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="236" y="306" font-size="16" fill="#183744" font-weight="600">b</text>
+    <circle cx="194" cy="251" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="194" y="256" font-size="16" fill="#183744" font-weight="600">c</text>
+    <line x1="468" y1="301" x2="426" y2="251" stroke="#53666f" stroke-width="2.7"/>
+    <circle cx="384" cy="301" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="384" y="306" font-size="16" fill="#183744" font-weight="600">a</text>
+    <circle cx="468" cy="301" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="468" y="306" font-size="16" fill="#183744" font-weight="600">b</text>
+    <circle cx="426" cy="251" r="12" fill="#fff" stroke="#183744" stroke-width="2"/>
+    <text x="426" y="256" font-size="16" fill="#183744" font-weight="600">c</text>
+    <text x="194" y="339" font-size="17" >{a,c}  |  {b}</text>
+    <text x="426" y="339" font-size="17" >{a}  |  {b,c}</text>
+  </g>
+</svg>
